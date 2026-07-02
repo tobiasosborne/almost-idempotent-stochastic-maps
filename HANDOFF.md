@@ -48,10 +48,13 @@ Still the Kernel / (EX) conjecture — but three waves sharpened WHERE it lives:
   vertex's mass into the shallow band, O(δ)/H cap on deep-side mass; obs-fwr-gap: F-WR is a
   coincidence-or-antipodality dichotomy, cannot count classes). Both heuristic-tagged, artifact-backed
   (`docs/waves/2026-07-02-B{1,2}-*.md`).
-- **The dangerous antecedent re-scopes to `σ̃ → 1`**: over ~48k exact idempotents the joint (σ̃>τ ∧ H>Bτ)
-  never occurred; the collapse bound `H(1−σ̃) ≤ ν(2+4δ)` (obs-height-collapse, 0/500 violations) is the
-  structural reason. **Candidate finisher: af-validate obs-height-collapse + prove `σ̃ ≤ 1−cτ` for hidden
-  vertices ⇒ Kernel Conjecture closes.** Orchestration of obs-height-collapse is RUNNING (background).
+- **The collapse bound is af-VALIDATED** (`obs-height-collapse`, 19/19 nodes clean — the first NEW
+  rigorous result): `H(1−σ̃) ≤ ν(2+4δ)` for hidden top vertices, `0<δ≤¼`, `W≠∅`. Rearranged: a dangerous
+  vertex (`H>Bτ`) necessarily has `1−σ̃ ≤ (2+4δ)τ/B`. **THE live question is therefore the σ̃-cap:
+  `1−σ̃_v ≥ cτ` for any universal `c>0` ⇒ `H ≤ (2+4δ)τ/c` ⇒ Kernel Conjecture.** This is the ledger's
+  DMF (deep-witness mass forcing) question on a rigorous backbone — existential-DMF⇒HLC is already
+  proved-mod-audit upstream. Kill condition (pre-registered on arm B): an exact instance with
+  `1−σ̃ = O(τ)`, `H>Bτ` at small δ kills the route.
 - **Constants pinned + a certified correction**: existential C₀=1 tight (5/4 = selector floor);
   `H/δ = 100/49 > 2` at finite δ (hull-dip, `runs/2026-07-02-web-regime-hunt/`, kernel-safe, asymptotic
   constant still 2) — do NOT quote "δ ≥ H/2, zero exceptions" (FINDINGS 2026-07-02 correction).
