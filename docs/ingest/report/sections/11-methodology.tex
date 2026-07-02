@@ -1,0 +1,187 @@
+\section{Multi-Agent Methodology And Audit Catches}
+
+\subsection{Method Contract}
+
+This report records an exploration lane, not a banked final proof.  The
+orchestrator was the agent maintaining the live state, delegation log, and
+status ledger.  A worker was an independent model run assigned one narrow
+lane: proof search, counterexample search, numerical verification, or hostile
+review.  The Fable closer was the large-context synthesis pass that compressed
+the late campaign around the exposedness-dual witness, meaning the LP dual
+certificate for failed exposedness, and the deep-witness mass forcing
+obstruction, abbreviated DMF: the demand that an optimal witness put definite
+mass near hidden height $H$.
+
+The done bar used during the campaign was intentionally stricter than ordinary
+drafting.  A claimed proof needed two-family audit: at least one Claude-family
+and one Codex-family derivation, with an adversarial pass by a party other than
+the author.  A claimed counterexample needed an exact rational family and a
+verification script checking $P\one=\one$, $P^2=P$, the row negative-mass bound
+$\delta$, and the distance lower bound.  An honest stall was also an acceptable
+terminal state, but only after all surviving lanes were named as precise
+obstructions.
+
+A derive-first hostile review means that the reviewer re-derives the statement
+from the definitions before trusting the submitted proof.  This mattered in
+several places: the reviewer was asked to find the hidden quantifier, sign, or
+normalization error rather than to edit prose.  A red-green check means that a
+script or certificate first exposed a failure mode, and then the corrected gate
+was rerun so that the same failure would be caught in the future.
+
+The method was deliberately local.  The notes under this exploration lane are
+provenance for this report; promotion to the main project requires a separate
+banking phase.  Local-only provenance therefore has two consequences for the
+reader.  First, a source note by itself is not an in-report mathematical claim:
+the claim must be stated here with its badge, proof sketch, numerical gate, or
+explicit open status.  Second, the only mathematical black-box imports used by
+the report are the two contracts stated in Section~\ref{sec:linear-markov-setting},
+\texttt{lem-classical-equiv} and \texttt{thm-cluster}; all other notes are
+provenance, audit trail, or evidence.
+
+\subsection{Ledger Discipline}
+
+Status tags are methodological, not cosmetic.  A badge controls what kind of
+sentence may be written.  \provedbadge{} means that a proof survived the stated
+audit.  \modauditbadge{} means that the proof exists but its correction,
+hypothesis, or banking caveat must travel with it.  \numbadge{} means verified
+computation, never a theorem.  \openbadge{} means the report is naming work
+still to be done.  \refutedbadge{} and \downgradedbadge{} prevent an old route
+from being silently resurrected.
+
+This discipline also explains the notation policy.  The old notes overloaded
+the external-mass symbol.  The report distinguishes the formal off-own-site
+mass $\sigoff$ from the geometric non-$\conv(\W)$ mass $\sigtilde$, where
+$\W$ is the set of well-exposed row vertices.  In the final convention,
+$\sigtilde$ is geometric: it is measured by positive carrier mass at positive
+$\ell^1$ distance from $C_W=\conv(\W)$, with any $\varepsilon$-halo counted as
+depth slack.  Thus an index not belonging to $\W$ is only a proxy unless its
+row is also geometrically outside $C_W$.
+
+\begin{warning}
+\downgradedbadge{} Older $\sigoff$-resolved claims are not automatically
+$\sigtilde$-claims.  In particular, the d12 probe measured an index-based
+proxy in the profiled instances.  Those data remain useful for that family,
+but they do not settle the geometric web case.
+\end{warning}
+
+The same rule applies to constants.  Finite-corner constants describe the
+verified corner family and may not be presented as asymptotic constants for
+the hidden localization claim (HLC), the desired bound $\delta\ge aH^2$.
+Conversely, an asymptotic statement such as HLC may use the corner as evidence
+or calibration only after its status has been downgraded to numerical or
+mod-audit evidence.
+
+\subsection{Audit Catches}
+
+The campaign's main value is not that many agents agreed.  Agreement is only
+evidence when the agents failed independently at the same sharply described
+object and when stronger statements were downgraded rather than defended.
+Four catches changed the shape of the final open problem.
+
+\begin{refutedstatement}
+\refutedbadge{} The literal psi-gap route is false.  The proposed uniform gap
+for $\rho$-far non-$S$-full rows has exact-rational counterexamples, so the
+original F-psi route is not a usable theorem.  Only the conditioned
+canonical-$\W$ replacement may be cited, and even that reroutes through the
+same top-band residual.
+\end{refutedstatement}
+
+\begin{downgradedstatement}
+\downgradedbadge{} The NG' consistency lemma was downgraded.  Its useful
+content is dead-route guidance: row, column, or diagonal exactness at the
+financing or blocker row does not by itself contain the missing $H$-scale
+information.  It is not a positive consistency theorem closing the web case.
+\end{downgradedstatement}
+
+\begin{warning}
+\downgradedbadge{} The broad d12 interpretation was narrowed after the
+$\sigtilde$ height-collapse audit.  The observed witnesses were deep with
+$m_*=1$ in the profiled corner and budget-line regimes, but the small-$\delta$
+web case was not measured there.  The final d13 verdict is outcome (c), a
+high-strength numerical confirmation of the linear-law record, not a theorem.
+\end{warning}
+
+The post-ledger swarm added two further controls.  First, \modauditbadge{} an
+exact rational $5\times5$ construction gives an all-shallow optimal face with
+hidden rows and $\sigtilde>0$, but only at height $H=O(\delta)$; it is an
+existence certificate modulo audit, not a refutation of DMF with
+$O(\delta/\tau)$ slack.  Second, \provedbadge{} the branch $\sigtilde\le\tau$
+is closed: the height cap
+\[
+        H\le 2(1+2\delta)\max(\sigtilde,\nu_v)
+\]
+gives $H\le3\tau$ for $\delta\le1/4$, hence $\delta\ge H^2/9$ directly and
+existential DMF holds there with $m_*=1$ and $C_D=3$.
+
+\provedbadge{} The attempted LP support-cleanup route also received a death
+certificate.  If one pushes shallow witness rows through $P$, negative leakage
+changes the dual objective from $B$ to $(B+N)/M_F$.  Since $M_F\le1+N$ while
+optimality would require $M_F\ge1+N/B$ when \(B=t^*(v)>0\) and \(B<\kappa<1\),
+any $N>0$ breaks the route.  The \(t^*(v)=0\) case is handled by exchange
+without dividing by \(B\).  The remaining obstruction is therefore not another
+exposedness-dual algebra trick; it is signed quantitative Baake--Sumner
+stability.
+
+\begin{numericalresult}
+\numbadge{} The empirical record was reframed after the sw11/sw12 forensics.
+The ``flat floor'' was never verified below about $\delta=0.06$ in the saved
+record.  Final d13 reports outcome (c): every verified small-scale instance in
+the campaign record satisfied the budget-line behavior \(H\lesssim2\delta\).
+\end{numericalresult}
+
+\subsection{Numerical Gates}
+
+The numerical pipeline was treated as certificate generation, not as proof.
+The recurring gates were exact or high-precision checks of $P\one=\one$ and
+$P^2=P$, honest use of $\tau=\sqrt{\delta}$, presolve-off LP verification when
+dual certificates mattered, multiplicity-correct tests for $\W$, and residual
+checks at the scale advertised by the source note.  Numerical claims were
+allowed to shape conjectures, expose false routes, and select constants for
+inspection.  They were not allowed to become theorem statements.
+
+This is why red-green checks appear repeatedly in the notes.  LP presolve
+artifacts, vertex-multiplicity bugs, scale degeneracies, and the geometric
+$\sigtilde$ proxy each produced a concrete correction.  The report keeps those
+corrections in the text because they are part of the mathematical provenance:
+without them, a reader would not know which tempting shortcuts have already
+failed.
+
+\subsection{Compact Timeline}
+
+\begin{itemize}[leftmargin=*]
+\item Day 1 built the signed-idempotent working model, the exposed-hull/HLC
+reduction, the audited belt of local lemmas, and the first numerical floor and
+wall record.  The end-of-day state still used the historical $\sigoff$-style
+wall language and left Branch A, Branch B, and the psi-gap route open.
+\item Day 2 compressed those branches through the Fable closer and hostile
+Codex audits.  The dual identity, exchange bound, row-witness mechanism, and
+corner constants were separated into proved, mod-audit, and numerical parts.
+The literal psi-gap and NG' routes were removed from the proof path.
+\item The d12 and wave-9 passes replaced broad witness-depth optimism with a
+geometric $\sigtilde$ dichotomy.  The $\sigtilde$-small branch gives height
+collapse, while the $\sigtilde$-large branch is the shallow hidden-web case.
+\item The nine-agent DMF swarm sharpened the residual: low-height all-shallow
+faces exist, the $\sigtilde\le\tau$ branch is proved, and LP witness-pushing
+cannot close the remaining branch.  The sw11/sw12 forensics and final d13
+reframed the empirical target as the possible linear law \(H=O(\delta)\).
+\end{itemize}
+
+\subsection{What Remains Methodologically Open}
+
+\begin{openproblem}
+\openbadge{} The final open form is height-conditional web exclusion: rule out
+a hidden top vertex with geometric $\sigtilde>\tau$ at height $H>B\tau$, for a
+universal $B$.  Equivalently for this report's route, prove the signed
+quantitative Baake--Sumner stability statement needed to exclude a
+self-sustaining shallow hidden top-band web, where the top band consists of
+rows with small separator deficit.  The $\delta=0$ Baake--Sumner anchor is
+byte-pinned, but the dimension-free perturbative modulus is still open.
+\end{openproblem}
+
+Future proof writers should therefore attack the web exclusion or the stronger
+linear law directly.  The dead routes are already informative: the literal
+psi-gap, raw factorization gauge arguments, unlocalized witness descent,
+financier-row exactness, blocker diagonal exactness, and finite-corner
+calibration do not close HLC.  Independent convergence on this residual is
+useful evidence that the obstruction map is honest; it is not a substitute for
+the missing stability theorem.

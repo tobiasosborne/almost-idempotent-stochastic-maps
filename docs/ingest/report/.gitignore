@@ -1,0 +1,7 @@
+# LaTeX build artifacts (latexmk) — the tracked artifact is the PDF source .tex only
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz

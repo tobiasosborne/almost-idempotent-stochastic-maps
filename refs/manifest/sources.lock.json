@@ -1,0 +1,31 @@
+{
+  "_comment": "Reproducible reconstruction manifest for refs/. fetch!=null => byte-reproducible from the pinned arXiv id (verified: the recorded bytes were byte-matched against the official arXiv source this session); fetch==null => content-addressed cache only ($EXTPROP_REFS_CACHE/<sha256>). Hashes are authoritative (== refs/manifest/checksums.sha256). Keep in sync with checksums.sha256; rebuild the payload with `python3 scripts/fetch-refs.py`.",
+  "arxiv_verified": [
+    "2007.11433"
+  ],
+  "files": [
+    {
+      "path": "baake-sumner-2007.11433/equal-fin.tex",
+      "sha256": "f358c71c066293f80c1f2cebd1bfb6b46489bf25320bccef7c5ec6b464b3aa01",
+      "source_id": "baake-sumner-2007.11433",
+      "fetch": {
+        "kind": "arxiv-eprint-member",
+        "id": "2007.11433"
+      }
+    },
+    {
+      "path": "hognas-mukherjea/hognas-mukherjea-2011.pdf",
+      "sha256": "d74844072a1b96a29acbae5586e42c641fcc17721f55b89184b95dbcf25fa649",
+      "source_id": "hognas-mukherjea",
+      "fetch": null,
+      "note": "cache-only; acquire manually — copyrighted Springer book (2nd ed. 2011), no public reproducible source. User-supplied PDF; restore from $EXTPROP_REFS_CACHE/<sha256>."
+    },
+    {
+      "path": "hognas-mukherjea/hognas-mukherjea-2011.txt",
+      "sha256": "ac5e74eb1c346c249632a53442b8015e736753973e5262c9fb09077359f30885",
+      "source_id": "hognas-mukherjea",
+      "fetch": null,
+      "note": "cache-only; acquire manually — local `pdftotext -layout` extraction of the copyrighted book (greppable loci; byte-quote against this .txt). Not fetch-reproducible."
+    }
+  ]
+}

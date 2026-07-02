@@ -1,0 +1,209 @@
+\section{DMF, Shallow Webs, And The Remaining Open}
+\label{sec:residual-dmf}
+
+\subsection{The Residual}
+
+Work in the exact signed affine retraction model: \(P\one=\one\),
+\(P^2=P\), with rows \(p_i\), row negative masses \(\nu_i\), maximal
+negative mass \(\delta=\max_i\nu_i\), and \(\tau=\sqrt{\delta}\).
+Let \(\W\) be the set of well-exposed row vertices and put
+\[
+  C_W=\conv(\W),\qquad H=\max_i\distone(p_i,C_W).
+\]
+For \(H>0\) choose a hidden top vertex \(v\), meaning a row vertex attaining
+this maximum and not lying in \(C_W\).  Its canonical separator is an affine
+functional \(\phi\), normalized in the \(\ell^\infty\) dual, with
+\(\phi\le0\) on \(C_W\) and \(\phi(p_v)=H\).  The deficit is
+\[
+  g_i=H-\phi(p_i),\qquad \Omega_g=\max_i g_i-\min_i g_i .
+\]
+For a top vertex the audited setup gives \(g_i\ge0\) for all rows and
+\(g=Pg\).  Rows of \(\W\) are automatically deep in the sense below, because
+\(\phi(p_w)\le0\) implies \(g_w\ge H\).
+
+The exposedness LP for \(v\) has optimal margin \(t^*(v)\).  When \(v\) is
+not exposed, an optimal failed-exposedness witness is a dual certificate
+\((\mu,\alpha,\beta,\gamma)\), where \(\mu\) is a probability measure on the
+\(\rho\)-far rows \(F_v\), \(\alpha,\beta\ge0\), and the dual identity gives
+the sharp exchange
+\[
+  \sum_j\mu_j g_j+\sum_i\alpha_i g_i
+  =\sum_k\beta_k g_k
+  \le t^*(v)\,\Omega_g<\kappa\Omega_g .
+\]
+This exchange is the pricing mechanism: it can turn witness depth into a
+height bound, but it does not create depth by itself.
+
+\subsection{Deep-Witness Mass Forcing}
+
+For constants \(m_*\in(0,1]\) and an error width \(E(\delta)\), a row
+\(j\) is \(E\)-deep for \(v\) if \(g_j\ge H-E(\delta)\).  The universal
+deep-witness mass-forcing statement says that every hidden top vertex \(v\)
+and every optimal failed-exposedness witness for \(v\) satisfy
+\[
+  \mu\{j:g_j\ge H-E(\delta)\}\ge m_* .
+\]
+The existential form requires only one optimal witness with this much deep
+mass.  This distinction is now load-bearing: the HLC chain needs only the
+existential form, while feasible row witnesses do not help unless they are
+proved to lie on, or transfer to, the optimal dual face.  Low-height
+all-shallow optimal faces therefore prove existence only; the general
+height-\(\tau\) exclusion remains open.
+
+\begin{proposition}[Existential DMF suffices for HLC]
+\modauditbadge
+Assume existential DMF holds for all sufficiently small \(\delta\), with
+parameters \(m_*>0\) and \(E(\delta)\).  Then every hidden top vertex obeys
+\[
+  H\le E(\delta)+\frac{\tau(2+4\delta)}{4m_*}.
+\]
+Consequently, if \(E(\delta)/\tau\to e\), then HLC follows with asymptotic
+constant
+\[
+  a=\left(\frac{1}{2m_*}+e\right)^{-2};
+\]
+in particular \(E=o(\tau)\) gives \(a\to4m_*^2\).
+\end{proposition}
+
+\begin{proof}
+Choose an optimal witness carrying mass \(m_*\) on \(E\)-deep rows.  Since
+\(\alpha_i g_i\ge0\), the sharp exchange gives
+\[
+  m_*(H-E(\delta))
+  \le \sum_j\mu_jg_j
+  \le t^*(v)\Omega_g<\kappa\Omega_g .
+\]
+Here \(\kappa=\tau/4\) and the top-separator normalization gives
+\(\Omega_g\le2+4\delta\).  Rearranging gives the displayed height bound.  If
+\(t^*(v)=0\), the same exchange forces \(\sum_j\mu_jg_j=0\), hence DMF gives
+\(H\le E(\delta)\), so no separate positive-margin case is needed.
+\end{proof}
+
+The full DMF statement remains open.  The proved part is the small
+geometric-\(\widetilde\sigma_v\) branch.  Here
+\(\widetilde\sigma_v(\varepsilon)\) denotes the positive coefficient mass
+of row \(v\) on rows whose \(\ell^1\)-distance from \(C_W\) is greater than
+\(\varepsilon\); rows in the \(\varepsilon\)-halo are automatically
+\((H-\varepsilon)\)-deep.  At \(\varepsilon=0\) this is the report's
+geometric branch variable.  It is distinct both from the formal
+off-own-site mass \(\sigoff=\sum_{k\ne v}(P_{vk})_+\) and from the d12
+index-not-in-\(W\) proxy.
+
+\begin{lemma}[Small-\(\widetilde\sigma_v\) height cap]
+\provedbadge
+For a hidden top vertex \(v\),
+\[
+  H\le 2(1+2\delta)\max(\widetilde\sigma_v,\nu_v).
+\]
+Thus, if \(\widetilde\sigma_v\le\tau\) and \(\delta\le1/4\), then
+\[
+  H\le3\tau,\qquad \delta\ge H^2/9.
+\]
+In the same branch existential DMF holds vacuously with \(m_*=1\) and
+\(E(\delta)=3\delta/\tau\).
+\end{lemma}
+
+\begin{proof}
+Split the positive part of \(p_v\) into mass on \(C_W\) and mass
+\(s=\widetilde\sigma_v\) outside \(C_W\).  If the \(C_W\)-mass
+\(1+\nu_v-s\) is zero, then \(s=1+\nu_v\ge1\), and any \(c\in C_W\) gives
+\(H\le D_K\le2+4\delta\le2(1+2\delta)s\).  Otherwise normalize the
+\(C_W\)-part to a barycenter \(c\in C_W\).  Since every row has
+\(\ell^1\)-norm at most \(1+2\delta\), the distance from \(p_v\) to \(c\)
+is bounded by \(2(1+2\delta)\max(s,\nu_v)\).  This bounds
+\(\distone(p_v,C_W)=H\).  Under \(\widetilde\sigma_v\le\tau\) and
+\(\delta\le1/4\), also \(\nu_v\le\delta\le\tau\), so \(H\le3\tau\).  Then
+the depth threshold \(H-3\delta/\tau=H-3\tau\) is nonpositive, while
+\(g_j\ge0\) for all rows.
+\end{proof}
+
+\subsection{Shallow Webs}
+
+An all-shallow optimal witness is an optimal failed-exposedness witness whose
+\(\mu\)-mass avoids the \(E\)-deep rows.  A shallow hidden web is a directed
+system of hidden top-band rows in which each row is witnessed by other
+shallow hidden rows rather than by rows of \(\W\).  The word ``web'' is meant
+literally here: the obstruction is not one bad row, but a self-sustaining
+top-band component.
+
+\begin{proposition}[Partial web exclusions: scoped inventory]
+\modauditbadge
+Wave-9 excludes only the following scoped mechanisms, and this report uses them
+only as inventory.  Direct two-site mutual carrying is impossible when each of
+two hidden rows carries the other with coefficient \(>1/2+O(\delta)\).  A
+closed disjoint order-one two-ball cycle is impossible under the stated
+return-mass inequality.  If the mutual-shadow mass is not concentrated in the
+skinny partner \(\rho\)-balls, then that non-skinny payment pattern already
+forces \(\delta\ge cH^2\).  The skinny spread-mass regime remains open.
+\end{proposition}
+
+\begin{proposition}[Low-height all-shallow faces exist]
+\modauditbadge
+There is an exact rational \(5\times5\) signed idempotent certificate with
+\(\widetilde\sigma_v>0\) and an optimal witness supported entirely on a far
+row with \(g=0\).  This does not refute DMF with \(E=C_D\delta/\tau\), because
+the construction has \(H=O(\delta)\), hence \(H/\tau\to0\).  Therefore the
+web exclusion must be height-conditional, not absolute.
+\end{proposition}
+
+The contrapositive of the small-\(\widetilde\sigma_v\) height cap explains
+why the web case is the only remaining high-height scenario.  If
+\(H\gg\delta\), the positive mass of \(v\) on \(C_W\) is at most
+\(\delta\Omega_g/H\), so \(\widetilde\sigma_v\) is forced close to \(1\).
+Thus a small-\(\delta\) counterexample to the hoped-for linear law, or to HLC
+through the DMF route, must be an almost-closed shallow hidden web with
+\(\widetilde\sigma_v>\tau\) and \(H\) comparable to \(\tau\).
+
+\begin{warning}[Pushing witnesses does not close the web case]
+\provedbadge
+LP support cleanup cannot prove the remaining branch.  If a shallow optimal
+witness is pushed through \(P\), the pushed dual objective becomes
+\[
+  B_{\mathrm{pushed}}=\frac{B+N}{M_F},
+\]
+where \(N\) is the negative leakage and \(M_F\le1+N\) is the pushed far mass.
+If \(B=t^*(v)>0\), optimality would require \(M_F\ge1+N/B\), impossible for
+\(N>0\) because \(B<\kappa<1\).  If \(t^*(v)=0\), the exchange identity
+already forces \(\sum_j\mu_jg_j=0\), so this division by \(B\) is not made.
+The missing input is therefore not another exposedness-dual algebra trick.
+\end{warning}
+
+\subsection{Numerical Status And Literature Position}
+
+\begin{numericalresult}[D12 depth profiles]
+\numbadge
+In twelve verified financed-wiggle instances, all optimal witnesses were
+deep with observed \(m_*=1\), and the measured index-based non-\(W\) carrier
+mass was zero.  Post-w9 and swarm audits downgrade the scope: those instances
+lie on the \(H=O(\delta)\) budget line, so they do not measure the
+high-height web branch.
+\end{numericalresult}
+
+The empirical reframing is sharper than the original flat-floor story.  The
+verified record has not established a small-\(\delta\) floor with
+\(H\asymp\tau\); all verified instances in the record, including final d13,
+satisfy roughly \(H\le2\delta\).  D13 is the campaign's decisive numerical
+confirmation of outcome (c), not a theorem: the linear law \(H=O(\delta)\) is
+the conjectural target.
+
+The literature sweep found no ready-made quantitative Douglas--Ando,
+Seever, or Baake--Sumner stability theorem that supplies this missing
+modulus.  The exact \(\delta=0\) Baake--Sumner normal form anchors the
+intuition: exact idempotent Markov structure has equal-input recurrent
+classes and no signed shallow web.  What is missing is a signed quantitative
+stability version with constants strong enough for the top band.
+
+\subsection{The Remaining Problem}
+
+\begin{openproblem}[Signed quantitative Baake--Sumner stability]
+\openbadge
+Prove, or refute by exact certificate, the height-conditional web exclusion:
+there is a universal \(B<\infty\) and \(\delta_0>0\) such that no exact signed
+affine retraction with \(\delta\le\delta_0\) has a hidden top vertex \(v\)
+with
+\[
+  \boxed{\widetilde\sigma_v>\tau\quad\text{and}\quad H>B\tau .}
+\]
+Equivalently, the \(\widetilde\sigma_v\le\tau\) branch is proved, low-height
+shallow faces are real, and HLC is reduced to excluding height-\(\tau\) webs.
+\end{openproblem}

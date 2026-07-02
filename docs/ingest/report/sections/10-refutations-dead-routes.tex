@@ -1,0 +1,212 @@
+\section{Refutations and Dead Routes}
+\label{sec:refutations-dead-routes}
+
+This section is a guardrail.  A dead route is a proof strategy whose failure is
+documented well enough that future work should not restart it without a new idea.  A
+downgrade is a statement that was useful during the campaign but whose original
+quantifiers or interpretation were later narrowed.  The statuses below are copied from
+the ledger, except for the explicitly marked post-design swarm addendum.
+
+Throughout, \(P\) is the exact signed affine retraction, \(p_i\) is its \(i\)-th row,
+\(\W\) is the set of \((\rho,\kappa)\)-well-exposed row vertices, and
+\(C_W=\conv(\W)\).  The hidden height is
+\[
+  H=\max_i \distone(p_i,C_W).
+\]
+For a height-maximizing hidden row vertex \(v\), the canonical separator is the
+\(\ell^\infty\)-normalized affine functional \(\phi\) with
+\(\phi\le0\) on \(C_W\), \(\sup_{x\in C_W}\phi(x)=0\), and
+\(\phi(p_v)=H\).  The deficit vector is
+\(g_i=H-\phi(p_i)\); the top band means rows
+with small deficit relative to \(H\) or to the oscillation \(\Omega_g\).  A failed
+exposedness witness is an optimal dual certificate for \(t^*(v)<\kappa\).  Deep-witness
+mass forcing, abbreviated DMF, asks for an optimal witness that places a fixed amount of
+mass on rows with deficit near \(H\); an all-shallow witness avoids such rows.
+
+\subsection{Refuted Statements}
+
+\begin{refutedstatement}[Literal psi-gap]
+\refutedbadge The literal psi-gap route is false.  In its unconditioned form, far
+non-\(S\)-full rows can trade \(S\)-deficit against the \(\lambda\phi\) term.  The
+following exact-rational \(6\times6\) idempotent gives a self-contained
+counterexample to the bare lemma:
+\[
+\begin{pmatrix}
+1&0&0&0&0&0\\
+0&1&0&0&0&0\\
+0&0&1&0&0&0\\
+0&0&0&1&0&0\\
+1/2&1/2&1/16&-1/16&0&0\\
+29/32&0&5/32&-1/16&0&0
+\end{pmatrix}.
+\]
+It has \(\delta=1/16\), hence \(\rho=1\), \(\kappa=1/16\).  With
+\(S=\{1,2\}\), \(\phi(x)=-2x_4\), \(\psi=x_1+x_2-x_4\),
+\(v^*=p_5\), and \(q=p_6\), one has
+\(q(S)=29/32<15/16\), \(\|p_5-p_6\|_1=1\), but
+\[
+  \psi(p_5)-\psi(p_6)=3/32
+  <(1/16)(33/16)=\kappa(\max_i\psi(p_i)-\min_i\psi(p_i)).
+\]
+This refutes only the unconditioned psi-gap input; the canonical-\(\W\)
+replacement is the scoped mod-audit route below.
+\end{refutedstatement}
+
+The surviving replacement is narrower.  The canonical-\(\W\) conditioned version uses
+the canonical top separator after \(\W\) is known and assumes the high-danger-band rows
+are \(S\)-full.  Its ledger status is \(\modauditbadge\): it reroutes the old psi
+strategy through the top-band residual rather than closing that residual.
+
+\begin{refutedstatement}[General-row leakage]
+\refutedbadge The leakage lemma does not hold for arbitrary rows.  The surviving L5'
+statement is only the global-height-maximizer version, with ledger status
+\(\modauditbadge\).  In particular, a proof may not run a leakage descent from an
+unselected hidden row and then appeal to L5' unchanged.
+\end{refutedstatement}
+
+\begin{numericalresult}[Literal far-top-band emptiness]
+\numbadge The literal statement \(T_{\mathrm{far}}=\emptyset\) is numerically false in
+the d10 certificate mining.  Across the tested grid, the far top-band positive feed
+stayed bounded, approximately \(M_{\mathrm{far}}\in[2.045,2.141]\), and the far top band
+was robustly occupied.  The result is numerical evidence only; the analytic target is an
+\(H^2\)-payment or depth statement, not emptiness.
+\end{numericalresult}
+
+\subsection{Downgrades}
+
+\begin{downgradedstatement}[Sigma]
+\downgradedbadge Older notes used one overloaded external-mass symbol.  The report must
+distinguish the formal off-own-site mass \(\sigoff\) from \(\sigtilde\), the positive
+coefficient mass on rows outside \(C_W\).  Post-swarm convention makes \(\sigtilde\) geometric:
+rows in an \(\varepsilon\)-halo of \(C_W\) are treated as inside the halo, and the halo
+error becomes depth slack because such rows are automatically \(H-\varepsilon\)-deep.
+\end{downgradedstatement}
+
+\begin{downgradedstatement}[Corner scope]
+\downgradedbadge The corner constants
+\(\tau_*=2-\sqrt3\), \(2(2-\sqrt3)\), and \((7+4\sqrt3)/4\) explain the measured
+finite-corner family, but they do not prove the asymptotic HLC.  The finite-corner
+calibration was retracted after the \(\Omega_g\)-handling bug: the corrected DMF chain is
+asymptotic, while the numerical corner is a finite point of the tested family.
+\end{downgradedstatement}
+
+\begin{downgradedstatement}[D12 scope]
+\downgradedbadge D12 remains useful numerical evidence, but its scope is downgraded.
+It found twelve verified instances whose optimal witnesses were entirely deep, with
+\(\sigoff\) about \(1.01\) to \(1.07\) but measured index-not-in-\(\W\) carrier mass zero.  The
+post-w9 and swarm audits reinterpret this as corner-regime evidence: d12 measured an
+index-based proxy, and it did not profile a verified small-\(\delta\) web instance.
+\end{downgradedstatement}
+
+\begin{downgradedstatement}[All-shallow faces]
+\downgradedbadge The absolute hope that all-shallow optimal faces do not exist is too
+strong.  The post-design s5 refuter gives an exact \(5\times5\) rational certificate
+with hidden \(v\), \(\sigtilde>0\), and an optimal witness supported on a far row with
+deficit \(g=0\).  The certificate is exact-rational with mod-audit status and lives only
+at height \(H=O(\delta)\).  Therefore the web exclusion must be height-conditional; this
+example does not refute DMF with \(E(\delta)=O(\delta/\tau)\).
+\end{downgradedstatement}
+
+The L2' recursion warning belongs in the same category.  L2' gives a
+\(\rho\)-shadow with status \(\modauditbadge\), but the recursive proof idea built on it
+is gapped at the target scale.  Likewise, top-vertex reduction is allowed for HLC, while
+non-top hidden vertices are not interchangeable with height-maximizing ones.
+
+\subsection{Dead Proof Routes}
+
+The canonical-\(g\) kernel-energy route has ledger status DEAD ROUTE: the source
+anti-lemma bounds its own positive quadratic energy by \(\delta\Omega_g^2\), too small
+to force Branch A.  The pure vertical functional \(g/\Omega_g\) is a source-note warning,
+not a standalone ledger result.  It explains why the wall constant is near \(1/2\), but
+it overshoots the top-band obstruction and cannot by itself expose \(v\).
+
+Row exactness at the financing blocker has ledger status DEAD ROUTE: it contains no
+\(H\) or \(\sigtilde\).  Diagonal or column exactness at the blocker is likewise vacuous
+or \(H\)-free in the relevant regimes.  These no-gain statements are useful diagnostics,
+not closure lemmas.  The NG' stronger consistency reading is retracted; only the
+dead-route guidance survives.
+
+\begin{refutedstatement}[Raw factorization gauge route]
+\refutedbadge A raw \(\framemat\Lambda=I\) argument is not gauge-invariant.  Under
+changes of realization, the invariant content is row exactness and column exactness for
+\(P^2=P\), not a preferred frame coordinate.  The raw factorization route is therefore
+recorded as dead-route/refuted guidance.
+\end{refutedstatement}
+
+\begin{downgradedstatement}[LP support-cleanup route]
+\provedbadge The post-design pushed-witness calculation gives a death certificate for
+support-cleanup as a proof of the remaining branch.  If shallow witness rows are pushed
+through \(P\), negative leakage changes the objective from \(B\) to \((B+N)/M_F\).  When
+\(B=t^*(v)>0\), remaining optimal would require \(M_F\ge 1+N/B\), while the available
+bound is \(M_F\le 1+N\) and \(B<\kappa<1\).  Any \(N>0\) breaks the argument.  The
+\(t^*(v)=0\) case is handled by the exchange identity without dividing by \(B\).
+\end{downgradedstatement}
+
+Route dictionary for the table: a high zero face is a low-deficit face where
+dual slack can concentrate; raw circuit bounds are unsigned combinatorial
+cycle estimates on coefficient support; the KKT localization-energy dichotomy
+is the failed attempt to split exposedness optimality into a local KKT case and
+an energy-payment case; a log-staircase is a chain of shells with geometrically
+changing heights.
+
+\begin{longtable}{p{0.24\linewidth}p{0.20\linewidth}p{0.42\linewidth}}
+\toprule
+Route & Ledger status & Failure mode \\
+\midrule
+Literal psi-gap route & REFUTED & Exact-rational and independent counterexamples; only the conditioned canonical-\(\W\) form remains. \\
+Top-band localization as \(T_{\mathrm{far}}=\emptyset\) & REFUTED / NUMERICAL & D10 shows bounded but nonzero far top-band occupancy. \\
+Canonical-\(g\) kernel energy & DEAD ROUTE & Its own energy bound is too small to force the needed height payment. \\
+Row exactness at financier & DEAD ROUTE & Gives an inequality with no \(H\) or \(\sigtilde\). \\
+Diagonal exactness at blocker & DEAD ROUTE & NG' demystifies it as vacuous or \(H\)-free. \\
+Raw factorization gauge route & DEAD ROUTE / REFUTED & Gauge choices add no invariant content beyond \(P^2=P\). \\
+Finite-corner equals asymptotic proof & RETRACTED/\newline DOWNGRADED & Exact finite constants are not an HLC proof at small \(\delta\). \\
+Broad d12 DMF proof & RETRACTED/\newline DOWNGRADED & Evidence applies to profiled corner/budget regimes, not the small-\(\delta\) web case. \\
+Averaging or quasi-stationary potentials & DEAD ROUTE & The gain is \(O(\delta)\), the same scale as the slop. \\
+Projection-norm height tests & DEAD ROUTE & Re-derive weak bounds only. \\
+Raw circuit bounds & DEAD ROUTE & Do not close the exposed-hull/HLC gap. \\
+Unlocalized dual descent & DEAD ROUTE & Loses a constant much larger than the target height. \\
+Maximality contradictions without localization & DEAD ROUTE & Do not control the high zero face. \\
+Rank induction via stochastic complement & DEAD ROUTE & Parked for this route despite rank-preservation tools. \\
+KKT localization-energy dichotomy & DEAD ROUTE & Leaves the same energy-route orphans. \\
+Pure convex shadow composition & DEAD ROUTE & Becomes vacuous as the mixing parameter tends to \(1\). \\
+Log-staircase or shell route & DEAD ROUTE & Exactness and the one-mode wall kill the common pattern; no counterexample was produced. \\
+\bottomrule
+\end{longtable}
+
+\subsection{What Remains Open}
+
+\begin{proposition}[Small-\(\sigtilde\) branch]
+\provedbadge In the post-design s8 addendum, if geometric \(\sigtilde\le\tau\) and
+\(\delta\le1/4\), then
+\[
+  H\le 2(1+2\delta)\max(\sigtilde,\nu_v)\le 3\tau .
+\]
+Consequently \(\delta\ge H^2/9\) directly, and existential DMF holds on this branch with
+\(m_*=1\) and \(C_D=3\).  This branch no longer belongs to the open problem.
+\end{proposition}
+
+\begin{numericalresult}[Empirical reframing]
+\numbadge The verified record no longer contains a banked small-\(\delta\) flat floor.
+The sw11/sw12 forensics report no verified flat-floor instance below about
+\(\delta=0.06\), and final d13 gives outcome (c): every verified instance in the record
+satisfies the linear behavior \(H\lesssim 2\delta\).  The linear law is the empirical
+truth of the campaign record, not yet a theorem.
+\end{numericalresult}
+
+\begin{openproblem}[Height-conditioned shallow-web exclusion]
+\openbadge The final open is height-conditioned.  With \(\sigtilde\) interpreted
+geometrically, HLC is equivalent, in the post-swarm synthesis, to excluding a hidden top
+vertex with
+\[
+  \sigtilde>\tau
+  \qquad\text{and}\qquad
+  H>B\tau
+\]
+for a universal constant \(B\).  This is the signed quantitative Baake--Sumner stability
+problem for shallow hidden top-band webs.  The exact \(\delta=0\) anchor is banked, but
+the perturbative signed statement is still open.
+\end{openproblem}
+
+Future proof work should attack that last web-stability problem directly.  The routes
+listed above either fail outright, prove only a scoped replacement, or explain the
+finite-corner/budget record without excluding high shallow webs.

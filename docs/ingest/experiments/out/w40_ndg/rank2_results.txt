@@ -1,0 +1,17 @@
+endpoint_symmetric_eps1_3: delta=1/3 theta_pairs=6 phi_min=0 argmins=4 maxS*/d=1 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+endpoint_wide: delta=1 theta_pairs=4 phi_min=0 argmins=3 maxS*/d=1 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+dual_on_extremes: delta=0 theta_pairs=4 phi_min=0 argmins=1 maxS*/d=0 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+near_degenerate_cluster: delta=1/2 theta_pairs=4 phi_min=0 argmins=2 maxS*/d=1 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+adversarial_many_near_other_pivot: delta=1/10 theta_pairs=8 phi_min=0 argmins=4 maxS*/d=1 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+random_00: delta=1 theta_pairs=6 phi_min=0 argmins=5 maxS*/d=1 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+random_01: delta=1/2 theta_pairs=6 phi_min=0 argmins=4 maxS*/d=1 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+random_02: delta=2/3 theta_pairs=5 phi_min=0 argmins=2 maxS*/d=1 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+random_03: delta=1 theta_pairs=8 phi_min=0 argmins=8 maxS*/d=1 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+random_04: delta=1 theta_pairs=6 phi_min=0 argmins=4 maxS*/d=2 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+random_05: delta=1 theta_pairs=5 phi_min=0 argmins=5 maxS*/d=1 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+random_06: delta=1 theta_pairs=6 phi_min=0 argmins=5 maxS*/d=1 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+random_07: delta=1 theta_pairs=5 phi_min=0 argmins=3 maxS*/d=1 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+random_08: delta=1 theta_pairs=6 phi_min=0 argmins=6 maxS*/d=1 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+random_09: delta=2/3 theta_pairs=8 phi_min=0 argmins=8 maxS*/d=1 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+random_10: delta=1/2 theta_pairs=5 phi_min=0 argmins=2 maxS*/d=1 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+random_11: delta=1 theta_pairs=5 phi_min=0 argmins=3 maxS*/d=2 maxV/d=0 overshoot_pos=0 checks={'BL': True, 'P2': True, 'rowsum': True}

@@ -1,0 +1,201 @@
+\section{Glossary and Notation}
+\label{sec:glossary-notation}
+
+\noindent This section is the report's local dictionary.  It repeats definitions so that
+symbols, result statuses, and source-note name clashes can be checked in one place.
+
+\subsection{Canonical Symbols}
+
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.58\textwidth}>{\raggedright\arraybackslash}p{0.18\textwidth}}
+\toprule
+Symbol & Meaning & First shard\\
+\midrule
+\endhead
+\(n\) & Number of rows, states, or sites. & 01-linear-markov-setting\\
+\(P\) & Exact signed affine retraction matrix: \(P\one=\one\) and \(P^2=P\). & 01-linear-markov-setting\\
+\(Q\) & Row-stochastic almost-idempotent matrix in the original problem. & 01-linear-markov-setting\\
+\(p_i\) & Row \(i\) of \(P\), viewed as a point and as a coefficient vector. & 01-linear-markov-setting\\
+\(K\) & Row polytope \(\conv\{p_i\}\). & 01-linear-markov-setting\\
+\(\DeltaN\) & Standard simplex. & 01-linear-markov-setting\\
+\(\nu_i\) & Row negative mass, \(\sum_k(P_{ik})_-\). & 01-linear-markov-setting\\
+\(\delta\) & Maximal row negative mass, \(\max_i\nu_i\). & 01-linear-markov-setting\\
+\(\tau\) & Square-root scale \(\sqrt{\delta}\). & 01-linear-markov-setting\\
+\(\rho\) & Exposure radius, fixed as \(4\tau\). & 02-geometry-exposedness\\
+\(\kappa\) & Exposure margin, fixed as \(\tau/4\). & 02-geometry-exposedness\\
+\(\|x\|_1\) & The \(\ell^1\) norm. & 01-linear-markov-setting\\
+\(D_K\) & \(\ell^1\)-diameter bound for \(K\). & 01-linear-markov-setting\\
+\(\framemat\) & Frame or realization matrix in \(P=\Lambda\framemat\), with \(\framemat\Lambda=I\). & 01-linear-markov-setting\\
+\(\Lambda\) & Coefficient/load matrix in \(P=\Lambda\framemat\). & 01-linear-markov-setting\\
+\(\W\) & Set of \((\rho,\kappa)\)-well-exposed row vertices. & 02-geometry-exposedness\\
+\(W\) & Allowed shorthand for \(\W\) inside formulas after first definition. & 02-geometry-exposedness\\
+\(C_W\) & Convex hull \(\conv(\W)\). & 02-geometry-exposedness\\
+\(H\) & Hidden height, \(\max_i\distone(p_i,C_W)\). & 02-geometry-exposedness\\
+\(v\) & Height-maximizing hidden row vertex unless another row is stated. & 02-geometry-exposedness\\
+\(\phi\) & Canonical separator for \(v\): normalized \(\ell^\infty\)-dual, \(\phi\le0\) on \(C_W\), \(\sup_{x\in C_W}\phi(x)=0\), and \(\phi(p_v)=H\). & 02-geometry-exposedness\\
+\(g_i\) & Canonical deficit \(H-\phi(p_i)\). & 02-geometry-exposedness\\
+\(g\) & Deficit vector \((g_i)_i\), with \(g=Pg\) in the canonical setup. & 02-geometry-exposedness\\
+\(\Omega_g\) & Oscillation \(\max_i g_i-\min_i g_i\). & 02-geometry-exposedness\\
+\(t^*(v)\) & Optimal exposedness LP margin for row \(v\). & 02-geometry-exposedness\\
+\(F_v\) & Set of rows \(\rho\)-far from \(v\). & 02-geometry-exposedness\\
+\(h\) & Affine exposedness test function with \(0\le h\le1\) and \(h(v)=0\). & 02-geometry-exposedness\\
+\(\mu,\alpha,\beta,\gamma\) & Dual witness variables for failed exposedness. & 02-geometry-exposedness\\
+\(A\) & Total alpha mass \(\sum_i\alpha_i\); not an algebra symbol here. & 02-geometry-exposedness\\
+\(B\) & Total beta mass \(\sum_i\beta_i\), equal to \(t^*\) for an optimal witness. & 02-geometry-exposedness\\
+\(S\) & Site set, usually the positive support of \(p_v\) or a selected cluster support. & 02-geometry-exposedness\\
+\(\sigoff\) & Formal off-own-site positive mass \(\sum_{k\ne v}(P_{vk})_+\). & 02-geometry-exposedness\\
+\(\sigtilde\) & Geometric non-\(C_W\) carrier mass for \(v\), classified by \(\distone(p_k,C_W)\) with the epsilon-halo convention; halo rows are counted as deep. & 02-geometry-exposedness\\
+\(\Av\) & Positive carrier set \(\{k:P_{vk}>0\}\). & 02-geometry-exposedness\\
+\(\lambda_k\) & Normalized carrier weight \(P_{vk}/\sigma_T\) on a specified carrier set \(T\). & 02-geometry-exposedness\\
+\(m_*\) & Deep-witness mass parameter in DMF. & 08-residual-dmf\\
+\(E(\delta)\) & DMF depth error width. & 08-residual-dmf\\
+\(e\) & Asymptotic ratio \(\lim E(\delta)/\tau\), when the limit exists. & 08-residual-dmf\\
+\(\Gamma\) & Kernel energy vector \(P(g^2)-g^2\). & 06-day1-belt\\
+\(d_{\mathrm{poke}}\) & Family poke depth in numerical constructions. & 05-corner-theorem\\
+\(\tau_*\) & Corner scale \(2-\sqrt3\). & 05-corner-theorem\\
+\(\delta_*\) & Corner negativity \((2-\sqrt3)^2\). & 05-corner-theorem\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\subsection{Badge Legend and Discipline}
+
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.62\textwidth}}
+\toprule
+Badge & Meaning\\
+\midrule
+\endhead
+\provedbadge & Prose proof and stated audit survived.\\
+\modauditbadge & Proof structure is present but carries an audit caveat, correction, or banking condition.\\
+\numbadge & Verified computation only; never a theorem.\\
+\conjbadge & Proposed statement supported by evidence but not proved.\\
+\openbadge & Current obstacle or unsolved statement.\\
+\refutedbadge & False statement, with counterexample or decisive contradiction in the sources.\\
+\downgradedbadge & Earlier stronger reading was withdrawn, narrowed, or retained only as guidance.\\
+\ambigbadge & Source conflict or unresolved quantifiers; not usable as a theorem.\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\medskip
+\noindent\fbox{\parbox{0.95\textwidth}{\textbf{Notation and status warning.}
+Never use bare \texttt{sigma\_v}: write \(\sigoff\) for formal off-own-site mass, call d12-style index-not-in-\(W\) mass a proxy, and write \(\sigtilde\) for geometric non-\(C_W\) carrier mass.  Numerical records, finite-corner constants, and family identities may be reported with \numbadge, but must not be promoted to theorem statements or asymptotic HLC proofs.}}
+
+\subsection{Jargon Glossary}
+
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.24\textwidth}>{\raggedright\arraybackslash}p{0.44\textwidth}>{\raggedright\arraybackslash}p{0.24\textwidth}}
+\toprule
+Term & Plain definition & Status if result\\
+\midrule
+\endhead
+\((\rho,\kappa)\)-exposedness & Existence of an affine separator zero at the row and at least \(\kappa\) on all \(\rho\)-far rows. & definition\\
+affine retraction & Exact affine idempotent on row vectors, represented by \(P\one=\one\), \(P^2=P\). & definition\\
+all-shallow witness & Failed-exposedness witness whose \(\mu\)-mass avoids deep rows; exact-rational examples exist only at \(H=O(\delta)\) so far. & existence \modauditbadge; height-\(\tau\) exclusion \openbadge\\
+almost idempotent stochastic matrix & Row-stochastic \(Q\) with small \(\|Q^2-Q\|\). & target setting\\
+alpha mass & Total slack mass \(A=\sum_i\alpha_i\) in the dual witness. & open-control issue\\
+blocker & Far row that binds or obstructs an exposedness separator. & definition\\
+Branch A / Branch B & Historical small- and large-sigma-wall branches; superseded by geometric \(\sigtilde\) conventions. & \openbadge\newline\numbadge\\
+budget line & Family relation \(H=2\delta\), equivalently \(\delta=H/2\). & \numbadge\\
+canonical separator & Normalized affine functional with \(\phi\le0\) on \(C_W\), \(\sup_{C_W}\phi=0\), and \(\phi(p_v)=H\). & definition\\
+carrier & Row with positive coefficient in a selected row identity. & definition\\
+CEL & Cluster-exposure lemma for the near-carrier branch. & \openbadge\\
+corner theorem & Closed-form explanation of the measured corner constants. & \modauditbadge\newline\numbadge\\
+deep row & Row with deficit near \(H\) under the declared \(E(\delta)\) threshold. & definition\\
+deficit \(g\) & Nonnegative height loss \(H-\phi(p_i)\) relative to the canonical separator. & definition\\
+\((\diamond)\)-dual & Exact vector identity for a failed-exposedness witness. & \provedbadge\\
+DMF & Deep-witness mass forcing: some optimal witness carries mass at deficit near \(H\). & \openbadge\\
+epsilon halo & Geometric convention around \(C_W\) used to classify \(\sigtilde\); halo rows count as deep. & convention\\
+existential DMF & Only one optimal exposedness witness needs deep mass; sufficient for HLC with the corrected constant formula. & conditional \modauditbadge\\
+exposedness LP & Linear program maximizing the margin \(t^*(v)\) of an exposedness separator. & definition\\
+failed-exposedness witness & Dual certificate \((\mu,\alpha,\beta,\gamma)\) showing \(t^*(v)<\kappa\). & definition\\
+feasible-vs-optimal witness gap & A feasible witness support pattern need not describe all optimal exposedness witnesses. & convention\\
+financier & Binding row that pays for an apex poke in numerical families. & jargon\\
+flat floor & Measured \(\delta/H^2\approx3.49\) floor; post-addendum: not verified below \(\delta\approx0.06\). & \numbadge\\
+FTI-2 & Distinct-vertex mutual-shadow numerical route; it did not verify a small-\(\delta\) web. & \numbadge\\
+geometric \(\sigtilde\) & Branch variable based on carrier rows' geometric distance to \(C_W\), not the d12 index proxy. & convention\\
+height collapse & For a hidden top vertex, small geometric \(\sigtilde\) gives the barycenter cap \(H\le2(1+2\delta)\max(\sigtilde,\nu_v)\); in particular \(\sigtilde\le\tau\) and \(\delta\le1/4\) imply \(H\le3\tau\). & \provedbadge\\
+hidden height & Distance from a row to \(C_W\), maximized over rows as \(H\). & definition\\
+hidden top vertex & Hidden vertex attaining \(H\). & WLOG \modauditbadge\\
+hidden vertex & Row vertex outside \(C_W\), or not controlled by the exposed hull. & definition\\
+high zero face & Low-deficit face where failed-exposedness dual slack can sit. & definition\\
+HLC & Hidden localization claim: a dimension-free bound \(\delta\ge aH^2\), equivalently \(H=O(\tau)\). & \openbadge\\
+max-neg units & Normalization in which \(\delta=\max_i\nu_i\). & definition\\
+MRP & Middle-regime pinch, the original day-1 residual. & \numbadge safe\\
+op-classical & Original dimension-free stability problem for almost-idempotent stochastic matrices. & \openbadge\\
+op-exposed-hull & Global exposed-hull reduction problem. & \openbadge\\
+quantitative Baake--Sumner stability & Exact \(\delta=0\) idempotent Markov chains have Baake--Sumner equal-input recurrent classes; the open perturbative version must exclude signed shallow hidden webs at height \(H>B\tau\). & \openbadge\\
+reciprocal-carrier lemma & Proposed financier/blocker self-coupling mechanism; retained only as an open heuristic after audits. & \openbadge\\
+row negative mass & Total negative coefficient mass in one row. & definition\\
+row polytope & Convex hull of the rows of \(P\). & definition\\
+row-witness & Dual witness built directly from a row identity. & \provedbadge\\
+self-indexing & Convention that row coordinates are also coefficients on row labels. & definition\\
+shallow hidden-witness graph & Directed graph of shallow hidden vertices witnessing one another. & \openbadge\\
+sigma-wall & Historical measured law for \(H/\tau\); future statements must use \(\sigtilde\). & \numbadge\newline\openbadge\\
+\(\sigoff\) & Formal positive mass away from row \(v\)'s own index. & definition\\
+signed-idempotent formulation & Exact signed \(P\) with small row negative mass. & \provedbadge\\
+ladder analysis & Heuristic analysis of long hidden ladders; not a theorem and not used to close HLC. & \conjbadge\\
+skinny regime & Spread-mass mutual-shadow regime not killed by wave-9 cycle lemmas. & \openbadge\\
+stochastic idempotent & Row-stochastic matrix satisfying \(Q^2=Q\). & definition\\
+supplier & Row supplying positive coefficient mass to a hidden row. & definition\\
+S-full & Row with almost all mass on a site set \(S\), usually \(x(S)\ge1-\kappa\). & definition\\
+the corner & Finite point \(\tau_*=2-\sqrt3\) producing the measured wall and floor. & \modauditbadge\newline\numbadge\\
+thm-cluster & Imported clustering theorem used in the outer reduction. & \provedbadge\\
+top band / top slab & Rows with small deficit, typically \(g<\kappa\Omega_g\), or a stated variant; ``top slab'' is the old synonym. & definition\\
+two-cycle obstruction & Minimal possible all-shallow web \(a\to b\to a\). & \openbadge\\
+\(W\)-locality & \(W\)-vertices have little positive mass on far rows. & \modauditbadge\\
+\(W\) / \(\W\) & The set of well-exposed row vertices. & definition\\
+web case & Large geometric-\(\sigtilde\) case where non-\(C_W\) top-band rows carry the mass. & \openbadge\\
+well-exposed vertex & Row vertex satisfying \((\rho,\kappa)\)-exposedness. & definition\\
+witness row & Row in the support of \(\mu\) for an exposedness-dual witness. & definition\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\subsection{Named Results by Status}
+
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.28\textwidth}>{\raggedright\arraybackslash}p{0.64\textwidth}}
+\toprule
+Status & Named results and records\\
+\midrule
+\endhead
+\provedbadge & \texttt{lem-classical-equiv}, \texttt{thm-cluster}, L1, L2, C10, L4, N1, F1, X1, X2, F-SS, F-ND, F-E, F-GB, F-BC, C10-exchange, \((\diamond)\), W2, W3 identity, SF, FC, MC, RW, sigma-height-collapse, W-rows deep, pushed-witness death certificate.\\
+\modauditbadge & \texttt{op-exposed-hull} \(\le\) HLC, HLC from historical sigma-wall, existential DMF implies HLC, L2', L5', L6, F-WR, F-2R, conditioned F-psi, column-carrier propagation, column-shadow, aggregate pinning, RF, ND', CPL, WL, corner closed forms, Baake--Sumner \(\delta=0\) anchor, top-vertex WLOG, small-delta sigma regime, direct-two-site, disjoint-two-ball, non-skinny payment.\\
+\numbadge & 67k+ exact instances, d8 MRP decider, d8 sigma-wall law, d8 \(k_{\mathrm{groups}}\) effect, d9 dual certificates and budget/wall table, d10 far top-band feed and financier law, d11 scale sweep and aggregate coupling, d12 DMF probe, d12 all-shallow search, d13 outcome (c) and linear-law record.\\
+\openbadge & op-classical, op-exposed-hull, HLC, historical Branch A, historical Branch B, DMF in the high-web branch, quantitative Baake--Sumner web stability, supplier-deficit lower bound, top-band localization, carrier-blocker coupling, reciprocal-carrier lemma, CEL, skinny spread-mass regime, height-\(\tau\) shallow-web exclusion for geometric \(\sigtilde>\tau\).\\
+\refutedbadge & Literal psi-gap, general-row leakage, literal \(T_{\mathrm{far}}=\emptyset\) top-band localization, raw factorization gauge route.\\
+\downgradedbadge & Overloaded historical \texttt{sigma\_v}, original F-psi, binding-height identity, NG', finite-corner calibration as asymptotic proof, broad d12 DMF proof, d10 scale interpretation, d12 sigma-tilde scope.\\
+\conjbadge\newline\ambigbadge & Ladder analysis, carrier-blocker coupling as a mechanism, reciprocal-carrier lemma, and watchlist items F-psi, sigma-wall, corner theorem, d12 support, NG', RF/CPL/ND'/WL.\\
+Post-addendum & \provedbadge\ For a hidden top vertex with \(\delta\le1/4\), the \(\sigtilde\le\tau\) branch is closed by \(H\le2(1+2\delta)\max(\sigtilde,\nu_v)\le3\tau\), hence \(\delta\ge H^2/9\), with existential DMF \(m_*=1\) and \(C_D=3\).  Pushed-witness cleanup has a proved death certificate for a dead route.  \(\modauditbadge\) An exact-rational all-shallow optimal face exists at \(H=O(\delta)\) only, so the general height-\(\tau\) web exclusion remains open.\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\subsection{Open Branch Pointer}
+
+The final open form is height-conditional: HLC is equivalent to excluding a hidden top vertex with geometric \(\sigtilde>\tau\) and height \(H>B\tau\), i.e. the signed quantitative Baake--Sumner stability problem.  Existing numerics support the stronger linear-law target but do not prove it: the d12 proxy was index-based rather than geometric, the verified flat-floor record never reached below \(\delta\approx0.06\), and final d13 reports outcome (c), with every verified instance in the record satisfying roughly \(H\le2\delta\).
+
+\subsection{Source-Name Clash Map}
+
+\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.28\textwidth}>{\raggedright\arraybackslash}p{0.38\textwidth}}
+\toprule
+Source-note name & Report notation & Reason\\
+\midrule
+\endhead
+\(R=\osc(g)\) & \(\Omega_g\) & Avoids collision with the frame matrix.\\
+\(R\) in \(P=\Lambda R\), \(R\Lambda=I\) & \(\framemat\) & Separates factorization notation from oscillation.\\
+\(R_w\) in wiggle rigidity & \(r_{\mathrm{web}}\), or explicit ``web radius'' & Avoids standalone \(R\).\\
+\(D=\diamone\) & \(D_K\) & Names the row-polytope diameter.\\
+Source \texttt{sigma\_v} meaning off-own-site mass & \(\sigoff\) & This is not the branch variable after the sigma catch.\\
+Source \texttt{sigma\_v} in d8/MRP sweeps & \(\sigtilde\) & The wall concerns geometric non-\(C_W\) carrier mass.\\
+d12 index-not-in-\(W\) mass & proxy only & Strong in the profiled instances, but distinct from geometric \(\sigtilde\).\\
+``sigma-wall'' & Historical sigma-wall or \(\widetilde\sigma\)-wall & Use only as campaign history unless \(\sigtilde\) is explicit.\\
+\(g_f=H\) & Family financier identity & Numerical/family identity, not a general theorem.\\
+\(\delta/H^2=3.49\) & Finite-corner floor & Prevents an asymptotic claim from a measured corner.\\
+\(R\) inert & \(\framemat\) inert in the final alternating LP step & Avoids overclaiming global irrelevance of idempotence.\\
+\bottomrule
+\end{longtable}
+\normalsize

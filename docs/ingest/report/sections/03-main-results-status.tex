@@ -1,0 +1,200 @@
+\section{Main Results and Status Ledger}
+
+This section is the report's status contract.  A row means a row \(p_i\) of
+the exact signed affine retraction \(P\), where \(P\one=\one\) and \(P^2=P\).
+The row negative mass is \(\nu_i\), its maximum is \(\delta\), and
+\(\tau=\sqrt{\delta}\).  The set \(\W\) consists of the
+\((\rho,\kappa)\)-well-exposed row vertices, with \(\rho=4\tau\) and
+\(\kappa=\tau/4\), and the hidden height is
+\[
+  H=\max_i \distone(p_i,\conv(\W)).
+\]
+The hidden localization claim, abbreviated HLC, asks for a universal
+constant \(a>0\) such that \(\delta\ge aH^2\).
+
+The badges below are part of the statement.  \(\provedbadge\) means a proof
+survived the stated audit; \(\modauditbadge\) means the proof exists with an
+explicit caveat or banking condition; \(\numbadge\) is verified computation,
+not a theorem; \(\openbadge\) is unresolved; \(\refutedbadge\) is false; and
+\(\downgradedbadge\) means an earlier stronger reading was withdrawn.
+
+\subsection{Main chain}
+
+\begin{longtable}{p{0.22\linewidth}p{0.16\linewidth}p{0.52\linewidth}}
+\toprule
+Entry & Status & What this report may state \\
+\midrule
+\texttt{op-classical}
+& \openbadge
+& Dimension-free stability of almost-idempotent row-stochastic matrices is
+the outer target.  It is not closed in this exploration. \\
+\texttt{lem-classical-equiv}
+& \provedbadge
+& The stochastic-idempotent formulation and the signed-idempotent
+formulation are equivalent; the report consumes this main-project result. \\
+\texttt{thm-cluster}
+& \provedbadge
+& The classical target reduces to the clustering plus exposed-hull route;
+only this contract-level fact is imported here. \\
+\texttt{op-exposed-hull}
+& \openbadge
+& The global exposed-hull problem remains open as a standalone target. \\
+\texttt{op-exposed-hull} from HLC
+& \modauditbadge
+& If HLC holds with \(\delta\ge aH^2\), then exposed-hull stability follows;
+``two-family verified assembly'' means independent derivations from two model
+families plus hostile audit, not a separate theorem hidden from the reader. \\
+\texttt{HLC}
+& \openbadge
+& HLC is the terminal mathematical target in this report.  It is supported by
+the record but remains unproved. \\
+\texttt{existential-DMF suffices}
+& \modauditbadge
+& One optimal failed-exposedness witness with deep mass is enough:
+if a witness has \(\mu\)-mass at least \(m_*\) at deficit
+\(g\ge H-E(\delta)\), then
+\[
+  H\le E(\delta)+\frac{\tau(2+4\delta)}{4m_*}.
+\]
+If \(E(\delta)/\tau\to e\), the resulting HLC constant is
+\((e+1/(2m_*))^{-2}\). \\
+\texttt{DMF}
+& \openbadge
+& Deep-witness mass forcing itself is open in the high-web branch.  The
+post-design refinement uses existential DMF: one optimal witness, not every
+feasible witness, must carry the deep mass. \\
+\texttt{quantitative Baake-Sumner web stability}
+& \openbadge
+& The remaining structural input is a signed, quantitative stability theorem
+excluding hidden top vertices with \(\sigtilde>\tau\), \(H>B\tau\), and only
+shallow top-band witnesses.  The exact \(\delta=0\) Baake--Sumner anchor is
+banked, but the perturbative theorem is not. \\
+\bottomrule
+\end{longtable}
+
+\subsection{Post-design sharpenings}
+
+The final branch variable is the geometric non-\(\W\) positive mass.  For a
+row \(x\), write \(C_W=\conv(\W)\) and measure positive mass on rows at
+positive \(\ell^1\)-distance from \(C_W\); with an \(\varepsilon\)-halo this
+is \(\widetilde{\sigma}_x(\varepsilon)\).  Halo rows with
+\(\distone(p_j,C_W)\le\varepsilon\) are automatically
+\((H-\varepsilon)\)-deep for the canonical deficit \(g_i=H-\phi(p_i)\).
+The older index-based proxy used by d12 is therefore evidence for those
+instances, but it is not the canonical definition of \(\sigtilde\).
+
+\begin{longtable}{p{0.22\linewidth}p{0.16\linewidth}p{0.52\linewidth}}
+\toprule
+Entry & Status & Current form \\
+\midrule
+\(\sigtilde\le\tau\) branch
+& \provedbadge
+& If \(v\) is a hidden top vertex, then
+\[
+  H\le 2(1+2\delta)\max(\sigtilde,\nu_v).
+\]
+Thus \(\sigtilde\le\tau\) and \(\delta\le 1/4\) imply
+\(H\le3\tau\), hence \(\delta\ge H^2/9\) directly.  In this branch
+existential DMF is vacuous with \(m_*=1\) and \(C_D=3\). \\
+All-shallow optimal face
+& \modauditbadge
+& An exact rational \(5\times5\) construction has hidden rows,
+\(\sigtilde>0\), and an optimal failed-exposedness witness supported
+entirely on a far row with \(g=0\).  The certificate is exact-rational with
+mod-audit status, and it lives on \(H=O(\delta)\).  It refutes any absolute ban
+on all-shallow witnesses, but not the height-comparable-to-\(\tau\) web
+exclusion needed for HLC. \\
+Pushed-witness cleanup
+& \provedbadge
+& LP support cleanup has a proved death certificate as a proof route.  For
+an optimal witness with \(B=t^*(v)>0\), pushing shallow witness rows through
+\(P\) changes the dual objective to \((B+N)/M_F\); negative leakage \(N>0\)
+prevents the pushed witness from staying optimal.  The \(t^*(v)=0\) case is
+handled separately by the exchange inequality, without division by \(B\). \\
+Feasible versus optimal witnesses
+& \downgradedbadge
+& A deep row-witness is not enough by itself.  The exchange inequality bounds
+a feasible witness by its own objective value, so depth must occur on an
+optimal face or be transferred to one with proof. \\
+Final web form
+& \openbadge
+& Since the \(\sigtilde\le\tau\) branch is proved, HLC is reduced to
+excluding hidden top vertices with \(\sigtilde>\tau\) and height larger than
+a fixed universal multiple of \(\tau\).  This is the signed quantitative
+Baake--Sumner stability problem. \\
+\bottomrule
+\end{longtable}
+
+\subsection{Corner, numerical record, and retractions}
+
+\begin{longtable}{p{0.22\linewidth}p{0.16\linewidth}p{0.52\linewidth}}
+\toprule
+Entry & Status & Current form \\
+\midrule
+Corner closed forms
+& \modauditbadge\ \numbadge
+& The measured corner family has
+\[
+  \tau_*=2-\sqrt3,\qquad
+  \delta_*=(2-\sqrt3)^2,\qquad
+  \delta/H^2=(7+4\sqrt3)/4
+\]
+at the finite corner.  The algebraic constants are exact for the family;
+the relevant optimality and family equality are numerical or mod-audit. \\
+Finite-corner calibration
+& \downgradedbadge
+& The finite corner does not prove an asymptotic HLC constant.  Earlier
+claims that \(m_*=1\) DMF reproduced the whole measured envelope were
+retracted after the \(\Omega_g\)-handling correction. \\
+Historical \(\sigma\)-wall
+& \downgradedbadge
+& Older notes overloaded the external-mass variable.  Future mathematical
+statements must distinguish the formal off-own-site mass \(\sigoff\) from
+the geometric non-\(\W\) mass \(\sigtilde\). \\
+d12 DMF support
+& \downgradedbadge\ \numbadge
+& D12 found fully deep optimal witnesses in its verified instances, but its
+scope is corner or budget-line only.  It does not settle the small-\(\delta\)
+web case. \\
+Flat-floor interpretation
+& \downgradedbadge\ \numbadge
+& The apparent \(\delta/H^2\approx3.49\) floor was not verified below
+\(\delta\approx0.06\).  The saved small-\(\delta\) record collapses to the
+linear law \(H\approx2\delta\), not to \(H\asymp\sqrt{\delta}\). \\
+\bottomrule
+\end{longtable}
+
+\begin{numericalresult}
+\numbadge
+Across the verified record, including the exact-instance campaigns, the d8
+middle-regime decider, d11 scale sweeps, d12 witness-depth probes, and the
+final d13 small-\(\delta\) search, no counterexample to HLC is known.  The
+empirical reframing is stronger: every verified instance in the record
+satisfies \(H\lesssim2\delta\), the day-1 linear hull-distance law.  D13
+records outcome (c): the flat floor is a finite-corner extrapolation, and the
+linear law is the empirical small-\(\delta\) behavior.  This is evidence only.
+\end{numericalresult}
+
+\begin{refutedstatement}
+\refutedbadge
+Several earlier routes are not available as theorems: the literal uniform
+psi-gap is false; the general-row leakage statement is false outside a
+global height maximizer; literal ``no far top-band row'' localization is
+false; raw factorization-gauge arguments are not invariant; and finite
+corner constants cannot be used as an asymptotic proof.
+\end{refutedstatement}
+
+\begin{openproblem}
+\openbadge
+Final residual.  Prove, or refute by construction, the height-conditional
+web exclusion: a hidden top vertex with \(\sigtilde>\tau\) cannot sit at
+height comparable to \(\tau\) while all optimal failed-exposedness witnesses
+remain shallow.  Equivalently for this report's chain, prove the signed
+quantitative Baake--Sumner stability needed to rule out such shallow hidden
+webs.  A low-height all-shallow face is known, so the statement must be
+height-conditional.
+\end{openproblem}
+
+Later sections give the proofs, audits, numerical gates, and dead-route
+details.  This section is only the inventory: it records what is proved, what
+is conditional, what is numerical, and what remains open.

@@ -1,0 +1,153 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage{enumitem}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!55!black,
+  citecolor=blue!55!black,
+  urlcolor=blue!55!black
+}
+
+% --------------------------------------------------------------------------
+% Status badges. Every result-like statement in the prose must carry one.
+% --------------------------------------------------------------------------
+\newcommand{\statusbadge}[2]{%
+  \begingroup
+  \setlength{\fboxsep}{1.5pt}%
+  \colorbox{#1!12}{\textcolor{#1!70!black}{\sffamily\scriptsize\bfseries #2}}%
+  \endgroup}
+
+\newcommand{\provedbadge}{\statusbadge{green}{PROVED}}
+\newcommand{\modauditbadge}{\statusbadge{orange}{PROVED-mod-audit}}
+\newcommand{\numbadge}{\statusbadge{blue}{NUMERICAL}}
+\newcommand{\conjbadge}{\statusbadge{violet}{CONJECTURAL}}
+\newcommand{\openbadge}{\statusbadge{red}{OPEN}}
+\newcommand{\refutedbadge}{\statusbadge{red}{REFUTED}}
+\newcommand{\downgradedbadge}{\statusbadge{gray}{RETRACTED/DOWNGRADED}}
+\newcommand{\ambigbadge}{\statusbadge{orange}{AMBIGUOUS}}
+
+% --------------------------------------------------------------------------
+% Theorem-like environments.
+% --------------------------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{numericalresult}[theorem]{Numerical Result}
+\newtheorem{openproblem}[theorem]{Open Problem}
+\newtheorem{refutedstatement}[theorem]{Refuted Statement}
+\newtheorem{downgradedstatement}[theorem]{Retracted/Downgraded Statement}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{warning}[theorem]{Warning}
+
+% --------------------------------------------------------------------------
+% Canonical notation macros.
+% --------------------------------------------------------------------------
+\newcommand{\one}{\mathbf 1}
+\newcommand{\R}{\mathbb R}
+\newcommand{\DeltaN}{\Delta_n}
+\newcommand{\ellone}{\ell^1}
+\newcommand{\distone}{\operatorname{dist}_1}
+\newcommand{\diamone}{\operatorname{diam}_1}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\osc}{\operatorname{osc}}
+\newcommand{\negmass}{\operatorname{neg}}
+\newcommand{\Rg}{R_g}
+\newcommand{\sigoff}{\sigma_v^{\mathrm{off}}}
+\newcommand{\sigtilde}{\widetilde{\sigma}_v}
+\newcommand{\W}{\mathcal W}
+\newcommand{\Av}{A_v}
+\newcommand{\Mcoup}{M_{\mathrm{coup}}}
+\newcommand{\framemat}{\mathsf R}
+\newcommand{\tp}{t_*}
+
+% --------------------------------------------------------------------------
+% Section include stubs. Writer agents may create files under report/sections/.
+% Until then, this skeleton still compiles as a design stub.
+% --------------------------------------------------------------------------
+\newcommand{\stubnote}[1]{%
+  \par\medskip
+  \noindent\textbf{TODO.} Writer shard \texttt{#1} is planned in
+  \texttt{report/PLAN.md}. Transcribe only from
+  \texttt{report/STATUS-LEDGER.md} and \texttt{report/NOTATION.md}.%
+  \par\medskip}
+
+\newcommand{\plannedinclude}[2]{%
+  \IfFileExists{#1.tex}{%
+    \include{#1}%
+  }{%
+    \clearpage
+    \section{#2}
+    \stubnote{#1.tex}
+  }%
+}
+
+\title{Classical Portfolio: A Two-Day Campaign Toward Dimension-Free Stability}
+\author{Exploration report design}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent We report on a two-day research campaign on the following stability
+question: is every row-stochastic matrix $Q$ with $\|Q^2-Q\|_{\infty\to\infty}
+\le \eta$ within distance $C\sqrt{\eta}$ of an exactly idempotent stochastic
+matrix, with $C$ independent of the dimension? By previously proved
+equivalences the question reduces to a geometric one about \emph{exact} signed
+idempotents ($P\mathbf 1=\mathbf 1$, $P^2=P$, row-wise negative mass at most
+$\delta$): how far can a row sit from the convex hull of the
+\emph{well-exposed} row vertices? The campaign did not close the question, but
+it compressed it. We prove a chain of reductions ending at a single open
+inequality about the depth profile of optimal exposedness-dual witnesses, give
+exact closed forms $\tau^*=2-\sqrt3$, $H/\tau=2(2-\sqrt3)$, $\delta/H^2=
+(7+4\sqrt3)/4$ for the previously mysterious measured wall and floor constants
+(a finite-$\delta$ corner, not an asymptotic law), prove one branch of the
+residual outright, and exhibit an exact rational construction showing the
+remaining branch is genuinely height-conditional. A verified numerical record
+($67{,}000$+ exact instances across five independent campaigns) is consistent
+with a \emph{linear} law $\delta\gtrsim H/2$, strictly stronger than the
+target; the conjectured $\sqrt\delta$-scale floor is shown to be an
+extrapolation artifact of a single corner scale. Every result carries an
+explicit status badge (proved / proved-mod-audit / numerical / open / refuted);
+no numerical or conditional statement is presented as a theorem. The report is
+self-contained modulo two declared black-box imports, stated in full as
+contracts: \texttt{lem-classical-equiv} and \texttt{thm-cluster}. Apart from
+those two contracts it assumes only basic linear algebra, convexity, and
+Markov-chain vocabulary.
+\end{abstract}
+
+\tableofcontents
+
+\plannedinclude{sections/00-abstract-roadmap}{Abstract, Reader Contract, And Roadmap}
+\plannedinclude{sections/01-linear-markov-setting}{Linear And Markov Setting}
+\plannedinclude{sections/02-geometry-exposedness}{Exposed Vertices, Hidden Height, And Separators}
+\plannedinclude{sections/03-main-results-status}{Main Results And Status Table}
+\plannedinclude{sections/04-reduction-chain}{Reduction Chain To The Residual}
+\plannedinclude{sections/05-corner-theorem}{The Finite Corner And Exact Constants}
+\plannedinclude{sections/06-day1-belt}{The Audited Day-1 Belt}
+\plannedinclude{sections/07-wave-lemmas-dual-witness}{Wave-5--9 Lemmas Around The Dual Witness}
+\plannedinclude{sections/08-residual-dmf}{DMF, Shallow Webs, And The Remaining Open}
+\plannedinclude{sections/09-numerics-record}{Numerical Campaigns And Verification Gates}
+\plannedinclude{sections/10-refutations-dead-routes}{Refutations, Downgrades, And Dead Routes}
+\plannedinclude{sections/11-methodology}{Multi-Agent Methodology And Audit Catches}
+\plannedinclude{sections/99-glossary-notation}{Glossary, Notation, And Index}
+
+\end{document}

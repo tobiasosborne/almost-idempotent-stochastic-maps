@@ -1,0 +1,214 @@
+\section{The Reduction Chain}
+
+\subsection{Orientation}
+The reductions use the ledger convention that ``\(A\leq B\)'' means problem
+\(A\) has been reduced to input \(B\): proving \(B\) is enough to prove \(A\).
+For the exact signed affine retraction \(P\one=\one\), \(P^2=P\), let \(p_i\)
+be its rows, let \(\delta\) be the maximal row negative mass, and set
+\(\tau=\sqrt\delta\), \(\rho=4\tau\), \(\kappa=\tau/4\).  A well-exposed row
+vertex is one separated from all \(\rho\)-far rows by an affine test with
+margin at least \(\kappa\); \(\W\) is the set of such vertices.  The hidden
+height is \(H=\max_i\distone(p_i,\conv(\W))\), and a hidden top vertex is a
+row vertex attaining this maximum outside \(\conv(\W)\).
+\[
+\begin{array}{c}
+\text{\texttt{op-classical}}\\
+\Uparrow\\
+\text{\texttt{thm-cluster}}+\text{\texttt{op-exposed-hull}}\\
+\Uparrow\\
+\text{HLC}\\
+\Uparrow\\
+\text{existential DMF}\\
+\Uparrow\\
+\text{height-conditional exclusion of high } \sigtilde \text{ shallow webs.}
+\end{array}
+\]
+HLC is the hidden localization claim \(\delta\geq aH^2\) for some universal
+\(a>0\).  DMF is deep-witness mass forcing: for a hidden top vertex, an
+optimal exposedness-dual witness has definite \(\mu\)-mass on rows whose
+deficit \(g_j\) is close to \(H\).
+
+\begin{openproblem}[\texttt{op-exposed-hull}]
+\openbadge
+\label{op:exposed-hull-formal}
+There are universal constants \(c,C>0\) such that, for every near-positive
+signed affine retraction \(P\) with row negative mass at most \(\delta\),
+taking \(\rho=C\sqrt{\delta}\), \(\kappa=c\sqrt{\delta}\), and
+\(W_{\rho,\kappa}=\{\hbox{row vertices }v:\ e_v(\rho)\geq\kappa\}\), every
+row \(p_i\) lies within \(C\sqrt{\delta}\) in \(\ell^1\)-distance of
+\(\conv(W_{\rho,\kappa})\).  Here \(e_v(\rho)\) is the exposedness margin
+against rows at distance at least \(\rho\).  By the imported global
+clustering/factorization route, this open problem implies \texttt{op-classical}.
+\end{openproblem}
+
+\begin{proposition}
+\provedbadge\  The outer classical problem is reduced to the exposed-hull
+problem through the two consumed main-project facts.
+\end{proposition}
+\begin{proof}
+The signed-idempotent formulation is equivalent to the original
+almost-idempotent stochastic formulation by \texttt{lem-classical-equiv}.  The
+imported clustering theorem \texttt{thm-cluster} then says that once all rows
+of \(P\) are controlled near the exposed hull \(\conv(\W)\), the classical
+stability target follows.  No later step here uses additional main-project
+facts.
+\end{proof}
+
+\begin{proposition}[HLC assembly contract]
+\modauditbadge\  The two-family verified assembly input is the following
+high-shell form of HLC, not a proof that HLC is already known: there are
+universal \(\delta_0,A_{\mathrm{HLC}},a>0\) such that, whenever
+\(\delta\le\delta_0\), \(H\ge A_{\mathrm{HLC}}\rho\), and
+\(\delta<aH^2\), some row vertex \(v\) with
+\(\distone(p_v,\conv(\W))\ge H/2\) is \((\rho,\kappa)\)-well-exposed.
+If this contract holds, then \texttt{op-exposed-hull} follows with
+\(C'=\max(4A_{\mathrm{HLC}},1/\sqrt a)\).
+\end{proposition}
+\begin{proof}
+Let \(C_{\W}=\conv(\W)\), \(h_i=\distone(p_i,C_{\W})\), and
+\(H=\max_i h_i\).  Since every well-exposed vertex lies in
+\(\W\subset C_{\W}\), the contract's exposed-vertex alternative is
+impossible when \(h_v\ge H/2>0\).
+Thus either \(H<A_{\mathrm{HLC}}\rho=4A_{\mathrm{HLC}}\tau\), or
+\(\delta\geq aH^2\) and \(H\leq\tau/\sqrt a\).  Hence every row is within
+\[
+  C'\tau,\qquad C'=\max(4A_{\mathrm{HLC}},1/\sqrt a),
+\]
+of \(C_{\W}\).  This is exactly the conditional
+\(\texttt{op-exposed-hull}\leq\mathrm{HLC}\) assembly; it does not prove HLC.
+\end{proof}
+
+\subsection{The Historical Sigma Wall}
+\begin{proposition}
+\modauditbadge\  If the historical two-branch sigma wall were proved with a
+fixed, unambiguous branch variable, it would imply HLC.
+\end{proposition}
+\begin{proof}
+The old route asked for constants \(B_A,B_B\) such that
+\[
+H\leq B_A\sigma\tau \quad(\sigma\leq 1/2),
+\qquad
+\sigma\geq1/2,\ H>B_B\tau \Longrightarrow v\in\W .
+\]
+Those two estimates would give \(a=\min(4/B_A^2,1/B_B^2)\).  The branch
+estimates themselves remain \openbadge/\numbadge\ in the ledger, and the
+measured \(B_B\approx0.536\) is the finite-corner value.  The asymptotic
+budget-line behavior tends toward \(1/2\); neither number is a proved Branch B
+constant.
+\end{proof}
+
+\begin{downgradedstatement}
+\downgradedbadge\  The old bare symbol \(\sigma_v\) is not a valid final
+branch variable.  This report separates the formal off-own-site mass
+\(\sigoff\) from the geometric non-\(\W\) positive mass \(\sigtilde\).
+The current \(\sigtilde\) convention is geometric: positive mass on rows at
+positive \(\ell^1\)-distance from \(C_{\W}\), with an \(\varepsilon\)-halo
+counted as automatically \(H-\varepsilon\) deep.  The d12 computation measured
+an index-based proxy, so it is evidence for its instances, not the canonical
+definition.
+\end{downgradedstatement}
+
+\subsection{DMF Suffices}
+For a hidden top vertex \(v\), let \(t^*(v)\) be the optimal exposedness
+margin, and let \((\mu,\alpha,\beta,\gamma)\) be an optimal failed-exposedness
+dual witness.  The canonical separator \(\phi\) gives deficits
+\(g_i=H-\phi(p_i)\); for a top vertex, \(g_i\geq0\).  Let
+\(\Omega_g=\max_i g_i-\min_i g_i\).  The sharp exchange identity is
+\provedbadge:
+\[
+\sum_j\mu_jg_j+\sum_k\alpha_kg_k
+  =\sum_k\beta_kg_k
+  \leq t^*(v)\Omega_g .
+\]
+
+\begin{proposition}
+\modauditbadge\  Existential DMF implies HLC, and one optimal witness is
+enough.
+\end{proposition}
+\begin{proof}
+Assume that for every hidden top vertex \(v\) there is an optimal dual witness
+whose \(\mu\)-mass on \(\{j:g_j\geq H-E(\delta)\}\) is at least \(m_*>0\).
+Then
+\[
+m_*(H-E(\delta))\leq\sum_j\mu_jg_j
+  \leq t^*(v)\Omega_g
+  < \frac{\tau}{4}(2+4\delta),
+\]
+because \(t^*(v)<\kappa=\tau/4\) and \(\Omega_g\leq2+4\delta\).  Hence
+\[
+H\leq \frac{\tau(2+4\delta)}{4m_*}+E(\delta).
+\]
+If \(E(\delta)/\tau\to e\), the asymptotic HLC constant is
+\[
+a=\left(\frac{1}{2m_*}+e\right)^{-2}.
+\]
+Only \(E=o(\tau)\) gives \(a\to4m_*^2\).  If \(t^*(v)=0\), the exchange gives
+\(\sum_j\mu_jg_j\leq0\), so DMF forces \(H\leq E(\delta)\); no separate
+\(\alpha\)-localization is needed.
+\end{proof}
+
+\begin{warning}
+\modauditbadge\  Two restrictions in the preceding proposition are
+load-bearing.  First, the deep witness must be optimal: a feasible witness is
+bounded by its own objective \(B\Omega_g\), not by \(t^*(v)\Omega_g\), unless
+it lies on the optimal face.  Second, the vertex must be height-maximizing.
+Convexity of distance to \(C_{\W}\) gives such a row vertex, and for that top
+choice \(g_i\geq0\); an arbitrary hidden vertex need not have this property.
+\end{warning}
+
+\subsection{What The Swarm Changed}
+\begin{proposition}
+\provedbadge\  The \(\sigtilde\leq\tau\) branch is closed.
+\end{proposition}
+\begin{proof}
+For a hidden top vertex \(v\), the barycenter split gives
+\[
+H\leq2(1+2\delta)\max(\sigtilde,\nu_v).
+\]
+Since \(\nu_v\leq\delta\), if \(\sigtilde\leq\tau\) and \(\delta\leq1/4\),
+then \(H\leq3\tau\), so \(\delta\geq H^2/9\) directly.  In DMF language this
+branch is vacuous with \(m_*=1\) and \(C_D=3\), because
+\(H-3\delta/\tau\leq0\) and every row has nonnegative deficit.
+\end{proof}
+
+\begin{warning}
+\modauditbadge\  All-shallow optimal faces exist, so the final exclusion must
+be height-conditional.  The swarm produced an exact rational \(5\times5\)
+certificate with hidden vertices, \(\sigtilde>0\), and an entire optimal
+witness supported on a far row with \(g=0\).  This does not refute DMF with an
+\(E(\delta)\) slack because the family has \(H=O(\delta)\), hence
+\(H/\tau\to0\).  The remaining open is not absolute nonexistence of shallow
+witnesses; it is their exclusion at height comparable to \(\tau\).
+\end{warning}
+
+\begin{warning}
+\provedbadge\  LP support-cleanup cannot close the remaining branch.  Pushing
+shallow witness rows through \(P\) changes the dual objective to
+\((B+N)/M_F\), where \(N>0\) is negative leakage and \(M_F\leq1+N\) is the far
+positive mass after pushing.  Optimality would require
+\(M_F\geq1+N/B\), impossible when \(B=t^*(v)>0\) and \(B<\kappa<1\).  If
+\(t^*(v)=0\), the exchange handles the chain case separately and no division
+by \(B\) is made.  The residual is not another exposedness-dual algebra trick.
+\end{warning}
+
+\begin{numericalresult}
+\numbadge\  The d13 small-\(\delta\) verdict is outcome (c), high strength:
+the verified record no longer supports a small-\(\delta\) flat floor.  Across
+the saved campaign record, including d13, every verified instance satisfies
+the empirical linear law \(H\lesssim2\delta\).  The apparent floor
+\(\delta/H^2\approx3.49\) was verified only near the finite corner, with
+crossover near \(\delta=0.05\)--\(0.06\).  This is numerical evidence and a
+reframed proof target, not a theorem.
+\end{numericalresult}
+
+\begin{openproblem}
+\openbadge\  The terminal residual is signed quantitative Baake--Sumner
+stability for high shallow webs.  In the sharpened campaign form, HLC is
+reduced to excluding hidden top vertices with \(\sigtilde>\tau\) and height
+\(H>B\tau\), for some universal \(B\), whose optimal witnesses can remain
+shallow.  The \(\sigtilde\leq\tau\) side is proved, and the exact \(5\times5\)
+all-shallow face shows why the statement must include the height condition.
+At \(\delta=0\), the Baake--Sumner equal-input normal form is the anchor; the
+open issue is its quantitative signed stability for small positive
+\(\delta\).
+\end{openproblem}

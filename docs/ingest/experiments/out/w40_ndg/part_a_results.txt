@@ -1,0 +1,8 @@
+transverse_pair_a1_4: delta=1/5 class=5 star=[1, 2, 3] Phi/d=1 S*/d_max=2 V/d_max=0 P1_all=True DEF_star=True VID_all=True overshoot_pos_star=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+dense_pair_k7: delta=6/17 class=9 star=[1, 2, 3, 4, 5, 6, 7] Phi/d=1 S*/d_max=2 V/d_max=0 P1_all=True DEF_star=True VID_all=True overshoot_pos_star=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+staircase_m2: delta=1/2 class=15 star=[1, 2, 3, 4, 5] Phi/d=1 S*/d_max=2 V/d_max=0 P1_all=True DEF_star=True VID_all=True overshoot_pos_star=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+staircase_m3: delta=1/2 class=21 star=[1, 2, 3, 4, 5, 6, 7] Phi/d=1 S*/d_max=2 V/d_max=0 P1_all=True DEF_star=True VID_all=True overshoot_pos_star=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+perturbed_staircase_m5_eps1_1000: delta=1/2 class=23 star=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] Phi/d=1 S*/d_max=2 V/d_max=1/500000 P1_all=True DEF_star=True VID_all=True overshoot_pos_star=1 checks={'BL': True, 'P2': True, 'rowsum': True}
+  overshoot_pos {'s': 10, 'u': 11, 'j': 0, 'beta': '999/1000000', 'lambda': '-1/999', 'V_contribution': '1/1000000', 'E': '5003/1998', 'sigma': '4999/1998'}
+no_center_path_k6: delta=1/100 class=8 star=[0, 1, 2, 3, 4, 7] Phi/d=3/2 S*/d_max=5/2 V/d_max=0 P1_all=True DEF_star=True VID_all=True overshoot_pos_star=0 checks={'BL': True, 'P2': True, 'rowsum': True}
+no_center_path_k8: delta=1/100 class=12 star=[0, 1, 2, 3, 4, 5, 6, 9] Phi/d=5/3 S*/d_max=8/3 V/d_max=0 P1_all=True DEF_star=True VID_all=True overshoot_pos_star=0 checks={'BL': True, 'P2': True, 'rowsum': True}

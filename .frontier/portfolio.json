@@ -1,0 +1,59 @@
+{
+  "goal": "Prove op-classical: universal eta0,C>0 (dimension-free) such that every row-stochastic Q with ||Q^2-Q||_{inf->inf} <= eta <= eta0 admits a stochastic idempotent E with ||Q-E||_{inf->inf} <= C*sqrt(eta) (sharp exponent 1/2).",
+  "frontier": "The Kernel/(EX) conjecture: every rank->=3 signed idempotent P with delta<=1/4 has a theta-1/2 actual-row chart U0 with max_s Phi_s(U0) <= C0*delta (C0=1 empirically); equivalently every hidden row vertex with invisible mass > sqrt(delta) has height <= B*sqrt(delta). This one input closes op-classical via HLC <= op-exposed-hull <= op-classical.",
+  "config": {
+    "stale_threshold": 2,
+    "max_blocks_per_turn": 2,
+    "oracles": []
+  },
+  "arms": [
+    {
+      "id": "A",
+      "desc": "Prove the (EX) kernel at rank >=3: every rank->=3 signed idempotent P with delta<=1/4 has a theta-1/2 actual-row chart U0 with max_s Phi_s(U0) <= delta (C0=1). Geometric tie-selection for max-volume charts; charge the two rank-3 bad wedges to the pivot row negative mass.",
+      "priority": "primary",
+      "target": "max_s Phi_s(U0) <= C0*delta for a selectable chart; composes with S*<=2Phi+6delta to C_sf=8",
+      "kill": "a rank->=3 counterexample with min_U max_s Phi_s/delta > 1",
+      "created": "1970-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "B",
+      "desc": "Prove lem-dual-localization (frame-free transfer): reproduce ||Ebar||_1 >= H from P^2=P WITHOUT the simplex frame; kill the skinny mu->1 regime where Route B is vacuous.",
+      "priority": "primary",
+      "target": "a frame-free proof of delta >= H/2 (or H <= C*delta) valid in the skinny regime",
+      "kill": "the skinny-pair config gives a frame-free counterexample",
+      "created": "1970-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "C",
+      "desc": "Repair the local-linear-law assembly: combine the four audited variety lemmas into H <= C_loc*delta near the Hognas-Mukherjea locus via nearest-branch recoding.",
+      "priority": "support",
+      "target": "H <= C_loc*delta assembled from the variety lemmas without the 12.8-128x blowup",
+      "kill": null,
+      "created": "1970-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "D",
+      "desc": "Global gap via Hognas-Mukherjea Thm 1.12 + the transverse coefficient tax sum_j (P_usj)+ * sum_{t!=s} (-a_t(j))+ <= C_mu*delta; signed quantitative Baake-Sumner stability.",
+      "priority": "support",
+      "target": "the transverse coefficient tax bound, closing displacement->face->L4->global",
+      "kill": null,
+      "created": "1970-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "E",
+      "desc": "Lojasiewicz/error-bound route: frame the linear law as a semialgebraic error bound (Hoffman 1952, Luo-Pang 1994) and/or quantitative stability of norm-one (contractive) projections (Douglas-Ando).",
+      "priority": "exploratory",
+      "target": "an error-bound modulus giving the sqrt(delta) distance",
+      "kill": null,
+      "created": "1970-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "F",
+      "desc": "Numerical cross-checks: exact-arithmetic LP enumeration and certified instances of candidate bounds and of (EX) at higher rank. NON-rigorous, feeds runs/ bundles only.",
+      "priority": "exploratory",
+      "target": "certified numerical support/refutation; never promoted without a certificate",
+      "kill": null,
+      "created": "1970-01-01T00:00:00.000Z"
+    }
+  ]
+}

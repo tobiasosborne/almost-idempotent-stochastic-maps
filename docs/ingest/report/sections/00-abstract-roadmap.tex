@@ -1,0 +1,159 @@
+\section{Abstract and Roadmap}
+
+\paragraph{Abstract.}
+The classical stability problem asks for a dimension-free constant controlling
+row-stochastic almost-idempotent matrices: if the rows of a nonnegative
+matrix sum to one and the two-step transition matrix is close to the one-step
+transition matrix, must the matrix be close in row \(\ell^1\) norm to an
+exact stochastic idempotent?  In the equivalent signed formulation used here,
+one studies an exact affine retraction \(P\), meaning \(P\one=\one\) and
+\(P^2=P\), whose rows may have small negative coefficient mass.  The parameter
+\(\delta\) is the largest row negative mass and \(\tau=\sqrt{\delta}\).
+
+The two-day campaign recorded here did not finish the classical theorem and
+did not produce a counterexample.  Its outcome is a compressed residual: the
+original open problem is reduced, through audited and conditionally audited
+steps, to a geometric localization statement for hidden rows.  The report's
+honest headline chain is
+\[
+  \mathrm{op}\text{-classical}
+  \leq
+  \mathrm{op}\text{-exposed-hull}
+  \leq
+  \mathrm{HLC}
+  \leq
+  \mathrm{DMF}.
+\]
+Here HLC is the hidden localization claim, the assertion that a hidden row's
+height is \(O(\tau)\); DMF is deep-witness mass forcing, the assertion that an
+optimal failed-exposedness witness, a dual certificate that a row is not
+well-exposed, carries a universal amount of mass at deficit within the
+permitted depth window.  \(\openbadge\) The current formulation of the open is
+sharper still: after the proved \(\sigtilde\le\tau\) branch, HLC is equivalent,
+at the report's level of reduction, to excluding a hidden top vertex with
+\(\sigtilde>\tau\) at height \(H>B\tau\) for a universal constant \(B\).  In
+words, the remaining problem is signed quantitative Baake--Sumner stability:
+the exact \(\delta=0\) Baake--Sumner theorem gives equal-input recurrent
+classes for stochastic idempotents, while the missing perturbative statement
+must rule out signed shallow hidden webs at height comparable to \(\tau\).
+
+\paragraph{Reader contract.}
+This report is meant to be readable with basic linear algebra, convexity, and
+finite-state Markov chains.  A row is viewed both as a vector of coefficients
+and as a point in an affine row polytope.  A well-exposed row is one separated
+from far rows by an affine test function with the fixed scales
+\(\rho=4\tau\) and \(\kappa=\tau/4\).  The set of well-exposed rows is
+\(\W\), and the hidden height \(H\) is the \(\ell^1\)-distance from the row
+polytope to \(\conv(\W)\).  Later sections give the precise definitions; this
+section only fixes the reading map and the status of the conclusions.
+
+The symbol \(\sigtilde\) is geometric: it measures positive coefficient mass
+on rows outside \(\conv(\W)\), with an \(\varepsilon\)-halo convention when
+one needs depth slack.  Rows in that halo are automatically deep for the
+canonical separator.  Some late numerical probes measured an index-based proxy
+instead; the report distinguishes that proxy from the geometric quantity.
+This distinction is one of the main notation corrections after the first
+historical wall language was written.
+
+\paragraph{Early nickname glossary.}
+The campaign names used later are shorthand, not extra hypotheses.  MRP is the
+middle-regime pinch tested numerically in d8.  A financier is a binding far row
+in the finite families; it is not a universal role.  The budget line is the
+family law \(H=2\delta\), while the flat floor is the finite-corner numerical
+ratio \(\delta/H^2\approx3.49\).  A top band is a set of rows with small
+canonical deficit \(g_i\), and a shallow web is a directed system of hidden
+top-band rows witnessing one another.  Baake--Sumner refers here to the exact
+\(\delta=0\) idempotent Markov normal form; the missing theorem is its signed
+quantitative perturbative version.
+
+Status badges are part of the mathematics.  A statement marked
+\(\provedbadge\) has a recorded proof and survived the stated audit route.
+A statement marked \(\modauditbadge\) is structurally proved or reduced but
+still carries an explicit audit, constant, or banking qualification.
+A statement marked \(\numbadge\) is verified computation, never a theorem.
+Open claims are marked \(\openbadge\); false or withdrawn routes are marked
+\(\refutedbadge\) or \(\downgradedbadge\).  No finite numerical pattern in this
+report should be read as an asymptotic theorem unless it is explicitly proved
+as one.  Badges in section heads or lead sentences are therefore not cosmetic;
+they are part of the statement being made.
+
+\paragraph{Roadmap.}
+The first sections set up the signed affine-retraction model, the
+\(\ell^1\) geometry of row polytopes, and the exposedness machinery.  They
+also record two consumed main-project inputs as black-box theorems, not as
+proofs reproduced in this report: the signed/stochastic equivalence and the
+cluster assembly theorem, both with \(\provedbadge\) status in the ledger.
+These imports are the reason the report may work with exact signed
+idempotents while the target remains the original stochastic matrix problem.
+
+The middle of the report gives the status table and the reduction chain.  The
+current theorem-shaped progress is conditional.  \(\modauditbadge\)
+HLC closes the exposed-hull problem.  \(\modauditbadge\) Existential DMF closes
+HLC by the bound
+\[
+  H \leq \frac{\tau(2+4\delta)}{4m_*}+E(\delta),
+\]
+for a deep-witness mass \(m_*\) and depth error \(E(\delta)\).  If
+\(E(\delta)/\tau\to e\), the resulting HLC constant is
+\((1/(2m_*)+e)^{-2}\); the special \(4m_*^2\) asymptotic appears only when
+\(E=o(\tau)\).  The report therefore treats HLC and DMF as the central
+coordinates of the problem rather than as side terminology.
+
+One finite feature receives its own section: the corner theorem.  The constants
+\(\tau_*=2-\sqrt 3\), the wall \(2(2-\sqrt 3)\), and the floor
+\((7+4\sqrt 3)/4\) explain a verified finite corner of the numerical
+families.  \(\modauditbadge\) The closed forms are exact after the family laws
+are accepted; \(\numbadge\) the optimality and finite-family gates are recorded
+as computation.  They are not presented as an asymptotic proof of HLC.  This
+distinction matters because later forensics reframe the old ``flat floor'' as
+a finite-corner phenomenon, not a verified small-\(\delta\) law.
+
+The audited belt collects the day-1 lemmas: lone far rows, hidden-vertex
+extraction, the failed-exposedness dual, frame clipping, maximizer leakage,
+the identity-frame linear bound, nilpotent-chain forcing, skinny
+near-coincidence, and the fable-belt energy and rigidity facts.  Those results
+are useful because they make the remaining obstruction small enough to name,
+not because they independently prove the target theorem.
+
+The wave-5--9 sections record the exposedness-dual identities, the sharp
+witness exchange, row-witness and \(W\)-locality facts, and the
+\(\sigtilde\)-height-collapse branch.  The post-design addendum strengthens
+that branch: \(\provedbadge\) if \(\sigtilde\leq\tau\) and
+\(\delta\leq1/4\), then
+\[
+  H\leq 2(1+2\delta)\max(\sigtilde,\nu_v)\leq 3\tau,
+\]
+so HLC follows directly there as \(\delta\geq H^2/9\).  In that branch
+existential DMF is vacuous with \(m_*=1\) and \(C_D=3\).
+
+The same addendum also prevents an overstrong formulation of the web problem.
+
+\noindent\(\modauditbadge\) An exact rational \(5\times5\) certificate gives
+an all-shallow optimal face with \(\sigtilde>0\) and the entire optimal witness
+on a far row of deficit zero.  This exact rational certificate lives only at
+height \(H=O(\delta)\).  Thus all-shallow faces are real; what remains open is
+their exclusion at height comparable to \(\tau\).
+
+The numerical section records verification gates rather than theorem claims.
+\(\numbadge\) The reliable record through the final d13 small-\(\delta\)
+verdict satisfies the linear law \(H\lesssim2\delta\); the formerly advertised
+small-\(\delta\) flat floor was not verified below about \(\delta=0.06\).
+D13 gives high-strength numerical confirmation of outcome (c): the apparent
+floor is a finite-corner extrapolation, while the empirical small-\(\delta\)
+law is linear.  This remains evidence and reframing, not a theorem.
+
+The dead-route section is included so that later work does not accidentally
+reuse refuted shortcuts.
+
+\noindent\(\refutedbadge\) The literal psi-gap is false.  \(\downgradedbadge\)
+Historical off-own-site wall language is downgraded unless restated with the
+geometric \(\sigtilde\).  \(\provedbadge\) LP support-cleanup for shallow
+witnesses is a dead end: pushing a witness through \(P\) introduces negative
+leakage, and that leakage breaks dual optimality rather than producing depth.
+
+The methodology section explains why the report is status-heavy.  Many claims
+were rediscovered, audited, weakened, or refuted by independent workers.  The
+goal of the write-up is therefore not to tell a smooth success story.  It is
+to leave a compact map: what is proved, what is numerical, what is conditional,
+what is false, and exactly where the remaining signed Baake--Sumner stability
+problem sits.

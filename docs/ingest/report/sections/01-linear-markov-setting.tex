@@ -1,0 +1,213 @@
+\section{Linear Markov Setting}
+\label{sec:linear-markov-setting}
+
+\subsection{Stochastic and signed retractions}
+
+Fix a finite state set \(\{1,\ldots,n\}\).  Vectors are row vectors.
+The all-ones column is \(\one\), the identity matrix is \(I_n\), and
+\(J=\one\one^{\mathsf T}\) is the all-ones matrix; source-note shorthand
+\(2Q-1\) below means \(2Q-I_n\), not \(2Q-J\).  The simplex
+\[
+  \DeltaN=\{x\in \R^n:\ x_k\ge 0\ \hbox{for all }k,\quad x\one=1\}
+\]
+is the standard simplex.  A matrix \(Q\in M_n(\R)\) is
+\emph{row-stochastic} if every row lies in \(\DeltaN\), equivalently
+\(Q\one=\one\) and \(Q_{ik}\ge 0\) for all \(i,k\).  A
+\emph{stochastic idempotent} is a row-stochastic matrix \(S\) with
+\(S^2=S\).  The original almost-idempotent defect is
+\[
+  \eta(Q)=\lVert Q^2-Q\rVert_{\infty\to\infty},
+\]
+where \(\lVert A\rVert_{\infty\to\infty}\) is the maximum absolute row
+sum norm.
+
+The exact model used in this report is a \emph{signed affine
+retraction}: a real matrix \(P\) satisfying
+\[
+  P\one=\one,\qquad P^2=P,
+\]
+with no entrywise positivity assumption.  Its \(i\)th row is denoted
+\(p_i\).  We use the same symbol \(p_i\) both for the matrix row and
+for the point of the affine hyperplane \(\{x\in \R^n:x\one=1\}\) that
+it defines.  The \emph{row polytope} is
+\[
+  K=\conv\{p_1,\ldots,p_n\}.
+\]
+Thus \(K\) is a convex hull of rows of \(P\), not the simplex unless
+the rows themselves are the coordinate vertices.
+
+The identity \(P^2=P\) is the main geometric rule.  Row \(i\) of this
+identity says
+\[
+  p_i=\sum_{k=1}^n P_{ik}\,p_k,\qquad \sum_{k=1}^n P_{ik}=1.
+\]
+So each row is an affine combination of all rows, with coefficients
+given by the same row of \(P\).  If all coefficients in row \(i\) are
+nonnegative, the identity only says \(p_i\in K\).  If some coefficients
+are negative, the same identity is a signed balance law.  For example,
+the coefficient pattern \(P_{i1}=1+\varepsilon\),
+\(P_{i2}=-\varepsilon\), and all other \(P_{ik}=0\) reads
+\[
+  p_i=p_1+\varepsilon(p_1-p_2),
+\]
+so the row lies on the affine line through \(p_2,p_1\), beyond \(p_1\).
+This is the elementary geometry behind the negative-mass parameter.
+
+\subsection{The L1 geometry and negative mass}
+
+Distances in the report are measured in the \(\ellone\) norm,
+\[
+  \lVert x\rVert_1=\sum_{k=1}^n |x_k|.
+\]
+For a set \(C\subset\R^n\), write
+\[
+  \distone(x,C)=\inf_{y\in C}\lVert x-y\rVert_1,
+\]
+and set
+\[
+  D_K=\diamone(K)=\sup_{x,y\in K}\lVert x-y\rVert_1.
+\]
+The dual unit ball for this metric is the \(\ell^\infty\) ball; later
+separators are normalized using this duality.
+
+For a scalar \(a\), write
+\[
+  a_+=\max(a,0),\qquad a_-=\max(-a,0).
+\]
+Thus \(a=a_+-a_-\) and \(|a|=a_++a_-\).  The \emph{row negative mass}
+of \(P\) at row \(i\) is
+\[
+  \nu_i=\sum_{k=1}^n (P_{ik})_-,
+\]
+and the global max-negative parameter is
+\[
+  \delta=\max_i \nu_i,\qquad \tau=\sqrt{\delta}.
+\]
+Because \(P\one=\one\), the positive coefficient mass in row \(i\) is
+\[
+  \sum_k (P_{ik})_+=1+\nu_i.
+\]
+The phrase \emph{max-neg units} means that all estimates are expressed
+using this single parameter \(\delta\).  Unless a statement explicitly
+says that a constant is construction-specific or finite-corner-specific,
+all constants are universal: independent of \(n\), the rank of \(P\),
+and the number of rows realizing the same point.
+
+A coordinate package that appears in the computational notes is a
+factorization
+\[
+  P=\Lambda\mathsf R,\qquad \mathsf R\Lambda=I.
+\]
+Here \(\mathsf R\) is a frame or realization matrix and \(\Lambda\) is
+a coefficient or load matrix.  This factorization is only a way to
+parametrize exact retractions.  The invariant objects in the report are
+the rows \(p_i\), their \(\ellone\) geometry, and the signed row
+coefficients of \(P\).  When the numerical sections quote a realized
+instance, \(\delta\) and \(\tau\) are recomputed from that exact \(P\);
+they are not inherited from a design parameter.
+
+\subsection{Two imported reductions}
+
+\begin{proposition}[Imported signed/stochastic equivalence]
+\provedbadge
+\label{prop:classical-equiv-consumed}
+\texttt{lem-classical-equiv} is imported as a black-box theorem.  Its
+source contract, with all symbols expanded, is:
+\begin{quote}\small
+The signed-idempotent and stochastic-idempotent formulations of classical
+stability are equivalent up to universal constants.  For sufficiently
+small \(\eta\), a row-stochastic \(Q\) with
+\(\lVert Q^2-Q\rVert_{\infty\to\infty}\leq\eta\) gives
+\(P=\theta(2Q-I_n)\), where
+\(\theta(X)=\tfrac12(I_n+\operatorname{sgn}X)\) and
+\(\operatorname{sgn}X=X(X^2)^{-1/2}\) is the finite-dimensional
+spectral/sign transform used in the equivalence.  This \(P\) is a signed affine
+retraction with
+\(\lVert P-Q\rVert_{\infty\to\infty}\leq C\eta\) and negative mass
+\(\delta\leq C\eta\).  Conversely, if \(P\one=\one\), \(P^2=P\), and
+\(\delta=\max_i\sum_k(P_{ik})_-\), define
+\(p_i^+=((P_{ik})_+)_{k=1}^n\), \(a_i=\sum_k(P_{ik})_-\), and
+\(q_i=p_i^+/(1+a_i)\).
+The row-normalized positive-part matrix \(Q\), with rows \(q_i\), is
+row-stochastic and satisfies
+\(\lVert P-Q\rVert_{\infty\to\infty}\leq 2\delta\) and
+\(\lVert Q^2-Q\rVert_{\infty\to\infty}\leq 6\delta+4\delta^2\).
+\end{quote}
+All constants in this import are universal.  Thus the original
+dimension-free problem for row-stochastic \(Q\) with small
+\(\eta(Q)=\lVert Q^2-Q\rVert_{\infty\to\infty}\) may be studied through
+exact signed affine retractions \(P\) with small \(\delta=\max_i\nu_i\).
+\end{proposition}
+
+\begin{proposition}[Imported cluster theorem]
+\provedbadge
+\label{prop:cluster-consumed}
+\texttt{thm-cluster} is imported as a black-box theorem.  Its source
+contract, with the local symbols made explicit, is:
+\begin{quote}\small
+There are universal \(\delta_0,C>0\) such that a signed affine
+retraction \(P\) with negative mass at most
+\(\delta\leq\delta_0\) has the following clustering consequence.  Suppose
+there are representative row vertices
+\(r^1=p_{i_1},\ldots,r^m=p_{i_m}\), pairwise
+\(2\rho\)-separated in \(\ell^1\), and each representative is
+\((\rho,\kappa)\)-exposed.  Let \(U_a\) be the associated disjoint
+clusters of rows near \(r^a\), and suppose every row outside the clusters
+lies within \(\gamma\) of \(\conv\{r^1,\ldots,r^m\}\).  Then there is a
+stochastic idempotent \(E\) with
+\(\lVert P-E\rVert_{\infty\to\infty}\leq
+C(\rho+\gamma+\delta/\kappa+\delta)\); so
+\(\rho,\gamma=O(\sqrt\delta)\), \(\kappa\geq c\sqrt\delta\) give
+\(O(\sqrt\delta)\), \(C\) independent of \(m\), \(n\), and the number of
+transient rows.
+\end{quote}
+This report does not reprove clustering; later sections only use the
+contract above to pass from exposed-hull control to the original
+classical stability target.
+\end{proposition}
+
+The consequence is methodological but important.  From this point on,
+the report studies exact matrices \(P\) satisfying \(P\one=\one\) and
+\(P^2=P\), with small \(\delta\).  Almost-idempotent matrices \(Q\) only
+enter through \cref{prop:classical-equiv-consumed}; stochastic
+idempotents are the target objects to which the signed rows must be
+rounded or clustered.
+
+\subsection{Where the remaining branch starts}
+
+The next sections define exposed row vertices, the well-exposed set
+\(\mathcal W\), its convex hull \(C_W=\conv(\mathcal W)\), and the
+\emph{hidden height} \(H=\max_i\distone(p_i,C_W)\).  They also define,
+for a height-maximizing hidden row vertex \(v\), the geometric mass
+\(\widetilde\sigma_v\): positive \(P_{vk}\)-mass carried by rows lying
+outside the exposed hull, with the small halo convention stated there.
+Those are not extra data beyond the signed retraction.  They are
+measurements made from the same row identity
+\[
+  p_v=\sum_k P_{vk}p_k.
+\]
+
+\begin{openproblem}[Residual branch]
+\openbadge
+\label{op:residual-branch-preview}
+After the exposed geometry is introduced, the final open form is the
+height-localization claim: prove a universal \(a>0\) with
+\(\delta\ge aH^2\).  Equivalently in the post-design formulation, it
+remains to exclude hidden top vertices with
+\(\widetilde\sigma_v>\tau\) at height \(H>B\tau\), for a universal
+constant \(B\).  The complementary branch
+\(\widetilde\sigma_v\le\tau\) is no longer open:
+\(\provedbadge\) the height cap gives \(H\le 3\tau\) for
+\(\delta\le 1/4\), hence \(\delta\ge H^2/9\) directly.  The exclusion
+must be height-conditional:
+\(\modauditbadge\) exact rational low-height all-shallow optimal faces
+exist with \(\widetilde\sigma_v>0\), but only at \(H=O(\delta)\).
+\end{openproblem}
+
+This is why the basic setting is deliberately linear.  The remaining
+obstruction is not a failure of \(P^2=P\), nor a failure of the Markov
+normalization \(P\one=\one\).  It is a signed quantitative
+Baake--Sumner stability question for affine row identities near the
+exposed hull.  \(\provedbadge\) The pushed-witness support-cleanup route
+is already recorded as unable to close the remaining branch, because
+negative leakage breaks the dual optimality needed by that route.

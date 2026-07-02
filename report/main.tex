@@ -1,0 +1,51 @@
+% =====================================================================
+% main.tex — MASTER for the internal sharded lab-book.
+% ROLE: preamble + macros + an ORDERED \include list ONLY. No body prose,
+%       no \section here (scripts/check-report-shards.sh enforces master purity).
+% Each shard is report/sections/NN_<slug>.tex with exactly one \section and a
+%   % SHARD-ID / SHARD-TITLE / SHARD-SUMMARY(x2-3) / SHARD-KEYWORDS  header block,
+%   registered in report/README.md (order) and report/SHARD_CATALOG.md (search).
+% Build: cd report && make   (latexmk -pdf main.tex → main.pdf)
+% =====================================================================
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{bm}
+\usepackage[hidelinks]{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+% --- domain macros (kept minimal; extend as shards are added) ---
+\newcommand{\Rn}{\mathbb{R}^n}
+\newcommand{\simplex}{\Delta_n}
+\newcommand{\opnorm}[1]{\lVert #1 \rVert_{\infty\to\infty}}
+\newcommand{\negmass}{\delta}          % negative mass of a signed idempotent
+\newcommand{\defect}{\eta}             % almost-idempotence defect
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\dist}{dist}
+
+\title{Almost-Idempotent Stochastic Maps --- internal lab-book}
+\author{(scientific-exploration repo; see PRD.md / CLAUDE.md)}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+% The rigorous spine is reproduced here one shard at a time as the argument DAG is
+% populated and each result clears L0 (byte-matched ref / af-validated / Lean).
+% NONE is reproduced yet — the DAG is being seeded from the ingested classical-portfolio
+% with honest status; see argument/DAG.md and report/PROVENANCE.md.
+%
+% Ordered shard includes (uncomment / add as shards land under report/sections/):
+% \include{sections/00_roadmap}
+
+\end{document}

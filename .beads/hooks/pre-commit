@@ -22,3 +22,10 @@ if command -v bd >/dev/null 2>&1; then
   if [ $_bd_exit -ne 0 ]; then exit $_bd_exit; fi
 fi
 # --- END BEADS INTEGRATION v1.0.0 ---
+
+# --- project validation suite (manual; outside the beads-managed block above) ---
+# The ONLY CI (CLAUDE.md Rule 12): no remote automation; this local gate must pass to commit.
+_root="$(git rev-parse --show-toplevel 2>/dev/null)"
+if [ -x "$_root/scripts/check-all.sh" ]; then
+  "$_root/scripts/check-all.sh" || exit 1
+fi

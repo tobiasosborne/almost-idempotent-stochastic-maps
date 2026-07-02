@@ -1,0 +1,540 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black}
+
+\theoremstyle{plain}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\one}{\mathbf 1}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dist}{\operatorname{dist}_1}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\negm}{\operatorname{neg}}
+\newcommand{\W}{\mathcal W}
+\newcommand{\sigt}{\widetilde{\sigma}}
+\newcommand{\Vol}{\operatorname{Vol}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\pos}[1]{#1_{+}}
+
+\title{The Kernel Conjecture, v2:\\
+the \textup{(EX)} interface for the classical stability programme}
+\author{Classical-portfolio campaign (exploration lane)}
+\date{13 June 2026}
+
+\begin{document}
+\maketitle
+
+\noindent\textbf{Purpose.} This document is the self-contained user-facing
+form of the current open kernel.  The earlier kernel was a hidden-vertex
+path-product floor.  The campaign has since reduced the missing input to the
+existence of one good actual-row coordinate chart, denoted \textup{(EX)} below.
+Everything here is stated from scratch: the chart vocabulary, the exact
+kernel, the proved bookkeeping, the conditional route to the classical theorem,
+and the failed routes a new proof should not repeat.  Status labels are the
+archived labels, not upgrades.
+
+\section{Classical endpoint and signed setting}
+
+\begin{definition}[Signed row-stochastic idempotent]\label{def:rowstoch}
+Throughout, ``row-stochastic'' means row sums equal one; entries may be
+negative.  A matrix $P\in\R^{n\times n}$ is an exact signed row-stochastic
+idempotent if
+\[
+P\one=\one,\qquad P^2=P .
+\]
+For row $i$ put
+\[
+\nu_i(P):=\sum_{j=1}^n(-P_{ij})_+,\qquad
+\delta(P):=\max_i\nu_i(P).
+\]
+Thus $\delta(P)$ is the largest negative mass in any row.  A genuinely
+nonnegative stochastic idempotent is exactly the case $\delta(P)=0$.
+\end{definition}
+
+\begin{conjecture}[\texttt{op-classical}; classical endpoint]\label{conj:opclassical}
+There are universal $\eta_0,C>0$ such that every row-stochastic $Q$ with
+$\|Q^2-Q\|_{\infty\to\infty}\le\eta\le\eta_0$ lies within $C\sqrt{\eta}$
+(max-row-$\ell^1$) of an exactly idempotent row-stochastic matrix.
+\end{conjecture}
+
+\noindent This is the endpoint called \texttt{op-classical} in the v1 kernel
+document.\footnote{Outer framing copied from
+\texttt{agent-A/explorations/classical-portfolio/report/kernel-conjecture.tex}.}
+The role of \textup{(EX)} is to supply the one missing finite-dimensional
+signed-idempotent estimate which then feeds the already assembled stability
+chain.
+
+\section{Actual-row charts}
+
+\begin{definition}[Actual-row bases and volume]\label{def:basis}
+Let $k=\rank P$, and write $p_i$ for the $i$th row of $P$.  An
+\emph{actual-row basis} is an ordered $k$-tuple
+$U=(u_1,\ldots,u_k)$ such that the rows
+\[
+r_s:=p_{u_s}\qquad (1\le s\le k)
+\]
+form a linear basis of the row space of $P$.  Its row volume is
+\[
+\Vol(U):=\det\bigl((\langle r_s,r_t\rangle)_{s,t=1}^k\bigr)^{1/2},
+\]
+and
+\[
+\Vol_{\max}(P):=\max\{\Vol(U): U\text{ is an actual-row basis}\}.
+\]
+\end{definition}
+
+\begin{definition}[Quasi-max-volume class]\label{def:theta}
+For $0<\theta\le1$ let
+\[
+\mathcal M_\theta(P):=\{U:\ U\text{ is an actual-row basis and }
+\Vol(U)\ge\theta\,\Vol_{\max}(P)\}.
+\]
+The final interface fixes $\theta=1/2$.  If $U\in\mathcal M_\theta(P)$ and
+$p_j=\sum_s a_s(j)r_s$, then Cramer's rule gives
+\[
+|a_s(j)|\le A:=\theta^{-1}\quad\text{for every }s,j.
+\]
+For $\theta=1/2$ this is the box $|a_s(j)|\le2$.\footnote{The actual-row volume
+minor equivalence and Cramer-box use are audited in
+\texttt{notes/swarm-answers/w34\_audit.md} and composed in
+\texttt{notes/swarm-answers/w35\_quantifier.md}.}
+\end{definition}
+
+\begin{definition}[Chart coefficients]\label{def:coeff}
+Fix an actual-row basis $U=(u_s)_{s=1}^k$.  The coefficients $a_s(j)$ are defined
+by
+\[
+p_j=\sum_{s=1}^k a_s(j)\,r_s,\qquad r_s=p_{u_s}.
+\]
+Since every row has total sum one, $\sum_s a_s(j)=1$.  Idempotence gives the
+harmonic coordinate identities
+\[
+\sum_j P_{u_sj}a_t(j)=\delta_{st}.
+\]
+Write
+\[
+\beta_s(j):=P_{u_sj}.
+\]
+For fixed pivot $s$ define
+\[
+\lambda_s(j):=1-a_s(j),\qquad
+\mu_s(j):=\sum_{t\ne s}(-a_t(j))_+,\qquad
+\sigma_s(j):=\sum_{t\ne s}(a_t(j))_+,
+\]
+and
+\[
+E_s(j):=\bigl(\mu_s(j)-\lambda_s(j)\bigr)_+.
+\]
+Because $\lambda_s=\sigma_s-\mu_s$, equivalently
+\[
+E_s(j)=\bigl(\sigma_s(j)-2\lambda_s(j)\bigr)_+.
+\]
+\end{definition}
+
+\begin{definition}[The excess functionals]\label{def:excess}
+For a chart $U$ and pivot $s$ put
+\[
+\Phi_s(U):=\sum_j(\beta_s(j))_+E_s(j),\qquad
+\Phi(U):=\max_s\Phi_s(U).
+\]
+The overshoot and positive transverse sums are
+\[
+V_s(U):=\sum_j(\beta_s(j))_+(-\lambda_s(j))_+,
+\]
+\[
+S^+_s(U):=\sum_j(\beta_s(j))_+\sigma_s(j),
+\]
+and the repaired sign-robust scalar budget is
+\[
+S^*_s(U):=S^+_s(U)+2V_s(U)
+=\sum_j(\beta_s(j))_+
+\bigl(\sigma_s(j)+2(-\lambda_s(j))_+\bigr).
+\]
+The older signed-face excess $\mathrm{SF}_s$ is exactly $\Phi_s$ in this
+notation.
+\end{definition}
+
+\begin{theorem}[Why $\theta=1/2$ is load-bearing]\label{thm:b6}
+For each $m\ge2$ and rational $0<\varepsilon<m/(2m+1)$ there is an exact
+family with $k=2m+1$ and $n=2m+3$ as follows.  Let
+\[
+\sigma_t=\begin{cases}
++1,&1\le t\le m,\\
+-1,&m<t\le2m,
+\end{cases}
+\qquad h=1-\varepsilon,\qquad d=\varepsilon/(2m).
+\]
+The coefficient rows are
+\[
+e_0,e_1,\ldots,e_{2m},
+\]
+\[
+x_+=h e_0+\sum_{t=1}^{2m}\left(d+\frac{\sigma_t}{2}\right)e_t,\qquad
+x_-=h e_0+\sum_{t=1}^{2m}\left(d-\frac{\sigma_t}{2}\right)e_t.
+\]
+There is an explicit left inverse $B$ with rows
+\[
+B_{0,0}=\varepsilon,\quad B_{0,t}=-d,\quad B_{0,+}=B_{0,-}=1/2,
+\]
+\[
+B_{r,0}=0,\quad
+B_{r,t}=\mathbf 1_{r=t}-\frac{\sigma_r\sigma_t}{2m},\quad
+B_{r,+}=\frac{\sigma_r}{2m},\quad
+B_{r,-}=-\frac{\sigma_r}{2m}
+\]
+for $1\le r,t\le2m$.  With $P=LB$, one has $BL=I$, $P^2=P$,
+$P\one=\one$, and $\delta(P)=1/2$.  The identity chart is the unique exact
+max-volume chart and has
+\[
+\frac{\Phi(U_{\mathrm{id}})}{\delta(P)}=m-3\varepsilon.
+\]
+The favorable charts have volume ratio exactly $1-\varepsilon$ and
+$\Phi/\delta=1$.
+\end{theorem}
+
+\begin{remark}[Interpretation]
+The theorem does not refute the kernel below $\delta\le1/4$, because this
+family is pinned at $\delta=1/2$.  It does prove that exact-max-volume
+selection, $\theta=1$, is the wrong robust class: for any fixed
+$\theta>1/2$ an adversary can choose $\varepsilon>1-\theta$ and exclude the
+good charts, while every fixed $\theta\le1/2$ includes them.  This is the
+reason the registry interface fixes $\theta=1/2$ and pays $A=2$ in the
+constants.\footnote{Perturbed staircase B6 and the theta consequence are in
+\texttt{notes/swarm-answers/w36\_audit.md}; the unperturbed staircase and
+tie ambiguity are in \texttt{notes/swarm-answers/w34\_halfcex.md}.}
+\end{remark}
+
+\section{The kernel: \textup{(EX)}}
+
+\begin{center}
+\fbox{\begin{minipage}{0.92\linewidth}
+\textbf{(EX).} There is a universal constant $C_0<\infty$ such that every
+exact signed row-stochastic idempotent $P$ with
+\[
+\delta(P)\le \frac{1}{4}
+\]
+has an actual-row basis $U\in\mathcal M_{1/2}(P)$ satisfying
+\[
+\max_s\Phi_s(U)\le C_0\,\delta(P).
+\]
+\end{minipage}}
+\end{center}
+
+\noindent The empirical value is $C_0=1$: in the exact rank-three suite every
+tested instance has
+\[
+\min_{U\in\mathcal M_{1/2}(P)}\max_s\frac{\Phi_s(U)}{\delta(P)}\le1,
+\]
+and the sharp value $1$ is attained by the transverse-pair and rank-three
+no-center families.  This is evidence only, not a proof.\footnote{Rank-three
+suite and the formal promotion of \textup{(EX)} to the campaign kernel:
+\texttt{notes/swarm-answers/w41\_ex.md}.  The independent factorization audit
+explicitly leaves \textup{(EX)} open:
+\texttt{notes/swarm-answers/w42\_factor\_audit.md}.}
+
+\section{Proved machinery around \textup{(EX)}}
+
+\paragraph{(P1) repaired pointwise domination.}
+For every chart, pivot, and row,
+\[
+E_s(j)\le \sigma_s(j)+2(-\lambda_s(j))_+.
+\tag{P1}
+\]
+Consequently $\Phi_s(U)\le S^*_s(U)$.  Status:
+\textbf{PROVED}; the inequality is a sign split, with equality on overshoot
+rows $\lambda_s(j)<0$.\footnote{\texttt{notes/swarm-answers/w39\_opus\_repair.md}
+and exact recheck in \texttt{notes/swarm-answers/w40\_ndg.md}.}
+
+\paragraph{(DEF) harmonic deficit identity.}
+For every chart and pivot,
+\[
+\sum_j\beta_s(j)\lambda_s(j)=0.
+\tag{DEF}
+\]
+This is just $\sum_{t\ne s}\sum_j\beta_s(j)a_t(j)=0$ from the coordinate
+harmonicity.  Status: \textbf{PROVED}.\footnote{Banked in
+\texttt{notes/swarm-answers/w37\_opus.md}; corrected and rechecked in
+\texttt{notes/swarm-answers/w38\_sb.md} and
+\texttt{notes/swarm-answers/w40\_ndg.md}.}
+
+\paragraph{Factorization from \texorpdfstring{$\Phi$}{Phi} to \texorpdfstring{$S^*$}{S*}.}
+For every $\theta=1/2$ chart $U$ and every pivot $s$,
+\[
+S^*_s(U)\le 2\Phi_s(U)+6\delta(P).
+\tag{F}
+\]
+The proof uses the pointwise estimate
+\[
+\sigma_s(j)+2(-\lambda_s(j))_+\le E_s(j)+2(\lambda_s(j))_+,
+\]
+then writes
+\[
+D^+_s=V_s+D^-_s,\qquad
+D^-_s=\sum_j(\beta_s(j))_-\lambda_s(j),
+\]
+by (DEF).  Since $\theta=1/2$ gives $\lambda_s(j)\le3$ and
+$\sum_j(\beta_s(j))_-\le\delta(P)$, $D^-_s\le3\delta(P)$, while
+$V_s\le\Phi_s/2$.  Status: \textbf{PROVED and audited}; constants $(2,6)$ are
+tight for this argument and class-wide, with no hidden $\delta\le1/4$
+dependence.\footnote{Codex proof in \texttt{notes/swarm-answers/w41\_ex.md};
+independent Opus audit in
+\texttt{notes/swarm-answers/w42\_factor\_audit.md}.}
+
+\paragraph{Rank-two theorem.}
+If $\rank(P)=2$, then every $\theta=1/2$ $\Phi$-argmin $U_*$ satisfies
+\[
+\Phi(U_*)=0,\qquad V_s(U_*)=0,\qquad S^*_s(U_*)\le2\delta(P)\quad(s=1,2).
+\]
+The proof chooses a max-diameter basis in the one-dimensional coordinate
+interval, which puts all coordinates in $[0,1]$ and gives $\Phi=0$; then (DEF)
+charges $S^*$ to the pivot row's negative mass.  Status:
+\textbf{PROVED by codex, second-family audit pending}.  The pending audit caveat
+is part of the archived status and should not be removed.\footnote{Rank-two
+proof and exact rank-two checks:
+\texttt{notes/swarm-answers/w40\_ndg.md}.  The audit caveat is recorded in
+\texttt{notes/swarm-answers/w42\_factor\_audit.md}.}
+
+\paragraph{Irreducibility of selection.}
+The $\Phi$-minimizing chart is not cosmetic.  Three shortcuts are refuted by
+exact witnesses:
+\begin{enumerate}
+\item \textbf{Pointwise ME dies.}  Bounds of the form
+$\max_jE_s(j)\le C\delta$ are false: the staircase with $m=3$ has
+$E=6\delta$, and the perturbed staircase with $m=5$ has
+$E=10\delta=2m\delta$ on a single row.
+\item \textbf{Sigma-only without selection dies.}  Over the full
+$\theta=1/2$ class, the perturbed staircase identity chart has
+$S^+_0\sim m\delta$ even though selected charts collapse the envelope.
+\item \textbf{Single-swap monotonicity dies.}  From the selected chart in the
+staircase $m=3$ and perturbed staircase $m=5$ witnesses, the best legal
+one-row swap still has $\Phi/\delta=1$; there is no contraction.
+\end{enumerate}
+Status: \textbf{PROVED refutations}; selection minimality must enter any
+proof.\footnote{\texttt{notes/swarm-answers/w37\_opus.md} and the exact
+single-swap audit in \texttt{notes/swarm-answers/w38\_sb.md}.}
+
+\section{Conditional chain to \texttt{op-classical}}
+
+Assume \textup{(EX)} with constant $C_0$.  Let $U_*$ be a
+$\Phi$-argmin over $\mathcal M_{1/2}(P)$.  By \textup{(EX)} and minimality,
+\[
+\max_s\Phi_s(U_*)\le C_0\delta(P).
+\]
+The factorization gives the repaired registry estimate
+\[
+\max_sS^*_s(U_*)\le (2C_0+6)\delta(P).
+\]
+Since (P1) gives $\Phi_s=\mathrm{SF}_s\le S^*_s$, the registry signed-face
+contract holds with
+\[
+C_{\rm sf}=2C_0+6.
+\]
+For the empirical $C_0=1$, this would be $C_{\rm sf}=8$.\footnote{Composition
+and quantifier check: \texttt{notes/swarm-answers/w41\_ex.md} and
+\texttt{notes/swarm-answers/w42\_factor\_audit.md}.}
+
+The downstream constants are the audited w35 constants with
+\[
+\theta=\frac{1}{2},\qquad A=\theta^{-1}=2.
+\]
+Thus
+\[
+C_\mu=C_{\rm sf}+1+A=C_{\rm sf}+3,
+\]
+\[
+C_D=4(1+2\delta_0)(C_{\rm sf}+1+A).
+\]
+At the \textup{(EX)} cap $\delta_0=1/4$, this is
+$C_D=6(C_{\rm sf}+3)$.  For any $\eta\le\theta/4=1/8$,
+\[
+L_\eta\le C_D\frac{\delta}{\eta}+\delta,
+\]
+and when $L_\eta\le1/8$ the conditional L4 assembly gives
+\[
+\|P-Q\|_{\infty,1}
+\le \eta+12C_D\frac{\delta}{\eta}+36\delta.
+\]
+Choosing $\eta=\sqrt\delta$ in the small regime yields the W-free
+$O(\sqrt\delta)$ theorem; the fixed-cap large-$\delta$ remainder is handled by
+the coarse fallback already recorded in the quantifier note.\footnote{Constants
+and the threshold correction are audited in
+\texttt{notes/swarm-answers/w35\_quantifier.md} and
+\texttt{notes/swarm-answers/w36\_audit.md}.}
+
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.58\linewidth}}
+\textbf{Link} & \textbf{Archived status} \\
+\hline
+\textup{(EX)} $\Rightarrow$ registry SF &
+\textbf{CONDITIONAL on \textup{(EX)}}; factorization and $C_{\rm sf}=2C_0+6$
+are \textbf{PROVED/audited}. \\
+Registry constants, $\theta=1/2$, $A=2$ &
+\textbf{CONFIRMED with minor threshold correction}; route through
+SF $\to$ tax $\to$ representative displacement $\to$ face/leakage.  Do not use
+the exact-max scalar cross-cluster telescope in quasi charts. \\
+Tax and representative displacement &
+\textbf{DIED-AT-used-conditionally}; w31/w30 reduce the needed estimates to
+the signed-face contract, which \textup{(EX)} supplies. \\
+Face/leakage and L4 assembly &
+\textbf{DIED-AT-used-conditionally}; w28 missed representative displacement,
+w27 banks in-class/cross-cluster/conditional L4 only. \\
+W-free $O(\sqrt\delta)$ &
+\textbf{CONFIRMED AS CONDITIONAL} by the w36 B3 audit. \\
+\texttt{op-exposed-hull} $\Rightarrow$ \texttt{op-classical} &
+Outer chain retained from v1: exposed-hull assembly proved modulo recorded
+audit; signed/stochastic equivalence \texttt{lem-classical-equiv} and
+\texttt{op-classical} endpoint proved in that framing. \\
+\end{tabular}
+\end{center}
+
+\noindent The status table deliberately preserves the uncomfortable labels:
+w27, w28, w30, and w31 are not retroactively proved as standalone theorems.
+They are used as conditional reductions once the registry SF estimate is
+assumed.\footnote{B3 status audit and upstream labels:
+\texttt{notes/swarm-answers/w36\_audit.md}.}
+
+\section{Evidence and constraints ledger}
+
+\begin{enumerate}
+\item \textbf{Rank two.}  The selected-chart theorem is proved at rank two:
+max-diameter gives $\Phi=0$, then (DEF) gives $S^*\le2\delta$.  The second
+family audit remains pending.\footnote{\texttt{notes/swarm-answers/w40\_ndg.md};
+pending-audit caveat in
+\texttt{notes/swarm-answers/w42\_factor\_audit.md}.}
+
+\item \textbf{Rank three.}  The exact suite contains $278$ valid
+$\delta\le1/4$ rank-three records: $220$ random exact instances, $53$
+structured adversarial instances, and $5$ known/restricted families.  It checks
+$2947$ theta-half charts inside the cap.  Worst observed
+$\min_U\max_s\Phi_s(U)/\delta$ is exactly $1$, attained by transverse and
+no-center rank-three families.  This is empirical, not proved.\footnote{
+\texttt{notes/swarm-answers/w41\_ex.md}.}
+
+\item \textbf{Moderate-delta phase structure.}  In the selected/min-chart
+stress families the bad ratios collapse to $1$ through the moderate regime
+tested below the campaign cap.  The unbounded staircase blow-up occurs at the
+endpoint $\delta=1/2$ in an exact or bad chart; favorable theta-half charts
+there still have ratio $1$.\footnote{Staircase threshold map:
+\texttt{notes/swarm-answers/w34\_halfcex.md}; selected stress checks:
+\texttt{notes/swarm-answers/w35\_charge.md} and
+\texttt{notes/swarm-answers/w36\_audit.md}.}
+
+\item \textbf{No-center path saturation.}  The no-center path family rules out
+sharp selected-chart optimism such as $C=1$ at the repaired budget level:
+selected ratios include $59999/40000$ at $k=6$ and $149999/90000$ at $k=8$,
+with float scans climbing toward $2$ in the older SF display and toward the
+repeated-shear envelope for $S^*$.\footnote{
+\texttt{notes/swarm-answers/w36\_charge.md} and
+\texttt{notes/swarm-answers/w39\_opus\_repair.md}.}
+
+\item \textbf{Windmill attempts.}  Rank-three windmill and balanced-cyclic
+adversarial searches did not stress \textup{(EX)} under $\delta\le1/4$: either
+the standard simplex chart stayed in the theta-half class with $\Phi=0$, or a
+max-volume tie had very small $\Phi$.\footnote{
+\texttt{notes/swarm-answers/w41\_ex.md}.}
+
+\item \textbf{Near-degenerate horn.}  The live proof mechanism has a real
+higher-rank gap: when the multi-row swap block is not volume-permitted, one
+needs a theorem that near-degeneracy of the transverse determinant forces the
+carried $S^*$ or $\Phi$ mass to be $O(\delta)$.  This is the named (NDG)
+display, worked only in low rank.\footnote{
+\texttt{notes/swarm-answers/w39\_opus\_repair.md} and
+\texttt{notes/swarm-answers/w40\_ndg.md}.}
+\end{enumerate}
+
+\section{Dead routes}
+
+\begin{enumerate}
+\item \textbf{Coefficient-only LP.}  Dead: it misses the full row negativity
+geometry; the structural $P=LB$, $BL=I$ LP was introduced specifically to remove
+the coefficient-only $\delta=0$ obstruction.\footnote{
+\texttt{notes/swarm-answers/w33\_sf\_geom.md}.}
+
+\item \textbf{Universal $C\le2$.}  Dead at moderate $\delta$: dense transverse
+pairs give exact $k=7$ ratio $17/8$ at $\delta=6/17$ and larger $k=9$ ratios
+above $2$.\footnote{\texttt{notes/swarm-answers/w33\_sf\_geom.md};
+audit confirmation in \texttt{notes/swarm-answers/w34\_audit.md}.}
+
+\item \textbf{Exists exact-max-volume.}  Dead at $\delta_0=1/2$: the perturbed
+staircase makes the identity chart the unique exact max-volume chart with
+ratio $m-3\varepsilon$.\footnote{\texttt{notes/swarm-answers/w36\_audit.md}.}
+
+\item \textbf{Pointwise ME.}  Dead: single rows can have $E$ equal to
+$6\delta$ or $10\delta$ while the selected sum remains controlled.\footnote{
+\texttt{notes/swarm-answers/w37\_opus.md}.}
+
+\item \textbf{Sigma-only.}  Dead without selection: $S^+$ grows like
+$m\delta$ on the perturbed staircase identity chart in the theta-half class.
+\footnote{\texttt{notes/swarm-answers/w37\_opus.md}.}
+
+\item \textbf{Single-swap monotonicity.}  Dead: exact one-swap checks from the
+selected staircase and perturbed staircase charts give no contraction; the best
+swap remains at $\Phi/\delta=1$.\footnote{
+\texttt{notes/swarm-answers/w38\_sb.md}.}
+
+\item \textbf{Convexity/Jensen route.}  Dead: the section-6 convexity estimate
+has Jensen in the wrong direction; the audited $k=7$ instance directly refutes
+the proposed upper bound.\footnote{\texttt{notes/swarm-answers/w33\_sf\_geom.md}
+and audit item A6 in \texttt{notes/swarm-answers/w34\_audit.md}.}
+
+\item \textbf{\textup{(SIG)} without overshoot.}  Dead: at theta $1/2$,
+overshoot rows have $\lambda<0$ and
+$E=\sigma+2(-\lambda)>\sigma$.  The perturbed staircase selected chart has
+$\lambda=-1/999$ and $\Phi_s-S^+_s=10^{-6}$ in the audited row; $S^*$ is the
+correct repaired object.\footnote{\texttt{notes/swarm-answers/w38\_sb.md} and
+\texttt{notes/swarm-answers/w39\_opus\_repair.md}.}
+\end{enumerate}
+
+\section{The live mechanism for \textup{(EX)}}
+
+The current proof attack is a two-horn selection argument.  Work in a
+$\Phi$-minimizing chart $U\in\mathcal M_{1/2}(P)$ and focus on a pivot $s$
+carrying the maximal excess.
+
+\medskip\noindent
+\textbf{Horn 1: volume-permitted multi-row swap.}  Swap a set $I$ of pivot rows
+with actual rows $J$ carrying the excess.  In old coordinates, write
+\[
+C=A[J,I],\qquad D=A[J,K],
+\]
+where $K$ is the unswapped pivot set.  The new coordinates are
+\[
+x'_I=x_IC^{-1},\qquad x'_K=x_K-x_IC^{-1}D,
+\]
+and the volume factor is $|\det C|$.  If the new chart remains in
+$\mathcal M_{1/2}(P)$, minimality of $U$ can compare $\Phi(U)$ to $\Phi(V)$.
+This is the higher-rank version of the shear formula.
+
+\medskip\noindent
+\textbf{Horn 2: near-degenerate block.}  If the relevant swap is not
+volume-permitted, the transverse block $C$ is near-degenerate.  The missing
+display (NDG) is that this near-degeneracy itself forces the carried excess to
+be $O(\delta)$ through (DEF), the row-negative budget, and the sum-rule
+identities.  This horn is the open technical heart at rank at least three.
+
+\medskip\noindent
+\textbf{Rank-two template and its failure in higher rank.}  In rank two, the
+max-diameter chart orders all coefficient rows on an interval and puts every
+coordinate between $0$ and $1$, so $\Phi=0$ is available before any swap
+argument.  In rank $k\ge3$, a max-volume simplex need not contain all actual
+rows in the nonnegative simplex.  Transverse signs persist, multi-row shears
+can move excess between coordinates, and single-swap stationarity only says the
+selected chart cannot be improved locally.  That is why \textup{(EX)}, not
+rank-two diameter, is the cold open problem.\footnote{Multi-row swap formula
+and rank-two proof:
+\texttt{notes/swarm-answers/w40\_ndg.md}; repaired live mechanism:
+\texttt{notes/swarm-answers/w39\_opus\_repair.md}.}
+
+\end{document}
