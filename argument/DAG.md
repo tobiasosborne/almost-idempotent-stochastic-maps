@@ -15,7 +15,7 @@ graph LR
   conj-ex["conj-ex<br/>conjecture/none"]
   conj-kernel["conj-kernel<br/>conjecture/none"]
   ex-hume["ex-hume<br/>proved-mod-audit/none"]
-  lem-classical-equiv["lem-classical-equiv<br/>proved-mod-audit/seeded"]
+  lem-classical-equiv["lem-classical-equiv<br/>proved/validated"]
   lem-dual-localization["lem-dual-localization<br/>open/none"]
   lem-exposed-circuit["lem-exposed-circuit<br/>proved-mod-audit/none"]
   lem-factorization["lem-factorization<br/>proved-mod-audit/none"]
@@ -41,6 +41,7 @@ graph LR
   thm-classical-factorization --> op-classical
   thm-cluster --> thm-classical-factorization
   thm-simplex --> thm-well-exposed
-  class conj-ex,conj-kernel,ex-hume,lem-classical-equiv,lem-exposed-circuit,lem-factorization,lem-leakage,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;
+  class lem-classical-equiv validated;
+  class conj-ex,conj-kernel,ex-hume,lem-exposed-circuit,lem-factorization,lem-leakage,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;
   class lem-dual-localization,op-classical,op-exposed-hull open;
 ```

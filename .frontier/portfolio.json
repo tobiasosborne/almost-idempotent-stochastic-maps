@@ -4,7 +4,20 @@
   "config": {
     "stale_threshold": 2,
     "max_blocks_per_turn": 2,
-    "oracles": []
+    "oracles": [
+      {
+        "name": "af-lem-classical-equiv",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-classical-equiv"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-classical-equiv/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-classical-equiv.md"
+        ]
+      }
+    ]
   },
   "arms": [
     {
@@ -53,6 +66,14 @@
       "priority": "exploratory",
       "target": "certified numerical support/refutation; never promoted without a certificate",
       "kill": null,
+      "created": "1970-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "R",
+      "desc": "re-establish the inherited reduction chain rigorously via af elevation (fresh codex prover/verifier per node; orchestrator never judges)",
+      "priority": "support",
+      "target": "every proved-mod-audit link of the chain af-validated in-repo",
+      "kill": "an af run refutes an inherited link (re-tag disproved, escalate to user)",
       "created": "1970-01-01T00:00:00.000Z"
     }
   ]

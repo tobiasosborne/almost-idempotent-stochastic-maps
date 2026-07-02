@@ -6,7 +6,7 @@
 | `conj-ex` | open-problem | conjecture | none | A | (CONJECTURE) (EX) working form: every rank->=3 exact signed idempotent P with de… |
 | `conj-kernel` | open-problem | conjecture | none | A | (CONJECTURE) Kernel Conjecture: there are universal delta_0>0 and B<inf (n-free)… |
 | `ex-hume` | obstruction | proved-mod-audit | none | A | The explicit 3x3 family P_s=I-u_s v_s^T (v_s=(1,-1+s,-s), u_s=(1-s+s^2,-s,0)^T) … |
-| `lem-classical-equiv` | lemma | proved-mod-audit | seeded | A | The signed-idempotent and stochastic-idempotent formulations of classical stabil… |
+| `lem-classical-equiv` | lemma | proved | validated | A | The signed-idempotent and stochastic-idempotent formulations of classical stabil… |
 | `lem-dual-localization` | open-problem | open | none | A | (OPEN) Frame-free dual localization: reproduce ||Ebar||_1 >= H from P^2=P WITHOU… |
 | `lem-exposed-circuit` | lemma | proved-mod-audit | none | A | For a signed affine retraction with neg mass <= delta: (i) a (rho,kappa)-exposed… |
 | `lem-factorization` | lemma | proved-mod-audit | none | A | (proved-mod-audit) Factorization bound: for any theta-1/2 actual-row basis U of … |

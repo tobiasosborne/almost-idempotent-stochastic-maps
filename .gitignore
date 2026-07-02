@@ -98,3 +98,4 @@ writeups/*.fls
 writeups/*.fdb_latexmk
 writeups/*.toc
 writeups/*.synctex.gz
+proofs/**/.af/

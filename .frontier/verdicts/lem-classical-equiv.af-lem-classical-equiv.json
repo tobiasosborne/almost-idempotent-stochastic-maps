@@ -1,0 +1,9 @@
+{
+  "claim": "lem-classical-equiv",
+  "oracle": "af-lem-classical-equiv",
+  "result": "pass",
+  "claim_hash": "a3f9ff44dbe2c7632f7754090bb09c1c1ca7fd78b9f1417a2438201942ba1167",
+  "oracle_digest": "051d8042e040ed69313e8db2b3ad5f2aefbed6cb4d69a6cc77efd5c669e182a2",
+  "inputs_hash": "2f3a5574f2dfbbde981f9838da02291d6a127d1793bb1b6a6a048042d08e8705",
+  "ts": "2026-07-02T07:03:46.866Z"
+}
