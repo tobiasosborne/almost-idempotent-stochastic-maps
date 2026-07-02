@@ -13,7 +13,7 @@ graph LR
   classDef nonrigorous fill:#ffe8cc,stroke:#d97706,color:#7a3d00,stroke-dasharray:4 2;
   classDef open fill:#ffd6d6,stroke:#cf222e,color:#6e1119,stroke-dasharray:5 3;
   conj-ex["conj-ex<br/>conjecture/none"]
-  conj-halo-collapse["conj-halo-collapse<br/>conjecture/seeded"]
+  conj-halo-collapse["conj-halo-collapse<br/>proved/validated"]
   conj-kernel["conj-kernel<br/>conjecture/none"]
   conj-no-free-frontier["conj-no-free-frontier<br/>conjecture/none"]
   ex-hume["ex-hume<br/>proved-mod-audit/none"]
@@ -58,7 +58,7 @@ graph LR
   thm-classical-factorization --> op-classical
   thm-cluster --> thm-classical-factorization
   thm-simplex --> thm-well-exposed
-  class lem-classical-equiv,lem-mass-split,lem-residual-lower,lem-residual-upper,obs-height-collapse validated;
-  class conj-ex,conj-halo-collapse,conj-kernel,conj-no-free-frontier,ex-hume,lem-canonical-separator,lem-exposed-circuit,lem-factorization,lem-leakage,lem-wiggle-rigidity,obs-deep-leakage,obs-fwr-gap,obs-linear-law-finite-delta,obs-sigma-halo-nonrobust,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;
+  class conj-halo-collapse,lem-classical-equiv,lem-mass-split,lem-residual-lower,lem-residual-upper,obs-height-collapse validated;
+  class conj-ex,conj-kernel,conj-no-free-frontier,ex-hume,lem-canonical-separator,lem-exposed-circuit,lem-factorization,lem-leakage,lem-wiggle-rigidity,obs-deep-leakage,obs-fwr-gap,obs-linear-law-finite-delta,obs-sigma-halo-nonrobust,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;
   class lem-dual-localization,op-classical,op-exposed-hull open;
 ```

@@ -1,0 +1,8 @@
+{
+  "id": "4afd7e6fc3ba72b9",
+  "name": "lem-residual-lower",
+  "source": "imports validated registry lemma proofs/lem-residual-lower — Convex outsourcing: let C be the convex hull of finitely many points of R^n, and suppose p = sum_{j=1}^m c_j p_j + (1 - s) q with points p_j, q in R^n, coefficients c_j \u003e= 0, s = sum_{j=1}^m c_j \u003c 1, and dist_1(p_j, C) \u003c= dist_1(p, C) for every j; then dist_1(p, C) \u003c= dist_1(q, C).",
+  "content_hash": "11972642f1ba4221639095403dfb40e7bc05f74ae1694990a3f8b5e2be36c219",
+  "created": "2026-07-02T14:53:00.986302695Z",
+  "notes": ""
+}

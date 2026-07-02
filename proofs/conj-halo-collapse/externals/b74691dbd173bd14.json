@@ -1,0 +1,8 @@
+{
+  "id": "b74691dbd173bd14",
+  "name": "lem-mass-split",
+  "source": "imports validated registry lemma proofs/lem-mass-split — Mass split: for an exact signed idempotent P and any row index v, writing a_j = P_{vj}, a_j^+ = max(a_j, 0), a_j^- = max(-a_j, 0), and nu_v = sum_j a_j^-, one has sum_j a_j^+ = 1 + nu_v.",
+  "content_hash": "a81cf3d53d32a8074c6c3b925113e313e19c0f99b07a9fdf7b7c6e2816f5c535",
+  "created": "2026-07-02T14:52:55.4835237Z",
+  "notes": ""
+}

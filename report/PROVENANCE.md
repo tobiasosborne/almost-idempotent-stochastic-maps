@@ -18,7 +18,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | Key | Path | SHA256 (16) | What it is |
 |-----|------|-------------|------------|
 | `ARG-CONJ-EX` | `argument/lemmas/conj-ex.md` | `02d459033dc90a3c` | Registry shard for `conj-ex` |
-| `ARG-CONJ-HALO-COLLAPSE` | `argument/lemmas/conj-halo-collapse.md` | `6b53331a5816b9aa` | Registry shard for `conj-halo-collapse` |
+| `ARG-CONJ-HALO-COLLAPSE` | `argument/lemmas/conj-halo-collapse.md` | `34f4de8d0861573d` | Registry shard for `conj-halo-collapse` |
 | `ARG-CONJ-KERNEL` | `argument/lemmas/conj-kernel.md` | `9c1f2f250cf211a6` | Registry shard for `conj-kernel` |
 | `ARG-CONJ-NO-FREE-FRONTIER` | `argument/lemmas/conj-no-free-frontier.md` | `070ea358dbc4c1b9` | Registry shard for `conj-no-free-frontier` |
 | `ARG-EX-HUME` | `argument/lemmas/ex-hume.md` | `db5fb7b80f69be6a` | Registry shard for `ex-hume` |
@@ -68,7 +68,7 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | lem:residual-lower | ARG-LEM-RESIDUAL-LOWER AF-LEM-RESIDUAL-LOWER | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`. |
 | lem:residual-upper | ARG-LEM-RESIDUAL-UPPER AF-LEM-RESIDUAL-UPPER | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; large tree warning retained. |
 | conj:ex | ARG-CONJ-EX | registry contract | OPEN | Status ledger anchor only; registry status `conjecture`. |
-| conj:halo-collapse | ARG-CONJ-HALO-COLLAPSE | registry contract | OPEN | Status ledger anchor only; registry status `conjecture`, `af: seeded`. |
+| conj:halo-collapse | ARG-CONJ-HALO-COLLAPSE | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-02 (20-node tree, clean; run 2 on the factored workspace). |
 | conj:kernel | ARG-CONJ-KERNEL | registry contract | OPEN | Status ledger anchor only; registry status `conjecture`. |
 | conj:no-free-frontier | ARG-CONJ-NO-FREE-FRONTIER | registry contract | OPEN | Status ledger anchor only; registry status `conjecture`. |
 | ex:hume | ARG-EX-HUME | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`, not rigorous here. |
