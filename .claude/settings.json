@@ -1,0 +1,35 @@
+{
+  "hooks": {
+    "PreCompact": [
+      {
+        "hooks": [
+          { "command": "bd prime", "type": "command" }
+        ],
+        "matcher": ""
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          { "command": "bd prime", "type": "command" },
+          { "command": "fr board --hook prompt", "type": "command" }
+        ],
+        "matcher": ""
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "command": "fr turn-begin && fr board --hook prompt", "type": "command" }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          { "command": "fr check --hook stop", "type": "command" }
+        ]
+      }
+    ]
+  }
+}
