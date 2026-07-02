@@ -24,7 +24,7 @@ graph LR
   lem-wiggle-rigidity["lem-wiggle-rigidity<br/>proved-mod-audit/none"]
   obs-deep-leakage["obs-deep-leakage<br/>heuristic/none"]
   obs-fwr-gap["obs-fwr-gap<br/>heuristic/none"]
-  obs-height-collapse["obs-height-collapse<br/>heuristic/none"]
+  obs-height-collapse["obs-height-collapse<br/>heuristic/seeded"]
   obs-linear-law-finite-delta["obs-linear-law-finite-delta<br/>numerical/none"]
   op-classical["op-classical<br/>open/none"]
   op-exposed-hull["op-exposed-hull<br/>open/none"]

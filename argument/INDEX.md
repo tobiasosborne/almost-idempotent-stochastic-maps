@@ -15,7 +15,7 @@
 | `lem-wiggle-rigidity` | lemma | proved-mod-audit | none | A | F-WR wiggle rigidity: for self-indexed common-pattern webs with row decompositio… |
 | `obs-deep-leakage` | obstruction | heuristic | none | A | For a hidden top vertex v of height H with canonical separator phi and deep side… |
 | `obs-fwr-gap` | obstruction | heuristic | none | A | F-WR forbidden-gap dichotomy: for a centered exact self-indexed common-pattern 2… |
-| `obs-height-collapse` | obstruction | heuristic | none | A | Height collapse: for an exact signed idempotent P with 0 < delta(P) <= 1/4, none… |
+| `obs-height-collapse` | obstruction | heuristic | seeded | A | Height collapse: for an exact signed idempotent P with 0 < delta(P) <= 1/4, none… |
 | `obs-linear-law-finite-delta` | obstruction | numerical | none | A | Certified finite-delta exceedance of the empirical linear law: the exact 5x5 sig… |
 | `op-classical` | open-problem | open | none | A | (OPEN) Classical projection stability: there are universal eta_0,C>0 (n-free) su… |
 | `op-exposed-hull` | open-problem | open | none | A | (OPEN) Global exposed-hull lemma: there are universal c,C>0 such that for every … |

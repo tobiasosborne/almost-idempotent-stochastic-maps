@@ -5,7 +5,7 @@ contract: Height collapse: for an exact signed idempotent P with 0 < delta(P) <=
 defs: def-signed-idempotent; def-height; def-visible-set; def-invisible-mass; def-negative-mass
 deps: 
 status: heuristic
-af: none
+af: seeded
 provenance: docs/waves/2026-07-02-F1-web-regime-hunt.md (arm F wave 1, opus worker; derivation from row reproduction p_v = sum_j P_vj p_j + the 2+4delta row-diameter bound); numerically 0/500 violations over the exact sweep runs/2026-07-02-web-regime-hunt/
 owner: A
 workspace: proofs/obs-height-collapse
