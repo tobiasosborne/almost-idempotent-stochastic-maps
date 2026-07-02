@@ -3,7 +3,7 @@ id: conj-halo-collapse
 kind: lemma
 contract: Halo-robust height collapse: for an exact signed idempotent P with 0 < delta(P) <= 1/4, nonempty visible set W(P), and hidden top vertex v of height H, let sigma be the invisible mass of v, sigma_g the halo-robust invisible mass (the positive coefficient mass v places on rows at ell-1 distance > tau/4 from conv W, tau = sqrt(delta)), and nu_v the row negative mass; then H * (1 - sigma_g) <= (sigma - sigma_g) * tau/4 + nu_v * (2 + 4*delta).
 defs: def-signed-idempotent; def-height; def-visible-set; def-invisible-mass; def-negative-mass
-deps: 
+deps: lem-mass-split; lem-residual-lower; lem-residual-upper
 status: conjecture
 af: seeded
 provenance: docs/waves/2026-07-02-F2-sigma-cap-refuter.md (arm F wave 2, opus worker, [check] mechanism: split the row reproduction with halo recipients priced at tau/4 instead of H); verified exact and non-vacuous on the three certified instances of runs/2026-07-02-sigma-cap-refuter/ (halo_bound_check.py)
@@ -28,3 +28,10 @@ cross-referenced between siblings) + 1 missing bridge fact. NOT a mathematical r
 structure signal per §6.3: FACTOR the mass-split bookkeeping and the residual-distance estimates into
 registry sub-lemmas (deps of this node), then re-seed and re-orchestrate (bd aism-*, quota-gated).
 The partial tree remains in `proofs/conj-halo-collapse/` pending the factoring.
+
+**Factoring (2026-07-02, aism-q7e):** three sub-lemma deps registered — [[lem-mass-split]] (the
+`sum a_j^+ = 1 + nu` pot bookkeeping, run-1 nodes 1.1.2/1.1.3/1.4.1.3.x), [[lem-residual-lower]]
+(the convex-outsourcing lower bound, run-1 node 1.4.2), [[lem-residual-upper]] (the residual-distance
+upper bound, run-1 node 1.4.3). Both residual lemmas are stated frame-free (pure l1 convex geometry).
+Plan: af-validate the three sub-lemmas, then wipe + re-seed this workspace (root contract UNCHANGED)
+with the deps registered as externals, and re-orchestrate.
