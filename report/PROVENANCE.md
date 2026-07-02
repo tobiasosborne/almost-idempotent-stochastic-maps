@@ -26,7 +26,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-LEM-CLASSICAL-EQUIV` | `argument/lemmas/lem-classical-equiv.md` | `2f3a5574f2dfbbde` | Registry shard for `lem-classical-equiv` |
 | `ARG-LEM-DUAL-LOCALIZATION` | `argument/lemmas/lem-dual-localization.md` | `3afe03731fb4d00d` | Registry shard for `lem-dual-localization` |
 | `ARG-LEM-EXPOSED-CIRCUIT` | `argument/lemmas/lem-exposed-circuit.md` | `17f0f840a3bf79e8` | Registry shard for `lem-exposed-circuit` |
-| `ARG-LEM-FACTORIZATION` | `argument/lemmas/lem-factorization.md` | `36552cb0add52a2f` | Registry shard for `lem-factorization` |
+| `ARG-LEM-FACTORIZATION` | `argument/lemmas/lem-factorization.md` | `4ad40eaec211f400` | Registry shard for `lem-factorization` |
 | `ARG-LEM-LEAKAGE` | `argument/lemmas/lem-leakage.md` | `ebedf751f8a1d2ab` | Registry shard for `lem-leakage` |
 | `ARG-LEM-MASS-SPLIT` | `argument/lemmas/lem-mass-split.md` | `634fdf3556b8f4ea` | Registry shard for `lem-mass-split` |
 | `ARG-LEM-RESIDUAL-LOWER` | `argument/lemmas/lem-residual-lower.md` | `3d4604e0725be091` | Registry shard for `lem-residual-lower` |
