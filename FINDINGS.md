@@ -104,3 +104,18 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   vertices** (proves the Kernel Conjecture via the collapse bound) **vs a rank-growing construction with
   `1−σ̃ = O(τ)`** (kills this route). Process lesson banked (bd memory): af contracts must be single
   minimal statements — the run-1 STUCK abort was caused by a compound contract, not by the mathematics.
+
+## 2026-07-02 — σ̃-cap refuter sweep (arm F wave 2): halo non-robustness + the surviving halo-robust cap
+
+- ❌ **Never state the σ̃-cap at ε=0.** The ε=0 invisible mass counts v's OWN self-coefficient once v is
+  (however slightly) outside `C_W`; an exact idempotent can have `P_vv = 5343/5000 > 1` on a hidden top
+  vertex, so `σ̃ > 1` and `1−σ̃ < 0` — exact certificate, `runs/2026-07-02-sigma-cap-refuter/` instance C
+  (recipient at 0.02τ, pure halo; halo-restricted σ̃ = 0; orchestrator-recomputed). Any finisher must use
+  the halo-robust `σ̃_g` (recipients at dist ≥ τ/4) — the halo-robustness caveat in `def-invisible-mass`,
+  now realized by an exact instance.
+- ✅ **The halo-robust cap survives with margin**: over ~25k searched hidden top vertices,
+  `σ̃_g ≤ ≈0.37τ` (so `1−σ̃_g ≥ 0.92`); max `H/τ = 0.462 < 0.536`; the dangerous joint regime remains
+  un-entered. Killing the cap is EQUIVALENT (via the af-validated collapse bound) to entering the
+  dangerous regime — no cheap kill exists. Wall mechanism candidate: `conj-no-free-frontier`
+  (exposedness absorption); self-mass-immune bridge candidate: `conj-halo-collapse`
+  (`H(1−σ̃_g) ≤ (σ̃−σ̃_g)τ/4 + ν(2+4δ)`, exact on all certified instances).
