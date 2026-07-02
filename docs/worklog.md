@@ -118,3 +118,22 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
 - Process: overreach-guard near-miss (registry edit during live runs) neutralized by fast commit;
   lesson banked to bd memory. Node-cap miscalibration (15 < natural 24–38 tree size) cost one abort
   cycle on each residual lemma.
+
+## 2026-07-02 (session 3 close) — the finisher bridge is RIGOROUS: six banked results
+
+- **`conj-halo-collapse` af-VALIDATED (run 2, 20-node tree, 20/20 clean)** — the halo-robust
+  height-collapse bridge `H(1−σ̃_g) ≤ (σ̃−σ̃_g)τ/4 + ν(2+4δ)` is now rigorous, importing the three
+  factored deps as af externals. Run 1 (pre-factoring) ballooned 49>40; the factoring discipline
+  (single-minimal contracts + registry sub-lemmas) cured it. fr verify PASS; aism-q7e closed.
+- **`lem-residual-lower` (32 live nodes) and `lem-residual-upper` (49) af-VALIDATED + banked** after
+  verify resumes across the quota stall (all challenges were af dependency-scoping hygiene, resolved
+  by bridge nodes; zero mathematical objections).
+- **Lab-book started:** 7 report shards (overview + one per rigorous result + full status ledger),
+  all 29 registry results anchored, provenance 0/0, codex-reviewed for overclaim (PASS).
+  Bridge banking propagated to the report in lockstep (hash + status rows).
+- **Frontier at close:** cap (OPEN) ⇒ [bridge RIGOROUS] ⇒ H=O(√δ) ⇒ Kernel ⇒ op-classical. THE open
+  input = halo-robust cap `σ̃_g ≤ 1−c`; mechanism `conj-no-free-frontier` wall-blocked (B4). Next:
+  arm A scoping wave (aism-vip) or the B4 FAIL-1 exact-instance decider (arm F).
+- Session totals: 4 new T0 results banked (mass-split, residual pair, bridge), 1 wave harvested
+  (B4), 1 L3 bundle re-homed (67k record), aism-136 flagged for user decision, 2 process memories
+  banked. Quota management: one stall bridged cleanly by stop/resume.
