@@ -72,6 +72,13 @@ verbatim), and keywords.
 - **Summary:** Records the run-1 balloon, the factoring into three sub-lemmas, and the clean 20-node run-2 tree.
 - **Keywords:** conj-halo-collapse, af validated, height collapse, halo-robust, invisible mass, bridge
 
+## `AISM-07-FACTORIZATION`
+- **File:** `report/sections/07_factorization.tex`
+- **Title:** Factorization bound
+- **Summary:** Reproduces the registry contract for lem-factorization, the af-validated (EX) composition link.
+- **Summary:** Summarizes the clean 11-live-node run-1 tree and notes the tightness claim was not elevated.
+- **Keywords:** lem-factorization, af validated, factorization, chart scores, (EX) composition
+
 ## `AISM-11-STATUS-LEDGER`
 - **File:** `report/sections/11-discussion.tex`
 - **Title:** Status ledger for non-validated registry results

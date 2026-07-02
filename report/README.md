@@ -46,4 +46,5 @@ mid-check.
 | 04 | `AISM-04-RESIDUAL-LOWER` | `report/sections/04_residual_lower.tex` |
 | 05 | `AISM-05-RESIDUAL-UPPER` | `report/sections/05_residual_upper.tex` |
 | 06 | `AISM-06-HALO-COLLAPSE` | `report/sections/06_halo_collapse.tex` |
+| 07 | `AISM-07-FACTORIZATION` | `report/sections/07_factorization.tex` |
 | 11 | `AISM-11-STATUS-LEDGER` | `report/sections/11-discussion.tex` |

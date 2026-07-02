@@ -9,7 +9,7 @@ hashed proof/consensus file. Results original to this project are marked `ORIGIN
 
 Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 
-> **Current report surface.** The first shards reproduce six `af`-validated results and anchor every
+> **Current report surface.** The first shards reproduce seven `af`-validated results and anchor every
 > remaining registry result in the status ledger. Non-rigorous registry statuses are copied honestly;
 > the ledger rows below are anchors, not promotions.
 
@@ -77,7 +77,7 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | lem:canonical-separator | ARG-LEM-CANONICAL-SEPARATOR | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:dual-localization | ARG-LEM-DUAL-LOCALIZATION | registry contract | OPEN | Status ledger anchor only; registry status `open`. |
 | lem:exposed-circuit | ARG-LEM-EXPOSED-CIRCUIT | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
-| lem:factorization | ARG-LEM-FACTORIZATION AF-LEM-FACTORIZATION | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (11-live-node tree, taint clean; run 1). |
+| lem:factorization | ARG-LEM-FACTORIZATION AF-LEM-FACTORIZATION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree, tightness claim not elevated. |
 | lem:leakage | ARG-LEM-LEAKAGE | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:wiggle-rigidity | ARG-LEM-WIGGLE-RIGIDITY | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | obs:deep-leakage | ARG-OBS-DEEP-LEAKAGE | registry contract | HEURISTIC | Status ledger anchor only; registry status `heuristic`. |
