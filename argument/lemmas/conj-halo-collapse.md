@@ -5,7 +5,7 @@ contract: Halo-robust height collapse: for an exact signed idempotent P with 0 <
 defs: def-signed-idempotent; def-height; def-visible-set; def-invisible-mass; def-negative-mass
 deps: 
 status: conjecture
-af: none
+af: seeded
 provenance: docs/waves/2026-07-02-F2-sigma-cap-refuter.md (arm F wave 2, opus worker, [check] mechanism: split the row reproduction with halo recipients priced at tau/4 instead of H); verified exact and non-vacuous on the three certified instances of runs/2026-07-02-sigma-cap-refuter/ (halo_bound_check.py)
 owner: A
 workspace: proofs/conj-halo-collapse

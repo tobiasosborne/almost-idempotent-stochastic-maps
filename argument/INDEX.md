@@ -4,7 +4,7 @@
 | id | kind | status | af | owner | contract |
 |---|---|---|---|---|---|
 | `conj-ex` | open-problem | conjecture | none | A | (CONJECTURE) (EX) working form: every rank->=3 exact signed idempotent P with de… |
-| `conj-halo-collapse` | lemma | conjecture | none | A | Halo-robust height collapse: for an exact signed idempotent P with 0 < delta(P) … |
+| `conj-halo-collapse` | lemma | conjecture | seeded | A | Halo-robust height collapse: for an exact signed idempotent P with 0 < delta(P) … |
 | `conj-kernel` | open-problem | conjecture | none | A | (CONJECTURE) Kernel Conjecture: there are universal delta_0>0 and B<inf (n-free)… |
 | `conj-no-free-frontier` | lemma | conjecture | none | A | No free frontier (exposedness absorption): for an exact signed idempotent P with… |
 | `ex-hume` | obstruction | proved-mod-audit | none | A | The explicit 3x3 family P_s=I-u_s v_s^T (v_s=(1,-1+s,-s), u_s=(1-s+s^2,-s,0)^T) … |

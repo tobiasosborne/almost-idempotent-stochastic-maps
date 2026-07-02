@@ -13,7 +13,7 @@ graph LR
   classDef nonrigorous fill:#ffe8cc,stroke:#d97706,color:#7a3d00,stroke-dasharray:4 2;
   classDef open fill:#ffd6d6,stroke:#cf222e,color:#6e1119,stroke-dasharray:5 3;
   conj-ex["conj-ex<br/>conjecture/none"]
-  conj-halo-collapse["conj-halo-collapse<br/>conjecture/none"]
+  conj-halo-collapse["conj-halo-collapse<br/>conjecture/seeded"]
   conj-kernel["conj-kernel<br/>conjecture/none"]
   conj-no-free-frontier["conj-no-free-frontier<br/>conjecture/none"]
   ex-hume["ex-hume<br/>proved-mod-audit/none"]
