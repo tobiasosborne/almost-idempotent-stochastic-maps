@@ -48,13 +48,16 @@ Still the Kernel / (EX) conjecture — but three waves sharpened WHERE it lives:
   vertex's mass into the shallow band, O(δ)/H cap on deep-side mass; obs-fwr-gap: F-WR is a
   coincidence-or-antipodality dichotomy, cannot count classes). Both heuristic-tagged, artifact-backed
   (`docs/waves/2026-07-02-B{1,2}-*.md`).
-- **The collapse bound is af-VALIDATED** (`obs-height-collapse`, 19/19 nodes clean — the first NEW
-  rigorous result): `H(1−σ̃) ≤ ν(2+4δ)` for hidden top vertices, `0<δ≤¼`, `W≠∅`. Rearranged: a dangerous
-  vertex (`H>Bτ`) necessarily has `1−σ̃ ≤ (2+4δ)τ/B`. **THE live question is therefore the σ̃-cap:
-  `1−σ̃_v ≥ cτ` for any universal `c>0` ⇒ `H ≤ (2+4δ)τ/c` ⇒ Kernel Conjecture.** This is the ledger's
-  DMF (deep-witness mass forcing) question on a rigorous backbone — existential-DMF⇒HLC is already
-  proved-mod-audit upstream. Kill condition (pre-registered on arm B): an exact instance with
-  `1−σ̃ = O(τ)`, `H>Bτ` at small δ kills the route.
+- **The collapse bound is af-VALIDATED** (`obs-height-collapse`, 19/19 clean): `H(1−σ̃) ≤ ν(2+4δ)`.
+  Waves B3 + F2 then sharpened the finisher question two ways: (i) **B3's one-sided ledger** — the
+  σ̃-cap asks for a lower bound on the exact quantity the collapse caps from above; its only lower-bound
+  route is the anti-splitting wall; the cap may be strictly stronger than the kernel. (ii) **F2's
+  refuter sweep** — the ε=0 cap is EXACTLY FALSE (self-mass certificate `σ̃=5343/5000>1`,
+  `obs-sigma-halo-nonrobust`; never state the cap at ε=0), but the **halo-robust cap survives with
+  margin** (`σ̃_g ≤ 0.37τ` over ~25k; killing it ⟺ entering the dangerous regime). **Current finisher
+  plan: af-validate `conj-halo-collapse` (the self-mass-immune bridge, orchestration RUNNING) + establish
+  the halo-robust cap via `conj-no-free-frontier` (exposedness absorption) — after first checking that
+  mechanism dodges the one-sided-ledger/anti-splitting walls.**
 - **Constants pinned + a certified correction**: existential C₀=1 tight (5/4 = selector floor);
   `H/δ = 100/49 > 2` at finite δ (hull-dip, `runs/2026-07-02-web-regime-hunt/`, kernel-safe, asymptotic
   constant still 2) — do NOT quote "δ ≥ H/2, zero exceptions" (FINDINGS 2026-07-02 correction).
