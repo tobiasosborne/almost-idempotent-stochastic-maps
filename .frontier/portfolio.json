@@ -28,6 +28,42 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/obs-height-collapse/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/obs-height-collapse.md"
         ]
+      },
+      {
+        "name": "af-lem-mass-split",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-mass-split"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-mass-split/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-mass-split.md"
+        ]
+      },
+      {
+        "name": "af-lem-residual-lower",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-residual-lower"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-residual-lower/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-residual-lower.md"
+        ]
+      },
+      {
+        "name": "af-lem-residual-upper",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-residual-upper"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-residual-upper/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-residual-upper.md"
+        ]
       }
     ]
   },
@@ -44,7 +80,7 @@
       "id": "B",
       "desc": "Prove lem-dual-localization (frame-free transfer): reproduce ||Ebar||_1 >= H from P^2=P WITHOUT the simplex frame; kill the skinny mu->1 regime where Route B is vacuous.",
       "priority": "primary",
-      "target": "the sigma-cap: prove sigma_v <= 1 - c*tau for hidden top vertices (0<delta<=1/4, W nonempty) — with the af-VALIDATED obs-height-collapse this yields H = O(sqrt(delta)) and closes the Kernel Conjecture; or refute via a rank-growing construction with 1-sigma = O(tau)",
+      "target": "the sigma-cap: prove sigma_v <= 1 - c*tau for hidden top vertices (0<delta<=1/4, W nonempty) \u2014 with the af-VALIDATED obs-height-collapse this yields H = O(sqrt(delta)) and closes the Kernel Conjecture; or refute via a rank-growing construction with 1-sigma = O(tau)",
       "kill": "an exact instance with sigma -> 1 at small delta and H > B*tau (then the collapse route dies and the campaign pivots to arm A/(EX))",
       "created": "1970-01-01T00:00:00.000Z"
     },

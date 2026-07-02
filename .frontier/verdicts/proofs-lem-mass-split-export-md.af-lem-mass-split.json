@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-mass-split/export.md",
+  "oracle": "af-lem-mass-split",
+  "result": "pass",
+  "claim_hash": "67002d8da8acec013db21f33b21bc0330c8492b3f72a277b76ce6ae51173c851",
+  "oracle_digest": "e28af50c13eac87f3b7da9f8da13aa57eae42cca8c3692a944733c3a666e19f9",
+  "inputs_hash": "634fdf3556b8f4eaecffe7a97a3adf675c3848a8e6d1b80a08e264b2319f5d02",
+  "ts": "2026-07-02T13:47:53.016Z"
+}
