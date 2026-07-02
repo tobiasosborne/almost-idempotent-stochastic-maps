@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-residual-lower/export.md",
+  "oracle": "af-lem-residual-lower",
+  "result": "pass",
+  "claim_hash": "e8fbf760d4954dadcce52924b76b6183430972b5f6b15784c29d2bf42713ec38",
+  "oracle_digest": "8b200d8b65ba05fe13990259a37c2a19afeafea4e288b7a607ec58e35aedd465",
+  "inputs_hash": "3d4604e0725be091acde6a26d979d2cafff2389899388d42cfd3c80740c37f6a",
+  "ts": "2026-07-02T14:51:14.213Z"
+}

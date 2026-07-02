@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-residual-upper/export.md",
+  "oracle": "af-lem-residual-upper",
+  "result": "pass",
+  "claim_hash": "05e247da7eb8db2514b58ff15bdc1a063c32adcbfae9455fbb0fa8121e10f624",
+  "oracle_digest": "7b4575ea4b9adf526a3d20377fe47cc7bc05f7170fd266c91c2db2baebb6749f",
+  "inputs_hash": "dc6328ea2b22dd3e5f7c434cbc19af1d9ecb88ea876abbcfe0a9b2a0cf33beb3",
+  "ts": "2026-07-02T14:51:14.346Z"
+}
