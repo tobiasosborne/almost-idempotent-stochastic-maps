@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/obs-height-collapse/export.md",
+  "oracle": "af-obs-height-collapse",
+  "result": "pass",
+  "claim_hash": "09189b50445991e89aa8fdfa5ee3e0f4dfef9cf0e943a89d9a51e8e82a15808e",
+  "oracle_digest": "cfecbbe36a5f2e7cc8241b346129f80d52f2e848d7477622e9ae875c1d726452",
+  "inputs_hash": "d7eb2ff172935af36f38a6738741e689243cd64831560305538ddd4011b993d9",
+  "ts": "2026-07-02T10:00:27.134Z"
+}

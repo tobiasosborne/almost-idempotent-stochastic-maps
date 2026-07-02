@@ -24,7 +24,7 @@ graph LR
   lem-wiggle-rigidity["lem-wiggle-rigidity<br/>proved-mod-audit/none"]
   obs-deep-leakage["obs-deep-leakage<br/>heuristic/none"]
   obs-fwr-gap["obs-fwr-gap<br/>heuristic/none"]
-  obs-height-collapse["obs-height-collapse<br/>heuristic/seeded"]
+  obs-height-collapse["obs-height-collapse<br/>proved/validated"]
   obs-linear-law-finite-delta["obs-linear-law-finite-delta<br/>numerical/none"]
   op-classical["op-classical<br/>open/none"]
   op-exposed-hull["op-exposed-hull<br/>open/none"]
@@ -49,7 +49,7 @@ graph LR
   thm-classical-factorization --> op-classical
   thm-cluster --> thm-classical-factorization
   thm-simplex --> thm-well-exposed
-  class lem-classical-equiv validated;
-  class conj-ex,conj-kernel,ex-hume,lem-canonical-separator,lem-exposed-circuit,lem-factorization,lem-leakage,lem-wiggle-rigidity,obs-deep-leakage,obs-fwr-gap,obs-height-collapse,obs-linear-law-finite-delta,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;
+  class lem-classical-equiv,obs-height-collapse validated;
+  class conj-ex,conj-kernel,ex-hume,lem-canonical-separator,lem-exposed-circuit,lem-factorization,lem-leakage,lem-wiggle-rigidity,obs-deep-leakage,obs-fwr-gap,obs-linear-law-finite-delta,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;
   class lem-dual-localization,op-classical,op-exposed-hull open;
 ```

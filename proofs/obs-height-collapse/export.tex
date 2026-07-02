@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Height collapse: for an exact signed idempotent P with 0 ...}
+\step{1} Height collapse: for an exact signed idempotent P with 0 < delta(P) <= 1/4, nonempty visible set W(P), and hidden top vertex v (height H = dist\_1(p\_v, conv W) maximal among rows), the invisible mass sigma\_v and the row negative mass nu\_v satisfy H * (1 - sigma\_v) <= nu\_v * (2 + 4*delta). \steptag{validated} \\[6pt]
+\step{1.1} Let C=conv W, a\_j=P\_vj, a\_j\textasciicircum{}+=max(a\_j,0), a\_j\textasciicircum{}-=max(-a\_j,0), and nu\_v=sum\_j a\_j\textasciicircum{}-. The exact signed idempotent identities imply p\_v=sum\_j a\_j p\_j and sum\_j a\_j=1; with S=sum\_j a\_j\textasciicircum{}+=1+nu\_v, the point q=S\textasciicircum{}\{-1\} sum\_j a\_j\textasciicircum{}+ p\_j is a convex combination of rows and p\_v=q+sum\_j a\_j\textasciicircum{}-(q-p\_j). \steptag{validated} \\[6pt]
+\step{1.1.1} By def-signed-idempotent, P\textasciicircum{}2=P and P1=1. Taking the v-th row of P\textasciicircum{}2=P gives p\_v=sum\_j P\_vj p\_j=sum\_j a\_j p\_j, and taking the v-th row of P1=1 gives sum\_j a\_j=1. \steptag{validated} \\[4pt]
+\step{1.1.2} For each real a\_j, a\_j=a\_j\textasciicircum{}+-a\_j\textasciicircum{}- with a\_j\textasciicircum{}+,a\_j\textasciicircum{}- >=0. Thus S=sum\_j a\_j\textasciicircum{}+=sum\_j a\_j+sum\_j a\_j\textasciicircum{}-=1+nu\_v>=1, so q=S\textasciicircum{}\{-1\}sum\_j a\_j\textasciicircum{}+p\_j is a convex combination of rows; substituting sum\_j a\_j\textasciicircum{}+p\_j=S q and nu\_v=sum\_j a\_j\textasciicircum{}- gives p\_v=q+sum\_j a\_j\textasciicircum{}-(q-p\_j). \steptag{validated} \\[4pt]
+\step{1.2} For d\_j=dist\_1(p\_j,C), the maximal-height hypothesis gives d\_j<=H for every row, and d\_j=0 on rows in C. Since sigma\_v=sum\_\{d\_j>0\} a\_j\textasciicircum{}+ by def-invisible-mass and dist\_1(.,C) is convex by def-height, dist\_1(q,C)<=S\textasciicircum{}\{-1\} sum\_j a\_j\textasciicircum{}+ d\_j<=S\textasciicircum{}\{-1\} sigma\_v H<=sigma\_v H. \steptag{validated} \\[6pt]
+\step{1.2.1} By def-height, C=conv W and H is the maximum over all rows of dist\_1(p\_i,C); hence each d\_j=dist\_1(p\_j,C) satisfies d\_j<=H, while any row p\_j in C has d\_j=0 by the definition of distance to a set. \steptag{validated} \\[4pt]
+\step{1.2.2} By def-invisible-mass, sigma\_v=sum\_\{d\_j>0\} a\_j\textasciicircum{}+. Since q=S\textasciicircum{}\{-1\}sum\_j a\_j\textasciicircum{}+p\_j is a convex combination of rows and def-height states that dist\_1(.,C) is convex, dist\_1(q,C)<=S\textasciicircum{}\{-1\}sum\_j a\_j\textasciicircum{}+d\_j<=S\textasciicircum{}\{-1\}sigma\_v H. From S=1+nu\_v>=1 and H>=0, this is at most sigma\_v H. \steptag{validated} \\[4pt]
+\step{1.3} The row-geometry clause of def-signed-idempotent gives ||p\_k-p\_j||\_1<=2+4*delta for all rows. Since q is a convex combination of rows, ||q-p\_j||\_1<=2+4*delta for each j; therefore ||p\_v-q||\_1<=nu\_v*(2+4*delta). \steptag{validated} \\[6pt]
+\step{1.3.1} Let D=2+4*delta. The row-geometry clause in def-signed-idempotent says that for an exact signed idempotent with negative mass delta, every pair of rows satisfies ||p\_k-p\_j||\_1<=D. \steptag{validated} \\[4pt]
+\step{1.3.2} Writing q=sum\_k b\_k p\_k with b\_k=a\_k\textasciicircum{}+/S, b\_k>=0, sum\_k b\_k=1, and D=2+4*delta, the local row-diameter bridge 1.3.2.1 gives ||p\_k-p\_j||\_1<=D for all rows, so the triangle inequality gives ||q-p\_j||\_1<=sum\_k b\_k||p\_k-p\_j||\_1<=D for every j. Using the locally rederived identity p\_v-q=sum\_j a\_j\textasciicircum{}-(q-p\_j) from 1.3.2.2, another triangle inequality gives ||p\_v-q||\_1<=sum\_j a\_j\textasciicircum{}-D=nu\_v D=nu\_v*(2+4*delta), as recorded in 1.3.2.3 and 1.3.2.4. \steptag{validated} \\[6pt]
+\step{1.3.2.1} Let D=2+4*delta. The row-geometry clause of def-signed-idempotent applies to the given exact signed idempotent P with negative mass delta=delta(P), so every pair of rows satisfies ||p\_k-p\_j||\_1 <= D. \steptag{validated} \\[4pt]
+\step{1.3.2.2} With a\_j=P\_vj, a\_j\textasciicircum{}+=max(a\_j,0), a\_j\textasciicircum{}-=max(-a\_j,0), nu\_v=sum\_j a\_j\textasciicircum{}-, S=sum\_j a\_j\textasciicircum{}+, and q=S\textasciicircum{}(-1) sum\_j a\_j\textasciicircum{}+ p\_j, def-signed-idempotent gives p\_v=sum\_j a\_j p\_j and sum\_j a\_j=1; hence S=1+nu\_v and p\_v-q=sum\_j a\_j\textasciicircum{}-(q-p\_j). \steptag{validated} \\[4pt]
+\step{1.3.2.3} Writing b\_k=a\_k\textasciicircum{}+/S, node 1.3.2.2 gives S=1+nu\_v>=1, b\_k>=0, sum\_k b\_k=1, and q=sum\_k b\_k p\_k. For each fixed j, the triangle inequality and node 1.3.2.1 give ||q-p\_j||\_1 = ||sum\_k b\_k(p\_k-p\_j)||\_1 <= sum\_k b\_k||p\_k-p\_j||\_1 <= D. \steptag{validated} \\[4pt]
+\step{1.3.2.4} Using node 1.3.2.2, p\_v-q=sum\_j a\_j\textasciicircum{}-(q-p\_j) with a\_j\textasciicircum{}- >= 0 and sum\_j a\_j\textasciicircum{}-=nu\_v. Using node 1.3.2.3 in the triangle inequality gives ||p\_v-q||\_1 <= sum\_j a\_j\textasciicircum{}-||q-p\_j||\_1 <= sum\_j a\_j\textasciicircum{}- D = nu\_v D = nu\_v*(2+4*delta). \steptag{validated} \\[4pt]
+\step{1.4} Combining the previous estimates gives H=dist\_1(p\_v,C)<=dist\_1(q,C)+||p\_v-q||\_1<=sigma\_v H+nu\_v*(2+4*delta), hence H*(1-sigma\_v)<=nu\_v*(2+4*delta). \steptag{validated} \\[6pt]
+\step{1.4.1} Because H=dist\_1(p\_v,C) by the hidden-top-vertex hypothesis and distance to a set is 1-Lipschitz in its point argument, H<=dist\_1(q,C)+||p\_v-q||\_1. Nodes 1.2 and 1.3 bound the two terms by sigma\_v H and nu\_v*(2+4*delta), respectively, so H<=sigma\_v H+nu\_v*(2+4*delta); subtracting sigma\_v H from both sides gives H*(1-sigma\_v)<=nu\_v*(2+4*delta). \steptag{validated} \\[6pt]
+\step{1.4.1.1} For C=conv W, the hidden-top-vertex hypothesis in def-height gives H=dist\_1(p\_v,C). Since C is nonempty, distance to C is 1-Lipschitz in the l1 metric: for any c in C, dist\_1(p\_v,C)<=||p\_v-q||\_1+||q-c||\_1, and taking the infimum over c gives H<=dist\_1(q,C)+||p\_v-q||\_1. \steptag{validated} \\[4pt]
+\step{1.4.1.2} Let a\_j=P\_vj, a\_j\textasciicircum{}+=max(a\_j,0), a\_j\textasciicircum{}-=max(-a\_j,0), nu\_v=sum\_j a\_j\textasciicircum{}-, S=sum\_j a\_j\textasciicircum{}+=1+nu\_v, and q=S\textasciicircum{}\{-1\}sum\_j a\_j\textasciicircum{}+p\_j. Then S>=1 and q is a convex combination of rows. For d\_j=dist\_1(p\_j,C), def-height gives 0<=d\_j<=H for every row and d\_j=0 for rows in C. By def-invisible-mass, sigma\_v=sum\_\{d\_j>0\} a\_j\textasciicircum{}+. Convexity of dist\_1(.,C) from def-height gives dist\_1(q,C)<=S\textasciicircum{}\{-1\}sum\_j a\_j\textasciicircum{}+d\_j<=S\textasciicircum{}\{-1\}sigma\_v H<=sigma\_v H. \steptag{validated} \\[4pt]
+\step{1.4.1.3} Let D=2+4*delta. The row-geometry clause of def-signed-idempotent gives ||p\_k-p\_j||\_1<=D for all rows. With q=S\textasciicircum{}\{-1\}sum\_k a\_k\textasciicircum{}+p\_k, q=sum\_k b\_k p\_k for b\_k=a\_k\textasciicircum{}+/S, b\_k>=0, sum\_k b\_k=1, so the triangle inequality gives ||q-p\_j||\_1<=sum\_k b\_k||p\_k-p\_j||\_1<=D for every j. The exact-idempotent row identity p\_v=sum\_j a\_j p\_j and sum\_j a\_j=1 imply p\_v=q+sum\_j a\_j\textasciicircum{}-(q-p\_j), hence ||p\_v-q||\_1<=sum\_j a\_j\textasciicircum{}-D=nu\_v*(2+4*delta). \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

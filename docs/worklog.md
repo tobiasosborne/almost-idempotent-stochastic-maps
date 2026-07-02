@@ -68,3 +68,16 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
 - Tooling feedback for the fr/af maintainer agents: docs/tooling-feedback/{FR,AF}-FEEDBACK.md (5ddf3ca).
 - fr decisions this stretch: B died→died (frontier reduced twice), F progress (T1), standing decision
   EXPLORE R (elevation in flight). Registry at 23 nodes; only lem-classical-equiv rigorous.
+
+## 2026-07-02 (session 2, close) — SECOND rigorous result: the collapse bound, af-validated
+
+- obs-height-collapse run 1 ABORTED [STUCK] (compound contract — my seeding error); contract narrowed
+  to the bare inequality (0<delta, consequences to body), re-seeded, run 2 VALIDATED: 19/19 nodes,
+  taint clean, 6 rounds. Banked via oracle af-obs-height-collapse (fr verify PASS, arm R pull 2, T0).
+  Commits 30dada7, a2df348, + banking commit. The FIRST NEW (non-inherited) rigorous result.
+- Frontier now: af-validated collapse bound + OPEN sigma-cap (sigma_v <= 1-c*tau for hidden top
+  vertices) => Kernel Conjecture. Arm B re-aimed at the sigma-cap with a pre-registered kill
+  (an exact instance with sigma->1, H>B*tau at small delta kills the route).
+- Process lesson banked (bd remember): af elevation contracts = single minimal statements.
+- Known WARNs (accepted): two validated trees >12 nodes (29 + 19) trip brittleness on every gate run;
+  factoring decisions tracked in aism-6ec / feedback item 10.

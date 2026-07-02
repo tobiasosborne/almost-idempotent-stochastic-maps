@@ -16,6 +16,18 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-classical-equiv/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-classical-equiv.md"
         ]
+      },
+      {
+        "name": "af-obs-height-collapse",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "obs-height-collapse"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/obs-height-collapse/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/obs-height-collapse.md"
+        ]
       }
     ]
   },
@@ -32,8 +44,8 @@
       "id": "B",
       "desc": "Prove lem-dual-localization (frame-free transfer): reproduce ||Ebar||_1 >= H from P^2=P WITHOUT the simplex frame; kill the skinny mu->1 regime where Route B is vacuous.",
       "priority": "primary",
-      "target": "shallow-web exclusion / anti-splitting: dimension-free bound on the number of geometrically distinct shallow classes hit by P_v^+ (both the linear law AND the sqrt-delta HLC are blocked exactly here)",
-      "kill": "a second independent obstruction shows band-grounding is impossible at any scale (then PIVOT the campaign to arm A/(EX) exclusively)",
+      "target": "the sigma-cap: prove sigma_v <= 1 - c*tau for hidden top vertices (0<delta<=1/4, W nonempty) — with the af-VALIDATED obs-height-collapse this yields H = O(sqrt(delta)) and closes the Kernel Conjecture; or refute via a rank-growing construction with 1-sigma = O(tau)",
+      "kill": "an exact instance with sigma -> 1 at small delta and H > B*tau (then the collapse route dies and the campaign pivots to arm A/(EX))",
       "created": "1970-01-01T00:00:00.000Z"
     },
     {

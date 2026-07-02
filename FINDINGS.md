@@ -94,3 +94,13 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   (`obs-height-collapse`, heuristic, 0/500 violations) is the structural reason: height is capped at
   O(δ) unless `σ̃ → 1`. **Strategic consequence:** proving `σ̃ ≤ 1−cτ` for hidden vertices would CLOSE the
   Kernel Conjecture via the collapse bound; hunting `σ̃ > τ` instances is a waste (W2 inertness).
+
+## 2026-07-02 — obs-height-collapse af-VALIDATED (addendum to the entry above)
+
+- ✅ The collapse bound `H(1−σ̃) ≤ ν(2+4δ)` is now **af-validated in-repo** (19-node tree, root
+  validated, taint clean; narrowed single-inequality contract with `0 < δ ≤ ¼`, `W ≠ ∅`) — upgraded from
+  heuristic/0-of-500. The kernel antecedent's re-scope to `σ̃ → 1` is therefore RIGOROUS (L0 rung b) modulo
+  nothing. **The live question of the whole campaign is now the σ̃-cap: `σ̃_v ≤ 1 − cτ` for hidden top
+  vertices** (proves the Kernel Conjecture via the collapse bound) **vs a rank-growing construction with
+  `1−σ̃ = O(τ)`** (kills this route). Process lesson banked (bd memory): af contracts must be single
+  minimal statements — the run-1 STUCK abort was caused by a compound contract, not by the mathematics.
