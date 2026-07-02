@@ -18,10 +18,13 @@ Usage:
   python3 scripts/argument.py --generate     # (re)write argument/{INDEX,DAG}.md
   python3 scripts/argument.py --show <id>     # local map of one result: contract, defs,
                                               #   direct deps/dependents, full ancestor/descendant closures
-  python3 scripts/argument.py --sync-beads    # (dry-run stub) mirror registry into beads
+  python3 scripts/argument.py --sync-beads    # mirror registry into beads (idempotent; one issue
+                                              #   per result, dep edges = DAG edges, available
+                                              #   results closed) so `bd ready` == proof frontier
 
 The whole-DAG map is argument/DAG.md (Mermaid, generated) + argument/INDEX.md (table, generated).
 """
+import re
 import sys
 import json
 import shutil
@@ -196,6 +199,133 @@ def check_orphans(lemmas, ws_dirs):
         if ws not in declared:
             errors.append(f"orphan workspace (no registry entry): {ws}")
     return errors
+
+
+# ---------- beads mirror (--sync-beads) ----------
+
+def _available(l):
+    """The linker's availability rule (see check_status): rigorous enough to build on."""
+    return l.get("af", "none") == "validated" or l.get("status") == "cited"
+
+
+def beads_title(l):
+    """Stable match key: the registry id as title prefix `<id>: <contract>`."""
+    c = normalize(l.get("contract", ""))
+    return f"{l['id']}: {c[:90]}" + ("…" if len(c) > 90 else "")
+
+
+def plan_beads_sync(lemmas, existing):
+    """Pure planner: diff the registry against a beads snapshot -> (actions, warnings).
+
+    `existing`: {result_id: {"issue": bd-id, "status": "open"|"closed", "deps": set(result_ids)}}.
+    Actions (in execution order — creates, then dep edges, then closes):
+      ("create", result_id, title, description, priority)
+      ("dep",    result_id, dep_result_id)   # bd: issue(result) depends on / blocked by issue(dep)
+      ("close",  result_id, reason)          # result already AVAILABLE (af=validated / cited)
+    Idempotent: on a fully-synced state the plan is empty. A closed bd issue whose result is NOT
+    available yields a WARNING, never an auto-reopen (a human may have deliberately de-scoped it)."""
+    ids = {l["id"] for l in lemmas}
+    ordered = sorted(lemmas, key=lambda d: d["id"])
+    actions, warnings = [], []
+    for l in ordered:
+        if l["id"] not in existing:
+            prio = 1 if l.get("kind") == "open-problem" else 2
+            desc = (f"Establish rigorously (L0): {normalize(l.get('contract', ''))} — shard "
+                    f"argument/lemmas/{l['id']}.md; kind={l.get('kind', '?')}, "
+                    f"status={l.get('status', '?')}, af={l.get('af', 'none')}. Mirrored from the "
+                    f"argument DAG by argument.py --sync-beads; blockers = DAG dep edges.")
+            actions.append(("create", l["id"], beads_title(l), desc, prio))
+    for l in ordered:
+        have = existing.get(l["id"], {}).get("deps", set())
+        for d in l.get("deps", []):
+            if d in ids and d not in have:
+                actions.append(("dep", l["id"], d))
+    for l in ordered:
+        ex = existing.get(l["id"])
+        if _available(l):
+            if ex is None or ex["status"] != "closed":
+                actions.append(("close", l["id"],
+                                f"already rigorous: status={l.get('status')}, af={l.get('af', 'none')}"))
+        elif ex is not None and ex["status"] == "closed":
+            warnings.append(f"{l['id']}: bd issue {ex['issue']} is closed but the result is NOT "
+                            f"rigorous (status={l.get('status')}, af={l.get('af', 'none')}) — "
+                            f"reopen manually if still in scope")
+    return actions, warnings
+
+
+def _bd(cli_args, timeout=60):
+    return subprocess.run(["bd"] + cli_args, capture_output=True, text=True, timeout=timeout)
+
+
+def beads_snapshot(registry_ids, bd=_bd):
+    """Snapshot bd state for the mirror: {result_id: {issue, status, deps:set(result_id)}}.
+    Match key = title prefix `<id>: `. bd calls are strictly serialized (exclusive Dolt lock).
+    --limit 0 is load-bearing: bd's default limit (50) would silently truncate the snapshot on a
+    grown tracker, making mirrored results look missing and re-creating them (duplicates)."""
+    p = bd(["list", "--all", "--json", "--limit", "0"])
+    issues = json.loads(p.stdout) if p.stdout.strip() else []
+    existing, rid_of_issue = {}, {}
+    for it in issues:
+        rid = it.get("title", "").split(":", 1)[0].strip()
+        if rid in registry_ids:
+            status = "closed" if it.get("status") == "closed" else "open"
+            existing[rid] = {"issue": it["id"], "status": status, "deps": set()}
+            rid_of_issue[it["id"]] = rid
+    for rid, e in sorted(existing.items()):
+        p = bd(["dep", "list", e["issue"], "--json", "--type", "blocks"])
+        try:
+            deps = json.loads(p.stdout) if p.stdout.strip() else []
+        except json.JSONDecodeError:
+            deps = []  # unparseable -> plan re-adds; bd tolerates duplicates
+        for d in deps if isinstance(deps, list) else []:
+            # the mirror manages ONLY blocks edges; a relates-to/tracks edge between two mirror
+            # issues must not suppress a needed blocks edge (belt-and-braces with --type above)
+            if isinstance(d, dict) and d.get("dependency_type", "blocks") != "blocks":
+                continue
+            did = d.get("id") if isinstance(d, dict) else d
+            if did in rid_of_issue:
+                e["deps"].add(rid_of_issue[did])
+    return existing
+
+
+def sync_beads(lemmas):
+    """Execute the plan against bd, strictly serialized. Returns 0 on success."""
+    if not shutil.which("bd"):
+        print("[--sync-beads] bd not found on PATH — skipped")
+        return 1
+    existing = beads_snapshot({l["id"] for l in lemmas})
+    actions, warnings = plan_beads_sync(lemmas, existing)
+    issue_of = {rid: e["issue"] for rid, e in existing.items()}
+    counts = {"create": 0, "dep": 0, "close": 0}
+    for act in actions:
+        if act[0] == "create":
+            _, rid, title, desc, prio = act
+            p = _bd(["create", "--title", title, "--description", desc,
+                     f"--priority={prio}", "--type=task", "-l", "dag-mirror"])
+            m = re.search(r"Created issue:\s*(\S+)", p.stdout)
+            if p.returncode != 0 or not m:
+                print(f"[--sync-beads] ERROR creating {rid}: {p.stderr.strip() or p.stdout.strip()}")
+                return 1
+            issue_of[rid] = m.group(1)
+        elif act[0] == "dep":
+            _, rid, dep = act
+            p = _bd(["dep", "add", issue_of[rid], issue_of[dep]])
+            dup = any(t in (p.stdout + p.stderr).lower() for t in ("exist", "duplicate"))
+            if p.returncode != 0 and not dup:
+                print(f"[--sync-beads] ERROR dep {rid} -> {dep}: {p.stderr.strip()}")
+                return 1
+        else:
+            _, rid, reason = act
+            p = _bd(["close", issue_of[rid], "--reason", reason])
+            if p.returncode != 0:
+                print(f"[--sync-beads] ERROR closing {rid}: {p.stderr.strip()}")
+                return 1
+        counts[act[0]] += 1
+    for w in warnings:
+        print(f"[--sync-beads] WARN {w}")
+    print(f"[--sync-beads] synced: {counts['create']} created, {counts['dep']} dep edges, "
+          f"{counts['close']} closed ({len(lemmas)} results mirrored)")
+    return 0
 
 
 # ---------- node map: ancestor/descendant closures (--show) ----------
@@ -419,8 +549,10 @@ def main(argv):
         generate(lemmas)
         print(f"wrote argument/INDEX.md + DAG.md ({len(lemmas)} results)")
     if "--sync-beads" in args:
-        print("[--sync-beads] dry-run stub: would ensure one bd issue per lemma with dep edges "
-              "(deferred until the registry is seeded; serialize bd calls).")
+        if errors:
+            print("[--sync-beads] refusing to sync: registry has errors (fix them first)")
+        elif sync_beads(lemmas) != 0:
+            errors.append("--sync-beads failed (see above)")
 
     for w in warnings:
         print(f"WARN  {w}")
