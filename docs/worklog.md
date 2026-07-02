@@ -97,3 +97,24 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   registry, 2 L3 bundles, 5 wave artifacts, sync-beads mirror live, 2 oracles registered, tooling
   feedback filed (af dry-run bug already fixed upstream in 0.1.4). Codex quota ~exhausted; wound down
   per user instruction.
+
+## 2026-07-02 (session 3, Claude orchestrator + codex workers) — B4 walls-check; factoring; 3rd rigorous result
+
+- **Arm B wave 4 (walls-check on `conj-no-free-frontier`)**: CONDITIONAL — one-sided ledger DODGED
+  (positional statement, upper-bound target), anti-splitting wall HIT (class-count reduction to c10) +
+  FAIL-1 soundness worry (uniform κ=τ/4 pointwise margin). DO-NOT-ELEVATE codified (shard + FINDINGS);
+  fr arm B pull logged died, frontier reduced to bridge-only. Artifact
+  `docs/waves/2026-07-02-B4-walls-check.md`.
+- **aism-q7e factoring**: `conj-halo-collapse` factored into `lem-mass-split`, `lem-residual-lower`,
+  `lem-residual-upper` (single-statement contracts; residual pair frame-free ℓ¹ convex geometry);
+  fresh codex reviewer PASS pre-commit; seeded; orchestrated.
+- **`lem-mass-split` af-VALIDATED (9 nodes, clean) → 3rd rigorous result**; fr verify PASS, banked.
+  Residual pair stalled on the 16:00 codex quota mid-verify (lower: challenges all resolved, 12/30
+  validated; upper: 17/37, 4 open scoping challenges); resume plan in HANDOFF.
+- **aism-4el**: inherited 67k (EX) record re-homed as L3 bundle `runs/2026-07-02-ex-enumeration-rehome`
+  (invariant independently recomputed PASS).
+- **aism-136**: dual-localization contract confirmed trivially-true-as-stated (codex, read-only);
+  candidate corrected contracts in bd notes; flagged `bd human` for the user.
+- Process: overreach-guard near-miss (registry edit during live runs) neutralized by fast commit;
+  lesson banked to bd memory. Node-cap miscalibration (15 < natural 24–38 tree size) cost one abort
+  cycle on each residual lemma.
