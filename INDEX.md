@@ -9,6 +9,7 @@ vocabulary). Hand-maintained in lockstep with content (CLAUDE.md Rule 9); `check
 
 | Run bundle | Question | Producing script | Rigour |
 |------------|----------|------------------|--------|
+| `runs/2026-07-02-undercap-killers/` | Which mechanism-killing witnesses survive the `(EX)` cap? → active-pivot simplification is killed under the cap: certified multiblock charts have `delta=1/100`, up to five pivots with `Phi_s>delta/2`, and `max Phi/delta` up to `7/4`; tiny selected `V>0` also occurs in balanced staircase rows; no row in this bundle reaches `max Phi/delta>2` or `max E/delta>3` under the cap | `runs/2026-07-02-undercap-killers/scripts/certify_undercap_killers.py` | numerical (L3) |
 | `runs/2026-07-02-ex-multiblock-coupling/` | Can richer one-anchor, multi-anchor, higher-arity, and cycle/chord shear couplings push the `(EX)` selected ratio past the no-center plateau? → NO in the certified rows: all natural multiblock families checked stay below `2`; calibration reproduces A2 `k=10 -> 7/4` | `runs/2026-07-02-ex-multiblock-coupling/scripts/certify_multiblock_coupling.py` | numerical (L3) |
 | `runs/2026-07-02-ex-no-center-highrank/` | Does the no-center path `(EX)` stress ratio plateau or grow with rank? Exact k=6/8 reproduce `3/2`, `5/3`; certified k=10,12,14,16,20,30 follow `2-2/(k-2)` and plateau toward `2`; delta-scale variants do not grow | `runs/2026-07-02-ex-no-center-highrank/scripts/certify_no_center_highrank.py` | numerical (L3) |
 | `runs/2026-07-02-web-regime-hunt/` | Can an exact idempotent enter the dangerous web regime (σ̃>τ ∧ H>Bτ)? → NO in ~48k instances; collapse bound 0/500 violations; certified H/δ=100/49>2 (hull-dip, kernel-safe) | `scripts/` inside the bundle (`verify_instance.py` = headline certificate) | numerical (L3) |
@@ -19,6 +20,7 @@ vocabulary). Hand-maintained in lockstep with content (CLAUDE.md Rule 9); `check
 
 | Script | Tool | Run bundle | CSV outputs | Figures | Report shard |
 |--------|------|------------|-------------|---------|--------------|
+| `runs/2026-07-02-undercap-killers/scripts/certify_undercap_killers.py` | `python3` exact rational arithmetic (`sympy`) | `runs/2026-07-02-undercap-killers/` | `runs/2026-07-02-undercap-killers/data/undercap_killers.csv` | none | none |
 | `runs/2026-07-02-ex-multiblock-coupling/scripts/certify_multiblock_coupling.py` | `python3` exact rational arithmetic (`sympy`) | `runs/2026-07-02-ex-multiblock-coupling/` | `runs/2026-07-02-ex-multiblock-coupling/data/multiblock_coupling.csv` | none | none |
 | `runs/2026-07-02-ex-no-center-highrank/scripts/certify_no_center_highrank.py` | `python3` exact rational arithmetic (`sympy`) | `runs/2026-07-02-ex-no-center-highrank/` | `runs/2026-07-02-ex-no-center-highrank/data/no_center_highrank.csv` | none | none |
 | `runs/2026-07-02-ex-enumeration-rehome/check_invariant.py` + manual re-home manifest | `python3` / manual archival copy | `runs/2026-07-02-ex-enumeration-rehome/` | `runs/2026-07-02-ex-enumeration-rehome/data/campaign_summary.csv` | none | none |

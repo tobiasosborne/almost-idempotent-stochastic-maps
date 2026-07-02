@@ -149,6 +149,16 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   ratios fit `2 − 2/(k−2)` (T2 pattern-read), so the working hypothesis is a PLATEAU at 2 (⇒ `C₀ = 2`,
   `C_sf = 2·2+6 = 10`) — but plateau-vs-growth is UNDECIDED and is the arm-A viability decider before
   any (EX) proof wave. Any universal `C₀` still discharges `op-classical` (the composition tolerates it).
+- ⛔ **Unnormalized `Σ_s Φ_s ≤ C·δ` is FALSE dimension-free (do not re-walk the sum interface).** Certified
+  under-cap witnesses (`runs/2026-07-02-undercap-killers/`, repeated decoupled anchors, orchestrator-
+  recomputed): `g` anchor copies give `sum Φ/δ = 11g/8` (g = 2,3,5 certified) while `max Φ/δ = 11/8`
+  stays fixed. Decoupled anchors amplify the SUM, never the MAX — any (EX) proof must be max-based or
+  carry a normalization/quotient that kills anchor multiplicity. This corrects the A5 "probabilistic
+  `Σ_s` interface" (docs/waves/2026-07-02-A5-averaged-selection.md): the interface lemma is fine, its
+  aggregate hypothesis is unsatisfiable unnormalized. Also from the same wave (A6): the δ=1/2
+  mechanism-killers do NOT port under the cap (B6 staircase high-E/many-active/high-sum collapse before
+  δ≤1/4; only tiny `V>0` ports), plateau-2 remains unbroken, and `V_s ≤ Φ_s/2` holds for every chart
+  and pivot by an elementary one-line argument (`docs/waves/2026-07-02-A6-undercap-killers.md` §T3).
 - ✅ **The (EX) existential form suffices downstream — no constructive selector is needed.** The
   composition chooses a `Φ`-argmin over the finite class `M_{1/2}(P)` and the hostile w42 audit confirms
   no quantifier slip (`docs/ingest/experiments/out/w42_factor_audit/audit.md:144–168`). Pure
