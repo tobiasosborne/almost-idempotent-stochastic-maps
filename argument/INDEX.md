@@ -14,7 +14,7 @@
 | `lem-exposed-circuit` | lemma | proved-mod-audit | none | A | For a signed affine retraction with neg mass <= delta: (i) a (rho,kappa)-exposed… |
 | `lem-factorization` | lemma | proved-mod-audit | none | A | (proved-mod-audit) Factorization bound: for any theta-1/2 actual-row basis U of … |
 | `lem-leakage` | lemma | proved-mod-audit | none | A | Affine-face leakage: for row-stochastic Q with ||Q^2-Q|| <= eta and affine h:Del… |
-| `lem-mass-split` | lemma | stated | seeded | A | Mass split: for an exact signed idempotent P and any row index v, writing a_j = … |
+| `lem-mass-split` | lemma | proved | validated | A | Mass split: for an exact signed idempotent P and any row index v, writing a_j = … |
 | `lem-residual-lower` | lemma | stated | seeded | A | Convex outsourcing: let C be the convex hull of finitely many points of R^n, and… |
 | `lem-residual-upper` | lemma | stated | seeded | A | Residual distance bound: let C be the convex hull of finitely many points of R^n… |
 | `lem-wiggle-rigidity` | lemma | proved-mod-audit | none | A | F-WR wiggle rigidity: for self-indexed common-pattern webs with row decompositio… |

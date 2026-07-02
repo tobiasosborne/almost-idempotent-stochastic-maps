@@ -4,8 +4,8 @@ kind: lemma
 contract: Mass split: for an exact signed idempotent P and any row index v, writing a_j = P_{vj}, a_j^+ = max(a_j, 0), a_j^- = max(-a_j, 0), and nu_v = sum_j a_j^-, one has sum_j a_j^+ = 1 + nu_v.
 defs: def-signed-idempotent; def-negative-mass
 deps: 
-status: stated
-af: seeded
+status: proved
+af: validated
 provenance: factored out of proofs/conj-halo-collapse elevation run 1 (nodes 1.1.2, 1.1.3, 1.4.1.3.x — the bookkeeping the provers re-derived inline across siblings, trip cause of the BALLOON abort); the identity is row-sum bookkeeping from P 1 = 1 in def-signed-idempotent
 owner: A
 workspace: proofs/lem-mass-split
@@ -20,3 +20,8 @@ subtrees; it is factored here as a standalone dep so provers import it instead.
 
 **Role:** dep of [[conj-halo-collapse]] (and available to any future ledger-style argument splitting
 row-reproduction mass into pots).
+
+**af-VALIDATED IN-REPO 2026-07-02** (run 1, clean): 9-node adversarial tree, root `validated`, taint
+9/9 clean; fresh codex prover/verifiers per node, Claude orchestrated only (§6). Ledger:
+`proofs/lem-mass-split/ledger/`; export: `proofs/lem-mass-split/export.md`. Status flip is the
+mechanical reflection of the codex ledger, not orchestrator judgment.
