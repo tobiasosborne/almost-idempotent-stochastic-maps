@@ -23,3 +23,14 @@ depth `∝ ν = O(τ)` (`t* = ν/(1+ν) < κ`).
 COEFFICIENT-mass lower bounds at v; this statement is about EXPOSEDNESS of extremal rows — a different
 species, plausibly outside that obstruction — but whether its quantitative form dodges the
 anti-splitting class-count is exactly what the next wave must determine before any af elevation.
+
+**Walls-check verdict (arm B wave 4, 2026-07-02, `docs/waves/2026-07-02-B4-walls-check.md`):
+CONDITIONAL — DO NOT af-ELEVATE.** Wall (a), the one-sided ledger, is genuinely dodged (T1): the
+contract is purely positional (no P-coefficient), and the composed target is an UPPER bound on `σ̃_g`,
+off B3's axis. Wall (b), anti-splitting/quotient-packing, is HIT (T1/T2): bounding TOTAL `σ̃_g` sums
+surviving twin mass over separating directions and needs a dimension-free genuine-outside quotient
+class count — a reduction to dead route c10. Additionally FAIL-1 (T2): the uniform `κ = τ/4` margin is
+a pointwise exposedness claim vulnerable to the dense-regular-polygon insufficiency — the conjecture is
+plausibly FALSE as literally written. Deciders recorded in the artifact §6 (exact-instance FAIL-1
+search; the class-count question = open signed quantitative Baake–Sumner). The elevation-worthy piece
+of the finisher remains the bridge [[conj-halo-collapse]] only.

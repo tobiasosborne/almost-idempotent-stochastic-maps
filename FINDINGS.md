@@ -119,3 +119,21 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   dangerous regime — no cheap kill exists. Wall mechanism candidate: `conj-no-free-frontier`
   (exposedness absorption); self-mass-immune bridge candidate: `conj-halo-collapse`
   (`H(1−σ̃_g) ≤ (σ̃−σ̃_g)τ/4 + ν(2+4δ)`, exact on all certified instances).
+
+## 2026-07-02 — walls-check on `conj-no-free-frontier` (arm B wave 4): cap-mechanism route wall-blocked
+
+- ✅ **Wall (a) — one-sided ledger — genuinely dodged.** The conjecture's contract carries no
+  P-coefficient at all: it is a positional exposedness-production rule, and its composed target is an
+  *upper* bound on `σ̃_g`, not the coefficient-mass *lower* bound at v that B3's ledger cannot supply.
+  A real structural gain worth remembering for future mechanism design (T1,
+  `docs/waves/2026-07-02-B4-walls-check.md` §1).
+- ❌ **Wall (b) — anti-splitting/quotient-packing — HIT.** The composed cap `σ̃_g ≤ 1−c` sums surviving
+  twin mass over separating directions and needs the number of geometrically distinct genuine-outside
+  quotient classes bounded dimension-free — exactly dead route c10. The shard's "hostable mass ∝ ν"
+  is per-cluster; it totals only if the class count is O(1) (silently assuming the wall). Plus
+  **FAIL-1**: the uniform `κ = τ/4` margin is pointwise and vulnerable to the dense-regular-polygon
+  insufficiency — the conjecture is *plausibly false as literally written* (B4 §2, T1/T2).
+- **Strategic consequence:** do NOT af-elevate `conj-no-free-frontier`; the bankable finisher piece is
+  the bridge `conj-halo-collapse` only. A future cap needs a NEW mechanism that is both ledger-immune
+  AND class-count-free, or must first settle the class-count decider (open signed quantitative
+  Baake–Sumner). F2's `σ̃_g ≤ 0.37τ` margin is low-dimension evidence and silent on wall (b).
