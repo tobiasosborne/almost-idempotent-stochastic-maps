@@ -32,3 +32,23 @@ formaliser). Concretely:
 
 **Nothing is rigorous in-repo yet** — the DAG is seeded from the classical-portfolio with honest status; the
 first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd ready`.
+
+## 2026-07-02 (session 2) — sync-beads live, chain wired, FIRST RIGOROUS RESULT banked
+
+- Implemented `argument.py --sync-beads` (pure planner + serialized bd executor; idempotent;
+  reviewer-hardened: `--limit 0`, `--type blocks`, injectable-runner tests 80/80) — `bd ready` now == the
+  proof frontier. Commits `17c9293`, fix `a2d78ce` context in `e68d1b6` chain. Independent opus review:
+  REQUEST-CHANGES (1 MAJOR latent truncation-duplication, 1 MINOR dep-type, 2 NIT) → all fixed → APPROVE.
+- Wired the missing final edge of the reduction chain: `op-classical` deps =
+  `thm-classical-factorization; prop-approx-simplex` (ONE composed route, AND not OR — ingest-cited).
+  Commit `c2d828f`. North star now correctly BLOCKED over 8 ancestors down to `conj-kernel`.
+- **Banked `lem-classical-equiv`** (commit `e68d1b6`): af orchestration run 1 (8 rounds) built a 28-node
+  tree, converged to 16 validated, exit classification = 1 MISSING fact (negative-mass formula) + sibling
+  dep hygiene; orchestrator provisioned `def-negative-mass` + `def-almost-idempotent` onto the shard
+  (`a2d78ce`); resumed `--phase verify` → root `validated`, taint 29/29 clean, in 7 more rounds. Oracle
+  `af-lem-classical-equiv` registered; `fr verify` PASS; `fr log R banked` (new support arm R), tier T0.
+  Brittleness WARN (29 nodes) accepted, factoring decision filed `aism-6ec`.
+- Roles set by user: orchestrator = knowledge/strategy overview + direction evaluation, NEVER proof
+  verification; no Fable subagents without permission (codex/opus/sonnet).
+- Strategy review filed 2 constant-hygiene issues: `aism-8bi` (C₀ 1 vs ≥5/4 tension), `aism-z48`
+  (H/δ = 2.000000000013 fuzz in an "exact" record). Standing fr decision: EXPLORE arm B next.

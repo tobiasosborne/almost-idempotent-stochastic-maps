@@ -12,68 +12,96 @@ TRIGGER: session close, or a material change in the current frontier / next task
 1. Read `PRD.md` (scope + the north-star theorem + reduction chain), then `CLAUDE.md` (== `AGENTS.md`, how
    to work — esp. the L0 rigour ladder and Rule 13 dead routes).
 2. Run `fr board` (the live portfolio + FRONTIER) and `bd ready` (available work).
-3. Skim `argument/DAG.md` (the seeded knowledge DAG) and `argument/INDEX.md`; read `FINDINGS.md` before
+3. Skim `argument/DAG.md` (first green node is live) and `argument/INDEX.md`; read `FINDINGS.md` before
    touching anything flagged or a dead route; read `docs/ingest/README.md` for the honest re-tag map of the
    inherited work.
 4. Gate before committing: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-02) — day-1 stand-up
+## Current state (2026-07-02, session 2) — first rigorous result BANKED
 
-- **Infra green.** Governance docs, the layered architecture, and the local-CI gates are in place;
-  `scripts/check-all.sh` passes on the scaffold and the LaTeX report builds. `fr` campaign initialised.
-- **Knowledge seeded, nothing rigorous.** The classical-portfolio is ingested (`docs/ingest/`) and its
-  reduction chain codified in `argument/` with honest status (`proved-mod-audit` / `conjecture` /
-  `numerical` / `open`). Only `lem-classical-equiv` was `af`-validated upstream; it re-enters as
-  `proved-mod-audit` until re-validated here. **No in-repo result is rigorous (L0).**
-- **`af` designed-in but opt-in** (`af: none` everywhere). Binary at `AF=${AF:-/home/tobias/Projects/vibefeld/af}`
-  (also `~/go/bin/af` on PATH); `codex` present for prover/verifier workers.
-- **Git:** local-only (no remote by user decision); 2 commits landed. **beads:** initialised (prefix
-  `aism`), `check-all.sh` wired into `.beads/hooks/pre-commit`.
+- **`lem-classical-equiv` is af-VALIDATED IN-REPO** (commit `e68d1b6`) — the signed↔stochastic bridge, the
+  repo's first genuinely rigorous result (L0 rung b). 29-node adversarial tree, root `validated`, taint
+  29/29 clean; fresh codex prover/verifiers per node, Claude orchestrated only. Ledger + human-readable
+  `export.md` in `proofs/lem-classical-equiv/`. Banked: claim-specific oracle `af-lem-classical-equiv`
+  registered, `fr verify … export.md` → PASS, `fr log R banked` (tier T0). Its 3 registry dependents
+  (`thm-rank-one`, `thm-simplex`, `prop-approx-simplex`) now have their dep available (blocked 9→6).
+  KNOWN WARN (accepted for now): 29 nodes > 12 trips the linker brittleness signal every gate run —
+  factoring decision filed as `aism-6ec` (P3).
+- **`bd ready` == the proof frontier.** `argument.py --sync-beads` is implemented (idempotent mirror:
+  issue-per-result, `blocks` edges = DAG deps, available results auto-closed) and reviewer-hardened
+  (`--limit 0`, `--type blocks`; commits `17c9293`, `a2d78ce`). The op-classical chain is fully wired:
+  `deps: thm-classical-factorization; prop-approx-simplex` — ONE COMPOSED route, AND not OR (commit
+  `c2d828f`, ingest-cited in the shard body); the north star closes over all 8 ancestors down to
+  `conj-kernel`.
+- **`fr` campaign live**: arms A–F seeded + new support arm **R** (re-establish the inherited chain via af).
+  First ▣ banked on R; standing decision: **EXPLORE B** next. All of A–F still untried.
+- **Roles (user-mandated 2026-07-02):** the orchestrator keeps the knowledge/strategy overview and
+  evaluates proof DIRECTIONS but NEVER verifies proofs (codex/af does); no Fable subagents without
+  explicit user permission — prefer codex / opus / sonnet workers.
+- **Git:** local-only, clean at `e68d1b6`+. **beads:** 17 DAG mirrors + work issues; `aism-rha`/`aism-22r`
+  closed this session.
 
 ## The frontier
 
-The single live open question (the `fr` FRONTIER): **the Kernel / (EX) conjecture** — the one input that,
-via `HLC ⇐ op-exposed-hull ⇐ op-classical`, closes the classical result. Geometric form: hidden row vertex
-with `σ̃_v > √δ` has height `≤ B√δ`. Working (EX) form: rank-≥3 signed idempotent has a θ-½ chart with
-`max_s Φ_s ≤ C₀·δ` (`C₀=1` empirically), composing with the factorization `S*≤2Φ+6δ` to `C_sf=8`.
+Unchanged mathematically: **the Kernel / (EX) conjecture** — the one input that closes `op-classical` via
+`HLC ⇐ op-exposed-hull ⇐ op-classical`. But TWO CONSTANT-HYGIENE FLAGS are now filed and should be pinned
+before heavy waves aim at a constant:
+- `aism-8bi`: "(EX) with C₀=1 empirically" (FRONTIER text) vs FINDINGS "C₀<1 REFUTED (transverse pair at
+  a=¼ gives Φ/δ=5/4)" — both cannot headline; pin from `docs/ingest/report/kernel-conjecture-v2.tex`.
+- `aism-z48`: worst `H/δ = 2.000000000013` in the "exact" 67k record — exact arithmetic has no 1e-11 fuzz;
+  either a non-exact step or the linear-law constant is not exactly 2. Decides Arm B/C targets.
+
+## Strategy assessment (2026-07-02, orchestrator)
+
+- **Arm B first** (standing `fr` decision): `lem-dual-localization` is a SINGLE well-isolated inequality
+  (`‖Ē‖₁ ≥ H` from `P²=P`, skinny μ→1 regime). Recorded deaths say the proof must NOT be convexity-based
+  (pure convex shadow composition is vacuous as μ→1) — the mechanism must come from the idempotence
+  algebra. Yields the LINEAR law, strictly stronger than the H² envelope HLC needs.
+- **Arm F early and cheap, redesigned**: the record's biggest evidential hole — below corner scale
+  δ≈0.233 the dangerous antecedent (hidden vertex with σ̃_v>√δ) has NEVER been entered. Construct
+  instances that force the antecedent; also resolves the C₀ tension (`aism-8bi`).
+- **Arm A after F pins C₀** (don't prove toward a false constant); any chart invariant must be
+  CLONE-INVARIANT (Rule 13); the selector graveyard is long — a new structural idea is required.
+- **C, D are feeders** (to B and A respectively); **E stays a literature probe** (generic Hoffman/
+  Łojasiewicz constants are n-dependent; op-classical needs n-free).
 
 ## Next steps (ranked) — RESUME HERE
 
-Day-1 stand-up is **committed and gate-green** (commit `baeaccd`; `docs/ingest/` re-tag map, 9 defs, refs
-manifest, 17-node DAG, `fr` campaign, `bd init` all in place). Remaining:
-
-1. **Mirror the argument DAG into beads** (`python3 scripts/argument.py --sync-beads`) and file the first
-   work issues from the `fr` arms so `bd ready` == the proof frontier.
-2. **First `af` elevation** (Phase 8, decided): `python3 scripts/seed-af-workspaces.py lem-classical-equiv`,
-   then `python3 scripts/af-orchestrate.py lem-classical-equiv --workers N --max-rounds M` in the background
-   (fresh codex prover/verifier per node; Claude NEVER judges) → on clean `validated`, mechanically flip to
-   `af: validated`, register the `fr verify` banking oracle, regenerate/gate/commit. This is the first
-   genuinely in-repo-rigorous result (the signed↔stochastic bridge).
-3. **Re-home the numerical record** as a `runs/<date>-ex-enumeration/` bundle (README + exact-arithmetic
-   re-run script + invariant) so the (EX) evidence is L3-disciplined, not just prose in `docs/ingest/`.
-4. **Open the primary arms** (A: (EX) at rank≥3; B: frame-free `lem-dual-localization`) with `fr` waves;
-   log each wave with `fr log`.
-5. **Wire report shards** as rigorous results land: create `report/sections/NN_*.tex` with `AISM-NN` headers,
-   a `report/PROVENANCE.md` row, and `SHARD_CATALOG.md`/`README.md` entries (gated by `check-report-shards.sh`).
+1. **Open Arm B** with a real `fr` wave (opus/sonnet subagents; log with `fr log B …`): target the
+   frame-free `δ ≥ H/2` (or `H ≤ C·δ`) in the skinny regime. Brief the wave with: DELIVERABLE2/3 +
+   `kernel-conjecture*.tex` loci, the frame-specific proof (`dist₁(λ,Δ)=2·neg(λ)`), and the
+   no-convexity death certificates.
+2. **Pin the two constants** (`aism-8bi`, `aism-z48`) from the ingest docs — cheap reads, high strategy
+   value; correct FRONTIER/HANDOFF text if confirmed.
+3. **Re-home the 67k record** as `runs/<date>-ex-enumeration/` (`aism-4el`, L3 discipline) — and design
+   the Arm-F antecedent-forcing probe on top of it.
+4. **Next af elevations** (arm R): `thm-rank-one` / `thm-simplex` / `prop-approx-simplex` now have their
+   dep validated; same protocol (`seed-af-workspaces.py <id>` → `af-orchestrate.py <id>` in background;
+   provision missing defs YOURSELF on the shard's `defs:` line if the classification says MISSING fact —
+   see `a2d78ce` for the pattern). Register a claim-specific oracle per banked result.
+5. **Report shards** as rigorous results land (`AISM-NN` headers, `PROVENANCE.md` row, catalog sync) —
+   the 17 "maps to NO report label" provenance warnings become real work once shard 1 exists.
 
 ## Recipes / commands
 
 ```bash
 sh scripts/check-all.sh                          # the gate
-python3 scripts/argument.py                       # linker: check + regen INDEX/DAG + print ready/blocked frontier
+python3 scripts/argument.py                       # linker: check + regen + ready/blocked frontier
+python3 scripts/argument.py --sync-beads          # idempotent DAG→beads mirror (implemented this session)
 python3 scripts/argument.py --show <id>           # one result's neighbourhood
-python3 scripts/check-defs.py --generate-index    # regen definitions/INDEX.md
 fr board ; fr status                              # the portfolio
-AF=${AF:-/home/tobias/Projects/vibefeld/af}       # af binary (opt-in Layer 2)
 python3 scripts/seed-af-workspaces.py <id>        # seed one af workspace from a registry contract
-python3 scripts/af-orchestrate.py <id> --workers N --max-rounds M   # run in background; orchestrator NEVER judges
+python3 scripts/af-orchestrate.py <id> --workers 8 --max-rounds 8    # background; NEVER judge
+python3 scripts/af-orchestrate.py <id> --phase verify --max-rounds 16  # RESUME an existing tree (no rebuild)
+fr verify proofs/<id>/export.md --oracle af-<id>  # bank gate (register oracle in portfolio.json first)
 ```
 
 ## What is intentionally NOT here
 
-- Any rigorous mathematical claim (day 1 — the DAG is seeded, not verified).
-- The general positive-maps / Jordan (JB) Layer-1 structure theorem (that stays in
-  `../almost-idempotent-positive-maps`; here only its commutative/stochastic shadow).
-- A git remote / remote CI (local-only by decision; `check-all.sh` is the only gate).
-- `cited` definitions whose `refs/` source isn't yet pinned (deferred — the seed defs are
-  `consensus`/`original`, source `internal`).
+- Any claim that more than ONE result is rigorous (only `lem-classical-equiv`; everything else is
+  `proved-mod-audit`/`conjecture`/`numerical`/`open`).
+- The general positive-maps / Jordan (JB) Layer-1 structure theorem (stays in
+  `../almost-idempotent-positive-maps`).
+- A git remote / remote CI (local-only by decision).
+- `cited` definitions whose `refs/` source isn't pinned (deferred; seed defs are `consensus`/`original`).
+- Resolution of the C₀ (1 vs ≥5/4) and H/δ (2+1.3e-11) tensions — flagged, filed, NOT yet pinned.
