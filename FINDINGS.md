@@ -137,3 +137,22 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   the bridge `conj-halo-collapse` only. A future cap needs a NEW mechanism that is both ledger-immune
   AND class-count-free, or must first settle the class-count decider (open signed quantitative
   Baake–Sumner). F2's `σ̃_g ≤ 0.37τ` margin is low-dimension evidence and silent on wall (b).
+
+## 2026-07-02 — (EX) chart scoping (arm A wave 1): "C₀ = 1 empirically" is RANK-3-ONLY
+
+- ❌ **Do not quote "C₀ = 1 empirically" (the `conj-ex` contract parenthesis) as the (EX) target.** It is
+  the rank-3 record only (278 exact `δ≤¼` instances, worst `min_U max_s Φ_s/δ = 1`, attained). The exact
+  higher-rank stress records already sit ABOVE 1: `no_center_path_k6: Φ/δ = 3/2`, `no_center_path_k8:
+  Φ/δ = 5/3` (both `δ = 1/100`, exact `BL/P²/rowsum` checks true —
+  `docs/ingest/experiments/out/w40_ndg/part_a_results.txt:7–8`, orchestrator-verified), and kernel-v2
+  notes float scans "climbing toward 2" (`docs/ingest/report/kernel-conjecture-v2.tex:434–440`). The
+  ratios fit `2 − 2/(k−2)` (T2 pattern-read), so the working hypothesis is a PLATEAU at 2 (⇒ `C₀ = 2`,
+  `C_sf = 2·2+6 = 10`) — but plateau-vs-growth is UNDECIDED and is the arm-A viability decider before
+  any (EX) proof wave. Any universal `C₀` still discharges `op-classical` (the composition tolerates it).
+- ✅ **The (EX) existential form suffices downstream — no constructive selector is needed.** The
+  composition chooses a `Φ`-argmin over the finite class `M_{1/2}(P)` and the hostile w42 audit confirms
+  no quantifier slip (`docs/ingest/experiments/out/w42_factor_audit/audit.md:144–168`). Pure
+  variational/compactness arguments are admissible. Walls caveat (A1 walls-check, T1): aggregate/global
+  proofs (dual certificate, clone-quotient measure compression) dodge both recorded B-walls; any
+  per-class / per-wedge / per-block proof re-imports the class-count wall in chart language. See
+  `docs/waves/2026-07-02-A1-ex-chart-scoping.md`.
