@@ -18,7 +18,21 @@ generated data** — it holds only this schema (aqm discipline).
 
 | CSV | Produced by | Run bundle | Report shard | Columns |
 |-----|-------------|------------|--------------|---------|
+| `runs/2026-07-02-ex-no-center-highrank/data/no_center_highrank.csv` | `runs/2026-07-02-ex-no-center-highrank/scripts/certify_no_center_highrank.py` | `runs/2026-07-02-ex-no-center-highrank/` | none | see contract below |
 | `runs/2026-07-02-ex-enumeration-rehome/data/campaign_summary.csv` | manual re-home manifest from archived upstream outputs | `runs/2026-07-02-ex-enumeration-rehome/` | none | see contract below |
+
+### `runs/2026-07-02-ex-no-center-highrank/data/no_center_highrank.csv`
+
+Column contract:
+
+- `k`: rank parameter of the no-center path instance, or a sentinel comment beginning with `#`.
+- `family`: no-center path scale label; sentinel rows carry caveats.
+- `delta_exact`: exact negative-mass value as a rational string.
+- `phi_over_delta_exact`: exact selected-chart value `min_U max_s Phi_s(U)/delta(P)` as a rational string.
+- `phi_over_delta_float`: decimal display of `phi_over_delta_exact`; not certified evidence.
+- `certification`: one of `full_enumeration`, `certified_reduction`, `upper_bound_only`.
+- `charts_checked`: number of theta-half charts evaluated after the stated certification step.
+- `notes`: compact exact checks/caveats, including `BL`, `P2`, `rowsum`, selected chart, and `Sstar/delta`.
 
 ### `runs/2026-07-02-ex-enumeration-rehome/data/campaign_summary.csv`
 
