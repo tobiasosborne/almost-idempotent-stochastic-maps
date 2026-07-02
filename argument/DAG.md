@@ -21,7 +21,7 @@ graph LR
   lem-classical-equiv["lem-classical-equiv<br/>proved/validated"]
   lem-dual-localization["lem-dual-localization<br/>open/none"]
   lem-exposed-circuit["lem-exposed-circuit<br/>proved-mod-audit/none"]
-  lem-factorization["lem-factorization<br/>proved-mod-audit/none"]
+  lem-factorization["lem-factorization<br/>proved-mod-audit/seeded"]
   lem-leakage["lem-leakage<br/>proved-mod-audit/none"]
   lem-mass-split["lem-mass-split<br/>proved/validated"]
   lem-residual-lower["lem-residual-lower<br/>proved/validated"]

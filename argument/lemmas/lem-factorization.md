@@ -5,7 +5,7 @@ contract: Factorization bound: let P be an exact signed idempotent (square real 
 defs: def-signed-idempotent; def-negative-mass
 deps: 
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/ingest (classical-portfolio; statement (F) and its audited proof at docs/ingest/report/kernel-conjecture-v2.tex lines ~272-293; chart vocabulary lines ~79-165)
 owner: A
 workspace: proofs/lem-factorization
