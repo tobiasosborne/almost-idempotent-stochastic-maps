@@ -4,8 +4,8 @@ kind: lemma
 contract: Factorization bound: let P be an exact signed idempotent (square real matrix with P^2 = P and all row sums equal to 1), let delta(P) = max_i sum_j max(-P_ij, 0), let k = rank(P), and let U = (u_1, ..., u_k) be an actual-row basis of P (the rows p_{u_1}, ..., p_{u_k} of P form a basis of the row space of P) whose Gram volume satisfies Vol(U) >= (1/2) * Vol_max(P), where Vol_max(P) is the maximum Gram volume over all actual-row bases of P; define coordinates a_t(j) by p_j = sum_t a_t(j) p_{u_t}, and for each pivot index s in {1, ..., k} set beta_s(j) = P_{u_s j}, lambda_s(j) = 1 - a_s(j), mu_s(j) = sum_{t != s} max(-a_t(j), 0), sigma_s(j) = sum_{t != s} max(a_t(j), 0), E_s(j) = max(mu_s(j) - lambda_s(j), 0), Phi_s(U) = sum_j max(beta_s(j), 0) * E_s(j), and S*_s(U) = sum_j max(beta_s(j), 0) * (sigma_s(j) + 2 * max(-lambda_s(j), 0)); then for every pivot s, S*_s(U) <= 2 * Phi_s(U) + 6 * delta(P).
 defs: def-signed-idempotent; def-negative-mass
 deps: 
-status: proved-mod-audit
-af: seeded
+status: proved
+af: validated
 provenance: docs/ingest (classical-portfolio; statement (F) and its audited proof at docs/ingest/report/kernel-conjecture-v2.tex lines ~272-293; chart vocabulary lines ~79-165)
 owner: A
 workspace: proofs/lem-factorization
@@ -25,9 +25,14 @@ the harmonic deficit identity `sum_j beta_s(j) lambda_s(j) = 0` ((DEF), from coo
 hypothesis gives `|a_t(j)| <= 2`, hence `lambda_s(j) <= 3`; pivot-row negative mass `<= delta`),
 and `V_s <= Phi_s/2` (on overshoot rows `lambda_s(j) < 0`, `E_s(j) >= 2*(-lambda_s(j))`).
 
+**af-VALIDATED IN-REPO 2026-07-03** (run 1, clean): 11-live-node adversarial tree (12 total, 1
+archived), root `validated`, taint 12/12 clean, 5 rounds; fresh codex prover/verifiers per node,
+Claude orchestrated only (§6). Ledger: `proofs/lem-factorization/ledger/`; export:
+`proofs/lem-factorization/export.md`. Status flip is the mechanical reflection of the codex ledger.
+
 **Elevation (2026-07-03, aism-kia):** contract narrowed from the inherited compound form (tightness
 + composition gloss moved to this body) to the single inequality, per the single-minimal-contract
-discipline (bd memory; the obs-height-collapse run-1 lesson). Awaiting af run.
+discipline (bd memory; the obs-height-collapse run-1 lesson).
 
 Finer vocabulary (def-actual-row-chart, def-phi-excess) still deferred; the contract is
 self-contained.

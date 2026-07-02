@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Factorization bound: let P be an exact signed idempotent ...}
+\step{1} Factorization bound: let P be an exact signed idempotent (square real matrix with P\textasciicircum{}2 = P and all row sums equal to 1), let delta(P) = max\_i sum\_j max(-P\_ij, 0), let k = rank(P), and let U = (u\_1, ..., u\_k) be an actual-row basis of P (the rows p\_\{u\_1\}, ..., p\_\{u\_k\} of P form a basis of the row space of P) whose Gram volume satisfies Vol(U) >= (1/2) * Vol\_max(P), where Vol\_max(P) is the maximum Gram volume over all actual-row bases of P; define coordinates a\_t(j) by p\_j = sum\_t a\_t(j) p\_\{u\_t\}, and for each pivot index s in \{1, ..., k\} set beta\_s(j) = P\_\{u\_s j\}, lambda\_s(j) = 1 - a\_s(j), mu\_s(j) = sum\_\{t != s\} max(-a\_t(j), 0), sigma\_s(j) = sum\_\{t != s\} max(a\_t(j), 0), E\_s(j) = max(mu\_s(j) - lambda\_s(j), 0), Phi\_s(U) = sum\_j max(beta\_s(j), 0) * E\_s(j), and S*\_s(U) = sum\_j max(beta\_s(j), 0) * (sigma\_s(j) + 2 * max(-lambda\_s(j), 0)); then for every pivot s, S*\_s(U) <= 2 * Phi\_s(U) + 6 * delta(P). \steptag{validated} \\[6pt]
+\step{1.1} Pointwise reduction: fix a pivot s, write beta\_j=beta\_s(j), beta\_j\textasciicircum{}+=max(beta\_j,0), lambda\_j=lambda\_s(j), lambda\_j\textasciicircum{}+=max(lambda\_j,0), lambda\_j\textasciicircum{}-=max(-lambda\_j,0), and D\_+=sum\_j beta\_j\textasciicircum{}+ lambda\_j\textasciicircum{}+. Then S*\_s(U) <= Phi\_s(U)+2D\_+. Reason: because P has row sums 1 and p\_j=sum\_t a\_t(j)p\_\{u\_t\} while each pivot row also has row sum 1, one has sum\_t a\_t(j)=1 and hence lambda\_j=sum\_\{t!=s\} a\_t(j)=sigma\_s(j)-mu\_s(j). The scalar inequality sigma\_s(j)+2lambda\_j\textasciicircum{}- <= E\_s(j)+2lambda\_j\textasciicircum{}+ follows by the two cases lambda\_j>=0 and lambda\_j<0; multiplying by beta\_j\textasciicircum{}+ and summing gives the displayed bound. \steptag{validated} \\[4pt]
+\step{1.2} Deficit estimate: for every fixed pivot s, with beta\_j\textasciicircum{}+=max(beta\_s(j),0), lambda\_j\textasciicircum{}+=max(lambda\_s(j),0), and D\_+=sum\_j beta\_j\textasciicircum{}+ lambda\_j\textasciicircum{}+, one has D\_+ <= (1/2)*Phi\_s(U)+3*delta(P). \steptag{validated} \\[6pt]
+\step{1.2.1} Harmonic identity: for the fixed pivot s and every coordinate index t, sum\_j beta\_s(j)*a\_t(j) equals 1 if t=s and equals 0 if t!=s; consequently sum\_j beta\_s(j)*lambda\_s(j)=0. This follows from the row identity p\_\{u\_s\}P=p\_\{u\_s\} (because P\textasciicircum{}2=P), from p\_j=sum\_t a\_t(j)p\_\{u\_t\}, from uniqueness of coordinates in the pivot-row basis, and from sum\_j beta\_s(j)=1 by the row-sum-one condition. \steptag{validated} \\[4pt]
+\step{1.2.2} Cramer box and negative-beta mass: for every t and j, |a\_t(j)|<=2; hence lambda\_s(j)=1-a\_s(j)<=3 for every j. Also sum\_j max(-beta\_s(j),0)<=delta(P). For the Cramer bound, if a\_t(j)=0 there is nothing to prove; otherwise replacing pivot row p\_\{u\_t\} by actual row p\_j gives an actual-row basis with Gram volume |a\_t(j)|*Vol(U), so |a\_t(j)|*Vol(U)<=Vol\_max(P)<=2*Vol(U). The negative-beta inequality is the definition of delta(P) applied to the pivot row u\_s. \steptag{validated} \\[4pt]
+\step{1.2.3} Harmonic decomposition: write beta\_j\textasciicircum{}+=max(beta\_s(j),0), beta\_j\textasciicircum{}-=max(-beta\_s(j),0), lambda\_j=lambda\_s(j), lambda\_j\textasciicircum{}+=max(lambda\_j,0), lambda\_j\textasciicircum{}-=max(-lambda\_j,0), D\_+=sum\_j beta\_j\textasciicircum{}+ lambda\_j\textasciicircum{}+, V=sum\_j beta\_j\textasciicircum{}+ lambda\_j\textasciicircum{}-, and D\_-=sum\_j beta\_j\textasciicircum{}- lambda\_j. If sum\_j beta\_s(j)lambda\_s(j)=0, then D\_+=V+D\_- because 0=sum\_j (beta\_j\textasciicircum{}+-beta\_j\textasciicircum{}-)(lambda\_j\textasciicircum{}+-lambda\_j\textasciicircum{}-)=(D\_+-V)-D\_-. \steptag{validated} \\[4pt]
+\step{1.2.4} Overshoot bound: V<=Phi\_s(U)/2. Indeed lambda\_j=sigma\_s(j)-mu\_s(j) by the row-sum coordinate identity, so when lambda\_j<0 one has E\_s(j)=max(mu\_s(j)-lambda\_j,0)=sigma\_s(j)+2*lambda\_j\textasciicircum{}- >= 2*lambda\_j\textasciicircum{}-; when lambda\_j>=0 the term beta\_j\textasciicircum{}+ lambda\_j\textasciicircum{}- is zero. Multiplying by beta\_j\textasciicircum{}+ and summing gives V<=Phi\_s(U)/2. \steptag{validated} \\[4pt]
+\step{1.2.5} Negative-row bound: D\_-<=3*delta(P). This follows from lambda\_s(j)<=3 for all j and sum\_j beta\_j\textasciicircum{}-<=delta(P), since D\_-=sum\_j beta\_j\textasciicircum{}- lambda\_s(j)<=sum\_j beta\_j\textasciicircum{}-*3. \steptag{validated} \\[4pt]
+\step{1.2.6} Deficit conclusion: the harmonic identity supplies the hypothesis of the harmonic decomposition, so D\_+=V+D\_-; the overshoot and negative-row bounds give V<=Phi\_s(U)/2 and D\_-<=3*delta(P). Hence D\_+<=(1/2)*Phi\_s(U)+3*delta(P). \steptag{validated} \\[4pt]
+\step{1.3} Final assembly from validated components: fix an arbitrary pivot s and write D\_+ as in node 1.1. Node 1.1 gives S*\_s(U) <= Phi\_s(U)+2D\_+. The validated deficit-conclusion node 1.2.6 gives D\_+ <= (1/2)*Phi\_s(U)+3*delta(P), using the harmonic, decomposition, overshoot, and negative-row bounds already validated in 1.2.1--1.2.5. Therefore S*\_s(U) <= Phi\_s(U)+2*((1/2)*Phi\_s(U)+3*delta(P)) = 2*Phi\_s(U)+6*delta(P). Since s was arbitrary, the bound holds for every pivot s. \steptag{validated} \\[6pt]
+\step{1.3.1} Bridge for the dependency challenge: for the fixed arbitrary pivot s, combine the validated pointwise reduction 1.1, S*\_s(U) <= Phi\_s(U)+2D\_+, with the validated deficit conclusion 1.2.6, D\_+ <= (1/2)*Phi\_s(U)+3*delta(P). Substitution gives S*\_s(U) <= Phi\_s(U)+2*((1/2)*Phi\_s(U)+3*delta(P)) = 2*Phi\_s(U)+6*delta(P). Because the pivot s was arbitrary, this proves the required inequality for every pivot s without invoking the still-pending umbrella node 1.2 as an established premise. \steptag{archived} \\[4pt]
+\step{1.3.2} Bridge for the dependency challenge: for the fixed arbitrary pivot s, combine the validated pointwise reduction 1.1, S*\_s(U) <= Phi\_s(U)+2D\_+, with the validated deficit conclusion 1.2.6, D\_+ <= (1/2)*Phi\_s(U)+3*delta(P). Substitution gives S*\_s(U) <= Phi\_s(U)+2*((1/2)*Phi\_s(U)+3*delta(P)) = 2*Phi\_s(U)+6*delta(P). Because the pivot s was arbitrary, this proves the required inequality for every pivot s without invoking the still-pending umbrella node 1.2 as an established premise. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

@@ -12,7 +12,7 @@
 | `lem-classical-equiv` | lemma | proved | validated | A | The signed-idempotent and stochastic-idempotent formulations of classical stabil… |
 | `lem-dual-localization` | open-problem | open | none | A | (OPEN) Frame-free dual localization: reproduce ||Ebar||_1 >= H from P^2=P WITHOU… |
 | `lem-exposed-circuit` | lemma | proved-mod-audit | none | A | For a signed affine retraction with neg mass <= delta: (i) a (rho,kappa)-exposed… |
-| `lem-factorization` | lemma | proved-mod-audit | seeded | A | Factorization bound: let P be an exact signed idempotent (square real matrix wit… |
+| `lem-factorization` | lemma | proved | validated | A | Factorization bound: let P be an exact signed idempotent (square real matrix wit… |
 | `lem-leakage` | lemma | proved-mod-audit | none | A | Affine-face leakage: for row-stochastic Q with ||Q^2-Q|| <= eta and affine h:Del… |
 | `lem-mass-split` | lemma | proved | validated | A | Mass split: for an exact signed idempotent P and any row index v, writing a_j = … |
 | `lem-residual-lower` | lemma | proved | validated | A | Convex outsourcing: let C be the convex hull of finitely many points of R^n, and… |
