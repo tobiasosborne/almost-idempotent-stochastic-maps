@@ -1,0 +1,38 @@
+% SHARD-ID: AISM-00-OVERVIEW
+% SHARD-TITLE: Roadmap and rigour status
+% SHARD-SUMMARY: Orients the lab-book around the open target op-classical and the report's strict rigour boundary.
+% SHARD-SUMMARY: Records the linear-law versus sqrt-envelope headline as orientation, not as a promoted theorem.
+% SHARD-KEYWORDS: overview, op-classical, rigour ladder, linear law, sharp exponent
+\section{Roadmap and rigour status}\label{sec:overview}
+
+This lab-book tracks the report-facing slice of the registry in
+\texttt{argument/}.  The north star is \texttt{op-classical}; its
+status is \emph{open}, and the status-ledger anchor is
+\ref{op:classical}.  The definitions used by the registry are the
+canonical shards \texttt{def-stochastic}, \texttt{def-almost-idempotent},
+\texttt{def-near-positive-projection}, \texttt{def-signed-idempotent},
+\texttt{def-negative-mass}, \texttt{def-height},
+\texttt{def-visible-set}, \texttt{def-invisible-mass}, and
+\texttt{def-exposed}.  This report references those identifiers; it
+does not introduce parallel definitions.
+
+The rigorous line is deliberately narrow.  A result may be called
+rigorous here only when it is byte-matched to a local theorem under
+\texttt{refs/}, validated in an \texttt{af} workspace, or Lean-proved.
+At the time of this shard, the only registry results reproduced as
+rigorous are the five \texttt{af}-validated entries
+\ref{lem:classical-equiv}, \ref{obs:height-collapse},
+\ref{lem:mass-split}, \ref{lem:residual-lower}, and
+\ref{lem:residual-upper}.  Every other registry result remains anchored
+only in the status ledger, with its lower-rung status left intact.
+
+The working headline is also status-sensitive.  The inherited campaign
+distinguishes the realizable-family linear law from the worst-case
+sqrt-envelope: the linear relation is the mechanism seen in the
+reduction record, while the sqrt scale is the stability target.  The
+sharp-exponent obstruction is \texttt{ex-hume}, anchored at
+\ref{ex:hume}, but it is still \texttt{proved-mod-audit} here rather
+than one of the rigorous results.  The bridge between the signed and
+stochastic pictures is the validated result
+\ref{lem:classical-equiv}; crossing between those pictures should cite
+that registry id rather than re-normalising notation locally.

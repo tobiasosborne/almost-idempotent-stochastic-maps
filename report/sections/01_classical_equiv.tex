@@ -1,0 +1,28 @@
+% SHARD-ID: AISM-01-CLASSICAL-EQUIV
+% SHARD-TITLE: The signed-stochastic bridge
+% SHARD-SUMMARY: Reproduces the registry contract for lem-classical-equiv, one of the af-validated rigorous results.
+% SHARD-SUMMARY: Summarizes the clean 29-node proof tree and records its role as the signed-to-stochastic bridge.
+% SHARD-KEYWORDS: lem-classical-equiv, af validated, signed picture, stochastic picture, bridge
+\section{The signed-stochastic bridge}\label{sec:classical-equiv}
+
+\begin{lemma}[Registry contract for \texttt{lem-classical-equiv}]
+\label{lem:classical-equiv}
+\contractquote{The signed-idempotent and stochastic-idempotent formulations of classical stability are equivalent up to universal constants: Q row-stochastic with ||Q^2-Q|| <= eta gives P=theta(2Q-1) signed affine retraction with ||P-Q|| <= C eta and neg mass delta <= C eta, and conversely row-normalising p_i^+ gives Q with ||P-Q|| <= 2 delta, ||Q^2-Q|| <= 6 delta+4 delta^2.}
+\end{lemma}
+
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
+This is one of the rigorous in-repo results.
+
+\noindent\textbf{Proof tree.} The registry shard records a 29-node
+adversarial tree with root \texttt{validated} and clean taint.  The
+human-readable export is
+\texttt{proofs/lem-classical-equiv/export.md}; the export also records
+the earlier missing-definition challenge and its repair by importing
+\texttt{def-negative-mass}.
+
+\noindent\textbf{Role in the chain.} This bridge is the authorized way
+to move between \texttt{op-classical}'s stochastic formulation and the
+signed exact-idempotent registry.  It is a dependency for the inherited
+simplex, rank-one, and approximate-simplex reductions, but those
+downstream reductions remain \texttt{proved-mod-audit} unless and until
+they clear an L0 gate.

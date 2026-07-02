@@ -11,6 +11,7 @@
 
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{array,booktabs,longtable}
 \usepackage{bm}
 \usepackage[hidelinks]{hyperref}
 
@@ -30,6 +31,7 @@
 \newcommand{\opnorm}[1]{\lVert #1 \rVert_{\infty\to\infty}}
 \newcommand{\negmass}{\delta}          % negative mass of a signed idempotent
 \newcommand{\defect}{\eta}             % almost-idempotence defect
+\newcommand{\contractquote}[1]{\begin{quote}\small\ttfamily\detokenize{#1}\end{quote}}
 \DeclareMathOperator{\conv}{conv}
 \DeclareMathOperator{\dist}{dist}
 
@@ -40,12 +42,13 @@
 \begin{document}
 \maketitle
 
-% The rigorous spine is reproduced here one shard at a time as the argument DAG is
-% populated and each result clears L0 (byte-matched ref / af-validated / Lean).
-% NONE is reproduced yet — the DAG is being seeded from the ingested classical-portfolio
-% with honest status; see argument/DAG.md and report/PROVENANCE.md.
-%
-% Ordered shard includes (uncomment / add as shards land under report/sections/):
-% \include{sections/00_roadmap}
+% Ordered shard includes:
+\include{sections/00_overview}
+\include{sections/01_classical_equiv}
+\include{sections/02_height_collapse}
+\include{sections/03_mass_split}
+\include{sections/04_residual_lower}
+\include{sections/05_residual_upper}
+\include{sections/11-discussion}
 
 \end{document}

@@ -39,4 +39,10 @@ mid-check.
 
 | # | SHARD-ID | file |
 |---|----------|------|
-| _(none yet)_ | | |
+| 00 | `AISM-00-OVERVIEW` | `report/sections/00_overview.tex` |
+| 01 | `AISM-01-CLASSICAL-EQUIV` | `report/sections/01_classical_equiv.tex` |
+| 02 | `AISM-02-HEIGHT-COLLAPSE` | `report/sections/02_height_collapse.tex` |
+| 03 | `AISM-03-MASS-SPLIT` | `report/sections/03_mass_split.tex` |
+| 04 | `AISM-04-RESIDUAL-LOWER` | `report/sections/04_residual_lower.tex` |
+| 05 | `AISM-05-RESIDUAL-UPPER` | `report/sections/05_residual_upper.tex` |
+| 11 | `AISM-11-STATUS-LEDGER` | `report/sections/11-discussion.tex` |
