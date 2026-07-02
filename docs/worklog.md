@@ -81,3 +81,19 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
 - Process lesson banked (bd remember): af elevation contracts = single minimal statements.
 - Known WARNs (accepted): two validated trees >12 nodes (29 + 19) trip brittleness on every gate run;
   factoring decisions tracked in aism-6ec / feedback item 10.
+
+## 2026-07-02 (session 2, final) — B3+F2 synthesis; halo-robust finisher staged; wind-down at quota
+
+- Arm B wave 3: OBSTRUCTION "one-sided ledger" — sigma-cap asks for the lower bound on the quantity
+  the validated collapse caps from above; only route = anti-splitting; sigma-cap => kernel RIGOROUS
+  (the one validated bridge). Arm F wave 2 (decider/refuter): eps=0 cap EXACTLY FALSE (instance C,
+  sigma=5343/5000>1 pure self-mass, orchestrator-recomputed); halo-robust cap survives with margin
+  (sigma_g <= 0.37tau over ~25k). Bundles: runs/2026-07-02-sigma-cap-refuter/. Shards:
+  obs-sigma-halo-nonrobust (numerical), conj-halo-collapse + conj-no-free-frontier (conjecture).
+- conj-halo-collapse elevation run 1: ABORTED [BALLOON] 49>40 (structural: inline re-derivation of
+  mass-split + residual-distance bookkeeping). Follow-ups filed: aism-q7e (factor+re-seed+re-run,
+  quota-gated 16:00), aism-5yk (no-free-frontier walls-check wave, opus, can run pre-16:00).
+- Session totals: 2 af-validated banked results (lem-classical-equiv, obs-height-collapse), 26-node
+  registry, 2 L3 bundles, 5 wave artifacts, sync-beads mirror live, 2 oracles registered, tooling
+  feedback filed (af dry-run bug already fixed upstream in 0.1.4). Codex quota ~exhausted; wound down
+  per user instruction.

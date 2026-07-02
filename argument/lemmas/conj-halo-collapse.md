@@ -19,5 +19,12 @@ extra split of the positive mass into halo vs genuine pots.
 
 **Role:** if af-validated, this replaces obs-height-collapse as the finisher bridge: together with a
 halo-robust cap `σ̃_g ≤ 1 − c` (mechanism candidate: [[conj-no-free-frontier]]) it yields
-`H = O(τ)` — the Kernel Conjecture's height cap. Elevation candidate NOW (small tree; the anti-splitting
-gap is not inside this statement).
+`H = O(τ)` — the Kernel Conjecture's height cap.
+
+**Elevation history:** run 1 (2026-07-02) ABORTED [BALLOON] at 49 live nodes (> cap 40) in 2 rounds,
+20/49 validated, root pending. Classification: 6× DAG/cross-sibling (the mass-split identity
+`Σ a_j⁺ = 1+ν` / `σ−σ_g ≥ 0` bookkeeping and the residual-distance bounds are re-derived inline and
+cross-referenced between siblings) + 1 missing bridge fact. NOT a mathematical refutation — a
+structure signal per §6.3: FACTOR the mass-split bookkeeping and the residual-distance estimates into
+registry sub-lemmas (deps of this node), then re-seed and re-orchestrate (bd aism-*, quota-gated).
+The partial tree remains in `proofs/conj-halo-collapse/` pending the factoring.
