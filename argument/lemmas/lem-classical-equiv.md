@@ -5,7 +5,7 @@ contract: The signed-idempotent and stochastic-idempotent formulations of classi
 defs: def-stochastic; def-signed-idempotent
 deps: 
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/ingest (classical-portfolio; contracts verbatim from ../almost-idempotent-positive-maps/argument/lemmas or report/kernel-conjecture.tex)
 owner: A
 workspace: proofs/lem-classical-equiv

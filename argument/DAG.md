@@ -15,7 +15,7 @@ graph LR
   conj-ex["conj-ex<br/>conjecture/none"]
   conj-kernel["conj-kernel<br/>conjecture/none"]
   ex-hume["ex-hume<br/>proved-mod-audit/none"]
-  lem-classical-equiv["lem-classical-equiv<br/>proved-mod-audit/none"]
+  lem-classical-equiv["lem-classical-equiv<br/>proved-mod-audit/seeded"]
   lem-dual-localization["lem-dual-localization<br/>open/none"]
   lem-exposed-circuit["lem-exposed-circuit<br/>proved-mod-audit/none"]
   lem-factorization["lem-factorization<br/>proved-mod-audit/none"]
