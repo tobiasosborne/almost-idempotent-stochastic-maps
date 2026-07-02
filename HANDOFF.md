@@ -27,7 +27,8 @@ TRIGGER: session close, or a material change in the current frontier / next task
   `proved-mod-audit` until re-validated here. **No in-repo result is rigorous (L0).**
 - **`af` designed-in but opt-in** (`af: none` everywhere). Binary at `AF=${AF:-/home/tobias/Projects/vibefeld/af}`
   (also `~/go/bin/af` on PATH); `codex` present for prover/verifier workers.
-- **Git:** local-only (no remote by user decision). **beads:** to be initialised (`bd init`, prefix `aism`).
+- **Git:** local-only (no remote by user decision); 2 commits landed. **beads:** initialised (prefix
+  `aism`), `check-all.sh` wired into `.beads/hooks/pre-commit`.
 
 ## The frontier
 
@@ -38,18 +39,22 @@ with `σ̃_v > √δ` has height `≤ B√δ`. Working (EX) form: rank-≥3 sign
 
 ## Next steps (ranked) — RESUME HERE
 
-1. **Finish + verify the day-1 content** (in flight): confirm `docs/ingest/` (curated core + re-tag map),
-   the seed `definitions/` (9 core shards), and `refs/manifest/` are populated and consistent; regenerate
-   `definitions/INDEX.md` + `argument/{INDEX,DAG}.md`; run `sh scripts/check-all.sh` green; commit.
-2. **`bd init`** (prefix `aism`), mirror the argument DAG into beads (`python3 scripts/argument.py
-   --sync-beads`), and file the first work issues from the fr arms.
+Day-1 stand-up is **committed and gate-green** (commit `baeaccd`; `docs/ingest/` re-tag map, 9 defs, refs
+manifest, 17-node DAG, `fr` campaign, `bd init` all in place). Remaining:
+
+1. **Mirror the argument DAG into beads** (`python3 scripts/argument.py --sync-beads`) and file the first
+   work issues from the `fr` arms so `bd ready` == the proof frontier.
+2. **First `af` elevation** (Phase 8, decided): `python3 scripts/seed-af-workspaces.py lem-classical-equiv`,
+   then `python3 scripts/af-orchestrate.py lem-classical-equiv --workers N --max-rounds M` in the background
+   (fresh codex prover/verifier per node; Claude NEVER judges) → on clean `validated`, mechanically flip to
+   `af: validated`, register the `fr verify` banking oracle, regenerate/gate/commit. This is the first
+   genuinely in-repo-rigorous result (the signed↔stochastic bridge).
 3. **Re-home the numerical record** as a `runs/<date>-ex-enumeration/` bundle (README + exact-arithmetic
    re-run script + invariant) so the (EX) evidence is L3-disciplined, not just prose in `docs/ingest/`.
-4. **First `af` elevation** (Phase 8, decided): `seed-af-workspaces.py lem-classical-equiv`, then
-   `af-orchestrate.py lem-classical-equiv` (fresh codex prover/verifier per node) → on clean `validated`,
-   flip to `af: validated` and register the `fr verify` banking oracle. This is the first genuinely
-   in-repo-rigorous result.
-5. **Open the primary arms** (A: (EX) at rank≥3; B: frame-free `lem-dual-localization`) with `fr` waves.
+4. **Open the primary arms** (A: (EX) at rank≥3; B: frame-free `lem-dual-localization`) with `fr` waves;
+   log each wave with `fr log`.
+5. **Wire report shards** as rigorous results land: create `report/sections/NN_*.tex` with `AISM-NN` headers,
+   a `report/PROVENANCE.md` row, and `SHARD_CATALOG.md`/`README.md` entries (gated by `check-report-shards.sh`).
 
 ## Recipes / commands
 
