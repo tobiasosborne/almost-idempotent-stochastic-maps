@@ -1,0 +1,5 @@
+seed=6 iters=1200
+  MAX H/delta: delta=0.05821 H/delta=1.9545 H/tau=0.4716 sig/tau=0.0054 sig>tau=False H>Btau=False
+       C=[['63/80', '1/8', '7/80'], ['-91/1600', '907/1600', '49/100']]
+       R2=[['7/800', '-1/20'], ['0', '-1/50'], ['-1/80', '1/50']]
+  JOINT sig>tau maxH/tau: NONE

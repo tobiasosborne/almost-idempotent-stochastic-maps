@@ -78,3 +78,19 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   conjecturally (`δ = H/2` tight on realizable families); `H ≤ 2δ` is the right Arm B/C target. Do NOT
   quote `2.000000000013` as an exact-arithmetic exceedance — it corrects the attribution in the founding
   entry above ("worst `H/δ = 2.000000000013`" under "67k+ exact instances").
+
+## 2026-07-02 — web-regime hunt (arm F wave 1): collapse bound, σ̃→1 re-scope, and a linear-law CORRECTION
+
+- ✅ **CORRECTION to the entry above: "δ ≥ H/2 with zero exceptions" is FALSE at finite δ.** A certified
+  exact 5×5 instance (`runs/2026-07-02-web-regime-hunt/`, `verify_instance.py`; independently recomputed
+  by the orchestrator) has `δ = 49/2000`, `H = 1/20`, so **`H/δ = 100/49 ≈ 2.0408 > 2`** (search max
+  ≈ 2.055). Mechanism = *hull-dip*: visible archetypes carrying their own negativity recede `conv W`. The
+  inherited record's generators kept visible rows nonnegative, so it never saw this. **Asymptotically the
+  linear-law constant is still 2** (`H/δ → 2`, `H/τ → 0` in the family — an O(δ) finite-size term,
+  kernel-safe). Do not quote `H ≤ 2δ` as exception-free at finite δ; the global finite-δ constant is > 2.
+- ✅ **The dangerous kernel antecedent re-scopes to `σ̃ → 1`.** Over ~48,000 exact idempotents (~500
+  certified hidden vertices, 7 families): `H > Bτ` occurred ZERO times; `σ̃ > τ` is cheap (up to σ̃/τ ≈ 4)
+  but INERT for height; the joint never occurred. The collapse bound `H(1−σ̃) ≤ ν(2+4δ)`
+  (`obs-height-collapse`, heuristic, 0/500 violations) is the structural reason: height is capped at
+  O(δ) unless `σ̃ → 1`. **Strategic consequence:** proving `σ̃ ≤ 1−cτ` for hidden vertices would CLOSE the
+  Kernel Conjecture via the collapse bound; hunting `σ̃ > τ` instances is a waste (W2 inertness).

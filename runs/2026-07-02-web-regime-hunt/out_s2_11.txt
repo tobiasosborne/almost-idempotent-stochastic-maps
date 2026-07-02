@@ -1,0 +1,7 @@
+seed=11 N=3000 kept(hidden)=121 collapse-bound violations=0
+  MAX H/delta (beat 2?): k=4 m=2 d=0.01785 v=4 H/delta=2.0164 H/tau=0.2694 sig/tau=0.0624 sig>tau=False H>Btau=False
+  MAX H/tau (hidden)   : k=4 m=2 d=0.01785 v=4 H/delta=2.0164 H/tau=0.2694 sig/tau=0.0624 sig>tau=False H>Btau=False
+  JOINT sig>tau, maxH/tau: k=4 m=3 d=0.16964 v=0 H/delta=0.1852 H/tau=0.0763 sig/tau=2.3942 sig>tau=True H>Btau=False
+  *** LINEAR LAW BEATEN *** dumping C,R2:
+   C = [['-1/125', '71/125', '9/20', '-1/100'], ['0', '0', '1', '0']]
+   R2= [['1/400', '1/150'], ['1/250', '0'], ['17/1250', '1/100'], ['1/250', '1/150']]

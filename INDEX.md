@@ -9,7 +9,8 @@ vocabulary). Hand-maintained in lockstep with content (CLAUDE.md Rule 9); `check
 
 | Run bundle | Question | Producing script | Rigour |
 |------------|----------|------------------|--------|
-| _(none yet — the ingested 67k-instance record will be re-homed as a `runs/` bundle)_ | | | numerical (L3) |
+| `runs/2026-07-02-web-regime-hunt/` | Can an exact idempotent enter the dangerous web regime (σ̃>τ ∧ H>Bτ)? → NO in ~48k instances; collapse bound 0/500 violations; certified H/δ=100/49>2 (hull-dip, kernel-safe) | `scripts/` inside the bundle (`verify_instance.py` = headline certificate) | numerical (L3) |
+| _(pending — the ingested 67k-instance record, re-home as a `runs/` bundle: bd aism-4el)_ | | | numerical (L3) |
 
 ## Script → output manifest
 

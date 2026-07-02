@@ -1,0 +1,4 @@
+seed=14 N=3000 kept(hidden)=124 collapse-bound violations=0
+  MAX H/delta (beat 2?): k=3 m=4 d=0.03609 v=6 H/delta=1.6164 H/tau=0.3071 sig/tau=0.0000 sig>tau=False H>Btau=False
+  MAX H/tau (hidden)   : k=3 m=4 d=0.03609 v=6 H/delta=1.6164 H/tau=0.3071 sig/tau=0.0000 sig>tau=False H>Btau=False
+  JOINT sig>tau, maxH/tau: k=4 m=3 d=0.21000 v=2 H/delta=0.1808 H/tau=0.0828 sig/tau=2.1822 sig>tau=True H>Btau=False
