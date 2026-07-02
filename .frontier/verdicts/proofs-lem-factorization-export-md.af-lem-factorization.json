@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-factorization/export.md",
+  "oracle": "af-lem-factorization",
+  "result": "pass",
+  "claim_hash": "c755b58b9c2a2fe91489bfb2b0c544b52100f248bcedd636f0941a8735d2c1f1",
+  "oracle_digest": "9420b9084599fc478b83ec7f015a2222aaf55b1815c43417b7713b04b0806731",
+  "inputs_hash": "206a89c203319e6fc526887f9385ad34ee97ff0767cc65717f3dcec6ea2f8d9b",
+  "ts": "2026-07-02T22:36:25.278Z"
+}

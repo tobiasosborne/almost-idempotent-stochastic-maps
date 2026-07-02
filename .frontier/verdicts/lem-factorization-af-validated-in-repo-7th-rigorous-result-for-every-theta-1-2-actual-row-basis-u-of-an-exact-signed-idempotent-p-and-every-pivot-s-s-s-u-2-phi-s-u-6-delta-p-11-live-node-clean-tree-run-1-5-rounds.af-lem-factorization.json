@@ -1,0 +1,9 @@
+{
+  "claim": "lem-factorization af-validated in-repo (7th rigorous result): for every theta-1/2 actual-row basis U of an exact signed idempotent P and every pivot s, S*_s(U) <= 2*Phi_s(U) + 6*delta(P); 11-live-node clean tree, run 1, 5 rounds",
+  "oracle": "af-lem-factorization",
+  "result": "fail",
+  "claim_hash": "ad886e299d2bb58ad9c8573c73ef929c31fc2498ef9d9c0289248d18b635dfb8",
+  "oracle_digest": "9420b9084599fc478b83ec7f015a2222aaf55b1815c43417b7713b04b0806731",
+  "inputs_hash": "206a89c203319e6fc526887f9385ad34ee97ff0767cc65717f3dcec6ea2f8d9b",
+  "ts": "2026-07-02T22:36:06.471Z"
+}
