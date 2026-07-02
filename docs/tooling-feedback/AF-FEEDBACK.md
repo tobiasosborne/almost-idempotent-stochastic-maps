@@ -15,28 +15,34 @@ Context: two orchestration runs on `proofs/lem-classical-equiv` (2026-07-02), 8+
 
 ### P0 — bugs
 
-1. **`af def-add --dry-run` MUTATES the workspace.** Worker-reported during round 1 of the resumed
-   run (fix-1.1.3.7 log): "Note: `af def-add --dry-run` still wrote a duplicate definition key
-   `negative mass delta(P)` with the same canonical content." A dry-run flag that writes is a
-   correctness bug for any scripted orchestration (and it produced a duplicate def key in our
-   ledger — harmless here, but noise in the record).
+1. ~~**`af def-add --dry-run` MUTATES the workspace.**~~ **FIXED in af 0.1.4.** Root cause was
+   broader than def-add: `--dry-run` (and `--verbose`) were registered global persistent flags
+   advertised in `af --help`, but no command ever read them — so `--dry-run` was a global no-op
+   and every mutating command wrote anyway. Fix: a global guard now *refuses* `--dry-run` on any
+   command that hasn't implemented it (loud error, non-zero exit, no write) instead of silently
+   mutating; `af def-add --dry-run` now previews without writing and warns when the name already
+   exists. Original report (fix-1.1.3.7 log): "`af def-add --dry-run` still wrote a duplicate
+   definition key `negative mass delta(P)`."
 
 ### P2 — feature requests
 
-2. **Bottom-up-ready job filter.** `af jobs --role verifier` vets a node as reviewable, but NOT
-   whether all its live children are already `validated` — our driver re-implements that gate
-   itself (children_of + state scan each round). A `--ready` (all live children validated) filter
-   server-side would remove a whole failure class from every driver.
+2. ~~**Bottom-up-ready job filter.**~~ **DONE in af 0.1.5.** `af jobs --ready` lists only verifier
+   jobs whose direct children are all cleared (validated/admitted/archived) — the same allowlist
+   `af accept` uses — so a node shown is acceptable now. Drops the per-round children_of + state
+   scan. Combine with `--format json`; `--ready --role prover` errors as contradictory.
 
-3. **`af init` should drop a workspace `.gitignore`.** The workspace working caches
-   (`.af/pending_defs`, `nodes/`, `defs/`, `locks/`…) had to be gitignored by hand at the repo
-   level; `af init` writing a one-line `.gitignore` for its own rebuildable state would make the
-   "track only ledger/ + externals/ + meta.json" policy the default everywhere.
+3. ~~**`af init` should drop a workspace `.gitignore`.**~~ **DONE in af 0.1.5.** `af init` now
+   writes a `.gitignore` ignoring `locks/`, `.af/`, `nodes/`, `defs/`, `lemmas/` and tracking
+   `ledger/`, `assumptions/`, `externals/`, `meta.json`. Note: the original suggestion said "track
+   only ledger/ + externals/ + meta.json" but **assumptions/ is filesystem-primary** (written
+   directly, not replayed from the ledger), so it is tracked too — ignoring it would have dropped
+   assumption data. A pre-existing `.gitignore` is never clobbered.
 
-4. **Machine-readable challenge classification.** Our driver classifies open challenges by
-   grepping their text (MISSING fact / DAG dep / genuine gap) to decide the §6.3 guardrail action.
-   If `af challenge` records carried a typed `category` field (set by the challenger), the abort
-   classification would be exact instead of heuristic.
+4. ~~**Machine-readable challenge classification.**~~ **DONE in af 0.1.5.** `af challenge --category`
+   accepts a typed, optional value (`gap`, `missing`, `dependency`, `incorrect`, `unclear`,
+   `other`), validated at raise time. `af challenges` gains a `--category` filter and includes
+   `category` in `--format json`, so the §6.3 guardrail classification can be exact instead of a
+   text grep.
 
 ## scripts/af-orchestrate.py (our driver — fixable in-repo)
 
