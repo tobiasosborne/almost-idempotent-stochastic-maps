@@ -18,8 +18,24 @@ generated data** — it holds only this schema (aqm discipline).
 
 | CSV | Produced by | Run bundle | Report shard | Columns |
 |-----|-------------|------------|--------------|---------|
+| `runs/2026-07-02-ex-multiblock-coupling/data/multiblock_coupling.csv` | `runs/2026-07-02-ex-multiblock-coupling/scripts/certify_multiblock_coupling.py` | `runs/2026-07-02-ex-multiblock-coupling/` | none | see contract below |
 | `runs/2026-07-02-ex-no-center-highrank/data/no_center_highrank.csv` | `runs/2026-07-02-ex-no-center-highrank/scripts/certify_no_center_highrank.py` | `runs/2026-07-02-ex-no-center-highrank/` | none | see contract below |
 | `runs/2026-07-02-ex-enumeration-rehome/data/campaign_summary.csv` | manual re-home manifest from archived upstream outputs | `runs/2026-07-02-ex-enumeration-rehome/` | none | see contract below |
+
+### `runs/2026-07-02-ex-multiblock-coupling/data/multiblock_coupling.csv`
+
+Column contract:
+
+- `family`: construction family label, or a sentinel comment beginning with `#`.
+- `params`: exact parameter description: shear scale, foreign coordinate count, graph/fan choice, and any calibration note.
+- `k`: rank parameter, equal to anchors plus foreign coordinates.
+- `n_rows`: number of actual rows in `L` and hence the size of `P=LB`.
+- `delta_exact`: exact negative-mass value as a rational string.
+- `phi_over_delta_exact`: exact selected-chart value `min_U max_s Phi_s(U)/delta(P)` over the certified theta-half chart class.
+- `phi_over_delta_float`: decimal display of `phi_over_delta_exact`; not certified evidence.
+- `certification`: one of `full_enumeration`, `certified_reduction`, `upper_bound_only`.
+- `charts_checked`: number of theta-half charts covered after the stated certification step.
+- `notes`: compact exact checks/caveats, including determinant-reduction bound, selected chart, `Sstar/delta`, per-anchor minima, `BL`, `P2`, row-sum, and direct-delta checks.
 
 ### `runs/2026-07-02-ex-no-center-highrank/data/no_center_highrank.csv`
 
