@@ -1,0 +1,397 @@
+{
+  "meta": {
+    "created": "2026-06-10 21:19:23",
+    "C": 4.0,
+    "c": 0.25,
+    "mission": "d13 small-delta flat-floor probe",
+    "targets": [
+      0.05,
+      0.01,
+      0.003,
+      0.001,
+      0.0003
+    ],
+    "ratio_gate": 0.3,
+    "floor_target_ratio": "H/tau in [0.35,0.54] (delta/H^2 in [3.4,8])",
+    "presolve": "OFF on all LPs",
+    "elapsed_s": 1200.1395745277405
+  },
+  "per_delta": [
+    {
+      "target_delta": 0.05,
+      "sqrt_delta": 0.22360679774997896,
+      "H_floor_if_realized": 0.11985324359398873,
+      "n_trials": 2162,
+      "elapsed_s": 120.01754522323608,
+      "best_ratio_any": 0.44721359549995937,
+      "best_is_vertex": true,
+      "best_delta_over_H2": 4.999999999999968,
+      "best_vertex_ratio": 0.44721359549995937,
+      "best_vertex_delta_over_H2": 4.999999999999968,
+      "gen_stats": {
+        "G1_fixed_tau": {
+          "n": 712,
+          "max_ratio": 0.44721359549995926,
+          "max_ratio_vertex": 0.44721359549995926,
+          "n_vertex_hidden": 570,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 9
+        },
+        "G2_canonical": {
+          "n": 721,
+          "max_ratio": 0.44721359549995937,
+          "max_ratio_vertex": 0.44721359549995937,
+          "n_vertex_hidden": 555,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 0
+        },
+        "G3_shell": {
+          "n": 720,
+          "max_ratio": 0.10505618309951559,
+          "max_ratio_vertex": 0.10505618309951559,
+          "n_vertex_hidden": 116,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 0
+        }
+      },
+      "entry_gate_cleared": true,
+      "anatomy_gate": "PASS",
+      "outcome": "a_verified_deep",
+      "H": 0.10000000000000053,
+      "H_over_tau": 0.4472135954999602,
+      "delta_over_H2": 4.9999999999999485,
+      "sigma_v": 1.0500000000000003,
+      "sigma_tilde": 0.0,
+      "m_star_observed": 0.9999999999999998,
+      "E_dmf_5delta_over_tau": 1.1180339887498951,
+      "shallow_fraction": 0.0,
+      "ALL_SHALLOW": false,
+      "class_composition": {
+        "W-vertex": 0.9999999999999998
+      },
+      "depth_profile": {
+        "E/H=0.0": 0.9999999999999998,
+        "E/H=0.1": 0.9999999999999998,
+        "E/H=0.25": 0.9999999999999998,
+        "E/H=0.5": 0.9999999999999998,
+        "E/H=0.75": 0.9999999999999998,
+        "E/H=0.9": 0.9999999999999998,
+        "E/H=1.0": 0.9999999999999998
+      },
+      "sigma_tilde_lemma_bound": -0.04999999999999516
+    },
+    {
+      "target_delta": 0.01,
+      "sqrt_delta": 0.1,
+      "H_floor_if_realized": 0.05360000000000001,
+      "n_trials": 3556,
+      "elapsed_s": 192.00175857543945,
+      "best_ratio_any": 0.22166319917444532,
+      "best_is_vertex": true,
+      "best_delta_over_H2": 20.35226768591532,
+      "best_vertex_ratio": 0.22166319917444532,
+      "best_vertex_delta_over_H2": 20.35226768591532,
+      "gen_stats": {
+        "G1_fixed_tau": {
+          "n": 1184,
+          "max_ratio": 0.22166319917444532,
+          "max_ratio_vertex": 0.22166319917444532,
+          "n_vertex_hidden": 1144,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 2
+        },
+        "G2_canonical": {
+          "n": 1185,
+          "max_ratio": 0.20000000000000565,
+          "max_ratio_vertex": 0.20000000000000565,
+          "n_vertex_hidden": 1140,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 0
+        },
+        "G3_shell": {
+          "n": 1185,
+          "max_ratio": 0.20000000000000231,
+          "max_ratio_vertex": 0.20000000000000231,
+          "n_vertex_hidden": 740,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 0
+        }
+      },
+      "entry_gate_cleared": false,
+      "outcome": "c_no_floor_vertex",
+      "failure_reason": "ratio COLLAPSES: max H/tau over all rows = 0.2217 << 0.3; nothing hides near the floor at this delta (entry gate not enterable)"
+    },
+    {
+      "target_delta": 0.003,
+      "sqrt_delta": 0.05477225575051661,
+      "H_floor_if_realized": 0.029357929082276905,
+      "n_trials": 5021,
+      "elapsed_s": 264.0175337791443,
+      "best_ratio_any": 0.10954451150106571,
+      "best_is_vertex": true,
+      "best_delta_over_H2": 83.33333333328392,
+      "best_vertex_ratio": 0.10954451150106571,
+      "best_vertex_delta_over_H2": 83.33333333328392,
+      "gen_stats": {
+        "G1_fixed_tau": {
+          "n": 1672,
+          "max_ratio": 0.10954451150104037,
+          "max_ratio_vertex": 0.10954451150104037,
+          "n_vertex_hidden": 1654,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 2
+        },
+        "G2_canonical": {
+          "n": 1674,
+          "max_ratio": 0.10954451150106571,
+          "max_ratio_vertex": 0.10954451150106571,
+          "n_vertex_hidden": 1662,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 0
+        },
+        "G3_shell": {
+          "n": 1673,
+          "max_ratio": 0.10954451150103733,
+          "max_ratio_vertex": 0.10954451150103733,
+          "n_vertex_hidden": 1528,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 0
+        }
+      },
+      "entry_gate_cleared": false,
+      "outcome": "c_no_floor_vertex",
+      "failure_reason": "ratio COLLAPSES: max H/tau over all rows = 0.1095 << 0.3; nothing hides near the floor at this delta (entry gate not enterable)"
+    },
+    {
+      "target_delta": 0.001,
+      "sqrt_delta": 0.03162277660168379,
+      "H_floor_if_realized": 0.016949808258502515,
+      "n_trials": 4762,
+      "elapsed_s": 312.0009660720825,
+      "best_ratio_any": 0.07724803620743571,
+      "best_is_vertex": true,
+      "best_delta_over_H2": 167.58112620768094,
+      "best_vertex_ratio": 0.07724803620743571,
+      "best_vertex_delta_over_H2": 167.58112620768094,
+      "gen_stats": {
+        "G1_fixed_tau": {
+          "n": 1588,
+          "max_ratio": 0.07724803620743571,
+          "max_ratio_vertex": 0.07724803620743571,
+          "n_vertex_hidden": 1579,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 0
+        },
+        "G2_canonical": {
+          "n": 1587,
+          "max_ratio": 0.06324555320342994,
+          "max_ratio_vertex": 0.06324555320342994,
+          "n_vertex_hidden": 1581,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 0
+        },
+        "G3_shell": {
+          "n": 1587,
+          "max_ratio": 0.06324555320337816,
+          "max_ratio_vertex": 0.06324555320337816,
+          "n_vertex_hidden": 1587,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 0
+        }
+      },
+      "entry_gate_cleared": false,
+      "outcome": "c_no_floor_vertex",
+      "failure_reason": "ratio COLLAPSES: max H/tau over all rows = 0.0772 << 0.3; nothing hides near the floor at this delta (entry gate not enterable)"
+    },
+    {
+      "target_delta": 0.0003,
+      "sqrt_delta": 0.017320508075688773,
+      "H_floor_if_realized": 0.009283792328569183,
+      "n_trials": 5414,
+      "elapsed_s": 312.0249011516571,
+      "best_ratio_any": 0.03464101615146538,
+      "best_is_vertex": true,
+      "best_delta_over_H2": 833.3333333291075,
+      "best_vertex_ratio": 0.03464101615146538,
+      "best_vertex_delta_over_H2": 833.3333333291075,
+      "gen_stats": {
+        "G1_fixed_tau": {
+          "n": 1804,
+          "max_ratio": 0.034641016151426916,
+          "max_ratio_vertex": 0.034641016151426916,
+          "n_vertex_hidden": 1797,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 1
+        },
+        "G2_canonical": {
+          "n": 1805,
+          "max_ratio": 0.03464101615146538,
+          "max_ratio_vertex": 0.03464101615146538,
+          "n_vertex_hidden": 1802,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 0
+        },
+        "G3_shell": {
+          "n": 1804,
+          "max_ratio": 0.03464101615139647,
+          "max_ratio_vertex": 0.03464101615139647,
+          "n_vertex_hidden": 1804,
+          "n_idem_fail": 0,
+          "n_rescale_fail": 0,
+          "n_delta_off": 0
+        }
+      },
+      "entry_gate_cleared": false,
+      "outcome": "c_no_floor_vertex",
+      "failure_reason": "ratio COLLAPSES: max H/tau over all rows = 0.0346 << 0.3; nothing hides near the floor at this delta (entry gate not enterable)"
+    }
+  ],
+  "verified_instances": [
+    {
+      "label": "d13_d5e-02",
+      "n": 7,
+      "idem_resid": 0.0,
+      "row_sum_resid": 4.440892098500626e-16,
+      "delta": 0.05000000000000002,
+      "target_delta": 0.05,
+      "generator": "G2_canonical",
+      "entry_ratio": 0.44721359549995937,
+      "tau": 0.22360679774997902,
+      "rho": 0.8944271909999161,
+      "kappa": 0.055901699437494755,
+      "v": 6,
+      "nW": 6,
+      "W": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "v_vertex": true,
+      "H_dist": 0.10000000000000034,
+      "max_height_vertex": 6,
+      "max_height": 0.10000000000000034,
+      "v_is_max_height": true,
+      "target_vertex": 6,
+      "H": 0.10000000000000053,
+      "R": 2.1000000000000005,
+      "sep_resid_Pg": 5.204170427930421e-16,
+      "g_v_target": 0.0,
+      "tstar": 0.04761904761904763,
+      "tstar_over_kappa": 0.8518354199999199,
+      "A": 0.0,
+      "B": 0.04761904761904763,
+      "gamma": 0.9523809523809523,
+      "MU": 0.9999999999999998,
+      "ident_resid": 3.885780586188048e-16,
+      "massbal_resid": 0.0,
+      "B_minus_tstar": 0.0,
+      "v_fails_exposed": true,
+      "witness_identity_ok": true,
+      "depth_profile": {
+        "E/H=0.0": 0.9999999999999998,
+        "E/H=0.1": 0.9999999999999998,
+        "E/H=0.25": 0.9999999999999998,
+        "E/H=0.5": 0.9999999999999998,
+        "E/H=0.75": 0.9999999999999998,
+        "E/H=0.9": 0.9999999999999998,
+        "E/H=1.0": 0.9999999999999998
+      },
+      "m_star_observed": 0.9999999999999998,
+      "E_dmf_5delta_over_tau": 1.1180339887498951,
+      "shallow_mass_g_lt_Hhalf": 0.0,
+      "mu_rows": {
+        "1": {
+          "vertex": true,
+          "inW": true,
+          "class": "W-vertex",
+          "o": 0.0,
+          "within_rho": false,
+          "g": 0.10000000000000053,
+          "dist_over_rho": 1.7505374197349595,
+          "mu": 0.25441511091724694,
+          "g_over_H": 1.0
+        },
+        "2": {
+          "vertex": true,
+          "inW": true,
+          "class": "W-vertex",
+          "o": 0.0,
+          "within_rho": false,
+          "g": 0.10000000000000053,
+          "dist_over_rho": 1.8279558898344925,
+          "mu": 0.22144121342075376,
+          "g_over_H": 1.0
+        },
+        "3": {
+          "vertex": true,
+          "inW": true,
+          "class": "W-vertex",
+          "o": 0.0,
+          "within_rho": false,
+          "g": 0.10000000000000053,
+          "dist_over_rho": 1.8374221717376478,
+          "mu": 0.2174093563103479,
+          "g_over_H": 1.0
+        },
+        "4": {
+          "vertex": true,
+          "inW": true,
+          "class": "W-vertex",
+          "o": 0.0,
+          "within_rho": false,
+          "g": 0.10000000000000053,
+          "dist_over_rho": 1.702670568091923,
+          "mu": 0.2748024507539573,
+          "g_over_H": 1.0
+        },
+        "5": {
+          "vertex": true,
+          "inW": true,
+          "class": "W-vertex",
+          "o": 0.0,
+          "within_rho": false,
+          "g": 0.10000000000000053,
+          "dist_over_rho": 2.2728994561000926,
+          "mu": 0.03193186859769397,
+          "g_over_H": 1.0
+        }
+      },
+      "class_composition": {
+        "W-vertex": 0.9999999999999998
+      },
+      "sigma_v": 1.0500000000000003,
+      "sigma_tilde": 0.0,
+      "P_vv": 0.0,
+      "nu_v": 0.05000000000000002,
+      "exchange_LHS": 0.1000000000000005,
+      "exchange_bound_tstarR": 0.10000000000000005,
+      "exchange_bound_kappaR": 0.11739356881873901,
+      "shallow_fraction": 0.0,
+      "ALL_SHALLOW": false,
+      "gate": "PASS"
+    }
+  ],
+  "all_shallow_found": false,
+  "VERDICT": "c_FLAT_FLOOR_IS_CORNER_EXTRAPOLATION",
+  "n_targets_floor_verified": 0,
+  "n_targets_outcome_c": 4,
+  "verdict_basis": "small-delta probe targets only (delta<1e-2); delta>=5e-2 is the validation anchor",
+  "validation_anchor_found_floor": true
+}

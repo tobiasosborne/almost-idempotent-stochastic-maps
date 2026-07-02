@@ -1,0 +1,21 @@
+{
+  "control_i_3p49_floor": {
+    "min_delta_over_H2": Infinity,
+    "rec": null,
+    "pass": false
+  },
+  "control_ii_collapse": {
+    "lone_far_exposed": true,
+    "margin": 1.0,
+    "kappa": 0.030618621784789725,
+    "dist_to_W": 0.0,
+    "in_W": true,
+    "collapse_ok": true
+  },
+  "control_iii_fnd": {
+    "near_delta_exposed": true,
+    "in_W": true,
+    "off_site_mass": 0.050000000000000044,
+    "fnd_ok": true
+  }
+}

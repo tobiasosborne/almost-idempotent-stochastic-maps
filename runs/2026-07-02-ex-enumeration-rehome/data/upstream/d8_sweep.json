@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "created": "2026-06-10 18:15:34",
+    "C": 4.0,
+    "normalization": "delta=max-row-neg"
+  },
+  "entered": [],
+  "best_per_cell": {},
+  "refutation": null,
+  "all_min_dH2": null,
+  "summary": {
+    "n_cells": 384,
+    "n_entered": 0,
+    "min_delta_over_H2": null,
+    "verdict": "NO_ENTRY",
+    "elapsed_s": 33.49538731575012
+  }
+}

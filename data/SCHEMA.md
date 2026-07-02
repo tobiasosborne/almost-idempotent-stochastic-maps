@@ -18,4 +18,20 @@ generated data** — it holds only this schema (aqm discipline).
 
 | CSV | Produced by | Run bundle | Report shard | Columns |
 |-----|-------------|------------|--------------|---------|
-| _(none yet)_ | | | | |
+| `runs/2026-07-02-ex-enumeration-rehome/data/campaign_summary.csv` | manual re-home manifest from archived upstream outputs | `runs/2026-07-02-ex-enumeration-rehome/` | none | see contract below |
+
+### `runs/2026-07-02-ex-enumeration-rehome/data/campaign_summary.csv`
+
+Column contract:
+
+- `artifact_id`: stable row id for this re-home manifest.
+- `campaign`: upstream campaign or enumeration label.
+- `upstream_path`: read-only source path used for the re-home.
+- `local_path`: path inside the run bundle, or `not_copied` for a report-only inventory row.
+- `instance_count`: archived instance count when the source gives one; `NA` if not applicable.
+- `delta_cap_count`: count inside the stated `delta` cap, when applicable.
+- `chart_count`: chart/enumeration count, when applicable.
+- `violation_count`: empirical violation count in the archived source's own terminology.
+- `key_metric`: compact headline metric; parse as descriptive text, not a theorem.
+- `status`: rigour tag; all rows here are `numerical_L3`.
+- `sha256`: SHA-256 of the local copied artifact when one exists; `NA` otherwise.

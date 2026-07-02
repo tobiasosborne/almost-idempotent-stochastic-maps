@@ -1,0 +1,32 @@
+total_records=444 usable_delta_le_1_4=278 random_delta_le_1_4=220 adversarial_delta_le_1_4=53
+factorization_checked_all=True
+worst_delta_ok=transverse_pair_a1_8 tag=known_rank3 delta=2/17 phi_min/delta=1 theta_class=3 basis=[1, 2, 3]
+mandatory:
+  transverse_pair_a1_8: delta=2/17 delta_ok=True phi_min/d=1 maxvol_best/d=1 peeled/d=17/16 negmass/d=17/16
+  transverse_pair_a1_4: delta=1/5 delta_ok=True phi_min/d=1 maxvol_best/d=1 peeled/d=5/4 negmass/d=5/4
+  dense_pair_rank3_restriction_transverse_a1_4: delta=1/5 delta_ok=True phi_min/d=1 maxvol_best/d=1 peeled/d=5/4 negmass/d=5/4
+  staircase_m1_rank3_delta1_2: delta=1/2 delta_ok=False phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  perturbed_staircase_m1_eps1_1000_delta1_2: delta=1/2 delta_ok=False phi_min/d=997/1000 maxvol_best/d=997/1000 peeled/d=997/1000 negmass/d=997/1000
+  no_center_rank3_a1_100: delta=1/100 delta_ok=True phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_a1_4: delta=1/4 delta_ok=True phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+top_delta_ok:
+  transverse_pair_a1_8: tag=known_rank3 delta=2/17 phi_min/d=1 maxvol_best/d=1 peeled/d=17/16 negmass/d=17/16
+  transverse_pair_a1_4: tag=known_rank3 delta=1/5 phi_min/d=1 maxvol_best/d=1 peeled/d=5/4 negmass/d=5/4
+  dense_pair_rank3_restriction_transverse_a1_4: tag=known_restricted delta=1/5 phi_min/d=1 maxvol_best/d=1 peeled/d=5/4 negmass/d=5/4
+  no_center_rank3_a1_100: tag=known_rank3 delta=1/100 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_a1_4: tag=known_rank3 delta=1/4 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_100: tag=adversarial_no_center delta=1/100 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_80: tag=adversarial_no_center delta=1/80 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_60: tag=adversarial_no_center delta=1/60 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_50: tag=adversarial_no_center delta=1/50 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_40: tag=adversarial_no_center delta=1/40 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_30: tag=adversarial_no_center delta=1/30 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_25: tag=adversarial_no_center delta=1/25 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_20: tag=adversarial_no_center delta=1/20 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_16: tag=adversarial_no_center delta=1/16 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_12: tag=adversarial_no_center delta=1/12 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_10: tag=adversarial_no_center delta=1/10 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_8: tag=adversarial_no_center delta=1/8 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_6: tag=adversarial_no_center delta=1/6 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_5: tag=adversarial_no_center delta=1/5 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1
+  no_center_rank3_fixed_a1_4: tag=adversarial_no_center delta=1/4 phi_min/d=1 maxvol_best/d=1 peeled/d=1 negmass/d=1

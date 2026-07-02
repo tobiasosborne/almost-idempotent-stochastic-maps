@@ -1,0 +1,322 @@
+[
+  {
+    "a": "1/4",
+    "delta": "1/5",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 5
+  },
+  {
+    "a": "1/4",
+    "delta": "1/4",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 4
+  },
+  {
+    "a": "1/5",
+    "delta": "5/29",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/5",
+    "delta": "1/5",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/6",
+    "delta": "3/20",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/6",
+    "delta": "1/6",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/7",
+    "delta": "7/53",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/7",
+    "delta": "1/7",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/8",
+    "delta": "2/17",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/8",
+    "delta": "1/8",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/9",
+    "delta": "9/85",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/9",
+    "delta": "1/9",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/10",
+    "delta": "5/52",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/10",
+    "delta": "1/10",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/11",
+    "delta": "11/125",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/11",
+    "delta": "1/11",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/12",
+    "delta": "3/37",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/12",
+    "delta": "1/12",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/13",
+    "delta": "13/173",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/13",
+    "delta": "1/13",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/14",
+    "delta": "7/100",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/14",
+    "delta": "1/14",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/15",
+    "delta": "15/229",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/15",
+    "delta": "1/15",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/16",
+    "delta": "4/65",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/16",
+    "delta": "1/16",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/17",
+    "delta": "17/293",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/17",
+    "delta": "1/17",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/18",
+    "delta": "9/164",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/18",
+    "delta": "1/18",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/19",
+    "delta": "19/365",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/19",
+    "delta": "1/19",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "1/20",
+    "delta": "5/101",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "1/20",
+    "delta": "1/20",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "2/9",
+    "delta": "18/97",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "2/9",
+    "delta": "2/9",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "3/14",
+    "delta": "21/116",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "3/14",
+    "delta": "3/14",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  },
+  {
+    "a": "4/17",
+    "delta": "68/353",
+    "family": "transverse",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 3
+  },
+  {
+    "a": "4/17",
+    "delta": "4/17",
+    "family": "no_center",
+    "maxvol_best": "1",
+    "phi_min_over_delta": "1",
+    "theta_class_size": 2
+  }
+]

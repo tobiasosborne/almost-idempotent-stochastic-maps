@@ -1,0 +1,3662 @@
+{
+  "meta": {
+    "created": "2026-06-10 19:03:04",
+    "C": 4.0,
+    "c": 0.25,
+    "sigmas": [
+      0.05,
+      0.1,
+      0.2,
+      0.35,
+      0.5,
+      0.536,
+      0.7,
+      1.0
+    ],
+    "k_groups": 1,
+    "normalization": "delta=max-row-neg",
+    "presolve": "OFF on all exposedness LPs",
+    "exposed_dual_solver": "gurobipy Method=1 dual simplex, Presolve=0, FeasTol=OptTol=1e-9",
+    "elapsed_s": 64.9057457447052
+  },
+  "cells": [
+    {
+      "sigma_v": 0.05,
+      "k_groups": 1,
+      "regime": "budget-bound",
+      "d_edge": 0.012500000000000002,
+      "delta": 0.0006250000000000001,
+      "tau": 0.025,
+      "H_real": 0.0012499999999998758,
+      "H_over_tau": 0.04999999999999503,
+      "delta_over_H2": 400.0000000000796,
+      "nW": 8,
+      "W": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11
+      ],
+      "v_fails_exposed": true,
+      "v_margin_over_kappa": 0.09993753903810121,
+      "cluster_margin_over_kappa_min": 0.026229303440254183,
+      "cluster_margin_over_kappa_max": 0.09993753903810121,
+      "exposedness_duals_edge": {
+        "v": {
+          "far": 11,
+          "tstar": 0.0006246096189881326,
+          "margin_over_kappa": 0.09993753903810121,
+          "exposed": false,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.0006246096189881326,
+            0.0006246096189881326,
+            0.0006246096189881326,
+            1.0,
+            1.0,
+            0.0006246096189881326,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 4,
+          "blockers": [
+            {
+              "row": 7,
+              "role": "frame-financing#4",
+              "Pi": -0.9494066208619613,
+              "h_value": 0.0006246096189881326,
+              "l1_to_target": 0.10125000000000005
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.025608994378513435,
+              "h_value": 0.0006246096189881326,
+              "l1_to_target": 1.9499999999999997
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.012492192379762651,
+              "h_value": 0.0006246096189881326,
+              "l1_to_target": 1.97625
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.012492192379762651,
+              "h_value": 0.0006246096189881326,
+              "l1_to_target": 1.97625
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 3.9013717613250014e-07,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0006242194818120001,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": 1.0842021724855044e-19,
+          "h_on_cluster": {
+            "supplier#0": 0.7376639600249845,
+            "supplier#1": 0.7376639600249845,
+            "v": 1.0842021724855044e-19
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 10,
+          "tstar": 0.00016393314650158864,
+          "margin_over_kappa": 0.026229303440254183,
+          "exposed": false,
+          "functional_a": [
+            0.0007884403712695452,
+            1.0,
+            0.00016393314650158867,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 2,
+          "blockers": [
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi": -0.7375430324509566,
+              "h_value": 0.00016393314650158864,
+              "l1_to_target": 0.5250000000000001
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.26245696754904335,
+              "h_value": 0.00016393314650158867,
+              "l1_to_target": 1.47625
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0001639331465015887,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": 2.0328790734103208e-20,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.9750037080116469
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0007884403712695452,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 10,
+          "tstar": 0.00016393314650158864,
+          "margin_over_kappa": 0.026229303440254183,
+          "exposed": false,
+          "functional_a": [
+            0.0007884403712695452,
+            1.0,
+            0.00016393314650158867,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 2,
+          "blockers": [
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi": -0.7375430324509566,
+              "h_value": 0.00016393314650158864,
+              "l1_to_target": 0.5250000000000001
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.26245696754904335,
+              "h_value": 0.00016393314650158867,
+              "l1_to_target": 1.47625
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0001639331465015887,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": 2.0328790734103208e-20,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.9750037080116469
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0007884403712695452,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "exposedness_duals_past": {
+        "v": {
+          "far": 10,
+          "tstar": 0.012833168805528138,
+          "margin_over_kappa": 2.013433174172867,
+          "exposed": true,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.012833168805528138,
+            0.012833168805528138,
+            0.012833168805528138,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 3,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.5162882527147089,
+              "h_value": 0.012833168805528138,
+              "l1_to_target": 1.9489999999999998
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.2418558736426456,
+              "h_value": 0.012833168805528138,
+              "l1_to_target": 1.9768
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.2418558736426455,
+              "h_value": 0.012833168805528138,
+              "l1_to_target": 1.9768
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 8.336141231792626e-06,
+              "h_value": 1.0
+            },
+            {
+              "row": 7,
+              "role": "frame-financing#4",
+              "Pi_lo": -18.756169792694966,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.012824832664296345,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": 1.0842021724855044e-19,
+          "h_on_cluster": {
+            "supplier#0": 0.7403751233958539,
+            "supplier#1": 0.7403751233958539,
+            "v": 8.131516293641283e-20
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 10,
+          "tstar": 0.00017080977371626766,
+          "margin_over_kappa": 0.026798842132049742,
+          "exposed": false,
+          "functional_a": [
+            0.0008202765939302132,
+            1.0,
+            0.00017080977371626763,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 2,
+          "blockers": [
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi": -0.7370449229704874,
+              "h_value": 0.00017080977371626766,
+              "l1_to_target": 0.526
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.2629550770295126,
+              "h_value": 0.00017080977371626763,
+              "l1_to_target": 1.4753
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0001708097737162676,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": -8.809142651444724e-20,
+          "h_on_cluster": {
+            "supplier#0": -1.0842021724855044e-19,
+            "supplier#1": -1.0842021724855044e-19,
+            "v": 0.9745039334957966
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0008202765939302132,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 10,
+          "tstar": 0.00017080977371626766,
+          "margin_over_kappa": 0.026798842132049742,
+          "exposed": false,
+          "functional_a": [
+            0.0008202765939302132,
+            1.0,
+            0.00017080977371626763,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 2,
+          "blockers": [
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi": -0.7370449229704874,
+              "h_value": 0.00017080977371626766,
+              "l1_to_target": 0.526
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.2629550770295126,
+              "h_value": 0.00017080977371626763,
+              "l1_to_target": 1.4753
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0001708097737162676,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": -8.809142651444724e-20,
+          "h_on_cluster": {
+            "supplier#0": -1.0842021724855044e-19,
+            "supplier#1": -1.0842021724855044e-19,
+            "v": 0.9745039334957966
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0008202765939302132,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "past_meta": {
+        "d": 0.013000000000000003,
+        "tau": 0.025495097567963927,
+        "H_over_tau": 0.0,
+        "nW": 9,
+        "entry_pass": false,
+        "v_in_W": true,
+        "suppliers_in_W": [],
+        "H_real": 0.0
+      },
+      "minneg_duals": {
+        "n_nonzero": 3,
+        "families": {
+          "pin": 1,
+          "neg": 1,
+          "epi": 1
+        },
+        "by_family": {
+          "pin": [
+            {
+              "key": "('pin', 10, 0)",
+              "Pi": -1.0
+            }
+          ],
+          "neg": [
+            {
+              "key": "('neg', 10, 0)",
+              "Pi": 1.0
+            }
+          ],
+          "epi": [
+            {
+              "key": "('epi', 10)",
+              "Pi": -1.0
+            }
+          ]
+        }
+      },
+      "mneg_lp": 0.0006250000000000001,
+      "verify_pass": true,
+      "idem_resid": 0.0
+    },
+    {
+      "sigma_v": 0.1,
+      "k_groups": 1,
+      "regime": "budget-bound",
+      "d_edge": 0.026,
+      "delta": 0.0026,
+      "tau": 0.05099019513592785,
+      "H_real": 0.005200000000000019,
+      "H_over_tau": 0.10198039027185607,
+      "delta_over_H2": 96.15384615384545,
+      "nW": 8,
+      "W": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11
+      ],
+      "v_fails_exposed": true,
+      "v_margin_over_kappa": 0.2034318577136559,
+      "cluster_margin_over_kappa_min": 0.05610703473163863,
+      "cluster_margin_over_kappa_max": 0.2034318577136559,
+      "exposedness_duals_edge": {
+        "v": {
+          "far": 11,
+          "tstar": 0.002593257530420906,
+          "margin_over_kappa": 0.2034318577136559,
+          "exposed": false,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.002593257530420906,
+            0.002593257530420906,
+            0.002593257530420906,
+            1.0,
+            1.0,
+            0.002593257530420906,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 4,
+          "blockers": [
+            {
+              "row": 7,
+              "role": "frame-financing#4",
+              "Pi": -0.8976660682226212,
+              "h_value": 0.002593257530420906,
+              "l1_to_target": 0.2052
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.053461001396369445,
+              "h_value": 0.002593257530420906,
+              "l1_to_target": 1.8980000000000001
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.024436465190504696,
+              "h_value": 0.002593257530420906,
+              "l1_to_target": 1.9562
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.024436465190504696,
+              "h_value": 0.002593257530420906,
+              "l1_to_target": 1.9562000000000002
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 6.724984619084735e-06,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.002586532545801821,
+              "h_value": 0.9999999999999999
+            }
+          ],
+          "h_on_target": 4.336808689942018e-19,
+          "h_on_cluster": {
+            "supplier#0": 0.7247157390783961,
+            "supplier#1": 0.7247157390783961,
+            "v": 0.0
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 10,
+          "tstar": 0.0007152271623661337,
+          "margin_over_kappa": 0.05610703473163863,
+          "exposed": false,
+          "functional_a": [
+            0.003306629924562272,
+            1.0,
+            0.0007152271623661338,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 2,
+          "blockers": [
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi": -0.7241974026968131,
+              "h_value": 0.0007152271623661337,
+              "l1_to_target": 0.5519999999999999
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.2758025973031869,
+              "h_value": 0.0007152271623661338,
+              "l1_to_target": 1.4532
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0007152271623661337,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": -2.168404344971009e-19,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.9490297389380989
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.003306629924562272,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 10,
+          "tstar": 0.0007152271623661337,
+          "margin_over_kappa": 0.05610703473163863,
+          "exposed": false,
+          "functional_a": [
+            0.003306629924562272,
+            1.0,
+            0.0007152271623661338,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 2,
+          "blockers": [
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi": -0.7241974026968131,
+              "h_value": 0.0007152271623661337,
+              "l1_to_target": 0.5519999999999999
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.2758025973031869,
+              "h_value": 0.0007152271623661338,
+              "l1_to_target": 1.4532
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0007152271623661337,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": -2.168404344971009e-19,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.9490297389380989
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.003306629924562272,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "exposedness_duals_past": {
+        "v": {
+          "far": 10,
+          "tstar": 0.025815879201169015,
+          "margin_over_kappa": 2.0059678793934728,
+          "exposed": true,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.025815879201169015,
+            0.025815879201169015,
+            0.025815879201169015,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 3,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.5275207014125669,
+              "h_value": 0.025815879201169015,
+              "l1_to_target": 1.897
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.23623964929371655,
+              "h_value": 0.025815879201169015,
+              "l1_to_target": 1.9568
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.23623964929371655,
+              "h_value": 0.025815879201169015,
+              "l1_to_target": 1.9568
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 6.823126702548037e-05,
+              "h_value": 1.0
+            },
+            {
+              "row": 7,
+              "role": "frame-financing#4",
+              "Pi_lo": -8.767657087189479,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.025747647934143535,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": -2.168404344971009e-19,
+          "h_on_cluster": {
+            "supplier#0": 0.7306380905991232,
+            "supplier#1": 0.7306380905991232,
+            "v": -3.2526065174565133e-19
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 10,
+          "tstar": 0.0007302547490041747,
+          "margin_over_kappa": 0.05674288909016059,
+          "exposed": false,
+          "functional_a": [
+            0.0033713207490192734,
+            1.0,
+            0.0007302547490041746,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 2,
+          "blockers": [
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi": -0.7237019154380997,
+              "h_value": 0.0007302547490041747,
+              "l1_to_target": 0.5529999999999999
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.2762980845619003,
+              "h_value": 0.0007302547490041746,
+              "l1_to_target": 1.4523000000000001
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0007302547490041745,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": 8.131516293641283e-20,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.9485306092946737
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0033713207490192734,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 10,
+          "tstar": 0.0007302547490041747,
+          "margin_over_kappa": 0.05674288909016059,
+          "exposed": false,
+          "functional_a": [
+            0.0033713207490192734,
+            1.0,
+            0.0007302547490041746,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 2,
+          "blockers": [
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi": -0.7237019154380997,
+              "h_value": 0.0007302547490041747,
+              "l1_to_target": 0.5529999999999999
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.2762980845619003,
+              "h_value": 0.0007302547490041746,
+              "l1_to_target": 1.4523000000000001
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0007302547490041745,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": 8.131516293641283e-20,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.9485306092946737
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0033713207490192734,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "past_meta": {
+        "d": 0.0265,
+        "tau": 0.051478150704935,
+        "H_over_tau": 0.0,
+        "nW": 9,
+        "entry_pass": false,
+        "v_in_W": true,
+        "suppliers_in_W": [],
+        "H_real": 0.0
+      },
+      "minneg_duals": {
+        "n_nonzero": 3,
+        "families": {
+          "pin": 1,
+          "neg": 1,
+          "epi": 1
+        },
+        "by_family": {
+          "pin": [
+            {
+              "key": "('pin', 10, 0)",
+              "Pi": -1.0
+            }
+          ],
+          "neg": [
+            {
+              "key": "('neg', 10, 0)",
+              "Pi": 1.0
+            }
+          ],
+          "epi": [
+            {
+              "key": "('epi', 10)",
+              "Pi": -1.0
+            }
+          ]
+        }
+      },
+      "mneg_lp": 0.0026,
+      "verify_pass": true,
+      "idem_resid": 0.0
+    },
+    {
+      "sigma_v": 0.2,
+      "k_groups": 1,
+      "regime": "budget-bound",
+      "d_edge": 0.055499999999999994,
+      "delta": 0.011099999999999999,
+      "tau": 0.10535653752852739,
+      "H_real": 0.022200000000000067,
+      "H_over_tau": 0.21071307505705542,
+      "delta_over_H2": 22.522522522522383,
+      "nW": 8,
+      "W": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11
+      ],
+      "v_fails_exposed": true,
+      "v_margin_over_kappa": 0.4167996737356438,
+      "cluster_margin_over_kappa_min": 0.12690667784586213,
+      "cluster_margin_over_kappa_max": 0.4167996737356438,
+      "exposedness_duals_edge": {
+        "v": {
+          "far": 11,
+          "tstar": 0.010978142616951831,
+          "margin_over_kappa": 0.4167996737356438,
+          "exposed": false,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.010978142616951831,
+            0.010978142616951831,
+            0.010978142616951831,
+            1.0,
+            1.0,
+            0.010978142616951831,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 4,
+          "blockers": [
+            {
+              "row": 7,
+              "role": "frame-financing#4",
+              "Pi": -0.7912174859064386,
+              "h_value": 0.010978142616951831,
+              "l1_to_target": 0.42219999999999996
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.1153199485708634,
+              "h_value": 0.010978142616951831,
+              "l1_to_target": 1.7890000000000001
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.04673128276134903,
+              "h_value": 0.010978142616951831,
+              "l1_to_target": 1.9277
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.04673128276134903,
+              "h_value": 0.010978142616951831,
+              "l1_to_target": 1.9277
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.00012051961531813404,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.010857623001633699,
+              "h_value": 0.9999999999999999
+            }
+          ],
+          "h_on_target": -1.734723475976807e-18,
+          "h_on_cluster": {
+            "supplier#0": 0.6978538225694788,
+            "supplier#1": 0.6978538225694788,
+            "v": -1.734723475976807e-18
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 10,
+          "tstar": 0.003342612041772077,
+          "margin_over_kappa": 0.12690667784586213,
+          "exposed": false,
+          "functional_a": [
+            0.014284058987016198,
+            1.0,
+            0.0033426120417720767,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 2,
+          "blockers": [
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi": -0.6955211679787614,
+              "h_value": 0.003342612041772077,
+              "l1_to_target": 0.6109999999999999
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.3044788320212386,
+              "h_value": 0.0033426120417720767,
+              "l1_to_target": 1.4112
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.003342612041772077,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": 6.505213034913027e-19,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.8947311955093148
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.014284058987016198,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 10,
+          "tstar": 0.003342612041772077,
+          "margin_over_kappa": 0.12690667784586213,
+          "exposed": false,
+          "functional_a": [
+            0.014284058987016198,
+            1.0,
+            0.0033426120417720767,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 2,
+          "blockers": [
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi": -0.6955211679787614,
+              "h_value": 0.003342612041772077,
+              "l1_to_target": 0.6109999999999999
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.3044788320212386,
+              "h_value": 0.0033426120417720767,
+              "l1_to_target": 1.4112
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.003342612041772077,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": 6.505213034913027e-19,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.8947311955093148
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.014284058987016198,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "exposedness_duals_past": {
+        "v": {
+          "far": 10,
+          "tstar": 0.053030303030303025,
+          "margin_over_kappa": 2.004357053836811,
+          "exposed": true,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.053030303030303025,
+            0.053030303030303025,
+            0.053030303030303025,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 3,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.5549242424242423,
+              "h_value": 0.053030303030303025,
+              "l1_to_target": 1.7880000000000003
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.22253787878787884,
+              "h_value": 0.053030303030303025,
+              "l1_to_target": 1.9284000000000003
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.22253787878787878,
+              "h_value": 0.053030303030303025,
+              "l1_to_target": 1.9284000000000001
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0005873609512850017,
+              "h_value": 1.0
+            },
+            {
+              "row": 7,
+              "role": "frame-financing#4",
+              "Pi_lo": -3.7878787878787876,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.052442942079018014,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": 8.673617379884035e-19,
+          "h_on_cluster": {
+            "supplier#0": 0.7102272727272727,
+            "supplier#1": 0.7102272727272727,
+            "v": 0.0
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 10,
+          "tstar": 0.0033777923556553586,
+          "margin_over_kappa": 0.1276685507639874,
+          "exposed": false,
+          "functional_a": [
+            0.014416329465640186,
+            1.0,
+            0.0033777923556553595,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 2,
+          "blockers": [
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi": -0.6950336044608305,
+              "h_value": 0.0033777923556553586,
+              "l1_to_target": 0.6120000000000001
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.3049663955391695,
+              "h_value": 0.0033777923556553595,
+              "l1_to_target": 1.4103999999999999
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0033777923556553603,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": -8.673617379884035e-19,
+          "h_on_cluster": {
+            "supplier#0": -1.734723475976807e-18,
+            "supplier#1": -1.734723475976807e-18,
+            "v": 0.8942344143740677
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.014416329465640186,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 10,
+          "tstar": 0.0033777923556553586,
+          "margin_over_kappa": 0.1276685507639874,
+          "exposed": false,
+          "functional_a": [
+            0.014416329465640186,
+            1.0,
+            0.0033777923556553595,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 2,
+          "blockers": [
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi": -0.6950336044608305,
+              "h_value": 0.0033777923556553586,
+              "l1_to_target": 0.6120000000000001
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.3049663955391695,
+              "h_value": 0.0033777923556553595,
+              "l1_to_target": 1.4103999999999999
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0033777923556553603,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": -8.673617379884035e-19,
+          "h_on_cluster": {
+            "supplier#0": -1.734723475976807e-18,
+            "supplier#1": -1.734723475976807e-18,
+            "v": 0.8942344143740677
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.014416329465640186,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "past_meta": {
+        "d": 0.055999999999999994,
+        "tau": 0.10583005244258362,
+        "H_over_tau": 0.0,
+        "nW": 9,
+        "entry_pass": false,
+        "v_in_W": true,
+        "suppliers_in_W": [],
+        "H_real": 0.0
+      },
+      "minneg_duals": {
+        "n_nonzero": 3,
+        "families": {
+          "pin": 1,
+          "neg": 1,
+          "epi": 1
+        },
+        "by_family": {
+          "pin": [
+            {
+              "key": "('pin', 10, 0)",
+              "Pi": -1.0
+            }
+          ],
+          "neg": [
+            {
+              "key": "('neg', 10, 0)",
+              "Pi": 1.0
+            }
+          ],
+          "epi": [
+            {
+              "key": "('epi', 10)",
+              "Pi": -1.0
+            }
+          ]
+        }
+      },
+      "mneg_lp": 0.011099999999999999,
+      "verify_pass": true,
+      "idem_resid": 0.0
+    },
+    {
+      "sigma_v": 0.35,
+      "k_groups": 1,
+      "regime": "budget-bound",
+      "d_edge": 0.10699999999999998,
+      "delta": 0.03744999999999999,
+      "tau": 0.19352002480363625,
+      "H_real": 0.07489999999999997,
+      "H_over_tau": 0.38704004960727245,
+      "delta_over_H2": 6.675567423230978,
+      "nW": 8,
+      "W": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11
+      ],
+      "v_fails_exposed": true,
+      "v_margin_over_kappa": 0.7461372588698684,
+      "cluster_margin_over_kappa_min": 0.7461372588698684,
+      "cluster_margin_over_kappa_max": 0.7461372588698684,
+      "exposedness_duals_edge": {
+        "v": {
+          "far": 11,
+          "tstar": 0.036098125210853524,
+          "margin_over_kappa": 0.7461372588698684,
+          "exposed": false,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.036098125210853524,
+            0.036098125210853524,
+            0.036098125210853524,
+            1.0,
+            1.0,
+            0.036098125210853524,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 4,
+          "blockers": [
+            {
+              "row": 7,
+              "role": "frame-financing#4",
+              "Pi": -0.6265362186129453,
+              "h_value": 0.036098125210853524,
+              "l1_to_target": 0.7748999999999999
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.2235770398573425,
+              "h_value": 0.036098125210853524,
+              "l1_to_target": 1.611
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.07494337076485615,
+              "h_value": 0.036098125210853524,
+              "l1_to_target": 1.9194
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.07494337076485615,
+              "h_value": 0.036098125210853524,
+              "l1_to_target": 1.9194
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0013030746437384588,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.034795050567115064,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": -3.469446951953614e-18,
+          "h_on_cluster": {
+            "supplier#0": 0.6558870307002748,
+            "supplier#1": 0.6558870307002748,
+            "v": 0.0
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 8,
+          "tstar": 0.036098125210853524,
+          "margin_over_kappa": 0.7461372588698684,
+          "exposed": false,
+          "functional_a": [
+            0.036098125210853524,
+            1.0,
+            0.036098125210853524,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.036098125210853524,
+              "l1_to_target": 1.3609
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.036098125210853524,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -1.8372185733901256,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": -3.469446951953614e-18,
+          "h_on_cluster": {
+            "supplier#0": -6.938893903907228e-18,
+            "supplier#1": -6.938893903907228e-18,
+            "v": 0.812521085353511
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.036098125210853524,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 8,
+          "tstar": 0.036098125210853524,
+          "margin_over_kappa": 0.7461372588698684,
+          "exposed": false,
+          "functional_a": [
+            0.036098125210853524,
+            1.0,
+            0.036098125210853524,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.036098125210853524,
+              "l1_to_target": 1.3609
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.036098125210853524,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -1.8372185733901256,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": -3.469446951953614e-18,
+          "h_on_cluster": {
+            "supplier#0": -6.938893903907228e-18,
+            "supplier#1": -6.938893903907228e-18,
+            "v": 0.812521085353511
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.036098125210853524,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "exposedness_duals_past": {
+        "v": {
+          "far": 10,
+          "tstar": 0.09706546275395032,
+          "margin_over_kappa": 2.001642282233687,
+          "exposed": true,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.09706546275395032,
+            0.09706546275395032,
+            0.09706546275395032,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 3,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.6001289906481779,
+              "h_value": 0.09706546275395032,
+              "l1_to_target": 1.61
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.19993550467591104,
+              "h_value": 0.09706546275395032,
+              "l1_to_target": 1.92025
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.19993550467591095,
+              "h_value": 0.09706546275395032,
+              "l1_to_target": 1.92025
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0035196607985711406,
+              "h_value": 1.0
+            },
+            {
+              "row": 7,
+              "role": "frame-financing#4",
+              "Pi_lo": -1.6768784263140923,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.09354580195537918,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": -5.204170427930421e-18,
+          "h_on_cluster": {
+            "supplier#0": 0.6772009029345373,
+            "supplier#1": 0.6772009029345373,
+            "v": -6.071532165918825e-18
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 8,
+          "tstar": 0.03626069148295385,
+          "margin_over_kappa": 0.7477524053977427,
+          "exposed": false,
+          "functional_a": [
+            0.036260691482953855,
+            1.0,
+            0.03626069148295385,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.03626069148295385,
+              "l1_to_target": 1.3602500000000002
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.036260691482953855,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -1.8334634886857515,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": 1.734723475976807e-18,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.8120708348391761
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.036260691482953855,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 8,
+          "tstar": 0.03626069148295385,
+          "margin_over_kappa": 0.7477524053977427,
+          "exposed": false,
+          "functional_a": [
+            0.036260691482953855,
+            1.0,
+            0.03626069148295385,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.03626069148295385,
+              "l1_to_target": 1.3602500000000002
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.036260691482953855,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -1.8334634886857515,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": 1.734723475976807e-18,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.8120708348391761
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.036260691482953855,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "past_meta": {
+        "d": 0.10749999999999998,
+        "tau": 0.1939716474127082,
+        "H_over_tau": 0.0,
+        "nW": 9,
+        "entry_pass": false,
+        "v_in_W": true,
+        "suppliers_in_W": [],
+        "H_real": 0.0
+      },
+      "minneg_duals": {
+        "n_nonzero": 3,
+        "families": {
+          "pin": 1,
+          "neg": 1,
+          "epi": 1
+        },
+        "by_family": {
+          "pin": [
+            {
+              "key": "('pin', 10, 0)",
+              "Pi": -1.0
+            }
+          ],
+          "neg": [
+            {
+              "key": "('neg', 10, 0)",
+              "Pi": 1.0
+            }
+          ],
+          "epi": [
+            {
+              "key": "('epi', 10)",
+              "Pi": -1.0
+            }
+          ]
+        }
+      },
+      "mneg_lp": 0.03744999999999999,
+      "verify_pass": true,
+      "idem_resid": 0.0
+    },
+    {
+      "sigma_v": 0.5,
+      "k_groups": 1,
+      "regime": "budget-bound",
+      "d_edge": 0.1435,
+      "delta": 0.07175,
+      "tau": 0.26786190471957744,
+      "H_real": 0.14349999999999985,
+      "H_over_tau": 0.5357238094391544,
+      "delta_over_H2": 3.484320557491296,
+      "nW": 8,
+      "W": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11
+      ],
+      "v_fails_exposed": true,
+      "v_margin_over_kappa": 0.9997178622610778,
+      "cluster_margin_over_kappa_min": 0.9997178622610776,
+      "cluster_margin_over_kappa_max": 0.9997178622610778,
+      "exposedness_duals_edge": {
+        "v": {
+          "far": 11,
+          "tstar": 0.06694658269185912,
+          "margin_over_kappa": 0.9997178622610778,
+          "exposed": false,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.06694658269185912,
+            0.06694658269185912,
+            0.06694658269185912,
+            1.0,
+            1.0,
+            0.06694658269185912,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 4,
+          "blockers": [
+            {
+              "row": 7,
+              "role": "frame-financing#4",
+              "Pi": -0.4665267086540704,
+              "h_value": 0.06694658269185912,
+              "l1_to_target": 1.1435
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.2905864814578808,
+              "h_value": 0.06694658269185912,
+              "l1_to_target": 1.5206278769950323
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.12144340494402436,
+              "h_value": 0.06694658269185912,
+              "l1_to_target": 1.8831860615024836
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.12144340494402436,
+              "h_value": 0.06694658269185912,
+              "l1_to_target": 1.8831860615024838
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.004481844934117929,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06246473775774118,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": 0.0,
+          "h_on_cluster": {
+            "supplier#0": 0.6866133678516748,
+            "supplier#1": 0.6866133678516748,
+            "v": 0.0
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 8,
+          "tstar": 0.0669465826918591,
+          "margin_over_kappa": 0.9997178622610776,
+          "exposed": false,
+          "functional_a": [
+            0.0669465826918591,
+            1.0,
+            0.0669465826918591,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.0669465826918591,
+              "l1_to_target": 1.471755753990065
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0669465826918591,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -2.0442701874413074,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": -3.469446951953614e-18,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.7763601012339783
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0669465826918591,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 8,
+          "tstar": 0.0669465826918591,
+          "margin_over_kappa": 0.9997178622610776,
+          "exposed": false,
+          "functional_a": [
+            0.0669465826918591,
+            1.0,
+            0.0669465826918591,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.0669465826918591,
+              "l1_to_target": 1.471755753990065
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0669465826918591,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -2.0442701874413074,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": -3.469446951953614e-18,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.7763601012339783
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0669465826918591,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "exposedness_duals_past": {
+        "v": {
+          "far": 11,
+          "tstar": 0.0671641791044776,
+          "margin_over_kappa": 1.001224467537219,
+          "exposed": true,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.0671641791044776,
+            0.0671641791044776,
+            0.0671641791044776,
+            1.0,
+            1.0,
+            0.0671641791044776,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 4,
+          "blockers": [
+            {
+              "row": 7,
+              "role": "frame-financing#4",
+              "Pi": -0.46641791044776115,
+              "h_value": 0.0671641791044776,
+              "l1_to_target": 1.1440000000000001
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.2906032469960769,
+              "h_value": 0.0671641791044776,
+              "l1_to_target": 1.5209466384404111
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.12148942127808093,
+              "h_value": 0.0671641791044776,
+              "l1_to_target": 1.8835266807797946
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.12148942127808093,
+              "h_value": 0.0671641791044776,
+              "l1_to_target": 1.8835266807797946
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.004511026954778345,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06265315214969924,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": -6.938893903907228e-18,
+          "h_on_cluster": {
+            "supplier#0": 0.6874502224257566,
+            "supplier#1": 0.6874502224257566,
+            "v": 0.0
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 8,
+          "tstar": 0.06716417910447761,
+          "margin_over_kappa": 1.0012244675372193,
+          "exposed": true,
+          "functional_a": [
+            0.0671641791044776,
+            1.0,
+            0.06716417910447761,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.06716417910447761,
+              "l1_to_target": 1.473893276880822
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06716417910447761,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -2.0517633944212617,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": -6.938893903907228e-18,
+          "h_on_cluster": {
+            "supplier#0": -1.3877787807814457e-17,
+            "supplier#1": -1.3877787807814457e-17,
+            "v": 0.7765609321084007
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0671641791044776,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 8,
+          "tstar": 0.06716417910447761,
+          "margin_over_kappa": 1.0012244675372193,
+          "exposed": true,
+          "functional_a": [
+            0.0671641791044776,
+            1.0,
+            0.06716417910447761,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.06716417910447761,
+              "l1_to_target": 1.473893276880822
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06716417910447761,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -2.0517633944212617,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": -6.938893903907228e-18,
+          "h_on_cluster": {
+            "supplier#0": -1.3877787807814457e-17,
+            "supplier#1": -1.3877787807814457e-17,
+            "v": 0.7765609321084007
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0671641791044776,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "past_meta": {
+        "d": 0.144,
+        "tau": 0.2683281572999748,
+        "H_over_tau": 0.0,
+        "nW": 11,
+        "entry_pass": false,
+        "v_in_W": true,
+        "suppliers_in_W": [
+          8,
+          9
+        ],
+        "H_real": 0.0
+      },
+      "minneg_duals": {
+        "n_nonzero": 3,
+        "families": {
+          "pin": 1,
+          "neg": 1,
+          "epi": 1
+        },
+        "by_family": {
+          "pin": [
+            {
+              "key": "('pin', 10, 0)",
+              "Pi": -1.0
+            }
+          ],
+          "neg": [
+            {
+              "key": "('neg', 10, 0)",
+              "Pi": 1.0
+            }
+          ],
+          "epi": [
+            {
+              "key": "('epi', 10)",
+              "Pi": -1.0
+            }
+          ]
+        }
+      },
+      "mneg_lp": 0.07175,
+      "verify_pass": true,
+      "idem_resid": 0.0
+    },
+    {
+      "sigma_v": 0.536,
+      "k_groups": 1,
+      "regime": "wall-bound",
+      "d_edge": 0.13349999999999998,
+      "delta": 0.071556,
+      "tau": 0.2674995327098722,
+      "H_real": 0.14311200000000007,
+      "H_over_tau": 0.5349990654197447,
+      "delta_over_H2": 3.493767119458881,
+      "nW": 8,
+      "W": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11
+      ],
+      "v_fails_exposed": true,
+      "v_margin_over_kappa": 0.9985461616933587,
+      "cluster_margin_over_kappa_min": 0.9985461616933587,
+      "cluster_margin_over_kappa_max": 0.9985461616933587,
+      "exposedness_duals_edge": {
+        "v": {
+          "far": 11,
+          "tstar": 0.06677765791055248,
+          "margin_over_kappa": 0.9985461616933587,
+          "exposed": false,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.06677765791055248,
+            0.06677765791055248,
+            0.06677765791055248,
+            1.0,
+            1.0,
+            0.06677765791055248,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 4,
+          "blockers": [
+            {
+              "row": 7,
+              "role": "frame-financing#4",
+              "Pi": -0.4330151667295037,
+              "h_value": 0.06677765791055248,
+              "l1_to_target": 1.215112
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.30103174501922136,
+              "h_value": 0.06677765791055248,
+              "l1_to_target": 1.4979672548683665
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.13297654412563747,
+              "h_value": 0.06677765791055248,
+              "l1_to_target": 1.8581283725658169
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.13297654412563747,
+              "h_value": 0.06677765791055248,
+              "l1_to_target": 1.8581283725658166
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.004459255596018774,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.062318402314533713,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": -1.3877787807814457e-17,
+          "h_on_cluster": {
+            "supplier#0": 0.6708086523315668,
+            "supplier#1": 0.6708086523315668,
+            "v": -1.3877787807814457e-17
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 8,
+          "tstar": 0.06677765791055248,
+          "margin_over_kappa": 0.9985461616933587,
+          "exposed": false,
+          "functional_a": [
+            0.0667776579105525,
+            1.0,
+            0.06677765791055248,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.06677765791055248,
+              "l1_to_target": 1.4376180725156087
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06677765791055248,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -1.9016709462645467,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": -6.938893903907228e-18,
+          "h_on_cluster": {
+            "supplier#0": -1.3877787807814457e-17,
+            "supplier#1": -1.3877787807814457e-17,
+            "v": 0.7657459128913311
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0667776579105525,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 8,
+          "tstar": 0.06677765791055248,
+          "margin_over_kappa": 0.9985461616933587,
+          "exposed": false,
+          "functional_a": [
+            0.0667776579105525,
+            1.0,
+            0.06677765791055248,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.06677765791055248,
+              "l1_to_target": 1.4376180725156087
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06677765791055248,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -1.9016709462645467,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": -6.938893903907228e-18,
+          "h_on_cluster": {
+            "supplier#0": -1.3877787807814457e-17,
+            "supplier#1": -1.3877787807814457e-17,
+            "v": 0.7657459128913311
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0667776579105525,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "exposedness_duals_past": {
+        "v": {
+          "far": 11,
+          "tstar": 0.0670110018062667,
+          "margin_over_kappa": 1.0001642060636822,
+          "exposed": true,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.0670110018062667,
+            0.0670110018062667,
+            0.0670110018062667,
+            1.0,
+            1.0,
+            0.0670110018062667,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 4,
+          "blockers": [
+            {
+              "row": 7,
+              "role": "frame-financing#4",
+              "Pi": -0.4329068951618922,
+              "h_value": 0.0670110018062667,
+              "l1_to_target": 1.215648
+            },
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.30098931180120636,
+              "h_value": 0.0670110018062667,
+              "l1_to_target": 1.4984328637359674
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.13305189651845073,
+              "h_value": 0.0670110018062667,
+              "l1_to_target": 1.8584315681320163
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.13305189651845073,
+              "h_value": 0.0670110018062667,
+              "l1_to_target": 1.8584315681320163
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.004490474363079479,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06252052744318723,
+              "h_value": 0.9999999999999999
+            }
+          ],
+          "h_on_target": 1.0408340855860843e-17,
+          "h_on_cluster": {
+            "supplier#0": 0.67170002603872,
+            "supplier#1": 0.67170002603872,
+            "v": 6.938893903907228e-18
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 8,
+          "tstar": 0.06701100180626668,
+          "margin_over_kappa": 1.0001642060636817,
+          "exposed": true,
+          "functional_a": [
+            0.0670110018062667,
+            1.0,
+            0.06701100180626668,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.06701100180626668,
+              "l1_to_target": 1.4398884174178501
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06701100180626668,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -1.9088906003217727,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": 0.0,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.7660216900050603
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0670110018062667,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 8,
+          "tstar": 0.06701100180626668,
+          "margin_over_kappa": 1.0001642060636817,
+          "exposed": true,
+          "functional_a": [
+            0.0670110018062667,
+            1.0,
+            0.06701100180626668,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.06701100180626668,
+              "l1_to_target": 1.4398884174178501
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06701100180626668,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -1.9088906003217727,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": 0.0,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.7660216900050603
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0670110018062667,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "past_meta": {
+        "d": 0.13399999999999998,
+        "tau": 0.268,
+        "H_over_tau": 0.0,
+        "nW": 11,
+        "entry_pass": false,
+        "v_in_W": true,
+        "suppliers_in_W": [
+          8,
+          9
+        ],
+        "H_real": 0.0
+      },
+      "minneg_duals": {
+        "n_nonzero": 3,
+        "families": {
+          "pin": 1,
+          "neg": 1,
+          "epi": 1
+        },
+        "by_family": {
+          "pin": [
+            {
+              "key": "('pin', 10, 0)",
+              "Pi": -1.0
+            }
+          ],
+          "neg": [
+            {
+              "key": "('neg', 10, 0)",
+              "Pi": 1.0
+            }
+          ],
+          "epi": [
+            {
+              "key": "('epi', 10)",
+              "Pi": -1.0
+            }
+          ]
+        }
+      },
+      "mneg_lp": 0.071556,
+      "verify_pass": true,
+      "idem_resid": 0.0
+    },
+    {
+      "sigma_v": 0.7,
+      "k_groups": 1,
+      "regime": "wall-bound",
+      "d_edge": 0.10249999999999998,
+      "delta": 0.07174999999999998,
+      "tau": 0.26786190471957744,
+      "H_real": 0.14349999999999988,
+      "H_over_tau": 0.5357238094391545,
+      "delta_over_H2": 3.4843205574912943,
+      "nW": 8,
+      "W": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11
+      ],
+      "v_fails_exposed": true,
+      "v_margin_over_kappa": 0.9997178622610776,
+      "cluster_margin_over_kappa_min": 0.9997178622610776,
+      "cluster_margin_over_kappa_max": 0.9997178622610776,
+      "exposedness_duals_edge": {
+        "v": {
+          "far": 11,
+          "tstar": 0.0669465826918591,
+          "margin_over_kappa": 0.9997178622610776,
+          "exposed": false,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.0669465826918591,
+            0.0669465826918591,
+            0.0669465826918591,
+            1.0,
+            1.0,
+            0.0669465826918591,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 4,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.32586890599486823,
+              "h_value": 0.0669465826918591,
+              "l1_to_target": 1.4449999999999998
+            },
+            {
+              "row": 7,
+              "role": "frame-financing#4",
+              "Pi": -0.2799160251924423,
+              "h_value": 0.0669465826918591,
+              "l1_to_target": 1.5434999999999999
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.19710753440634476,
+              "h_value": 0.0669465826918591,
+              "l1_to_target": 1.7209999999999999
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.19710753440634476,
+              "h_value": 0.0669465826918591,
+              "l1_to_target": 1.721
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.004481844934117928,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.062464737757741175,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": 3.469446951953614e-18,
+          "h_on_cluster": {
+            "supplier#0": 0.6710986703988803,
+            "supplier#1": 0.6710986703988803,
+            "v": 1.3877787807814457e-17
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 8,
+          "tstar": 0.0669465826918591,
+          "margin_over_kappa": 0.9997178622610776,
+          "exposed": false,
+          "functional_a": [
+            0.06694658269185909,
+            1.0,
+            0.0669465826918591,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.0669465826918591,
+              "l1_to_target": 1.4385
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0669465826918591,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -1.9038260153159725,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": 0.0,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.7410776766969909
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.06694658269185909,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 8,
+          "tstar": 0.0669465826918591,
+          "margin_over_kappa": 0.9997178622610776,
+          "exposed": false,
+          "functional_a": [
+            0.06694658269185909,
+            1.0,
+            0.0669465826918591,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.0669465826918591,
+              "l1_to_target": 1.4385
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.0669465826918591,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -1.9038260153159725,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": 0.0,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.7410776766969909
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.06694658269185909,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "exposedness_duals_past": {
+        "v": {
+          "far": 11,
+          "tstar": 0.0672511892547337,
+          "margin_over_kappa": 1.0018260671278838,
+          "exposed": true,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.0672511892547337,
+            0.0672511892547337,
+            0.0672511892547337,
+            1.0,
+            1.0,
+            0.0672511892547337,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 4,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.32655535864191776,
+              "h_value": 0.0672511892547337,
+              "l1_to_target": 1.444
+            },
+            {
+              "row": 7,
+              "role": "frame-financing#4",
+              "Pi": -0.2798246432235798,
+              "h_value": 0.0672511892547337,
+              "l1_to_target": 1.5441999999999998
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.1968099990672512,
+              "h_value": 0.0672511892547337,
+              "l1_to_target": 1.7222
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.1968099990672512,
+              "h_value": 0.0672511892547337,
+              "l1_to_target": 1.7222
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.004522722456176008,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06272846679855769,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": 1.0408340855860843e-17,
+          "h_on_cluster": {
+            "supplier#0": 0.670739669806921,
+            "supplier#1": 0.670739669806921,
+            "v": 6.938893903907228e-18
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 8,
+          "tstar": 0.06725118925473372,
+          "margin_over_kappa": 1.0018260671278842,
+          "exposed": true,
+          "functional_a": [
+            0.06725118925473368,
+            1.0,
+            0.06725118925473371,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.06725118925473371,
+              "l1_to_target": 1.4382
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06725118925473372,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -1.9001123790564334,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": 3.469446951953614e-18,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.740695830612816
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.06725118925473368,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 8,
+          "tstar": 0.06725118925473372,
+          "margin_over_kappa": 1.0018260671278842,
+          "exposed": true,
+          "functional_a": [
+            0.06725118925473368,
+            1.0,
+            0.06725118925473371,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.06725118925473371,
+              "l1_to_target": 1.4382
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06725118925473372,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -1.9001123790564334,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": 3.469446951953614e-18,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.740695830612816
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.06725118925473368,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "past_meta": {
+        "d": 0.10299999999999998,
+        "tau": 0.268514431641951,
+        "H_over_tau": 0.0,
+        "nW": 11,
+        "entry_pass": false,
+        "v_in_W": true,
+        "suppliers_in_W": [
+          8,
+          9
+        ],
+        "H_real": 0.0
+      },
+      "minneg_duals": {
+        "n_nonzero": 3,
+        "families": {
+          "pin": 1,
+          "neg": 1,
+          "epi": 1
+        },
+        "by_family": {
+          "pin": [
+            {
+              "key": "('pin', 10, 0)",
+              "Pi": -1.0
+            }
+          ],
+          "neg": [
+            {
+              "key": "('neg', 10, 0)",
+              "Pi": 1.0
+            }
+          ],
+          "epi": [
+            {
+              "key": "('epi', 10)",
+              "Pi": -1.0
+            }
+          ]
+        }
+      },
+      "mneg_lp": 0.07174999999999998,
+      "verify_pass": true,
+      "idem_resid": 0.0
+    },
+    {
+      "sigma_v": 1.0,
+      "k_groups": 1,
+      "regime": "wall-bound",
+      "d_edge": 0.0715,
+      "delta": 0.0715,
+      "tau": 0.26739483914241874,
+      "H_real": 0.14300000000000002,
+      "H_over_tau": 0.5347896782848376,
+      "delta_over_H2": 3.4965034965034953,
+      "nW": 8,
+      "W": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11
+      ],
+      "v_fails_exposed": true,
+      "v_margin_over_kappa": 0.9982075189637656,
+      "cluster_margin_over_kappa_min": 0.9982075189637656,
+      "cluster_margin_over_kappa_max": 0.9982075189637656,
+      "exposedness_duals_edge": {
+        "v": {
+          "far": 11,
+          "tstar": 0.06672888474101725,
+          "margin_over_kappa": 0.9982075189637656,
+          "exposed": false,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.06672888474101725,
+            0.06672888474101725,
+            0.06672888474101725,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 3,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.3667755482967802,
+              "h_value": 0.06672888474101725,
+              "l1_to_target": 1.357
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.31661222585160986,
+              "h_value": 0.06672888474101725,
+              "l1_to_target": 1.4645
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.31661222585160986,
+              "h_value": 0.06672888474101725,
+              "l1_to_target": 1.4645000000000001
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.004452744058779966,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06227614068223729,
+              "h_value": 0.9999999999999999
+            }
+          ],
+          "h_on_target": -6.938893903907228e-18,
+          "h_on_cluster": {
+            "supplier#0": 0.6999533364442371,
+            "supplier#1": 0.6999533364442371,
+            "v": -6.938893903907228e-18
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 8,
+          "tstar": 0.06672888474101725,
+          "margin_over_kappa": 0.9982075189637656,
+          "exposed": false,
+          "functional_a": [
+            0.06672888474101726,
+            1.0,
+            0.06672888474101725,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.06672888474101725,
+              "l1_to_target": 1.5
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06672888474101726,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -2.17714879142842,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": 0.0,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.6999533364442371
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.06672888474101726,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 8,
+          "tstar": 0.06672888474101725,
+          "margin_over_kappa": 0.9982075189637656,
+          "exposed": false,
+          "functional_a": [
+            0.06672888474101726,
+            1.0,
+            0.06672888474101725,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.06672888474101725,
+              "l1_to_target": 1.5
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06672888474101726,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -2.17714879142842,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": 0.0,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.6999533364442371
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.06672888474101726,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "exposedness_duals_past": {
+        "v": {
+          "far": 11,
+          "tstar": 0.0671641791044776,
+          "margin_over_kappa": 1.001224467537219,
+          "exposed": true,
+          "functional_a": [
+            1.0,
+            1.0,
+            0.0671641791044776,
+            0.0671641791044776,
+            0.0671641791044776,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 3,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -0.36753731343283574,
+              "h_value": 0.0671641791044776,
+              "l1_to_target": 1.356
+            },
+            {
+              "row": 4,
+              "role": "frame-financing#1",
+              "Pi": -0.31623134328358216,
+              "h_value": 0.0671641791044776,
+              "l1_to_target": 1.466
+            },
+            {
+              "row": 3,
+              "role": "frame-financing#0",
+              "Pi": -0.3162313432835821,
+              "h_value": 0.0671641791044776,
+              "l1_to_target": 1.466
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.004511026954778345,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06265315214969924,
+              "h_value": 1.0
+            }
+          ],
+          "h_on_target": -6.938893903907228e-18,
+          "h_on_cluster": {
+            "supplier#0": 0.6996268656716418,
+            "supplier#1": 0.6996268656716418,
+            "v": -6.938893903907228e-18
+          },
+          "h_on_anchors": {
+            "anchor#0": 1.0,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#0": {
+          "far": 8,
+          "tstar": 0.06716417910447763,
+          "margin_over_kappa": 1.0012244675372195,
+          "exposed": true,
+          "functional_a": [
+            0.0671641791044776,
+            1.0,
+            0.06716417910447763,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.06716417910447763,
+              "l1_to_target": 1.5
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06716417910447764,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -2.1727542412162792,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": 0.0,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.6996268656716418
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0671641791044776,
+            "anchor#1": 1.0
+          }
+        },
+        "supplier#1": {
+          "far": 8,
+          "tstar": 0.06716417910447763,
+          "margin_over_kappa": 1.0012244675372195,
+          "exposed": true,
+          "functional_a": [
+            0.0671641791044776,
+            1.0,
+            0.06716417910447763,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "functional_b": 0.0,
+          "n_blockers": 1,
+          "blockers": [
+            {
+              "row": 2,
+              "role": "frame-group#0",
+              "Pi": -1.0,
+              "h_value": 0.06716417910447763,
+              "l1_to_target": 1.5
+            }
+          ],
+          "box_active": [
+            {
+              "row": 1,
+              "role": "anchor#1",
+              "Pi_lo": 0.0,
+              "Pi_hi": 0.06716417910447764,
+              "h_value": 1.0
+            },
+            {
+              "row": 11,
+              "role": "v''",
+              "Pi_lo": -2.1727542412162792,
+              "Pi_hi": 0.0,
+              "h_value": 0.0
+            }
+          ],
+          "h_on_target": 0.0,
+          "h_on_cluster": {
+            "supplier#0": 0.0,
+            "supplier#1": 0.0,
+            "v": 0.6996268656716418
+          },
+          "h_on_anchors": {
+            "anchor#0": 0.0671641791044776,
+            "anchor#1": 1.0
+          }
+        }
+      },
+      "past_meta": {
+        "d": 0.072,
+        "tau": 0.2683281572999748,
+        "H_over_tau": 0.0,
+        "nW": 11,
+        "entry_pass": false,
+        "v_in_W": true,
+        "suppliers_in_W": [
+          8,
+          9
+        ],
+        "H_real": 0.0
+      },
+      "minneg_duals": {
+        "n_nonzero": 3,
+        "families": {
+          "pin": 1,
+          "neg": 1,
+          "epi": 1
+        },
+        "by_family": {
+          "pin": [
+            {
+              "key": "('pin', 10, 0)",
+              "Pi": -1.0
+            }
+          ],
+          "neg": [
+            {
+              "key": "('neg', 10, 0)",
+              "Pi": 1.0
+            }
+          ],
+          "epi": [
+            {
+              "key": "('epi', 10)",
+              "Pi": -1.0
+            }
+          ]
+        }
+      },
+      "mneg_lp": 0.0715,
+      "verify_pass": true,
+      "idem_resid": 0.0
+    }
+  ]
+}
