@@ -45,4 +45,5 @@ mid-check.
 | 03 | `AISM-03-MASS-SPLIT` | `report/sections/03_mass_split.tex` |
 | 04 | `AISM-04-RESIDUAL-LOWER` | `report/sections/04_residual_lower.tex` |
 | 05 | `AISM-05-RESIDUAL-UPPER` | `report/sections/05_residual_upper.tex` |
+| 06 | `AISM-06-HALO-COLLAPSE` | `report/sections/06_halo_collapse.tex` |
 | 11 | `AISM-11-STATUS-LEDGER` | `report/sections/11-discussion.tex` |

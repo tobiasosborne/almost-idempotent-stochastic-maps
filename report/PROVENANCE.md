@@ -9,7 +9,7 @@ hashed proof/consensus file. Results original to this project are marked `ORIGIN
 
 Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 
-> **Current report surface.** The first shards reproduce five `af`-validated results and anchor every
+> **Current report surface.** The first shards reproduce six `af`-validated results and anchor every
 > remaining registry result in the status ledger. Non-rigorous registry statuses are copied honestly;
 > the ledger rows below are anchors, not promotions.
 
@@ -51,6 +51,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-MASS-SPLIT` | `proofs/lem-mass-split/export.md` | `67002d8da8acec01` | `af` proof export for `lem-mass-split` |
 | `AF-LEM-RESIDUAL-LOWER` | `proofs/lem-residual-lower/export.md` | `e8fbf760d4954dad` | `af` proof export for `lem-residual-lower` |
 | `AF-LEM-RESIDUAL-UPPER` | `proofs/lem-residual-upper/export.md` | `05e247da7eb8db25` | `af` proof export for `lem-residual-upper` |
+| `AF-CONJ-HALO-COLLAPSE` | `proofs/conj-halo-collapse/export.md` | `216304dc1141dd42` | `af` proof export for `conj-halo-collapse` |
 
 ## Per-claim ledger
 
@@ -68,7 +69,7 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | lem:residual-lower | ARG-LEM-RESIDUAL-LOWER AF-LEM-RESIDUAL-LOWER | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`. |
 | lem:residual-upper | ARG-LEM-RESIDUAL-UPPER AF-LEM-RESIDUAL-UPPER | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; large tree warning retained. |
 | conj:ex | ARG-CONJ-EX | registry contract | OPEN | Status ledger anchor only; registry status `conjecture`. |
-| conj:halo-collapse | ARG-CONJ-HALO-COLLAPSE | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-02 (20-node tree, clean; run 2 on the factored workspace). |
+| conj:halo-collapse | ARG-CONJ-HALO-COLLAPSE AF-CONJ-HALO-COLLAPSE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-2 tree on the factored workspace. |
 | conj:kernel | ARG-CONJ-KERNEL | registry contract | OPEN | Status ledger anchor only; registry status `conjecture`. |
 | conj:no-free-frontier | ARG-CONJ-NO-FREE-FRONTIER | registry contract | OPEN | Status ledger anchor only; registry status `conjecture`. |
 | ex:hume | ARG-EX-HUME | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`, not rigorous here. |

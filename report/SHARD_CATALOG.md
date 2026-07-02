@@ -65,6 +65,13 @@ verbatim), and keywords.
 - **Summary:** Summarizes the clean 49-live-node proof tree and records the tracked refactor warning honestly.
 - **Keywords:** lem-residual-upper, af validated, residual distance, l1 distance, halo collapse
 
+## `AISM-06-HALO-COLLAPSE`
+- **File:** `report/sections/06_halo_collapse.tex`
+- **Title:** Halo-robust height collapse
+- **Summary:** Reproduces the registry contract for conj-halo-collapse, the af-validated halo-robust bridge.
+- **Summary:** Records the run-1 balloon, the factoring into three sub-lemmas, and the clean 20-node run-2 tree.
+- **Keywords:** conj-halo-collapse, af validated, height collapse, halo-robust, invisible mass, bridge
+
 ## `AISM-11-STATUS-LEDGER`
 - **File:** `report/sections/11-discussion.tex`
 - **Title:** Status ledger for non-validated registry results
