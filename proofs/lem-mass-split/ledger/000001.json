@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-07-02T13:33:48.371852936Z","conjecture":"Mass split: for an exact signed idempotent P and any row index v, writing a_j = P_{vj}, a_j^+ = max(a_j, 0), a_j^- = max(-a_j, 0), and nu_v = sum_j a_j^-, one has sum_j a_j^+ = 1 + nu_v.","author":"orchestrator"}

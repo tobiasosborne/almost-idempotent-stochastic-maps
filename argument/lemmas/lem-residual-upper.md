@@ -5,7 +5,7 @@ contract: Residual distance bound: let C be the convex hull of finitely many poi
 defs: 
 deps: 
 status: stated
-af: none
+af: seeded
 provenance: factored out of proofs/conj-halo-collapse elevation run 1 (node 1.4.3 and its algebra children 1.4.3.1–1.4.3.5, several codex-validated there); stated frame-free (pure l1 convex geometry, no idempotent structure)
 owner: A
 workspace: proofs/lem-residual-upper

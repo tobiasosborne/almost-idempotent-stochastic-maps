@@ -23,9 +23,9 @@ graph LR
   lem-exposed-circuit["lem-exposed-circuit<br/>proved-mod-audit/none"]
   lem-factorization["lem-factorization<br/>proved-mod-audit/none"]
   lem-leakage["lem-leakage<br/>proved-mod-audit/none"]
-  lem-mass-split["lem-mass-split<br/>stated/none"]
-  lem-residual-lower["lem-residual-lower<br/>stated/none"]
-  lem-residual-upper["lem-residual-upper<br/>stated/none"]
+  lem-mass-split["lem-mass-split<br/>stated/seeded"]
+  lem-residual-lower["lem-residual-lower<br/>stated/seeded"]
+  lem-residual-upper["lem-residual-upper<br/>stated/seeded"]
   lem-wiggle-rigidity["lem-wiggle-rigidity<br/>proved-mod-audit/none"]
   obs-deep-leakage["obs-deep-leakage<br/>heuristic/none"]
   obs-fwr-gap["obs-fwr-gap<br/>heuristic/none"]
@@ -59,7 +59,7 @@ graph LR
   thm-cluster --> thm-classical-factorization
   thm-simplex --> thm-well-exposed
   class lem-classical-equiv,obs-height-collapse validated;
-  class lem-mass-split,lem-residual-lower,lem-residual-upper stated;
+  class lem-mass-split,lem-residual-lower,lem-residual-upper seeded;
   class conj-ex,conj-halo-collapse,conj-kernel,conj-no-free-frontier,ex-hume,lem-canonical-separator,lem-exposed-circuit,lem-factorization,lem-leakage,lem-wiggle-rigidity,obs-deep-leakage,obs-fwr-gap,obs-linear-law-finite-delta,obs-sigma-halo-nonrobust,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;
   class lem-dual-localization,op-classical,op-exposed-hull open;
 ```

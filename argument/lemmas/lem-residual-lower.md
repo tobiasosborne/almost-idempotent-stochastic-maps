@@ -5,7 +5,7 @@ contract: Convex outsourcing: let C be the convex hull of finitely many points o
 defs: 
 deps: 
 status: stated
-af: none
+af: seeded
 provenance: factored out of proofs/conj-halo-collapse elevation run 1 (node 1.4.2, all four children codex-validated there); stated frame-free (pure l1 convex geometry, no idempotent structure)
 owner: A
 workspace: proofs/lem-residual-lower

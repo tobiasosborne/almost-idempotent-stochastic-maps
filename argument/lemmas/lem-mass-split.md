@@ -5,7 +5,7 @@ contract: Mass split: for an exact signed idempotent P and any row index v, writ
 defs: def-signed-idempotent; def-negative-mass
 deps: 
 status: stated
-af: none
+af: seeded
 provenance: factored out of proofs/conj-halo-collapse elevation run 1 (nodes 1.1.2, 1.1.3, 1.4.1.3.x — the bookkeeping the provers re-derived inline across siblings, trip cause of the BALLOON abort); the identity is row-sum bookkeeping from P 1 = 1 in def-signed-idempotent
 owner: A
 workspace: proofs/lem-mass-split
