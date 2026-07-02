@@ -137,3 +137,37 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
 - Session totals: 4 new T0 results banked (mass-split, residual pair, bridge), 1 wave harvested
   (B4), 1 L3 bundle re-homed (67k record), aism-136 flagged for user decision, 2 process memories
   banked. Quota management: one stall bridged cleanly by stop/resume.
+
+## 2026-07-02/03 (session 4 close) — arm A campaign: 7 codex waves, 7th rigorous result, plateau-2
+
+- **Arm A opened and driven through 7 serial codex waves (A1–A7, all in `docs/waves/`):**
+  - A1 scoping: existential (EX) suffices downstream (w42 audit: no quantifier slip); walls-check
+    verdict — aggregate proofs dodge the recorded B-walls, per-class proofs re-import class-count;
+    "C₀=1 empirically" exposed as RANK-3-ONLY (FINDINGS entry).
+  - A2 (L3 bundle `ex-no-center-highrank`): path family certified `Φ/δ = 2−2/(k−2)` through k=30 —
+    PLATEAU toward 2, not growth. Orchestrator recomputed k=10 (7/4) independently.
+  - A3 (L3 bundle `ex-multiblock-coupling`): 25 certified rows over 5 decoupled coupling designs —
+    all < 2; the θ-class decouples to one signed pivot per anchor (average-distance mechanism).
+    Orchestrator recomputed star-f9 (23/16).
+  - A4 proof skeleton: argmin interface clean; beta-LP-only route KILLED (exact two-atom witness);
+    GAP A/GAP B isolated; `Φ ≤ 2δ` passes the full exact bench.
+  - A5 averaged selection: naive chart averaging KILLED in all three natural measures (sigma-cap-B
+    certificate: best chart perfect, θ-average ~10×); max-vs-sum crux articulated.
+  - A6 (L3 bundle `undercap-killers`): the δ=1/2 mechanism-killers do NOT port under the cap;
+    NEW certified witness kills unnormalized `Σ_s Φ_s` (repeated anchors: sum=11g/8·δ, max=11/8·δ);
+    `V_s ≤ Φ_s/2` proved inline. Orchestrator recomputed the 512-chart repeated-star row.
+  - A7 coupled anchors: coupling REDUCES the ratio (best new certified 3/2, anchor-mixing to rank
+    121); **cheap-adversary program CLOSED — plateau-2 unbroken across 7 design families.**
+- **`lem-factorization` af-VALIDATED (run 1 clean, 5 rounds, 11 live nodes, 12/12 taint) → 7th
+  rigorous result, banked (fr verify PASS, new oracle registered).** Contract narrowed to the single
+  self-contained inequality first (single-minimal discipline; tightness (2,6) NOT elevated). The
+  (EX) composition link `S*_s ≤ 2Φ_s + 6δ ⇒ C_sf = 2C₀+6` is now RIGOROUS.
+- **Lab-book grown to 9 shards:** AISM-06 (conj-halo-collapse) + AISM-07 (lem-factorization) added
+  with full lockstep (catalog/README/PROVENANCE/counts); provenance 0/0 throughout.
+- FINDINGS: three new dated entries (rank-3-only C₀; sum-interface dead route; session-4 roll-up:
+  plateau-2 picture + killed mechanisms). aism-6ec: accept-and-defer recommendation recorded.
+- Frontier at close: TWO chains to op-classical, each one open input — A-side: the max-based argmin
+  charge (GAP B / plateau-2 lemma); B-side: the halo-robust cap (unchanged). aism-136 still awaits
+  the user decision.
+- Session totals: 7 codex waves harvested + 1 af orchestration validated; 3 new L3 bundles (all
+  headlines orchestrator-recomputed); 1 T0 result banked; 8 bd issues created/closed; ~10 commits.

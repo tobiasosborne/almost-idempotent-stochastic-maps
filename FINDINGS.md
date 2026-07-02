@@ -138,6 +138,26 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   AND class-count-free, or must first settle the class-count decider (open signed quantitative
   Baake–Sumner). F2's `σ̃_g ≤ 0.37τ` margin is low-dimension evidence and silent on wall (b).
 
+## 2026-07-03 — arm A session-4 roll-up: the plateau-2 picture and the killed proof mechanisms
+
+- ✅ **Plateau-2 is the standing empirical law (7 adversarial design families, all certified < 2).**
+  min-max `Φ/δ` over θ-½ charts: path family `2−2/(k−2)` → 2 (A2, k≤30); five decoupled couplings
+  (A3); balanced-staircase rescales + repeated anchors (A6); five COUPLED designs incl. anchor-mixing
+  to rank 121 (A7 — coupling *reduces* the ratio; best new certified value 3/2). The unbroken-unproved
+  candidate lemma: `max_s Φ_s(U*) ≤ 2δ(P)` at every θ-½ Φ-argmin, `δ ≤ ¼`. All wave artifacts
+  `docs/waves/2026-07-02-A2…2026-07-03-A7`; headlines orchestrator-recomputed per bundle.
+- ⛔ **Proof mechanisms KILLED this session (exact certificates; do not re-walk):** fixed-chart
+  beta-LP-only (A4 two-atom moment witness — realizability `P=LB`, `BL=I` must enter); naive chart
+  averaging in all three natural measures (A5 sigma-cap-B certificate: best chart Φ=0, θ-class average
+  ~10× δ); unnormalized `Σ_s Φ_s ≤ Cδ` (A6 repeated-anchor witness, see the dead-route entry above);
+  pointwise `E ≤ Cδ`, `σ ≤ 2δ`, `V=0` at argmin (named witnesses in A4/A6).
+- ✅ **What survives:** the argmin interface (existential (EX) ⟺ argmin bound, lossless); argmin
+  Schur-swap COMPARISON (≠ dead single-swap descent); the probabilistic-method interface only in
+  max-based/normalized form; `V_s ≤ Φ_s/2` (elementary, every chart/pivot); and the rigorous
+  composition link `lem-factorization` (af-validated 2026-07-03) turning any universal (EX) `C₀` into
+  `C_sf = 2C₀+6`. The δ=1/2 mechanism-killers (B6, perturbed staircase) do NOT port under the cap
+  (A6 rescale tradeoff): under-cap witnesses are structurally tamer — the cap is load-bearing.
+
 ## 2026-07-02 — (EX) chart scoping (arm A wave 1): "C₀ = 1 empirically" is RANK-3-ONLY
 
 - ❌ **Do not quote "C₀ = 1 empirically" (the `conj-ex` contract parenthesis) as the (EX) target.** It is

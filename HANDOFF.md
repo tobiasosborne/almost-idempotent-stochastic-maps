@@ -10,70 +10,81 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md` — esp. L0 rigour ladder, Rule 13 dead routes).
-2. Run `fr board` and `bd ready`. Skim `argument/DAG.md` (**6 green nodes**) + `FINDINGS.md` (four dated
-   2026-07-02 entries) + `report/main.pdf` (the lab-book now exists: 7 shards, all 29 results anchored).
-3. Wave artifacts in `docs/waves/` (B1–B4, F1, F2); L3 bundles in `runs/` (3, gate-green).
+2. Run `fr board` and `bd ready`. Skim `argument/DAG.md` (**7 green nodes**) + `FINDINGS.md` (the
+   2026-07-03 arm-A roll-up + the 2026-07-02 entries) + `report/main.pdf` (9 shards, all 29 results
+   anchored).
+3. Wave artifacts in `docs/waves/` (B1–B4, F1–F2, **A1–A7 new**); L3 bundles in `runs/` (6, gate-green).
 4. Gate before committing: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-02, session 3 close) — SIX rigorous results; the finisher BRIDGE is rigorous
+## Current state (2026-07-03, session 4 close) — SEVEN rigorous results; arm A is the live program
 
 **Rigorous (af-validated in-repo, banked via fr verify, T0):**
 
-1. `lem-classical-equiv` — signed↔stochastic bridge (29-node tree).
-2. `obs-height-collapse` — ε=0 collapse bound `H(1−σ̃) ≤ ν(2+4δ)` (19 nodes).
+1. `lem-classical-equiv` — signed↔stochastic bridge (29 nodes).
+2. `obs-height-collapse` — ε=0 collapse bound (19 nodes).
 3. `lem-mass-split` — `Σ a_j⁺ = 1+ν_v` (9 nodes).
-4. `lem-residual-lower` — frame-free convex outsourcing `dist₁(p,C) ≤ dist₁(q,C)` (32 live nodes).
-5. `lem-residual-upper` — frame-free residual bound `m·dist₁(q,C) ≤ Σb_j·dist₁(p_j,C)+Σc_k·D_k` (49).
-6. **`conj-halo-collapse` — the halo-robust height-collapse BRIDGE
-   `H(1−σ̃_g) ≤ (σ̃−σ̃_g)·τ/4 + ν_v(2+4δ)` (20-node tree, clean; run 2 on the factored workspace).**
+4. `lem-residual-lower` — frame-free convex outsourcing (32 live).
+5. `lem-residual-upper` — frame-free residual bound (49 live).
+6. `conj-halo-collapse` — the halo-robust height-collapse BRIDGE (20 nodes).
+7. **`lem-factorization` — the (EX) composition link `S*_s ≤ 2Φ_s + 6δ` (11 live nodes, run 1 clean,
+   5 rounds; contract narrowed to the single inequality first; tightness (2,6) NOT elevated).**
 
-**The chain now reads: cap (OPEN) ⇒ [bridge, RIGOROUS] ⇒ `H = O(√δ)` at hidden top vertices ⇒ Kernel
-Conjecture ⇒ HLC ⇒ op-exposed-hull ⇒ op-classical.** One input missing: the halo-robust cap
-`σ̃_g ≤ 1−c`.
+**Two live chains to `op-classical`:**
+- **A-side (this session's program):** (EX) `max_s Φ_s(U₀) ≤ C₀δ` (OPEN, conjecture) ⇒ [rigorous
+  `lem-factorization`] ⇒ `C_sf = 2C₀+6` ⇒ … `op-classical`.
+- **B-side (unchanged):** halo-robust cap `σ̃_g ≤ 1−c` (OPEN, wall-blocked mechanisms) ⇒ [rigorous
+  bridge `conj-halo-collapse`] ⇒ `H=O(τ)` ⇒ Kernel ⇒ … `op-classical`.
 
-- Registry: 29 results; lab-book: 7 report shards, provenance 0 errors/0 warnings; `bd` mirror synced.
-- Process wins recorded: the balloon/factoring discipline WORKS (run 1: 49>40 abort → factor →
-  run 2: 20 nodes clean). Two bd memories: single-minimal contracts; no argument/definitions edits
-  while any orchestration is live (git-porcelain overreach guard).
-- Known WARNs (accepted, tracked aism-6ec): five >12-node REFACTOR warnings on validated trees.
+## Session-4 arm-A campaign (7 codex waves, A1–A7 in docs/waves/)
 
-## The frontier (2026-07-02 close)
+- **A1 scoping:** existential (EX) suffices downstream (no selector needed; w42 audit — no quantifier
+  slip); walls-check: aggregate proofs dodge the B-walls, per-class proofs re-import class-count.
+  **"C₀=1 empirically" is rank-3-only** (FINDINGS).
+- **A2+A3+A6+A7 certified adversarial program (4 L3 bundles, headlines orchestrator-recomputed):**
+  min-max `Φ/δ` PLATEAUS below 2 across 7 independent design families (path `2−2/(k−2)` k≤30;
+  5 decoupled couplings; staircase rescales; repeated anchors; 5 coupled designs to rank 121 —
+  coupling *reduces* the ratio). **Cheap-adversary program CLOSED; plateau-2 argmin lemma unbroken.**
+- **A4+A5 proof scoping (mechanism kills, exact certificates):** beta-LP-only dead (two-atom witness);
+  naive chart averaging dead (uniform/vol²/DPP — sigma-cap-B certificate); unnormalized `Σ_s Φ_s`
+  dead (repeated-anchor witness, A6). Survivors: argmin interface; Schur-swap comparison;
+  max-based probabilistic interface; `V_s ≤ Φ_s/2` (elementary).
+- **The δ=1/2 killers (B6, perturbed staircase) do NOT port under the cap** — the cap is
+  load-bearing (A6 rescale tradeoff). Working constant `C₀ ≈ 2` ⇒ `C_sf = 10`.
 
-**THE open question: the halo-robust cap `σ̃_g ≤ 1−c` for hidden top vertices (0<δ≤¼, W≠∅).**
+## The frontier (2026-07-03 close)
 
-- Mechanism `conj-no-free-frontier` is **wall-blocked — DO NOT ELEVATE** (B4: dodges the one-sided
-  ledger but re-imports the dimension-free class count = dead route c10/c20; plus FAIL-1: uniform
-  κ=τ/4 plausibly false as written). Artifact `docs/waves/2026-07-02-B4-walls-check.md` §6 records
-  two deciders: (i) FAIL-1 exact-instance hunt (arm F work); (ii) the class-count question (open
-  signed quantitative Baake–Sumner — dead-route territory without a new idea).
-- Arm B is 4×✗ (stalled). **Arm A ((EX) chart bound) is the untried PRIMARY** and composes to
-  `C_sf = 8` without needing the cap — the natural next EXPLORE (issue aism-vip).
-- Empirics: cap holds with margin (`σ̃_g ≤ 0.37τ` over ~25k, F2) — low-dimension evidence, silent on
-  the class-count wall.
+**Arm A's sole open input: the max-based argmin charge** — GAP A/GAP B in
+`docs/waves/2026-07-02-A4-aggregate-charge.md`: prove `max_s Φ_s(U*) ≤ Cδ` at a θ-½ Φ-argmin, either
+via Schur-swap stationarity + a near-degeneracy payment (the source's named open horn,
+kernel-conjecture-v2.tex ~448–454) or a genuinely new aggregate/max-based mechanism. Do NOT
+af-elevate GAP A as-is (it is (EX) restated — genuine-gap abort predicted).
+
+**B-side unchanged:** the halo-robust cap needs a NEW ledger-immune, class-count-free mechanism, or
+the B4 deciders (FAIL-1 exact instance hunt = arm F work; signed quantitative Baake–Sumner count).
 
 ## Next steps (ranked) — RESUME HERE
 
-1. **aism-vip: EXPLORE arm A** — first scoping wave on the (EX) chart bound
-   `max_s Φ_s(U₀) ≤ C₀·δ` (codex worker; read the dead routes FIRST: 12.8–128× blowup,
-   exists-exact-max-volume selectors). Deliverable: attack plan or reduction.
-2. Alternative/parallel: **arm F hunt for the B4 FAIL-1 decider** — an exact instance with an
-   extremal row failing (ρ,κ)-exposedness at uniform κ=τ/4 (refutes `conj-no-free-frontier` as
-   written; sharpens what any future cap mechanism must assume).
-3. **USER DECISION pending (aism-136, `bd human`):** `lem-dual-localization` contract is trivially
-   true as stated (codex-verified). Candidate corrected contracts in the bd notes.
-4. Hygiene queue: `aism-6ec` (REFACTOR-warning policy for big validated trees); refs/ pinning for
-   `cited` defs (deferred); report shard for the bridge proof narrative (the ledger row exists;
-   a full section like the other five would be natural next lab-book work).
+1. **Arm A wave 8 (theory):** sharpen GAP B — an explicit Schur-block degeneracy functional with the
+   payment inequality, exact-tested on the A2–A7 instance zoo (A4 §4 rec 2). Kill criteria as before
+   (per-class counting; dead selectors).
+2. **Alternative:** arm F FAIL-1 decider hunt (exact instance refuting `conj-no-free-frontier` at
+   uniform κ=τ/4) — sharpens any future B-side cap mechanism; independent of arm A.
+3. **USER DECISION still pending (aism-136, `bd human`):** `lem-dual-localization` contract is
+   trivially true as stated (codex-verified); candidate corrected contracts in the bd notes.
+4. Hygiene: aism-6ec (accept-and-defer recommendation recorded on the REFACTOR WARNs); refs/ pinning
+   for `cited` defs (deferred); consider a def-actual-row-chart / def-phi-excess definitions pass if
+   arm A keeps producing chart-language registry results (contracts currently self-contained).
 
-## Standing role/process rules (user-mandated 2026-07-02)
+## Standing role/process rules (user-mandated 2026-07-02/03)
 
-- Orchestrator = knowledge/strategy overview + proof-direction evaluation; NEVER verifies proofs
-  (codex/af does). No Fable subagents without explicit permission — **prefer codex** workers.
-- af contracts: SINGLE minimal statement (bd memory). Balloon abort → FACTOR, re-seed, re-run —
-  proven effective this session.
-- No argument/definitions edits while ANY orchestration is live (bd memory; guard is git-porcelain).
-- Numerics: exact-ℚ certificates, L3 bundles, orchestrator independently recomputes headlines.
-- Waves: verbatim harvest artifact in `docs/waves/`, honest-status codification, fr log per pull.
+- Orchestrator = strategy/overview; NEVER verifies proofs (codex/af does). No Fable subagents —
+  prefer codex workers. ONE af orchestration at a time; codex scouting waves serial-ish.
+- af contracts: SINGLE minimal statement (bd memory; lem-factorization narrowing worked first-run).
+- No argument/definitions edits while ANY orchestration is live (git-porcelain overreach guard).
+- Numerics: exact-ℚ, L3 bundles, orchestrator independently recomputes one headline per bundle
+  (done for A2/A3/A6: 7/4, 23/16, and the 512-chart repeated-star row).
+- Waves: verbatim harvest artifact in `docs/waves/`, honest tiering (T0–T3), fr log per pull;
+  workers told: no fr/bd, no registry/report edits.
 
 ## Recipes / commands
 
@@ -82,15 +93,14 @@ sh scripts/check-all.sh                          # the gate
 fr board ; fr status                              # the portfolio
 python3 scripts/seed-af-workspaces.py <id>        # seed one af workspace (contract verbatim)
 python3 scripts/af-orchestrate.py <id> --workers 8 --max-rounds 12 --node-cap 40   # background
-python3 scripts/af-orchestrate.py <id> --phase verify --max-rounds 16 --node-cap 40 # RESUME a tree
-fr verify proofs/<id>/export.md --oracle af-<id>  # bank gate (6 oracles registered)
+fr verify proofs/<id>/export.md --oracle af-<id>  # bank gate (7 oracles registered)
 python3 scripts/argument.py --sync-beads          # idempotent DAG→beads mirror
 ```
 
 ## What is intentionally NOT here
 
-- Any claim that more than SIX results are rigorous (everything else: honest lower rungs).
-- Any claim the Kernel Conjecture / (EX) / op-classical is closed — the CAP IS OPEN.
-- σ̃-statements at ε=0 (refuted); the cap via exposedness absorption (B4, wall-blocked).
-- The linear law as "δ ≥ H/2, zero exceptions" (H/δ=100/49 certified; asymptotic constant 2 stands).
-- A git remote / remote CI (local-only by decision).
+- Any claim that more than SEVEN results are rigorous (everything else: honest lower rungs).
+- Any claim (EX) / the Kernel Conjecture / op-classical is closed — BOTH chain inputs are OPEN.
+- Plateau-2 as a theorem (it is L3 evidence + an unbroken candidate lemma, across 7 design families).
+- The tightness of (2,6) in lem-factorization as rigorous (deliberately not elevated; body note).
+- A git remote / remote CI (local-only by decision; bd hook confirms no remote — do not "push").
