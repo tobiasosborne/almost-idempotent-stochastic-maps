@@ -41,15 +41,22 @@ TRIGGER: session close, or a material change in the current frontier / next task
 - **Git:** local-only, clean at `e68d1b6`+. **beads:** 17 DAG mirrors + work issues; `aism-rha`/`aism-22r`
   closed this session.
 
-## The frontier
+## The frontier (re-scoped 2026-07-02 by arm B waves 1-2 + arm F wave 1)
 
-Unchanged mathematically: **the Kernel / (EX) conjecture** — the one input that closes `op-classical` via
-`HLC ⇐ op-exposed-hull ⇐ op-classical`. But TWO CONSTANT-HYGIENE FLAGS are now filed and should be pinned
-before heavy waves aim at a constant:
-- `aism-8bi`: "(EX) with C₀=1 empirically" (FRONTIER text) vs FINDINGS "C₀<1 REFUTED (transverse pair at
-  a=¼ gives Φ/δ=5/4)" — both cannot headline; pin from `docs/ingest/report/kernel-conjecture-v2.tex`.
-- `aism-z48`: worst `H/δ = 2.000000000013` in the "exact" 67k record — exact arithmetic has no 1e-11 fuzz;
-  either a non-exact step or the linear-law constant is not exactly 2. Decides Arm B/C targets.
+Still the Kernel / (EX) conjecture — but three waves sharpened WHERE it lives:
+- **v-local and web-rigidity proof families are CLOSED** (obs-deep-leakage: exactness pushes the hidden
+  vertex's mass into the shallow band, O(δ)/H cap on deep-side mass; obs-fwr-gap: F-WR is a
+  coincidence-or-antipodality dichotomy, cannot count classes). Both heuristic-tagged, artifact-backed
+  (`docs/waves/2026-07-02-B{1,2}-*.md`).
+- **The dangerous antecedent re-scopes to `σ̃ → 1`**: over ~48k exact idempotents the joint (σ̃>τ ∧ H>Bτ)
+  never occurred; the collapse bound `H(1−σ̃) ≤ ν(2+4δ)` (obs-height-collapse, 0/500 violations) is the
+  structural reason. **Candidate finisher: af-validate obs-height-collapse + prove `σ̃ ≤ 1−cτ` for hidden
+  vertices ⇒ Kernel Conjecture closes.** Orchestration of obs-height-collapse is RUNNING (background).
+- **Constants pinned + a certified correction**: existential C₀=1 tight (5/4 = selector floor);
+  `H/δ = 100/49 > 2` at finite δ (hull-dip, `runs/2026-07-02-web-regime-hunt/`, kernel-safe, asymptotic
+  constant still 2) — do NOT quote "δ ≥ H/2, zero exceptions" (FINDINGS 2026-07-02 correction).
+- Contract-precision flag: `aism-136` (lem-dual-localization's stated inequality may be trivially true —
+  proposed restatement goes to the user, not edited unilaterally).
 
 ## Strategy assessment (2026-07-02, orchestrator)
 

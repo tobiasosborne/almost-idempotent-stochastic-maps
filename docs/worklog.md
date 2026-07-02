@@ -52,3 +52,19 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   verification; no Fable subagents without permission (codex/opus/sonnet).
 - Strategy review filed 2 constant-hygiene issues: `aism-8bi` (C₀ 1 vs ≥5/4 tension), `aism-z48`
   (H/δ = 2.000000000013 fuzz in an "exact" record). Standing fr decision: EXPLORE arm B next.
+
+## 2026-07-02 (session 2, continued) — three waves harvested; frontier re-scoped to σ̃→1
+
+- Arm B wave 1 (opus): OBSTRUCTION — obs-deep-leakage (heuristic shard) closes local-at-v routes;
+  arm re-aimed at anti-splitting. Wave 2 (opus): OBSTRUCTION — obs-fwr-gap (heuristic shard) closes the
+  web-rigidity family; s5 arithmetic independently recomputed over ℚ. lem-canonical-separator +
+  lem-wiggle-rigidity imported as proved-mod-audit inputs. Commits fb305e7, 99e098c.
+- Arm F wave 1 (opus): STALL-MAP over ~48k exact idempotents — dangerous regime never entered; collapse
+  bound H(1−σ̃) ≤ ν(2+4δ) 0/500 (obs-height-collapse, the CANDIDATE FINISHER: + σ̃ ≤ 1−cτ ⇒ kernel
+  closes); CERTIFIED finite-δ linear-law exceedance H/δ = 100/49 (hull-dip; kernel-safe; FINDINGS
+  corrected). L3 bundle runs/2026-07-02-web-regime-hunt/ (first bundle through check-runs); headline
+  certificate independently recomputed by the orchestrator. Commit 41218bf.
+- obs-height-collapse seeded (861a737) and its codex orchestration launched in background.
+- Tooling feedback for the fr/af maintainer agents: docs/tooling-feedback/{FR,AF}-FEEDBACK.md (5ddf3ca).
+- fr decisions this stretch: B died→died (frontier reduced twice), F progress (T1), standing decision
+  EXPLORE R (elevation in flight). Registry at 23 nodes; only lem-classical-equiv rigorous.
