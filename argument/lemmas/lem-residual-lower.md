@@ -4,8 +4,8 @@ kind: lemma
 contract: Convex outsourcing: let C be the convex hull of finitely many points of R^n, and suppose p = sum_{j=1}^m c_j p_j + (1 - s) q with points p_j, q in R^n, coefficients c_j >= 0, s = sum_{j=1}^m c_j < 1, and dist_1(p_j, C) <= dist_1(p, C) for every j; then dist_1(p, C) <= dist_1(q, C).
 defs: 
 deps: 
-status: stated
-af: seeded
+status: proved
+af: validated
 provenance: factored out of proofs/conj-halo-collapse elevation run 1 (node 1.4.2, all four children codex-validated there); stated frame-free (pure l1 convex geometry, no idempotent structure)
 owner: A
 workspace: proofs/lem-residual-lower
@@ -24,3 +24,8 @@ Only BSc-level notions are used (`l1` distance to a set, convex hull — common 
 **Role:** dep of [[conj-halo-collapse]] — applied with `p = p_v` (a hidden top vertex, so
 `dist_1(p_j, C_W) <= H = dist_1(p_v, C_W)` for all rows), the `c_j` the genuine-pot masses `a_j^+`
 (`j` with `d_j > tau/4`), and `s = sigma_g < 1`.
+
+**af-VALIDATED IN-REPO 2026-07-02** (run 1 + verify resumes, clean): 32 validated live nodes (36
+total incl. 4 archived), root `validated`, taint 36/36 clean; fresh codex prover/verifiers per node,
+Claude orchestrated only (§6). Ledger: `proofs/lem-residual-lower/ledger/`; export:
+`proofs/lem-residual-lower/export.md`. Status flip is the mechanical reflection of the codex ledger.

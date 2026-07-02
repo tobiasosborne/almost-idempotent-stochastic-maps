@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Convex outsourcing: let C be the convex hull of finitely ...}
+\step{1} Convex outsourcing: let C be the convex hull of finitely many points of R\textasciicircum{}n, and suppose p = sum\_\{j=1\}\textasciicircum{}m c\_j p\_j + (1 - s) q with points p\_j, q in R\textasciicircum{}n, coefficients c\_j >= 0, s = sum\_\{j=1\}\textasciicircum{}m c\_j < 1, and dist\_1(p\_j, C) <= dist\_1(p, C) for every j; then dist\_1(p, C) <= dist\_1(q, C). \steptag{validated} \\[6pt]
+\step{1.1} Let D = dist\_1(p, C) and d = dist\_1(q, C). Since C is a finite convex hull in R\textasciicircum{}n, C is compact and convex, and the l1 distance to C is attained: for each j choose r\_j in C with ||p\_j - r\_j||\_1 = dist\_1(p\_j, C), and choose r in C with ||q - r||\_1 = d. \steptag{validated} \\[6pt]
+\step{1.1.1} A convex hull of finitely many points of R\textasciicircum{}n is the image of a standard simplex under an affine map, hence it is compact; by definition it is convex. \steptag{validated} \\[4pt]
+\step{1.1.2} For any fixed x in R\textasciicircum{}n, the function z -> ||x - z||\_1 is continuous on C, so compactness of C gives a minimizer z\_x in C with ||x - z\_x||\_1 = dist\_1(x, C). \steptag{validated} \\[4pt]
+\step{1.1.3} Apply the preceding minimizer fact with x = p\_j for each j and with x = q; name the resulting minimizers r\_j and r, and set D = dist\_1(p, C), d = dist\_1(q, C). \steptag{validated} \\[4pt]
+\step{1.2} The comparison point r\_star := sum\_\{j=1\}\textasciicircum{}m c\_j r\_j + (1 - s) r belongs to C. \steptag{validated} \\[6pt]
+\step{1.2.1} Each r\_j and r lies in C by the nearest-point choices from node 1.1. \steptag{validated} \\[6pt]
+\step{1.2.1.1} This membership step depends on node 1.1: node 1.1 explicitly chooses, for each j, a point r\_j in C and also chooses r in C. Therefore the assertions r\_j in C for every j and r in C are exactly part of those choices; no nearest-point property beyond the membership specified in the choices is being used here. \steptag{validated} \\[4pt]
+\step{1.2.2} The coefficients c\_j are nonnegative, and 1 - s is positive because s < 1; moreover sum\_\{j=1\}\textasciicircum{}m c\_j + (1 - s) = s + (1 - s) = 1. \steptag{validated} \\[4pt]
+\step{1.2.3} Since C is convex, any finite convex combination of points of C with nonnegative coefficients summing to 1 lies in C; applying this to the points r\_j and r gives r\_star in C. \steptag{validated} \\[6pt]
+\step{1.2.3.1} Use node 1.2.1 for the membership premise (r\_j in C for every j and r in C) and node 1.2.2 for the coefficient premise (c\_j >= 0, 1-s > 0, and sum\_j c\_j + (1-s) = 1). With these premises declared, the list r\_1,...,r\_m,r with weights c\_1,...,c\_m,1-s is a finite convex combination of points of C. Since C is convex, that convex combination lies in C; by the definition of r\_star, this point is r\_star, hence r\_star in C. \steptag{archived} \\[4pt]
+\step{1.2.3.2} Dependency-bearing bridge: this step has validation dependencies on node 1.2.1 for the membership premise r\_j in C for every j and r in C, and on node 1.2.2 for the coefficient premise c\_j >= 0, 1-s > 0, and sum\_j c\_j + (1-s) = 1. Once those dependency nodes are validated, r\_star = sum\_j c\_j r\_j + (1-s)r is a finite convex combination of points of C; therefore convexity of C implies r\_star in C. Until node 1.2.1 is validated, this step remains blocked and makes no standalone use of the membership premise. \steptag{validated} \\[6pt]
+\step{1.2.3.2.1} Challenge response for ch-e657d7b871ac7728: this bridge does not use node 1.2.1 as a currently validated premise. It requires validation of nodes 1.2.1 and 1.2.2. Once 1.2.1 is validated, it supplies exactly r\_j in C for every j and r in C; once 1.2.2 is validated, it supplies c\_j >= 0, 1-s > 0, and sum\_j c\_j + (1-s) = 1. Under those validated dependencies, r\_star = sum\_j c\_j r\_j + (1-s)r is a finite convex combination of points of C, so convexity of C gives r\_star in C. Until 1.2.1 is validated, this child and its parent remain blocked, so no unvalidated membership premise is being used. \steptag{archived} \\[4pt]
+\step{1.3} For this r\_star one has D <= ||p - r\_star||\_1 <= sum\_\{j=1\}\textasciicircum{}m c\_j ||p\_j - r\_j||\_1 + (1 - s)||q - r||\_1. \steptag{validated} \\[6pt]
+\step{1.3.1} Because r\_star belongs to C by node 1.2 and D = dist\_1(p, C), the definition of distance to a set gives D <= ||p - r\_star||\_1. \steptag{validated} \\[6pt]
+\step{1.3.1.1} This step explicitly depends on node 1.2: once node 1.2 is validated, its statement gives r\_star in C. For distance to a set, D = dist\_1(p,C) is the infimum of ||p-y||\_1 over y in C, so every particular y in C satisfies D <= ||p-y||\_1. Applying this to y = r\_star gives D <= ||p-r\_star||\_1. \steptag{archived} \\[4pt]
+\step{1.3.1.2} Corrected dependency-bearing proof of the parent step: use node 1.2 for r\_star in C and node 1.1.3 for the binding D = dist\_1(p,C). With those two validated inputs, the definition of distance to a set gives D <= ||p-r\_star||\_1. \steptag{validated} \\[6pt]
+\step{1.3.1.2.1} Dependency-bearing bridge for the distance comparison: this child depends on nodes 1.2 and 1.1.3 and requires both to be validated. Node 1.2 gives r\_star in C. Node 1.1.3 sets D = dist\_1(p,C). By definition, dist\_1(p,C) is the infimum of ||p-y||\_1 over y in C, so every y in C satisfies D <= ||p-y||\_1. Taking y = r\_star gives D <= ||p-r\_star||\_1. \steptag{validated} \\[4pt]
+\step{1.3.2} Substituting p = sum\_\{j=1\}\textasciicircum{}m c\_j p\_j + (1 - s) q and r\_star = sum\_\{j=1\}\textasciicircum{}m c\_j r\_j + (1 - s) r gives p - r\_star = sum\_\{j=1\}\textasciicircum{}m c\_j (p\_j - r\_j) + (1 - s)(q - r). \steptag{validated} \\[4pt]
+\step{1.3.3} The l1 triangle inequality and absolute homogeneity give ||sum\_\{j=1\}\textasciicircum{}m c\_j (p\_j - r\_j) + (1 - s)(q - r)||\_1 <= sum\_\{j=1\}\textasciicircum{}m c\_j ||p\_j - r\_j||\_1 + (1 - s)||q - r||\_1, since c\_j >= 0 and 1 - s >= 0. \steptag{validated} \\[4pt]
+\step{1.3.4} Combining the preceding three statements yields D <= ||p - r\_star||\_1 <= sum\_\{j=1\}\textasciicircum{}m c\_j ||p\_j - r\_j||\_1 + (1 - s)||q - r||\_1. \steptag{validated} \\[4pt]
+\step{1.4} The hypotheses and the nearest-point choices give sum\_\{j=1\}\textasciicircum{}m c\_j ||p\_j - r\_j||\_1 + (1 - s)||q - r||\_1 <= s D + (1 - s) d. \steptag{validated} \\[6pt]
+\step{1.4.1} For every j, the choice of r\_j gives ||p\_j - r\_j||\_1 = dist\_1(p\_j, C), and the hypothesis gives dist\_1(p\_j, C) <= D. \steptag{validated} \\[4pt]
+\step{1.4.2} Since each c\_j >= 0, multiplying the inequalities ||p\_j - r\_j||\_1 <= D by c\_j and summing gives sum\_\{j=1\}\textasciicircum{}m c\_j ||p\_j - r\_j||\_1 <= (sum\_\{j=1\}\textasciicircum{}m c\_j) D = s D. \steptag{validated} \\[4pt]
+\step{1.4.3} The choice of r gives ||q - r||\_1 = d, so (1 - s)||q - r||\_1 = (1 - s)d. \steptag{validated} \\[6pt]
+\step{1.4.3.1} Dependency-bearing bridge for the minimizer equality: node 1.1.3 applies the nearest-point/minimizer fact with x = q, names the resulting minimizer r, and sets d = dist\_1(q, C). Therefore that imported choice gives ||q - r||\_1 = d. Multiplying this equality by the scalar 1 - s gives (1 - s)||q - r||\_1 = (1 - s)d; no additional nearest-point premise is being assumed inside 1.4.3. \steptag{archived} \\[4pt]
+\step{1.4.3.2} Dependency-bearing bridge for the minimizer equality: this step depends on node 1.1.3. Node 1.1.3 applies the nearest-point/minimizer fact with x = q, names the resulting minimizer r, and sets d = dist\_1(q, C). Therefore that imported choice gives ||q - r||\_1 = d. Multiplying this equality by the scalar 1 - s gives (1 - s)||q - r||\_1 = (1 - s)d; no additional nearest-point premise is being assumed inside 1.4.3. \steptag{validated} \\[4pt]
+\step{1.4.4} Adding the two bounds gives sum\_\{j=1\}\textasciicircum{}m c\_j ||p\_j - r\_j||\_1 + (1 - s)||q - r||\_1 <= s D + (1 - s)d. \steptag{validated} \\[4pt]
+\step{1.5} Because D <= s D + (1 - s) d and s < 1, it follows that D <= d, i.e. dist\_1(p, C) <= dist\_1(q, C). \steptag{validated} \\[6pt]
+\step{1.5.1} Combining node 1.3 with node 1.4 gives D <= s D + (1 - s)d. \steptag{validated} \\[6pt]
+\step{1.5.1.1} Dependency-bearing bridge for the combination: this step depends on nodes 1.3 and 1.4 and requires both to be validated. Let A = sum\_\{j=1\}\textasciicircum{}m c\_j ||p\_j - r\_j||\_1 + (1 - s)||q - r||\_1. Node 1.3 gives D <= ||p - r\_star||\_1 <= A, hence D <= A. Node 1.4 gives A <= s D + (1 - s)d. By transitivity of <=, D <= s D + (1 - s)d. \steptag{validated} \\[6pt]
+\step{1.5.1.1.1} Challenge response for ch-9e721809b5c36eec: this bridge is not an unconditional proof from pending premises. It is a dependency-bearing step whose only nonlocal inputs are nodes 1.3 and 1.4, and it requires both to be validated before this child can be accepted. Once 1.3 is validated, it supplies D <= ||p - r\_star||\_1 <= A, where A = sum\_\{j=1\}\textasciicircum{}m c\_j ||p\_j - r\_j||\_1 + (1 - s)||q - r||\_1, hence D <= A. Once 1.4 is validated, it supplies A <= s D + (1 - s)d. Transitivity of <= then gives D <= s D + (1 - s)d. Until nodes 1.3 and 1.4 validate, this child remains blocked and does not validate the inequality. \steptag{validated} \\[4pt]
+\step{1.5.2} Subtracting s D from both sides gives (1 - s)D <= (1 - s)d. \steptag{validated} \\[4pt]
+\step{1.5.3} Because s < 1, the scalar 1 - s is positive, so division by 1 - s preserves the inequality and yields D <= d. \steptag{validated} \\[4pt]
+\step{1.5.4} By the definitions D = dist\_1(p, C) and d = dist\_1(q, C), the inequality D <= d is exactly dist\_1(p, C) <= dist\_1(q, C). \steptag{validated} \\[6pt]
+\step{1.5.4.1} Dependency-bearing bridge for the final substitution: this step depends on nodes 1.5.3 and 1.1.3. Node 1.5.3 gives D <= d. Node 1.1.3 sets D = dist\_1(p, C) and d = dist\_1(q, C) after applying the minimizer setup to p\_j and q. Substituting these two recorded equalities into D <= d gives exactly dist\_1(p, C) <= dist\_1(q, C). \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

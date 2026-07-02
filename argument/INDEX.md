@@ -15,8 +15,8 @@
 | `lem-factorization` | lemma | proved-mod-audit | none | A | (proved-mod-audit) Factorization bound: for any theta-1/2 actual-row basis U of … |
 | `lem-leakage` | lemma | proved-mod-audit | none | A | Affine-face leakage: for row-stochastic Q with ||Q^2-Q|| <= eta and affine h:Del… |
 | `lem-mass-split` | lemma | proved | validated | A | Mass split: for an exact signed idempotent P and any row index v, writing a_j = … |
-| `lem-residual-lower` | lemma | stated | seeded | A | Convex outsourcing: let C be the convex hull of finitely many points of R^n, and… |
-| `lem-residual-upper` | lemma | stated | seeded | A | Residual distance bound: let C be the convex hull of finitely many points of R^n… |
+| `lem-residual-lower` | lemma | proved | validated | A | Convex outsourcing: let C be the convex hull of finitely many points of R^n, and… |
+| `lem-residual-upper` | lemma | proved | validated | A | Residual distance bound: let C be the convex hull of finitely many points of R^n… |
 | `lem-wiggle-rigidity` | lemma | proved-mod-audit | none | A | F-WR wiggle rigidity: for self-indexed common-pattern webs with row decompositio… |
 | `obs-deep-leakage` | obstruction | heuristic | none | A | For a hidden top vertex v of height H with canonical separator phi and deep side… |
 | `obs-fwr-gap` | obstruction | heuristic | none | A | F-WR forbidden-gap dichotomy: for a centered exact self-indexed common-pattern 2… |
