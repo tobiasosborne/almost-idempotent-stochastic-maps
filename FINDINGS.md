@@ -59,3 +59,22 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   `af` workspace validation, or a numerical certificate re-run). Register one in
   `.frontier/portfolio.json → config.oracles` when the first bankable claim exists — do NOT register a
   coarse "gate" oracle (it would pass any claim, defeating the anti-gaming purpose).
+
+## 2026-07-02 — constants PINNED (strategist read of the ingest record; closes aism-8bi / aism-z48)
+
+- ✅ **C₀ in (EX): the EXISTENTIAL constant is exactly 1 empirically; 5/4 is a SELECTOR floor.** Over the
+  278 valid rank-3 `δ≤¼` exact instances (w41_ex), worst `min_U max_s Φ_s(U)/δ = 1`, ATTAINED (transverse
+  pairs `a=1/8`, `a=1/4`; no-center paths) — so `C₀<1` is impossible and `C₀=1` is tight for the
+  existential form. The `5/4` belongs to cheap SELECTORS (worst max-volume tie / peeled / min-neg-mass;
+  3–4 violators each; sharp witness = transverse pair `a=¼`: Φ-argmin gives `Φ/δ=1`, bad tie `5/4`).
+  Loci: `docs/ingest/experiments/out/w41_ex/proof.md` (selector + family tables);
+  `docs/ingest/report/kernel-conjecture-v2.tex:223–235`. **Strategic consequence (Arm A): `C_sf=2C₀+6`
+  tolerates ANY universal `C₀` (1→8, 5/4→8.5) — do not fight for the aesthetic 1; a robust selector with
+  any universal constant discharges `op-classical`.**
+- ✅ **`H/δ = 2.000000000013` is FLOAT noise from LOCAL numerics — NOT the exact record.** The figure comes
+  from the local (float) search near the H–M locus (`docs/ingest/report/kernel-conjecture.tex:418`, "local
+  numerics give worst stable ratio"); the 67k exact record supports `δ ≥ H/2` with zero exceptions
+  (`docs/ingest/OVERVIEW.md:87` conflates the two sources). The linear-law constant is exactly 2
+  conjecturally (`δ = H/2` tight on realizable families); `H ≤ 2δ` is the right Arm B/C target. Do NOT
+  quote `2.000000000013` as an exact-arithmetic exceedance — it corrects the attribution in the founding
+  entry above ("worst `H/δ = 2.000000000013`" under "67k+ exact instances").
