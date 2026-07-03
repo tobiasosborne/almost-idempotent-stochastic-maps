@@ -19,9 +19,9 @@
 | `lem-mass-split` | lemma | proved | validated | A | Mass split: for an exact signed idempotent P and any row index v, writing a_j = … |
 | `lem-residual-lower` | lemma | proved | validated | A | Convex outsourcing: let C be the convex hull of finitely many points of R^n, and… |
 | `lem-residual-upper` | lemma | proved | validated | A | Residual distance bound: let C be the convex hull of finitely many points of R^n… |
-| `lem-weighted-min` | lemma | proved-mod-audit | none | A | Weighted minimum bound: let p_1, ..., p_m be positive reals with sum_i p_i = 1 a… |
+| `lem-weighted-min` | lemma | proved-mod-audit | seeded | A | Weighted minimum bound: let p_1, ..., p_m be positive reals with sum_i p_i = 1 a… |
 | `lem-wiggle-rigidity` | lemma | proved-mod-audit | none | A | F-WR wiggle rigidity: for self-indexed common-pattern webs with row decompositio… |
-| `lem-zerosum-triangle` | lemma | proved-mod-audit | none | A | Zero-sum triangle bound: let w and v be vectors in R^d with v having coordinate … |
+| `lem-zerosum-triangle` | lemma | proved-mod-audit | seeded | A | Zero-sum triangle bound: let w and v be vectors in R^d with v having coordinate … |
 | `obs-deep-leakage` | obstruction | heuristic | none | A | For a hidden top vertex v of height H with canonical separator phi and deep side… |
 | `obs-fwr-gap` | obstruction | heuristic | none | A | F-WR forbidden-gap dichotomy: for a centered exact self-indexed common-pattern 2… |
 | `obs-height-collapse` | obstruction | proved | validated | A | Height collapse: for an exact signed idempotent P with 0 < delta(P) <= 1/4, none… |

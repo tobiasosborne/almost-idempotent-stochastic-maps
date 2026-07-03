@@ -29,8 +29,8 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-LEM-EXPOSED-CIRCUIT` | `argument/lemmas/lem-exposed-circuit.md` | `17f0f840a3bf79e8` | Registry shard for `lem-exposed-circuit` |
 | `ARG-LEM-FAN-PAYMENT` | `argument/lemmas/lem-fan-payment.md` | `b9d40c34caa673f8` | Registry shard for `lem-fan-payment` |
 | `ARG-LEM-FACTORIZATION` | `argument/lemmas/lem-factorization.md` | `206a89c203319e6f` | Registry shard for `lem-factorization` |
-| `ARG-LEM-WEIGHTED-MIN` | `argument/lemmas/lem-weighted-min.md` | `e3cadb712b1a0144` | Registry shard for `lem-weighted-min` |
-| `ARG-LEM-ZEROSUM-TRIANGLE` | `argument/lemmas/lem-zerosum-triangle.md` | `23845c51973805d7` | Registry shard for `lem-zerosum-triangle` |
+| `ARG-LEM-WEIGHTED-MIN` | `argument/lemmas/lem-weighted-min.md` | `beff2f7fd6d5a113` | Registry shard for `lem-weighted-min` |
+| `ARG-LEM-ZEROSUM-TRIANGLE` | `argument/lemmas/lem-zerosum-triangle.md` | `594d17ebf503ce79` | Registry shard for `lem-zerosum-triangle` |
 | `ARG-LEM-LEAKAGE` | `argument/lemmas/lem-leakage.md` | `ebedf751f8a1d2ab` | Registry shard for `lem-leakage` |
 | `ARG-LEM-MASS-SPLIT` | `argument/lemmas/lem-mass-split.md` | `634fdf3556b8f4ea` | Registry shard for `lem-mass-split` |
 | `ARG-LEM-RESIDUAL-LOWER` | `argument/lemmas/lem-residual-lower.md` | `3d4604e0725be091` | Registry shard for `lem-residual-lower` |

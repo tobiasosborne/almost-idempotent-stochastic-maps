@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-07-03T06:11:45.001611686Z","conjecture":"Zero-sum triangle bound: let w and v be vectors in R^d with v having coordinate sum zero (sum_l v(l) = 0); write n(x) = sum_l max(-x(l), 0); then n(w - v) \u003c= n(w) + n(v).","author":"orchestrator"}

@@ -5,7 +5,7 @@ contract: Weighted minimum bound: let p_1, ..., p_m be positive reals with sum_i
 defs: 
 deps: 
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/waves/2026-07-03-A10-weighted-payment.md (arm A wave 10, codex; the support-averaging step of the fan payment proof: if every n_i exceeded the weighted average the average would exceed itself); factored out of proofs/lem-fan-payment after the run-1/run-2 balloon aborts (aism-ugk)
 owner: A
 workspace: proofs/lem-weighted-min

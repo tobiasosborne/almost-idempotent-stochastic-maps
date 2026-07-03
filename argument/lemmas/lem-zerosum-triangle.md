@@ -5,7 +5,7 @@ contract: Zero-sum triangle bound: let w and v be vectors in R^d with v having c
 defs: 
 deps: 
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/waves/2026-07-03-A10-weighted-payment.md (arm A wave 10, codex; the zero-sum triangle step of the fan payment proof — pointwise max(-(w(l)-v(l)), 0) <= max(-w(l), 0) + max(v(l), 0), summed, plus sum_l max(v(l), 0) = sum_l max(-v(l), 0) = n(v) by the zero coordinate sum); factored out of proofs/lem-fan-payment after the run-1/run-2 balloon aborts (aism-ugk)
 owner: A
 workspace: proofs/lem-zerosum-triangle

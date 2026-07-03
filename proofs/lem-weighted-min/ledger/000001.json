@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-07-03T06:11:45.075520988Z","conjecture":"Weighted minimum bound: let p_1, ..., p_m be positive reals with sum_i p_i = 1 and let n_1, ..., n_m be real numbers; then min over i in {1, ..., m} of n_i \u003c= sum_i p_i * n_i.","author":"orchestrator"}
