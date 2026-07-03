@@ -12,7 +12,7 @@ TRIGGER: session close, or a material change in the current frontier / next task
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md` — esp. L0 rigour ladder, Rule 13 dead routes).
 2. Run `fr board` and `bd ready`. Skim `argument/DAG.md` (**12 green nodes**) + `FINDINGS.md` +
    `report/main.pdf` (9 shards; NOTE: sections for results 8–12 not yet written — ledger rows only).
-3. Wave artifacts in `docs/waves/` (B1–B4, F1–F2, A1–A12, D1–D2); L3 bundles in `runs/` (6).
+3. Wave artifacts in `docs/waves/` (B1–B4, F1–F2, A1–A12, D1–D6); L3 bundles in `runs/` (6).
 4. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
 ## Current state (2026-07-03, session 4 CLOSE) — TWELVE rigorous results
@@ -89,8 +89,8 @@ fr verify proofs/<id>/export.md --oracle af-<id>   # 12 oracles registered
 ## What is intentionally NOT here
 
 - Any claim that more than TWELVE results are rigorous.
-- Any claim (EX)/Kernel/op-classical is closed — open inputs: (SI), (BN), legal-collateral horn,
-  B-side cap.
+- Any claim (EX)/Kernel/op-classical is closed — open inputs: (FIN)/(RSI), (BN), the legal
+  collateral theorem, B-side cap. ((SI) is REFUTED — see FINDINGS.)
 - Constant 2 for the D-RESTRICTED fan payment (sharp is 2+√2; exact refuters in A11).
 - Plateau-2 as a theorem for general (EX) (L3 evidence + the rigorous fan-template cases only).
 - A git remote (local-only by decision).
