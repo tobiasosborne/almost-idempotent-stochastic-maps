@@ -138,6 +138,17 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   AND class-count-free, or must first settle the class-count decider (open signed quantitative
   Baake–Sumner). F2's `σ̃_g ≤ 0.37τ` margin is low-dimension evidence and silent on wall (b).
 
+## 2026-07-03 — legal-leak certificates: the argmin does NOT exclude legal rows (do not re-walk)
+
+- ⛔ **"β-positive legal rows with μ>0 are impossible/absorbable at a Φ-argmin" is FALSE.** Exact
+  two-scale transverse certificates (D6, `docs/waves/2026-07-03-D6-legal-leak.md`): `L_μ/δ` up to
+  `999959/1000000` coexisting with `M_D>0` at a θ-½ Φ-argmin; `F_L>0` realizable; the (FIN)
+  constant-1 version already stressed (`592875/591017`). The only argmin fact is the A9 max-
+  stationarity DISJUNCTION (same-pivot payment OR collateral rise) — collateral has no useful
+  universal lower bound. Consequence: the payment and legal horns of GAP B are genuinely coupled;
+  the legal horn needs a real collateral theorem (`strict legal contributor at a maximal pivot ⇒
+  Φ ≤ C_legal·δ`), not ledger bookkeeping; (FIN) must carry `C_fin > 1`.
+
 ## 2026-07-03 — (SI) death certificate: external sources alone can NOT pay the degenerate tax
 
 - ⛔ **`M_D ≤ C·(G_class⁻ + S⁻^μ)` (the D2 "(SI)" source inequality) is FALSE — do not re-walk.**
