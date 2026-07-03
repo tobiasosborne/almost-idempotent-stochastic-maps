@@ -171,3 +171,26 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   the user decision.
 - Session totals: 7 codex waves harvested + 1 af orchestration validated; 3 new L3 bundles (all
   headlines orchestrator-recomputed); 1 T0 result banked; 8 bd issues created/closed; ~10 commits.
+
+## 2026-07-03 (session 4 continuation) — the reduction cascade: 5 more rigorous results (8th-12th)
+
+- **Waves A8-A12 + D1-D2 (7 more codex waves)** drove the (EX) argmin charge through a full
+  reduction cascade: GAP B split into payment + legal-collateral horns (A8); exact accounting +
+  disjunction, circular routes killed (A9); WOP isolated, all-mass fan payment PROVED inline (A10);
+  D-restricted fan inequality PROVED with SHARP constant 2+sqrt(2), C=2 exactly refuted (A11); the
+  lift made exact — payment horn reduced to (TT) conj-degenerate-transport (A12); H-M Thm 1.12
+  applied — (TT) is a B-row inequality, quotient harmonicity, delta=0 refuter excluded (D1); exact
+  source split + class-negative budget proved, (SI)+(BN) isolated with a 4-piece factoring (D2).
+- **Five af-validated results banked (8th-12th):** lem-zerosum-triangle (10 nodes),
+  lem-weighted-min (8), lem-fan-payment (15, after a 39/47 double balloon cured by factoring),
+  lem-negpart-subadditive (16), lem-fan-payment-restricted (27, run 1 clean — the sharp 2+sqrt(2)
+  theorem). The fan-payment family is genuinely NEW mathematics produced by this session's waves.
+- **Two new registry conjectures codified:** conj-degenerate-payment (A8 payment horn),
+  conj-degenerate-transport (A12 (TT), owner D). Registry at 36 results.
+- **Arm D opened** (2 pulls, both progress): the H-M structure side reached the same object as the
+  argmin side; the old all-row tax wall is dodged in the delta=0/aggregate senses.
+- Process: one network outage bridged cleanly (weighted-min verify resume); one node-cap
+  miscalibration (30 vs standard 40) cost an abort cycle; pre-factoring adopted for linear-chain
+  proofs (DRF validated run-1 clean with pre-factored dep).
+- HANDOFF checkpoint-rewritten mid-session (frontier materially changed). Lab-book sections for
+  results 8-12 pending (ledger rows exist).
