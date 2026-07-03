@@ -138,6 +138,19 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   AND class-count-free, or must first settle the class-count decider (open signed quantitative
   Baake–Sumner). F2's `σ̃_g ≤ 0.37τ` margin is low-dimension evidence and silent on wall (b).
 
+## 2026-07-03 — (SI) death certificate: external sources alone can NOT pay the degenerate tax
+
+- ⛔ **`M_D ≤ C·(G_class⁻ + S⁻^μ)` (the D2 "(SI)" source inequality) is FALSE — do not re-walk.**
+  Exact realized refuter (D3, `docs/waves/2026-07-03-D3-si-bn.md` §T1-PROVED-INLINE): rank-3, n=5,
+  δ=1/10 centered fan whose θ-½ Φ-argmin has two Schur-degenerate active rows with `M_D = δ/2`
+  while the pivot row is fully nonnegative (`G⁻ = S⁻ = 0`). Slab, argmin, AND realizability are all
+  present — none of them excludes centered internal transport. The missing source is the degenerate
+  rows' OWN weighted negativity `R_D^ν = Σ β⁺ν_j` (equal to `M_D` exactly on the refuter). Any
+  transport/source argument must carry `R_D^ν`; the surviving statement is (RSI)
+  `M_D ≤ C·(G⁻ + S⁻^μ + R_D^ν)` — which is the A10 WOP quantity re-emerging in H-M quotient
+  language (the A-line and D-line have converged on it). The rigorous fan lemmas are PAYMENT
+  machinery, not source machinery (their barycenter estimate points the wrong way).
+
 ## 2026-07-03 — arm A session-4 roll-up: the plateau-2 picture and the killed proof mechanisms
 
 - ✅ **Plateau-2 is the standing empirical law (7 adversarial design families, all certified < 2).**
