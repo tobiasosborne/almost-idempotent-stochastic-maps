@@ -210,3 +210,19 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   proofs (dual certificate, clone-quotient measure compression) dodge both recorded B-walls; any
   per-class / per-wedge / per-block proof re-imports the class-count wall in chart language. See
   `docs/waves/2026-07-02-A1-ex-chart-scoping.md`.
+
+## 2026-07-03 — orphan-row certificate (arm G wave 3): the fan-financing family can be EMPTY
+
+- ⛔ **"Every strict legal β-positive row with μ_j>0 at a θ-½ Φ-argmin has a volume-permitted negative
+  coordinate" is FALSE — and with it the pure-legal circulation inequality at `C_legal=0` (do not
+  re-walk either).** Exact rank-3 one-B-row certificate (G3,
+  `docs/waves/2026-07-03-G3-orphan-row.md`): `o=(7/12,−1/12,1/2)`, `α=(−1/5,−1/4,1/20)`, `δ=1/4`,
+  unique θ-½ argmin `(c0,c1,c2)`. The orphan row is legal through its POSITIVE coordinate `7/12>1/2`
+  while its only negative coordinate `−1/12` is sub-threshold ⇒ the G1 fan-matched financing family is
+  EMPTY, yet `L_μ+F_L = 257/57600 > 0`. NOT an amplifier: the leak is paid by the class aggregate
+  `G_class⁻ = 7/240` (ratio `257/1680`), and the financier is structural —
+  `Γ_{s,0} = −β_o·a_0(o) < 0` is forced by legality-through-the-positive-coordinate itself. Scope
+  caveat: the certificate is λ-positive (`E_s(o)=0`, no A9 same-pivot payment owed); the ACTIVE-row
+  orphan exclusion (`E_s(j)>0 ⇒` volume-permitted negative coordinate) remains OPEN. Consequence: any
+  circulation/financing lemma must carry a class-aggregate orphan horn — negative-coordinate fan
+  weights alone cannot see λ-positive orphan leakage.
