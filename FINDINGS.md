@@ -253,3 +253,17 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   cruder `+C_δ·δ(P)` (`C_δ ≥ 2` forced). Watch the next hole: "silent" β-positive B rows (no
   volume-permitted coordinate at all) could cancel financiers while contributing to neither OD nor any
   budget term — the repaired budget may need `Σβ_jν_j` over ALL β-positive B rows.
+- ❌ **Do NOT conflate ambient own-negativity `ν_j` with chart negativity (G6,
+  `docs/waves/2026-07-03-G6-repaired-horn.md`).** The pointwise domination `ν_j ≥ a_r(j)⁻` is FALSE:
+  row reproduction gives `(1−P_jj)·a_r(j) = Σ_{i≠j} P_ji·a_r(i)`, so a large positive self-coefficient
+  `P_jj` carries chart negativity at arbitrarily small ambient cost — exact silent-algebra family with
+  `β·a⁻/β·ν = 1/κ → ∞` (checkpoint `e=1/4, κ=1/100`: ratio 100, `δ=1/400`). BUT it is not an (RH)
+  refuter: the θ-half Φ-argmin PIVOTS ONTO the self-supported row (chart volume 5/4, max Φ = 0) — the
+  pathology is eaten by minimality via a pivot-REMOVING chart move, a swap family the A9
+  active-preserving disjunctions do not cover. Status after G6: the unified own-negativity horn (RH)
+  `OD ≤ C_RH·(G⁻+S⁻^μ+Σ_{β>0}βν)` is OPEN and survives ALL certified instances (G5 family = exactly
+  sup 4 ⇒ `C_RH ≥ 4`; D6 certs have OD=0 after fan separation); small closed piece (T1, rank 3): on
+  active orphan rows `E_s ≤ μ_s`, so the payment term is ≤ a factor-2 overhead on `L_μ`. THE isolated
+  missing statement is **(SC)**: at a θ-half Φ-argmin, the β-weighted transverse negative chart mass of
+  non-fan β-positive B rows is `≤ C·(G⁻+S⁻^μ+Σβν)` + fan-collateral residual — i.e. an argmin
+  self-support/cancellation control, provable only by USING minimality (pivot-removing moves).
