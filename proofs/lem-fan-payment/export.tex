@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Zero-sum fan payment: let (w\_1, p\_1), ..., (w\_m, p\_m) be ...}
+\step{1} Zero-sum fan payment: let (w\_1, p\_1), ..., (w\_m, p\_m) be a finite family with vectors w\_i in R\textasciicircum{}d and weights p\_i > 0 satisfying sum\_i p\_i = 1, such that every w\_i has coordinate sum zero (sum\_l w\_i(l) = 0) and the weighted barycenter is zero (sum\_i p\_i w\_i = 0); write n(w) = sum\_l max(-w(l), 0); then min over i* in \{1, ..., m\} of sum\_i p\_i n(w\_i - w\_\{i*\}) <= 2 * sum\_i p\_i n(w\_i). \steptag{validated} \\[6pt]
+\step{1.1} For each candidate pivot k in \{1, ..., m\}, set A\_k := sum\_i p\_i n(w\_i - w\_k), and set N := sum\_i p\_i n(w\_i). The desired root conclusion is min over k of A\_k <= 2*N. \steptag{validated} \\[4pt]
+\step{1.2} By lem-weighted-min applied to the weights p\_k and the real numbers A\_k, min over k in \{1, ..., m\} of A\_k <= sum\_k p\_k A\_k. \steptag{validated} \\[6pt]
+\step{1.2.1} The root hypotheses give p\_k > 0 for every k and sum\_k p\_k = 1; for the finite real family A\_k := sum\_i p\_i n(w\_i - w\_k), the hypotheses of lem-weighted-min are therefore satisfied. \steptag{validated} \\[4pt]
+\step{1.2.2} Instantiating lem-weighted-min with n\_k := A\_k yields min over k in \{1, ..., m\} of A\_k <= sum\_k p\_k A\_k. \steptag{validated} \\[4pt]
+\step{1.3} The weighted average of the pivot costs satisfies sum\_k p\_k A\_k <= 2*N. \steptag{validated} \\[6pt]
+\step{1.3.1} For every pair of indices (i,k), the root hypothesis says w\_k has coordinate sum zero, so lem-zerosum-triangle applied with w := w\_i and v := w\_k gives n(w\_i - w\_k) <= n(w\_i) + n(w\_k). \steptag{validated} \\[4pt]
+\step{1.3.2} Expanding A\_k := sum\_i p\_i n(w\_i - w\_k) gives sum\_k p\_k A\_k = sum\_k p\_k sum\_i p\_i n(w\_i - w\_k) = sum\_\{i,k\} p\_i p\_k n(w\_i - w\_k). \steptag{validated} \\[4pt]
+\step{1.3.3} Because p\_i > 0 and p\_k > 0, multiplying the pairwise inequality by p\_i p\_k preserves it and summing over all finite pairs gives sum\_\{i,k\} p\_i p\_k n(w\_i - w\_k) <= sum\_\{i,k\} p\_i p\_k (n(w\_i) + n(w\_k)). \steptag{validated} \\[4pt]
+\step{1.3.4} Using sum\_i p\_i = sum\_k p\_k = 1 and N := sum\_i p\_i n(w\_i), the last double sum equals (sum\_k p\_k) sum\_i p\_i n(w\_i) + (sum\_i p\_i) sum\_k p\_k n(w\_k) = N + N = 2*N. \steptag{validated} \\[4pt]
+\step{1.4} Combining min\_k A\_k <= sum\_k p\_k A\_k with sum\_k p\_k A\_k <= 2*N gives min\_k A\_k <= 2*N, which is exactly min over i* of sum\_i p\_i n(w\_i - w\_i*) <= 2*sum\_i p\_i n(w\_i). \steptag{validated} \\[6pt]
+\step{1.4.1} The abbreviation node 1.1 fixes A\_k := sum\_i p\_i n(w\_i - w\_k) for each k and N := sum\_i p\_i n(w\_i). The already validated nodes 1.2.1 and 1.2.2 establish, for these same A\_k and weights p\_k, the inequality min\_k A\_k <= sum\_k p\_k A\_k. \steptag{validated} \\[6pt]
+\step{1.4.1.1} Dependency import: nodes 1.1, 1.2.1, and 1.2.2 are validated and supply exactly the definitions of A\_k and N and the weighted-min conclusion min\_k A\_k <= sum\_k p\_k A\_k used by 1.4.1. \steptag{validated} \\[4pt]
+\step{1.4.2} Using the definitions of A\_k and N from node 1.1, the validated nodes 1.3.1 through 1.3.4 give the chain sum\_k p\_k A\_k = sum\_\{i,k\} p\_i p\_k n(w\_i - w\_k) <= sum\_\{i,k\} p\_i p\_k (n(w\_i)+n(w\_k)) = 2*N; hence sum\_k p\_k A\_k <= 2*N. \steptag{validated} \\[4pt]
+\step{1.4.3} From 1.4.1 we have min\_k A\_k <= sum\_k p\_k A\_k, and from 1.4.2 we have sum\_k p\_k A\_k <= 2*N. Transitivity of <= gives min\_k A\_k <= 2*N. Substituting the definitions A\_k := sum\_i p\_i n(w\_i - w\_k) and N := sum\_i p\_i n(w\_i) from 1.1, and merely renaming the pivot index k as i*, this is exactly min over i* in \{1,...,m\} of sum\_i p\_i n(w\_i - w\_i*) <= 2*sum\_i p\_i n(w\_i). \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

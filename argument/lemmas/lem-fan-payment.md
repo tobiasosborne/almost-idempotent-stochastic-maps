@@ -4,8 +4,8 @@ kind: lemma
 contract: Zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite family with vectors w_i in R^d and weights p_i > 0 satisfying sum_i p_i = 1, such that every w_i has coordinate sum zero (sum_l w_i(l) = 0) and the weighted barycenter is zero (sum_i p_i w_i = 0); write n(w) = sum_l max(-w(l), 0); then min over i* in {1, ..., m} of sum_i p_i n(w_i - w_{i*}) <= 2 * sum_i p_i n(w_i).
 defs: 
 deps: lem-zerosum-triangle; lem-weighted-min
-status: proved-mod-audit
-af: seeded
+status: proved
+af: validated
 provenance: docs/waves/2026-07-03-A10-weighted-payment.md (arm A wave 10, codex; T2 "A fan all-mass inequality is proved inline" — support-averaging step: some support point v has n(v) <= N := sum_i p_i n(w_i); zero-sum triangle step: n(w - v) <= n(w) + n(v) since pos(v) = neg(v) for coordinate-sum-zero v)
 owner: A
 workspace: proofs/lem-fan-payment
@@ -24,9 +24,11 @@ Classification per §6.3: FACTOR — deps [[lem-zerosum-triangle]] + [[lem-weigh
 (aism-ugk); plan: validate both, wipe + re-seed this workspace (root contract UNCHANGED) with the
 deps as af externals, re-orchestrate.
 
-**Status:** the inline proof is the A10 codex worker's (two elementary steps, quoted in the
-provenance field); it has NOT cleared an independent reviewer or af pass here, hence
-`proved-mod-audit` (L0). Elevation intended (small tree expected).
+**af-VALIDATED IN-REPO 2026-07-03** (run 3 on the factored workspace, clean): 15-node adversarial
+tree, root `validated`, taint 15/15 clean; imports the af-validated deps [[lem-zerosum-triangle]]
+and [[lem-weighted-min]] as externals; fresh codex provers/verifiers per node, Claude orchestrated
+only (§6). Export: `proofs/lem-fan-payment/export.md`. Status flip is the mechanical reflection of
+the codex ledger. (Runs 1-2, pre-factoring, ballooned 39/47; the factoring cured it: 15 vs 47.)
 
 **Sharpness context (A10, T0):** the over-broad variant with an ARBITRARY chosen `w_0` (instead of
 the minimizer) and without the coordinate-sum-zero hypothesis is refuted exactly (scalar certificate

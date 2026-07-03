@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-weighted-min/export.md",
+  "oracle": "af-lem-weighted-min",
+  "result": "pass",
+  "claim_hash": "2b0bc678481aa4ccc1553b4e2b5b7788ddffca60c8d02bcb6c0359fa83d471fd",
+  "oracle_digest": "d36f5c3b55c68f6b6d8d4491902a60a50ce8026fa4626582ead18bf683fec0db",
+  "inputs_hash": "027c9e9d2177675c603c810445a1be453a70d0340053f398c3ee86a326f9a7e8",
+  "ts": "2026-07-03T07:43:07.336Z"
+}

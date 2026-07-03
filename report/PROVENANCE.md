@@ -27,7 +27,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-LEM-CLASSICAL-EQUIV` | `argument/lemmas/lem-classical-equiv.md` | `2f3a5574f2dfbbde` | Registry shard for `lem-classical-equiv` |
 | `ARG-LEM-DUAL-LOCALIZATION` | `argument/lemmas/lem-dual-localization.md` | `3afe03731fb4d00d` | Registry shard for `lem-dual-localization` |
 | `ARG-LEM-EXPOSED-CIRCUIT` | `argument/lemmas/lem-exposed-circuit.md` | `17f0f840a3bf79e8` | Registry shard for `lem-exposed-circuit` |
-| `ARG-LEM-FAN-PAYMENT` | `argument/lemmas/lem-fan-payment.md` | `b9d40c34caa673f8` | Registry shard for `lem-fan-payment` |
+| `ARG-LEM-FAN-PAYMENT` | `argument/lemmas/lem-fan-payment.md` | `e1ddc5ff382fa777` | Registry shard for `lem-fan-payment` |
 | `ARG-LEM-FACTORIZATION` | `argument/lemmas/lem-factorization.md` | `206a89c203319e6f` | Registry shard for `lem-factorization` |
 | `ARG-LEM-WEIGHTED-MIN` | `argument/lemmas/lem-weighted-min.md` | `027c9e9d2177675c` | Registry shard for `lem-weighted-min` |
 | `ARG-LEM-ZEROSUM-TRIANGLE` | `argument/lemmas/lem-zerosum-triangle.md` | `faf9bf0f9ebbde07` | Registry shard for `lem-zerosum-triangle` |
@@ -56,6 +56,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-RESIDUAL-LOWER` | `proofs/lem-residual-lower/export.md` | `e8fbf760d4954dad` | `af` proof export for `lem-residual-lower` |
 | `AF-LEM-RESIDUAL-UPPER` | `proofs/lem-residual-upper/export.md` | `05e247da7eb8db25` | `af` proof export for `lem-residual-upper` |
 | `AF-CONJ-HALO-COLLAPSE` | `proofs/conj-halo-collapse/export.md` | `216304dc1141dd42` | `af` proof export for `conj-halo-collapse` |
+| `AF-LEM-FAN-PAYMENT` | `proofs/lem-fan-payment/export.md` | `e5b82f20f763b68a` | `af` proof export for `lem-fan-payment` |
 | `AF-LEM-WEIGHTED-MIN` | `proofs/lem-weighted-min/export.md` | `2b0bc678481aa4cc` | `af` proof export for `lem-weighted-min` |
 | `AF-LEM-ZEROSUM-TRIANGLE` | `proofs/lem-zerosum-triangle/export.md` | `10c4fc62e9ad5714` | `af` proof export for `lem-zerosum-triangle` |
 | `AF-LEM-FACTORIZATION` | `proofs/lem-factorization/export.md` | `c755b58b9c2a2fe9` | `af` proof export for `lem-factorization` |
@@ -85,7 +86,7 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | lem:dual-localization | ARG-LEM-DUAL-LOCALIZATION | registry contract | OPEN | Status ledger anchor only; registry status `open`. |
 | lem:exposed-circuit | ARG-LEM-EXPOSED-CIRCUIT | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:factorization | ARG-LEM-FACTORIZATION AF-LEM-FACTORIZATION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree, tightness claim not elevated. |
-| lem:fan-payment | ARG-LEM-FAN-PAYMENT | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (A10 inline worker proof, unreviewed). |
+| lem:fan-payment | ARG-LEM-FAN-PAYMENT AF-LEM-FAN-PAYMENT | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (15-node tree, taint clean; run 3 on the factored workspace). |
 | lem:weighted-min | ARG-LEM-WEIGHTED-MIN AF-LEM-WEIGHTED-MIN | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (8-node tree, taint clean). |
 | lem:zerosum-triangle | ARG-LEM-ZEROSUM-TRIANGLE AF-LEM-ZEROSUM-TRIANGLE | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (10-node tree, taint clean; run 1). |
 | lem:leakage | ARG-LEM-LEAKAGE | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
