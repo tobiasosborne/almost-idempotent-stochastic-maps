@@ -124,6 +124,30 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-fan-payment/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-fan-payment.md"
         ]
+      },
+      {
+        "name": "af-lem-negpart-subadditive",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-negpart-subadditive"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-negpart-subadditive/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-negpart-subadditive.md"
+        ]
+      },
+      {
+        "name": "af-lem-fan-payment-restricted",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-fan-payment-restricted"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-fan-payment-restricted/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-fan-payment-restricted.md"
+        ]
       }
     ]
   },

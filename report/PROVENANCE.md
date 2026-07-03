@@ -32,7 +32,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-LEM-WEIGHTED-MIN` | `argument/lemmas/lem-weighted-min.md` | `027c9e9d2177675c` | Registry shard for `lem-weighted-min` |
 | `ARG-LEM-ZEROSUM-TRIANGLE` | `argument/lemmas/lem-zerosum-triangle.md` | `faf9bf0f9ebbde07` | Registry shard for `lem-zerosum-triangle` |
 | `ARG-LEM-FAN-PAYMENT-RESTRICTED` | `argument/lemmas/lem-fan-payment-restricted.md` | `b4cdf96feca1d667` | Registry shard for `lem-fan-payment-restricted` |
-| `ARG-LEM-NEGPART-SUBADDITIVE` | `argument/lemmas/lem-negpart-subadditive.md` | `04df3023c61e8d59` | Registry shard for `lem-negpart-subadditive` |
+| `ARG-LEM-NEGPART-SUBADDITIVE` | `argument/lemmas/lem-negpart-subadditive.md` | `ef75f5da237ac853` | Registry shard for `lem-negpart-subadditive` |
 | `ARG-LEM-LEAKAGE` | `argument/lemmas/lem-leakage.md` | `ebedf751f8a1d2ab` | Registry shard for `lem-leakage` |
 | `ARG-LEM-MASS-SPLIT` | `argument/lemmas/lem-mass-split.md` | `634fdf3556b8f4ea` | Registry shard for `lem-mass-split` |
 | `ARG-LEM-RESIDUAL-LOWER` | `argument/lemmas/lem-residual-lower.md` | `3d4604e0725be091` | Registry shard for `lem-residual-lower` |
@@ -58,6 +58,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-RESIDUAL-LOWER` | `proofs/lem-residual-lower/export.md` | `e8fbf760d4954dad` | `af` proof export for `lem-residual-lower` |
 | `AF-LEM-RESIDUAL-UPPER` | `proofs/lem-residual-upper/export.md` | `05e247da7eb8db25` | `af` proof export for `lem-residual-upper` |
 | `AF-CONJ-HALO-COLLAPSE` | `proofs/conj-halo-collapse/export.md` | `216304dc1141dd42` | `af` proof export for `conj-halo-collapse` |
+| `AF-LEM-NEGPART-SUBADDITIVE` | `proofs/lem-negpart-subadditive/export.md` | `fe2ceedc496256f6` | `af` proof export for `lem-negpart-subadditive` |
 | `AF-LEM-FAN-PAYMENT` | `proofs/lem-fan-payment/export.md` | `e5b82f20f763b68a` | `af` proof export for `lem-fan-payment` |
 | `AF-LEM-WEIGHTED-MIN` | `proofs/lem-weighted-min/export.md` | `2b0bc678481aa4cc` | `af` proof export for `lem-weighted-min` |
 | `AF-LEM-ZEROSUM-TRIANGLE` | `proofs/lem-zerosum-triangle/export.md` | `10c4fc62e9ad5714` | `af` proof export for `lem-zerosum-triangle` |
@@ -92,7 +93,7 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | lem:weighted-min | ARG-LEM-WEIGHTED-MIN AF-LEM-WEIGHTED-MIN | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (8-node tree, taint clean). |
 | lem:zerosum-triangle | ARG-LEM-ZEROSUM-TRIANGLE AF-LEM-ZEROSUM-TRIANGLE | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (10-node tree, taint clean; run 1). |
 | lem:fan-payment-restricted | ARG-LEM-FAN-PAYMENT-RESTRICTED | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (A11 inline proof, unreviewed). |
-| lem:negpart-subadditive | ARG-LEM-NEGPART-SUBADDITIVE | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (A11 pre-factoring). |
+| lem:negpart-subadditive | ARG-LEM-NEGPART-SUBADDITIVE AF-LEM-NEGPART-SUBADDITIVE | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (16-node tree, taint clean). |
 | lem:leakage | ARG-LEM-LEAKAGE | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:wiggle-rigidity | ARG-LEM-WIGGLE-RIGIDITY | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | obs:deep-leakage | ARG-OBS-DEEP-LEAKAGE | registry contract | HEURISTIC | Status ledger anchor only; registry status `heuristic`. |

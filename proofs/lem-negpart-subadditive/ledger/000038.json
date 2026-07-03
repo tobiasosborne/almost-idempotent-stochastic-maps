@@ -1,0 +1,1 @@
+{"type":"challenge_raised","timestamp":"2026-07-03T08:21:23.597749702Z","challenge_id":"ch-17ef3367ba214f25","node_id":"1.3.2","target":"inference","reason":"Node misidentifies sum_l(max(-x_l,0)+max(-y_l,0)) as n(x+y). By definition n(x+y)=sum_l max(-(x_l+y_l),0), not the mixed sum; counterexample d=1, x=1, y=-1 gives mixed sum 1 but n(x+y)=0.","severity":"major","raised_by":""}
