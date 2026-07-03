@@ -27,7 +27,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-LEM-CLASSICAL-EQUIV` | `argument/lemmas/lem-classical-equiv.md` | `2f3a5574f2dfbbde` | Registry shard for `lem-classical-equiv` |
 | `ARG-LEM-DUAL-LOCALIZATION` | `argument/lemmas/lem-dual-localization.md` | `3afe03731fb4d00d` | Registry shard for `lem-dual-localization` |
 | `ARG-LEM-EXPOSED-CIRCUIT` | `argument/lemmas/lem-exposed-circuit.md` | `17f0f840a3bf79e8` | Registry shard for `lem-exposed-circuit` |
-| `ARG-LEM-FAN-PAYMENT` | `argument/lemmas/lem-fan-payment.md` | `62a7d3f4ee65ec32` | Registry shard for `lem-fan-payment` |
+| `ARG-LEM-FAN-PAYMENT` | `argument/lemmas/lem-fan-payment.md` | `03f99ffbbc3a9c55` | Registry shard for `lem-fan-payment` |
 | `ARG-LEM-FACTORIZATION` | `argument/lemmas/lem-factorization.md` | `206a89c203319e6f` | Registry shard for `lem-factorization` |
 | `ARG-LEM-LEAKAGE` | `argument/lemmas/lem-leakage.md` | `ebedf751f8a1d2ab` | Registry shard for `lem-leakage` |
 | `ARG-LEM-MASS-SPLIT` | `argument/lemmas/lem-mass-split.md` | `634fdf3556b8f4ea` | Registry shard for `lem-mass-split` |

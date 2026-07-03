@@ -5,7 +5,7 @@ contract: Zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite fami
 defs: 
 deps: 
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/waves/2026-07-03-A10-weighted-payment.md (arm A wave 10, codex; T2 "A fan all-mass inequality is proved inline" — support-averaging step: some support point v has n(v) <= N := sum_i p_i n(w_i); zero-sum triangle step: n(w - v) <= n(w) + n(v) since pos(v) = neg(v) for coordinate-sum-zero v)
 owner: A
 workspace: proofs/lem-fan-payment
