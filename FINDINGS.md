@@ -239,3 +239,17 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   financier-cancellation may be δ-expensive (unproved; the conjectured conservation mechanism). The
   surviving target is the aggregate ACTIVE-ORPHAN-FINANCING lemma: post-fan orphan demand
   (incl. `βE_s`, cancellations before positive parts) `≤ C_orph·(G_class⁻+S⁻^μ+R_D^ν)`.
+- ⛔ **That aggregate orphan-financing lemma is FALSE for EVERY finite `C_orph` (G5,
+  `docs/waves/2026-07-03-G5-orphan-financing-lemma.md`) — the class/signed budget CAN be starved; do
+  not re-walk any orphan horn budgeted only by `G_class⁻+S⁻^μ+R_D^ν`.** Exact two-orphan amplifying
+  family (`o0=(p,−e,q), o1=(−e,p,q)`, `β=¼` each, `0<h<1/6`): `δ(P)=¼−h²/p<¼`, unique θ-½ argmin,
+  both rows active strict-legal orphans, fan family empty, `OD = ½−2h` against budget
+  `G_class⁻ = h` ⇒ ratio `1/(2h)−2 → ∞`. Mechanism (T1 exact ledger, eq. (4)–(5) of the artifact):
+  `P_r^O = N_r^O − H_r − Γ_r` — each orphan's positive legal coordinate is canceled by the OTHER
+  orphan's sub-threshold negative coordinate, whose own leak sits in OD, not in the budget.
+  **NOT an (EX) refuter**: on the same family `Φ_s/δ → 1` (plateau-2 intact) — it kills only the
+  budget choice. Forced repair (the (SI)→(RSI) own-negativity pattern repeating): the orphan budget
+  must include orphan own row-negative mass — `Σ_{active orphan} β_j ν_j` (coefficient ≥ 4 forced) or
+  cruder `+C_δ·δ(P)` (`C_δ ≥ 2` forced). Watch the next hole: "silent" β-positive B rows (no
+  volume-permitted coordinate at all) could cancel financiers while contributing to neither OD nor any
+  budget term — the repaired budget may need `Σβ_jν_j` over ALL β-positive B rows.
