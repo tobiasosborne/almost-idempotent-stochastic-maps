@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Zero-sum triangle bound: let w and v be vectors in R\textasciicircum{}d wi...}
+\step{1} Zero-sum triangle bound: let w and v be vectors in R\textasciicircum{}d with v having coordinate sum zero (sum\_l v(l) = 0); write n(x) = sum\_l max(-x(l), 0); then n(w - v) <= n(w) + n(v). \steptag{validated} \\[6pt]
+\step{1.1} For every coordinate l, max(-(w(l)-v(l)),0) <= max(-w(l),0) + max(v(l),0). \steptag{validated} \\[6pt]
+\step{1.1.1} For any real numbers a and b, max(a+b,0) <= max(a,0) + max(b,0). Indeed, max(a,0)+max(b,0) is nonnegative and is at least a+b, so it bounds the maximum of a+b and 0. \steptag{validated} \\[4pt]
+\step{1.1.2} For a fixed coordinate l, take a=-w(l) and b=v(l); since -(w(l)-v(l)) = -w(l)+v(l), the previous real inequality gives max(-(w(l)-v(l)),0) <= max(-w(l),0)+max(v(l),0). \steptag{validated} \\[4pt]
+\step{1.2} Summing the coordinate inequalities over l gives n(w-v) <= n(w) + sum\_l max(v(l),0). \steptag{validated} \\[4pt]
+\step{1.3} Because sum\_l v(l)=0, sum\_l max(v(l),0) = n(v). \steptag{validated} \\[6pt]
+\step{1.3.1} For each coordinate l, v(l) = max(v(l),0) - max(-v(l),0), by the two cases v(l) >= 0 and v(l) < 0. \steptag{validated} \\[4pt]
+\step{1.3.2} Summing the preceding coordinate identity gives sum\_l v(l) = sum\_l max(v(l),0) - sum\_l max(-v(l),0). \steptag{validated} \\[4pt]
+\step{1.3.3} Since sum\_l v(l)=0 and n(v)=sum\_l max(-v(l),0), the equality sum\_l max(v(l),0)=n(v) follows. \steptag{validated} \\[4pt]
+\step{1.4} Combining the preceding two conclusions gives n(w-v) <= n(w) + n(v). \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

@@ -30,7 +30,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-LEM-FAN-PAYMENT` | `argument/lemmas/lem-fan-payment.md` | `b9d40c34caa673f8` | Registry shard for `lem-fan-payment` |
 | `ARG-LEM-FACTORIZATION` | `argument/lemmas/lem-factorization.md` | `206a89c203319e6f` | Registry shard for `lem-factorization` |
 | `ARG-LEM-WEIGHTED-MIN` | `argument/lemmas/lem-weighted-min.md` | `beff2f7fd6d5a113` | Registry shard for `lem-weighted-min` |
-| `ARG-LEM-ZEROSUM-TRIANGLE` | `argument/lemmas/lem-zerosum-triangle.md` | `594d17ebf503ce79` | Registry shard for `lem-zerosum-triangle` |
+| `ARG-LEM-ZEROSUM-TRIANGLE` | `argument/lemmas/lem-zerosum-triangle.md` | `faf9bf0f9ebbde07` | Registry shard for `lem-zerosum-triangle` |
 | `ARG-LEM-LEAKAGE` | `argument/lemmas/lem-leakage.md` | `ebedf751f8a1d2ab` | Registry shard for `lem-leakage` |
 | `ARG-LEM-MASS-SPLIT` | `argument/lemmas/lem-mass-split.md` | `634fdf3556b8f4ea` | Registry shard for `lem-mass-split` |
 | `ARG-LEM-RESIDUAL-LOWER` | `argument/lemmas/lem-residual-lower.md` | `3d4604e0725be091` | Registry shard for `lem-residual-lower` |
@@ -56,6 +56,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-RESIDUAL-LOWER` | `proofs/lem-residual-lower/export.md` | `e8fbf760d4954dad` | `af` proof export for `lem-residual-lower` |
 | `AF-LEM-RESIDUAL-UPPER` | `proofs/lem-residual-upper/export.md` | `05e247da7eb8db25` | `af` proof export for `lem-residual-upper` |
 | `AF-CONJ-HALO-COLLAPSE` | `proofs/conj-halo-collapse/export.md` | `216304dc1141dd42` | `af` proof export for `conj-halo-collapse` |
+| `AF-LEM-ZEROSUM-TRIANGLE` | `proofs/lem-zerosum-triangle/export.md` | `10c4fc62e9ad5714` | `af` proof export for `lem-zerosum-triangle` |
 | `AF-LEM-FACTORIZATION` | `proofs/lem-factorization/export.md` | `c755b58b9c2a2fe9` | `af` proof export for `lem-factorization` |
 
 ## Per-claim ledger
@@ -85,7 +86,7 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | lem:factorization | ARG-LEM-FACTORIZATION AF-LEM-FACTORIZATION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree, tightness claim not elevated. |
 | lem:fan-payment | ARG-LEM-FAN-PAYMENT | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (A10 inline worker proof, unreviewed). |
 | lem:weighted-min | ARG-LEM-WEIGHTED-MIN | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (A10 factoring). |
-| lem:zerosum-triangle | ARG-LEM-ZEROSUM-TRIANGLE | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (A10 factoring). |
+| lem:zerosum-triangle | ARG-LEM-ZEROSUM-TRIANGLE AF-LEM-ZEROSUM-TRIANGLE | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (10-node tree, taint clean; run 1). |
 | lem:leakage | ARG-LEM-LEAKAGE | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:wiggle-rigidity | ARG-LEM-WIGGLE-RIGIDITY | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | obs:deep-leakage | ARG-OBS-DEEP-LEAKAGE | registry contract | HEURISTIC | Status ledger anchor only; registry status `heuristic`. |

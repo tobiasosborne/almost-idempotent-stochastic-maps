@@ -88,6 +88,42 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-factorization/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-factorization.md"
         ]
+      },
+      {
+        "name": "af-lem-zerosum-triangle",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-zerosum-triangle"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-zerosum-triangle/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-zerosum-triangle.md"
+        ]
+      },
+      {
+        "name": "af-lem-weighted-min",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-weighted-min"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-weighted-min/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-weighted-min.md"
+        ]
+      },
+      {
+        "name": "af-lem-fan-payment",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-fan-payment"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-fan-payment/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-fan-payment.md"
+        ]
       }
     ]
   },
