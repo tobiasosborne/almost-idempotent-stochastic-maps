@@ -164,7 +164,7 @@
       "id": "B",
       "desc": "Prove lem-dual-localization (frame-free transfer): reproduce ||Ebar||_1 >= H from P^2=P WITHOUT the simplex frame; kill the skinny mu->1 regime where Route B is vacuous.",
       "priority": "primary",
-      "target": "the sigma-cap: prove sigma_v <= 1 - c*tau for hidden top vertices (0<delta<=1/4, W nonempty) \u2014 with the af-VALIDATED obs-height-collapse this yields H = O(sqrt(delta)) and closes the Kernel Conjecture; or refute via a rank-growing construction with 1-sigma = O(tau)",
+      "target": "the sigma-cap: prove sigma_v <= 1 - c*tau for hidden top vertices (0<delta<=1/4, W nonempty) — with the af-VALIDATED obs-height-collapse this yields H = O(sqrt(delta)) and closes the Kernel Conjecture; or refute via a rank-growing construction with 1-sigma = O(tau)",
       "kill": "an exact instance with sigma -> 1 at small delta and H > B*tau (then the collapse route dies and the campaign pivots to arm A/(EX))",
       "created": "1970-01-01T00:00:00.000Z"
     },
@@ -206,6 +206,14 @@
       "priority": "support",
       "target": "every proved-mod-audit link of the chain af-validated in-repo",
       "kill": "an af run refutes an inherited link (re-tag disproved, escalate to user)",
+      "created": "1970-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "G",
+      "desc": "Flow conservation over the swap family: prove that the beta-weighted excess of a theta-1/2 Phi-argmin chart, summed against the A9 stationarity disjunctions of all volume-permitted swaps, TELESCOPES against the D5 financing ledger with the rigorous fan lemmas (2, 2+sqrt(2)) as exchange rate and the proved delta-budgets (sum Gamma^- <= delta, sum beta^- <= delta, R_D^nu <= (5/4)delta) as boundary terms — the single conjectured missing lemma of the (EX) engine, subsuming the coupled payment/(FIN) and legal-collateral horns; equivalently (constructive form) the H-M Thm 1.12 CONVERSE rounding: merge classes, project B-rows onto the (1.2)/(1.3) nonnegative polytope, projection distance O(delta)",
+      "priority": "primary",
+      "target": "the (EX)/GAP-B argmin charge via one joint mechanism instead of two coupled horns",
+      "kill": "the D6 legal-leak certificates AMPLIFY instead of telescoping (a rank-growing family with L_mu-type leaks composing past every universal constant) — then (EX) is false and the retarget is the height-conditional kernel",
       "created": "1970-01-01T00:00:00.000Z"
     }
   ]

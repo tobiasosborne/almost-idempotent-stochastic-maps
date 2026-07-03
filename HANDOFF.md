@@ -53,12 +53,17 @@ op-classical. B-side (cap) unchanged/parked.
 
 ## Next steps (ranked) — RESUME HERE
 
-1. **The legal collateral theorem** — `strict legal contributor at a maximal pivot ⇒ Φ ≤
-   C_legal·δ` (D6 rec 3): the legal horn's real open mechanism; must use more than Schur norms
-   (A9: crude Lipschitz circular; D6: no useful collateral lower bound). THE hard open on the
-   A/D-side, now explicitly coupled to the payment side via (FIN).
-2. **(FIN) with C_fin > 1** — the joint legal-aware financier statement (D5 §T2, stressed but
-   unbroken by D6 certificate B). Decide or reduce it.
+1. **ARM G (new, primary): the flow-conservation lemma** — the conjectured single missing lemma
+   of the (EX) engine (see the 2026-07-03 synthesis in `RESEARCH_NOTES.md`): the argmin excess,
+   summed against the stationarity disjunctions of ALL legal swaps, telescopes against the D5
+   financing ledger (fan lemmas = exchange rate; δ-budgets = boundary terms). Subsumes the coupled
+   payment/(FIN) + legal-collateral horns in one mechanism; constructive alternative = the H-M
+   Thm 1.12 CONVERSE rounding. Kill criterion (pre-registered in fr): the D6 leak AMPLIFIES
+   instead of telescoping ⇒ (EX) false ⇒ retarget height-conditional kernel. First wave: derive
+   the telescoping candidate sum explicitly on the D6 certificates (where every term is known
+   exactly) and on the D4 refuter, then general.
+2. **(FIN) with C_fin > 1 / the legal collateral theorem** — the two-horn formulation (D5 §T2,
+   D6 rec 3), now the FALLBACK decomposition if arm G's joint mechanism stalls.
 3. **Codify + af-elevate the provable infrastructure** (small trees, quota-cheap):
    `lem-beta-stationarity-excess-ledger` (D5 (1)/(2)), `lem-hm-coordinate-source-split` (D2 (1)),
    `lem-class-negative-budget` (`ΣΓ⁻ ≤ δ`, trivial grouped-negative-part bound), the A12
