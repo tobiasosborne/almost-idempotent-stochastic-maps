@@ -65,3 +65,22 @@ systems), Meyer 1989 (stochastic complementation / uncoupling Markov chains), Ch
   add when the (EX) working-form lemmas are seeded into `argument/`.
 - **Banking oracle design** — register a claim-specific oracle only when the first bankable claim exists
   (`FINDINGS.md`).
+
+## 2026-07-03 — strategist synthesis at session-4 close: the conjectured shape of the full proof
+
+Three-tier architecture: (1) the reduction scaffold (signed equivalence + factorization, rigorous;
+exposed-hull chain re-establishable); (2) THE ENGINE — conjectured to be a signed
+**circulation/flow-conservation argument over the family of volume-permitted swaps at the
+Phi-argmin**: weighted sum of the A9 stationarity disjunctions arranged so collaterals telescope
+against the D5 financing ledger, with the rigorous fan lemmas (2 and 2+sqrt(2)) as the local
+exchange rate and the proved delta-budgets (Gamma^-, beta^-, R^nu) as the boundary terms. Evidence:
+every exact identity sought was provable; every one-sided estimate died or went tautological
+(cancellation-dependence); the horns coupled (D5/D6). The single missing lemma: "the beta-weighted
+excess of the argmin chart, summed against the stationarity disjunctions of all legal swaps,
+telescopes to the delta-budgets." First campaign statement that would genuinely USE minimality.
+(3) the sqrt-delta envelope only at the exposedness window + ex-hume sharpness. Alternative
+writeup of (2): constructive H-M rounding via the Thm 1.12 CONVERSE (cluster at sqrt(delta) scale,
+MERGE classes — never select — then project B-rows onto the (1.2)/(1.3) nonnegative polytope);
+same engine, cleaner narrative. Constants: C0=2 conjectured true (fan rate); a circulation proof
+lands C0 ~ 20, C_sf ~ 50, op-classical C in the low hundreds. Credence (EX) true: ~80/20; the
+refutation program shares the same next object (amplify vs telescope the D6 leak).
