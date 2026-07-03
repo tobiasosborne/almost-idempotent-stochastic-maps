@@ -1,0 +1,8 @@
+{
+  "id": "70dba2c74d67c5c1",
+  "name": "lem-weighted-min",
+  "source": "imports validated registry lemma proofs/lem-weighted-min — Weighted minimum bound: let p_1, ..., p_m be positive reals with sum_i p_i = 1 and let n_1, ..., n_m be real numbers; then min over i in {1, ..., m} of n_i \u003c= sum_i p_i * n_i.",
+  "content_hash": "6da39e1b167696289e1f139a71f137c5fd38ae943311b9ee1a712c5aec7e7e96",
+  "created": "2026-07-03T07:43:29.801240921Z",
+  "notes": ""
+}

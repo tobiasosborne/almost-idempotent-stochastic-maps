@@ -1,1 +1,0 @@
-{"type":"node_amended","timestamp":"2026-07-03T05:57:53.275634846Z","node_id":"1.5.2","previous_statement":"Node 1.4 gives the candidate bound sum_i p_i n(w_i - w_k) \u003c= 2*N.","new_statement":"For the index k supplied by 1.1, the candidate bound sum_i p_i n(w_i - w_k) \u003c= 2*N holds.","owner":"pf-1_5_2-r1"}

@@ -1,1 +1,0 @@
-{"type":"node_amended","timestamp":"2026-07-03T05:58:13.265884096Z","node_id":"1.4.1","previous_statement":"For every i, w_k has coordinate sum zero by the root hypotheses, so applying 1.3 with x=w_i and z=w_k gives n(w_i - w_k) \u003c= n(w_i) + n(w_k).","new_statement":"For every i, n(w_i - w_k) \u003c= n(w_i) + n(w_k).","owner":"pf-1_4_1-r1"}
