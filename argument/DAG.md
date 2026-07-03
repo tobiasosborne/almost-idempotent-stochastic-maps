@@ -28,7 +28,7 @@ graph LR
   lem-mass-split["lem-mass-split<br/>proved/validated"]
   lem-residual-lower["lem-residual-lower<br/>proved/validated"]
   lem-residual-upper["lem-residual-upper<br/>proved/validated"]
-  lem-weighted-min["lem-weighted-min<br/>proved-mod-audit/seeded"]
+  lem-weighted-min["lem-weighted-min<br/>proved/validated"]
   lem-wiggle-rigidity["lem-wiggle-rigidity<br/>proved-mod-audit/none"]
   lem-zerosum-triangle["lem-zerosum-triangle<br/>proved/validated"]
   obs-deep-leakage["obs-deep-leakage<br/>heuristic/none"]
@@ -64,7 +64,7 @@ graph LR
   thm-classical-factorization --> op-classical
   thm-cluster --> thm-classical-factorization
   thm-simplex --> thm-well-exposed
-  class conj-halo-collapse,lem-classical-equiv,lem-factorization,lem-mass-split,lem-residual-lower,lem-residual-upper,lem-zerosum-triangle,obs-height-collapse validated;
-  class conj-degenerate-payment,conj-ex,conj-kernel,conj-no-free-frontier,ex-hume,lem-canonical-separator,lem-exposed-circuit,lem-fan-payment,lem-leakage,lem-weighted-min,lem-wiggle-rigidity,obs-deep-leakage,obs-fwr-gap,obs-linear-law-finite-delta,obs-sigma-halo-nonrobust,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;
+  class conj-halo-collapse,lem-classical-equiv,lem-factorization,lem-mass-split,lem-residual-lower,lem-residual-upper,lem-weighted-min,lem-zerosum-triangle,obs-height-collapse validated;
+  class conj-degenerate-payment,conj-ex,conj-kernel,conj-no-free-frontier,ex-hume,lem-canonical-separator,lem-exposed-circuit,lem-fan-payment,lem-leakage,lem-wiggle-rigidity,obs-deep-leakage,obs-fwr-gap,obs-linear-law-finite-delta,obs-sigma-halo-nonrobust,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;
   class lem-dual-localization,op-classical,op-exposed-hull open;
 ```

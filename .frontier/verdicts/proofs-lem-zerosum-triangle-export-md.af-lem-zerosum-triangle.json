@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-zerosum-triangle/export.md",
+  "oracle": "af-lem-zerosum-triangle",
+  "result": "pass",
+  "claim_hash": "10c4fc62e9ad57148354ffc6a43facd42139bdb5466f42984bf6069424bd8d15",
+  "oracle_digest": "2f9440de495dde18136e0633b702c4bd15d8c94124cf3d04e2a010d0482e4abc",
+  "inputs_hash": "faf9bf0f9ebbde07b36f8afb2fa6999116d864ab0273eca33dbc36e0cc52d4d2",
+  "ts": "2026-07-03T06:20:05.924Z"
+}

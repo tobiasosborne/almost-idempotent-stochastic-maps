@@ -1,0 +1,1 @@
+{"type":"node_amended","timestamp":"2026-07-03T07:36:59.667101607Z","node_id":"1.3","previous_statement":"For every i in {1, ..., m}, p_i * n_k \u003c= p_i * n_i.","new_statement":"For the index k supplied by nodes 1.1 and 1.2, so that n_k \u003c= n_i for every i in {1, ..., m}, we have p_i * n_k \u003c= p_i * n_i for every i in {1, ..., m}.","owner":"pf-1_3-r1"}
