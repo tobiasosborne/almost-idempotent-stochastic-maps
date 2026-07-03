@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-negpart-subadditive/export.md",
+  "oracle": "af-lem-negpart-subadditive",
+  "result": "pass",
+  "claim_hash": "fe2ceedc496256f6ee524cf096af666194adf100db28bdba42441e613762779e",
+  "oracle_digest": "da35ee6772ed1a519c76e89aa9cdbeac0aef3d09d56a5404655ce116854346d7",
+  "inputs_hash": "ef75f5da237ac853d56774846c3a01d15ccd07f46e9e6b257beb915da41bda10",
+  "ts": "2026-07-03T08:34:19.083Z"
+}

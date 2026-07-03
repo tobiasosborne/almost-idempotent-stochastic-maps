@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{D-restricted zero-sum fan payment: let (w\_1, p\_1), ..., (...}
+\step{1} D-restricted zero-sum fan payment: let (w\_1, p\_1), ..., (w\_m, p\_m) be a finite family with vectors w\_i in R\textasciicircum{}d and weights p\_i > 0 satisfying sum\_i p\_i = 1, such that every w\_i has coordinate sum zero and the weighted barycenter is zero (sum\_i p\_i w\_i = 0); write n(w) = sum\_l max(-w(l), 0); let w\_* be a minimizer of v -> sum\_i p\_i n(w\_i - v) over \{w\_1, ..., w\_m\} and let A = \{ i : n(w\_i - w\_*) > 0 \}; then sum\_\{i in A\} p\_i n(w\_i - w\_*) <= (2 + sqrt(2)) * sum\_\{i in A\} p\_i n(w\_i). \steptag{validated} \\[6pt]
+\step{1.1} Setup: choose an index s with w\_s = w\_*; set B := \{i : w\_i = w\_*\}, q := sum\_\{i in B\} p\_i, r := sum\_\{i in A\} p\_i, D := sum\_\{i in A\} p\_i n(w\_i), and N := sum\_\{i in A\} p\_i n(w\_i - w\_*). Then q > 0, A is the complement of B, r = 1 - q, every difference w\_i - w\_j has coordinate sum zero, and the root inequality is N <= (2 + sqrt(2))*D. \steptag{validated} \\[6pt]
+\step{1.1.1} Because w\_* is a minimizer over the finite candidate set \{w\_1, ..., w\_m\}, w\_* is itself one of the vectors in that set; choose s with w\_s = w\_*. Then s is in B, so q = sum\_\{i in B\} p\_i >= p\_s > 0. \steptag{validated} \\[4pt]
+\step{1.1.2} For each i, the difference w\_i - w\_* has coordinate sum zero. For any zero-sum vector x, n(x)=0 holds exactly when x=0: n(x)=0 means all coordinates are nonnegative, and coordinate sum zero then forces every coordinate to be 0. Hence n(w\_i - w\_*)=0 exactly when w\_i=w\_*, so A=\{i:n(w\_i-w\_*)>0\} is the complement of B. \steptag{validated} \\[4pt]
+\step{1.1.3} Since A is the complement of B in \{1,...,m\} and sum\_i p\_i = 1, the abbreviations q := sum\_\{i in B\} p\_i and r := sum\_\{i in A\} p\_i satisfy r = 1 - q. \steptag{validated} \\[4pt]
+\step{1.1.4} Since every w\_i has coordinate sum zero, every difference w\_i - w\_j also has coordinate sum zero. With N := sum\_\{i in A\} p\_i n(w\_i - w\_*) and D := sum\_\{i in A\} p\_i n(w\_i), the inequality N <= (2+sqrt(2))*D is exactly the root inequality after substituting these abbreviations. \steptag{validated} \\[4pt]
+\step{1.2} First bound: in the setup of node 1.1, N <= D/q. \steptag{validated} \\[6pt]
+\step{1.2.1} For every i in A, w\_* has coordinate sum zero, so lem-zerosum-triangle applied with w := w\_i and v := w\_* gives n(w\_i - w\_*) <= n(w\_i) + n(w\_*). Multiplying by p\_i and summing over i in A gives N <= D + r*n(w\_*). \steptag{validated} \\[4pt]
+\step{1.2.2} Using node 1.1.2 that A is the complement of B in \{1,...,m\}, split the barycenter identity sum\_i p\_i w\_i = 0 over the disjoint union B union A; since w\_i = w\_* on B and q := sum\_\{i in B\} p\_i, this gives q*w\_* + sum\_\{i in A\} p\_i w\_i = 0, hence -q*w\_* = sum\_\{i in A\} p\_i w\_i. \steptag{validated} \\[6pt]
+\step{1.2.2.1} Node 1.1.2 says exactly that A is the complement of B in the full index set \{1,...,m\}; hence \{1,...,m\} is the disjoint union B union A. Therefore the barycenter identity sum\_i p\_i w\_i = 0 may be written as sum\_\{i in B\} p\_i w\_i + sum\_\{i in A\} p\_i w\_i = 0. By the definition B := \{i : w\_i = w\_*\}, the first sum is (sum\_\{i in B\} p\_i) w\_* = q*w\_*. Substitution gives q*w\_* + sum\_\{i in A\} p\_i w\_i = 0, and moving the first term gives -q*w\_* = sum\_\{i in A\} p\_i w\_i. \steptag{validated} \\[4pt]
+\step{1.2.3} Because w\_* is zero-sum, n(-w\_*) = n(w\_*); because n is a sum of negative parts, n(c x)=c*n(x) for c>=0. Thus q*n(w\_*) = n(-q*w\_*) = n(sum\_\{i in A\} p\_i w\_i). Repeated use of lem-negpart-subadditive gives n(sum\_\{i in A\} p\_i w\_i) <= sum\_\{i in A\} p\_i n(w\_i)=D, so q*n(w\_*) <= D. \steptag{validated} \\[4pt]
+\step{1.2.4} Combining N <= D + r*n(w\_*) with q*n(w\_*) <= D and q>0 gives N <= D + (r/q)*D = ((q+r)/q)*D. Since r=1-q, q+r=1, so N <= D/q. \steptag{validated} \\[4pt]
+\step{1.2.5} Nodes 1.2.1, 1.2.2, 1.2.3, and 1.2.4, using the setup facts q>0 and r=1-q from nodes 1.1.1 and 1.1.3, establish the first bound N <= D/q. \steptag{validated} \\[4pt]
+\step{1.3} Second bound: in the setup of node 1.1, if q < 1/2, then N <= (2*(1-q)/(1-2*q))*D. \steptag{validated} \\[6pt]
+\step{1.3.1} For each j in A, the minimizer property of w\_* gives F(w\_*) <= F(w\_j), where F(v):=sum\_i p\_i n(w\_i-v). Since A is the complement of B and w\_i=w\_* on B, F(w\_*)=N; hence N <= F(w\_j) for every j in A. \steptag{validated} \\[4pt]
+\step{1.3.2} Multiplying N <= F(w\_j) by p\_j and summing over j in A gives r*N <= sum\_\{j in A\} p\_j F(w\_j). Expanding F(w\_j) and splitting i over A and B gives sum\_\{j in A\} p\_j F(w\_j) = sum\_\{i,j in A\} p\_i p\_j n(w\_i-w\_j) + q*sum\_\{j in A\} p\_j n(w\_*-w\_j). \steptag{validated} \\[4pt]
+\step{1.3.3} For j in A, w\_j-w\_* is zero-sum, so n(w\_*-w\_j)=n(w\_j-w\_*). Therefore q*sum\_\{j in A\} p\_j n(w\_*-w\_j)=q*N. \steptag{validated} \\[4pt]
+\step{1.3.4} For i,j in A, w\_j has coordinate sum zero, so lem-zerosum-triangle applied with w := w\_i and v := w\_j gives n(w\_i-w\_j) <= n(w\_i)+n(w\_j). Multiplying by p\_i p\_j and summing over A x A gives sum\_\{i,j in A\} p\_i p\_j n(w\_i-w\_j) <= 2*r*D. \steptag{validated} \\[4pt]
+\step{1.3.5} Combining the preceding inequalities gives r*N <= 2*r*D + q*N, so (r-q)*N <= 2*r*D. If q < 1/2, then r-q = 1-2*q > 0, and with r=1-q division gives N <= (2*(1-q)/(1-2*q))*D. \steptag{validated} \\[4pt]
+\step{1.3.6} Nodes 1.3.1 through 1.3.5, using the setup facts that A is the complement of B, r=1-q, and differences are zero-sum from nodes 1.1.2, 1.1.3, and 1.1.4, establish the conditional second bound: if q < 1/2 then N <= (2*(1-q)/(1-2*q))*D. \steptag{validated} \\[4pt]
+\step{1.4} Envelope: nodes 1.1, 1.2, and 1.3 imply N <= (2 + sqrt(2))*D; substituting N = sum\_\{i in A\} p\_i n(w\_i - w\_*) and D = sum\_\{i in A\} p\_i n(w\_i) from node 1.1 gives the root inequality. \steptag{validated} \\[6pt]
+\step{1.4.1} Let C := 2 + sqrt(2) and q0 := 1/C. Then 0 < q0 < 1/2, C*q0 = 1, and a direct calculation gives 2*(1-q0)/(1-2*q0) = C. \steptag{validated} \\[4pt]
+\step{1.4.2} If q >= q0, then the first bound N <= D/q from node 1.2 and D >= 0 give N <= D/q <= D/q0 = C*D. \steptag{validated} \\[4pt]
+\step{1.4.3} If q < q0, then q < 1/2. The second bound from node 1.3 gives N <= 2*(1-q)/(1-2*q)*D, and since 0 <= q < q0, direct algebra gives 2*(1-q)/(1-2*q) <= C. Hence N <= C*D. \steptag{validated} \\[4pt]
+\step{1.4.4} The two cases q >= q0 and q < q0 are exhaustive. Nodes 1.4.2 and 1.4.3 therefore give N <= C*D with C=2+sqrt(2). Using node 1.1 to substitute N=sum\_\{i in A\} p\_i n(w\_i-w\_*) and D=sum\_\{i in A\} p\_i n(w\_i), this is exactly the root conclusion. \steptag{validated} \\[6pt]
+\step{1.4.4.1} Dependency check for this case-split step: node 1.2 is now epistemic\_state=validated, and the other direct validation dependencies of node 1.4.4, namely 1.1, 1.3, 1.4.1, 1.4.2, and 1.4.3, are also validated. Therefore the earlier objection that 1.4.4 used an unvalidated direct dependency no longer applies; the case split may use the validated q >= q0 branch 1.4.2 and the validated q < q0 branch 1.4.3, with the substitution of N and D supplied by validated node 1.1. \steptag{validated} \\[4pt]
+\step{1.4.4.2} All direct validation dependencies needed for node 1.4.4 are now satisfied: nodes 1.1, 1.2, 1.3, 1.4.1, 1.4.2, and 1.4.3 are each epistemic\_state=validated. Hence the final inference in node 1.4.4 depends only on validated inputs: the exhaustive dichotomy q >= q0 or q < q0, the validated branch conclusions 1.4.2 and 1.4.3, and the validated setup/substitution facts in 1.1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
