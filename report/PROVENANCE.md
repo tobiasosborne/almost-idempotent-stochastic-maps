@@ -31,6 +31,8 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-LEM-FACTORIZATION` | `argument/lemmas/lem-factorization.md` | `206a89c203319e6f` | Registry shard for `lem-factorization` |
 | `ARG-LEM-WEIGHTED-MIN` | `argument/lemmas/lem-weighted-min.md` | `027c9e9d2177675c` | Registry shard for `lem-weighted-min` |
 | `ARG-LEM-ZEROSUM-TRIANGLE` | `argument/lemmas/lem-zerosum-triangle.md` | `faf9bf0f9ebbde07` | Registry shard for `lem-zerosum-triangle` |
+| `ARG-LEM-FAN-PAYMENT-RESTRICTED` | `argument/lemmas/lem-fan-payment-restricted.md` | `b237dfad0af67c78` | Registry shard for `lem-fan-payment-restricted` |
+| `ARG-LEM-NEGPART-SUBADDITIVE` | `argument/lemmas/lem-negpart-subadditive.md` | `4bfb29b6597565f1` | Registry shard for `lem-negpart-subadditive` |
 | `ARG-LEM-LEAKAGE` | `argument/lemmas/lem-leakage.md` | `ebedf751f8a1d2ab` | Registry shard for `lem-leakage` |
 | `ARG-LEM-MASS-SPLIT` | `argument/lemmas/lem-mass-split.md` | `634fdf3556b8f4ea` | Registry shard for `lem-mass-split` |
 | `ARG-LEM-RESIDUAL-LOWER` | `argument/lemmas/lem-residual-lower.md` | `3d4604e0725be091` | Registry shard for `lem-residual-lower` |
@@ -89,6 +91,8 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | lem:fan-payment | ARG-LEM-FAN-PAYMENT AF-LEM-FAN-PAYMENT | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (15-node tree, taint clean; run 3 on the factored workspace). |
 | lem:weighted-min | ARG-LEM-WEIGHTED-MIN AF-LEM-WEIGHTED-MIN | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (8-node tree, taint clean). |
 | lem:zerosum-triangle | ARG-LEM-ZEROSUM-TRIANGLE AF-LEM-ZEROSUM-TRIANGLE | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (10-node tree, taint clean; run 1). |
+| lem:fan-payment-restricted | ARG-LEM-FAN-PAYMENT-RESTRICTED | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (A11 inline proof, unreviewed). |
+| lem:negpart-subadditive | ARG-LEM-NEGPART-SUBADDITIVE | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (A11 pre-factoring). |
 | lem:leakage | ARG-LEM-LEAKAGE | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:wiggle-rigidity | ARG-LEM-WIGGLE-RIGIDITY | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | obs:deep-leakage | ARG-OBS-DEEP-LEAKAGE | registry contract | HEURISTIC | Status ledger anchor only; registry status `heuristic`. |
