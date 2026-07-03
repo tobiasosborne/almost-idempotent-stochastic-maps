@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-fan-payment/export.md",
+  "oracle": "af-lem-fan-payment",
+  "result": "pass",
+  "claim_hash": "e5b82f20f763b68a01bc7e3739dda84b6b5932fec6a9f582d81c68a297ac959b",
+  "oracle_digest": "dfeff4b9ce9030b9c9df87b96d25235c23123328d8e2c9832babcd47f51aff3c",
+  "inputs_hash": "e1ddc5ff382fa777812fbfd7c6866534e1b7a2909105922441d592b60ea7bff1",
+  "ts": "2026-07-03T08:01:11.017Z"
+}
