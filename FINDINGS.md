@@ -226,3 +226,16 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   orphan exclusion (`E_s(j)>0 ⇒` volume-permitted negative coordinate) remains OPEN. Consequence: any
   circulation/financing lemma must carry a class-aggregate orphan horn — negative-coordinate fan
   weights alone cannot see λ-positive orphan leakage.
+- ⛔ **The ACTIVE-row orphan exclusion (`E_s(j)>0 ⇒` volume-permitted negative coordinate) is ALSO
+  FALSE (G4, `docs/waves/2026-07-03-G4-orphan-financing.md`) — do not re-walk any orphan-exclusion
+  route.** Exact rank-3 certificate (`p=3/5, e=2/5, α=(5/16,−1/4,7/64)`, `δ=1/4`, θ-½ argmin
+  `(c0,c1,c2)`): `E_s(o)=1/5>0`, only negative coordinate `−2/5` sub-threshold — an active orphan
+  owing A9 payment with an empty fan family. Still exactly financed: `Γ_0=−21/320` pays it at ratio
+  exactly 1 (payment included). Quantitatively (T1 on the one-B-row family): the orphan ratio
+  `(L_μ+F_L)/budget` is BOUNDED with `sup = 1`, not attained (cap = the θ-half volume boundary
+  `p↓½, e↑½` with `δ=¼` active, not an argmin switch); charging active A9 payment to the same horn
+  pushes the trend to `2` ⇒ `C_orph ≥ 1` (≥ 2 with payment). Suggestive killed design: a second
+  legal row built to CANCEL the financier `Γ_0` was rejected by `δ = 1001/1600 > 1/4` —
+  financier-cancellation may be δ-expensive (unproved; the conjectured conservation mechanism). The
+  surviving target is the aggregate ACTIVE-ORPHAN-FINANCING lemma: post-fan orphan demand
+  (incl. `βE_s`, cancellations before positive parts) `≤ C_orph·(G_class⁻+S⁻^μ+R_D^ν)`.
