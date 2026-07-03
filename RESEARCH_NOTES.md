@@ -84,3 +84,23 @@ MERGE classes — never select — then project B-rows onto the (1.2)/(1.3) nonn
 same engine, cleaner narrative. Constants: C0=2 conjectured true (fan rate); a circulation proof
 lands C0 ~ 20, C_sf ~ 50, op-classical C in the low hundreds. Credence (EX) true: ~80/20; the
 refutation program shares the same next object (amplify vs telescope the D6 leak).
+
+## 2026-07-03 — session-5 (arm G, waves G1–G8) synthesis: the engine survived contact and has ONE sub-gap
+
+The flow-conservation conjecture above survived eight adversarial/proof waves and is now REALIZED as a
+concrete architecture: **fan horn** (G1/G2: fan-matched weights `w=a_t(j)⁻/μ_j` telescope every certified
+legal leak, incl. exact F_L, residual constant 0) **+ repaired orphan horn (RH)** (`OD ≤
+C_RH·(G⁻+S⁻^μ+Σ_{β>0}βν)`, exact floor `C_RH ≥ 4`, survives every certified instance) **+ (SC)** the
+argmin self-support/cancellation control, itself reduced to **(PRT)** — charge the three pivot-removing
+blocker branches (volume-inadmissible / Ψ-blocked / Γ-blocked) to `G⁻+S⁻^μ+SIGMA+FanRes`. The evidence
+pattern across all 8 waves: **every exact leak found has an exactly identifiable financier** (class
+aggregate → own-negativity → pivot-removing moves), and each refuted candidate died only by a budget that
+was too small, never by an (EX)-threatening amplifier (the G5 family has `Φ_s/δ → 1`). Toolkit banked at
+T1 (worker paper-proofs, unreviewed): G5 harmonic/cancellation ledger, G6 ambient/chart identity +
+`E_s ≤ μ_s` payment overhead, G7 pivot-removing disjunction `M ≤ max(Ψ_j,Γ_j)` (the first statement that
+uses minimality), G8 transfer financed-excess identity (reproduces D5's financing on the D4 refuter to
+the penny). Dead this session (FINDINGS): both orphan exclusions, the class/signed-only orphan budget,
+pointwise silent domination `ν_j ≥ a_r(j)⁻`, and rank-3 pure-legal `C_legal=0`. Credence (EX) true:
+unchanged ~80/20, with the refutation program now sharing (PRT) (an unpayable blocker family = the
+reshaped kill). Next attack on (PRT): per-branch exact realizability FIRST (build or exclude each blocker
+type at an argmin), not another aggregate pass — two aggregate waves (G7, G8) went OPEN.

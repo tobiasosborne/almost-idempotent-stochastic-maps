@@ -211,3 +211,33 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
 - **End-state:** both GAP-B horns need genuinely new mechanisms and are provably coupled ((FIN));
   the provable wave-artifact lemmas (ledger, splits, class budget, lambda-correction,
   perturbed-DRF) are the elevation backlog. Codex quota exhausted at close (probe timeout).
+
+## 2026-07-03 (session 5) — arm G: the flow-conservation engine survives contact; (SC)→(PRT) isolated
+
+- **Eight codex waves (G1–G8), every one harvested + fr-logged + committed** (single-arm EXPLOIT run;
+  arm yielded to EXPLORE R after two consecutive OPEN waves per the breaker).
+- **G1/G2 — fan horn stands:** fan-matched negative-coordinate weights `w=a_t(j)⁻/μ_j` telescope every
+  certified legal leak (incl. exact F_L) with residual constant 0; unoriented weightings FAIL (uniform
+  leaves +9/14·δ on D6-A) — signed orientation FORCED. Adversarial stress survived (worst 814/2149).
+- **G3/G4 — orphan rows are real, both exclusions die:** exact rank-3 certificates (λ-positive AND
+  active E_s>0) with empty fan family; leaks exactly class-financed (257/1680; ratio 1 with payment);
+  one-B-row orphan ratio bounded, sup=1 (T1), trend → 2 with A9 payment ⇒ C_orph ≥ 2.
+- **G5 — the amplifier:** exact two-orphan cancellation family starves the class/signed budget for
+  EVERY finite constant (OD/budget = 1/(2h)−2 → ∞) while Φ_s/δ → 1 (NOT an (EX) refuter). The
+  (SI)→(RSI) own-negativity pattern repeats: repair = Σβν budget (floor 4 forced).
+- **G6 — (RH) stands, silent subtlety found:** unified budget survives everything (G5 = exactly sup 4);
+  pointwise domination ν_j ≥ a_r(j)⁻ FALSE (self-support carries chart negativity at vanishing ambient
+  cost) — but the argmin catches the exact counterexample family via a pivot-REMOVING move. E_s ≤ μ_s
+  closed (T1) on rank-3 active orphans.
+- **G7/G8 — toolkit banked, target OPEN twice:** pivot-removing disjunction M ≤ max(Ψ,Γ) with volume
+  factor |a_s(j)| (T1, the first minimality-using tool); B-block transfer system + β-weighted
+  financed-excess identity (T1, reproduces D5's financing on the D4 refuter to the penny). (SC) reduced
+  to ONE sub-gap: (PRT), the high-self pivot-removing blocker/import theorem.
+- **Five FINDINGS death certificates** (both orphan exclusions, C_legal=0, class/signed-only orphan
+  budget, pointwise silent domination) + the ambient-vs-chart non-conflation caveat.
+- **No promotions:** still 12 rigorous results; all session-5 output honestly T0/T1/T2 wave material.
+- **Queued:** (PRT) fresh-angle attack (aism-qkv); registry codification of conj-rh/conj-sc/
+  obs-orphan-amplifier/lem-pivot-removing-move blocked on a user def-vocabulary decision (aism-l70);
+  elevation backlog grew (G5 ledger, G6 identity, G7 formulas).
+- Process: codex quota fresh all session (8 waves, no outage); wave prompts/answers/transcripts in the
+  session scratchpad; commits signed Claude Fable 5 (orchestrator model this session).

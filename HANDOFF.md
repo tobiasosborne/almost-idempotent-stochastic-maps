@@ -10,77 +10,79 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md` — esp. L0 rigour ladder, Rule 13 dead routes).
-2. Run `fr board` and `bd ready`. Skim `argument/DAG.md` (**12 green nodes**) + `FINDINGS.md` +
-   `report/main.pdf` (9 shards; NOTE: sections for results 8–12 not yet written — ledger rows only).
-3. Wave artifacts in `docs/waves/` (B1–B4, F1–F2, A1–A12, D1–D6); L3 bundles in `runs/` (6).
+2. Run `fr board` and `bd ready`. Skim `argument/DAG.md` (**12 green nodes**) + `FINDINGS.md`
+   (esp. the 2026-07-03 orphan section — FIVE new death certificates this session) +
+   `report/main.pdf` (9 shards; sections for results 8–12 still ledger-rows-only).
+3. Wave artifacts in `docs/waves/` (B1–B4, F1–F2, A1–A12, D1–D6, **G1–G8**); L3 bundles in `runs/` (6).
 4. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-03, session 4 CLOSE) — TWELVE rigorous results
+## Current state (2026-07-03, session 5 CLOSE) — still TWELVE rigorous results
 
-**Rigorous (af-validated in-repo, banked, T0):** 1. `lem-classical-equiv` · 2. `obs-height-collapse` ·
-3. `lem-mass-split` · 4. `lem-residual-lower` · 5. `lem-residual-upper` · 6. `conj-halo-collapse`
-(B-side bridge) · 7. `lem-factorization` (A-side composition link) · 8. `lem-zerosum-triangle` ·
-9. `lem-weighted-min` · 10. **`lem-fan-payment`** (all-mass zero-sum fan payment, constant 2 — NEW
-mathematics, explains the certified plateau-2) · 11. `lem-negpart-subadditive` ·
-12. **`lem-fan-payment-restricted`** (D-restricted fan payment, SHARP constant `2+√2`; C=2 exactly
-refuted — never quote 2 for the restricted variant).
+**Rigorous (af-validated in-repo, banked, T0):** unchanged from session 4 — 1. `lem-classical-equiv` ·
+2. `obs-height-collapse` · 3. `lem-mass-split` · 4. `lem-residual-lower` · 5. `lem-residual-upper` ·
+6. `conj-halo-collapse` · 7. `lem-factorization` · 8. `lem-zerosum-triangle` · 9. `lem-weighted-min` ·
+10. `lem-fan-payment` · 11. `lem-negpart-subadditive` · 12. `lem-fan-payment-restricted`.
+**Nothing was promoted this session** (all session-5 output is wave-artifact T0/T1/T2, honestly tagged).
 
-**The A-side reduction cascade (waves A8–A12, D1–D2 — the session's main product):**
-(EX) argmin charge = GAP B = [payment horn] + [legal-collateral horn].
-Payment horn (`conj-degenerate-payment`) ⇐ discrete side CLOSED (results 10+12) + THE LIFT (A12):
-coordinate half EXACT (λ-correction; barycenter defect identically sourced by pivot-row negativity;
-perturbed-DRF derived) ⇒ remaining gap = **`conj-degenerate-transport` (TT)**:
-`Σ_{D_s} β⁺μ ≤ C_tr·δ` at a θ-½ Φ-argmin. D1 (H–M Thm 1.12): (TT) is exactly an H-M B-row
-inequality; quotient harmonicity proved; δ=0 refuter EXCLUDED from D_s. D2: exact source split +
-class-negative budget `ΣΓ⁻ ≤ δ` proved inline; remaining = **(SI)** aggregate degenerate source +
-**(BN)** β-negative transverse bound (4-piece factoring in the D2 artifact §T4;
-`C_tr = C_src(1+C_-)`; then payment horn at `2C_tr` crude).
+**Session 5 = arm G (flow-conservation), waves G1–G8.** The conjectured circulation engine SURVIVED
+adversarial contact and is now a concrete three-part architecture with ONE isolated sub-gap:
 
-**D3–D6 (post-checkpoint):** (SI) REFUTED exactly (D3 centered-fan argmin certificate — external
-sources alone cannot pay; own-negativity R_D^ν is the missing source; FINDINGS entry) ⇒ survivor
-(RSI) `M_D ≤ C_src(G⁻+S⁻^μ+R_D^ν)` — UNBROKEN, C_src=1 sharp at the D3 fan. (BN) got its first
-exact β-negative instances: alive, worst 3/32. D4: import decomposition PROVED-inline (class rows
-import-safe; imports chain only through B rows); B-block contraction KILLED exactly (ρ_B=21/20
-argmin certificate). D5: the exact β-stationarity financing ledger PROVED-inline (D4 refuter
-financed to the penny by the negative pivot-class aggregate); but the WIE→RSI composition is
-TAUTOLOGICAL — the legal baseline L_μ leaks in ⇒ **the payment and legal horns are COUPLED**;
-resisting statement (FIN). D6: the leak is REALIZED — exact argmin certificates (L_μ/δ ≈ 1 with
-M_D>0; F_L>0; (FIN) at C=1 stressed); the argmin-mechanism impossibility lemma is FALSE (FINDINGS).
+- **Fan horn (G1/G2):** fan-matched weights `w_{j,t}=a_t(j)⁻/μ_j` telescope every certified legal leak
+  (incl. exact `F_L`) with tested residual constant 0; unoriented weightings FAIL (signed orientation
+  forced). Survived adversarial stress (worst certified ratio 814/2149).
+- **Repaired orphan horn (RH) (G3–G6):** `OD ≤ C_RH·(G_class⁻ + S⁻^μ + Σ_{β>0} β_jν_j)` — the unified
+  own-negativity budget. Exact floor `C_RH ≥ 4` (G5 family, sup exactly 4); survives ALL certified
+  instances; D6 certificates have OD=0 after fan separation.
+- **(SC) → (PRT), the single open sub-gap (G6–G8):** the argmin self-support/cancellation control,
+  reduced to the **high-self pivot-removing blocker/import theorem**: every non-fan β-positive
+  high-self row either admits an unblocked admissible pivot-removing move (contradicting argmin) or its
+  blocker branch — volume-inadmissible / Ψ-blocked / Γ-blocked — is charged to
+  `G⁻+S⁻^μ+SIGMA+FanRes`. Waves G7+G8 both went OPEN on it (tool-building progress, target undecided)
+  ⇒ arm yielded per the breaker (fr decision: EXPLORE R).
 
-**Chain summary at close:** [(FIN) with C_fin>1 + legal collateral theorem — the two COUPLED open
-mechanisms] ⇒ (RSI)+(BN) ⇒ (TT) ⇒ payment horn ⇒ (EX) ⇒ [rigorous lem-factorization] ⇒ C_sf ⇒ …
-op-classical. B-side (cap) unchanged/parked.
+**Toolkit banked at T1 (worker paper-proofs, unreviewed — NOT rigorous):** G5 harmonic sum rules +
+cancellation ledger `P_r^O = N_r^O − H_r − Γ_r`; G6 ambient/chart identity
+`(1−P_jj)a_r(j) = Σ_{i≠j}P_ji a_r(i)` + payment overhead `E_s ≤ μ_s` (rank-3 active orphans); G7
+pivot-removing disjunction `M ≤ max(Ψ_j,Γ_j)` (volume factor `|a_s(j)|`, NOT `P_jj`) — the first
+statement that genuinely uses Φ-minimality; G8 B-block transfer system (`κ_jW_j ≤ S_j⁻+ΣP_ji⁺W_i`,
+`S_j⁻ ≤ 4ν_j`) + β-weighted financed-excess identity (reproduces D5's financing on the D4 refuter
+exactly).
+
+**Dead this session (FINDINGS death certificates — do NOT re-walk):** literal orphan exclusion (G3);
+ACTIVE-row orphan exclusion (G4); rank-3 pure-legal `C_legal=0` (G3); the class/signed-only orphan
+budget for EVERY finite constant (G5 exact two-orphan amplifier — NOT an (EX) refuter, `Φ_s/δ → 1`);
+pointwise silent domination `ν_j ≥ a_r(j)⁻` (G6 — ambient ν vs chart negativity are different objects).
+
+**Evidence pattern (8 waves):** every exact leak has an exactly identifiable financier; every kill was a
+too-small budget, never an (EX)-threatening amplifier. Credence (EX) ~80/20 unchanged; the refutation
+program now shares (PRT) (an unpayable blocker family = the reshaped kill criterion).
 
 ## Next steps (ranked) — RESUME HERE
 
-1. **ARM G (new, primary): the flow-conservation lemma** — the conjectured single missing lemma
-   of the (EX) engine (see the 2026-07-03 synthesis in `RESEARCH_NOTES.md`): the argmin excess,
-   summed against the stationarity disjunctions of ALL legal swaps, telescopes against the D5
-   financing ledger (fan lemmas = exchange rate; δ-budgets = boundary terms). Subsumes the coupled
-   payment/(FIN) + legal-collateral horns in one mechanism; constructive alternative = the H-M
-   Thm 1.12 CONVERSE rounding. Kill criterion (pre-registered in fr): the D6 leak AMPLIFIES
-   instead of telescoping ⇒ (EX) false ⇒ retarget height-conditional kernel. First wave: derive
-   the telescoping candidate sum explicitly on the D6 certificates (where every term is known
-   exactly) and on the D4 refuter, then general.
-2. **(FIN) with C_fin > 1 / the legal collateral theorem** — the two-horn formulation (D5 §T2,
-   D6 rec 3), now the FALLBACK decomposition if arm G's joint mechanism stalls.
-3. **Codify + af-elevate the provable infrastructure** (small trees, quota-cheap):
-   `lem-beta-stationarity-excess-ledger` (D5 (1)/(2)), `lem-hm-coordinate-source-split` (D2 (1)),
-   `lem-class-negative-budget` (`ΣΓ⁻ ≤ δ`, trivial grouped-negative-part bound), the A12
-   λ-correction + perturbed-DRF lemmas. Each is proved in a wave artifact, awaiting elevation.
-4. **(BN)** `S⁻^μ ≤ C₋δ`: alive with margin (worst 3/32); one more adversarial hunt then elevate
-   or codify as conjecture.
-5. **Lab-book shards AISM-08..12** for results 8–12 (ledger rows exist; full sections pending).
+1. **(PRT) direct attack (arm G wave 9, `aism-qkv`)** — with a FRESH angle: per-branch exact
+   realizability first (construct or exclude each blocker type — volume-inadmissible / Ψ-blocked /
+   Γ-blocked high-self non-fan row at a certified argmin), NOT another aggregate pass (G7/G8 both went
+   OPEN on aggregate attacks). The branch that resists realization is the one to prove impossible.
+2. **Registry codification of arm G outputs (`aism-l70`) — needs a USER decision:** register `conj-rh`,
+   `conj-sc`/(PRT), `obs-orphan-amplifier` (G5 family), `lem-pivot-removing-move` (G7 tool). Blocker:
+   contract vocabulary (H-M class aggregates beyond singleton classes, θ-½ argmin chart, orphan row) —
+   either (a) add def shards or (b) fully-inline contracts in the `conj-degenerate-transport` style.
+3. **af-elevate the provable infrastructure** (unchanged queue from session 4, now larger): the D5
+   ledger lemma, D2 source split, `ΣΓ⁻ ≤ δ` budget, A12 λ-correction/perturbed-DRF; NEW candidates
+   once codified: the G5 ledger, G6 ambient/chart identity, G7 pivot-removing formulas (small trees,
+   pre-factored — remember the fan-payment 39/47-node lesson).
+4. **(BN)** `S⁻^μ ≤ C₋δ`: alive (worst 3/32); one more adversarial hunt then elevate or codify.
+5. **Lab-book shards AISM-08..12** for results 8–12 (ledger rows exist; sections pending).
 6. **USER DECISION pending (aism-136):** lem-dual-localization trivially-true contract.
 7. B-side deciders (arm F FAIL-1 hunt; signed Baake–Sumner) when diversifying.
 
 ## Standing rules (unchanged; see CLAUDE.md + bd memories)
 
-Codex workers only (no Fable subagents); ONE af orchestration at a time; single-minimal af
-contracts; pre-factor linear-chain proofs (fan-payment ballooned 39/47 → factored trio validated
-15+10+8 clean); node-cap 40 (not 30); no argument//definitions edits while an orchestration runs;
-numerics = exact-ℚ L3 bundles with orchestrator recomputation; waves = verbatim docs/waves/
-artifacts, honest T0–T3 tiers, fr log per pull, workers told no fr/bd.
+Codex workers only (no Fable subagents); ONE af orchestration at a time; single-minimal af contracts;
+pre-factor linear-chain proofs; node-cap 40; no argument//definitions edits while an orchestration runs;
+numerics = exact-ℚ L3 bundles with orchestrator recomputation; waves = verbatim docs/waves/ artifacts,
+honest T0–T3 tiers, fr log per pull, workers told no fr/bd. Session-5 addition: wave prompts live in the
+session scratchpad (g1–g8-prompt.md pattern); worker answers + transcripts likewise.
 
 ## Recipes
 
@@ -89,13 +91,15 @@ sh scripts/check-all.sh
 python3 scripts/seed-af-workspaces.py <id>
 python3 scripts/af-orchestrate.py <id> --workers 8 --max-rounds 14 --node-cap 40   # background
 fr verify proofs/<id>/export.md --oracle af-<id>   # 12 oracles registered
+# wave dispatch (session-5 pattern):
+codex exec --skip-git-repo-check -C <repo> -s workspace-write -o <answer> - < <prompt>
 ```
 
 ## What is intentionally NOT here
 
-- Any claim that more than TWELVE results are rigorous.
-- Any claim (EX)/Kernel/op-classical is closed — open inputs: (FIN)/(RSI), (BN), the legal
-  collateral theorem, B-side cap. ((SI) is REFUTED — see FINDINGS.)
-- Constant 2 for the D-RESTRICTED fan payment (sharp is 2+√2; exact refuters in A11).
-- Plateau-2 as a theorem for general (EX) (L3 evidence + the rigorous fan-template cases only).
+- Any claim that more than TWELVE results are rigorous (ALL arm-G output is T0/T1/T2 wave material).
+- Any claim (EX)/Kernel/op-classical is closed — open inputs: (PRT)⇒(SC)⇒(RH) on the A-side engine,
+  (BN), B-side cap. ((SI), both orphan exclusions, the class/signed orphan budget, pointwise silent
+  domination: all REFUTED — see FINDINGS.)
+- `C_legal = 0` or any orphan budget without the `Σβν` own-negativity term.
 - A git remote (local-only by decision).
