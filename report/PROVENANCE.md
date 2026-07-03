@@ -17,6 +17,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 
 | Key | Path | SHA256 (16) | What it is |
 |-----|------|-------------|------------|
+| `ARG-CONJ-DEGENERATE-PAYMENT` | `argument/lemmas/conj-degenerate-payment.md` | `3b7cd00d33cbf5fa` | Registry shard for `conj-degenerate-payment` |
 | `ARG-CONJ-EX` | `argument/lemmas/conj-ex.md` | `02d459033dc90a3c` | Registry shard for `conj-ex` |
 | `ARG-CONJ-HALO-COLLAPSE` | `argument/lemmas/conj-halo-collapse.md` | `34f4de8d0861573d` | Registry shard for `conj-halo-collapse` |
 | `ARG-CONJ-KERNEL` | `argument/lemmas/conj-kernel.md` | `9c1f2f250cf211a6` | Registry shard for `conj-kernel` |
@@ -69,6 +70,7 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | lem:mass-split | ARG-LEM-MASS-SPLIT AF-LEM-MASS-SPLIT | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`. |
 | lem:residual-lower | ARG-LEM-RESIDUAL-LOWER AF-LEM-RESIDUAL-LOWER | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`. |
 | lem:residual-upper | ARG-LEM-RESIDUAL-UPPER AF-LEM-RESIDUAL-UPPER | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; large tree warning retained. |
+| conj:degenerate-payment | ARG-CONJ-DEGENERATE-PAYMENT | registry contract | OPEN | Status ledger anchor only; registry status `conjecture` (A8 payment horn). |
 | conj:ex | ARG-CONJ-EX | registry contract | OPEN | Status ledger anchor only; registry status `conjecture`. |
 | conj:halo-collapse | ARG-CONJ-HALO-COLLAPSE AF-CONJ-HALO-COLLAPSE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-2 tree on the factored workspace. |
 | conj:kernel | ARG-CONJ-KERNEL | registry contract | OPEN | Status ledger anchor only; registry status `conjecture`. |
