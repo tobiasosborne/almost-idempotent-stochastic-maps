@@ -5,7 +5,7 @@ contract: Negative-part subadditivity: for all vectors x and y in R^d, writing n
 defs: 
 deps: 
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/waves/2026-07-03-A11-drestricted-fan.md (arm A wave 11, codex; the barycenter-subadditivity step of the DRF proof — pointwise max(-(x(l)+y(l)), 0) <= max(-x(l), 0) + max(-y(l), 0), summed over l); pre-factored before elevation per the lem-fan-payment balloon lesson (aism-ugk)
 owner: A
 workspace: proofs/lem-negpart-subadditive

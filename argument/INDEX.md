@@ -15,10 +15,10 @@
 | `lem-exposed-circuit` | lemma | proved-mod-audit | none | A | For a signed affine retraction with neg mass <= delta: (i) a (rho,kappa)-exposed… |
 | `lem-factorization` | lemma | proved | validated | A | Factorization bound: let P be an exact signed idempotent (square real matrix wit… |
 | `lem-fan-payment` | lemma | proved | validated | A | Zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite family with ve… |
-| `lem-fan-payment-restricted` | lemma | proved-mod-audit | none | A | D-restricted zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite f… |
+| `lem-fan-payment-restricted` | lemma | proved-mod-audit | seeded | A | D-restricted zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite f… |
 | `lem-leakage` | lemma | proved-mod-audit | none | A | Affine-face leakage: for row-stochastic Q with ||Q^2-Q|| <= eta and affine h:Del… |
 | `lem-mass-split` | lemma | proved | validated | A | Mass split: for an exact signed idempotent P and any row index v, writing a_j = … |
-| `lem-negpart-subadditive` | lemma | proved-mod-audit | none | A | Negative-part subadditivity: for all vectors x and y in R^d, writing n(w) = sum_… |
+| `lem-negpart-subadditive` | lemma | proved-mod-audit | seeded | A | Negative-part subadditivity: for all vectors x and y in R^d, writing n(w) = sum_… |
 | `lem-residual-lower` | lemma | proved | validated | A | Convex outsourcing: let C be the convex hull of finitely many points of R^n, and… |
 | `lem-residual-upper` | lemma | proved | validated | A | Residual distance bound: let C be the convex hull of finitely many points of R^n… |
 | `lem-weighted-min` | lemma | proved | validated | A | Weighted minimum bound: let p_1, ..., p_m be positive reals with sum_i p_i = 1 a… |

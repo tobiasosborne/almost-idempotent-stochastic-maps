@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-07-03T08:16:23.052290521Z","conjecture":"Negative-part subadditivity: for all vectors x and y in R^d, writing n(w) = sum_l max(-w(l), 0), one has n(x + y) \u003c= n(x) + n(y).","author":"orchestrator"}

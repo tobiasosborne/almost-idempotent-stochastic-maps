@@ -1,0 +1,8 @@
+{
+  "id": "1abf51761046886f",
+  "name": "lem-zerosum-triangle",
+  "source": "imports validated registry lemma proofs/lem-zerosum-triangle — Zero-sum triangle bound: let w and v be vectors in R^d with v having coordinate sum zero (sum_l v(l) = 0); write n(x) = sum_l max(-x(l), 0); then n(w - v) \u003c= n(w) + n(v).",
+  "content_hash": "2b8943f55c136438e06b7595ddaad2cf9e28cc35bac8012392e40059acd079ae",
+  "created": "2026-07-03T08:16:23.247964396Z",
+  "notes": ""
+}

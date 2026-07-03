@@ -5,7 +5,7 @@ contract: D-restricted zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be 
 defs: 
 deps: lem-zerosum-triangle; lem-negpart-subadditive
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/waves/2026-07-03-A11-drestricted-fan.md (arm A wave 11, codex; T2 complete inline proof — horn (i): zero-sum triangle + barycenter subadditivity give N <= D/q where q is the duplicate-pivot-cluster mass; horn (ii): averaging the minimizer comparison over nonpivot support points gives N <= 2(1-q)/(1-2q) * D for q < 1/2; the bounds cross at q0 = 1 - 1/sqrt(2) with common value 2 + sqrt(2))
 owner: A
 workspace: proofs/lem-fan-payment-restricted
