@@ -194,3 +194,20 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   proofs (DRF validated run-1 clean with pre-factored dep).
 - HANDOFF checkpoint-rewritten mid-session (frontier materially changed). Lab-book sections for
   results 8-12 pending (ledger rows exist).
+
+## 2026-07-03 (session 4 close, part 2) — the D-line descent: ledger exact, horns coupled
+
+- **Waves D3-D6 (4 more codex waves):** (SI) REFUTED exactly (centered-fan argmin certificate;
+  own-negativity is the missing source) => (RSI) isolated, unbroken, C_src=1 sharp; (BN) first
+  exact beta-negative tests pass (3/32); D4 import decomposition PROVED-inline + B-block
+  contraction KILLED exactly (rho_B=21/20); D5 exact beta-stationarity financing ledger
+  PROVED-inline (D4 refuter financed to the penny) + the WIE->RSI composition shown TAUTOLOGICAL
+  (legal baseline L_mu leaks) => horns COUPLED, (FIN) isolated; D6 legal leak REALIZED (exact
+  argmin certificates L_mu/delta ~ 1, F_L>0) — the argmin-mechanism impossibility lemma is FALSE.
+- **Two FINDINGS dead-route entries** ((SI) death; legal-leak certificates + horn coupling).
+- **Session-4 grand totals:** 19 codex waves (A1-A12, D1-D6, + the af orchestrations), 5 af
+  orchestration arcs, 12 rigorous results (5 new + re-established), 2 registry conjectures
+  codified, 3 L3 bundles, ~35 commits, every wave harvested + fr-logged + committed.
+- **End-state:** both GAP-B horns need genuinely new mechanisms and are provably coupled ((FIN));
+  the provable wave-artifact lemmas (ledger, splits, class budget, lambda-correction,
+  perturbed-DRF) are the elevation backlog. Codex quota exhausted at close (probe timeout).

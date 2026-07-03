@@ -15,7 +15,7 @@ TRIGGER: session close, or a material change in the current frontier / next task
 3. Wave artifacts in `docs/waves/` (B1–B4, F1–F2, A1–A12, D1–D2); L3 bundles in `runs/` (6).
 4. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-03, session 4 checkpoint) — TWELVE rigorous results
+## Current state (2026-07-03, session 4 CLOSE) — TWELVE rigorous results
 
 **Rigorous (af-validated in-repo, banked, T0):** 1. `lem-classical-equiv` · 2. `obs-height-collapse` ·
 3. `lem-mass-split` · 4. `lem-residual-lower` · 5. `lem-residual-upper` · 6. `conj-halo-collapse`
@@ -36,21 +36,38 @@ class-negative budget `ΣΓ⁻ ≤ δ` proved inline; remaining = **(SI)** aggre
 **(BN)** β-negative transverse bound (4-piece factoring in the D2 artifact §T4;
 `C_tr = C_src(1+C_-)`; then payment horn at `2C_tr` crude).
 
-**Chain summary:** [(SI)+(BN) OPEN] ⇒ (TT) ⇒ payment horn ⇒ (+ legal-collateral horn OPEN) ⇒ (EX)
-⇒ [rigorous lem-factorization] ⇒ C_sf ⇒ … op-classical. B-side (cap) unchanged/parked.
+**D3–D6 (post-checkpoint):** (SI) REFUTED exactly (D3 centered-fan argmin certificate — external
+sources alone cannot pay; own-negativity R_D^ν is the missing source; FINDINGS entry) ⇒ survivor
+(RSI) `M_D ≤ C_src(G⁻+S⁻^μ+R_D^ν)` — UNBROKEN, C_src=1 sharp at the D3 fan. (BN) got its first
+exact β-negative instances: alive, worst 3/32. D4: import decomposition PROVED-inline (class rows
+import-safe; imports chain only through B rows); B-block contraction KILLED exactly (ρ_B=21/20
+argmin certificate). D5: the exact β-stationarity financing ledger PROVED-inline (D4 refuter
+financed to the penny by the negative pivot-class aggregate); but the WIE→RSI composition is
+TAUTOLOGICAL — the legal baseline L_μ leaks in ⇒ **the payment and legal horns are COUPLED**;
+resisting statement (FIN). D6: the leak is REALIZED — exact argmin certificates (L_μ/δ ≈ 1 with
+M_D>0; F_L>0; (FIN) at C=1 stressed); the argmin-mechanism impossibility lemma is FALSE (FINDINGS).
+
+**Chain summary at close:** [(FIN) with C_fin>1 + legal collateral theorem — the two COUPLED open
+mechanisms] ⇒ (RSI)+(BN) ⇒ (TT) ⇒ payment horn ⇒ (EX) ⇒ [rigorous lem-factorization] ⇒ C_sf ⇒ …
+op-classical. B-side (cap) unchanged/parked.
 
 ## Next steps (ranked) — RESUME HERE
 
-1. **D3 (in flight or next): decide (SI)** — the aggregate degenerate source; the no-center
-   internal-transport is the crux; the rigorous fan lemmas may BE the aggregate transport. And hunt
-   instances with β-negative B rows ((BN) is untested — the whole zoo has none).
-2. **Codify D2's two provable pieces** as registry shards + af-elevate (small trees):
-   `lem-hm-coordinate-source-split` (D2 eq. (1)) and `lem-class-negative-budget` (`ΣΓ⁻ ≤ δ`).
-3. **Legal-collateral horn** (A9 has the exact disjunction; crude Lipschitz is circular) — needs a
-   new idea; no candidate mechanism yet.
-4. **Lab-book shards AISM-08..12** for results 8–12 (ledger rows exist; full sections pending).
-5. **USER DECISION pending (aism-136):** lem-dual-localization trivially-true contract.
-6. B-side deciders (arm F FAIL-1 hunt; signed Baake–Sumner) when diversifying.
+1. **The legal collateral theorem** — `strict legal contributor at a maximal pivot ⇒ Φ ≤
+   C_legal·δ` (D6 rec 3): the legal horn's real open mechanism; must use more than Schur norms
+   (A9: crude Lipschitz circular; D6: no useful collateral lower bound). THE hard open on the
+   A/D-side, now explicitly coupled to the payment side via (FIN).
+2. **(FIN) with C_fin > 1** — the joint legal-aware financier statement (D5 §T2, stressed but
+   unbroken by D6 certificate B). Decide or reduce it.
+3. **Codify + af-elevate the provable infrastructure** (small trees, quota-cheap):
+   `lem-beta-stationarity-excess-ledger` (D5 (1)/(2)), `lem-hm-coordinate-source-split` (D2 (1)),
+   `lem-class-negative-budget` (`ΣΓ⁻ ≤ δ`, trivial grouped-negative-part bound), the A12
+   λ-correction + perturbed-DRF lemmas. Each is proved in a wave artifact, awaiting elevation.
+4. **(BN)** `S⁻^μ ≤ C₋δ`: alive with margin (worst 3/32); one more adversarial hunt then elevate
+   or codify as conjecture.
+5. **Lab-book shards AISM-08..12** for results 8–12 (ledger rows exist; full sections pending).
+6. **USER DECISION pending (aism-136):** lem-dual-localization trivially-true contract.
+7. B-side deciders (arm F FAIL-1 hunt; signed Baake–Sumner) when diversifying.
 
 ## Standing rules (unchanged; see CLAUDE.md + bd memories)
 
