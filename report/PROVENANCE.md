@@ -28,6 +28,8 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-CONJ-SKINNY-SHADOW-CAP` | `argument/lemmas/conj-skinny-shadow-cap.md` | `c44aa05083b9e8c6` | Registry shard for `conj-skinny-shadow-cap` |
 | `ARG-OBS-ORPHAN-AMPLIFIER` | `argument/lemmas/obs-orphan-amplifier.md` | `7472032fae335d9e` | Registry shard for `obs-orphan-amplifier` |
 | `ARG-LEM-PIVOT-REMOVING-MOVE` | `argument/lemmas/lem-pivot-removing-move.md` | `69fa5db24c4aefbf` | Registry shard for `lem-pivot-removing-move` |
+| `ARG-LEM-CROSS-PIVOT-CANCELLATION` | `argument/lemmas/lem-cross-pivot-cancellation.md` | `f5f15b410f20341b` | Registry shard for `lem-cross-pivot-cancellation` |
+| `ARG-LEM-IMPORT-REDUCTION` | `argument/lemmas/lem-import-reduction.md` | `2daa23dde9971765` | Registry shard for `lem-import-reduction` |
 | `ARG-LEM-COLLATERAL-IMPORT` | `argument/lemmas/lem-collateral-import.md` | `84d102f0f6623af1` | Registry shard for `lem-collateral-import` |
 | `ARG-EX-HUME` | `argument/lemmas/ex-hume.md` | `db5fb7b80f69be6a` | Registry shard for `ex-hume` |
 | `ARG-LEM-CANONICAL-SEPARATOR` | `argument/lemmas/lem-canonical-separator.md` | `10d34ab7f83bfd0c` | Registry shard for `lem-canonical-separator` |
@@ -112,6 +114,8 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | lem:fan-payment-restricted | ARG-LEM-FAN-PAYMENT-RESTRICTED AF-LEM-FAN-PAYMENT-RESTRICTED | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree; sharpness certificates not elevated. |
 | lem:negpart-subadditive | ARG-LEM-NEGPART-SUBADDITIVE AF-LEM-NEGPART-SUBADDITIVE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree, pre-factored before elevation. |
 | lem:collateral-import | ARG-LEM-COLLATERAL-IMPORT AF-LEM-COLLATERAL-IMPORT | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-04 (32-node tree, taint clean; run 1, zero open challenges); section shard pending. |
+| lem:cross-pivot-cancellation | ARG-LEM-CROSS-PIVOT-CANCELLATION | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (G11 B-L identity; numerically verified on three instances; elevation queued). |
+| lem:import-reduction | ARG-LEM-IMPORT-REDUCTION | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (G11 reduction (4); exhibits orchestrator-recomputed; elevation queued). |
 | lem:leakage | ARG-LEM-LEAKAGE | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:wiggle-rigidity | ARG-LEM-WIGGLE-RIGIDITY | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | obs:deep-leakage | ARG-OBS-DEEP-LEAKAGE | registry contract | HEURISTIC | Status ledger anchor only; registry status `heuristic`. |
