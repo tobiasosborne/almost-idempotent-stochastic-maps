@@ -5,7 +5,7 @@ contract: Pivot-removing max-stationarity: let P be a rank-3 exact signed idempo
 defs: def-signed-idempotent
 deps: 
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/waves/2026-07-03-G7-sc-decider.md §T1 "Pivot-Removing Schur Move" eqs. (1),(2),(4),(5),(6) and §T1 "Exact Phi Disjunction" eq. (7)
 owner: A
 workspace: proofs/lem-pivot-removing-move

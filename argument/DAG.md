@@ -32,7 +32,7 @@ graph LR
   lem-leakage["lem-leakage<br/>proved-mod-audit/none"]
   lem-mass-split["lem-mass-split<br/>proved/validated"]
   lem-negpart-subadditive["lem-negpart-subadditive<br/>proved/validated"]
-  lem-pivot-removing-move["lem-pivot-removing-move<br/>proved-mod-audit/none"]
+  lem-pivot-removing-move["lem-pivot-removing-move<br/>proved-mod-audit/seeded"]
   lem-residual-lower["lem-residual-lower<br/>proved/validated"]
   lem-residual-upper["lem-residual-upper<br/>proved/validated"]
   lem-weighted-min["lem-weighted-min<br/>proved/validated"]
