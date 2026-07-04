@@ -9,9 +9,9 @@ The rows below are anchors, not upgrades.  They give every remaining
 registry result a report label while preserving the registry status.
 The first thirteen \texttt{af}-validated results are reproduced in
 \ref{lem:classical-equiv}--\ref{lem:pivot-removing-move}; they are
-not duplicated in this ledger.  The fourteenth
-(\texttt{lem-collateral-import}) is anchored below pending its own
-section.
+not duplicated in this ledger.  The fourteenth and fifteenth
+(\texttt{lem-collateral-import}, \texttt{lem-cross-pivot-cancellation})
+are anchored below pending their own sections.
 
 \small
 \begin{longtable}{>{\raggedright\arraybackslash}p{0.25\textwidth}
@@ -34,7 +34,7 @@ Registry id & Status & Contract gloss \\
 \label{lem:dual-localization}\texttt{lem-dual-localization}\makebox[0pt][l]{\phantom{\ref{lem:dual-localization}}} & obstruction (superseded) & Retired 2026-07-04: the transcribed contract is a distance tautology; superseded by \texttt{conj-skinny-shadow-cap}. \\
 \label{lem:exposed-circuit}\texttt{lem-exposed-circuit}\makebox[0pt][l]{\phantom{\ref{lem:exposed-circuit}}} & proved-mod-audit & Concentration and circuit estimate for exposed vertices; inherited/mod-audit only. \\
 \label{lem:collateral-import}\texttt{lem-collateral-import}\makebox[0pt][l]{\phantom{\ref{lem:collateral-import}}} & proved (af: validated) & Collateral-import bound (CI) for the pivot-removing move, sharp on the wave-10 witness; af-validated in-repo 2026-07-04 (32-node tree, taint clean). \\
-\label{lem:cross-pivot-cancellation}\texttt{lem-cross-pivot-cancellation}\makebox[0pt][l]{\phantom{\ref{lem:cross-pivot-cancellation}}} & proved-mod-audit & Cross-pivot B-L cancellation identity behind the import anatomy; wave paper-proof pending elevation. \\
+\label{lem:cross-pivot-cancellation}\texttt{lem-cross-pivot-cancellation}\makebox[0pt][l]{\phantom{\ref{lem:cross-pivot-cancellation}}} & proved (af: validated) & Cross-pivot B-L cancellation identity behind the import anatomy; af-validated in-repo 2026-07-04 (23-node tree, taint clean); near-definitional. \\
 \label{lem:import-reduction}\texttt{lem-import-reduction}\makebox[0pt][l]{\phantom{\ref{lem:import-reduction}}} & proved-mod-audit & Universal reduction of the collateral import to the cross-pivot masses; wave paper-proof pending elevation. \\
 \label{lem:leakage}\texttt{lem-leakage}\makebox[0pt][l]{\phantom{\ref{lem:leakage}}} & proved-mod-audit & Affine-face leakage estimate for almost-idempotent stochastic rows; inherited/mod-audit only. \\
 \label{lem:wiggle-rigidity}\texttt{lem-wiggle-rigidity}\makebox[0pt][l]{\phantom{\ref{lem:wiggle-rigidity}}} & proved-mod-audit & F-WR wiggle-rigidity estimate for common-pattern webs; side conditions remain inherited. \\

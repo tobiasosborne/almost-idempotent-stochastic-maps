@@ -104,7 +104,7 @@ cd proofs/<id> && "$AF" export -f markdown > export.md && "$AF" export -f latex 
 
 ## What is intentionally NOT here
 
-- Any claim that more than FOURTEEN results are rigorous (all other arm-G output is honest
+- Any claim that more than FIFTEEN results are rigorous (all other arm-G output is honest
   conjecture / proved-mod-audit / wave-tier material).
 - Any claim (EX)/Kernel/op-classical is closed — open inputs: (PRT)'s (G) collateral branch ⇒ (SC) ⇒
   (RH) on the A-side engine, (BN), the B-side sigma-cap. ((SI), both orphan exclusions, the

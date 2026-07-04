@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-cross-pivot-cancellation/export.md",
+  "oracle": "af-lem-cross-pivot-cancellation",
+  "result": "pass",
+  "claim_hash": "942b216f2a64b6bdc0f4ab35bafae03357ec8241d60dbc32b997d334084bd131",
+  "oracle_digest": "74e7f84d9eb16206d5233ce7355f979c7f31d297c6d9af36874769dae353dcc8",
+  "inputs_hash": "0ee1d3933b8df1df1006fb1760f0452ecdda191269acccdb3199daf26fdb0968",
+  "ts": "2026-07-04T10:13:19.075Z"
+}

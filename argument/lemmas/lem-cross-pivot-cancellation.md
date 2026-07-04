@@ -4,8 +4,8 @@ kind: lemma
 contract: Cross-pivot cancellation: let P be a rank-3 exact signed idempotent (square real matrix with P^2 = P and all row sums equal to 1), let U = (u_0,u_1,u_2) be an actual-row chart whose rows p_{u_0}, p_{u_1}, p_{u_2} form a basis of the row space, and define coordinates a_q(i) by p_i = sum_q a_q(i)p_{u_q} and beta_r(i) = P_{u_r i}; then for every pair of distinct indices r, s in {0,1,2}, sum_i beta_r(i)*a_s(i) = 0, the sum running over all row indices i of P.
 defs: def-signed-idempotent
 deps: 
-status: proved-mod-audit
-af: seeded
+status: proved
+af: validated
 provenance: docs/waves/2026-07-04-G11-capped-charge.md §Task 1 eq. (2) (exact B-L duality: row reproduction p_{u_r} = sum_i P_{u_r i} p_i from P^2 = P, coordinates taken, a_s(u_r) = 0 for r != s); verified numerically on three exact instances by the orchestrator 2026-07-04
 owner: A
 workspace: proofs/lem-cross-pivot-cancellation
@@ -27,3 +27,10 @@ pivot is paid by `B_{r,s}` (beta-positive rows with negative pivot coordinate) p
 **Role.** Composes with [[lem-import-reduction]] and the validated [[lem-collateral-import]] to
 reduce the dominant collateral import to `B_{r,s} + C_{r,s}` — the exact residual named by wave
 G11 for [[conj-sc]]/(PRT).
+
+**af-VALIDATED IN-REPO 2026-07-04** (run 1 clean, 6 rounds): 23-node tree, root `validated`,
+taint 23/23 clean; fresh codex provers/verifiers per node, Claude orchestrated only (§6).
+Export: `proofs/lem-cross-pivot-cancellation/export.md`. Status flip is the mechanical
+reflection of the codex ledger. (Honesty note, per the 2026-07-04 session audit: this is a
+near-definitional identity; it was elevated as completion of in-flight work, and its "rigorous
+result" weight should be discounted accordingly.)
