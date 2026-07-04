@@ -85,3 +85,21 @@ Column contract:
 - `key_metric`: compact headline metric; parse as descriptive text, not a theorem.
 - `status`: rigour tag; all rows here are `numerical_L3`.
 - `sha256`: SHA-256 of the local copied artifact when one exists; `NA` otherwise.
+
+### `runs/2026-07-04-rank4-transfer-decider/data/certified_points.csv`
+
+Column contract (all exact values are rational strings; one row per certified instance):
+
+- `name`: stable instance id (`CALIBRATION_*` = known rank-3 reproduction; `*rank5*` = cheap probe).
+- `family`: construction family (`calibration`, `no-center`, `cycle-coupling`).
+- `rank` / `n`: rank of `P` and ambient dimension.
+- `delta`: exact negative mass `delta(P)`.
+- `theta_charts` / `argmin_count` / `argmin_basis`: theta-half chart census at the certified argmin
+  (complete enumeration over actual-row charts; basis = row indices, space-separated).
+- `phi` / `phi_over_delta` / `max_phi_s_over_delta`: exact argmin `Phi` values and ratios.
+- `max_B_over_delta` / `max_BC_over_delta`: cross-pivot masses under the G12 convention (`s` = maximal
+  pivot, `r` transverse) — NOT the all-ordered-pairs maximum (see bundle README finding 3).
+- `pivot_moves_checked` / `positive_c_moves`: pivot-removing disjunction checks (all theta-half moves;
+  disjunction asserted exactly on each).
+- `ci_pairs_checked` / `worst_ci_slack`: rank-4 `c>0` (CI) transcription checks; slack `0` = sharp.
+- `rank5_probe`: `True` for the cheap rank-5 probes (reduced coverage — see bundle README scope).

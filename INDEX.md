@@ -16,6 +16,7 @@ vocabulary). Hand-maintained in lockstep with content (CLAUDE.md Rule 9); `check
 | `runs/2026-07-02-sigma-cap-refuter/` | Can the σ̃-cap be killed (1−σ̃=o(τ))? → NOT genuinely: halo-robust σ̃_g ≤ 0.37τ over ~25k; but ε=0 cap FALSE exactly (σ̃=5343/5000>1 self-mass, instance C); halo-robust collapse bound holds exactly on A/B/C | `scripts/` inside the bundle (`certify.py`, `halo_bound_check.py`) | numerical (L3) |
 | `runs/2026-07-02-ex-enumeration-rehome/` | Re-home the inherited 67k+ exact-instance d8-d14 linear-law spine plus rank-3 `(EX)` enumeration: `H~=2delta` within inherited generators; rank-3 `(EX)` has 278 `delta<=1/4` records, 2947 in-cap theta-half charts, 0 empirical `C0=1` violations; all evidence only | copied upstream producers in `scripts/`; local invariant `check_invariant.py`; manifest `data/campaign_summary.csv` | numerical (L3) |
 | `runs/2026-07-04-cross-pivot-kill-test/` | Do the G11 cross-pivot masses dwarf the pivot-s budget? → NO on all six certified instances: `B_{r,s}=0` everywhere (12 pairs), `C_{r,s}<=2delta` trivially via the Cramer box, worst `(B+C)/budget = 2499/1376 ~ 1.82`; residual localizes to the B-question | `runs/2026-07-04-cross-pivot-kill-test/scripts/cross_pivot_masses.py` (deterministic, known-value asserts) | numerical (L3) |
+| `runs/2026-07-04-rank4-transfer-decider/` | Does the (PRT) skeleton transfer beyond rank 3 (session-7 de-risk decider #1)? → PASSES in this search: no rank-4/5 violation of the pivot-removing disjunction (48 theta-half moves) or of the natural `c>0` rank-4 (CI) transcription (144 pairs, worst slack exactly 0); `Phi/delta` plateau intact (`5/4` rank 4, `4/3` rank 5); first nonzero-B instances beyond rank 3, all sub-delta (max `B/delta = 27031/82920`) | `runs/2026-07-04-rank4-transfer-decider/scripts/decider_rank4.py` (deterministic, known-value asserts; orchestrator-recomputed) | numerical (L3) |
 
 ## Script → output manifest
 
@@ -26,6 +27,7 @@ vocabulary). Hand-maintained in lockstep with content (CLAUDE.md Rule 9); `check
 | `runs/2026-07-02-ex-no-center-highrank/scripts/certify_no_center_highrank.py` | `python3` exact rational arithmetic (`sympy`) | `runs/2026-07-02-ex-no-center-highrank/` | `runs/2026-07-02-ex-no-center-highrank/data/no_center_highrank.csv` | none | none |
 | `runs/2026-07-02-ex-enumeration-rehome/check_invariant.py` + manual re-home manifest | `python3` / manual archival copy | `runs/2026-07-02-ex-enumeration-rehome/` | `runs/2026-07-02-ex-enumeration-rehome/data/campaign_summary.csv` | none | none |
 | `runs/2026-07-04-cross-pivot-kill-test/scripts/cross_pivot_masses.py` | `python3` exact rational arithmetic (`fractions`) | `runs/2026-07-04-cross-pivot-kill-test/` | none (stdout table; known-value asserts are the contract) | none | none |
+| `runs/2026-07-04-rank4-transfer-decider/scripts/decider_rank4.py` | `python3` exact rational arithmetic (`fractions`) | `runs/2026-07-04-rank4-transfer-decider/` | `runs/2026-07-04-rank4-transfer-decider/data/certified_points.csv` (+ `.json`, `ANSWER.md`) | none | none |
 
 ## Planning / reference documents
 

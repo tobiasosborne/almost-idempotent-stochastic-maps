@@ -353,3 +353,15 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   ex-hume vs SBD sharpness cross-check; arm E decision-check wave. `aism-z98` recommendation: DEFER.
 - Process: all dispatches read-only subagents; no registry/definitions edits; fr `orient` logged per
   turn + `fr discover` for the tier-1 finds; bd issues filed for every follow-up.
+
+## 2026-07-04 (session 7, continued) — de-risk decider #1 banked: the skeleton transfers to rank 4/5
+
+- **`runs/2026-07-04-rank4-transfer-decider/` (L3, codex-built, orchestrator-recomputed):** no rank-4/5
+  violation of the pivot-removing disjunction (48 exact θ-half moves) or of the natural `c>0` rank-4
+  (CI) transcription (144 pairs, worst slack exactly 0 — sharp); `Φ/δ` plateau intact (5/4 at rank 4,
+  4/3 at rank 5, the known slow climb toward 2); first nonzero-B instances beyond rank 3
+  (cycle-coupling family), all sub-δ (max `B/δ = 27031/82920`). Convention caution recorded: over ALL
+  ordered pairs the no-center rank-4 instance realizes `B=δ` exactly at a NON-maximal pivot — do not
+  conflate with the G12 maximal-pivot convention. Verdict: the "machinery visibly breaks at rank 4"
+  kill scenario is OFF; rank generalization stays open as proof work. fr: F progress T0.
+- Decider #2 (small-δ certified argmin sweep) still in flight (codex background worker).

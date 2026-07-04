@@ -1,0 +1,11 @@
+name,family,rank,n,delta,theta_charts,argmin_count,argmin_basis,phi,phi_over_delta,max_phi_s_over_delta,max_B_over_delta,max_BC_over_delta,pivot_moves_checked,positive_c_moves,ci_pairs_checked,worst_ci_slack,rank5_probe
+CALIBRATION_no_center_rank3_a1_100,calibration,3,4,1/100,2,2,0 1 2,1/100,1,1,0,0,2,2,4,0,False
+no_center_rank4_a1_100,no-center,4,7,1/100,4,4,0 1 2 3,1/80,5/4,5/4,0,0,12,12,36,0,False
+no_center_rank4_a1_20,no-center,4,7,1/20,4,4,0 1 2 3,1/16,5/4,5/4,0,0,12,12,36,0,False
+no_center_rank4_a1_4,no-center,4,7,1/4,10,4,0 1 2 3,5/16,5/4,5/4,0,0,12,12,36,0,False
+cycle_coupling_rank4_a1_5_w15_16,cycle-coupling-mixture,4,12,467/2160,81,1,0 1 2 3,131/10800,131/2335,131/2335,131/2335,31/467,4,4,12,0,False
+cycle_coupling_rank4_a1_12_w1_2,cycle-coupling-mixture,4,12,115/876,81,1,0 1 2 3,1741/42048,1741/5520,1741/5520,1741/5520,157/460,4,4,12,0,False
+cycle_coupling_rank4_a1_30_w1_2,cycle-coupling-mixture,4,12,691/13530,81,1,0 1 2 3,27031/1623600,27031/82920,27031/82920,27031/82920,931/2764,4,4,12,0,False
+rank5_probe_no_center_a1_100,no-center,5,10,1/100,6,2,0 1 2 3 6,1/75,4/3,4/3,0,0,10,10,40,0,True
+rank5_probe_no_center_a1_20,no-center,5,10,1/20,6,2,0 1 2 3 6,1/15,4/3,4/3,0,0,10,10,40,0,True
+cycle_coupling_rank5_a1_8_w15_16,cycle-coupling-mixture,5,15,72323/530048,243,1,0 1 2 3 4,4113/530048,4113/72323,4113/72323,4113/72323,4616/72323,10,10,40,0,True
