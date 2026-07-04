@@ -53,3 +53,11 @@ chain tolerate the additive `2δ` financing of C?). No fourth budget patch is de
 Arm G wave 12 (reframed, bd `aism-4uh`): (i) adversarial hunt for a capped certified argmin with
 `B_{r,s} > 0` (realize it or prove `B ≤ C·δ` there); (ii) the assembly-tolerance check for the `+2δ`
 term. `lem-import-reduction` deliberately NOT elevated pre-decision (session-audit policy).
+
+## Addendum (2026-07-04, post wave G12)
+
+The scope caveat above was warranted: wave G12 (`docs/waves/2026-07-04-G12-b-question.md`) REFUTED the
+`B_{r,s} = 0` extrapolation with an exact certified capped argmin carrying `B_{1,2} = 2/57` (still
+sub-δ: `B/δ = 8/57`). This bundle's data and invariants stand unchanged; only the tempting
+generalization died, exactly as the honest-scope note anticipated. The live target is now the
+branch-sensitive `B ≤ K·δ` (bd wave-13 issue).

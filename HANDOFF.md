@@ -14,7 +14,7 @@ TRIGGER: session close, or a material change in the current frontier / next task
    (2026-07-03 orphan section + the 2026-07-04 frame-free callout update) + `docs/LEARNINGS.md`
    (**first entry landed**: the lem-dual-localization tautology) + `report/main.pdf` (15 shards;
    results 1–13 have sections, the 14th is ledger-row-only pending AISM-15, `aism-*` open issue).
-3. Wave artifacts in `docs/waves/` (B1–B4, F1–F2, A1–A12, D1–D6, G1–G8, **G9–G11**); L3 bundles in `runs/` (6).
+3. Wave artifacts in `docs/waves/` (B1–B4, F1–F2, A1–A12, D1–D6, G1–G8, **G9–G12**); L3 bundles in `runs/` (6).
 4. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
 ## Current state (2026-07-04, session 6 CLOSE + continuation) — FOURTEEN rigorous results
@@ -58,21 +58,25 @@ confirm-pass CONFIRMed. Reviewer ≠ author throughout; three distinct codex rev
 
 ## Next steps (ranked) — RESUME HERE
 
-*(2026-07-04 continuation, part 2: `lem-collateral-import` is the **FOURTEENTH rigorous result**
-(af-validated run 1, 32 nodes, zero open challenges; `fr verify` pass). Wave 11 RAN — see
-`docs/waves/2026-07-04-G11-capped-charge.md`: (CHARGE) PARTIAL; the dominant import reduces via the
-exact B-L cancellation `Σ_i β_r(i)a_s(i)=0` to the cross-pivot masses `B_{r,s}+C_{r,s}`, which are
-NOT in the pivot-s budget — **the (PRT) residual is now the cross-pivot charge question**. No capped
-clean (G) in 360k sweeps; certified capped near miss only (δ=¼, Ψ=69/250 and Γ=21/80 both > M=1/10).)*
+*(2026-07-04 continuation, part 3 — post-audit. A user-requested SOBER AUDIT reset policy: no
+ritual elevations, decision-checks before narrowing waves. The kill test
+(`runs/2026-07-04-cross-pivot-kill-test/`) + wave G12 (`docs/waves/2026-07-04-G12-b-question.md`) then
+DECIDED the cross-pivot question's shape: `B=0` at capped argmins is FALSE (exact certified `B=2/57`
+at `δ=¼`) but sub-δ in all data; non-argmin `B/δ` is unbounded and minimality pivots it away; the
+assembly is rate-tolerant. **The (PRT) collateral horn is now a pre-factored 7-step skeleton with ONE
+open link** — 3 links VALIDATED (pivot-removing disjunction, (CI), cross-pivot cancellation), 2
+elementary (import reduction, mod-audit; `C_{r,s} ≤ 2δ` via the box), open link = the branch-sensitive
+**B-lemma**. FIFTEEN rigorous results (15th = the near-definitional cancellation identity, weight
+discounted per audit).)*
 
-1. **Codify + af-elevate the G11 tools (`aism-cw8`)** — TWO separate minimal shards:
-   `lem-cross-pivot-cancellation` (the B-L identity, tiny near-definitional tree) and
-   `lem-import-reduction` (bound (4), deps on the VALIDATED `lem-collateral-import`).
-2. **Arm G wave 12 (`aism-4uh`): the cross-pivot charge decider** — (i) pay `B_{r,s}+C_{r,s}` from
-   the pivot-s budget using argmin minimality; or (ii) propose the budget reshape (a transverse-pivot
-   term in (SC)/(RH) — the G5→G6 SIGMA-repair pattern one level up; test against ALL certified
-   instances); or (iii) capped (G) construction seeded from the G11 near miss (push Ψ below M while
-   keeping Γ up). Exact ℚ + complete argmin certification + orchestrator recomputation.
+1. **Arm G wave 13 (`aism-5sc`): the B-lemma** — at a capped θ-½ argmin carrying a clean high-self
+   non-fan Γ-branch, `B_{r,s} ≤ K·δ`: prove via minimality on the B-carrying rows (the `c<0`
+   pivot-removing move is the named tool gap — possibly a small codify+elevate first), or amplify
+   `B/δ` along certified capped argmin families (G12 instance as seed).
+2. **USER DECISION (`aism-z98`):** whether `conj-sc`/`conj-rh` contracts admit an explicit
+   `+C_δ·δ(P)` term (the G12 C-financing — mechanism-derived, arrives WITH its financing proof;
+   distinct from the audit's epicycle pattern). Options: amend now / require reabsorption in the
+   proof / defer until the B-lemma decides.
 3. **af-elevation backlog** (codify-then-elevate, per the session-5 queue): the D5 ledger lemma, D2
    source split, `ΣΓ⁻ ≤ δ` budget, A12 λ-correction/perturbed-DRF; G5 harmonic/cancellation ledger, G6
    ambient/chart identity + payment overhead `E_s ≤ μ_s`. All still need registry codification first

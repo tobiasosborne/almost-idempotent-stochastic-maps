@@ -308,3 +308,25 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   orchestrator-recomputed exactly.
 - **Queued:** codify+elevate the two G11 tools (separate minimal shards); arm G wave 12 = the
   cross-pivot charge / budget-reshape / seeded-construction decider.
+
+## 2026-07-04 (session 6 continuation, part 3) — audit, kill test, the B-question decided
+
+- **Sober audit (user-requested):** assessed ~half the day's output as self-documentation/ritual
+  elevation; flagged the budget-epicycle risk and the 5-pull single-wall pattern; policy set: no
+  ritual elevations, decision-checks before narrowing waves. Logged in fr.
+- **15th rigorous result (weight discounted per audit):** `lem-cross-pivot-cancellation` af-VALIDATED
+  (23-node run-1 tree, clean) — near-definitional B-L identity; elevated as in-flight completion only.
+  `lem-import-reduction` deliberately NOT elevated pre-decision.
+- **Kill test banked** (`runs/2026-07-04-cross-pivot-kill-test/`, L3, known-value invariants):
+  `B_{r,s}=0` on all six prior certified instances; `C_{r,s} <= 2δ` trivially (chart-row negativity ×
+  Cramer box); worst `(B+C)/budget ≈ 1.82`. Reframed wave 12 to the falsifiable B-question.
+- **Wave G12 (arm G, codex): DECIDED both sub-questions.** (i) `B=0` at capped argmins is FALSE —
+  exact certified argmin with `B=2/57` at `δ=1/4` (complete enumeration; orchestrator-recomputed) —
+  but sub-δ; non-argmin `B/δ` unbounded (50 at ε=1/100) and minimality pivots it away. (ii) The
+  intended assembly is rate-tolerant (no step needs o(δ)); only a contract-level naked-δ bookkeeping
+  question remains. **Pre-factored 7-step collateral skeleton banked**: 3 links VALIDATED
+  (disjunction, (CI), cancellation), 2 elementary (import reduction mod-audit; `C<=2δ` box), ONE open
+  link = the branch-sensitive **B-lemma** (`B <= K·δ` at clean high-self Γ-branches).
+- **Queued:** wave 13 = the B-lemma (prove via minimality incl. the c<0 move — the named tool gap —
+  or amplify at argmins); USER decision filed on the `+C_δ·δ` contract amendment (mechanism-derived,
+  arrives with its financing proof — distinct from the audit's epicycle pattern).
