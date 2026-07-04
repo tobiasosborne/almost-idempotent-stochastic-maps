@@ -241,3 +241,36 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   elevation backlog grew (G5 ledger, G6 identity, G7 formulas).
 - Process: codex quota fresh all session (8 waves, no outage); wave prompts/answers/transcripts in the
   session scratchpad; commits signed Claude Fable 5 (orchestrator model this session).
+
+## 2026-07-04 (session 6) — G9 decides V/P; dual-localization retired; arm-G codified; 13th rigorous result
+
+- **Wave G9 (arm G, codex): per-branch (PRT) realizability.** (V) volume-inadmissible branch REALIZED
+  (exact certified argmin, score-degenerate M=0, charge ratio 624/4427); (P) Psi-blocked branch REALIZED
+  (genuine blocker 91/300 >= M=1/12, ratio 240/451); amplification probes bounded on both families;
+  (G) Gamma/collateral branch neither realized nor proved empty ⇒ (PRT) OPEN, narrowed to the (G)
+  branch. Both certificates orchestrator-recomputed in exact Fractions (complete theta-half enumeration,
+  argmin, branch conditions, ratios) — reproduced exactly. Artifact `docs/waves/2026-07-04-G9-*`.
+- **USER DECISIONS (2): (a)** arm-G codification uses FULLY-INLINE contracts (no def shards while the
+  vocabulary moves); **(b)** `lem-dual-localization` superseded, not rewritten in place.
+- **Supersession:** `conj-skinny-shadow-cap` registered (skinny two-shadow cap at the sqrt(delta) scale);
+  `lem-dual-localization` retired to `obstruction` (transcribed contract = distance tautology, confirmed
+  by independent codex verifier; upstream DELIVERABLE2:86 mislabelled it). First `docs/LEARNINGS.md`
+  entry; CLAUDE/AGENTS callout, FINDINGS, RESEARCH_NOTES, report ledger updated. Independent codex
+  reviewer APPROVE (A–E PASS).
+- **Codification (aism-l70):** `conj-rh` (floor C_RH>=4 in body), `conj-sc` (body records (PRT) + G9
+  narrowing), `obs-orphan-amplifier` (proved-mod-audit; contract identities orchestrator-recomputed at
+  4 parameter values), `lem-pivot-removing-move`. Codex drafted → independent codex review
+  REQUEST-CHANGES (4 transcription fixes: Schur volume factor |det C| wording, lambda-positive
+  strict-legal cover, silent-row quantifier, Phi/delta→1) → fixes applied verbatim → fresh confirm-pass
+  CONFIRM. deps left EMPTY per conjecture precedent. (Also caught+fixed: orchestrator extraction regex
+  truncated two shard bodies at inner code fences.)
+- **13th rigorous result:** `lem-pivot-removing-move` af-VALIDATED (run 1, 9-node tree, 3 rounds, ZERO
+  challenges, taint 9/9). Export written, oracle registered, `fr verify` PASS, banked (arm R,
+  EXPLOIT G). The (G)-branch attack now stands on a rigorous disjunction.
+- **Lab-book:** shards AISM-08..12 for rigorous results 8–12 (contracts verbatim); status ledger
+  renumbered to `13_discussion.tex`; caught a false-green: `check-provenance.py` hard-coded the ledger
+  filename (red/green probed the fix). AISM-14 (pivot-removing section) filed as follow-up.
+- **Queued:** arm G wave 10 — the (G) collateral-branch decider (construct or prove empty; new bd issue);
+  AISM-14 section shard; elevation backlog (D5 ledger, G5 ledger, G6 identity) still needs codification.
+- Process: codex workers for wave/draft/review/confirm (4 dispatches + 8-worker orchestration); three
+  independent codex reviewers used (reviewer ≠ author throughout); commits signed per repo convention.
