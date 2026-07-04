@@ -16,7 +16,7 @@
 | `lem-canonical-separator` | lemma | proved-mod-audit | none | A | For a signed affine retraction P with hidden top vertex v of height H there exis… |
 | `lem-classical-equiv` | lemma | proved | validated | A | The signed-idempotent and stochastic-idempotent formulations of classical stabil… |
 | `lem-collateral-import` | lemma | proved | validated | A | Collateral import bound: let P be a rank-3 exact signed idempotent (square real … |
-| `lem-cross-pivot-cancellation` | lemma | proved-mod-audit | none | A | Cross-pivot cancellation: let P be a rank-3 exact signed idempotent (square real… |
+| `lem-cross-pivot-cancellation` | lemma | proved-mod-audit | seeded | A | Cross-pivot cancellation: let P be a rank-3 exact signed idempotent (square real… |
 | `lem-dual-localization` | open-problem | obstruction | none | A | (SUPERSEDED by conj-skinny-shadow-cap, 2026-07-04; trivially true as stated) Fra… |
 | `lem-exposed-circuit` | lemma | proved-mod-audit | none | A | For a signed affine retraction with neg mass <= delta: (i) a (rho,kappa)-exposed… |
 | `lem-factorization` | lemma | proved | validated | A | Factorization bound: let P be an exact signed idempotent (square real matrix wit… |

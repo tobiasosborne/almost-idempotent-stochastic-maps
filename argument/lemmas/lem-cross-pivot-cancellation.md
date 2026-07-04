@@ -5,7 +5,7 @@ contract: Cross-pivot cancellation: let P be a rank-3 exact signed idempotent (s
 defs: def-signed-idempotent
 deps: 
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/waves/2026-07-04-G11-capped-charge.md §Task 1 eq. (2) (exact B-L duality: row reproduction p_{u_r} = sum_i P_{u_r i} p_i from P^2 = P, coordinates taken, a_s(u_r) = 0 for r != s); verified numerically on three exact instances by the orchestrator 2026-07-04
 owner: A
 workspace: proofs/lem-cross-pivot-cancellation
