@@ -5,7 +5,7 @@ contract: Collateral import bound: let P be a rank-3 exact signed idempotent (sq
 defs: def-signed-idempotent
 deps: lem-pivot-removing-move
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/waves/2026-07-04-G10-collateral-branch.md §Task 3 "Emptiness-Lemma Attempt" (the per-row expansion E_r^j(i) <= E_r(i) + R_{r,j}(i)_+ via (-x+y)^+ <= x^- + y^+ and (X+Y)^+ <= X^+ + Y^+, summed against the unchanged transverse beta row); new-coordinate and unchanged-left-inverse formulas per the af-VALIDATED lem-pivot-removing-move contract
 owner: A
 workspace: proofs/lem-collateral-import

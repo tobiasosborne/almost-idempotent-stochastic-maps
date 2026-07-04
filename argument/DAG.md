@@ -24,7 +24,7 @@ graph LR
   ex-hume["ex-hume<br/>proved-mod-audit/none"]
   lem-canonical-separator["lem-canonical-separator<br/>proved-mod-audit/none"]
   lem-classical-equiv["lem-classical-equiv<br/>proved/validated"]
-  lem-collateral-import["lem-collateral-import<br/>proved-mod-audit/none"]
+  lem-collateral-import["lem-collateral-import<br/>proved-mod-audit/seeded"]
   lem-dual-localization["lem-dual-localization<br/>obstruction/none"]
   lem-exposed-circuit["lem-exposed-circuit<br/>proved-mod-audit/none"]
   lem-factorization["lem-factorization<br/>proved/validated"]

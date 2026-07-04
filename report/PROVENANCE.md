@@ -28,7 +28,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-CONJ-SKINNY-SHADOW-CAP` | `argument/lemmas/conj-skinny-shadow-cap.md` | `c44aa05083b9e8c6` | Registry shard for `conj-skinny-shadow-cap` |
 | `ARG-OBS-ORPHAN-AMPLIFIER` | `argument/lemmas/obs-orphan-amplifier.md` | `7472032fae335d9e` | Registry shard for `obs-orphan-amplifier` |
 | `ARG-LEM-PIVOT-REMOVING-MOVE` | `argument/lemmas/lem-pivot-removing-move.md` | `69fa5db24c4aefbf` | Registry shard for `lem-pivot-removing-move` |
-| `ARG-LEM-COLLATERAL-IMPORT` | `argument/lemmas/lem-collateral-import.md` | `1b4883d9333b0bf4` | Registry shard for `lem-collateral-import` |
+| `ARG-LEM-COLLATERAL-IMPORT` | `argument/lemmas/lem-collateral-import.md` | `03d2d7d38bd8a594` | Registry shard for `lem-collateral-import` |
 | `ARG-EX-HUME` | `argument/lemmas/ex-hume.md` | `db5fb7b80f69be6a` | Registry shard for `ex-hume` |
 | `ARG-LEM-CANONICAL-SEPARATOR` | `argument/lemmas/lem-canonical-separator.md` | `10d34ab7f83bfd0c` | Registry shard for `lem-canonical-separator` |
 | `ARG-LEM-CLASSICAL-EQUIV` | `argument/lemmas/lem-classical-equiv.md` | `2f3a5574f2dfbbde` | Registry shard for `lem-classical-equiv` |
