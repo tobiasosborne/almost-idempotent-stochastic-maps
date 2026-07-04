@@ -160,6 +160,18 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-pivot-removing-move/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-pivot-removing-move.md"
         ]
+      },
+      {
+        "name": "af-lem-collateral-import",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-collateral-import"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-collateral-import/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-collateral-import.md"
+        ]
       }
     ]
   },

@@ -28,7 +28,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-CONJ-SKINNY-SHADOW-CAP` | `argument/lemmas/conj-skinny-shadow-cap.md` | `c44aa05083b9e8c6` | Registry shard for `conj-skinny-shadow-cap` |
 | `ARG-OBS-ORPHAN-AMPLIFIER` | `argument/lemmas/obs-orphan-amplifier.md` | `7472032fae335d9e` | Registry shard for `obs-orphan-amplifier` |
 | `ARG-LEM-PIVOT-REMOVING-MOVE` | `argument/lemmas/lem-pivot-removing-move.md` | `69fa5db24c4aefbf` | Registry shard for `lem-pivot-removing-move` |
-| `ARG-LEM-COLLATERAL-IMPORT` | `argument/lemmas/lem-collateral-import.md` | `03d2d7d38bd8a594` | Registry shard for `lem-collateral-import` |
+| `ARG-LEM-COLLATERAL-IMPORT` | `argument/lemmas/lem-collateral-import.md` | `84d102f0f6623af1` | Registry shard for `lem-collateral-import` |
 | `ARG-EX-HUME` | `argument/lemmas/ex-hume.md` | `db5fb7b80f69be6a` | Registry shard for `ex-hume` |
 | `ARG-LEM-CANONICAL-SEPARATOR` | `argument/lemmas/lem-canonical-separator.md` | `10d34ab7f83bfd0c` | Registry shard for `lem-canonical-separator` |
 | `ARG-LEM-CLASSICAL-EQUIV` | `argument/lemmas/lem-classical-equiv.md` | `2f3a5574f2dfbbde` | Registry shard for `lem-classical-equiv` |
@@ -71,6 +71,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-WEIGHTED-MIN` | `proofs/lem-weighted-min/export.md` | `2b0bc678481aa4cc` | `af` proof export for `lem-weighted-min` |
 | `AF-LEM-ZEROSUM-TRIANGLE` | `proofs/lem-zerosum-triangle/export.md` | `10c4fc62e9ad5714` | `af` proof export for `lem-zerosum-triangle` |
 | `AF-LEM-FACTORIZATION` | `proofs/lem-factorization/export.md` | `c755b58b9c2a2fe9` | `af` proof export for `lem-factorization` |
+| `AF-LEM-COLLATERAL-IMPORT` | `proofs/lem-collateral-import/export.md` | `c2d35f80dc8b12c6` | `af` proof export for `lem-collateral-import` |
 | `AF-LEM-PIVOT-REMOVING-MOVE` | `proofs/lem-pivot-removing-move/export.md` | `276e02185cab5cc3` | `af` proof export for `lem-pivot-removing-move` |
 
 ## Per-claim ledger
@@ -110,7 +111,7 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | lem:zerosum-triangle | ARG-LEM-ZEROSUM-TRIANGLE AF-LEM-ZEROSUM-TRIANGLE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree, factored out of lem-fan-payment. |
 | lem:fan-payment-restricted | ARG-LEM-FAN-PAYMENT-RESTRICTED AF-LEM-FAN-PAYMENT-RESTRICTED | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree; sharpness certificates not elevated. |
 | lem:negpart-subadditive | ARG-LEM-NEGPART-SUBADDITIVE AF-LEM-NEGPART-SUBADDITIVE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree, pre-factored before elevation. |
-| lem:collateral-import | ARG-LEM-COLLATERAL-IMPORT | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (G10 (CI) tool; sharp on the delta=49/60 witness, orchestrator-recomputed; elevation queued). |
+| lem:collateral-import | ARG-LEM-COLLATERAL-IMPORT AF-LEM-COLLATERAL-IMPORT | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-04 (32-node tree, taint clean; run 1, zero open challenges); section shard pending. |
 | lem:leakage | ARG-LEM-LEAKAGE | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:wiggle-rigidity | ARG-LEM-WIGGLE-RIGIDITY | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | obs:deep-leakage | ARG-OBS-DEEP-LEAKAGE | registry contract | HEURISTIC | Status ledger anchor only; registry status `heuristic`. |

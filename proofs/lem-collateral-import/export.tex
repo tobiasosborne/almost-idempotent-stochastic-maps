@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Collateral import bound: let P be a rank-3 exact signed i...}
+\step{1} Collateral import bound: let P be a rank-3 exact signed idempotent (square real matrix with P\textasciicircum{}2 = P and all row sums equal to 1), let U = (u\_0,u\_1,u\_2) be an actual-row chart whose rows p\_\{u\_0\}, p\_\{u\_1\}, p\_\{u\_2\} form a basis of the row space, define coordinates a\_q(i) by p\_i = sum\_q a\_q(i)p\_\{u\_q\}, beta\_r(i) = P\_\{u\_r i\}, E\_r(i) = max(sum\_\{q != r\} max(-a\_q(i),0) - (1 - a\_r(i)), 0), and Phi\_r(U) = sum\_i max(beta\_r(i),0)E\_r(i); fix a pivot index s, a non-chart row j with c = a\_s(j) > 0, a transverse index r != s, and let t be the remaining index, writing d\_r = a\_r(j) and d\_t = a\_t(j); on the pivot-removing chart V\_j = U - u\_s + j define new coordinates a\_s\textasciicircum{}j(i) = a\_s(i)/c and a\_q\textasciicircum{}j(i) = a\_q(i) - a\_s(i)a\_q(j)/c for q != s, E\_r\textasciicircum{}j(i) = max(sum\_\{q != r\} max(-a\_q\textasciicircum{}j(i),0) - (1 - a\_r\textasciicircum{}j(i)), 0), and Phi\_r(V\_j) = sum\_i max(beta\_r(i),0)E\_r\textasciicircum{}j(i) (the transverse left-inverse row at r is unchanged by the move); define R\_\{r,j\}(i) = (1/c - 1)*max(-a\_s(i),0) + max(a\_s(i)*d\_t/c, 0) - a\_s(i)*d\_r/c and I\_\{r,j\}(U) = sum\_i max(beta\_r(i),0)*max(R\_\{r,j\}(i),0); then Phi\_r(V\_j) <= Phi\_r(U) + I\_\{r,j\}(U). \steptag{validated} \\[6pt]
+\step{1.1} It is enough to prove the pointwise row bound E\_r\textasciicircum{}j(i) <= E\_r(i) + max(R\_\{r,j\}(i),0) for every row index i: multiplying by w\_i=max(beta\_r(i),0) >= 0 and summing over the finite row set gives Phi\_r(V\_j) <= Phi\_r(U)+I\_\{r,j\}(U) by the definitions of Phi\_r(V\_j), Phi\_r(U), and I\_\{r,j\}(U). \steptag{validated} \\[6pt]
+\step{1.1.1} For each row index i, w\_i=max(beta\_r(i),0) is nonnegative because the maximum of a real number and 0 is at least 0. \steptag{validated} \\[4pt]
+\step{1.1.2} If E\_r\textasciicircum{}j(i) <= E\_r(i)+max(R\_\{r,j\}(i),0) for every i, then multiplying by w\_i>=0 preserves the inequality: w\_i E\_r\textasciicircum{}j(i) <= w\_i E\_r(i)+w\_i max(R\_\{r,j\}(i),0). \steptag{validated} \\[4pt]
+\step{1.1.3} The row set is finite because P is a square real matrix; summing the preceding inequalities over i gives sum\_i w\_i E\_r\textasciicircum{}j(i) <= sum\_i w\_i E\_r(i)+sum\_i w\_i max(R\_\{r,j\}(i),0). \steptag{validated} \\[4pt]
+\step{1.1.4} By the root definitions and the unchanged transverse left-inverse row, sum\_i w\_i E\_r\textasciicircum{}j(i)=Phi\_r(V\_j), sum\_i w\_i E\_r(i)=Phi\_r(U), and sum\_i w\_i max(R\_\{r,j\}(i),0)=I\_\{r,j\}(U). \steptag{validated} \\[4pt]
+\step{1.2} For every row index i, if B\_i=max(-a\_s(i),0)+max(-a\_t(i),0)-1+a\_r(i) and R\_i=R\_\{r,j\}(i), then the pivot-removing coordinate formulas give E\_r\textasciicircum{}j(i) <= max(B\_i+R\_i,0). \steptag{validated} \\[6pt]
+\step{1.2.1} Fix an arbitrary row index i. Since r != s and t is the remaining chart index, the two indices q != r are exactly s and t, so E\_r\textasciicircum{}j(i)=max(max(-a\_s\textasciicircum{}j(i),0)+max(-a\_t\textasciicircum{}j(i),0)-1+a\_r\textasciicircum{}j(i),0). \steptag{validated} \\[4pt]
+\step{1.2.2} The pivot-removing coordinate formulas, as stated in the root and imported from external lem-pivot-removing-move, give a\_s\textasciicircum{}j(i)=a\_s(i)/c, a\_t\textasciicircum{}j(i)=a\_t(i)-a\_s(i)d\_t/c, and a\_r\textasciicircum{}j(i)=a\_r(i)-a\_s(i)d\_r/c; because c>0, max(-a\_s\textasciicircum{}j(i),0)=(1/c)max(-a\_s(i),0). \steptag{validated} \\[4pt]
+\step{1.2.3} For real x and y, max(x+y,0) <= max(x,0)+max(y,0); with x=-a\_t(i) and y=a\_s(i)d\_t/c this gives max(-a\_t\textasciicircum{}j(i),0)=max(-a\_t(i)+a\_s(i)d\_t/c,0) <= max(-a\_t(i),0)+max(a\_s(i)d\_t/c,0). \steptag{validated} \\[6pt]
+\step{1.2.3.1} For all real x and y, max(x+y,0) <= max(x,0)+max(y,0): if x+y <= 0 then the left side is 0, while the right side is nonnegative; if x+y > 0 then max(x+y,0)=x+y <= max(x,0)+max(y,0) because x <= max(x,0) and y <= max(y,0). \steptag{validated} \\[4pt]
+\step{1.2.3.2} With x=-a\_t(i) and y=a\_s(i)d\_t/c, the scalar inequality gives max(-a\_t(i)+a\_s(i)d\_t/c,0) <= max(-a\_t(i),0)+max(a\_s(i)d\_t/c,0). \steptag{validated} \\[4pt]
+\step{1.2.3.3} Since the coordinate formula gives a\_t\textasciicircum{}j(i)=a\_t(i)-a\_s(i)d\_t/c, the left side is max(-a\_t\textasciicircum{}j(i),0), which proves the asserted bound for the t-coordinate contribution. \steptag{validated} \\[4pt]
+\step{1.2.4} Substituting the preceding bounds into the inner expression for E\_r\textasciicircum{}j(i) gives max(-a\_s\textasciicircum{}j(i),0)+max(-a\_t\textasciicircum{}j(i),0)-1+a\_r\textasciicircum{}j(i) <= B\_i+R\_i, where B\_i=max(-a\_s(i),0)+max(-a\_t(i),0)-1+a\_r(i) and R\_i=(1/c-1)max(-a\_s(i),0)+max(a\_s(i)d\_t/c,0)-a\_s(i)d\_r/c=R\_\{r,j\}(i). \steptag{validated} \\[4pt]
+\step{1.2.5} The map z -> max(z,0) is monotone, so applying it to the previous inequality gives E\_r\textasciicircum{}j(i) <= max(B\_i+R\_i,0). \steptag{validated} \\[4pt]
+\step{1.3} For every row index i, the scalar positive-part inequality max(X+Y,0) <= max(X,0)+max(Y,0), applied with X=B\_i and Y=R\_i, gives max(B\_i+R\_i,0) <= E\_r(i)+max(R\_\{r,j\}(i),0). \steptag{validated} \\[6pt]
+\step{1.3.1} For all real X and Y, max(X+Y,0) <= max(X,0)+max(Y,0): if X+Y <= 0 the left side is 0, and if X+Y > 0 then X+Y <= max(X,0)+max(Y,0) because each real number is at most its maximum with 0. \steptag{validated} \\[4pt]
+\step{1.3.2} Apply this scalar inequality with X=B\_i and Y=R\_i to obtain max(B\_i+R\_i,0) <= max(B\_i,0)+max(R\_i,0). \steptag{validated} \\[4pt]
+\step{1.3.3} By the root definition of E\_r(i) and because q != r means q is s or t, max(B\_i,0)=max(max(-a\_s(i),0)+max(-a\_t(i),0)-1+a\_r(i),0)=E\_r(i). \steptag{validated} \\[6pt]
+\step{1.3.3.1} Within node 1.3.3, B\_i is the local abbreviation max(-a\_s(i),0)+max(-a\_t(i),0)-1+a\_r(i); it is not an independent variable or additional assumption. \steptag{validated} \\[4pt]
+\step{1.3.3.2} Since r != s and t is the remaining coordinate index among the three chart-coordinate labels, the coordinate labels q with q != r are exactly s and t. \steptag{validated} \\[4pt]
+\step{1.3.3.3} The root definition gives E\_r(i)=max(sum\_\{q != r\} max(-a\_q(i),0)-(1-a\_r(i)),0), and using the preceding identification of the q != r labels this is max(max(-a\_s(i),0)+max(-a\_t(i),0)-1+a\_r(i),0). \steptag{validated} \\[4pt]
+\step{1.3.3.4} Using the local abbreviation for B\_i, max(B\_i,0)=max(max(-a\_s(i),0)+max(-a\_t(i),0)-1+a\_r(i),0), which is E\_r(i) by the preceding step. \steptag{validated} \\[4pt]
+\step{1.3.4} Since R\_i was defined as R\_\{r,j\}(i), the preceding inequality is exactly max(B\_i+R\_i,0) <= E\_r(i)+max(R\_\{r,j\}(i),0). \steptag{validated} \\[4pt]
+\step{1.3.5} In this node B\_i denotes max(-a\_s(i),0)+max(-a\_t(i),0)-1+a\_r(i), and R\_i denotes R\_\{r,j\}(i), the same abbreviations used in node 1.2. \steptag{validated} \\[4pt]
+\step{1.4} Combining the preceding two pointwise estimates yields E\_r\textasciicircum{}j(i) <= E\_r(i)+max(R\_\{r,j\}(i),0) for every row index i, and the summation step then proves the claimed collateral import bound. \steptag{validated} \\[6pt]
+\step{1.4.1} Fix any row index i. Node 1.2 gives E\_r\textasciicircum{}j(i) <= max(B\_i+R\_i,0), and node 1.3 gives max(B\_i+R\_i,0) <= E\_r(i)+max(R\_\{r,j\}(i),0). \steptag{validated} \\[6pt]
+\step{1.4.1.1} The first displayed inequality does not require pending parent node 1.2: validated nodes 1.2.1 through 1.2.5, applied to this fixed row index i, expand E\_r\textasciicircum{}j(i) with q != r equal to s,t, substitute the pivot-removing coordinate formulas, use c > 0 and max(x+y,0) <= max(x,0)+max(y,0), identify B\_i and R\_i=R\_\{r,j\}(i), and apply monotonicity of z -> max(z,0), giving E\_r\textasciicircum{}j(i) <= max(B\_i+R\_i,0). \steptag{archived} \\[4pt]
+\step{1.4.1.2} Dependency-pinned first inequality: requiring validated nodes 1.2.1, 1.2.2, 1.2.3, 1.2.4, and 1.2.5, their chain proves directly for this fixed row i that E\_r\textasciicircum{}j(i) <= max(B\_i+R\_i,0); this cites only those validated children, not pending parent node 1.2. \steptag{validated} \\[4pt]
+\step{1.4.1.3} Self-contained second inequality: set B\_i=max(-a\_s(i),0)+max(-a\_t(i),0)-1+a\_r(i) and R\_i=R\_\{r,j\}(i). Since r != s and t is the remaining chart index, the indices q != r are exactly s and t, so the root definition of E\_r gives E\_r(i)=max(B\_i,0). The scalar inequality max(X+Y,0) <= max(X,0)+max(Y,0), applied with X=B\_i and Y=R\_i, gives max(B\_i+R\_i,0) <= max(B\_i,0)+max(R\_i,0)=E\_r(i)+max(R\_\{r,j\}(i),0). \steptag{validated} \\[4pt]
+\step{1.4.2} By transitivity of <=, E\_r\textasciicircum{}j(i) <= E\_r(i)+max(R\_\{r,j\}(i),0) for that row index i; since i was arbitrary, the pointwise row bound holds for every i. \steptag{validated} \\[4pt]
+\step{1.4.3} Node 1.1 applies this pointwise row bound to the nonnegative weights max(beta\_r(i),0) and identifies the resulting finite sums, yielding Phi\_r(V\_j) <= Phi\_r(U)+I\_\{r,j\}(U). \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

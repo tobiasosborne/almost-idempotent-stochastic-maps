@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-collateral-import/export.md",
+  "oracle": "af-lem-collateral-import",
+  "result": "pass",
+  "claim_hash": "c2d35f80dc8b12c6a7c86752bde51fdec0ae0644cd39d37ce05268977a6cfaeb",
+  "oracle_digest": "5c04ec3373937da39eb285be86b02b210f8fa8c5c9d60fe433dacd9be2b4fbd0",
+  "inputs_hash": "84d102f0f6623af1495865e0c833fe8d818adf586f1f53fbebc3cdab8b3d2e4f",
+  "ts": "2026-07-04T07:48:40.477Z"
+}
