@@ -394,3 +394,21 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   `docs/waves/2026-07-04-G13-b-lemma-conditional.md`; orchestrator re-ran the verification (exit 0).
   fr: G progress T1; frontier now = NSC(K0). Independent codex review dispatched pre-codification;
   amplifier branch still in flight.
+
+## 2026-07-04 (session 7, continued) — wave 13 complete: review APPROVE; amplifier law 0.77764; frontier = NSC
+
+- **Independent codex review of the prover draft: APPROVE** (adversarial exact grid over every case
+  split, 0 failures; one sharpening: the I^- bound is an EQUALITY with the standard A/B definitions).
+  The c<0 import tool and the conditional NSC(K0) structure are reviewer-cleared (reviewer ≠ author).
+  Artifact: waves-scratch review dir (session scratchpad); verdict recorded in the wave doc header.
+- **Wave G13 amplifier harvested** (`docs/waves/2026-07-04-G13-b-amplifier.md` +
+  `runs/2026-07-04-b-amplifier-hunt/`, L3): new record `B/δ ≈ 0.77764` with an ALGEBRAIC family-limit
+  law (irrational row-loss balance, certified rationals approach from both sides); crossing 1: NO;
+  cloning does not amplify (clone-invariance holds); alternative shapes lose the clean Γ-branch. At the
+  record point B exceeds the literal (CI)-financed total and the G12 pivot-s budget ×4.24 —
+  **orchestrator correction recorded**: the wave prompt's "kill" criterion (iii) was mis-specified (the
+  skeleton bounds I BY B); the true content is that B needs its OWN δ-scale financing (NSC / aism-z98
+  shape). Orchestrator independently recomputed the record incl. the (0,1,3)/(0,2,4) argmin tie.
+- **Frontier after wave 13: NSC(K0)** — a self-support/row-negativity principle at the argmin (not a
+  chart-move comparison; all certified B-mass is volume-inadmissible), empirical K0 ≈ 2.8. Wave 14 =
+  prove NSC via idempotence/self-support, or refute via ν-starved carrier families. fr: G progress T0.

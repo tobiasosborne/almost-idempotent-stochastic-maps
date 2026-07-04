@@ -117,3 +117,18 @@ Column contract (exact values are rational strings; one row per certified (insta
 - `B_over_delta`: the decider quantity (headline max `8400000/10897843` at `delta = 55319/1000000`).
 - `clean_gamma_js` / `gamma_js`: count of branch rows classified clean-high-self-non-fan-Gamma / Gamma
   at this argmin (worker's implementation of the G12 branch conventions).
+
+### `runs/2026-07-04-b-amplifier-hunt/data/certified_points.csv`
+
+Column contract (exact rational strings; one row per certified argmin point):
+
+- `name` / `family` / `n`: instance id, construction family, ambient dimension (rank 3 throughout).
+- `delta` / `B_over_delta`: exact negative mass and the hunt quantity (record ~ 0.77764).
+- `U` / `s` / `r` / `branch_j`: certified theta-half Phi-argmin chart (complete enumeration; ties
+  possible — see bundle README), maximal pivot, transverse index, clean-Gamma branch row.
+- `B` / `C` / `A` / `D`: exact cross-pivot masses (cancellation A = B + C - D asserted).
+- `Phi_r` / `ci_import` / `ci_total` / `B_minus_ci_total`: literal (CI) comparison at the Gamma pivot
+  (see bundle README finding 3 and the orchestrator correction — NOT a skeleton-kill criterion).
+- `reduced_total` / `B_minus_reduced_total`: same comparison under the import-reduction coefficients.
+- `budget_total` / `B_over_budget_total`: G12 pivot-s budget terms (G_class^- + S_-^mu + SIGMA) and the
+  coverage ratio (record ~ 4.24 — B needs its own delta-scale financing).
