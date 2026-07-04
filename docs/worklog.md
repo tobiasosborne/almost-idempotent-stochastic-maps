@@ -274,3 +274,19 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   AISM-14 section shard; elevation backlog (D5 ledger, G5 ledger, G6 identity) still needs codification.
 - Process: codex workers for wave/draft/review/confirm (4 dispatches + 8-worker orchestration); three
   independent codex reviewers used (reviewer ≠ author throughout); commits signed per repo convention.
+
+## 2026-07-04 (session 6 continuation) — AISM-14; wave G10: (G) cap-blocked locally, (CI) banked
+
+- **AISM-14 landed:** section shard for `lem-pivot-removing-move`; the report reproduces all THIRTEEN
+  rigorous results; status ledger shrunk accordingly (aism-t5c closed).
+- **Wave G10 (arm G, codex): the collateral-branch decider.** (G) OPEN but narrowed BOTH ways:
+  (i) the Γ-only sign pattern (`Psi_j=0 < M=2/25`, `Gamma_j=11/40 > M`) is EXACTLY realizable at a fully
+  argmin-certified 5×5 instance — but at `delta=49/60` (cap violated; tooling only); no capped instance
+  in the two/three-B-row sweeps (evidence, not emptiness). (ii) NEW T1 tool banked: the
+  **collateral-import inequality (CI)** `Phi_r(V_j) <= Phi_r(U) + I_{r,j}` with explicit positive-part
+  import, derived FROM the validated `lem-pivot-removing-move` transform, SHARP (zero slack) on the
+  witness. A clean (G) branch forces `M - Phi_r(U) <= I_{r,j}` ⇒ (PRT)'s collateral question is now:
+  charge `I_{r,j}` at the cap, or prove capped emptiness. Orchestrator recomputation reproduced the
+  witness, all branch/budget values, ratio `1600/4897`, and (CI) sharpness exactly.
+- **Queued:** codify+elevate `lem-collateral-import` (aism-bof, priority — puts wave 11 on rigorous
+  ground); arm G wave 11 = the capped charge/emptiness decider (aism-izb). fr: G progress T1, EXPLORE R.

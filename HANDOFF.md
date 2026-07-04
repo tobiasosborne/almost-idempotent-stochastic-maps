@@ -14,7 +14,7 @@ TRIGGER: session close, or a material change in the current frontier / next task
    (2026-07-03 orphan section + the 2026-07-04 frame-free callout update) + `docs/LEARNINGS.md`
    (**first entry landed**: the lem-dual-localization tautology) + `report/main.pdf` (14 shards;
    results 1–12 have sections, the 13th is ledger-row-only pending AISM-14).
-3. Wave artifacts in `docs/waves/` (B1–B4, F1–F2, A1–A12, D1–D6, G1–G8, **G9**); L3 bundles in `runs/` (6).
+3. Wave artifacts in `docs/waves/` (B1–B4, F1–F2, A1–A12, D1–D6, G1–G8, **G9–G10**); L3 bundles in `runs/` (6).
 4. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
 ## Current state (2026-07-04, session 6 CLOSE) — THIRTEEN rigorous results
@@ -55,15 +55,18 @@ confirm-pass CONFIRMed. Reviewer ≠ author throughout; three distinct codex rev
 
 ## Next steps (ranked) — RESUME HERE
 
-1. **Arm G wave 10 (`aism-93m`): decide the (G) collateral branch** — (i) targeted construction:
-   two-blocker-row designs where `V_j` is admissible, `Psi_j < M`, but some other pivot `r` has
-   `Phi_r(V_j) ≥ M` (build on the NOW-RIGOROUS `lem-pivot-removing-move` disjunction + transform
-   formulas); (ii) if construction resists, the emptiness lemma: bound `Gamma_j` by old-chart scores +
-   imports via the G8 transfer ledger, pre-factored for af. Either output decides the (PRT) assembly
-   shape. δ ≤ ¼ + complete argmin certification + exact ℚ mandatory; orchestrator recomputation of any
-   headline certificate.
-2. **AISM-14 section shard (`aism-t5c`)** for the 13th rigorous result (ledger row + PROVENANCE say
-   "section pending").
+*(2026-07-04 continuation: wave 10 RAN — see `docs/waves/2026-07-04-G10-collateral-branch.md`. (G) is
+OPEN-narrowed: the Γ-only pattern is exactly realizable but only at δ=49/60 (cap-blocked); NEW T1 tool
+banked = the collateral-import inequality **(CI)** `Phi_r(V_j) ≤ Phi_r(U) + I_{r,j}`, SHARP on the
+witness, consuming the validated pivot-removing transform. AISM-14 also landed — 13 sections now.)*
+
+1. **Codify + af-elevate `lem-collateral-import` (`aism-bof`)** — the (CI) inequality as a registry
+   shard (fully-inline contract; deps: `lem-pivot-removing-move`, VALIDATED) and elevate it: elementary
+   positive-part steps, pre-factored, small tree expected. This puts wave 11 on rigorous ground.
+2. **Arm G wave 11 (`aism-izb`): the capped charge/emptiness decider** — bound `I_{r,j}` by the unified
+   budget at δ ≤ ¼ for high-self non-fan `j` (closing the (G) charge), or construct a capped certified
+   (G) instance. The δ=49/60 witness says the pattern is only cap-blocked — the question is whether the
+   cap kills the import `R_{r,j}(k)_+` carried by collateral rows.
 3. **af-elevation backlog** (codify-then-elevate, per the session-5 queue): the D5 ledger lemma, D2
    source split, `ΣΓ⁻ ≤ δ` budget, A12 λ-correction/perturbed-DRF; G5 harmonic/cancellation ledger, G6
    ambient/chart identity + payment overhead `E_s ≤ μ_s`. All still need registry codification first
