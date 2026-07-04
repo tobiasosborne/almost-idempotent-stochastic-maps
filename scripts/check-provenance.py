@@ -199,8 +199,8 @@ def parse_provenance(prov_path=PROVENANCE):
 
 
 def status_table_rows(sections=SECTIONS):
-    """Parse the tab:status table in 11-discussion.tex -> [(status_cell_lower, [labels]), ...]."""
-    f = pathlib.Path(sections) / "11-discussion.tex"
+    """Parse the tab:status table in 13_discussion.tex -> [(status_cell_lower, [labels]), ...]."""
+    f = pathlib.Path(sections) / "13_discussion.tex"
     if not f.is_file():
         return []
     text = f.read_text(encoding="utf-8")

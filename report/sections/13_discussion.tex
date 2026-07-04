@@ -1,4 +1,4 @@
-% SHARD-ID: AISM-11-STATUS-LEDGER
+% SHARD-ID: AISM-13-STATUS-LEDGER
 % SHARD-TITLE: Status ledger for non-validated registry results
 % SHARD-SUMMARY: Anchors every registry result not already reproduced as an af-validated section.
 % SHARD-SUMMARY: Preserves each remaining result's honest status without promoting inherited or numerical claims.
@@ -7,15 +7,15 @@
 
 The rows below are anchors, not upgrades.  They give every remaining
 registry result a report label while preserving the registry status.
-The seven \texttt{af}-validated results are reproduced in
-\ref{lem:classical-equiv}--\ref{lem:factorization}; they are not
-duplicated in this ledger.
+The twelve \texttt{af}-validated results are reproduced in
+\ref{lem:classical-equiv}--\ref{lem:fan-payment-restricted}; they are
+not duplicated in this ledger.
 
 \small
 \begin{longtable}{>{\raggedright\arraybackslash}p{0.25\textwidth}
                   >{\raggedright\arraybackslash}p{0.16\textwidth}
                   >{\raggedright\arraybackslash}p{0.49\textwidth}}
-\caption{Registry status ledger for report anchors outside the seven validated sections.}\\
+\caption{Registry status ledger for report anchors outside the twelve validated sections.}\\
 \toprule
 Registry id & Status & Contract gloss \\
 \midrule
@@ -28,11 +28,6 @@ Registry id & Status & Contract gloss \\
 \label{lem:canonical-separator}\texttt{lem-canonical-separator}\makebox[0pt][l]{\phantom{\ref{lem:canonical-separator}}} & proved-mod-audit & Canonical separator package for a hidden top vertex and its harmonic deficit; inherited/mod-audit only. \\
 \label{lem:dual-localization}\texttt{lem-dual-localization}\makebox[0pt][l]{\phantom{\ref{lem:dual-localization}}} & open & Frame-free dual-localization gap behind the linear-law route; explicitly open. \\
 \label{lem:exposed-circuit}\texttt{lem-exposed-circuit}\makebox[0pt][l]{\phantom{\ref{lem:exposed-circuit}}} & proved-mod-audit & Concentration and circuit estimate for exposed vertices; inherited/mod-audit only. \\
-\label{lem:fan-payment}\texttt{lem-fan-payment}\makebox[0pt][l]{\phantom{\ref{lem:fan-payment}}} & proved (af: validated) & Zero-sum fan payment inequality with constant two; af-validated in-repo 2026-07-03 (15-node tree, taint clean; factored workspace). \\
-\label{lem:weighted-min}\texttt{lem-weighted-min}\makebox[0pt][l]{\phantom{\ref{lem:weighted-min}}} & proved (af: validated) & Weighted minimum bound; af-validated in-repo 2026-07-03 (8-node tree, taint clean). \\
-\label{lem:zerosum-triangle}\texttt{lem-zerosum-triangle}\makebox[0pt][l]{\phantom{\ref{lem:zerosum-triangle}}} & proved (af: validated) & Zero-sum triangle bound for negative-part mass; af-validated in-repo 2026-07-03 (10-node tree, taint clean). \\
-\label{lem:fan-payment-restricted}\texttt{lem-fan-payment-restricted}\makebox[0pt][l]{\phantom{\ref{lem:fan-payment-restricted}}} & proved (af: validated) & D-restricted zero-sum fan payment with sharp constant two plus root two; af-validated in-repo 2026-07-03 (27-node tree, taint clean). \\
-\label{lem:negpart-subadditive}\texttt{lem-negpart-subadditive}\makebox[0pt][l]{\phantom{\ref{lem:negpart-subadditive}}} & proved (af: validated) & Negative-part subadditivity; af-validated in-repo 2026-07-03 (16-node tree, taint clean). \\
 \label{lem:leakage}\texttt{lem-leakage}\makebox[0pt][l]{\phantom{\ref{lem:leakage}}} & proved-mod-audit & Affine-face leakage estimate for almost-idempotent stochastic rows; inherited/mod-audit only. \\
 \label{lem:wiggle-rigidity}\texttt{lem-wiggle-rigidity}\makebox[0pt][l]{\phantom{\ref{lem:wiggle-rigidity}}} & proved-mod-audit & F-WR wiggle-rigidity estimate for common-pattern webs; side conditions remain inherited. \\
 \label{obs:deep-leakage}\texttt{obs-deep-leakage}\makebox[0pt][l]{\phantom{\ref{obs:deep-leakage}}} & heuristic & Heuristic obstruction showing why a purely local row-identity argument cannot price deep-side mass. \\

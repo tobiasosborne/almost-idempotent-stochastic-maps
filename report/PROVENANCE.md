@@ -9,7 +9,7 @@ hashed proof/consensus file. Results original to this project are marked `ORIGIN
 
 Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 
-> **Current report surface.** The first shards reproduce seven `af`-validated results and anchor every
+> **Current report surface.** The first shards reproduce twelve `af`-validated results and anchor every
 > remaining registry result in the status ledger. Non-rigorous registry statuses are copied honestly;
 > the ledger rows below are anchors, not promotions.
 
@@ -92,11 +92,11 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | lem:dual-localization | ARG-LEM-DUAL-LOCALIZATION | registry contract | OPEN | Status ledger anchor only; registry status `open`. |
 | lem:exposed-circuit | ARG-LEM-EXPOSED-CIRCUIT | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:factorization | ARG-LEM-FACTORIZATION AF-LEM-FACTORIZATION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree, tightness claim not elevated. |
-| lem:fan-payment | ARG-LEM-FAN-PAYMENT AF-LEM-FAN-PAYMENT | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (15-node tree, taint clean; run 3 on the factored workspace). |
-| lem:weighted-min | ARG-LEM-WEIGHTED-MIN AF-LEM-WEIGHTED-MIN | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (8-node tree, taint clean). |
-| lem:zerosum-triangle | ARG-LEM-ZEROSUM-TRIANGLE AF-LEM-ZEROSUM-TRIANGLE | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (10-node tree, taint clean; run 1). |
-| lem:fan-payment-restricted | ARG-LEM-FAN-PAYMENT-RESTRICTED AF-LEM-FAN-PAYMENT-RESTRICTED | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (27-node tree, taint clean; run 1). |
-| lem:negpart-subadditive | ARG-LEM-NEGPART-SUBADDITIVE AF-LEM-NEGPART-SUBADDITIVE | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-03 (16-node tree, taint clean). |
+| lem:fan-payment | ARG-LEM-FAN-PAYMENT AF-LEM-FAN-PAYMENT | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-3 tree on the factored workspace, runs 1-2 ballooned. |
+| lem:weighted-min | ARG-LEM-WEIGHTED-MIN AF-LEM-WEIGHTED-MIN | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; verify phase resumed after a network outage. |
+| lem:zerosum-triangle | ARG-LEM-ZEROSUM-TRIANGLE AF-LEM-ZEROSUM-TRIANGLE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree, factored out of lem-fan-payment. |
+| lem:fan-payment-restricted | ARG-LEM-FAN-PAYMENT-RESTRICTED AF-LEM-FAN-PAYMENT-RESTRICTED | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree; sharpness certificates not elevated. |
+| lem:negpart-subadditive | ARG-LEM-NEGPART-SUBADDITIVE AF-LEM-NEGPART-SUBADDITIVE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree, pre-factored before elevation. |
 | lem:leakage | ARG-LEM-LEAKAGE | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:wiggle-rigidity | ARG-LEM-WIGGLE-RIGIDITY | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | obs:deep-leakage | ARG-OBS-DEEP-LEAKAGE | registry contract | HEURISTIC | Status ledger anchor only; registry status `heuristic`. |

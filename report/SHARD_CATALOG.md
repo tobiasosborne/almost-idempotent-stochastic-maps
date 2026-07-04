@@ -79,8 +79,43 @@ verbatim), and keywords.
 - **Summary:** Summarizes the clean 11-live-node run-1 tree and notes the tightness claim was not elevated.
 - **Keywords:** lem-factorization, af validated, factorization, chart scores, (EX) composition
 
-## `AISM-11-STATUS-LEDGER`
-- **File:** `report/sections/11-discussion.tex`
+## `AISM-08-ZEROSUM-TRIANGLE`
+- **File:** `report/sections/08_zerosum_triangle.tex`
+- **Title:** Zero-sum triangle bound
+- **Summary:** Reproduces the registry contract for lem-zerosum-triangle, an af-validated negative-part triangle inequality.
+- **Summary:** Summarizes the clean 10-node run-1 tree and its role as the first factored dependency of the fan payment lemma.
+- **Keywords:** lem-zerosum-triangle, af validated, negative part, zero coordinate sum, triangle inequality
+
+## `AISM-09-WEIGHTED-MIN`
+- **File:** `report/sections/09_weighted_min.tex`
+- **Title:** Weighted minimum bound
+- **Summary:** Reproduces the registry contract for lem-weighted-min, an af-validated averaging selection bound.
+- **Summary:** Summarizes the clean 8-node tree and its role as the support-averaging step of the fan payment proof.
+- **Keywords:** lem-weighted-min, af validated, weighted average, support averaging, index selection
+
+## `AISM-10-FAN-PAYMENT`
+- **File:** `report/sections/10_fan_payment.tex`
+- **Title:** Zero-sum fan payment
+- **Summary:** Reproduces the registry contract for lem-fan-payment, the af-validated all-mass fan payment inequality.
+- **Summary:** Summarizes the factored 15-node run-3 tree after two balloon aborts and its role behind the plateau-2 constant.
+- **Keywords:** lem-fan-payment, af validated, fan payment, plateau 2, payment horn
+
+## `AISM-11-NEGPART-SUBADDITIVE`
+- **File:** `report/sections/11_negpart_subadditive.tex`
+- **Title:** Negative-part subadditivity
+- **Summary:** Reproduces the registry contract for lem-negpart-subadditive, an af-validated pointwise subadditivity bound.
+- **Summary:** Summarizes the clean 16-node run-1 tree and its role as the pre-factored barycenter step of the D-restricted fan proof.
+- **Keywords:** lem-negpart-subadditive, af validated, negative part, subadditivity, barycenter step
+
+## `AISM-12-FAN-PAYMENT-RESTRICTED`
+- **File:** `report/sections/12_fan_payment_restricted.tex`
+- **Title:** D-restricted zero-sum fan payment
+- **Summary:** Reproduces the registry contract for lem-fan-payment-restricted, af-validated with sharp constant two plus root two.
+- **Summary:** Summarizes the clean 27-node run-1 tree and records that constant two is exactly refuted for this variant.
+- **Keywords:** lem-fan-payment-restricted, af validated, D-restricted, sharp constant, payment horn
+
+## `AISM-13-STATUS-LEDGER`
+- **File:** `report/sections/13_discussion.tex`
 - **Title:** Status ledger for non-validated registry results
 - **Summary:** Anchors every registry result not already reproduced as an af-validated section.
 - **Summary:** Preserves each remaining result's honest status without promoting inherited or numerical claims.

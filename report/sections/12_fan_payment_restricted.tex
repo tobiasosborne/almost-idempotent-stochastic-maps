@@ -1,0 +1,34 @@
+% SHARD-ID: AISM-12-FAN-PAYMENT-RESTRICTED
+% SHARD-TITLE: D-restricted zero-sum fan payment
+% SHARD-SUMMARY: Reproduces the registry contract for lem-fan-payment-restricted, af-validated with sharp constant two plus root two.
+% SHARD-SUMMARY: Summarizes the clean 27-node run-1 tree and records that constant two is exactly refuted for this variant.
+% SHARD-KEYWORDS: lem-fan-payment-restricted, af validated, D-restricted, sharp constant, payment horn
+\section{D-restricted zero-sum fan payment}\label{sec:fan-payment-restricted}
+
+\begin{lemma}[Registry contract for \texttt{lem-fan-payment-restricted}]
+\label{lem:fan-payment-restricted}
+\contractquote{D-restricted zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite family with vectors w_i in R^d and weights p_i > 0 satisfying sum_i p_i = 1, such that every w_i has coordinate sum zero and the weighted barycenter is zero (sum_i p_i w_i = 0); write n(w) = sum_l max(-w(l), 0); let w_* be a minimizer of v -> sum_i p_i n(w_i - v) over {w_1, ..., w_m} and let A = { i : n(w_i - w_*) > 0 }; then sum_{i in A} p_i n(w_i - w_*) <= (2 + sqrt(2)) * sum_{i in A} p_i n(w_i).}
+\end{lemma}
+
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
+This is one of the rigorous in-repo results.
+
+\noindent\textbf{Proof tree.} The registry shard records a 27-node
+adversarial tree, root \texttt{validated}, taint \texttt{27/27 clean},
+closed in run 1 after ten rounds; it imports the \texttt{af}-validated
+dependencies \ref{lem:zerosum-triangle} and
+\ref{lem:negpart-subadditive} as externals.  The export is
+\texttt{proofs/lem-fan-payment-restricted/export.md}.  Proof shape:
+with $q$ the duplicate-pivot mass, horn (i) gives $N \le D/q$ and horn
+(ii) gives $N \le 2(1-q)/(1-2q)\,D$ for $q < 1/2$; the bounds cross at
+$q_0 = 1 - 1/\sqrt{2}$ with common value $2 + \sqrt{2}$.
+
+\noindent\textbf{Role in the chain.} The D-restricted refinement of
+\ref{lem:fan-payment}: the denominator keeps only rows with positive
+distance to the selected pivot, the fan shadow of the degenerate-set
+restriction behind \texttt{conj-degenerate-payment}.  The registry
+shard body records exact certificates (wave material, not elevated
+here) refuting constant $2$ for this variant and attaining
+$2 + \sqrt{2}$ in the limit, so the validated constant is sharp.  The
+remaining obstruction toward \texttt{conj-degenerate-payment} is the
+lift from $\theta$-$\tfrac12$ argmin rows to this fan model.

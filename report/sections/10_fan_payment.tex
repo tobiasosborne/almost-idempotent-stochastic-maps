@@ -1,0 +1,33 @@
+% SHARD-ID: AISM-10-FAN-PAYMENT
+% SHARD-TITLE: Zero-sum fan payment
+% SHARD-SUMMARY: Reproduces the registry contract for lem-fan-payment, the af-validated all-mass fan payment inequality.
+% SHARD-SUMMARY: Summarizes the factored 15-node run-3 tree after two balloon aborts and its role behind the plateau-2 constant.
+% SHARD-KEYWORDS: lem-fan-payment, af validated, fan payment, plateau 2, payment horn
+\section{Zero-sum fan payment}\label{sec:fan-payment}
+
+\begin{lemma}[Registry contract for \texttt{lem-fan-payment}]
+\label{lem:fan-payment}
+\contractquote{Zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite family with vectors w_i in R^d and weights p_i > 0 satisfying sum_i p_i = 1, such that every w_i has coordinate sum zero (sum_l w_i(l) = 0) and the weighted barycenter is zero (sum_i p_i w_i = 0); write n(w) = sum_l max(-w(l), 0); then min over i* in {1, ..., m} of sum_i p_i n(w_i - w_{i*}) <= 2 * sum_i p_i n(w_i).}
+\end{lemma}
+
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
+This is one of the rigorous in-repo results.
+
+\noindent\textbf{Proof tree.} The registry shard records a 15-node
+adversarial tree, root \texttt{validated}, taint \texttt{15/15 clean},
+closed in run 3 on the factored workspace; it imports the
+\texttt{af}-validated dependencies \ref{lem:zerosum-triangle} and
+\ref{lem:weighted-min} as externals.  Runs 1--2, before the factoring,
+balloon-aborted at 39 and 47 nodes; the factoring cured the balloon
+(15 versus 47).  The export is
+\texttt{proofs/lem-fan-payment/export.md}.
+
+\noindent\textbf{Role in the chain.} The all-mass fan payment lemma is
+the discrete mechanism behind the certified plateau-2 constant on the
+reduced fan families of the arm-A campaign: in a reduced edge-fan
+chart the anchor-pivot score is exactly the weighted average
+$\sum_i p_i\, n(w_i - w_*)$, so this lemma bounds the fan-template
+$\Phi/\delta$ by $2$.  The registry shard body additionally records an
+exact refutation certificate for the over-broad variant (arbitrary
+$w_0$, no zero-sum hypothesis, ratio $5$); that certificate is wave
+material and is not elevated here.

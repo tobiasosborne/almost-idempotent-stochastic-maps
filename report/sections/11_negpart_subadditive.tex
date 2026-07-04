@@ -1,0 +1,27 @@
+% SHARD-ID: AISM-11-NEGPART-SUBADDITIVE
+% SHARD-TITLE: Negative-part subadditivity
+% SHARD-SUMMARY: Reproduces the registry contract for lem-negpart-subadditive, an af-validated pointwise subadditivity bound.
+% SHARD-SUMMARY: Summarizes the clean 16-node run-1 tree and its role as the pre-factored barycenter step of the D-restricted fan proof.
+% SHARD-KEYWORDS: lem-negpart-subadditive, af validated, negative part, subadditivity, barycenter step
+\section{Negative-part subadditivity}\label{sec:negpart-subadditive}
+
+\begin{lemma}[Registry contract for \texttt{lem-negpart-subadditive}]
+\label{lem:negpart-subadditive}
+\contractquote{Negative-part subadditivity: for all vectors x and y in R^d, writing n(w) = sum_l max(-w(l), 0), one has n(x + y) <= n(x) + n(y).}
+\end{lemma}
+
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
+This is one of the rigorous in-repo results.
+
+\noindent\textbf{Proof tree.} The registry shard records a 16-node
+adversarial tree, root \texttt{validated}, taint \texttt{16/16 clean},
+closed in run 1.  The export is
+\texttt{proofs/lem-negpart-subadditive/export.md}.  The lemma was
+pre-factored \emph{before} elevation, applying the balloon lesson from
+\texttt{lem-fan-payment} instead of re-learning it.
+
+\noindent\textbf{Role in the chain.} Pre-factored dependency of
+\ref{lem:fan-payment-restricted}: the D-restricted fan proof's
+barycenter step $D \ge n(\sum_{i \in A} p_i w_i)$ uses exactly this
+pointwise subadditivity (with nonnegative homogeneity, which is
+definitional).

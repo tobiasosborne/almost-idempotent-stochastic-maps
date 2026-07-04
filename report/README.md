@@ -47,4 +47,9 @@ mid-check.
 | 05 | `AISM-05-RESIDUAL-UPPER` | `report/sections/05_residual_upper.tex` |
 | 06 | `AISM-06-HALO-COLLAPSE` | `report/sections/06_halo_collapse.tex` |
 | 07 | `AISM-07-FACTORIZATION` | `report/sections/07_factorization.tex` |
-| 11 | `AISM-11-STATUS-LEDGER` | `report/sections/11-discussion.tex` |
+| 08 | `AISM-08-ZEROSUM-TRIANGLE` | `report/sections/08_zerosum_triangle.tex` |
+| 09 | `AISM-09-WEIGHTED-MIN` | `report/sections/09_weighted_min.tex` |
+| 10 | `AISM-10-FAN-PAYMENT` | `report/sections/10_fan_payment.tex` |
+| 11 | `AISM-11-NEGPART-SUBADDITIVE` | `report/sections/11_negpart_subadditive.tex` |
+| 12 | `AISM-12-FAN-PAYMENT-RESTRICTED` | `report/sections/12_fan_payment_restricted.tex` |
+| 13 | `AISM-13-STATUS-LEDGER` | `report/sections/13_discussion.tex` |
