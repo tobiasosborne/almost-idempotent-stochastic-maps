@@ -23,7 +23,11 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-CONJ-HALO-COLLAPSE` | `argument/lemmas/conj-halo-collapse.md` | `34f4de8d0861573d` | Registry shard for `conj-halo-collapse` |
 | `ARG-CONJ-KERNEL` | `argument/lemmas/conj-kernel.md` | `9c1f2f250cf211a6` | Registry shard for `conj-kernel` |
 | `ARG-CONJ-NO-FREE-FRONTIER` | `argument/lemmas/conj-no-free-frontier.md` | `070ea358dbc4c1b9` | Registry shard for `conj-no-free-frontier` |
+| `ARG-CONJ-RH` | `argument/lemmas/conj-rh.md` | `32d9183c905dfe31` | Registry shard for `conj-rh` |
+| `ARG-CONJ-SC` | `argument/lemmas/conj-sc.md` | `97a6fac2e65508ed` | Registry shard for `conj-sc` |
 | `ARG-CONJ-SKINNY-SHADOW-CAP` | `argument/lemmas/conj-skinny-shadow-cap.md` | `c44aa05083b9e8c6` | Registry shard for `conj-skinny-shadow-cap` |
+| `ARG-OBS-ORPHAN-AMPLIFIER` | `argument/lemmas/obs-orphan-amplifier.md` | `7472032fae335d9e` | Registry shard for `obs-orphan-amplifier` |
+| `ARG-LEM-PIVOT-REMOVING-MOVE` | `argument/lemmas/lem-pivot-removing-move.md` | `24217bd20e7876ae` | Registry shard for `lem-pivot-removing-move` |
 | `ARG-EX-HUME` | `argument/lemmas/ex-hume.md` | `db5fb7b80f69be6a` | Registry shard for `ex-hume` |
 | `ARG-LEM-CANONICAL-SEPARATOR` | `argument/lemmas/lem-canonical-separator.md` | `10d34ab7f83bfd0c` | Registry shard for `lem-canonical-separator` |
 | `ARG-LEM-CLASSICAL-EQUIV` | `argument/lemmas/lem-classical-equiv.md` | `2f3a5574f2dfbbde` | Registry shard for `lem-classical-equiv` |
@@ -89,7 +93,11 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | conj:halo-collapse | ARG-CONJ-HALO-COLLAPSE AF-CONJ-HALO-COLLAPSE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-2 tree on the factored workspace. |
 | conj:kernel | ARG-CONJ-KERNEL | registry contract | OPEN | Status ledger anchor only; registry status `conjecture`. |
 | conj:no-free-frontier | ARG-CONJ-NO-FREE-FRONTIER | registry contract | OPEN | Status ledger anchor only; registry status `conjecture`. |
+| conj:rh | ARG-CONJ-RH | registry contract | OPEN | Status ledger anchor only; registry status `conjecture` (repaired orphan horn; exact coefficient floor 4 from obs-orphan-amplifier). |
+| conj:sc | ARG-CONJ-SC | registry contract | OPEN | Status ledger anchor only; registry status `conjecture` ((SC) control; reduced to (PRT), collateral branch open after G9). |
 | conj:skinny-shadow-cap | ARG-CONJ-SKINNY-SHADOW-CAP | registry contract | OPEN | Status ledger anchor only; registry status `conjecture` (corrected Route-B skinny cap; supersedes lem-dual-localization). |
+| obs:orphan-amplifier | ARG-OBS-ORPHAN-AMPLIFIER | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (exact G5 two-orphan family; identities orchestrator-recomputed 2026-07-04). |
+| lem:pivot-removing-move | ARG-LEM-PIVOT-REMOVING-MOVE | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (G7 pivot-removing tool; wave paper-proof, unreviewed). |
 | ex:hume | ARG-EX-HUME | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`, not rigorous here. |
 | lem:canonical-separator | ARG-LEM-CANONICAL-SEPARATOR | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:dual-localization | ARG-LEM-DUAL-LOCALIZATION | registry contract | SUPERSEDED | Retired 2026-07-04 (contract trivially true as stated); superseded by conj-skinny-shadow-cap; registry status `obstruction`. |
