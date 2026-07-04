@@ -1,0 +1,19 @@
+name,family,delta,U,s,r,B,C,A,D,B_over_delta,clean_gamma_js,gamma_js
+insert-y=681/10000,compensated-insert,55319/1000000,0 2 4,2,0,0,0,0,0,0,1,1
+insert-y=681/10000,compensated-insert,55319/1000000,0 2 4,2,1,42/985,0,42/985,0,8400000/10897843,1,1
+insert-y=17/250,compensated-insert,1383/25000,0 2 4,2,0,0,0,0,0,0,1,1
+insert-y=17/250,compensated-insert,1383/25000,0 2 4,2,1,42/985,0,42/985,0,70000/90817,1,1
+insert-y=1/20,compensated-insert,111/2000,0 2 4,2,0,0,0,0,0,0,1,1
+insert-y=1/20,compensated-insert,111/2000,0 2 4,2,1,42/985,0,42/985,0,5600/7289,1,1
+insert-y=3/100,compensated-insert,557/10000,0 2 4,2,0,0,0,0,0,0,1,1
+insert-y=3/100,compensated-insert,557/10000,0 2 4,2,1,42/985,0,42/985,0,84000/109729,1,1
+insert-y=1/100,compensated-insert,559/10000,0 2 4,2,0,0,0,0,0,0,1,1
+insert-y=1/100,compensated-insert,559/10000,0 2 4,2,1,42/985,0,42/985,0,84000/110123,1,1
+two-carrier-A,two-carrier,7/125,0 2 4,2,0,0,0,0,0,0,1,1
+two-carrier-A,two-carrier,7/125,0 2 4,2,1,42/985,0,42/985,0,150/197,1,1
+two-carrier-B,two-carrier,99/1250,0 2 4,2,0,0,0,0,0,0,1,1
+two-carrier-B,two-carrier,99/1250,0 2 4,2,1,3/50,0,3/50,0,25/33,1,1
+two-carrier-C,two-carrier,21/250,0 2 4,2,0,0,0,0,0,0,1,1
+two-carrier-C,two-carrier,21/250,0 2 4,2,1,24/397,0,24/397,0,2000/2779,1,1
+two-carrier-D,two-carrier,71/625,0 2 4,2,0,0,0,0,0,0,1,1
+two-carrier-D,two-carrier,71/625,0 2 4,2,1,71/900,0,71/900,0,25/36,1,1

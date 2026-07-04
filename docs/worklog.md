@@ -365,3 +365,16 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   conflate with the G12 maximal-pivot convention. Verdict: the "machinery visibly breaks at rank 4"
   kill scenario is OFF; rank generalization stays open as proof work. fr: F progress T0.
 - Decider #2 (small-δ certified argmin sweep) still in flight (codex background worker).
+
+## 2026-07-04 (session 7, continued) — de-risk decider #2 banked: B/delta ≈ 0.771 at small delta; wave 13 GO
+
+- **`runs/2026-07-04-small-delta-b-sweep/` (L3, codex-built, orchestrator-recomputed):** the evidence-audit
+  blind spot is filled and the picture CHANGES — `B/δ` does not vanish at small δ, it rises: max certified
+  `B/δ = 8400000/10897843 ≈ 0.771` at `δ ≈ 0.055` (compensated-insert family, clean high-self non-fan
+  Γ-branch, UNIQUE certified θ-½ argmin; orchestrator independently re-derived δ, the 8-chart θ-half
+  census, the argmin, and `B=42/985` via its own Gaussian-elimination/Gram code). Ten certified points in
+  `[0.69, 0.771]` across two families. Every amplification attempt was obstructed by argmin switching
+  (non-argmin `B/δ` up to 50 never survives certification — reproducing G12), Ψ-flips, or high-self loss —
+  minimality binds. Consequences: "all capped-argmin data is sub-δ" was a δ≈cap artifact; the B-lemma
+  needs `K ≥ 0.771` (δ-scale, not ε); `aism-z98` gains direct evidence that a full δ-scale B term must be
+  absorbed. **Wave 13 GO** (both deciders passed); frontier updated in fr. fr: G progress T0.

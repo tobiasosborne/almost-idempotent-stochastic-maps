@@ -103,3 +103,17 @@ Column contract (all exact values are rational strings; one row per certified in
   disjunction asserted exactly on each).
 - `ci_pairs_checked` / `worst_ci_slack`: rank-4 `c>0` (CI) transcription checks; slack `0` = sharp.
 - `rank5_probe`: `True` for the cheap rank-5 probes (reduced coverage — see bundle README scope).
+
+### `runs/2026-07-04-small-delta-b-sweep/data/certified_points.csv`
+
+Column contract (exact values are rational strings; one row per certified (instance, s, r) mass):
+
+- `name` / `family`: instance id and construction family (`compensated-insert`, `two-carrier`).
+- `delta`: exact negative mass `delta(P)`.
+- `U`: certified theta-half Phi-argmin chart (row indices, space-separated; complete actual-row chart
+  enumeration per instance).
+- `s` / `r`: maximal pivot and transverse index for the reported masses (G12 convention).
+- `B` / `C` / `A` / `D`: exact cross-pivot masses; cancellation `A = B + C - D` hard-asserted.
+- `B_over_delta`: the decider quantity (headline max `8400000/10897843` at `delta = 55319/1000000`).
+- `clean_gamma_js` / `gamma_js`: count of branch rows classified clean-high-self-non-fan-Gamma / Gamma
+  at this argmin (worker's implementation of the G12 branch conventions).
