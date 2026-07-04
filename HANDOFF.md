@@ -10,20 +10,23 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md` — esp. L0 rigour ladder, Rule 13 dead routes).
-2. Run `fr board` and `bd ready`. Skim `argument/DAG.md` (**13 green nodes**) + `FINDINGS.md`
+2. Run `fr board` and `bd ready`. Skim `argument/DAG.md` (**14 green nodes**) + `FINDINGS.md`
    (2026-07-03 orphan section + the 2026-07-04 frame-free callout update) + `docs/LEARNINGS.md`
-   (**first entry landed**: the lem-dual-localization tautology) + `report/main.pdf` (14 shards;
-   results 1–12 have sections, the 13th is ledger-row-only pending AISM-14).
-3. Wave artifacts in `docs/waves/` (B1–B4, F1–F2, A1–A12, D1–D6, G1–G8, **G9–G10**); L3 bundles in `runs/` (6).
+   (**first entry landed**: the lem-dual-localization tautology) + `report/main.pdf` (15 shards;
+   results 1–13 have sections, the 14th is ledger-row-only pending AISM-15, `aism-*` open issue).
+3. Wave artifacts in `docs/waves/` (B1–B4, F1–F2, A1–A12, D1–D6, G1–G8, **G9–G11**); L3 bundles in `runs/` (6).
 4. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-04, session 6 CLOSE) — THIRTEEN rigorous results
+## Current state (2026-07-04, session 6 CLOSE + continuation) — FOURTEEN rigorous results
 
 **Rigorous (af-validated in-repo, banked, T0):** results 1–12 unchanged (see `argument/INDEX.md`) plus
 **13. `lem-pivot-removing-move`** — the G7 pivot-removing chart move (exact volume factor `|a_s(j)|`,
 coordinate transform, and the max-stationarity disjunction `Phi_s(U) <= max(Psi_j, Gamma_j)` at a θ-½
 Φ-argmin). Run 1 clean: 9-node tree, 3 rounds, ZERO challenges, taint 9/9; `fr verify` pass
-(oracle `af-lem-pivot-removing-move`). **The (SC)/(PRT) minimality tool is now rigorous.**
+(oracle `af-lem-pivot-removing-move`). **The (SC)/(PRT) minimality tool is now rigorous.** And
+**14. `lem-collateral-import`** — the (CI) import bound `Phi_r(V_j) <= Phi_r(U) + I_{r,j}` (run 1
+clean: 32-node tree, 6 rounds, zero open challenges, taint 32/32; imports result 13 as external;
+`fr verify` pass). **The collateral branch is bracketed by rigorous statements.**
 
 **Session 6 headlines:**
 
@@ -55,18 +58,21 @@ confirm-pass CONFIRMed. Reviewer ≠ author throughout; three distinct codex rev
 
 ## Next steps (ranked) — RESUME HERE
 
-*(2026-07-04 continuation: wave 10 RAN — see `docs/waves/2026-07-04-G10-collateral-branch.md`. (G) is
-OPEN-narrowed: the Γ-only pattern is exactly realizable but only at δ=49/60 (cap-blocked); NEW T1 tool
-banked = the collateral-import inequality **(CI)** `Phi_r(V_j) ≤ Phi_r(U) + I_{r,j}`, SHARP on the
-witness, consuming the validated pivot-removing transform. AISM-14 also landed — 13 sections now.)*
+*(2026-07-04 continuation, part 2: `lem-collateral-import` is the **FOURTEENTH rigorous result**
+(af-validated run 1, 32 nodes, zero open challenges; `fr verify` pass). Wave 11 RAN — see
+`docs/waves/2026-07-04-G11-capped-charge.md`: (CHARGE) PARTIAL; the dominant import reduces via the
+exact B-L cancellation `Σ_i β_r(i)a_s(i)=0` to the cross-pivot masses `B_{r,s}+C_{r,s}`, which are
+NOT in the pivot-s budget — **the (PRT) residual is now the cross-pivot charge question**. No capped
+clean (G) in 360k sweeps; certified capped near miss only (δ=¼, Ψ=69/250 and Γ=21/80 both > M=1/10).)*
 
-1. **Codify + af-elevate `lem-collateral-import` (`aism-bof`)** — the (CI) inequality as a registry
-   shard (fully-inline contract; deps: `lem-pivot-removing-move`, VALIDATED) and elevate it: elementary
-   positive-part steps, pre-factored, small tree expected. This puts wave 11 on rigorous ground.
-2. **Arm G wave 11 (`aism-izb`): the capped charge/emptiness decider** — bound `I_{r,j}` by the unified
-   budget at δ ≤ ¼ for high-self non-fan `j` (closing the (G) charge), or construct a capped certified
-   (G) instance. The δ=49/60 witness says the pattern is only cap-blocked — the question is whether the
-   cap kills the import `R_{r,j}(k)_+` carried by collateral rows.
+1. **Codify + af-elevate the G11 tools (`aism-cw8`)** — TWO separate minimal shards:
+   `lem-cross-pivot-cancellation` (the B-L identity, tiny near-definitional tree) and
+   `lem-import-reduction` (bound (4), deps on the VALIDATED `lem-collateral-import`).
+2. **Arm G wave 12 (`aism-4uh`): the cross-pivot charge decider** — (i) pay `B_{r,s}+C_{r,s}` from
+   the pivot-s budget using argmin minimality; or (ii) propose the budget reshape (a transverse-pivot
+   term in (SC)/(RH) — the G5→G6 SIGMA-repair pattern one level up; test against ALL certified
+   instances); or (iii) capped (G) construction seeded from the G11 near miss (push Ψ below M while
+   keeping Γ up). Exact ℚ + complete argmin certification + orchestrator recomputation.
 3. **af-elevation backlog** (codify-then-elevate, per the session-5 queue): the D5 ledger lemma, D2
    source split, `ΣΓ⁻ ≤ δ` budget, A12 λ-correction/perturbed-DRF; G5 harmonic/cancellation ledger, G6
    ambient/chart identity + payment overhead `E_s ≤ μ_s`. All still need registry codification first
@@ -89,7 +95,7 @@ workers told no fr/bd; wave prompts + answers + transcripts live in the session 
 sh scripts/check-all.sh
 python3 scripts/seed-af-workspaces.py <id>       # then COMMIT before orchestrating
 python3 scripts/af-orchestrate.py <id> --workers 8 --max-rounds 14 --node-cap 40   # background
-fr verify proofs/<id>/export.md --oracle af-<id>   # 13 oracles registered
+fr verify proofs/<id>/export.md --oracle af-<id>   # 14 oracles registered
 # wave dispatch:
 codex exec --skip-git-repo-check -C <repo> -s workspace-write -o <answer> - < <prompt>
 # af export (run INSIDE proofs/<id>/; af export prints to stdout):
@@ -98,7 +104,7 @@ cd proofs/<id> && "$AF" export -f markdown > export.md && "$AF" export -f latex 
 
 ## What is intentionally NOT here
 
-- Any claim that more than THIRTEEN results are rigorous (all other arm-G output is honest
+- Any claim that more than FOURTEEN results are rigorous (all other arm-G output is honest
   conjecture / proved-mod-audit / wave-tier material).
 - Any claim (EX)/Kernel/op-classical is closed — open inputs: (PRT)'s (G) collateral branch ⇒ (SC) ⇒
   (RH) on the A-side engine, (BN), the B-side sigma-cap. ((SI), both orphan exclusions, the

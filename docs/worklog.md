@@ -290,3 +290,21 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   witness, all branch/budget values, ratio `1600/4897`, and (CI) sharpness exactly.
 - **Queued:** codify+elevate `lem-collateral-import` (aism-bof, priority — puts wave 11 on rigorous
   ground); arm G wave 11 = the capped charge/emptiness decider (aism-izb). fr: G progress T1, EXPLORE R.
+
+## 2026-07-04 (session 6 continuation, part 2) — 14th rigorous result; waves G11: the cross-pivot residual
+
+- **14th rigorous result:** `lem-collateral-import` — the (CI) bound `Phi_r(V_j) <= Phi_r(U) + I_{r,j}`
+  — codified (independent codex review APPROVE, no corrections) and af-VALIDATED same-day (run 1,
+  32-node tree, 6 rounds, zero open challenges, taint 32/32; imports the validated
+  pivot-removing move). Oracle registered, `fr verify` pass, banked (arm R, EXPLOIT G). AISM-15
+  section shard filed.
+- **Wave G11 (arm G, codex): the capped charge decider.** (CHARGE) PARTIAL — T1 tools banked:
+  the exact B-L cross-pivot cancellation `sum_i beta_r(i)a_s(i)=0` (so `A_{r,s}=B_{r,s}+C_{r,s}-D_{r,s}`)
+  and the universal import reduction (4). The dominant import term reduces to `B_{r,s}+C_{r,s}` —
+  cross-pivot masses NOT in the pivot-s unified budget: **the (PRT) residual is now the cross-pivot
+  charge question** (pay it, reshape the budget with a transverse-pivot term à la the G5→G6 SIGMA
+  repair, or realize a capped (G)). No capped clean (G) in 360k exact sweeps; certified capped near
+  miss only (`delta=1/4`, `Psi=69/250` AND `Gamma=21/80` both `> M=1/10`). All exhibits + the identity
+  orchestrator-recomputed exactly.
+- **Queued:** codify+elevate the two G11 tools (separate minimal shards); arm G wave 12 = the
+  cross-pivot charge / budget-reshape / seeded-construction decider.
