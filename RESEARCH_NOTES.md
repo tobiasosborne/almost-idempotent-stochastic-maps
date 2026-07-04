@@ -21,9 +21,11 @@ where the literature suffices, `af`-validated where new reasoning is needed).
   has a θ-½ actual-row chart `U₀` with `max_s Φ_s(U₀) ≤ δ` (empirical `C₀=1`). Obstruction: a geometric
   tie-selection argument for max-volume actual-row charts, charging the two rank-3 bad wedges at each vertex
   to the pivot row's negative mass without losing to positive-β cancellations. (`C₀<1` refuted.)
-- **B (primary)** — Prove **`lem-dual-localization`** (frame-free transfer): reproduce `‖Ēbar‖₁ ≥ H` from
-  `P²=P` WITHOUT the simplex frame — the exact inequality Route B loses in the skinny `μ→1` regime. Minimal
-  deciding config recorded upstream (skinny pair `v₁=(½,½+p,−p)`, `v₂=(½+g,½−g+p,−p)`, `g<ρ`).
+- **B (primary)** — The **sigma-cap** (`σ_v ≤ 1−c·τ` for hidden top vertices; see the fr board), plus the
+  corrected Route-B statement **`conj-skinny-shadow-cap`** (skinny two-shadow cap at the `√δ` scale).
+  `lem-dual-localization` was RETIRED 2026-07-04: its transcribed contract ("reproduce `‖Ēbar‖₁ ≥ H` from
+  `P²=P`") is a distance tautology (B1 + independent codex verifier; `docs/LEARNINGS.md`). Minimal deciding
+  config recorded upstream (skinny pair `v₁=(½,½+p,−p)`, `v₂=(½+g,½−g+p,−p)`, `g<ρ`).
 - **C (support)** — **Repair the local-linear-law assembly**: combine the four audited variety lemmas
   (tangent-cone, ambient fixed-mass visibility, mass-removed boundary-recoding, stratified distance) into
   `H ≤ C_loc·δ` near the Högnäs–Mukherjea locus, via a nearest-branch recoding (the prior attempt broke by

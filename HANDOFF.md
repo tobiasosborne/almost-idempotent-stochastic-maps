@@ -73,7 +73,8 @@ program now shares (PRT) (an unpayable blocker family = the reshaped kill criter
    pre-factored — remember the fan-payment 39/47-node lesson).
 4. **(BN)** `S⁻^μ ≤ C₋δ`: alive (worst 3/32); one more adversarial hunt then elevate or codify.
 5. **Lab-book shards AISM-08..12** for results 8–12 (ledger rows exist; sections pending).
-6. **USER DECISION pending (aism-136):** lem-dual-localization trivially-true contract.
+6. **RESOLVED 2026-07-04 (aism-136, user decision):** lem-dual-localization retired (contract was a
+   distance tautology) and superseded by `conj-skinny-shadow-cap`; see `docs/LEARNINGS.md`.
 7. B-side deciders (arm F FAIL-1 hunt; signed Baake–Sumner) when diversifying.
 
 ## Standing rules (unchanged; see CLAUDE.md + bd memories)

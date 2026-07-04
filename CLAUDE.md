@@ -154,9 +154,10 @@ blocked on the pre-read, and stop — do not improvise.
 - ❌ **Raw-index path products.** Index-level path-product floors are refuted (cloning obstruction). Only
   **clone-invariant (quotient)** quantities may appear in a proof — this killed a whole family of attempts.
 - ❌ **Frame-specific → frame-free.** The exact identity `dist₁(λ,Δ)=2·neg(λ)` gives `δ ≥ H/2` **in the
-  canonical simplex frame**; the transferable (frame-free) statement is exactly the open
-  `lem-dual-localization` gap (Route B is vacuous in the skinny `μ→1` regime). Do not present the
-  frame-specific proof as the general one.
+  canonical simplex frame**; the transferable (frame-free) statement is now carried by
+  `conj-skinny-shadow-cap` (`lem-dual-localization` retired 2026-07-04: its transcribed contract was a
+  distance tautology — see `docs/LEARNINGS.md`; Route B is vacuous in the skinny `μ→1` regime). Do not
+  present the frame-specific proof as the general one.
 - ❌ **Signed vs stochastic formulation drift.** Results live in an equivalent **signed** picture (exact
   idempotence, negative mass `δ`) linked to the stochastic picture by `lem-classical-equiv` up to universal
   constants. Always say which picture a bound is stated in, and cite the equivalence when crossing.

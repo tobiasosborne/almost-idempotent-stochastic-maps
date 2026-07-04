@@ -19,9 +19,10 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   State which one a claim rests on (`CONVENTIONS.md` (c)). The `√η`/`√δ` distance exponent is nonetheless
   **sharp** (`ex-hume`, Hume's 3×3 family).
 - ❌ **Frame-specific ⇒ frame-free.** The exact identity `dist₁(λ,Δ) = 2·neg(λ)` gives `δ ≥ H/2` **in the
-  canonical simplex frame** (proved); the transferable (frame-free) statement is exactly the OPEN
-  `lem-dual-localization` gap (Route B is vacuous in the skinny `μ→1` regime). Never present the
-  frame-specific proof as the general one.
+  canonical simplex frame** (proved); the transferable (frame-free) statement is now carried by
+  `conj-skinny-shadow-cap` (`lem-dual-localization` was RETIRED 2026-07-04 — its transcribed contract was
+  a distance tautology; see the 2026-07-04 entry below; Route B is vacuous in the skinny `μ→1` regime).
+  Never present the frame-specific proof as the general one.
 - ❌ **Signed vs stochastic drift.** Bounds live in an equivalent **signed** picture (exact idempotence,
   negative mass `δ`) linked to the stochastic picture (`‖Q²−Q‖ ≤ η`) by `lem-classical-equiv` up to
   universal constants. Always say which picture a bound is in; cite the equivalence when crossing.
