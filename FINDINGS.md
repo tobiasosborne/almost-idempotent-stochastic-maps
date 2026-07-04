@@ -268,3 +268,36 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   missing statement is **(SC)**: at a θ-half Φ-argmin, the β-weighted transverse negative chart mass of
   non-fan β-positive B rows is `≤ C·(G⁻+S⁻^μ+Σβν)` + fan-collateral residual — i.e. an argmin
   self-support/cancellation control, provable only by USING minimality (pivot-removing moves).
+
+## 2026-07-04 — literature negative space (7-lane sweep; sources `stated`, none byte-matched — L1)
+
+*(Full sweep record: `docs/lit-review/2026-07-04-literature-sweep.md`. These are "easy to get wrong"
+imports a future agent might reach for — read before importing ANY external tool.)*
+
+- ❌ **Do NOT route the within-class distribution rounding through hitting-time / fundamental-matrix
+  sensitivity.** The sharpest entrywise stationary-distribution perturbation theorem
+  (Thiede–Van Koten–Weare, SIMAX 2015, arXiv:1410.1431, scout-verified full text) has coefficients
+  `Q_{ij}(S)^{-1}` provably growing EXPONENTIALLY in state count, and the theorem degenerates to trivial
+  exactly at the reducibility boundary — the regime a near-idempotent Q lives in. Any sub-argument
+  inheriting these coefficients is presumptively NOT dimension-free.
+- ❌ **Do NOT import generic "spectral gap ⇒ structure" lemmas for non-reversible chains.** Mehta et al.
+  (arXiv:1909.12497, scout-verified): for doubly-stochastic A, `φ(A) ≥ Δ(A)/(35n)` with a matching
+  `φ ≤ Δ/√n` family — the n-loss is NECESSARY. (Our entrywise hypothesis is stronger than a gap, so this
+  does not refute op-classical; it kills the generic import.)
+- ❌ **The modern entrywise/ℓ∞ eigenvector program (Abbe–Fan–Wang–Zhong etc.) is keyed to INCOHERENCE**
+  — delocalized eigenvectors. Our target subspace is indicator-like (maximally coherent): those theorems
+  give no improvement over weak Davis–Kahan here. Wrong regime, not just weak constants. (Deterministic
+  exceptions worth knowing: Cape–Tang–Priebe Thm 4.2 — symmetric only; Damle–Sun Thm 5.1 — template only.)
+- ❌ **"Quantitative Baake–Sumner web stability" does not exist.** The full citation tree of
+  arXiv:2007.11433 (9 works, checked 2026-07-04) is exclusively Markov-embeddability. The inherited
+  campaign's pointer is unsubstantiated — do not cite it as a route unless a locus in `docs/ingest/` is
+  produced.
+- ⚠ **The unconstrained/pre-structured versions of our problem are LINEAR-rate and easy** — Riesz
+  projection / Kitaev Prop 3.1 (signed fix at O(η)); Kazhdan ε-representations (2δ); Gowers–Hatami
+  (Cε, normalized HS); Christensen near-inclusions (14d). The ½ exponent enters WITH the positivity
+  cone (degenerate-complementarity mechanism, Luo–Pang 1994 — see the sweep §1.3). Do not "borrow" a
+  linear-rate theorem and expect it to survive stochasticity.
+- ⚠ **Kitaev arXiv:2405.02434 poses the noncommutative lift of op-classical as OPEN** (§1.2 of the
+  paper, scout-verified). Two easy-to-get-wrong details: the commutative-case reduction (cb-norm →
+  ∞→∞) is OUR inference, not in the paper — verify before citing; and the claim "published in Nature"
+  circulating in search engines is FALSE (arXiv preprint, math.OA).

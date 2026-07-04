@@ -330,3 +330,26 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
 - **Queued:** wave 13 = the B-lemma (prove via minimality incl. the c<0 move — the named tool gap —
   or amplify at argmins); USER decision filed on the `+C_δ·δ` contract amendment (mechanism-derived,
   arrives with its financing proof — distinct from the audit's epicycle pattern).
+
+## 2026-07-04 (session 7) — operational audit + literature sweep (no proof waves; knowledge banking)
+
+- **User-mandated sober audit (4 read-only sonnet auditors):** DAG census (44 results, not 46; 6 of 15
+  validated results substantive; ONE validated result on the wired critical path), fr process audit
+  (83% single-mechanism concentration A→D→G; breaker structurally defeated by `progress` self-tagging;
+  budget-patch pattern ×3 confirmed; C/E never dispatched), full gap map (B-lemma ≈ 1–5% of remaining
+  work; dominant unpriced risks = rank-3-only scoping + unaudited inherited downstream chain + unproven
+  ex⟺kernel equivalence), evidence audit (gate green; B-lemma data all at δ∈{0.233,0.2498,1/4}; kernel
+  numerics n≤9; (BN) unregistered; zero cited leaves). Banked: `docs/audits/2026-07-04-operational-audit.md`.
+- **User-mandated literature sweep (7 read-only sonnet web scouts):** NO lane found op-classical stated
+  or solved anywhere. Tier-1: Kitaev arXiv:2405.02434 poses the noncommutative lift VERBATIM AS OPEN
+  (3 scouts converged, full-text verified); Salzmann–Bergh–Datta arXiv:2405.01532 Thm 5.2 = √ε
+  dimension-free + sharp for approximate fixed distributions (reset-trick Lemma 5.5 transferable);
+  Luo–Pang/Mangasarian–Shiau degenerate-complementarity mechanism explains the ½ exponent and backs the
+  never-dispatched arm E. Negative space banked to FINDINGS (TVKW, Mehta, incoherence mismatch, B–S
+  web-stability unsubstantiated). Banked: `docs/lit-review/2026-07-04-literature-sweep.md`;
+  RESEARCH_NOTES queue extended (12 sources); arm-D's B–S-stability line corrected.
+- **Adopted sequencing (audit §7):** deciders BEFORE wave 13 — rank-4/5 skeleton stress test; small-δ
+  certified argmin sweep; ex⟺kernel adversarial audit + HLC/finisher wiring; SBD reset-trick probe;
+  ex-hume vs SBD sharpness cross-check; arm E decision-check wave. `aism-z98` recommendation: DEFER.
+- Process: all dispatches read-only subagents; no registry/definitions edits; fr `orient` logged per
+  turn + `fr discover` for the tier-1 finds; bd issues filed for every follow-up.

@@ -33,7 +33,9 @@ where the literature suffices, `af`-validated where new reasoning is needed).
 - **D (support)** — **Global gap via Högnäs–Mukherjea Theorem 1.12** (the signed structure theorem):
   quantify how near-positivity forces proportional-row classes toward equal-input blocks; the single named
   open of the w25–w31 line is the transverse coefficient tax
-  `Σ_j (P_{u_s j})₊ · Σ_{t≠s} (−a_t(j))₊ ≤ C_μ·δ`. Also: signed quantitative **Baake–Sumner** stability.
+  `Σ_j (P_{u_s j})₊ · Σ_{t≠s} (−a_t(j))₊ ≤ C_μ·δ`. ~~Also: signed quantitative **Baake–Sumner**
+  stability.~~ *(2026-07-04 sweep: no such result exists anywhere in the Baake–Sumner citation tree —
+  the inherited "quantitative B–S web stability" pointer is unsubstantiated; see FINDINGS 2026-07-04.)*
 - **E (exploratory)** — **Łojasiewicz / error-bound route**: frame the linear law as a semialgebraic error
   bound (Hoffman 1952, Luo–Pang 1994) and/or as quantitative stability of norm-one (contractive) projections
   on `ℓ∞_n` à la Douglas–Andô (the H–M family is the norm-one case, `‖P‖ = 1+2δ`). Plus the higher-rank NDG
@@ -57,6 +59,18 @@ Andô 1966 (contractive projections in `Lp`), Flor 1969 (groups of non-negative 
 (error bounds for linear inequalities — the Łojasiewicz anchor), Luo–Pang 1994 (error bounds for analytic
 systems), Meyer 1989 (stochastic complementation / uncoupling Markov chains), Chakraborty–Rao 2001
 (convolution powers of probabilities on stochastic matrices).
+
+**2026-07-04 sweep additions** (full table + rationale: `docs/lit-review/2026-07-04-literature-sweep.md`
+§4; ALL `stated` until byte-matched): **HIGH** — Kitaev arXiv:2405.02434 (poses the noncommutative lift of
+op-classical as OPEN; Prop 3.1 = citable linear signed fix; incremental-construction toolkit §§5–9);
+Salzmann–Bergh–Datta arXiv:2405.01532 (classical Thm 5.2: √ε dimension-free + SHARP for approximate fixed
+distributions; Lemma 5.5 reset-trick). **MED** — Mangasarian–Shiau 1987 (degenerate-complementarity ½
+exponent, companion to Luo–Pang); Cape–Tang–Priebe arXiv:1705.10735 (Thm 4.2, deterministic ∞-norm-native
+2→∞ bound, symmetric case); Damle–Sun arXiv:1905.07865 (Thm 5.1 non-normal Schur template);
+Kachkovskiy–Safarov arXiv:1403.2021 (sharp-√ structural-obstruction template). **LOW** — Mikhalev–Oseledets
+arXiv:1502.07838 (maxvol anchor for the Cramer box); Thiede–Van Koten–Weare arXiv:1410.1431 + Mehta
+arXiv:1909.12497 (negative-space certificates); Ipsen–Selee SIMAX 2011 and González-Torres LAA 2017
+(both UNVERIFIED — scouts could not extract full text).
 
 ## Deferred decisions (escalate before resolving)
 
@@ -106,3 +120,30 @@ pointwise silent domination `ν_j ≥ a_r(j)⁻`, and rank-3 pure-legal `C_legal
 unchanged ~80/20, with the refutation program now sharing (PRT) (an unpayable blocker family = the
 reshaped kill). Next attack on (PRT): per-branch exact realizability FIRST (build or exclude each blocker
 type at an argmin), not another aggregate pass — two aggregate waves (G7, G8) went OPEN.
+
+## 2026-07-04 — operational audit + literature sweep: the reassessed board (session 7)
+
+Two user-mandated reviews, both canonically recorded (read them before strategising):
+**`docs/audits/2026-07-04-operational-audit.md`** (4-lane sober audit: 1/15 validated results on the
+wired critical path; B-lemma ≈ 1–5% of remaining work; rank-3-only scoping + the unaudited inherited
+downstream chain are the dominant unpriced risks; breaker structurally defeated by `progress`
+self-tagging) and **`docs/lit-review/2026-07-04-literature-sweep.md`** (7-lane sweep: NOBODY states
+op-classical; Kitaev arXiv:2405.02434 poses its noncommutative lift verbatim as open; SBD
+arXiv:2405.01532 = solved √ε-sharp sibling for approximate fixed distributions; degenerate-complementarity
+error bounds explain the ½ exponent and back arm E).
+
+New/strengthened directions:
+- **Arm E activation (error-bound/complementarity route)** — now literature-backed: cast
+  `E²=E, E≥0, E𝟙=𝟙` as a complementarity system; Luo–Pang gives Hölder-½ at degenerate solutions;
+  the open work = dimension-free uniformity of the constant. Decision-check wave first.
+- **Reset-trick transfer probe** — can SBD Lemma 5.5 (λ-mixing regularization, correction ≤ defect/λ,
+  λ~√ε) be adapted from fixed-VECTOR to idempotent-MAP hypotheses? Cheap probe before any resourcing.
+- **Entropy/Pinsker shape** (speculative): an entropy functional vanishing iff Q is partition-generated,
+  controlled by η ⇒ √η via Pinsker — dimension-free + clone-invariant by construction.
+- **Kitaev incremental-construction strategy** (alternative to one-shot argmin charts): partitioned-index
+  merge-and-extend with an error-reduction bootstrap — read §§5–9 before designing any new (EX) wave.
+- **Sharpness cross-check**: SBD Remark 5.4's 3-state family vs `ex-hume` — same extremal mechanism?
+
+Deciders queued BEFORE wave 13 (audit §7): rank-4/5 skeleton stress test; small-δ certified argmin sweep
+(all current B-lemma data sits at δ ∈ {0.233, 0.2498, 1/4}); ex⟺kernel adversarial audit + HLC/finisher
+DAG wiring. `aism-z98` (+C_δ·δ): recommendation DEFER until the small-δ data decides.

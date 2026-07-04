@@ -63,6 +63,19 @@ outputs codified with fully-inline contracts (user decision; `conj-rh`, `conj-sc
 `obs-orphan-amplifier`, plus the elevated tools); lab-book shards AISM-08..14; `check-provenance.py`
 false-green fixed (hard-coded ledger filename); registry at 46 results, linker green.
 
+## 2026-07-04 SESSION 7 UPDATE — audit + literature sweep re-sequenced the plan (read these FIRST)
+
+**`docs/audits/2026-07-04-operational-audit.md`** (sober 4-lane audit: one validated result on the wired
+critical path; B-lemma ≈ 1–5% of remaining work; dominant risks = rank-3-only scoping, unaudited inherited
+downstream chain, unproven ex⟺kernel equivalence) and
+**`docs/lit-review/2026-07-04-literature-sweep.md`** (7-lane sweep: op-classical stated NOWHERE; Kitaev
+arXiv:2405.02434 poses its noncommutative lift as OPEN; SBD arXiv:2405.01532 = √ε-sharp solved sibling;
+degenerate-complementarity ½-mechanism backs arm E). **Adopted sequencing: deciders BEFORE wave 13** —
+rank-4/5 skeleton stress test, small-δ certified argmin sweep, ex⟺kernel adversarial audit + HLC wiring,
+SBD reset-trick probe, ex-hume vs SBD sharpness cross-check, arm E decision-check. See the bd issues filed
+2026-07-04 (session 7). The ranked list below is the PRE-audit ordering, kept for context; wave 13 now
+runs only if the deciders survive.
+
 ## Next steps (ranked) — RESUME HERE
 
 1. **Arm G wave 13 (`aism-5sc`): the B-lemma** — prove `B_{r,s} ≤ K·δ` at clean high-self Γ-branches
