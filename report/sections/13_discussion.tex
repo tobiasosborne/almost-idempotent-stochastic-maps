@@ -7,17 +7,15 @@
 
 The rows below are anchors, not upgrades.  They give every remaining
 registry result a report label while preserving the registry status.
-The first twelve \texttt{af}-validated results are reproduced in
-\ref{lem:classical-equiv}--\ref{lem:fan-payment-restricted}; they are
-not duplicated in this ledger.  The thirteenth
-(\texttt{lem-pivot-removing-move}) is anchored below pending its own
-section.
+The thirteen \texttt{af}-validated results are reproduced in
+\ref{lem:classical-equiv}--\ref{lem:pivot-removing-move}; they are
+not duplicated in this ledger.
 
 \small
 \begin{longtable}{>{\raggedright\arraybackslash}p{0.25\textwidth}
                   >{\raggedright\arraybackslash}p{0.16\textwidth}
                   >{\raggedright\arraybackslash}p{0.49\textwidth}}
-\caption{Registry status ledger for report anchors outside the twelve validated sections.}\\
+\caption{Registry status ledger for report anchors outside the thirteen validated sections.}\\
 \toprule
 Registry id & Status & Contract gloss \\
 \midrule
@@ -34,7 +32,6 @@ Registry id & Status & Contract gloss \\
 \label{lem:dual-localization}\texttt{lem-dual-localization}\makebox[0pt][l]{\phantom{\ref{lem:dual-localization}}} & obstruction (superseded) & Retired 2026-07-04: the transcribed contract is a distance tautology; superseded by \texttt{conj-skinny-shadow-cap}. \\
 \label{lem:exposed-circuit}\texttt{lem-exposed-circuit}\makebox[0pt][l]{\phantom{\ref{lem:exposed-circuit}}} & proved-mod-audit & Concentration and circuit estimate for exposed vertices; inherited/mod-audit only. \\
 \label{lem:leakage}\texttt{lem-leakage}\makebox[0pt][l]{\phantom{\ref{lem:leakage}}} & proved-mod-audit & Affine-face leakage estimate for almost-idempotent stochastic rows; inherited/mod-audit only. \\
-\label{lem:pivot-removing-move}\texttt{lem-pivot-removing-move}\makebox[0pt][l]{\phantom{\ref{lem:pivot-removing-move}}} & proved (af: validated) & Pivot-removing chart move: exact volume factor, coordinate transform, and max-stationarity disjunction at an argmin; af-validated in-repo 2026-07-04 (9-node tree, taint clean). \\
 \label{lem:wiggle-rigidity}\texttt{lem-wiggle-rigidity}\makebox[0pt][l]{\phantom{\ref{lem:wiggle-rigidity}}} & proved-mod-audit & F-WR wiggle-rigidity estimate for common-pattern webs; side conditions remain inherited. \\
 \label{obs:deep-leakage}\texttt{obs-deep-leakage}\makebox[0pt][l]{\phantom{\ref{obs:deep-leakage}}} & heuristic & Heuristic obstruction showing why a purely local row-identity argument cannot price deep-side mass. \\
 \label{obs:fwr-gap}\texttt{obs-fwr-gap}\makebox[0pt][l]{\phantom{\ref{obs:fwr-gap}}} & heuristic & F-WR forbidden-gap obstruction to using web rigidity as the dimension-free shallow-class counter. \\

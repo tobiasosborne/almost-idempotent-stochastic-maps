@@ -114,6 +114,13 @@ verbatim), and keywords.
 - **Summary:** Summarizes the clean 27-node run-1 tree and records that constant two is exactly refuted for this variant.
 - **Keywords:** lem-fan-payment-restricted, af validated, D-restricted, sharp constant, payment horn
 
+## `AISM-14-PIVOT-REMOVING-MOVE`
+- **File:** `report/sections/14_pivot_removing_move.tex`
+- **Title:** Pivot-removing max-stationarity
+- **Summary:** Reproduces the registry contract for lem-pivot-removing-move, the af-validated pivot-removing chart move.
+- **Summary:** Summarizes the clean 9-node zero-challenge run-1 tree and its role as the minimality tool of the argmin engine.
+- **Keywords:** lem-pivot-removing-move, af validated, pivot removing, max stationarity, argmin, collateral
+
 ## `AISM-13-STATUS-LEDGER`
 - **File:** `report/sections/13_discussion.tex`
 - **Title:** Status ledger for non-validated registry results

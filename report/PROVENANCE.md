@@ -9,7 +9,7 @@ hashed proof/consensus file. Results original to this project are marked `ORIGIN
 
 Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 
-> **Current report surface.** The first shards reproduce twelve `af`-validated results and anchor every
+> **Current report surface.** The first shards reproduce thirteen `af`-validated results and anchor every
 > remaining registry result in the status ledger. Non-rigorous registry statuses are copied honestly;
 > the ledger rows below are anchors, not promotions.
 
@@ -98,7 +98,7 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | conj:sc | ARG-CONJ-SC | registry contract | OPEN | Status ledger anchor only; registry status `conjecture` ((SC) control; reduced to (PRT), collateral branch open after G9). |
 | conj:skinny-shadow-cap | ARG-CONJ-SKINNY-SHADOW-CAP | registry contract | OPEN | Status ledger anchor only; registry status `conjecture` (corrected Route-B skinny cap; supersedes lem-dual-localization). |
 | obs:orphan-amplifier | ARG-OBS-ORPHAN-AMPLIFIER | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (exact G5 two-orphan family; identities orchestrator-recomputed 2026-07-04). |
-| lem:pivot-removing-move | ARG-LEM-PIVOT-REMOVING-MOVE AF-LEM-PIVOT-REMOVING-MOVE | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-04 (9-node tree, taint clean; run 1, zero challenges); section shard pending. |
+| lem:pivot-removing-move | ARG-LEM-PIVOT-REMOVING-MOVE AF-LEM-PIVOT-REMOVING-MOVE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree, zero challenges, pre-factored elevation. |
 | ex:hume | ARG-EX-HUME | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`, not rigorous here. |
 | lem:canonical-separator | ARG-LEM-CANONICAL-SEPARATOR | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:dual-localization | ARG-LEM-DUAL-LOCALIZATION | registry contract | SUPERSEDED | Retired 2026-07-04 (contract trivially true as stated); superseded by conj-skinny-shadow-cap; registry status `obstruction`. |

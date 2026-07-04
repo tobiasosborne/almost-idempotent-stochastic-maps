@@ -52,4 +52,5 @@ mid-check.
 | 10 | `AISM-10-FAN-PAYMENT` | `report/sections/10_fan_payment.tex` |
 | 11 | `AISM-11-NEGPART-SUBADDITIVE` | `report/sections/11_negpart_subadditive.tex` |
 | 12 | `AISM-12-FAN-PAYMENT-RESTRICTED` | `report/sections/12_fan_payment_restricted.tex` |
+| 14 | `AISM-14-PIVOT-REMOVING-MOVE` | `report/sections/14_pivot_removing_move.tex` |
 | 13 | `AISM-13-STATUS-LEDGER` | `report/sections/13_discussion.tex` |
