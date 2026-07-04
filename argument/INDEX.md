@@ -23,7 +23,7 @@
 | `lem-leakage` | lemma | proved-mod-audit | none | A | Affine-face leakage: for row-stochastic Q with ||Q^2-Q|| <= eta and affine h:Del… |
 | `lem-mass-split` | lemma | proved | validated | A | Mass split: for an exact signed idempotent P and any row index v, writing a_j = … |
 | `lem-negpart-subadditive` | lemma | proved | validated | A | Negative-part subadditivity: for all vectors x and y in R^d, writing n(w) = sum_… |
-| `lem-pivot-removing-move` | lemma | proved-mod-audit | seeded | A | Pivot-removing max-stationarity: let P be a rank-3 exact signed idempotent (squa… |
+| `lem-pivot-removing-move` | lemma | proved | validated | A | Pivot-removing max-stationarity: let P be a rank-3 exact signed idempotent (squa… |
 | `lem-residual-lower` | lemma | proved | validated | A | Convex outsourcing: let C be the convex hull of finitely many points of R^n, and… |
 | `lem-residual-upper` | lemma | proved | validated | A | Residual distance bound: let C be the convex hull of finitely many points of R^n… |
 | `lem-weighted-min` | lemma | proved | validated | A | Weighted minimum bound: let p_1, ..., p_m be positive reals with sum_i p_i = 1 a… |

@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Pivot-removing max-stationarity: let P be a rank-3 exact ...}
+\step{1} Pivot-removing max-stationarity: let P be a rank-3 exact signed idempotent (square real matrix with P\textasciicircum{}2 = P and all row sums equal to 1), let U = (u\_0,u\_1,u\_2) be an actual-row chart whose rows p\_\{u\_0\}, p\_\{u\_1\}, p\_\{u\_2\} form a basis of the row space, let Vol\_max(P) be the maximum Gram volume over actual-row charts, m\_U = Vol(U)/Vol\_max(P), define old coordinates a\_t(i) by p\_i = sum\_t a\_t(i)p\_\{u\_t\}, beta\_r(i) = P\_\{u\_r i\}, lambda\_r(i) = 1-a\_r(i), mu\_r(i) = sum\_\{t != r\} max(-a\_t(i),0), E\_r(i) = max(mu\_r(i)-lambda\_r(i),0), Phi\_r(U) = sum\_i max(beta\_r(i),0)E\_r(i), and Phi(U) = max\_r Phi\_r(U), assume U is a theta-half Phi-argmin meaning m\_U >= 1/2 and Phi(U) is minimal among actual-row charts W with Vol(W)/Vol\_max(P) >= 1/2, fix a maximal pivot s with Phi\_s(U)=Phi(U), and let j notin \{u\_0,u\_1,u\_2\} have c = a\_s(j) != 0 such that the pivot-removing chart V\_j = U-u\_s+j is theta-half admissible, equivalently |a\_s(j)|*m\_U >= 1/2 with volume factor Vol(V\_j)/Vol(U)=|a\_s(j)|; defining new coordinates on V\_j by a\_s\textasciicircum{}j(i)=a\_s(i)/c and a\_t\textasciicircum{}j(i)=a\_t(i)-a\_s(i)a\_t(j)/c for t != s, E\_r\textasciicircum{}j(i)=max(sum\_\{q != r\} max(-a\_q\textasciicircum{}j(i),0)-(1-a\_r\textasciicircum{}j(i)),0), Psi\_j=Phi\_s(V\_j)=sum\_i max(P\_\{ji\},0)E\_s\textasciicircum{}j(i), and Gamma\_j=max\_\{r != s\} Phi\_r(V\_j)=max\_\{r != s\} sum\_i max(P\_\{u\_r i\},0)E\_r\textasciicircum{}j(i), one has Phi\_s(U) <= max(Psi\_j, Gamma\_j). \steptag{validated} \\[6pt]
+\step{1.1} Because V\_j is theta-half admissible, V\_j lies among the actual-row charts W with Vol(W)/Vol\_max(P) >= 1/2 to which the theta-half Phi-argmin property of U applies; hence Phi(U) <= Phi(V\_j). \steptag{validated} \\[6pt]
+\step{1.1.1} The root hypothesis defines U being a theta-half Phi-argmin to mean: among actual-row charts W satisfying Vol(W)/Vol\_max(P) >= 1/2, the value Phi(U) is minimal. \steptag{validated} \\[4pt]
+\step{1.1.2} The root hypothesis also says V\_j is theta-half admissible; equivalently Vol(V\_j)/Vol\_max(P)=|a\_s(j)| m\_U >= 1/2 via Vol(V\_j)/Vol(U)=|a\_s(j)| and m\_U=Vol(U)/Vol\_max(P), so V\_j is one of those comparison charts and minimality gives Phi(U) <= Phi(V\_j). \steptag{validated} \\[4pt]
+\step{1.2} The root hypothesis fixes a maximal pivot s with Phi\_s(U)=Phi(U). \steptag{validated} \\[4pt]
+\step{1.3} For the pivot-removing chart V\_j, the definitions of Psi\_j, Gamma\_j, and Phi give Phi(V\_j)=max(Psi\_j,Gamma\_j). \steptag{validated} \\[6pt]
+\step{1.3.1} For any rank-3 chart, Phi(chart) is the maximum of its three component values Phi\_r(chart); separating the index r=s from the two indices r != s gives Phi(V\_j)=max(Phi\_s(V\_j), max\_\{r != s\} Phi\_r(V\_j)). \steptag{validated} \\[4pt]
+\step{1.3.2} The root definitions for the pivot-removing chart give Psi\_j=Phi\_s(V\_j) and Gamma\_j=max\_\{r != s\} Phi\_r(V\_j); substituting these two equalities into the preceding displayed maximum gives Phi(V\_j)=max(Psi\_j,Gamma\_j). \steptag{validated} \\[4pt]
+\step{1.4} Assuming the earlier subclaims Phi(U) <= Phi(V\_j), Phi\_s(U)=Phi(U), and Phi(V\_j)=max(Psi\_j,Gamma\_j), elementary substitution and transitivity give Phi\_s(U) <= max(Psi\_j,Gamma\_j), which is exactly the root conclusion. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

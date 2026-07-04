@@ -1,0 +1,1 @@
+{"type":"node_amended","timestamp":"2026-07-04T06:39:31.384349408Z","node_id":"1.2","previous_statement":"The maximal-pivot assumption gives Phi_s(U)=Phi(U), so the preceding comparison implies Phi_s(U) \u003c= Phi(V_j).","new_statement":"The root hypothesis fixes a maximal pivot s with Phi_s(U)=Phi(U).","owner":"prover-build"}

@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-pivot-removing-move/export.md",
+  "oracle": "af-lem-pivot-removing-move",
+  "result": "pass",
+  "claim_hash": "276e02185cab5cc33f02546f2c425e993c55ce772e0a945e6d7d794ca7b75ea8",
+  "oracle_digest": "fdf63675edc2bfcd28304cd58f0b40a5635a6d1c2b3c458cdb61891d5d85c069",
+  "inputs_hash": "69fa5db24c4aefbfc4c0cb8bcbc2d97c55fde338e1599350669a23035f01caa1",
+  "ts": "2026-07-04T06:51:38.950Z"
+}
