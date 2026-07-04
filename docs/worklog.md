@@ -378,3 +378,19 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   minimality binds. Consequences: "all capped-argmin data is sub-δ" was a δ≈cap artifact; the B-lemma
   needs `K ≥ 0.771` (δ-scale, not ε); `aism-z98` gains direct evidence that a full δ-scale B term must be
   absorbed. **Wave 13 GO** (both deciders passed); frontier updated in fr. fr: G progress T0.
+
+## 2026-07-04 (session 7, continued) — wave 13 prover harvested: c<0 tool banked; B-lemma reduced to NSC
+
+- **Wave G13 prover (codex): T1 + T2 + a structural reframe.** (i) T1: the c<0 pivot-removing transform
+  (sign-agnostic, verified) + the c<0 pointwise/summed import bound `Phi_r(V_j) <= Phi_r(U) + I^-_{r,j}`
+  with explicit `R^-` — the algebra genuinely differs from validated (CI) (the `1/|c|` term lands on A,
+  the B-coefficient carries a subtractive −1); exact-verified on the 0.771 maximizer, two-carrier-B, and
+  G12 (slack 0 somewhere ⇒ sharp). (ii) T2: the B-lemma proved CONDITIONAL on one named minimal subclaim
+  **NSC(K0)** (`B_{r,s} <= K0·Σ_carriers β_r^+·ν_i` ⇒ `K = 5K0/4` under the cap). (iii) STRUCTURAL
+  HEADLINE: in all three certified stress instances the ENTIRE B-mass sits on volume-INADMISSIBLE
+  carriers — pivot-removing minimality is blind to them; Ψ-blocks escape the transverse import bound
+  (pivot β-row changes); Γ-blocks give only forward forcing. NSC empirics: B/weighted-ν ∈
+  {≈1.14, 2.25, ≈2.79} — testable law, K0 ≈ 3 would do. Artifact (verbatim):
+  `docs/waves/2026-07-04-G13-b-lemma-conditional.md`; orchestrator re-ran the verification (exit 0).
+  fr: G progress T1; frontier now = NSC(K0). Independent codex review dispatched pre-codification;
+  amplifier branch still in flight.
