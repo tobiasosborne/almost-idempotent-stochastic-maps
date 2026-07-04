@@ -10,7 +10,9 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md` — esp. L0 rigour ladder, Rule 13 dead routes).
-2. Read the two session-7 canonical reviews — they reshaped the plan:
+2. Read the THREE session-7 canonical strategy documents — they reshaped the plan:
+   **`docs/plans/2026-07-04-top-down-proof-sketch.md`** (the FULL top-down Lamport-style proof
+   architecture — every wave targets exactly one step of it; exactly FOUR open mechanisms),
    **`docs/audits/2026-07-04-operational-audit.md`** (sober 4-lane audit) and
    **`docs/lit-review/2026-07-04-literature-sweep.md`** (7-lane sweep; Kitaev poses our problem's
    noncommutative lift as OPEN — arXiv:2405.02434).

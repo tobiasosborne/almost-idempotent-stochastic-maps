@@ -412,3 +412,14 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
 - **Frontier after wave 13: NSC(K0)** — a self-support/row-negativity principle at the argmin (not a
   chart-move comparison; all certified B-mass is volume-inadmissible), empirical K0 ≈ 2.8. Wave 14 =
   prove NSC via idempotence/self-support, or refute via ν-starved carrier families. fr: G progress T0.
+
+## 2026-07-04 (session 7, close+) — top-down full proof sketch banked
+
+- **User-requested strategist deliverable banked:** `docs/plans/2026-07-04-top-down-proof-sketch.md`
+  — the complete Lamport-style top-down architecture of op-classical (10-step main chain + 7-step
+  Lemma K block), with per-step mechanism, connections, honest status tags, the single point where
+  sqrt(delta) enters (the exposedness window, main <1>7 — matching sharpness), designated fallbacks
+  (arm E error-bound route, SBD reset-trick, incremental bootstrap), and the compressed ledger:
+  exactly FOUR open mechanisms (NSC; orphan budget; fan-lift; master decomposition + rank transfer)
+  — everything else is assembly or transcription. HANDOFF START-HERE updated to point at it. Wave
+  design and the DAG-wiring issue are to be built against this document.
