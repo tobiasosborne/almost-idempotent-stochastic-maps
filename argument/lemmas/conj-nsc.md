@@ -5,7 +5,7 @@ contract: Negative self-support charge NSC(K0): there is a universal constant K0
 defs: def-signed-idempotent; def-negative-mass
 deps: 
 status: conjecture
-af: none
+af: seeded
 provenance: docs/waves/2026-07-04-G13-b-lemma-conditional.md §4 (NSC(K0) isolated as the single residual subclaim of the B-lemma; conditional proof B_{r,s} <= (5K0/4)*delta(P) under the cap); independent codex review APPROVE docs/waves/2026-07-04-G13-review.md §4 (single inequality, no hidden compound assertion; reduction correct); B-lemma target docs/waves/2026-07-04-G12-b-question.md §T1 Output And Gap
 owner: A
 workspace: proofs/conj-nsc

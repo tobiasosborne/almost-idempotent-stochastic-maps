@@ -4,16 +4,16 @@
 | id | kind | status | af | owner | contract |
 |---|---|---|---|---|---|
 | `conj-degenerate-payment` | lemma | conjecture | none | A | Degenerate payment: let P be an exact signed idempotent (square real matrix with… |
-| `conj-degenerate-transport` | lemma | conjecture | none | D | Degenerate transverse transport: there is a universal constant C_tr (independent… |
+| `conj-degenerate-transport` | lemma | conjecture | seeded | D | Degenerate transverse transport: there is a universal constant C_tr (independent… |
 | `conj-ex` | open-problem | conjecture | none | A | (CONJECTURE) (EX) working form: every rank->=3 exact signed idempotent P with de… |
 | `conj-halo-collapse` | lemma | proved | validated | A | Halo-robust height collapse: for an exact signed idempotent P with 0 < delta(P) … |
 | `conj-kernel` | open-problem | conjecture | none | A | (CONJECTURE) Kernel Conjecture: there are universal delta_0>0 and B<inf (n-free)… |
 | `conj-no-free-frontier` | lemma | conjecture | none | A | No free frontier (exposedness absorption): for an exact signed idempotent P with… |
-| `conj-nsc` | lemma | conjecture | none | A | Negative self-support charge NSC(K0): there is a universal constant K0 (independ… |
-| `conj-rh` | lemma | conjecture | none | A | Repaired orphan horn: there are universal constants C_RH and C_RH_fan such that … |
-| `conj-sc` | lemma | conjecture | none | A | Self-support/cancellation control: there are universal constants C_SC and C_fan_… |
+| `conj-nsc` | lemma | conjecture | seeded | A | Negative self-support charge NSC(K0): there is a universal constant K0 (independ… |
+| `conj-rh` | lemma | conjecture | seeded | A | Repaired orphan horn: there are universal constants C_RH and C_RH_fan such that … |
+| `conj-sc` | lemma | conjecture | seeded | A | Self-support/cancellation control: there are universal constants C_SC and C_fan_… |
 | `conj-skinny-shadow-cap` | lemma | conjecture | none | A | Skinny two-shadow cap: there exist universal constants delta_0 > 0, c in (0,1), … |
-| `ex-hume` | obstruction | proved-mod-audit | none | A | The explicit 3x3 family P_s=I-u_s v_s^T (v_s=(1,-1+s,-s), u_s=(1-s+s^2,-s,0)^T) … |
+| `ex-hume` | obstruction | proved-mod-audit | seeded | A | The explicit 3x3 family P_s=I-u_s v_s^T (v_s=(1,-1+s,-s), u_s=(1-s+s^2,-s,0)^T) … |
 | `lem-canonical-separator` | lemma | proved-mod-audit | none | A | For a signed affine retraction P with hidden top vertex v of height H there exis… |
 | `lem-classical-equiv` | lemma | proved | validated | A | The signed-idempotent and stochastic-idempotent formulations of classical stabil… |
 | `lem-collateral-import` | lemma | proved | validated | A | Collateral import bound: let P be a rank-3 exact signed idempotent (square real … |
@@ -23,10 +23,10 @@
 | `lem-factorization` | lemma | proved | validated | A | Factorization bound: let P be an exact signed idempotent (square real matrix wit… |
 | `lem-fan-payment` | lemma | proved | validated | A | Zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite family with ve… |
 | `lem-fan-payment-restricted` | lemma | proved | validated | A | D-restricted zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite f… |
-| `lem-import-reduction` | lemma | proved-mod-audit | none | A | Import reduction: let P be a rank-3 exact signed idempotent (square real matrix … |
+| `lem-import-reduction` | lemma | proved-mod-audit | seeded | A | Import reduction: let P be a rank-3 exact signed idempotent (square real matrix … |
 | `lem-leakage` | lemma | proved-mod-audit | none | A | Affine-face leakage: for row-stochastic Q with ||Q^2-Q|| <= eta and affine h:Del… |
 | `lem-mass-split` | lemma | proved | validated | A | Mass split: for an exact signed idempotent P and any row index v, writing a_j = … |
-| `lem-negative-pivot-import` | lemma | proved-mod-audit | none | A | Negative-pivot collateral import bound: let P be a rank-3 exact signed idempoten… |
+| `lem-negative-pivot-import` | lemma | proved-mod-audit | seeded | A | Negative-pivot collateral import bound: let P be a rank-3 exact signed idempoten… |
 | `lem-negpart-subadditive` | lemma | proved | validated | A | Negative-part subadditivity: for all vectors x and y in R^d, writing n(w) = sum_… |
 | `lem-pivot-removing-move` | lemma | proved | validated | A | Pivot-removing max-stationarity: let P be a rank-3 exact signed idempotent (squa… |
 | `lem-residual-lower` | lemma | proved | validated | A | Convex outsourcing: let C be the convex hull of finitely many points of R^n, and… |
@@ -42,9 +42,9 @@
 | `obs-sigma-halo-nonrobust` | obstruction | numerical | none | A | The sigma-cap is FALSE as literally written at epsilon = 0: the exact 5x5 signed… |
 | `op-classical` | open-problem | open | none | A | (OPEN) Classical projection stability: there are universal eta_0,C>0 (n-free) su… |
 | `op-exposed-hull` | open-problem | open | none | A | (OPEN) Global exposed-hull lemma: there are universal c,C>0 such that for every … |
-| `prop-approx-simplex` | proposition | proved-mod-audit | none | A | If the rows of P admit gamma-approximate simplex coordinates (representatives r^… |
-| `thm-classical-factorization` | theorem | proved-mod-audit | none | A | There are universal eta_0,C>0 such that if Q is row-stochastic with eta=||Q^2-Q|… |
-| `thm-cluster` | theorem | proved-mod-audit | none | A | There are universal delta_0,C>0 such that a signed affine retraction P with neg … |
+| `prop-approx-simplex` | proposition | proved-mod-audit | seeded | A | If the rows of P admit gamma-approximate simplex coordinates (representatives r^… |
+| `thm-classical-factorization` | theorem | proved-mod-audit | seeded | A | There are universal eta_0,C>0 such that if Q is row-stochastic with eta=||Q^2-Q|… |
+| `thm-cluster` | theorem | proved-mod-audit | seeded | A | There are universal delta_0,C>0 such that a signed affine retraction P with neg … |
 | `thm-corner-constants` | theorem | proved-mod-audit | none | A | (proved-mod-audit; family-equality/optimality part numerical) Corner constants: … |
 | `thm-rank-one` | theorem | proved-mod-audit | none | A | There are universal delta_0,C>0 such that every rank-one signed affine retractio… |
 | `thm-simplex` | theorem | proved-mod-audit | none | A | There are universal delta_0,C>0 such that every signed affine retraction P with … |

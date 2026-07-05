@@ -5,7 +5,7 @@ contract: Import reduction: let P be a rank-3 exact signed idempotent (square re
 defs: def-signed-idempotent
 deps: 
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/waves/2026-07-04-G11-capped-charge.md §Task 1 eq. (4) (per-row split of R_{r,j}(i)_+ into a_s(i)^- and a_s(i)^+ multiples: (1/c-1)a_s^- has positive part ((1-c)^+/c)a_s^-; (a_s d_t/c)^+ = (a_s^+ d_t^+ + a_s^- d_t^-)/c; -a_s d_r/c <= (d_r^-/c)a_s^+ + (d_r^+/c)a_s^-; multiply by beta_r^+ and sum); exhibits verified by the orchestrator 2026-07-04
 owner: A
 workspace: proofs/lem-import-reduction

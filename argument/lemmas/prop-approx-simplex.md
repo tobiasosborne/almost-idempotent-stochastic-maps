@@ -5,7 +5,7 @@ contract: If the rows of P admit gamma-approximate simplex coordinates (represen
 defs: def-stochastic
 deps: lem-classical-equiv
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/ingest (classical-portfolio; contracts verbatim from ../almost-idempotent-positive-maps/argument/lemmas or report/kernel-conjecture.tex)
 owner: A
 workspace: proofs/prop-approx-simplex

@@ -5,7 +5,7 @@ contract: Self-support/cancellation control: there are universal constants C_SC 
 defs: def-signed-idempotent; def-negative-mass
 deps: 
 status: conjecture
-af: none
+af: seeded
 provenance: docs/waves/2026-07-03-G7-sc-decider.md §Target display (SC) and §T2 "Status Of (SC)"; docs/waves/2026-07-03-G6-repaired-horn.md §T1/T2 "What Would Prove RH"; docs/waves/2026-07-03-G8-transfer-financing.md display (PRT); docs/waves/2026-07-04-G9-prt-realizability.md §Verdict
 owner: A
 workspace: proofs/conj-sc

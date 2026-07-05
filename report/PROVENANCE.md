@@ -18,20 +18,20 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | Key | Path | SHA256 (16) | What it is |
 |-----|------|-------------|------------|
 | `ARG-CONJ-DEGENERATE-PAYMENT` | `argument/lemmas/conj-degenerate-payment.md` | `3b7cd00d33cbf5fa` | Registry shard for `conj-degenerate-payment` |
-| `ARG-CONJ-DEGENERATE-TRANSPORT` | `argument/lemmas/conj-degenerate-transport.md` | `25dcf1d0d6e1e977` | Registry shard for `conj-degenerate-transport` |
+| `ARG-CONJ-DEGENERATE-TRANSPORT` | `argument/lemmas/conj-degenerate-transport.md` | `b68de13aaa480a15` | Registry shard for `conj-degenerate-transport` |
 | `ARG-CONJ-EX` | `argument/lemmas/conj-ex.md` | `02d459033dc90a3c` | Registry shard for `conj-ex` |
 | `ARG-CONJ-HALO-COLLAPSE` | `argument/lemmas/conj-halo-collapse.md` | `34f4de8d0861573d` | Registry shard for `conj-halo-collapse` |
 | `ARG-CONJ-KERNEL` | `argument/lemmas/conj-kernel.md` | `9c1f2f250cf211a6` | Registry shard for `conj-kernel` |
 | `ARG-CONJ-NO-FREE-FRONTIER` | `argument/lemmas/conj-no-free-frontier.md` | `070ea358dbc4c1b9` | Registry shard for `conj-no-free-frontier` |
-| `ARG-CONJ-RH` | `argument/lemmas/conj-rh.md` | `32d9183c905dfe31` | Registry shard for `conj-rh` |
-| `ARG-CONJ-SC` | `argument/lemmas/conj-sc.md` | `97a6fac2e65508ed` | Registry shard for `conj-sc` |
+| `ARG-CONJ-RH` | `argument/lemmas/conj-rh.md` | `c4b4885f2a17b4d7` | Registry shard for `conj-rh` |
+| `ARG-CONJ-SC` | `argument/lemmas/conj-sc.md` | `618c7511457521d6` | Registry shard for `conj-sc` |
 | `ARG-CONJ-SKINNY-SHADOW-CAP` | `argument/lemmas/conj-skinny-shadow-cap.md` | `c44aa05083b9e8c6` | Registry shard for `conj-skinny-shadow-cap` |
 | `ARG-OBS-ORPHAN-AMPLIFIER` | `argument/lemmas/obs-orphan-amplifier.md` | `7472032fae335d9e` | Registry shard for `obs-orphan-amplifier` |
 | `ARG-LEM-PIVOT-REMOVING-MOVE` | `argument/lemmas/lem-pivot-removing-move.md` | `69fa5db24c4aefbf` | Registry shard for `lem-pivot-removing-move` |
 | `ARG-LEM-CROSS-PIVOT-CANCELLATION` | `argument/lemmas/lem-cross-pivot-cancellation.md` | `0ee1d3933b8df1df` | Registry shard for `lem-cross-pivot-cancellation` |
-| `ARG-LEM-IMPORT-REDUCTION` | `argument/lemmas/lem-import-reduction.md` | `2daa23dde9971765` | Registry shard for `lem-import-reduction` |
+| `ARG-LEM-IMPORT-REDUCTION` | `argument/lemmas/lem-import-reduction.md` | `621e528b36b15974` | Registry shard for `lem-import-reduction` |
 | `ARG-LEM-COLLATERAL-IMPORT` | `argument/lemmas/lem-collateral-import.md` | `84d102f0f6623af1` | Registry shard for `lem-collateral-import` |
-| `ARG-EX-HUME` | `argument/lemmas/ex-hume.md` | `db5fb7b80f69be6a` | Registry shard for `ex-hume` |
+| `ARG-EX-HUME` | `argument/lemmas/ex-hume.md` | `5c9bdc59fc0e4413` | Registry shard for `ex-hume` |
 | `ARG-LEM-CANONICAL-SEPARATOR` | `argument/lemmas/lem-canonical-separator.md` | `10d34ab7f83bfd0c` | Registry shard for `lem-canonical-separator` |
 | `ARG-LEM-CLASSICAL-EQUIV` | `argument/lemmas/lem-classical-equiv.md` | `2f3a5574f2dfbbde` | Registry shard for `lem-classical-equiv` |
 | `ARG-LEM-DUAL-LOCALIZATION` | `argument/lemmas/lem-dual-localization.md` | `ea1434019e41f90f` | Registry shard for `lem-dual-localization` (retired/superseded 2026-07-04) |
@@ -54,9 +54,9 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-OBS-SIGMA-HALO-NONROBUST` | `argument/lemmas/obs-sigma-halo-nonrobust.md` | `cc2f80fb9fc80e45` | Registry shard for `obs-sigma-halo-nonrobust` |
 | `ARG-OP-CLASSICAL` | `argument/lemmas/op-classical.md` | `2ef7e965c5db0146` | Registry shard for `op-classical` |
 | `ARG-OP-EXPOSED-HULL` | `argument/lemmas/op-exposed-hull.md` | `d988f94acd0e06b7` | Registry shard for `op-exposed-hull` |
-| `ARG-PROP-APPROX-SIMPLEX` | `argument/lemmas/prop-approx-simplex.md` | `36bc314b5637c753` | Registry shard for `prop-approx-simplex` |
-| `ARG-THM-CLASSICAL-FACTORIZATION` | `argument/lemmas/thm-classical-factorization.md` | `5aef19d51a9dea22` | Registry shard for `thm-classical-factorization` |
-| `ARG-THM-CLUSTER` | `argument/lemmas/thm-cluster.md` | `822ae1100d053594` | Registry shard for `thm-cluster` |
+| `ARG-PROP-APPROX-SIMPLEX` | `argument/lemmas/prop-approx-simplex.md` | `9f82860ad220c83c` | Registry shard for `prop-approx-simplex` |
+| `ARG-THM-CLASSICAL-FACTORIZATION` | `argument/lemmas/thm-classical-factorization.md` | `d8141d320ce37791` | Registry shard for `thm-classical-factorization` |
+| `ARG-THM-CLUSTER` | `argument/lemmas/thm-cluster.md` | `a0b07d18715d720e` | Registry shard for `thm-cluster` |
 | `ARG-THM-CORNER-CONSTANTS` | `argument/lemmas/thm-corner-constants.md` | `5511fbf48c7a35db` | Registry shard for `thm-corner-constants` |
 | `ARG-THM-RANK-ONE` | `argument/lemmas/thm-rank-one.md` | `2934d0541289281a` | Registry shard for `thm-rank-one` |
 | `ARG-THM-SIMPLEX` | `argument/lemmas/thm-simplex.md` | `68e40372042d2d7c` | Registry shard for `thm-simplex` |

@@ -5,7 +5,7 @@ contract: Repaired orphan horn: there are universal constants C_RH and C_RH_fan 
 defs: def-signed-idempotent; def-negative-mass
 deps: 
 status: conjecture
-af: none
+af: seeded
 provenance: docs/waves/2026-07-03-G6-repaired-horn.md §Target display (RH), §T1/T2 "What Would Prove RH" eq. (6), and §Verdict; docs/waves/2026-07-03-G5-orphan-financing-lemma.md eqs. (8)-(10); docs/waves/2026-07-03-G7-sc-decider.md §T2 "(RH) Assembly Status"
 owner: A
 workspace: proofs/conj-rh

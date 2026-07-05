@@ -5,7 +5,7 @@ contract: Degenerate transverse transport: there is a universal constant C_tr (i
 defs: def-signed-idempotent; def-negative-mass
 deps: 
 status: conjecture
-af: none
+af: seeded
 provenance: docs/waves/2026-07-03-A12-lift.md (arm A wave 12, codex; statement (TT) of §T2 — the payment-horn gap after the lift analysis); exact zoo evidence in the A12 transport table (all restricted ratios <= 5/3, incl. the nonzero-lambda balanced staircase at ~1.000002 and sigma-cap B at 0)
 owner: D
 workspace: proofs/conj-degenerate-transport

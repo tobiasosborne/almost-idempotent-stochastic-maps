@@ -5,7 +5,7 @@ contract: Negative-pivot collateral import bound: let P be a rank-3 exact signed
 defs: def-signed-idempotent
 deps: lem-pivot-removing-move
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/waves/2026-07-04-G13-b-lemma-conditional.md §1 (sign-agnostic coordinate transform) and §2 (pointwise bound E_r^j(i) <= E_r(i) + (R^-_{r,j}(i))^+ and summed import bound); independent codex review APPROVE docs/waves/2026-07-04-G13-review.md §§1-2 (adversarial exact rational grid over every case split, 0 failures)
 owner: A
 workspace: proofs/lem-negative-pivot-import

@@ -5,7 +5,7 @@ contract: There are universal eta_0,C>0 such that if Q is row-stochastic with et
 defs: def-stochastic
 deps: thm-cluster; op-exposed-hull
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/ingest (classical-portfolio; contracts verbatim from ../almost-idempotent-positive-maps/argument/lemmas or report/kernel-conjecture.tex)
 owner: A
 workspace: proofs/thm-classical-factorization

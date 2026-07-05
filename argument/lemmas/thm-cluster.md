@@ -5,7 +5,7 @@ contract: There are universal delta_0,C>0 such that a signed affine retraction P
 defs: def-exposed; def-stochastic
 deps: lem-exposed-circuit
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/ingest (classical-portfolio; contracts verbatim from ../almost-idempotent-positive-maps/argument/lemmas or report/kernel-conjecture.tex)
 owner: A
 workspace: proofs/thm-cluster

@@ -5,7 +5,7 @@ contract: The explicit 3x3 family P_s=I-u_s v_s^T (v_s=(1,-1+s,-s), u_s=(1-s+s^2
 defs: def-stochastic; def-signed-idempotent
 deps: 
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/ingest (classical-portfolio; contracts verbatim from ../almost-idempotent-positive-maps/argument/lemmas or report/kernel-conjecture.tex)
 owner: A
 workspace: proofs/ex-hume
