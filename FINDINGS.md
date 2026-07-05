@@ -344,3 +344,33 @@ imports a future agent might reach for — read before importing ANY external to
 - Successor discipline confirmed twice in one day: bounded prove-or-refute waves on freshly
   codified conjectures killed two wrong shapes (broad NSC, Gamma-emptiness) within hours of
   codification, each leaving a sharper, certified-nonvacuous target. Cost of each kill: one wave.
+
+## 2026-07-05 — W18 (session 9): Route-A wall re-read — WALL-NARROWED, not wall-blocked; D1 confirmed twice
+
+- ✅ **The recorded B3/B4 walls do NOT bind the constant cap `σ_g ≤ 1/2` as stated** (W18,
+  `docs/waves/2026-07-05-W18-route-a-wall-reread.md`, worker T1/T2 — no status change):
+  B3's one-sided ledger was a wall for a *lower* bound on visible-pot mass; CAP-1/2 is an *upper*
+  bound on genuine-outside mass (B4's dodge), but the burden TRANSFERS intact to a named residual —
+  the **constant-mass shallow-genuine exclusion**: positive mass on rows with `dist₁(·,C_W) > τ/4`
+  AND canonical-separator depth `< τ/4` must be `≤ 1/2 − 4τ(2+4δ)`. The class-count dead route
+  (c10/quotient packing) **BINDS-ONLY-O(1)**: CAP-1/2 tolerates `C/τ` (or `C/δ`) genuine classes,
+  which NO recorded killer family excludes — and no recorded construction pushes total `σ_g`
+  toward 1/2 (F2 maxima: `σ_g = 5991/80000`, `229/3200`; W17b census max `1/25`).
+- ❗ **Two honesty flags on the narrowed route.** (i) The per-class "hostable mass ∝ poke depth"
+  bound is NOT a proved lemma (conjecture-body prose, `conj-no-free-frontier`), with two
+  undisambiguated scale readings — `O(τ)` (poke parameter) vs `O(δ)` (row negativity); which one
+  holds changes the needed class count by a factor `1/τ`. (ii) The depth-ledger steps consume
+  `obs-deep-leakage`, whose status is **heuristic** — the "deep slice is paid" step is itself an
+  unproved input until that shard is re-established.
+- ✅ **W17's D1 is now twice-independently re-derived** (W18 R1 under an independence discipline +
+  R2's Q4(b)): cap `σ_g ≤ 1/2` on hidden top vertices ⇒ `H ≤ (29/8)τ`, exact constants `29/16`,
+  `29/8` confirmed; STRENGTHENED — under the cap ALL rows land within `(29/8)τ` of `conv W` (the
+  Kernel raw antecedent `σ̃_v > τ` is unused; no raw-to-halo bridge needed). Residuals for
+  "cap ⇒ Kernel": W-nonemptiness (genuine gap), `δ = 0` endpoint (short). Still worker-T1, NOT
+  af-validated.
+- ❌ **CAP-1/2 is NOT equivalent to the height bound** (orchestrator wave-brief hypothesis,
+  REFUTED independently by both workers): the validated collapse gives cap ⇒ height bound and
+  `H > (29/8)τ ⇒ every hidden top has σ_g > 1/2`, but NOT the converse — the cap additionally
+  excludes the low-height/high-`σ_g` region. Consequence: the W17b census slack is *stronger*
+  evidence than "no tall instance found", and refuter searches should target `σ_g > 1/2` at ANY
+  height. Do not cite the cap and the height bound as interchangeable.
