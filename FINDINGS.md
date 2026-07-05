@@ -374,3 +374,36 @@ imports a future agent might reach for — read before importing ANY external to
   excludes the low-height/high-`σ_g` region. Consequence: the W17b census slack is *stronger*
   evidence than "no tall instance found", and refuter searches should target `σ_g > 1/2` at ANY
   height. Do not cite the cap and the height bound as interchangeable.
+
+## 2026-07-05 — E1 (session 9): arm E decision-check — Luo–Pang is NOT a black-box ½; route retargeted GO-CONDITIONAL
+
+- ❌ **The lit-review §1.3 attribution does not survive the staged primary** (E1,
+  `docs/waves/2026-07-05-E1-error-bound-decision-check.md`, worker A, text-grounded
+  [STAGED-quote] audit): Luo–Pang 1994's ½-exponent results (Thm 4.1 / Cor 4.1) require
+  **Assumption 4.1 — every quadratic NONNEGATIVE on the polyhedron** — and the idempotence
+  entries `(E²−E)_ij` are **sign-indefinite** on the stochastic polytope (T1 witness at n=2).
+  The general analytic theorems (2.1/2.2) give fixed-n bounds with UNSPECIFIED exponent and
+  instance/compact-set constants. **Fixed-n √ is not even free**: the staged Example 4.2 is a
+  quadratic system with error-bound exponent ≤ 1/4. Norm conversions add `n^{3/4}` (Frobenius)
+  to `n` (entrywise-ℓ1) on top. Never cite "Luo–Pang gives ½ for our system".
+- ❗ **Citation drift caught** (staged bibliography, refs [26]/[27]): the monotone-LCP error
+  bound is Mangasarian–Shiau, *Math. Programming* **36 (1986)** 81–89; "SIAM JCO 25 (1987)"
+  is their SEPARATE Lipschitz-continuity paper. The lit-review §1.3 line conflated them
+  (correction note added there). Acquisition queue updated accordingly.
+- ✅ **The (EB) formulation passes the clone/block smell tests in the theorem direction**
+  (worker A T1: weighted clone lift preserves row-residuals, distances, and idempotency;
+  block sums are maxima) — independently confirmed exactly by the E1b pilot. Consequence:
+  any future arm-E proof charging by raw index counts / active-constraint counts / Euclidean
+  dimension is suspect unless shown clone-lift invariant. Euclidean black-box constants FAIL
+  this test.
+- ✅ **Pilot (L3, `runs/2026-07-05-e1-uniformity-pilot/`): no visible n-blowup** — largest
+  certified ratio `r ≈ 1.375` at the stochasticized ex-hume anchor with TRUE n=3 minimum;
+  coupled n=4..12 family bounded. A pilot, never a uniformity certificate; decision-grade
+  wave-2 criteria recorded in the bundle.
+- **Arm E retarget (GO-CONDITIONAL, worker A):** not "apply Luo–Pang" but a bespoke,
+  clone-invariant feasible-slice error bound for the stochastic-idempotent variety. Two named
+  intermediates: (E-int-1) fixed-n local √ bound with the constant expressed in stratum data,
+  then measure n-dependence; (E-int-2) find nonnegative-on-P_n quadratics `R_n` with zero set
+  exactly the idempotents and `R_n(Q) ≤ K·η`, K n-free — that WOULD make Cor 4.1 applicable by
+  construction. Kill criteria recorded in the wave doc (incl.: a feasible family with
+  `dist/√η → ∞` kills op-classical itself, not just the arm).

@@ -63,6 +63,16 @@ noncommutative generalization verbatim as an open problem (§1.1).
 
 ### 1.3 The degenerate-complementarity ½-exponent mechanism [abstract/secondary — needs primary verification]
 
+> **CORRECTION (2026-07-05, E1 primary-source audit — `docs/waves/2026-07-05-E1-error-bound-decision-check.md`):**
+> the staged Luo–Pang 1994 primary does NOT make the ½ exponent directly applicable to
+> `E²=E, E≥0, E𝟙=𝟙`: its ½ theorems require every quadratic NONNEGATIVE on the polyhedron
+> (Assumption 4.1), and `(E²−E)_ij` is sign-indefinite on the stochastic polytope; fixed-n √ is
+> not free either (staged Example 4.2: exponent ≤ ¼). Also a citation conflation below: the
+> monotone-LCP error bound is Mangasarian–Shiau, Math. Programming 36 (1986) 81–89; SIAM JCO 25
+> (1987) is their separate Lipschitz paper. This section's mechanism claim stands only as the
+> RETARGETED arm-E programme (bespoke clone-invariant feasible-slice error bound), not as a
+> citable theorem.
+
 - Mangasarian–Shiau (SIAM J. Control Optim. 25, 1987) + Luo–Pang (Math. Programming 67, 1994; canonical
   monograph Facchinei–Pang 2003): Hölder/Łojasiewicz error bounds for quadratic systems with nonnegativity;
   **exponent exactly 1/2 at DEGENERATE solutions** (active constraint + vanishing dual slack), linear at
