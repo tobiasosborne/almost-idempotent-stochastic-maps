@@ -11,4 +11,10 @@ owner: A
 workspace: proofs/conj-kernel
 ---
 
-The **FRONTIER** (`fr board`). The complementary branch (sigma~_v <= tau) is already a theorem upstream; this is the missing branch. Equivalent working form: [[conj-ex]]. Evidence only (67k instances) -> `numerical`, never a proof (`FINDINGS.md`).
+**THE theorem-facing input** (user decision 2026-07-05, adopting the DC4 redraw): the recorded
+route `Kernel => HLC => op-exposed-hull => op-classical` is short-proof + mod-audit, priced link
+by link in `docs/waves/2026-07-05-DC4-equiv-assembly-audit.md`. The complementary branch
+(sigma~_v <= tau) is already a theorem upstream; this is the missing branch. [[conj-ex]] is a
+SEPARATE conjectural attack route — no proved edge between the two in either direction (DC4;
+never write "equivalently"). Evidence only (67k instances) -> `numerical`, never a proof
+(`FINDINGS.md`).

@@ -31,15 +31,19 @@ through the chain
 
 > `op-classical  ⇐  op-exposed-hull  ⇐  HLC (hull-linear-cap)  ⇐  Kernel/(EX) conjecture`
 
-with the downstream steps `proved` / `proved-mod-audit` and the **single missing input** stated two
-equivalent ways (both OPEN):
+with the downstream steps `proved` / `proved-mod-audit` and the **single missing theorem-facing
+input** (OPEN):
 - **Kernel Conjecture** (geometric): universal `δ₀, B` s.t. every exact signed idempotent `P` with
   `δ(P) ≤ δ₀` has `W(P) ≠ ∅` and every hidden row vertex `v` with invisible mass `σ̃_v > τ = √δ` satisfies
   `dist₁(p_v, conv{p_w : w ∈ W}) ≤ B·τ`.
-- **(EX) conjecture** (current working form): every rank-≥3 signed idempotent `P` with `δ ≤ ¼` has a θ-½
-  actual-row chart `U₀` with `max_s Φ_s(U₀) ≤ C₀·δ` (empirically `C₀ = 1`). With the (proved-mod-audit)
-  factorization `S*_s ≤ 2Φ_s + 6δ` this composes to the registry constant `C_sf = 8` and discharges
-  `op-classical`.
+
+A second conjecture is a **separate attack route, NOT an equivalent form** (decision 2026-07-05,
+adopting the DC4 audit redraw — no proved implication exists in either direction; see
+`docs/waves/2026-07-05-DC4-equiv-assembly-audit.md`):
+- **(EX) conjecture**: every rank-≥3 signed idempotent `P` with `δ ≤ ¼` has a θ-½ actual-row chart
+  `U₀` with `max_s Φ_s(U₀) ≤ C₀·δ` (empirically `C₀ = 1`). With the (proved-mod-audit)
+  factorization `S*_s ≤ 2Φ_s + 6δ` this composes to `C_sf = 8`; it would discharge `op-classical`
+  only through the **OPEN edge `(EX) ⇒ Kernel/HLC`**.
 
 **Honest headline.** The realizable-family relation is **linear, `δ = H/2`**; the `δ ≳ H²` form is only the
 worst-case envelope (H capped at `O(√δ)` by the exposedness window). The `√η` exponent is nonetheless sharp.

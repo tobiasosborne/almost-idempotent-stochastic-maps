@@ -1,4 +1,9 @@
 <!--
+*** SUPERSEDED 2026-07-05 by docs/plans/2026-07-05-top-down-proof-sketch-v2.md (session-8 DC1-DC4
+decision-check wave: trunk equivalence unproved both directions; broad NSC disproved; K<1>6
+assembly RED; fusion supported). Kept intact because banked artifacts cite v1 line numbers
+(e.g. the DC4 gap table). Do not build new waves against THIS file. ***
+
 ROLE: the top-down, breadth-first FULL proof sketch of op-classical (user-requested, session 7) —
   Lamport-style structured outline, highest hierarchy level only. The strategic map every wave and
   every DAG-wiring step should be built against.

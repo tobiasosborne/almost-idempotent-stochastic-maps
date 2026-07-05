@@ -19,9 +19,9 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 |-----|------|-------------|------------|
 | `ARG-CONJ-DEGENERATE-PAYMENT` | `argument/lemmas/conj-degenerate-payment.md` | `3b7cd00d33cbf5fa` | Registry shard for `conj-degenerate-payment` |
 | `ARG-CONJ-DEGENERATE-TRANSPORT` | `argument/lemmas/conj-degenerate-transport.md` | `b68de13aaa480a15` | Registry shard for `conj-degenerate-transport` |
-| `ARG-CONJ-EX` | `argument/lemmas/conj-ex.md` | `02d459033dc90a3c` | Registry shard for `conj-ex` |
+| `ARG-CONJ-EX` | `argument/lemmas/conj-ex.md` | `150f2cf7b1925372` | Registry shard for `conj-ex` |
 | `ARG-CONJ-HALO-COLLAPSE` | `argument/lemmas/conj-halo-collapse.md` | `34f4de8d0861573d` | Registry shard for `conj-halo-collapse` |
-| `ARG-CONJ-KERNEL` | `argument/lemmas/conj-kernel.md` | `9c1f2f250cf211a6` | Registry shard for `conj-kernel` |
+| `ARG-CONJ-KERNEL` | `argument/lemmas/conj-kernel.md` | `f010524f7cf199f0` | Registry shard for `conj-kernel` |
 | `ARG-CONJ-NO-FREE-FRONTIER` | `argument/lemmas/conj-no-free-frontier.md` | `070ea358dbc4c1b9` | Registry shard for `conj-no-free-frontier` |
 | `ARG-CONJ-RH` | `argument/lemmas/conj-rh.md` | `c4b4885f2a17b4d7` | Registry shard for `conj-rh` |
 | `ARG-CONJ-SC` | `argument/lemmas/conj-sc.md` | `618c7511457521d6` | Registry shard for `conj-sc` |
