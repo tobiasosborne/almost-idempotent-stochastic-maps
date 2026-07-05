@@ -66,11 +66,25 @@ anchors; not blocking]
 
 ## ROUTE A to <2>4 — direct geometric (the old B-arm line)
 
-Prove the halo-robust cap `sigma_g <= 1 - c` for hidden top vertices; with the [rigorous]
-collapse bound this yields H = O(tau) and closes Kernel. STATE: wall-blocked — needs a
-ledger-immune, class-count-free mechanism (B4 killed exposedness absorption); the B4 deciders
-(FAIL-1 exact instance; signed quantitative class count) remain the named unblockers. [OPEN; no
-active waves; the fr trail holds the full wall record]
+Target redrawn by W18 (2026-07-05, session 9; `docs/waves/2026-07-05-W18-route-a-wall-reread.md`):
+**CAP-1/2** — universal `delta_0` such that every hidden top vertex has halo-robust
+`sigma_g <= 1/2`. With the [rigorous] collapse bound this gives `H <= (29/8)*tau` (D1,
+twice-independently worker-derived, exact constants confirmed; STRENGTHENED: cap bounds ALL rows,
+the Kernel raw antecedent is unused) and closes Kernel modulo W-nonemptiness [genuine gap] + the
+delta=0 endpoint [short]. NOTE: CAP-1/2 is strictly STRONGER than the paired height bound (not
+equivalent — both W18 workers independently; it also excludes the low-height/high-sigma_g region).
+
+STATE: **WALL-NARROWED** (was: wall-blocked). W18 verdicts: B3 one-sided ledger TRANSFERRED (not
+binding as stated) — the named minimal residual is the **constant-mass shallow-genuine
+exclusion**: mass on rows with `dist_1(.,C_W) > tau/4` AND separator-depth `< tau/4` must be
+`<= 1/2 - 4*tau*(2+4*delta)`; the class-count dead route BINDS-ONLY-O(1) — CAP-1/2 tolerates
+`C/tau` (or `C/delta`) classes, which no recorded family excludes. Honesty flags: the per-class
+hostable-mass bound is UNPROVED with ambiguous scale (O(tau) poke vs O(delta) row-negativity);
+the depth-ledger steps consume obs-deep-leakage [heuristic — needs re-establishment before any
+rigorous assembly]. Ranked surviving mechanisms (W18 Q5(ii), each with kill criterion + decider):
+(1) delta-dependent quotient packing + per-class hostable-mass lemma; (2) mass dichotomy
+(visibility-or-halo at constant mass; killed-as-uniform-pointwise by B4 FAIL-1, needs a global
+form); (3) chart-toolkit transport (blocked by the D5 weight bridge, same as <3>3). [OPEN]
 
 ## ROUTE B to <2>4 — via the chart engine ((EX), the arm A/D/G machine)
 
@@ -145,7 +159,10 @@ Trunk (blocking regardless of route):
 3. <2>6 HLC=>op-exposed-hull re-audit. [moderate]
 4. <2>7 three interface gaps (cluster / approx-simplex / JB). [moderate-to-genuine]
 
-Route A: 5. the halo-robust sigma_g cap mechanism. [OPEN, wall-blocked, needs a new idea]
+Route A: 5. CAP-1/2 (`sigma_g <= 1/2` at hidden tops). [OPEN, wall-NARROWED by W18: minimal
+residual = constant-mass shallow-genuine exclusion; delta-dependent class-count opening; plus
+W-nonemptiness (genuine) + obs-deep-leakage re-establishment (currently heuristic) + delta=0
+endpoint (short) for the full Kernel closure]
 
 Route B: 6. (EX) itself via K1-K5: exhaustiveness [bookkeeping], unified financing horn [hard],
 conj-b-restricted [open; certified-nonempty hypothesis class; K >= 0.7708 forced; explicit
@@ -162,8 +179,15 @@ Sharpness: closed mod-audit (ex-hume; not blocking).
   a persistent floor rescues the <3>3 dictionary despite the D5 wall.
 - The D_J/B floor decider (wave 16's named test): D_J/B -> 0 kills the direct-FE route for
   conj-b-restricted; a floor isolates the exact theorem to prove.
-- Route A's wall record has not been re-read against the new import toolkit (the c<0 tool and
-  cross-pivot ledger postdate the B4 walls).
+- ~~Route A's wall record has not been re-read against the new import toolkit~~ DONE (W18,
+  session 9): WALL-NARROWED. New named surfaces it exposed:
+  - the constant-mass shallow-genuine exclusion (Route A's minimal residual) — no mechanism yet;
+  - the per-class hostable-mass lemma: unproved, scale ambiguous (O(tau) vs O(delta)) — a
+    disambiguation decider is cheap and changes the needed class count by 1/tau;
+  - obs-deep-leakage is only [heuristic] but is consumed by every depth-ledger step — needs
+    re-establishment (elevation candidate) before any rigorous Route-A assembly;
+  - D1 (cap => H <= 29tau/8) is twice worker-derived but uncodified — registry shard pending
+    (bd follow-up), NOT yet af-validated.
 - FanRes = O(delta): unproved, now load-bearing for K4.
 - Silent-row exhaustiveness lemma: unwritten.
 - Rank-4 Gamma/c<0 decider extension: not run.
