@@ -423,3 +423,43 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   exactly FOUR open mechanisms (NSC; orphan budget; fan-lift; master decomposition + rank transfer)
   — everything else is assembly or transcription. HANDOFF START-HERE updated to point at it. Wave
   design and the DAG-wiring issue are to be built against this document.
+
+## 2026-07-05 (session 8) — BFS scoping: sketch v2; two conjectures killed by certificate; Kernel-rooted redraw
+
+- **User redirections (binding):** breadth-first top-down scoping ("af per node, refine the
+  hardest leaf after SOTA recon"); mid-session: **no progress theatre** — the deliverable is a
+  fully scoped workable proof, progress = unscoped surface shrinking (memory + bd remember).
+- **Codified + seeded:** wave-13 tools (`lem-negative-pivot-import` proved-mod-audit; `conj-nsc`
+  broad-form with loud scope note) at 43ce90b; 10 sketch-node af workspaces seeded (8784594);
+  `lem-import-reduction` af-VALIDATED = 16th rigorous (81e247e; bookkeeping-grade).
+- **4-lane sonnet recon banked** (3f69029, `docs/recon/2026-07-05-open-mechanism-recon.md`):
+  difficulty ranking + the D/G COUPLING hypothesis + unrecorded K⟨1⟩6 composition risks.
+- **Idempotent Atlas published** (user-requested interactive proof explainer; opus build from
+  orchestrator spec; 3 reading lenses, 4 live instruments incl. the certified G12 specimen).
+- **Decision-check wave DC1-DC4** (533be01): DC1 fusion SUPPORTED (D-line demands financed by the
+  G-line budget, worst ratio 1); **DC2 broad `conj-nsc` REFUTED** (zero-denominator certificate,
+  orchestrator-independently recomputed; carrier entrywise nonnegative at a certified argmin);
+  DC3 K⟨1⟩6 additive master formula RED (FanRes realized>0 + absent; silent rows tribeless;
+  SC-in-RH nesting double-charge); DC4 `conj-ex ⟺ conj-kernel` UNPROVED both directions (three
+  named mismatches; redraw recommended).
+- **User decisions:** adopt the DC4 redraw (PRD + shards edited: Kernel = theorem-facing input;
+  (EX) = attack route; "equivalently" cut) + Γ-emptiness-first successor. Sketch v2 banked
+  (c1b4daf, updated 7ed4d0e/e6ec340/fb84a37) — the phase deliverable, with the priced OPEN
+  LEDGER + unscoped-surface list.
+- **W15: `conj-gamma-emptiness` REFUTED** (b490ea4) — the FIRST certified capped clean Γ-block
+  (δ≈0.055, Ψ=1/200 < M ≤ Γ=7/250, refuting row high-self); G11's 0/352 was coverage. T1
+  residual: `M − Φ_r ≤ 17B + 20δ` ⇒ **`conj-b-restricted`** codified as THE K3 link (hypothesis
+  class certified NONEMPTY, K ≥ 0.7708 forced, K_G = 17K+20 explicit).
+- **W16/W16b:** clean-block sup B/δ = 0.77764 (the wave-13 record instance ITSELF carries a
+  clean block — wall binds with/without); direct-FE identity + conditional theorem; adversarial
+  floor collapsed 157/500 → 23/1000 (genuine point) — direct-FE route FRAGILE; residual = α→1
+  continuation. (7ed4d0e, fb84a37)
+- **W17/W17b:** ⟨3⟩3 dictionary priced — D1 low-halo reduction proved short (only σ_g > 1/2
+  matters; constant cap ⇒ Kernel with B = 29/8), D5 weight-transport = the wall, possibly
+  Kernel-sized; door-ratio census REGIME-EMPTY-SO-FAR (514 instances, max σ_g = 1/25) ⇒ ≥12×
+  empirical slack on the **Route-A constant cap** — the wall re-read is session 9's top item.
+  (7ed4d0e, e6ec340)
+- **Discipline notes:** two freshly codified conjectures killed by bounded prove-or-refute waves
+  within hours each — falsifiable contracts + certified-grippable hypothesis classes work; every
+  status-changing certificate independently recomputed from matrices alone; W16b banked with an
+  explicit verification-scope limitation (fresh-point JSON lacked matrices).
