@@ -4,14 +4,23 @@ kind: lemma
 contract: Capped Gamma-emptiness: for every rank-3 exact signed idempotent P (square real matrix with P^2 = P and all row sums equal to 1) with 0 < delta(P) <= 1/4 where delta(P) = max_i sum_l max(-P_il,0), every actual-row chart U = (u_0,u_1,u_2) whose rows p_{u_0}, p_{u_1}, p_{u_2} form a basis of the row space, which is theta-half (Vol(U)/Vol_max(P) >= 1/2, with Vol_max(P) the maximum Gram volume over actual-row charts) and minimizes Phi(U) = max_r Phi_r(U) among theta-half actual-row charts, where coordinates a_q(i) are defined by p_i = sum_q a_q(i)p_{u_q}, E_r(i) = max(sum_{q != r} max(-a_q(i),0) - (1 - a_r(i)), 0), and Phi_r(U) = sum_i max(P_{u_r i},0)E_r(i), every maximal pivot s with Phi_s(U) = Phi(U), and every non-chart row j whose pivot-removing chart V_j = U - u_s + j is theta-half admissible (|a_s(j)|*Vol(U)/Vol_max(P) >= 1/2), with new coordinates a_s^j(i) = a_s(i)/a_s(j) and a_q^j(i) = a_q(i) - a_s(i)a_q(j)/a_s(j) for q != s, Psi_j = sum_i max(P_{ji},0)*max(sum_{q != s} max(-a_q^j(i),0) - (1 - a_s^j(i)), 0), and Gamma_j = max over r != s of sum_i max(P_{u_r i},0)*max(sum_{q != r} max(-a_q^j(i),0) - (1 - a_r^j(i)), 0), it is NOT the case that Psi_j < Phi_s(U) <= Gamma_j.
 defs: def-signed-idempotent; def-negative-mass
 deps: 
-status: conjecture
+status: disproved
 af: none
 provenance: docs/waves/2026-07-04-G11-capped-charge.md (0 clean (G) branches in 352 capped candidates; "prove capped (G)-emptiness" named as the alternative route); docs/waves/2026-07-04-G10-collateral-branch.md (the delta=49/60 clean-Gamma witness — pattern is cap-blocked, not structurally impossible); successor decision docs/recon/2026-07-05-open-mechanism-recon.md §0 + runs/2026-07-05-nsc-zero-denominator-refuter/ (user decision 2026-07-05 after the broad-NSC refutation)
 owner: A
 workspace: proofs/conj-gamma-emptiness
 ---
 
-**The adopted successor to the disproved broad [[conj-nsc]]** (user decision 2026-07-05: attack
+**DISPROVED 2026-07-05 (wave 15, same session as codification — the bounded attempt did its job).**
+Exact rank-3 counterexample, orchestrator-independently recomputed:
+`runs/2026-07-05-gamma-emptiness-refuter/` — the FIRST certified capped clean Gamma-block
+(`delta = 55319/1000000`, unique argmin `(0,2,4)`, `Psi_j = 1/200 < M <= Gamma_j = 7/250`; the
+refuting row is high-self `P_11 = 203/400`, so a high-self clause would not have saved it —
+G11's 0/352 was search coverage, not emptiness evidence). The recorded fallback fires:
+successor = [[conj-b-restricted]], whose hypothesis class this instance certifies NONEMPTY
+(`B/delta ~ 0.7708` there). Wave artifact: `docs/waves/2026-07-05-W15-gamma-emptiness.md`.
+
+**The adopted successor to the disproved broad [[conj-nsc]]** (as it stood earlier on 2026-07-05) (user decision 2026-07-05: attack
 capped (G)-emptiness first as a bounded proof attempt; the δ-financed branch-restricted B-lemma is
 the recorded fallback target — the aism-z98 shape). If this holds, the Γ-branch of the validated
 pivot-removing disjunction [[lem-pivot-removing-move]] (`Φ_s(U) ≤ max(Ψ_j, Γ_j)`) is VACUOUS under

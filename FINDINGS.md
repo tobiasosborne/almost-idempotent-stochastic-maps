@@ -327,3 +327,20 @@ imports a future agent might reach for — read before importing ANY external to
   F_L, FIN_lhs) is financed by the G-line contract budget (worst ratio exactly 1, D3 via Σβν; no
   demand-positive/budget-zero escape) — supports treating the fan/orphan/self-support financing as
   ONE budget in sketch v2. Finite evidence, not proof.
+
+## 2026-07-05 — wave 15: Gamma-emptiness DEAD; the branch-restricted B-lemma regime is REAL
+
+- ⛔ **Capped (G)-emptiness is REFUTED** (`runs/2026-07-05-gamma-emptiness-refuter/`,
+  orchestrator-independently recomputed): the FIRST certified capped clean Gamma-block exists
+  (delta ~ 0.055, unique theta-half argmin, Psi_j = 1/200 < M <= Gamma_j = 7/250). **G11's 0/352
+  capped search was a coverage artifact, not emptiness evidence** — never treat a failed search
+  census as support for an emptiness conjecture without a coverage argument. The refuting row is
+  high-self (P_11 = 203/400), so the high-self-restricted variant is refuted too.
+- ✅ **The (PRT) collateral horn now has ONE explicit missing ingredient** (wave-15 T1 residual):
+  `M − Φ_r ≤ 17·B_{r,s} + 16δ` (c>0) / `+ 20δ` (c<0) under the theta-half Cramer box — so
+  `conj-b-restricted` (`B ≤ K·δ` at capped argmins carrying a clean Gamma-block) closes the branch
+  with `K_G = 17K + 20`. Its hypothesis class is NONEMPTY for the first time (the refuter itself:
+  `B/δ = 0.7708`, forcing `K ≥ 0.7708`; the wave-13 family law suggests `K ≥ 0.77764`).
+- Successor discipline confirmed twice in one day: bounded prove-or-refute waves on freshly
+  codified conjectures killed two wrong shapes (broad NSC, Gamma-emptiness) within hours of
+  codification, each leaving a sharper, certified-nonvacuous target. Cost of each kill: one wave.

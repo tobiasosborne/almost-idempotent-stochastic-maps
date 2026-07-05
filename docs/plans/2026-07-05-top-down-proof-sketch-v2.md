@@ -99,13 +99,16 @@ gap; unpriced until attempted]
   REPLACES v1's separate fan-lift (K<1>2) and orphan horn (K<1>3) as one mechanism. [OPEN; hard;
   the single biggest open surface of Route B]
 - **K3. Self-support horn.** The (PRT) skeleton chain is [rigorous/reviewed] end-to-end
-  (disjunction, (CI) c>0, c<0 import [reviewed], import reduction, cross-pivot cancellation).
-  Its only open link, the B-lemma, is now attacked as: **conj-gamma-emptiness** [OPEN; wave
-  dispatched 2026-07-05] — if proved, the Gamma-branch is VACUOUS under the cap and K3 reduces to
-  the realized-and-charged (V)/(Psi) branches; fallback = delta-financed branch-restricted
-  B-lemma (z98 shape). DEAD: broad NSC (charging B to carrier row-negativity —
-  runs/2026-07-05-nsc-zero-denominator-refuter/, zero-denominator certificate; a carrier can be
-  entrywise nonnegative AT a certified argmin).
+  (disjunction, (CI) c>0, c<0 import [reviewed], import reduction, cross-pivot cancellation), and
+  wave 15's T1 residual makes its assembly EXPLICIT: `M - Phi_r <= 17*B_{r,s} + 20*delta` under
+  the box. The single open link is **conj-b-restricted** (`B_{r,s} <= K*delta` at capped argmins
+  carrying a clean Gamma-block) [OPEN; hypothesis class certified NONEMPTY by the wave-15
+  instance, B/delta = 0.7708 there, so K >= 0.7708 forced; closes the branch with K_G = 17K+20].
+  DEAD, both orchestrator-verified: broad NSC (zero-denominator certificate,
+  runs/2026-07-05-nsc-zero-denominator-refuter/ — never charge carrier row-negativity) and
+  capped Gamma-emptiness (runs/2026-07-05-gamma-emptiness-refuter/ — the FIRST certified capped
+  clean Gamma-block; G11's 0/352 was coverage, and the refuting row is high-self, so the
+  high-self-restricted emptiness variant died with it).
 - **K4. Master assembly, nesting-aware (DC3 restatement).** Phi_s assembled by: (a) the nested
   SC -> RH route on ALL non-fan NF_s demand (incl. silent/high-self rows — charged ONCE); (b) the
   fan-cover payment WITH its explicit FanRes_s(U) residual (FanRes > 0 is realized; either keep
@@ -134,9 +137,9 @@ Trunk (blocking regardless of route):
 Route A: 5. the halo-robust sigma_g cap mechanism. [OPEN, wall-blocked, needs a new idea]
 
 Route B: 6. (EX) itself via K1-K5: exhaustiveness [bookkeeping], unified financing horn [hard],
-Gamma-emptiness-or-B-financing [open, bounded attempt in flight], nesting-aware assembly shard
-[bookkeeping-hard], rank transfer [moderate]; PLUS 7. the (EX)=>Kernel edge <3>3. [genuine gap,
-never attempted]
+conj-b-restricted [open; certified-nonempty hypothesis class; K >= 0.7708 forced; explicit
+downstream constants], nesting-aware assembly shard [bookkeeping-hard], rank transfer
+[moderate]; PLUS 7. the (EX)=>Kernel edge <3>3. [genuine gap, never attempted]
 
 Sharpness: closed mod-audit (ex-hume; not blocking).
 
