@@ -83,8 +83,14 @@ supply: a dictionary from the chart/pivot frame to the hidden-vertex frame cross
 mismatches — (i) one existential argmin chart vs all hidden vertices; (ii) pivot-row weights
 beta_s(j) = P_{u_s j} vs vertex-row weights P_vj; (iii) the maximal-pivot restriction vs
 arbitrary vertices (needs a pivot/vertex selection lemma). v1's <1>7 "sigma-door financing"
-prose was the sketch of this edge; it is hereby demoted to a proof OBLIGATION. [OPEN; genuine
-gap; unpriced until attempted]
+prose was the sketch of this edge; it is hereby demoted to a proof OBLIGATION.
+[PRICED by wave 17 (docs/waves/2026-07-05-W17-ex-kernel-dictionary.md): factored D0-D8; proved
+short (worker T1): D0, D8, and D1 = only hidden top vertices with halo-robust sigma_g > 1/2
+matter (H <= 29tau/8 otherwise, from the validated halo-collapse); GENUINE GAPS: D4 quantifier
+bridge + D5 THE WALL (no lemma transports row-v weights P_vj into pivot weights P_{u_s j}) + D7
+self-support replacement; D2 (W nonempty) moderate, untouched; D6 carrier-nu DEAD (DC2).
+Closability estimate: possibly Kernel-sized — relative value shifts toward Route A. Named
+decider: the door ratio max_s S*_s(U)/(sigma_g*H).]
 
 **The (EX) engine itself (Lemma-K block, restructured by DC1/DC2/DC3):**
 
@@ -109,6 +115,11 @@ gap; unpriced until attempted]
   capped Gamma-emptiness (runs/2026-07-05-gamma-emptiness-refuter/ — the FIRST certified capped
   clean Gamma-block; G11's 0/352 was coverage, and the refuting row is high-self, so the
   high-self-restricted emptiness variant died with it).
+  Wave-16 state (UNDECIDED, banked runs/2026-07-05-w16-clean-block-b/): sup B/delta = 0.77764
+  over 9 certified clean-block instances — the wave-13 record instance ITSELF carries a clean
+  block, so the wall binds with and without it; direct-FE identity (T1 exact) + conditional
+  theorem: a uniform floor on the carrier self-defect D_J/B (seed 157/500) plus D_J <= C*delta
+  gives B <= (C/lambda)*delta. Named decider: minimize D_J/B over clean-block instances.
 - **K4. Master assembly, nesting-aware (DC3 restatement).** Phi_s assembled by: (a) the nested
   SC -> RH route on ALL non-fan NF_s demand (incl. silent/high-self rows — charged ONCE); (b) the
   fan-cover payment WITH its explicit FanRes_s(U) residual (FanRes > 0 is realized; either keep
@@ -139,14 +150,18 @@ Route A: 5. the halo-robust sigma_g cap mechanism. [OPEN, wall-blocked, needs a 
 Route B: 6. (EX) itself via K1-K5: exhaustiveness [bookkeeping], unified financing horn [hard],
 conj-b-restricted [open; certified-nonempty hypothesis class; K >= 0.7708 forced; explicit
 downstream constants], nesting-aware assembly shard [bookkeeping-hard], rank transfer
-[moderate]; PLUS 7. the (EX)=>Kernel edge <3>3. [genuine gap, never attempted]
+[moderate]; PLUS 7. the (EX)=>Kernel edge <3>3. [PRICED (wave 17): D1/D8 proved short; D4+D5+D7
+genuine gaps (D5 = the weight-transport wall); possibly Kernel-sized]
 
 Sharpness: closed mod-audit (ex-hume; not blocking).
 
 ## Unscoped surface remaining (drives the next BFS round)
 
-- The <3>3 dictionary has never been attempted — even its difficulty is unknown. (Next scoping
-  wave candidate after Gamma-emptiness returns.)
+- The door-ratio decider (wave 17's named test): max_s S*_s(U)/(sigma_g*H) over rank-3
+  families — a single exact counterexample to the door lower bound redraws v3 toward Route A;
+  a persistent floor rescues the <3>3 dictionary despite the D5 wall.
+- The D_J/B floor decider (wave 16's named test): D_J/B -> 0 kills the direct-FE route for
+  conj-b-restricted; a floor isolates the exact theorem to prove.
 - Route A's wall record has not been re-read against the new import toolkit (the c<0 tool and
   cross-pivot ledger postdate the B4 walls).
 - FanRes = O(delta): unproved, now load-bearing for K4.

@@ -1,0 +1,77 @@
+{
+  "B": "42/985",
+  "B_over_delta": "8400000/10897843",
+  "Gamma": "7/250",
+  "M": "219870541/7880000000",
+  "Phi": [
+    "0",
+    "679/24625",
+    "219870541/7880000000"
+  ],
+  "Psi": "1/200",
+  "U": [
+    0,
+    2,
+    4
+  ],
+  "carriers": [
+    {
+      "a_s": "-12/197",
+      "beta": "7/10",
+      "contribution": "42/985",
+      "i": 3,
+      "pivot_admissible": false,
+      "row_negativity": "2666319/50000000",
+      "self": "343/500"
+    }
+  ],
+  "ci": {
+    "I": "21/9850",
+    "alpha_A": "0",
+    "alpha_B": "13/200",
+    "bound": "273/98500",
+    "c": "200/197",
+    "d_r": "5/197",
+    "d_t": "-8/197",
+    "terms": [
+      [
+        3,
+        "3/985",
+        "21/9850"
+      ]
+    ]
+  },
+  "clean_block_row": 1,
+  "delta": "55319/1000000",
+  "direct_fe": {
+    "A_in": {
+      "3": "2401/5000"
+    },
+    "B": "42/985",
+    "carriers": [
+      3
+    ],
+    "lhs": "3297/246250",
+    "lhs_terms": {
+      "3": "3297/246250"
+    },
+    "rhs": "3297/246250",
+    "signed_self_defect_floor": "157/500",
+    "source_terms": {
+      "3": {
+        "external_negative_to_negative_coord": "0",
+        "external_negative_to_positive_coord": "2643819/49250000",
+        "external_positive_to_negative_coord": "0",
+        "external_positive_to_positive_coord": "-1701819/49250000",
+        "internal_negative_transfer": "0",
+        "self_negative": "0",
+        "unweighted": "471/24625",
+        "weighted": "3297/246250"
+      }
+    },
+    "transfer_excess": "0"
+  },
+  "r": 1,
+  "s": 2,
+  "tier": "T0 exact rational certificate; T1 identity interpretation only"
+}
