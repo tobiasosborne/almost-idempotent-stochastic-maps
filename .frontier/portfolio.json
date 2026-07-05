@@ -207,6 +207,16 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-nsc-zero-denominator-refuter/data/nsc_certificates.json",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-nsc-zero-denominator-refuter/scripts/orch_verify_refuter.py"
         ]
+      },
+      {
+        "name": "gamma-emptiness-refuter",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-gamma-emptiness-refuter/scripts/orch_verify_refuter.py"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-gamma-emptiness-refuter/scripts/orch_verify_refuter.py"
+        ]
       }
     ]
   },

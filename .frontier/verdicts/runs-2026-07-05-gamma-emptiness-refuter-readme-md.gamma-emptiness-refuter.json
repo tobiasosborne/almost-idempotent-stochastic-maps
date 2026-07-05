@@ -1,0 +1,9 @@
+{
+  "claim": "runs/2026-07-05-gamma-emptiness-refuter/README.md",
+  "oracle": "gamma-emptiness-refuter",
+  "result": "pass",
+  "claim_hash": "eb7bba737d54fef5d6a99d3adc8ea6854f727c9c41d454c364cb12bfb90d17fc",
+  "oracle_digest": "8ba74e07084e410faced39eee4af913429307c140759cdc42d1a6b87332d2f35",
+  "inputs_hash": "7b13e37d36c99890237b941f3c25db5e1d386ccef2fb60bf9c838bfda13e0ea2",
+  "ts": "2026-07-05T08:57:59.908Z"
+}
