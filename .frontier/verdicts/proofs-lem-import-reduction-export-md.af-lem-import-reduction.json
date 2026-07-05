@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-import-reduction/export.md",
+  "oracle": "af-lem-import-reduction",
+  "result": "pass",
+  "claim_hash": "258c183a39434e5deeabb28b94362221726fb8ff7d90206684d18aa3d3f0b8bf",
+  "oracle_digest": "9c7e0085fd3ddaec32fb7863479dc8e7ebdfc4183d2bebb9c9b144159985261a",
+  "inputs_hash": "b228e6b2c93470cec9d539c0e6416f824108a91fd6267b74cee75e2e7cb0cd96",
+  "ts": "2026-07-05T07:31:52.007Z"
+}

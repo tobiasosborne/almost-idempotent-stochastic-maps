@@ -184,6 +184,18 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-cross-pivot-cancellation/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-cross-pivot-cancellation.md"
         ]
+      },
+      {
+        "name": "af-lem-import-reduction",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-import-reduction"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-import-reduction/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-import-reduction.md"
+        ]
       }
     ]
   },
