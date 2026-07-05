@@ -196,6 +196,17 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-import-reduction/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-import-reduction.md"
         ]
+      },
+      {
+        "name": "nsc-zero-den-refuter",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-nsc-zero-denominator-refuter/scripts/orch_verify_refuter.py"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-nsc-zero-denominator-refuter/data/nsc_certificates.json",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-nsc-zero-denominator-refuter/scripts/orch_verify_refuter.py"
+        ]
       }
     ]
   },

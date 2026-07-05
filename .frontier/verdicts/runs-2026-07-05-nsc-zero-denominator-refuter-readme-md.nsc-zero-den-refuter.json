@@ -1,0 +1,9 @@
+{
+  "claim": "runs/2026-07-05-nsc-zero-denominator-refuter/README.md",
+  "oracle": "nsc-zero-den-refuter",
+  "result": "pass",
+  "claim_hash": "73b53737b253e7ab2bbb8c6f5c99e108624ec050afae8b9559d91763fdb2856f",
+  "oracle_digest": "2bf152b2163c14ac21f3486c2dffcde9afcafba5ecc4478775ebf907baa9edaa",
+  "inputs_hash": "362e8f42ec8fe91e9ab47230b9904ce4ef90a791ec172f643e854050cb5fba59",
+  "ts": "2026-07-05T08:31:09.070Z"
+}
