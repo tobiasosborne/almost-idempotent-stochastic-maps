@@ -18,7 +18,7 @@ graph LR
   conj-halo-collapse["conj-halo-collapse<br/>proved/validated"]
   conj-kernel["conj-kernel<br/>conjecture/none"]
   conj-no-free-frontier["conj-no-free-frontier<br/>conjecture/none"]
-  conj-nsc["conj-nsc<br/>conjecture/seeded"]
+  conj-nsc["conj-nsc<br/>disproved/seeded"]
   conj-rh["conj-rh<br/>conjecture/seeded"]
   conj-sc["conj-sc<br/>conjecture/seeded"]
   conj-skinny-shadow-cap["conj-skinny-shadow-cap<br/>conjecture/none"]
@@ -82,6 +82,7 @@ graph LR
   thm-cluster --> thm-classical-factorization
   thm-simplex --> thm-well-exposed
   class conj-halo-collapse,lem-classical-equiv,lem-collateral-import,lem-cross-pivot-cancellation,lem-factorization,lem-fan-payment,lem-fan-payment-restricted,lem-import-reduction,lem-mass-split,lem-negpart-subadditive,lem-pivot-removing-move,lem-residual-lower,lem-residual-upper,lem-weighted-min,lem-zerosum-triangle,obs-height-collapse validated;
-  class conj-degenerate-payment,conj-degenerate-transport,conj-ex,conj-kernel,conj-no-free-frontier,conj-nsc,conj-rh,conj-sc,conj-skinny-shadow-cap,ex-hume,lem-canonical-separator,lem-exposed-circuit,lem-leakage,lem-negative-pivot-import,lem-wiggle-rigidity,obs-deep-leakage,obs-fwr-gap,obs-linear-law-finite-delta,obs-orphan-amplifier,obs-sigma-halo-nonrobust,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;
+  class conj-nsc seeded;
+  class conj-degenerate-payment,conj-degenerate-transport,conj-ex,conj-kernel,conj-no-free-frontier,conj-rh,conj-sc,conj-skinny-shadow-cap,ex-hume,lem-canonical-separator,lem-exposed-circuit,lem-leakage,lem-negative-pivot-import,lem-wiggle-rigidity,obs-deep-leakage,obs-fwr-gap,obs-linear-law-finite-delta,obs-orphan-amplifier,obs-sigma-halo-nonrobust,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;
   class lem-dual-localization,op-classical,op-exposed-hull open;
 ```

@@ -301,3 +301,29 @@ imports a future agent might reach for — read before importing ANY external to
   paper, scout-verified). Two easy-to-get-wrong details: the commutative-case reduction (cb-norm →
   ∞→∞) is OUR inference, not in the paper — verify before citing; and the claim "published in Nature"
   circulating in search engines is FALSE (arXiv preprint, math.OA).
+
+## 2026-07-05 — decision-check wave DC1–DC4 (session 8): the sketch's ledger redrawn by exact certificates
+
+- ⛔ **Broad NSC charging is DEAD (zero-denominator death certificate).** A carrier row can hold
+  `B_{r,s} > 0` chart-negativity while being **entrywise nonnegative** (`ν_i = 0`) — AT a certified
+  unique capped θ-half Φ-argmin (`runs/2026-07-05-nsc-zero-denominator-refuter/`,
+  orchestrator-independently recomputed). Chart-negativity of a carrier needs NO ambient negativity
+  on that row even at the argmin: the G6 decoupling, previously known only away from the argmin
+  mechanism, is realized at one. Any future B-financing must NOT charge carrier row-negativity
+  alone. The refuter has `B ≪ δ` and `Φ ≡ 0` (no Γ-branch), so the branch-restricted B-lemma
+  target `B ≤ K·δ` is untouched. `conj-nsc` is `disproved` (broad form); successor shape = user
+  decision.
+- ❌ **"ex ⟺ kernel" has NO proof in either direction** (DC4, `docs/waves/2026-07-05-DC4-equiv-assembly-audit.md`):
+  registry-prose only, both directions priced GENUINE GAP, with three named mismatches
+  (chart-vs-vertex quantifiers; `P_vj` vs `P_{u_s j}` weights; maximal-pivot drift). Until an
+  `EX ⇒ Kernel/HLC` edge is proved, (EX)-side results do NOT feed op-classical. Never write
+  "equivalently" for these two statements.
+- ❌ **The K⟨1⟩6 additive master formula is RED as written** (DC3, T0): `FanRes_s(U) > 0` is
+  REALIZED (D6 legal-leak instances) while the master formula has no FanRes term; silent rows are
+  REALIZED with NO tribe under the sketch's fan/orphan/self-supported trichotomy (D3, D6); the
+  high-self G13 stress rows are chargeable through BOTH the C_RH budget and the naked δ term
+  (double-charge). Assembly must be nesting-aware (SC → RH), FanRes-explicit, and silent-row-aware.
+- ✅ **Fusion evidence (DC1, T0/T2):** on the D3/D4/D6 certificates every D-line demand (M_D, L_μ,
+  F_L, FIN_lhs) is financed by the G-line contract budget (worst ratio exactly 1, D3 via Σβν; no
+  demand-positive/budget-zero escape) — supports treating the fan/orphan/self-support financing as
+  ONE budget in sketch v2. Finite evidence, not proof.

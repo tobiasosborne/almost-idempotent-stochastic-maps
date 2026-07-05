@@ -9,7 +9,7 @@
 | `conj-halo-collapse` | lemma | proved | validated | A | Halo-robust height collapse: for an exact signed idempotent P with 0 < delta(P) … |
 | `conj-kernel` | open-problem | conjecture | none | A | (CONJECTURE) Kernel Conjecture: there are universal delta_0>0 and B<inf (n-free)… |
 | `conj-no-free-frontier` | lemma | conjecture | none | A | No free frontier (exposedness absorption): for an exact signed idempotent P with… |
-| `conj-nsc` | lemma | conjecture | seeded | A | Negative self-support charge NSC(K0): there is a universal constant K0 (independ… |
+| `conj-nsc` | lemma | disproved | seeded | A | Negative self-support charge NSC(K0): there is a universal constant K0 (independ… |
 | `conj-rh` | lemma | conjecture | seeded | A | Repaired orphan horn: there are universal constants C_RH and C_RH_fan such that … |
 | `conj-sc` | lemma | conjecture | seeded | A | Self-support/cancellation control: there are universal constants C_SC and C_fan_… |
 | `conj-skinny-shadow-cap` | lemma | conjecture | none | A | Skinny two-shadow cap: there exist universal constants delta_0 > 0, c in (0,1), … |
