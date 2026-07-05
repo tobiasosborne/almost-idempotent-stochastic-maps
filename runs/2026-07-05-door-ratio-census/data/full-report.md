@@ -1,0 +1,1408 @@
+# Wave 17b Door-Ratio Decider Report
+
+Tier legend: T0 = exact local certificate or repo locus; T1 = exact computation from T0 definitions; T2 = search verdict/gap; T3 = speculation. No tracked files were edited; scratch only.
+
+## Rerun
+
+```bash
+python3 waves-scratch/w17b-door-ratio/door_ratio_decider.py
+```
+
+## Implemented Exact Predicates
+
+- [T0/T1] `W(P)` uses the repo exact LP pipeline: row vertices, admissible exposers, far rows by `dist_1^2 >= 16*delta`, and exposedness by `16*t*^2 >= delta`.
+- [T0/T1] `H` is exact `dist_1(row, conv W)` by rational LP.
+- [T0/T1] `sigma_g(v)` is the halo-robust invisible mass `sum_j max(P_vj,0)` over recipients with `dist_1(p_j,C_W) >= tau/4`, certified by `16*dist_j^2 >= delta`.
+- [T0/T1] theta-half charts are actual-row rank-3 bases with determinant volume at least half of maximum; `Phi_s` and `S*_s` follow `lem-factorization` verbatim.
+- [T1] Door ratio is `max_{theta-half Phi-argmin U, pivot s} S*_s(U)/(sigma_g(v)*H)` when the denominator is positive.
+
+## Calibration Hard Asserts
+
+- [T0] s5 calibration: delta=1841/1600000, W=[0, 1, 2], H=1/1000, sigma_raw(row3)=1/2000, sigma_g(row3)=0.
+- [T0] web-headline calibration: delta=49/2000, W=[0, 1, 2], H=1/20, hidden tops=[3, 4].
+- [T0] sigma-halo calibration: delta=252559/1280000, top=0, sigma_raw=5343/5000, sigma_g=0.
+
+## Census
+
+- [T1] rank-3 candidate instances loaded: `514`.
+- [T1] exact analyses completed: `514`; analysis errors/skips: `0`.
+- [T1] certified with `0 < delta <= 1/4`: `298`.
+- [T1] certified with nonempty `W`: `298`.
+- [T1] certified instances with at least one hidden top vertex: `74`.
+- [T1] certified hidden top vertices measured: `138`.
+- [T1] hidden top vertices with `sigma_g > 0`: `50`.
+- [T1] hidden top vertices entering the D1 door regime `sigma_g > 1/2`: `0`.
+- [T1] D3 chart-visibility failures (`Phi`-argmin contains hidden top): `0`.
+- [T1] D5 zero-pivot-visibility halo mass examples: `0`.
+
+## Closest High-Halo Records
+
+| label | source | n | delta | W | H | v | sigma_raw | sigma_g | max S* | R_door | argmins | D3? | zero-pivot mass / fraction |
+|---|---|---:|---:|---|---:|---:|---:|---:|---:|---:|---|---|---:|
+| `fresh-web-p1/20-x0-rho1/50` | fresh:web-pair | 5 | 6/125 | [0, 1, 2] | 1/10 | 3 | 1/25 | 1/25 | 21/500 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+| `fresh-web-p1/20-x0-rho1/50` | fresh:web-pair | 5 | 6/125 | [0, 1, 2] | 1/10 | 4 | 1/25 | 1/25 | 21/500 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+| `fresh-web-p1/20-x1/4-rho1/50` | fresh:web-pair | 5 | 6/125 | [0, 1, 2] | 1/10 | 3 | 1/25 | 1/25 | 21/500 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+| `fresh-web-p1/20-x1/4-rho1/50` | fresh:web-pair | 5 | 6/125 | [0, 1, 2] | 1/10 | 4 | 1/25 | 1/25 | 21/500 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+| `fresh-web-p1/20-x1/3-rho1/50` | fresh:web-pair | 5 | 6/125 | [0, 1, 2] | 1/10 | 3 | 1/25 | 1/25 | 21/500 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+| `fresh-web-p1/20-x1/3-rho1/50` | fresh:web-pair | 5 | 6/125 | [0, 1, 2] | 1/10 | 4 | 1/25 | 1/25 | 21/500 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+| `fresh-web-p1/20-x1/2-rho1/50` | fresh:web-pair | 5 | 6/125 | [0, 1, 2] | 1/10 | 3 | 1/25 | 1/25 | 21/500 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+| `fresh-web-p1/20-x1/2-rho1/50` | fresh:web-pair | 5 | 6/125 | [0, 1, 2] | 1/10 | 4 | 1/25 | 1/25 | 21/500 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+
+## Smallest Positive-Halo Ratios
+
+| label | source | n | delta | W | H | v | sigma_raw | sigma_g | max S* | R_door | argmins | D3? | zero-pivot mass / fraction |
+|---|---|---:|---:|---|---:|---:|---:|---:|---:|---:|---|---|---:|
+| `fresh-web-p1/20-x0-rho1/200` | fresh:web-pair | 5 | 99/2000 | [0, 1, 2] | 1/10 | 3 | 1/100 | 1/100 | 21/2000 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+| `fresh-web-p1/20-x0-rho1/200` | fresh:web-pair | 5 | 99/2000 | [0, 1, 2] | 1/10 | 4 | 1/100 | 1/100 | 21/2000 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+| `fresh-web-p1/20-x0-rho1/100` | fresh:web-pair | 5 | 49/1000 | [0, 1, 2] | 1/10 | 3 | 1/50 | 1/50 | 21/1000 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+| `fresh-web-p1/20-x0-rho1/100` | fresh:web-pair | 5 | 49/1000 | [0, 1, 2] | 1/10 | 4 | 1/50 | 1/50 | 21/1000 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+| `fresh-web-p1/20-x0-rho1/50` | fresh:web-pair | 5 | 6/125 | [0, 1, 2] | 1/10 | 3 | 1/25 | 1/25 | 21/500 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+| `fresh-web-p1/20-x0-rho1/50` | fresh:web-pair | 5 | 6/125 | [0, 1, 2] | 1/10 | 4 | 1/25 | 1/25 | 21/500 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+| `fresh-web-p1/20-x1/4-rho1/200` | fresh:web-pair | 5 | 99/2000 | [0, 1, 2] | 1/10 | 3 | 1/100 | 1/100 | 21/2000 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+| `fresh-web-p1/20-x1/4-rho1/200` | fresh:web-pair | 5 | 99/2000 | [0, 1, 2] | 1/10 | 4 | 1/100 | 1/100 | 21/2000 | 21/2 (10.5) | [(0, 1, 2)] | False | 0 / 0 |
+
+## Verdict
+
+**[T2] REGIME-EMPTY-SO-FAR.** This run did not certify a single rank-3 hidden top vertex with `sigma_g > 1/2` under `delta <= 1/4`. This is not an emptiness theorem.
+**[T1] Best certified halo mass was `sigma_g=1/25`** on `fresh-web-p1/20-x0-rho1/50` (raw sigma `1/25`, `H=1/10`).
+**[T1] Largest raw invisible mass was `sigma_raw=1/25`** on `fresh-web-p1/20-x0-rho1/50`, but its halo mass was `sigma_g=1/25`.
+**[T2] The door ratio itself is therefore undecided in the intended high-halo branch.** The search is informative mainly because the numerator machinery is easy to measure, while realizing the denominator condition `sigma_g>1/2` remains the bottleneck.
+
+## Hard Assert List
+
+- calibration:s5: every row has exact dist_1 to conv W
+- calibration s5: delta=1841/1600000
+- calibration s5: H=1/1000
+- calibration s5: W=(0,1,2)
+- calibration s5: hidden=(3,4)
+- calibration s5: sigma_raw(row3)=1/2000
+- calibration:web-headline: every row has exact dist_1 to conv W
+- calibration web-headline: delta=49/2000
+- calibration web-headline: H=1/20
+- calibration web-headline: W=(0,1,2)
+- calibration:sigma-halo-nonrobust: every row has exact dist_1 to conv W
+- calibration sigma witness: delta=252559/1280000
+- calibration sigma witness: hidden top with raw sigma=5343/5000 and sigma_g=0
+- transverse_pair_a1_8: B*L=I_3, P^2=P, and row sums=1 exactly
+- transverse_pair_a1_8: every row has exact dist_1 to conv W
+- transverse_pair_a1_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- transverse_pair_a1_4: every row has exact dist_1 to conv W
+- staircase_m1_rank3_delta1_2: B*L=I_3, P^2=P, and row sums=1 exactly
+- staircase_m1_rank3_delta1_2: every row has exact dist_1 to conv W
+- perturbed_staircase_m1_eps1_1000_delta1_2: B*L=I_3, P^2=P, and row sums=1 exactly
+- perturbed_staircase_m1_eps1_1000_delta1_2: every row has exact dist_1 to conv W
+- no_center_rank3_a1_100: B*L=I_3, P^2=P, and row sums=1 exactly
+- no_center_rank3_a1_100: every row has exact dist_1 to conv W
+- no_center_rank3_a1_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- no_center_rank3_a1_4: every row has exact dist_1 to conv W
+- windmill_r1_3_q1_20_basis_0: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_3_q1_20_basis_1: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_3_q1_20_basis_1: every row has exact dist_1 to conv W
+- windmill_r1_3_q1_20_basis_2: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_3_q1_20_basis_2: every row has exact dist_1 to conv W
+- windmill_r1_3_q1_20_mix2_0: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_3_q1_20_mix2_0: every row has exact dist_1 to conv W
+- windmill_r1_3_q1_20_mix2_1: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_3_q1_20_mix2_1: every row has exact dist_1 to conv W
+- windmill_r1_3_q1_20_mix2_2: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_3_q1_20_mix2_2: every row has exact dist_1 to conv W
+- windmill_r1_4_q1_12_basis_0: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_4_q1_12_basis_0: every row has exact dist_1 to conv W
+- windmill_r1_4_q1_12_basis_1: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_4_q1_12_basis_1: every row has exact dist_1 to conv W
+- windmill_r1_4_q1_12_basis_2: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_4_q1_12_basis_2: every row has exact dist_1 to conv W
+- windmill_r1_4_q1_12_basis_3: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_4_q1_12_basis_3: every row has exact dist_1 to conv W
+- windmill_r1_4_q1_12_mix2_0: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_4_q1_12_mix2_0: every row has exact dist_1 to conv W
+- windmill_r1_4_q1_12_mix2_1: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_4_q1_12_mix2_1: every row has exact dist_1 to conv W
+- windmill_r1_4_q1_12_mix2_2: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_4_q1_12_mix2_2: every row has exact dist_1 to conv W
+- windmill_r1_4_q1_12_mix2_3: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_4_q1_12_mix2_3: every row has exact dist_1 to conv W
+- windmill_r1_4_q1_12_mix2_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_4_q1_12_mix2_4: every row has exact dist_1 to conv W
+- windmill_r1_4_q1_12_mix2_5: B*L=I_3, P^2=P, and row sums=1 exactly
+- windmill_r1_4_q1_12_mix2_5: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_basis_0: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_basis_0: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_basis_1: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_basis_1: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_basis_2: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_basis_2: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_basis_3: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_basis_3: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_basis_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_basis_4: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_basis_5: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_basis_5: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_basis_6: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_basis_6: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_basis_7: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_basis_7: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_0: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_0: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_1: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_1: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_2: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_2: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_3: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_3: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_4: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_5: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_5: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_6: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_6: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_7: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_7: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_8: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_8: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_9: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_9: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_10: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_10: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_11: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_11: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_12: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_12: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_13: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_13: every row has exact dist_1 to conv W
+- near_degenerate_t1_20_h1_12_mix2_14: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_20_h1_12_mix2_14: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_basis_0: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_basis_0: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_basis_1: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_basis_1: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_basis_2: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_basis_2: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_basis_3: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_basis_3: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_basis_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_basis_4: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_basis_5: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_basis_5: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_basis_6: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_basis_6: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_basis_7: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_basis_7: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_0: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_0: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_1: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_1: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_2: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_2: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_3: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_3: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_4: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_5: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_5: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_6: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_6: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_7: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_7: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_8: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_8: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_9: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_9: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_10: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_10: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_11: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_11: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_12: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_12: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_13: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_13: every row has exact dist_1 to conv W
+- near_degenerate_t1_50_h1_20_mix2_14: B*L=I_3, P^2=P, and row sums=1 exactly
+- near_degenerate_t1_50_h1_20_mix2_14: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_0: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_0: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_1: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_1: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_2: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_2: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_3: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_3: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_4: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_5: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_5: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_6: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_6: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_7: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_7: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_8: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_8: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_9: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_9: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_10: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_10: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_11: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_11: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_12: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_12: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_13: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_13: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_14: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_14: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_15: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_15: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_16: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_16: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_17: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_17: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_18: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_18: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_19: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_19: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_20: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_20: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_standard: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_standard: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_stdmix_7_3_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_stdmix_7_3_4: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_stdmix_7_7_8: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_stdmix_7_7_8: every row has exact dist_1 to conv W
+- cyclic_outside_a1_5_e1_20_stdmix_7_15_16: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_5_e1_20_stdmix_7_15_16: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_0: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_0: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_1: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_1: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_2: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_2: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_3: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_3: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_4: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_5: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_5: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_6: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_6: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_7: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_7: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_8: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_8: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_9: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_9: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_10: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_10: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_11: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_11: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_12: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_12: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_13: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_13: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_14: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_14: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_15: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_15: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_16: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_16: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_17: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_17: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_18: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_18: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_19: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_19: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_20: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_20: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_standard: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_standard: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_stdmix_7_3_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_stdmix_7_3_4: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_stdmix_7_7_8: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_stdmix_7_7_8: every row has exact dist_1 to conv W
+- cyclic_outside_a1_4_e1_30_stdmix_7_15_16: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_4_e1_30_stdmix_7_15_16: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_0: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_0: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_1: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_1: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_2: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_2: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_3: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_3: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_4: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_5: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_5: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_6: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_6: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_7: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_7: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_8: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_8: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_9: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_9: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_10: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_10: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_11: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_11: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_12: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_12: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_13: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_13: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_14: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_14: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_15: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_15: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_16: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_16: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_17: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_17: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_18: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_18: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_19: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_19: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_20: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_20: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_standard: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_standard: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_stdmix_7_3_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_stdmix_7_3_4: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_stdmix_7_7_8: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_stdmix_7_7_8: every row has exact dist_1 to conv W
+- cyclic_outside_a1_6_e1_12_stdmix_7_15_16: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_6_e1_12_stdmix_7_15_16: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_0: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_0: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_1: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_1: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_2: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_2: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_3: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_3: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_4: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_5: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_5: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_6: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_6: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_7: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_7: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_8: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_8: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_9: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_9: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_10: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_10: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_11: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_11: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_12: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_12: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_13: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_13: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_14: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_14: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_15: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_15: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_16: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_16: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_17: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_17: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_18: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_18: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_19: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_19: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_20: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_20: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_standard: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_standard: every row has exact dist_1 to conv W
+- cyclic_outside_a1_8_e1_40_stdmix_7_3_4: B*L=I_3, P^2=P, and row sums=1 exactly
+- cyclic_outside_a1_8_e1_40_stdmix_7_3_4: every row has exact dist_1 to conv W
+- random_exact_000: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_000: every row has exact dist_1 to conv W
+- random_exact_001: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_002: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_002: every row has exact dist_1 to conv W
+- random_exact_003: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_003: every row has exact dist_1 to conv W
+- random_exact_004: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_004: every row has exact dist_1 to conv W
+- random_exact_005: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_005: every row has exact dist_1 to conv W
+- random_exact_006: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_006: every row has exact dist_1 to conv W
+- random_exact_007: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_007: every row has exact dist_1 to conv W
+- random_exact_008: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_008: every row has exact dist_1 to conv W
+- random_exact_009: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_009: every row has exact dist_1 to conv W
+- random_exact_010: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_010: every row has exact dist_1 to conv W
+- random_exact_011: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_011: every row has exact dist_1 to conv W
+- random_exact_012: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_012: every row has exact dist_1 to conv W
+- random_exact_013: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_013: every row has exact dist_1 to conv W
+- random_exact_014: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_014: every row has exact dist_1 to conv W
+- random_exact_015: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_015: every row has exact dist_1 to conv W
+- random_exact_016: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_016: every row has exact dist_1 to conv W
+- random_exact_017: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_017: every row has exact dist_1 to conv W
+- random_exact_018: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_018: every row has exact dist_1 to conv W
+- random_exact_019: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_019: every row has exact dist_1 to conv W
+- random_exact_020: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_020: every row has exact dist_1 to conv W
+- random_exact_021: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_021: every row has exact dist_1 to conv W
+- random_exact_022: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_022: every row has exact dist_1 to conv W
+- random_exact_023: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_023: every row has exact dist_1 to conv W
+- random_exact_024: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_024: every row has exact dist_1 to conv W
+- random_exact_025: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_026: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_026: every row has exact dist_1 to conv W
+- random_exact_027: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_027: every row has exact dist_1 to conv W
+- random_exact_028: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_028: every row has exact dist_1 to conv W
+- random_exact_029: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_029: every row has exact dist_1 to conv W
+- random_exact_030: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_030: every row has exact dist_1 to conv W
+- random_exact_031: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_031: every row has exact dist_1 to conv W
+- random_exact_032: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_032: every row has exact dist_1 to conv W
+- random_exact_033: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_033: every row has exact dist_1 to conv W
+- random_exact_034: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_034: every row has exact dist_1 to conv W
+- random_exact_035: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_035: every row has exact dist_1 to conv W
+- random_exact_036: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_036: every row has exact dist_1 to conv W
+- random_exact_037: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_037: every row has exact dist_1 to conv W
+- random_exact_038: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_038: every row has exact dist_1 to conv W
+- random_exact_039: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_039: every row has exact dist_1 to conv W
+- random_exact_040: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_040: every row has exact dist_1 to conv W
+- random_exact_041: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_041: every row has exact dist_1 to conv W
+- random_exact_042: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_042: every row has exact dist_1 to conv W
+- random_exact_043: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_043: every row has exact dist_1 to conv W
+- random_exact_044: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_044: every row has exact dist_1 to conv W
+- random_exact_045: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_045: every row has exact dist_1 to conv W
+- random_exact_046: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_046: every row has exact dist_1 to conv W
+- random_exact_047: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_048: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_048: every row has exact dist_1 to conv W
+- random_exact_049: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_049: every row has exact dist_1 to conv W
+- random_exact_050: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_050: every row has exact dist_1 to conv W
+- random_exact_051: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_051: every row has exact dist_1 to conv W
+- random_exact_052: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_053: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_053: every row has exact dist_1 to conv W
+- random_exact_054: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_055: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_055: every row has exact dist_1 to conv W
+- random_exact_056: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_056: every row has exact dist_1 to conv W
+- random_exact_057: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_057: every row has exact dist_1 to conv W
+- random_exact_058: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_058: every row has exact dist_1 to conv W
+- random_exact_058: at least one actual-row basis
+- random_exact_058: factorization holds on 42 theta chart-pivots
+- random_exact_058: theta-half chart set nonempty
+- random_exact_058: theta-half Phi-argmin set nonempty
+- random_exact_059: B*L=I_3, P^2=P, and row sums=1 exactly
+- random_exact_059: every row has exact dist_1 to conv W
+- 2026-07-04-b-amplifier-hunt:json:4: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-b-amplifier-hunt:json:4: every row has exact dist_1 to conv W
+- 2026-07-04-b-amplifier-hunt:json:4: at least one actual-row basis
+- 2026-07-04-b-amplifier-hunt:json:4: factorization holds on 24 theta chart-pivots
+- 2026-07-04-b-amplifier-hunt:json:4: theta-half chart set nonempty
+- 2026-07-04-b-amplifier-hunt:json:4: theta-half Phi-argmin set nonempty
+- 2026-07-04-b-amplifier-hunt:json:8: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-b-amplifier-hunt:json:8: every row has exact dist_1 to conv W
+- 2026-07-04-b-amplifier-hunt:json:8: at least one actual-row basis
+- 2026-07-04-b-amplifier-hunt:json:8: factorization holds on 36 theta chart-pivots
+- 2026-07-04-b-amplifier-hunt:json:8: theta-half chart set nonempty
+- 2026-07-04-b-amplifier-hunt:json:8: theta-half Phi-argmin set nonempty
+- 2026-07-04-b-amplifier-hunt:json:12: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-b-amplifier-hunt:json:12: every row has exact dist_1 to conv W
+- 2026-07-04-b-amplifier-hunt:json:12: at least one actual-row basis
+- 2026-07-04-b-amplifier-hunt:json:12: factorization holds on 60 theta chart-pivots
+- 2026-07-04-b-amplifier-hunt:json:12: theta-half chart set nonempty
+- 2026-07-04-b-amplifier-hunt:json:12: theta-half Phi-argmin set nonempty
+- 2026-07-04-b-amplifier-hunt:json:16: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-b-amplifier-hunt:json:16: every row has exact dist_1 to conv W
+- 2026-07-04-b-amplifier-hunt:json:16: at least one actual-row basis
+- 2026-07-04-b-amplifier-hunt:json:16: factorization holds on 24 theta chart-pivots
+- 2026-07-04-b-amplifier-hunt:json:16: theta-half chart set nonempty
+- 2026-07-04-b-amplifier-hunt:json:16: theta-half Phi-argmin set nonempty
+- 2026-07-04-b-amplifier-hunt:json:20: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-b-amplifier-hunt:json:20: every row has exact dist_1 to conv W
+- 2026-07-04-b-amplifier-hunt:json:20: at least one actual-row basis
+- 2026-07-04-b-amplifier-hunt:json:20: factorization holds on 24 theta chart-pivots
+- 2026-07-04-b-amplifier-hunt:json:20: theta-half chart set nonempty
+- 2026-07-04-b-amplifier-hunt:json:20: theta-half Phi-argmin set nonempty
+- 2026-07-04-b-amplifier-hunt:json:24: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-b-amplifier-hunt:json:24: every row has exact dist_1 to conv W
+- 2026-07-04-b-amplifier-hunt:json:24: at least one actual-row basis
+- 2026-07-04-b-amplifier-hunt:json:24: factorization holds on 24 theta chart-pivots
+- 2026-07-04-b-amplifier-hunt:json:24: theta-half chart set nonempty
+- 2026-07-04-b-amplifier-hunt:json:24: theta-half Phi-argmin set nonempty
+- 2026-07-04-b-amplifier-hunt:json:28: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-b-amplifier-hunt:json:28: every row has exact dist_1 to conv W
+- 2026-07-04-b-amplifier-hunt:json:28: at least one actual-row basis
+- 2026-07-04-b-amplifier-hunt:json:28: factorization holds on 24 theta chart-pivots
+- 2026-07-04-b-amplifier-hunt:json:28: theta-half chart set nonempty
+- 2026-07-04-b-amplifier-hunt:json:28: theta-half Phi-argmin set nonempty
+- 2026-07-04-b-amplifier-hunt:json:32: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-b-amplifier-hunt:json:32: every row has exact dist_1 to conv W
+- 2026-07-04-b-amplifier-hunt:json:32: at least one actual-row basis
+- 2026-07-04-b-amplifier-hunt:json:32: factorization holds on 24 theta chart-pivots
+- 2026-07-04-b-amplifier-hunt:json:32: theta-half chart set nonempty
+- 2026-07-04-b-amplifier-hunt:json:32: theta-half Phi-argmin set nonempty
+- 2026-07-04-b-amplifier-hunt:json:36: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-b-amplifier-hunt:json:36: every row has exact dist_1 to conv W
+- 2026-07-04-b-amplifier-hunt:json:36: at least one actual-row basis
+- 2026-07-04-b-amplifier-hunt:json:36: factorization holds on 24 theta chart-pivots
+- 2026-07-04-b-amplifier-hunt:json:36: theta-half chart set nonempty
+- 2026-07-04-b-amplifier-hunt:json:36: theta-half Phi-argmin set nonempty
+- 2026-07-04-small-delta-b-sweep:json:36: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-small-delta-b-sweep:json:36: every row has exact dist_1 to conv W
+- 2026-07-04-small-delta-b-sweep:json:36: at least one actual-row basis
+- 2026-07-04-small-delta-b-sweep:json:36: factorization holds on 24 theta chart-pivots
+- 2026-07-04-small-delta-b-sweep:json:36: theta-half chart set nonempty
+- 2026-07-04-small-delta-b-sweep:json:36: theta-half Phi-argmin set nonempty
+- 2026-07-04-small-delta-b-sweep:json:61: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-small-delta-b-sweep:json:61: every row has exact dist_1 to conv W
+- 2026-07-04-small-delta-b-sweep:json:61: at least one actual-row basis
+- 2026-07-04-small-delta-b-sweep:json:61: factorization holds on 24 theta chart-pivots
+- 2026-07-04-small-delta-b-sweep:json:61: theta-half chart set nonempty
+- 2026-07-04-small-delta-b-sweep:json:61: theta-half Phi-argmin set nonempty
+- 2026-07-04-small-delta-b-sweep:json:86: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-small-delta-b-sweep:json:86: every row has exact dist_1 to conv W
+- 2026-07-04-small-delta-b-sweep:json:86: at least one actual-row basis
+- 2026-07-04-small-delta-b-sweep:json:86: factorization holds on 24 theta chart-pivots
+- 2026-07-04-small-delta-b-sweep:json:86: theta-half chart set nonempty
+- 2026-07-04-small-delta-b-sweep:json:86: theta-half Phi-argmin set nonempty
+- 2026-07-04-small-delta-b-sweep:json:111: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-small-delta-b-sweep:json:111: every row has exact dist_1 to conv W
+- 2026-07-04-small-delta-b-sweep:json:111: at least one actual-row basis
+- 2026-07-04-small-delta-b-sweep:json:111: factorization holds on 24 theta chart-pivots
+- 2026-07-04-small-delta-b-sweep:json:111: theta-half chart set nonempty
+- 2026-07-04-small-delta-b-sweep:json:111: theta-half Phi-argmin set nonempty
+- 2026-07-04-small-delta-b-sweep:json:136: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-small-delta-b-sweep:json:136: every row has exact dist_1 to conv W
+- 2026-07-04-small-delta-b-sweep:json:151: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-small-delta-b-sweep:json:151: every row has exact dist_1 to conv W
+- 2026-07-04-small-delta-b-sweep:json:166: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-small-delta-b-sweep:json:166: every row has exact dist_1 to conv W
+- 2026-07-04-small-delta-b-sweep:json:181: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-04-small-delta-b-sweep:json:181: every row has exact dist_1 to conv W
+- 2026-07-05-nsc-zero-denominator-refuter:json:1: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-05-nsc-zero-denominator-refuter:json:1: every row has exact dist_1 to conv W
+- 2026-07-05-nsc-zero-denominator-refuter:json:80: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-05-nsc-zero-denominator-refuter:json:80: every row has exact dist_1 to conv W
+- 2026-07-05-nsc-zero-denominator-refuter:json:99: B*L=I_3, P^2=P, and row sums=1 exactly
+- 2026-07-05-nsc-zero-denominator-refuter:json:99: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/100-0: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/100-0: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/100-1: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/100-1: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/100-2: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/100-2: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/100-3: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/100-3: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/100-4: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/100-4: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/100-5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/100-5: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/100-6: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/100-6: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/100-7: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/100-7: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/50-8: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/50-8: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/50-9: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/50-9: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/50-10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/50-10: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/50-11: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/50-11: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/50-12: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/50-12: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/50-13: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/50-13: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/50-14: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/50-14: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/50-15: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/50-15: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/25-16: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/25-16: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/25-17: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/25-17: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/25-18: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/25-18: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/25-19: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/25-19: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/25-20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/25-20: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/25-21: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/25-21: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/25-22: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/25-22: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/25-23: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/25-23: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/12-24: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/12-24: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/12-25: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/12-25: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/12-26: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/12-26: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/12-27: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/12-27: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/12-28: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/12-28: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/12-29: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/12-29: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/12-30: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/12-30: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/12-31: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/12-31: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/8-32: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/8-32: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/8-33: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/8-33: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/8-34: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/8-34: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/8-35: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/8-35: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/8-36: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/8-36: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/8-37: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/8-37: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/8-38: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/8-38: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/8-39: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/8-39: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/6-40: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/6-40: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/6-41: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/6-41: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/6-42: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/6-42: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/6-43: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/6-43: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/6-44: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/6-44: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/6-45: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/6-45: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/6-46: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/6-46: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/6-47: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/6-47: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/4-48: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/4-48: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/4-49: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/4-49: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/4-50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/4-50: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/4-51: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/4-51: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/4-52: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/4-52: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/4-53: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/4-53: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/4-54: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/4-54: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/4-55: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/4-55: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/3-56: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/3-56: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/3-57: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/3-57: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/3-58: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/3-58: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/3-59: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/3-59: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/3-60: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/3-60: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/3-61: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/3-61: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/3-62: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/3-62: every row has exact dist_1 to conv W
+- fresh-one-hidden-a1/3-63: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-one-hidden-a1/3-63: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x0-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x0-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x0-rho1/200: at least one actual-row basis
+- fresh-web-p1/100-x0-rho1/200: factorization holds on 15 theta chart-pivots
+- fresh-web-p1/100-x0-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/100-x0-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x0-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x0-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x0-rho1/100: at least one actual-row basis
+- fresh-web-p1/100-x0-rho1/100: factorization holds on 15 theta chart-pivots
+- fresh-web-p1/100-x0-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/100-x0-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x0-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x0-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x0-rho1/50: at least one actual-row basis
+- fresh-web-p1/100-x0-rho1/50: factorization holds on 15 theta chart-pivots
+- fresh-web-p1/100-x0-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/100-x0-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x0-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x0-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x0-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x0-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x0-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x0-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/4-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/4-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/4-rho1/200: at least one actual-row basis
+- fresh-web-p1/100-x1/4-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/100-x1/4-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/100-x1/4-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x1/4-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/4-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/4-rho1/100: at least one actual-row basis
+- fresh-web-p1/100-x1/4-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/100-x1/4-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/100-x1/4-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x1/4-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/4-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/4-rho1/50: at least one actual-row basis
+- fresh-web-p1/100-x1/4-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/100-x1/4-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/100-x1/4-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x1/4-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/4-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/4-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/4-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/4-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/4-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/3-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/3-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/3-rho1/200: at least one actual-row basis
+- fresh-web-p1/100-x1/3-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/100-x1/3-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/100-x1/3-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x1/3-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/3-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/3-rho1/100: at least one actual-row basis
+- fresh-web-p1/100-x1/3-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/100-x1/3-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/100-x1/3-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x1/3-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/3-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/3-rho1/50: at least one actual-row basis
+- fresh-web-p1/100-x1/3-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/100-x1/3-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/100-x1/3-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x1/3-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/3-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/3-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/3-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/3-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/3-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/2-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/2-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/2-rho1/200: at least one actual-row basis
+- fresh-web-p1/100-x1/2-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/100-x1/2-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/100-x1/2-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x1/2-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/2-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/2-rho1/100: at least one actual-row basis
+- fresh-web-p1/100-x1/2-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/100-x1/2-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/100-x1/2-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x1/2-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/2-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/2-rho1/50: at least one actual-row basis
+- fresh-web-p1/100-x1/2-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/100-x1/2-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/100-x1/2-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x1/2-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/2-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/2-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/2-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1/2-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1/2-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1-rho1/200: at least one actual-row basis
+- fresh-web-p1/100-x1-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/100-x1-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/100-x1-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x1-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1-rho1/100: at least one actual-row basis
+- fresh-web-p1/100-x1-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/100-x1-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/100-x1-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x1-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1-rho1/50: at least one actual-row basis
+- fresh-web-p1/100-x1-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/100-x1-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/100-x1-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/100-x1-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/100-x1-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/100-x1-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x0-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x0-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x0-rho1/200: at least one actual-row basis
+- fresh-web-p1/80-x0-rho1/200: factorization holds on 15 theta chart-pivots
+- fresh-web-p1/80-x0-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/80-x0-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x0-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x0-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x0-rho1/100: at least one actual-row basis
+- fresh-web-p1/80-x0-rho1/100: factorization holds on 15 theta chart-pivots
+- fresh-web-p1/80-x0-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/80-x0-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x0-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x0-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x0-rho1/50: at least one actual-row basis
+- fresh-web-p1/80-x0-rho1/50: factorization holds on 15 theta chart-pivots
+- fresh-web-p1/80-x0-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/80-x0-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x0-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x0-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x0-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x0-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x0-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x0-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/4-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/4-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/4-rho1/200: at least one actual-row basis
+- fresh-web-p1/80-x1/4-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/80-x1/4-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/80-x1/4-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x1/4-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/4-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/4-rho1/100: at least one actual-row basis
+- fresh-web-p1/80-x1/4-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/80-x1/4-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/80-x1/4-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x1/4-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/4-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/4-rho1/50: at least one actual-row basis
+- fresh-web-p1/80-x1/4-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/80-x1/4-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/80-x1/4-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x1/4-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/4-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/4-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/4-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/4-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/4-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/3-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/3-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/3-rho1/200: at least one actual-row basis
+- fresh-web-p1/80-x1/3-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/80-x1/3-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/80-x1/3-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x1/3-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/3-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/3-rho1/100: at least one actual-row basis
+- fresh-web-p1/80-x1/3-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/80-x1/3-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/80-x1/3-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x1/3-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/3-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/3-rho1/50: at least one actual-row basis
+- fresh-web-p1/80-x1/3-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/80-x1/3-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/80-x1/3-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x1/3-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/3-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/3-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/3-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/3-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/3-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/2-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/2-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/2-rho1/200: at least one actual-row basis
+- fresh-web-p1/80-x1/2-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/80-x1/2-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/80-x1/2-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x1/2-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/2-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/2-rho1/100: at least one actual-row basis
+- fresh-web-p1/80-x1/2-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/80-x1/2-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/80-x1/2-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x1/2-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/2-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/2-rho1/50: at least one actual-row basis
+- fresh-web-p1/80-x1/2-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/80-x1/2-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/80-x1/2-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x1/2-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/2-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/2-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/2-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1/2-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1/2-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1-rho1/200: at least one actual-row basis
+- fresh-web-p1/80-x1-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/80-x1-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/80-x1-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x1-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1-rho1/100: at least one actual-row basis
+- fresh-web-p1/80-x1-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/80-x1-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/80-x1-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x1-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1-rho1/50: at least one actual-row basis
+- fresh-web-p1/80-x1-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/80-x1-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/80-x1-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/80-x1-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/80-x1-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/80-x1-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x0-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x0-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x0-rho1/200: at least one actual-row basis
+- fresh-web-p1/40-x0-rho1/200: factorization holds on 15 theta chart-pivots
+- fresh-web-p1/40-x0-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/40-x0-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x0-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x0-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x0-rho1/100: at least one actual-row basis
+- fresh-web-p1/40-x0-rho1/100: factorization holds on 15 theta chart-pivots
+- fresh-web-p1/40-x0-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/40-x0-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x0-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x0-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x0-rho1/50: at least one actual-row basis
+- fresh-web-p1/40-x0-rho1/50: factorization holds on 15 theta chart-pivots
+- fresh-web-p1/40-x0-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/40-x0-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x0-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x0-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x0-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x0-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x0-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x0-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/4-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/4-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/4-rho1/200: at least one actual-row basis
+- fresh-web-p1/40-x1/4-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/40-x1/4-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/40-x1/4-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x1/4-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/4-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/4-rho1/100: at least one actual-row basis
+- fresh-web-p1/40-x1/4-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/40-x1/4-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/40-x1/4-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x1/4-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/4-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/4-rho1/50: at least one actual-row basis
+- fresh-web-p1/40-x1/4-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/40-x1/4-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/40-x1/4-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x1/4-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/4-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/4-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/4-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/4-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/4-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/3-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/3-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/3-rho1/200: at least one actual-row basis
+- fresh-web-p1/40-x1/3-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/40-x1/3-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/40-x1/3-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x1/3-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/3-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/3-rho1/100: at least one actual-row basis
+- fresh-web-p1/40-x1/3-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/40-x1/3-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/40-x1/3-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x1/3-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/3-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/3-rho1/50: at least one actual-row basis
+- fresh-web-p1/40-x1/3-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/40-x1/3-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/40-x1/3-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x1/3-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/3-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/3-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/3-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/3-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/3-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/2-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/2-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/2-rho1/200: at least one actual-row basis
+- fresh-web-p1/40-x1/2-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/40-x1/2-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/40-x1/2-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x1/2-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/2-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/2-rho1/100: at least one actual-row basis
+- fresh-web-p1/40-x1/2-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/40-x1/2-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/40-x1/2-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x1/2-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/2-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/2-rho1/50: at least one actual-row basis
+- fresh-web-p1/40-x1/2-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/40-x1/2-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/40-x1/2-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x1/2-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/2-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/2-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/2-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1/2-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1/2-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1-rho1/200: at least one actual-row basis
+- fresh-web-p1/40-x1-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/40-x1-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/40-x1-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x1-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1-rho1/100: at least one actual-row basis
+- fresh-web-p1/40-x1-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/40-x1-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/40-x1-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x1-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1-rho1/50: at least one actual-row basis
+- fresh-web-p1/40-x1-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/40-x1-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/40-x1-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/40-x1-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/40-x1-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/40-x1-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x0-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x0-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x0-rho1/200: at least one actual-row basis
+- fresh-web-p1/20-x0-rho1/200: factorization holds on 15 theta chart-pivots
+- fresh-web-p1/20-x0-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/20-x0-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x0-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x0-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x0-rho1/100: at least one actual-row basis
+- fresh-web-p1/20-x0-rho1/100: factorization holds on 15 theta chart-pivots
+- fresh-web-p1/20-x0-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/20-x0-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x0-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x0-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x0-rho1/50: at least one actual-row basis
+- fresh-web-p1/20-x0-rho1/50: factorization holds on 15 theta chart-pivots
+- fresh-web-p1/20-x0-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/20-x0-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x0-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x0-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x0-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x0-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x0-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x0-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/4-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/4-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/4-rho1/200: at least one actual-row basis
+- fresh-web-p1/20-x1/4-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/20-x1/4-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/20-x1/4-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x1/4-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/4-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/4-rho1/100: at least one actual-row basis
+- fresh-web-p1/20-x1/4-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/20-x1/4-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/20-x1/4-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x1/4-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/4-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/4-rho1/50: at least one actual-row basis
+- fresh-web-p1/20-x1/4-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/20-x1/4-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/20-x1/4-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x1/4-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/4-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/4-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/4-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/4-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/4-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/3-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/3-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/3-rho1/200: at least one actual-row basis
+- fresh-web-p1/20-x1/3-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/20-x1/3-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/20-x1/3-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x1/3-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/3-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/3-rho1/100: at least one actual-row basis
+- fresh-web-p1/20-x1/3-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/20-x1/3-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/20-x1/3-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x1/3-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/3-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/3-rho1/50: at least one actual-row basis
+- fresh-web-p1/20-x1/3-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/20-x1/3-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/20-x1/3-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x1/3-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/3-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/3-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/3-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/3-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/3-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/2-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/2-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/2-rho1/200: at least one actual-row basis
+- fresh-web-p1/20-x1/2-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/20-x1/2-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/20-x1/2-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x1/2-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/2-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/2-rho1/100: at least one actual-row basis
+- fresh-web-p1/20-x1/2-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/20-x1/2-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/20-x1/2-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x1/2-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/2-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/2-rho1/50: at least one actual-row basis
+- fresh-web-p1/20-x1/2-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/20-x1/2-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/20-x1/2-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x1/2-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/2-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/2-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/2-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1/2-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1/2-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1-rho1/200: at least one actual-row basis
+- fresh-web-p1/20-x1-rho1/200: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/20-x1-rho1/200: theta-half chart set nonempty
+- fresh-web-p1/20-x1-rho1/200: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x1-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1-rho1/100: at least one actual-row basis
+- fresh-web-p1/20-x1-rho1/100: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/20-x1-rho1/100: theta-half chart set nonempty
+- fresh-web-p1/20-x1-rho1/100: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x1-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1-rho1/50: at least one actual-row basis
+- fresh-web-p1/20-x1-rho1/50: factorization holds on 12 theta chart-pivots
+- fresh-web-p1/20-x1-rho1/50: theta-half chart set nonempty
+- fresh-web-p1/20-x1-rho1/50: theta-half Phi-argmin set nonempty
+- fresh-web-p1/20-x1-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/20-x1-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/20-x1-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x0-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x0-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x0-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x0-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x0-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x0-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x0-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x0-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x0-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x0-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x0-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x0-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/4-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/4-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/4-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/4-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/4-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/4-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/4-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/4-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/4-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/4-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/4-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/4-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/3-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/3-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/3-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/3-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/3-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/3-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/3-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/3-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/3-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/3-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/3-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/3-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/2-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/2-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/2-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/2-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/2-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/2-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/2-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/2-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/2-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/2-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1/2-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1/2-rho1/5: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1-rho1/200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1-rho1/200: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1-rho1/100: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1-rho1/100: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1-rho1/50: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1-rho1/50: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1-rho1/20: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1-rho1/20: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1-rho1/10: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1-rho1/10: every row has exact dist_1 to conv W
+- fresh-web-p1/10-x1-rho1/5: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-web-p1/10-x1-rho1/5: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/50-150: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/50-150: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/50-151: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/50-151: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/50-152: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/50-152: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/50-153: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/50-153: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/50-154: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/50-154: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/50-155: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/50-155: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/50-156: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/50-156: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/50-157: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/50-157: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/50-158: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/50-158: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/25-159: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/25-159: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/25-160: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/25-160: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/25-161: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/25-161: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/25-162: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/25-162: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/25-163: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/25-163: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/25-164: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/25-164: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/25-165: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/25-165: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/25-166: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/25-166: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/25-167: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/25-167: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/12-168: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/12-168: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/12-169: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/12-169: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/12-170: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/12-170: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/12-171: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/12-171: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/12-172: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/12-172: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/12-173: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/12-173: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/12-174: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/12-174: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/12-175: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/12-175: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/12-176: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/12-176: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/8-177: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/8-177: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/8-178: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/8-178: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/8-179: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/8-179: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/8-180: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/8-180: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/8-181: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/8-181: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/8-182: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/8-182: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/8-183: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/8-183: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/8-184: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/8-184: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/8-185: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/8-185: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/6-186: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/6-186: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/6-187: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/6-187: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/6-188: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/6-188: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/6-189: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/6-189: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/6-190: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/6-190: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/6-191: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/6-191: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/6-192: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/6-192: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/6-193: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/6-193: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/6-194: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/6-194: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/4-195: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/4-195: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/4-196: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/4-196: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/4-197: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/4-197: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/4-198: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/4-198: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/4-199: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/4-199: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/4-200: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/4-200: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/4-201: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/4-201: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/4-202: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/4-202: every row has exact dist_1 to conv W
+- fresh-two-hidden-a1/4-203: B*L=I_3, P^2=P, and row sums=1 exactly
+- fresh-two-hidden-a1/4-203: every row has exact dist_1 to conv W
+
+## Next Experiment
+
+[T2] Replace broad family search with an exact feasibility/optimization loop for `sigma_g>1/2`: fix rank-3 `Lambda=[I;C]`, impose a candidate hidden-top/visible-set combinatorial type and `tau/4` halo membership, then solve for `R2` with linear constraints plus exact branch-and-bound on the quadratic threshold comparisons. The current brute-force grids mostly rediscover that high self-mass makes the row visible or leaves it inside the halo.
+
