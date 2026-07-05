@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Import reduction: let P be a rank-3 exact signed idempote...}
+\step{1} Import reduction: let P be a rank-3 exact signed idempotent (square real matrix with P\textasciicircum{}2 = P and all row sums equal to 1), let U = (u\_0,u\_1,u\_2) be an actual-row chart whose rows p\_\{u\_0\}, p\_\{u\_1\}, p\_\{u\_2\} form a basis of the row space, define coordinates a\_q(i) by p\_i = sum\_q a\_q(i)p\_\{u\_q\} and beta\_r(i) = P\_\{u\_r i\}; fix a pivot index s, a non-chart row j with c = a\_s(j) > 0, a transverse index r != s, and let t be the remaining index, writing d\_r = a\_r(j) and d\_t = a\_t(j); define R\_\{r,j\}(i) = (1/c - 1)*max(-a\_s(i),0) + max(a\_s(i)*d\_t/c, 0) - a\_s(i)*d\_r/c, I\_\{r,j\}(U) = sum\_i max(beta\_r(i),0)*max(R\_\{r,j\}(i),0), A\_\{r,s\} = sum\_i max(beta\_r(i),0)*max(a\_s(i),0), and B\_\{r,s\} = sum\_i max(beta\_r(i),0)*max(-a\_s(i),0); then I\_\{r,j\}(U) <= ((max(1-c,0) + max(-d\_t,0) + max(d\_r,0))/c)*B\_\{r,s\} + ((max(d\_t,0) + max(-d\_r,0))/c)*A\_\{r,s\}. \steptag{validated} \\[6pt]
+\step{1.1} Pointwise scalar reduction: for every summation index i, set a=a\_s(i), a\textasciicircum{}+=max(a,0), a\textasciicircum{}-=max(-a,0), alpha=(max(1-c,0)+max(-d\_t,0)+max(d\_r,0))/c, and gamma=(max(d\_t,0)+max(-d\_r,0))/c. With c>0 and R\_i=(1/c-1)a\textasciicircum{}-+max(a*d\_t/c,0)-a*d\_r/c, one has max(R\_i,0) <= alpha*a\textasciicircum{}- + gamma*a\textasciicircum{}+. \steptag{validated} \\[6pt]
+\step{1.1.1} First summand bound: because c>0 and a\textasciicircum{}->=0, (1/c-1)*a\textasciicircum{}- = ((1-c)/c)*a\textasciicircum{}- <= (max(1-c,0)/c)*a\textasciicircum{}-; this covers both c<=1 and c>1. \steptag{validated} \\[4pt]
+\step{1.1.2} d\_t product bound: because c>0, max(a*d\_t/c,0) <= (max(-d\_t,0)/c)*a\textasciicircum{}- + (max(d\_t,0)/c)*a\textasciicircum{}+; indeed if d\_t>=0 the left side is (d\_t/c)*a\textasciicircum{}+, and if d\_t<0 it is ((-d\_t)/c)*a\textasciicircum{}-. \steptag{validated} \\[4pt]
+\step{1.1.3} d\_r linear bound: because c>0, -a*d\_r/c <= (max(d\_r,0)/c)*a\textasciicircum{}- + (max(-d\_r,0)/c)*a\textasciicircum{}+; this follows by writing a=a\textasciicircum{}+-a\textasciicircum{}- and considering d\_r>=0 and d\_r<0. \steptag{validated} \\[4pt]
+\step{1.1.4} Combination and positive part: adding the preceding three bounds gives R\_i <= alpha*a\textasciicircum{}- + gamma*a\textasciicircum{}+. Since alpha>=0, gamma>=0, a\textasciicircum{}+>=0, and a\textasciicircum{}->=0, the right side is nonnegative, so max(R\_i,0) <= alpha*a\textasciicircum{}- + gamma*a\textasciicircum{}+. \steptag{validated} \\[4pt]
+\step{1.2} Weighted summation: assuming the pointwise scalar reduction for every i, multiply it by beta\_i\textasciicircum{}+=max(beta\_r(i),0), sum over i, and use the definitions of I\_\{r,j\}(U), A\_\{r,s\}, and B\_\{r,s\} to obtain the claimed bound. \steptag{validated} \\[6pt]
+\step{1.2.1} Nonnegative-weight step: for each i, beta\_i\textasciicircum{}+=max(beta\_r(i),0) is nonnegative, so the pointwise inequality max(R\_i,0) <= alpha*a\_s(i)\textasciicircum{}- + gamma*a\_s(i)\textasciicircum{}+ remains valid after multiplication by beta\_i\textasciicircum{}+. \steptag{validated} \\[4pt]
+\step{1.2.2} Finite summation step: summing the weighted inequalities over all row indices i gives sum\_i beta\_i\textasciicircum{}+*max(R\_i,0) <= alpha*sum\_i beta\_i\textasciicircum{}+*a\_s(i)\textasciicircum{}- + gamma*sum\_i beta\_i\textasciicircum{}+*a\_s(i)\textasciicircum{}+. \steptag{validated} \\[4pt]
+\step{1.2.3} Substitution of definitions: by the definitions in the root statement, sum\_i beta\_i\textasciicircum{}+*max(R\_i,0)=I\_\{r,j\}(U), sum\_i beta\_i\textasciicircum{}+*a\_s(i)\textasciicircum{}-=B\_\{r,s\}, sum\_i beta\_i\textasciicircum{}+*a\_s(i)\textasciicircum{}+=A\_\{r,s\}, alpha=(max(1-c,0)+max(-d\_t,0)+max(d\_r,0))/c, and gamma=(max(d\_t,0)+max(-d\_r,0))/c; substituting these identities is exactly the asserted inequality. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

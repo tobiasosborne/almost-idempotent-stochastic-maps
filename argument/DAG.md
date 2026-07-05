@@ -32,7 +32,7 @@ graph LR
   lem-factorization["lem-factorization<br/>proved/validated"]
   lem-fan-payment["lem-fan-payment<br/>proved/validated"]
   lem-fan-payment-restricted["lem-fan-payment-restricted<br/>proved/validated"]
-  lem-import-reduction["lem-import-reduction<br/>proved-mod-audit/seeded"]
+  lem-import-reduction["lem-import-reduction<br/>proved/validated"]
   lem-leakage["lem-leakage<br/>proved-mod-audit/none"]
   lem-mass-split["lem-mass-split<br/>proved/validated"]
   lem-negative-pivot-import["lem-negative-pivot-import<br/>proved-mod-audit/seeded"]
@@ -81,7 +81,7 @@ graph LR
   thm-classical-factorization --> op-classical
   thm-cluster --> thm-classical-factorization
   thm-simplex --> thm-well-exposed
-  class conj-halo-collapse,lem-classical-equiv,lem-collateral-import,lem-cross-pivot-cancellation,lem-factorization,lem-fan-payment,lem-fan-payment-restricted,lem-mass-split,lem-negpart-subadditive,lem-pivot-removing-move,lem-residual-lower,lem-residual-upper,lem-weighted-min,lem-zerosum-triangle,obs-height-collapse validated;
-  class conj-degenerate-payment,conj-degenerate-transport,conj-ex,conj-kernel,conj-no-free-frontier,conj-nsc,conj-rh,conj-sc,conj-skinny-shadow-cap,ex-hume,lem-canonical-separator,lem-exposed-circuit,lem-import-reduction,lem-leakage,lem-negative-pivot-import,lem-wiggle-rigidity,obs-deep-leakage,obs-fwr-gap,obs-linear-law-finite-delta,obs-orphan-amplifier,obs-sigma-halo-nonrobust,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;
+  class conj-halo-collapse,lem-classical-equiv,lem-collateral-import,lem-cross-pivot-cancellation,lem-factorization,lem-fan-payment,lem-fan-payment-restricted,lem-import-reduction,lem-mass-split,lem-negpart-subadditive,lem-pivot-removing-move,lem-residual-lower,lem-residual-upper,lem-weighted-min,lem-zerosum-triangle,obs-height-collapse validated;
+  class conj-degenerate-payment,conj-degenerate-transport,conj-ex,conj-kernel,conj-no-free-frontier,conj-nsc,conj-rh,conj-sc,conj-skinny-shadow-cap,ex-hume,lem-canonical-separator,lem-exposed-circuit,lem-leakage,lem-negative-pivot-import,lem-wiggle-rigidity,obs-deep-leakage,obs-fwr-gap,obs-linear-law-finite-delta,obs-orphan-amplifier,obs-sigma-halo-nonrobust,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;
   class lem-dual-localization,op-classical,op-exposed-hull open;
 ```

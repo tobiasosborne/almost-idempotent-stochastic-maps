@@ -29,7 +29,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-OBS-ORPHAN-AMPLIFIER` | `argument/lemmas/obs-orphan-amplifier.md` | `7472032fae335d9e` | Registry shard for `obs-orphan-amplifier` |
 | `ARG-LEM-PIVOT-REMOVING-MOVE` | `argument/lemmas/lem-pivot-removing-move.md` | `69fa5db24c4aefbf` | Registry shard for `lem-pivot-removing-move` |
 | `ARG-LEM-CROSS-PIVOT-CANCELLATION` | `argument/lemmas/lem-cross-pivot-cancellation.md` | `0ee1d3933b8df1df` | Registry shard for `lem-cross-pivot-cancellation` |
-| `ARG-LEM-IMPORT-REDUCTION` | `argument/lemmas/lem-import-reduction.md` | `621e528b36b15974` | Registry shard for `lem-import-reduction` |
+| `ARG-LEM-IMPORT-REDUCTION` | `argument/lemmas/lem-import-reduction.md` | `b228e6b2c93470ce` | Registry shard for `lem-import-reduction` |
 | `ARG-LEM-COLLATERAL-IMPORT` | `argument/lemmas/lem-collateral-import.md` | `84d102f0f6623af1` | Registry shard for `lem-collateral-import` |
 | `ARG-EX-HUME` | `argument/lemmas/ex-hume.md` | `5c9bdc59fc0e4413` | Registry shard for `ex-hume` |
 | `ARG-LEM-CANONICAL-SEPARATOR` | `argument/lemmas/lem-canonical-separator.md` | `10d34ab7f83bfd0c` | Registry shard for `lem-canonical-separator` |

@@ -23,7 +23,7 @@
 | `lem-factorization` | lemma | proved | validated | A | Factorization bound: let P be an exact signed idempotent (square real matrix wit… |
 | `lem-fan-payment` | lemma | proved | validated | A | Zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite family with ve… |
 | `lem-fan-payment-restricted` | lemma | proved | validated | A | D-restricted zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite f… |
-| `lem-import-reduction` | lemma | proved-mod-audit | seeded | A | Import reduction: let P be a rank-3 exact signed idempotent (square real matrix … |
+| `lem-import-reduction` | lemma | proved | validated | A | Import reduction: let P be a rank-3 exact signed idempotent (square real matrix … |
 | `lem-leakage` | lemma | proved-mod-audit | none | A | Affine-face leakage: for row-stochastic Q with ||Q^2-Q|| <= eta and affine h:Del… |
 | `lem-mass-split` | lemma | proved | validated | A | Mass split: for an exact signed idempotent P and any row index v, writing a_j = … |
 | `lem-negative-pivot-import` | lemma | proved-mod-audit | seeded | A | Negative-pivot collateral import bound: let P be a rank-3 exact signed idempoten… |
