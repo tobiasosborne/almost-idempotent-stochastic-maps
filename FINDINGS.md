@@ -676,3 +676,20 @@ imports a future agent might reach for — read before importing ANY external to
   s = 351/250; R₄ = 0 in every certified true-hidden construction; the δ = 1/4 LP comparison
   shows coefficient capacity is NOT the blocker — exact geometry is. W36 target: identify the
   functional that crosses zero at the transition and generalize the exposer that appears.
+
+## 2026-07-07 — W36 (session 11): the absorption mechanism NAMED — the rho-halo exemption; the bridge in final form
+
+- **Absorption spends the halo exemption, not coefficient capacity** (exact, twice-computed:
+  AE + hostile VAE re-solved the LP from scratch): in the certified W35 transition family the
+  exposer margin is a RATIO of affine-circuit coefficients (negative anchors / FAR positive
+  support), and t* JUMPS (17/417 → 51/569) when the heavy circuit partner enters the ρ-ball —
+  the crossing quantity is the clone-invariant ρ-excess ‖p_j − p_v‖₁² − 16δ. No t* = κ
+  crossing occurs; visibility flips with the far set.
+- ❌ **Easy to get wrong:** the ρ-far set vs the far POSITIVE CIRCUIT support are different
+  sets (VAE's correction); and with the ≥ρ convention the partner is still far AT the
+  threshold equality.
+- **THE BRIDGE (the program's last named gap, 4th independent confirmation, sharpest form):**
+  shipped row mass (P_vj⁺) vs affine-circuit mass (witness/dependency coefficients — note the
+  hiddenness dual witness IS a circuit through p_v). Untried hybrid for W37: substitute row
+  reproduction into the witness balance ONCE — the resulting second circuit has coefficients
+  λ_f·P_fk, a genuine row/circuit hybrid object.
