@@ -547,3 +547,28 @@ imports a future agent might reach for — read before importing ANY external to
   mass disintegrating onto hidden vertices — the once-applied maximum principle must produce a
   contradiction (anti-splitting, analytic form). Plus the standing trunk items (<2>6, <2>7),
   W-nonemptiness, and the δ₀-endpoint bookkeeping.
+
+## 2026-07-06 — W25 (session 10, round 3): step 4 decided into a conjecture + a named missing input; the once-applied principle's yield is a LOWER bound
+
+- ✅ **`lem-top-concentration` (proved, reviewed):** the once-applied maximum principle with an
+  affine ℓ1/ℓ∞ support functional gives `Σ_{j∉G_a} P_vj⁺ ≤ ν_v(2+4δ)/(H−aτ)` at hidden tops, and
+  the same bound on the disintegration slack; in tall width-4 configs the deep hidden-web mass is
+  FORCED UP: `M_v⁴ > 1/2 − δ − τ(2+4δ)/9` (W25,
+  `docs/waves/2026-07-06-W25-step4-decider.md`; verifier VALID incl. an exact LP support-functional
+  test). **The recorded wall in its precise form: the local principle pushes mass INTO the
+  near-top hidden band.** Closing step 4 needs the opposite (upper) cap.
+- ⛔ **INSUFFICIENCY CERTIFICATE (do not re-attempt step 4 from the current fact-list):** a 3×3
+  exact idempotent (`δ = 1/100`; L3 bundle `runs/2026-07-06-w25-step4-decider/`, orchestrator
+  recompute 17/17 from printed values) satisfies EVERY banked scalar fact (harmonicity, collapse
+  conclusion, Lemma-A conclusion, disintegration, row facts) under labels with a sustained web and
+  labeled `H = 20τ` — while the labeled-hidden top is ACTUALLY (ρ,κ)-exposed (explicit exposer,
+  margin 100/101). **The mandatory missing input is HIDDENNESS: t*(v) < κ — the failure of every
+  admissible exposer against some ρ-far row — which NO banked lemma consumes.** Any future step-4
+  attempt without a hiddenness input is pre-refuted by this certificate.
+- ✅ **Step 4 reduced to `conj-min-a-w4`** (codified conjecture): in tall width-4 configs
+  (`δ ≤ (17−12√2)/2`, `H > 13τ`) SOME hidden top has `σ₄ ≤ 1/2`. With the reviewed parametric
+  collapse this yields `H ≤ 13τ` — the height side of Kernel at B = 13. Blind convergence (third
+  E2-pattern occurrence): the prover's minimal missing cap and the obstructor's violated-fact
+  diagnosis are the same statement from opposite sides. Next attack filed: `aism-n7i` (P0) —
+  hiddenness consumption via exposer-failure witnesses + the two-observable machinery;
+  `lem-canonical-separator` re-establishment as sub-target.

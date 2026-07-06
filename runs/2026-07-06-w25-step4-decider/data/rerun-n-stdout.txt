@@ -1,0 +1,18 @@
+W25 worker N exact certificate: PASS
+constants:
+  delta=1/100 tau=1/10 rho=2/5 kappa=1/40 H=2
+  H/(tau)=20 and 13*tau=13/10
+matrix P:
+  w: [1, 0, 0]  nu=0
+  v: [0, 1, 0]  nu=0
+  s: [101/100, -1/100, 0]  nu=1/100
+abstract W=[0] hidden_vertices=[1, 2] hidden_tops=[1]
+depths d=[0, 2, 1/50], G_4=[1]
+g=P*1_G4=[0, 1, -1/100]
+disintegration rows (M, slack, support j->v weight):
+  w: M=0 slack=0 support=-
+  v: M=1 slack=0 support=v->v:1
+  s: M=0 slack=0 support=-
+intentional violation:
+  row v is actually (rho,kappa)-exposed by h(x)=100/101*x_0
+  h values=[100/101, 0, 1], far margin=100/101
