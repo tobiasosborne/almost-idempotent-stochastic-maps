@@ -46,7 +46,7 @@ graph LR
   lem-harmonic-affine-bridge["lem-harmonic-affine-bridge<br/>proved/none"]
   lem-hiddenness-alpha-slab-leakage["lem-hiddenness-alpha-slab-leakage<br/>proved/none"]
   lem-hiddenness-depth-markov["lem-hiddenness-depth-markov<br/>proved/none"]
-  lem-hiddenness-dual-witness["lem-hiddenness-dual-witness<br/>proved/none"]
+  lem-hiddenness-dual-witness["lem-hiddenness-dual-witness<br/>proved/seeded"]
   lem-hlc-implies-exposed-hull["lem-hlc-implies-exposed-hull<br/>proved/none"]
   lem-import-reduction["lem-import-reduction<br/>proved/validated"]
   lem-kernel-implies-hlc["lem-kernel-implies-hlc<br/>proved/none"]
