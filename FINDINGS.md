@@ -435,3 +435,27 @@ imports a future agent might reach for — read before importing ANY external to
   remaining content: E-int-1 (stratum-data constants) + the degree-≥3 / stratified residual
   question. Third same-shape confirmation of the bounded prove-or-refute discipline: a freshly
   named target killed within hours, leaving sharper certified survivors.
+
+## 2026-07-06 — W19 (session 9): Route-A deciders — the per-class folklore is unprovable-as-written; the σ_g wall is ABSORPTION, not capacity
+
+- ❌ **The per-class "hostable mass ∝ poke depth = O(τ)" folklore is NOT provable at any
+  nontrivial scale from the current toolkit** (W19-B, `docs/waves/2026-07-06-W19-route-a-deciders.md`):
+  only the trivial `M_X ≤ 1+δ` is derivable; the folklore needs BOTH a sound
+  exposedness-production rule (B4-FAIL-1-wounded) AND a previously unnamed **coefficient-poke
+  charge** linking geometric poke depth to `P_vj` mass. **T0: the self-inclusive reading is
+  exactly contradicted by banked instance B** (ρ-component mass `229/3200 > 1/20` = the poke
+  value) — every future cluster lemma must carry an explicit self-mass exclusion. External
+  calibration `0.2468·δ` = `0.0533·τ`: consistent with both scales; asymptotics open. Named
+  codification target: **`conj-external-poke-charge(A)`** (a conjecture — do NOT codify the
+  folklore as written).
+- ✅ **The σ_g > 1/2 wall is exposedness ABSORPTION, not mass capacity** (W19-A, L3,
+  `runs/2026-07-06-w19-sigma-frontier/`): the exact LP relaxation places `5/4` mass on
+  designated outside recipients, but the exact-geometry optimizer point has `W = [3,4,5]`,
+  `H = 0` — recipients become visible. New certified record `σ_g = 5991/80000 ≈ 0.075`
+  (rank 5, genuine SELF recipient; above the W17b census max `1/25`, still ~6.7× below the
+  cap). Duplicate-splitting leaves total `σ_g` exactly unchanged (single quotient class);
+  the hidden/absorbed frontier on that design sits in `(5/84, 1/16]`. NOT an emptiness claim.
+- ❗ **Named residual (both workers jointly):** geometrically DISTINCT multi-class designs —
+  many recipients in different quotient classes each near its per-class ceiling — remain
+  untested. That is the direct empirical probe of the `C/τ`-count opening (W18) and of the
+  poke-charge conjecture, and the sharpest next decider on Route A.

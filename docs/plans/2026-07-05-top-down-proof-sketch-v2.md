@@ -86,6 +86,17 @@ rigorous assembly]. Ranked surviving mechanisms (W18 Q5(ii), each with kill crit
 (visibility-or-halo at constant mass; killed-as-uniform-pointwise by B4 FAIL-1, needs a global
 form); (3) chart-toolkit transport (blocked by the D5 weight bridge, same as <3>3). [OPEN]
 
+W19 decider results (2026-07-06, `docs/waves/2026-07-06-W19-route-a-deciders.md`): the
+per-class hostable-mass folklore is UNPROVABLE-AS-WRITTEN (only trivial M_X <= 1+delta; needs
+a sound production rule + a coefficient-poke charge; self-inclusive reading exactly
+contradicted by instance B — T0); named codification target conj-external-poke-charge(A).
+The sigma_g frontier attack identified the binding constraint = EXPOSEDNESS ABSORPTION (LP mass
+capacity is 5/4; geometry absorbs high-mass recipients into W); record sigma_g = 5991/80000
+~ 0.075 (rank-5 genuine self), duplicate-splitting inert (one quotient class). Mechanism (2)
+is thereby STRENGTHENED as the live shape (absorption IS a mass dichotomy in action); the
+sharpest next decider = geometrically DISTINCT multi-class optimization (does absorption bind
+classwise, or can total sigma_g accumulate across classes?).
+
 ## ROUTE B to <2>4 — via the chart engine ((EX), the arm A/D/G machine)
 
 **<3>1. (EX) (conj-ex).** max_s Phi_s(U0) <= C0*delta at a theta-half Phi-argmin. [OPEN]
@@ -187,8 +198,10 @@ Sharpness: closed mod-audit (ex-hume; not blocking).
 - ~~Route A's wall record has not been re-read against the new import toolkit~~ DONE (W18,
   session 9): WALL-NARROWED. New named surfaces it exposed:
   - the constant-mass shallow-genuine exclusion (Route A's minimal residual) — no mechanism yet;
-  - the per-class hostable-mass lemma: unproved, scale ambiguous (O(tau) vs O(delta)) — a
-    disambiguation decider is cheap and changes the needed class count by 1/tau;
+  - the per-class hostable-mass lemma: W19-B settled the STATUS (unprovable-as-written; needs
+    the coefficient-poke charge; self-mass exclusion mandatory) but NOT the scale — live form is
+    conj-external-poke-charge(A) [uncodified]; empirical probe = the distinct-multi-class
+    optimization (W19 joint residual);
   - obs-deep-leakage is only [heuristic] but is consumed by every depth-ledger step — needs
     re-establishment (elevation candidate) before any rigorous Route-A assembly;
   - D1 (cap => H <= 29tau/8) is twice worker-derived but uncodified — registry shard pending
