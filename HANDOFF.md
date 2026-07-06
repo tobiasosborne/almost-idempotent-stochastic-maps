@@ -11,8 +11,8 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 1. Read `PRD.md` (Kernel is THE theorem-facing input; (EX) is a separate attack route), then
    `CLAUDE.md` (== `AGENTS.md`).
-2. Read **`docs/plans/2026-07-06-top-down-proof-sketch-v5.md`** — THE canonical strategic map
-   (v5, session-10 round-2 delta of v4; v4/v3/v2 superseded in place, kept for line citations).
+2. Read **`docs/plans/2026-07-06-top-down-proof-sketch-v6.md`** — THE canonical strategic map
+   (v6, session-10 round-3 delta of v5; v5/v4/v3/v2 superseded in place, kept for line citations).
    Every wave names its node there. The OPEN LEDGER + UNSCOPED-SURFACE list at its end IS the
    progress metric. **STEWARDSHIP (user mandate, 2026-07-06, binding): the sketch is the
    project's most dynamic artifact — keeping it reconciled with newly banked evidence is a
@@ -22,20 +22,33 @@ TRIGGER: session close, or a material change in the current frontier / next task
    unscoped/unpriced surface shrinking — never commit/seeding/elevation counts. (bd memory
    `bfs-phase-discipline`; agent memory `no-progress-theatre`.)
 4. Run `fr board` and `bd ready`. Newest wave artifacts: `docs/waves/2026-07-06-W20-*` through
-   `2026-07-06-W24-*`; newest bundles: `runs/2026-07-06-w20-g-zoo-measurement/`,
-   `runs/2026-07-06-w21-lemma-a-decider/`, `runs/2026-07-06-w23-a-gap/`. `FINDINGS.md` has five
-   new dated entries (07-06 W20/W21/W22/W23/W24). Wave prompts + raw worker answers:
-   session-10 scratchpad (`W20/`–`W24/`).
+   `2026-07-06-W25-*`; newest bundles: `runs/2026-07-06-w20-g-zoo-measurement/`,
+   `runs/2026-07-06-w21-lemma-a-decider/`, `runs/2026-07-06-w23-a-gap/`,
+   `runs/2026-07-06-w25-step4-decider/`. `FINDINGS.md` has six new dated entries (07-06
+   W20–W25). Wave prompts + raw worker answers: session-10 scratchpad (`W20/`–`W25/`).
 5. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-06, session 10 round-2 CLOSE) — the g-bootstrap is ONE open step from MIN-A; trunk <2>5 paid; REGISTRY +5 (all reviewed or wiring)
+## Current state (2026-07-06, session 10 round-3 CLOSE) — step 4 REDUCED to conj-min-a-w4 + the named HIDDENNESS input; REGISTRY +7 total
 
-**Rigorous (af-validated, T0): 16** — unchanged. **Registry deltas this session: +4 REVIEWED
-lemmas + 1 open-problem node + 1 rewire** — `lem-visible-g-small` (W21), `lem-kernel-implies-hlc`
-(W22), `lem-parametric-halo-collapse` (W23), `lem-genuine-disintegration` (W24), `op-hlc`
-(registered + `op-exposed-hull` rewired through it). All four lemmas: `status: proved`,
-`af: none` — L5 reviewer-gate satisfied (each by a SEPARATE fresh hostile codex verifier), L0
-"rigorous" NOT claimed. The linker's ready frontier = the three g-bootstrap lemmas.
+**Rigorous (af-validated, T0): 16** — unchanged. **Registry deltas this session: +5 REVIEWED
+lemmas + 1 open-problem node + 1 frontier conjecture + 1 rewire** — `lem-visible-g-small` (W21),
+`lem-kernel-implies-hlc` (W22), `lem-parametric-halo-collapse` (W23),
+`lem-genuine-disintegration` (W24), `lem-top-concentration` (W25), `op-hlc` (+ `op-exposed-hull`
+rewire), `conj-min-a-w4` (THE frontier statement). All five lemmas: `status: proved`, `af: none`
+— L5 reviewer-gate satisfied (each by a SEPARATE fresh hostile codex verifier), L0 "rigorous"
+NOT claimed. Linker: 55 results; ready frontier = the four reviewed g-bootstrap lemmas.
+
+**Round 3 (W25, the step-4 decider) in brief.** Blind prover/obstructor pair + hostile verifier:
+prover M PARTIAL — the once-applied maximum principle's true yield is `lem-top-concentration`
+(top mass concentrates on G_a; deep-web mass FORCED UP in tall configs — the principle pushes
+mass IN, not out; verifier O VALID incl. exact LP support-functional test); obstructor N
+INSUFFICIENT — an exact 3x3 idempotent satisfies EVERY banked scalar fact with a sustained web
+while its labeled-hidden top is actually exposed (orchestrator recompute 17/17 from printed
+values). Blind convergence: the missing UPPER cap (M) and the missing hiddenness input (N) are
+the same gap. **Step 4 is now ONE conjecture — `conj-min-a-w4` (tall width-4 configs: some
+hidden top has sigma_4 <= 1/2, closing H <= 13tau at B = 13) — plus ONE named input to consume:
+HIDDENNESS, t*(v) < kappa, which no banked lemma uses. Any bare-fact-set attempt is pre-refuted
+by the certificate.**
 
 **Session 10 in one paragraph.** Eleven fresh codex workers across five waves, all on the
 user-directed kernel-conjecture strategy (the g-bootstrap) plus the trunk debt. Round 1
@@ -59,22 +72,22 @@ scripts rerun exit 0; every prover was checked by a separate hostile verifier.
 
 ## Next steps (ranked) — RESUME HERE
 
-0. **THE STEP-4 WAVE (`aism-7pe`, P0 — the bootstrap finisher attempt).** Design per sketch v5 M1 step 4:
-   prove-or-refute pair + hostile verifier on the once-applied maximum principle over the
-   width-4 surface. The wave brief must (a) hand workers the three reviewed lemmas + the two
-   af-validated collapse contracts as the ONLY imports, (b) pre-register kill criteria (a
-   certified band-web sustaining g^{(4)} ≥ 1/2 under the constraints = a Kernel-counterexample
-   hint), (c) decide explicitly whether obs-deep-leakage is consumed (if yes, aism-tq3
-   re-blocks).
+0. **`aism-n7i` (P0) — conj-min-a-w4 via HIDDENNESS consumption.** The next finisher wave:
+   turn t*(v) < kappa (every admissible exposer of a hidden vertex fails the kappa-margin
+   against some rho-far row — a universal statement over exposers) into the width-4 cap.
+   In scope: the exposer-failure witnesses; the two-observable machinery (mass-g + affine
+   deficit, both harmonic; lem-top-concentration's support functional is the deficit in
+   first-principles form); sub-target lem-canonical-separator re-establishment (mod-audit).
+   Prove-or-refute pair + hostile verifier; import the reviewed quintet + af-validated only.
 1. **Trunk <2>6 re-audit** (HLC ⇒ op-exposed-hull) — the staleness rule's next mandatory
-   debtor; now one of only two unreviewed links behind a proved Kernel (with <2>7).
-2. **`aism-88r` (USER DECISION) — af elevation of the reviewed quartet**, prioritizing
-   `lem-parametric-halo-collapse` + `lem-genuine-disintegration` (their deps are ALL
-   af-validated; single-minimal contracts; small trees expected). Opt-in per Rule 6.
-3. **`aism-yxa` re-aimed** — codify the D1/cap⇒Kernel assembly targeting the parametric form
-   (B = 13 at width 4; W-nonemptiness and δ=0 endpoint are the remaining assembly gaps).
-4. **`aism-tq3`** — obs-deep-leakage: HOLD until the step-4 design decides whether it is
-   consumed; if yes, it re-blocks and jumps the queue.
+   debtor; one of only two unreviewed links behind a proved Kernel (with <2>7).
+2. **`aism-88r` (USER DECISION) — af elevation of the reviewed QUINTET**, prioritizing
+   `lem-parametric-halo-collapse` + `lem-genuine-disintegration` + `lem-top-concentration`
+   (deps all af-validated or none; single-minimal contracts). Opt-in per Rule 6.
+3. **`aism-yxa` re-aimed** — the parametric assembly (B = 13; W-nonemptiness and δ=0 endpoint
+   are the remaining assembly gaps).
+4. **`aism-tq3`** — obs-deep-leakage: DORMANT (W25 proved the missing input is hiddenness, not
+   the depth ledger).
 5. Standing queue: `aism-pld` (poke-charge + multi-class; gated on realizing depth > 1τ);
    `aism-j3j` (E2 survivors); α→1 continuation (Route B gate); arm E (`aism-5an`); refs ingest
    (`aism-5de`, `aism-1nh`); `aism-z98` USER DECISION; report sections 14–15 (`aism-av0` — note

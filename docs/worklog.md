@@ -612,3 +612,33 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   — T(1/4) = 29/8 was the check that made the parametric form trustworthy. Issues: closed
   aism-pu0, aism-sg6, aism-o1x; aism-88r extended to the reviewed quartet; aism-tq3 demoted to
   check-at-design; aism-yxa re-aimed at the parametric form.
+
+## 2026-07-06 — Session 10, round 3 (W25): the step-4 decider — reduced to conj-min-a-w4 + the named HIDDENNESS input
+
+- **Direction (user):** "keep going, most important next step" → the P0 step-4 finisher wave
+  (aism-7pe). Design: blind prover (M, once-applied max principle, obs-deep-leakage forbidden)
+  vs blind obstructor (N, insufficiency-certificate mandate, the E2 pattern) + separate hostile
+  verifier (O) on M's claimed derivation. Mid-wave user Q&A: strategy status + brittleness
+  (answer: brittleness-as-open-items concentrates at step 4; the three-prong strategy).
+- **Outcomes (blind-convergent):** M PARTIAL — the once-applied principle's true yield is the
+  NEAR-TOP CONCENTRATION lower bound (top mass concentrates on G_a: sum_{j not in G_a} P_vj+ <=
+  nu(2+4delta)/(H-a*tau); deep-web mass FORCED UP: M_v^4 > 1/2 - delta - tau(2+4delta)/9 in tall
+  width-4 configs) and the missing piece is the UPPER cap; O: VALID 7/7 (incl. an exact
+  LP-constructed support functional on the banked rank-5 instance). N: INSUFFICIENT — exact 3x3
+  idempotent (delta = 1/100) satisfying EVERY banked scalar fact under labels with a sustained
+  web + labeled H = 20tau, while the labeled-hidden top is ACTUALLY (rho,kappa)-exposed
+  (explicit exposer, margin 100/101); orchestrator recomputed the ENTIRE certificate from
+  printed values (17/17). The two blind verdicts are the same gap from opposite sides.
+- **Codified:** `lem-top-concentration` (proved/af:none, reviewed — the verified half of
+  step 4); `conj-min-a-w4` (THE frontier conjecture: tall width-4 configs have some hidden top
+  with sigma_4 <= 1/2; with the parametric collapse ⇒ H <= 13tau, Kernel height side at
+  B = 13). Registry 55 results, linker green; ready frontier = the four reviewed lemmas.
+- **Map change (sketch v6, pins updated):** step 4 is no longer an unscoped mechanism hunt —
+  ONE conjecture + ONE named mandatory input (HIDDENNESS: t*(v) < kappa; no banked lemma
+  consumes it; bare-fact-set attempts pre-refuted by the certificate, RETIRED #13).
+  obs-deep-leakage confirmed dormant (the missing input is hiddenness, not the depth ledger).
+  Next attack filed: aism-n7i (P0) — exposer-failure witnesses + two-observable machinery;
+  lem-canonical-separator re-establishment as sub-target.
+- **Bundle:** `runs/2026-07-06-w25-step4-decider/` (worker checker + orchestrator recompute,
+  both exit 0). Issues: closed aism-7pe (the wave; the step lives on as conj-min-a-w4 +
+  aism-n7i); aism-88r extended to the quintet.
