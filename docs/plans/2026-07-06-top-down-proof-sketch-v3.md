@@ -83,9 +83,39 @@ as stated (W18: TRANSFERRED / BINDS-ONLY-O(1)); the surviving named residual is 
 must stay <= 1/2 - 4*tau*(2+4*delta)).
 
 **Mechanism surfaces (redrawn in v3, ranked):**
-- **M1 — absorption forcing / mass dichotomy at constant mass** (primary; W19 showed it IS the
-  operative wall). Global form required — the uniform pointwise version is dead (B4 FAIL-1
-  dense-polygon side rows). [OPEN]
+- **M1 — absorption forcing via THE G-BOOTSTRAP (named candidate, strategist proposal
+  2026-07-06, USER-ADOPTED as the target — all [T3] until worker-derived).** Skeleton:
+  (1) for the genuine set `G = {j : dist_1(p_j, C_W) > a*tau}` (halo width `a` a TUNABLE
+  constant), the observable `g := P*1_G` (row mass on G) is EXACTLY P-harmonic — `Pg = P^2 1_G
+  = P 1_G = g`, one line from idempotence, clone-safe; and `g_v = sigma_g(v) +- nu_v`, so the
+  MIN-A contradiction antecedent reads `g > 1/2 - delta` on every hidden top. [rigorous on
+  arrival]
+  (2) LEMMA A (load-bearing, aism-0b1): visible rows are g-small — exposedness at W is GIVEN
+  by definition (no production rule); reproduction + concentration (the lem-exposed-circuit /
+  thm-well-exposed shape, mod-audit — re-derive) force w's mass into the rho-ball up to
+  O(delta/kappa) = O(tau); with `a > 4` this gives `g|_W <= C*tau`. The constants fight:
+  `a ~ 5` vs `H > 29tau/8`. [OPEN, prove-or-refute]
+  (3) disintegration: genuine mass lands on HIDDEN vertices in the depth band, via
+  lem-residual-upper [validated] + exposed-vertices-are-in-W. [short, expected T1]
+  (4) once-applied maximum principle (delta-slack paid ONCE — no iteration; idempotence makes
+  P^t = P, so dynamic/mixing arguments are sterile BY DESIGN and are not used): the web
+  `{g >= 1/2}` must be band-self-sustaining while g is small on W and depth-capped on the deep
+  side [deep side consumes obs-deep-leakage — elevation aism-tq3 is a blocking dep]. THE
+  HONEST RESIDUAL: can a harmonic class-observable hold >= 1/2 on a band-supported set while
+  <= C*tau on W? Anti-splitting in ANALYTIC (count-free) form. [OPEN — the kill zone]
+  Wall-evasion audit (why the recorded certificates do not bind): B3/c15 one-sided ledger —
+  `g = Pg` is an IDENTITY, not an upper-bound-only ledger; c10/obs-fwr-gap class count — g is
+  one aggregated scalar field, nothing is counted; B4 FAIL-1 — exposedness is CONSUMED at W
+  (given), never produced; cloning — `1_G` is row-geometric, g clones consistently; sterile
+  iteration — max principle applied once. KILL CRITERIA (pre-registered): a certified visible
+  row with `g >> tau` at workable halo widths (kills Lemma A); a certified band-supported
+  family with `g >= 1/2` coexisting with `g|_W <= C*tau` + the harmonic slack (kills step 4 —
+  and doubles as the strongest hint yet toward a Kernel counterexample). Deciders: aism-vmt
+  (measure g across the zoo, multi halo-width — CHEAP, FIRST), aism-0b1 (Lemma A), aism-pld's
+  distinct-multi-class optimization (doubles as a step-4 stress).
+  Subsumed: the earlier block-idempotence idea — `g` is the row-sum shadow of the
+  `P[.,G]` block identity. The old M1 phrasing ("global mass dichotomy") is the SHAPE this
+  candidate instantiates; the uniform pointwise version stays dead (B4 FAIL-1).
 - **M2 — external quotient packing at C/tau** via `conj-external-poke-charge(A)` [UNCODIFIED —
   aism-pld; MANDATORY self-mass exclusion: the self-inclusive form is T0-refuted by instance B
   (229/3200 > 1/20)]. If the poke charge holds at any constant, CAP-1/2 follows from
@@ -102,11 +132,13 @@ must stay <= 1/2 - 4*tau*(2+4*delta)).
 step consumes it — no assembled Route-A argument can be rigorous before its re-establishment/
 elevation (aism-tq3). Treat as a prerequisite of any Route-A af work, not hygiene.
 
-**Deciders (ranked):** (1) distinct-multi-class sigma_g optimization — does absorption bind
-classwise or can total sigma_g accumulate across geometrically distinct classes? (aism-pld,
-extends runs/2026-07-06-w19-sigma-frontier/); (2) poke-charge codification + bounded
-prove-or-refute wave (aism-pld); (3) obs-deep-leakage elevation (aism-tq3); (4) a genuine-self
-variant of the frontier attack (M3's empirical probe — push the rank-5 self mode).
+**Deciders (re-ranked 2026-07-06, g-bootstrap adopted):** (1) aism-vmt — measure g across the
+certified zoo at halo widths a in {1/4,1,2,4,5,6}, harmonicity as a pipeline assert (CHEAP;
+Lemma-A empirical pre-check + kill-zone scan); (2) aism-0b1 — Lemma A prove-or-refute
+(exposedness-concentration at W, halo width parametric); (3) obs-deep-leakage elevation
+(aism-tq3 — blocking dep of step 4's deep side); (4) aism-pld — poke-charge codification +
+distinct-multi-class optimization (M2 fallback AND step-4 stress); (5) a genuine-self variant
+of the frontier attack (M3's empirical probe).
 
 ## ROUTE B to <2>4 — via the chart engine (DEMOTED in v3: held at the K3 decision point)
 
@@ -173,9 +205,12 @@ Trunk (blocking regardless of route):
 3. <2>6 re-audit. [moderate; STALE]
 4. <2>7 three interface gaps. [moderate-to-genuine; STALE]
 
-Route A (primary): 5. MIN-A via M1/M2/M3 [OPEN; M2 conditional on the uncodified poke charge;
-M3 newly named, no bound]; 6. obs-deep-leakage elevation [blocking dep]; 7. W-nonemptiness
-[genuine]; 8. delta=0 endpoint [short]; 9. D1 codification + review [bookkeeping, aism-yxa].
+Route A (primary): 5. MIN-A via M1 = THE G-BOOTSTRAP [target of record 2026-07-06: step 1
+rigorous-on-arrival; Lemma A open (aism-0b1); step 3 short; step 4 = the analytic
+anti-splitting residual — kill criteria pre-registered; M2 poke-charge = fallback; M3 inside
+the g-frame]; 6. obs-deep-leakage elevation [blocking dep of step 4]; 7. W-nonemptiness
+[genuine; SBD reset import aism-1qd is the candidate tool]; 8. delta=0 endpoint [short];
+9. D1 codification + review [bookkeeping, aism-yxa].
 
 Route B (held): 10. alpha->1 continuation [the kill/rescue gate]; everything else frozen
 behind it (K2 hard; K3 open; K4 bookkeeping-hard; K5 moderate; <3>3 possibly Kernel-sized).
@@ -186,7 +221,10 @@ Sharpness: closed mod-audit (not blocking).
 
 ## Unscoped surface remaining (drives the next BFS round)
 
-- M3, the genuine-self-mass cap: NO bound, NO mechanism, newly named. Scope it.
+- The g-bootstrap steps 2 and 4: Lemma A unproved (aism-0b1); the band-web question (the
+  analytic anti-splitting residual) unscoped — decider aism-vmt runs FIRST.
+- M3, the genuine-self-mass cap: inside the g-frame by construction (g counts self), but no
+  standalone bound if the bootstrap dies. Keep named.
 - The distinct-multi-class question (absorption classwise vs accumulation): decider designed,
   unrun (aism-pld).
 - conj-external-poke-charge(A): uncodified; its prove-or-refute wave unrun.

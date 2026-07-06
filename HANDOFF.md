@@ -64,13 +64,18 @@ duplicate-splitting exactly inert (one quotient class).
 **Registry deltas: NONE.** (Sketch v2, FINDINGS, lit-review §1.3 correction, INDEX.md rows,
 and two L3 bundles are the deltas.)
 
-## Next steps (ranked by this session's evidence) — RESUME HERE
+## Next steps (ranked; g-bootstrap = TARGET OF RECORD, user-adopted 2026-07-06) — RESUME HERE
 
-1. **`aism-pld` (P1) — THE Route-A decider pair.** (a) Codify `conj-external-poke-charge(A)`
-   (W19-B's named target; MANDATORY self-mass exclusion — the self-inclusive form is
-   T0-refuted); (b) the distinct-multi-class `σ_g` optimization: designs with m geometrically
-   DISTINCT genuine-outside quotient classes each pushed toward its ceiling — does absorption
-   bind classwise (supports CAP-1/2 via the C/τ count) or can total `σ_g` accumulate (stress)?
+0. **THE TARGET: MIN-A via the G-BOOTSTRAP** (sketch v3 §Route A, mechanism M1 — read it FIRST;
+   fr arm B re-aimed to it). `g := P·1_G` is exactly P-harmonic; cap g on W by definition-given
+   exposedness (Lemma A); once-applied max principle vs the band-web residual. Wave order:
+   **`aism-vmt`** (measure g across the certified zoo, multi halo-width, harmonicity as a
+   pipeline assert — CHEAP, runs FIRST; its kill criteria are pre-registered in the sketch),
+   then **`aism-0b1`** (Lemma A prove-or-refute, halo width parametric).
+1. **`aism-pld` (P1) — companion pair (now ALSO a step-4 stress).** (a) Codify
+   `conj-external-poke-charge(A)` (M2 fallback; MANDATORY self-mass exclusion — the
+   self-inclusive form is T0-refuted); (b) the distinct-multi-class `σ_g` optimization —
+   doubles as an attempt to build a band-supported g-web (the bootstrap's kill zone).
    Extends `runs/2026-07-06-w19-sigma-frontier/`.
 2. **Cheap codifications, then their reviews:** `aism-yxa` (D1 as a registry lemma — cap ⇒
    `H ≤ 29τ/8`; twice worker-derived, needs one independent codex review; do NOT state it as an
