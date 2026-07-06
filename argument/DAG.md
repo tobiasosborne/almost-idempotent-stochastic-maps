@@ -64,7 +64,7 @@ graph LR
   lem-sharp-vertex-visibility["lem-sharp-vertex-visibility<br/>proved/none"]
   lem-simplex-visibility["lem-simplex-visibility<br/>proved/none"]
   lem-single-heavy-recipient-rho-shadow["lem-single-heavy-recipient-rho-shadow<br/>proved/none"]
-  lem-top-concentration["lem-top-concentration<br/>proved/seeded"]
+  lem-top-concentration["lem-top-concentration<br/>proved/validated"]
   lem-top-slab-companion["lem-top-slab-companion<br/>proved/none"]
   lem-two-observable-pencil-bound["lem-two-observable-pencil-bound<br/>proved/none"]
   lem-visible-g-small["lem-visible-g-small<br/>proved/none"]
@@ -137,8 +137,8 @@ graph LR
   thm-classical-factorization --> op-classical
   thm-cluster --> thm-classical-factorization
   thm-simplex --> thm-well-exposed
-  class conj-halo-collapse,lem-classical-equiv,lem-collateral-import,lem-cross-pivot-cancellation,lem-factorization,lem-fan-payment,lem-fan-payment-restricted,lem-genuine-disintegration,lem-import-reduction,lem-mass-split,lem-negpart-subadditive,lem-parametric-halo-collapse,lem-pivot-removing-move,lem-residual-lower,lem-residual-upper,lem-weighted-min,lem-zerosum-triangle,obs-height-collapse validated;
-  class cor-rank-two-visible,lem-conditional-g-near-exposer,lem-cs-low-slab-pincer,lem-delta-zero-endpoint,lem-depth-d-halo-collapse,lem-gmax-web-concentration,lem-harmonic-affine-bridge,lem-hiddenness-alpha-slab-leakage,lem-hiddenness-depth-markov,lem-hiddenness-dual-witness,lem-hlc-implies-exposed-hull,lem-kernel-implies-hlc,lem-min-a-implies-height,lem-rank3-maxchart-hidden-tangent,lem-received-mass-proximity,lem-sharp-vertex-visibility,lem-simplex-visibility,lem-single-heavy-recipient-rho-shadow,lem-top-concentration,lem-top-slab-companion,lem-two-observable-pencil-bound,lem-visible-g-small proved;
+  class conj-halo-collapse,lem-classical-equiv,lem-collateral-import,lem-cross-pivot-cancellation,lem-factorization,lem-fan-payment,lem-fan-payment-restricted,lem-genuine-disintegration,lem-import-reduction,lem-mass-split,lem-negpart-subadditive,lem-parametric-halo-collapse,lem-pivot-removing-move,lem-residual-lower,lem-residual-upper,lem-top-concentration,lem-weighted-min,lem-zerosum-triangle,obs-height-collapse validated;
+  class cor-rank-two-visible,lem-conditional-g-near-exposer,lem-cs-low-slab-pincer,lem-delta-zero-endpoint,lem-depth-d-halo-collapse,lem-gmax-web-concentration,lem-harmonic-affine-bridge,lem-hiddenness-alpha-slab-leakage,lem-hiddenness-depth-markov,lem-hiddenness-dual-witness,lem-hlc-implies-exposed-hull,lem-kernel-implies-hlc,lem-min-a-implies-height,lem-rank3-maxchart-hidden-tangent,lem-received-mass-proximity,lem-sharp-vertex-visibility,lem-simplex-visibility,lem-single-heavy-recipient-rho-shadow,lem-top-slab-companion,lem-two-observable-pencil-bound,lem-visible-g-small proved;
   class conj-nsc seeded;
   class conj-gamma-emptiness stated;
   class conj-b-restricted,conj-degenerate-payment,conj-degenerate-transport,conj-ex,conj-kernel,conj-low-slab-cap,conj-min-a-w4,conj-no-free-frontier,conj-rh,conj-sc,conj-skinny-shadow-cap,ex-hume,lem-canonical-separator,lem-exposed-circuit,lem-leakage,lem-negative-pivot-import,lem-wiggle-rigidity,obs-deep-leakage,obs-fwr-gap,obs-linear-law-finite-delta,obs-orphan-amplifier,obs-sigma-halo-nonrobust,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;

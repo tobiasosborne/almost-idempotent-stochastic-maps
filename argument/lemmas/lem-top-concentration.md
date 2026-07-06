@@ -5,7 +5,7 @@ contract: Top concentration: for an exact signed idempotent P with 0 < delta(P) 
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed; def-invisible-mass; def-height
 deps: 
 status: proved
-af: seeded
+af: validated
 provenance: W25 wave (docs/waves/2026-07-06-W25-step4-decider.md): fresh-codex prover (worker M, the verified core of its PARTIAL) + SEPARATE fresh-codex adversarial verifier (worker O, VALID on all 7 checklist items incl. an exact LP support-functional test on the banked rank-5 instance); first-principles proof (ell1/ell-infty support functional + row reproduction), no imports
 owner: A
 workspace: proofs/lem-top-concentration

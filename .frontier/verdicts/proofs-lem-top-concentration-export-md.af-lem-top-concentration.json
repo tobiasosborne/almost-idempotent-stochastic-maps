@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-top-concentration/export.md",
+  "oracle": "af-lem-top-concentration",
+  "result": "pass",
+  "claim_hash": "835cacb8312e2d8341f719dfee8664a0343b42495ed8f8480f62c4267c1054b7",
+  "oracle_digest": "00e86deb937b22e93d66fb39397568b0b830fc12504bf6eb86ab7281e4c298c1",
+  "inputs_hash": "6e3fccb03531a7836f99007f401e6a408a804798576ec9c378adfca425e81723",
+  "ts": "2026-07-06T23:13:12.156Z"
+}
