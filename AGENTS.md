@@ -12,7 +12,7 @@ TRIGGER: a process/convention/tooling change, or a new standing rule from the us
 > *How do I work?* → this file. *Current state / next task?* → **`HANDOFF.md`** then `bd ready`.
 > *Where's the exploration portfolio?* → `fr board` (the explore/exploit controller).
 > *Where's the LIVE PROOF STRATEGY?* → the newest `docs/plans/*top-down-proof-sketch*` file
-> (**v8, 2026-07-07 session 11 round 3**) — the MOST DYNAMIC artifact in this repo. **Keeping it reconciled with
+> (**v9, 2026-07-07 session 11 round 5**) — the MOST DYNAMIC artifact in this repo. **Keeping it reconciled with
 > newly banked evidence is a first-class deliverable of every session (user mandate,
 > 2026-07-06): a wave that changes the map without updating the sketch is incomplete work
 > (Rule 9). Supersede by dated file; old versions stay intact for line citations.** *Notation?* →

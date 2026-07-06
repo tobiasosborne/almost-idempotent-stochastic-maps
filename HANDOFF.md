@@ -10,8 +10,8 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read **`docs/plans/2026-07-07-top-down-proof-sketch-v8.md`** — THE canonical strategic map
-   (v8, session-11 round-3; v7 and earlier superseded in place, kept for line citations).
+2. Read **`docs/plans/2026-07-07-top-down-proof-sketch-v9.md`** — THE canonical strategic map
+   (v9, session-11 round-5; v8 and earlier superseded in place, kept for line citations).
    **STEWARDSHIP (user mandate, 2026-07-06, binding): reconciling the sketch with newly banked
    evidence is a FIRST-CLASS DELIVERABLE of every session (Rule 9).**
 3. **PHASE DISCIPLINE (user, 2026-07-05, binding): no progress theatre** — progress =
@@ -22,13 +22,24 @@ TRIGGER: session close, or a material change in the current frontier / next task
    Wave prompts + raw answers: session-11 scratchpad (`W26/`–`W34/`).
 5. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-07, session 11 MID-SESSION CHECKPOINT — waves W34 + af #2 IN FLIGHT)
+## Current state (2026-07-07, session 11 round-5 CHECKPOINT — VAG + af #4 IN FLIGHT)
 
-**Rigorous (af-validated, T0): 17** — `lem-parametric-halo-collapse` elevated this session
-(915891a; 14/14 nodes, taint clean, fr-oracle ▣). **Registry: 71 results** (+16 this session:
-12 reviewed lemmas + 1 corollary + 1 conjecture + op-hlc wiring done earlier). All new lemmas
-`proved`/`af: none` with SEPARATE fresh hostile codex verifiers (L5); L0 claimed ONLY for the
-af-validated 17.
+**Rigorous (af-validated, T0): 19** — this session elevated `lem-parametric-halo-collapse`
+(#17, 915891a), `lem-genuine-disintegration` (#18, 072c97f), `lem-top-concentration` (#19,
+2a01032) — three of the four g-bootstrap steps are L0. **Registry: 77 results** (+22 this
+session). All new lemmas `proved`/`af: none` with SEPARATE fresh hostile codex verifiers (L5);
+L0 claimed ONLY for the af-validated 19.
+
+**THE TERMINAL PICTURE (sketch v9): THE FIVE-ROUTE CONVERGENCE.** Waves W26–W38 attacked the
+cap through five independent mechanism families (witness coupling; CS/pincer; collapse family;
+absorption/proximity; dual certificates + residual cancellation) — every one bottoms out on
+ONE conjecture: **near-cluster absorption** (a tall hidden top cannot keep ≥ 1−θ₀ of its mass
+on its ρ-near deep cluster without a cluster-side vertex turning exposed). Five priced levers
+(sketch v9): the value-vs-Lipschitz conditioning lemma; the W36 exact transition family;
+the deepest-vertex extremal choice; the W30/W31 anchor tension inside the cluster; the
+quotient self-loop object. The Route-A chain is otherwise fully reviewed/rigorous
+(cap ⇒ pincer ⇒ collapse[RIGOROUS] ⇒ height ⇒ HLC ⇒ exposed-hull), with W-nonemptiness
+rank ≥ 3 sharing the mechanism and trunk <2>7 the only unreviewed link.
 
 **Session 11 in one paragraph (user directive: full-proof orchestration, breadth-first,
 codex/opus delegation).** Nine waves + two af orchestrations so far. W26 (relaunch): hiddenness
@@ -50,31 +61,29 @@ bd aism-2fi P0). The certified pincer (W29-X): true-hidden folds back before dep
 
 ## IN FLIGHT (resume these FIRST if interrupted)
 
-- **W34 (`aism-2fi`/`aism-n7i`): the g-max self-consistency attack** on conj-low-slab-cap —
-  codex worker AB, brief `scratchpad/W34/PROMPT-AB.md` (sub-target: the DEPTH-d parametric
-  collapse). On harvest: hostile verifier, orchestrator recompute, bank per session pattern.
-- **af orchestration #2: `lem-genuine-disintegration`** (elevation queue aism-88r item 2) —
-  running in background; round-1 DAG-hygiene churn is normal. On root=validated: af export,
-  flip af: seeded→validated, register fr oracle, fr verify (claim = export.md path), fr log
-  ▣ banked, commit (all mechanical — see the 915891a commit as the model).
-  **While it runs: argument//definitions edits ONLY as fast atomic edit+commit windows.**
-- If a wave brief is lost with the scratchpad: re-derive from the wave docs + this file; the
-  W34 brief's content is summarized in sketch v8 (attack channel 1).
+- **VAG — hostile verifier on W38-AG's identities** (rho-near residual cancellation +
+  self-defect shadow; brief `scratchpad/W38/PROMPT-VAG.md`). On VALID: codify
+  `lem-rho-near-residual-cancellation` + `lem-self-defect-shadow` + register
+  `conj-near-cluster-absorption` as the frontier conjecture shard; W38 wave doc + fr log;
+  the W38 answer is at `scratchpad/W38/ANSWER-AG.md` (its content is summarized in sketch v9
+  route 5 + FINDINGS 2026-07-07 if the scratchpad is lost).
+- **af orchestration #4: `lem-hiddenness-dual-witness`** (elevation queue) — resumed after
+  the recorded guard-collision pattern. On root=validated: mechanical banking (the 2a01032
+  commit is the model). **While it runs: argument//definitions edits ONLY as fast atomic
+  edit+commit windows.**
 
 ## Next steps (ranked)
 
-0. Harvest W34 → verify → bank; then the next coupling wave iterates on its named gap
-   (the depth-d collapse, if delivered, is a shard on its own).
-1. af elevation queue (aism-88r, one at a time): after genuine-disintegration →
-   lem-top-concentration (deps none) → lem-hiddenness-dual-witness → lem-cs-low-slab-pincer +
-   lem-harmonic-affine-bridge (both deps-none, few-line proofs — cheap validations).
-2. Trunk <2>7 audit (aism-23b): thm-classical-factorization classification pass — now with
-   the W27 interface findings (Q not stochastic; loose-delta) as explicit audit questions.
-3. The loose-delta robustness lemma (small; closes op-exposed-hull's literal wording).
-4. W-nonemptiness rank>=3 next wave: rides the unified mechanism (aism-2fi); do not fund
-   separately from the coupling unless W34 dies.
+0. Land VAG → codify the W38 pair + conj-near-cluster-absorption → sketch/FINDINGS lockstep.
+1. **The next frontier wave (W39): near-cluster absorption via the priced levers** (sketch v9:
+   conditioning lemma (a) and the deepest-vertex choice (c) first; the W36 transition family
+   (b) as the local model). Prove-or-refute pair + hostile verifier.
+2. af elevation queue (aism-88r): after the witness → lem-cs-low-slab-pincer,
+   lem-harmonic-affine-bridge, lem-row-far-dual-certificate (all deps-none, few-line proofs).
+3. Trunk <2>7 audit (aism-23b) with the W27 interface findings as explicit audit questions.
+4. The loose-delta robustness lemma (small).
 5. Standing queue: aism-pld, aism-j3j, alpha->1 (Route B gate), aism-5an, refs (aism-5de,
-   aism-1nh), aism-z98 USER DECISION, report labels (aism-av0 — 20+ shards now warn-level).
+   aism-1nh), aism-z98 USER DECISION, report labels (aism-av0 — 30+ shards warn-level).
 
 ## Standing rules (session-11 additions to the CLAUDE.md/bd-memory set)
 
@@ -103,10 +112,10 @@ PYTHONDONTWRITEBYTECODE=1 python3 -u runs/2026-07-06-w30-w-nonemptiness/scripts/
 
 ## What is intentionally NOT here
 
-- Any claim more than SEVENTEEN results are af-validated. The 12 new session-11 lemmas are
-  REVIEWED (L5), NOT L0-rigorous.
-- Any claim conj-low-slab-cap, conj-min-a-w4, Kernel(i) at rank>=3, or the Kernel Conjecture
-  is proved. The trunk still has <2>7 mod-audit + the loose-delta lemma open.
+- Any claim more than NINETEEN results are af-validated. The session-11 reviewed lemmas
+  (17 of them) are L5, NOT L0-rigorous.
+- Any claim conj-low-slab-cap, conj-near-cluster-absorption, conj-min-a-w4, Kernel(i) at
+  rank>=3, or the Kernel Conjecture is proved. The trunk still has <2>7 mod-audit + the loose-delta lemma open.
 - Any claim the bootstrap works outside small delta_0 (the theta-flexible form trades B for
   delta_0; state the pair).
 - A git remote (local-only by decision) — close = commits + bd close-out, no push.
