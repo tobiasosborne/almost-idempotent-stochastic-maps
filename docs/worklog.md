@@ -686,3 +686,24 @@ Process lessons banked in HANDOFF standing rules: atomic edit+commit windows und
 orchestrations (two guard aborts, both resumed clean from the intact ledger); verifier
 corrections that WEAKEN hypotheses are upgrades; calibration constants are not load-bearing
 until checked (the 1/2 in conj-min-a-w4).
+
+## 2026-07-07 — Session 11 close (rounds 4-6): the five-route convergence; halted by codex quota
+
+Rounds 4-6 (W34-W38 + elevations #2-#4-partial): lem-depth-d-halo-collapse +
+lem-gmax-web-concentration (W34, VAB); lem-received-mass-proximity +
+lem-single-heavy-recipient-rho-shadow + the exact absorption-transition bundle (W35, VAC/AD);
+the rho-halo exemption mechanism, twice-computed (W36, VAE); lem-row-far-dual-certificate
+(SHARP) + lem-hybrid-dual-certificate + the dual-direction wall (W37, VAF);
+lem-rho-near-residual-cancellation + lem-self-defect-shadow + conj-near-cluster-absorption
+REGISTERED (W38, VAG). af: lem-genuine-disintegration (#18) + lem-top-concentration (#19)
+validated. Sketch v9 = THE FIVE-ROUTE CONVERGENCE: everything bottoms out on
+conj-near-cluster-absorption, five priced levers.
+
+Commits this stretch: de2659f, 072c97f, 0958810/e371283, 103b780, ca32fd2, 2a01032, b83f48e,
+ac9288a, d1392bb, 9b7215f, 4b1a654. Final session tallies: registry 55 -> 80; af-validated
+16 -> 19; the open surface = ONE conjecture (+ Kernel(i) rank>=3 sharing its mechanism +
+trunk <2>7 + the small loose-delta lemma).
+
+HALT: codex usage quota exhausted (~01:00; resets 4:00 AM) — W39-AH/AI and af orchestration #4
+killed without output; relaunch instructions pinned in HANDOFF (blocker section). Every
+completed wave was banked before the halt; gates green at 4b1a654 + this close-out.

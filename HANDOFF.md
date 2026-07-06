@@ -59,31 +59,31 @@ square the slab defect) now sits under BOTH open ledger items** (FINDINGS 2026-0
 bd aism-2fi P0). The certified pincer (W29-X): true-hidden folds back before depth 4τ
 (best frontier H/τ = √(5/99)); tall attempts die by absorption.
 
-## IN FLIGHT (resume these FIRST if interrupted)
+## ⛔ BLOCKER AT SESSION HALT (2026-07-07 ~01:00): CODEX USAGE QUOTA EXHAUSTED (resets 4:00 AM)
 
-- **VAG — hostile verifier on W38-AG's identities** (rho-near residual cancellation +
-  self-defect shadow; brief `scratchpad/W38/PROMPT-VAG.md`). On VALID: codify
-  `lem-rho-near-residual-cancellation` + `lem-self-defect-shadow` + register
-  `conj-near-cluster-absorption` as the frontier conjecture shard; W38 wave doc + fr log;
-  the W38 answer is at `scratchpad/W38/ANSWER-AG.md` (its content is summarized in sketch v9
-  route 5 + FINDINGS 2026-07-07 if the scratchpad is lost).
-- **af orchestration #4: `lem-hiddenness-dual-witness`** (elevation queue) — resumed after
-  the recorded guard-collision pattern. On root=validated: mechanical banking (the 2a01032
-  commit is the model). **While it runs: argument//definitions edits ONLY as fast atomic
-  edit+commit windows.**
+All codex workers died on `ERROR: You've hit your usage limit ... try again at 4:00 AM`.
+W38 WAS fully banked before the halt (4b1a654). Killed mid-run with NO output (relaunch
+fresh — briefs preserved in the session scratchpad AND summarized in sketch v9):
 
-## Next steps (ranked)
+- **W39-AH** (levers a+c: conditioning lemma + deepest vertex): brief
+  `scratchpad/W39/PROMPT-AH.md`. **W39-AI** (lever d: anchor tension / aggregated-witness
+  circuit): brief `scratchpad/W39/PROMPT-AI.md`. If the scratchpad is gone, re-derive both
+  briefs from conj-near-cluster-absorption's shard body (the five levers) + sketch v9.
+- **af orchestration #4: `lem-hiddenness-dual-witness`** — prover build IS in the ledger;
+  a plain relaunch resumes: `python3 scripts/af-orchestrate.py lem-hiddenness-dual-witness
+  --workers 6 --max-rounds 14 --node-cap 40` (background). On root=validated: mechanical
+  banking (the 2a01032 commit is the model).
 
-0. Land VAG → codify the W38 pair + conj-near-cluster-absorption → sketch/FINDINGS lockstep.
-1. **The next frontier wave (W39): near-cluster absorption via the priced levers** (sketch v9:
-   conditioning lemma (a) and the deepest-vertex choice (c) first; the W36 transition family
-   (b) as the local model). Prove-or-refute pair + hostile verifier.
-2. af elevation queue (aism-88r): after the witness → lem-cs-low-slab-pincer,
+## Next steps (ranked; resume AFTER the quota reset)
+
+0. Relaunch the three killed workers (above). On W39 harvest: hostile verifier per house
+   pattern → bank → sketch v10 if the map moves.
+1. af elevation queue (aism-88r) after the witness: lem-cs-low-slab-pincer,
    lem-harmonic-affine-bridge, lem-row-far-dual-certificate (all deps-none, few-line proofs).
-3. Trunk <2>7 audit (aism-23b) with the W27 interface findings as explicit audit questions.
-4. The loose-delta robustness lemma (small).
-5. Standing queue: aism-pld, aism-j3j, alpha->1 (Route B gate), aism-5an, refs (aism-5de,
-   aism-1nh), aism-z98 USER DECISION, report labels (aism-av0 — 30+ shards warn-level).
+2. Trunk <2>7 audit (aism-23b) with the W27 interface findings as explicit audit questions.
+3. The loose-delta robustness lemma (small).
+4. Standing queue: aism-pld, aism-j3j, alpha->1 (Route B gate), aism-5an, refs (aism-5de,
+   aism-1nh), aism-z98 USER DECISION, report labels (aism-av0 — 35+ shards warn-level).
 
 ## Standing rules (session-11 additions to the CLAUDE.md/bd-memory set)
 
