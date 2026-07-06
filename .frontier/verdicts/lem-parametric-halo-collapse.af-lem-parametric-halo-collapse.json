@@ -1,0 +1,9 @@
+{
+  "claim": "lem-parametric-halo-collapse",
+  "oracle": "af-lem-parametric-halo-collapse",
+  "result": "pass",
+  "claim_hash": "498b86868a1046f1e079726cda50c52c9b9d6bd67219f62fda3274376f2185c1",
+  "oracle_digest": "7313ce5cf30cac63202ead26e42e3257d1e3ff92c09738178d951547383200ad",
+  "inputs_hash": "0e8cb1b2c1327f52d7cbd7e05cbaa71c02dcaf7645ebb1d63ec708d814934127",
+  "ts": "2026-07-06T21:49:05.741Z"
+}

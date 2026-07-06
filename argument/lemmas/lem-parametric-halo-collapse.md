@@ -5,7 +5,7 @@ contract: Parametric halo collapse: for an exact signed idempotent P with 0 < de
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-invisible-mass; def-height
 deps: lem-mass-split; lem-residual-lower; lem-residual-upper
 status: proved
-af: seeded
+af: validated
 provenance: W23 wave (docs/waves/2026-07-06-W23-a-gap.md): fresh-codex derivation (worker H) + SEPARATE fresh-codex adversarial verifier (worker L, VALID — expanded the residual-split proof independently, checked the a = 1/4 calibration against the af-validated conj-halo-collapse contract, exact tests on the banked rank-5 and a constructed 4x4); generalizes conj-halo-collapse (af: validated) from a = 1/4 to arbitrary width
 owner: A
 workspace: proofs/lem-parametric-halo-collapse

@@ -37,7 +37,7 @@
 | `lem-min-a-implies-height` | lemma | proved | none | A | Conditional MIN-A height bound: assuming conj-min-a-w4, every exact signed idemp… |
 | `lem-negative-pivot-import` | lemma | proved-mod-audit | seeded | A | Negative-pivot collateral import bound: let P be a rank-3 exact signed idempoten… |
 | `lem-negpart-subadditive` | lemma | proved | validated | A | Negative-part subadditivity: for all vectors x and y in R^d, writing n(w) = sum_… |
-| `lem-parametric-halo-collapse` | lemma | proved | seeded | A | Parametric halo collapse: for an exact signed idempotent P with 0 < delta(P) <= … |
+| `lem-parametric-halo-collapse` | lemma | proved | validated | A | Parametric halo collapse: for an exact signed idempotent P with 0 < delta(P) <= … |
 | `lem-pivot-removing-move` | lemma | proved | validated | A | Pivot-removing max-stationarity: let P be a rank-3 exact signed idempotent (squa… |
 | `lem-residual-lower` | lemma | proved | validated | A | Convex outsourcing: let C be the convex hull of finitely many points of R^n, and… |
 | `lem-residual-upper` | lemma | proved | validated | A | Residual distance bound: let C be the convex hull of finitely many points of R^n… |

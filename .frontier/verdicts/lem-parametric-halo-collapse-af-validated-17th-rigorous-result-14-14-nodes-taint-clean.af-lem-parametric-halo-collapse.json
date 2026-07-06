@@ -1,0 +1,9 @@
+{
+  "claim": "lem-parametric-halo-collapse af-validated (17th rigorous result; 14/14 nodes, taint clean)",
+  "oracle": "af-lem-parametric-halo-collapse",
+  "result": "fail",
+  "claim_hash": "a22b32e0acdf805ee044f765fccce0bd23d85940bec3d58f96629198fe8c0222",
+  "oracle_digest": "7313ce5cf30cac63202ead26e42e3257d1e3ff92c09738178d951547383200ad",
+  "inputs_hash": "0e8cb1b2c1327f52d7cbd7e05cbaa71c02dcaf7645ebb1d63ec708d814934127",
+  "ts": "2026-07-06T21:48:39.509Z"
+}
