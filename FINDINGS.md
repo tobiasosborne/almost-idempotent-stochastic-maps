@@ -614,3 +614,17 @@ imports a future agent might reach for — read before importing ANY external to
   includes v itself and every admissible exposer has minimum EXACTLY 0; visibility holds because
   def-exposed tests t*(v) ≥ κ (non-strict). Any future definition change to strict > would BREAK
   the endpoint — the shard body carries this warning.
+
+## 2026-07-06 — W30 (session 11): W-nonemptiness first bricks; the anchor obstruction named
+
+- **Kernel(i) strata now reviewed:** δ=0 (lem-delta-zero-endpoint, W28), simplex row polytopes
+  (lem-simplex-visibility), rank ≤ 2 (cor-rank-two-visible), sharp vertices
+  (lem-sharp-vertex-visibility — hull over geometrically DISTINCT other rows, nonempty; the
+  singleton case is excluded by hypothesis). Rank ≥ 3 non-simplex is the OPEN production theorem.
+- **The candidate mechanism, blind-convergent three ways** (T's gap == U's obstruction == the W26
+  witness): hiddenness needs VISIBLE ANCHORS — every hidden vertex's far barycenter leaned on
+  visible rows in every construction (297 exact audits, found_W_empty=False). Next wave shape:
+  assume W = ∅, every vertex hidden, apply the dual witness at an extremal vertex, contradict.
+- ❌ **Easy to get wrong:** lem-sharp-vertex-visibility does NOT assert sharp vertices exist;
+  existence is the open question. And the simplex hypothesis is genuinely restrictive (the
+  banked rank-5 W19 matrix: 6 vertices, affine rank 4 — not a simplex, W nonempty anyway).

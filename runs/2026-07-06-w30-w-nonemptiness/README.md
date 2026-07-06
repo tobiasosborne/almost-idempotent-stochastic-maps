@@ -12,7 +12,8 @@ signed idempotent P with delta(P) <= delta_0 has W(P) nonempty? Mutually-blind p
   the row polytope is a simplex, in particular affine dimension ≤1 / rank≤2; gap: no
   dimension-free mechanism found forcing a simplex/sharp vertex from P²=P and small δ)` —
   hostile verifier VT dispatched on the simplex-visibility / sharp-vertex / rank<=2 claims;
-  codification pending its verdict.
+  VT verdict: `VALID-WITH-CORRECTIONS` — codified as `lem-simplex-visibility`,
+  `lem-sharp-vertex-visibility` (corrected hull), `cor-rank-two-visible`.
 - Worker U (verbatim first line): `NOT-REFUTED (searched: exact audits + 297 admissible random
   Lambda-C idempotents; sharpest obstruction: hiddenness forces a far-row barycenter near each
   hidden vertex, and all constructions needed visible anchors for that barycenter)`.
@@ -37,10 +38,10 @@ samples=2000/seed=30031 → audited=297, hidden_vertex_records=15, found_W_empty
 
 ## Next
 
-On VT VALID: codify `lem-simplex-visibility` (+ sharp-vertex criterion as body or separate
-shard). Next wave: the anchorless-witness contradiction attempt (assume W = ∅, apply the
-hiddenness dual witness at an extremal vertex, derive contradiction) — the first mechanism
-candidate for the dimension-free production theorem.
+DONE: the trio codified on VT's verdict (see `docs/waves/2026-07-06-W30-w-nonemptiness.md`).
+Next wave: the anchorless-witness contradiction attempt (assume W = ∅, apply the hiddenness
+dual witness at an extremal vertex, derive contradiction) — the first mechanism candidate for
+the dimension-free production theorem at rank >= 3.
 
 ## Honest scope (L3)
 
