@@ -407,3 +407,31 @@ imports a future agent might reach for — read before importing ANY external to
   exactly the idempotents and `R_n(Q) ≤ K·η`, K n-free — that WOULD make Cor 4.1 applicable by
   construction. Kill criteria recorded in the wave doc (incl.: a feasible family with
   `dist/√η → ∞` kills op-classical itself, not just the arm).
+
+## 2026-07-06 — E2 (session 9): E-int-2 DEAD — nonnegative-quadratic residuals are BLIND (death certificate)
+
+- ⛔ **DEAD ROUTE (do not re-walk): quadratic Assumption-4.1 residuals for the stochastic-idempotent
+  variety.** E2 (`docs/waves/2026-07-06-E2-nonneg-residual-decider.md`): two mutually blind
+  adversarial workers independently proved the same n=2 no-go lemma — **every quadratic
+  nonnegative on `P_2` and vanishing on `S_2` is identically zero on `P_2`** (divisibility by
+  `(a−b)`; two-sided nonnegativity across the interior rank-one continuum forces `c(a−b)²`; the
+  isolated idempotent `I₂` forces `c = 0`) — and the weighted clone lift transports the
+  blindness into every `P_n`. So condition (b) (zero set = `S_n`) is impossible at EVERY n;
+  there is no `K(n)` to bound (the failure precedes the domination condition, which was the
+  easy direction). Witness at which every admissible quadratic vanishes:
+  `Q* = ((1/3,2/3),(2/3,1/3))`, `η = 4/9`. Structural cause: an interior idempotent CONTINUUM
+  + an extra boundary idempotent in one two-state quotient. Orchestrator: both scripts exit 0
+  + independent exact recomputation (witness, residual formula, clone identity, cubic hatch,
+  retraction idempotents).
+- ✅ **Two survivors, banked T1 (worker-attributed, uncodified):** (i) the **degree-3 escape
+  hatch** — `F₂(a,b) = (a−b)²((1−a)+b)` is nonnegative on `P_2`, has zero set EXACTLY `S_2`,
+  and satisfies `F₂ ≤ η`: higher-degree nonnegative residuals are NOT blocked (Luo–Pang §4 is
+  degree-2-specific — a different engine or a stratified application is needed downstream);
+  (ii) **`aff(S_n)` = the full row-stochastic affine space** (deterministic retractions
+  `R_{i→j}` span all row-sum-zero directions) — no linear form vanishes on `S_n`;
+  SOS-of-linear is permanently dead.
+- ❗ Honesty limits: this kills only the quadratic-residual CONSTRUCTION route into the staged
+  Cor 4.1; it does NOT disprove fixed-n √ error bounds by other means (worker C, T2). Arm E's
+  remaining content: E-int-1 (stratum-data constants) + the degree-≥3 / stratified residual
+  question. Third same-shape confirmation of the bounded prove-or-refute discipline: a freshly
+  named target killed within hours, leaving sharper certified survivors.

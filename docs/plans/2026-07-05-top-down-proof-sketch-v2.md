@@ -147,7 +147,12 @@ decider: the door ratio max_s S*_s(U)/(sigma_g*H).]
 ## Designated fallbacks (unchanged from v1, still unprobed)
 
 - Route B collapses => arm E: dimension-free Holder-1/2 error bound for {E^2=E, E>=0, E1=1}
-  directly (Luo-Pang uniformization; decision-check queued as aism-78w).
+  directly. STATE after E1+E2 (2026-07-05/06): Luo-Pang is NOT black-box (Assumption 4.1
+  blocker, E1); the nonnegative-QUADRATIC residual route is DEAD at every n (E2 KILL-1,
+  twice-independent n=2 no-go + clone propagation); survivors = E-int-1 (fixed-n stratum-data
+  sqrt constants, then n-uniformity) + the degree->=3 residual (exact n=2 cubic hatch
+  F_2 <= eta with correct zero set) / stratified route. Standing constraint: clone-lift
+  invariance (E1). [aism-5an re-scoped]
 - K2 resists => SBD reset-trick per class (arXiv:2405.01532 Lemma 5.5; composition probe unrun).
 - K5 resists => incremental bootstrap becomes primary.
 
