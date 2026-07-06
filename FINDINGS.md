@@ -628,3 +628,19 @@ imports a future agent might reach for — read before importing ANY external to
 - ❌ **Easy to get wrong:** lem-sharp-vertex-visibility does NOT assert sharp vertices exist;
   existence is the open question. And the simplex hypothesis is genuinely restrictive (the
   banked rank-5 W19 matrix: 6 vertices, affine rank 4 — not a simplex, W nonempty anyway).
+
+## 2026-07-07 — W29 (session 11): depth-Markov banked with WEAKENED hypotheses; the pincer certified end-to-end
+
+- **lem-hiddenness-depth-markov holds for ANY witness at ANY delta > 0** (VW's correction
+  strengthened the lemma): the c-parametric bound needs only Σβ < κ; tallness + δ ≤ δ₁ enter
+  only the 2√2/3 G₄-corollary (exact: 1/2 + δ₁ = 3(3−2√2), strict even at the endpoint).
+  No complementary slackness is used ANYWHERE in the reviewed witness toolkit — CS (the
+  optimal exposer h* = t* on λ-support / 1 on β-support / 0 on α-support, paired with row
+  reproduction: v's positive mass on {h* ≥ s} is ≤ ν_v/s) is an UNTOUCHED coupling channel.
+- ❌ **α on the top slab is uncontrollable** (lem-hiddenness-alpha-slab-leakage bounds ONLY the
+  deep slab, in absolute mass): α-mass at v itself is invisible to the balance equation. Any
+  coupling argument must live with top-slab α or eliminate it structurally.
+- **The pincer, now exact-certified from the refuter side (W29-X):** true-hidden constructions
+  fold back before depth 4τ (best certified frontier H/τ = √(5/99) ≈ 0.225, G₄ = ∅, σ₄ ≡ 0,
+  with exact witnesses at both hidden tops); tall attempts die by absorption. Bounded search,
+  NO emptiness claim — but any future refuter must beat this certified interface.
