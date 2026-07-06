@@ -573,3 +573,42 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   recomputed every headline's algebra from printed matrices alone; all worker scripts rerun
   exit 0; FINDINGS +2 dated entries; fr: one pull logged per wave (arm B). Issues: closed
   aism-vmt, aism-0b1; created aism-sg6 (a-gap), aism-88r (af-elevation proposal).
+
+## 2026-07-06 — Session 10, round 2 (W22 + W23 + W24): trunk <2>5 paid; THE A-GAP CLOSED; step 3 done — the bootstrap is ONE open step from MIN-A
+
+- **Direction (user):** "keep going" after the round-1 banking. Three waves, six fresh codex
+  workers (three provers, one adversarial pair-half, three hostile verifiers — every claimed
+  proof checked by a separate fresh verifier). One network interruption mid-flight; all workers
+  survived (recovery checked, nothing lost).
+- **W22 (`aism-pu0`, trunk <2>5):** Kernel ⇒ HLC re-derived in-repo INDEPENDENT of the ingest
+  text (worker F: height-at-vertex, δ=0 branch, s8 cap re-derivation via mass-split +
+  row-diameter, dichotomy assembly, C₁ = max{B,3}); hostile verifier G: VALID 7/7 (row-diameter
+  clause literally in the def shard; 17-fixture exact test). Codified `lem-kernel-implies-hlc`
+  (proved/af:none); **`op-hlc` registered** and `op-exposed-hull` rewired through it — the
+  linker now sees the full finisher chain. Trunk staleness debt PAID; <2>6/<2>7 are the only
+  unreviewed links behind a proved Kernel.
+- **W23 (`aism-sg6`, THE A-GAP):** worker H derived the **parametric halo collapse**
+  `H(1−σ_a) ≤ (σ−σ_a)·aτ + ν(2+4δ)` (the af-validated conj-halo-collapse = the a = 1/4 case,
+  exact calibration T(1/4) = 29/8); forced-mass curve **T(a) = 5a/2 + 3**, **T(4) = 13**;
+  MIN-A at width 4: `H > 13τ` ⇒ hidden tops `g^{(4)} > 1/2 − δ` vs Lemma A's 4τ visible cap;
+  numerical gap iff `δ < (17−12√2)/2 ≈ 0.0147` (orchestrator re-verified the window algebra).
+  Hostile verifier L: VALID — expanded the residual-split proof itself, checked the σ_a ≥ 1
+  branch and exact tests. Codified `lem-parametric-halo-collapse` (proved/af:none; deps all
+  af-validated). Worker I (route ii, small-a Lemma A): OPEN-BOTH-SIDES — structurally blocked
+  prove side, no family enters G_{15/4} (δ-inflation + absorption); MOOT while route (i)
+  stands; L3 bundle `runs/2026-07-06-w23-a-gap/`.
+- **W24 (`aism-o1x`, step 3):** worker J proved S3.1–S3.4 (disintegration ledger
+  `g_i ≤ M_i^a + Σ P_ij⁺(H−d_j)/(H−aτ)`, M_i^a on hidden vertices at depth (aτ, H]); hostile
+  verifier K: VALID (exact tests rank-3/rank-5; presentation caveat folded in). Codified
+  `lem-genuine-disintegration` (proved/af:none).
+- **Net map change (sketch v5, pins updated):** the g-bootstrap's remaining mathematical
+  content is exactly ONE open step — **step 4**, posed precisely (width-4 surface; δ-window;
+  13τ threshold). obs-deep-leakage DEMOTED from standing Route-A blocker to step-4 design
+  question (the surface was derived without it). RETIRED +3 (a-gap as open front; small-a
+  route-ii waves; step-3 as open surface). Registry: 53 results; ready frontier = the three
+  reviewed g-bootstrap lemmas.
+- **Discipline additions:** verifiers must EXPAND compressed prover steps (W23-L reproved the
+  split); calibration anchors (recover a validated constant as a special case) are load-bearing
+  — T(1/4) = 29/8 was the check that made the parametric form trustworthy. Issues: closed
+  aism-pu0, aism-sg6, aism-o1x; aism-88r extended to the reviewed quartet; aism-tq3 demoted to
+  check-at-design; aism-yxa re-aimed at the parametric form.
