@@ -463,3 +463,54 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   within hours each — falsifiable contracts + certified-grippable hypothesis classes work; every
   status-changing certificate independently recomputed from matrices alone; W16b banked with an
   explicit verification-scope limitation (fresh-point JSON lacked matrices).
+
+## 2026-07-05/06 (session 9) — Route-A wall narrowed; arm E activated, scoped, and pruned; registry untouched
+
+- **W18 — Route-A wall re-read** (dc149bf, dcab12c, 1b77474; bd aism-0uf): the B3/B4 death
+  certificates do NOT bind the constant cap CAP-1/2 as stated — **WALL-NARROWED** (was
+  wall-blocked). D1 (cap ⇒ `H ≤ 29τ/8`) re-derived twice independently (R1 under an
+  independence discipline; exact constants `29/16`, `29/8`) and STRENGTHENED (cap bounds ALL
+  rows; Kernel raw antecedent unused). Orchestrator's equivalence hypothesis REFUTED by both
+  workers (cap strictly stronger; refuters must target `σ_g > 1/2` at ANY height). Minimal
+  residual named: constant-mass shallow-genuine exclusion (`≤ 1/2 − 4τ(2+4δ)`); class-count
+  dead route binds only O(1) (C/τ opening). Honesty flags: per-class hostable-mass unproved,
+  obs-deep-leakage [heuristic] load-bearing. Sketch v2 Route A redrawn in place.
+- **User strategy question answered** (quadratic-usage audit, orient-logged): validated engines
+  consume `P² = P` once (first-order row reproduction); the rank-3 factorization identities are
+  the only second-order tools; two dead routes already certify linear-only insufficiency; the
+  isolated core (shallow-web exclusion) is a quadratic fixed-point question. Named unexploited
+  structure: block idempotence on the web, trace budget, column/left frame, arm E. → User
+  directed: pull arm E.
+- **E1 — arm E wave 1, first pull ever** (6fe11e3, 17653ec; bd aism-78w closed): staged
+  Luo–Pang 1994 does NOT support the lit-review §1.3 black-box-½ attribution (Assumption 4.1
+  blocker; `(E²−E)_ij` sign-indefinite, T1 n=2 witness; staged Ex. 4.2 shows fixed-n exponent
+  can be ≤ ¼; norm conversions cost `n^{3/4}`–`n`). Citation drift caught + corrected in the
+  lit-review (MS Math. Prog. 36 (1986) vs SIAM JCO 25 (1987)). Verdict GO-CONDITIONAL;
+  intermediates E-int-1/E-int-2; (EB) proved clone-lift/block-sum invariant (standing smell
+  test). No-blowup pilot banked (`runs/2026-07-05-e1-uniformity-pilot/`: true n=3 minima via
+  idempotent-type enumeration; max certified `r ≈ 1.375` at the stochasticized ex-hume anchor;
+  coupled n=4..12 bounded). Follow-ups: aism-5an, aism-1nh.
+- **E2 — E-int-2 prove-or-refute** (4766587, f7892af): **REFUTED, KILL-1** — two mutually
+  blind adversarial workers (constructor/obstructor) independently proved the same n=2 no-go
+  (every quadratic ≥ 0 on `P_2` vanishing on `S_2` is identically zero: interior rank-one
+  continuum forces `c(a−b)²`, `I₂` kills c); clone lift propagates to every n (witness
+  `Q* = ((1/3,2/3),(2/3,1/3))`, `η = 4/9`). Coherence audit: the burden was entirely the
+  zero-set condition. Survivors banked T1: degree-3 hatch `F₂ = (a−b)²((1−a)+b) ≤ η` with
+  exact zero set `S_2`; `aff(S_n)` = full stochastic affine space (SOS-of-linear dead).
+  FINDINGS death certificate; sketch arm-E fallback redrawn; codification follow-up aism-j3j.
+- **W19 — Route-A deciders** (e7515ec, c2cf152; bd aism-213 closed): (B, paper) per-class
+  hostable-mass folklore UNPROVABLE-as-written — only trivial `M_X ≤ 1+δ`; needs a sound
+  production rule + a previously-unnamed coefficient-poke charge; **T0: self-inclusive reading
+  exactly contradicted by banked instance B (`229/3200 > 1/20`)** — self-mass exclusion
+  mandatory; C/δ–C/τ counts confirmed unblocked; codification target
+  `conj-external-poke-charge(A)`. (A, exact L3, `runs/2026-07-06-w19-sigma-frontier/`)
+  `σ_g > 1/2` NOT-REALIZED-HERE with the binding constraint IDENTIFIED = **exposedness
+  absorption** (exact LP places 5/4 designated mass; exact geometry absorbs recipients into W,
+  H = 0); record `σ_g = 5991/80000 ≈ 0.075` (rank-5 genuine self); duplicate-splitting exactly
+  inert. Joint named residual: distinct-multi-class optimization (aism-pld, P1).
+- **Discipline:** four waves, two workers each, all with orchestrator printed-matrix
+  recomputation + script reruns; three not-an-emptiness stamps; mutually-blind adversarial
+  pairing validated (E2); registry deliberately untouched — three codification follow-ups
+  filed instead (aism-yxa, aism-j3j, aism-pld). Issues: closed aism-0uf/78w/213/cw8; released
+  aism-5an/pu0 to open; created aism-yxa, aism-213(→closed), aism-j3j, aism-1nh, aism-5an,
+  aism-pld.
