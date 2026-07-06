@@ -693,3 +693,23 @@ imports a future agent might reach for — read before importing ANY external to
   hiddenness dual witness IS a circuit through p_v). Untried hybrid for W37: substitute row
   reproduction into the witness balance ONCE — the resulting second circuit has coefficients
   λ_f·P_fk, a genuine row/circuit hybrid object.
+
+## 2026-07-07 — W37+W38 (session 11): the dual-direction wall; the residual cancellation; ONE conjecture left
+
+- **The dual-direction wall (VAF-confirmed):** every feasible circuit (incl. v's own row,
+  normalized — lem-row-far-dual-certificate, SHARP on the W29 frontier: nu/L_F = t* exactly)
+  UPPER-bounds t*; hiddenness cannot be run backward through upper bounds, and rho-NEAR mass
+  contributes ZERO to L_F. The lambda*P hybrid is non-amplifying (lem-hybrid-dual-certificate).
+- **The residual cancellation (worker AG, VAG verifying):** in the self-cluster split the
+  far-deep term cancels EXACTLY (A(H-a*tau) <= nu(H+D)); a pure rho-near cluster with
+  S = 1 - O(tau) is CONSISTENT with every banked identity — the renormalized budget
+  nu/(1-S) exactly pays the height at 1-S = O(tau). The self-cluster route via residuals is
+  DEAD as attempted.
+- ❌ **def-exposed normalizes by VALUE, not Lipschitz constant** (worker AG's catch): rows
+  4tau-close need NOT have comparable exposedness LPs — any near-cluster interlock needs a
+  conditioning lemma first. Do not assume exposer transfer across near rows.
+- **EVERYTHING now converges on ONE conjecture: conj-near-cluster-absorption** (== the W36
+  rho-halo mechanism made universal == cluster-to-exposedness == conj-low-slab-cap's residual
+  content): in the tall regime, heavy positive mass on the rho-near deep cluster of a hidden
+  top forces exposedness of some cluster vertex. Five independent routes (witness coupling,
+  rank-3 tangent, CS pincer, absorption proximity, residual cancellation) all bottom out here.
