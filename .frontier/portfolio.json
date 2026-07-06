@@ -229,6 +229,18 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-parametric-halo-collapse/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-parametric-halo-collapse.md"
         ]
+      },
+      {
+        "name": "af-lem-genuine-disintegration",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-genuine-disintegration"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-genuine-disintegration/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-genuine-disintegration.md"
+        ]
       }
     ]
   },

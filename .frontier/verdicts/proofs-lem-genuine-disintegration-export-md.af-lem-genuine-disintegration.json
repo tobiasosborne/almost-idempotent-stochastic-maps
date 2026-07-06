@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-genuine-disintegration/export.md",
+  "oracle": "af-lem-genuine-disintegration",
+  "result": "pass",
+  "claim_hash": "926f1e024670b0e2a6e7a619b1f724711391f874cb143af1c562af60c2b2a8e6",
+  "oracle_digest": "6e6753e241717c093815474f73ea842382a6adcc0d5420c6f87b872a420643e4",
+  "inputs_hash": "e68f022493e5e777c8b66f02e0eebca6cd9c54d32f2ac7121a38270b995d4501",
+  "ts": "2026-07-06T22:42:08.233Z"
+}
