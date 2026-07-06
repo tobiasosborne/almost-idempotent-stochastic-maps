@@ -514,3 +514,14 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   filed instead (aism-yxa, aism-j3j, aism-pld). Issues: closed aism-0uf/78w/213/cw8; released
   aism-5an/pu0 to open; created aism-yxa, aism-213(→closed), aism-j3j, aism-1nh, aism-5an,
   aism-pld.
+- **Sketch v3 + pinning (post-close addendum, 2026-07-06):** user-directed critical strategy
+  review delivered (session-8 Kernel-rooted redraw HELD UP; four named lags), then
+  `docs/plans/2026-07-06-top-down-proof-sketch-v3.md` written and PINNED (HANDOFF START-HERE,
+  CLAUDE.md==AGENTS.md router line, bd memory `proof-sketch-stewardship`). v3 novelties: MIN-A
+  minimal obligation (tall ⇒ SOME hidden top ≤ 1/2); wall renamed to exposedness absorption;
+  M3 genuine-self-mass cap named (the W19 record mode); Route B demoted to held-at-K3 (α→1 =
+  the one sanctioned action); trunk STALENESS RULE (one trunk item per session); RETIRED
+  section with certificates (7 items); fr arm-B target re-aimed to MIN-A/CAP-1/2 (stale
+  `1−cτ` phrasing retired). **User mandate encoded everywhere: the sketch is the most dynamic
+  artifact — reconciling it each session is a first-class deliverable.** (commits <v3>,
+  4d14c5c)
