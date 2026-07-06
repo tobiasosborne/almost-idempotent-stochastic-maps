@@ -13,7 +13,8 @@ VAC on AC's claims. Prompts + raw answers in the session-11 scratchpad (`W35/`).
   cluster into exposedness, so no universal `theta` cap yet)`
 - Verifier VAC: `VALID-WITH-CORRECTIONS (Claim P valid; Claim S needs `0 < delta` for the
   strict `< 4*tau` line, and the `H` Lipschitz form only holds when `v` is a top)`
-- Worker AD: [pending — this doc updates on harvest]
+- Worker AD: `NOT-SUSTAINED (frontier: R_4 = 0 in these certified constructions; binding
+  constraint: true-hidden rows stay below 4τ, while coefficient pushes are absorbed into W)`
 
 ## Results (round 1)
 
@@ -29,8 +30,19 @@ VAC on AC's claims. Prompts + raw answers in the session-11 scratchpad (`W35/`).
    G_a ∩ {h* < κ} must force some recipient-side vertex to become (ρ, κ)-exposed. That
    statement (not proximity) is conj-low-slab-cap's true content.
 
+## Results (round 2 — AD's harvest)
+
+4. **The absorption transition, captured exactly** (bundle
+   `runs/2026-07-07-w35-absorption-threshold/`, orchestrator rerun PASS): R₄ = 0 in every
+   certified true-hidden construction; the rank-5 scaled direction is hidden with
+   R_{1/4} ≈ 0.105 at s = 1403/1000 and ABSORBED into W at s = 351/250 (t*₅ = 51/569, H = 0)
+   — a 1-parameter family crossing the transition. The LP comparison (δ = 1/4, a 5/4
+   coefficient, everything visible) shows coefficient capacity is NOT the blocker: exact
+   geometry is. W36 = the transition wave: what quantity crosses zero; extract and generalize
+   the exposer that appears at absorption.
+
 ## Banking (orchestrator)
 
-Registry: the two shards above (VAC as reviewer). AD's threshold measurements + bundle bank on
-harvest (second commit updates this doc). Honest tiers: reviewed paper proofs (L5); NOT
-af-validated, NOT L0-rigorous; the cap remains OPEN.
+Registry: the two shards above (VAC as reviewer). Bundle: AD's exact verifier + README +
+INDEX row. Honest tiers: reviewed paper proofs (L5) + L3 certificates; NOT af-validated, NOT
+L0-rigorous; the cap remains OPEN.

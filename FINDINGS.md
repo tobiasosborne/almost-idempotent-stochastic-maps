@@ -661,3 +661,18 @@ imports a future agent might reach for — read before importing ANY external to
 - ❌ **Easy to get wrong:** the CS channel bounds mass ONLY where exposers are HIGH; the low
   slab (including all self/top-cluster mass at h(p_v)=0) is invisible to it. Do not cite the
   pincer as a sigma_a cap — it is exactly half of one.
+
+## 2026-07-07 — W35 (session 11): absorption round 1 — proximity is real but sub-scale; the transition captured exactly
+
+- **No lone mule** (lem-single-heavy-recipient-rho-shadow): a (1−τ)-heavy recipient of a row's
+  mass sits INSIDE the ρ-ball (27τ/8 < 4τ at δ ≤ 1/16) — cap counterexamples must SPREAD deep
+  mass. And receiving mass = proximity in general (lem-received-mass-proximity).
+- ❌ **Proximity ≠ absorption.** At the cap scale (σ_A > 1−θ−4τ) the proximity bound
+  ~ D(θ+4τ) EXCEEDS ρ even at θ = 0 — after the CS pincer spends 4τ, proximity alone can
+  never reach the exposedness-exempt scale. The cap's true content is
+  **cluster-to-EXPOSEDNESS**, not cluster-to-proximity.
+- **The absorption transition is now an exact object** (W35-AD bundle): one 1-parameter rank-5
+  family, hidden with R_{1/4} ≈ 0.105 at s = 1403/1000, absorbed (t*₅ = 51/569, H = 0) at
+  s = 351/250; R₄ = 0 in every certified true-hidden construction; the δ = 1/4 LP comparison
+  shows coefficient capacity is NOT the blocker — exact geometry is. W36 target: identify the
+  functional that crosses zero at the transition and generalize the exposer that appears.
