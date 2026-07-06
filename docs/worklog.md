@@ -525,3 +525,10 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   `1−cτ` phrasing retired). **User mandate encoded everywhere: the sketch is the most dynamic
   artifact — reconciling it each session is a first-class deliverable.** (commits <v3>,
   4d14c5c)
+- **G-bootstrap adopted as target of record (post-close addendum 2, 2026-07-06):** strategist
+  proposal (g := P·1_G exactly P-harmonic from idempotence; Lemma A caps g on W via
+  definition-given exposedness; once-applied max principle vs the band-web residual) delivered
+  on user request and USER-ADOPTED. Sketch v3 M1 updated in place with the skeleton +
+  wall-evasion audit + pre-registered kill criteria; fr arm B re-aimed; HANDOFF resume item 0;
+  new deciders filed: aism-vmt (g-zoo measurement, first) + aism-0b1 (Lemma A). (02779c1,
+  b93f60d)
