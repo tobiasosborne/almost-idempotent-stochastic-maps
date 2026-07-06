@@ -42,7 +42,7 @@ graph LR
   lem-mass-split["lem-mass-split<br/>proved/validated"]
   lem-negative-pivot-import["lem-negative-pivot-import<br/>proved-mod-audit/seeded"]
   lem-negpart-subadditive["lem-negpart-subadditive<br/>proved/validated"]
-  lem-parametric-halo-collapse["lem-parametric-halo-collapse<br/>proved/none"]
+  lem-parametric-halo-collapse["lem-parametric-halo-collapse<br/>proved/seeded"]
   lem-pivot-removing-move["lem-pivot-removing-move<br/>proved/validated"]
   lem-residual-lower["lem-residual-lower<br/>proved/validated"]
   lem-residual-upper["lem-residual-upper<br/>proved/validated"]
