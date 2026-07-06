@@ -644,3 +644,20 @@ imports a future agent might reach for — read before importing ANY external to
   fold back before depth 4τ (best certified frontier H/τ = √(5/99) ≈ 0.225, G₄ = ∅, σ₄ ≡ 0,
   with exact witnesses at both hidden tops); tall attempts die by absorption. Bounded search,
   NO emptiness claim — but any future refuter must beat this certified interface.
+
+## 2026-07-07 — W31+W32 (session 11): ONE mechanism under both open ledger items
+
+- **The strategic convergence:** conj-min-a-w4's gap (couple the witness lambda / low-exposer
+  slab to the row coefficients P_vj^+ — W29/W32) and the W-nonemptiness rank>=3 gap (upgrade
+  the tangent-companion slab defect from O(tau) to O(tau^2) — W31) are the SAME missing shape.
+  Any mechanism that charges slab/witness geometry to row coefficients (or squares the defect)
+  closes BOTH. Registered attack surface: conj-low-slab-coefficient-cap (W32's successor
+  statement) + the theta-flexible target CAP_{a,theta} (ANY universal theta>0 wins; B = K_a/theta).
+- **lem-cs-low-slab-pincer shape (pending VZ):** for ANY admissible exposer h at v, positive
+  row mass on {h >= s} is <= nu_v/s [row reproduction + sign split]. Consequence: a cap
+  counterexample packs > 1-theta-4tau of the top's positive mass into G_a ∩ {h* < kappa} —
+  the SAME slab hiddenness forces >94% of the witness mass into (depth-Markov). The two
+  measures cohabit; nothing yet relates them.
+- ❌ **Easy to get wrong:** the CS channel bounds mass ONLY where exposers are HIGH; the low
+  slab (including all self/top-cluster mass at h(p_v)=0) is invisible to it. Do not cite the
+  pincer as a sigma_a cap — it is exactly half of one.
