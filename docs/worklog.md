@@ -658,3 +658,31 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   backgrounded call — `&`-wrapping two workers inside one backgrounded shell orphans them
   (no completion notification; needed a polling watcher + manual kill).
 - No registry/sketch changes in this stop (v6 + the 55-result registry stand as committed).
+
+## 2026-07-06/07 — Session 11: user-directed full-proof orchestration (breadth-first, continuous)
+
+User directive: orchestrate the full proof; pick weakest/open steps; delegate liberally to
+codex (+opus); breadth-first; dynamically re-strategize; aim at strict rigour; don't stop.
+
+Nine waves (W26 relaunch, W27, W28, W29, W30, W31, W32, W33; W34 in flight) + two af
+orchestrations. Every codified lemma passed a SEPARATE fresh hostile codex verifier before
+banking (L5); orchestrator recomputed all rerunnable artifacts. Commits: fc64f93 (seed),
+cff8647 (W26+W27+W28 + five lemmas), fa1fbcf (sketch v7 + W30 bundle), 915891a
+(lem-parametric-halo-collapse af-VALIDATED — 17th rigorous result), 240b616 (W30 trio),
+0958810 (seed #2), 415eb60 (W29 pair), aa40787 (W31 tangent), 95d2e1a (W32 pincer +
+conj-low-slab-cap), bc622d4 (W33 bridge trio), + this checkpoint (sketch v8 + HANDOFF).
+
+Headlines: (1) hiddenness CONSUMED (dual witness; W25 cert dead under canonical geometry);
+(2) trunk <2>6 PAID (pinned-delta; loose-delta mismatch + Q-not-stochastic = named findings);
+(3) the assembly codified (B=13 conditional + delta=0 endpoint); (4) W-nonemptiness strata
+(delta=0/simplex/rank<=2/rank-3-tangent); (5) the coupling toolkit (depth-Markov 94%,
+alpha-slab, CS pincer SHARP, harmonic-affine bridge {g:Pg=g}=affine-in-position, conditional
+g-near-exposer, pencil bound); (6) THE UNIFIED FRONTIER: conj-low-slab-cap (theta-flexible —
+ANY (a,theta) closes the height clause at B=K_a/theta) and the discovery that ONE mechanism
+sits under BOTH open ledger items (aism-2fi P0); (7) first af elevation of the session
+(parametric collapse, 14/14 clean; elevation #2 genuine-disintegration live at checkpoint).
+
+Process lessons banked in HANDOFF standing rules: atomic edit+commit windows under live
+orchestrations (two guard aborts, both resumed clean from the intact ledger); verifier
+corrections that WEAKEN hypotheses are upgrades; calibration constants are not load-bearing
+until checked (the 1/2 in conj-min-a-w4).
