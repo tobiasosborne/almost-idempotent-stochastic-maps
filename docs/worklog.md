@@ -642,3 +642,19 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
 - **Bundle:** `runs/2026-07-06-w25-step4-decider/` (worker checker + orchestrator recompute,
   both exit 0). Issues: closed aism-7pe (the wave; the step lives on as conj-min-a-w4 +
   aism-n7i); aism-88r extended to the quintet.
+
+## 2026-07-07 — Session 10 hard stop (network outage): W26 interrupted mid-flight, state preserved
+
+- W26 (aism-n7i P0, conj-min-a-w4 via hiddenness: prover P + round-2 insufficiency obstructor Q,
+  mutually blind) was dispatched 2026-07-06 ~16:53 and ran 1h+; a network outage triggered a
+  user-directed hard stop BEFORE either worker produced an answer. Both workers + the watcher
+  killed cleanly; NO worker output reached the repo.
+- State preserved for relaunch: both wave briefs verbatim + SHA256-frozen in
+  `runs/2026-07-06-w26-hiddenness/prompts/` (interrupted-marker README with the relaunch
+  command; INDEX row). HANDOFF resume item 0 rewritten accordingly. Unbanked T3 hint from the
+  killed run's log tail: worker Q's searches could not enter the tall regime with TRUE hidden
+  vertices — consistent with the absorption wall; treat as hint only.
+- Process gotcha recorded (bundle README + HANDOFF): launch each codex worker as its OWN
+  backgrounded call — `&`-wrapping two workers inside one backgrounded shell orphans them
+  (no completion notification; needed a polling watcher + manual kill).
+- No registry/sketch changes in this stop (v6 + the 55-result registry stand as committed).

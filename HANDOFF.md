@@ -72,7 +72,17 @@ scripts rerun exit 0; every prover was checked by a separate hostile verifier.
 
 ## Next steps (ranked) — RESUME HERE
 
-0. **`aism-n7i` (P0) — conj-min-a-w4 via HIDDENNESS consumption.** The next finisher wave:
+0. **RESUME THE INTERRUPTED W26 (`aism-n7i`, P0, claimed) — conj-min-a-w4 via HIDDENNESS.**
+   The wave WAS DISPATCHED 2026-07-06 evening and KILLED mid-run by a network outage before any
+   worker answer existed (no worker output reached the repo). The two briefs are preserved
+   VERBATIM + SHA256-frozen in `runs/2026-07-06-w26-hiddenness/prompts/`; the relaunch command
+   is in that bundle's README (process gotcha recorded there: one backgrounded call per codex
+   worker — `&`-wrapping orphans them). Relaunch verbatim; on harvest: hostile verifier on any
+   claimed proof, orchestrator recompute, bank per the session-10 pattern, and REWRITE the
+   interrupted-marker README. Unbanked signal from the killed run's log tail (worker-asserted,
+   tier T3, use only as a hint): worker Q's searches could not enter the tall regime with TRUE
+   hidden vertices (best hidden height far below tau) — consistent with the absorption wall.
+   The wave's design (unchanged):
    turn t*(v) < kappa (every admissible exposer of a hidden vertex fails the kappa-margin
    against some rho-far row — a universal statement over exposers) into the width-4 cap.
    In scope: the exposer-failure witnesses; the two-observable machinery (mass-g + affine
