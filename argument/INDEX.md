@@ -53,7 +53,7 @@
 | `lem-residual-upper` | lemma | proved | validated | A | Residual distance bound: let C be the convex hull of finitely many points of R^n… |
 | `lem-sharp-vertex-visibility` | lemma | proved | none | A | Sharp-vertex visibility: for an exact signed idempotent P with delta(P) <= 1/4 a… |
 | `lem-simplex-visibility` | lemma | proved | none | A | Simplex visibility: for an exact signed idempotent P with delta(P) <= 1/4 whose … |
-| `lem-top-concentration` | lemma | proved | none | A | Top concentration: for an exact signed idempotent P with 0 < delta(P) <= 1/4, no… |
+| `lem-top-concentration` | lemma | proved | seeded | A | Top concentration: for an exact signed idempotent P with 0 < delta(P) <= 1/4, no… |
 | `lem-top-slab-companion` | lemma | proved | none | A | Top-slab companion: for an exact signed idempotent P with 0 < delta(P) <= (17 - … |
 | `lem-two-observable-pencil-bound` | lemma | proved | none | A | Two-observable pencil bound: for an exact signed idempotent P, a hidden row vert… |
 | `lem-visible-g-small` | lemma | proved | none | A | Visible rows are g-small: for an exact signed idempotent P with 0 < delta(P) <= … |

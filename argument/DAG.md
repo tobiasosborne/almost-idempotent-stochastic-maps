@@ -62,7 +62,7 @@ graph LR
   lem-residual-upper["lem-residual-upper<br/>proved/validated"]
   lem-sharp-vertex-visibility["lem-sharp-vertex-visibility<br/>proved/none"]
   lem-simplex-visibility["lem-simplex-visibility<br/>proved/none"]
-  lem-top-concentration["lem-top-concentration<br/>proved/none"]
+  lem-top-concentration["lem-top-concentration<br/>proved/seeded"]
   lem-top-slab-companion["lem-top-slab-companion<br/>proved/none"]
   lem-two-observable-pencil-bound["lem-two-observable-pencil-bound<br/>proved/none"]
   lem-visible-g-small["lem-visible-g-small<br/>proved/none"]
