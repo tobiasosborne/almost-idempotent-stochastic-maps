@@ -53,7 +53,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-OBS-LINEAR-LAW-FINITE-DELTA` | `argument/lemmas/obs-linear-law-finite-delta.md` | `e42a723d8f9a40b5` | Registry shard for `obs-linear-law-finite-delta` |
 | `ARG-OBS-SIGMA-HALO-NONROBUST` | `argument/lemmas/obs-sigma-halo-nonrobust.md` | `cc2f80fb9fc80e45` | Registry shard for `obs-sigma-halo-nonrobust` |
 | `ARG-OP-CLASSICAL` | `argument/lemmas/op-classical.md` | `2ef7e965c5db0146` | Registry shard for `op-classical` |
-| `ARG-OP-EXPOSED-HULL` | `argument/lemmas/op-exposed-hull.md` | `d988f94acd0e06b7` | Registry shard for `op-exposed-hull` |
+| `ARG-OP-EXPOSED-HULL` | `argument/lemmas/op-exposed-hull.md` | `caf66a086306eaaf` | Registry shard for `op-exposed-hull` |
 | `ARG-PROP-APPROX-SIMPLEX` | `argument/lemmas/prop-approx-simplex.md` | `9f82860ad220c83c` | Registry shard for `prop-approx-simplex` |
 | `ARG-THM-CLASSICAL-FACTORIZATION` | `argument/lemmas/thm-classical-factorization.md` | `d8141d320ce37791` | Registry shard for `thm-classical-factorization` |
 | `ARG-THM-CLUSTER` | `argument/lemmas/thm-cluster.md` | `a0b07d18715d720e` | Registry shard for `thm-cluster` |
