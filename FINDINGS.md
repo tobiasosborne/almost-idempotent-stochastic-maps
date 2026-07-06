@@ -572,3 +572,45 @@ imports a future agent might reach for — read before importing ANY external to
   diagnosis are the same statement from opposite sides. Next attack filed: `aism-n7i` (P0) —
   hiddenness consumption via exposer-failure witnesses + the two-observable machinery;
   `lem-canonical-separator` re-establishment as sub-target.
+
+## 2026-07-06 — W26 (session 11): hiddenness consumed — the LP-dual witness; the two dual FORMS differ (α family)
+
+- **The witness (reviewed).** `lem-hiddenness-dual-witness`: a hidden row vertex v yields λ ∈ Δ(F_v),
+  α, β ≥ 0 with Σβ = t*(v) < κ and Σλ_f(p_f−p_v) + Σα_i(p_i−p_v) = Σβ_i(p_i−p_v). Pairing with an
+  affine ψ (ψ(p_v)=0, 0 ≤ ψ ≤ E, **E > 0 required for strictness** — VP's correction) gives a ρ-far
+  row with ψ(p_f) < κE. First banked fact that CONSUMES hiddenness (the W25-mandated input).
+- ❌ **Easy to get wrong: the two dual forms are NOT interchangeable.** Worker Q's "gauge" form
+  (far barycenter within κ·(2+4δ) of p_v, NO positive-slack family) matches its exact fixtures
+  (rank-5: ‖q_far−p_v‖₁ = t*·D exactly) but was NOT independently verified; VP's validated dual
+  RETAINS the α family, so in general the far combination reproduces p_v only up to the
+  (1+A−B)-scaling with A unbounded a priori. Cite only the validated form; reconciling them
+  (when can α be dropped?) is an open presentation question.
+- **The W25 insufficiency certificate is DEAD under canonical geometry** (worker Q, exact): the
+  3×3's labeled-hidden top has t* = 100/101 (visible), W = {v,s}, H = 0. Insufficiency arguments
+  must now respect the F9/F10 canonical classification — label games are closed.
+- **The remaining step-4 gap, sharpened:** nothing couples the witness to row-v's OWN coefficients
+  (σ₄). Q's interface for any future refuter: a sustained G₄ web where EVERY hidden carrier has a
+  ρ-far barycenter returning within κ(2+4δ) — no such construction exists (bounded search, T3).
+
+## 2026-07-06 — W27 (session 11): trunk <2>6 paid — and the registered op-exposed-hull contract has a loose-δ mismatch
+
+- **<2>6 re-derived + hostile-verified** (`lem-hlc-implies-exposed-hull`, c = 1/4, C = max{4,C₁}):
+  under the direct registered HLC form the inherited localization detour (C' = max(4A,1/√a)) is
+  unnecessary. W-nonemptiness made an EXPLICIT hypothesis (def-height needs it; op-hlc's contract
+  is silent — same gap W30 attacks independently).
+- ❌ **AUDIT FINDING: op-exposed-hull's registered contract, read literally, is NOT what the
+  assembly proves.** With a FREE upper bound δ ≥ δ(P) the threshold κ = c√δ GROWS while the
+  proven margin stays √(δ(P))/4 — the implication only holds at δ = δ(P). Closing the literal
+  wording needs the robustness lemma W_{4√d,√d/4} ⊆ W_{C√δ,c√δ} (d ≤ δ ≤ δ₀) — OPEN, named.
+- ❌ **The nearby matrix Q is row-sum-one signed with δ(Q) ≤ d — NOT proved stochastic, NOT
+  idempotent.** The <2>7 consumer (thm-classical-factorization) must be audited against exactly
+  this interface; do not quietly assume a stochastic idempotent was produced at <2>6.
+
+## 2026-07-06 — W28 (session 11): the parametric assembly is codified; the δ=0 endpoint rides on def-exposed's non-strict ≥
+
+- `lem-min-a-implies-height` (conditional on conj-min-a-w4): H ≤ 13τ for 0 < δ ≤ (17−12√2)/2,
+  W nonempty — the D1 assembly at B = 13, now a registry edge (aism-yxa scope closed).
+- ❌ **δ=0 endpoint definition-sensitivity** (`lem-delta-zero-endpoint`): at τ = 0 the far set
+  includes v itself and every admissible exposer has minimum EXACTLY 0; visibility holds because
+  def-exposed tests t*(v) ≥ κ (non-strict). Any future definition change to strict > would BREAK
+  the endpoint — the shard body carries this warning.
