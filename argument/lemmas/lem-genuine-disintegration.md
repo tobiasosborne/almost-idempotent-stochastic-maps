@@ -5,7 +5,7 @@ contract: Genuine-mass disintegration: for an exact signed idempotent P with 0 <
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed; def-invisible-mass; def-height
 deps: lem-residual-upper
 status: proved
-af: none
+af: seeded
 provenance: W24 wave (docs/waves/2026-07-06-W24-step3-disintegration.md): fresh-codex prover (worker J, S3.1-S3.4) + SEPARATE fresh-codex adversarial verifier (worker K, VALID — checked classification, extreme-point identification, residual-upper hypotheses, ledger algebra, strictness, denominators; exact tests on the banked rank-3 and rank-5 instances); g-bootstrap step 3 of sketch M1
 owner: A
 workspace: proofs/lem-genuine-disintegration

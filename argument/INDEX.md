@@ -28,7 +28,7 @@
 | `lem-factorization` | lemma | proved | validated | A | Factorization bound: let P be an exact signed idempotent (square real matrix wit… |
 | `lem-fan-payment` | lemma | proved | validated | A | Zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite family with ve… |
 | `lem-fan-payment-restricted` | lemma | proved | validated | A | D-restricted zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite f… |
-| `lem-genuine-disintegration` | lemma | proved | none | A | Genuine-mass disintegration: for an exact signed idempotent P with 0 < delta(P) … |
+| `lem-genuine-disintegration` | lemma | proved | seeded | A | Genuine-mass disintegration: for an exact signed idempotent P with 0 < delta(P) … |
 | `lem-hiddenness-dual-witness` | lemma | proved | none | A | Hiddenness dual witness: for an exact signed idempotent P and a hidden row verte… |
 | `lem-hlc-implies-exposed-hull` | lemma | proved | none | A | HLC implies exposed hull (pinned-delta form): if there are universal delta_0 > 0… |
 | `lem-import-reduction` | lemma | proved | validated | A | Import reduction: let P be a rank-3 exact signed idempotent (square real matrix … |

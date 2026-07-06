@@ -37,7 +37,7 @@ graph LR
   lem-factorization["lem-factorization<br/>proved/validated"]
   lem-fan-payment["lem-fan-payment<br/>proved/validated"]
   lem-fan-payment-restricted["lem-fan-payment-restricted<br/>proved/validated"]
-  lem-genuine-disintegration["lem-genuine-disintegration<br/>proved/none"]
+  lem-genuine-disintegration["lem-genuine-disintegration<br/>proved/seeded"]
   lem-hiddenness-dual-witness["lem-hiddenness-dual-witness<br/>proved/none"]
   lem-hlc-implies-exposed-hull["lem-hlc-implies-exposed-hull<br/>proved/none"]
   lem-import-reduction["lem-import-reduction<br/>proved/validated"]
