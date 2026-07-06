@@ -497,3 +497,53 @@ imports a future agent might reach for — read before importing ANY external to
   aism-tq3), or Lemma A must be extended into `a ∈ (29/8, 4)` by a NEW mechanism (the ρ-far
   inclusion genuinely fails there), or the collapse constant must improve. Do not cite Lemma A at
   `a < 4`.
+
+## 2026-07-06 — W22 (session 10, round 2): trunk <2>5 re-derived + reviewed — Kernel ⇒ HLC codified; HLC is now a DAG node
+
+- ✅ **`lem-kernel-implies-hlc` (proved, reviewed):** Kernel(δ₀, B) ⇒ H(P) ≤ max{B,3}·√δ for
+  δ ≤ min{δ₀, 1/4} (W22, `docs/waves/2026-07-06-W22-kernel-implies-hlc.md`): fresh-codex prover
+  independent of the ingest text; s8 cap re-derived from mass-split + the row-diameter clause
+  (H(1−σ̃) ≤ ν(2+4δ)); separate hostile verifier VALID 7/7 (incl. a 17-fixture exact test of the
+  intermediate inequality). Trunk staleness debt PAID — `<2>5` moves from "recorded T1, not a
+  shard" to reviewed + codified.
+- ✅ **`op-hlc` registered + finisher wiring:** HLC is now a first-class open-problem node;
+  `op-exposed-hull` rewired to dep on it (faithful <2>6 consumption); the linker sees the full
+  chain conj-kernel → lem-kernel-implies-hlc → op-hlc → op-exposed-hull → op-classical.
+  Consequence: **<2>6 and <2>7 are now the ONLY unreviewed links between a proved Kernel and
+  op-classical** — the trunk debt has a precise shape.
+
+## 2026-07-06 — W23 (session 10, round 2): THE A-GAP CLOSED (mod-review) — parametric halo collapse, T(a) = 5a/2 + 3
+
+- ✅ **`lem-parametric-halo-collapse` (proved, reviewed):** for a hidden top v of height H and ANY
+  halo width a > 0: `H(1−σ_a) ≤ (σ−σ_a)·aτ + ν(2+4δ)` (W23, `docs/waves/2026-07-06-W23-a-gap.md`);
+  the af-validated conj-halo-collapse is exactly the a = 1/4 case (verifier-checked, no off-by-4);
+  verifier expanded the residual-split proof independently and passed exact tests. Consequences:
+  forced-mass curve **T(a) = 5a/2 + 3** (T(1/4) = 29/8 = the W18 constant, exact; **T(4) = 13**);
+  **MIN-A at width 4**: H > 13τ forces every hidden top to `g^{(4)} > 1/2 − δ`, pairing with the
+  proved Lemma A (visible ≤ 4τ) into a genuine gap iff **δ < (17−12√2)/2 ≈ 0.0147**. The
+  g-bootstrap's contradiction surface is now width-compatible; MIN-A's tall threshold updates
+  29τ/8 → 13τ.
+- ❗ **Route (ii) (small-a Lemma A) is OPEN-BOTH-SIDES and MOOT** (worker I, L3
+  `runs/2026-07-06-w23-a-gap/`): prove side structurally blocked (the (aτ, 4τ) annulus is priced by
+  no tool — the exposer starts at ρ = 4τ); refute side could not enter G_{15/4} on any tested family
+  (δ-inflation + absorption named). Do not fund further small-a waves unless step 4 turns out to
+  need a < 4.
+- ❗ Follow-up re-aim: D1 codification (aism-yxa) should target the parametric form directly —
+  the cap-⇒-Kernel assembly now runs through T(a) with B = 13 at width 4.
+
+## 2026-07-06 — W24 (session 10, round 2): g-bootstrap step 3 (disintegration) derived + reviewed
+
+- ✅ **`lem-genuine-disintegration` (proved, reviewed):** S3.1–S3.4 (W24,
+  `docs/waves/2026-07-06-W24-step3-disintegration.md`): every j ∈ G_a is a hidden vertex or
+  non-vertex row; vertex disintegration with μ_j(θ) ≥ (d_j−θ)/(H−θ); the consumable ledger
+  `g_i ≤ M_i^a + Σ_{j∈G_a} P_ij⁺(H−d_j)/(H−aτ)` with M_i^a supported entirely on hidden vertices
+  at depth (aτ, H]. Hostile verifier VALID (exact tests on banked rank-3/rank-5; one presentation
+  caveat folded into the shard).
+- ❗ **Honest limits kept loud:** no vertex count, no web structure, no uniform slack bound — rows
+  barely past the halo can lose most disintegrated weight to shallow vertices. That residue IS
+  step 4.
+- ✅ **The bootstrap's remaining mathematical content is now exactly ONE open step:** for
+  δ < (17−12√2)/2 and H > 13τ — harmonic g^{(4)}, hidden tops > 1/2 − δ, visible rows ≤ 4τ, deep
+  mass disintegrating onto hidden vertices — the once-applied maximum principle must produce a
+  contradiction (anti-splitting, analytic form). Plus the standing trunk items (<2>6, <2>7),
+  W-nonemptiness, and the δ₀-endpoint bookkeeping.
