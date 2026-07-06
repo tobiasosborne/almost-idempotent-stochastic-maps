@@ -532,3 +532,44 @@ first `af` elevation target is `lem-classical-equiv`. See `HANDOFF.md` and `bd r
   wall-evasion audit + pre-registered kill criteria; fr arm B re-aimed; HANDOFF resume item 0;
   new deciders filed: aism-vmt (g-zoo measurement, first) + aism-0b1 (Lemma A). (02779c1,
   b93f60d)
+
+## 2026-07-06 — Session 10: the g-bootstrap deciders (W20 + W21) — Lemma A PROVED+reviewed; the a-gap named; registry +1
+
+- **Direction (user):** focus entirely on the kernel-conjecture strategy of record = the
+  g-bootstrap (sketch v3 M1). Two waves, five fresh codex workers: two mutually-blind
+  adversarial pairs + one separate hostile verifier. Trunk staleness rule consciously violated
+  (user-directed focus); debt made explicit in sketch v4.
+- **W21 (`aism-0b1`, Lemma A prove-or-refute + verification):** prover PROVED at exact
+  constants — `−ν_w ≤ g_w ≤ 4τ` for every visible row, every halo width `a ≥ 4`
+  (exposer-pairing vs row reproduction; `a ≥ 4` used exactly once in the halo-to-ρ-far
+  inclusion); SEPARATE fresh adversarial verifier: VALID 7/7 (definition fidelity, affine
+  identity, sup/ε, sign discipline, duplicates, constants, 20k exact sanity sweep);
+  mutually-blind refuter: NOT-REFUTED at `a ∈ {4,5,6}` (could not populate G_a at all) and
+  independently derived the prover's inclusion from the opposite mandate; refuter frontier
+  certificate `g_w = √(147/569)·τ ≈ 0.508τ` at `a = 1/4` (largest certified visible g/τ;
+  harmless to the lemma). **Codified `argument/lemmas/lem-visible-g-small.md`
+  (`status: proved`, `af: none`)** — the linker's new ready frontier; af-elevation proposal
+  filed (aism-88r, user opt-in). Bundle `runs/2026-07-06-w21-lemma-a-decider/` (orchestrator
+  recompute 11/11 from printed matrices; rerun exit 0). Wave doc
+  `docs/waves/2026-07-06-W21-lemma-a-decider.md`.
+- **W20 (`aism-vmt`, zoo g-measurement + adversarial kill-hunt):** LEMMA-A-SUPPORTED /
+  NO-KILL-FRONTIER. Full exact sweep — 307 unique certified matrices, 1842 (matrix,a) cases,
+  1842 harmonicity `Pg = g` + 9564 sandwich checks, 4 banked calibrations, 216-entry explicit
+  skip table; adversarial constructor (LP-guided anti-absorption, duplicate families, clone
+  tests) realized neither pre-registered kill. **Structural headline: `G_a` EMPTY zoo-wide for
+  every `a ≥ 1`** — nothing banked realizes depth > 1τ, so the step-4 kill zone is
+  unreachable and zoo g-measurement is RETIRED as a step-4 decider (sketch v4 RETIRED #8).
+  Visible frontier at `a = 1/4`: `7/80` (`(g/τ)² = 105/569 ≈ 0.43²`). Binding constraint
+  everywhere: exposedness absorption (third confirmation). Bundle
+  `runs/2026-07-06-w20-g-zoo-measurement/` (orchestrator recompute 8/8; reruns exit 0). Wave
+  doc `docs/waves/2026-07-06-W20-g-zoo-measurement.md`.
+- **Sketch v4** (`docs/plans/2026-07-06-top-down-proof-sketch-v4.md`, surgical delta of v3;
+  pins updated: HANDOFF, CLAUDE.md==AGENTS.md router, bd + agent memory): M1 steps 1+2 stand
+  (step 1 realized, step 2 reviewed); **THE A-GAP `(29τ/8, 4τ]` named as the new sub-front**
+  (aism-sg6: collapse-constant improvement vs small-a mechanism vs deep-mass routing); RETIRED
+  +2 (zoo g-measurement as step-4 decider; Lemma A prove-or-refute waves); trunk staleness
+  debt recorded.
+- **Discipline:** the prove/refute/verify TRIPLE worked end-to-end in one wave; orchestrator
+  recomputed every headline's algebra from printed matrices alone; all worker scripts rerun
+  exit 0; FINDINGS +2 dated entries; fr: one pull logged per wave (arm B). Issues: closed
+  aism-vmt, aism-0b1; created aism-sg6 (a-gap), aism-88r (af-elevation proposal).
