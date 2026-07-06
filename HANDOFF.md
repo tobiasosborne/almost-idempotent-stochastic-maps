@@ -11,10 +11,12 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 1. Read `PRD.md` (Kernel is THE theorem-facing input; (EX) is a separate attack route), then
    `CLAUDE.md` (== `AGENTS.md`).
-2. Read **`docs/plans/2026-07-05-top-down-proof-sketch-v2.md`** — the canonical strategic map,
-   UPDATED IN PLACE this session (Route A redrawn by W18+W19; arm-E fallback line redrawn by
-   E1+E2). Every wave names its node there. The OPEN LEDGER + UNSCOPED-SURFACE list at its end
-   IS the progress metric.
+2. Read **`docs/plans/2026-07-06-top-down-proof-sketch-v3.md`** — THE canonical strategic map
+   (v3, session-9 redraw; v2 superseded in place, kept for line citations). Every wave names
+   its node there. The OPEN LEDGER + UNSCOPED-SURFACE list at its end IS the progress metric.
+   **STEWARDSHIP (user mandate, 2026-07-06, binding): the sketch is the project's most dynamic
+   artifact — keeping it reconciled with newly banked evidence is a FIRST-CLASS DELIVERABLE of
+   every session; a wave that changes the map without updating the sketch is incomplete work.**
 3. **THE PHASE DISCIPLINE (user, 2026-07-05, binding): no progress theatre.** Progress =
    unscoped/unpriced surface shrinking — never commit/seeding/elevation counts. (bd memory
    `bfs-phase-discipline`; agent memory `no-progress-theatre`.)
