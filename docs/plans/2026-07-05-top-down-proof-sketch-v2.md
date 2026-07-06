@@ -1,6 +1,8 @@
 <!--
-ROLE: the top-down, breadth-first FULL proof sketch of op-classical, VERSION 2 (session 8) — the
-  canonical strategic map. Supersedes docs/plans/2026-07-04-top-down-proof-sketch.md after the
+ROLE: SUPERSEDED (2026-07-06) by docs/plans/2026-07-06-top-down-proof-sketch-v3.md — kept
+  intact because banked artifacts cite this file's line numbers. Do NOT orient from this
+  version. Originally: the top-down, breadth-first FULL proof sketch of op-classical,
+  VERSION 2 (session 8) — the canonical strategic map. Supersedes docs/plans/2026-07-04-top-down-proof-sketch.md after the
   DC1-DC4 decision-check wave and two user decisions (2026-07-05): (D1) Kernel is the
   theorem-facing input, (EX) is a separate attack route with an explicitly OPEN edge (DC4 redraw);
   (D2) the broad-NSC successor is capped Gamma-emptiness first (conj-gamma-emptiness), with the
