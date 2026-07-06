@@ -59,7 +59,7 @@ scripts rerun exit 0; every prover was checked by a separate hostile verifier.
 
 ## Next steps (ranked) — RESUME HERE
 
-0. **THE STEP-4 WAVE (the bootstrap finisher attempt).** Design per sketch v5 M1 step 4:
+0. **THE STEP-4 WAVE (`aism-7pe`, P0 — the bootstrap finisher attempt).** Design per sketch v5 M1 step 4:
    prove-or-refute pair + hostile verifier on the once-applied maximum principle over the
    width-4 surface. The wave brief must (a) hand workers the three reviewed lemmas + the two
    af-validated collapse contracts as the ONLY imports, (b) pre-register kill criteria (a
