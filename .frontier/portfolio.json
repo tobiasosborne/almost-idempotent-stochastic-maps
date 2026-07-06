@@ -233,8 +233,8 @@
       "id": "B",
       "desc": "Prove lem-dual-localization (frame-free transfer): reproduce ||Ebar||_1 >= H from P^2=P WITHOUT the simplex frame; kill the skinny mu->1 regime where Route B is vacuous.",
       "priority": "primary",
-      "target": "MIN-A (the minimal Route-A obligation, sketch v3): if H > (29/8)*tau then SOME hidden top vertex has halo-robust sigma_g <= 1/2 — with the af-validated collapse this closes the Kernel height bound (B = 29/8, D1 twice worker-derived); CAP-1/2 (sigma_g <= 1/2 at every hidden top, ANY height) is the refuter/search surface (record 5991/80000). Wall = exposedness absorption; mechanism surfaces M1 dichotomy / M2 poke-charge+C/tau packing / M3 genuine-self cap (new) / M4 transport (blocked).",
-      "kill": "an exact hidden top with sigma_g > 1/2 at delta <= 1/4 AND a tall companion showing MIN-A fails (then the collapse route dies and the campaign pivots to Route B alpha->1 or arm E); or the distinct-multi-class decider showing total sigma_g accumulates past 1/2 across classes",
+      "target": "MIN-A via THE G-BOOTSTRAP (sketch v3 M1, target of record 2026-07-06): g := P*1_G is EXACTLY P-harmonic (Pg = g, one line from P^2 = P; g_v = sigma_g +- nu_v, so the MIN-A contradiction antecedent = g > 1/2 - delta on every hidden top); Lemma A (aism-0b1) caps g on W via definition-given exposedness + concentration with tunable halo width a (constants fight a~5 vs H > 29tau/8); disintegration via lem-residual-upper; once-applied max principle => the band-web residual (analytic anti-splitting, count-free). Deciders first: aism-vmt (measure g across the zoo, multi halo-width, harmonicity assert).",
+      "kill": "pre-registered: a certified visible row with g >> tau at workable halo widths (kills Lemma A); a certified band-supported family with g >= 1/2 while g|_W <= C*tau + harmonic slack (kills step 4 and is the strongest hint yet toward a Kernel counterexample); either => fall back to M2 poke-charge / Route B alpha->1 gate / arm E",
       "created": "1970-01-01T00:00:00.000Z"
     },
     {
