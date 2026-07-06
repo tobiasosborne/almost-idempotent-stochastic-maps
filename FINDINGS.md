@@ -459,3 +459,41 @@ imports a future agent might reach for — read before importing ANY external to
   many recipients in different quotient classes each near its per-class ceiling — remain
   untested. That is the direct empirical probe of the `C/τ`-count opening (W18) and of the
   poke-charge conjecture, and the sharpest next decider on Route A.
+
+## 2026-07-06 — W20 (session 10): g-bootstrap decider 1 — no kill; the zoo CANNOT populate G_a for a ≥ 1
+
+- ✅ **Both pre-registered g-bootstrap kills UNREALIZED** (W20,
+  `docs/waves/2026-07-06-W20-g-zoo-measurement.md`, L3 bundle
+  `runs/2026-07-06-w20-g-zoo-measurement/`): full exact sweep (307 unique certified matrices, 1842
+  `(matrix, a)` cases, 1842 harmonicity `Pg = g` + 9564 sandwich `σ_g − ν ≤ g ≤ σ_g` checks, 4
+  banked calibrations) + a mutually-blind adversarial constructor. At `a = 1/4` the visible-row
+  frontier is `g_w = 7/80` (`(g_w/τ)² = 105/569`, ≈ 0.43τ); no row anywhere reached `g ≥ 1/2`.
+- ❗ **The load-bearing structural fact: `G_a` is EMPTY zoo-wide for every `a ≥ 1`** — the deepest
+  genuine geometry ever banked sits within 1·τ of `conv W` (consistent with the 25k-sweep
+  `H ≤ 0.462τ`). Consequence: **zoo measurement is EXHAUSTED as a step-4 decider** — the band-web
+  kill zone is unreachable by every known construction. Evidence FOR MIN-A; an emptiness claim of
+  nothing.
+- ✅ The M1 clone-safety claim realized on an example: weighted row-cloning transports `G_{1/4}` and
+  preserves old-row `g` exactly (worker B). Binding constraint in all adversarial designs:
+  exposedness absorption (the W19 wall), again identified by the LP-vs-exact-geometry comparison.
+
+## 2026-07-06 — W21 (session 10): LEMMA A (visible rows are g-small) PROVED (C = 4, a ≥ 4) + verified + refuter-converged; the a-gap is the new named front
+
+- ✅ **Lemma A is proved at exact constants and independently verified** (W21,
+  `docs/waves/2026-07-06-W21-lemma-a-decider.md`): fresh-codex prover — `−ν_w ≤ g_w ≤ 4τ` for every
+  visible row `w`, every halo width `a ≥ 4` (mechanism: exposer-pairing against row reproduction;
+  `a ≥ 4` used exactly once, in `G_a ⊆ {ρ-far from p_w}`); SEPARATE fresh-codex adversarial verifier
+  returned VALID on all 7 checklist items; the mutually-blind refuter converged NOT-REFUTED and
+  independently derived the same ρ-far inclusion from the opposite mandate (second occurrence of the
+  E2 adversarial-convergence pattern). Codified as `lem-visible-g-small` (`status: proved`,
+  `af: none` — NOT L0-rigorous; af elevation filed). The g-bootstrap's steps 1+2 now stand.
+- ✅ **New refuter frontier certificate** (L3, `runs/2026-07-06-w21-lemma-a-decider/`): visible row
+  with `g^{(1/4)} = 49/400`, `K = √(147/569) ≈ 0.508` at `δ = 27881/480000` — the largest certified
+  visible-row `g/τ` to date (beats W20's 0.43); absorption companion: scaling `λ: 7/5 → 29/20` flips
+  the deep row visible (`H = 0`). At `a ∈ {4,5,6}` the refuter could not populate `G_a` at all.
+- ❗ **The constants fight is now exact — the `(29τ/8, 4τ]` a-gap band:** Lemma A's mechanism needs
+  `a ≥ 4`; MIN-A's tall antecedent guarantees depth only `> 29τ/8 = 3.625τ`; nothing banked realizes
+  depth `> 1τ`. Either step 3/4 must place deep-band mass beyond `4τ` (obs-deep-leakage territory,
+  aism-tq3), or Lemma A must be extended into `a ∈ (29/8, 4)` by a NEW mechanism (the ρ-far
+  inclusion genuinely fails there), or the collapse constant must improve. Do not cite Lemma A at
+  `a < 4`.

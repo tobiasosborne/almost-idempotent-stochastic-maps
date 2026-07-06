@@ -1,0 +1,903 @@
+LEMMA-A-SUPPORTED (sup g_w/tau = 0 at a=4)
+
+# W20 Worker A — exact g-zoo measurement
+
+Tier legend: [T0] repo definition/banked pipeline fact; [T1] exact computation, hard-asserted; [T2] structured read/non-realization; [T3] heuristic.
+
+## Rerun
+
+```bash
+python3 runs/2026-07-06-w20-g-zoo-measurement/scripts/w20_worker_a.py
+```
+
+## Implemented exact predicates
+
+- [T0/T1] `W(P)`, row vertices, exposedness, and `dist_1(row,conv W)` are computed with the banked exact `pipeline.py` LP routines.
+- [T1] For halo width `a`, `G_a={j: d_j>a*tau}` is decided by the exact strict predicate `d_j>0 and d_j^2>a^2*delta`.
+- [T1] `g=P*1_G` and `sigma_g(v)=sum_{j in G} max(P_vj,0)` are exact rational row sums.
+- [T1] Every measured `(instance,a)` hard-asserts `P*g=g` and `sigma_g(v)-nu_v <= g_v <= sigma_g(v)` for every row.
+
+## Coverage
+
+- [T1] Source entries attempted after construction: `527`; raw loader counts `{'W19': 8, 'sigma-cap-refuter': 3, 'web-regime-hunt': 2, 'door:instances_from_rank3_suite:raw': 227, 'door:instances_from_json_bundles:raw': 20, 'door:instances_fresh_lambdac:raw': 268, 'door-ratio census': 514}`.
+- [T1] Covered qualifying source entries (`0<delta<=1/4`, `W!=empty`): `311`.
+- [T1] Unique exact matrices measured after de-duplication: `307`.
+- [T1] Exact `(unique matrix, halo width)` measurements: `1842`.
+- [T1] Covered by group: `{'W19': 8, 'sigma-cap-refuter': 3, 'web-regime-hunt': 2, 'door-ratio census': 298}`.
+- [T1/T2] Skipped/not qualifying by group: `{'door-ratio census': 216}`. These are not silent skips; reasons are listed below.
+
+Covered source entries:
+
+| group | count |
+|---|---:|
+| W19 | 8 |
+| door-ratio census | 298 |
+| sigma-cap-refuter | 3 |
+| web-regime-hunt | 2 |
+
+Skipped or non-qualifying source entries:
+
+| group | label | reason |
+|---|---|---|
+| door-ratio census | `door_staircase_m1_rank3_delta1_2` | delta>1/4: 1/2 |
+| door-ratio census | `door_perturbed_staircase_m1_eps1_1000_delta1_2` | delta>1/4: 1/2 |
+| door-ratio census | `door_windmill_r1_3_q1_20_basis_0` | delta=0 |
+| door-ratio census | `door_windmill_r1_3_q1_20_basis_1` | delta>1/4: 7/8 |
+| door-ratio census | `door_windmill_r1_3_q1_20_basis_2` | delta>1/4: 7/8 |
+| door-ratio census | `door_windmill_r1_3_q1_20_mix2_0` | delta>1/4: 7/16 |
+| door-ratio census | `door_windmill_r1_3_q1_20_mix2_1` | delta>1/4: 7/16 |
+| door-ratio census | `door_windmill_r1_3_q1_20_mix2_2` | delta>1/4: 7/16 |
+| door-ratio census | `door_windmill_r1_4_q1_12_basis_1` | delta>1/4: 4/7 |
+| door-ratio census | `door_windmill_r1_4_q1_12_basis_2` | delta>1/4: 4/7 |
+| door-ratio census | `door_windmill_r1_4_q1_12_basis_3` | delta>1/4: 4/5 |
+| door-ratio census | `door_windmill_r1_4_q1_12_mix2_0` | delta>1/4: 2/7 |
+| door-ratio census | `door_windmill_r1_4_q1_12_mix2_1` | delta>1/4: 2/7 |
+| door-ratio census | `door_windmill_r1_4_q1_12_mix2_2` | delta>1/4: 2/5 |
+| door-ratio census | `door_windmill_r1_4_q1_12_mix2_3` | delta>1/4: 2/7 |
+| door-ratio census | `door_windmill_r1_4_q1_12_mix2_4` | delta>1/4: 24/35 |
+| door-ratio census | `door_windmill_r1_4_q1_12_mix2_5` | delta>1/4: 24/35 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_basis_0` | delta>1/4: 9/10 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_basis_1` | delta>1/4: 9/10 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_basis_2` | delta>1/4: 1/2 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_basis_3` | delta>1/4: 10/9 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_basis_4` | delta>1/4: 12/13 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_basis_5` | delta>1/4: 1 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_basis_6` | delta>1/4: 12/13 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_basis_7` | delta>1/4: 10/9 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_0` | delta>1/4: 1/2 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_1` | delta>1/4: 27/40 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_2` | delta>1/4: 19/24 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_3` | delta>1/4: 6/13 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_4` | delta>1/4: 9/10 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_5` | delta>1/4: 27/40 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_6` | delta>1/4: 5/9 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_7` | delta>1/4: 237/260 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_8` | delta>1/4: 3/4 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_9` | delta>1/4: 19/24 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_10` | delta>1/4: 357/520 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_11` | delta>1/4: 27/40 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_12` | delta>1/4: 5/9 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_13` | delta>1/4: 5/9 |
+| door-ratio census | `door_near_degenerate_t1_20_h1_12_mix2_14` | delta>1/4: 10/13 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_basis_0` | delta>1/4: 24/25 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_basis_1` | delta>1/4: 24/25 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_basis_2` | delta>1/4: 1/2 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_basis_3` | delta>1/4: 25/24 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_basis_4` | delta>1/4: 32/33 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_basis_5` | delta>1/4: 1 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_basis_6` | delta>1/4: 32/33 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_basis_7` | delta>1/4: 25/24 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_0` | delta>1/4: 1/2 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_1` | delta>1/4: 18/25 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_2` | delta>1/4: 49/64 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_3` | delta>1/4: 16/33 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_4` | delta>1/4: 24/25 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_5` | delta>1/4: 18/25 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_6` | delta>1/4: 25/48 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_7` | delta>1/4: 796/825 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_8` | delta>1/4: 4/5 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_9` | delta>1/4: 49/64 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_10` | delta>1/4: 598/825 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_11` | delta>1/4: 18/25 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_12` | delta>1/4: 25/48 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_13` | delta>1/4: 25/48 |
+| door-ratio census | `door_near_degenerate_t1_50_h1_20_mix2_14` | delta>1/4: 664/825 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_0` | delta>1/4: 1219/1440 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_1` | delta>1/4: 477/380 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_2` | delta>1/4: 23/20 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_3` | delta>1/4: 23/30 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_4` | delta>1/4: 23/20 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_5` | delta>1/4: 23/30 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_6` | delta>1/4: 427/570 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_7` | delta>1/4: 23/30 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_8` | delta>1/4: 763/570 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_9` | delta>1/4: 37/45 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_10` | delta>1/4: 23/30 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_11` | delta>1/4: 517/380 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_12` | delta>1/4: 14/15 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_13` | delta>1/4: 517/380 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_14` | delta>1/4: 97/95 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_15` | delta>1/4: 23/30 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_16` | delta>1/4: 23/20 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_17` | delta>1/4: 487/570 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_18` | delta>1/4: 2051/1710 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_19` | delta>1/4: 346/285 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_20` | delta>1/4: 23/30 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_standard` | delta>1/4: 23/20 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_stdmix_7_3_4` | delta>1/4: 467/380 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_stdmix_7_7_8` | delta>1/4: 113/95 |
+| door-ratio census | `door_cyclic_outside_a1_5_e1_20_stdmix_7_15_16` | delta>1/4: 889/760 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_0` | delta>1/4: 12191/13500 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_1` | delta>1/4: 1553/1160 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_2` | delta>1/4: 73/60 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_3` | delta>1/4: 73/90 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_4` | delta>1/4: 73/60 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_5` | delta>1/4: 73/90 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_6` | delta>1/4: 8213/10440 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_7` | delta>1/4: 73/90 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_8` | delta>1/4: 14963/10440 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_9` | delta>1/4: 79/90 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_10` | delta>1/4: 73/90 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_11` | delta>1/4: 1271/870 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_12` | delta>1/4: 1 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_13` | delta>1/4: 1271/870 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_14` | delta>1/4: 191/174 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_15` | delta>1/4: 73/90 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_16` | delta>1/4: 73/60 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_17` | delta>1/4: 1186/1305 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_18` | delta>1/4: 2281/1740 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_19` | delta>1/4: 463/348 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_20` | delta>1/4: 73/90 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_standard` | delta>1/4: 73/60 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_stdmix_7_3_4` | delta>1/4: 18211/13920 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_stdmix_7_7_8` | delta>1/4: 35147/27840 |
+| door-ratio census | `door_cyclic_outside_a1_4_e1_30_stdmix_7_15_16` | delta>1/4: 69019/55680 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_0` | delta>1/4: 403/504 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_1` | delta>1/4: 157/132 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_2` | delta>1/4: 13/12 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_3` | delta>1/4: 13/18 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_4` | delta>1/4: 13/12 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_5` | delta>1/4: 13/18 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_6` | delta>1/4: 70/99 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_7` | delta>1/4: 13/18 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_8` | delta>1/4: 14/11 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_9` | delta>1/4: 97/126 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_10` | delta>1/4: 13/18 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_11` | delta>1/4: 57/44 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_12` | delta>1/4: 8/9 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_13` | delta>1/4: 57/44 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_14` | delta>1/4: 97/99 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_15` | delta>1/4: 13/18 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_16` | delta>1/4: 13/12 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_17` | delta>1/4: 161/198 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_18` | delta>1/4: 796/693 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_19` | delta>1/4: 115/99 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_20` | delta>1/4: 13/18 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_standard` | delta>1/4: 13/12 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_stdmix_7_3_4` | delta>1/4: 307/264 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_stdmix_7_7_8` | delta>1/4: 593/528 |
+| door-ratio census | `door_cyclic_outside_a1_6_e1_12_stdmix_7_15_16` | delta>1/4: 1165/1056 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_0` | delta>1/4: 176/225 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_1` | delta>1/4: 301/260 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_2` | delta>1/4: 11/10 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_3` | delta>1/4: 11/15 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_4` | delta>1/4: 11/10 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_5` | delta>1/4: 11/15 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_6` | delta>1/4: 189/260 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_7` | delta>1/4: 11/15 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_8` | delta>1/4: 157/130 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_9` | delta>1/4: 104/135 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_10` | delta>1/4: 11/15 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_11` | delta>1/4: 79/65 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_12` | delta>1/4: 5/6 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_13` | delta>1/4: 79/65 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_14` | delta>1/4: 23/26 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_15` | delta>1/4: 11/15 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_16` | delta>1/4: 11/10 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_17` | delta>1/4: 51/65 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_18` | delta>1/4: 346/351 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_19` | delta>1/4: 116/117 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_20` | delta>1/4: 11/15 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_standard` | delta>1/4: 11/10 |
+| door-ratio census | `door_cyclic_outside_a1_8_e1_40_stdmix_7_3_4` | delta>1/4: 1189/1040 |
+| door-ratio census | `door_random_exact_001` | delta=0 |
+| door-ratio census | `door_random_exact_025` | delta=0 |
+| door-ratio census | `door_random_exact_047` | delta=0 |
+| door-ratio census | `door_random_exact_052` | delta=0 |
+| door-ratio census | `door_random_exact_054` | delta=0 |
+| door-ratio census | `door_fresh-web-p1/100-x0-rho1/5` | delta>1/4: 101/250 |
+| door-ratio census | `door_fresh-web-p1/100-x1/4-rho1/5` | delta>1/4: 101/250 |
+| door-ratio census | `door_fresh-web-p1/100-x1/3-rho1/5` | delta>1/4: 101/250 |
+| door-ratio census | `door_fresh-web-p1/100-x1/2-rho1/5` | delta>1/4: 101/250 |
+| door-ratio census | `door_fresh-web-p1/100-x1-rho1/5` | delta>1/4: 101/250 |
+| door-ratio census | `door_fresh-web-p1/80-x0-rho1/5` | delta>1/4: 81/200 |
+| door-ratio census | `door_fresh-web-p1/80-x1/4-rho1/5` | delta>1/4: 81/200 |
+| door-ratio census | `door_fresh-web-p1/80-x1/3-rho1/5` | delta>1/4: 81/200 |
+| door-ratio census | `door_fresh-web-p1/80-x1/2-rho1/5` | delta>1/4: 81/200 |
+| door-ratio census | `door_fresh-web-p1/80-x1-rho1/5` | delta>1/4: 81/200 |
+| door-ratio census | `door_fresh-web-p1/40-x0-rho1/5` | delta>1/4: 41/100 |
+| door-ratio census | `door_fresh-web-p1/40-x1/4-rho1/5` | delta>1/4: 41/100 |
+| door-ratio census | `door_fresh-web-p1/40-x1/3-rho1/5` | delta>1/4: 41/100 |
+| door-ratio census | `door_fresh-web-p1/40-x1/2-rho1/5` | delta>1/4: 41/100 |
+| door-ratio census | `door_fresh-web-p1/40-x1-rho1/5` | delta>1/4: 41/100 |
+| door-ratio census | `door_fresh-web-p1/20-x0-rho1/5` | delta>1/4: 21/50 |
+| door-ratio census | `door_fresh-web-p1/20-x1/4-rho1/5` | delta>1/4: 21/50 |
+| door-ratio census | `door_fresh-web-p1/20-x1/3-rho1/5` | delta>1/4: 21/50 |
+| door-ratio census | `door_fresh-web-p1/20-x1/2-rho1/5` | delta>1/4: 21/50 |
+| door-ratio census | `door_fresh-web-p1/20-x1-rho1/5` | delta>1/4: 21/50 |
+| door-ratio census | `door_fresh-web-p1/10-x0-rho1/5` | delta>1/4: 11/25 |
+| door-ratio census | `door_fresh-web-p1/10-x1/4-rho1/5` | delta>1/4: 11/25 |
+| door-ratio census | `door_fresh-web-p1/10-x1/3-rho1/5` | delta>1/4: 11/25 |
+| door-ratio census | `door_fresh-web-p1/10-x1/2-rho1/5` | delta>1/4: 11/25 |
+| door-ratio census | `door_fresh-web-p1/10-x1-rho1/5` | delta>1/4: 11/25 |
+| door-ratio census | `door_fresh-two-hidden-a1/50-151` | delta>1/4: 2647/10000 |
+| door-ratio census | `door_fresh-two-hidden-a1/50-154` | delta>1/4: 27/100 |
+| door-ratio census | `door_fresh-two-hidden-a1/50-157` | delta>1/4: 1349/5000 |
+| door-ratio census | `door_fresh-two-hidden-a1/25-160` | delta>1/4: 697/2500 |
+| door-ratio census | `door_fresh-two-hidden-a1/25-163` | delta>1/4: 29/100 |
+| door-ratio census | `door_fresh-two-hidden-a1/25-166` | delta>1/4: 723/2500 |
+| door-ratio census | `door_fresh-two-hidden-a1/12-169` | delta>1/4: 59/192 |
+| door-ratio census | `door_fresh-two-hidden-a1/12-172` | delta>1/4: 1/3 |
+| door-ratio census | `door_fresh-two-hidden-a1/12-175` | delta>1/4: 95/288 |
+| door-ratio census | `door_fresh-two-hidden-a1/8-178` | delta>1/4: 85/256 |
+| door-ratio census | `door_fresh-two-hidden-a1/8-181` | delta>1/4: 3/8 |
+| door-ratio census | `door_fresh-two-hidden-a1/8-184` | delta>1/4: 47/128 |
+| door-ratio census | `door_fresh-two-hidden-a1/6-187` | delta>1/4: 17/48 |
+| door-ratio census | `door_fresh-two-hidden-a1/6-188` | delta>1/4: 41/144 |
+| door-ratio census | `door_fresh-two-hidden-a1/6-190` | delta>1/4: 5/12 |
+| door-ratio census | `door_fresh-two-hidden-a1/6-193` | delta>1/4: 29/72 |
+| door-ratio census | `door_fresh-two-hidden-a1/6-194` | delta>1/4: 377/1440 |
+| door-ratio census | `door_fresh-two-hidden-a1/4-196` | delta>1/4: 25/64 |
+| door-ratio census | `door_fresh-two-hidden-a1/4-197` | delta>1/4: 3/8 |
+| door-ratio census | `door_fresh-two-hidden-a1/4-198` | delta>1/4: 9/32 |
+| door-ratio census | `door_fresh-two-hidden-a1/4-199` | delta>1/4: 1/2 |
+| door-ratio census | `door_fresh-two-hidden-a1/4-200` | delta>1/4: 23/80 |
+| door-ratio census | `door_fresh-two-hidden-a1/4-201` | delta>1/4: 9/32 |
+| door-ratio census | `door_fresh-two-hidden-a1/4-202` | delta>1/4: 15/32 |
+| door-ratio census | `door_fresh-two-hidden-a1/4-203` | delta>1/4: 43/128 |
+
+Covered labels by unique measured matrix:
+
+| id | n | delta | H | W | hidden tops | aliases |
+|---|---:|---:|---:|---|---|---|
+| `I001` | 5 | `252559/1280000` (0.19731172) | `962906/108276325` (0.0088930429) | [1, 2, 3, 4] | [0] | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| `I002` | 5 | `74551/1600000` (0.046594375) | `2577690413/25862880000` (0.09966757) | [0, 1, 2] | [3] | w19_rank3_genuine_partner [W19]; sigma_cap_B_maxH_genuine_partner [sigma-cap-refuter] |
+| `I003` | 5 | `1/16` (0.0625) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | w19_duplicate_split_m2_q5_84 [W19] |
+| `I004` | 7 | `1/16` (0.0625) | `1/10` (0.1) | [0, 1, 2] | [3, 4, 5, 6] | w19_duplicate_split_m4_q5_84 [W19] |
+| `I005` | 11 | `1/16` (0.0625) | `1/10` (0.1) | [0, 1, 2] | [3, 4, 5, 6, 7, 8, 9, 10] | w19_duplicate_split_m8_q5_84 [W19] |
+| `I006` | 5 | `21/320` (0.065625) | `0` (0) | [0, 1, 2, 3, 4] | [] | w19_duplicate_split_m2_q1_16_absorption [W19] |
+| `I007` | 6 | `3983/96000` (0.041489583) | `4131459/48713900` (0.08481068) | [0, 1, 2, 3, 4] | [5] | w19_rank5_genuine_self [W19]; sigma_cap_A_max_genuine_self [sigma-cap-refuter] |
+| `I008` | 6 | `1/4` (0.25) | `0` (0) | [3, 4, 5] | [] | w19_rank3_relaxed_cycle_lp_optimizer [W19] |
+| `I009` | 5 | `1841/1600000` (0.001150625) | `1/1000` (0.001) | [0, 1, 2] | [3, 4] | web_regime_s5_calibration [web-regime-hunt] |
+| `I010` | 5 | `49/2000` (0.0245) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | web_regime_headline_delta_49_2000 [web-regime-hunt]; door_fresh-web-p1/40-x1/3-rho1/100 [door-ratio census] |
+| `I011` | 5 | `2/17` (0.11764706) | `0` (0) | [1, 2, 3, 4] | [] | door_transverse_pair_a1_8 [door-ratio census] |
+| `I012` | 5 | `1/5` (0.2) | `0` (0) | [1, 2, 3, 4] | [] | door_transverse_pair_a1_4 [door-ratio census] |
+| `I013` | 4 | `1/100` (0.01) | `0` (0) | [0, 1, 2, 3] | [] | door_no_center_rank3_a1_100 [door-ratio census] |
+| `I014` | 4 | `1/4` (0.25) | `0` (0) | [0, 1, 2, 3] | [] | door_no_center_rank3_a1_4 [door-ratio census] |
+| `I015` | 6 | `2/9` (0.22222222) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_windmill_r1_4_q1_12_basis_0 [door-ratio census] |
+| `I016` | 5 | `1/4` (0.25) | `0` (0) | [0, 1, 2, 3] | [] | door_random_exact_000 [door-ratio census] |
+| `I017` | 7 | `4/51` (0.078431373) | `0` (0) | [0, 1, 3, 5] | [] | door_random_exact_002 [door-ratio census] |
+| `I018` | 9 | `29/144` (0.20138889) | `0` (0) | [0, 1, 2, 7, 8] | [] | door_random_exact_003 [door-ratio census] |
+| `I019` | 6 | `32/147` (0.21768707) | `0` (0) | [0, 1, 2, 4] | [] | door_random_exact_004 [door-ratio census] |
+| `I020` | 5 | `1/8` (0.125) | `0` (0) | [0, 1, 2, 4] | [] | door_random_exact_005 [door-ratio census] |
+| `I021` | 7 | `1/8` (0.125) | `0` (0) | [0, 1, 2, 6] | [] | door_random_exact_006 [door-ratio census] |
+| `I022` | 5 | `1/7` (0.14285714) | `0` (0) | [0, 1, 2, 3] | [] | door_random_exact_007 [door-ratio census] |
+| `I023` | 9 | `2/21` (0.095238095) | `0` (0) | [0, 2, 4, 6, 8] | [] | door_random_exact_008 [door-ratio census] |
+| `I024` | 9 | `229/1134` (0.20194004) | `0` (0) | [0, 1, 2, 3, 7, 8] | [] | door_random_exact_009 [door-ratio census] |
+| `I025` | 9 | `23/171` (0.13450292) | `0` (0) | [0, 3, 6, 7, 8] | [] | door_random_exact_010 [door-ratio census] |
+| `I026` | 7 | `1/8` (0.125) | `0` (0) | [0, 1, 2, 5, 6] | [] | door_random_exact_011 [door-ratio census] |
+| `I027` | 7 | `15/88` (0.17045455) | `0` (0) | [1, 2, 3, 4, 5, 6] | [] | door_random_exact_012 [door-ratio census] |
+| `I028` | 7 | `769/3808` (0.20194328) | `0` (0) | [0, 1, 2, 3, 5] | [] | door_random_exact_013 [door-ratio census] |
+| `I029` | 7 | `1/6` (0.16666667) | `0` (0) | [0, 2, 3, 4, 5] | [] | door_random_exact_014 [door-ratio census] |
+| `I030` | 5 | `5/32` (0.15625) | `0` (0) | [2, 3, 4] | [] | door_random_exact_015 [door-ratio census] |
+| `I031` | 7 | `20285/163944` (0.12373127) | `0` (0) | [0, 1, 3, 5] | [] | door_random_exact_016 [door-ratio census] |
+| `I032` | 8 | `1/8` (0.125) | `0` (0) | [0, 2, 4] | [] | door_random_exact_017 [door-ratio census] |
+| `I033` | 5 | `2/21` (0.095238095) | `0` (0) | [0, 1, 2, 3] | [] | door_random_exact_018 [door-ratio census] |
+| `I034` | 9 | `1/4` (0.25) | `0` (0) | [0, 1, 2, 4, 5, 6, 8] | [] | door_random_exact_019 [door-ratio census] |
+| `I035` | 6 | `1/4` (0.25) | `0` (0) | [0, 1, 2, 3] | [] | door_random_exact_020 [door-ratio census] |
+| `I036` | 5 | `1/16` (0.0625) | `0` (0) | [0, 1, 2, 3] | [] | door_random_exact_021 [door-ratio census] |
+| `I037` | 7 | `1/6` (0.16666667) | `0` (0) | [0, 1, 2, 3, 6] | [] | door_random_exact_022 [door-ratio census] |
+| `I038` | 7 | `1/4` (0.25) | `0` (0) | [0, 1, 2, 6] | [] | door_random_exact_023 [door-ratio census] |
+| `I039` | 5 | `1/12` (0.083333333) | `0` (0) | [0, 1, 2] | [] | door_random_exact_024 [door-ratio census] |
+| `I040` | 5 | `1/5` (0.2) | `0` (0) | [1, 2, 3, 4] | [] | door_random_exact_026 [door-ratio census] |
+| `I041` | 6 | `1/7` (0.14285714) | `0` (0) | [0, 1, 2, 4] | [] | door_random_exact_027 [door-ratio census] |
+| `I042` | 5 | `3/13` (0.23076923) | `0` (0) | [0, 1, 2] | [] | door_random_exact_028 [door-ratio census] |
+| `I043` | 7 | `1/55` (0.018181818) | `0` (0) | [0, 1, 3, 6] | [] | door_random_exact_029 [door-ratio census] |
+| `I044` | 8 | `3049/12324` (0.24740344) | `0` (0) | [0, 1, 2, 3, 5] | [] | door_random_exact_030 [door-ratio census] |
+| `I045` | 7 | `1/4` (0.25) | `0` (0) | [0, 1, 3, 4, 6] | [] | door_random_exact_031 [door-ratio census] |
+| `I046` | 9 | `1/9` (0.11111111) | `0` (0) | [1, 2, 3, 4, 6, 8] | [] | door_random_exact_032 [door-ratio census] |
+| `I047` | 7 | `1/10` (0.1) | `0` (0) | [1, 2, 3, 5] | [] | door_random_exact_033 [door-ratio census] |
+| `I048` | 5 | `1/7` (0.14285714) | `0` (0) | [1, 2, 3, 4] | [] | door_random_exact_034 [door-ratio census] |
+| `I049` | 5 | `1/4` (0.25) | `0` (0) | [0, 1, 2, 4] | [] | door_random_exact_035 [door-ratio census] |
+| `I050` | 5 | `1/16` (0.0625) | `0` (0) | [0, 1, 2, 3] | [] | door_random_exact_036 [door-ratio census] |
+| `I051` | 7 | `1/4` (0.25) | `0` (0) | [1, 2, 4, 5] | [] | door_random_exact_037 [door-ratio census] |
+| `I052` | 6 | `2/15` (0.13333333) | `0` (0) | [0, 1, 2, 3, 5] | [] | door_random_exact_038 [door-ratio census] |
+| `I053` | 6 | `1/4` (0.25) | `0` (0) | [0, 1, 2, 3, 5] | [] | door_random_exact_039 [door-ratio census] |
+| `I054` | 7 | `3/14` (0.21428571) | `0` (0) | [0, 1, 2, 5, 6] | [] | door_random_exact_040 [door-ratio census] |
+| `I055` | 5 | `1/4` (0.25) | `0` (0) | [0, 2, 3] | [] | door_random_exact_041 [door-ratio census] |
+| `I056` | 7 | `58/245` (0.23673469) | `0` (0) | [0, 1, 2, 3, 5] | [] | door_random_exact_042 [door-ratio census] |
+| `I057` | 5 | `5/39` (0.12820513) | `0` (0) | [0, 1, 2] | [] | door_random_exact_043 [door-ratio census] |
+| `I058` | 9 | `1/4` (0.25) | `0` (0) | [0, 1, 2, 3, 5, 6] | [] | door_random_exact_044 [door-ratio census] |
+| `I059` | 8 | `3/14` (0.21428571) | `0` (0) | [0, 1, 2, 6, 7] | [] | door_random_exact_045 [door-ratio census] |
+| `I060` | 9 | `16/81` (0.19753086) | `0` (0) | [1, 2, 4, 7, 8] | [] | door_random_exact_046 [door-ratio census] |
+| `I061` | 6 | `1/4` (0.25) | `0` (0) | [0, 1, 2, 3, 4, 5] | [] | door_random_exact_048 [door-ratio census] |
+| `I062` | 7 | `3/13` (0.23076923) | `0` (0) | [0, 1, 2, 5, 6] | [] | door_random_exact_049 [door-ratio census] |
+| `I063` | 6 | `1/4` (0.25) | `0` (0) | [0, 1, 2, 3, 4, 5] | [] | door_random_exact_050 [door-ratio census] |
+| `I064` | 9 | `6355/27783` (0.228737) | `0` (0) | [1, 2, 3, 4, 6, 7] | [] | door_random_exact_051 [door-ratio census] |
+| `I065` | 6 | `1/8` (0.125) | `0` (0) | [0, 2, 3, 4] | [] | door_random_exact_053 [door-ratio census] |
+| `I066` | 5 | `169/812` (0.20812808) | `0` (0) | [0, 1, 2, 3] | [] | door_random_exact_055 [door-ratio census] |
+| `I067` | 8 | `24/143` (0.16783217) | `0` (0) | [0, 1, 2, 3, 5, 6] | [] | door_random_exact_056 [door-ratio census] |
+| `I068` | 7 | `173/936` (0.18482906) | `0` (0) | [1, 2, 3, 4, 5] | [] | door_random_exact_057 [door-ratio census] |
+| `I069` | 8 | `3294/22165` (0.14861268) | `92475/2358356` (0.039211637) | [1, 2, 3, 4] | [7] | door_random_exact_058 [door-ratio census] |
+| `I070` | 7 | `2/13` (0.15384615) | `0` (0) | [1, 2, 3, 6] | [] | door_random_exact_059 [door-ratio census] |
+| `I071` | 6 | `590855669597640985598471/10775740230179796072754000` (0.054832026) | `322963773/9272035225` (0.034832026) | [0, 1, 2, 3, 4] | [5] | door_2026-07-04-b-amplifier-hunt:json:4 [door-ratio census] |
+| `I072` | 7 | `590855669597640985598471/10775740230179796072754000` (0.054832026) | `322963773/9272035225` (0.034832026) | [0, 1, 2, 3, 4] | [5, 6] | door_2026-07-04-b-amplifier-hunt:json:8 [door-ratio census] |
+| `I073` | 9 | `590855669597640985598471/10775740230179796072754000` (0.054832026) | `322963773/9272035225` (0.034832026) | [0, 1, 2, 3, 4] | [5, 6, 7, 8] | door_2026-07-04-b-amplifier-hunt:json:12 [door-ratio census] |
+| `I074` | 6 | `240056644205627653309/4378037093644339853000` (0.054832026) | `35655834/1023650875` (0.034832026) | [0, 1, 2, 3, 4] | [5] | door_2026-07-04-b-amplifier-hunt:json:16 [door-ratio census] |
+| `I075` | 6 | `5083897521949/92717666720000` (0.054832026) | `2061267/59177350` (0.034832026) | [0, 1, 2, 3, 4] | [5] | door_2026-07-04-b-amplifier-hunt:json:20 [door-ratio census] |
+| `I076` | 6 | `214773927937/3916940577200` (0.054832062) | `435387/12500000` (0.03483096) | [0, 1, 2, 3, 4] | [5] | door_2026-07-04-b-amplifier-hunt:json:24 [door-ratio census] |
+| `I077` | 6 | `25785673/470027600` (0.054859912) | `17/500` (0.034) | [0, 1, 2, 3, 4] | [5] | door_2026-07-04-b-amplifier-hunt:json:28 [door-ratio census] |
+| `I078` | 6 | `43325321/783235600` (0.055315822) | `51/2500` (0.0204) | [0, 1, 2, 3, 4] | [5] | door_2026-07-04-b-amplifier-hunt:json:32 [door-ratio census] |
+| `I079` | 6 | `55319/1000000` (0.055319) | `51/2500` (0.0204) | [0, 1, 2, 3, 4] | [5] | door_2026-07-04-b-amplifier-hunt:json:36 [door-ratio census] |
+| `I080` | 6 | `1383/25000` (0.05532) | `51/2500` (0.0204) | [0, 1, 2, 3, 4] | [5] | door_2026-07-04-small-delta-b-sweep:json:36 [door-ratio census] |
+| `I081` | 6 | `111/2000` (0.0555) | `51/2500` (0.0204) | [0, 1, 2, 3, 4] | [5] | door_2026-07-04-small-delta-b-sweep:json:61 [door-ratio census] |
+| `I082` | 6 | `557/10000` (0.0557) | `51/2500` (0.0204) | [0, 1, 2, 3, 4] | [5] | door_2026-07-04-small-delta-b-sweep:json:86 [door-ratio census] |
+| `I083` | 6 | `559/10000` (0.0559) | `51/2500` (0.0204) | [0, 1, 2, 3, 4] | [5] | door_2026-07-04-small-delta-b-sweep:json:111 [door-ratio census] |
+| `I084` | 5 | `7/125` (0.056) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_2026-07-04-small-delta-b-sweep:json:136 [door-ratio census] |
+| `I085` | 5 | `99/1250` (0.0792) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_2026-07-04-small-delta-b-sweep:json:151 [door-ratio census] |
+| `I086` | 5 | `21/250` (0.084) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_2026-07-04-small-delta-b-sweep:json:166 [door-ratio census] |
+| `I087` | 5 | `71/625` (0.1136) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_2026-07-04-small-delta-b-sweep:json:181 [door-ratio census] |
+| `I088` | 5 | `1/4` (0.25) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_2026-07-05-nsc-zero-denominator-refuter:json:1 [door-ratio census] |
+| `I089` | 5 | `20099999/4040100000` (0.0049751241) | `0` (0) | [0, 2, 3, 4] | [] | door_2026-07-05-nsc-zero-denominator-refuter:json:80 [door-ratio census] |
+| `I090` | 7 | `20099999/4040100000` (0.0049751241) | `0` (0) | [0, 2, 3, 4] | [] | door_2026-07-05-nsc-zero-denominator-refuter:json:99 [door-ratio census] |
+| `I091` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/100-0 [door-ratio census] |
+| `I092` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/100-1 [door-ratio census] |
+| `I093` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/100-2 [door-ratio census] |
+| `I094` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/100-3 [door-ratio census] |
+| `I095` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/100-4 [door-ratio census] |
+| `I096` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/100-5 [door-ratio census] |
+| `I097` | 4 | `101/600` (0.16833333) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/100-6 [door-ratio census] |
+| `I098` | 4 | `1/6` (0.16666667) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/100-7 [door-ratio census] |
+| `I099` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/50-8 [door-ratio census] |
+| `I100` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/50-9 [door-ratio census] |
+| `I101` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/50-10 [door-ratio census] |
+| `I102` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/50-11 [door-ratio census] |
+| `I103` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/50-12 [door-ratio census] |
+| `I104` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/50-13 [door-ratio census] |
+| `I105` | 4 | `17/100` (0.17) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/50-14 [door-ratio census] |
+| `I106` | 4 | `1/6` (0.16666667) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/50-15 [door-ratio census] |
+| `I107` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/25-16 [door-ratio census] |
+| `I108` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/25-17 [door-ratio census] |
+| `I109` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/25-18 [door-ratio census] |
+| `I110` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/25-19 [door-ratio census] |
+| `I111` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/25-20 [door-ratio census] |
+| `I112` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/25-21 [door-ratio census] |
+| `I113` | 4 | `13/75` (0.17333333) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/25-22 [door-ratio census] |
+| `I114` | 4 | `1/6` (0.16666667) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/25-23 [door-ratio census] |
+| `I115` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/12-24 [door-ratio census] |
+| `I116` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/12-25 [door-ratio census] |
+| `I117` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/12-26 [door-ratio census] |
+| `I118` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/12-27 [door-ratio census] |
+| `I119` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/12-28 [door-ratio census] |
+| `I120` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/12-29 [door-ratio census] |
+| `I121` | 4 | `13/72` (0.18055556) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/12-30 [door-ratio census] |
+| `I122` | 4 | `1/6` (0.16666667) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/12-31 [door-ratio census] |
+| `I123` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/8-32 [door-ratio census] |
+| `I124` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/8-33 [door-ratio census] |
+| `I125` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/8-34 [door-ratio census] |
+| `I126` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/8-35 [door-ratio census] |
+| `I127` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/8-36 [door-ratio census] |
+| `I128` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/8-37 [door-ratio census] |
+| `I129` | 4 | `3/16` (0.1875) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/8-38 [door-ratio census] |
+| `I130` | 4 | `1/6` (0.16666667) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/8-39 [door-ratio census] |
+| `I131` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/6-40 [door-ratio census] |
+| `I132` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/6-41 [door-ratio census] |
+| `I133` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/6-42 [door-ratio census] |
+| `I134` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/6-43 [door-ratio census] |
+| `I135` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/6-44 [door-ratio census] |
+| `I136` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/6-45 [door-ratio census] |
+| `I137` | 4 | `7/36` (0.19444444) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/6-46 [door-ratio census] |
+| `I138` | 4 | `1/6` (0.16666667) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/6-47 [door-ratio census] |
+| `I139` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/4-48 [door-ratio census] |
+| `I140` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/4-49 [door-ratio census] |
+| `I141` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/4-50 [door-ratio census] |
+| `I142` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/4-51 [door-ratio census] |
+| `I143` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/4-52 [door-ratio census] |
+| `I144` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/4-53 [door-ratio census] |
+| `I145` | 4 | `5/24` (0.20833333) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/4-54 [door-ratio census] |
+| `I146` | 4 | `1/6` (0.16666667) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/4-55 [door-ratio census] |
+| `I147` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/3-56 [door-ratio census] |
+| `I148` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/3-57 [door-ratio census] |
+| `I149` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/3-58 [door-ratio census] |
+| `I150` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/3-59 [door-ratio census] |
+| `I151` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/3-60 [door-ratio census] |
+| `I152` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/3-61 [door-ratio census] |
+| `I153` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/3-62 [door-ratio census] |
+| `I154` | 4 | `1/4` (0.25) | `0` (0) | [1, 2, 3] | [] | door_fresh-one-hidden-a1/3-63 [door-ratio census] |
+| `I155` | 5 | `101/10000` (0.0101) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x0-rho1/200 [door-ratio census] |
+| `I156` | 5 | `101/5000` (0.0202) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x0-rho1/100 [door-ratio census] |
+| `I157` | 5 | `101/2500` (0.0404) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x0-rho1/50 [door-ratio census] |
+| `I158` | 5 | `101/1000` (0.101) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/100-x0-rho1/20 [door-ratio census] |
+| `I159` | 5 | `101/500` (0.202) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/100-x0-rho1/10 [door-ratio census] |
+| `I160` | 5 | `101/10000` (0.0101) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x1/4-rho1/200 [door-ratio census] |
+| `I161` | 5 | `101/5000` (0.0202) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x1/4-rho1/100 [door-ratio census] |
+| `I162` | 5 | `101/2500` (0.0404) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x1/4-rho1/50 [door-ratio census] |
+| `I163` | 5 | `101/1000` (0.101) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/100-x1/4-rho1/20 [door-ratio census] |
+| `I164` | 5 | `101/500` (0.202) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/100-x1/4-rho1/10 [door-ratio census] |
+| `I165` | 5 | `101/10000` (0.0101) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x1/3-rho1/200 [door-ratio census] |
+| `I166` | 5 | `101/5000` (0.0202) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x1/3-rho1/100 [door-ratio census] |
+| `I167` | 5 | `101/2500` (0.0404) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x1/3-rho1/50 [door-ratio census] |
+| `I168` | 5 | `101/1000` (0.101) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/100-x1/3-rho1/20 [door-ratio census] |
+| `I169` | 5 | `101/500` (0.202) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/100-x1/3-rho1/10 [door-ratio census] |
+| `I170` | 5 | `101/10000` (0.0101) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x1/2-rho1/200 [door-ratio census] |
+| `I171` | 5 | `101/5000` (0.0202) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x1/2-rho1/100 [door-ratio census] |
+| `I172` | 5 | `101/2500` (0.0404) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x1/2-rho1/50 [door-ratio census] |
+| `I173` | 5 | `101/1000` (0.101) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/100-x1/2-rho1/20 [door-ratio census] |
+| `I174` | 5 | `101/500` (0.202) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/100-x1/2-rho1/10 [door-ratio census] |
+| `I175` | 5 | `101/10000` (0.0101) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x1-rho1/200 [door-ratio census] |
+| `I176` | 5 | `101/5000` (0.0202) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x1-rho1/100 [door-ratio census] |
+| `I177` | 5 | `101/2500` (0.0404) | `1/50` (0.02) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/100-x1-rho1/50 [door-ratio census] |
+| `I178` | 5 | `101/1000` (0.101) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/100-x1-rho1/20 [door-ratio census] |
+| `I179` | 5 | `101/500` (0.202) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/100-x1-rho1/10 [door-ratio census] |
+| `I180` | 5 | `99/8000` (0.012375) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x0-rho1/200 [door-ratio census] |
+| `I181` | 5 | `81/4000` (0.02025) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x0-rho1/100 [door-ratio census] |
+| `I182` | 5 | `81/2000` (0.0405) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x0-rho1/50 [door-ratio census] |
+| `I183` | 5 | `81/800` (0.10125) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/80-x0-rho1/20 [door-ratio census] |
+| `I184` | 5 | `81/400` (0.2025) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/80-x0-rho1/10 [door-ratio census] |
+| `I185` | 5 | `99/8000` (0.012375) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x1/4-rho1/200 [door-ratio census] |
+| `I186` | 5 | `81/4000` (0.02025) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x1/4-rho1/100 [door-ratio census] |
+| `I187` | 5 | `81/2000` (0.0405) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x1/4-rho1/50 [door-ratio census] |
+| `I188` | 5 | `81/800` (0.10125) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/80-x1/4-rho1/20 [door-ratio census] |
+| `I189` | 5 | `81/400` (0.2025) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/80-x1/4-rho1/10 [door-ratio census] |
+| `I190` | 5 | `99/8000` (0.012375) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x1/3-rho1/200 [door-ratio census] |
+| `I191` | 5 | `81/4000` (0.02025) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x1/3-rho1/100 [door-ratio census] |
+| `I192` | 5 | `81/2000` (0.0405) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x1/3-rho1/50 [door-ratio census] |
+| `I193` | 5 | `81/800` (0.10125) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/80-x1/3-rho1/20 [door-ratio census] |
+| `I194` | 5 | `81/400` (0.2025) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/80-x1/3-rho1/10 [door-ratio census] |
+| `I195` | 5 | `99/8000` (0.012375) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x1/2-rho1/200 [door-ratio census] |
+| `I196` | 5 | `81/4000` (0.02025) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x1/2-rho1/100 [door-ratio census] |
+| `I197` | 5 | `81/2000` (0.0405) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x1/2-rho1/50 [door-ratio census] |
+| `I198` | 5 | `81/800` (0.10125) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/80-x1/2-rho1/20 [door-ratio census] |
+| `I199` | 5 | `81/400` (0.2025) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/80-x1/2-rho1/10 [door-ratio census] |
+| `I200` | 5 | `99/8000` (0.012375) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x1-rho1/200 [door-ratio census] |
+| `I201` | 5 | `81/4000` (0.02025) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x1-rho1/100 [door-ratio census] |
+| `I202` | 5 | `81/2000` (0.0405) | `1/40` (0.025) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/80-x1-rho1/50 [door-ratio census] |
+| `I203` | 5 | `81/800` (0.10125) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/80-x1-rho1/20 [door-ratio census] |
+| `I204` | 5 | `81/400` (0.2025) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/80-x1-rho1/10 [door-ratio census] |
+| `I205` | 5 | `99/4000` (0.02475) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/40-x0-rho1/200 [door-ratio census] |
+| `I206` | 5 | `49/2000` (0.0245) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/40-x0-rho1/100 [door-ratio census] |
+| `I207` | 5 | `41/1000` (0.041) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/40-x0-rho1/50 [door-ratio census] |
+| `I208` | 5 | `41/400` (0.1025) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/40-x0-rho1/20 [door-ratio census] |
+| `I209` | 5 | `41/200` (0.205) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/40-x0-rho1/10 [door-ratio census] |
+| `I210` | 5 | `99/4000` (0.02475) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/40-x1/4-rho1/200 [door-ratio census] |
+| `I211` | 5 | `49/2000` (0.0245) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/40-x1/4-rho1/100 [door-ratio census] |
+| `I212` | 5 | `41/1000` (0.041) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/40-x1/4-rho1/50 [door-ratio census] |
+| `I213` | 5 | `41/400` (0.1025) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/40-x1/4-rho1/20 [door-ratio census] |
+| `I214` | 5 | `41/200` (0.205) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/40-x1/4-rho1/10 [door-ratio census] |
+| `I215` | 5 | `99/4000` (0.02475) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/40-x1/3-rho1/200 [door-ratio census] |
+| `I216` | 5 | `41/1000` (0.041) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/40-x1/3-rho1/50 [door-ratio census] |
+| `I217` | 5 | `41/400` (0.1025) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/40-x1/3-rho1/20 [door-ratio census] |
+| `I218` | 5 | `41/200` (0.205) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/40-x1/3-rho1/10 [door-ratio census] |
+| `I219` | 5 | `99/4000` (0.02475) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/40-x1/2-rho1/200 [door-ratio census] |
+| `I220` | 5 | `49/2000` (0.0245) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/40-x1/2-rho1/100 [door-ratio census] |
+| `I221` | 5 | `41/1000` (0.041) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/40-x1/2-rho1/50 [door-ratio census] |
+| `I222` | 5 | `41/400` (0.1025) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/40-x1/2-rho1/20 [door-ratio census] |
+| `I223` | 5 | `41/200` (0.205) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/40-x1/2-rho1/10 [door-ratio census] |
+| `I224` | 5 | `99/4000` (0.02475) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/40-x1-rho1/200 [door-ratio census] |
+| `I225` | 5 | `49/2000` (0.0245) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/40-x1-rho1/100 [door-ratio census] |
+| `I226` | 5 | `41/1000` (0.041) | `1/20` (0.05) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/40-x1-rho1/50 [door-ratio census] |
+| `I227` | 5 | `41/400` (0.1025) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/40-x1-rho1/20 [door-ratio census] |
+| `I228` | 5 | `41/200` (0.205) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/40-x1-rho1/10 [door-ratio census] |
+| `I229` | 5 | `99/2000` (0.0495) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x0-rho1/200 [door-ratio census] |
+| `I230` | 5 | `49/1000` (0.049) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x0-rho1/100 [door-ratio census] |
+| `I231` | 5 | `6/125` (0.048) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x0-rho1/50 [door-ratio census] |
+| `I232` | 5 | `21/200` (0.105) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/20-x0-rho1/20 [door-ratio census] |
+| `I233` | 5 | `21/100` (0.21) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/20-x0-rho1/10 [door-ratio census] |
+| `I234` | 5 | `99/2000` (0.0495) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x1/4-rho1/200 [door-ratio census] |
+| `I235` | 5 | `49/1000` (0.049) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x1/4-rho1/100 [door-ratio census] |
+| `I236` | 5 | `6/125` (0.048) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x1/4-rho1/50 [door-ratio census] |
+| `I237` | 5 | `21/200` (0.105) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/20-x1/4-rho1/20 [door-ratio census] |
+| `I238` | 5 | `21/100` (0.21) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/20-x1/4-rho1/10 [door-ratio census] |
+| `I239` | 5 | `99/2000` (0.0495) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x1/3-rho1/200 [door-ratio census] |
+| `I240` | 5 | `49/1000` (0.049) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x1/3-rho1/100 [door-ratio census] |
+| `I241` | 5 | `6/125` (0.048) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x1/3-rho1/50 [door-ratio census] |
+| `I242` | 5 | `21/200` (0.105) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/20-x1/3-rho1/20 [door-ratio census] |
+| `I243` | 5 | `21/100` (0.21) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/20-x1/3-rho1/10 [door-ratio census] |
+| `I244` | 5 | `99/2000` (0.0495) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x1/2-rho1/200 [door-ratio census] |
+| `I245` | 5 | `49/1000` (0.049) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x1/2-rho1/100 [door-ratio census] |
+| `I246` | 5 | `6/125` (0.048) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x1/2-rho1/50 [door-ratio census] |
+| `I247` | 5 | `21/200` (0.105) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/20-x1/2-rho1/20 [door-ratio census] |
+| `I248` | 5 | `21/100` (0.21) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/20-x1/2-rho1/10 [door-ratio census] |
+| `I249` | 5 | `99/2000` (0.0495) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x1-rho1/200 [door-ratio census] |
+| `I250` | 5 | `49/1000` (0.049) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x1-rho1/100 [door-ratio census] |
+| `I251` | 5 | `6/125` (0.048) | `1/10` (0.1) | [0, 1, 2] | [3, 4] | door_fresh-web-p1/20-x1-rho1/50 [door-ratio census] |
+| `I252` | 5 | `21/200` (0.105) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/20-x1-rho1/20 [door-ratio census] |
+| `I253` | 5 | `21/100` (0.21) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/20-x1-rho1/10 [door-ratio census] |
+| `I254` | 5 | `99/1000` (0.099) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x0-rho1/200 [door-ratio census] |
+| `I255` | 5 | `49/500` (0.098) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x0-rho1/100 [door-ratio census] |
+| `I256` | 5 | `12/125` (0.096) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x0-rho1/50 [door-ratio census] |
+| `I257` | 5 | `11/100` (0.11) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x0-rho1/20 [door-ratio census] |
+| `I258` | 5 | `11/50` (0.22) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x0-rho1/10 [door-ratio census] |
+| `I259` | 5 | `99/1000` (0.099) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/4-rho1/200 [door-ratio census] |
+| `I260` | 5 | `49/500` (0.098) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/4-rho1/100 [door-ratio census] |
+| `I261` | 5 | `12/125` (0.096) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/4-rho1/50 [door-ratio census] |
+| `I262` | 5 | `11/100` (0.11) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/4-rho1/20 [door-ratio census] |
+| `I263` | 5 | `11/50` (0.22) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/4-rho1/10 [door-ratio census] |
+| `I264` | 5 | `99/1000` (0.099) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/3-rho1/200 [door-ratio census] |
+| `I265` | 5 | `49/500` (0.098) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/3-rho1/100 [door-ratio census] |
+| `I266` | 5 | `12/125` (0.096) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/3-rho1/50 [door-ratio census] |
+| `I267` | 5 | `11/100` (0.11) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/3-rho1/20 [door-ratio census] |
+| `I268` | 5 | `11/50` (0.22) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/3-rho1/10 [door-ratio census] |
+| `I269` | 5 | `99/1000` (0.099) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/2-rho1/200 [door-ratio census] |
+| `I270` | 5 | `49/500` (0.098) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/2-rho1/100 [door-ratio census] |
+| `I271` | 5 | `12/125` (0.096) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/2-rho1/50 [door-ratio census] |
+| `I272` | 5 | `11/100` (0.11) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/2-rho1/20 [door-ratio census] |
+| `I273` | 5 | `11/50` (0.22) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1/2-rho1/10 [door-ratio census] |
+| `I274` | 5 | `99/1000` (0.099) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1-rho1/200 [door-ratio census] |
+| `I275` | 5 | `49/500` (0.098) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1-rho1/100 [door-ratio census] |
+| `I276` | 5 | `12/125` (0.096) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1-rho1/50 [door-ratio census] |
+| `I277` | 5 | `11/100` (0.11) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1-rho1/20 [door-ratio census] |
+| `I278` | 5 | `11/50` (0.22) | `0` (0) | [0, 1, 2, 3, 4] | [] | door_fresh-web-p1/10-x1-rho1/10 [door-ratio census] |
+| `I279` | 5 | `549/4000` (0.13725) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/50-150 [door-ratio census] |
+| `I280` | 5 | `1/4` (0.25) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/50-152 [door-ratio census] |
+| `I281` | 5 | `11/80` (0.1375) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/50-153 [door-ratio census] |
+| `I282` | 5 | `1/4` (0.25) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/50-155 [door-ratio census] |
+| `I283` | 5 | `699/5000` (0.1398) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/50-156 [door-ratio census] |
+| `I284` | 5 | `1/4` (0.25) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/50-158 [door-ratio census] |
+| `I285` | 5 | `149/1000` (0.149) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/25-159 [door-ratio census] |
+| `I286` | 5 | `1/4` (0.25) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/25-161 [door-ratio census] |
+| `I287` | 5 | `3/20` (0.15) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/25-162 [door-ratio census] |
+| `I288` | 5 | `1/4` (0.25) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/25-164 [door-ratio census] |
+| `I289` | 5 | `771/5000` (0.1542) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/25-165 [door-ratio census] |
+| `I290` | 5 | `1/4` (0.25) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/25-167 [door-ratio census] |
+| `I291` | 5 | `199/1152` (0.17274306) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/12-168 [door-ratio census] |
+| `I292` | 5 | `1/4` (0.25) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/12-170 [door-ratio census] |
+| `I293` | 5 | `17/96` (0.17708333) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/12-171 [door-ratio census] |
+| `I294` | 5 | `1/4` (0.25) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/12-173 [door-ratio census] |
+| `I295` | 5 | `53/288` (0.18402778) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/12-174 [door-ratio census] |
+| `I296` | 5 | `1/4` (0.25) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/12-176 [door-ratio census] |
+| `I297` | 5 | `99/512` (0.19335938) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/8-177 [door-ratio census] |
+| `I298` | 5 | `1/4` (0.25) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/8-179 [door-ratio census] |
+| `I299` | 5 | `13/64` (0.203125) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/8-180 [door-ratio census] |
+| `I300` | 5 | `1/4` (0.25) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/8-182 [door-ratio census] |
+| `I301` | 5 | `27/128` (0.2109375) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/8-183 [door-ratio census] |
+| `I302` | 5 | `1/4` (0.25) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/8-185 [door-ratio census] |
+| `I303` | 5 | `61/288` (0.21180556) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/6-186 [door-ratio census] |
+| `I304` | 5 | `11/48` (0.22916667) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/6-189 [door-ratio census] |
+| `I305` | 5 | `1/4` (0.25) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/6-191 [door-ratio census] |
+| `I306` | 5 | `17/72` (0.23611111) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/6-192 [door-ratio census] |
+| `I307` | 5 | `31/128` (0.2421875) | `0` (0) | [2, 3, 4] | [] | door_fresh-two-hidden-a1/4-195 [door-ratio census] |
+
+## Aggregate tables per halo width
+
+| a | |G_a| max | visible max g_w | visible max g_w/tau | visible min g_w | band max g | global max g | any global g>=1/2? |
+|---:|---:|---:|---:|---:|---:|---:|---|
+| 1/4 | 8 | `7/80` (0.0875) at `I007` row `4` (w19_rank5_genuine_self [W19]; sigma_cap_A_max_genuine_self [sigma-cap-refuter]) | `7/80/sqrt(3983/96000)` (0.42957452) at `I007` row `4` (w19_rank5_genuine_self [W19]; sigma_cap_A_max_genuine_self [sigma-cap-refuter]) | `0` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `0` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `7/80` (0.0875) at `I007` row `4` (w19_rank5_genuine_self [W19]; sigma_cap_A_max_genuine_self [sigma-cap-refuter]) | False |
+| 1 | 0 | `0` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0/sqrt(252559/1280000)` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `0` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `0` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | False |
+| 2 | 0 | `0` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0/sqrt(252559/1280000)` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `0` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `0` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | False |
+| 4 | 0 | `0` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0/sqrt(252559/1280000)` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `0` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `0` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | False |
+| 5 | 0 | `0` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0/sqrt(252559/1280000)` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `0` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `0` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | False |
+| 6 | 0 | `0` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0/sqrt(252559/1280000)` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `1` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `0` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | `0` (0) at `I001` row `0` (w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter]) | False |
+
+## Lemma-A empirical test: visible rows
+
+[T1] Top visible-row values of `g_w/tau`; exact ordering used square comparisons, floats are display only.
+
+| rank | a | instance | row | g_w | g_w/tau | (g_w/tau)^2 exact | aliases |
+|---:|---:|---|---:|---:|---:|---:|---|
+| 1 | 1/4 | `I007` | 4 | `7/80` (0.0875) | `7/80/sqrt(3983/96000)` (0.42957452) | sqrt(`105/569`) | w19_rank5_genuine_self [W19]; sigma_cap_A_max_genuine_self [sigma-cap-refuter] |
+| 2 | 1/4 | `I002` | 2 | `63/800` (0.07875) | `63/800/sqrt(74551/1600000)` (0.36482435) | sqrt(`19845/149102`) | w19_rank3_genuine_partner [W19]; sigma_cap_B_maxH_genuine_partner [sigma-cap-refuter] |
+| 3 | 1/4 | `I007` | 2 | `1/16` (0.0625) | `1/16/sqrt(3983/96000)` (0.30683894) | sqrt(`375/3983`) | w19_rank5_genuine_self [W19]; sigma_cap_A_max_genuine_self [sigma-cap-refuter] |
+| 4 | 1/4 | `I002` | 0 | `23/400` (0.0575) | `23/400/sqrt(74551/1600000)` (0.26637968) | sqrt(`5290/74551`) | w19_rank3_genuine_partner [W19]; sigma_cap_B_maxH_genuine_partner [sigma-cap-refuter] |
+| 5 | 1/4 | `I003` | 0 | `5/84` (0.05952381) | `5/84/sqrt(1/16)` (0.23809524) | sqrt(`25/441`) | w19_duplicate_split_m2_q5_84 [W19] |
+| 6 | 1/4 | `I003` | 1 | `5/84` (0.05952381) | `5/84/sqrt(1/16)` (0.23809524) | sqrt(`25/441`) | w19_duplicate_split_m2_q5_84 [W19] |
+| 7 | 1/4 | `I003` | 2 | `5/84` (0.05952381) | `5/84/sqrt(1/16)` (0.23809524) | sqrt(`25/441`) | w19_duplicate_split_m2_q5_84 [W19] |
+| 8 | 1/4 | `I004` | 0 | `5/84` (0.05952381) | `5/84/sqrt(1/16)` (0.23809524) | sqrt(`25/441`) | w19_duplicate_split_m4_q5_84 [W19] |
+| 9 | 1/4 | `I004` | 1 | `5/84` (0.05952381) | `5/84/sqrt(1/16)` (0.23809524) | sqrt(`25/441`) | w19_duplicate_split_m4_q5_84 [W19] |
+| 10 | 1/4 | `I004` | 2 | `5/84` (0.05952381) | `5/84/sqrt(1/16)` (0.23809524) | sqrt(`25/441`) | w19_duplicate_split_m4_q5_84 [W19] |
+
+[T1/T2] Workable halo widths `a in {4,5,6}` only:
+
+| rank | a | instance | row | g_w | g_w/tau | (g_w/tau)^2 exact | aliases |
+|---:|---:|---|---:|---:|---:|---:|---|
+| 1 | 4 | `I001` | 1 | `0` (0) | `0/sqrt(252559/1280000)` (0) | sqrt(`0`) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| 2 | 4 | `I001` | 2 | `0` (0) | `0/sqrt(252559/1280000)` (0) | sqrt(`0`) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| 3 | 4 | `I001` | 3 | `0` (0) | `0/sqrt(252559/1280000)` (0) | sqrt(`0`) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| 4 | 4 | `I001` | 4 | `0` (0) | `0/sqrt(252559/1280000)` (0) | sqrt(`0`) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| 5 | 4 | `I002` | 0 | `0` (0) | `0/sqrt(74551/1600000)` (0) | sqrt(`0`) | w19_rank3_genuine_partner [W19]; sigma_cap_B_maxH_genuine_partner [sigma-cap-refuter] |
+
+## Band rows
+
+[T1] Rows in the band satisfy `0<d_j<=a*tau`, i.e. `d_j^2<=a^2*delta` with positive distance.
+
+| rank | a | instance | row | max band g | aliases |
+|---:|---:|---|---:|---:|---|
+| 1 | 1/4 | `I001` | 0 | `0` (0) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| 2 | 1 | `I001` | 0 | `0` (0) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| 3 | 2 | `I001` | 0 | `0` (0) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| 4 | 4 | `I001` | 0 | `0` (0) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| 5 | 5 | `I001` | 0 | `0` (0) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| 6 | 6 | `I001` | 0 | `0` (0) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+
+## Hidden tops
+
+[T1] Hidden-top comparison uses the signed `g_v`, the positive companion `sigma_g(v)`, and the exact gap `sigma_g(v)-g_v` (negative mass on `G_a`, bounded by `nu_v`).
+
+### a = 1/4
+
+| rank | a | instance | top row | g_v | sigma_g(v) | sigma-g gap | nu_v | aliases |
+|---:|---:|---|---:|---:|---:|---:|---:|---|
+| 1 | 1/4 | `I007` | 5 | `5991/80000` (0.0748875) | `5991/80000` (0.0748875) | `0` (0) | `1258153/32000000` (0.039317281) | w19_rank5_genuine_self [W19]; sigma_cap_A_max_genuine_self [sigma-cap-refuter] |
+| 2 | 1/4 | `I002` | 3 | `229/3200` (0.0715625) | `229/3200` (0.0715625) | `0` (0) | `74551/1600000` (0.046594375) | w19_rank3_genuine_partner [W19]; sigma_cap_B_maxH_genuine_partner [sigma-cap-refuter] |
+| 3 | 1/4 | `I003` | 3 | `5/84` (0.05952381) | `5/84` (0.05952381) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m2_q5_84 [W19] |
+| 4 | 1/4 | `I003` | 4 | `5/84` (0.05952381) | `5/84` (0.05952381) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m2_q5_84 [W19] |
+| 5 | 1/4 | `I004` | 3 | `5/84` (0.05952381) | `5/84` (0.05952381) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 6 | 1/4 | `I004` | 4 | `5/84` (0.05952381) | `5/84` (0.05952381) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 7 | 1/4 | `I004` | 5 | `5/84` (0.05952381) | `5/84` (0.05952381) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 8 | 1/4 | `I004` | 6 | `5/84` (0.05952381) | `5/84` (0.05952381) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+
+### a = 1
+
+| rank | a | instance | top row | g_v | sigma_g(v) | sigma-g gap | nu_v | aliases |
+|---:|---:|---|---:|---:|---:|---:|---:|---|
+| 1 | 1 | `I001` | 0 | `0` (0) | `0` (0) | `0` (0) | `441/6400` (0.06890625) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| 2 | 1 | `I002` | 3 | `0` (0) | `0` (0) | `0` (0) | `74551/1600000` (0.046594375) | w19_rank3_genuine_partner [W19]; sigma_cap_B_maxH_genuine_partner [sigma-cap-refuter] |
+| 3 | 1 | `I003` | 3 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m2_q5_84 [W19] |
+| 4 | 1 | `I003` | 4 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m2_q5_84 [W19] |
+| 5 | 1 | `I004` | 3 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 6 | 1 | `I004` | 4 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 7 | 1 | `I004` | 5 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 8 | 1 | `I004` | 6 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+
+### a = 2
+
+| rank | a | instance | top row | g_v | sigma_g(v) | sigma-g gap | nu_v | aliases |
+|---:|---:|---|---:|---:|---:|---:|---:|---|
+| 1 | 2 | `I001` | 0 | `0` (0) | `0` (0) | `0` (0) | `441/6400` (0.06890625) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| 2 | 2 | `I002` | 3 | `0` (0) | `0` (0) | `0` (0) | `74551/1600000` (0.046594375) | w19_rank3_genuine_partner [W19]; sigma_cap_B_maxH_genuine_partner [sigma-cap-refuter] |
+| 3 | 2 | `I003` | 3 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m2_q5_84 [W19] |
+| 4 | 2 | `I003` | 4 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m2_q5_84 [W19] |
+| 5 | 2 | `I004` | 3 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 6 | 2 | `I004` | 4 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 7 | 2 | `I004` | 5 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 8 | 2 | `I004` | 6 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+
+### a = 4
+
+| rank | a | instance | top row | g_v | sigma_g(v) | sigma-g gap | nu_v | aliases |
+|---:|---:|---|---:|---:|---:|---:|---:|---|
+| 1 | 4 | `I001` | 0 | `0` (0) | `0` (0) | `0` (0) | `441/6400` (0.06890625) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| 2 | 4 | `I002` | 3 | `0` (0) | `0` (0) | `0` (0) | `74551/1600000` (0.046594375) | w19_rank3_genuine_partner [W19]; sigma_cap_B_maxH_genuine_partner [sigma-cap-refuter] |
+| 3 | 4 | `I003` | 3 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m2_q5_84 [W19] |
+| 4 | 4 | `I003` | 4 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m2_q5_84 [W19] |
+| 5 | 4 | `I004` | 3 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 6 | 4 | `I004` | 4 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 7 | 4 | `I004` | 5 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 8 | 4 | `I004` | 6 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+
+### a = 5
+
+| rank | a | instance | top row | g_v | sigma_g(v) | sigma-g gap | nu_v | aliases |
+|---:|---:|---|---:|---:|---:|---:|---:|---|
+| 1 | 5 | `I001` | 0 | `0` (0) | `0` (0) | `0` (0) | `441/6400` (0.06890625) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| 2 | 5 | `I002` | 3 | `0` (0) | `0` (0) | `0` (0) | `74551/1600000` (0.046594375) | w19_rank3_genuine_partner [W19]; sigma_cap_B_maxH_genuine_partner [sigma-cap-refuter] |
+| 3 | 5 | `I003` | 3 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m2_q5_84 [W19] |
+| 4 | 5 | `I003` | 4 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m2_q5_84 [W19] |
+| 5 | 5 | `I004` | 3 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 6 | 5 | `I004` | 4 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 7 | 5 | `I004` | 5 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 8 | 5 | `I004` | 6 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+
+### a = 6
+
+| rank | a | instance | top row | g_v | sigma_g(v) | sigma-g gap | nu_v | aliases |
+|---:|---:|---|---:|---:|---:|---:|---:|---|
+| 1 | 6 | `I001` | 0 | `0` (0) | `0` (0) | `0` (0) | `441/6400` (0.06890625) | w19_halo_nonrobust_witness [W19]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter] |
+| 2 | 6 | `I002` | 3 | `0` (0) | `0` (0) | `0` (0) | `74551/1600000` (0.046594375) | w19_rank3_genuine_partner [W19]; sigma_cap_B_maxH_genuine_partner [sigma-cap-refuter] |
+| 3 | 6 | `I003` | 3 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m2_q5_84 [W19] |
+| 4 | 6 | `I003` | 4 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m2_q5_84 [W19] |
+| 5 | 6 | `I004` | 3 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 6 | 6 | `I004` | 4 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 7 | 6 | `I004` | 5 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+| 8 | 6 | `I004` | 6 | `0` (0) | `0` (0) | `0` (0) | `79/1680` (0.04702381) | w19_duplicate_split_m4_q5_84 [W19] |
+
+## Global g>=1/2 scan
+
+- [T1/T2] No measured row in the covered zoo reached `g>=1/2` at any requested halo width. This is not an emptiness theorem.
+
+## Kill scan
+
+- [T1/T2] K1 nearest miss: max visible `g_w/tau` for `a in {4,5,6}` is `0/sqrt(252559/1280000)` (0) at `I001` row `1`, a=4.
+- [T1/T2] K2 nearest miss: max band `g` for `a in {4,5,6}` is `0` (0) at `I001` row `0`, a=4, margin to `1/2` is `1/2` (0.5); local visible max is `0/sqrt(252559/1280000)` (0).
+- [T2] No failed search is being promoted to an emptiness claim; the statement is only about this harvested certified zoo.
+
+## Calibration hard asserts
+
+- [T1] Harmonicity asserts passed: `1842` exact `(instance,a)` checks.
+- [T1] Sandwich asserts passed: `9564` exact row checks.
+- [T1] calibration halo-nonrobust: delta=252559/1280000
+- [T1] calibration halo-nonrobust: has a hidden top
+- [T1] calibration halo-nonrobust: sigma_g=0 at a hidden top
+- [T1] rank-3 genuine partner: delta=74551/1600000
+- [T1] rank-3 genuine partner: row 3 is a hidden top
+- [T1] rank-3 genuine partner: sigma_g(row 3)=229/3200
+- [T1] rank-5 genuine self: delta=3983/96000
+- [T1] rank-5 genuine self: row 5 is a hidden top
+- [T1] rank-5 genuine self: sigma_g(row 5)=5991/80000
+- [T1] duplicate split m=2: delta=1/16
+- [T1] duplicate split m=2: H=1/10
+- [T1] duplicate split m=2: hidden tops nonempty
+- [T1] duplicate split m=2: each hidden top sigma_g=5/84
+- [T1] duplicate split m=4: delta=1/16
+- [T1] duplicate split m=4: H=1/10
+- [T1] duplicate split m=4: hidden tops nonempty
+- [T1] duplicate split m=4: each hidden top sigma_g=5/84
+- [T1] duplicate split m=8: delta=1/16
+- [T1] duplicate split m=8: H=1/10
+- [T1] duplicate split m=8: hidden tops nonempty
+- [T1] duplicate split m=8: each hidden top sigma_g=5/84
+
+## Headline/extreme matrices
+
+[T1] Full exact `P` matrices for every headline/extreme instance referenced above.
+
+### I001: w19_halo_nonrobust_witness
+
+- aliases: w19_halo_nonrobust_witness [W19; w19_worker_a:calibration_sigma_halo_nonrobust]; sigma_cap_C_halo_nonrobust_selfmass [sigma-cap-refuter; halo_bound_check.py:C_selfmass]
+- delta=252559/1280000, H=962906/108276325, W=[1, 2, 3, 4], hidden_tops=[0]
+
+```python
+[
+  ["5343/5000", "49/160000", "0", "-49/6400", "-49/800"],
+  ["14/75", "1201/1200", "0", "-1/48", "-1/6"],
+  ["7/50", "1/1600", "1", "-1/64", "-1/8"],
+  ["231/5000", "33/160000", "0", "6367/6400", "-33/800"],
+  ["3575971/3000000", "510853/96000000", "0", "-510853/3840000", "-30853/480000"]
+]
+```
+
+### I002: w19_rank3_genuine_partner
+
+- aliases: w19_rank3_genuine_partner [W19; w19_worker_a:rank3_genuine_partner]; sigma_cap_B_maxH_genuine_partner [sigma-cap-refuter; certify_best.py:B_C/B_R2]
+- delta=74551/1600000, H=2577690413/25862880000, W=[0, 1, 2], hidden_tops=[3]
+
+```python
+[
+  ["31023/32000", "43/16000", "-949/32000", "9/200", "1/80"],
+  ["-457/80000", "40017/40000", "-377/80000", "1/200", "1/200"],
+  ["-51/1250", "303/80000", "76661/80000", "11/160", "1/100"],
+  ["23129/50000", "-74551/1600000", "819923/1600000", "961/16000", "23/2000"],
+  ["7770491/12800000", "-20353/640000", "4572529/12800000", "17831/320000", "377/32000"]
+]
+```
+
+### I003: w19_duplicate_split_m2_q5_84
+
+- aliases: w19_duplicate_split_m2_q5_84 [W19; w19_worker_a:duplicate_split_instance(q=5/84)]
+- delta=1/16, H=1/10, W=[0, 1, 2], hidden_tops=[3, 4]
+
+```python
+[
+  ["163/168", "-11/336", "1/336", "5/168", "5/168"],
+  ["-5/168", "325/336", "1/336", "5/168", "5/168"],
+  ["-5/168", "-11/336", "337/336", "5/168", "5/168"],
+  ["79/168", "869/1680", "-79/1680", "5/168", "5/168"],
+  ["79/168", "869/1680", "-79/1680", "5/168", "5/168"]
+]
+```
+
+### I004: w19_duplicate_split_m4_q5_84
+
+- aliases: w19_duplicate_split_m4_q5_84 [W19; w19_worker_a:duplicate_split_instance(q=5/84)]
+- delta=1/16, H=1/10, W=[0, 1, 2], hidden_tops=[3, 4, 5, 6]
+
+```python
+[
+  ["163/168", "-11/336", "1/336", "5/336", "5/336", "5/336", "5/336"],
+  ["-5/168", "325/336", "1/336", "5/336", "5/336", "5/336", "5/336"],
+  ["-5/168", "-11/336", "337/336", "5/336", "5/336", "5/336", "5/336"],
+  ["79/168", "869/1680", "-79/1680", "5/336", "5/336", "5/336", "5/336"],
+  ["79/168", "869/1680", "-79/1680", "5/336", "5/336", "5/336", "5/336"],
+  ["79/168", "869/1680", "-79/1680", "5/336", "5/336", "5/336", "5/336"],
+  ["79/168", "869/1680", "-79/1680", "5/336", "5/336", "5/336", "5/336"]
+]
+```
+
+### I005: w19_duplicate_split_m8_q5_84
+
+- aliases: w19_duplicate_split_m8_q5_84 [W19; w19_worker_a:duplicate_split_instance(q=5/84)]
+- delta=1/16, H=1/10, W=[0, 1, 2], hidden_tops=[3, 4, 5, 6, 7, 8, 9, 10]
+
+```python
+[
+  ["163/168", "-11/336", "1/336", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672"],
+  ["-5/168", "325/336", "1/336", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672"],
+  ["-5/168", "-11/336", "337/336", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672"],
+  ["79/168", "869/1680", "-79/1680", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672"],
+  ["79/168", "869/1680", "-79/1680", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672"],
+  ["79/168", "869/1680", "-79/1680", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672"],
+  ["79/168", "869/1680", "-79/1680", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672"],
+  ["79/168", "869/1680", "-79/1680", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672"],
+  ["79/168", "869/1680", "-79/1680", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672"],
+  ["79/168", "869/1680", "-79/1680", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672"],
+  ["79/168", "869/1680", "-79/1680", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672", "5/672"]
+]
+```
+
+### I006: w19_duplicate_split_m2_q1_16_absorption
+
+- aliases: w19_duplicate_split_m2_q1_16_absorption [W19; w19_worker_a:duplicate_split_instance(q=1/16)]
+- delta=21/320, H=0, W=[0, 1, 2, 3, 4], hidden_tops=[]
+
+```python
+[
+  ["31/32", "-11/320", "1/320", "1/32", "1/32"],
+  ["-1/32", "309/320", "1/320", "1/32", "1/32"],
+  ["-1/32", "-11/320", "321/320", "1/32", "1/32"],
+  ["15/32", "33/64", "-3/64", "1/32", "1/32"],
+  ["15/32", "33/64", "-3/64", "1/32", "1/32"]
+]
+```
+
+### I007: w19_rank5_genuine_self
+
+- aliases: w19_rank5_genuine_self [W19; w19_worker_a:rank5_genuine_self]; sigma_cap_A_max_genuine_self [sigma-cap-refuter; certify_best.py:A_C/A_R2]
+- delta=3983/96000, H=4131459/48713900, W=[0, 1, 2, 3, 4], hidden_tops=[5]
+
+```python
+[
+  ["6409/6400", "-69/32000", "-1/64", "3/16000", "-341/16000", "3/80"],
+  ["3/8000", "39977/40000", "-1/240", "1/20000", "-341/60000", "1/100"],
+  ["3/1280", "-23/6400", "187/192", "1/3200", "-341/9600", "1/16"],
+  ["1/2560", "-23/38400", "-5/1152", "19201/19200", "-341/57600", "1/96"],
+  ["21/6400", "-161/32000", "-7/192", "7/16000", "45613/48000", "7/80"],
+  ["-222027/6400000", "1702207/32000000", "74009/192000", "-74009/16000000", "25237069/48000000", "5991/80000"]
+]
+```
+
+### I008: w19_rank3_relaxed_cycle_lp_optimizer
+
+- aliases: w19_rank3_relaxed_cycle_lp_optimizer [W19; w19_worker_a:solve_relaxed_cycle_lp]
+- delta=1/4, H=0, W=[3, 4, 5], hidden_tops=[]
+
+```python
+[
+  ["-495/3224", "0", "5/124", "92325/99944", "18465/99944", "469/99944"],
+  ["749/3224", "0", "25/124", "-18751/99944", "76205/99944", "-879/99944"],
+  ["-99/3224", "0", "125/124", "2345/99944", "469/99944", "-551/99944"],
+  ["-1/4", "0", "0", "149/124", "5/124", "1/124"],
+  ["31/104", "0", "0", "-25/104", "99/104", "-1/104"],
+  ["0", "0", "5/4", "-25/124", "-5/124", "-1/124"]
+]
+```
+
+### I009: web_regime_s5_calibration
+
+- aliases: web_regime_s5_calibration [web-regime-hunt; calibrate_s5.py:build_s5_exact]
+- delta=1841/1600000, H=1/1000, W=[0, 1, 2], hidden_tops=[3, 4]
+
+```python
+[
+  ["4000001/4000000", "-399/8000000", "-3603/8000000", "1801/4000000", "199/4000000"],
+  ["1/4000000", "8001601/8000000", "-5603/8000000", "3801/4000000", "-1801/4000000"],
+  ["1/4000000", "-2399/8000000", "7998397/8000000", "-199/4000000", "2199/4000000"],
+  ["-1999/4000000", "1989/40000", "3801099/4000000", "0", "1/2000"],
+  ["-1999/4000000", "21999/40000", "1800099/4000000", "1/2000", "0"]
+]
+```
+
+### I010: web_regime_headline_delta_49_2000
+
+- aliases: web_regime_headline_delta_49_2000 [web-regime-hunt; verify_instance.py generator]; door_fresh-web-p1/40-x1/3-rho1/100 [door-ratio census; fresh:web-pair]
+- delta=49/2000, H=1/20, W=[0, 1, 2], hidden_tops=[3, 4]
+
+```python
+[
+  ["99/100", "-21/2000", "1/2000", "1/100", "1/100"],
+  ["-1/100", "1979/2000", "1/2000", "1/100", "1/100"],
+  ["-1/100", "-21/2000", "2001/2000", "1/100", "1/100"],
+  ["289/600", "3137/6000", "-49/2000", "1/100", "1/100"],
+  ["299/600", "3037/6000", "-49/2000", "1/100", "1/100"]
+]
+```
+
