@@ -44,7 +44,7 @@ graph LR
   lem-fan-payment-restricted["lem-fan-payment-restricted<br/>proved/validated"]
   lem-genuine-disintegration["lem-genuine-disintegration<br/>proved/validated"]
   lem-gmax-web-concentration["lem-gmax-web-concentration<br/>proved/none"]
-  lem-harmonic-affine-bridge["lem-harmonic-affine-bridge<br/>proved/none"]
+  lem-harmonic-affine-bridge["lem-harmonic-affine-bridge<br/>proved/seeded"]
   lem-hiddenness-alpha-slab-leakage["lem-hiddenness-alpha-slab-leakage<br/>proved/none"]
   lem-hiddenness-depth-markov["lem-hiddenness-depth-markov<br/>proved/none"]
   lem-hiddenness-dual-witness["lem-hiddenness-dual-witness<br/>proved/validated"]
