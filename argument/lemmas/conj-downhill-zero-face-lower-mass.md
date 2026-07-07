@@ -16,6 +16,12 @@ c0*kappa <= nu_z <= delta, i.e. c0*tau/4 <= tau^2, impossible for delta < (c0/4)
 scale gap (tau vs tau^2) means NO constant-fight: any universal c0, however small, closes
 the terminal node's (T2) face and with it [[conj-zero-face-elimination]]'s bridge horn.
 
+**Sharpened bridge note (W49-BD, VBD-approved):** capacity forbids ANY blocker lower bound
+m_kappa(z) > 4*tau — so the exact sufficient form is any f(tau) > 4*tau, and a universal
+constant c0 is sufficient but stronger than needed. Ledger-only proofs are DEAD
+([[obs-thin-zero-face-blocker-graft]]): the surviving content is tall anti-thin-blocker
+SELECTION (the tightness-promotion wall).
+
 **Theatre guard (pre-committed exit, W47 wave doc).** This statement rhymes with the dead
 anti-splitting/sigma-cap walls. Distinguishers: the scale advantage above, and a cheap
 refutation path — an exact tall-heavy instance whose blocker is kappa-high-STARVING
