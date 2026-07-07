@@ -66,14 +66,16 @@ square the slab defect) now sits under BOTH open ledger items** (FINDINGS 2026-0
 bd aism-2fi P0). The certified pincer (W29-X): true-hidden folds back before depth 4τ
 (best frontier H/τ = √(5/99)); tall attempts die by absorption.
 
-## IN FLIGHT (resume FIRST if interrupted)
+## ⛔ BLOCKER AT HALT #2 (2026-07-07 ~09:00): CODEX QUOTA EXHAUSTED AGAIN (resets 9:06 AM)
 
-- **af orchestration #6: `lem-harmonic-affine-bridge`** (elevation queue; #22 candidate) —
-  resumed after a guard collision (13/18 nodes validated pre-resume; the ledger survives; a
-  plain relaunch resumes). On root=validated: mechanical banking (3689e2c is the model).
-  **While it runs: argument//definitions edits ONLY as fast atomic edit+commit windows.**
-- (The 2026-07-07 ~01:00 codex-quota halt was RESOLVED by the 04:05 monitor auto-resume; all
-  killed workers were relaunched and harvested — W39/W40/W41 banked.)
+The elevation cascade ran the quota dry a second time. Elevations #22-#25 were banked BEFORE
+the halt (bridge, row-far-cert, top-slab-companion, depth-markov — the witness family is L0
+except the DEFERRED alpha-slab). The depth-d-halo-collapse orchestration (seeded c5c44a8)
+died with EMPTY codex completions (1-node ledger, prover build never ran) — a plain relaunch
+after the reset re-runs it:
+`python3 scripts/af-orchestrate.py lem-depth-d-halo-collapse --workers 6 --max-rounds 14 --node-cap 40`
+A monitor is armed for the 9:10 auto-resume. DEFERRED (needs factoring, stays L5):
+lem-hiddenness-alpha-slab-leakage (two identical STUCK aborts, 740b666).
 
 ## Next steps (ranked)
 

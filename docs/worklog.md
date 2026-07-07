@@ -723,3 +723,16 @@ at close (13/18 validated pre-resume). Sketch v10: THE ENDGAME STACK fully price
 TWO open mechanism questions (radial thickness; the primal conversion) between here and the
 Kernel height clause, whose engine links are now BOTH rigorous. Commits: abda2b5, 0f7cdb4,
 072c97f-2a01032-b4038d2-3689e2c (elevations), bb129f1, + this close. Registry 85; af 21.
+
+## 2026-07-07 (morning) — Session 11 rounds 8-9: W42/W43 + the elevation cascade; halt #2
+
+W42 (the two v10 questions): terminal node reformulated — residual cancellation on the
+optimal face, CLUSTER-UNIFORM; one new shard (bounded-alpha top-slab reduction), two
+duplicates refused (VAO/L2). W43: THE CHARACTERIZATION (VAQ VALID) — alpha-free/R=0 ==
+conv{tight-far} ∩ t*·conv{tight-upper} nonempty; predicts every certificate exactly; sketch
+v11 + W44 (the intersection wave) pinned. Elevation cascade: #22 harmonic-affine-bridge,
+#23 row-far-dual-certificate, #24 top-slab-companion (first fully rigorous hiddenness chain),
+#25 depth-markov; alpha-slab DEFERRED (compound-proof thrash, needs factoring); depth-d
+killed by quota halt #2 (resets 9:06 AM; monitor armed for 9:10 auto-resume). Registry 87;
+af-validated 25. Commits: f137d19, 5c9378f, 14d439b, 769a8d2, 1b1f22b, 09111d8+#24, 8f0a01c,
+6704fc0, 740b666, c5c44a8, + this close.
