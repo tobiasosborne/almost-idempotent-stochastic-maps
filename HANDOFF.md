@@ -66,7 +66,17 @@ square the slab defect) now sits under BOTH open ledger items** (FINDINGS 2026-0
 bd aism-2fi P0). The certified pincer (W29-X): true-hidden folds back before depth 4τ
 (best frontier H/τ = √(5/99)); tall attempts die by absorption.
 
-## ⛔ BLOCKER AT HALT #2 (2026-07-07 ~09:00): CODEX QUOTA EXHAUSTED AGAIN (resets 9:06 AM)
+## ⛔ BLOCKER AT HALT #3 (2026-07-07 09:40): CODEX QUOTA STILL EXHAUSTED PAST THE ADVERTISED RESET
+
+The 9:06 reset did NOT restore capacity (probes at 09:40 still error). The session consumed
+~40 codex workers + 10 af orchestrations; the allocation is dry. USER DECISION: purchase
+credits or wait for the next (unknown) window. A capacity-probe monitor is armed — the
+campaign auto-resumes the moment codex answers. KILLED WITH NO OUTPUT (relaunch verbatim on
+resume): W44-AR (`scratchpad/W44/PROMPT-AR.md` — the intersection wave; reconstructible from
+lem-optimal-face-alpha-free-characterization's shard + sketch v11 (T1)) and the
+depth-d-halo-collapse orchestration (1-node ledger, plain relaunch).
+
+## (superseded halt #2 record follows)
 
 The elevation cascade ran the quota dry a second time. Elevations #22-#25 were banked BEFORE
 the halt (bridge, row-far-cert, top-slab-companion, depth-markov — the witness family is L0
