@@ -57,4 +57,18 @@ No remote CI. The local gate is wired into `.beads/hooks/pre-commit`.
 - **Ground truth** `refs/` — byte-verified sources (payload gitignored, manifest tracked).
 - **Controller** `.frontier/` — the `fr` campaign. **Ingest** `docs/ingest/` — the prior work, re-tagged.
 
-License: AGPL-3.0.
+## License
+
+Licensed under the **GNU Affero General Public License v3.0** — see [`LICENSE`](LICENSE).
+The AGPL's network clause (§13) applies: if you run a modified version to offer a service over a
+network, you must make the modified source available to its users.
+
+Copyright © 2026 Tobias J. Osborne.
+
+## Status & caveats
+
+This is an **open research programme**, not a finished result. Read the tags honestly: nothing here is
+"rigorous" (in this repo's sense — L0) unless it is byte-matched to a published theorem, `af`-formalised,
+or Lean-proved. Everything else is explicitly flagged `numerical` / `heuristic` / `conjecture` / `stated` /
+`proved-mod-audit`. The central open question (`op-classical` → the Kernel/(EX) conjecture) is **unsolved**.
+The ingested prior work in `docs/ingest/` is a *starting point*, never an oracle.
