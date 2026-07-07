@@ -22,15 +22,22 @@ TRIGGER: session close, or a material change in the current frontier / next task
    Wave prompts + raw answers: session-11 scratchpad (`W26/`–`W34/`).
 5. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-07, session 11 round-5 CHECKPOINT — VAG + af #4 IN FLIGHT)
+## Current state (2026-07-07, session 11 round-7 CHECKPOINT — af #6 IN FLIGHT)
 
-**Rigorous (af-validated, T0): 19** — this session elevated `lem-parametric-halo-collapse`
-(#17, 915891a), `lem-genuine-disintegration` (#18, 072c97f), `lem-top-concentration` (#19,
-2a01032) — three of the four g-bootstrap steps are L0. **Registry: 77 results** (+22 this
-session). All new lemmas `proved`/`af: none` with SEPARATE fresh hostile codex verifiers (L5);
-L0 claimed ONLY for the af-validated 19.
+**Rigorous (af-validated, T0): 21** — session-11 elevations: #17 lem-parametric-halo-collapse
+(915891a), #18 lem-genuine-disintegration (072c97f), #19 lem-top-concentration (2a01032),
+#20 lem-hiddenness-dual-witness (b4038d2), #21 lem-cs-low-slab-pincer (3689e2c). **Registry:
+85 results** (+30 this session). All reviewed lemmas via SEPARATE fresh hostile codex
+verifiers (L5); L0 claimed ONLY for the af-validated 21.
 
-**THE TERMINAL PICTURE (sketch v9): THE FIVE-ROUTE CONVERGENCE.** Waves W26–W38 attacked the
+**THE ENDGAME STACK (sketch v10): exactly TWO open mechanism questions** — (1) tall zero-face
+RADIAL THICKNESS (why topness fattens the zero face; certified dichotomy support, W41) and
+(2) THE PRIMAL CONVERSION (kill ALL witnesses of some cluster vertex; capacity template
+lem-row-zero-capacity + the W36 exact local model) — sit between the current state and the
+Kernel height clause, whose engine links (#17 + #21) are BOTH rigorous. Plus: Kernel(i)
+rank >= 3 (shares the mechanism), trunk <2>7, the loose-delta lemma.
+
+**Round 1-5 background (sketch v9): THE FIVE-ROUTE CONVERGENCE.** Waves W26–W38 attacked the
 cap through five independent mechanism families (witness coupling; CS/pincer; collapse family;
 absorption/proximity; dual certificates + residual cancellation) — every one bottoms out on
 ONE conjecture: **near-cluster absorption** (a tall hidden top cannot keep ≥ 1−θ₀ of its mass
@@ -59,31 +66,27 @@ square the slab defect) now sits under BOTH open ledger items** (FINDINGS 2026-0
 bd aism-2fi P0). The certified pincer (W29-X): true-hidden folds back before depth 4τ
 (best frontier H/τ = √(5/99)); tall attempts die by absorption.
 
-## ⛔ BLOCKER AT SESSION HALT (2026-07-07 ~01:00): CODEX USAGE QUOTA EXHAUSTED (resets 4:00 AM)
+## IN FLIGHT (resume FIRST if interrupted)
 
-All codex workers died on `ERROR: You've hit your usage limit ... try again at 4:00 AM`.
-W38 WAS fully banked before the halt (4b1a654). Killed mid-run with NO output (relaunch
-fresh — briefs preserved in the session scratchpad AND summarized in sketch v9):
+- **af orchestration #6: `lem-harmonic-affine-bridge`** (elevation queue; #22 candidate) —
+  resumed after a guard collision (13/18 nodes validated pre-resume; the ledger survives; a
+  plain relaunch resumes). On root=validated: mechanical banking (3689e2c is the model).
+  **While it runs: argument//definitions edits ONLY as fast atomic edit+commit windows.**
+- (The 2026-07-07 ~01:00 codex-quota halt was RESOLVED by the 04:05 monitor auto-resume; all
+  killed workers were relaunched and harvested — W39/W40/W41 banked.)
 
-- **W39-AH** (levers a+c: conditioning lemma + deepest vertex): brief
-  `scratchpad/W39/PROMPT-AH.md`. **W39-AI** (lever d: anchor tension / aggregated-witness
-  circuit): brief `scratchpad/W39/PROMPT-AI.md`. If the scratchpad is gone, re-derive both
-  briefs from conj-near-cluster-absorption's shard body (the five levers) + sketch v9.
-- **af orchestration #4: `lem-hiddenness-dual-witness`** — prover build IS in the ledger;
-  a plain relaunch resumes: `python3 scripts/af-orchestrate.py lem-hiddenness-dual-witness
-  --workers 6 --max-rounds 14 --node-cap 40` (background). On root=validated: mechanical
-  banking (the 2a01032 commit is the model).
+## Next steps (ranked)
 
-## Next steps (ranked; resume AFTER the quota reset)
-
-0. Relaunch the three killed workers (above). On W39 harvest: hostile verifier per house
-   pattern → bank → sketch v10 if the map moves.
-1. af elevation queue (aism-88r) after the witness: lem-cs-low-slab-pincer,
-   lem-harmonic-affine-bridge, lem-row-far-dual-certificate (all deps-none, few-line proofs).
+0. **W42: the two v10 mechanism questions** — (1) radial thickness (why topness fattens the
+   zero face; start from the certified W41 dichotomy + the W36 local model) and (2) the
+   primal conversion (kill all witnesses of a cluster vertex; capacity template). Blind
+   pair or two independent provers + hostile verifiers, per the session pattern.
+1. af elevation queue after #22: lem-row-far-dual-certificate, lem-depth-d-halo-collapse,
+   lem-top-slab-companion, lem-hiddenness-depth-markov (deps now all af-validated).
 2. Trunk <2>7 audit (aism-23b) with the W27 interface findings as explicit audit questions.
 3. The loose-delta robustness lemma (small).
 4. Standing queue: aism-pld, aism-j3j, alpha->1 (Route B gate), aism-5an, refs (aism-5de,
-   aism-1nh), aism-z98 USER DECISION, report labels (aism-av0 — 35+ shards warn-level).
+   aism-1nh), aism-z98 USER DECISION, report labels (aism-av0 — 40+ shards warn-level).
 
 ## Standing rules (session-11 additions to the CLAUDE.md/bd-memory set)
 
@@ -112,8 +115,8 @@ PYTHONDONTWRITEBYTECODE=1 python3 -u runs/2026-07-06-w30-w-nonemptiness/scripts/
 
 ## What is intentionally NOT here
 
-- Any claim more than NINETEEN results are af-validated. The session-11 reviewed lemmas
-  (17 of them) are L5, NOT L0-rigorous.
+- Any claim more than TWENTY-ONE results are af-validated. The session-11 reviewed lemmas
+  are L5, NOT L0-rigorous.
 - Any claim conj-low-slab-cap, conj-near-cluster-absorption, conj-min-a-w4, Kernel(i) at
   rank>=3, or the Kernel Conjecture is proved. The trunk still has <2>7 mod-audit + the loose-delta lemma open.
 - Any claim the bootstrap works outside small delta_0 (the theta-flexible form trades B for
