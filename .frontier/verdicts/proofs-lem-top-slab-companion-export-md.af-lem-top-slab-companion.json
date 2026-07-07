@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-top-slab-companion/export.md",
+  "oracle": "af-lem-top-slab-companion",
+  "result": "pass",
+  "claim_hash": "0bd9a544b579944a8aa1f85176b4547e5976c33902a2b39ee6b831622872b369",
+  "oracle_digest": "e504245830e13a39828c05d383f760b6b1830c6b8ced70c589763a0fa77e2709",
+  "inputs_hash": "2ba54119151a63c20262dcecc1e689b4eb5208c99343032e67d06bc9a29d683f",
+  "ts": "2026-07-07T03:45:51.492Z"
+}

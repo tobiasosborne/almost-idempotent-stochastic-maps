@@ -5,7 +5,7 @@ contract: Top-slab companion: for an exact signed idempotent P with 0 < delta(P)
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed; def-invisible-mass; def-height
 deps: lem-hiddenness-dual-witness
 status: proved
-af: seeded
+af: validated
 provenance: W26 wave (docs/waves/2026-07-06-W26-hiddenness-consumption.md): fresh-codex prover (worker P, claim 2 of its PARTIAL) + SEPARATE fresh-codex hostile verifier (VP, VALID-WITH-CORRECTIONS — exact symbolic constant chain 13 - (1/2 + delta) >= 4 + 6*sqrt(2) > 4 at delta <= (17-12*sqrt2)/2)
 owner: A
 workspace: proofs/lem-top-slab-companion

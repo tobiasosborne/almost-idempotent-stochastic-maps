@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Top-slab companion: for an exact signed idempotent P with...}
+\step{1} Top-slab companion: for an exact signed idempotent P with 0 < delta(P) <= (17 - 12*sqrt(2))/2, nonempty visible set W(P), and hidden top vertex v of height H > 13*tau (tau = sqrt(delta)), there is a row f with ||p\_f - p\_v||\_1 >= 4*tau and dist\_1(p\_f, conv\{p\_w : w in W\}) > H - (1/2 + delta)*tau. \steptag{validated} \\[6pt]
+\step{1.1} Let C\_W = conv\{p\_w : w in W\}. Finite-dimensional ell1 distance duality gives an affine 1-Lipschitz functional phi with phi(p\_v)=H and phi <= 0 on C\_W; with psi=H-phi, one has psi(p\_v)=0 and 0 <= psi(p\_i) <= 2+4*delta for every row i. \steptag{validated} \\[6pt]
+\step{1.1.1} Since W is nonempty and finite, C\_W is a nonempty compact convex polytope. The ell1 distance formula dist\_1(p\_v,C\_W)=sup\_\{||u||\_infty<=1\}(u.p\_v-sup\_\{c in C\_W\}u.c) attains its supremum, so choose u with u.p\_v-sup\_C u.c=H. \steptag{validated} \\[4pt]
+\step{1.1.2} Using the vector u chosen in 1.1.1, define phi(x)=u.x-sup\_\{c in C\_W\}u.c. Then ||u||\_infty<=1 makes phi 1-Lipschitz for the ell1 metric, phi <= 0 on C\_W by construction, and phi(p\_v)=H by the distance-attaining equality from 1.1.1. \steptag{validated} \\[6pt]
+\step{1.1.2.1} The phrase 'the vector u chosen in 1.1.1' means precisely the validated distance-attaining vector from node 1.1.1: ||u||\_infty<=1 and u.p\_v - sup\_\{c in C\_W\} u.c = H. Therefore this u is not arbitrary (for example, not u=0 when H>0), and substituting x=p\_v in the definition phi(x)=u.x-sup\_\{c in C\_W\}u.c gives phi(p\_v)=H. \steptag{validated} \\[4pt]
+\step{1.1.2.2} For any c in C\_W, sup\_\{d in C\_W\} u.d >= u.c, hence phi(c)=u.c-sup\_\{d in C\_W\}u.d <= 0. For any x,y, |phi(x)-phi(y)|=|u.(x-y)| <= ||u||\_infty*||x-y||\_1 <= ||x-y||\_1 by the ||u||\_infty<=1 part imported from 1.1.1, so phi is 1-Lipschitz for the ell1 metric. \steptag{validated} \\[4pt]
+\step{1.1.3} For any row p\_i, phi(p\_i) <= dist\_1(p\_i,C\_W) because phi is 1-Lipschitz and phi <= 0 on C\_W. Since v is a hidden top vertex of height H, def-height gives dist\_1(p\_i,C\_W) <= H for all rows, hence psi(p\_i)=H-phi(p\_i) >= 0 and psi(p\_v)=0. \steptag{validated} \\[4pt]
+\step{1.1.4} For any row p\_i, psi(p\_i)=phi(p\_v)-phi(p\_i) <= ||p\_v-p\_i||\_1 by 1-Lipschitzness of phi, and def-signed-idempotent gives ||p\_v-p\_i||\_1 <= 2+4*delta; hence psi(p\_i) <= 2+4*delta. \steptag{validated} \\[4pt]
+\step{1.2} Because v is a hidden row vertex at the scales rho=4*tau and kappa=tau/4, lem-hiddenness-dual-witness supplies F\_v nonempty and coefficients lambda\_f, alpha\_i, beta\_i satisfying its balance identity, lambda\_f>=0 with sum\_F lambda\_f=1, alpha\_i,beta\_i>=0, and sum\_i beta\_i=t*(v)<kappa. \steptag{validated} \\[6pt]
+\step{1.2.1} By def-visible-set and def-exposed, the scales attached to P are tau=sqrt(delta(P)), rho=4*tau, and kappa=tau/4, and a hidden top vertex v is a hidden row vertex for these scales. \steptag{validated} \\[4pt]
+\step{1.2.2} Instantiating lem-hiddenness-dual-witness with this exact signed idempotent P and hidden row vertex v gives the nonempty set F\_v=\{j: ||p\_j-p\_v||\_1 >= rho\} and coefficients lambda\_f, alpha\_i, beta\_i with all the nonnegativity, normalization, beta-sum, and balance properties stated in 1.2. \steptag{validated} \\[4pt]
+\step{1.3} Applying the affine functional psi, whose value at p\_v is 0, to that balance identity yields a rho-far index f in F\_v with psi(p\_f) < kappa*(2+4*delta) = (1/2 + delta)*tau. \steptag{validated} \\[6pt]
+\step{1.3.1} Let L be the linear part of the affine function psi. Because psi(p\_v)=0, for every row index i one has L(p\_i-p\_v)=psi(p\_i). \steptag{validated} \\[4pt]
+\step{1.3.2} Apply L to the balance from 1.2: sum\_f lambda\_f*psi(p\_f)+sum\_i alpha\_i*psi(p\_i)=sum\_i beta\_i*psi(p\_i). \steptag{validated} \\[4pt]
+\step{1.3.3} By 1.1, psi(p\_i)>=0 and psi(p\_i)<=D:=2+4*delta for every row. With alpha\_i,beta\_i>=0 and sum\_i beta\_i=t*(v)<kappa, the equality in 1.3.2 implies sum\_f lambda\_f*psi(p\_f) <= sum\_i beta\_i*psi(p\_i) <= D*sum\_i beta\_i < kappa*D. \steptag{validated} \\[4pt]
+\step{1.3.4} Since lambda\_f>=0 and sum\_f lambda\_f=1, the strict weighted-average bound in 1.3.3 implies that some f in F\_v has psi(p\_f)<kappa*D. \steptag{validated} \\[4pt]
+\step{1.3.5} Using kappa=tau/4 and D=2+4*delta gives kappa*D=(tau/4)*(2+4*delta)=(1/2+delta)*tau, so the f from 1.3.4 satisfies psi(p\_f)<(1/2+delta)*tau. \steptag{validated} \\[4pt]
+\step{1.4} For the index f from the previous step, membership in F\_v gives ||p\_f-p\_v||\_1 >= rho = 4*tau; also phi(p\_f)=H-psi(p\_f) > H-(1/2+delta)*tau and phi <= dist\_1(.,C\_W), so dist\_1(p\_f,C\_W) > H-(1/2+delta)*tau. \steptag{validated} \\[6pt]
+\step{1.4.1} The index f supplied by 1.3 lies in F\_v, and by the definition imported through lem-hiddenness-dual-witness, F\_v=\{j: ||p\_j-p\_v||\_1 >= rho\}; with rho=4*tau this gives ||p\_f-p\_v||\_1 >= 4*tau. \steptag{validated} \\[4pt]
+\step{1.4.2} Since psi=H-phi and 1.3 gives psi(p\_f)<(1/2+delta)*tau, one has phi(p\_f)=H-psi(p\_f)>H-(1/2+delta)*tau. \steptag{validated} \\[4pt]
+\step{1.4.3} For every c in C\_W, phi(c)<=0 and phi is 1-Lipschitz, so phi(p\_f)<=phi(c)+||p\_f-c||\_1<=||p\_f-c||\_1. Taking the infimum over c in C\_W gives phi(p\_f)<=dist\_1(p\_f,C\_W). \steptag{validated} \\[4pt]
+\step{1.4.4} Combining 1.4.2 and 1.4.3 gives dist\_1(p\_f,C\_W)>H-(1/2+delta)*tau, and C\_W is exactly conv\{p\_w : w in W\}; together with 1.4.1 this is the row required by node 1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
