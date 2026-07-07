@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Row-far dual certificate: for an exact signed idempotent ...}
+\step{1} Row-far dual certificate: for an exact signed idempotent P and a geometrically distinct row vertex v with delta(P) > 0 (tau = sqrt(delta), rho = 4*tau), writing L\_F(v) = sum over \{f : ||p\_f - p\_v||\_1 >= rho\} of max(P\_vf, 0) and nu\_v the row negative mass, if L\_F(v) > 0 then t*(v) <= nu\_v / L\_F(v), where t*(v) is the exposedness margin of def-exposed. \steptag{validated} \\[6pt]
+\step{1.1} Notation and nonemptiness: set F=\{f: ||p\_f-p\_v||\_1 >= rho\}, w\_f=max(P\_vf,0), nu\_v=sum\_j max(-P\_vj,0), and L\_F=sum\_\{f in F\} w\_f. The hypothesis L\_F>0 implies that F contains at least one index with w\_f>0, so the far-row minimum in def-exposed is over a nonempty set and min\_\{f in F\} h(p\_f) <= min\_\{f in F, w\_f>0\} h(p\_f) for every admissible exposer h. \steptag{validated} \\[4pt]
+\step{1.2} Affine row identity: for every admissible exposer h for v in the sense of def-exposed, exact signed idempotence gives p\_v=sum\_j P\_vj p\_j and sum\_j P\_vj=1; since h is affine and h(p\_v)=0, one has 0=sum\_j P\_vj h(p\_j). \steptag{validated} \\[6pt]
+\step{1.2.1} Row reproduction from def-signed-idempotent: P\textasciicircum{}2=P makes the v-th row of P equal to the v-th row of P\textasciicircum{}2, namely p\_v=sum\_j P\_vj p\_j; P1=1 gives sum\_j P\_vj=1. \steptag{validated} \\[4pt]
+\step{1.2.2} Affine pairing fact: if h is affine, a\_j are real coefficients with finite support, and sum\_j a\_j=1, then h(sum\_j a\_j p\_j)=sum\_j a\_j h(p\_j). In particular this applies to a\_j=P\_vj once sum\_j P\_vj=1 is known. \steptag{validated} \\[4pt]
+\step{1.2.3} Combination of row reproduction with affine admissibility: applying node 1.2.2 to the coefficients a\_j=P\_vj and using node 1.2.1 gives h(p\_v)=sum\_j P\_vj h(p\_j); admissibility in def-exposed gives h(p\_v)=0, hence 0=sum\_j P\_vj h(p\_j). \steptag{validated} \\[4pt]
+\step{1.3} Weighted inequality: for every admissible exposer h, the identity 0=sum\_j P\_vj h(p\_j) and the bounds 0<=h(p\_j)<=1 imply sum\_\{f in F\} w\_f h(p\_f) <= nu\_v. \steptag{validated} \\[6pt]
+\step{1.3.1} Algebra for the weighted inequality: write h\_j=h(p\_j), J\_+=\{j:P\_vj>0\}, and J\_-=\{j:P\_vj<0\}. From 0=sum\_j P\_vj h\_j, moving negative terms gives sum\_\{j in J\_+\} P\_vj h\_j=sum\_\{j in J\_-\} (-P\_vj) h\_j. Since w\_f=max(P\_vf,0), F-positive terms are a sub-sum of the nonnegative left side, so sum\_\{f in F\} w\_f h\_f <= sum\_\{j in J\_+\} P\_vj h\_j. Since 0<=h\_j<=1, the right side equals sum\_\{j in J\_-\} (-P\_vj)h\_j <= sum\_\{j in J\_-\} (-P\_vj)=sum\_j max(-P\_vj,0)=nu\_v by def-negative-mass. \steptag{validated} \\[4pt]
+\step{1.4} Weighted average bound: for every admissible exposer h, since L\_F>0 and w\_f>=0, min\_\{f in F\} h(p\_f) <= (sum\_\{f in F\} w\_f h(p\_f))/L\_F <= nu\_v/L\_F. \steptag{validated} \\[6pt]
+\step{1.4.1} Weighted-average deduction avoiding the pending parent 1.3: by node 1.1, L\_F=sum\_\{f in F\} w\_f>0 and at least one far weight w\_f is positive. For any admissible h, set A=(sum\_\{f in F\} w\_f h(p\_f))/L\_F. The direct algebra supplied under this node, using the validated row identity from node 1.2.3 and def-negative-mass, gives sum\_\{f in F\} w\_f h(p\_f) <= nu\_v. Since the weights w\_f are nonnegative and have positive total L\_F, min\_\{f in F\} h(p\_f) <= A; division by L\_F>0 gives A<=nu\_v/L\_F. \steptag{validated} \\[6pt]
+\step{1.4.1.1} Direct bridge for the challenge: fix an arbitrary admissible exposer h and write h\_j=h(p\_j), J\_+=\{j:P\_vj>0\}, and J\_-=\{j:P\_vj<0\}. Node 1.2.3 gives 0=sum\_j P\_vj h\_j. Moving the negative terms gives sum\_\{j in J\_+\} P\_vj h\_j=sum\_\{j in J\_-\} (-P\_vj)h\_j. For f in F, w\_f=max(P\_vf,0), so the terms w\_f h\_f with w\_f>0 are among the nonnegative J\_+ terms; hence sum\_\{f in F\} w\_f h\_f <= sum\_\{j in J\_+\} P\_vj h\_j. Admissibility gives 0<=h\_j<=1 for every row, so this is <=sum\_\{j in J\_-\}(-P\_vj)=sum\_j max(-P\_vj,0)=nu\_v by def-negative-mass. Node 1.1 gives L\_F=sum\_\{f in F\}w\_f>0 and w\_f>=0. Therefore A=(sum\_\{f in F\}w\_f h\_f)/L\_F is a weighted average over the positive far weights, min\_\{f in F\} h(p\_f)<=A, and division of the numerator bound by L\_F>0 gives A<=nu\_v/L\_F. \steptag{validated} \\[4pt]
+\step{1.5} Supremum step: because the preceding bound holds for every admissible exposer h, the definition t*(v)=sup\_h min\_\{f: ||p\_f-p\_v|$|\_1\rangle$=rho\} h(p\_f) from def-exposed gives t*(v) <= nu\_v/L\_F. \steptag{validated} \\[6pt]
+\step{1.5.1} Supremum deduction using node 1.4: def-exposed defines t*(v) as the supremum, over admissible exposers h, of min\_\{f: ||p\_f-p\_v|$|\_1\rangle$=rho\} h(p\_f). Node 1.4 says every such quantity is <=nu\_v/L\_F. Therefore their supremum is also <=nu\_v/L\_F, which is the desired conclusion. \steptag{validated} \\[6pt]
+\step{1.5.1.1} Direct replacement for the challenged dependency on node 1.4: for any admissible exposer h, node 1.1 gives L\_F=sum\_\{f in F\} w\_f>0 with w\_f>=0 on F, so min\_\{f in F\} h(p\_f) <= (sum\_\{f in F\} w\_f h(p\_f))/L\_F; node 1.3 gives the numerator <= nu\_v, hence min\_\{f in F\} h(p\_f) <= nu\_v/L\_F. Therefore every value in the set whose supremum defines t*(v) in def-exposed is <=nu\_v/L\_F, and the elementary supremum property gives t*(v)<=nu\_v/L\_F. This proves the parent without using pending node 1.4 as an accepted premise. \steptag{validated} \\[6pt]
+\step{1.5.1.1.1} Dependency-correct local repair for ch-605a47af315fea46: fix an arbitrary admissible exposer h and put F=\{f: ||p\_f-p\_v|$|\_1\rangle$=rho\}, w\_f=max(P\_vf,0), L\_F=sum\_\{f in F\}w\_f. From validated node 1.1, L\_F>0 and the w\_f on F are nonnegative, so the weighted average A=(sum\_\{f in F\}w\_f h(p\_f))/L\_F is defined and min\_\{f in F\}h(p\_f)<=A. From validated node 1.3, sum\_\{f in F\}w\_f h(p\_f)<=nu\_v, hence A<=nu\_v/L\_F and therefore min\_\{f in F\}h(p\_f)<=nu\_v/L\_F. Since h was arbitrary, every admissible-exposer value entering t*(v)=sup\_h min\_\{f:||p\_f-p\_v|$|\_1\rangle$=rho\}h(p\_f) in def-exposed is bounded above by nu\_v/L\_F; the elementary supremum property gives t*(v)<=nu\_v/L\_F. Thus the inference is now supported by declared dependencies on the validated facts instead of an undeclared use of pending node 1.4. \steptag{validated} \\[4pt]
+\step{1.5.1.2} Dependency-correct supremum bridge: using only validated nodes 1.1 and 1.3, fix an arbitrary admissible exposer h. Node 1.1 gives L\_F=sum\_\{f in F\} w\_f>0 and w\_f>=0, hence min\_\{f in F\} h(p\_f) <= (sum\_\{f in F\} w\_f h(p\_f))/L\_F. Node 1.3 gives sum\_\{f in F\} w\_f h(p\_f) <= nu\_v, so min\_\{f in F\} h(p\_f) <= nu\_v/L\_F for every admissible h. Since def-exposed defines t*(v) as the supremum of these minima over admissible h, and every member of that set is bounded above by nu\_v/L\_F, the supremum is also bounded above by nu\_v/L\_F. Thus the deduction no longer requires pending node 1.4. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

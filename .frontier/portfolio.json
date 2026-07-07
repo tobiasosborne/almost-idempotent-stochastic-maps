@@ -289,6 +289,18 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-harmonic-affine-bridge/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-harmonic-affine-bridge.md"
         ]
+      },
+      {
+        "name": "af-lem-row-far-dual-certificate",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-row-far-dual-certificate"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-row-far-dual-certificate/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-row-far-dual-certificate.md"
+        ]
       }
     ]
   },

@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-row-far-dual-certificate/export.md",
+  "oracle": "af-lem-row-far-dual-certificate",
+  "result": "pass",
+  "claim_hash": "b4214c77f3e8c43cf2db1f958ecf87785aee56791a3d5bf7dd650487c0b2030d",
+  "oracle_digest": "060a36e4935377841c28e3c80a089aee269e0c313728704d7a5638cc238844ee",
+  "inputs_hash": "c9de63ba0422ab59b27c6e4044c1be8159b5d9cbd05f52671db0aecbfcc21aa2",
+  "ts": "2026-07-07T03:25:23.598Z"
+}
