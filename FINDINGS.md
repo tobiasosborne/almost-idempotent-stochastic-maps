@@ -763,3 +763,21 @@ imports a future agent might reach for — read before importing ANY external to
   conj-tall-zero-face-radial-thickness -> tall alpha control -> aggregation -> (still) the
   primal conversion -> conj-near-cluster-absorption -> conj-low-slab-cap -> [two RIGOROUS
   engine links] -> Kernel height clause.
+
+## 2026-07-07 — W42 (session 11): residual cancellation is the mechanism; the cluster-uniform correction
+
+- ❌ **The thickness route's hard stop, exact:** value-normalized exposedness NEVER turns
+  "h* = O(delta) on the cluster" into "h* = 0" — the missing LP statement is optimal-face
+  selection (min over optimal h* of h(p_j) for a near-deep nonclone row = 0). Do not re-run
+  thickness waves without an optimal-face selection idea.
+- **The mechanism in the certificates is RESIDUAL CANCELLATION** (VAO-reconfirmed: the W41
+  TOP-preserving optimal witness has alpha = 0, R = 0): topness acts by making the optimal
+  face contain an R = 0 datum, not by measurable hull reach. Reformulated terminal target.
+- **The cluster-uniform correction (AP, VAO-confirmed scope):** conj-tall-zero-face-radial-
+  thickness controls only v's OWN datum; the aggregation needs alpha control for witnesses of
+  EVERY mass-carrying cluster vertex. The single-statement alternative: the row-to-circuit
+  absorption bridge (cheap bounded-alpha witnesses everywhere on the cluster => v ships mass
+  outside C or some cluster vertex is exposed).
+- **L2 flags honored:** the heavy-cluster low-slab and top-residual-slab statements are
+  DUPLICATES of banked material (pincer corollary; alpha-slab/depth-Markov engine) — not
+  codified. One new shard only: lem-bounded-alpha-top-slab-reduction.
