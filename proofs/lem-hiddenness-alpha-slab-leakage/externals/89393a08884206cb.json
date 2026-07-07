@@ -1,0 +1,8 @@
+{
+  "id": "89393a08884206cb",
+  "name": "lem-hiddenness-dual-witness",
+  "source": "imports validated registry lemma proofs/lem-hiddenness-dual-witness — Hiddenness dual witness: for an exact signed idempotent P and a hidden row vertex v (rho = 4*tau, kappa = tau/4, tau = sqrt(delta(P))), writing F_v = {j : ||p_j - p_v||_1 \u003e= rho} for the rho-far row-index set (nonempty for hidden v), there exist lambda_f \u003e= 0 (f in F_v) with sum_f lambda_f = 1 and alpha_i, beta_i \u003e= 0 (over all row indices i) with sum_i beta_i = t*(v) \u003c kappa, such that sum_f lambda_f*(p_f - p_v) + sum_i alpha_i*(p_i - p_v) = sum_i beta_i*(p_i - p_v).",
+  "content_hash": "a48a73e1708c11e8555dc8604149169e6229dfde426c3891900b97573953b48c",
+  "created": "2026-07-07T04:32:55.666560476Z",
+  "notes": ""
+}
