@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-harmonic-affine-bridge/export.md",
+  "oracle": "af-lem-harmonic-affine-bridge",
+  "result": "pass",
+  "claim_hash": "fe417c19b4d6233399905396e8964ffb217970bb313c818356ebaca18846635a",
+  "oracle_digest": "1fe7b21989bb04e49b1625be64f92e95347ba25ed3c7b6a8afac58f0f215fcaf",
+  "inputs_hash": "2b3d9266b79e3a35d40ec49d8c57673b94c11b02ccc0e1a38464d0115c256246",
+  "ts": "2026-07-07T02:59:23.591Z"
+}

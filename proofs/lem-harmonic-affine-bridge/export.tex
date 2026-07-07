@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Harmonic-affine bridge: for an exact signed idempotent P ...}
+\step{1} Harmonic-affine bridge: for an exact signed idempotent P with rows p\_i = (P\_ij)\_j, a vector g satisfies Pg = g if and only if there exists u with g\_i = u . p\_i for every row index i; in the forward direction u = g works (g\_i = p\_i . g), and the constant term of any affine representation is absorbable into u since all row sums equal 1. \steptag{validated} \\[6pt]
+\step{1.1} Coordinate consequences of exact signed idempotence: if P is an exact signed idempotent and p\_i is row i, then sum\_j P\_ij = 1 for each i, (Pg)\_i = p\_i . g for every vector g, and sum\_j P\_ij p\_j = p\_i for each i. \steptag{validated} \\[6pt]
+\step{1.1.1} Row sums: by def-signed-idempotent, P*1 = 1, so for each row i, sum\_j P\_ij = 1. \steptag{validated} \\[4pt]
+\step{1.1.2} Matrix-vector coordinates: since p\_i is row i, for every vector g one has (Pg)\_i = sum\_j P\_ij g\_j = p\_i . g. \steptag{validated} \\[4pt]
+\step{1.1.3} Row reproduction: by def-signed-idempotent, P\textasciicircum{}2 = P; hence for every coordinate k, (sum\_j P\_ij p\_j)\_k = sum\_j P\_ij P\_jk = (P\textasciicircum{}2)\_ik = P\_ik = (p\_i)\_k, so sum\_j P\_ij p\_j = p\_i. \steptag{validated} \\[4pt]
+\step{1.2} Forward direction: if Pg = g, then choosing u = g gives g\_i = u . p\_i for every row index i, because g\_i = (Pg)\_i = p\_i . g. \steptag{validated} \\[6pt]
+\step{1.2.1} Assume Pg = g. Then for each row index i, g\_i = (Pg)\_i. \steptag{validated} \\[4pt]
+\step{1.2.2} Since p\_i is row i, (Pg)\_i = sum\_j P\_ij g\_j = p\_i . g. \steptag{validated} \\[4pt]
+\step{1.2.3} Taking u = g therefore gives g\_i = p\_i . g = p\_i . u, equivalently g\_i = u . p\_i under the usual dot-product notation. \steptag{validated} \\[4pt]
+\step{1.3} Constant absorption: any affine representation g\_i = c + u . p\_i can be rewritten as a purely linear row representation g\_i = u' . p\_i by taking u' = u + c*1, since every row sum is 1. \steptag{validated} \\[6pt]
+\step{1.3.1} Assume an affine row representation g\_i = c + u . p\_i for all row indices i. \steptag{validated} \\[4pt]
+\step{1.3.2} By the row-sum part of def-signed-idempotent, p\_i . 1 = sum\_j P\_ij = 1 for every i. \steptag{validated} \\[4pt]
+\step{1.3.3} Set u' = u + c*1. Then u' . p\_i = u . p\_i + c*(1 . p\_i) = u . p\_i + c = g\_i for every i, so the constant term has been absorbed into the linear coefficient. \steptag{validated} \\[4pt]
+\step{1.4} Converse direction: if there is a vector u with g\_i = u . p\_i for every i, then Pg = g, because (Pg)\_i = sum\_j P\_ij g\_j = u . (sum\_j P\_ij p\_j) = u . p\_i = g\_i. \steptag{validated} \\[6pt]
+\step{1.4.1} Assume there is a vector u such that g\_j = u . p\_j for every row index j. \steptag{validated} \\[4pt]
+\step{1.4.2} For each i, the matrix-vector formula gives (Pg)\_i = sum\_j P\_ij g\_j = sum\_j P\_ij (u . p\_j). \steptag{validated} \\[4pt]
+\step{1.4.3} By linearity of the dot product, sum\_j P\_ij (u . p\_j) = u . (sum\_j P\_ij p\_j). \steptag{validated} \\[4pt]
+\step{1.4.4} By row reproduction from P\textasciicircum{}2 = P, sum\_j P\_ij p\_j = p\_i; hence (Pg)\_i = u . p\_i = g\_i for every i, so Pg = g. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

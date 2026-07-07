@@ -277,6 +277,18 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-cs-low-slab-pincer/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-cs-low-slab-pincer.md"
         ]
+      },
+      {
+        "name": "af-lem-harmonic-affine-bridge",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-harmonic-affine-bridge"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-harmonic-affine-bridge/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-harmonic-affine-bridge.md"
+        ]
       }
     ]
   },

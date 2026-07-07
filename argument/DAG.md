@@ -45,7 +45,7 @@ graph LR
   lem-fan-payment-restricted["lem-fan-payment-restricted<br/>proved/validated"]
   lem-genuine-disintegration["lem-genuine-disintegration<br/>proved/validated"]
   lem-gmax-web-concentration["lem-gmax-web-concentration<br/>proved/none"]
-  lem-harmonic-affine-bridge["lem-harmonic-affine-bridge<br/>proved/seeded"]
+  lem-harmonic-affine-bridge["lem-harmonic-affine-bridge<br/>proved/validated"]
   lem-hiddenness-alpha-slab-leakage["lem-hiddenness-alpha-slab-leakage<br/>proved/none"]
   lem-hiddenness-depth-markov["lem-hiddenness-depth-markov<br/>proved/none"]
   lem-hiddenness-dual-witness["lem-hiddenness-dual-witness<br/>proved/validated"]
@@ -155,8 +155,8 @@ graph LR
   thm-classical-factorization --> op-classical
   thm-cluster --> thm-classical-factorization
   thm-simplex --> thm-well-exposed
-  class conj-halo-collapse,lem-classical-equiv,lem-collateral-import,lem-cross-pivot-cancellation,lem-cs-low-slab-pincer,lem-factorization,lem-fan-payment,lem-fan-payment-restricted,lem-genuine-disintegration,lem-hiddenness-dual-witness,lem-import-reduction,lem-mass-split,lem-negpart-subadditive,lem-parametric-halo-collapse,lem-pivot-removing-move,lem-residual-lower,lem-residual-upper,lem-top-concentration,lem-weighted-min,lem-zerosum-triangle,obs-height-collapse validated;
-  class cor-rank-two-visible,lem-conditional-g-near-exposer,lem-delta-zero-endpoint,lem-depth-d-halo-collapse,lem-gmax-web-concentration,lem-harmonic-affine-bridge,lem-hiddenness-alpha-slab-leakage,lem-hiddenness-depth-markov,lem-hlc-implies-exposed-hull,lem-hybrid-dual-certificate,lem-kernel-implies-hlc,lem-min-a-implies-height,lem-radial-alpha-bound,lem-rank3-maxchart-hidden-tangent,lem-received-mass-proximity,lem-rho-near-residual-cancellation,lem-row-far-dual-certificate,lem-row-zero-capacity,lem-self-defect-shadow,lem-sharp-vertex-visibility,lem-simplex-visibility,lem-single-heavy-recipient-rho-shadow,lem-top-slab-companion,lem-two-observable-pencil-bound,lem-visible-g-small,lem-zero-face-alpha-gauge,obs-realized-alpha-blowup proved;
+  class conj-halo-collapse,lem-classical-equiv,lem-collateral-import,lem-cross-pivot-cancellation,lem-cs-low-slab-pincer,lem-factorization,lem-fan-payment,lem-fan-payment-restricted,lem-genuine-disintegration,lem-harmonic-affine-bridge,lem-hiddenness-dual-witness,lem-import-reduction,lem-mass-split,lem-negpart-subadditive,lem-parametric-halo-collapse,lem-pivot-removing-move,lem-residual-lower,lem-residual-upper,lem-top-concentration,lem-weighted-min,lem-zerosum-triangle,obs-height-collapse validated;
+  class cor-rank-two-visible,lem-conditional-g-near-exposer,lem-delta-zero-endpoint,lem-depth-d-halo-collapse,lem-gmax-web-concentration,lem-hiddenness-alpha-slab-leakage,lem-hiddenness-depth-markov,lem-hlc-implies-exposed-hull,lem-hybrid-dual-certificate,lem-kernel-implies-hlc,lem-min-a-implies-height,lem-radial-alpha-bound,lem-rank3-maxchart-hidden-tangent,lem-received-mass-proximity,lem-rho-near-residual-cancellation,lem-row-far-dual-certificate,lem-row-zero-capacity,lem-self-defect-shadow,lem-sharp-vertex-visibility,lem-simplex-visibility,lem-single-heavy-recipient-rho-shadow,lem-top-slab-companion,lem-two-observable-pencil-bound,lem-visible-g-small,lem-zero-face-alpha-gauge,obs-realized-alpha-blowup proved;
   class conj-nsc seeded;
   class conj-gamma-emptiness stated;
   class conj-b-restricted,conj-degenerate-payment,conj-degenerate-transport,conj-ex,conj-kernel,conj-low-slab-cap,conj-min-a-w4,conj-near-cluster-absorption,conj-no-free-frontier,conj-rh,conj-sc,conj-skinny-shadow-cap,conj-tall-zero-face-radial-thickness,ex-hume,lem-canonical-separator,lem-exposed-circuit,lem-leakage,lem-negative-pivot-import,lem-wiggle-rigidity,obs-deep-leakage,obs-fwr-gap,obs-linear-law-finite-delta,obs-orphan-amplifier,obs-sigma-halo-nonrobust,prop-approx-simplex,thm-classical-factorization,thm-cluster,thm-corner-constants,thm-rank-one,thm-simplex,thm-well-exposed nonrigorous;

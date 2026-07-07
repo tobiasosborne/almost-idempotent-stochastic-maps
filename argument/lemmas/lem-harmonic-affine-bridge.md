@@ -5,7 +5,7 @@ contract: Harmonic-affine bridge: for an exact signed idempotent P with rows p_i
 defs: def-signed-idempotent
 deps: 
 status: proved
-af: seeded
+af: validated
 provenance: W33 wave (docs/waves/2026-07-07-W33-harmonic-affine-bridge.md): fresh-codex prover (worker AA) + SEPARATE fresh-codex hostile verifier (VAA, VALID — index conventions checked against the def shard; exact fixture on the banked W19 rank-5: Pg = g and g_i = p_i . g verified entrywise); first-principles, two lines each direction
 owner: A
 workspace: proofs/lem-harmonic-affine-bridge
