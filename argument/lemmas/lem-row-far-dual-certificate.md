@@ -5,7 +5,7 @@ contract: Row-far dual certificate: for an exact signed idempotent P and a geome
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed
 deps: 
 status: proved
-af: none
+af: seeded
 provenance: W37 wave (docs/waves/2026-07-07-W37-bridge.md): fresh-codex prover (worker AF) + SEPARATE fresh-codex hostile verifier (VAF, VALID — re-derived the dual feasible set and the weak-duality direction from scratch: any feasible normalized circuit upper-bounds t* via pairing with an arbitrary admissible h, no attainment needed; exact fixture: SHARP on the W29 frontier, nu_3/L_F = 1/81 = t*(3) exactly; visible-row check with explicit gap)
 owner: A
 workspace: proofs/lem-row-far-dual-certificate
