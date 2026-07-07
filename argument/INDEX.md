@@ -66,7 +66,7 @@
 | `lem-simplex-visibility` | lemma | proved | none | A | Simplex visibility: for an exact signed idempotent P with delta(P) <= 1/4 whose … |
 | `lem-single-heavy-recipient-rho-shadow` | lemma | proved | none | A | Single-heavy-recipient rho-shadow: for an exact signed idempotent P with 0 < del… |
 | `lem-top-concentration` | lemma | proved | validated | A | Top concentration: for an exact signed idempotent P with 0 < delta(P) <= 1/4, no… |
-| `lem-top-slab-companion` | lemma | proved | none | A | Top-slab companion: for an exact signed idempotent P with 0 < delta(P) <= (17 - … |
+| `lem-top-slab-companion` | lemma | proved | seeded | A | Top-slab companion: for an exact signed idempotent P with 0 < delta(P) <= (17 - … |
 | `lem-two-observable-pencil-bound` | lemma | proved | none | A | Two-observable pencil bound: for an exact signed idempotent P, a hidden row vert… |
 | `lem-visible-g-small` | lemma | proved | none | A | Visible rows are g-small: for an exact signed idempotent P with 0 < delta(P) <= … |
 | `lem-weighted-min` | lemma | proved | validated | A | Weighted minimum bound: let p_1, ..., p_m be positive reals with sum_i p_i = 1 a… |

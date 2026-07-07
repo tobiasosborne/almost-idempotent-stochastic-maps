@@ -75,7 +75,7 @@ graph LR
   lem-simplex-visibility["lem-simplex-visibility<br/>proved/none"]
   lem-single-heavy-recipient-rho-shadow["lem-single-heavy-recipient-rho-shadow<br/>proved/none"]
   lem-top-concentration["lem-top-concentration<br/>proved/validated"]
-  lem-top-slab-companion["lem-top-slab-companion<br/>proved/none"]
+  lem-top-slab-companion["lem-top-slab-companion<br/>proved/seeded"]
   lem-two-observable-pencil-bound["lem-two-observable-pencil-bound<br/>proved/none"]
   lem-visible-g-small["lem-visible-g-small<br/>proved/none"]
   lem-weighted-min["lem-weighted-min<br/>proved/validated"]
