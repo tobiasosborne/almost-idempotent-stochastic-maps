@@ -9,10 +9,15 @@ flight). Author drafts + labs in the session-12 scratchpad (`W49-fable/FP1`, `FP
 
 - FP2: `PARTIAL` — six exact fragments; VFP2: `VALID-WITH-CORRECTIONS (A-G survive;
   corrections are scope/wording, not mathematical invalidations)`.
-- FP1: `PARTIAL` — the complete rank-3 zero-face anatomy chain (unique edge-functional
-  exposer under disjointness; A_min = gap/reach EXACTLY, reproducing the banked 100; the
-  supporting-functional pinning; the downhill dichotomy; a 9-vertex exact fixture table;
-  ONE shard-ready open reach inequality). VFP1 pending — NOT yet codified.
+- FP1: `PARTIAL` — the complete rank-3 zero-face anatomy chain; VFP1:
+  `VALID-WITH-CORRECTIONS (core anatomy chain and exact fixtures validate; statement-level
+  corrections required)` — five corrections adopted (W nonempty in the setting; the
+  positive-transverse-component strictness; the quotient-distance normalization; the
+  fixture count 4 disjoint + 5 overlap; the width-4 conjecture form). CODIFIED:
+  [[lem-rank3-zero-face-anatomy]], [[lem-rank3-zero-face-min-mass]] (A_min = gap/reach,
+  reproducing the banked 100 exactly), [[lem-rank3-supporting-functional-pinning]],
+  [[lem-rank3-downhill-dichotomy]], and THE rank-3 closer candidate
+  [[conj-rank3-cluster-zero-face-reach]] (width-4 form).
 
 ## Results (FP2 side, codified per VFP2's split)
 
