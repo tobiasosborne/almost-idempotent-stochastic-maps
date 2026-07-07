@@ -31,7 +31,7 @@ graph LR
   conj-zero-face-elimination["conj-zero-face-elimination<br/>conjecture/none"]
   cor-rank-two-visible["cor-rank-two-visible<br/>proved/none"]
   ex-hume["ex-hume<br/>proved-mod-audit/seeded"]
-  lem-always-tight-dual-support["lem-always-tight-dual-support<br/>proved/none"]
+  lem-always-tight-dual-support["lem-always-tight-dual-support<br/>proved/seeded"]
   lem-bounded-alpha-top-slab-reduction["lem-bounded-alpha-top-slab-reduction<br/>proved/none"]
   lem-canonical-separator["lem-canonical-separator<br/>proved-mod-audit/none"]
   lem-classical-equiv["lem-classical-equiv<br/>proved/validated"]

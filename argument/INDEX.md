@@ -22,7 +22,7 @@
 | `conj-zero-face-elimination` | lemma | conjecture | none | A | (CONJECTURE) Tall-cluster zero-face elimination: there exist universal constants… |
 | `cor-rank-two-visible` | corollary | proved | none | A | Rank-two visibility: every exact signed idempotent P with rank(P) <= 2 and delta… |
 | `ex-hume` | obstruction | proved-mod-audit | seeded | A | The explicit 3x3 family P_s=I-u_s v_s^T (v_s=(1,-1+s,-s), u_s=(1-s+s^2,-s,0)^T) … |
-| `lem-always-tight-dual-support` | lemma | proved | none | A | Always-tight dual support: for the exposedness LP at a hidden geometrically dist… |
+| `lem-always-tight-dual-support` | lemma | proved | seeded | A | Always-tight dual support: for the exposedness LP at a hidden geometrically dist… |
 | `lem-bounded-alpha-top-slab-reduction` | lemma | proved | none | A | Bounded-alpha top-slab reduction: for an exact signed idempotent P with delta(P)… |
 | `lem-canonical-separator` | lemma | proved-mod-audit | none | A | For a signed affine retraction P with hidden top vertex v of height H there exis… |
 | `lem-classical-equiv` | lemma | proved | validated | A | The signed-idempotent and stochastic-idempotent formulations of classical stabil… |
