@@ -31,7 +31,7 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 **Rigorous (af-validated, T0): 28** — session-12 elevations: #26 lem-depth-d-halo-collapse
 (e0478c6), #27 lem-row-zero-capacity (402ed01), #28 lem-always-tight-dual-support (9b1dde7).
-**Registry: 120 results** (+35 this session). Every codified proof passed a SEPARATE fresh
+**Registry: 119 results** (+34 this session). Every codified proof passed a SEPARATE fresh
 hostile codex verifier (L5); L0 claimed ONLY for the af-validated 28.
 
 **THE STATE OF THE PROOF (sketch v16): ONE unscoped node, one favoured kill.**

@@ -11,7 +11,7 @@ STEWARDSHIP CONTRACT (binding): as in v10-v15. STATUS DISCIPLINE (L0): a SKETCH 
 
 Theorem; trunk; the endgame stack's lower half; the pivot (ONE face — the in-class
 intersection horn of conj-zero-face-elimination — merged by prop-f2-t1-equivalence);
-28 af-validated; registry 120; the closed-by-certificate list; USER DECISIONS aism-nlg,
+28 af-validated; registry 119; the closed-by-certificate list; USER DECISIONS aism-nlg,
 aism-z98; parked Tier-2/3 farm-out queue.
 
 ## THE MODE CHOICE, DATA-INFORMED (W52): (M2) TALL-EMPTINESS IS FAVOURED
