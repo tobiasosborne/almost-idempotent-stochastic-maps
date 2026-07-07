@@ -1,0 +1,8 @@
+{
+  "id": "a6abe4ca43f0696f",
+  "name": "lem-residual-upper",
+  "source": "imports validated registry lemma proofs/lem-residual-upper — Residual distance bound: let C be the convex hull of finitely many points of R^n, let b_1..b_M, c_1..c_N \u003e= 0 with m = sum_j b_j - sum_k c_k \u003e 0, let p_j, r_k be points of R^n with q = (sum_j b_j p_j - sum_k c_k r_k) / m, and let D_k \u003e= 0 satisfy ||x - r_k||_1 \u003c= D_k for all x in C and each k; then m * dist_1(q, C) \u003c= sum_j b_j * dist_1(p_j, C) + sum_k c_k * D_k.",
+  "content_hash": "93880e5d7caa9419f611e9ca07137a56fdd29ca9a85367e2c7c66e5a85276b9e",
+  "created": "2026-07-07T16:10:38.996924141Z",
+  "notes": ""
+}

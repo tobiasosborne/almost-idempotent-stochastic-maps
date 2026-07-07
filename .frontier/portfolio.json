@@ -325,6 +325,18 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-hiddenness-depth-markov/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-hiddenness-depth-markov.md"
         ]
+      },
+      {
+        "name": "af-lem-depth-d-halo-collapse",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-depth-d-halo-collapse"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-depth-d-halo-collapse/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-depth-d-halo-collapse.md"
+        ]
       }
     ]
   },
