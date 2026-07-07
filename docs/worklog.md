@@ -736,3 +736,17 @@ v11 + W44 (the intersection wave) pinned. Elevation cascade: #22 harmonic-affine
 killed by quota halt #2 (resets 9:06 AM; monitor armed for 9:10 auto-resume). Registry 87;
 af-validated 25. Commits: f137d19, 5c9378f, 14d439b, 769a8d2, 1b1f22b, 09111d8+#24, 8f0a01c,
 6704fc0, 740b666, c5c44a8, + this close.
+
+## 2026-07-07 09:45 — Session 11 CLOSED (user-directed stop at halt #3)
+
+Codex quota dry past the advertised reset; probe monitor stopped; resume is manual (HANDOFF
+halt-#3 section has the two relaunch items: W44 the intersection wave + the depth-d
+elevation). FINAL SESSION TALLIES: registry 55 -> 87 (+32); af-validated 16 -> 25 (+9: the
+parametric collapse, disintegration, top concentration, the hiddenness witness, the CS
+pincer, the harmonic-affine bridge, the row-far certificate, the top-slab companion,
+depth-Markov); 18 waves (W26-W43) each with separate hostile codex verification; trunk <2>5
+and <2>6 paid at reviewed tier; the open surface reduced to (T1)/(T2) — one verified
+convex-intersection characterization away from the height clause whose engine links are both
+L0 — plus Kernel(i) rank>=3, trunk <2>7, and the loose-delta lemma. Sketch v11 is canonical;
+one elevation deferred with certificate; no overclaims: the Kernel Conjecture and
+op-classical remain OPEN.

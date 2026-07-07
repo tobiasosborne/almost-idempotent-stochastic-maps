@@ -66,15 +66,22 @@ square the slab defect) now sits under BOTH open ledger items** (FINDINGS 2026-0
 bd aism-2fi P0). The certified pincer (W29-X): true-hidden folds back before depth 4τ
 (best frontier H/τ = √(5/99)); tall attempts die by absorption.
 
-## ⛔ BLOCKER AT HALT #3 (2026-07-07 09:40): CODEX QUOTA STILL EXHAUSTED PAST THE ADVERTISED RESET
+## ⛔ SESSION CLOSED AT HALT #3 (2026-07-07 09:40, user-directed stop): CODEX QUOTA EXHAUSTED
 
-The 9:06 reset did NOT restore capacity (probes at 09:40 still error). The session consumed
-~40 codex workers + 10 af orchestrations; the allocation is dry. USER DECISION: purchase
-credits or wait for the next (unknown) window. A capacity-probe monitor is armed — the
-campaign auto-resumes the moment codex answers. KILLED WITH NO OUTPUT (relaunch verbatim on
-resume): W44-AR (`scratchpad/W44/PROMPT-AR.md` — the intersection wave; reconstructible from
-lem-optimal-face-alpha-free-characterization's shard + sketch v11 (T1)) and the
-depth-d-halo-collapse orchestration (1-node ledger, plain relaunch).
+The 9:06 reset did NOT restore capacity; the session consumed ~40 codex workers + 10 af
+orchestrations (bd `aism-6ij`, P0 USER DECISION: credits or wait). The probe monitor was
+STOPPED at session close — resume is MANUAL. On resume, relaunch verbatim:
+
+1. **W44-AR — the (T1) intersection wave** (THE next mathematical act). Brief was in the
+   session scratchpad (now gone); RECONSTRUCT from: lem-optimal-face-alpha-free-
+   characterization's shard (the tool + fixture table), sketch v11 (T1) + the W44 pin below,
+   and the W42/W43 wave docs (attack routes: L0 geography of T/O via depth-Markov +
+   concentration; residual cancellation via optimal-face freedom; separator-as-exposer
+   contradiction; rank-3 fallback where hulls are computable).
+2. **Elevation queue**: `python3 scripts/af-orchestrate.py lem-depth-d-halo-collapse
+   --workers 6 --max-rounds 14 --node-cap 40` (1-node ledger, plain relaunch re-runs the
+   prover build); then row-zero-capacity, radial-alpha-bound family, the optimal-face
+   characterization. DEFERRED (needs factoring): lem-hiddenness-alpha-slab-leakage (740b666).
 
 ## (superseded halt #2 record follows)
 
