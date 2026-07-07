@@ -792,3 +792,23 @@ imports a future agent might reach for — read before importing ANY external to
   CLUSTER-UNIFORMLY at tall heavy near-cluster tops ((T1)), or the row-to-circuit bridge
   ((T2)). Membership in T/O is always-tightness on the WHOLE optimal face (the W42 hard stop
   stands — near-zero values certify nothing).
+
+## 2026-07-07 — W49/W50 (session 12): the tightness-promotion wall named; literature negative space
+
+- **The two Tier-1 faces reduce to ONE difficulty: whole-optimal-face TIGHTNESS PROMOTION
+  under tall/heavy.** (F1)'s residual (promote row-positive far balance-witnesses into T,
+  BF) and (F2)'s residual (select fat blockers / exclude thin near-clones, BD) are the same
+  wall — the W42 hard stop in sharper clothes. Ledger-only proofs are certified dead on both
+  faces (the BD thin-blocker graft gadget: kappa-high mass t*eps; verification VBD pending).
+- **In-class disjointness has NEVER been realized** (BE exact frontier): every starving-
+  blocker/disjointness construction dies at G_4 = C_4 = empty, H < 4*tau; restoring topness
+  restores the intersection. The faces are two shots at one truth.
+- **DEAD ROUTE (literature, W50): spectral-gap => structure imports for (F2).**
+  Hartfiel–Meyer, LAA 272 (1998) 193–203 [stated, not byte-matched]: subdominant eigenvalue
+  near 1 forces near-uncoupling only at FIXED n, threshold degrading with n. The whole
+  Simon–Ando/NCD/metastability apparatus is dimension-DEPENDENT — the (F2) mass floor must
+  be built natively and clone-invariantly. Do not re-walk.
+- **The solved sibling + its trap (W50):** Salzmann–Bergh–Datta arXiv:2405.01532 Thm 5.2
+  fixes a VECTOR (sqrt-eps, dimension-free, sharp; Lemma 5.5 reset-trick importable); the
+  abstract foregrounds the dimension-DEPENDENT application — triage from §5, not the
+  abstract. Our problem fixes a MAP; per-vector-to-global reassembly IS the Kernel content.
