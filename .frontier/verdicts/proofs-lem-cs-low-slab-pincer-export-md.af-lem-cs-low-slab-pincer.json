@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-cs-low-slab-pincer/export.md",
+  "oracle": "af-lem-cs-low-slab-pincer",
+  "result": "pass",
+  "claim_hash": "e40f769ec5cd533a10f49f6e053770ed12fba93c7d1a44eb11d7bece72565fc5",
+  "oracle_digest": "324b2529c63fc253a661ba52c461e8189a67481bddabe311a479596c75fa9eb4",
+  "inputs_hash": "7115bf723810e0aa5d40b9157591e3a81d1f021e6cbe7dfd49591f1832606c31",
+  "ts": "2026-07-07T02:47:26.603Z"
+}

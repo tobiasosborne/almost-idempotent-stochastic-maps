@@ -265,6 +265,18 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-hiddenness-dual-witness/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-hiddenness-dual-witness.md"
         ]
+      },
+      {
+        "name": "af-lem-cs-low-slab-pincer",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-cs-low-slab-pincer"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-cs-low-slab-pincer/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-cs-low-slab-pincer.md"
+        ]
       }
     ]
   },

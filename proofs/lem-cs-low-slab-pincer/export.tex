@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{CS low-slab pincer: for an exact signed idempotent P, a r...}
+\step{1} CS low-slab pincer: for an exact signed idempotent P, a row index v with nu\_v = sum\_j max(-P\_vj, 0), an affine h with h(p\_v) = 0 and 0 <= h(p\_j) <= 1 for every row j, and every s > 0, one has sum over \{j : h(p\_j) >= s\} of max(P\_vj, 0) <= nu\_v / s. \steptag{validated} \\[6pt]
+\step{1.1} Let a\_j = P\_vj, h\_j = h(p\_j), a\_j\textasciicircum{}+ = max(a\_j, 0), and a\_j\textasciicircum{}- = max(-a\_j, 0). Exact signed idempotence and affinity give the scalar reproduction identity 0 = sum\_j a\_j h\_j. \steptag{validated} \\[6pt]
+\step{1.1.1} By def-signed-idempotent, P\textasciicircum{}2 = P and P 1 = 1. Therefore for every coordinate k, (p\_v)\_k = P\_vk = sum\_j P\_vj P\_jk, so p\_v = sum\_j a\_j p\_j; also sum\_j a\_j = 1. \steptag{validated} \\[4pt]
+\step{1.1.2} Since h is affine and the coefficients a\_j sum to 1, applying h to p\_v = sum\_j a\_j p\_j gives h(p\_v) = sum\_j a\_j h(p\_j). The hypothesis h(p\_v)=0 then gives 0 = sum\_j a\_j h\_j. \steptag{validated} \\[4pt]
+\step{1.2} The scalar reproduction identity and the bounds 0 <= h\_j <= 1 imply sum\_j a\_j\textasciicircum{}+ h\_j <= nu\_v. \steptag{validated} \\[6pt]
+\step{1.2.1} For every j, a\_j = a\_j\textasciicircum{}+ - a\_j\textasciicircum{}- with a\_j\textasciicircum{}+, a\_j\textasciicircum{}- >= 0. Substituting this into 0 = sum\_j a\_j h\_j gives sum\_j a\_j\textasciicircum{}+ h\_j = sum\_j a\_j\textasciicircum{}- h\_j. \steptag{validated} \\[4pt]
+\step{1.2.2} Because 0 <= h\_j <= 1 and a\_j\textasciicircum{}- >= 0, one has sum\_j a\_j\textasciicircum{}- h\_j <= sum\_j a\_j\textasciicircum{}-. Since a\_j = P\_vj, the definition of nu\_v gives sum\_j a\_j\textasciicircum{}- = sum\_j max(-P\_vj,0) = nu\_v, hence sum\_j a\_j\textasciicircum{}+ h\_j <= nu\_v. \steptag{validated} \\[6pt]
+\step{1.2.2.1} Using validated node 1.2.1, sum\_j a\_j\textasciicircum{}+ h\_j = sum\_j a\_j\textasciicircum{}- h\_j. The bounds 0 <= h\_j <= 1 and a\_j\textasciicircum{}- >= 0 give sum\_j a\_j\textasciicircum{}- h\_j <= sum\_j a\_j\textasciicircum{}-. Since a\_j = P\_vj, a\_j\textasciicircum{}- = max(-P\_vj,0), so sum\_j a\_j\textasciicircum{}- = nu\_v by the definition of nu\_v. Therefore sum\_j a\_j\textasciicircum{}+ h\_j <= nu\_v. \steptag{validated} \\[4pt]
+\step{1.3} For A\_s = \{j : h\_j >= s\}, the inequality s * sum\_\{j in A\_s\} a\_j\textasciicircum{}+ <= sum\_j a\_j\textasciicircum{}+ h\_j holds; since s > 0, combining with the previous bound gives sum\_\{j in A\_s\} max(P\_vj,0) <= nu\_v / s. \steptag{validated} \\[6pt]
+\step{1.3.1} For each j in A\_s, h\_j >= s and a\_j\textasciicircum{}+ >= 0, so s a\_j\textasciicircum{}+ <= a\_j\textasciicircum{}+ h\_j. Summing over A\_s gives s * sum\_\{j in A\_s\} a\_j\textasciicircum{}+ <= sum\_\{j in A\_s\} a\_j\textasciicircum{}+ h\_j <= sum\_j a\_j\textasciicircum{}+ h\_j, since all a\_j\textasciicircum{}+ h\_j are nonnegative. \steptag{validated} \\[4pt]
+\step{1.3.2} Within the notation a\_j = P\_vj, h\_j = h(p\_j), a\_j\textasciicircum{}+ = max(a\_j,0), and A\_s = \{j : h\_j >= s\}, the locally established sign-split estimate sum\_j a\_j\textasciicircum{}+ h\_j <= nu\_v and high-slab estimate s * sum\_\{j in A\_s\} a\_j\textasciicircum{}+ <= sum\_j a\_j\textasciicircum{}+ h\_j imply s * sum\_\{j in A\_s\} a\_j\textasciicircum{}+ <= nu\_v. Since s > 0, division by s yields sum\_\{j : h(p\_j) >= s\} max(P\_vj,0) <= nu\_v / s. \steptag{validated} \\[6pt]
+\step{1.3.2.1} Re-derive the sign-split bound inside node 1.3.2. Put a\_j = P\_vj, h\_j = h(p\_j), a\_j\textasciicircum{}+ = max(a\_j,0), and a\_j\textasciicircum{}- = max(-a\_j,0). Since P is an exact signed idempotent, P\textasciicircum{}2 = P and P 1 = 1, so p\_v = sum\_j a\_j p\_j and sum\_j a\_j = 1. Affineness of h and h(p\_v)=0 give 0 = sum\_j a\_j h\_j. As a\_j = a\_j\textasciicircum{}+ - a\_j\textasciicircum{}- and the sums are finite, sum\_j a\_j\textasciicircum{}+ h\_j = sum\_j a\_j\textasciicircum{}- h\_j. Since 0 <= h\_j <= 1 and a\_j\textasciicircum{}- >= 0, sum\_j a\_j\textasciicircum{}- h\_j <= sum\_j a\_j\textasciicircum{}- = sum\_j max(-P\_vj,0) = nu\_v. Hence sum\_j a\_j\textasciicircum{}+ h\_j <= nu\_v. \steptag{validated} \\[4pt]
+\step{1.3.2.2} Re-derive the high-slab localization inside node 1.3.2. Let A\_s = \{j : h\_j >= s\}. For each j in A\_s, h\_j >= s and a\_j\textasciicircum{}+ >= 0, hence s a\_j\textasciicircum{}+ <= a\_j\textasciicircum{}+ h\_j. Summing over A\_s gives s * sum\_\{j in A\_s\} a\_j\textasciicircum{}+ <= sum\_\{j in A\_s\} a\_j\textasciicircum{}+ h\_j. Also every omitted term a\_j\textasciicircum{}+ h\_j is nonnegative because a\_j\textasciicircum{}+ >= 0 and h\_j >= 0, so sum\_\{j in A\_s\} a\_j\textasciicircum{}+ h\_j <= sum\_j a\_j\textasciicircum{}+ h\_j. \steptag{validated} \\[4pt]
+\step{1.3.2.3} Combining the two preceding children gives s * sum\_\{j in A\_s\} a\_j\textasciicircum{}+ <= nu\_v. Since s > 0, division by s gives sum\_\{j in A\_s\} a\_j\textasciicircum{}+ <= nu\_v / s. Finally A\_s = \{j : h\_j >= s\} = \{j : h(p\_j) >= s\} and a\_j\textasciicircum{}+ = max(P\_vj,0), which is exactly sum over \{j : h(p\_j) >= s\} of max(P\_vj,0) <= nu\_v / s. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
