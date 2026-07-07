@@ -349,6 +349,18 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-row-zero-capacity/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-row-zero-capacity.md"
         ]
+      },
+      {
+        "name": "af-lem-always-tight-dual-support",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-always-tight-dual-support"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-always-tight-dual-support/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-always-tight-dual-support.md"
+        ]
       }
     ]
   },

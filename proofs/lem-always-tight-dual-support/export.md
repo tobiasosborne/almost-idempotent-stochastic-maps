@@ -1,0 +1,218 @@
+# Proof Export
+
+## Node 1
+
+**Statement:** Always-tight dual support: for the exposedness LP at a hidden geometrically distinct row vertex u of an exact signed idempotent P with delta(P) > 0 and nonempty visible set, every optimal hiddenness dual witness (lambda, alpha, beta), after deleting redundant centered-zero constraints, has supp(lambda) contained in T, supp(beta) contained in O, and supp(alpha) contained in Z, where T, O, Z are the rho-far, upper-box, and lower-box constraint families tight on the WHOLE primal optimal face; T is nonempty, and O is nonempty if and only if t*(u) > 0.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+### Node 1.1
+
+**Statement:** Set up the exposedness LP and its reduced optimal dual witnesses. Let F={f: ||p_f-p_u||_1>=rho}, d_i=p_i-p_u, and t=t*(u). A primal feasible point is an admissible exposer h with h(p_u)=0, 0<=h(p_i)<=1, and objective min_{f in F} h(p_f); equivalently maximize t subject to h(p_f)>=t for f in F. The primal optimal face consists of the admissible exposers attaining t. The always-tight families are T={f in F: h(p_f)=t for every primal optimum h}, O={i: h(p_i)=1 for every primal optimum h}, and Z={i: h(p_i)=0 for every primal optimum h}. After deleting redundant centered-zero constraints, an optimal hiddenness dual witness is a nonnegative triple (lambda,alpha,beta) with sum_F lambda_f=1, sum_i beta_i=t, and sum_F lambda_f d_f + sum_i alpha_i d_i = sum_i beta_i d_i; the external lemma lem-hiddenness-dual-witness supplies such witnesses for hidden u, and standard LP duality gives the same feasibility/equality conditions for every optimal hiddenness dual witness.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+#### Node 1.1.1
+
+**Statement:** The definitions give the primal feasible set. By def-negative-mass and def-visible-set, delta(P)>0 fixes tau=sqrt(delta(P)), rho=4*tau, and kappa=tau/4. By def-exposed, an admissible exposer for u is an affine h with h(p_u)=0 and 0<=h(p_i)<=1 for every row. The exposedness objective is min_{f in F} h(p_f), where F={f: ||p_f-p_u||_1>=rho}; the zero exposer is feasible, so the optimal value t=t*(u) is at least 0. Since u is hidden and delta(P)>0, t<kappa<infinity, so F is nonempty.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+#### Node 1.1.2
+
+**Statement:** The exposedness problem is the finite linear program maximize t subject to h(p_f)-t>=0 for f in F, h(p_i)>=0 for every row index i, and 1-h(p_i)>=0 for every row index i, with h affine and h(p_u)=0. Its primal optimal face is the set of admissible exposers attaining the optimal value t. Thus T, O, and Z are exactly the constraints of the three displayed families that are tight for every point of this optimal face.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+#### Node 1.1.3
+
+**Statement:** The reduced dual witness data are the KKT/LP-dual variables for those three constraint families after removing centered-zero lower constraints d_i=p_i-p_u=0. Therefore every optimal hiddenness dual witness has lambda_f, alpha_i, beta_i>=0, sum_F lambda_f=1, sum_i beta_i=t, and the stationarity/balance equation sum_F lambda_f d_f + sum_i alpha_i d_i = sum_i beta_i d_i. The external validated lemma lem-hiddenness-dual-witness supplies at least one such optimal witness for hidden u.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+### Node 1.2
+
+**Statement:** Complementarity identity. For any primal optimum h and any reduced optimal hiddenness dual witness (lambda,alpha,beta), pairing h with the dual balance and using h(p_u)=0, sum_F lambda_f=1, and sum_i beta_i=t gives sum_F lambda_f*(h(p_f)-t) + sum_i alpha_i*h(p_i) + sum_i beta_i*(1-h(p_i)) = 0.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+### Node 1.3
+
+**Statement:** Each term in the complementarity identity is nonnegative. Indeed primal feasibility gives h(p_f)>=t on F and 0<=h(p_i)<=1 on all row indices, while lambda, alpha, and beta are nonnegative.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+### Node 1.4
+
+**Statement:** Positive dual mass forces whole-face tightness. Since the identity in node 1.2 is a sum of nonnegative terms equal to zero, for the fixed optimum h every positive lambda_f forces h(p_f)=t, every positive alpha_i forces h(p_i)=0, and every positive beta_i forces h(p_i)=1. As h was an arbitrary primal optimum, supp(lambda) is contained in T, supp(alpha) is contained in Z, and supp(beta) is contained in O.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+#### Node 1.4.1
+
+**Statement:** For any fixed primal optimum h and any fixed reduced optimal hiddenness dual witness (lambda,alpha,beta), the validated complementarity identity of node 1.2 and the validated nonnegativity statement of node 1.3 apply. Therefore the finite family of real summands lambda_f*(h(p_f)-t), alpha_i*h(p_i), and beta_i*(1-h(p_i)) is termwise nonnegative and its total sum is 0.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+#### Node 1.4.2
+
+**Statement:** A finite family of nonnegative real numbers with total sum 0 has every member equal to 0. Applying this to node 1.4.1, for the fixed primal optimum h: if lambda_f>0 then h(p_f)-t=0, hence h(p_f)=t; if alpha_i>0 then h(p_i)=0; and if beta_i>0 then 1-h(p_i)=0, hence h(p_i)=1.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+#### Node 1.4.3
+
+**Statement:** The primal optimum h in nodes 1.4.1 and 1.4.2 was arbitrary, while the reduced optimal witness (lambda,alpha,beta) was fixed. Hence every f with lambda_f>0 satisfies h(p_f)=t for every primal optimum h, every i with alpha_i>0 satisfies h(p_i)=0 for every primal optimum h, and every i with beta_i>0 satisfies h(p_i)=1 for every primal optimum h. By node 1.1.2, these are exactly membership in the always-tight families T, Z, and O respectively; therefore supp(lambda) is contained in T, supp(alpha) is contained in Z, and supp(beta) is contained in O.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+### Node 1.5
+
+**Statement:** T is nonempty. For any reduced optimal hiddenness dual witness, sum_F lambda_f=1 with lambda_f>=0, so supp(lambda) is nonempty; node 1.4 then places this nonempty support inside T.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+#### Node 1.5.1
+
+**Statement:** Direct proof of T nonempty avoiding node 1.4. Let (lambda,alpha,beta) be any reduced optimal hiddenness dual witness. Since F is finite, lambda_f >= 0 for all f in F, and sum_F lambda_f = 1, there is f0 in F with lambda_f0 > 0. Fix an arbitrary primal optimum h. By the validated complementarity identity 1.2 and nonnegativity 1.3, every summand in the zero sum is nonnegative; hence the particular summand lambda_f0*(h(p_f0)-t) is zero. Because lambda_f0 > 0, h(p_f0)=t. Since h was arbitrary over the primal optimal face, f0 is tight for the rho-far constraint on the whole optimal face, so f0 in T. Therefore T is nonempty.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+### Node 1.6
+
+**Statement:** O is nonempty if and only if t*(u)>0. First, t>=0 because the zero exposer is primal feasible. If t=0, the zero exposer is primal optimal, so no upper-box constraint h(p_i)<=1 is tight on the whole primal optimal face and O is empty. Conversely, if t>0, lem-hiddenness-dual-witness gives an optimal witness with sum_i beta_i=t>0; hence supp(beta) is nonempty, and node 1.4 puts that support inside O.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+#### Node 1.6.1
+
+**Statement:** If t*(u)=0, the zero exposer is primal optimal because it is feasible and attains objective 0. For this optimum h=0, every row has h(p_i)=0, so no upper-box constraint h(p_i)<=1 is tight on the whole primal optimal face; hence O is empty.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+#### Node 1.6.2
+
+**Statement:** If t*(u)>0, the external validated lemma lem-hiddenness-dual-witness gives an optimal witness with beta_i>=0 and sum_i beta_i=t*(u)>0, so some beta_i is positive. By the support localization proved from the complementarity identity, every positive-beta index lies in O; hence O is nonempty.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+##### Node 1.6.2.1
+
+**Statement:** Local beta-support localization. For any primal optimum h and any reduced optimal hiddenness dual witness (lambda,alpha,beta), if beta_i>0 then i lies in O. Indeed, validated node 1.2 gives the complementarity identity, and validated node 1.3 says every summand in it is nonnegative. A sum of nonnegative real numbers equal to zero has every summand zero; hence beta_i>0 forces beta_i*(1-h(p_i))=0 and so h(p_i)=1. Since the primal optimum h was arbitrary, h(p_i)=1 for every primal optimum h. By the definition of O as the upper-box constraints tight on the whole primal optimal face, i is in O.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+
+##### Node 1.6.2.2
+
+**Statement:** Nonempty beta support gives nonempty O. Under the hypothesis t*(u)>0, validated node 1.1.3 gives a reduced optimal hiddenness dual witness with beta_i>=0 for all i and sum_i beta_i=t*(u). Because the index set is finite and the sum of nonnegative beta_i is positive, at least one beta_i is positive. By node 1.6.2.1, that index belongs to O. Therefore O is nonempty.
+
+**Type:** claim
+
+**Inference:** assumption
+
+**Status:** validated
+
+**Taint:** clean
+

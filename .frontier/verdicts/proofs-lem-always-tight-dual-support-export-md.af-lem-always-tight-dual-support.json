@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-always-tight-dual-support/export.md",
+  "oracle": "af-lem-always-tight-dual-support",
+  "result": "pass",
+  "claim_hash": "5627d564d97b0ce7d03b561a1b273941cb16d824d8c8fb924ca8835b99f9ec5f",
+  "oracle_digest": "c178d73751d1a01b8e4389ed0fa38a249815b49180fbc19e30077c56c96661e4",
+  "inputs_hash": "fc21d6045ab3bd10aa899c8567039056934b177c21ec5171457f6185f5d8ffaa",
+  "ts": "2026-07-07T17:15:37.267Z"
+}

@@ -5,7 +5,7 @@ contract: Always-tight dual support: for the exposedness LP at a hidden geometri
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed
 deps: lem-hiddenness-dual-witness
 status: proved
-af: seeded
+af: validated
 provenance: W44 wave (docs/waves/2026-07-07-W44-t1-intersection.md): TWO independent fresh-codex provers (AR and AS, identical core proof — pair the witness balance with any optimal exposer h to get the complementarity identity sum lambda_f(h_f - t*) + sum alpha_i h_i + sum beta_i(1 - h_i) = 0 with every summand nonnegative) + SEPARATE fresh-codex hostile verifier (VAR, VALID-WITH-CORRECTIONS — the redundant-centered-zero caveat: if redundant centered zero constraints are retained, arbitrary alpha can be added on d_v = 0 rows without changing the balance, hence the "reduced witness" clause; O-empty edge: t* = 0 makes h = 0 optimal; exact edge fixtures incl. rank-3 singleton T/O, t* = 0, duplicate centered rows)
 owner: A
 workspace: proofs/lem-always-tight-dual-support
