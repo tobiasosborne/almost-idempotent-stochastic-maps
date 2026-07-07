@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-row-zero-capacity/export.md",
+  "oracle": "af-lem-row-zero-capacity",
+  "result": "pass",
+  "claim_hash": "58a4acc9f72797cab0303206d8d5c1059ded7267059d58ca1d0f13a562a9aaa7",
+  "oracle_digest": "c054c2655ee2be490b3b9c1ef8d0e84a56cb3775099dfe2a16756342fe0d18b1",
+  "inputs_hash": "fd6eacae12969ebd2ae6a643b4de9fd7ed389c04f3379e12de5fcdba4fe3c2f2",
+  "ts": "2026-07-07T16:40:03.288Z"
+}

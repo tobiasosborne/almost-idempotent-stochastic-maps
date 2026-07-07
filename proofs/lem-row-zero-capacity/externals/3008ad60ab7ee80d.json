@@ -1,0 +1,8 @@
+{
+  "id": "3008ad60ab7ee80d",
+  "name": "lem-harmonic-affine-bridge",
+  "source": "imports validated registry lemma proofs/lem-harmonic-affine-bridge — Harmonic-affine bridge: for an exact signed idempotent P with rows p_i = (P_ij)_j, a vector g satisfies Pg = g if and only if there exists u with g_i = u . p_i for every row index i; in the forward direction u = g works (g_i = p_i . g), and the constant term of any affine representation is absorbable into u since all row sums equal 1.",
+  "content_hash": "afc691d8672fc8915076e18471d502e101d318e9428d34d61b13328b7867a81c",
+  "created": "2026-07-07T16:26:40.534280446Z",
+  "notes": ""
+}

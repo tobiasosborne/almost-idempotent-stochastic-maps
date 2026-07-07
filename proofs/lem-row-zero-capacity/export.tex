@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Row-zero capacity: for an exact signed idempotent P, a ro...}
+\step{1} Row-zero capacity: for an exact signed idempotent P, a row index i, and any vector y with P y = y, 0 <= y\_j <= 1 for all j, y\_i = 0, and y\_f >= kappa for all f in a set F, one has kappa * sum over f in F of max(P\_if, 0) <= nu\_i, where nu\_i is the row-i negative mass. \steptag{validated} \\[6pt]
+\step{1.1} Fix arbitrary data satisfying the hypotheses. Write p\_j = P\_ij, p\_j\textasciicircum{}+ = max(p\_j,0), p\_j\textasciicircum{}- = max(-p\_j,0), and nu\_i = sum\_j p\_j\textasciicircum{}-; by def-negative-mass this nu\_i is exactly the row-i negative mass appearing in the claim. \steptag{validated} \\[4pt]
+\step{1.2} Row balance: by Py = y and y\_i = 0, the i-th coordinate gives 0 = (Py)\_i = sum\_j P\_ij y\_j = sum\_j p\_j y\_j. \steptag{validated} \\[6pt]
+\step{1.2.1} For a finite square matrix P and vector y, the i-th coordinate of Py is (Py)\_i = sum\_j P\_ij y\_j by matrix-vector multiplication. \steptag{validated} \\[4pt]
+\step{1.2.2} The hypothesis Py = y gives (Py)\_i = y\_i, and the hypothesis y\_i = 0 gives (Py)\_i = 0; using p\_j = P\_ij from 1.1 yields 0 = sum\_j P\_ij y\_j = sum\_j p\_j y\_j. \steptag{validated} \\[4pt]
+\step{1.3} Positive-negative splitting of the row balance gives sum\_j p\_j\textasciicircum{}+ y\_j = sum\_j p\_j\textasciicircum{}- y\_j. \steptag{validated} \\[6pt]
+\step{1.3.1} For each j, by the definitions p\_j\textasciicircum{}+ = max(p\_j,0) and p\_j\textasciicircum{}- = max(-p\_j,0), so p\_j = p\_j\textasciicircum{}+ - p\_j\textasciicircum{}- and both p\_j\textasciicircum{}+, p\_j\textasciicircum{}- are nonnegative. \steptag{validated} \\[4pt]
+\step{1.3.2} Substituting p\_j = p\_j\textasciicircum{}+ - p\_j\textasciicircum{}- into the row balance from 1.2 gives 0 = sum\_j p\_j\textasciicircum{}+ y\_j - sum\_j p\_j\textasciicircum{}- y\_j; adding sum\_j p\_j\textasciicircum{}- y\_j to both sides gives sum\_j p\_j\textasciicircum{}+ y\_j = sum\_j p\_j\textasciicircum{}- y\_j. \steptag{validated} \\[4pt]
+\step{1.4} The negative side is bounded by row-i negative mass: since 0 <= y\_j <= 1 and p\_j\textasciicircum{}- >= 0 for every j, sum\_j p\_j\textasciicircum{}- y\_j <= sum\_j p\_j\textasciicircum{}- = nu\_i. \steptag{validated} \\[6pt]
+\step{1.4.1} For every j, p\_j\textasciicircum{}- >= 0 and the hypothesis 0 <= y\_j <= 1 gives p\_j\textasciicircum{}- y\_j <= p\_j\textasciicircum{}-; summing these finitely many inequalities gives sum\_j p\_j\textasciicircum{}- y\_j <= sum\_j p\_j\textasciicircum{}-. \steptag{validated} \\[4pt]
+\step{1.4.2} By the abbreviation in 1.1 and def-negative-mass, sum\_j p\_j\textasciicircum{}- is the row-i negative mass nu\_i, so sum\_j p\_j\textasciicircum{}- y\_j <= nu\_i. \steptag{validated} \\[4pt]
+\step{1.5} The F-positive contribution is bounded below by kappa: since y\_f >= kappa for f in F and p\_f\textasciicircum{}+ >= 0, kappa * sum\_\{f in F\} p\_f\textasciicircum{}+ <= sum\_\{f in F\} p\_f\textasciicircum{}+ y\_f <= sum\_j p\_j\textasciicircum{}+ y\_j. \steptag{validated} \\[6pt]
+\step{1.5.1} For each f in F, p\_f\textasciicircum{}+ >= 0 and the hypothesis y\_f >= kappa imply kappa p\_f\textasciicircum{}+ <= y\_f p\_f\textasciicircum{}+; summing over f in F gives kappa * sum\_\{f in F\} p\_f\textasciicircum{}+ <= sum\_\{f in F\} p\_f\textasciicircum{}+ y\_f. \steptag{validated} \\[4pt]
+\step{1.5.2} For every j, p\_j\textasciicircum{}+ >= 0 and y\_j >= 0, so p\_j\textasciicircum{}+ y\_j >= 0. Since F is a subset of the row index set, sum\_\{f in F\} p\_f\textasciicircum{}+ y\_f <= sum\_j p\_j\textasciicircum{}+ y\_j. \steptag{validated} \\[4pt]
+\step{1.6} Combining the preceding inequalities gives kappa * sum\_\{f in F\} max(P\_if,0) = kappa * sum\_\{f in F\} p\_f\textasciicircum{}+ <= sum\_j p\_j\textasciicircum{}+ y\_j = sum\_j p\_j\textasciicircum{}- y\_j <= nu\_i; since the data were arbitrary, the claimed universal statement follows. \steptag{validated} \\[6pt]
+\step{1.6.1} From 1.5, kappa * sum\_\{f in F\} p\_f\textasciicircum{}+ <= sum\_j p\_j\textasciicircum{}+ y\_j. From 1.3, sum\_j p\_j\textasciicircum{}+ y\_j = sum\_j p\_j\textasciicircum{}- y\_j. From 1.4, sum\_j p\_j\textasciicircum{}- y\_j <= nu\_i. Chaining gives kappa * sum\_\{f in F\} p\_f\textasciicircum{}+ <= nu\_i. \steptag{validated} \\[4pt]
+\step{1.6.2} Because p\_f\textasciicircum{}+ = max(p\_f,0) and p\_f = P\_if by 1.1, sum\_\{f in F\} p\_f\textasciicircum{}+ = sum\_\{f in F\} max(P\_if,0). Substituting this identity into the chained inequality gives the desired displayed inequality. \steptag{validated} \\[4pt]
+\step{1.6.3} The initial choice in 1.1 was arbitrary among all P, i, y, F, and kappa satisfying the root hypotheses, so universal generalization proves node 1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

@@ -337,6 +337,18 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-depth-d-halo-collapse/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-depth-d-halo-collapse.md"
         ]
+      },
+      {
+        "name": "af-lem-row-zero-capacity",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-row-zero-capacity"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-row-zero-capacity/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-row-zero-capacity.md"
+        ]
       }
     ]
   },
