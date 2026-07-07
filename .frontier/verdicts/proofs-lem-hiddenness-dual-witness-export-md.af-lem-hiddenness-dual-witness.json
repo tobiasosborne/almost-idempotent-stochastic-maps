@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-hiddenness-dual-witness/export.md",
+  "oracle": "af-lem-hiddenness-dual-witness",
+  "result": "pass",
+  "claim_hash": "d71d6c8842a42fd7fd6a34954dc61caf3432273d03dee634009509f48a283843",
+  "oracle_digest": "98e2775acaca7f6c03366a6de748e8ec8addac3e0149950219257766ee1a5675",
+  "inputs_hash": "a89129996a8d06a7746b5bc02428411ceeb7bb1dd6fed533fd044437db8f8159",
+  "ts": "2026-07-07T02:15:01.279Z"
+}

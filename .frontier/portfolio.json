@@ -253,6 +253,18 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-top-concentration/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-top-concentration.md"
         ]
+      },
+      {
+        "name": "af-lem-hiddenness-dual-witness",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-hiddenness-dual-witness"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-hiddenness-dual-witness/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-hiddenness-dual-witness.md"
+        ]
       }
     ]
   },

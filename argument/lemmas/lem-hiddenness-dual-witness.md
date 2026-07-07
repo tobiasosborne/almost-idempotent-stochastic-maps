@@ -5,7 +5,7 @@ contract: Hiddenness dual witness: for an exact signed idempotent P and a hidden
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed
 deps: 
 status: proved
-af: seeded
+af: validated
 provenance: W26 wave (docs/waves/2026-07-06-W26-hiddenness-consumption.md): fresh-codex prover (worker P) + SEPARATE fresh-codex hostile verifier (VP, VALID-WITH-CORRECTIONS — re-derived the dual from scratch incl. feasibility/boundedness/attainment/strong duality and the hidden => F_v nonempty step, exact fixture on the banked W19 7x7 duplicate-split matrix, t*(v) = 1/21 < 1/16 with the witness recomputed exactly); first-principles finite LP duality, no imports
 owner: A
 workspace: proofs/lem-hiddenness-dual-witness

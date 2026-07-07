@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Hiddenness dual witness: for an exact signed idempotent P...}
+\step{1} Hiddenness dual witness: for an exact signed idempotent P and a hidden row vertex v (rho = 4*tau, kappa = tau/4, tau = sqrt(delta(P))), writing F\_v = \{j : ||p\_j - p\_v||\_1 >= rho\} for the rho-far row-index set (nonempty for hidden v), there exist lambda\_f >= 0 (f in F\_v) with sum\_f lambda\_f = 1 and alpha\_i, beta\_i >= 0 (over all row indices i) with sum\_i beta\_i = t*(v) < kappa, such that sum\_f lambda\_f*(p\_f - p\_v) + sum\_i alpha\_i*(p\_i - p\_v) = sum\_i beta\_i*(p\_i - p\_v). \steptag{validated} \\[6pt]
+\step{1.1} Hiddenness gives the scalar prerequisites: F\_v is nonempty and t*(v) < kappa. By def-exposed, if no row is at l1-distance at least rho from p\_v then t*(v)=+infty; a hidden row vertex is not (rho,kappa)-exposed, so it cannot have t*(v)>=kappa, hence F\_v is nonempty and t*(v)<kappa. \steptag{validated} \\[4pt]
+\step{1.2} The exposedness-margin optimization is the finite primal LP: with d\_i=p\_i-p\_v, choose u in R\textasciicircum{}n and t in R, maximize t, subject to 0 <= u.d\_i <= 1 for every row index i and t <= u.d\_f for every f in F\_v. Its optimal value is exactly t*(v); it is feasible at u=0,t=0 and, because F\_v is nonempty, it is bounded above by 1. \steptag{validated} \\[6pt]
+\step{1.2.1} An admissible exposer h with h(p\_v)=0 is, on the finite row set, h(p\_i)=u.(p\_i-p\_v) for the linear part u of h; conversely any u defines the affine function h(x)=u.(x-p\_v), which has h(p\_v)=0. Therefore admissibility 0<=h(p\_i)<=1 is exactly 0<=u.d\_i<=1 for all row indices i. \steptag{validated} \\[4pt]
+\step{1.2.2} For fixed u satisfying 0<=u.d\_i<=1, the largest feasible t in the displayed LP is min\_\{f in F\_v\} u.d\_f. Hence maximizing t is exactly the exposedness-margin supremum t*(v). The point u=0,t=0 is feasible, and if F\_v is nonempty then t<=u.d\_f<=1 for any f in F\_v, so the primal objective is bounded above by 1. \steptag{validated} \\[4pt]
+\step{1.3} The standard dual of that primal LP has nonnegative variables beta\_i for u.d\_i <= 1, alpha\_i for -u.d\_i <= 0, and lambda\_f for t-u.d\_f <= 0. It minimizes sum\_i beta\_i subject to sum\_f lambda\_f = 1 and sum\_f lambda\_f*d\_f + sum\_i alpha\_i*d\_i = sum\_i beta\_i*d\_i. \steptag{validated} \\[6pt]
+\step{1.3.1} Put the primal from 1.2 in max-with-free-variables form with x=(u,t), objective t, and inequalities u.d\_i<=1, -u.d\_i<=0, and t-u.d\_f<=0. The dual of a finite maximization LP with free variables and <= inequalities uses nonnegative multipliers on those inequalities and imposes equality of the coefficient vector with the primal objective vector. \steptag{validated} \\[4pt]
+\step{1.3.2} Applying that rule gives multipliers beta\_i>=0, alpha\_i>=0, lambda\_f>=0 and dual objective sum\_i beta\_i. Equality of the t-coefficient gives sum\_f lambda\_f=1. Equality of the u-coefficients gives sum\_i beta\_i*d\_i - sum\_i alpha\_i*d\_i - sum\_f lambda\_f*d\_f=0, equivalently sum\_f lambda\_f*d\_f + sum\_i alpha\_i*d\_i = sum\_i beta\_i*d\_i. \steptag{validated} \\[4pt]
+\step{1.4} Finite LP strong duality and dual attainment apply to the feasible bounded finite LP above, so there is an optimal dual solution with sum\_i beta\_i = t*(v). Together with t*(v)<kappa, the dual nonnegativity, lambda-normalization, and vector equality are exactly the required hiddenness witness. \steptag{validated} \\[6pt]
+\step{1.4.1} The primal LP from 1.2 is finite-dimensional, feasible, and has finite optimal value t*(v). Therefore standard finite LP strong duality gives equality between the primal optimum and the dual optimum from 1.3, and dual attainment gives a dual feasible minimizer. \steptag{validated} \\[4pt]
+\step{1.4.2} Choose such a dual minimizer. By 1.3 its variables satisfy lambda\_f>=0, alpha\_i>=0, beta\_i>=0, sum\_f lambda\_f=1, and sum\_f lambda\_f*d\_f + sum\_i alpha\_i*d\_i = sum\_i beta\_i*d\_i; by strong duality its objective sum\_i beta\_i equals t*(v). By 1.1 this common value is < kappa, and substituting d\_i=p\_i-p\_v gives the witness equation in node 1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
