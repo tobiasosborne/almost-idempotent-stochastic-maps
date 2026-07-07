@@ -726,3 +726,23 @@ imports a future agent might reach for — read before importing ANY external to
   controlled A (complementary slackness structure)? (ii) PRIMAL EXPOSER construction — dual
   circuits only upper-bound t*; exposure needs an explicit margin-κ exposer (the W36 anatomy)
   or a lower bound over ALL duals. Everything else is bookkeeping around these two.
+
+## 2026-07-07 — W40 (session 11): the alpha gauge solved; THE BLOW-UP IS REAL; the fork
+
+- **The witness free ray is exactly priced** (lem-zero-face-alpha-gauge): minimal alpha = the
+  zero-face conic gauge of the tangential residual; clone-only zero faces give alpha-free
+  witnesses (all banked fixtures: A_min = 0). CS geography: alpha lives ON the optimal
+  exposer's zero face (not transverse — the orchestrator's guess was corrected).
+- ⛔ **LP-only alpha bounds are DEAD** (obs-realized-alpha-blowup, VERIFIER-STRENGTHENED): an
+  explicit exact 4x4 signed idempotent (delta = eps) has a hidden vertex whose EVERY optimal
+  witness carries alpha = 1/eps — a thin zero-face row forces it. Do not re-run alpha-bound
+  attempts without tall-cluster structure.
+- **The general capacity threshold** (lem-row-zero-capacity): admissible harmonic candidates
+  vanishing at row i pay kappa*(far-target mass) <= nu_i — the W36 anatomy in general
+  position; full-exposer feasibility is EQUIVALENT to non-hiddenness (LP duality — the primal
+  and dual routes are formally one).
+- **THE FORK (sketch v10):** (i) does the alpha blow-up coexist with the TALL heavy-cluster
+  mode (exact-certificate decider; the alpha-slab leakage bound controls alpha only OFF the
+  top slab, and the blow-up alpha sits ON it — genuinely open both ways)? or (ii) assemble a
+  non-aggregation finisher from the capacity threshold + residual cancellation. Fund (i)
+  first: it is decidable and either branch re-prices everything.
