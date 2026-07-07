@@ -707,3 +707,19 @@ trunk <2>7 + the small loose-delta lemma).
 HALT: codex usage quota exhausted (~01:00; resets 4:00 AM) — W39-AH/AI and af orchestration #4
 killed without output; relaunch instructions pinned in HANDOFF (blocker section). Every
 completed wave was banked before the halt; gates green at 4b1a654 + this close-out.
+
+## 2026-07-07 — Session 11 rounds 6-7 (post-quota): W39-W41 + elevations #20/#21; sketch v10
+
+Auto-resume at the 04:05 quota reset worked (monitor-driven). W39 (levers a/c/d): all reduce
+to two primitives — alpha gauge + primal conversion (no shards; L2 discipline). W40: the
+gauge SOLVED (lem-zero-face-alpha-gauge), THE BLOW-UP REALIZED inside exact idempotents
+(obs-realized-alpha-blowup — verifier-strengthened; LP-only alpha bounds dead), the capacity
+threshold general (lem-row-zero-capacity). W41 (the fork decider): lem-radial-alpha-bound
+(VAN-corrected: convex-hull radial reach, one-way) + conj-tall-zero-face-radial-thickness
+registered + the certified TOPNESS-vs-BLOWUP dichotomy (four exact families, double-rerun
+PASS; bundle runs/2026-07-07-w41-tall-blowup/). Elevations: #20 lem-hiddenness-dual-witness
+(b4038d2), #21 lem-cs-low-slab-pincer (3689e2c); #22 (harmonic-affine-bridge) orchestrating
+at close (13/18 validated pre-resume). Sketch v10: THE ENDGAME STACK fully priced — exactly
+TWO open mechanism questions (radial thickness; the primal conversion) between here and the
+Kernel height clause, whose engine links are now BOTH rigorous. Commits: abda2b5, 0f7cdb4,
+072c97f-2a01032-b4038d2-3689e2c (elevations), bb129f1, + this close. Registry 85; af 21.
