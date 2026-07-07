@@ -77,10 +77,14 @@ bd aism-2fi P0). The certified pincer (W29-X): true-hidden folds back before dep
 
 ## Next steps (ranked)
 
-0. **W43: the reformulated terminal node (sketch v11)** — (T1) cluster-uniform optimal-face
-   residual cancellation (the LP optimal-face-selection question: when does the optimal face
-   contain an R = 0 datum?) and/or (T2) the row-to-circuit absorption bridge. W42 banked the
-   bounded-alpha top-slab reduction as the graph half; the duplicates were refused (L2).
+0. **W44: THE INTERSECTION WAVE.** W43 ANSWERED the optimal-face question
+   (lem-optimal-face-alpha-free-characterization, VAQ VALID): alpha-free/R=0 ==
+   conv{always-tight far displacements} ∩ t*·conv{always-tight upper displacements} != empty.
+   The Route-A residual is now ONE statement: prove that intersection nonempty
+   CLUSTER-UNIFORMLY at tall heavy near-cluster tops ((T1) final form; all engine links
+   rigorous), or the (T2) row-to-circuit bridge. Attack with the full L0 toolkit bearing on
+   WHERE T and O sit at tall tops (concentration #19 pins v's mass; the pincer #21 pins
+   h*-slabs; depth-Markov pins lambda geography).
 1. af elevation queue after #22: lem-row-far-dual-certificate, lem-depth-d-halo-collapse,
    lem-top-slab-companion, lem-hiddenness-depth-markov (deps now all af-validated).
 2. Trunk <2>7 audit (aism-23b) with the W27 interface findings as explicit audit questions.
