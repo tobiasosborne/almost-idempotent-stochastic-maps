@@ -5,7 +5,7 @@ contract: Hiddenness depth-Markov: for an exact signed idempotent P with delta(P
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed; def-height
 deps: lem-hiddenness-dual-witness
 status: proved
-af: none
+af: seeded
 provenance: W29 wave (docs/waves/2026-07-06-W29-witness-coupling.md): fresh-codex prover (worker W) + SEPARATE fresh-codex hostile verifier (VW, VALID-WITH-CORRECTIONS — the corrections WEAKEN the hypotheses: the c-parametric bound needs no tallness and no delta cutoff, only a witness with sum beta < kappa; quantifier check confirms it holds for EVERY witness tuple, no optimality/CS used; exact W19 7x7 fixture at two c values)
 owner: A
 workspace: proofs/lem-hiddenness-depth-markov
