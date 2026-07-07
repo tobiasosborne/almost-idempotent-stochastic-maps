@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-depth-d-halo-collapse/export.md",
+  "oracle": "af-lem-depth-d-halo-collapse",
+  "result": "pass",
+  "claim_hash": "c22fed932acf9cb79af4a430f0ee30a89b059de7c9d4589f3ac6d75222e33717",
+  "oracle_digest": "35524e07a305a0097926d5da34e5be05d2215f938d9d62a11729f77db0165708",
+  "inputs_hash": "35ce052128fc18a903c1302f0def9e232b4b8fac2aa3ae2925792350cc461d18",
+  "ts": "2026-07-07T16:24:14.347Z"
+}
