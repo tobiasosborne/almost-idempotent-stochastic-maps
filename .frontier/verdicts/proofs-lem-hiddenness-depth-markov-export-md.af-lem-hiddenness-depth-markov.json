@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-hiddenness-depth-markov/export.md",
+  "oracle": "af-lem-hiddenness-depth-markov",
+  "result": "pass",
+  "claim_hash": "e47f169b3bd440ce4a81427e67b83d6ac55783d24707fb7a979a6a4587c77768",
+  "oracle_digest": "2be9c62ffbfd03548e3afc1d6d7a395d06756666decdab543893d5a9b4a9384b",
+  "inputs_hash": "1b9fba36bbd9e28ced88ff9ed5c7f3a8bc21d96532671fb540b3d7b00858569b",
+  "ts": "2026-07-07T04:31:46.116Z"
+}
