@@ -746,3 +746,20 @@ imports a future agent might reach for — read before importing ANY external to
   top slab, and the blow-up alpha sits ON it — genuinely open both ways)? or (ii) assemble a
   non-aggregation finisher from the capacity threshold + residual cancellation. Fund (i)
   first: it is decidable and either branch re-prices everything.
+
+## 2026-07-07 — W41 (session 11): topness vs the blow-up; radial thickness = the priced endgame
+
+- **The conditional bound (lem-radial-alpha-bound, VAN-corrected):** A_min = ||R||_1 / (radial
+  reach of the residual direction in the CONVEX HULL of zero-face displacements) — hull, not
+  cone (the free conic mass normalizes); R = 0 gives A_min = 0. Thickness mu =>
+  A_min <= (1+tau/4)(2+4delta)/mu. ONE-WAY only.
+- **The certified dichotomy (W41 bundle, four exact families, double-rerun):** the alpha
+  blow-up and the hidden-TOP condition are mutually exclusive in every certificate — forcing
+  v to stay top collapses A_min to 0. Support for conj-tall-zero-face-radial-thickness exactly
+  at tops; no tall thin-zero-face instance exists in the record.
+- ❌ **Easy to get wrong:** radial thickness implies the alpha bound, NOT conversely; and
+  bounded alpha only unblocks witness AGGREGATION — the dual-direction conversion (feasible
+  circuits vs primal exposer) remains a separate wall. The endgame stack is now:
+  conj-tall-zero-face-radial-thickness -> tall alpha control -> aggregation -> (still) the
+  primal conversion -> conj-near-cluster-absorption -> conj-low-slab-cap -> [two RIGOROUS
+  engine links] -> Kernel height clause.
