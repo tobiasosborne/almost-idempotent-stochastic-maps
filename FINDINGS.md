@@ -781,3 +781,14 @@ imports a future agent might reach for — read before importing ANY external to
 - **L2 flags honored:** the heavy-cluster low-slab and top-residual-slab statements are
   DUPLICATES of banked material (pincer corollary; alpha-slab/depth-Markov engine) — not
   codified. One new shard only: lem-bounded-alpha-top-slab-reduction.
+
+## 2026-07-07 — W43 (session 11): the terminal node in final geometric form
+
+- **The alpha-free/R=0 condition is EXACTLY a convex intersection** (VAQ VALID):
+  conv{always-tight far displacements} ∩ t*·conv{always-tight upper displacements} ≠ ∅.
+  Predicts every banked certificate residual-by-residual. VAQ's strengthening: any dual
+  optimum complements EVERY primal optimum; O empty is impossible for alpha-free at t* > 0.
+- **THE program's remaining Route-A content, final form:** prove the intersection nonempty
+  CLUSTER-UNIFORMLY at tall heavy near-cluster tops ((T1)), or the row-to-circuit bridge
+  ((T2)). Membership in T/O is always-tightness on the WHOLE optimal face (the W42 hard stop
+  stands — near-zero values certify nothing).
