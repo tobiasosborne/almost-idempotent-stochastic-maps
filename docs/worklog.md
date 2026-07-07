@@ -750,3 +750,25 @@ convex-intersection characterization away from the height clause whose engine li
 L0 — plus Kernel(i) rank>=3, trunk <2>7, and the loose-delta lemma. Sketch v11 is canonical;
 one elevation deferred with certificate; no overclaims: the Kernel Conjecture and
 op-classical remain OPEN.
+
+## 2026-07-07 — Session 12 (full-proof orchestration; the Tier-1 elimination campaign)
+
+User directives (now standing, memorized): Tier-1 focus; "all creativity and all means" on
+unknown-math elimination (Fable-grade agents sanctioned); farm procedural work to simpler
+models once Tier 1 falls. Nine waves (W44-W52 + W49F Fable lane), 3 af elevations
+(#26 depth-d-halo-collapse, #27 row-zero-capacity, #28 always-tight-dual-support), registry
+85 -> 120, two quota halts absorbed. Arc: W44 four-prover wave put the terminal node in
+exact conic (Z-cone) form -> W45/W46 discharged the trunk audit + loose-delta (USER DECISION
+aism-nlg) -> W47 the capacity bridge + rank-3 line collapse -> ideation portfolio (5
+mechanisms) -> W48 four bricks verified (Gamma sharp / return-flow 1/2 / deflation /
+censoring) -> W49 both faces reduced to the tightness-promotion wall; ledger-only proofs
+certified dead (thin-blocker graft) -> W50 literature strike (NOT known math; spectral
+imports dimension-dependent) -> FP3 bypass audit (NO-CHEAPER-BYPASS) -> W51 budget-class
+attacks certified dead (class-count wall) -> W49F Fable deep proofs: prop-f2-t1-equivalence
+MERGED the faces by theorem (+ huddle anatomy, exposure void, exchange identity, rank-3
+anatomy chain with A_min = gap/reach exact) -> W52 pre-registered tall-entry experiment
+BLOCKED with three named binding constraints. Close state (sketch v16): ONE unscoped node
+(the in-class intersection horn), favoured kill = (M2) TALL-EMPTINESS (rank-free; the class
+never realized; lemma-ize (B1)-(B3) + exclude the huddle = the Kernel height clause);
+fallback = (M1) conj-rank3-cluster-zero-face-reach. Next: W53 the (B1)-(B3) lemma-ization
+wave. Remote push enabled (origin exists; old local-only note retired).

@@ -10,138 +10,111 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read **`docs/plans/2026-07-07-top-down-proof-sketch-v15.md`** — THE canonical strategic map
-   (v15, session-12 round-5 DELTA redraw; v14 and earlier superseded in place, kept for line citations).
+2. Read **`docs/plans/2026-07-07-top-down-proof-sketch-v16.md`** — THE canonical strategic map
+   (v16, session-12 close DELTA redraw; v15 and earlier superseded in place, kept for line citations).
    **STEWARDSHIP (user mandate, 2026-07-06, binding): reconciling the sketch with newly banked
    evidence is a FIRST-CLASS DELIVERABLE of every session (Rule 9).**
-3. **PHASE DISCIPLINE (user, 2026-07-05, binding): no progress theatre** — progress =
-   unscoped/unpriced surface shrinking.
-4. Run `fr board` and `bd ready`. Session-11 wave artifacts: `docs/waves/2026-07-06-W26/27/28/30`
-   + `2026-07-07-W29/31/32/33`; bundles `runs/2026-07-06-w26-hiddenness/`,
-   `runs/2026-07-06-w29-witness-coupling/`, `runs/2026-07-06-w30-w-nonemptiness/`.
-   Wave prompts + raw answers: session-11 scratchpad (`W26/`–`W34/`).
+3. **STANDING DIRECTIVES (user, 2026-07-07, binding):** (i) TIER-1 FOCUS — all new capacity at the
+   truly open steps; no new Tier-2/3 dispatches unless they feed Tier 1; (ii) "exploit all
+   creativity and all means" on unknown-math elimination — Fable-grade agents sanctioned liberally
+   for deep proof/strategy work while Tier-1 nodes remain (verification stays fresh-codex-only,
+   §6); (iii) once Tier 1 falls, FARM OUT the parked procedural queue to simpler models.
+   Also binding: no progress theatre (2026-07-05).
+4. Run `fr board` and `bd ready`. Session-12 wave artifacts: `docs/waves/2026-07-07-W44...W52*`;
+   bundles `runs/2026-07-07-w44-rank3-boundary/`, `runs/2026-07-07-w52-tall-entry/`;
+   strategy docs `docs/plans/2026-07-07-{ideation-mechanism-portfolio,bypass-audit}.md`.
+   Session-12 scratchpad (worker prompts + raw answers) is gone at reboot — wave docs carry
+   the verbatim verdict lines and the shards carry the corrected contracts.
 5. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-07, session 11 round-7 CHECKPOINT — af #6 IN FLIGHT)
+## Current state (2026-07-07, session 12 close)
 
-**Rigorous (af-validated, T0): 21** — session-11 elevations: #17 lem-parametric-halo-collapse
-(915891a), #18 lem-genuine-disintegration (072c97f), #19 lem-top-concentration (2a01032),
-#20 lem-hiddenness-dual-witness (b4038d2), #21 lem-cs-low-slab-pincer (3689e2c). **Registry:
-85 results** (+30 this session). All reviewed lemmas via SEPARATE fresh hostile codex
-verifiers (L5); L0 claimed ONLY for the af-validated 21.
+**Rigorous (af-validated, T0): 28** — session-12 elevations: #26 lem-depth-d-halo-collapse
+(e0478c6), #27 lem-row-zero-capacity (402ed01), #28 lem-always-tight-dual-support (9b1dde7).
+**Registry: 120 results** (+35 this session). Every codified proof passed a SEPARATE fresh
+hostile codex verifier (L5); L0 claimed ONLY for the af-validated 28.
 
-**THE ENDGAME STACK (sketch v10): exactly TWO open mechanism questions** — (1) tall zero-face
-RADIAL THICKNESS (why topness fattens the zero face; certified dichotomy support, W41) and
-(2) THE PRIMAL CONVERSION (kill ALL witnesses of some cluster vertex; capacity template
-lem-row-zero-capacity + the W36 exact local model) — sit between the current state and the
-Kernel height clause, whose engine links (#17 + #21) are BOTH rigorous. Plus: Kernel(i)
-rank >= 3 (shares the mechanism), trunk <2>7, the loose-delta lemma.
+**THE STATE OF THE PROOF (sketch v16): ONE unscoped node, one favoured kill.**
+The terminal node is the IN-CLASS INTERSECTION HORN of `conj-zero-face-elimination`
+(the v13 "two faces" were merged BY THEOREM: `prop-f2-t1-equivalence` — (F2) was (T1) in
+contrapositive form; the exposure horn is VOID in tall regimes). Two attack modes:
 
-**Round 1-5 background (sketch v9): THE FIVE-ROUTE CONVERGENCE.** Waves W26–W38 attacked the
-cap through five independent mechanism families (witness coupling; CS/pincer; collapse family;
-absorption/proximity; dual certificates + residual cancellation) — every one bottoms out on
-ONE conjecture: **near-cluster absorption** (a tall hidden top cannot keep ≥ 1−θ₀ of its mass
-on its ρ-near deep cluster without a cluster-side vertex turning exposed). Five priced levers
-(sketch v9): the value-vs-Lipschitz conditioning lemma; the W36 exact transition family;
-the deepest-vertex extremal choice; the W30/W31 anchor tension inside the cluster; the
-quotient self-loop object. The Route-A chain is otherwise fully reviewed/rigorous
-(cap ⇒ pincer ⇒ collapse[RIGOROUS] ⇒ height ⇒ HLC ⇒ exposed-hull), with W-nonemptiness
-rank ≥ 3 sharing the mechanism and trunk <2>7 the only unreviewed link.
+- **(M2) TALL-EMPTINESS (favoured, rank-free):** the tall heavy near-cluster class has
+  NEVER been realized — the W52 pre-registered experiment is BLOCKED (1296 exact records,
+  zero tall, zero nonempty C4; best-ever H^2/delta ~ 0.228 vs threshold 16) with THREE
+  named binding constraints (delta inflation / forced visibility / top
+  reversion-with-intersection). Tall-emptiness == exclude the HUDDLE
+  (`lem-zero-face-vertex-support`: two mutually-exempt deep hidden vertices within 4*tau)
+  == the Kernel height clause DIRECTLY.
+- **(M1) the rank-3 reach inequality (fallback):** `conj-rank3-cluster-zero-face-reach`
+  (width-4 form) alone closes the node at rank 3 via the VFP1-verified anatomy chain
+  (`lem-rank3-zero-face-anatomy` — disjointness has ONE rigid shape;
+  `lem-rank3-zero-face-min-mass` — A_min = gap_2/reach EXACT, reproducing the banked 100;
+  pinning; downhill dichotomy). Rank-3-scoped; general-rank is a separate named price
+  (VOID if (M2) lands).
 
-**Session 11 in one paragraph (user directive: full-proof orchestration, breadth-first,
-codex/opus delegation).** Nine waves + two af orchestrations so far. W26 (relaunch): hiddenness
-CONSUMED — `lem-hiddenness-dual-witness` + `lem-top-slab-companion`; W25's certificate died
-under canonical geometry. W27: trunk <2>6 PAID (`lem-hlc-implies-exposed-hull`, pinned-delta;
-loose-delta contract mismatch + Q-not-stochastic interface = named findings). W28: the
-assembly codified (`lem-min-a-implies-height` B=13 + `lem-delta-zero-endpoint`). W30+W31:
-W-nonemptiness strata (`lem-simplex-visibility`, `lem-sharp-vertex-visibility`,
-`cor-rank-two-visible`, `lem-rank3-maxchart-hidden-tangent`). W29+W32+W33: the coupling
-toolkit (`lem-hiddenness-depth-markov` >94% witness mass deep+far;
-`lem-hiddenness-alpha-slab-leakage`; `lem-cs-low-slab-pincer` SHARP;
-`lem-harmonic-affine-bridge` {g:Pg=g}=affine-in-position; `lem-conditional-g-near-exposer`;
-`lem-two-observable-pencil-bound`) + THE frontier statement **`conj-low-slab-cap`
-(theta-flexible: ANY universal (a,theta) closes the Kernel height clause at B = K_a/theta)**.
-**THE CENTRAL DISCOVERY: ONE mechanism (charge slab/witness geometry to row coefficients, or
-square the slab defect) now sits under BOTH open ledger items** (FINDINGS 2026-07-07;
-bd aism-2fi P0). The certified pincer (W29-X): true-hidden folds back before depth 4τ
-(best frontier H/τ = √(5/99)); tall attempts die by absorption.
+**Closed BY CERTIFICATE this session (do not re-walk; FINDINGS 2026-07-07 entries):**
+ledger-only (F2) proofs (`obs-thin-zero-face-blocker-graft`); budget-class attacks
+(`obs-gamma-two-level-class-count-wall`, `obs-gamma-capacity-scale-blind` — the B4
+Gamma-lumping bypass died at the class-count wall); the exposure horn
+(`lem-ball-cluster-exposure-void`); the (F2) constant-hunt (any bound > 4*tau suffices;
+c0 = a certificate of emptiness); spectral/NCD imports (dimension-dependent, Hartfiel-Meyer);
+ALL bypasses (docs/plans/2026-07-07-bypass-audit.md: NO-CHEAPER-BYPASS, six axes); and
+op-classical is NOT known mathematics (W50, fourth pass; we are the commutative case of
+Kitaev's named open problem — SBD arXiv:2405.01532 Thm 5.2 is the solved VECTOR sibling).
 
-## ⛔ SESSION CLOSED AT HALT #3 (2026-07-07 09:40, user-directed stop): CODEX QUOTA EXHAUSTED
-
-The 9:06 reset did NOT restore capacity; the session consumed ~40 codex workers + 10 af
-orchestrations (bd `aism-6ij`, P0 USER DECISION: credits or wait). The probe monitor was
-STOPPED at session close — resume is MANUAL. On resume, relaunch verbatim:
-
-1. **W44-AR — the (T1) intersection wave** (THE next mathematical act). Brief was in the
-   session scratchpad (now gone); RECONSTRUCT from: lem-optimal-face-alpha-free-
-   characterization's shard (the tool + fixture table), sketch v11 (T1) + the W44 pin below,
-   and the W42/W43 wave docs (attack routes: L0 geography of T/O via depth-Markov +
-   concentration; residual cancellation via optimal-face freedom; separator-as-exposer
-   contradiction; rank-3 fallback where hulls are computable).
-2. **Elevation queue**: `python3 scripts/af-orchestrate.py lem-depth-d-halo-collapse
-   --workers 6 --max-rounds 14 --node-cap 40` (1-node ledger, plain relaunch re-runs the
-   prover build); then row-zero-capacity, radial-alpha-bound family, the optimal-face
-   characterization. DEFERRED (needs factoring): lem-hiddenness-alpha-slab-leakage (740b666).
-
-## (superseded halt #2 record follows)
-
-The elevation cascade ran the quota dry a second time. Elevations #22-#25 were banked BEFORE
-the halt (bridge, row-far-cert, top-slab-companion, depth-markov — the witness family is L0
-except the DEFERRED alpha-slab). The depth-d-halo-collapse orchestration (seeded c5c44a8)
-died with EMPTY codex completions (1-node ledger, prover build never ran) — a plain relaunch
-after the reset re-runs it:
-`python3 scripts/af-orchestrate.py lem-depth-d-halo-collapse --workers 6 --max-rounds 14 --node-cap 40`
-A monitor is armed for the 9:10 auto-resume. DEFERRED (needs factoring, stays L5):
-lem-hiddenness-alpha-slab-leakage (two identical STUCK aborts, 740b666).
+**The verified mechanism toolkit (L5, W48):** `lem-signed-carre-du-champ` (sharp constants),
+`lem-cluster-return-flow` (sharp 1/2), `lem-wedderburn-deflation`, `lem-censoring-exactness`.
+**The W44/W47/W49 LP toolkit (L5):** conic reduction, tight-far geography, separator
+obstruction, capacity bridge, interval reduction, row balance, spread criterion, exchange
+identity, forced alpha, huddle localization/support.
 
 ## Next steps (ranked)
 
-0. **W44: THE INTERSECTION WAVE.** W43 ANSWERED the optimal-face question
-   (lem-optimal-face-alpha-free-characterization, VAQ VALID): alpha-free/R=0 ==
-   conv{always-tight far displacements} ∩ t*·conv{always-tight upper displacements} != empty.
-   The Route-A residual is now ONE statement: prove that intersection nonempty
-   CLUSTER-UNIFORMLY at tall heavy near-cluster tops ((T1) final form; all engine links
-   rigorous), or the (T2) row-to-circuit bridge. Attack with the full L0 toolkit bearing on
-   WHERE T and O sit at tall tops (concentration #19 pins v's mass; the pincer #21 pins
-   h*-slabs; depth-Markov pins lambda geography).
-1. af elevation queue after #22: lem-row-far-dual-certificate, lem-depth-d-halo-collapse,
-   lem-top-slab-companion, lem-hiddenness-depth-markov (deps now all af-validated).
-2. Trunk <2>7 audit (aism-23b) with the W27 interface findings as explicit audit questions.
-3. The loose-delta robustness lemma (small).
-4. Standing queue: aism-pld, aism-j3j, alpha->1 (Route B gate), aism-5an, refs (aism-5de,
-   aism-1nh), aism-z98 USER DECISION, report labels (aism-av0 — 40+ shards warn-level).
+0. **W53 — the (B1)-(B3) lemma-ization wave (THE opening move, sketch v16):** three provers,
+   one per W52 binding constraint, each targeting "the constraint is UNIVERSAL, not
+   family-specific"; hostile verifiers per protocol. (B1)-(B3) universal + the huddle
+   anatomy = tall-emptiness = the Kernel height clause, rank-free.
+1. (M1) in parallel if capacity allows: prove/refute `conj-rank3-cluster-zero-face-reach`
+   (the W52 frontier instances are the stress data; `runs/2026-07-07-w52-tall-entry/`).
+2. USER DECISIONS pending: `aism-nlg` (pinned-delta re-wording of op-exposed-hull +
+   pure-stochastic restatement of thm-classical-factorization — retires loose-delta without
+   proof); `aism-z98` (standing).
+3. PARKED Tier-2/3 (farm out to simpler models once Tier 1 falls, per the user directive):
+   elevation queue (the reviewed W44/W47/W48/W49F families; the af memory: single minimal
+   contracts, factor compound ones), trunk <2>7 factoring (aism-ik6), Kernel(i) rank >= 3,
+   report labels (aism-av0), refs ingest (aism-5de: SBD + Kitaev byte-match).
 
-## Standing rules (session-11 additions to the CLAUDE.md/bd-memory set)
+## Standing rules (session-12 additions to the CLAUDE.md/bd-memory set)
 
-Codex workers only (no Fable subagents); ONE af orchestration at a time; **argument//definitions
-edits during a live orchestration ONLY as fast atomic edit+commit windows (two guard-abort
-lessons this session — resume works from the intact ledger via a plain relaunch)**; hostile
-verifier BEFORE codifying any worker proof; verifier corrections that WEAKEN hypotheses are
-upgrades — codify the corrected form; theta-flexibility: never treat a calibration constant
-as load-bearing without checking; fr: `fr orient` on no-bank turns, one `fr log` pull per
-banked wave, ▣ banked ONLY via `fr verify` against the af oracle (claim = the export.md path).
+Codex workers for all proving/verifying; Fable-grade agents liberally for deep
+proof/strategy while Tier-1 nodes remain (their output is AUTHOR output — always
+hostile-verified by fresh codex before codification); ONE af orchestration at a time;
+registry edits during live orchestrations only as fast atomic edit+commit windows; wave
+docs carry verbatim verdict first-lines; theta-flexibility; `fr orient` on no-bank turns,
+one `fr log` pull per harvested wave, ▣ banked only via `fr verify` against the af oracle.
+NOTE: a GitHub remote EXISTS (origin = github.com/tobiasosborne/almost-idempotent-stochastic-maps);
+close = commits + `bd dolt push` + `git push` (the old "local-only" note is retired).
 
 ## Recipes
 
 ```bash
 sh scripts/check-all.sh
-python3 scripts/seed-af-workspaces.py <id>                    # then COMMIT before orchestrating
+python3 scripts/seed-af-workspaces.py <id>       # then COMMIT before orchestrating
 python3 scripts/af-orchestrate.py <id> --workers 6 --max-rounds 14 --node-cap 40   # background
-codex exec --skip-git-repo-check -C <repo> -s workspace-write -o <answer> - < <prompt>  # one bg call per worker
+codex exec --skip-git-repo-check -C <scratch-workdir> -s workspace-write -o ANSWER.md - < <prompt>
 # banking an af validation: af export -d proofs/<id> > proofs/<id>/export.md (+ --format latex);
-#   sed shard af: seeded->validated; argument.py --generate; register oracle in
+#   flip shard af: seeded->validated; argument.py --generate; register oracle in
 #   .frontier/portfolio.json; fr verify proofs/<id>/export.md --oracle af-<id>; fr log ▣; commit.
-PYTHONDONTWRITEBYTECODE=1 python3 runs/2026-07-06-w26-hiddenness/scripts/w26_worker_q.py --samples 1000
-PYTHONDONTWRITEBYTECODE=1 python3 -u runs/2026-07-06-w29-witness-coupling/scripts/w29_verify.py
-PYTHONDONTWRITEBYTECODE=1 python3 -u runs/2026-07-06-w30-w-nonemptiness/scripts/w30_worker_u_audit.py --samples 2000 --seed 30031
+PYTHONDONTWRITEBYTECODE=1 python3 runs/2026-07-07-w44-rank3-boundary/scripts/hostile_rank3_verify.py
+PYTHONDONTWRITEBYTECODE=1 python3 runs/2026-07-07-w52-tall-entry/scripts/w52_exact.py
 ```
 
 ## What is intentionally NOT here
 
-- Any claim more than TWENTY-ONE results are af-validated. The session-11 reviewed lemmas
-  are L5, NOT L0-rigorous.
-- Any claim conj-low-slab-cap, conj-near-cluster-absorption, conj-min-a-w4, Kernel(i) at
-  rank>=3, or the Kernel Conjecture is proved. The trunk still has <2>7 mod-audit + the loose-delta lemma open.
-- Any claim the bootstrap works outside small delta_0 (the theta-flexible form trades B for
-  delta_0; state the pair).
-- A git remote (local-only by decision) — close = commits + bd close-out, no push.
+- Any claim more than TWENTY-EIGHT results are af-validated. All session-12 codified proofs
+  are L5 (fresh-hostile-verified), NOT L0.
+- Any claim the terminal node, tall-emptiness, the reach conjecture, Kernel(i) rank >= 3,
+  or the Kernel Conjecture is proved. W52's BLOCKED is a bounded search over named
+  families — evidence, never an emptiness proof (L3).
+- Any claim (M1)'s rank-3 payout extends to general rank without the separately named step.
