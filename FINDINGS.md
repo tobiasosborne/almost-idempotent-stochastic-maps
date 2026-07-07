@@ -812,3 +812,14 @@ imports a future agent might reach for — read before importing ANY external to
   fixes a VECTOR (sqrt-eps, dimension-free, sharp; Lemma 5.5 reset-trick importable); the
   abstract foregrounds the dimension-DEPENDENT application — triage from §5, not the
   abstract. Our problem fixes a MAP; per-vector-to-global reassembly IS the Kernel content.
+
+## 2026-07-07 — W49F (session 12): the faces merge; the tall class has never been realized
+
+- **(F2) == (T1) on the restricted domain** ([[prop-f2-t1-equivalence]], VFP2-verified):
+  c0 was a certificate of emptiness, not a constant to hunt. The exposure horn is VOID in
+  tall regimes (ball-cluster reading). The terminal node is ONE face.
+- **NO banked instance is in-class** (VFP2 exact recomputation: all three census H^2/delta
+  ratios < 16). Every (T1)-domain claim to date is about an EMPTY certified record —
+  refutation is gated behind the never-solved tall-construction problem; TALL-EMPTINESS
+  (= the height clause, via the huddle anatomy of lem-zero-face-vertex-support) is a live
+  candidate theorem, not just a fallback.
