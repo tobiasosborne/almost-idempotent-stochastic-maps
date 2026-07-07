@@ -10,8 +10,8 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read **`docs/plans/2026-07-07-top-down-proof-sketch-v10.md`** — THE canonical strategic map
-   (v10, session-11 round-7; v9 and earlier superseded in place, kept for line citations).
+2. Read **`docs/plans/2026-07-07-top-down-proof-sketch-v11.md`** — THE canonical strategic map
+   (v11, session-11 round-8 DELTA redraw; v10 and earlier superseded in place, kept for line citations).
    **STEWARDSHIP (user mandate, 2026-07-06, binding): reconciling the sketch with newly banked
    evidence is a FIRST-CLASS DELIVERABLE of every session (Rule 9).**
 3. **PHASE DISCIPLINE (user, 2026-07-05, binding): no progress theatre** — progress =
@@ -77,10 +77,10 @@ bd aism-2fi P0). The certified pincer (W29-X): true-hidden folds back before dep
 
 ## Next steps (ranked)
 
-0. **W42: the two v10 mechanism questions** — (1) radial thickness (why topness fattens the
-   zero face; start from the certified W41 dichotomy + the W36 local model) and (2) the
-   primal conversion (kill all witnesses of a cluster vertex; capacity template). Blind
-   pair or two independent provers + hostile verifiers, per the session pattern.
+0. **W43: the reformulated terminal node (sketch v11)** — (T1) cluster-uniform optimal-face
+   residual cancellation (the LP optimal-face-selection question: when does the optimal face
+   contain an R = 0 datum?) and/or (T2) the row-to-circuit absorption bridge. W42 banked the
+   bounded-alpha top-slab reduction as the graph half; the duplicates were refused (L2).
 1. af elevation queue after #22: lem-row-far-dual-certificate, lem-depth-d-halo-collapse,
    lem-top-slab-companion, lem-hiddenness-depth-markov (deps now all af-validated).
 2. Trunk <2>7 audit (aism-23b) with the W27 interface findings as explicit audit questions.
