@@ -10,8 +10,8 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read **`docs/plans/2026-07-07-top-down-proof-sketch-v14.md`** — THE canonical strategic map
-   (v14, session-12 round-4 DELTA redraw; v13 and earlier superseded in place, kept for line citations).
+2. Read **`docs/plans/2026-07-07-top-down-proof-sketch-v15.md`** — THE canonical strategic map
+   (v15, session-12 round-5 DELTA redraw; v14 and earlier superseded in place, kept for line citations).
    **STEWARDSHIP (user mandate, 2026-07-06, binding): reconciling the sketch with newly banked
    evidence is a FIRST-CLASS DELIVERABLE of every session (Rule 9).**
 3. **PHASE DISCIPLINE (user, 2026-07-05, binding): no progress theatre** — progress =
