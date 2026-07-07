@@ -5,7 +5,7 @@ contract: CS low-slab pincer: for an exact signed idempotent P, a row index v wi
 defs: def-signed-idempotent; def-negative-mass
 deps: 
 status: proved
-af: none
+af: seeded
 provenance: W32 wave (docs/waves/2026-07-07-W32-cs-pincer.md): fresh-codex prover (worker Z) + SEPARATE fresh-codex hostile verifier (VZ, VALID with MINIMAL hypotheses — no hiddenness, no vertex, no top, no nonempty W, no delta > 0 anywhere; exact fixture on the W29 frontier instance realizes EQUALITY at s = t* — the bound is sharp); first-principles (row reproduction + row sums + sign split + Markov), no imports
 owner: A
 workspace: proofs/lem-cs-low-slab-pincer

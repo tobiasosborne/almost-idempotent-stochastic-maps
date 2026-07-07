@@ -34,7 +34,7 @@ graph LR
   lem-collateral-import["lem-collateral-import<br/>proved/validated"]
   lem-conditional-g-near-exposer["lem-conditional-g-near-exposer<br/>proved/none"]
   lem-cross-pivot-cancellation["lem-cross-pivot-cancellation<br/>proved/validated"]
-  lem-cs-low-slab-pincer["lem-cs-low-slab-pincer<br/>proved/none"]
+  lem-cs-low-slab-pincer["lem-cs-low-slab-pincer<br/>proved/seeded"]
   lem-delta-zero-endpoint["lem-delta-zero-endpoint<br/>proved/none"]
   lem-depth-d-halo-collapse["lem-depth-d-halo-collapse<br/>proved/none"]
   lem-dual-localization["lem-dual-localization<br/>obstruction/none"]
