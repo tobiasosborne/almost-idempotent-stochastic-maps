@@ -713,3 +713,16 @@ imports a future agent might reach for — read before importing ANY external to
   content): in the tall regime, heavy positive mass on the rho-near deep cluster of a hidden
   top forces exposedness of some cluster vertex. Five independent routes (witness coupling,
   rank-3 tangent, CS pincer, absorption proximity, residual cancellation) all bottom out here.
+
+## 2026-07-07 — W39 (session 11): levers (a)/(c)/(d) all reduce to TWO primitives
+
+- **Lever (a) closed:** t* does NOT transfer across 4τ-near rows (value normalization has no
+  gradient control along thin hull directions — the cloning escape; basepoint shifts break
+  the box). **Lever (c):** the deepest-vertex collapse is a corollary of banked material and
+  forces TOTAL deep mass, not ρ-near deep mass. **Lever (d):** far-set shift fails at scale;
+  the aggregated-witness circuit carries unbounded center coefficients (1 + A_u − B_u).
+- **THE TWO PRIMITIVES under conj-near-cluster-absorption:** (i) the ALPHA-GAUGE lemma — the
+  dual's alpha is objective-free (a free ray); does a minimal-alpha optimal witness have
+  controlled A (complementary slackness structure)? (ii) PRIMAL EXPOSER construction — dual
+  circuits only upper-bound t*; exposure needs an explicit margin-κ exposer (the W36 anatomy)
+  or a lower bound over ALL duals. Everything else is bookkeeping around these two.
