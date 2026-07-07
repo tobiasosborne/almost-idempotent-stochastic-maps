@@ -5,7 +5,7 @@ contract: Depth-d halo collapse: for an exact signed idempotent P with 0 < delta
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-invisible-mass; def-height
 deps: lem-mass-split; lem-residual-upper
 status: proved
-af: none
+af: seeded
 provenance: W34 wave (docs/waves/2026-07-07-W34-gmax-self-consistency.md): fresh-codex prover (worker AB, the requested sub-target) + SEPARATE fresh-codex hostile verifier (VAB, VALID-WITH-CORRECTIONS — legitimized the convex split exactly: the residual q = (non-halo positive terms − negative terms)/(1 − sigma_a) has affine mass 1 − sigma_a, so p_v is a GENUINE convex combination of the G_a rows and q; calibration anchor: at a hidden top d = H and C_a = 0 recover the af-validated lem-parametric-halo-collapse contract VERBATIM; exact fixtures incl. a genuine non-top row on the banked W19 rank-3)
 owner: A
 workspace: proofs/lem-depth-d-halo-collapse

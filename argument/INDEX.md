@@ -29,7 +29,7 @@
 | `lem-cross-pivot-cancellation` | lemma | proved | validated | A | Cross-pivot cancellation: let P be a rank-3 exact signed idempotent (square real… |
 | `lem-cs-low-slab-pincer` | lemma | proved | validated | A | CS low-slab pincer: for an exact signed idempotent P, a row index v with nu_v = … |
 | `lem-delta-zero-endpoint` | lemma | proved | none | A | Delta-zero visible endpoint: every exact signed idempotent P with delta(P) = 0 h… |
-| `lem-depth-d-halo-collapse` | lemma | proved | none | A | Depth-d halo collapse: for an exact signed idempotent P with 0 < delta(P) <= 1/4… |
+| `lem-depth-d-halo-collapse` | lemma | proved | seeded | A | Depth-d halo collapse: for an exact signed idempotent P with 0 < delta(P) <= 1/4… |
 | `lem-dual-localization` | open-problem | obstruction | none | A | (SUPERSEDED by conj-skinny-shadow-cap, 2026-07-04; trivially true as stated) Fra… |
 | `lem-exposed-circuit` | lemma | proved-mod-audit | none | A | For a signed affine retraction with neg mass <= delta: (i) a (rho,kappa)-exposed… |
 | `lem-factorization` | lemma | proved | validated | A | Factorization bound: let P be an exact signed idempotent (square real matrix wit… |

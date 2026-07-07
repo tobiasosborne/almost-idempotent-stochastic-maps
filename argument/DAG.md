@@ -38,7 +38,7 @@ graph LR
   lem-cross-pivot-cancellation["lem-cross-pivot-cancellation<br/>proved/validated"]
   lem-cs-low-slab-pincer["lem-cs-low-slab-pincer<br/>proved/validated"]
   lem-delta-zero-endpoint["lem-delta-zero-endpoint<br/>proved/none"]
-  lem-depth-d-halo-collapse["lem-depth-d-halo-collapse<br/>proved/none"]
+  lem-depth-d-halo-collapse["lem-depth-d-halo-collapse<br/>proved/seeded"]
   lem-dual-localization["lem-dual-localization<br/>obstruction/none"]
   lem-exposed-circuit["lem-exposed-circuit<br/>proved-mod-audit/none"]
   lem-factorization["lem-factorization<br/>proved/validated"]
