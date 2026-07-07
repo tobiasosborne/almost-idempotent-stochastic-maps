@@ -5,7 +5,7 @@ contract: Row-zero capacity: for an exact signed idempotent P, a row index i, an
 defs: def-signed-idempotent; def-negative-mass
 deps: lem-harmonic-affine-bridge
 status: proved
-af: none
+af: seeded
 provenance: W40 wave (docs/waves/2026-07-07-W40-two-primitives.md): fresh-codex prover (worker AK) + SEPARATE fresh-codex hostile verifier (VAL, VALID-WITH-CORRECTIONS — the hypothesis y_i = 0 made explicit; the converse row-local balancing construction kept as a body note with its free-anchor caveat; nu_i = 0 edge forces the F-mass to vanish)
 owner: A
 workspace: proofs/lem-row-zero-capacity

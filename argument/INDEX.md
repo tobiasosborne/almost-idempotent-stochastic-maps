@@ -60,7 +60,7 @@
 | `lem-residual-upper` | lemma | proved | validated | A | Residual distance bound: let C be the convex hull of finitely many points of R^n… |
 | `lem-rho-near-residual-cancellation` | lemma | proved | none | A | Residual cancellation at a hidden top: for an exact signed idempotent P with del… |
 | `lem-row-far-dual-certificate` | lemma | proved | validated | A | Row-far dual certificate: for an exact signed idempotent P and a geometrically d… |
-| `lem-row-zero-capacity` | lemma | proved | none | A | Row-zero capacity: for an exact signed idempotent P, a row index i, and any vect… |
+| `lem-row-zero-capacity` | lemma | proved | seeded | A | Row-zero capacity: for an exact signed idempotent P, a row index i, and any vect… |
 | `lem-self-defect-shadow` | lemma | proved | none | A | Self-defect shadow: for an exact signed idempotent P and a row index v with P_vv… |
 | `lem-sharp-vertex-visibility` | lemma | proved | none | A | Sharp-vertex visibility: for an exact signed idempotent P with delta(P) <= 1/4 a… |
 | `lem-simplex-visibility` | lemma | proved | none | A | Simplex visibility: for an exact signed idempotent P with delta(P) <= 1/4 whose … |

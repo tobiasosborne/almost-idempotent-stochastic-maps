@@ -69,7 +69,7 @@ graph LR
   lem-residual-upper["lem-residual-upper<br/>proved/validated"]
   lem-rho-near-residual-cancellation["lem-rho-near-residual-cancellation<br/>proved/none"]
   lem-row-far-dual-certificate["lem-row-far-dual-certificate<br/>proved/validated"]
-  lem-row-zero-capacity["lem-row-zero-capacity<br/>proved/none"]
+  lem-row-zero-capacity["lem-row-zero-capacity<br/>proved/seeded"]
   lem-self-defect-shadow["lem-self-defect-shadow<br/>proved/none"]
   lem-sharp-vertex-visibility["lem-sharp-vertex-visibility<br/>proved/none"]
   lem-simplex-visibility["lem-simplex-visibility<br/>proved/none"]
