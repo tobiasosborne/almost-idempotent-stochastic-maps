@@ -38,7 +38,7 @@
 | `lem-genuine-disintegration` | lemma | proved | validated | A | Genuine-mass disintegration: for an exact signed idempotent P with 0 < delta(P) … |
 | `lem-gmax-web-concentration` | lemma | proved | none | A | G-max web concentration: for an exact signed idempotent P with 0 < delta(P) <= 1… |
 | `lem-harmonic-affine-bridge` | lemma | proved | validated | A | Harmonic-affine bridge: for an exact signed idempotent P with rows p_i = (P_ij)_… |
-| `lem-hiddenness-alpha-slab-leakage` | lemma | proved | none | A | Hiddenness alpha-slab leakage: for an exact signed idempotent P with delta(P) > … |
+| `lem-hiddenness-alpha-slab-leakage` | lemma | proved | seeded | A | Hiddenness alpha-slab leakage: for an exact signed idempotent P with delta(P) > … |
 | `lem-hiddenness-depth-markov` | lemma | proved | validated | A | Hiddenness depth-Markov: for an exact signed idempotent P with delta(P) > 0, non… |
 | `lem-hiddenness-dual-witness` | lemma | proved | validated | A | Hiddenness dual witness: for an exact signed idempotent P and a hidden row verte… |
 | `lem-hlc-implies-exposed-hull` | lemma | proved | none | A | HLC implies exposed hull (pinned-delta form): if there are universal delta_0 > 0… |

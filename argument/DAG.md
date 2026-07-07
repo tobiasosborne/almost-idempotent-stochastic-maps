@@ -47,7 +47,7 @@ graph LR
   lem-genuine-disintegration["lem-genuine-disintegration<br/>proved/validated"]
   lem-gmax-web-concentration["lem-gmax-web-concentration<br/>proved/none"]
   lem-harmonic-affine-bridge["lem-harmonic-affine-bridge<br/>proved/validated"]
-  lem-hiddenness-alpha-slab-leakage["lem-hiddenness-alpha-slab-leakage<br/>proved/none"]
+  lem-hiddenness-alpha-slab-leakage["lem-hiddenness-alpha-slab-leakage<br/>proved/seeded"]
   lem-hiddenness-depth-markov["lem-hiddenness-depth-markov<br/>proved/validated"]
   lem-hiddenness-dual-witness["lem-hiddenness-dual-witness<br/>proved/validated"]
   lem-hlc-implies-exposed-hull["lem-hlc-implies-exposed-hull<br/>proved/none"]

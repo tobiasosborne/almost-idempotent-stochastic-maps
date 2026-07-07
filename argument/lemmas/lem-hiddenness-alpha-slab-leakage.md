@@ -5,7 +5,7 @@ contract: Hiddenness alpha-slab leakage: for an exact signed idempotent P with d
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed; def-height
 deps: lem-hiddenness-dual-witness
 status: proved
-af: none
+af: seeded
 provenance: W29 wave (docs/waves/2026-07-06-W29-witness-coupling.md): fresh-codex prover (worker W) + SEPARATE fresh-codex hostile verifier (VW, VALID-WITH-CORRECTIONS — same weakened hypotheses as lem-hiddenness-depth-markov; sign-legality of dropping the lambda term checked; exact fixture)
 owner: A
 workspace: proofs/lem-hiddenness-alpha-slab-leakage
