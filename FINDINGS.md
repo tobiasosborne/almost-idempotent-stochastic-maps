@@ -877,3 +877,33 @@ imports a future agent might reach for — read before importing ANY external to
   divides by t*(u) is dead (t* arbitrarily small in (0,kappa)); the proved replacement
   toolkit is lem-psi-corner-trap (|m| <= 3+4*delta, osc <= 5+8*delta, max principle with
   O(delta) slack).
+
+## 2026-07-09 — W55: co-top coupling strategy — the scalar wall is a completion wall
+
+- **Exact front end, not yet codified:** if the L6.5 target mass is `<2^-10`, the
+  two-step positive-flow identity from `P^2=P` forces `>15/16` of the top's positive
+  mass onto near/top/low-exposer rows that each return `>3/4` positive mass to a broader
+  near corner. Disjointness plants a second hidden zero-face vertex there. Two hostile
+  reviews checked the inequalities; this is paper-level strategy until a fresh standalone
+  prover/verifier pass and registry shard land.
+- **Small-gauge bridge, conditional and uncodified:** for a reduced display with
+  `A0=sum a_z<=3/32`, splitting the shallow lambda-mass at `tau/(2+4delta)` gives exactly
+  SL1b or a conditioned SL1a object (barycenter constant `484/223<2.2`, exposer constant
+  `256/223<16/13`). Hence SL1a+SL1b force `A0>3/32` in the disjoint branch.
+- **DEAD: identify `lambda*P` with `p_v`, or infer coefficient overlap from common
+  localization.** `lambda*P` is a separate invariant signed probability. The only exact
+  comparison contains the unbounded zero-face conic term.
+- **DEAD: conic recurrence / thin-thick separator split.** The `a_z` are dual LP
+  multipliers, not transition weights. A single average `g/A0` does not put recurrence,
+  transverse displacement, and vertexhood on the same carrier; “thin” does not imply
+  collapse and “thick” does not imply exposure.
+- **Exact local threat:** the `A0=5, g=5*tau` starvation gadget in W55 has exact top-row
+  reproduction, prescribed top-row negativity `tau^2`, all positive top mass rho-near, and zero positive
+  inflow to the far actor while satisfying all current scalar ledgers. It is NOT a
+  counterexample until globally completed with tall visible-hull geometry and all-row
+  negativity `<=tau^2`.
+- **The actual large-gauge mechanism:** prove/refute global completion in factorized
+  coordinates `P=L*B`, `B*L=I`. Transient-row extensions, clone splitting, nonvertex T
+  rows, and same-carrier vertexization are mandatory invariance tests. A feasible exact
+  rational completion family with `tau->0` refutes L6.5; a stable LP-dual infeasibility certificate is the
+  intended route to a dimension-free paper proof.

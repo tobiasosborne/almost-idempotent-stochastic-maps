@@ -10,8 +10,8 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read **`docs/plans/2026-07-09-top-down-proof-sketch-v18.md`** — THE canonical strategic map
-   (v18, session-13 close; v17 and earlier superseded in place, kept for line citations).
+2. Read **`docs/plans/2026-07-09-top-down-proof-sketch-v19.md`** — THE canonical strategic map
+   (v19, W55 strategy delta; v18 and earlier superseded in place, kept for line citations).
    Then **`docs/plans/2026-07-09-w54-huddle-charge-decomposition-tree.md`** — the VERIFIED
    decomposition of the terminal node (read PART A through PART B).
    **STEWARDSHIP (user mandate, 2026-07-06, binding): reconciling the sketch with newly
@@ -22,19 +22,18 @@ TRIGGER: session close, or a material change in the current frontier / next task
    progress theatre; **(v) NEW 2026-07-09: the objective function of every Tier-1 attack
    is DECOMPOSITION into lower-complexity pieces** (case trees, small-lemma systems with
    checkable assemblies) — W53/W54 are the template.
-4. Run `fr board` and `bd ready`. Session-13 artifacts: waves
-   `docs/waves/2026-07-09-W53-binding-constraint-lemmaization.md` +
-   `2026-07-09-W54-huddle-charge-decomposition.md` (+ `2026-07-09-W54-artifacts/` — the
-   Fable proof docs backing the banked shards, the tree, all verifier verdicts).
+4. Run `fr board` and `bd ready`. Read
+   `docs/waves/2026-07-09-W55-cotop-web-coupling-strategy.md` after the W54 tree. This
+   checkout currently lacks the local Dolt beads database, so `bd ready` reports
+   “no beads database found”; do not silently `bd init` over the configured project.
 5. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-09, session 13 close)
+## Current state (2026-07-09, W55 strategy close)
 
 **Rigorous (af-validated, T0): 28** (unchanged — no af runs this session).
-**Registry: 140** (+21 this session; EVERY codified proof passed a SEPARATE fresh hostile
-codex verifier, L5; L0 claimed ONLY for the af-validated 28).
+**Registry: 140** (unchanged in W55; L0 claimed ONLY for the af-validated 28).
 
-**THE STATE OF THE PROOF (sketch v18): the terminal node is a VERIFIED four-leaf system.**
+**THE STATE OF THE PROOF (sketch v19): the terminal node remains a VERIFIED four-leaf system.**
 Session 13 executed the decomposition mandate end-to-end: W53 collapsed the three W52
 binding constraints into THE HUDDLE CHARGE (sketch v17); W54's Fable-architect case tree
 was hostile-verified (INVALID -> prescribed repairs -> VALID-WITH-CORRECTIONS, all
@@ -50,33 +49,36 @@ applied), its easy/medium leaves proved or reduced, and both creative branches c
 - Consumption above the node: `lem-absorption-implies-low-slab-cap` wires tall-emptiness
   (+ `conj-far-low-slab-cap`) => `conj-low-slab-cap` => the Kernel height clause.
 
-SL1a and conj-cotop-web-coupling are two windows on ONE object (the confined co-top web);
-the honest open count is FOUR sharply-scoped conjectures, each with proved toolkits,
-named refuter targets, and preserved proof context.
+W55 attacked `conj-cotop-web-coupling` decomposition-first. Two exact, independently
+hostile-reviewed reductions emerged but remain uncodified/non-L0: failure of coupling
+creates a top-funded high-return near corner (E1-E5), and every small-conic-gauge display
+(`A0<=3/32`) reduces to the existing SL1a/SL1b pair. Moderate gauge, conditionally on
+SL1b, reduces to a new OPEN mixed co-top straddle. Large gauge does NOT reduce by harmonic ledgers: an exact local
+`A0=5, g=5*tau` starvation gadget survives all of them. The live large-gauge mechanism is
+global completion obstruction through `P=L*B`, `B*L=I`, or an exact refuter completion.
 
-**Dead by certificate this session (FINDINGS 2026-07-09, do not re-walk):** witness-
-averaging for Branch II (identity cap); the averaging axis (degenerate via Y_v);
-pointwise-to-simultaneous by averaging; pure co-top rigidity (shallow-counterweight
-escape); any starvation constant dividing by t*(u); plus the W53 entries (affine-pairing
-blind spot; B2-as-stated subsumed; small-beta witness reading binding).
+**New dead routes (W55):** identifying `lambda*P` with `p_v`; treating dual conic weights
+as transition mass; a thin/thick split from the single `g/A0` separator moment; and an
+untyped “some web member is exposed” step without vertexization, pairwise separation, and
+same-carrier inheritance. The transient-row extension and the exact starvation gadget are
+mandatory tests.
 
-## Next steps (ranked) — W55
+## Next steps (ranked) — W56
 
-0. **SL1b first** (`conj-shallow-counterweight-exclusion`, graded most attackable):
-   codex prover — shallow rows live near the visible hull where exposers have room;
-   universal shadowing below kappa should contradict the visible-side machinery
-   (lem-row-far-dual-certificate, lem-visible-g-small, the margin lemma).
-1. **The confined co-top web as ONE joint Fable wave**: SL1a + conj-cotop-web-coupling
-   together (aism-zm8), consuming lem-cotop-witness-pinning + lem-intersection-witness-
-   confinement + lem-psi-corner-trap; decomposition-first.
-2. **L5 dual-face mass minimax** (aism-vuc): codex geometry problem on Y_v (linear in y;
+0. **Fresh standalone prover/verifier passes on W55 E1-E5**, then codify only if valid.
+1. **Fresh pass on the small-gauge bridge** `A0<=3/32 => SL1a or SL1b`; this is the
+   cleanest new joint edge and must carry its conditioning constants verbatim.
+2. **Exact completion/refutation LP** for the `A0=5, g=5*tau` starvation gadget in
+   `P=L*B`, `B*L=I` coordinates. A rational feasible family refutes L6.5; stable dual
+   infeasibility multipliers should define the global completion theorem.
+3. **Mixed co-top straddle + SL1a as one joint wave**; explicitly solve nonvertex support,
+   pairwise separation, and same-carrier vertexization. SL1b remains the easiest sibling.
+4. **L5 dual-face mass minimax** (aism-vuc): codex geometry problem on Y_v (linear in y;
    the simplex obstruction is sharp — the proof must use Y_v structure + idempotence).
-3. conj-far-low-slab-cap + conj-summit-cylinder-exclusion: siblings; may fall to the same
-   web mechanisms — check after 0/1.
-4. Parked: L7 gaps (aism-2ii), elevation queue (the W53/W54 proved families are prime
+5. Parked: L7 gaps (aism-2ii), elevation queue (the W53/W54 proved families are prime
    af-elevation shapes — single minimal contracts), trunk <2>7 (aism-ik6), Kernel(i)
    rank >= 3, refs ingest (aism-5de).
-5. USER DECISIONS pending: `aism-nlg`, `aism-z98` (standing).
+6. USER DECISIONS pending: `aism-nlg`, `aism-z98` (standing).
 
 ## Standing rules (unchanged from session 12 + the new decomposition directive)
 
@@ -105,7 +107,9 @@ codex exec --skip-git-repo-check -C <scratch-workdir> -s workspace-write -o <scr
 
 - Any claim more than TWENTY-EIGHT results are af-validated. All session-13 codified
   proofs are L5 (fresh-hostile-verified), NOT L0.
-- Any claim the huddle charge, tall-emptiness, any of the four leaves, or the Kernel
+- Any claim W55 proves L6.5, the huddle charge, tall-emptiness, any leaf, or the Kernel
   Conjecture is proved. The W54 tree is a VERIFIED CONDITIONAL derivation — its leaves
   are conjectures.
+- Any claim the W55 E1-E5 or small-gauge bridge are L0/registry results. They passed
+  strategy-level hostile review only and await fresh standalone codification passes.
 - Any claim the W52 BLOCKED search or any numerical evidence is a proof (L3).

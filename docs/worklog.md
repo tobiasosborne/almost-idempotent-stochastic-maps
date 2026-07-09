@@ -809,3 +809,18 @@ fresh hostile codex verifier; ~14 codex workers + 3 Fable authors + 1 Opus strat
 
 Commits this session: 5eea0aa, 00ee4ef, ca32a0b, 41201cc, 1c87df8, b62b51a, 60b71ae +
 the close commit. All pushed.
+
+## 2026-07-09 — W55: co-top web coupling strategy wave
+
+User-directed deep attack on `conj-cotop-web-coupling`, run decomposition-first with
+three independent lanes (algebra, decomposition, refutation) and two hostile synthesis
+reviews. No registry status changed. The exact front end survived: L6.5 starvation forces
+a top-funded high-return near corner (E1-E5), and small reduced conic gauge
+`A0<=3/32` reduces conditionally to the existing SL1a/SL1b pair. The moderate-gauge
+residual is a new mixed co-top straddle object. Both reviewers rejected the proposed
+large-gauge thin/thick closure: dual conic multipliers are not transition mass and one
+separator moment cannot align recurrence, transversality, and vertexhood. An exact local
+`A0=5, g=5*tau` starvation gadget survives every scalar ledger; the decisive question is
+global completion/refutation in `P=L*B`, `B*L=I` coordinates. Strategy recorded in the W55
+wave and canonical sketch v19; FINDINGS and HANDOFF reconciled. The E1-E5 and small-gauge
+claims remain uncodified/non-L0 pending fresh standalone prover/verifier passes.
