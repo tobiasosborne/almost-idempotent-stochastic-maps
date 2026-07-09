@@ -1,0 +1,3 @@
+VERDICT: INVALID — H-W is a lex-minimal restatement of SL1a, and its purported sub-DAG leaves three hard residuals unresolved.
+
+The audit records three fatal defects in `VERDICT-W56-R2.md`: H-W is equivalent to SL1a by two-line minimal-counterexample preprocessing, H-D/H-I/H-X merely rename the remaining hard cells, and lex-minimality fails transient-row stability. Additional gaps include an inapplicable censoring citation, invalid H-I recursion, a same-carrier gap in H-D, and a `7/13` arithmetic error.
