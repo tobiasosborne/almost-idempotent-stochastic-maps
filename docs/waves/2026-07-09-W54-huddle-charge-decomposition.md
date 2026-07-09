@@ -57,3 +57,26 @@ unproved).
 The tree is AUTHOR material until V-ASM-2 lands; the banked leaves are L5-tier lemmas
 independent of the tree's validity. Nothing here is af-validated; nothing promotes the
 huddle charge itself.
+
+## Update (same day): the assembly VERIFIED; AG-1/AG-2 both discharged
+
+**V-ASM-2 (repaired assembly, fresh codex):**
+`VERDICT: VALID-WITH-CORRECTIONS — The u := v repair now typechecks modulo the explicit R4 t*(v)=0 audit, but G8 must synchronize c_m, c_r, and theta_0 with the existential leaf constants and must include delta_0(L5).`
+(G8-v3 synchronization applied verbatim; no new cracks found from the re-rooting.)
+
+**R4 (localization shard audit):**
+`AUDIT: CLAUSE-HOLDS / T*POSITIVE-PROVED — the recorded far-constraint mechanism needs the missing observation that a finite geometrically distinct row vertex with nonempty rho-far set has t*(v) > 0, so the t*=0 boundary is impossible under the shard contract.`
+
+**V-R4 (on the auditor's proof):**
+`VERDICT: VALID-WITH-CORRECTIONS — The hidden-vertex positive-margin claim is correct, but the audit text must add the missing rho>0/hiddenness qualifier to its broad margin slogan and must not cite LP attainment as part of a shard contract that does not state it.`
+
+Banked: `lem-positive-exposedness-margin` (corrections applied); wired as a dep + boundary
+note of `lem-zero-face-localization`. The consolidated verified tree is
+`docs/plans/2026-07-09-w54-huddle-charge-decomposition-tree.md` (PART A = architect v1,
+PART B = the verifier-prescribed repair delta; read A through B).
+
+**State of the huddle charge after consolidation:**
+THE HUDDLE CHARGE <= {L2-v2, conj-summit-cylinder-exclusion (L3), L5, L6-v2, L7-or-
+chain-uniform-L6} — assembly hostile-verified; L1/L4 proved+banked; the margin lemma
+proved+banked. The open surface is FOUR statements (L2-v2, cylinder exclusion, L5
+minimax, L6-v2) plus L7's chain cap (two named gaps, foldable into L6 chain-uniformity).
