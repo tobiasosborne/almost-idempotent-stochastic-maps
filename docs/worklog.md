@@ -824,3 +824,21 @@ separator moment cannot align recurrence, transversality, and vertexhood. An exa
 global completion/refutation in `P=L*B`, `B*L=I` coordinates. Strategy recorded in the W55
 wave and canonical sketch v19; FINDINGS and HANDOFF reconciled. The E1-E5 and small-gauge
 claims remain uncodified/non-L0 pending fresh standalone prover/verifier passes.
+
+## 2026-07-09 — session 14 (interrupted close): codex retarget + W56 SL1a decomposition (partial)
+
+- Tooling: codex workers retargeted to gpt-5.6-sol with priority-tiered reasoning
+  effort (af-orchestrate.py --tier creative = prover ultra / verifier xhigh default;
+  --tier routine = high/high; per-role overrides; effort-scaled timeouts; 17-assert
+  red-green test suite wired into check-all). Commit 7a3365e.
+- W56 (user central priority: reduce all Tier-1 new-math leaves to Tier-2): SL1a
+  selected as the most open leaf (unified rigidity core of both W54 branches). Codex
+  architect (gpt-5.6-sol ultra, self-contained workspace) ran ~45 min and was
+  interrupted by user stop mid-§3. Recovered: the DAG shape (3 routine leaves + 1 hard
+  leaf H-SCCO with far/near horns) + proved-input audit + exhaustiveness argument ->
+  docs/waves/2026-07-09-W56-artifacts/ (decomposition-PARTIAL.md, target.md,
+  architect-session-log.txt.gz). NO hostile verification ran; nothing codified;
+  SL1a remains OPEN. Wave record:
+  docs/waves/2026-07-09-W56-sl1a-decomposition-interrupted.md.
+- NOTE: this checkout lacks the initialized beads DB (bd create fails; per HANDOFF do
+  not bd init) — wave tracked via fr log + wave doc only.

@@ -63,8 +63,17 @@ untyped “some web member is exposed” step without vertexization, pairwise se
 same-carrier inheritance. The transient-row extension and the exact starvation gadget are
 mandatory tests.
 
-## Next steps (ranked) — W56
+## Next steps (ranked) — W56/W57
 
+-1. **RESUME W56 (user central priority 2026-07-09: reduce ALL Tier-1 new-math leaves
+   to Tier-2).** SL1a (`conj-straddling-web-exclusion`) was selected as the most open
+   Tier-1 leaf and a codex architect (gpt-5.6-sol, ultra) was INTERRUPTED mid-run: the
+   DAG shape (L-S selector -> L-V same-carrier reproduction at the selected web row ->
+   L-P discard/horn split -> ONE hard leaf H-SCCO) and the proved-input audit are
+   preserved in `docs/waves/2026-07-09-W56-artifacts/decomposition-PARTIAL.md` (+ the
+   full worker session log, gzipped, same dir); §3-§6 (leaf statements, assembly,
+   red tests) are MISSING and NOTHING is hostile-verified. Resume per
+   `docs/waves/2026-07-09-W56-sl1a-decomposition-interrupted.md` §Next session.
 0. **Fresh standalone prover/verifier passes on W55 E1-E5**, then codify only if valid.
 1. **Fresh pass on the small-gauge bridge** `A0<=3/32 => SL1a or SL1b`; this is the
    cleanest new joint edge and must carry its conditioning constants verbatim.
