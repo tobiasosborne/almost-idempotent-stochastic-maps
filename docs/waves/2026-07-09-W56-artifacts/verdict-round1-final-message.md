@@ -1,0 +1,3 @@
+VERDICT: INVALID — H-CCO is a broader restatement of the residual exclusion, and its purported one-level sub-DAG merely renames unresolved completion cells.
+
+The routine assembly arithmetic and cited proved shards check out, but the sole HARD leaf does not restrict to a genuinely smaller configuration space, its descendants lack quantified statements or closers, and its routing is nonunique because of several noncanonical selections. The mandatory non-vacuity and red-test claims are also incomplete. All 15 findings are recorded in `VERDICT-W56.md`.
