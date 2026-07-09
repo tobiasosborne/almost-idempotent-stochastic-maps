@@ -101,3 +101,47 @@ max principle), `conj-cotop-web-coupling` (L6.5, THE isolated wall).
 L5-minimax, conj-cotop-web-coupling} (+ L7 chain cap, foldable). Named candidate unifier:
 MUTUAL-EXPOSURE RIGIDITY (a straddling family of mutually rho-far co-top vertices cannot
 all be hidden) — the L2 Fable prover carries the convergence hint.
+
+## Update 3 (same day): L5 reduced to the dual-face mass minimax
+
+**Prover L5:** `VERDICT: BLOCKED — L5 reduces cleanly to a linear minimax problem on the top dual face, but no proved shard supplies the required dimension-free mass-minimax/finite-cover claim.`
+Named gap (L5-GAP-1, the direct minimax form): for A rho-far co-top with normalized
+positive weights w_j/S_A, prove sup over y in Y_v of sum_{j in A} (w_j/S_A)*y.(p_v - p_j)
+>= gamma*tau with universal gamma > 0 (equivalently a universal-size extreme-cover of
+Y_v serving all far-deep deficits). The pointwise form (= conj-summit-cylinder-exclusion)
+does NOT imply it by averaging (the verified simplex obstruction). Nothing banked from
+L5; the reduction vocabulary is already carried by lem-top-support-dual-face.
+
+## Update 4 (wave close): L2 harvested — Branch II collapses; the artifacts preserved
+
+**Fable author L2:** `VERDICT: PARTIAL` — L2-v2 collapses to bare tall+intersecting-hulls
+emptiness; SL1a + SL1b => L2-core (proved sub-assembly).
+**Verifier V-L2:** `VERDICT: VALID-WITH-CORRECTIONS — The proved core survives, but the answer must correct a contract overreach, a false "never a majority" consequence, and several boundary/constant statements.`
+(All corrections applied at banking.)
+
+Banked: `lem-l2-core-collapse`, `lem-intersection-witness-confinement` (Theorem B, with
+the weakened Markov consequence), `conj-straddling-web-exclusion` (SL1a),
+`conj-shallow-counterweight-exclusion` (SL1b). FINDINGS: the witness-averaging dead end
+(by identity), the averaging degeneracy, the corrected rigidity picture, the sharp L5
+obstruction, the t*-free discipline. NOT separately banked: Theorem C (cylinder + narrow
+dual face omega_v closes Branch II — recorded here; codify on consumption), Proposition E
+(inside the SL1a shard body), the L5/L7 reductions (answers preserved).
+
+**All wave artifacts preserved** in docs/waves/2026-07-09-W54-artifacts/ (the two Fable
+proof documents backing the banked shards, the architect tree v1 + delta, all nine
+verifier verdicts, the L5/L7 answers).
+
+## FINAL WAVE STATE — the huddle-charge surface after W54
+
+THE HUDDLE CHARGE (== the terminal node of sketch v17) <= by the VERIFIED tree +
+verified collapses:
+- **Branch II (intersecting hulls):** conj-straddling-web-exclusion (SL1a) +
+  conj-shallow-counterweight-exclusion (SL1b)  [or: conj-summit-cylinder-exclusion +
+  narrow dual face, Theorem C route];
+- **Branch I (disjoint hulls):** conj-cotop-web-coupling (L6.5) + the L5 dual-face mass
+  minimax (L5-GAP-1, aism-vuc)  [L7 chain cap foldable, aism-2ii];
+- everything else PROVED (L5-tier) and hostile-verified: 12 new lemmas this wave.
+
+SL1a and conj-cotop-web-coupling are two windows on ONE object (the confined co-top
+web); the honest count of genuinely open questions after W54 is FOUR, all sharply
+scoped, all with named refuter targets and proved toolkits.

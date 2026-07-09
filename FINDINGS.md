@@ -850,3 +850,30 @@ imports a future agent might reach for — read before importing ANY external to
 - **Verifier-demanded reading, binding for future waves:** "hiddenness dual witness" in
   any depth-Markov/top-slab consumer means the SMALL-BETA witness (sum beta_i < tau/4 =
   the lem-hiddenness-dual-witness normalization); statements must say so explicitly.
+
+## 2026-07-09 — W54 (session 13): the decomposition wave — dead ends by identity; the surface after
+
+- **DEAD ROUTE (by identity): the witness-averaging mechanism for Branch II.** In every
+  alpha-free (intersection-branch) configuration the lambda-average top-deficit is capped
+  at t*(v)*(2+4*delta) < (1/2+delta)*tau for EVERY top support functional and every
+  finite convex average ([[lem-intersection-witness-confinement]] B4 — the alpha-free
+  case of lem-cotop-witness-pinning's exact pairing). Consequently the lambda-mass at
+  deficit >= tau is < 1/2+delta — no majority, no contradiction, at ANY tallness; and
+  pointwise cylinder exclusion canNOT close Branch II through the lambda-pairing
+  (Cyl_v(eps) is convex and contains p_v: barycenters of excluded points re-enter). The
+  W54-architect averaging mechanism for L2 is dead as a witness route. Do not re-walk.
+- **Averaging degeneracy:** every finite convex average of top support functionals
+  coincides on the row set with a single one (Y_v convex; lem-l2-core-collapse) — the
+  "averaged-phi upgrade" axis buys NOTHING beyond single functionals.
+- **Mutual-exposure rigidity, corrected:** the pure co-top rigidity form is NOT forced —
+  a shallow counterweight of mass ~4*tau/(2+4*delta) passes all mass/depth caps; the
+  honest unified surface is the PAIR conj-straddling-web-exclusion (SL1a) +
+  conj-shallow-counterweight-exclusion (SL1b) (V-L2-audited Proposition E).
+- **The L5 minimax obstruction is proved-sharp:** pointwise dual-face visibility does
+  not average up (the V-L3 simplex witness); L5 = the dual-face mass minimax (sup over
+  y in Y_v of the mass-normalized far-deep deficit >= gamma*tau), open as L5-GAP-1
+  (aism-vuc).
+- **t*-free discipline for starvation arguments:** any exchange-starvation constant that
+  divides by t*(u) is dead (t* arbitrarily small in (0,kappa)); the proved replacement
+  toolkit is lem-psi-corner-trap (|m| <= 3+4*delta, osc <= 5+8*delta, max principle with
+  O(delta) slack).
