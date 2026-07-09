@@ -80,3 +80,24 @@ THE HUDDLE CHARGE <= {L2-v2, conj-summit-cylinder-exclusion (L3), L5, L6-v2, L7-
 chain-uniform-L6} — assembly hostile-verified; L1/L4 proved+banked; the margin lemma
 proved+banked. The open surface is FOUR statements (L2-v2, cylinder exclusion, L5
 minimax, L6-v2) plus L7's chain cap (two named gaps, foldable into L6 chain-uniformity).
+
+## Update 2 (same day): the L6 leaf COLLAPSED onto one coupling conjecture
+
+**Fable author L6:** `VERDICT: DECOMPOSED — L6 (in the u = v form the assembly actually consumes) collapses onto ONE minimal open coupling sub-leaf; everything else is proved.`
+**Verifier V-L6:** `VERDICT: VALID-WITH-CORRECTIONS — The load-bearing implication L6.5 => L6-v2 checks out, but L6.3 uses an unsupported nonclone reading of the reduced display contracts and the assembly overstates equivalence/minimality.`
+
+Corrections applied at banking: L6.3's nonclone clause re-proved in the verifier's
+prescribed order (downhill first, clones displace zero); L6.4 pinned to a
+relative-interior optimal exposer; the equivalence claim DEMOTED (L6.5 is a STRONGER open
+sub-leaf — it drops NOT-Q4); the tree constant re-pinned c_m := c_*/2 (legal under
+G8-v3 monotonicity; V-L6 finding 6).
+
+Banked: `lem-cotop-witness-pinning` (L6.1+L6.2 — the exact display pairing; witness AND
+zero-face mass co-top; 13/16 starved-set localization), `lem-downhill-cotop-conic-mass`
+(L6.3 repaired), `lem-psi-corner-trap` (L6.4 — the t*-FREE normalization + corner trap +
+max principle), `conj-cotop-web-coupling` (L6.5, THE isolated wall).
+
+**Huddle-charge open surface after L6:** {L2-v2, conj-summit-cylinder-exclusion,
+L5-minimax, conj-cotop-web-coupling} (+ L7 chain cap, foldable). Named candidate unifier:
+MUTUAL-EXPOSURE RIGIDITY (a straddling family of mutually rho-far co-top vertices cannot
+all be hidden) — the L2 Fable prover carries the convergence hint.
