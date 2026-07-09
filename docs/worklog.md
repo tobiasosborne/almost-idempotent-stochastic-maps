@@ -772,3 +772,40 @@ BLOCKED with three named binding constraints. Close state (sketch v16): ONE unsc
 never realized; lemma-ize (B1)-(B3) + exclude the huddle = the Kernel height clause);
 fallback = (M1) conj-rank3-cluster-zero-face-reach. Next: W53 the (B1)-(B3) lemma-ization
 wave. Remote push enabled (origin exists; old local-only note retired).
+
+## 2026-07-09 — Session 13: the decomposition campaign (W53 + W54)
+
+User mandate: orchestrate the full proof, breadth-first; the objective function of Tier-1
+attacks = DECOMPOSITION into lower-complexity pieces. Executed two waves end-to-end
+(registry 119 -> 140; 28 af-validated unchanged; every banked item through a SEPARATE
+fresh hostile codex verifier; ~14 codex workers + 3 Fable authors + 1 Opus strategist).
+
+- **W53 (the binding-constraint lemma-ization):** 4 codex provers ALL PARTIAL, 4
+  verifiers ALL VALID-WITH-CORRECTIONS — the three W52 constraints are ONE wall. Banked:
+  lem-top-deficit-price, lem-disjointness-huddle-reduction, lem-top-witness-third-actor,
+  lem-bounded-alpha-forced-far-slab + the handle conjectures conj-top-deficit-coupling,
+  conj-tall-bounded-alpha. Sketch v17: terminal node = THE HUDDLE CHARGE. C_4 contract
+  daylight closed. (Commits 5eea0aa..; wave doc W53.)
+- **W54 (the huddle-charge decomposition):** E1 sub-wave wired absorption =>
+  conj-low-slab-cap (lem-absorption-implies-low-slab-cap + conj-far-low-slab-cap, V-E1
+  VALID no corrections). Fable architect tree (7 leaves) -> V-ASM INVALID -> prescribed
+  repairs (re-root u := v; clone-invariant Q3; strict G8) -> V-ASM-2
+  VALID-WITH-CORRECTIONS (G8-v3 applied); AG-1 discharged via the NEW
+  lem-positive-exposedness-margin (R4 audit + V-R4), AG-2 resolved. Leaves: L1/L4
+  PROVED+VALID (lem-averaged-deficit-charge, lem-zero-face-capacity-kill); L3 ->
+  lem-top-support-dual-face (legal tilts == the dual face Y_v) +
+  conj-summit-cylinder-exclusion; L7 BLOCKED (two named gaps, aism-2ii); L5 BLOCKED ->
+  the dual-face mass minimax (aism-vuc). Fable L6 DECOMPOSED -> V-L6: banked
+  lem-cotop-witness-pinning, lem-downhill-cotop-conic-mass, lem-psi-corner-trap (the
+  t*-FREE toolkit) + conj-cotop-web-coupling (THE isolated lambda-vs-P+ wall). Fable L2
+  PARTIAL -> V-L2: banked lem-l2-core-collapse, lem-intersection-witness-confinement
+  (the identity-level averaging cap) + conj-straddling-web-exclusion (SL1a) +
+  conj-shallow-counterweight-exclusion (SL1b). All artifacts preserved in
+  docs/waves/2026-07-09-W54-artifacts/. FINDINGS: five new dead-route certificates.
+- **Net map change (sketch v18):** THE HUDDLE CHARGE == a VERIFIED four-leaf system
+  (SL1a + SL1b / conj-cotop-web-coupling + L5-minimax), four windows on the confined
+  co-top web; SL1b graded most attackable. W55 queue filed (aism-vuc, aism-zm8,
+  aism-2ii); user decisions aism-nlg/aism-z98 still pending.
+
+Commits this session: 5eea0aa, 00ee4ef, ca32a0b, 41201cc, 1c87df8, b62b51a, 60b71ae +
+the close commit. All pushed.

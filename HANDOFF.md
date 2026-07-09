@@ -10,91 +10,87 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read **`docs/plans/2026-07-09-top-down-proof-sketch-v17.md`** — THE canonical strategic map
-   (v17, session-13 W53 bank DELTA redraw; v16 and earlier superseded in place, kept for line citations).
-   **STEWARDSHIP (user mandate, 2026-07-06, binding): reconciling the sketch with newly banked
-   evidence is a FIRST-CLASS DELIVERABLE of every session (Rule 9).**
-3. **STANDING DIRECTIVES (user, 2026-07-07, binding):** (i) TIER-1 FOCUS — all new capacity at the
-   truly open steps; no new Tier-2/3 dispatches unless they feed Tier 1; (ii) "exploit all
-   creativity and all means" on unknown-math elimination — Fable-grade agents sanctioned liberally
-   for deep proof/strategy work while Tier-1 nodes remain (verification stays fresh-codex-only,
-   §6); (iii) once Tier 1 falls, FARM OUT the parked procedural queue to simpler models.
-   Also binding: no progress theatre (2026-07-05).
-4. Run `fr board` and `bd ready`. Session-12 wave artifacts: `docs/waves/2026-07-07-W44...W52*`;
-   bundles `runs/2026-07-07-w44-rank3-boundary/`, `runs/2026-07-07-w52-tall-entry/`;
-   strategy docs `docs/plans/2026-07-07-{ideation-mechanism-portfolio,bypass-audit}.md`.
-   Session-12 scratchpad (worker prompts + raw answers) is gone at reboot — wave docs carry
-   the verbatim verdict lines and the shards carry the corrected contracts.
+2. Read **`docs/plans/2026-07-09-top-down-proof-sketch-v18.md`** — THE canonical strategic map
+   (v18, session-13 close; v17 and earlier superseded in place, kept for line citations).
+   Then **`docs/plans/2026-07-09-w54-huddle-charge-decomposition-tree.md`** — the VERIFIED
+   decomposition of the terminal node (read PART A through PART B).
+   **STEWARDSHIP (user mandate, 2026-07-06, binding): reconciling the sketch with newly
+   banked evidence is a FIRST-CLASS DELIVERABLE of every session (Rule 9).**
+3. **STANDING DIRECTIVES (user, binding):** (i) TIER-1 FOCUS; (ii) Fable-grade agents
+   liberally for deep proof/strategy while Tier-1 nodes remain (verification stays
+   fresh-codex-only, §6); (iii) once Tier 1 falls, farm out the parked queue; (iv) no
+   progress theatre; **(v) NEW 2026-07-09: the objective function of every Tier-1 attack
+   is DECOMPOSITION into lower-complexity pieces** (case trees, small-lemma systems with
+   checkable assemblies) — W53/W54 are the template.
+4. Run `fr board` and `bd ready`. Session-13 artifacts: waves
+   `docs/waves/2026-07-09-W53-binding-constraint-lemmaization.md` +
+   `2026-07-09-W54-huddle-charge-decomposition.md` (+ `2026-07-09-W54-artifacts/` — the
+   Fable proof docs backing the banked shards, the tree, all verifier verdicts).
 5. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-07, session 12 close)
+## Current state (2026-07-09, session 13 close)
 
-**Rigorous (af-validated, T0): 28** — session-12 elevations: #26 lem-depth-d-halo-collapse
-(e0478c6), #27 lem-row-zero-capacity (402ed01), #28 lem-always-tight-dual-support (9b1dde7).
-**Registry: 119 results** (+34 this session). Every codified proof passed a SEPARATE fresh
-hostile codex verifier (L5); L0 claimed ONLY for the af-validated 28.
+**Rigorous (af-validated, T0): 28** (unchanged — no af runs this session).
+**Registry: 140** (+21 this session; EVERY codified proof passed a SEPARATE fresh hostile
+codex verifier, L5; L0 claimed ONLY for the af-validated 28).
 
-**THE STATE OF THE PROOF (sketch v16): ONE unscoped node, one favoured kill.**
-The terminal node is the IN-CLASS INTERSECTION HORN of `conj-zero-face-elimination`
-(the v13 "two faces" were merged BY THEOREM: `prop-f2-t1-equivalence` — (F2) was (T1) in
-contrapositive form; the exposure horn is VOID in tall regimes). Two attack modes:
+**THE STATE OF THE PROOF (sketch v18): the terminal node is a VERIFIED four-leaf system.**
+Session 13 executed the decomposition mandate end-to-end: W53 collapsed the three W52
+binding constraints into THE HUDDLE CHARGE (sketch v17); W54's Fable-architect case tree
+was hostile-verified (INVALID -> prescribed repairs -> VALID-WITH-CORRECTIONS, all
+applied), its easy/medium leaves proved or reduced, and both creative branches collapsed:
 
-- **(M2) TALL-EMPTINESS (favoured, rank-free):** the tall heavy near-cluster class has
-  NEVER been realized — the W52 pre-registered experiment is BLOCKED (1296 exact records,
-  zero tall, zero nonempty C4; best-ever H^2/delta ~ 0.228 vs threshold 16) with THREE
-  named binding constraints (delta inflation / forced visibility / top
-  reversion-with-intersection). Tall-emptiness == exclude the HUDDLE
-  (`lem-zero-face-vertex-support`: two mutually-exempt deep hidden vertices within 4*tau)
-  == the Kernel height clause DIRECTLY.
-- **(M1) the rank-3 reach inequality (fallback):** `conj-rank3-cluster-zero-face-reach`
-  (width-4 form) alone closes the node at rank 3 via the VFP1-verified anatomy chain
-  (`lem-rank3-zero-face-anatomy` — disjointness has ONE rigid shape;
-  `lem-rank3-zero-face-min-mass` — A_min = gap_2/reach EXACT, reproducing the banked 100;
-  pinning; downhill dichotomy). Rank-3-scoped; general-rank is a separate named price
-  (VOID if (M2) lands).
+- **Branch II == {`conj-straddling-web-exclusion` (SL1a) + `conj-shallow-counterweight-
+  exclusion` (SL1b)}** via `lem-l2-core-collapse` + `lem-intersection-witness-confinement`
+  (the identity-level averaging cap). Alternative: Theorem-C route via
+  `conj-summit-cylinder-exclusion` + narrow dual face (wave doc).
+- **Branch I == {`conj-cotop-web-coupling` (L6.5) + the L5 dual-face mass minimax
+  (aism-vuc)}** via `lem-cotop-witness-pinning`, `lem-downhill-cotop-conic-mass`,
+  `lem-psi-corner-trap` (the t*-FREE toolkit — the t*-division death trap is closed).
+- Consumption above the node: `lem-absorption-implies-low-slab-cap` wires tall-emptiness
+  (+ `conj-far-low-slab-cap`) => `conj-low-slab-cap` => the Kernel height clause.
 
-**Closed BY CERTIFICATE this session (do not re-walk; FINDINGS 2026-07-07 entries):**
-ledger-only (F2) proofs (`obs-thin-zero-face-blocker-graft`); budget-class attacks
-(`obs-gamma-two-level-class-count-wall`, `obs-gamma-capacity-scale-blind` — the B4
-Gamma-lumping bypass died at the class-count wall); the exposure horn
-(`lem-ball-cluster-exposure-void`); the (F2) constant-hunt (any bound > 4*tau suffices;
-c0 = a certificate of emptiness); spectral/NCD imports (dimension-dependent, Hartfiel-Meyer);
-ALL bypasses (docs/plans/2026-07-07-bypass-audit.md: NO-CHEAPER-BYPASS, six axes); and
-op-classical is NOT known mathematics (W50, fourth pass; we are the commutative case of
-Kitaev's named open problem — SBD arXiv:2405.01532 Thm 5.2 is the solved VECTOR sibling).
+SL1a and conj-cotop-web-coupling are two windows on ONE object (the confined co-top web);
+the honest open count is FOUR sharply-scoped conjectures, each with proved toolkits,
+named refuter targets, and preserved proof context.
 
-**The verified mechanism toolkit (L5, W48):** `lem-signed-carre-du-champ` (sharp constants),
-`lem-cluster-return-flow` (sharp 1/2), `lem-wedderburn-deflation`, `lem-censoring-exactness`.
-**The W44/W47/W49 LP toolkit (L5):** conic reduction, tight-far geography, separator
-obstruction, capacity bridge, interval reduction, row balance, spread criterion, exchange
-identity, forced alpha, huddle localization/support.
+**Dead by certificate this session (FINDINGS 2026-07-09, do not re-walk):** witness-
+averaging for Branch II (identity cap); the averaging axis (degenerate via Y_v);
+pointwise-to-simultaneous by averaging; pure co-top rigidity (shallow-counterweight
+escape); any starvation constant dividing by t*(u); plus the W53 entries (affine-pairing
+blind spot; B2-as-stated subsumed; small-beta witness reading binding).
 
-## Next steps (ranked)
+## Next steps (ranked) — W55
 
-0. **W53 — the (B1)-(B3) lemma-ization wave (THE opening move, sketch v16):** three provers,
-   one per W52 binding constraint, each targeting "the constraint is UNIVERSAL, not
-   family-specific"; hostile verifiers per protocol. (B1)-(B3) universal + the huddle
-   anatomy = tall-emptiness = the Kernel height clause, rank-free.
-1. (M1) in parallel if capacity allows: prove/refute `conj-rank3-cluster-zero-face-reach`
-   (the W52 frontier instances are the stress data; `runs/2026-07-07-w52-tall-entry/`).
-2. USER DECISIONS pending: `aism-nlg` (pinned-delta re-wording of op-exposed-hull +
-   pure-stochastic restatement of thm-classical-factorization — retires loose-delta without
-   proof); `aism-z98` (standing).
-3. PARKED Tier-2/3 (farm out to simpler models once Tier 1 falls, per the user directive):
-   elevation queue (the reviewed W44/W47/W48/W49F families; the af memory: single minimal
-   contracts, factor compound ones), trunk <2>7 factoring (aism-ik6), Kernel(i) rank >= 3,
-   report labels (aism-av0), refs ingest (aism-5de: SBD + Kitaev byte-match).
+0. **SL1b first** (`conj-shallow-counterweight-exclusion`, graded most attackable):
+   codex prover — shallow rows live near the visible hull where exposers have room;
+   universal shadowing below kappa should contradict the visible-side machinery
+   (lem-row-far-dual-certificate, lem-visible-g-small, the margin lemma).
+1. **The confined co-top web as ONE joint Fable wave**: SL1a + conj-cotop-web-coupling
+   together (aism-zm8), consuming lem-cotop-witness-pinning + lem-intersection-witness-
+   confinement + lem-psi-corner-trap; decomposition-first.
+2. **L5 dual-face mass minimax** (aism-vuc): codex geometry problem on Y_v (linear in y;
+   the simplex obstruction is sharp — the proof must use Y_v structure + idempotence).
+3. conj-far-low-slab-cap + conj-summit-cylinder-exclusion: siblings; may fall to the same
+   web mechanisms — check after 0/1.
+4. Parked: L7 gaps (aism-2ii), elevation queue (the W53/W54 proved families are prime
+   af-elevation shapes — single minimal contracts), trunk <2>7 (aism-ik6), Kernel(i)
+   rank >= 3, refs ingest (aism-5de).
+5. USER DECISIONS pending: `aism-nlg`, `aism-z98` (standing).
 
-## Standing rules (session-12 additions to the CLAUDE.md/bd-memory set)
+## Standing rules (unchanged from session 12 + the new decomposition directive)
 
-Codex workers for all proving/verifying; Fable-grade agents liberally for deep
-proof/strategy while Tier-1 nodes remain (their output is AUTHOR output — always
-hostile-verified by fresh codex before codification); ONE af orchestration at a time;
-registry edits during live orchestrations only as fast atomic edit+commit windows; wave
-docs carry verbatim verdict first-lines; theta-flexibility; `fr orient` on no-bank turns,
-one `fr log` pull per harvested wave, ▣ banked only via `fr verify` against the af oracle.
-NOTE: a GitHub remote EXISTS (origin = github.com/tobiasosborne/almost-idempotent-stochastic-maps);
-close = commits + `bd dolt push` + `git push` (the old "local-only" note is retired).
+Codex workers for all proving/verifying; Fable-grade for deep proof/strategy (AUTHOR
+output — always hostile-verified by fresh codex before codification); ONE af
+orchestration at a time; wave docs carry verbatim verdict first-lines; `fr orient` on
+no-bank turns; ▣ banked only via `fr verify` against the af oracle. Worker-prompt
+patterns + verifier-prompt patterns for decomposition waves: see the W53/W54 scratchpad
+prompts quoted in the wave docs (self-contained workspaces: definitions + argument +
+CONVENTIONS + the target artifact; verdict-first-line discipline; status discipline
+stated in every prompt). NOTE: `codex exec -o FILE` overwrites with the final MESSAGE —
+point -o at a scratch FINAL.md, never at the worker's ANSWER.md; recover answers from
+the session log if clobbered. Fable agents: instruct INCREMENTAL file writes (<~10k
+tokens per call) — one died on the 64k output ceiling and was resumed via SendMessage.
 
 ## Recipes
 
@@ -102,19 +98,14 @@ close = commits + `bd dolt push` + `git push` (the old "local-only" note is reti
 sh scripts/check-all.sh
 python3 scripts/seed-af-workspaces.py <id>       # then COMMIT before orchestrating
 python3 scripts/af-orchestrate.py <id> --workers 6 --max-rounds 14 --node-cap 40   # background
-codex exec --skip-git-repo-check -C <scratch-workdir> -s workspace-write -o ANSWER.md - < <prompt>
-# banking an af validation: af export -d proofs/<id> > proofs/<id>/export.md (+ --format latex);
-#   flip shard af: seeded->validated; argument.py --generate; register oracle in
-#   .frontier/portfolio.json; fr verify proofs/<id>/export.md --oracle af-<id>; fr log ▣; commit.
-PYTHONDONTWRITEBYTECODE=1 python3 runs/2026-07-07-w44-rank3-boundary/scripts/hostile_rank3_verify.py
-PYTHONDONTWRITEBYTECODE=1 python3 runs/2026-07-07-w52-tall-entry/scripts/w52_exact.py
+codex exec --skip-git-repo-check -C <scratch-workdir> -s workspace-write -o <scratch>/FINAL.md - < <prompt>
 ```
 
 ## What is intentionally NOT here
 
-- Any claim more than TWENTY-EIGHT results are af-validated. All session-12 codified proofs
-  are L5 (fresh-hostile-verified), NOT L0.
-- Any claim the terminal node, tall-emptiness, the reach conjecture, Kernel(i) rank >= 3,
-  or the Kernel Conjecture is proved. W52's BLOCKED is a bounded search over named
-  families — evidence, never an emptiness proof (L3).
-- Any claim (M1)'s rank-3 payout extends to general rank without the separately named step.
+- Any claim more than TWENTY-EIGHT results are af-validated. All session-13 codified
+  proofs are L5 (fresh-hostile-verified), NOT L0.
+- Any claim the huddle charge, tall-emptiness, any of the four leaves, or the Kernel
+  Conjecture is proved. The W54 tree is a VERIFIED CONDITIONAL derivation — its leaves
+  are conjectures.
+- Any claim the W52 BLOCKED search or any numerical evidence is a proof (L3).
