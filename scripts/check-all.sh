@@ -25,7 +25,7 @@ echo "[check-all] sharded lab-book (master purity, shard headers, README/CATALOG
 bash scripts/check-report-shards.sh || fail "check-report-shards"
 
 echo "[check-all] tooling tests (TDD; port-and-verify)"
-for t in scripts/tests/test_argument.py scripts/tests/test_check_defs.py scripts/tests/test_check_refs.py scripts/tests/test_check_runs.py; do
+for t in scripts/tests/test_argument.py scripts/tests/test_check_defs.py scripts/tests/test_check_refs.py scripts/tests/test_check_runs.py scripts/tests/test_af_orchestrate.py; do
   [ -f "$t" ] || continue
   out=$(python3 "$t" 2>&1) || { echo "$out"; fail "$t"; }
 done

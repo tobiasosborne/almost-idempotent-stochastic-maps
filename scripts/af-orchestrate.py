@@ -5,7 +5,12 @@ PROTOCOL (user-mandated, strict — see ~/.claude .../memory/af-verification-pro
   * This script (the ORCHESTRATOR) only drives the af tree: it dispatches codex prover/
     verifier jobs and reads `af status/jobs/get` for control flow. It NEVER judges a proof's
     correctness and never accepts/challenges itself.
-  * PROVERS are codex (gpt-5.5/xhigh) runs; a prover may build/address multiple nodes.
+  * PROVERS are codex (gpt-5.6-sol) runs; a prover may build/address multiple nodes.
+    Reasoning effort is TIERED per run (user directive 2026-07-09): `--tier creative`
+    (the default: prover=ultra, verifier=xhigh) for truly creative/demanding conjectures;
+    `--tier routine` (prover=high, verifier=high) for lower-priority mechanical
+    elevations (e.g. single-shard corollaries from the parked queue). Fine-grained
+    overrides: --prover-effort / --verifier-effort; model override: $CODEX_MODEL.
   * EVERY node is validated ONLY by a FRESH codex verifier — a brand-new `codex exec`
     (independent context) explicitly told that finding a counterexample/gap/error is a BIG
     SUCCESS. Fresh per node; roles never mix; codex used liberally and in parallel.
@@ -32,6 +37,18 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 AF = os.environ.get("AF") or shutil.which("af") or "/home/tobias/Projects/vibefeld/af"
 CODEX = "codex"
+CODEX_MODEL = os.environ.get("CODEX_MODEL", "gpt-5.6-sol")
+# gpt-5.6-sol supported reasoning efforts (codex models cache): low..ultra.
+CODEX_EFFORTS = ("low", "medium", "high", "xhigh", "max", "ultra")
+# Effort tiers (user directive 2026-07-09): highest thinking for truly creative/demanding
+# jobs, lower thinking for lower-priority (mechanical) elevations.
+TIERS = {
+    "creative": {"prover": "ultra", "verifier": "xhigh"},
+    "routine": {"prover": "high", "verifier": "high"},
+}
+# Deeper reasoning needs more wall-clock before we declare a worker timed out.
+_EFFORT_TIMEOUT = {"low": 900, "medium": 1200, "high": 1800, "xhigh": 2400,
+                   "max": 3600, "ultra": 3600}
 
 
 def af(ws, *args, timeout=60):
@@ -125,13 +142,18 @@ def overreach_paths():
     return bad
 
 
-def run_codex(prompt, answer_path, log_path, sandbox="workspace-write", timeout=1800):
+def run_codex(prompt, answer_path, log_path, sandbox="workspace-write", timeout=None,
+              effort="xhigh"):
+    if timeout is None:
+        timeout = _EFFORT_TIMEOUT.get(effort, 1800)
     answer_path = pathlib.Path(answer_path)
     answer_path.parent.mkdir(parents=True, exist_ok=True)
     answer_path.unlink(missing_ok=True)
     with open(log_path, "w") as lf:
         try:
             subprocess.run([CODEX, "exec", "--skip-git-repo-check", "-C", str(ROOT),
+                            "-m", CODEX_MODEL,
+                            "-c", f'model_reasoning_effort="{effort}"',
                             "-s", sandbox, "-o", str(answer_path), "-"],
                            input=prompt, text=True, stdout=lf, stderr=subprocess.STDOUT,
                            timeout=timeout, cwd=ROOT)
@@ -172,7 +194,7 @@ def deps_groundtruth(rid):
 
 def ground(rid, ws):
     return (
-        f"You are a fresh gpt-5.5 worker with NO prior context. Repo root is your cwd. The af binary is "
+        f"You are a fresh {CODEX_MODEL} worker with NO prior context. Repo root is your cwd. The af binary is "
         f"`{AF}` (pass `-d {ws}` to EVERY af command). Workspace: {ws}.\n"
         + deps_groundtruth(rid) +
         f"READ THESE FIRST and trust NOTHING you are merely told:\n"
@@ -277,7 +299,18 @@ def main(argv):
     # Claude provisions the needed fact properly (byte-matched, correct layer) and re-runs.
     ap.add_argument("--no-overreach-guard", action="store_true",
                     help="disable the guard that aborts when a prover edits definitions/ or argument/")
+    # Reasoning-effort tiering (user directive 2026-07-09): highest thinking for truly
+    # creative/demanding conjectures, lower thinking for lower-priority mechanical jobs.
+    ap.add_argument("--tier", choices=sorted(TIERS), default="creative",
+                    help="effort preset: creative = prover ultra / verifier xhigh (default); "
+                         "routine = prover high / verifier high (mechanical elevations)")
+    ap.add_argument("--prover-effort", choices=CODEX_EFFORTS, default=None,
+                    help="override the tier's prover reasoning effort")
+    ap.add_argument("--verifier-effort", choices=CODEX_EFFORTS, default=None,
+                    help="override the tier's verifier reasoning effort")
     a = ap.parse_args(argv)
+    prover_effort = a.prover_effort or TIERS[a.tier]["prover"]
+    verifier_effort = a.verifier_effort or TIERS[a.tier]["verifier"]
     rid, ws = a.rid, f"proofs/{a.rid}"
     logdir = pathlib.Path(a.logdir or f"/tmp/af-orch/{rid}")
     logdir.mkdir(parents=True, exist_ok=True)
@@ -303,9 +336,10 @@ def main(argv):
         return ("PROVER-OVERREACH", f"prover dirtied definitions/ or argument/ during {when}")
 
     if a.phase in ("all", "prove"):
-        log("PROVER build dispatch (codex)...")
+        log(f"PROVER build dispatch (codex {CODEX_MODEL}, effort={prover_effort}; "
+            f"verifiers at {verifier_effort})...")
         out = run_codex(prover_build_prompt(rid, ws), logdir / "prover-build.answer.txt",
-                        logdir / "prover-build.log")
+                        logdir / "prover-build.log", effort=prover_effort)
         log(f"prover build done: {' '.join(out.split())[-280:]}")
         if check_overreach("prover build"):
             log("ABORTED [PROVER-OVERREACH]: review `git diff`; provision the needed fact YOURSELF "
@@ -360,12 +394,14 @@ def main(argv):
             o = f"pf-{n.replace('.', '_')}-r{rnd}"
             tasks.append(("prover-fix", n, pool.submit(
                 run_codex, prover_fix_prompt(rid, ws, n, o),
-                logdir / f"fix-{n}-r{rnd}.answer.txt", logdir / f"fix-{n}-r{rnd}.log")))
+                logdir / f"fix-{n}-r{rnd}.answer.txt", logdir / f"fix-{n}-r{rnd}.log",
+                effort=prover_effort)))
         for n in ready:
             o = f"v-{n.replace('.', '_')}-r{rnd}"
             tasks.append(("verifier", n, pool.submit(
                 run_codex, verifier_prompt(rid, ws, n, o),
-                logdir / f"verify-{n}-r{rnd}.answer.txt", logdir / f"verify-{n}-r{rnd}.log")))
+                logdir / f"verify-{n}-r{rnd}.answer.txt", logdir / f"verify-{n}-r{rnd}.log",
+                effort=verifier_effort)))
         for kind, n, fut in tasks:
             tail = " ".join((fut.result() or "").split())[-160:]
             log(f"    {kind} {n}: {tail}")

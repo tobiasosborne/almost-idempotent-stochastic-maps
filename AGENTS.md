@@ -262,7 +262,11 @@ is **not** stood up on every result — only for a conjecture the user or the po
    — a new `codex exec`, told that finding a counterexample/gap/error is a BIG SUCCESS. Fresh per node;
    prover ≠ verifier ≠ challenger; bottom-up (a node reaches a verifier only once all its live children are
    `validated`). Quick form:
-   `echo "PROMPT" | codex exec --skip-git-repo-check -C <repo> -s workspace-write -o ANSWER -`.
+   `echo "PROMPT" | codex exec --skip-git-repo-check -C <repo> -m gpt-5.6-sol -c 'model_reasoning_effort="<effort>"' -s workspace-write -o ANSWER -`.
+   **Model/effort policy (user directive 2026-07-09): codex = `gpt-5.6-sol`; effort `ultra` (highest) for
+   truly creative/demanding jobs, lower (`high` or below) for lower-priority routine jobs.**
+   `af-orchestrate.py` encodes this as `--tier creative` (prover `ultra` / verifier `xhigh`, default) vs
+   `--tier routine` (`high`/`high`), with `--prover-effort`/`--verifier-effort` overrides.
 3. **Driver:** `python3 scripts/af-orchestrate.py <id> --workers N --max-rounds M [--node-cap 40]` run in the
    **background** (a single backgrounded call — no `nohup`/`&` wrapping that orphans it). One prover *build*,
    then rounds of {prover-fix ∥ fresh-per-node verifier} until root node `1` is `validated`. Guardrails:

@@ -82,7 +82,10 @@ mandatory tests.
 
 ## Standing rules (unchanged from session 12 + the new decomposition directive)
 
-Codex workers for all proving/verifying; Fable-grade for deep proof/strategy (AUTHOR
+Codex workers for all proving/verifying; codex model is **gpt-5.6-sol** (user directive
+2026-07-09) at effort ULTRA for truly creative/demanding jobs and lower effort (high or
+below) for lower-priority routine jobs — `af-orchestrate.py --tier` encodes this;
+Fable-grade for deep proof/strategy (AUTHOR
 output — always hostile-verified by fresh codex before codification); ONE af
 orchestration at a time; wave docs carry verbatim verdict first-lines; `fr orient` on
 no-bank turns; ▣ banked only via `fr verify` against the af oracle. Worker-prompt
@@ -100,7 +103,13 @@ tokens per call) — one died on the 64k output ceiling and was resumed via Send
 sh scripts/check-all.sh
 python3 scripts/seed-af-workspaces.py <id>       # then COMMIT before orchestrating
 python3 scripts/af-orchestrate.py <id> --workers 6 --max-rounds 14 --node-cap 40   # background
-codex exec --skip-git-repo-check -C <scratch-workdir> -s workspace-write -o <scratch>/FINAL.md - < <prompt>
+#   effort tiers (user directive 2026-07-09): default --tier creative (prover ultra /
+#   verifier xhigh) for creative-demanding conjectures; --tier routine (high/high) for
+#   lower-priority mechanical elevations; --prover-effort/--verifier-effort to fine-tune.
+codex exec --skip-git-repo-check -C <scratch-workdir> -m gpt-5.6-sol \
+  -c 'model_reasoning_effort="ultra"' -s workspace-write -o <scratch>/FINAL.md - < <prompt>
+#   manual workers: gpt-5.6-sol; effort ultra for creative/demanding jobs, high (or lower)
+#   for routine ones (supported: low..ultra).
 ```
 
 ## What is intentionally NOT here
