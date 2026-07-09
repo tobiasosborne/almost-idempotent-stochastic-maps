@@ -1,7 +1,7 @@
 ---
 id: conj-rank3-cluster-zero-face-reach
 kind: lemma
-contract: (CONJECTURE) Rank-3 cluster zero-face reach (width-4 form): there exist universal theta_0 in (0,1), A_0 < inf, delta_0 > 0 such that for every rank-3 exact signed idempotent P with 0 < delta(P) <= delta_0 and nonempty visible set, every hidden top v of height H > 13*tau carrying >= 1 - theta_0 of its positive row mass on its width-4 top-slab cluster C_4, and every mass-carrying cluster vertex u in C_4 with 0 < t*(u) < kappa whose always-tight hulls are disjoint: some always-tight zero-face row z at u satisfies dist_1(p_z - p_u, span(R_2)) >= (1/2 + delta)*tau/A_0, R_2 the non-kernel extreme ray of the displacement cone at u.
+contract: (CONJECTURE) Rank-3 cluster zero-face reach (width-4 form): there exist universal theta_0 in (0,1), A_0 < inf, delta_0 > 0 such that for every rank-3 exact signed idempotent P with 0 < delta(P) <= delta_0 and nonempty visible set, every hidden top v of height H > 13*tau carrying >= 1 - theta_0 of its positive row mass on its width-4 top-slab cluster C_4 = {j : ||p_j - p_v||_1 < 4*tau, dist_1(p_j, conv{p_w : w in W}) > 4*tau}, and every mass-carrying cluster vertex u in C_4 with 0 < t*(u) < kappa whose always-tight hulls are disjoint: some always-tight zero-face row z at u satisfies dist_1(p_z - p_u, span(R_2)) >= (1/2 + delta)*tau/A_0, R_2 the non-kernel extreme ray of the displacement cone at u.
 defs: def-signed-idempotent; def-exposed; def-visible-set; def-height; def-negative-mass
 deps: 
 status: conjecture

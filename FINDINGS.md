@@ -823,3 +823,30 @@ imports a future agent might reach for — read before importing ANY external to
   refutation is gated behind the never-solved tall-construction problem; TALL-EMPTINESS
   (= the height clause, via the huddle anatomy of lem-zero-face-vertex-support) is a live
   candidate theorem, not just a fallback.
+
+## 2026-07-09 — W53 (session 13): the constraints collapse; the affine-pairing blind spot
+
+- **The three W52 binding constraints are NOT three independent walls** (four provers +
+  four fresh hostile verifiers, all VALID-WITH-CORRECTIONS): (B3) top reversion == the
+  contrapositive of the huddle ([[lem-disjointness-huddle-reduction]]); (B2) forced
+  visibility as literally stated is SUBSUMED by `lem-ball-cluster-exposure-void` (ball
+  rows of a tall top are never exposed — the W52 phrasing was dynamical, about the entry
+  path); its real static content is the third-actor web (`lem-top-witness-third-actor`);
+  (M1)'s reach conjecture reduces to the same huddle object. ONE Tier-1 question remains:
+  THE HUDDLE CHARGE.
+- **The affine-pairing blind spot (why B1 alone cannot close).** The top-deficit price
+  `sum a_j^+ z_j <= delta*(2+4delta)` (`lem-top-deficit-price`) bites only on positive
+  mass with definite top-deficit; rows in the rho-ball of the top have z_j < 4*tau, so a
+  heavy huddle evades it entirely. VB1-audited companion fact: `lem-rho-near-residual-
+  cancellation` prices only SHALLOW outside mass (and its contract carries an S < 1
+  hypothesis — any invocation for arbitrary C needs the S >= 1 case split via mass-split:
+  A_{C,a} <= nu_v). No height-vs-delta trade-off for the heavy rho-near top-slab cluster
+  follows from row-reproduction/residual tools alone — the charge must come from
+  hiddenness/zero-face structure.
+- **Contract daylight closed:** `conj-zero-face-elimination` / `conj-rank3-cluster-zero-
+  face-reach` used the cluster symbols C / C_4 without inline definition (VM1 catch);
+  both contracts now carry the explicit set (near AND deep, matching
+  `conj-near-cluster-absorption` and the W52 script convention).
+- **Verifier-demanded reading, binding for future waves:** "hiddenness dual witness" in
+  any depth-Markov/top-slab consumer means the SMALL-BETA witness (sum beta_i < tau/4 =
+  the lem-hiddenness-dual-witness normalization); statements must say so explicitly.

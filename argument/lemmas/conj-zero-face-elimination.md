@@ -1,7 +1,7 @@
 ---
 id: conj-zero-face-elimination
 kind: lemma
-contract: (CONJECTURE) Tall-cluster zero-face elimination: there exist universal constants a >= 4, theta_0 in (0,1), A_0 < inf, delta_0 > 0 such that for every exact signed idempotent P with 0 < delta(P) <= delta_0, every hidden top vertex v carrying >= 1 - theta_0 of its positive row mass on its rho-near top-slab cluster C, and every mass-carrying cluster vertex u in C with t*(u) > 0: conv{p_f - p_u : f in T(u)} intersects t*(u)*conv{p_i - p_u : i in O(u)}, or u admits a reduced optimal display whose zero-face conic mass sum a_z is at most A_0.
+contract: (CONJECTURE) Tall-cluster zero-face elimination: there exist universal constants a >= 4, theta_0 in (0,1), A_0 < inf, delta_0 > 0 such that for every exact signed idempotent P with 0 < delta(P) <= delta_0, every hidden top vertex v carrying >= 1 - theta_0 of its positive row mass on its rho-near top-slab cluster C = {j : ||p_j - p_v||_1 < 4*tau, dist_1(p_j, conv{p_w : w in W}) > a*tau}, and every mass-carrying cluster vertex u in C with t*(u) > 0: conv{p_f - p_u : f in T(u)} intersects t*(u)*conv{p_i - p_u : i in O(u)}, or u admits a reduced optimal display whose zero-face conic mass sum a_z is at most A_0.
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed; def-height
 deps: 
 status: conjecture
