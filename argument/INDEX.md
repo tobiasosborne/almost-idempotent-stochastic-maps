@@ -78,7 +78,7 @@
 | `lem-kernel-implies-hlc` | lemma | proved | none | A | Kernel implies HLC: if there are universal delta_0>0 and B<inf (n-free) such tha… |
 | `lem-l2-core-collapse` | lemma | proved | none | A | L2-core collapse: the W54 tree's Branch-II leaf L2-v2 is EQUIVALENT to bare inte… |
 | `lem-leakage` | lemma | proved-mod-audit | none | A | Affine-face leakage: for row-stochastic Q with ||Q^2-Q|| <= eta and affine h:Del… |
-| `lem-low-slab-cap-implies-min-a` | lemma | stated | none | A | Low-slab-cap implies MIN-A: assuming conj-low-slab-cap at width a = 4 (constants… |
+| `lem-low-slab-cap-implies-min-a` | lemma | proved | none | A | Low-slab-cap implies MIN-A: assuming conj-low-slab-cap holds at width a = 4 with… |
 | `lem-mass-split` | lemma | proved | validated | A | Mass split: for an exact signed idempotent P and any row index v, writing a_j = … |
 | `lem-min-a-implies-height` | lemma | proved | none | A | Conditional MIN-A height bound: assuming conj-min-a-w4, every exact signed idemp… |
 | `lem-negative-pivot-import` | lemma | proved-mod-audit | seeded | A | Negative-pivot collateral import bound: let P be a rank-3 exact signed idempoten… |

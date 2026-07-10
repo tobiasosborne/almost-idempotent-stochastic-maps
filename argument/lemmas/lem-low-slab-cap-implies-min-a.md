@@ -1,10 +1,10 @@
 ---
 id: lem-low-slab-cap-implies-min-a
 kind: lemma
-contract: Low-slab-cap implies MIN-A: assuming conj-low-slab-cap at width a = 4 (constants theta in (0,1), delta_0 > 0) together with lem-cs-low-slab-pincer, conj-min-a-w4 holds, i.e. every exact signed idempotent P with 0 < delta(P) <= min(delta_0, (17-12*sqrt(2))/2), nonempty visible set W(P), and height H > 13*tau (tau = sqrt(delta)) has a hidden top vertex v with sigma_4(v) <= 1/2 (positive coefficient mass on rows at l1-distance > 4*tau from conv W), by splitting G_4 = {j in G_4 : h_v*(p_j) < tau/4} (capped 1 - theta - 4*tau by conj-low-slab-cap) and {j in G_4 : h_v*(p_j) >= tau/4} (capped O(tau) via lem-cs-low-slab-pincer at s = tau/4).
+contract: Low-slab-cap implies MIN-A: assuming conj-low-slab-cap holds at width a = 4 with theta = 1/2 and its delta_0 >= (17-12*sqrt(2))/2 (so the bridge covers the full MIN-A interval; for smaller existential delta_0 the conclusion holds only for delta <= min(delta_0, (17-12*sqrt(2))/2)) together with lem-cs-low-slab-pincer, conj-min-a-w4 holds, i.e. every exact signed idempotent P with 0 < delta(P) <= min(delta_0, (17-12*sqrt(2))/2), nonempty visible set W(P), and height H > 13*tau (tau = sqrt(delta)) has a hidden top vertex v with sigma_4(v) <= 1/2 (positive coefficient mass on rows at l1-distance > 4*tau from conv W), by splitting G_4 = {j in G_4 : h_v*(p_j) < tau/4} (capped 1 - theta - 4*tau by conj-low-slab-cap) and {j in G_4 : h_v*(p_j) >= tau/4} (capped O(tau) via lem-cs-low-slab-pincer at s = tau/4).
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed; def-height; def-slab; def-near-cluster
 deps: conj-low-slab-cap; lem-cs-low-slab-pincer
-status: stated
+status: proved
 af: none
 provenance: transcribed 2026-07-10 (Phase-2 DAG-wiring wave) from conj-low-slab-cap's role note ("At (a, theta) = (4, 1/2) this implies conj-min-a-w4") + the lem-cs-low-slab-pincer composition; STATED (unverified in-repo), pending a hostile-verification pass
 owner: A
@@ -26,3 +26,5 @@ stated $\delta$ ceiling, and that the $(a,\theta)=(4,1/2)$ calibration of [[conj
 intended instance) is the content a hostile-verification wave must confirm before any promotion.
 Locus: [[conj-low-slab-cap]] role note; sketch `docs/plans/2026-07-10-top-down-proof-sketch-v24.md`
 lineage (v9 five-route convergence). FLAGGED for the batch hostile pass.
+
+**Hostile verdict (2026-07-10, fresh codex, batched pass — docs/waves/2026-07-10-remediation-artifacts/verdict-bridges.md):** verbatim first token `VALID-AS-CONDITIONAL` — 'the mass split and constants are correct once the contract explicitly assumes a=4, theta=1/2, delta_0 >= (17-12*sqrt(2))/2'. The prescribed additions are now IN the contract above; status flipped stated -> proved (L5, reviewer != author) as the mechanical reflection of that verdict.

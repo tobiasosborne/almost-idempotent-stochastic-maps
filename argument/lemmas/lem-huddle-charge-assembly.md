@@ -34,3 +34,5 @@ The exact leaf-to-shard mapping is the session-13 refactor (four-leaf system, sk
 reorganization of the original L1-L7 tree; L1/L4 are proved corollaries of
 [[lem-top-deficit-price]]/[[lem-affine-exposer-row-capacity]] and are not deps. FLAGGED for the batch
 hostile pass; the assembly must NOT be promoted until AG-1/AG-2/L5 are registered and cleared.
+
+**HOSTILE VERDICT: INVALID AS STATED (2026-07-10, fresh codex — docs/waves/2026-07-10-remediation-artifacts/verdict-bridges.md). DO NOT CONSUME.** The consumed contracts do NOT close Branch II: lem-l2-core-collapse gives only the equivalence with intersection-branch emptiness; NO registered contract derives the SL1a-or-SL1b configurations from intersecting hulls; the L5 minimax is an unregistered, unquantified premise. AG-1/AG-2 are individually repairable; the Branch-II gap is not. Repair path: codify the l2-attack §2.6-2.7 intersecting-hulls -> SL1a/SL1b derivation as a registry lemma + register the L5 premise, then re-verify (bead filed at the wave close).
