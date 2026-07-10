@@ -4,8 +4,10 @@ kind: lemma
 contract: For every exact signed idempotent P with 0 < delta(P) <= 2^(-16) and nonempty visible set W, every hidden top vertex v of height H > 16sqrt(delta(P)), every affine phi with phi(p_v) = H, phi <= 0 on conv{p_w:w in W}, and |phi(a)-phi(b)| <= ||a-b||_1, every admissible exposer h at v, every row point f with ||p_f-p_v||_1 >= 4sqrt(delta(P)), d_f = dist_1(p_f,conv{p_w:w in W}) > H-4sqrt(delta(P)), and 2(H-phi(p_f))/D+h(p_f) <= 12sqrt(delta(P))/13 for D = 2+4delta(P), and every family xi_x(u) of probability weights on the geometrically distinct row vertices, constant on clone fibers, with p_x = sum_u xi_x(u)p_u for every row point x and xi_u Dirac at u for every vertex point u, the coupled measure Gamma_f(x,u) = (sum_{j:p_j=p_x} max(P_fj,0))xi_x(u) assigns at least 58079731/109051904 > 1/2 mass to C_f = {(x,u):H-phi(p_x) < 4sqrt(delta(P)), h(p_x) < 4sqrt(delta(P)), H-phi(p_u) < 4sqrt(delta(P)), h(p_u) < 4sqrt(delta(P))}, every (x,u) in C_f satisfies dist_1(p_x,conv{p_w:w in W}) > H-4sqrt(delta(P)) and dist_1(p_u,conv{p_w:w in W}) > H-4sqrt(delta(P)), and its vertex coordinate u is hidden.
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed; def-height
 deps: lem-top-deficit-price; lem-harmonic-affine-bridge; lem-mass-split
-status: proved-candidate
-owner: W56-extraction
+status: proved
+af: none
+provenance: W56 wave (docs/waves/2026-07-09-W56-artifacts/): extracted from the twice-hostile-verified routine material of DECOMPOSITION-v2 (verdict-round1.md, verdict-round2.md); per-shard fresh hostile codex verdict in verdict-extraction.md (4 VALID + 6 VALID-WITH-CORRECTIONS, corrections applied and re-listed in the wave doc); reviewer != author throughout.
+owner: B
 ---
 
 # SL1a coupled coefficient-kernel corner ledger

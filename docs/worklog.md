@@ -842,3 +842,22 @@ claims remain uncodified/non-L0 pending fresh standalone prover/verifier passes.
   docs/waves/2026-07-09-W56-sl1a-decomposition-interrupted.md.
 - NOTE: this checkout lacks the initialized beads DB (bd create fails; per HANDOFF do
   not bd init) — wave tracked via fr log + wave doc only.
+
+## 2026-07-10 — Session 14 (original device): W56 close — the SL1a wall + the three-cell surface
+
+- Cross-device git reconciliation (log.jsonl cycle-collision resolved 317/318); found
+  beads has NO Dolt remote anywhere (local-only DB; user decision pending).
+- Smoke-tested gpt-5.6-sol through af-orchestrate.run_codex at high/xhigh/ultra: PASS
+  (exact answers; model+effort verbatim in session logs).
+- W56 resumed serially per the user decomposition+creativity directive: resumed codex
+  architect (ultra; redesigned DAG, DECOMPOSED-WITH-ONE-HARD) -> hostile r1 INVALID
+  (H-CCO = broader restatement) -> Fable repair author (five-leaf lex-minimal design,
+  REPAIRED-WITH-ONE-HARD) -> hostile r2 INVALID (free preprocessing; transient-row
+  instability) -> the wall certified -> extraction (7 lemma + 3 conj drafts) ->
+  per-shard hostile verification (4 VALID + 6 VALID-WITH-CORRECTIONS, 0 INVALID) ->
+  prescribed corrections applied (6/6) -> BANKED. Registry 140 -> 150; 5 new FINDINGS
+  dead routes; codex quota outage bridged by a delayed dispatcher.
+- Sketch v20 + wave close doc + HANDOFF rewritten; router pins updated.
+- SL1a's surface is now three single-contract sigma-cells (H-D/H-I/H-X) on a proved
+  conditional interface (lem-sl1a-three-cell-reduction). W57: H-X first via the exact
+  P=L*B completion LP (serves the W55 large-gauge wall too).

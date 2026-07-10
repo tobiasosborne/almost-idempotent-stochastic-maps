@@ -4,8 +4,10 @@ kind: lemma
 contract: For every exact signed idempotent P with delta(P) > 0, nonempty visible set W, and hidden top vertex v of height H > 16sqrt(delta(P)), every probability measure lambda on row points whose support consists of points p_x satisfying ||p_x-p_v||_1 >= 4sqrt(delta(P)) and dist_1(p_x,conv{p_w:w in W}) > H-4sqrt(delta(P)), whose barycenter b satisfies ||b-p_v||_1 <= 11sqrt(delta(P))/5, and whose mean under every admissible exposer a at v is at most 4sqrt(delta(P))/13, every top support functional phi at v, and every admissible exposer h at v, some row point f in supp(lambda) satisfies 2(H-phi(p_f))/(2+4delta(P)) + h(p_f) <= 12sqrt(delta(P))/13.
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed; def-height
 deps: lem-top-deficit-price
-status: proved-candidate
-owner: W56-extraction
+status: proved
+af: none
+provenance: W56 wave (docs/waves/2026-07-09-W56-artifacts/): extracted from the twice-hostile-verified routine material of DECOMPOSITION-v2 (verdict-round1.md, verdict-round2.md); per-shard fresh hostile codex verdict in verdict-extraction.md (4 VALID + 6 VALID-WITH-CORRECTIONS, corrections applied and re-listed in the wave doc); reviewer != author throughout.
+owner: B
 ---
 
 # SL1a score selector

@@ -5,7 +5,9 @@ contract: There exists a universal delta_I in (0,2^(-16)] such that no finite ex
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed; def-height
 deps: 
 status: conjecture
-owner: W56-extraction
+af: none
+provenance: W56 wave (docs/waves/2026-07-09-W56-artifacts/): extracted from the twice-hostile-verified routine material of DECOMPOSITION-v2 (verdict-round1.md, verdict-round2.md); per-shard fresh hostile codex verdict in verdict-extraction.md (4 VALID + 6 VALID-WITH-CORRECTIONS, corrections applied and re-listed in the wave doc); reviewer != author throughout.
+owner: B
 ---
 
 # Intersection-diagonal cell exclusion

@@ -10,101 +10,87 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read **`docs/plans/2026-07-09-top-down-proof-sketch-v19.md`** — THE canonical strategic map
-   (v19, W55 strategy delta; v18 and earlier superseded in place, kept for line citations).
-   Then **`docs/plans/2026-07-09-w54-huddle-charge-decomposition-tree.md`** — the VERIFIED
-   decomposition of the terminal node (read PART A through PART B).
+2. Read **`docs/plans/2026-07-10-top-down-proof-sketch-v20.md`** — THE canonical strategic
+   map (v20, W56 SL1a-surface delta; v19 and earlier superseded in place, kept for line
+   citations). Then `docs/waves/2026-07-10-W56-sl1a-decomposition-close.md` (the W56
+   close: the wall, the harvest, the new three-cell SL1a surface).
    **STEWARDSHIP (user mandate, 2026-07-06, binding): reconciling the sketch with newly
    banked evidence is a FIRST-CLASS DELIVERABLE of every session (Rule 9).**
-3. **STANDING DIRECTIVES (user, binding):** (i) TIER-1 FOCUS; (ii) Fable-grade agents
-   liberally for deep proof/strategy while Tier-1 nodes remain (verification stays
-   fresh-codex-only, §6); (iii) once Tier 1 falls, farm out the parked queue; (iv) no
-   progress theatre; **(v) NEW 2026-07-09: the objective function of every Tier-1 attack
-   is DECOMPOSITION into lower-complexity pieces** (case trees, small-lemma systems with
-   checkable assemblies) — W53/W54 are the template.
-4. Run `fr board` and `bd ready`. Read
-   `docs/waves/2026-07-09-W55-cotop-web-coupling-strategy.md` after the W54 tree. This
-   checkout currently lacks the local Dolt beads database, so `bd ready` reports
-   “no beads database found”; do not silently `bd init` over the configured project.
+3. **STANDING DIRECTIVES (user, binding):** (i) TIER-1 FOCUS; (ii) the objective function
+   of every Tier-1 attack is DECOMPOSITION into lower-complexity pieces — BUT NOTE the
+   W56 wall: for SL1a-shaped targets, "one hard leaf on a smaller class" after free
+   preprocessing is a certified dead objective; decompose by MECHANISM SEPARATION
+   (the three-cell shape) instead; (iii) creativity mandate (2026-07-09): proof-strategy
+   subagents are prompted to think outside the box while respecting FINDINGS dead routes;
+   (iv) work mostly SERIALLY; Fable-grade agents (serial) for truly demanding creative
+   author steps — verification stays fresh-codex-only (§6); (v) no progress theatre.
+4. Run `fr board` and `bd ready`. This checkout HAS the local beads DB. NOTE: beads has
+   NO Dolt remote configured anywhere (`bd dolt push/pull` cannot work; the DB is
+   local-only to this machine — cross-device sync is a pending user decision).
 5. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-09, W55 strategy close)
+## Current state (2026-07-10, W56 close)
 
-**Rigorous (af-validated, T0): 28** (unchanged — no af runs this session).
-**Registry: 140** (unchanged in W55; L0 claimed ONLY for the af-validated 28).
+**Rigorous (af-validated, T0): 28** (unchanged — no af runs). **Registry: 150** (+7
+proved L5 lemmas, +3 conjectures this wave; EVERY banked proof passed a SEPARATE fresh
+hostile codex verifier; L0 claimed ONLY for the af-validated 28).
 
-**THE STATE OF THE PROOF (sketch v19): the terminal node remains a VERIFIED four-leaf system.**
-Session 13 executed the decomposition mandate end-to-end: W53 collapsed the three W52
-binding constraints into THE HUDDLE CHARGE (sketch v17); W54's Fable-architect case tree
-was hostile-verified (INVALID -> prescribed repairs -> VALID-WITH-CORRECTIONS, all
-applied), its easy/medium leaves proved or reduced, and both creative branches collapsed:
+**THE STATE OF THE PROOF (sketch v20): SL1a = three quantified sigma-cells on a proved
+interface.** W56 ran resumed-architect (codex ultra) -> hostile r1 (INVALID) -> Fable
+repair -> hostile r2 (INVALID) -> extraction -> per-shard verification (4 VALID +
+6 VALID-WITH-CORRECTIONS, 0 INVALID) -> corrections -> BANK. The two INVALIDs converged
+on a structural wall (now a FINDINGS certificate): after the free routine pipeline, any
+retained-class hard leaf restates SL1a. The honest deliverable is mechanism separation:
 
-- **Branch II == {`conj-straddling-web-exclusion` (SL1a) + `conj-shallow-counterweight-
-  exclusion` (SL1b)}** via `lem-l2-core-collapse` + `lem-intersection-witness-confinement`
-  (the identity-level averaging cap). Alternative: Theorem-C route via
-  `conj-summit-cylinder-exclusion` + narrow dual face (wave doc).
-- **Branch I == {`conj-cotop-web-coupling` (L6.5) + the L5 dual-face mass minimax
-  (aism-vuc)}** via `lem-cotop-witness-pinning`, `lem-downhill-cotop-conic-mass`,
-  `lem-psi-corner-trap` (the t*-FREE toolkit — the t*-division death trap is closed).
-- Consumption above the node: `lem-absorption-implies-low-slab-cap` wires tall-emptiness
-  (+ `conj-far-low-slab-cap`) => `conj-low-slab-cap` => the Kernel height clause.
+- **Proved (L5):** `lem-sl1a-score-selector`, `lem-sl1a-corner-ledger` (Gamma_f(C_f) >
+  1/2, universal over legal kernels), `lem-radial-horn-partition`,
+  `lem-zero-face-one-sixteenth-capacity-kill`, `lem-affine-barycenter-identity`,
+  `lem-clone-invariant-row-complexity`, and **`lem-sl1a-three-cell-reduction`**
+  (three cells => SL1a, delta_0 = min(delta_D, delta_I, delta_X, 2^-16)).
+- **The new SL1a surface (OPEN):** `conj-sl1a-deep-diagonal-cell` (H-D),
+  `conj-sl1a-intersection-diagonal-cell` (H-I), `conj-sl1a-off-diagonal-cell` (H-X).
+  SL1a is EQUIVALENT to their conjunction — sharper windows, not strict progress.
 
-W55 attacked `conj-cotop-web-coupling` decomposition-first. Two exact, independently
-hostile-reviewed reductions emerged but remain uncodified/non-L0: failure of coupling
-creates a top-funded high-return near corner (E1-E5), and every small-conic-gauge display
-(`A0<=3/32`) reduces to the existing SL1a/SL1b pair. Moderate gauge, conditionally on
-SL1b, reduces to a new OPEN mixed co-top straddle. Large gauge does NOT reduce by harmonic ledgers: an exact local
-`A0=5, g=5*tau` starvation gadget survives all of them. The live large-gauge mechanism is
-global completion obstruction through `P=L*B`, `B*L=I`, or an exact refuter completion.
+**New dead routes (FINDINGS 2026-07-10):** one-hard-leaf-after-free-preprocessing;
+lex-(V,R) minimal-counterexample stratification; freight censoring without a norm gap;
+second-generation L-C recursion; max-principle far-side return (= W55
+carrier-coincidence). The W55 dead routes and walls are unchanged.
 
-**New dead routes (W55):** identifying `lambda*P` with `p_v`; treating dual conic weights
-as transition mass; a thin/thick split from the single `g/A0` separator moment; and an
-untyped “some web member is exposed” step without vertexization, pairwise separation, and
-same-carrier inheritance. The transient-row extension and the exact starvation gadget are
-mandatory tests.
+**The huddle-charge surface after W56:** {H-D + H-I + H-X} (== SL1a) +
+`conj-shallow-counterweight-exclusion` (SL1b) / `conj-cotop-web-coupling` + the L5
+dual-face mass minimax (aism-vuc). Four Tier-1 windows became six sharper ones.
 
-## Next steps (ranked) — W56/W57
+## Next steps (ranked) — W57
 
--1. **RESUME W56 (user central priority 2026-07-09: reduce ALL Tier-1 new-math leaves
-   to Tier-2).** SL1a (`conj-straddling-web-exclusion`) was selected as the most open
-   Tier-1 leaf and a codex architect (gpt-5.6-sol, ultra) was INTERRUPTED mid-run: the
-   DAG shape (L-S selector -> L-V same-carrier reproduction at the selected web row ->
-   L-P discard/horn split -> ONE hard leaf H-SCCO) and the proved-input audit are
-   preserved in `docs/waves/2026-07-09-W56-artifacts/decomposition-PARTIAL.md` (+ the
-   full worker session log, gzipped, same dir); §3-§6 (leaf statements, assembly,
-   red tests) are MISSING and NOTHING is hostile-verified. Resume per
-   `docs/waves/2026-07-09-W56-sl1a-decomposition-interrupted.md` §Next session.
-0. **Fresh standalone prover/verifier passes on W55 E1-E5**, then codify only if valid.
-1. **Fresh pass on the small-gauge bridge** `A0<=3/32 => SL1a or SL1b`; this is the
-   cleanest new joint edge and must carry its conditioning constants verbatim.
-2. **Exact completion/refutation LP** for the `A0=5, g=5*tau` starvation gadget in
-   `P=L*B`, `B*L=I` coordinates. A rational feasible family refutes L6.5; stable dual
-   infeasibility multipliers should define the global completion theorem.
-3. **Mixed co-top straddle + SL1a as one joint wave**; explicitly solve nonvertex support,
-   pairwise separation, and same-carrier vertexization. SL1b remains the easiest sibling.
-4. **L5 dual-face mass minimax** (aism-vuc): codex geometry problem on Y_v (linear in y;
-   the simplex obstruction is sharp — the proof must use Y_v structure + idempotence).
-5. Parked: L7 gaps (aism-2ii), elevation queue (the W53/W54 proved families are prime
-   af-elevation shapes — single minimal contracts), trunk <2>7 (aism-ik6), Kernel(i)
-   rank >= 3, refs ingest (aism-5de).
-6. USER DECISIONS pending: `aism-nlg`, `aism-z98` (standing).
+0. **H-X first** (`conj-sl1a-off-diagonal-cell`): it shares the completion-obstruction
+   shape with the W55 large-gauge wall, so ONE exact `P=L*B, B*L=I`
+   completion/refutation LP wave (v19 item 3 == v20 item 0) serves both fronts. A
+   rational feasible tau->0 family refutes; a stable dual infeasibility certificate is
+   the intended dimension-free mechanism.
+1. **Codify W55 E1-E5** after a fresh standalone prover/verifier pass (HANDOFF-v19
+   item 0, still pending).
+2. **The small-gauge bridge** `A0<=3/32 => SL1a(cells)+SL1b` — carry the conditioning
+   constants verbatim (484/223, 256/223).
+3. **H-D / H-I**: far-horn v-in-F_u coupling (H-D) and the intersecting-hull anatomy
+   via `lem-intersection-witness-confinement` (H-I); prompt for out-of-the-box
+   mechanisms, constraints = the W56 dead routes.
+4. **SL1b** (easiest sibling, unchanged) and the **L5 minimax** (aism-vuc, independent).
+5. Parked: af-elevation queue (the W56 proved 7 are prime single-contract shapes; also
+   the W53/W54 families), L7 gaps (aism-2ii), trunk <2>7 (aism-ik6), refs ingest
+   (aism-5de). USER DECISIONS pending: `aism-nlg`, `aism-z98`, beads Dolt remote.
 
-## Standing rules (unchanged from session 12 + the new decomposition directive)
+## Standing rules (updated 2026-07-10)
 
-Codex workers for all proving/verifying; codex model is **gpt-5.6-sol** (user directive
-2026-07-09) at effort ULTRA for truly creative/demanding jobs and lower effort (high or
-below) for lower-priority routine jobs — `af-orchestrate.py --tier` encodes this;
-Fable-grade for deep proof/strategy (AUTHOR
-output — always hostile-verified by fresh codex before codification); ONE af
-orchestration at a time; wave docs carry verbatim verdict first-lines; `fr orient` on
-no-bank turns; ▣ banked only via `fr verify` against the af oracle. Worker-prompt
-patterns + verifier-prompt patterns for decomposition waves: see the W53/W54 scratchpad
-prompts quoted in the wave docs (self-contained workspaces: definitions + argument +
-CONVENTIONS + the target artifact; verdict-first-line discipline; status discipline
-stated in every prompt). NOTE: `codex exec -o FILE` overwrites with the final MESSAGE —
-point -o at a scratch FINAL.md, never at the worker's ANSWER.md; recover answers from
-the session log if clobbered. Fable agents: instruct INCREMENTAL file writes (<~10k
-tokens per call) — one died on the 64k output ceiling and was resumed via SendMessage.
+Codex = gpt-5.6-sol (smoke-tested this session: model+effort verbatim-verified in
+session logs); effort ULTRA for creative/demanding, xhigh for hostile verification,
+high for routine — `af-orchestrate.py --tier` encodes this. Fable-grade agents: AUTHOR
+role only, serial, for the genuinely creative steps; ALWAYS hostile-verified by fresh
+codex before codification; instruct INCREMENTAL file writes (<~10k tokens per call).
+ONE af orchestration at a time; wave docs carry verbatim verdict first-lines;
+`fr orient` on no-wave turns; ▣ banked only via `fr verify` against the af oracle.
+`codex exec -o FILE` overwrites with the final MESSAGE — point -o at a scratch
+FINAL.md. Codex usage limits can interrupt long waves: bridge with a delayed
+dispatcher (sleep-until-reset + retry loop, see the W56 close Process notes).
 
 ## Recipes
 
@@ -112,22 +98,19 @@ tokens per call) — one died on the 64k output ceiling and was resumed via Send
 sh scripts/check-all.sh
 python3 scripts/seed-af-workspaces.py <id>       # then COMMIT before orchestrating
 python3 scripts/af-orchestrate.py <id> --workers 6 --max-rounds 14 --node-cap 40   # background
-#   effort tiers (user directive 2026-07-09): default --tier creative (prover ultra /
-#   verifier xhigh) for creative-demanding conjectures; --tier routine (high/high) for
-#   lower-priority mechanical elevations; --prover-effort/--verifier-effort to fine-tune.
 codex exec --skip-git-repo-check -C <scratch-workdir> -m gpt-5.6-sol \
   -c 'model_reasoning_effort="ultra"' -s workspace-write -o <scratch>/FINAL.md - < <prompt>
-#   manual workers: gpt-5.6-sol; effort ultra for creative/demanding jobs, high (or lower)
-#   for routine ones (supported: low..ultra).
 ```
 
 ## What is intentionally NOT here
 
-- Any claim more than TWENTY-EIGHT results are af-validated. All session-13 codified
-  proofs are L5 (fresh-hostile-verified), NOT L0.
-- Any claim W55 proves L6.5, the huddle charge, tall-emptiness, any leaf, or the Kernel
-  Conjecture is proved. The W54 tree is a VERIFIED CONDITIONAL derivation — its leaves
-  are conjectures.
-- Any claim the W55 E1-E5 or small-gauge bridge are L0/registry results. They passed
-  strategy-level hostile review only and await fresh standalone codification passes.
-- Any claim the W52 BLOCKED search or any numerical evidence is a proof (L3).
+- Any claim more than TWENTY-EIGHT results are af-validated. The W56 banked 7 are L5
+  (fresh-hostile-verified), NOT L0.
+- Any claim SL1a, any sigma-cell, SL1b, L6.5, the L5 minimax, tall-emptiness, the
+  huddle charge, or the Kernel Conjecture is proved. `lem-sl1a-three-cell-reduction`
+  is a CONDITIONAL derivation; its three deps are conjectures.
+- Any claim the three-cell surface is strict progress: SL1a is EQUIVALENT to the
+  conjunction. The gain is mechanism separation + proved interface + named refuter
+  targets, honestly stated.
+- Any claim the W55 E1-E5 or small-gauge bridge are codified (still pending, W57 items
+  1-2).
