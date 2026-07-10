@@ -75,7 +75,7 @@
 | `lem-hx-financing-floor` | lemma | proved | seeded | B | For every finite exact signed idempotent P, every ordered pair (a,b) of points o… |
 | `lem-hx-forced-exterior-coupling` | lemma | proved | seeded | B | For every finite exact signed idempotent P, every pair of row indices (r,s), and… |
 | `lem-hx-robust-scalar-starvation` | lemma | proved | validated | B | For all reals K_R, L, K_C >= 0 there is a universal delta_R(K_R,L,K_C) in (0,2^(… |
-| `lem-hx-signed-variation-ledger` | lemma | proved | seeded | B | For every finite exact signed idempotent P, every ordered pair (a,b) of points o… |
+| `lem-hx-signed-variation-ledger` | lemma | proved | validated | B | For every finite exact signed idempotent P, every ordered pair (a,b) of points o… |
 | `lem-hx-transverse-moment-identity` | lemma | proved | validated | B | For every finite exact signed idempotent P, all points q0 != q1 of the row polyt… |
 | `lem-hybrid-dual-certificate` | lemma | proved | none | A | Hybrid dual certificate: for an exact signed idempotent P, a hidden geometricall… |
 | `lem-import-reduction` | lemma | proved | validated | A | Import reduction: let P be a rank-3 exact signed idempotent (square real matrix … |

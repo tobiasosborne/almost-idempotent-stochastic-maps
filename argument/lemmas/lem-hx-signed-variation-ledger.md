@@ -5,9 +5,9 @@ contract: For every finite exact signed idempotent P, every ordered pair (a,b) o
 defs: def-signed-idempotent; def-negative-mass
 deps: 
 status: proved
-af: seeded
+af: validated
 workspace: proofs/lem-hx-signed-variation-ledger
-provenance: W60 wave (docs/waves/2026-07-10-W60-artifacts/): codex prover (gpt-5.6-sol, high) PROOFS-W60-ENGINE.md §E2; fresh hostile codex verifier (gpt-5.6-sol, xhigh), batched verdict VERDICT-W60-ENGINE.md line 'E2: VALID'. Reviewer != author.
+provenance: W60 wave (docs/waves/2026-07-10-W60-artifacts/): codex prover (gpt-5.6-sol, high) PROOFS-W60-ENGINE.md §E2; fresh hostile codex verifier (gpt-5.6-sol, xhigh), batched verdict VERDICT-W60-ENGINE.md line 'E2: VALID'. Reviewer != author. af-orchestrate 2026-07-10 (W61, aism-8nt): root validated, 11/11 nodes, taint clean; fresh codex verifier per node (prover != verifier); export.md/tex in proofs/.
 owner: B
 ---
 
@@ -34,5 +34,6 @@ on each sign-union \(U_\pm\) (a genuine index subset) the subset budgets
 that is the point: it converts variation demands into positive-mass demands
 (the confinement question). Clone-invariant. Signed picture.
 
-**Rigour tier.** L5 (fresh hostile codex, batched W60 verdict). NOT af-validated.
+**Rigour tier.** af-validated (W61 orchestration 2026-07-10: root validated,
+11/11 nodes, taint clean; prior L5 batched W60 verdict).
 af-elevation candidate. Consumer: [[lem-hx-financing-floor]].

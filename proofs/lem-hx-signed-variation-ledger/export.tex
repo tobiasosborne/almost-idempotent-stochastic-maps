@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{For every finite exact signed idempotent P, every ordered...}
+\step{1} For every finite exact signed idempotent P, every ordered pair (a,b) of points of the row polytope K(P), and every set S of full row-point fibers, sum\_\{Q in S\} |d\_Q| <= a\textasciicircum{}+(S) + b\textasciicircum{}+(S) + nu(a) + nu(b), where d\_Q = sum\_\{j in Q\}(a\_j - b\_j), r\textasciicircum{}+(S) = sum\_\{Q in S\} sum\_\{j in Q\} max(r\_j,0), and nu(r) = sum\_j max(-r\_j,0). \steptag{validated} \\[6pt]
+\step{1.1} Fix admissible P, a, b, and S. Since full row-point fibers are fibers of the index-to-row-point map, distinct Q in S are disjoint coordinate sets. Define S\_+ = \{Q in S : d\_Q >= 0\}, S\_- = \{Q in S : d\_Q < 0\}, U\_+ = union\_\{Q in S\_+\} Q, and U\_- = union\_\{Q in S\_-\} Q; thus S is the disjoint union of S\_+ and S\_-, and U\_+ and U\_- are disjoint coordinate unions. \steptag{validated} \\[4pt]
+\step{1.2} Writing r(U) = sum\_\{j in U\} r\_j, disjointness of the full fibers and d\_Q = sum\_\{j in Q\}(a\_j-b\_j) give the exact sign-split identity sum\_\{Q in S\}|d\_Q| = a(U\_+) - b(U\_+) + b(U\_-) - a(U\_-). \steptag{validated} \\[4pt]
+\step{1.3} For every finite real vector r and every coordinate subset U, with r\textasciicircum{}+(U) = sum\_\{j in U\} max(r\_j,0) and nu(r) = sum\_j max(-r\_j,0), one has -nu(r) <= r(U) <= r\textasciicircum{}+(U). \steptag{validated} \\[6pt]
+\step{1.3.1} For each coordinate j, r\_j <= max(r\_j,0); summing over j in U gives r(U) <= r\textasciicircum{}+(U). \steptag{validated} \\[4pt]
+\step{1.3.2} For each coordinate j, r\_j >= -max(-r\_j,0); hence r(U) >= -sum\_\{j in U\}max(-r\_j,0) >= -sum\_j max(-r\_j,0) = -nu(r). \steptag{validated} \\[4pt]
+\step{1.4} Applying the subset budget to a and b on U\_+ gives a(U\_+) - b(U\_+) <= a\textasciicircum{}+(U\_+) + nu(b). \steptag{validated} \\[4pt]
+\step{1.5} Applying the subset budget to b and a on U\_- gives b(U\_-) - a(U\_-) <= b\textasciicircum{}+(U\_-) + nu(a). \steptag{validated} \\[4pt]
+\step{1.6} Let n be finite, let a,b be real vectors indexed by \{1,...,n\}, and let S be a family of pairwise disjoint coordinate subsets. For d\_Q := sum\_\{j in Q\}(a\_j-b\_j), set S\_+ := \{Q in S : d\_Q >= 0\}, S\_- := \{Q in S : d\_Q < 0\}, U\_+ := union\_\{Q in S\_+\} Q, and U\_- := union\_\{Q in S\_-\} Q. Define r\textasciicircum{}+\_coord(U) := sum\_\{j in U\} max(r\_j,0) for a coordinate set U and r\textasciicircum{}+\_fib(T) := sum\_\{Q in T\} sum\_\{j in Q\} max(r\_j,0) for a subfamily T of S. Then a\textasciicircum{}+\_coord(U\_+) <= a\textasciicircum{}+\_fib(S) and b\textasciicircum{}+\_coord(U\_-) <= b\textasciicircum{}+\_fib(S). \steptag{validated} \\[6pt]
+\step{1.6.1} Let n be finite, let a,b be real vectors indexed by \{1,...,n\}, and let S be a family of pairwise disjoint coordinate subsets Q. For d\_Q := sum\_\{j in Q\}(a\_j-b\_j), define S\_+ := \{Q in S : d\_Q >= 0\}, S\_- := \{Q in S : d\_Q < 0\}, U\_+ := union\_\{Q in S\_+\}Q, and U\_- := union\_\{Q in S\_-\}Q. Distinguish the coordinate-set positive mass r\textasciicircum{}+\_coord(U) := sum\_\{j in U\} max(r\_j,0) from the fiber-family positive mass r\textasciicircum{}+\_fib(T) := sum\_\{Q in T\} sum\_\{j in Q\} max(r\_j,0). Pairwise disjointness gives r\textasciicircum{}+\_coord(U\_+) = r\textasciicircum{}+\_fib(S\_+) and r\textasciicircum{}+\_coord(U\_-) = r\textasciicircum{}+\_fib(S\_-), because each coordinate in the respective union occurs in exactly one fiber. Since S\_+ and S\_- are subfamilies of S and every max(r\_j,0) is nonnegative, r\textasciicircum{}+\_fib(S\_+) <= r\textasciicircum{}+\_fib(S) and r\textasciicircum{}+\_fib(S\_-) <= r\textasciicircum{}+\_fib(S). Hence a\textasciicircum{}+\_coord(U\_+) <= a\textasciicircum{}+\_fib(S) and b\textasciicircum{}+\_coord(U\_-) <= b\textasciicircum{}+\_fib(S), which are precisely the intended, now type-explicit inequalities in node 1.6. \steptag{validated} \\[4pt]
+\step{1.7} Substituting the two sign estimates into the exact sign-split identity and then using positive-part monotonicity yields sum\_\{Q in S\}|d\_Q| <= a\textasciicircum{}+(S) + b\textasciicircum{}+(S) + nu(a) + nu(b), which is the asserted inequality for the arbitrary admissible P, a, b, and S. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
