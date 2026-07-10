@@ -10,8 +10,8 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read **`docs/plans/2026-07-10-top-down-proof-sketch-v22.md`** — THE canonical strategic
-   map (v22, W58 extra-vertex delta; v21 and earlier superseded in place, kept for line
+2. Read **`docs/plans/2026-07-10-top-down-proof-sketch-v23.md`** — THE canonical strategic
+   map (v23, W59 obstruction-lemma delta; v22 and earlier superseded in place, kept for line
    citations). Then `docs/waves/2026-07-10-W56-sl1a-decomposition-close.md` (the W56
    close: the wall, the harvest, the new three-cell SL1a surface).
    **STEWARDSHIP (user mandate, 2026-07-06, binding): reconciling the sketch with newly
@@ -31,7 +31,7 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 ## Current state (2026-07-10, W56 close)
 
-**Rigorous (af-validated, T0): 28** (unchanged — no af runs). **Registry: 150** (+7
+**Rigorous (af-validated, T0): 28** (unchanged — no af runs). **Registry: 151** (+7
 proved L5 lemmas, +3 conjectures this wave; EVERY banked proof passed a SEPARATE fresh
 hostile codex verifier; L0 claimed ONLY for the af-validated 28).
 
@@ -64,8 +64,11 @@ dual-face mass minimax (aism-vuc). Four Tier-1 windows became six sharper ones.
 
 0. DONE: W57 minimal family AND W58 extra-vertex family both INFEASIBLE (exact, stable
    Farkas; bundles runs/2026-07-10-w57-* and runs/2026-07-10-w58-*; L3; the obstruction
-   is K-parametric per the W58 CERTIFICATE). LIVE: 0b paper-proof the K-parametric
-   completion-obstruction candidate lemma (aism-cq2, W59 in flight at session close).
+   is K-parametric per the W58 CERTIFICATE). W59 DONE: the obstruction is
+   PROVED K-FREE (lem-starvation-completion-obstruction, L5, registry 151; hostile
+   verdict VALID-WITH-CORRECTIONS, correction applied) — the first proved mechanism
+   on the H-X front. LIVE: the generalization wave (sketch v23 item 0: slab
+   confinement / rank / the H-X tableau) + af-elevation of the new lemma.
    Original item for reference: **H-X first** (`conj-sl1a-off-diagonal-cell`): it shares the completion-obstruction
    shape with the W55 large-gauge wall, so ONE exact `P=L*B, B*L=I`
    completion/refutation LP wave (v19 item 3 == v20 item 0) serves both fronts. A

@@ -123,6 +123,8 @@ To prove this directly from idempotence, subtract the \(v\)-row of
 \]
 
 Also \(\sum_jD_j=0\), because both \(p_z\) and \(p_v\) have row sum one.
+Abbreviate \(x_j:=x_{[j]}\) and \(y_j:=y_{[j]}\) (the canonical coordinates of the
+fiber \([j]\), constant on clone fibers per the conventions of the STATEMENT).
 Using the canonical expansion \(p_j=p_v+x_jD+y_jE\) in (4),
 
 \[

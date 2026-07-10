@@ -882,3 +882,16 @@ claims remain uncodified/non-L0 pending fresh standalone prover/verifier passes.
   Bundle runs/2026-07-10-w58-starvation-completion-extra-vertex; INDEX row; gates green.
   Candidate lemma now K-parametric (CERTIFICATE.md updated). Sketch v22; pins updated.
   Residual: unbounded-K, rank>3 (parked). Main line -> paper-proof wave (aism-cq2).
+
+## 2026-07-10 — Session 14 (cont.): W59 — the completion obstruction PROVED (L5, K-free); registry 151
+
+- W59 (aism-cq2, codex ultra prover -> fresh hostile codex verifier, serial): the
+  W57/W58 Farkas certificates converted to a first-principles paper proof, STRONGER
+  than the candidate: K-FREE (any finite exterior slab-confined fiber set), ceiling
+  tau <= 1/256. Verdict first line verbatim: 'VERDICT: VALID-WITH-CORRECTIONS — the
+  K-free obstruction is proved; only an index-level coordinate abbreviation is
+  missing.' Single notation correction applied; banked as
+  lem-starvation-completion-obstruction (L5, registry 151; prime af-elevation shape).
+  Mechanism: idempotence demands one unit of transverse moment vs O(tau) supply.
+  Proof + verdicts preserved in runs/2026-07-10-w58-*/. Sketch v23; pins; aism-cq2
+  closed. Next: generalization wave toward the H-X tableau + af-elevation.
