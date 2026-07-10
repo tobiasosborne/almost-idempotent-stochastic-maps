@@ -5,10 +5,16 @@
 % SHARD-KEYWORDS: lem-weighted-min, af validated, weighted average, support averaging, index selection
 \section{Weighted minimum bound}\label{sec:weighted-min}
 
-\begin{lemma}[Registry contract for \texttt{lem-weighted-min}]
-\label{lem:weighted-min}
-\contractquote{Weighted minimum bound: let p_1, ..., p_m be positive reals with sum_i p_i = 1 and let n_1, ..., n_m be real numbers; then min over i in {1, ..., m} of n_i <= sum_i p_i * n_i.}
+\begin{lemma}[\texttt{lem-weighted-min}]\label{lem:weighted-min}
+Let $p_1,\dots,p_m$ be positive reals with $\sum_i p_i=1$ and let
+$n_1,\dots,n_m$ be real numbers. Then
+\[
+  \min_{i\in\{1,\dots,m\}} n_i\;\le\;\sum_i p_i\,n_i.
+\]
 \end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Weighted minimum bound: let p_1, ..., p_m be positive reals with sum_i p_i = 1 and let n_1, ..., n_m be real numbers; then min over i in {1, ..., m} of n_i <= sum_i p_i * n_i.}
 
 \noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
 This is one of the rigorous in-repo results.

@@ -5,10 +5,20 @@
 % SHARD-KEYWORDS: lem-fan-payment-restricted, af validated, D-restricted, sharp constant, payment horn
 \section{D-restricted zero-sum fan payment}\label{sec:fan-payment-restricted}
 
-\begin{lemma}[Registry contract for \texttt{lem-fan-payment-restricted}]
-\label{lem:fan-payment-restricted}
-\contractquote{D-restricted zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite family with vectors w_i in R^d and weights p_i > 0 satisfying sum_i p_i = 1, such that every w_i has coordinate sum zero and the weighted barycenter is zero (sum_i p_i w_i = 0); write n(w) = sum_l max(-w(l), 0); let w_* be a minimizer of v -> sum_i p_i n(w_i - v) over {w_1, ..., w_m} and let A = { i : n(w_i - w_*) > 0 }; then sum_{i in A} p_i n(w_i - w_*) <= (2 + sqrt(2)) * sum_{i in A} p_i n(w_i).}
+\begin{lemma}[\texttt{lem-fan-payment-restricted}]\label{lem:fan-payment-restricted}
+Let $(w_1,p_1),\dots,(w_m,p_m)$ be a finite family with vectors
+$w_i\in\mathbb{R}^d$ and weights $p_i>0$ satisfying $\sum_i p_i=1$, such that
+every $w_i$ has zero coordinate sum and the weighted barycenter is zero,
+$\sum_i p_i w_i=0$. Write $n(w)=\sum_l\max(-w(l),0)$, let $w_{*}$ be a minimizer
+of $v\mapsto\sum_i p_i\,n(w_i-v)$ over $\{w_1,\dots,w_m\}$, and set
+$A=\{i:n(w_i-w_{*})>0\}$. Then
+\[
+  \sum_{i\in A}p_i\,n(w_i-w_{*})\;\le\;(2+\sqrt2)\sum_{i\in A}p_i\,n(w_i).
+\]
 \end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{D-restricted zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite family with vectors w_i in R^d and weights p_i > 0 satisfying sum_i p_i = 1, such that every w_i has coordinate sum zero and the weighted barycenter is zero (sum_i p_i w_i = 0); write n(w) = sum_l max(-w(l), 0); let w_* be a minimizer of v -> sum_i p_i n(w_i - v) over {w_1, ..., w_m} and let A = { i : n(w_i - w_*) > 0 }; then sum_{i in A} p_i n(w_i - w_*) <= (2 + sqrt(2)) * sum_{i in A} p_i n(w_i).}
 
 \noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
 This is one of the rigorous in-repo results.

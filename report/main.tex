@@ -41,7 +41,20 @@
 \newcommand{\tstar}{t^{*}}              % exposedness margin
 \newcommand{\posp}[1]{#1^{+}}          % positive part
 \newcommand{\negp}[1]{#1^{-}}          % negative part
-\newcommand{\contractquote}[1]{\begin{quote}\small\ttfamily\detokenize{#1}\end{quote}}
+% Provenance anchor: the byte-faithful registry contract, rendered as a visually
+% quiet, rule-delimited footnotesize block. The typeset amsthm statement is the
+% PRIMARY rendering; this detokenized quote is the verbatim anchor beneath it.
+% \raggedright + \sloppy keep long contracts from overflowing the text block.
+\newcommand{\contractquote}[1]{%
+  \par\addvspace{0.5\baselineskip}%
+  {\footnotesize
+   \noindent\hrulefill\par\nobreak\vspace{0.35ex}%
+   \begingroup\ttfamily\frenchspacing\raggedright\sloppy
+     \noindent\detokenize{#1}\par
+   \endgroup
+   \vspace{0.35ex}\noindent\hrulefill\par}%
+  \addvspace{0.5\baselineskip}%
+  \noindent\ignorespaces}
 \DeclareMathOperator{\conv}{conv}
 \DeclareMathOperator{\dist}{dist}
 \newcommand{\distone}{\dist_{1}}       % l1 distance to a convex set

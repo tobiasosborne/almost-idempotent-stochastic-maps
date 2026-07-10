@@ -5,10 +5,15 @@
 % SHARD-KEYWORDS: lem-negpart-subadditive, af validated, negative part, subadditivity, barycenter step
 \section{Negative-part subadditivity}\label{sec:negpart-subadditive}
 
-\begin{lemma}[Registry contract for \texttt{lem-negpart-subadditive}]
-\label{lem:negpart-subadditive}
-\contractquote{Negative-part subadditivity: for all vectors x and y in R^d, writing n(w) = sum_l max(-w(l), 0), one has n(x + y) <= n(x) + n(y).}
+\begin{lemma}[\texttt{lem-negpart-subadditive}]\label{lem:negpart-subadditive}
+For all vectors $x,y\in\mathbb{R}^d$, writing $n(w)=\sum_l\max(-w(l),0)$, one has
+\[
+  n(x+y)\;\le\;n(x)+n(y).
+\]
 \end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Negative-part subadditivity: for all vectors x and y in R^d, writing n(w) = sum_l max(-w(l), 0), one has n(x + y) <= n(x) + n(y).}
 
 \noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
 This is one of the rigorous in-repo results.

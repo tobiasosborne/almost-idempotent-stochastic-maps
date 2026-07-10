@@ -5,10 +5,21 @@
 % SHARD-KEYWORDS: lem-halo-collapse, af validated, height collapse, halo-robust, invisible mass, bridge
 \section{Halo-robust height collapse}\label{sec:halo-collapse}
 
-\begin{lemma}[Registry contract for \texttt{lem-halo-collapse}]
-\label{lem:halo-collapse}
-\contractquote{Halo-robust height collapse: for an exact signed idempotent P with 0 < delta(P) <= 1/4, nonempty visible set W(P), and hidden top vertex v of height H, let sigma be the invisible mass of v, sigma_g the halo-robust invisible mass (the positive coefficient mass v places on rows at ell-1 distance > tau/4 from conv W, tau = sqrt(delta)), and nu_v the row negative mass; then H * (1 - sigma_g) <= (sigma - sigma_g) * tau/4 + nu_v * (2 + 4*delta).}
+\begin{lemma}[\texttt{lem-halo-collapse}]\label{lem:halo-collapse}
+Let $P$ be an exact signed idempotent with $0<\negmass(P)\le\tfrac14$, nonempty
+visible set $\vis(P)$, and hidden top vertex $v$ of height $\height$. Let
+$\sigma$ be the invisible mass of $v$, let $\sigma_g$ be the halo-robust
+invisible mass---the positive-coefficient mass $v$ places on rows at $\ell_1$
+distance $>\tsq/4$ from $\conv\vis$, where $\tsq=\sqrt{\negmass}$---and let
+$\nu_v$ be the row negative mass. Then
+\[
+  \height\,(1-\sigma_g)\;\le\;(\sigma-\sigma_g)\,\tfrac{\tsq}{4}
+    +\nu_v\,(2+4\negmass).
+\]
 \end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Halo-robust height collapse: for an exact signed idempotent P with 0 < delta(P) <= 1/4, nonempty visible set W(P), and hidden top vertex v of height H, let sigma be the invisible mass of v, sigma_g the halo-robust invisible mass (the positive coefficient mass v places on rows at ell-1 distance > tau/4 from conv W, tau = sqrt(delta)), and nu_v the row negative mass; then H * (1 - sigma_g) <= (sigma - sigma_g) * tau/4 + nu_v * (2 + 4*delta).}
 
 \noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
 This is one of the rigorous in-repo results.

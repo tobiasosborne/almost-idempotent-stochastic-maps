@@ -5,10 +5,16 @@
 % SHARD-KEYWORDS: lem-zerosum-triangle, af validated, negative part, zero coordinate sum, triangle inequality
 \section{Zero-sum triangle bound}\label{sec:zerosum-triangle}
 
-\begin{lemma}[Registry contract for \texttt{lem-zerosum-triangle}]
-\label{lem:zerosum-triangle}
-\contractquote{Zero-sum triangle bound: let w and v be vectors in R^d with v having coordinate sum zero (sum_l v(l) = 0); write n(x) = sum_l max(-x(l), 0); then n(w - v) <= n(w) + n(v).}
+\begin{lemma}[\texttt{lem-zerosum-triangle}]\label{lem:zerosum-triangle}
+Let $w,v\in\mathbb{R}^d$ with $v$ having zero coordinate sum, $\sum_l v(l)=0$,
+and write $n(x)=\sum_l\max(-x(l),0)$. Then
+\[
+  n(w-v)\;\le\;n(w)+n(v).
+\]
 \end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Zero-sum triangle bound: let w and v be vectors in R^d with v having coordinate sum zero (sum_l v(l) = 0); write n(x) = sum_l max(-x(l), 0); then n(w - v) <= n(w) + n(v).}
 
 \noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
 This is one of the rigorous in-repo results.

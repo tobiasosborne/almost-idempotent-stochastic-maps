@@ -5,10 +5,18 @@
 % SHARD-KEYWORDS: obs-height-collapse, af validated, height, invisible mass, sigma cap
 \section{Height collapse}\label{sec:height-collapse}
 
-\begin{proposition}[Registry contract for \texttt{obs-height-collapse}]
-\label{obs:height-collapse}
+\begin{observation}[\texttt{obs-height-collapse}]\label{obs:height-collapse}
+Let $P$ be an exact signed idempotent with $0<\negmass(P)\le\tfrac14$, nonempty
+visible set $\vis(P)$, and a hidden top vertex $v$ of height
+$\height=\distone(p_v,\conv\vis)$ maximal among the rows. Then the invisible
+mass $\sigma_v$ and the row negative mass $\nu_v$ satisfy
+\[
+  \height\,(1-\sigma_v)\;\le\;\nu_v\,(2+4\negmass).
+\]
+\end{observation}
+
+\noindent\textbf{Registry contract (verbatim).}
 \contractquote{Height collapse: for an exact signed idempotent P with 0 < delta(P) <= 1/4, nonempty visible set W(P), and hidden top vertex v (height H = dist_1(p_v, conv W) maximal among rows), the invisible mass sigma_v and the row negative mass nu_v satisfy H * (1 - sigma_v) <= nu_v * (2 + 4*delta).}
-\end{proposition}
 
 \noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
 This is one of the rigorous in-repo results.

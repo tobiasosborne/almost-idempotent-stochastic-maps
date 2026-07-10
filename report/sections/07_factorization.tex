@@ -5,10 +5,32 @@
 % SHARD-KEYWORDS: lem-factorization, af validated, factorization, chart scores, (EX) composition
 \section{Factorization bound}\label{sec:factorization}
 
-\begin{lemma}[Registry contract for \texttt{lem-factorization}]
-\label{lem:factorization}
-\contractquote{Factorization bound: let P be an exact signed idempotent (square real matrix with P^2 = P and all row sums equal to 1), let delta(P) = max_i sum_j max(-P_ij, 0), let k = rank(P), and let U = (u_1, ..., u_k) be an actual-row basis of P (the rows p_{u_1}, ..., p_{u_k} of P form a basis of the row space of P) whose Gram volume satisfies Vol(U) >= (1/2) * Vol_max(P), where Vol_max(P) is the maximum Gram volume over all actual-row bases of P; define coordinates a_t(j) by p_j = sum_t a_t(j) p_{u_t}, and for each pivot index s in {1, ..., k} set beta_s(j) = P_{u_s j}, lambda_s(j) = 1 - a_s(j), mu_s(j) = sum_{t != s} max(-a_t(j), 0), sigma_s(j) = sum_{t != s} max(a_t(j), 0), E_s(j) = max(mu_s(j) - lambda_s(j), 0), Phi_s(U) = sum_j max(beta_s(j), 0) * E_s(j), and S*_s(U) = sum_j max(beta_s(j), 0) * (sigma_s(j) + 2 * max(-lambda_s(j), 0)); then for every pivot s, S*_s(U) <= 2 * Phi_s(U) + 6 * delta(P).}
+\begin{lemma}[\texttt{lem-factorization}]\label{lem:factorization}
+Let $P$ be an exact signed idempotent (a square real matrix with $P^2=P$ and all
+row sums equal to $1$), let $\negmass(P)=\max_i\sum_j\max(-P_{ij},0)$, let
+$k=\rank P$, and let $U=(u_1,\dots,u_k)$ be an actual-row basis of $P$---the rows
+$p_{u_1},\dots,p_{u_k}$ form a basis of the row space---with Gram volume
+$\Vol(U)\ge\tfrac12\Vol_{\max}(P)$, where $\Vol_{\max}(P)$ is the maximum Gram
+volume over all actual-row bases of $P$. Define coordinates $a_t(j)$ by
+$p_j=\sum_t a_t(j)\,p_{u_t}$, and for each pivot index $s\in\{1,\dots,k\}$ set
+\begin{align*}
+  \beta_s(j)&=P_{u_s j}, & \lambda_s(j)&=1-a_s(j), &
+  \mu_s(j)&=\sum_{t\neq s}\max(-a_t(j),0),\\
+  \sigma_s(j)&=\sum_{t\neq s}\max(a_t(j),0), &
+  E_s(j)&=\max(\mu_s(j)-\lambda_s(j),0),
+\end{align*}
+\[
+  \Phi_s(U)=\sum_j\max(\beta_s(j),0)\,E_s(j),\qquad
+  S^{*}_s(U)=\sum_j\max(\beta_s(j),0)\bigl(\sigma_s(j)+2\max(-\lambda_s(j),0)\bigr).
+\]
+Then for every pivot $s$,
+\[
+  S^{*}_s(U)\;\le\;2\,\Phi_s(U)+6\,\negmass(P).
+\]
 \end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Factorization bound: let P be an exact signed idempotent (square real matrix with P^2 = P and all row sums equal to 1), let delta(P) = max_i sum_j max(-P_ij, 0), let k = rank(P), and let U = (u_1, ..., u_k) be an actual-row basis of P (the rows p_{u_1}, ..., p_{u_k} of P form a basis of the row space of P) whose Gram volume satisfies Vol(U) >= (1/2) * Vol_max(P), where Vol_max(P) is the maximum Gram volume over all actual-row bases of P; define coordinates a_t(j) by p_j = sum_t a_t(j) p_{u_t}, and for each pivot index s in {1, ..., k} set beta_s(j) = P_{u_s j}, lambda_s(j) = 1 - a_s(j), mu_s(j) = sum_{t != s} max(-a_t(j), 0), sigma_s(j) = sum_{t != s} max(a_t(j), 0), E_s(j) = max(mu_s(j) - lambda_s(j), 0), Phi_s(U) = sum_j max(beta_s(j), 0) * E_s(j), and S*_s(U) = sum_j max(beta_s(j), 0) * (sigma_s(j) + 2 * max(-lambda_s(j), 0)); then for every pivot s, S*_s(U) <= 2 * Phi_s(U) + 6 * delta(P).}
 
 \noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
 This is one of the rigorous in-repo results.

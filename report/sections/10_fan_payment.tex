@@ -5,10 +5,19 @@
 % SHARD-KEYWORDS: lem-fan-payment, af validated, fan payment, plateau 2, payment horn
 \section{Zero-sum fan payment}\label{sec:fan-payment}
 
-\begin{lemma}[Registry contract for \texttt{lem-fan-payment}]
-\label{lem:fan-payment}
-\contractquote{Zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite family with vectors w_i in R^d and weights p_i > 0 satisfying sum_i p_i = 1, such that every w_i has coordinate sum zero (sum_l w_i(l) = 0) and the weighted barycenter is zero (sum_i p_i w_i = 0); write n(w) = sum_l max(-w(l), 0); then min over i* in {1, ..., m} of sum_i p_i n(w_i - w_{i*}) <= 2 * sum_i p_i n(w_i).}
+\begin{lemma}[\texttt{lem-fan-payment}]\label{lem:fan-payment}
+Let $(w_1,p_1),\dots,(w_m,p_m)$ be a finite family with vectors
+$w_i\in\mathbb{R}^d$ and weights $p_i>0$ satisfying $\sum_i p_i=1$, such that
+every $w_i$ has zero coordinate sum, $\sum_l w_i(l)=0$, and the weighted
+barycenter is zero, $\sum_i p_i w_i=0$. Write $n(w)=\sum_l\max(-w(l),0)$. Then
+\[
+  \min_{i^{*}\in\{1,\dots,m\}}\ \sum_i p_i\,n(w_i-w_{i^{*}})
+    \;\le\;2\sum_i p_i\,n(w_i).
+\]
 \end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite family with vectors w_i in R^d and weights p_i > 0 satisfying sum_i p_i = 1, such that every w_i has coordinate sum zero (sum_l w_i(l) = 0) and the weighted barycenter is zero (sum_i p_i w_i = 0); write n(w) = sum_l max(-w(l), 0); then min over i* in {1, ..., m} of sum_i p_i n(w_i - w_{i*}) <= 2 * sum_i p_i n(w_i).}
 
 \noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
 This is one of the rigorous in-repo results.

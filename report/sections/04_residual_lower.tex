@@ -5,10 +5,21 @@
 % SHARD-KEYWORDS: lem-residual-lower, af validated, convex outsourcing, l1 distance, halo collapse
 \section{Convex outsourcing}\label{sec:residual-lower}
 
-\begin{lemma}[Registry contract for \texttt{lem-residual-lower}]
-\label{lem:residual-lower}
-\contractquote{Convex outsourcing: let C be the convex hull of finitely many points of R^n, and suppose p = sum_{j=1}^m c_j p_j + (1 - s) q with points p_j, q in R^n, coefficients c_j >= 0, s = sum_{j=1}^m c_j < 1, and dist_1(p_j, C) <= dist_1(p, C) for every j; then dist_1(p, C) <= dist_1(q, C).}
+\begin{lemma}[\texttt{lem-residual-lower}]\label{lem:residual-lower}
+Let $C=\conv\{y_1,\dots,y_N\}\subseteq\Rn$ be the convex hull of finitely many
+points, and suppose
+\[
+  p=\sum_{j=1}^m c_j\,p_j+(1-s)\,q,\qquad
+  c_j\ge0,\quad s=\sum_{j=1}^m c_j<1,
+\]
+with $p_j,q\in\Rn$ and $\distone(p_j,C)\le\distone(p,C)$ for every $j$. Then
+\[
+  \distone(p,C)\;\le\;\distone(q,C).
+\]
 \end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Convex outsourcing: let C be the convex hull of finitely many points of R^n, and suppose p = sum_{j=1}^m c_j p_j + (1 - s) q with points p_j, q in R^n, coefficients c_j >= 0, s = sum_{j=1}^m c_j < 1, and dist_1(p_j, C) <= dist_1(p, C) for every j; then dist_1(p, C) <= dist_1(q, C).}
 
 \noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
 This is one of the rigorous in-repo results.

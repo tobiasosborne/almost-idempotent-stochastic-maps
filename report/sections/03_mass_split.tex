@@ -5,10 +5,17 @@
 % SHARD-KEYWORDS: lem-mass-split, af validated, negative mass, row sum, halo collapse
 \section{Mass split bookkeeping}\label{sec:mass-split}
 
-\begin{lemma}[Registry contract for \texttt{lem-mass-split}]
-\label{lem:mass-split}
-\contractquote{Mass split: for an exact signed idempotent P and any row index v, writing a_j = P_{vj}, a_j^+ = max(a_j, 0), a_j^- = max(-a_j, 0), and nu_v = sum_j a_j^-, one has sum_j a_j^+ = 1 + nu_v.}
+\begin{lemma}[\texttt{lem-mass-split}]\label{lem:mass-split}
+Let $P$ be an exact signed idempotent and $v$ any row index. Writing
+$a_j=P_{vj}$, $\posp{a_j}=\max(a_j,0)$, $\negp{a_j}=\max(-a_j,0)$, and
+$\nu_v=\sum_j\negp{a_j}$, one has
+\[
+  \sum_j\posp{a_j}\;=\;1+\nu_v.
+\]
 \end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Mass split: for an exact signed idempotent P and any row index v, writing a_j = P_{vj}, a_j^+ = max(a_j, 0), a_j^- = max(-a_j, 0), and nu_v = sum_j a_j^-, one has sum_j a_j^+ = 1 + nu_v.}
 
 \noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
 This is one of the rigorous in-repo results.

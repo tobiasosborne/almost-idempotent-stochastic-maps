@@ -5,10 +5,47 @@
 % SHARD-KEYWORDS: lem-pivot-removing-move, af validated, pivot removing, max stationarity, argmin, collateral
 \section{Pivot-removing max-stationarity}\label{sec:pivot-removing-move}
 
-\begin{lemma}[Registry contract for \texttt{lem-pivot-removing-move}]
-\label{lem:pivot-removing-move}
-\contractquote{Pivot-removing max-stationarity: let P be a rank-3 exact signed idempotent (square real matrix with P^2 = P and all row sums equal to 1), let U = (u_0,u_1,u_2) be an actual-row chart whose rows p_{u_0}, p_{u_1}, p_{u_2} form a basis of the row space, let Vol_max(P) be the maximum Gram volume over actual-row charts, m_U = Vol(U)/Vol_max(P), define old coordinates a_t(i) by p_i = sum_t a_t(i)p_{u_t}, beta_r(i) = P_{u_r i}, lambda_r(i) = 1-a_r(i), mu_r(i) = sum_{t != r} max(-a_t(i),0), E_r(i) = max(mu_r(i)-lambda_r(i),0), Phi_r(U) = sum_i max(beta_r(i),0)E_r(i), and Phi(U) = max_r Phi_r(U), assume U is a theta-half Phi-argmin meaning m_U >= 1/2 and Phi(U) is minimal among actual-row charts W with Vol(W)/Vol_max(P) >= 1/2, fix a maximal pivot s with Phi_s(U)=Phi(U), and let j notin {u_0,u_1,u_2} have c = a_s(j) != 0 such that the pivot-removing chart V_j = U-u_s+j is theta-half admissible, equivalently |a_s(j)|*m_U >= 1/2 with volume factor Vol(V_j)/Vol(U)=|a_s(j)|; defining new coordinates on V_j by a_s^j(i)=a_s(i)/c and a_t^j(i)=a_t(i)-a_s(i)a_t(j)/c for t != s, E_r^j(i)=max(sum_{q != r} max(-a_q^j(i),0)-(1-a_r^j(i)),0), Psi_j=Phi_s(V_j)=sum_i max(P_{ji},0)E_s^j(i), and Gamma_j=max_{r != s} Phi_r(V_j)=max_{r != s} sum_i max(P_{u_r i},0)E_r^j(i), one has Phi_s(U) <= max(Psi_j, Gamma_j).}
+\begin{lemma}[\texttt{lem-pivot-removing-move}]\label{lem:pivot-removing-move}
+Let $P$ be a rank-$3$ exact signed idempotent ($P^2=P$, all row sums $1$), let
+$U=(u_0,u_1,u_2)$ be an actual-row chart whose rows $p_{u_0},p_{u_1},p_{u_2}$
+form a basis of the row space, let $\Vol_{\max}(P)$ be the maximum Gram volume
+over actual-row charts, and $m_U=\Vol(U)/\Vol_{\max}(P)$. Define old coordinates
+$a_t(i)$ by $p_i=\sum_t a_t(i)\,p_{u_t}$, and set
+\[
+  \beta_r(i)=P_{u_r i},\qquad \lambda_r(i)=1-a_r(i),\qquad
+  \mu_r(i)=\sum_{t\neq r}\max(-a_t(i),0),
+\]
+\[
+  E_r(i)=\max(\mu_r(i)-\lambda_r(i),0),\qquad
+  \Phi_r(U)=\sum_i\max(\beta_r(i),0)\,E_r(i),\qquad
+  \Phi(U)=\max_r\Phi_r(U).
+\]
+Assume $U$ is a $\theta$-$\tfrac12$ $\Phi$-argmin: $m_U\ge\tfrac12$ and $\Phi(U)$
+is minimal among actual-row charts $W$ with $\Vol(W)/\Vol_{\max}(P)\ge\tfrac12$.
+Fix a maximal pivot $s$ with $\Phi_s(U)=\Phi(U)$, and let
+$j\notin\{u_0,u_1,u_2\}$ have $c=a_s(j)\neq0$ such that the pivot-removing chart
+$V_j=U-u_s+j$ is $\theta$-$\tfrac12$ admissible---equivalently
+$|a_s(j)|\,m_U\ge\tfrac12$, with volume factor $\Vol(V_j)/\Vol(U)=|a_s(j)|$.
+Defining new coordinates on $V_j$ by
+\[
+  a_s^{j}(i)=\frac{a_s(i)}{c},\qquad
+  a_t^{j}(i)=a_t(i)-\frac{a_s(i)\,a_t(j)}{c}\quad(t\neq s),
+\]
+\[
+  E_r^{j}(i)=\max\!\Bigl(\sum_{q\neq r}\max(-a_q^{j}(i),0)-(1-a_r^{j}(i)),\,0\Bigr),
+\]
+\[
+  \Psi_j=\Phi_s(V_j)=\sum_i\max(P_{ji},0)\,E_s^{j}(i),\qquad
+  \Gamma_j=\max_{r\neq s}\Phi_r(V_j)=\max_{r\neq s}\sum_i\max(P_{u_r i},0)\,E_r^{j}(i),
+\]
+one has
+\[
+  \Phi_s(U)\;\le\;\max(\Psi_j,\Gamma_j).
+\]
 \end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Pivot-removing max-stationarity: let P be a rank-3 exact signed idempotent (square real matrix with P^2 = P and all row sums equal to 1), let U = (u_0,u_1,u_2) be an actual-row chart whose rows p_{u_0}, p_{u_1}, p_{u_2} form a basis of the row space, let Vol_max(P) be the maximum Gram volume over actual-row charts, m_U = Vol(U)/Vol_max(P), define old coordinates a_t(i) by p_i = sum_t a_t(i)p_{u_t}, beta_r(i) = P_{u_r i}, lambda_r(i) = 1-a_r(i), mu_r(i) = sum_{t != r} max(-a_t(i),0), E_r(i) = max(mu_r(i)-lambda_r(i),0), Phi_r(U) = sum_i max(beta_r(i),0)E_r(i), and Phi(U) = max_r Phi_r(U), assume U is a theta-half Phi-argmin meaning m_U >= 1/2 and Phi(U) is minimal among actual-row charts W with Vol(W)/Vol_max(P) >= 1/2, fix a maximal pivot s with Phi_s(U)=Phi(U), and let j notin {u_0,u_1,u_2} have c = a_s(j) != 0 such that the pivot-removing chart V_j = U-u_s+j is theta-half admissible, equivalently |a_s(j)|*m_U >= 1/2 with volume factor Vol(V_j)/Vol(U)=|a_s(j)|; defining new coordinates on V_j by a_s^j(i)=a_s(i)/c and a_t^j(i)=a_t(i)-a_s(i)a_t(j)/c for t != s, E_r^j(i)=max(sum_{q != r} max(-a_q^j(i),0)-(1-a_r^j(i)),0), Psi_j=Phi_s(V_j)=sum_i max(P_{ji},0)E_s^j(i), and Gamma_j=max_{r != s} Phi_r(V_j)=max_{r != s} sum_i max(P_{u_r i},0)E_r^j(i), one has Phi_s(U) <= max(Psi_j, Gamma_j).}
 
 \noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
 This is one of the rigorous in-repo results.
