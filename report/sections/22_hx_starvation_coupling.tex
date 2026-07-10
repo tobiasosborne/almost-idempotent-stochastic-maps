@@ -1,0 +1,94 @@
+% SHARD-ID: AISM-22-HX-STARVATION-COUPLING
+% SHARD-TITLE: Robust scalar starvation and forced exterior coupling
+% SHARD-SUMMARY: Reproduces the af-validated lem-hx-robust-scalar-starvation, the rank-free slab-free generalization of the starvation obstruction with an explicit universal ceiling.
+% SHARD-SUMMARY: Reproduces the af-validated lem-hx-forced-exterior-coupling, the first forced long-range positive-financing lower bound.
+% SHARD-SUMMARY: Records the exact T0 calibration, the verifier's tail-cap near-counterexample, and the af provenance of both results.
+% SHARD-KEYWORDS: lem-hx-robust-scalar-starvation, lem-hx-forced-exterior-coupling, af validated, starvation, top-tail cap, tableau window, forced coupling, H-X engine
+\section{Robust scalar starvation and forced exterior coupling}\label{sec:hx-starvation-coupling}
+
+This section typesets the two remaining engine results: the generalization of the
+starvation obstruction of \S\ref{sec:starvation-obstruction} --- rank-free,
+slab-free, with the exact tableau pins relaxed to a metric window and the zero-top
+hypothesis to an $O(\delta)$ tail cap --- and the ball instantiation of the
+financing floor of \S\ref{sec:hx-financing-engine}. Notation as there; additionally
+$\delta=\delta(P)$, $\tau=\sqrt\delta$, and $c_Q=\sum_{j\in Q}P_{vj}$ for a
+distinguished fiber representative $v$.
+
+\subsection{Robust scalar starvation}
+
+\begin{lemma}[\texttt{lem-hx-robust-scalar-starvation}]\label{lem:hx-robust-scalar-starvation}
+For all reals $K_R,L,K_C\ge0$ there is a universal
+$\delta_R(K_R,L,K_C)\in(0,2^{-16}]$ such that no finite exact signed idempotent $P$
+with $0<\delta\le\delta_R$ admits full row-point fibers represented by $v$ and $f$,
+a real $A\ge4$ and a point $q\in K(P)$ with
+$\tau/2\le\lone{q-p_v}\le2\tau$ and $\lone{p_f-p_v+A(q-p_v)}\le K_R\delta$, and an
+affine $\chi$ with $\chi(p_v)=0$, $\chi(q)=1$, and
+$|\chi(x)-\chi(y)|\le\lone{x-y}/\lone{q-p_v}$ on $K(P)$, such that
+$\sum_{Q:\,|\chi(p_Q)|>L}\max(c_Q,0)\le K_C\,\delta$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{For all reals K_R, L, K_C >= 0 there is a universal delta_R(K_R,L,K_C) in (0,2^(-16)] such that no finite exact signed idempotent P with 0 < delta(P) <= delta_R admits full row-point fibers represented by v and f, a real A >= 4 and a point q of the row polytope K(P) with sqrt(delta(P))/2 <= ||q - p_v||_1 <= 2*sqrt(delta(P)) and ||p_f - p_v + A*(q - p_v)||_1 <= K_R*delta(P), and an affine chi with chi(p_v) = 0, chi(q) = 1, and |chi(x) - chi(y)| <= ||x - y||_1/||q - p_v||_1 for all x,y in K(P), such that sum_{Q: |chi(p_Q)| > L} max(c_Q, 0) <= K_C*delta(P), where c_Q = sum_{j in Q} P_{vj}.}
+
+\noindent\textbf{Explicit ceiling.} With $B=K_C+1+(K_C+K_R+1)/4$ and $H=2L+6B$:
+$\delta_R=\min\{2^{-16},(4H^2)^{-1}\}$.
+
+\noindent\textbf{Proof sketch (by contradiction).} Set $D=q-p_v$ and apply the unit
+moment (Lemma~\ref{lem:hx-transverse-moment-identity} at the pair $(p_v,q)$):
+$\sum_Qd_Q\chi(p_Q)=1$. The core ($|\chi(p_Q)|\le L$) costs at most
+$L\lone D\le2L\tau$ since grouping decreases $\ell^1$ variation. On the tail, split
+by the sign of $d_Q$: the negative union is paid by the positive $v$-row top tail
+plus $\nu_v$, at most $(K_C+1)\delta$; the positive union is routed through the
+finance-row identity $p_f=p_v-AD+r$, $\lone r\le K_R\delta$, whose subset budget
+gives at most $(K_C+K_R+1)\delta/A\le(K_C+K_R+1)\delta/4$. The intrinsic Lipschitz
+bound caps the tail lever by the row diameter over $\lone D$, so the tail cost is
+$O(\delta/\tau)=O(\tau)$; below $\delta_R$ the total is $<1$, contradicting the
+moment. \hfill$\square$
+
+\noindent\textbf{Calibration and sharpness of the hypotheses.} (i) The
+starvation obstruction of \S\ref{sec:starvation-obstruction} sits at the fixed
+calibration $(K_R,L,K_C)=(3,1,0)$ with $\delta_R(3,1,0)=2^{-16}$, slightly roomier
+than the W59 close. (ii) The af verifier's independent rank-two exact near-example
+satisfies every hypothesis \emph{except} the tail cap
+($\mathrm{Tail}_1\approx1$) --- the top-tail cap is the indispensable obstruction,
+not a consequence of the scaffold. The lemma supplies neither the actor pair
+$(A,q)$ nor the tail cap from an H-X datum; producing those is exactly the open
+hard residual (the W60 route fork).
+
+\subsection{Forced exterior coupling}
+
+\begin{lemma}[\texttt{lem-hx-forced-exterior-coupling}]\label{lem:hx-forced-exterior-coupling}
+For every pair of row indices $(r,s)$ and every point $c\in K(P)$, the full
+row-point fibers $Q$ with $\lone{p_Q-c}>1/2$ jointly carry positive coefficient
+mass
+\[
+  P_r^+ + P_s^+\ \ge\ \frac{\lone{p_r-p_s}}{2\,(2+4\delta)}-2\delta .
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{For every finite exact signed idempotent P, every pair of row indices (r,s), and every point c of the row polytope K(P), the full row-point fibers Q with ||p_Q - c||_1 > 1/2 jointly carry positive coefficient mass P_r^+ + P_s^+ at least ||p_r - p_s||_1/(2*(2 + 4*delta(P))) - 2*delta(P).}
+
+\noindent\textbf{Proof sketch.} Instantiate the financing floor
+(Lemma~\ref{lem:hx-financing-floor}) at the pair $(p_r,p_s)$ with the recentred sign
+functional $\psi_c$, the ball $N=\{Q:\lone{p_Q-c}\le1/2\}$, $A\,\ell_\chi=1/2$, and
+$\Lambda=(2+4\delta)/\lone{p_r-p_s}$ from the signed row-diameter bound
+$\lone{p_i}\le1+2\nu_i$; the floor rearranges to the display. At $\delta=0$ this is
+the quantitative shadow of block disjointness: two mixture rows at separation
+$\ell$ ship $\Omega(\ell)$ mass to $\ell^1$-spread recurrent fibers. Exact vacuity
+threshold: $\lone{p_r-p_s}\le8\delta+16\delta^2$. \hfill$\square$
+
+\noindent\textbf{Provenance.} Both: \texttt{status: proved},
+\texttt{af: validated}, W60 wave codex prover + fresh hostile batched codex
+verifier, then W61 per-node af orchestration --- starvation $12/12$ nodes, coupling
+$12/12$, taint clean; workspaces
+\texttt{proofs/lem-hx-robust-scalar-starvation},
+\texttt{proofs/lem-hx-forced-exterior-coupling} (export node~1 each). Reviewer
+$\neq$ author throughout (\texttt{owner: B}).
+
+\noindent\textbf{Role in the chain.} Lemma~\ref{lem:hx-robust-scalar-starvation}
+retires the rank and slab restrictions of \S\ref{sec:starvation-obstruction} at the
+mechanism level and de-pins the tableau metric to the window $[\tau/2,2\tau]$;
+Lemma~\ref{lem:hx-forced-exterior-coupling} is the first forced long-range
+positive-financing lower bound (feeding the L6.5 coupling front). Neither settles
+any open cell; \texttt{op-classical} remains open.

@@ -103,6 +103,16 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-TOP-CONCENTRATION` | `proofs/lem-top-concentration/export.md` | `835cacb8312e2d83` | `af` proof export for `lem-top-concentration` |
 | `ARG-LEM-STARVATION-COMPLETION-OBSTRUCTION` | `argument/lemmas/lem-starvation-completion-obstruction.md` | `a7ae8563e5777a18` | Registry shard for `lem-starvation-completion-obstruction` |
 | `AF-LEM-STARVATION-COMPLETION-OBSTRUCTION` | `proofs/lem-starvation-completion-obstruction/export.md` | `ed573c49836f7273` | `af` proof export for `lem-starvation-completion-obstruction` |
+| `ARG-LEM-HX-TRANSVERSE-MOMENT-IDENTITY` | `argument/lemmas/lem-hx-transverse-moment-identity.md` | `9942ef5edf4dd1f9` | Registry shard for `lem-hx-transverse-moment-identity` |
+| `AF-LEM-HX-TRANSVERSE-MOMENT-IDENTITY` | `proofs/lem-hx-transverse-moment-identity/export.md` | `86029535d5f953e9` | `af` proof export for `lem-hx-transverse-moment-identity` |
+| `ARG-LEM-HX-SIGNED-VARIATION-LEDGER` | `argument/lemmas/lem-hx-signed-variation-ledger.md` | `8c00612aa717f1ce` | Registry shard for `lem-hx-signed-variation-ledger` |
+| `AF-LEM-HX-SIGNED-VARIATION-LEDGER` | `proofs/lem-hx-signed-variation-ledger/export.md` | `f9aa7f83bbc6c162` | `af` proof export for `lem-hx-signed-variation-ledger` |
+| `ARG-LEM-HX-FINANCING-FLOOR` | `argument/lemmas/lem-hx-financing-floor.md` | `d9722082e019d948` | Registry shard for `lem-hx-financing-floor` |
+| `AF-LEM-HX-FINANCING-FLOOR` | `proofs/lem-hx-financing-floor/export.md` | `725075f6730e58b2` | `af` proof export for `lem-hx-financing-floor` |
+| `ARG-LEM-HX-ROBUST-SCALAR-STARVATION` | `argument/lemmas/lem-hx-robust-scalar-starvation.md` | `fca95b140f831bbf` | Registry shard for `lem-hx-robust-scalar-starvation` |
+| `AF-LEM-HX-ROBUST-SCALAR-STARVATION` | `proofs/lem-hx-robust-scalar-starvation/export.md` | `6b72ab50f9f17ea5` | `af` proof export for `lem-hx-robust-scalar-starvation` |
+| `ARG-LEM-HX-FORCED-EXTERIOR-COUPLING` | `argument/lemmas/lem-hx-forced-exterior-coupling.md` | `b7fc9790b7caff74` | Registry shard for `lem-hx-forced-exterior-coupling` |
+| `AF-LEM-HX-FORCED-EXTERIOR-COUPLING` | `proofs/lem-hx-forced-exterior-coupling/export.md` | `bc8936013c6cb48a` | `af` proof export for `lem-hx-forced-exterior-coupling` |
 
 ## Per-claim ledger
 
@@ -144,6 +154,11 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | lem:genuine-disintegration | ARG-LEM-GENUINE-DISINTEGRATION AF-LEM-GENUINE-DISINTEGRATION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; imports residual-upper; g-bootstrap step 3. |
 | lem:top-concentration | ARG-LEM-TOP-CONCENTRATION AF-LEM-TOP-CONCENTRATION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; first-principles support functional, no imports. |
 | lem:starvation-completion-obstruction | ARG-LEM-STARVATION-COMPLETION-OBSTRUCTION AF-LEM-STARVATION-COMPLETION-OBSTRUCTION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; W59 paper-proof, fresh hostile verifier VALID-WITH-CORRECTIONS, reviewer != author. |
+| lem:hx-transverse-moment-identity | ARG-LEM-HX-TRANSVERSE-MOMENT-IDENTITY AF-LEM-HX-TRANSVERSE-MOMENT-IDENTITY | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated` (W61, 14/14 nodes); basis-free, no imports. |
+| lem:hx-signed-variation-ledger | ARG-LEM-HX-SIGNED-VARIATION-LEDGER AF-LEM-HX-SIGNED-VARIATION-LEDGER | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated` (W61, 11/11 nodes); no imports. |
+| lem:hx-financing-floor | ARG-LEM-HX-FINANCING-FLOOR AF-LEM-HX-FINANCING-FLOOR | registry contract and proof export node 1 | O | Contract quoted verbatim on the W61-corrected A > 0 form (LEARNINGS retraction of the all-reals-A reading); status `proved`, `af: validated` (12 validated + 2 archived); imports the moment identity and the ledger. |
+| lem:hx-robust-scalar-starvation | ARG-LEM-HX-ROBUST-SCALAR-STARVATION AF-LEM-HX-ROBUST-SCALAR-STARVATION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated` (W61, 12/12 nodes); imports the moment identity; explicit ceiling min(2^-16, 1/(4H^2)). |
+| lem:hx-forced-exterior-coupling | ARG-LEM-HX-FORCED-EXTERIOR-COUPLING AF-LEM-HX-FORCED-EXTERIOR-COUPLING | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated` (W61, 12/12 nodes); instantiates the financing floor. |
 | ex:hume | ARG-EX-HUME | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`, not rigorous here. |
 | lem:canonical-separator | ARG-LEM-CANONICAL-SEPARATOR | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:dual-localization | ARG-LEM-DUAL-LOCALIZATION | registry contract | SUPERSEDED | Retired 2026-07-04 (contract trivially true as stated); superseded by conj-skinny-shadow-cap; registry status `obstruction`. |

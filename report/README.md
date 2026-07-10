@@ -59,4 +59,6 @@ mid-check.
 | 18 | `AISM-18-PARAMETRIC-HALO-COLLAPSE` | `report/sections/18_parametric_halo_collapse.tex` |
 | 19 | `AISM-19-GENUINE-DISINTEGRATION` | `report/sections/19_genuine_disintegration.tex` |
 | 20 | `AISM-20-STARVATION-OBSTRUCTION` | `report/sections/20_starvation_obstruction.tex` |
+| 21 | `AISM-21-HX-FINANCING-ENGINE` | `report/sections/21_hx_financing_engine.tex` |
+| 22 | `AISM-22-HX-STARVATION-COUPLING` | `report/sections/22_hx_starvation_coupling.tex` |
 | 13 | `AISM-13-STATUS-LEDGER` | `report/sections/13_discussion.tex` |

@@ -169,6 +169,22 @@ verbatim), and keywords.
 - **Summary:** Records the paper-proof provenance and the role of the obstruction in closing the exchange-starvation leaf.
 - **Keywords:** lem-starvation-completion-obstruction, af validated, starvation, rank three, unit moment, exterior budget, K-free
 
+## `AISM-21-HX-FINANCING-ENGINE`
+- **File:** `report/sections/21_hx_financing_engine.tex`
+- **Title:** The H-X financing engine: unit moment, sign-union ledger, financing floor
+- **Summary:** Reproduces the three af-validated W60/W61 engine lemmas lem-hx-transverse-moment-identity, lem-hx-signed-variation-ledger, and lem-hx-financing-floor.
+- **Summary:** Typesets the basis-free unit transverse moment, the two-sign-union budget converter, and their arithmetic assembly into the high-lever financing floor.
+- **Summary:** Records the W61 quantifier correction on the floor (all reals A restated to A > 0) and the af provenance of all three results.
+- **Keywords:** lem-hx-transverse-moment-identity, lem-hx-signed-variation-ledger, lem-hx-financing-floor, af validated, unit moment, sign union, financing floor, H-X engine
+
+## `AISM-22-HX-STARVATION-COUPLING`
+- **File:** `report/sections/22_hx_starvation_coupling.tex`
+- **Title:** Robust scalar starvation and forced exterior coupling
+- **Summary:** Reproduces the af-validated lem-hx-robust-scalar-starvation, the rank-free slab-free generalization of the starvation obstruction with an explicit universal ceiling.
+- **Summary:** Reproduces the af-validated lem-hx-forced-exterior-coupling, the first forced long-range positive-financing lower bound.
+- **Summary:** Records the exact T0 calibration, the verifier's tail-cap near-counterexample, and the af provenance of both results.
+- **Keywords:** lem-hx-robust-scalar-starvation, lem-hx-forced-exterior-coupling, af validated, starvation, top-tail cap, tableau window, forced coupling, H-X engine
+
 ## `AISM-13-STATUS-LEDGER`
 - **File:** `report/sections/13_discussion.tex`
 - **Title:** Status ledger for non-validated registry results

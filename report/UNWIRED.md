@@ -42,11 +42,6 @@ conj-zero-face-elimination
 cor-rank-two-visible
 lem-absorption-implies-low-slab-cap
 lem-huddle-charge-assembly
-lem-hx-financing-floor
-lem-hx-forced-exterior-coupling
-lem-hx-robust-scalar-starvation
-lem-hx-signed-variation-ledger
-lem-hx-transverse-moment-identity
 lem-low-slab-cap-implies-min-a
 lem-affine-barycenter-identity
 lem-affine-exposer-row-capacity
