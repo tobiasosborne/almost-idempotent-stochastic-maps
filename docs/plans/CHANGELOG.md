@@ -197,3 +197,20 @@ same X/I/D cell trichotomy as the SL1a fronts. Open surface strictly reduced:
 the sign-cube threat is pinned in I-cap; D-cap has the strongest positive
 mechanism (bounded-slab + robust starvation). Next per §4: the six W63 L3
 decider shapes, then creative I-cap -> D-cap -> X -> Sh -> W -> D.
+
+## 2026-07-11 — W63 (session 17): six-shape I-horn decider batch ALL BLOCKED; 5th consecutive tallness bind; pre-creative program COMPLETE (delta on v25)
+
+No registry change (L3 evidence only; `runs/2026-07-11-w63-ihorn-six-shape-decider/`,
+aism-t20p). All six W63 creative-leaf decider shapes BLOCKED with zero genuine
+I-base data: D/W reach the drift equality and an exactly PAID weighted chord
+(true ray value 2*tau^2) but remain the old wide fan (Omega -> 3/4) and short;
+Sh binds at the tau^2 negativity budget; X yields the FIRST exact
+definition-level M_X > 1/8 corner ledger (by-catch fixture — not an SC output,
+no I-base/L0 input); the attempted I-cap diagonal plateau has M_I = 0 and routes
+to the D cell, missing the I cell by exactly 1/16 (the predicted sign-cube cell
+has never been entered); D-cap stays inside the proved rank-three obstruction
+class and the canonical W55 completion fails negativity by order one. Map
+consequence: the pre-creative decider program for ALL NINE creative surfaces of
+the W62+W63 trees is complete; tallness and the negativity budget are the only
+walls ever named; creative queue green-lit (aism-72zn, I-cap first, with the
+X ledger and routes-to-D plateau as adverse fixtures).
