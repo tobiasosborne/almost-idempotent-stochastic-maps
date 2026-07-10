@@ -46,10 +46,15 @@ def parse_frontmatter(text):
 
 
 def flip_af_seeded(path, lines, fm_end):
-    """Replace the single `af: none` line inside the frontmatter with `af: seeded`."""
+    """Replace the single `af: none` line inside the frontmatter with `af: seeded`,
+    and ensure the `workspace: proofs/<id>` line the linker requires is present."""
+    rid = path.stem
+    has_workspace = any(lines[i].strip().startswith("workspace:") for i in range(1, fm_end))
     for i in range(1, fm_end):
         if lines[i].strip() == "af: none":
             lines[i] = lines[i].replace("af: none", "af: seeded")
+            if not has_workspace:
+                lines.insert(i + 1, f"workspace: proofs/{rid}")
             path.write_text("\n".join(lines) + "\n", encoding="utf-8")
             return True
     return False

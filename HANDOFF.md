@@ -33,9 +33,9 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 **Rigorous (af-validated, T0): 29** (lem-starvation-completion-obstruction af-validated 2026-07-10, ▣ fr-verified). **Registry: 151** (+7
 proved L5 lemmas, +3 conjectures this wave; EVERY banked proof passed a SEPARATE fresh
-hostile codex verifier; L0 claimed ONLY for the af-validated 28).
+hostile codex verifier; L0 claimed ONLY for the af-validated 29).
 
-**THE STATE OF THE PROOF (sketch v20): SL1a = three quantified sigma-cells on a proved
+**THE STATE OF THE PROOF (sketch v24; the W56 core map): SL1a = three quantified sigma-cells on a proved
 interface.** W56 ran resumed-architect (codex ultra) -> hostile r1 (INVALID) -> Fable
 repair -> hostile r2 (INVALID) -> extraction -> per-shard verification (4 VALID +
 6 VALID-WITH-CORRECTIONS, 0 INVALID) -> corrections -> BANK. The two INVALIDs converged
