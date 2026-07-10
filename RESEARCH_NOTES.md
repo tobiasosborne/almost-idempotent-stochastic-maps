@@ -15,7 +15,7 @@ s.t. every row-stochastic `Q` with `‖Q²−Q‖_{∞→∞} ≤ η ≤ η₀` 
 the **Kernel / (EX) conjecture** (`PRD.md`). Our job is to make one full path rigorous (byte-matched refs
 where the literature suffices, `af`-validated where new reasoning is needed).
 
-## Live exploration directions (mirrored in `fr` arms — run `fr board`)
+## Exploration directions (historical, sessions 2-7 origin — see fr board for the live frontier)
 
 - **A (primary)** — Prove the **(EX) kernel at rank ≥ 3**: every rank-≥3 signed idempotent `P` with `δ ≤ ¼`
   has a θ-½ actual-row chart `U₀` with `max_s Φ_s(U₀) ≤ δ` (empirical `C₀=1`). Obstruction: a geometric
