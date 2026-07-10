@@ -5,9 +5,9 @@ contract: For every finite exact signed idempotent P, all points q0 != q1 of the
 defs: def-signed-idempotent
 deps: 
 status: proved
-af: seeded
+af: validated
 workspace: proofs/lem-hx-transverse-moment-identity
-provenance: W60 wave (docs/waves/2026-07-10-W60-artifacts/): codex prover (gpt-5.6-sol, high) PROOFS-W60-ENGINE.md §E1; fresh hostile codex verifier (gpt-5.6-sol, xhigh), batched verdict VERDICT-W60-ENGINE.md line 'E1: VALID'. Reviewer != author.
+provenance: W60 wave (docs/waves/2026-07-10-W60-artifacts/): codex prover (gpt-5.6-sol, high) PROOFS-W60-ENGINE.md §E1; fresh hostile codex verifier (gpt-5.6-sol, xhigh), batched verdict VERDICT-W60-ENGINE.md line 'E1: VALID'. Reviewer != author. af-orchestrate 2026-07-10 (W61, aism-zo1): root validated, 14/14 nodes, taint clean; fresh codex verifier per node (prover != verifier); export.md/tex in proofs/.
 owner: B
 ---
 
@@ -37,6 +37,6 @@ constant \(1/\lVert D\rVert_1\) (dual-norm attainment, finite-dimensional).
 selection of \((q_0,q_1,\chi)\). Clone-invariant (full-fiber sums of affine values
 on row points). Signed picture.
 
-**Rigour tier.** L5 (fresh hostile codex, batched W60 verdict). NOT af-validated.
-af-elevation candidate (single minimal contract). Consumers:
+**Rigour tier.** af-validated (W61 orchestration 2026-07-10: root validated,
+14/14 nodes, taint clean; prior L5 batched W60 verdict). Consumers:
 [[lem-hx-financing-floor]], [[lem-hx-robust-scalar-starvation]].

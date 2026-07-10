@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{For every finite exact signed idempotent P, all points q0...}
+\step{1} For every finite exact signed idempotent P, all points q0 != q1 of the row polytope K(P) = conv\{p\_i\}, and every affine function chi on R\textasciicircum{}I with chi(q0) = 0 and chi(q1) = 1, the full row-point fibers satisfy sum\_Q d\_Q*chi(p\_Q) = 1, where d\_Q = sum\_\{j in Q\}(q1\_j - q0\_j). \steptag{validated} \\[6pt]
+\step{1.1} Every point q in K(P)=conv\{p\_i\} satisfies qP=q and q·1=1. \steptag{validated} \\[6pt]
+\step{1.1.1} For every row p\_i of P, p\_i P=p\_i and p\_i·1=1. \steptag{validated} \\[4pt]
+\step{1.1.2} If q=sum\_i alpha\_i p\_i with alpha\_i>=0 and sum\_i alpha\_i=1, then linearity gives qP=q and q·1=1. \steptag{validated} \\[4pt]
+\step{1.2} Writing D=q1-q0, one has DP=D and D·1=0. \steptag{validated} \\[6pt]
+\step{1.2.1} For k in \{0,1\}, because q\_k is a convex combination of rows, P\textasciicircum{}2=P and P1=1 imply q\_k P=q\_k and q\_k·1=1. \steptag{validated} \\[4pt]
+\step{1.2.2} Subtracting the k=0 identities from the k=1 identities yields (q1-q0)P=q1-q0 and (q1-q0)·1=0, i.e. DP=D and D·1=0. \steptag{validated} \\[4pt]
+\step{1.3} For any affine chi(x)=L(x)+c, if DP=D and D·1=0 then sum\_j D\_j chi(p\_j)=chi(q1)-chi(q0)=1. \steptag{validated} \\[6pt]
+\step{1.3.1} By row-matrix multiplication, sum\_j D\_j p\_j=DP. \steptag{validated} \\[4pt]
+\step{1.3.2} Using chi(x)=L(x)+c and finite linearity, sum\_j D\_j chi(p\_j)=L(sum\_j D\_j p\_j)+c sum\_j D\_j=L(DP)+c(D·1)=L(D). \steptag{validated} \\[4pt]
+\step{1.3.3} The affine constant cancels between the endpoints, so chi(q1)-chi(q0)=L(q1-q0)=L(D); the endpoint normalization makes this difference 1. \steptag{validated} \\[4pt]
+\step{1.4} Partitioning the finite index set into full row-point fibers Q gives sum\_Q d\_Q chi(p\_Q)=sum\_j D\_j chi(p\_j), where d\_Q=sum\_\{j in Q\}D\_j. \steptag{validated} \\[6pt]
+\step{1.4.1} The full row-point fibers Q partition the finite index set, and for every j in Q the row p\_j equals the common row point p\_Q. \steptag{validated} \\[4pt]
+\step{1.4.2} For each fiber Q, sum\_\{j in Q\} D\_j chi(p\_j)=(sum\_\{j in Q\}D\_j)chi(p\_Q)=d\_Q chi(p\_Q); summing the finitely many fiber equalities gives the claimed regrouping. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
