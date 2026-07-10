@@ -87,3 +87,21 @@ gamma dial). Both independent strategist trees banked in
 `docs/waves/2026-07-10-W60-artifacts/`. New Tier-1 item 0: the route decision + its
 two cheap L3 deciders; engine-bank af-elevation queued (prime:
 lem-hx-robust-scalar-starvation).
+
+## 2026-07-10 — W61: engine pair af-validated (T0 29 -> 31); both route-fork deciders decided (delta on v25)
+
+af-elevation (aism-zo1): `lem-hx-transverse-moment-identity` (14/14 nodes) and
+`lem-hx-robust-scalar-starvation` (12/12 nodes) are af-VALIDATED, taint clean — the
+T0 generalization proper of the starvation mechanism now sits at the oracle rung;
+T0 count 29 -> 31. The two L3 route-fork deciders (aism-3nk/aism-kup) are decided
+and banked (`runs/2026-07-10-w61-x2-graft-refuter/`,
+`runs/2026-07-10-w61-leak-financing-refuter/`): (A) X2 NOT refuted — the graft
+family gets every checked selected-corner clause except TALLNESS (H = O(tau^3));
+(B) FINANCING INSTANCE FOUND in local N5(ii) geometry — the ledger-only close of
+N5(ii) is dead as budgeted; N5 needs a freight-row/Gamma_f-coupling budget as a
+PREREQUISITE. Convergent signal: tallness is the binding wall in both searches —
+the resource the adversary cannot manufacture and the ledgers do not yet consume.
+Route fork aism-ur9 remains a USER DECISION, now fully informed (synthesis in
+`docs/waves/2026-07-10-W61-deciders-and-elevation.md`). Remaining engine-bank
+elevations (ledger/floor/coupling) queued serially. No surface change; no new
+mathematics beyond the oracle promotions and the two L3 records.
