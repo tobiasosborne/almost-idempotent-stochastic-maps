@@ -927,3 +927,20 @@ claims remain uncodified/non-L0 pending fresh standalone prover/verifier passes.
   repair bead aism-pus.
 - Registry 155; T0 29; all gates green; everything pushed. W60 (the H-X
   generalization wave) is the next mathematical wave.
+
+## 2026-07-10 — Session 15: W60 H-X engine bank (decomposition wave)
+
+User directive: attack the Tier-1s with DECOMPOSITION as the objective function.
+W60 (aism-bgh): two independent strategists (Fable + codex ultra) on the T0->H-X
+gap; trees CONVERGED on a routine engine bank and DIVERGED on the hard residual.
+Banked (L5, fresh hostile batched codex verdict, corrections applied):
+lem-hx-transverse-moment-identity, lem-hx-signed-variation-ledger,
+lem-hx-financing-floor, lem-hx-robust-scalar-starvation (explicit ceiling
+delta_R = min(2^-16, 1/(4H^2))), lem-hx-forced-exterior-coupling. Registry
+153->158. W59 HONEST-LIMITS gaps 1 (rank) + 2 (slab) RETIRED at mechanism level;
+tableau pin -> [tau/2,2tau] window; zero-top -> O(delta) tail cap. Sketch v25 +
+CHANGELOG + CURRENT + UNWIRED + HANDOFF reconciled. Route fork escalated as USER
+DECISION aism-ur9 (Route A codex named-H-X X2/X3F/X3N/X4 vs Route B Fable
+gamma-renegotiation N4+N5/N6 + gamma dial); two cheap L3 deciders identified.
+Wave artifacts: docs/waves/2026-07-10-W60-artifacts/ (both strategist trees,
+prover proofs, hostile verdict, all briefs). Commits 49c985e..HEAD, all pushed.
