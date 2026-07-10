@@ -10,8 +10,8 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read **`docs/plans/2026-07-10-top-down-proof-sketch-v23.md`** — THE canonical strategic
-   map (v23, W59 obstruction-lemma delta; v22 and earlier superseded in place, kept for line
+2. Read **`docs/plans/2026-07-10-top-down-proof-sketch-v24.md`** — THE canonical strategic
+   map (v24, af-elevation delta; v23 and earlier superseded in place, kept for line
    citations). Then `docs/waves/2026-07-10-W56-sl1a-decomposition-close.md` (the W56
    close: the wall, the harvest, the new three-cell SL1a surface).
    **STEWARDSHIP (user mandate, 2026-07-06, binding): reconciling the sketch with newly
@@ -31,7 +31,7 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 ## Current state (2026-07-10, W56 close)
 
-**Rigorous (af-validated, T0): 28** (unchanged — no af runs). **Registry: 151** (+7
+**Rigorous (af-validated, T0): 29** (lem-starvation-completion-obstruction af-validated 2026-07-10, ▣ fr-verified). **Registry: 151** (+7
 proved L5 lemmas, +3 conjectures this wave; EVERY banked proof passed a SEPARATE fresh
 hostile codex verifier; L0 claimed ONLY for the af-validated 28).
 
@@ -111,7 +111,7 @@ codex exec --skip-git-repo-check -C <scratch-workdir> -m gpt-5.6-sol \
 
 ## What is intentionally NOT here
 
-- Any claim more than TWENTY-EIGHT results are af-validated. The W56 banked 7 are L5
+- Any claim more than TWENTY-NINE results are af-validated. The W56 banked 7 are L5
   (fresh-hostile-verified), NOT L0.
 - Any claim SL1a, any sigma-cell, SL1b, L6.5, the L5 minimax, tall-emptiness, the
   huddle charge, or the Kernel Conjecture is proved. `lem-sl1a-three-cell-reduction`

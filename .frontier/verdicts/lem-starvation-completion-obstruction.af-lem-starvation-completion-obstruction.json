@@ -1,0 +1,9 @@
+{
+  "claim": "lem-starvation-completion-obstruction",
+  "oracle": "af-lem-starvation-completion-obstruction",
+  "result": "pass",
+  "claim_hash": "ee63a3be241b8c6f867faf7dc9cab20fe7b5cc3a9dbd48468274cf9230a3ec3e",
+  "oracle_digest": "0c8d5fbf2d0fcd2e073f890f163f269d0e51b51bfc1d71c48b143d2ebcbce65e",
+  "inputs_hash": "a7ae8563e5777a18c461ca427b5b2a2b8db4e8a9d341e526feac24a26bff8c82",
+  "ts": "2026-07-10T04:04:16.606Z"
+}

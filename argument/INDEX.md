@@ -112,7 +112,7 @@
 | `lem-sl1a-corner-ledger` | lemma | proved | none | B | For every exact signed idempotent P with 0 < delta(P) <= 2^(-16) and nonempty vi… |
 | `lem-sl1a-score-selector` | lemma | proved | none | B | For every exact signed idempotent P with delta(P) > 0, nonempty visible set W, a… |
 | `lem-sl1a-three-cell-reduction` | lemma | proved | none | B | If there exist universal delta_X, delta_I, delta_D in (0,2^(-16)] such that, wri… |
-| `lem-starvation-completion-obstruction` | lemma | proved | seeded | B | Bounded-slab starvation completion obstruction (K-free): for every finite I, eve… |
+| `lem-starvation-completion-obstruction` | lemma | proved | validated | B | Bounded-slab starvation completion obstruction (K-free): for every finite I, eve… |
 | `lem-tight-far-geography` | lemma | proved | none | A | Tight-far geography: for an exact signed idempotent P with delta(P) > 0 and none… |
 | `lem-top-concentration` | lemma | proved | validated | A | Top concentration: for an exact signed idempotent P with 0 < delta(P) <= 1/4, no… |
 | `lem-top-deficit-price` | lemma | proved | none | A | Top-deficit price: for an exact signed idempotent P with delta(P) > 0 and nonemp… |

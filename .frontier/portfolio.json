@@ -361,6 +361,18 @@
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-always-tight-dual-support/ledger",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-always-tight-dual-support.md"
         ]
+      },
+      {
+        "name": "af-lem-starvation-completion-obstruction",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-starvation-completion-obstruction"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/lem-starvation-completion-obstruction/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-starvation-completion-obstruction.md"
+        ]
       }
     ]
   },
