@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{For every finite exact signed idempotent P, every pair of...}
+\step{1} For every finite exact signed idempotent P, every pair of row indices (r,s), and every point c of the row polytope K(P), the full row-point fibers Q with ||p\_Q - c||\_1 > 1/2 jointly carry positive coefficient mass P\_r\textasciicircum{}+ + P\_s\textasciicircum{}+ at least ||p\_r - p\_s||\_1/(2*(2 + 4*delta(P))) - 2*delta(P). \steptag{validated} \\[6pt]
+\step{1.1} Fix arbitrary admissible P,r,s,c, put delta=delta(P), a=p\_r, b=p\_s, ell=||a-b||\_1, and let F be the full row-point fibers Q with ||p\_Q-c|$|\_1\rangle$1/2. If ell=0, then P\_r\textasciicircum{}+(F)+P\_s\textasciicircum{}+(F)>=0>=ell/(2*(2+4*delta))-2*delta, so the claimed bound holds. \steptag{validated} \\[4pt]
+\step{1.2} With the same notation, if ell>0 then P\_r\textasciicircum{}+(F)+P\_s\textasciicircum{}+(F)>=ell/(2*(2+4*delta))-2*delta. \steptag{validated} \\[6pt]
+\step{1.2.1} Choose u in [-1,1]\textasciicircum{}n coordinatewise so that u\_j(a\_j-b\_j)=|a\_j-b\_j|, and define the affine functional chi(x)=u dot (x-c)/ell. Then chi(a)-chi(b)=1. \steptag{validated} \\[4pt]
+\step{1.2.2} Let N be the full row-point fibers Q with ||p\_Q-c||\_1<=1/2, set A=1/(2*ell), and set Lambda=(2+4*delta)/ell. Then |chi(p\_Q)|<=A for Q in N and |chi(p\_Q)|<=Lambda for Q not in N; moreover A,Lambda>0 and the complement of N is exactly F. \steptag{validated} \\[6pt]
+\step{1.2.2.1} Because ||u||\_infinity<=1, |chi(x)|<=||x-c||\_1/ell for every x. Hence for every Q in N, |chi(p\_Q)|<=1/(2*ell)=A. \steptag{validated} \\[4pt]
+\step{1.2.2.2} By def-signed-idempotent, any two rows of P have l1-distance at most 2+4*delta. Since c is a convex combination of rows, ||p\_Q-c||\_1<=2+4*delta for every row point p\_Q, and therefore |chi(p\_Q)|<=Lambda for every Q not in N. Since ell>0 and delta>=0, A,Lambda>0; by their definitions, the complement of N is exactly F. \steptag{validated} \\[4pt]
+\step{1.2.3} For d\_Q=sum\_\{j in Q\}(a\_j-b\_j) and l\_chi=sum\_Q |d\_Q|, one has l\_chi<=ell; also nu(a)+nu(b)<=2*delta. \steptag{validated} \\[6pt]
+\step{1.2.3.1} The full row-point fibers partition the coordinate indices, so the triangle inequality gives l\_chi=sum\_Q |sum\_\{j in Q\}(a\_j-b\_j)|<=sum\_j |a\_j-b\_j|=ell. \steptag{validated} \\[4pt]
+\step{1.2.3.2} Because a=p\_r and b=p\_s are rows of P, def-negative-mass gives nu(a)<=delta(P)=delta and nu(b)<=delta(P)=delta, hence nu(a)+nu(b)<=2*delta. \steptag{validated} \\[4pt]
+\step{1.2.4} Applying lem-hx-financing-floor with the preceding chi,A,Lambda,N gives P\_r\textasciicircum{}+(F)+P\_s\textasciicircum{}+(F)>=ell/(2*(2+4*delta))-2*delta. \steptag{validated} \\[6pt]
+\step{1.2.4.1} The hypotheses established above permit the exact external lem-hx-financing-floor, which yields P\_r\textasciicircum{}+(F)+P\_s\textasciicircum{}+(F)>= (1-A*l\_chi)/Lambda-nu(a)-nu(b). Since l\_chi<=ell, A=1/(2*ell), Lambda=(2+4*delta)/ell, and nu(a)+nu(b)<=2*delta, the right side is at least (1-1/2)/((2+4*delta)/ell)-2*delta=ell/(2*(2+4*delta))-2*delta. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

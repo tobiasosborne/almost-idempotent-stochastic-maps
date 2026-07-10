@@ -5,9 +5,9 @@ contract: For every finite exact signed idempotent P, every pair of row indices 
 defs: def-signed-idempotent; def-negative-mass
 deps: lem-hx-financing-floor
 status: proved
-af: seeded
+af: validated
 workspace: proofs/lem-hx-forced-exterior-coupling
-provenance: W60 wave (docs/waves/2026-07-10-W60-artifacts/): codex prover (gpt-5.6-sol, high) PROOFS-W60-ENGINE.md §E5; fresh hostile codex verifier (gpt-5.6-sol, xhigh), batched verdict VERDICT-W60-ENGINE.md line 'E5: VALID-WITH-CORRECTIONS' (scope: exact triviality threshold l <= 8*delta + 16*delta^2 recorded; correction applied in-file and here). Reviewer != author.
+provenance: W60 wave (docs/waves/2026-07-10-W60-artifacts/): codex prover (gpt-5.6-sol, high) PROOFS-W60-ENGINE.md §E5; fresh hostile codex verifier (gpt-5.6-sol, xhigh), batched verdict VERDICT-W60-ENGINE.md line 'E5: VALID-WITH-CORRECTIONS' (scope: exact triviality threshold l <= 8*delta + 16*delta^2 recorded; correction applied in-file and here). Reviewer != author. af-orchestrate 2026-07-10 (W61, aism-8nt): root validated, 12/12 nodes, taint clean; fresh codex verifier per node; export.md/tex in proofs/.
 owner: B
 ---
 
@@ -34,7 +34,7 @@ in particular vacuous throughout \(\ell\le8\delta\). It does not say which row
 pays, identify a fiber, or furnish any selected-corner datum. Clone-invariant.
 Signed picture.
 
-**Rigour tier.** L5 (fresh hostile codex, batched W60 verdict; scope correction
-applied as prescribed). NOT af-validated. af-elevation candidate. Intended
+**Rigour tier.** af-validated (W61 orchestration 2026-07-10: root validated,
+12/12 nodes, taint clean; prior L5 batched W60 verdict).
 consumers: the L6.5 coupling front (`conj-cotop-web-coupling`), route-fork hard
 nodes (aism-ur9).
