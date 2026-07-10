@@ -5,9 +5,9 @@ contract: For every finite exact signed idempotent P, every ordered pair (a,b) o
 defs: def-signed-idempotent; def-negative-mass
 deps: lem-hx-transverse-moment-identity; lem-hx-signed-variation-ledger
 status: proved
-af: seeded
+af: validated
 workspace: proofs/lem-hx-financing-floor
-provenance: W60 wave (docs/waves/2026-07-10-W60-artifacts/): codex prover (gpt-5.6-sol, high) PROOFS-W60-ENGINE.md §E3; fresh hostile codex verifier (gpt-5.6-sol, xhigh), batched verdict VERDICT-W60-ENGINE.md line 'E3: VALID-WITH-CORRECTIONS' (contract wording: the endpoint-pin normalization replaced by the difference-one condition chi(a)-chi(b)=1 actually used; correction applied in-file and here). Reviewer != author. Quantifier correction 2026-07-10 (W61): 'all reals A' -> 'A > 0' after af verifier challenges (ch-9388e571 et al., proofs/lem-hx-financing-floor/ledger/) exhibited the A<0 reading false; reviewer = the fresh af verifiers, != author.
+provenance: W60 wave (docs/waves/2026-07-10-W60-artifacts/): codex prover (gpt-5.6-sol, high) PROOFS-W60-ENGINE.md §E3; fresh hostile codex verifier (gpt-5.6-sol, xhigh), batched verdict VERDICT-W60-ENGINE.md line 'E3: VALID-WITH-CORRECTIONS' (contract wording: the endpoint-pin normalization replaced by the difference-one condition chi(a)-chi(b)=1 actually used; correction applied in-file and here). Reviewer != author. Quantifier correction 2026-07-10 (W61): 'all reals A' -> 'A > 0' after af verifier challenges (ch-9388e571 et al., proofs/lem-hx-financing-floor/ledger/) exhibited the A<0 reading false; reviewer = the fresh af verifiers, != author. af-orchestrate 2026-07-10 (W61, aism-8nt): root validated on the corrected contract, 12 validated + 2 archived nodes, taint clean; fresh codex verifier per node; export.md/tex in proofs/.
 owner: B
 ---
 
@@ -47,7 +47,8 @@ is what the W60 proof establishes and what the contract now states. All consumer
 are unaffected: [[lem-hx-forced-exterior-coupling]] instantiates \(A\ell=1/2\);
 the route-fork actor scaffolds use \(A\ge4\). Recorded in `docs/LEARNINGS.md`.
 
-**Rigour tier.** L5 (fresh hostile codex, batched W60 verdict; wording correction
-applied as prescribed). NOT af-validated. af-elevation candidate. Consumer:
+**Rigour tier.** af-validated (W61 orchestration 2026-07-10: root validated on the
+corrected A > 0 contract, 12 validated + 2 archived nodes, taint clean; prior L5
+batched W60 verdict). Consumer:
 [[lem-hx-forced-exterior-coupling]]; the W60 route fork's hard nodes consume this
 engine (USER DECISION aism-ur9).

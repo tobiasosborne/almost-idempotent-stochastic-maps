@@ -72,7 +72,7 @@
 | `lem-hiddenness-dual-witness` | lemma | proved | validated | A | Hiddenness dual witness: for an exact signed idempotent P and a hidden row verte… |
 | `lem-hlc-implies-exposed-hull` | lemma | proved | none | A | HLC implies exposed hull (pinned-delta form): if there are universal delta_0 > 0… |
 | `lem-huddle-charge-assembly` | lemma | stated | none | A | Huddle-charge assembly (W54 tree, tall restriction): if lem-l2-core-collapse (Br… |
-| `lem-hx-financing-floor` | lemma | proved | seeded | B | For every finite exact signed idempotent P, every ordered pair (a,b) of points o… |
+| `lem-hx-financing-floor` | lemma | proved | validated | B | For every finite exact signed idempotent P, every ordered pair (a,b) of points o… |
 | `lem-hx-forced-exterior-coupling` | lemma | proved | seeded | B | For every finite exact signed idempotent P, every pair of row indices (r,s), and… |
 | `lem-hx-robust-scalar-starvation` | lemma | proved | validated | B | For all reals K_R, L, K_C >= 0 there is a universal delta_R(K_R,L,K_C) in (0,2^(… |
 | `lem-hx-signed-variation-ledger` | lemma | proved | validated | B | For every finite exact signed idempotent P, every ordered pair (a,b) of points o… |

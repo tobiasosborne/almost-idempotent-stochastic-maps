@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{For every finite exact signed idempotent P, every ordered...}
+\step{1} For every finite exact signed idempotent P, every ordered pair (a,b) of points of the row polytope K(P) with a != b, every affine chi with chi(a) - chi(b) = 1, all reals A > 0 and Lambda > 0, and every set N of full row-point fibers with |chi(p\_Q)| <= A for every Q in N and |chi(p\_Q)| <= Lambda for every Q not in N, the complement F of N satisfies a\textasciicircum{}+(F) + b\textasciicircum{}+(F) >= (1 - A*l\_chi)/Lambda - nu(a) - nu(b), where l\_chi = sum\_Q |d\_Q| and d\_Q = sum\_\{j in Q\}(a\_j - b\_j). \steptag{validated} \\[6pt]
+\step{1.1} In the setting of node 1, the permitted external lem-hx-transverse-moment-identity, applied with q0=b, q1=a and the recentered affine function chi\_0(x)=chi(x)-chi(b), yields the unit moment sum\_Q d\_Q*chi(p\_Q)=1 for d\_Q=sum\_\{j in Q\}(a\_j-b\_j). \steptag{validated} \\[6pt]
+\step{1.1.1} By def-signed-idempotent every row p\_i has coordinate sum 1. Since a and b lie in K(P)=conv\{p\_i\}, they also have coordinate sum 1. Because the full row-point fibers Q partition the finite index set, sum\_Q d\_Q=sum\_j(a\_j-b\_j)=1-1=0. \steptag{validated} \\[4pt]
+\step{1.1.2} Set chi\_0(x)=chi(x)-chi(b). Then chi\_0 is affine, chi\_0(b)=0, and chi\_0(a)=chi(a)-chi(b)=1. Applying lem-hx-transverse-moment-identity with q0=b and q1=a gives sum\_Q d\_Q*chi\_0(p\_Q)=1. Expanding chi\_0 and using sum\_Q d\_Q=0 gives sum\_Q d\_Q*chi(p\_Q)=1. \steptag{validated} \\[4pt]
+\step{1.2} Writing F for the complement of N, the unit moment and the bounds on |chi(p\_Q)| imply sum\_\{Q in F\}|d\_Q| >= (1-A*l\_chi)/Lambda, where l\_chi=sum\_Q|d\_Q|. \steptag{validated} \\[6pt]
+\step{1.2.1} Since the fibers split as N disjoint-union F, the unit moment from node 1.1 and the triangle inequality give 1 <= sum\_\{Q in N\}|d\_Q|*|chi(p\_Q)| + sum\_\{Q in F\}|d\_Q|*|chi(p\_Q)| <= A*sum\_\{Q in N\}|d\_Q| + Lambda*sum\_\{Q in F\}|d\_Q|. \steptag{validated} \\[4pt]
+\step{1.2.2} The stipulated A>0 and Lambda>0 imply A*sum\_\{Q in N\}|d\_Q| <= A*l\_chi. Hence 1 <= A*l\_chi+Lambda*sum\_\{Q in F\}|d\_Q|; subtracting A*l\_chi and dividing by Lambda>0 yields sum\_\{Q in F\}|d\_Q| >= (1-A*l\_chi)/Lambda. \steptag{validated} \\[4pt]
+\step{1.2.3} The root claim has been mathematically corrected from the false quantifier ‘all reals A’ to the explicit hypothesis A>0 (while retaining Lambda>0). Therefore the verifier’s example A=-1 is outside the corrected theorem domain. Under A>0, since N is a subset of all fibers, sum\_\{Q in N\}|d\_Q| <= l\_chi=sum\_Q|d\_Q|, and multiplication by A preserves the inequality; together with node 1.2.1 this yields 1 <= A*l\_chi+Lambda*sum\_\{Q in F\}|d\_Q| and hence the asserted bound after subtraction and division by Lambda>0. \steptag{validated} \\[4pt]
+\step{1.3} The permitted external lem-hx-signed-variation-ledger applied to the ordered pair (a,b) and S=F gives sum\_\{Q in F\}|d\_Q| <= a\textasciicircum{}+(F)+b\textasciicircum{}+(F)+nu(a)+nu(b); combining this with the preceding lower bound and rearranging proves the inequality in node 1. \steptag{archived} \\[6pt]
+\step{1.3.1} The verifier's scope objection is correct: node 1.3 proves the desired financing inequality only under the additional hypothesis A>=0, which is absent from the registered shard contract. Indeed, for P=I\_2, fibers Q\_1=\{1\}, Q\_2=\{2\}, a=e\_1, b=e\_2, chi(x)=x\_1, N=empty, F=\{Q\_1,Q\_2\}, A=-1, and Lambda=1, all registered hypotheses hold, but l\_chi=2, nu(a)=nu(b)=0, a\textasciicircum{}+(F)+b\textasciicircum{}+(F)=2, and the claimed lower bound is 3. Thus the registered theorem is false; amending only the af root to A>0 creates a contract mismatch and cannot constitute a proof. A mathematically valid repair is to require A>=0 in the registry contract and identically in the af root. \steptag{validated} \\[6pt]
+\step{1.3.1.1} For the explicit counterexample P=I\_2, P1=1 and P\textasciicircum{}2=P, so P is a finite exact signed idempotent. Its two distinct rows are a=e\_1 and b=e\_2 and its full row-point fibers are Q\_1=\{1\}, Q\_2=\{2\}. The affine chi(x)=x\_1 satisfies chi(a)-chi(b)=1. With N=empty, both N-bounds |chi(p\_Q)|<=A are vacuous even for A=-1; on F=\{Q\_1,Q\_2\}, |chi(e\_1)|=1 and |chi(e\_2)|=0 are at most Lambda=1. Moreover d\_\{Q\_1\}=1, d\_\{Q\_2\}=-1, hence l\_chi=2; nu(a)=nu(b)=0; and a\textasciicircum{}+(F)=b\textasciicircum{}+(F)=1. Consequently the asserted inequality reads 2>=3 and fails. This directly establishes that the all-real-A registry contract is false and that no bridging proof step can close the objection without changing that contract. \steptag{validated} \\[4pt]
+\step{1.3.2} Under the current root hypothesis A>0, node 1.2 gives (1-A*l\_chi)/Lambda <= sum\_\{Q in F\}|d\_Q|. Applying lem-hx-signed-variation-ledger to the ordered pair (a,b) and the fiber set S=F gives sum\_\{Q in F\}|d\_Q| <= a\textasciicircum{}+(F)+b\textasciicircum{}+(F)+nu(a)+nu(b), with exactly the same d\_Q=sum\_\{j in Q\}(a\_j-b\_j). Chaining these inequalities and subtracting nu(a)+nu(b) from both sides yields a\textasciicircum{}+(F)+b\textasciicircum{}+(F) >= (1-A*l\_chi)/Lambda-nu(a)-nu(b), which is the conclusion of node 1. \steptag{archived} \\[4pt]
+\step{1.4} Applying lem-hx-signed-variation-ledger to the ordered pair (a,b) and the set S=F of full row-point fibers gives sum\_\{Q in F\}|d\_Q| <= a\textasciicircum{}+(F)+b\textasciicircum{}+(F)+nu(a)+nu(b), because its coefficient d\_Q is exactly sum\_\{j in Q\}(a\_j-b\_j), the coefficient used in node 1. \steptag{validated} \\[4pt]
+\step{1.5} Node 1.2 and node 1.4 give (1-A*l\_chi)/Lambda <= sum\_\{Q in F\}|d\_Q| <= a\textasciicircum{}+(F)+b\textasciicircum{}+(F)+nu(a)+nu(b). By transitivity and subtraction of nu(a)+nu(b), a\textasciicircum{}+(F)+b\textasciicircum{}+(F) >= (1-A*l\_chi)/Lambda-nu(a)-nu(b), exactly the conclusion of node 1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
