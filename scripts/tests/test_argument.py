@@ -26,6 +26,12 @@ def L(id, deps=(), defs=(), af="none", status="proved", contract="C", workspace=
             "status": status, "contract": contract,
             "workspace": workspace or f"proofs/{id}"}
 
+def R(id, deps=(), routes=(), defs=(), af="none", status="proved", contract="C", workspace=None):
+    """Like L() but with an OR-ROUTE list: routes = ((m1,m2),(m3,)) -> [[m1,m2],[m3]]."""
+    d = L(id, deps=deps, defs=defs, af=af, status=status, contract=contract, workspace=workspace)
+    d["routes"] = [list(r) for r in routes]
+    return d
+
 # --- check_acyclic ---
 chain = [L("a", deps=[]), L("b", deps=["a"]), L("c", deps=["b"])]
 check("acyclic chain -> no error", ag.check_acyclic(chain) == [])
@@ -289,6 +295,131 @@ check("snapshot: only registry-titled issues are mapped",
 check("snapshot: closed status survives the round-trip", snap["lem-y"]["status"] == "closed")
 check("snapshot: non-blocks edges are filtered even if bd's --type filter fails",
       snap["lem-x"]["deps"] == {"lem-y"})
+
+# =====================================================================================
+# OR-ROUTE (disjunctive deps) — P0 feature aism-3ne. Grammar: routes: [a; b] | [c]
+#   each bracketed group = one route (conjunction of members); groups OR-combined.
+# =====================================================================================
+
+# --- (0) parse_routes grammar ---
+check("parse_routes: two routes", ag.parse_routes("[a; b] | [c]") == [["a", "b"], ["c"]])
+check("parse_routes: blank/None -> []", ag.parse_routes("") == [] and ag.parse_routes(None) == [])
+check("parse_routes: single group", ag.parse_routes("[a; b]") == [["a", "b"]])
+check("parse_routes: whitespace + empty group tolerated", ag.parse_routes(" [ a ;b ] |  ") == [["a", "b"]])
+# frontmatter round-trip: a shard with a routes: line parses into list-of-lists
+with tempfile.TemporaryDirectory() as d:
+    d = pathlib.Path(d); (d / "lemmas").mkdir()
+    (d / "lemmas" / "op-g.md").write_text(
+        "---\nid: op-g\nkind: open-problem\ncontract: G.\ndeps: \n"
+        "routes: [lem-a; lem-b] | [lem-c]\nstatus: open\naf: none\n---\nbody\n", encoding="utf-8")
+    (d / "lemmas" / "lem-plain.md").write_text(   # no routes line at all
+        "---\nid: lem-plain\nkind: lemma\ncontract: P.\ndeps: op-g\nstatus: proved\naf: none\n---\nx\n", encoding="utf-8")
+    _lem, _e = ag.parse_registry(d)
+    _byid = {x["id"]: x for x in _lem}
+    check("parse_registry: routes parse to list-of-lists", _byid["op-g"]["routes"] == [["lem-a", "lem-b"], ["lem-c"]])
+    check("parse_registry: no-routes shard -> [] (backward-compat)", _byid["lem-plain"]["routes"] == [])
+
+# --- (1) disjunctive ready/blocked: ready iff SOME route fully available; blocked iff none ---
+reg = [L("X", af="validated", status="proved"), L("Y", af="none", status="proved"),
+       R("G", routes=[["X"], ["Y"]], af="none", status="proved")]
+_, ready, blocked = ag.check_status(reg)
+check("OR-route: G ready when route1 (X validated) fires", "G" in ready and "G" not in blocked)
+reg2 = [L("X", af="none", status="proved"), L("Y", af="none", status="proved"),
+        R("G", routes=[["X"], ["Y"]], af="none", status="proved")]
+_, ready2, blocked2 = ag.check_status(reg2)
+check("OR-route: G blocked when NO route fully available", "G" in blocked2 and "G" not in ready2)
+reg3 = [L("X", af="none", status="proved"), L("Y", af="none", status="cited"),
+        R("G", routes=[["X"], ["Y"]], af="none", status="proved")]
+_, ready3, _ = ag.check_status(reg3)
+check("OR-route: G ready when route2 (cited leaf) fires", "G" in ready3)
+reg4 = [L("X", af="validated"), L("Y", af="none", status="proved"),
+        R("G", routes=[["X", "Y"]], af="none", status="proved")]
+_, ready4, blocked4 = ag.check_status(reg4)
+check("OR-route: a route is conjunctive (BOTH members required)", "G" in blocked4 and "G" not in ready4)
+reg5 = [L("D", af="none", status="proved"), L("X", af="validated"),
+        R("G", deps=["D"], routes=[["X"]], af="none", status="proved")]
+_, _, blocked5 = ag.check_status(reg5)
+check("OR-route: unmet unconditional dep blocks even with a firing route", "G" in blocked5)
+
+# --- (2) acyclicity over the UNION: a cycle hidden in a NON-FIRST route is still caught ---
+acyc = [L("safe", deps=[]), R("G", routes=[["safe"], ["H"]]), L("H", deps=["G"])]
+check("OR-route: cycle hidden in a non-first route is caught", ag.check_acyclic(acyc) != [])
+noc = [L("safe"), L("H2"), R("G", routes=[["safe"], ["H2"]])]
+check("OR-route: acyclic when no route cycles", ag.check_acyclic(noc) == [])
+# route members must resolve (check_imports)
+bad_rm = [R("G", routes=[["ghost"]])]
+check("OR-route: dangling route member is caught", has(ag.check_imports(bad_rm, set()), "ghost"))
+
+# --- (3) status propagation: af=validated needs ONE fully-validated/cited route (red->green) ---
+ok = [L("X", af="validated", status="proved"), L("Y", af="none", status="proved"),
+      R("G", routes=[["X"], ["Y"]], af="validated", status="proved")]
+errs_ok, _, _ = ag.check_status(ok)
+check("OR-route status-prop: validated G with one fully-validated route -> no error (green)", not has(errs_ok, "G"))
+bad = [L("X", af="none", status="proved"), L("Y", af="none", status="proved"),   # perturb: demote X
+       R("G", routes=[["X"], ["Y"]], af="validated", status="proved")]
+errs_bad, _, _ = ag.check_status(bad)
+check("OR-route status-prop: validated G with NO fully-validated route -> ERROR (red)", has(errs_bad, "G"))
+errs_restore, _, _ = ag.check_status(ok)                                          # restore
+check("OR-route status-prop: restore -> green again", not has(errs_restore, "G"))
+
+# --- (4) backward-compat: live registry non-route shards classify IDENTICALLY to the deps-only rule ---
+real, real_errs = ag.parse_registry(ROOT / "argument")
+check("backward-compat: live registry parses clean", real_errs == [])
+def _ref_deps_only(lemmas):
+    af_of = {l["id"]: l.get("af", "none") for l in lemmas}
+    st_of = {l["id"]: l.get("status") for l in lemmas}
+    avail = lambda d: af_of.get(d, "none") == "validated" or st_of.get(d) == "cited"
+    ready, blocked = set(), set()
+    for l in lemmas:
+        ok = all(avail(d) for d in l.get("deps", []))
+        if l.get("af", "none") != "validated" and not ok: blocked.add(l["id"])
+        if l.get("af", "none") in ("none", "seeded") and l.get("status") in ("proved", "consensus") and ok:
+            ready.add(l["id"])
+    return ready, blocked
+_, nready, nblocked = ag.check_status(real)
+rready, rblocked = _ref_deps_only(real)
+routed = {l["id"] for l in real if l.get("routes")}
+check("backward-compat: non-route shards' READY set unchanged",
+      {x for x in nready if x not in routed} == {x for x in rready if x not in routed})
+check("backward-compat: non-route shards' BLOCKED set unchanged",
+      {x for x in nblocked if x not in routed} == {x for x in rblocked if x not in routed})
+# once op-hlc is wired (routes present), it must be BLOCKED (no route fully validated) — meaningful post-wiring
+if "op-hlc" in routed:
+    check("backward-compat: wired op-hlc (routes) is blocked", "op-hlc" in nblocked)
+
+# --- (5) DAG rendering with routes: OR-junctions, solid member edges, dashed OR edge; valid Mermaid ---
+rreg = [L("m1", af="validated", status="proved"), L("m2", status="cited"), L("m3", status="proved"),
+        R("goal", routes=[["m1", "m2"], ["m3"]], af="none", status="open")]
+rreg[3]["kind"] = "open-problem"
+dag = ag.render_dag(rreg)
+check("DAG routes: junction node goal__route1 rendered", 'goal__route1{"route 1"}' in dag)
+check("DAG routes: junction node goal__route2 rendered", 'goal__route2{"route 2"}' in dag)
+check("DAG routes: conjunctive member solid edge m1 --> goal__route1", "m1 --> goal__route1" in dag)
+check("DAG routes: dashed OR edge junction -> goal", "goal__route1 -. OR .-> goal" in dag)
+check("DAG routes: route-junction classDef + class assignment",
+      "classDef routejct" in dag and "class goal__route1,goal__route2 routejct" in dag)
+check("DAG routes: deterministic", ag.render_dag(rreg) == ag.render_dag(rreg))
+check("DAG routes: valid Mermaid skeleton (graph header + balanced fences)",
+      "```mermaid\ngraph LR\n" in dag and dag.count("```") == 2)
+check("DAG routes: every dashed OR link is well-formed ('-. OR .->')",
+      dag.count("-.") == dag.count(".->") == 2)   # exactly the two OR edges
+with tempfile.TemporaryDirectory() as _td:
+    _d = pathlib.Path(_td)
+    ag.generate(rreg, arg_dir=_d)
+    check("DAG routes: fresh routed generate -> not stale (staleness gate green)",
+          ag.check_generated(rreg, arg_dir=_d) == [])
+
+# --- route_closures / --closure-min helper: per-route ancestor sets ---
+prc = [L("a1"), L("a2", deps=["a1"]), L("b1"),
+       R("goal", routes=[["a2"], ["b1"]], status="open")]
+prc[3]["kind"] = "open-problem"
+rc = ag.route_closures(prc, "goal")
+check("route_closures: one entry per route", len(rc) == 2)
+check("route_closures: route1 ancestors = {a1,a2}", rc[0][2] == {"a1", "a2"})
+check("route_closures: route2 ancestors = {b1}", rc[1][2] == {"b1"})
+check("route_closures: deps-only shard -> [] (no routes)", ag.route_closures([L("x")], "x") == [])
+# union closure (deps_closure) spans ALL routes ('potentially relevant ancestors')
+check("deps_closure over routes = union of all route ancestors", ag.deps_closure(prc, "goal") == {"a1", "a2", "b1"})
 
 print(f"\n{passed} passed, {failed} failed")
 raise SystemExit(1 if failed else 0)

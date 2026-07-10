@@ -25,7 +25,8 @@ id: lem-square-hole-almost-positive    # lem-|thm-|prop-|cor-|op-<slug>; unique;
 kind: lemma                            # lemma | proposition | theorem | corollary | open-problem | obstruction
 contract: For r in A, q_r = P(r^2)-r^2 satisfies q_r >= -C·eta·||r||^2·1.   # THE statement (one line)
 defs: def-spectral-idempotent; def-near-fixed-algebra; def-square-hole      # def-ids used (semicolon list)
-deps: lem-P-properties                 # lemma-ids imported (semicolon list; the DAG edges)
+deps: lem-P-properties                 # lemma-ids imported unconditionally (semicolon list; DAG edges)
+routes: [lem-a; lem-b] | [lem-c]       # OPTIONAL OR-ROUTE: alternative dep-groups (see below); omit if none
 status: stated                         # stated | proved | cited | consensus | open | obstruction | disproved (the MATH status)
 af: none                               # none | seeded | validated  (formalization progress in proofs/<id>/)
 provenance: theorem-B-algebraic-bridge.md:301-372 (B; A-verified v0.5 §10)
@@ -41,7 +42,23 @@ workspace: proofs/lem-square-hole-almost-positive
 - **kind** — the result type. `open-problem`/`obstruction` are tracked too (the frontier and the no-gos).
 - **contract** — the canonical statement, ONE line. It must equal (modulo whitespace) the af workspace
   root conjecture and any dependent's import of this id. This is the anti-drift invariant.
-- **defs / deps** — imports. `defs` resolve to `definitions/<id>.md`; `deps` resolve to other registry ids.
+- **defs / deps** — imports. `defs` resolve to `definitions/<id>.md`; `deps` resolve to other registry
+  ids. `deps` are **unconditional** — needed by *every* way of discharging the result.
+- **routes** *(OPTIONAL, OR-ROUTE — aism-3ne)* — alternative dependency groups, when a result can be
+  discharged by **any one of several** independent strategies. Grammar:
+  `routes: [lem-a; lem-b] | [lem-c]` — each bracketed group is **one route** (a *conjunction*: all its
+  members required), groups separated by `|` (the *disjunction*: any one route suffices). A shard may
+  carry `deps:` (unconditional) **and** `routes:` together. Semantics enforced by the linker:
+  - **Acyclicity** is over the **union** of `deps` + all route members (a cycle hidden in *any* route is
+    still a cycle).
+  - **Satisfaction** (ready / blocked, and the `af: validated` status-propagation rule): a result's
+    imports are met iff every unconditional `dep` is available **AND** (`routes` is empty **OR** at least
+    **one** route's members are *all* available). So an `af: validated` routed result needs one *fully*
+    validated/cited route plus all unconditional deps — the rigour ladder is never weakened.
+  - **Closures** (`--show`, DAG): the ancestor/descendant closures are the **union over all routes** (the
+    "potentially relevant ancestors"). For the *per-route* ancestor sets use
+    `python3 scripts/argument.py --closure-min <id>`.
+  - A deps-only shard (no `routes:` line) behaves **byte-identically to before** this field existed.
 - **status** — the mathematical status. `stated` = asserted+proved in the upstream manuscript,
   transcribed faithfully here, **not yet independently verified in-repo** (the default for a transcribed
   result — this repo audits an existing paper); `proved` = a proof we have independently checked (ready
@@ -53,11 +70,13 @@ workspace: proofs/lem-square-hole-almost-positive
 
 ## What the linker enforces (`scripts/argument.py`)
 
-1. **Acyclic** — `deps` form a DAG (cycle ⇒ ERROR).
-2. **Imports resolve** — every `dep` is a known registry id; every `def` is a known `definitions/` id (ERROR on dangling).
+1. **Acyclic** — `deps` **and** all `routes` members (the union) form a DAG (cycle ⇒ ERROR).
+2. **Imports resolve** — every `dep` and every `routes` member is a known registry id; every `def` is a
+   known `definitions/` id (ERROR on dangling).
 3. **Contract match** — for `af != none`, the registry `contract` ≡ the af root conjecture (`af get 1 -f json`); drift ⇒ ERROR.
-4. **Status propagation** — `af: validated` requires all deps `af: validated` (ERROR otherwise); computes
-   the **ready frontier** (status `proved`/`consensus`, `af != validated`, all deps validated) and the **blocked** set.
+4. **Status propagation** — `af: validated` requires all unconditional deps validated **and** (no `routes`,
+   or one route *fully* validated/cited) (ERROR otherwise); computes the **ready frontier** (status
+   `proved`/`consensus`, `af != validated`, imports met per the OR-route satisfaction rule) and the **blocked** set.
 5. **Brittleness** — for a workspace with node-count or depth over threshold (default >12 / depth >3),
    WARN **REFACTOR: factor into sub-lemmas** (principle 2's failure signal, made mechanical).
 6. **Orphans** — registry lemma with `af != none` but missing `proofs/<id>/` ⇒ ERROR; a `proofs/*` workspace
@@ -81,5 +100,7 @@ INDEX/DAG are generated — do not hand-edit.
 ## Tooling
 - `python3 scripts/argument.py --check` — run all checks (exit ≠ 0 on ERROR). Part of the pre-commit suite.
 - `python3 scripts/argument.py --generate` — (re)write `INDEX.md` + `DAG.md`.
-- `python3 scripts/argument.py --show <id>` — local map (contract, deps/dependents, ancestor/descendant closures).
+- `python3 scripts/argument.py --show <id>` — local map (contract, deps/routes, dependents, ancestor/descendant closures).
+- `python3 scripts/argument.py --closure-min <id>` — for a routed shard, the **per-route** ancestor closures
+  (each route is one self-contained way to discharge the result).
 - `python3 scripts/argument.py --sync-beads` — mirror the registry into beads.

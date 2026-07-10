@@ -60,3 +60,14 @@ af-validated the root in 3 rounds (7 nodes, all validated, taint clean); `fr ver
 PASS (▣). Terminal artifact of the W55–W59 arc: threat named → exact kills → paper
 proof → af oracle. Tier-1 order unchanged — the generalization wave toward the H-X
 tableau is now anchored to a T0 lemma.
+
+## 2026-07-10 — OR-routes land; op-classical's formal closure now contains the live surface (delta on v24)
+
+The linker gained disjunctive `routes:` support (aism-3ne, user-decided option (a) of the
+op-hlc OR-question). op-hlc now declares BOTH routes — [lem-kernel-implies-hlc; conj-kernel]
+| [lem-min-a-implies-height] — without false conjunction. op-classical's directed ancestor
+closure: 12 -> 41 prerequisites (+29 = the whole MIN-A/absorption/huddle component incl. the
+three-cell SL1a surface); reachable open conjectures 1 -> 11 (7 irreducible leaves). Per-route
+closures: Kernel = 3, MIN-A = 30. op-hlc correctly remains status: open (declared, not
+discharged). No mathematical content changed — this is codification of the map the sketch
+already asserted in prose.

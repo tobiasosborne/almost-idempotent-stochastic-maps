@@ -17,7 +17,8 @@ Usage:
   python3 scripts/argument.py --check       # validate (exit 1 on ERROR)
   python3 scripts/argument.py --generate     # (re)write argument/{INDEX,DAG}.md
   python3 scripts/argument.py --show <id>     # local map of one result: contract, defs,
-                                              #   direct deps/dependents, full ancestor/descendant closures
+                                              #   direct deps/routes/dependents, full ancestor/descendant closures
+  python3 scripts/argument.py --closure-min <id>  # per-route ancestor closures of a routed (OR-ROUTE) shard
   python3 scripts/argument.py --sync-beads    # mirror registry into beads (idempotent; one issue
                                               #   per result, dep edges = DAG edges, available
                                               #   results closed) so `bd ready` == proof frontier
@@ -64,6 +65,44 @@ def normalize(s):
     return " ".join((s or "").split())
 
 
+def parse_routes(s):
+    """Parse the OPTIONAL `routes:` field into a list of routes, each route a conjunctive
+    dep-list. Grammar (P0 OR-ROUTE, aism-3ne):
+
+        routes: [dep-a; dep-b] | [dep-c]
+
+    Each bracketed group is ONE route (a conjunction of its members — all must be satisfied
+    for that route to fire); groups are separated by `|` (the disjunction — ANY one route
+    suffices). Whitespace around `|`, brackets, and `;` is ignored; empty groups are dropped.
+    Returns [] for a missing/blank field (backward-compatible: a shard with no routes behaves
+    byte-identically to today). Returns e.g. [["dep-a","dep-b"], ["dep-c"]]."""
+    s = (s or "").strip()
+    if not s:
+        return []
+    routes = []
+    for group in s.split("|"):
+        group = group.strip()
+        if group.startswith("[") and group.endswith("]"):
+            group = group[1:-1]
+        members = [x.strip() for x in group.split(";") if x.strip()]
+        if members:
+            routes.append(members)
+    return routes
+
+
+def route_members(l):
+    """Flattened list of every id appearing in any of a shard's routes (with multiplicity)."""
+    return [m for r in l.get("routes", []) for m in r]
+
+
+def all_dep_ids(l):
+    """The UNION of unconditional deps + all route members. Used for acyclicity and for the
+    (conservative, union-over-routes) ancestor/descendant closures — the 'potentially relevant
+    ancestors'. A cycle through ANY route is still a cycle; goal-reachability counts every route's
+    members as ancestors. (Per-route closures are available via --closure-min.)"""
+    return list(l.get("deps", [])) + route_members(l)
+
+
 def _parse_frontmatter(path):
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---"):
@@ -80,6 +119,8 @@ def _parse_frontmatter(path):
         fm[k.strip()] = v.strip()
     for f in LIST_FIELDS:
         fm[f] = [x.strip() for x in fm.get(f, "").split(";") if x.strip()]
+    # OPTIONAL `routes:` — parsed structurally (not a simple `;`-list); absent -> [] (backward-compat).
+    fm["routes"] = parse_routes(fm.get("routes", ""))
     return fm
 
 
@@ -111,7 +152,9 @@ def parse_registry(arg_dir):
 
 def check_acyclic(lemmas):
     ids = {l["id"] for l in lemmas}
-    adj = {l["id"]: [d for d in l.get("deps", []) if d in ids] for l in lemmas}
+    # Acyclicity is computed over the UNION of deps + all route members (conservative: a cycle
+    # hidden in any route — not just the first — is still a cycle).
+    adj = {l["id"]: [d for d in all_dep_ids(l) if d in ids] for l in lemmas}
     errors, state = [], {}  # 0=unvisited 1=in-stack 2=done
 
     def dfs(u, stack):
@@ -140,6 +183,11 @@ def check_imports(lemmas, def_ids):
         for d in l.get("deps", []):
             if d not in ids:
                 errors.append(f"{l['id']}: unknown dep '{d}' (not a registry id)")
+        for ri, r in enumerate(l.get("routes", []), 1):
+            for m in r:
+                if m not in ids:
+                    errors.append(f"{l['id']}: unknown route member '{m}' "
+                                  f"(route {ri}, not a registry id)")
         for df in l.get("defs", []):
             if df not in def_ids:
                 errors.append(f"{l['id']}: unknown def '{df}' (not in definitions/)")
@@ -154,18 +202,36 @@ def check_status(lemmas):
     # Only status=='cited' counts as a leaf — NOT consensus/open/obstruction/disproved/proved.
     def available(d):
         return af_of.get(d, "none") == "validated" or status_of.get(d) == "cited"
+
+    def requirements_met(l):
+        """A shard's imports are satisfied iff every unconditional dep is available AND
+        (it has no routes, OR at least ONE route's members are ALL available). This is the
+        disjunctive (OR-ROUTE) generalisation; a deps-only shard (routes == []) reduces to the
+        original 'all deps available' rule byte-for-byte."""
+        if not all(available(d) for d in l.get("deps", [])):
+            return False
+        routes = l.get("routes", [])
+        if routes and not any(all(available(m) for m in r) for r in routes):
+            return False
+        return True
+
     errors, ready, blocked = [], [], []
     for l in lemmas:
-        deps = l.get("deps", [])
-        deps_available = all(available(d) for d in deps)
-        if l.get("af") == "validated" and not deps_available:
-            bad = [d for d in deps if not available(d)]
-            errors.append(f"{l['id']}: af=validated but dep(s) not validated: {bad}")
-        if l.get("af", "none") != "validated" and not deps_available:
+        met = requirements_met(l)
+        if l.get("af") == "validated" and not met:
+            # Status propagation (the af rule): a validated result can never rest on a non-rigorous
+            # dep. With routes, it needs all unconditional deps available AND one FULLY-available route.
+            bad = [d for d in l.get("deps", []) if not available(d)]
+            if l.get("routes"):
+                errors.append(f"{l['id']}: af=validated but no route is fully validated/cited "
+                              f"(unconditional bad deps: {bad})")
+            else:
+                errors.append(f"{l['id']}: af=validated but dep(s) not validated: {bad}")
+        if l.get("af", "none") != "validated" and not met:
             blocked.append(l["id"])
         if (l.get("af", "none") in ("none", "seeded")
                 and l.get("status") in ("proved", "consensus")
-                and deps_available):
+                and met):
             ready.append(l["id"])
     return errors, ready, blocked
 
@@ -337,20 +403,23 @@ def sync_beads(lemmas):
 # ---------- node map: ancestor/descendant closures (--show) ----------
 
 def _closure(lemmas, root, reverse):
-    """Transitive set reachable from `root` along deps edges (reverse=False) or
-    reverse deps edges (reverse=True). Excludes `root`; ignores dangling deps
-    (check_imports reports those). Returns None if `root` is not a registry id."""
+    """Transitive set reachable from `root` along dependency edges (reverse=False) or reverse
+    dependency edges (reverse=True). Edges = the UNION of deps + all route members (so the
+    ancestor closure is the 'potentially relevant ancestors' over ALL routes — the conservative
+    goal-reachability set; per-route closures are separate, see route_closures / --closure-min).
+    Excludes `root`; ignores dangling deps (check_imports reports those). Returns None if `root`
+    is not a registry id."""
     by = {l["id"]: l for l in lemmas}
     if root not in by:
         return None
     if reverse:
         adj = {i: [] for i in by}
         for l in lemmas:
-            for d in l.get("deps", []):
+            for d in all_dep_ids(l):
                 if d in by:
                     adj[d].append(l["id"])
     else:
-        adj = {i: [d for d in by[i].get("deps", []) if d in by] for i in by}
+        adj = {i: [d for d in all_dep_ids(by[i]) if d in by] for i in by}
     seen, stack = set(), list(adj[root])
     while stack:
         n = stack.pop()
@@ -372,6 +441,31 @@ def dependents_closure(lemmas, root):
     return _closure(lemmas, root, reverse=True)
 
 
+def route_closures(lemmas, root):
+    """Per-route ancestor closures of a routed shard. Returns a list of (route_index, members,
+    closure_set) — one entry per route — where closure_set is the transitive ancestor set reached
+    by treating THAT route's members (plus the shard's unconditional deps) as the only edges out of
+    `root`. Empty list if `root` is unknown or has no routes. This makes the disjunction legible:
+    each entry is one self-contained way to discharge `root`."""
+    by = {l["id"]: l for l in lemmas}
+    if root not in by or not by[root].get("routes"):
+        return []
+    base = list(by[root].get("deps", []))
+    out = []
+    for i, r in enumerate(by[root]["routes"], 1):
+        # transitive closure over full deps edges, but with `root`'s outgoing edges = base + this route
+        seen, stack = set(), [d for d in base + list(r) if d in by]
+        while stack:
+            n = stack.pop()
+            if n in seen:
+                continue
+            seen.add(n)
+            stack.extend(d for d in all_dep_ids(by[n]) if d in by)
+        seen.discard(root)
+        out.append((i, list(r), seen))
+    return out
+
+
 def format_show(lemmas, root):
     """Human-readable local map of one result: its contract, direct defs/deps,
     direct dependents, and the full ancestor/descendant closures."""
@@ -386,19 +480,25 @@ def format_show(lemmas, root):
         return f"{i}[{x.get('status','?')}/{x.get('af','none')}]" if x else f"{i}[MISSING]"
 
     direct_deps = l.get("deps", [])
-    direct_dependents = sorted(i for i in by if root in by[i].get("deps", []))
+    # route members count as consumers/consumed too (union edge set)
+    direct_dependents = sorted(i for i in by if root in all_dep_ids(by[i]))
     anc = sorted(deps_closure(lemmas, root))
     desc = sorted(dependents_closure(lemmas, root))
-    return "\n".join([
+    lines = [
         f"# {root}  [{l.get('status','?')}/{l.get('af','none')}]  "
         f"kind={l.get('kind','?')}  owner={l.get('owner','-')}",
         f"contract: {l.get('contract','')}",
         f"defs:        {'; '.join(l.get('defs', [])) or '(none)'}",
         f"deps (direct prerequisites): {', '.join(tag(d) for d in direct_deps) or '(none)'}",
+    ]
+    for i, members in enumerate(l.get("routes", []), 1):
+        lines.append(f"route {i} (OR; all-of): {', '.join(tag(m) for m in members) or '(none)'}")
+    lines += [
         f"dependents (direct):         {', '.join(tag(d) for d in direct_dependents) or '(none)'}",
         f"ancestors   (all {len(anc)} prerequisites): {', '.join(anc) or '(none)'}",
         f"descendants (all {len(desc)} dependents):   {', '.join(desc) or '(none)'}",
-    ])
+    ]
+    return "\n".join(lines)
 
 
 # ---------- integration (filesystem + af) ----------
@@ -451,7 +551,17 @@ CLASSDEFS = [
     ("nonrigorous", "fill:#ffe8cc,stroke:#d97706,color:#7a3d00,stroke-dasharray:4 2"),
     ("open",      "fill:#ffd6d6,stroke:#cf222e,color:#6e1119,stroke-dasharray:5 3"),
 ]
+# OR-route junction nodes (id__routeN) are rendered in this distinct pill style.
+ROUTE_CLASSDEF = ("routejct", "fill:#fbe7ff,stroke:#8250df,color:#3b1a73,stroke-dasharray:2 2")
 GEN_HEADER = "<!-- GENERATED by scripts/argument.py --generate. Do not hand-edit. -->\n"
+# OR-ROUTE rendering (aism-3ne): a shard with a `routes:` field draws, per route i, a rhombus
+# junction node `<id>__routeI` labelled "route i"; each route MEMBER feeds that junction with a
+# solid edge (member --> id__routeI, the conjunction), and the junction feeds the shard with a
+# DASHED "OR" edge (id__routeI -. OR .-> id, the disjunction). Unconditional deps draw ordinary
+# solid edges straight to the shard. So: solid = required; dashed OR = "any one route suffices".
+DAG_ROUTE_NOTE = ("<!-- OR-routes: `<id>__routeN` rhombus = one alternative route; solid edges into "
+                  "it are that route's conjunctive members; the dashed `OR` edge into `<id>` means "
+                  "any single route suffices. Unconditional deps draw plain solid edges. -->\n")
 LEGEND = ("**Proof-status legend:** 🟩 validated · 🟦 proved · 🟨 seeded · "
           "⬜ stated · 🟪 cited · 🟧 proved-mod-audit/conjecture/heuristic/numerical (NON-rigorous) · 🟥 open")
 
@@ -482,19 +592,36 @@ def render_index(lemmas):
 
 
 def render_dag(lemmas):
-    """The full deps DAG + proof status as a status-coloured Mermaid graph. Deterministic."""
+    """The full deps DAG + proof status as a status-coloured Mermaid graph. Deterministic.
+    Multi-route shards render an OR-junction per route (see DAG_ROUTE_NOTE)."""
     ll = sorted(lemmas, key=lambda d: d.get("id", ""))
     nodes = [f'  {l["id"]}["{l["id"]}<br/>{l.get("status","")}/{l.get("af","none")}"]' for l in ll]
-    edges = sorted(f"  {d} --> {l['id']}" for l in ll for d in l.get("deps", []))
+    # unconditional deps -> plain solid edges (required by every route)
+    edges = [f"  {d} --> {l['id']}" for l in ll for d in l.get("deps", [])]
+    route_nodes, route_edges, route_junctions = [], [], []
+    for l in ll:
+        for i, r in enumerate(l.get("routes", []), 1):
+            jn = f'{l["id"]}__route{i}'
+            route_junctions.append(jn)
+            route_nodes.append(f'  {jn}{{"route {i}"}}')
+            for m in sorted(r):                          # solid = this route's conjunctive members
+                route_edges.append(f"  {m} --> {jn}")
+            route_edges.append(f"  {jn} -. OR .-> {l['id']}")   # dashed = the disjunction
+    edges = sorted(edges) + sorted(route_edges)
+    total_edges = len(edges)
     classdefs = [f"  classDef {name} {style};" for name, style in CLASSDEFS]
+    classdefs.append(f"  classDef {ROUTE_CLASSDEF[0]} {ROUTE_CLASSDEF[1]};")
     by_class = {}
     for l in ll:
         by_class.setdefault(proof_class(l), []).append(l["id"])
     classlines = [f"  class {','.join(sorted(by_class[name]))} {name};"
                   for name, _ in CLASSDEFS if by_class.get(name)]
-    body = "\n".join(classdefs + nodes + edges + classlines)
-    return (GEN_HEADER + f"# Argument DAG ({len(ll)} results, {len(edges)} edges)\n\n"
-            + LEGEND + "\n\n```mermaid\ngraph LR\n" + body + "\n```\n")
+    if route_junctions:
+        classlines.append(f"  class {','.join(sorted(route_junctions))} {ROUTE_CLASSDEF[0]};")
+    body = "\n".join(classdefs + nodes + route_nodes + edges + classlines)
+    header = (GEN_HEADER + DAG_ROUTE_NOTE
+              + f"# Argument DAG ({len(ll)} results, {total_edges} edges)\n\n")
+    return (header + LEGEND + "\n\n```mermaid\ngraph LR\n" + body + "\n```\n")
 
 
 def generate(lemmas, arg_dir=ARG_DIR):
@@ -526,6 +653,29 @@ def main(argv):
         lemmas, _ = parse_registry(ARG_DIR)
         print(format_show(lemmas, target))
         return 0 if any(l.get("id") == target for l in lemmas) else 1
+    if "--closure-min" in argv:
+        i = argv.index("--closure-min")
+        target = argv[i + 1] if i + 1 < len(argv) else None
+        if not target or target.startswith("--"):
+            print("usage: python3 scripts/argument.py --closure-min <id>")
+            return 2
+        lemmas, _ = parse_registry(ARG_DIR)
+        by = {l["id"]: l for l in lemmas}
+        if target not in by:
+            print(f"unknown id '{target}' — not a registry result.")
+            return 1
+        rc = route_closures(lemmas, target)
+        if not rc:
+            print(f"{target}: no routes (deps-only shard). Full ancestor closure via --show.")
+            return 0
+        print(f"# {target}: per-route ancestor closures ({len(rc)} routes; ANY one discharges it)")
+        base = by[target].get("deps", [])
+        if base:
+            print(f"unconditional deps (in every route): {', '.join(base)}")
+        for idx, members, clo in rc:
+            print(f"route {idx} (members: {', '.join(members)}): "
+                  f"{len(clo)} ancestors -> {', '.join(sorted(clo)) or '(none)'}")
+        return 0
     args = set(argv) or {"--check", "--generate"}
     lemmas, errors = parse_registry(ARG_DIR)
     def_ids = load_def_ids()
