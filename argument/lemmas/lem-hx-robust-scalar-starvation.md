@@ -5,7 +5,8 @@ contract: For all reals K_R, L, K_C >= 0 there is a universal delta_R(K_R,L,K_C)
 defs: def-signed-idempotent; def-negative-mass
 deps: lem-hx-transverse-moment-identity
 status: proved
-af: none
+af: seeded
+workspace: proofs/lem-hx-robust-scalar-starvation
 provenance: W60 wave (docs/waves/2026-07-10-W60-artifacts/): codex prover (gpt-5.6-sol, high) PROOFS-W60-ENGINE.md §E4; fresh hostile codex verifier (gpt-5.6-sol, xhigh), batched verdict VERDICT-W60-ENGINE.md line 'E4: VALID' (incl. an independent small-exact-counterexample attack that failed exactly at the tail hypothesis, and the T0 fixture check). Reviewer != author.
 owner: B
 ---

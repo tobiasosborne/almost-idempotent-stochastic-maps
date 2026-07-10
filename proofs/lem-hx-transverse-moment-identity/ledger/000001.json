@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-07-10T12:57:55.41613488Z","conjecture":"For every finite exact signed idempotent P, all points q0 != q1 of the row polytope K(P) = conv{p_i}, and every affine function chi on R^I with chi(q0) = 0 and chi(q1) = 1, the full row-point fibers satisfy sum_Q d_Q*chi(p_Q) = 1, where d_Q = sum_{j in Q}(q1_j - q0_j).","author":"orchestrator"}
