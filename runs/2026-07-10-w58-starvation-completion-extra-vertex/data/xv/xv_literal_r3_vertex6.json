@@ -1,0 +1,615 @@
+{
+  "bounded_external_fiber_pattern": {
+    "K_124_uniform_margin": "8161/1048576",
+    "K_1_base_margin": "4079615/4194304",
+    "K_1_uniform_A_margin": "4063231/4194304",
+    "K_at_parent_ceiling": 124,
+    "K_fiber_necessary_inequality": "1<=s*(A+K*(2+4*s^2))",
+    "per_external_fiber_Dq_bound": "|D_q|<=t",
+    "per_external_fiber_XDq_bound": "32769/4194304",
+    "safe_s0_of_K": "min(1/256,1/(12*(K+1)))",
+    "scope": "K counts zero-top support fibers outside the original actor hull; all other added zero-top fibers must lie in that hull"
+  },
+  "case_constraints": {
+    "canonical_exposer_Y_interval": [
+      "0",
+      "1"
+    ],
+    "geometry_status": "ALL CELLS KILLED BY ALGEBRAIC RELAXATION; no H-X realization claimed",
+    "location_cells": [
+      "fv_only",
+      "of_only",
+      "f_corner_both",
+      "zo_only"
+    ],
+    "metric_Z_l1": "1/256",
+    "optimal_face_patterns": [
+      "q near; Y=0 adds Z, 0<Y<1 is interior, Y=1 adds O",
+      "q far; Y<t is empty, Y=t adds T, t<Y<1 preserves singleton T/O, Y=1 adds O"
+    ],
+    "support": "v,w,f,z,o,q; q is a geometric vertex outside conv(v,f,z,o)",
+    "top_pin_P_vq": "0"
+  },
+  "case_id": "xv_literal_r3_vertex6",
+  "description": "Rank-three W55 actors plus one zero-top vertex outside the actor hull",
+  "factor_problem": {
+    "L": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "-5/257",
+        "1/16842752"
+      ],
+      [
+        "1",
+        "-5",
+        "1/65536"
+      ],
+      [
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "256",
+        "1/2"
+      ]
+    ],
+    "equalities": {
+      "matrix": [
+        [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-5/257",
+          "-5",
+          "1",
+          "0",
+          "256",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/16842752",
+          "1/65536",
+          "0",
+          "1",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-5/257",
+          "-5",
+          "1",
+          "0",
+          "256"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/16842752",
+          "1/65536",
+          "0",
+          "1",
+          "1/2"
+        ]
+      ],
+      "names": [
+        "D_moment_0",
+        "D_moment_1",
+        "D_moment_2",
+        "E_moment_0",
+        "E_moment_1",
+        "E_moment_2"
+      ],
+      "rhs": [
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    "fixed_B_row_0": [
+      "255/256",
+      "257/65536",
+      "-1/65536",
+      "0",
+      "0",
+      "0"
+    ],
+    "necessary_entry_inequalities": [
+      {
+        "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-5",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/65536"
+        ],
+        "column": "q",
+        "constant": "1/65536",
+        "entry_constant_without_t": "0",
+        "name": "P_fq+t>=0",
+        "row": "f",
+        "source": "row negative mass <=t implies each entry >=-t"
+      },
+      {
+        "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "column": "v",
+        "constant": "65281/65536",
+        "entry_constant_without_t": "255/256",
+        "name": "P_ov+t>=0",
+        "row": "o",
+        "source": "row negative mass <=t implies each entry >=-t"
+      },
+      {
+        "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "column": "w",
+        "constant": "129/32768",
+        "entry_constant_without_t": "257/65536",
+        "name": "P_ow+t>=0",
+        "row": "o",
+        "source": "row negative mass <=t implies each entry >=-t"
+      },
+      {
+        "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "column": "z",
+        "constant": "1/65536",
+        "entry_constant_without_t": "0",
+        "name": "P_oz+t>=0",
+        "row": "o",
+        "source": "row negative mass <=t implies each entry >=-t"
+      },
+      {
+        "coefficients": [
+          "256",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "column": "v",
+        "constant": "65281/65536",
+        "entry_constant_without_t": "255/256",
+        "name": "P_qv+t>=0",
+        "row": "q",
+        "source": "row negative mass <=t implies each entry >=-t"
+      },
+      {
+        "coefficients": [
+          "0",
+          "256",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "column": "w",
+        "constant": "129/32768",
+        "entry_constant_without_t": "257/65536",
+        "name": "P_qw+t>=0",
+        "row": "q",
+        "source": "row negative mass <=t implies each entry >=-t"
+      },
+      {
+        "coefficients": [
+          "0",
+          "0",
+          "256",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ],
+        "column": "f",
+        "constant": "0",
+        "entry_constant_without_t": "-1/65536",
+        "name": "P_qf+t>=0",
+        "row": "q",
+        "source": "row negative mass <=t implies each entry >=-t"
+      }
+    ],
+    "unknowns": [
+      "D_v",
+      "D_w",
+      "D_f",
+      "D_z",
+      "D_o",
+      "D_q",
+      "E_v",
+      "E_w",
+      "E_f",
+      "E_z",
+      "E_o",
+      "E_q"
+    ]
+  },
+  "farkas_certificate": {
+    "B_facet": "66175/256",
+    "C": "17170431/16842752",
+    "D_sum": "145981017713367445/8623489024",
+    "H": "511/2",
+    "K": "641/256",
+    "M": "169077125/512",
+    "contradiction_margin_M_minus_tD": "186482464633099560555/565148976676864",
+    "d": "393215/65536",
+    "equality_multipliers": [
+      "330875",
+      "-330875",
+      "-330875",
+      "984315/256",
+      "-218169215/33554432",
+      "-984315/256"
+    ],
+    "inequality_multipliers": [
+      "33815425/2",
+      "1637755/512",
+      "1637755/514",
+      "128797966465/33554432",
+      "330875/256",
+      "5681266357125/4311744512",
+      "130105013125/16777216"
+    ],
+    "normalized_R": "81363545292800/4170886220381927",
+    "parametric_formulas": {
+      "B_facet": "A+(1-t)*X-A*Y",
+      "C": "1+a*(A-t)",
+      "H": "X+Y-1",
+      "K": "A*Y+t*X",
+      "d": "A+1-t",
+      "equality_multipliers_D0_Dx_Dy_E0_Ex_Ey": [
+        "A*B*X",
+        "-A*B*X",
+        "-A*B*X",
+        "A*H*K+A*B*Y",
+        "(1-t)*H*K-A*B*Y",
+        "-A*H*K-A*B*Y"
+      ],
+      "identity": "sum_i weight_i*entry_i+A*B*H=sum_k mu_k*(BL-I)_k",
+      "weights_in_selected_entry_order": [
+        "B*X*H",
+        "A*H*K",
+        "A*(1-a)*H*K",
+        "d*H*K",
+        "A*B",
+        "A*B*C",
+        "A*B*d"
+      ]
+    },
+    "selected_entries": [
+      "P_fq",
+      "P_ov",
+      "P_ow",
+      "P_oz",
+      "P_qv",
+      "P_qw",
+      "P_qf"
+    ]
+  },
+  "labels": [
+    "v",
+    "w",
+    "f",
+    "z",
+    "o",
+    "q"
+  ],
+  "parameter_reduction": {
+    "actor_hull_facets": {
+      "fv": "t*X+A*Y>=0",
+      "lower": "Y>=0",
+      "of": "A+(1-t)*X-A*Y>=0",
+      "zo": "1-X-Y>=0"
+    },
+    "canonical_exposer_slab_Y": [
+      "0",
+      "1"
+    ],
+    "derivation": [
+      "p_q=(1-Y)*p_v+Y*p_o+X*D and 0<=Y<=1 imply |X|*||D||_1<=2+4t",
+      "D moment and ||D||_1=s imply X*D_q>=1-A*s>0",
+      "if X<0 then D_q=P_zq<0, hence |D_q|<=t, contradicting the previous two inequalities",
+      "therefore X>0 and X>=1/s-A; the row-l1 bound gives X<=2/s+4s"
+    ],
+    "exterior_cells": [
+      "fv_only",
+      "of_only",
+      "f_corner_both",
+      "zo_only"
+    ],
+    "left_cell_contradiction_margin": "4079615/4194304",
+    "left_cell_upper_abs_XDq": "32769/4194304",
+    "moment_lower_1_minus_As": "251/256",
+    "necessary_abs_Xs_bound": "32769/16384",
+    "necessary_row_l1_bound": "32769/32768",
+    "surviving_X_interval": [
+      "251",
+      "32769/64"
+    ],
+    "surviving_cell": "zo_only"
+  },
+  "parameters": {
+    "A": "5",
+    "X_representative": "256",
+    "Y_representative": "1/2",
+    "a": "1/257",
+    "s": "1/256",
+    "t": "1/65536"
+  },
+  "rank": 3,
+  "sample_relaxation": {
+    "B": [
+      [
+        "255/256",
+        "257/65536",
+        "-1/65536",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-255/256",
+        "-257/65536",
+        "1/65536",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "-255/256",
+        "-257/65536",
+        "1/65536",
+        "0",
+        "1",
+        "0"
+      ]
+    ],
+    "P": [
+      [
+        "255/256",
+        "257/65536",
+        "-1/65536",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "4378459905/4311744512",
+        "17170431/4294967296",
+        "-17170431/1103806595072",
+        "-5/257",
+        "1/16842752",
+        "0"
+      ],
+      [
+        "100269825/16777216",
+        "101056255/4294967296",
+        "-393215/4294967296",
+        "-5",
+        "1/65536",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "-130305/512",
+        "-131327/131072",
+        "511/131072",
+        "256",
+        "1/2",
+        "0"
+      ]
+    ],
+    "affine_gadget_residual": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "sample_Z_l1": "65537/32768",
+    "sample_delta": "33489407/131072",
+    "scope": "BL=I, idempotence, row sums, actor gadget, and top pins only; metric, negativity, exterior geometry, and horn constraints are deliberately dropped",
+    "w_interpolation_residual": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "schema": "starvation-extra-vertex-farkas-v1",
+  "stability": {
+    "A_interval": [
+      "4",
+      "6"
+    ],
+    "Y_interval": [
+      "0",
+      "1"
+    ],
+    "exact_probe_grid": {
+      "A": [
+        "4",
+        "5",
+        "6"
+      ],
+      "X_choices": [
+        "1/s-A",
+        "1/s",
+        "2/s+4s"
+      ],
+      "Y": [
+        "0",
+        "1/2",
+        "1"
+      ],
+      "s": [
+        "1/256",
+        "1/512",
+        "1/1024"
+      ]
+    },
+    "margin_fraction_greater_than": "249/250",
+    "ratio_less_than": "1/250",
+    "ratio_term_bounds": [
+      "1/500",
+      "1/1000",
+      "1/1000"
+    ],
+    "s_interval": [
+      "0",
+      "1/256"
+    ],
+    "s_left_endpoint_open": true,
+    "strip_bounds": {
+      "B_greater_than": "249",
+      "C_less_than": "2",
+      "H_at_least": "249",
+      "K_less_than": "7",
+      "d_less_than": "7"
+    }
+  },
+  "status": "AUTHOR-CLAIM exact L3 evidence",
+  "verdict": "INFEASIBLE"
+}

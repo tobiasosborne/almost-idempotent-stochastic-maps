@@ -872,3 +872,13 @@ claims remain uncodified/non-L0 pending fresh standalone prover/verifier passes.
   added, check-runs green). Candidate completion-obstruction lemma extracted from the
   stable multipliers (the H-X mechanism seed). Follow-ups filed: aism-hjm (extra-vertex
   family), aism-cq2 (paper-proof wave). Sketch v21 delta; HANDOFF/router pins updated.
+
+## 2026-07-10 — Session 14 (cont.): W58 — the extra-vertex escape is dead; the obstruction is K-parametric
+
+- W58 (aism-hjm, codex ultra, serial): all three first-extra-vertex completion cases
+  INFEASIBLE (exact Farkas, stability uniform A0 in [4,6]/tau <= 1/256/Y in [0,1];
+  independent check OVERALL PASS, orchestrator-reproduced). Column-local multiplier
+  pattern extends to every fixed K exterior fibers below tau <= min(1/256,1/(12(K+1))).
+  Bundle runs/2026-07-10-w58-starvation-completion-extra-vertex; INDEX row; gates green.
+  Candidate lemma now K-parametric (CERTIFICATE.md updated). Sketch v22; pins updated.
+  Residual: unbounded-K, rank>3 (parked). Main line -> paper-proof wave (aism-cq2).

@@ -12,7 +12,7 @@ TRIGGER: a process/convention/tooling change, or a new standing rule from the us
 > *How do I work?* → this file. *Current state / next task?* → **`HANDOFF.md`** then `bd ready`.
 > *Where's the exploration portfolio?* → `fr board` (the explore/exploit controller).
 > *Where's the LIVE PROOF STRATEGY?* → the newest `docs/plans/*top-down-proof-sketch*` file
-> (**v21, 2026-07-10 W57 completion-LP delta**) — the MOST DYNAMIC artifact in this repo. **Keeping it reconciled with
+> (**v22, 2026-07-10 W58 extra-vertex delta**) — the MOST DYNAMIC artifact in this repo. **Keeping it reconciled with
 > newly banked evidence is a first-class deliverable of every session (user mandate,
 > 2026-07-06): a wave that changes the map without updating the sketch is incomplete work
 > (Rule 9). Supersede by dated file; old versions stay intact for line citations.** *Notation?* →

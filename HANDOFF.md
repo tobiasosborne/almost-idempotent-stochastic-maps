@@ -10,8 +10,8 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read **`docs/plans/2026-07-10-top-down-proof-sketch-v21.md`** — THE canonical strategic
-   map (v21, W57 completion-LP delta; v20 and earlier superseded in place, kept for line
+2. Read **`docs/plans/2026-07-10-top-down-proof-sketch-v22.md`** — THE canonical strategic
+   map (v22, W58 extra-vertex delta; v21 and earlier superseded in place, kept for line
    citations). Then `docs/waves/2026-07-10-W56-sl1a-decomposition-close.md` (the W56
    close: the wall, the harvest, the new three-cell SL1a surface).
    **STEWARDSHIP (user mandate, 2026-07-06, binding): reconciling the sketch with newly
