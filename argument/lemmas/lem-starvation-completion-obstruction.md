@@ -5,7 +5,8 @@ contract: Bounded-slab starvation completion obstruction (K-free): for every fin
 defs: def-signed-idempotent; def-negative-mass
 deps: 
 status: proved
-af: none
+af: seeded
+workspace: proofs/lem-starvation-completion-obstruction
 provenance: W59 wave (runs/2026-07-10-w58-starvation-completion-extra-vertex/PAPER-PROOF-w59.md): codex prover (gpt-5.6-sol ultra) paper proof from first principles, guided by (but independent of) the W57/W58 exact Farkas certificates; fresh hostile codex verifier verdict first line verbatim 'VERDICT: VALID-WITH-CORRECTIONS — the K-free obstruction is proved; only an index-level coordinate abbreviation is missing.' (single notation correction applied). Reviewer != author.
 owner: B
 ---

@@ -121,7 +121,7 @@ graph LR
   lem-sl1a-corner-ledger["lem-sl1a-corner-ledger<br/>proved/none"]
   lem-sl1a-score-selector["lem-sl1a-score-selector<br/>proved/none"]
   lem-sl1a-three-cell-reduction["lem-sl1a-three-cell-reduction<br/>proved/none"]
-  lem-starvation-completion-obstruction["lem-starvation-completion-obstruction<br/>proved/none"]
+  lem-starvation-completion-obstruction["lem-starvation-completion-obstruction<br/>proved/seeded"]
   lem-tight-far-geography["lem-tight-far-geography<br/>proved/none"]
   lem-top-concentration["lem-top-concentration<br/>proved/validated"]
   lem-top-deficit-price["lem-top-deficit-price<br/>proved/none"]
