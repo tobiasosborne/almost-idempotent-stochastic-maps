@@ -1,0 +1,78 @@
+% SHARD-ID: AISM-18-PARAMETRIC-HALO-COLLAPSE
+% SHARD-TITLE: Parametric and depth-d halo collapse
+% SHARD-SUMMARY: Reproduces lem-parametric-halo-collapse, the af-validated width-parametric generalisation of the halo-collapse bridge.
+% SHARD-SUMMARY: Reproduces lem-depth-d-halo-collapse, the af-validated non-top-row version with an explicit deeper-row correction term.
+% SHARD-SUMMARY: Typesets the residual-split convexity argument that reduces both bounds to the frame-free residual estimates.
+% SHARD-KEYWORDS: lem-parametric-halo-collapse, lem-depth-d-halo-collapse, af validated, halo collapse, residual split, invisible mass, height
+\section{Parametric and depth-\texorpdfstring{$d$}{d} halo collapse}\label{sec:parametric-halo-collapse}
+
+Both results generalise the af-validated halo-collapse bridge \ref{conj:halo-collapse} by making the
+halo width a free parameter. Fix an exact signed idempotent $P$ with $0<\negmass\le\tfrac14$ and
+nonempty visible set $\vis(P)$; write $C=\conv\{p_w:w\in\vis\}$, $d_j=\distone(p_j,C)$, $\tsq=\sqrt{\negmass}$, and
+$\alpha_j=P_{vj}$ with parts $\posp{\alpha_j},\negp{\alpha_j}$ and $\nu_v=\sum_j\negp{\alpha_j}$. For a
+halo width $a>0$ the mass placed strictly outside the $a\tsq$-halo of $C$ is
+$\sigma_a=\sum_{j:\,d_j>a\tsq}\posp{\alpha_j}$, and $\sigma=\sum_{j:\,d_j>0}\posp{\alpha_j}$ is the
+invisible mass (\texttt{def-invisible-mass}).
+
+\subsection{The parametric bridge}
+
+\begin{lemma}[\texttt{lem-parametric-halo-collapse}]\label{lem:parametric-halo-collapse}
+Let $v$ be a hidden top vertex of height $\height$ and $a>0$. Then
+\begin{equation}\label{eq:phc-parametric}
+  \height\,(1-\sigma_a)\;\le\;(\sigma-\sigma_a)\,a\tsq\;+\;\nu_v\,\rowdiam .
+\end{equation}
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Parametric halo collapse: for an exact signed idempotent P with 0 < delta(P) <= 1/4, nonempty visible set W(P), hidden top vertex v of height H, and any halo width a > 0, writing sigma_a for the positive coefficient mass v places on rows at ell-1 distance > a*tau from conv W (tau = sqrt(delta)), sigma for the invisible mass, and nu_v for the row negative mass, one has H*(1 - sigma_a) <= (sigma - sigma_a)*a*tau + nu_v*(2 + 4*delta).}
+
+\noindent\textbf{Proof sketch.} If $\sigma_a\ge1$ the left side is $\le0$ and the right side is
+$\ge0$. Otherwise put $A=\{j:d_j>a\tsq\}$ and
+\[
+  q=\frac{1}{1-\sigma_a}\Bigl(\sum_{j\notin A}\posp{\alpha_j}\,p_j-\sum_k\negp{\alpha_k}\,p_k\Bigr),
+\]
+so that by row reproduction and mass split ($\sum_j\posp{\alpha_j}=1+\nu_v$, \ref{lem:mass-split})
+$p_v=\sum_{j\in A}\posp{\alpha_j}\,p_j+(1-\sigma_a)\,q$ is a genuine convex combination. The lower
+residual estimate \ref{lem:residual-lower} gives $\height\le\distone(q,C)$, while the upper residual
+estimate \ref{lem:residual-upper} with $D_k=\rowdiam$ gives
+$(1-\sigma_a)\distone(q,C)\le\sum_{j\notin A}\posp{\alpha_j}d_j+\nu_v\rowdiam$. Pricing the non-halo
+rows by $\sum_{j\notin A}\posp{\alpha_j}d_j\le(\sigma-\sigma_a)a\tsq$ and multiplying the first bound by
+$1-\sigma_a>0$ yields \eqref{eq:phc-parametric}. \hfill$\square$
+
+\noindent\textbf{Provenance.} \texttt{status: proved}, \texttt{af: validated}; workspace
+\texttt{proofs/lem-parametric-halo-collapse} (export node~1), importing \ref{lem:mass-split},
+\ref{lem:residual-lower}, \ref{lem:residual-upper}. At $a=\tfrac14$ it recovers the
+\ref{conj:halo-collapse} contract verbatim; the verifier checked that calibration and the rank-5
+fixture.
+
+\subsection{The depth-\texorpdfstring{$d$}{d} version}
+
+\begin{lemma}[\texttt{lem-depth-d-halo-collapse}]\label{lem:depth-d-halo-collapse}
+Let $v$ be any row index with depth $d=\distone(p_v,C)$ and let $a>0$. With
+$\sigma_a(v)=\sum_{d_j>a\tsq}\posp{P_{vj}}$, $\sigma(v)=\sum_{d_j>0}\posp{P_{vj}}$, and the
+deeper-row correction $C_a(v)=\sum_{d_j>a\tsq,\ d_j>d}\posp{P_{vj}}\,(d_j-d)$,
+\begin{equation}\label{eq:phc-depthd}
+  d\,(1-\sigma_a(v))\;\le\;(\sigma(v)-\sigma_a(v))\,a\tsq\;+\;\nu_v\,\rowdiam\;+\;C_a(v).
+\end{equation}
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Depth-d halo collapse: for an exact signed idempotent P with 0 < delta(P) <= 1/4 and nonempty visible set W(P), any row index v with d = dist_1(p_v, conv{p_w : w in W}), and any halo width a > 0, writing d_j = dist_1(p_j, conv W), sigma_a(v) = sum over {j : d_j > a*tau} of max(P_vj, 0) (tau = sqrt(delta)), sigma(v) = sum over {j : d_j > 0} of max(P_vj, 0), nu_v the row negative mass, and C_a(v) = sum over {j : d_j > a*tau, d_j > d} of max(P_vj, 0)*(d_j - d), one has d*(1 - sigma_a(v)) <= (sigma(v) - sigma_a(v))*a*tau + nu_v*(2 + 4*delta) + C_a(v).}
+
+\noindent\textbf{Proof sketch.} The trivial branch $\sigma_a(v)\ge1$ is as before. Otherwise the same
+residual $q$ (now with $B=\{j:d_j\le a\tsq\}$) gives $p_v=\sum_{j\in A}\posp{P_{vj}}p_j+(1-\sigma_a)q$.
+Convexity of $x\mapsto\distone(x,C)$ gives $d\le\sum_{j\in A}\posp{P_{vj}}d_j+(1-\sigma_a)\distone(q,C)$;
+splitting $A$ at $d_j\le d$ versus $d_j>d$ replaces $\sum_{j\in A}\posp{P_{vj}}d_j$ by
+$\sigma_a(v)\,d+C_a(v)$, so $(1-\sigma_a)d\le C_a(v)+(1-\sigma_a)\distone(q,C)$. Pricing $\distone(q,C)$
+through \ref{lem:residual-upper} exactly as in the parametric case gives \eqref{eq:phc-depthd}. At a
+hidden top ($d=\height$, $C_a=0$) it recovers \eqref{eq:phc-parametric}. \hfill$\square$
+
+\noindent\textbf{Provenance.} \texttt{status: proved}, \texttt{af: validated}; workspace
+\texttt{proofs/lem-depth-d-halo-collapse} (export node~1), importing \ref{lem:mass-split},
+\ref{lem:residual-upper}. The verifier legitimised the convex split and checked the top-row
+calibration against \ref{lem:parametric-halo-collapse}.
+
+\noindent\textbf{Role in the chain.} These are the halo-collapse bounds at arbitrary width and depth:
+the free parameter $a$ is what lets the genuine-mass bootstrap of \S\ref{sec:genuine-disintegration}
+choose a halo that separates hidden from visible rows. They tighten but do not close the height cap of
+the Kernel Conjecture \ref{conj:kernel}.

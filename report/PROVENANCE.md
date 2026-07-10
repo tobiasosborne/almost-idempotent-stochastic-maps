@@ -9,9 +9,10 @@ hashed proof/consensus file. Results original to this project are marked `ORIGIN
 
 Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 
-> **Current report surface.** The first shards reproduce thirteen `af`-validated results and anchor every
-> remaining registry result in the status ledger. Non-rigorous registry statuses are copied honestly;
-> the ledger rows below are anchors, not promotions.
+> **Current report surface.** The section shards reproduce twenty-six of the twenty-nine `af`-validated
+> registry results (the paper-track T0 spine) and anchor every remaining registry result in the status
+> ledger. Non-rigorous registry statuses are copied honestly; the ledger rows below are anchors, not
+> promotions.
 
 ## Ground-truth source registry
 
@@ -76,6 +77,32 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-COLLATERAL-IMPORT` | `proofs/lem-collateral-import/export.md` | `c2d35f80dc8b12c6` | `af` proof export for `lem-collateral-import` |
 | `AF-LEM-CROSS-PIVOT-CANCELLATION` | `proofs/lem-cross-pivot-cancellation/export.md` | `942b216f2a64b6bd` | `af` proof export for `lem-cross-pivot-cancellation` |
 | `AF-LEM-PIVOT-REMOVING-MOVE` | `proofs/lem-pivot-removing-move/export.md` | `276e02185cab5cc3` | `af` proof export for `lem-pivot-removing-move` |
+| `ARG-LEM-HIDDENNESS-DUAL-WITNESS` | `argument/lemmas/lem-hiddenness-dual-witness.md` | `a89129996a8d06a7` | Registry shard for `lem-hiddenness-dual-witness` |
+| `AF-LEM-HIDDENNESS-DUAL-WITNESS` | `proofs/lem-hiddenness-dual-witness/export.md` | `d71d6c8842a42fd7` | `af` proof export for `lem-hiddenness-dual-witness` |
+| `ARG-LEM-ALWAYS-TIGHT-DUAL-SUPPORT` | `argument/lemmas/lem-always-tight-dual-support.md` | `fc21d6045ab3bd10` | Registry shard for `lem-always-tight-dual-support` |
+| `AF-LEM-ALWAYS-TIGHT-DUAL-SUPPORT` | `proofs/lem-always-tight-dual-support/export.md` | `5627d564d97b0ce7` | `af` proof export for `lem-always-tight-dual-support` |
+| `ARG-LEM-HIDDENNESS-DEPTH-MARKOV` | `argument/lemmas/lem-hiddenness-depth-markov.md` | `1b9fba36bbd9e28c` | Registry shard for `lem-hiddenness-depth-markov` |
+| `AF-LEM-HIDDENNESS-DEPTH-MARKOV` | `proofs/lem-hiddenness-depth-markov/export.md` | `e47f169b3bd440ce` | `af` proof export for `lem-hiddenness-depth-markov` |
+| `ARG-LEM-ROW-FAR-DUAL-CERTIFICATE` | `argument/lemmas/lem-row-far-dual-certificate.md` | `c9de63ba0422ab59` | Registry shard for `lem-row-far-dual-certificate` |
+| `AF-LEM-ROW-FAR-DUAL-CERTIFICATE` | `proofs/lem-row-far-dual-certificate/export.md` | `b4214c77f3e8c43c` | `af` proof export for `lem-row-far-dual-certificate` |
+| `ARG-LEM-TOP-SLAB-COMPANION` | `argument/lemmas/lem-top-slab-companion.md` | `2ba54119151a63c2` | Registry shard for `lem-top-slab-companion` |
+| `AF-LEM-TOP-SLAB-COMPANION` | `proofs/lem-top-slab-companion/export.md` | `0bd9a544b579944a` | `af` proof export for `lem-top-slab-companion` |
+| `ARG-LEM-CS-LOW-SLAB-PINCER` | `argument/lemmas/lem-cs-low-slab-pincer.md` | `7115bf723810e0aa` | Registry shard for `lem-cs-low-slab-pincer` |
+| `AF-LEM-CS-LOW-SLAB-PINCER` | `proofs/lem-cs-low-slab-pincer/export.md` | `e40f769ec5cd533a` | `af` proof export for `lem-cs-low-slab-pincer` |
+| `ARG-LEM-ROW-ZERO-CAPACITY` | `argument/lemmas/lem-row-zero-capacity.md` | `fd6eacae12969ebd` | Registry shard for `lem-row-zero-capacity` |
+| `AF-LEM-ROW-ZERO-CAPACITY` | `proofs/lem-row-zero-capacity/export.md` | `58a4acc9f72797ca` | `af` proof export for `lem-row-zero-capacity` |
+| `ARG-LEM-HARMONIC-AFFINE-BRIDGE` | `argument/lemmas/lem-harmonic-affine-bridge.md` | `2b3d9266b79e3a35` | Registry shard for `lem-harmonic-affine-bridge` |
+| `AF-LEM-HARMONIC-AFFINE-BRIDGE` | `proofs/lem-harmonic-affine-bridge/export.md` | `fe417c19b4d62333` | `af` proof export for `lem-harmonic-affine-bridge` |
+| `ARG-LEM-PARAMETRIC-HALO-COLLAPSE` | `argument/lemmas/lem-parametric-halo-collapse.md` | `0e8cb1b2c1327f52` | Registry shard for `lem-parametric-halo-collapse` |
+| `AF-LEM-PARAMETRIC-HALO-COLLAPSE` | `proofs/lem-parametric-halo-collapse/export.md` | `12a8d1452a51a257` | `af` proof export for `lem-parametric-halo-collapse` |
+| `ARG-LEM-DEPTH-D-HALO-COLLAPSE` | `argument/lemmas/lem-depth-d-halo-collapse.md` | `35ce052128fc18a9` | Registry shard for `lem-depth-d-halo-collapse` |
+| `AF-LEM-DEPTH-D-HALO-COLLAPSE` | `proofs/lem-depth-d-halo-collapse/export.md` | `c22fed932acf9cb7` | `af` proof export for `lem-depth-d-halo-collapse` |
+| `ARG-LEM-GENUINE-DISINTEGRATION` | `argument/lemmas/lem-genuine-disintegration.md` | `e68f022493e5e777` | Registry shard for `lem-genuine-disintegration` |
+| `AF-LEM-GENUINE-DISINTEGRATION` | `proofs/lem-genuine-disintegration/export.md` | `926f1e024670b0e2` | `af` proof export for `lem-genuine-disintegration` |
+| `ARG-LEM-TOP-CONCENTRATION` | `argument/lemmas/lem-top-concentration.md` | `6e3fccb03531a783` | Registry shard for `lem-top-concentration` |
+| `AF-LEM-TOP-CONCENTRATION` | `proofs/lem-top-concentration/export.md` | `835cacb8312e2d83` | `af` proof export for `lem-top-concentration` |
+| `ARG-LEM-STARVATION-COMPLETION-OBSTRUCTION` | `argument/lemmas/lem-starvation-completion-obstruction.md` | `a7ae8563e5777a18` | Registry shard for `lem-starvation-completion-obstruction` |
+| `AF-LEM-STARVATION-COMPLETION-OBSTRUCTION` | `proofs/lem-starvation-completion-obstruction/export.md` | `ed573c49836f7273` | `af` proof export for `lem-starvation-completion-obstruction` |
 
 ## Per-claim ledger
 
@@ -104,6 +131,19 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | conj:skinny-shadow-cap | ARG-CONJ-SKINNY-SHADOW-CAP | registry contract | OPEN | Status ledger anchor only; registry status `conjecture` (corrected Route-B skinny cap; supersedes lem-dual-localization). |
 | obs:orphan-amplifier | ARG-OBS-ORPHAN-AMPLIFIER | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (exact G5 two-orphan family; identities orchestrator-recomputed 2026-07-04). |
 | lem:pivot-removing-move | ARG-LEM-PIVOT-REMOVING-MOVE AF-LEM-PIVOT-REMOVING-MOVE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree, zero challenges, pre-factored elevation. |
+| lem:hiddenness-dual-witness | ARG-LEM-HIDDENNESS-DUAL-WITNESS AF-LEM-HIDDENNESS-DUAL-WITNESS | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; first-principles finite LP duality, no imports. |
+| lem:always-tight-dual-support | ARG-LEM-ALWAYS-TIGHT-DUAL-SUPPORT AF-LEM-ALWAYS-TIGHT-DUAL-SUPPORT | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; imports lem-hiddenness-dual-witness as validated external. |
+| lem:hiddenness-depth-markov | ARG-LEM-HIDDENNESS-DEPTH-MARKOV AF-LEM-HIDDENNESS-DEPTH-MARKOV | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; verifier weakened hypotheses to any witness with sum beta < kappa. |
+| lem:row-far-dual-certificate | ARG-LEM-ROW-FAR-DUAL-CERTIFICATE AF-LEM-ROW-FAR-DUAL-CERTIFICATE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; weak-duality certificate, sharp on the W29 frontier. |
+| lem:top-slab-companion | ARG-LEM-TOP-SLAB-COMPANION AF-LEM-TOP-SLAB-COMPANION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; exact symbolic constant chain checked. |
+| lem:cs-low-slab-pincer | ARG-LEM-CS-LOW-SLAB-PINCER AF-LEM-CS-LOW-SLAB-PINCER | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; minimal hypotheses, sharp at s = t*. |
+| lem:row-zero-capacity | ARG-LEM-ROW-ZERO-CAPACITY AF-LEM-ROW-ZERO-CAPACITY | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; rests on lem-harmonic-affine-bridge in the registry. |
+| lem:harmonic-affine-bridge | ARG-LEM-HARMONIC-AFFINE-BRIDGE AF-LEM-HARMONIC-AFFINE-BRIDGE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; two lines each direction. |
+| lem:parametric-halo-collapse | ARG-LEM-PARAMETRIC-HALO-COLLAPSE AF-LEM-PARAMETRIC-HALO-COLLAPSE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; imports mass-split, residual-lower, residual-upper; recovers conj-halo-collapse at a = 1/4. |
+| lem:depth-d-halo-collapse | ARG-LEM-DEPTH-D-HALO-COLLAPSE AF-LEM-DEPTH-D-HALO-COLLAPSE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; imports mass-split, residual-upper; calibrates against parametric-halo-collapse. |
+| lem:genuine-disintegration | ARG-LEM-GENUINE-DISINTEGRATION AF-LEM-GENUINE-DISINTEGRATION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; imports residual-upper; g-bootstrap step 3. |
+| lem:top-concentration | ARG-LEM-TOP-CONCENTRATION AF-LEM-TOP-CONCENTRATION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; first-principles support functional, no imports. |
+| lem:starvation-completion-obstruction | ARG-LEM-STARVATION-COMPLETION-OBSTRUCTION AF-LEM-STARVATION-COMPLETION-OBSTRUCTION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; W59 paper-proof, fresh hostile verifier VALID-WITH-CORRECTIONS, reviewer != author. |
 | ex:hume | ARG-EX-HUME | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`, not rigorous here. |
 | lem:canonical-separator | ARG-LEM-CANONICAL-SEPARATOR | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:dual-localization | ARG-LEM-DUAL-LOCALIZATION | registry contract | SUPERSEDED | Retired 2026-07-04 (contract trivially true as stated); superseded by conj-skinny-shadow-cap; registry status `obstruction`. |
@@ -116,7 +156,7 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | lem:negpart-subadditive | ARG-LEM-NEGPART-SUBADDITIVE AF-LEM-NEGPART-SUBADDITIVE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-1 tree, pre-factored before elevation. |
 | lem:collateral-import | ARG-LEM-COLLATERAL-IMPORT AF-LEM-COLLATERAL-IMPORT | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-04 (32-node tree, taint clean; run 1, zero open challenges); section shard pending. |
 | lem:cross-pivot-cancellation | ARG-LEM-CROSS-PIVOT-CANCELLATION AF-LEM-CROSS-PIVOT-CANCELLATION | registry contract | PROVED | Status ledger row; af-validated in-repo 2026-07-04 (23-node tree, taint clean; run 1); near-definitional — weight discounted per session audit; section shard pending. |
-| lem:import-reduction | ARG-LEM-IMPORT-REDUCTION | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit` (G11 reduction (4); exhibits orchestrator-recomputed; elevation queued). |
+| lem:import-reduction | ARG-LEM-IMPORT-REDUCTION | registry contract | PROVED | Status ledger row; registry status `proved`, `af: validated` (G11 reduction (4)); section shard pending. |
 | lem:leakage | ARG-LEM-LEAKAGE | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | lem:wiggle-rigidity | ARG-LEM-WIGGLE-RIGIDITY | registry contract | EXTRACT | Status ledger anchor only; registry status `proved-mod-audit`. |
 | obs:deep-leakage | ARG-OBS-DEEP-LEAKAGE | registry contract | HEURISTIC | Status ledger anchor only; registry status `heuristic`. |

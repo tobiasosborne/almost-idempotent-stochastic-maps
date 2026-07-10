@@ -1,0 +1,119 @@
+% SHARD-ID: AISM-15-HIDDENNESS-DUAL-WITNESS
+% SHARD-TITLE: The hiddenness dual witness and its always-tight support
+% SHARD-SUMMARY: Reproduces lem-hiddenness-dual-witness, the af-validated LP-dual witness attached to a hidden row vertex.
+% SHARD-SUMMARY: Reproduces lem-always-tight-dual-support, the af-validated complementary-slackness localisation of that witness.
+% SHARD-SUMMARY: Typesets the exposedness LP, its dual, and the complementarity identity that both proofs turn on.
+% SHARD-KEYWORDS: lem-hiddenness-dual-witness, lem-always-tight-dual-support, af validated, exposedness LP, LP duality, complementary slackness
+\section{The hiddenness dual witness and its always-tight support}\label{sec:hiddenness-dual-witness}
+
+Throughout this section $P$ is an exact signed idempotent (\texttt{def-signed-idempotent}) with
+$\negmass=\negmass(P)>0$, and we write the derived scales
+\[
+  \tsq=\sqrt{\negmass},\qquad \rho=4\tsq,\qquad \kappa=\tfrac14\tsq,
+\]
+as fixed in \texttt{CONVENTIONS.md} (c). For a row vertex $v$ with row point $p_v$ set
+$d_i=p_i-p_v$ and let
+\[
+  F_v=\bigl\{\,j : \lone{p_j-p_v}\ge\rho\,\bigr\}
+\]
+be the $\rho$-far row-index set. Recall (\texttt{def-exposed}) that the \emph{exposedness margin}
+of $v$ is
+\begin{equation}\label{eq:hdw-tstar}
+  \tstar(v)=\sup_{h}\ \min_{f\in F_v} h(p_f),
+\end{equation}
+the supremum over affine \emph{admissible exposers} $h$ with $h(p_v)=0$ and $0\le h(p_i)\le1$ for
+every row $i$; the vertex $v$ is \emph{hidden} when it is not $(\rho,\kappa)$-exposed, i.e.
+$\tstar(v)<\kappa$.
+
+\subsection{Existence of the witness}
+
+\begin{lemma}[\texttt{lem-hiddenness-dual-witness}]\label{lem:hiddenness-dual-witness}
+Let $v$ be a hidden row vertex of $P$. Then $F_v\neq\varnothing$ and there exist coefficients
+$\lambda_f\ge0$ $(f\in F_v)$ with $\sum_{f}\lambda_f=1$, and $\alpha_i,\beta_i\ge0$ over all row
+indices with $\sum_i\beta_i=\tstar(v)<\kappa$, such that
+\begin{equation}\label{eq:hdw-balance}
+  \sum_{f\in F_v}\lambda_f\,(p_f-p_v)\;+\;\sum_i\alpha_i\,(p_i-p_v)
+    \;=\;\sum_i\beta_i\,(p_i-p_v).
+\end{equation}
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Hiddenness dual witness: for an exact signed idempotent P and a hidden row vertex v (rho = 4*tau, kappa = tau/4, tau = sqrt(delta(P))), writing F_v = {j : ||p_j - p_v||_1 >= rho} for the rho-far row-index set (nonempty for hidden v), there exist lambda_f >= 0 (f in F_v) with sum_f lambda_f = 1 and alpha_i, beta_i >= 0 (over all row indices i) with sum_i beta_i = t*(v) < kappa, such that sum_f lambda_f*(p_f - p_v) + sum_i alpha_i*(p_i - p_v) = sum_i beta_i*(p_i - p_v).}
+
+\noindent\textbf{Proof sketch.} Hiddenness first supplies the scalar prerequisites: were $F_v$ empty,
+\texttt{def-exposed} would give $\tstar(v)=+\infty$, so a hidden vertex forces $F_v\neq\varnothing$ and
+$\tstar(v)<\kappa$. Writing an admissible exposer as $h(x)=u\cdot(x-p_v)$, the margin
+\eqref{eq:hdw-tstar} is the value of the finite linear program
+\begin{equation}\label{eq:hdw-primal}
+  \max_{u,\,t}\ t
+  \quad\text{s.t.}\quad
+  0\le u\cdot d_i\le1\ \ (\forall i),\qquad t\le u\cdot d_f\ \ (\forall f\in F_v),
+\end{equation}
+which is feasible at $(u,t)=(0,0)$ and, since $F_v\neq\varnothing$, bounded above by $1$. Dualising
+\eqref{eq:hdw-primal} with multipliers $\beta_i\ge0$ on $u\cdot d_i\le1$, $\alpha_i\ge0$ on
+$-u\cdot d_i\le0$, and $\lambda_f\ge0$ on $t-u\cdot d_f\le0$ gives
+\[
+  \min\ \sum_i\beta_i
+  \quad\text{s.t.}\quad
+  \sum_{f}\lambda_f=1,\qquad
+  \sum_f\lambda_f d_f+\sum_i\alpha_i d_i=\sum_i\beta_i d_i .
+\]
+Finite LP strong duality and dual attainment produce an optimal dual point with
+$\sum_i\beta_i=\tstar(v)$; substituting $d_i=p_i-p_v$ is exactly \eqref{eq:hdw-balance}, and
+$\tstar(v)<\kappa$ closes the count. \hfill$\square$
+
+\noindent\textbf{Provenance.} \texttt{status: proved}, \texttt{af: validated}; workspace
+\texttt{proofs/lem-hiddenness-dual-witness} (export node~1). First-principles finite LP duality with
+no imports; a fresh-codex hostile verifier re-derived feasibility, boundedness, attainment, and strong
+duality from scratch and checked the witness on the banked $7\times7$ duplicate-split fixture
+($\tstar(v)=\tfrac1{21}<\tfrac1{16}$).
+
+\subsection{The witness support is always tight}
+
+Fix a hidden geometrically distinct row vertex $u$ with nonempty visible set $\vis(P)$. On the primal
+optimal face of \eqref{eq:hdw-primal} define the \emph{always-tight} constraint families
+\[
+  T=\{f\in F_u : h(p_f)=\tstar(u)\ \forall\text{ optima }h\},\quad
+  O=\{i : h(p_i)=1\ \forall\text{ optima}\},\quad
+  Z=\{i : h(p_i)=0\ \forall\text{ optima}\}.
+\]
+
+\begin{lemma}[\texttt{lem-always-tight-dual-support}]\label{lem:always-tight-dual-support}
+After deleting redundant centered-zero constraints, every optimal hiddenness dual witness
+$(\lambda,\alpha,\beta)$ of $u$ satisfies
+\[
+  \supp(\lambda)\subseteq T,\qquad \supp(\beta)\subseteq O,\qquad \supp(\alpha)\subseteq Z,
+\]
+with $T\neq\varnothing$, and $O\neq\varnothing$ if and only if $\tstar(u)>0$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Always-tight dual support: for the exposedness LP at a hidden geometrically distinct row vertex u of an exact signed idempotent P with delta(P) > 0 and nonempty visible set, every optimal hiddenness dual witness (lambda, alpha, beta), after deleting redundant centered-zero constraints, has supp(lambda) contained in T, supp(beta) contained in O, and supp(alpha) contained in Z, where T, O, Z are the rho-far, upper-box, and lower-box constraint families tight on the WHOLE primal optimal face; T is nonempty, and O is nonempty if and only if t*(u) > 0.}
+
+\noindent\textbf{Proof sketch.} Pair any primal optimum $h$ with the dual balance of
+Lemma~\ref{lem:hiddenness-dual-witness}. Using $h(p_u)=0$, $\sum_f\lambda_f=1$, and
+$\sum_i\beta_i=\tstar(u)$ yields the \emph{complementarity identity}
+\begin{equation}\label{eq:hdw-comp}
+  \sum_{f}\lambda_f\bigl(h(p_f)-\tstar(u)\bigr)
+  +\sum_i\alpha_i\,h(p_i)
+  +\sum_i\beta_i\bigl(1-h(p_i)\bigr)=0 .
+\end{equation}
+Every summand of \eqref{eq:hdw-comp} is nonnegative by primal feasibility, so each vanishes: a positive
+$\lambda_f$ forces $h(p_f)=\tstar(u)$, a positive $\alpha_i$ forces $h(p_i)=0$, and a positive
+$\beta_i$ forces $h(p_i)=1$. As $h$ ranges over all optima this places the supports in $T$, $Z$, and
+$O$. Since $\sum_f\lambda_f=1$ the set $\supp(\lambda)$ is nonempty, so $T\neq\varnothing$; and
+$O\neq\varnothing$ iff some $\beta_i>0$ iff $\sum_i\beta_i=\tstar(u)>0$ (when $\tstar(u)=0$ the zero
+exposer is optimal and no upper box is tight). \hfill$\square$
+
+\noindent\textbf{Provenance.} \texttt{status: proved}, \texttt{af: validated}; workspace
+\texttt{proofs/lem-always-tight-dual-support} (export node~1), importing
+Lemma~\ref{lem:hiddenness-dual-witness} as a validated external. Two independent fresh-codex provers
+produced the same complementarity core; a separate hostile verifier added the redundant-centered-zero
+caveat (retained in the ``reduced witness'' clause) and the $\tstar=0$ edge.
+
+\noindent\textbf{Role in the chain.} These two lemmas are the geometric engine of the hiddenness route:
+Lemma~\ref{lem:hiddenness-dual-witness} converts ``$v$ is hidden'' into a normalised transport identity
+on the $\rho$-far rows, and Lemma~\ref{lem:always-tight-dual-support} pins that transport to the tight
+face. Their consumers are the depth-Markov concentration and far-row existence results of
+\S\ref{sec:witness-consequences}. Nothing here bounds the height $\height$; that is the open cap of the
+Kernel Conjecture.

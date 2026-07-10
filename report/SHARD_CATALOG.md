@@ -121,6 +121,54 @@ verbatim), and keywords.
 - **Summary:** Summarizes the clean 9-node zero-challenge run-1 tree and its role as the minimality tool of the argmin engine.
 - **Keywords:** lem-pivot-removing-move, af validated, pivot removing, max stationarity, argmin, collateral
 
+## `AISM-15-HIDDENNESS-DUAL-WITNESS`
+- **File:** `report/sections/15_hiddenness_dual_witness.tex`
+- **Title:** The hiddenness dual witness and its always-tight support
+- **Summary:** Reproduces lem-hiddenness-dual-witness, the af-validated LP-dual witness attached to a hidden row vertex.
+- **Summary:** Reproduces lem-always-tight-dual-support, the af-validated complementary-slackness localisation of that witness.
+- **Summary:** Typesets the exposedness LP, its dual, and the complementarity identity that both proofs turn on.
+- **Keywords:** lem-hiddenness-dual-witness, lem-always-tight-dual-support, af validated, exposedness LP, LP duality, complementary slackness
+
+## `AISM-16-WITNESS-CONSEQUENCES`
+- **File:** `report/sections/16_witness_consequences.tex`
+- **Title:** Consequences of the hiddenness witness: depth-Markov, far-row certificate, top-slab companion
+- **Summary:** Reproduces lem-hiddenness-depth-markov, the af-validated Markov bound concentrating the witness mass near the top depth.
+- **Summary:** Reproduces lem-row-far-dual-certificate and lem-top-slab-companion, the af-validated margin bound and far-row existence statement.
+- **Summary:** Typesets the l1 support-functional deficit and the weighted-average arguments the three proofs share.
+- **Keywords:** lem-hiddenness-depth-markov, lem-row-far-dual-certificate, lem-top-slab-companion, af validated, support functional, Markov inequality, exposedness margin
+
+## `AISM-17-SLAB-CAPACITY-PRIMITIVES`
+- **File:** `report/sections/17_slab_capacity_primitives.tex`
+- **Title:** Slab and capacity primitives for harmonic test functions
+- **Summary:** Reproduces lem-cs-low-slab-pincer and lem-row-zero-capacity, the af-validated Chebyshev-slab and row-zero capacity bounds.
+- **Summary:** Reproduces lem-harmonic-affine-bridge, the af-validated equivalence between P-harmonic vectors and affine functions of the rows.
+- **Summary:** Typesets the single row-reproduction identity that all three elementary primitives share.
+- **Keywords:** lem-cs-low-slab-pincer, lem-row-zero-capacity, lem-harmonic-affine-bridge, af validated, row reproduction, negative mass, harmonic vector
+
+## `AISM-18-PARAMETRIC-HALO-COLLAPSE`
+- **File:** `report/sections/18_parametric_halo_collapse.tex`
+- **Title:** Parametric and depth-d halo collapse
+- **Summary:** Reproduces lem-parametric-halo-collapse, the af-validated width-parametric generalisation of the halo-collapse bridge.
+- **Summary:** Reproduces lem-depth-d-halo-collapse, the af-validated non-top-row version with an explicit deeper-row correction term.
+- **Summary:** Typesets the residual-split convexity argument that reduces both bounds to the frame-free residual estimates.
+- **Keywords:** lem-parametric-halo-collapse, lem-depth-d-halo-collapse, af validated, halo collapse, residual split, invisible mass, height
+
+## `AISM-19-GENUINE-DISINTEGRATION`
+- **File:** `report/sections/19_genuine_disintegration.tex`
+- **Title:** Genuine-mass disintegration and top concentration
+- **Summary:** Reproduces lem-genuine-disintegration, the af-validated bound splitting halo mass into hidden-vertex mass and a shallow remainder.
+- **Summary:** Reproduces lem-top-concentration, the af-validated bound on the positive mass a hidden top vertex places outside the genuine set.
+- **Summary:** Typesets the depth-convexity and support-functional deficit arguments driving the g-bootstrap.
+- **Keywords:** lem-genuine-disintegration, lem-top-concentration, af validated, genuine mass, g-bootstrap, depth convexity, support functional
+
+## `AISM-20-STARVATION-OBSTRUCTION`
+- **File:** `report/sections/20_starvation_obstruction.tex`
+- **Title:** The bounded-slab starvation completion obstruction
+- **Summary:** Reproduces lem-starvation-completion-obstruction, the af-validated K-free non-existence result for a rank-three starvation configuration.
+- **Summary:** Typesets the unit-moment identity and the fiber-budget bound whose contradiction drives the proof.
+- **Summary:** Records the paper-proof provenance and the role of the obstruction in closing the exchange-starvation leaf.
+- **Keywords:** lem-starvation-completion-obstruction, af validated, starvation, rank three, unit moment, exterior budget, K-free
+
 ## `AISM-13-STATUS-LEDGER`
 - **File:** `report/sections/13_discussion.tex`
 - **Title:** Status ledger for non-validated registry results

@@ -21,19 +21,34 @@
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{observation}[theorem]{Observation}
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
 
-% --- domain macros (kept minimal; extend as shards are added) ---
+% --- domain macros (semantic notation; mirror of CONVENTIONS.md) ---
 \newcommand{\Rn}{\mathbb{R}^n}
 \newcommand{\simplex}{\Delta_n}
-\newcommand{\opnorm}[1]{\lVert #1 \rVert_{\infty\to\infty}}
-\newcommand{\negmass}{\delta}          % negative mass of a signed idempotent
-\newcommand{\defect}{\eta}             % almost-idempotence defect
+\newcommand{\opnorm}[1]{\lVert #1 \rVert_{\infty\to\infty}}   % map (row-sum) norm
+\newcommand{\lone}[1]{\lVert #1 \rVert_{1}}                    % l1 vector norm
+\newcommand{\linf}[1]{\lVert #1 \rVert_{\infty}}              % l-infinity norm
+\newcommand{\negmass}{\delta}          % negative mass delta(P) of a signed idempotent
+\newcommand{\defect}{\eta}             % almost-idempotence defect eta
+\newcommand{\tsq}{\tau}                % tau = sqrt(delta); the derived length scale
+\newcommand{\rowdiam}{(2+4\delta)}     % universal max l1 separation of two rows
+\newcommand{\vis}{W}                    % visible / exposed set W(P)
+\newcommand{\height}{H}                 % height H(P)
+\newcommand{\tstar}{t^{*}}              % exposedness margin
+\newcommand{\posp}[1]{#1^{+}}          % positive part
+\newcommand{\negp}[1]{#1^{-}}          % negative part
 \newcommand{\contractquote}[1]{\begin{quote}\small\ttfamily\detokenize{#1}\end{quote}}
 \DeclareMathOperator{\conv}{conv}
 \DeclareMathOperator{\dist}{dist}
+\newcommand{\distone}{\dist_{1}}       % l1 distance to a convex set
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Vol}{Vol}
 
 \title{Almost-Idempotent Stochastic Maps --- internal lab-book}
 \author{(scientific-exploration repo; see PRD.md / CLAUDE.md)}
@@ -57,6 +72,12 @@
 \include{sections/11_negpart_subadditive}
 \include{sections/12_fan_payment_restricted}
 \include{sections/14_pivot_removing_move}
+\include{sections/15_hiddenness_dual_witness}
+\include{sections/16_witness_consequences}
+\include{sections/17_slab_capacity_primitives}
+\include{sections/18_parametric_halo_collapse}
+\include{sections/19_genuine_disintegration}
+\include{sections/20_starvation_obstruction}
 \include{sections/13_discussion}
 
 \end{document}

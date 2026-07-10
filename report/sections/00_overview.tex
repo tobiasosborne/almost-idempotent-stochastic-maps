@@ -5,36 +5,52 @@
 % SHARD-KEYWORDS: overview, op-classical, rigour ladder, linear law, sharp exponent
 \section{Roadmap and rigour status}\label{sec:overview}
 
-This lab-book tracks the report-facing slice of the registry in
-\texttt{argument/}.  The north star is \texttt{op-classical}; its
-status is \emph{open}, and the status-ledger anchor is
-\ref{op:classical}.  The definitions used by the registry are the
-canonical shards \texttt{def-stochastic}, \texttt{def-almost-idempotent},
-\texttt{def-near-positive-projection}, \texttt{def-signed-idempotent},
-\texttt{def-negative-mass}, \texttt{def-height},
-\texttt{def-visible-set}, \texttt{def-invisible-mass}, and
-\texttt{def-exposed}.  This report references those identifiers; it
-does not introduce parallel definitions.
+This lab-book is the \emph{paper-track} of the project: it reproduces the af-validated (T0) results of
+the registry in \texttt{argument/} together with a thin spine of open conjectures that orients them. It
+is deliberately \emph{not} a mirror of the whole registry --- the non-rigorous results (inherited
+\texttt{proved-mod-audit}, \texttt{conjecture}, \texttt{numerical}, \texttt{heuristic}) are anchored
+once, honestly, in the status ledger of \S\ref{sec:status-ledger} and are never restated as theorems
+here. The north star is \texttt{op-classical}; its status is \emph{open}, and its status-ledger anchor
+is \ref{op:classical}. The definitions used below are the canonical shards \texttt{def-stochastic},
+\texttt{def-almost-idempotent}, \texttt{def-near-positive-projection}, \texttt{def-signed-idempotent},
+\texttt{def-negative-mass}, \texttt{def-height}, \texttt{def-visible-set}, \texttt{def-invisible-mass},
+and \texttt{def-exposed}; this report references those identifiers and introduces no parallel
+definitions.
 
-The rigorous line is deliberately narrow.  A result may be called
-rigorous here only when it is byte-matched to a local theorem under
-\texttt{refs/}, validated in an \texttt{af} workspace, or Lean-proved.
-At the time of this shard, the only registry results reproduced as
-rigorous are the seven \texttt{af}-validated entries
-\ref{lem:classical-equiv}, \ref{obs:height-collapse},
-\ref{lem:mass-split}, \ref{lem:residual-lower},
-\ref{lem:residual-upper}, \ref{conj:halo-collapse}, and
-\ref{lem:factorization}.  Every other
-registry result remains anchored
-only in the status ledger, with its lower-rung status left intact.
+The target itself is the classical (stochastic) stability statement: there are universal constants
+$\eta_0,C>0$ such that every row-stochastic $Q$ with $\opnorm{Q^2-Q}\le\eta\le\eta_0$ admits a
+stochastic idempotent $E$ with
+\begin{equation}\label{eq:ov-target}
+  \opnorm{Q-E}\;\le\;C\sqrt{\eta},
+\end{equation}
+with the exponent $\tfrac12$ sharp. This remains \textbf{open} in this repo.
 
-The working headline is also status-sensitive.  The inherited campaign
-distinguishes the realizable-family linear law from the worst-case
-sqrt-envelope: the linear relation is the mechanism seen in the
-reduction record, while the sqrt scale is the stability target.  The
-sharp-exponent obstruction is \texttt{ex-hume}, anchored at
-\ref{ex:hume}, but it is still \texttt{proved-mod-audit} here rather
-than one of the rigorous results.  The bridge between the signed and
-stochastic pictures is the validated result
-\ref{lem:classical-equiv}; crossing between those pictures should cite
-that registry id rather than re-normalising notation locally.
+The rigorous line is narrow by design. A result may be called rigorous here only when it is byte-matched
+to a local theorem under \texttt{refs/}, validated in an \texttt{af} workspace, or Lean-proved. At the
+time of this shard the registry records \textbf{29 af-validated results}. Those reproduced as full
+sections of this report are the signed--stochastic bridge \ref{lem:classical-equiv}; the halo-collapse
+family \ref{obs:height-collapse}, \ref{lem:mass-split}, \ref{lem:residual-lower},
+\ref{lem:residual-upper}, \ref{conj:halo-collapse}, \ref{lem:parametric-halo-collapse},
+\ref{lem:depth-d-halo-collapse}, \ref{lem:genuine-disintegration}, \ref{lem:top-concentration}; the
+$(EX)$/factorization and fan-payment chain \ref{lem:factorization}, \ref{lem:zerosum-triangle},
+\ref{lem:weighted-min}, \ref{lem:fan-payment}, \ref{lem:negpart-subadditive},
+\ref{lem:fan-payment-restricted}; the argmin engine \ref{lem:pivot-removing-move}; the hiddenness
+witnesses and their consequences \ref{lem:hiddenness-dual-witness}, \ref{lem:always-tight-dual-support},
+\ref{lem:hiddenness-depth-markov}, \ref{lem:row-far-dual-certificate}, \ref{lem:top-slab-companion}; the
+slab/capacity primitives \ref{lem:cs-low-slab-pincer}, \ref{lem:row-zero-capacity},
+\ref{lem:harmonic-affine-bridge}; and the starvation obstruction
+\ref{lem:starvation-completion-obstruction}. Every other registry result remains anchored only in the
+status ledger, with its lower-rung status left intact.
+
+The working headline is itself status-sensitive. The inherited campaign distinguishes the
+realizable-family \emph{linear law} from the worst-case \emph{$\sqrt{}$-envelope}: along the realizable
+family the tight relation between negative mass $\negmass$ and height $\height$ is
+\[
+  \negmass=\tfrac12\,\height\qquad\text{(linear)},
+\]
+while the quadratic form $\negmass\gtrsim\height^2$ is only the worst-case envelope, binding because
+$\height\le O(\tsq)=O(\sqrt{\negmass})$. The $\sqrt{\eta}$ exponent of \eqref{eq:ov-target} is
+nonetheless sharp, certified by the family \texttt{ex-hume} (anchored at \ref{ex:hume}), which is still
+\texttt{proved-mod-audit} here rather than one of the rigorous results. Crossing between the signed and
+stochastic pictures should cite the validated bridge \ref{lem:classical-equiv} rather than
+re-normalising notation locally.

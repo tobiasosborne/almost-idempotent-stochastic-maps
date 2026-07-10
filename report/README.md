@@ -53,4 +53,10 @@ mid-check.
 | 11 | `AISM-11-NEGPART-SUBADDITIVE` | `report/sections/11_negpart_subadditive.tex` |
 | 12 | `AISM-12-FAN-PAYMENT-RESTRICTED` | `report/sections/12_fan_payment_restricted.tex` |
 | 14 | `AISM-14-PIVOT-REMOVING-MOVE` | `report/sections/14_pivot_removing_move.tex` |
+| 15 | `AISM-15-HIDDENNESS-DUAL-WITNESS` | `report/sections/15_hiddenness_dual_witness.tex` |
+| 16 | `AISM-16-WITNESS-CONSEQUENCES` | `report/sections/16_witness_consequences.tex` |
+| 17 | `AISM-17-SLAB-CAPACITY-PRIMITIVES` | `report/sections/17_slab_capacity_primitives.tex` |
+| 18 | `AISM-18-PARAMETRIC-HALO-COLLAPSE` | `report/sections/18_parametric_halo_collapse.tex` |
+| 19 | `AISM-19-GENUINE-DISINTEGRATION` | `report/sections/19_genuine_disintegration.tex` |
+| 20 | `AISM-20-STARVATION-OBSTRUCTION` | `report/sections/20_starvation_obstruction.tex` |
 | 13 | `AISM-13-STATUS-LEDGER` | `report/sections/13_discussion.tex` |
