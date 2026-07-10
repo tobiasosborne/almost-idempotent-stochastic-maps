@@ -1,9 +1,0 @@
-{
-  "claim": "proofs/conj-halo-collapse/export.md",
-  "oracle": "af-conj-halo-collapse",
-  "result": "pass",
-  "claim_hash": "216304dc1141dd4298983d39a8542bc845a6df26437dc8ae17870956f827ed74",
-  "oracle_digest": "a95e2af7d919236b96fd06dfbe642f307ef6df13bdbd88c09d0501f56a72d6e5",
-  "inputs_hash": "34f4de8d0861573db02e306a110efccec5b5d4ca89537b9cbfa3dfa357276068",
-  "ts": "2026-07-02T15:46:04.299Z"
-}

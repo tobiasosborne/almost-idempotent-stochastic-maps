@@ -21,7 +21,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-CONJ-DEGENERATE-PAYMENT` | `argument/lemmas/conj-degenerate-payment.md` | `3b7cd00d33cbf5fa` | Registry shard for `conj-degenerate-payment` |
 | `ARG-CONJ-DEGENERATE-TRANSPORT` | `argument/lemmas/conj-degenerate-transport.md` | `b68de13aaa480a15` | Registry shard for `conj-degenerate-transport` |
 | `ARG-CONJ-EX` | `argument/lemmas/conj-ex.md` | `150f2cf7b1925372` | Registry shard for `conj-ex` |
-| `ARG-LEM-HALO-COLLAPSE` | `argument/lemmas/lem-halo-collapse.md` | `297e462fa69d03c7` | Registry shard for `lem-halo-collapse` (renamed from `conj-halo-collapse` 2026-07-10) |
+| `ARG-LEM-HALO-COLLAPSE` | `argument/lemmas/lem-halo-collapse.md` | `fd18ed860e42b824` | Registry shard for `lem-halo-collapse` (renamed from `conj-halo-collapse` 2026-07-10) |
 | `ARG-CONJ-KERNEL` | `argument/lemmas/conj-kernel.md` | `f010524f7cf199f0` | Registry shard for `conj-kernel` |
 | `ARG-CONJ-NO-FREE-FRONTIER` | `argument/lemmas/conj-no-free-frontier.md` | `ae2798814ac899f5` | Registry shard for `conj-no-free-frontier` |
 | `ARG-CONJ-RH` | `argument/lemmas/conj-rh.md` | `c4b4885f2a17b4d7` | Registry shard for `conj-rh` |

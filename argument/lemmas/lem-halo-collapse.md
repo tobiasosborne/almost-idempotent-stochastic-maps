@@ -8,14 +8,14 @@ status: proved
 af: validated
 provenance: docs/waves/2026-07-02-F2-sigma-cap-refuter.md (arm F wave 2, opus worker, [check] mechanism: split the row reproduction with halo recipients priced at tau/4 instead of H); verified exact and non-vacuous on the three certified instances of runs/2026-07-02-sigma-cap-refuter/ (halo_bound_check.py)
 owner: A
-workspace: proofs/conj-halo-collapse
+workspace: proofs/lem-halo-collapse
 ---
 
 **af-VALIDATED IN-REPO 2026-07-02** (run 2 on the fresh factored workspace, clean): 20-node
 adversarial tree, root `validated`, taint 20/20 clean; fresh codex prover/verifiers per node, Claude
 orchestrated only (§6); imports the three af-validated deps [[lem-mass-split]],
 [[lem-residual-lower]], [[lem-residual-upper]] as externals. Ledger:
-`proofs/conj-halo-collapse/ledger/`; export: `proofs/conj-halo-collapse/export.md`. Status flip is
+`proofs/lem-halo-collapse/ledger/`; export: `proofs/lem-halo-collapse/export.md`. Status flip is
 the mechanical reflection of the codex ledger. (Run 1, pre-factoring, ballooned 49>40; the factoring
 cured it: 20 vs 49 nodes.)
 
