@@ -239,3 +239,21 @@ numerical I guards — both short and with ZERO top ownership: intersection alon
 is NOT the obstruction; coupling a multi-ray I module into a tall ultra web is.
 Batched hostile verifier (fresh codex xhigh) dispatched over the 8-node routine
 batch. Nothing promoted.
+
+## 2026-07-11 — W64 (session 17): I-cap routine batch verdict 7/8 VALID + 1 corrected; calibrations verified (delta on v25)
+
+The fresh batched hostile codex verifier returned
+`docs/waves/2026-07-11-W64-artifacts/VERDICT-W64-ICAP-BATCH.md`:
+B0/S/C/G/T+/IC/A all VALID (every constants chain recomputed: 6tau/7, 1/14,
+1/42 census, c_m/512 and c_m/1536 ownership floors, 2tau/15 T-spend, c_m/1024
+outer-halo flow; clone audits with split and partially selected fibers; kernel
+fixed before classification; R2 source dominations matched; dependency
+contracts checked incl. the corrected A>0 financing floor). R is
+VALID-WITH-CORRECTION: the six-way routing alternatives are exhaustive but NOT
+pairwise disjoint (exact overlap distributions exhibited); minimal honest fix =
+priority guards (take the first line if it holds, else the second; equality
+owned by the first) — preserves all constants; the §2 assembly's 'exactly one'
+inherits the same repair. All three calibration matrices (the 4x4 I module,
+P_S, and the 8x8 block extension) recomputed and VERIFIED exactly, incl. the
+zero-top-ownership claim. Codification of the eight shards (R in corrected
+form) in flight.
