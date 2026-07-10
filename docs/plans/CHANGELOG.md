@@ -214,3 +214,28 @@ consequence: the pre-creative decider program for ALL NINE creative surfaces of
 the W62+W63 trees is complete; tallness and the negativity budget are the only
 walls ever named; creative queue green-lit (aism-72zn, I-cap first, with the
 X ledger and routes-to-D plateau as adverse fixtures).
+
+## 2026-07-11 — W64 (session 17): I-cap DECOMPOSED (strategy artifact; hostile verify in flight; delta on v25)
+
+Fresh codex ultra strategist-prover returned
+`docs/waves/2026-07-11-W64-artifacts/ICAP-ATTACK-W64.md` (+ appendix proofs;
+aism-72zn): node I-cap (`conj-w63-I-intersection-diagonal-corner-exclusion`, the
+sign-cube cell) achieves objective (a) — decomposed into EIGHT routine nodes
+(B0 single-root receiver cap; S score-bulk production, lambda_A{score-good}
+> 1/14; C arbitrary-kernel X/I/D bulk census, one cell >= 1/42; G common
+receiver statistic with constant top ownership P_v^+ > c_m/512 resp. c_m/1536;
+T+ the explicit tallness spend P_v^+{d_Q <= tau/4} < 2*tau/15; IC the
+internally closed diagonal-flow package with O(delta)-overflow two-fold flow;
+A the structural cost of type I — a singleton far-tight family is impossible,
+exactly why the W63 plateau had M_I = 0; R the exact six-way residual split) +
+SIX strictly smaller creative leaves (X_gap/X_near/I_far/I_near/D_gap/D_near),
+assembly with gamma_cap/delta_cap threading and a separate honest emptiness
+ceiling. Hard core in one sentence: an exact high-rank sign cube must carry
+constant top mass on alpha-free cancellation vertices while its two-fold
+positive flow is covered inside the saturated halo and every common scalar
+demand stays O(delta). NEW exact calibrations: a short 4x4 module with local
+type-I ledger mass 1023/8192 > 1/16 and an 8x8 block extension meeting all
+numerical I guards — both short and with ZERO top ownership: intersection alone
+is NOT the obstruction; coupling a multi-ray I module into a tall ultra web is.
+Batched hostile verifier (fresh codex xhigh) dispatched over the 8-node routine
+batch. Nothing promoted.
