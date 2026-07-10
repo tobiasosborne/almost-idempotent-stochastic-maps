@@ -10,8 +10,8 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read **`docs/plans/2026-07-10-top-down-proof-sketch-v20.md`** — THE canonical strategic
-   map (v20, W56 SL1a-surface delta; v19 and earlier superseded in place, kept for line
+2. Read **`docs/plans/2026-07-10-top-down-proof-sketch-v21.md`** — THE canonical strategic
+   map (v21, W57 completion-LP delta; v20 and earlier superseded in place, kept for line
    citations). Then `docs/waves/2026-07-10-W56-sl1a-decomposition-close.md` (the W56
    close: the wall, the harvest, the new three-cell SL1a surface).
    **STEWARDSHIP (user mandate, 2026-07-06, binding): reconciling the sketch with newly
@@ -62,7 +62,7 @@ dual-face mass minimax (aism-vuc). Four Tier-1 windows became six sharper ones.
 
 ## Next steps (ranked) — W57
 
-0. **H-X first** (`conj-sl1a-off-diagonal-cell`): it shares the completion-obstruction
+0. DONE for the minimal family (W57, runs/2026-07-10-w57-starvation-completion-lp: INFEASIBLE, stable exact Farkas certificates; L3). Split residue: 0a decide the extra-vertex family (aism-hjm); 0b paper-proof the completion-obstruction candidate lemma (aism-cq2). Original item for reference: **H-X first** (`conj-sl1a-off-diagonal-cell`): it shares the completion-obstruction
    shape with the W55 large-gauge wall, so ONE exact `P=L*B, B*L=I`
    completion/refutation LP wave (v19 item 3 == v20 item 0) serves both fronts. A
    rational feasible tau->0 family refutes; a stable dual infeasibility certificate is

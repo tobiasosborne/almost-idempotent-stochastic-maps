@@ -1,0 +1,577 @@
+{
+  "case_constraints": {
+    "certified_atom": {
+      "horn": "B_F",
+      "mass_lower_bound": "1/4",
+      "off_diagonal": true,
+      "u": "f",
+      "x": "x"
+    },
+    "freight_constraint": {
+      "entry": "P_fx",
+      "lower_bound": "1/2"
+    },
+    "geometry_status": "NOT_REALIZED: the added midpoint changes no vertex, so the full co-top/tall cell is empty",
+    "kernel_xi_x": {
+      "f": "1/2",
+      "v": "1/2"
+    },
+    "score_threshold": "3/832",
+    "score_upper_bound": "3/65536",
+    "top_pin": "P_vx=0"
+  },
+  "case_id": "hx_far_r3_nonvertex6",
+  "description": "First zero-top added-nonvertex formal H-X far freight refinement, compressed exactly to actor5; full H-X geometry is not realized",
+  "factor_problem": {
+    "L": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "-5/257",
+        "1/16842752"
+      ],
+      [
+        "1",
+        "-5",
+        "1/65536"
+      ],
+      [
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "1"
+      ]
+    ],
+    "equalities": {
+      "matrix": [
+        [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "-5/257",
+          "-5",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/16842752",
+          "1/65536",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-5/257",
+          "-5",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/16842752",
+          "1/65536",
+          "0",
+          "1"
+        ]
+      ],
+      "names": [
+        "D_moment_0",
+        "D_moment_1",
+        "D_moment_2",
+        "E_moment_0",
+        "E_moment_1",
+        "E_moment_2"
+      ],
+      "rhs": [
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    "fixed_B_row_0": [
+      "255/256",
+      "257/65536",
+      "-1/65536",
+      "0",
+      "0"
+    ],
+    "necessary_inequalities": [
+      {
+        "coefficients": [
+          "-5",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/65536",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "column": "v",
+        "constant": "65281/65536",
+        "entry_constant_without_t": "255/256",
+        "name": "P_fv+t>=0",
+        "row": "f",
+        "source": "row negativity <= t implies every entry >= -t"
+      },
+      {
+        "coefficients": [
+          "0",
+          "0",
+          "0",
+          "-5",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/65536",
+          "0"
+        ],
+        "column": "z",
+        "constant": "1/65536",
+        "entry_constant_without_t": "0",
+        "name": "P_fz+t>=0",
+        "row": "f",
+        "source": "row negativity <= t implies every entry >= -t"
+      },
+      {
+        "coefficients": [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "column": "f",
+        "constant": "0",
+        "entry_constant_without_t": "-1/65536",
+        "name": "P_zf+t>=0",
+        "row": "z",
+        "source": "row negativity <= t implies every entry >= -t"
+      },
+      {
+        "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "column": "v",
+        "constant": "65281/65536",
+        "entry_constant_without_t": "255/256",
+        "name": "P_ov+t>=0",
+        "row": "o",
+        "source": "row negativity <= t implies every entry >= -t"
+      },
+      {
+        "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "column": "w",
+        "constant": "129/32768",
+        "entry_constant_without_t": "257/65536",
+        "name": "P_ow+t>=0",
+        "row": "o",
+        "source": "row negativity <= t implies every entry >= -t"
+      }
+    ],
+    "unknowns": [
+      "D_v",
+      "D_w",
+      "D_f",
+      "D_z",
+      "D_o",
+      "E_v",
+      "E_w",
+      "E_f",
+      "E_z",
+      "E_o"
+    ]
+  },
+  "farkas_certificate": {
+    "D_sum": "44154402561260545/281474976710656",
+    "M": "2170365235582731525/72057594037927936",
+    "contradiction_margin_M_minus_tD": "555569345906618009855/18446744073709551616",
+    "equality_multipliers_mu": [
+      "-2526406375/4294967296",
+      "-8510326699787525/281474976710656",
+      "2526406375/4294967296",
+      "22064003835/281474976710656",
+      "289192898265345/18446744073709551616",
+      "-22064003835/281474976710656"
+    ],
+    "inequality_multipliers_N": [
+      "505281275/4294967296",
+      "1735179453595905/281474976710656",
+      "2526406375/16777216",
+      "1285/16777216",
+      "85852155/1099511627776"
+    ],
+    "normalized_R": "434073047116546305/2260705411136539904"
+  },
+  "labels": [
+    "v",
+    "w",
+    "f",
+    "z",
+    "o"
+  ],
+  "lift": {
+    "L_full": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "-5/257",
+        "1/16842752"
+      ],
+      [
+        "1",
+        "-5",
+        "1/65536"
+      ],
+      [
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "-5/2",
+        "1/131072"
+      ]
+    ],
+    "aggregation": {
+      "b_prime_f": {
+        "b_f": "1",
+        "b_x": "1/2"
+      },
+      "b_prime_v": {
+        "b_v": "1",
+        "b_x": "1/2"
+      }
+    },
+    "fixed_B_row_0_full": [
+      "255/256",
+      "257/65536",
+      "-1/65536",
+      "0",
+      "0",
+      "0"
+    ],
+    "labels_full": [
+      "v",
+      "w",
+      "f",
+      "z",
+      "o",
+      "x"
+    ],
+    "negative_part_argument": "For theta>=0, (-[u+theta*x])_+ <= (-u)_+ + theta*(-x)_+; summing the two distributed columns preserves total theta=1.",
+    "sample_B_aggregated": [
+      [
+        "255/256",
+        "257/65536",
+        "-1/65536",
+        "0",
+        "0"
+      ],
+      [
+        "-255/256",
+        "-257/65536",
+        "1/65536",
+        "1",
+        "0"
+      ],
+      [
+        "-255/256",
+        "-257/65536",
+        "1/65536",
+        "0",
+        "1"
+      ]
+    ],
+    "sample_B_full_equality_only": [
+      [
+        "255/256",
+        "257/65536",
+        "-1/65536",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-255/256",
+        "-257/65536",
+        "1/65536",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "-255/256",
+        "-257/65536",
+        "1/65536",
+        "0",
+        "1",
+        "0"
+      ]
+    ],
+    "sample_P_full_equality_only": [
+      [
+        "255/256",
+        "257/65536",
+        "-1/65536",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "4378459905/4311744512",
+        "17170431/4294967296",
+        "-17170431/1103806595072",
+        "-5/257",
+        "1/16842752",
+        "0"
+      ],
+      [
+        "100269825/16777216",
+        "101056255/4294967296",
+        "-393215/4294967296",
+        "-5",
+        "1/65536",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "116981505/33554432",
+        "117899007/8589934592",
+        "-458751/8589934592",
+        "-5/2",
+        "1/131072",
+        "0"
+      ]
+    ],
+    "x_barycentric_coordinates": {
+      "f": "1/2",
+      "v": "1/2"
+    }
+  },
+  "metric_obstruction": {
+    "argument": "1=|sum x_j D_j| <= max|x_j|*||D||_1=A*s",
+    "contradiction_margin_1_minus_A_s": "251/256",
+    "max_abs_x": "5",
+    "moment": "sum_j x_j*D_j=1",
+    "required_D_l1": "1/256"
+  },
+  "parameters": {
+    "A": "5",
+    "a": "1/257",
+    "s": "1/256",
+    "t": "1/65536"
+  },
+  "rank": 3,
+  "sample_relaxation": {
+    "B": [
+      [
+        "255/256",
+        "257/65536",
+        "-1/65536",
+        "0",
+        "0"
+      ],
+      [
+        "-255/256",
+        "-257/65536",
+        "1/65536",
+        "1",
+        "0"
+      ],
+      [
+        "-255/256",
+        "-257/65536",
+        "1/65536",
+        "0",
+        "1"
+      ]
+    ],
+    "P": [
+      [
+        "255/256",
+        "257/65536",
+        "-1/65536",
+        "0",
+        "0"
+      ],
+      [
+        "4378459905/4311744512",
+        "17170431/4294967296",
+        "-17170431/1103806595072",
+        "-5/257",
+        "1/16842752"
+      ],
+      [
+        "100269825/16777216",
+        "101056255/4294967296",
+        "-393215/4294967296",
+        "-5",
+        "1/65536"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "Z_l1": "65537/32768",
+    "affine_gadget_residual": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "sample_delta": "21475229695/4294967296",
+    "scope": "BL=I, idempotence, row sums, affine gadget, and top pins only; norm and negativity are deliberately dropped",
+    "w_interpolation_residual": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "schema": "starvation-farkas-v1",
+  "stability": {
+    "A_interval": [
+      "4",
+      "6"
+    ],
+    "analytic_bounds": {
+      "D_less_than": "264",
+      "M_greater_than": "16",
+      "R_greater_than": "2/33",
+      "all_N_positive": true,
+      "t_at_most": "1/65536"
+    },
+    "g_over_s_interval": [
+      "4",
+      "6"
+    ],
+    "g_used_by_certificate": false,
+    "s_interval": [
+      "0",
+      "1/256"
+    ],
+    "s_left_endpoint_open": true
+  },
+  "verdict": "INFEASIBLE"
+}

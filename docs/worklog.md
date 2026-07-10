@@ -861,3 +861,14 @@ claims remain uncodified/non-L0 pending fresh standalone prover/verifier passes.
 - SL1a's surface is now three single-contract sigma-cells (H-D/H-I/H-X) on a proved
   conditional interface (lem-sl1a-three-cell-reduction). W57: H-X first via the exact
   P=L*B completion LP (serves the W55 large-gauge wall too).
+
+## 2026-07-10 — Session 14 (cont.): W57 — the starvation gadget's minimal completions are dead (exact, L3)
+
+- W57 (aism-oxu, codex ultra, serial): exact P=L*B, B*L=I completion LP on the W55
+  starvation gadget. Minimal rank-3 actor-hull family INFEASIBLE (3 cases, exact
+  Farkas certificates, stable over A0 in [4,6], tau <= 1/256); independent check
+  OVERALL PASS, reproduced by the orchestrator. Extra-vertex family UNDECIDED (the
+  live residual). Bundle: runs/2026-07-10-w57-starvation-completion-lp (INDEX row
+  added, check-runs green). Candidate completion-obstruction lemma extracted from the
+  stable multipliers (the H-X mechanism seed). Follow-ups filed: aism-hjm (extra-vertex
+  family), aism-cq2 (paper-proof wave). Sketch v21 delta; HANDOFF/router pins updated.
