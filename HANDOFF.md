@@ -62,7 +62,11 @@ dual-face mass minimax (aism-vuc). Four Tier-1 windows became six sharper ones.
 
 ## Next steps (ranked) — W57
 
-0. DONE for the minimal family (W57, runs/2026-07-10-w57-starvation-completion-lp: INFEASIBLE, stable exact Farkas certificates; L3). Split residue: 0a decide the extra-vertex family (aism-hjm); 0b paper-proof the completion-obstruction candidate lemma (aism-cq2). Original item for reference: **H-X first** (`conj-sl1a-off-diagonal-cell`): it shares the completion-obstruction
+0. DONE: W57 minimal family AND W58 extra-vertex family both INFEASIBLE (exact, stable
+   Farkas; bundles runs/2026-07-10-w57-* and runs/2026-07-10-w58-*; L3; the obstruction
+   is K-parametric per the W58 CERTIFICATE). LIVE: 0b paper-proof the K-parametric
+   completion-obstruction candidate lemma (aism-cq2, W59 in flight at session close).
+   Original item for reference: **H-X first** (`conj-sl1a-off-diagonal-cell`): it shares the completion-obstruction
    shape with the W55 large-gauge wall, so ONE exact `P=L*B, B*L=I`
    completion/refutation LP wave (v19 item 3 == v20 item 0) serves both fronts. A
    rational feasible tau->0 family refutes; a stable dual infeasibility certificate is
