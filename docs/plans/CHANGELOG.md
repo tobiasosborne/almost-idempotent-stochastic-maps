@@ -71,3 +71,19 @@ three-cell SL1a surface); reachable open conjectures 1 -> 11 (7 irreducible leav
 closures: Kernel = 3, MIN-A = 30. op-hlc correctly remains status: open (declared, not
 discharged). No mathematical content changed — this is codification of the map the sketch
 already asserted in prose.
+
+## v25 — 2026-07-10, W60 engine-bank delta (new numbered file)
+
+Registry 153 → 158 (+5 proved L5 lemmas, the W60 ENGINE BANK; batched hostile verdict
+MIXED = 3 VALID + 2 VALID-WITH-CORRECTIONS, corrections applied as prescribed).
+`lem-hx-transverse-moment-identity` / `lem-hx-signed-variation-ledger` /
+`lem-hx-financing-floor` / `lem-hx-robust-scalar-starvation` /
+`lem-hx-forced-exterior-coupling`. W59 §HONEST-LIMITS gaps 1 (rank) and 2 (slab)
+RETIRED at the mechanism level; the tableau metric pin relaxed to the window
+[tau/2, 2tau]; fiberwise zero-top relaxed to an O(delta) top-tail cap. The H-X hard
+residual is now a two-route FORK (USER DECISION aism-ur9): Route A codex exact-H-X
+(X2/X3F/X3N/X4) vs Route B Fable gamma-renegotiation (N4 + N5/N6, surface change +
+gamma dial). Both independent strategist trees banked in
+`docs/waves/2026-07-10-W60-artifacts/`. New Tier-1 item 0: the route decision + its
+two cheap L3 deciders; engine-bank af-elevation queued (prime:
+lem-hx-robust-scalar-starvation).

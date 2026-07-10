@@ -71,6 +71,24 @@ exterior coupling, a guaranteed byproduct feeding L6.5).
 batched hostile verifier (W56 pattern) before any registry entry. Route fork + γ-dial
 escalated as a USER DECISION bead. Nothing promoted.
 
+## ENGINE BATCH OUTCOME (same day) — BANKED at L5
+
+Prover: codex gpt-5.6-sol (high), `PROOFS-W60-ENGINE.md`. Verifier: FRESH hostile
+codex gpt-5.6-sol (xhigh), batched per-target verdict `VERDICT-W60-ENGINE.md`
+(both in `2026-07-10-W60-artifacts/`). Verdict: **MIXED = E1 VALID, E2 VALID,
+E3 VALID-WITH-CORRECTIONS (contract wording: difference-one normalization),
+E4 VALID (incl. an independent counterexample attack that failed exactly at the
+tail hypothesis + the T0 (3,1,0) fixture), E5 VALID-WITH-CORRECTIONS (exact
+vacuity threshold l <= 8delta+16delta^2). DEAD-ROUTE section: none.** Both
+corrections applied in-file (flagged) and reflected in the registry shards.
+
+Registered (status proved, af none, L5, reviewer != author): E1 ->
+`lem-hx-transverse-moment-identity`, E2 -> `lem-hx-signed-variation-ledger`,
+E3 -> `lem-hx-financing-floor`, E4 -> `lem-hx-robust-scalar-starvation`,
+E5 -> `lem-hx-forced-exterior-coupling`. Registry 153 -> 158. Sketch v25 +
+CHANGELOG reconciled; UNWIRED whitelist extended (off paper-track until
+af-validated). W59 §HONEST-LIMITS gaps 1-2 retired at mechanism level.
+
 Engine batch contracts (merged, signed picture, all clone-invariant):
 E1 = full-fiber affine moment identity at row-hull endpoint pairs (N1/X0 merged);
 E2 = two-sign-union variation ledger incl. synthetic-hull rows (N2 + ν(q) ≤ δ);
