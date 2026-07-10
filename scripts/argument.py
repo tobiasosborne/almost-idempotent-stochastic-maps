@@ -52,7 +52,12 @@ MATH_STATUS = {"proved", "cited", "consensus", "open", "obstruction", "disproved
 NONRIGOROUS_STATUS = {"stated", "proved-mod-audit", "conjecture", "heuristic", "numerical"}
 AF_STATES = {"none", "seeded", "validated"}
 LIST_FIELDS = ("defs", "deps")
-NODE_THRESHOLD = 12
+# Brittleness threshold = the ONE shared soft cap (scripts/af_constants.py) also read by
+# af-orchestrate.py's balloon guard, so the linker and the orchestrator cannot drift (aism-s64).
+_SCRIPTS_DIR = str(pathlib.Path(__file__).resolve().parent)
+if _SCRIPTS_DIR not in sys.path:
+    sys.path.insert(0, _SCRIPTS_DIR)
+from af_constants import NODE_SOFT_CAP as NODE_THRESHOLD  # noqa: E402
 
 
 def normalize(s):
@@ -182,7 +187,8 @@ def check_brittleness(lemmas, nodecounts, threshold=NODE_THRESHOLD):
     for l in lemmas:
         nc = nodecounts.get(l["id"])
         if nc is not None and nc > threshold:
-            warnings.append(f"REFACTOR: {l['workspace']} has {nc} nodes (>{threshold}) "
+            ws = l.get("workspace") or f"proofs/{l['id']}"
+            warnings.append(f"REFACTOR: {ws} has {nc} nodes (>{threshold}) "
                             f"— factor {l['id']} into sub-lemmas")
     return warnings
 

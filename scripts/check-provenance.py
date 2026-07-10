@@ -24,8 +24,10 @@ CHECKS (errors block the commit; warnings are surfaced but do not):
   ERROR  status OVERCLAIM   a registry status=open result framed as proved/benchmark (never `open`) in
                             tab:status — the project's #1 guarded failure mode (a confident WRONG claim)
   ERROR  build (--build)    `latexmk` compiles the report AND the log has no undefined references
+  ERROR  anchor             a registry result mapping to ZERO report labels that is NOT whitelisted in
+                            report/UNWIRED.md (a statement silently dropped from / never wired into the
+                            paper); an unanchored id ON the whitelist is a deliberate off-track WARN
   WARN   reverse labels     a report result-label (thm/lem/prop/cor/op/obs/ex:) with no registry backref
-  WARN   anchor             a registry result mapping to ZERO report labels (dropped/unlinked statement)
   WARN   coverage           a report-facing registry result with no per-claim PROVENANCE row
   WARN   status underclaim  a proved/validated result framed ONLY `open` in tab:status
   WARN   parse integrity    a `|`-data line in a recognized PROVENANCE block that failed to parse, or a
@@ -64,6 +66,7 @@ SECTIONS = ROOT / "report" / "sections"
 PROVENANCE = ROOT / "report" / "PROVENANCE.md"
 REPORT_DIR = ROOT / "report"
 BUILD_DIR = REPORT_DIR / ".build"
+UNWIRED = REPORT_DIR / "UNWIRED.md"
 
 LABEL = r"[a-z]+:[A-Za-z0-9-]+"             # slugs may carry uppercase (lem:P-properties)
 LABEL_RE = re.compile(r"\\label\{(" + LABEL + r")\}")
@@ -319,15 +322,47 @@ def check_status_drift(status_rows, shards, texlabels):
     return errors, warnings
 
 
-def check_anchor(shards, texlabels):
+def load_unwired(path=UNWIRED):
+    """Parse report/UNWIRED.md -> the set of registry ids intentionally OUT of the paper track.
+
+    An id is any non-blank, non-`#`-comment line inside a fenced ``` block (the prose/headers live
+    outside the fences, so we only harvest lines while inside one). Pure w.r.t. its `path` argument
+    so unit tests can point it at a fixture; returns an empty set if the file is absent."""
+    path = pathlib.Path(path)
+    if not path.is_file():
+        return set()
+    ids = set()
+    in_fence = False
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.strip().startswith("```"):
+            in_fence = not in_fence
+            continue
+        if not in_fence:
+            continue
+        tok = line.strip()
+        if not tok or tok.startswith("#"):
+            continue
+        ids.add(tok.split()[0])
+    return ids
+
+
+def check_anchor(shards, texlabels, whitelist=frozenset()):
     """A registry result that maps to ZERO report labels (no `report <label>` token and no id-transform
-    hit) is an unanchored/dropped statement — surfaced as a WARN (catches a whole-section cut or a new
-    shard never wired into the paper). Today every shard anchors, so this is silent until something drops."""
-    warnings = []
+    hit) is an unanchored/dropped statement. Returns (errors, warnings).
+
+    An unanchored id ON the report/UNWIRED.md whitelist is a deliberate exploration-track result -> a
+    silent WARN. An unanchored id NOT whitelisted is a hard ERROR: a result silently dropped from (or
+    never wired into) the paper without being explicitly declared out-of-track. This is the project's
+    anti-drift stance — a new statement must EITHER be anchored in report/ OR listed in UNWIRED.md."""
+    errors, warnings = [], []
     for s in shards:
         if not labels_of(s, texlabels):
-            warnings.append(f"{s['id']}: maps to NO report label (dropped from the paper, or never wired in)")
-    return warnings
+            if s["id"] in whitelist:
+                warnings.append(f"{s['id']}: unanchored but whitelisted in report/UNWIRED.md (off paper-track)")
+            else:
+                errors.append(f"{s['id']}: maps to NO report label and is NOT in report/UNWIRED.md "
+                              f"(dropped from the paper, or never wired in — anchor it or whitelist it)")
+    return errors, warnings
 
 
 def check_source_hashes(source_rows, root=ROOT, tracked=None):
@@ -447,7 +482,8 @@ def run_semantic():
     grp("hash freshness", he, hw)
     se, sw = check_status_drift(status_table_rows(), shards, texlabels)
     grp("status drift", se, sw)
-    grp("anchor", (), check_anchor(shards, texlabels))
+    ae, aw = check_anchor(shards, texlabels, load_unwired())
+    grp("anchor", ae, aw)
     grp("reverse labels", (), check_reverse_labels(shards, texlabels))
     grp("coverage", (), check_coverage(shards, claim_rows, texlabels))
     grp("parse integrity", (), prov["parse_warnings"])

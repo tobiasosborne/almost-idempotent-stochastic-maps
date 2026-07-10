@@ -35,9 +35,19 @@ import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+_SCRIPTS_DIR = str(pathlib.Path(__file__).resolve().parent)
+if _SCRIPTS_DIR not in sys.path:
+    sys.path.insert(0, _SCRIPTS_DIR)
+from af_constants import NODE_SOFT_CAP  # noqa: E402  (shared with argument.py — aism-s64)
+
 AF = os.environ.get("AF") or shutil.which("af") or "/home/tobias/Projects/vibefeld/af"
 CODEX = "codex"
 CODEX_MODEL = os.environ.get("CODEX_MODEL", "gpt-5.6-sol")
+# codex quota/auth outage tell (incident 2026-07-10: a quota outage burned all 14 rounds with
+# empty worker outputs, root still pending, and NO abort). The literal codex error contains the
+# first marker; the second is the same message with a typographic apostrophe, just in case.
+CODEX_USAGE_LIMIT_MARKERS = ("You've hit your usage limit",
+                             "You’ve hit your usage limit")
 # gpt-5.6-sol supported reasoning efforts (codex models cache): low..ultra.
 CODEX_EFFORTS = ("low", "medium", "high", "xhigh", "max", "ultra")
 # Effort tiers (user directive 2026-07-09): highest thinking for truly creative/demanding
@@ -125,11 +135,16 @@ def _git_porcelain():
         return ""
 
 
-def overreach_paths():
-    """Working-tree paths under Layers 0/1 (definitions/ + argument/). A codex prover runs with repo-wide
-    workspace-write; it must write ONLY inside its proofs/<id>/ af workspace. Any change here means it
-    edited ground truth / the registry — that is Claude's job (provision-first), so flag it. Returns the
-    set of porcelain lines (status + path) for matching paths."""
+def overreach_paths(ws=None):
+    """Working-tree paths OUTSIDE the orchestration's own af workspace (`ws` = proofs/<rid>/).
+    A codex prover runs with repo-wide workspace-write, but it must write ONLY inside its
+    proofs/<rid>/ workspace; the orchestrator itself dirties NOTHING else in-repo by design
+    (worker answers/logs go to the /tmp logdir; git porcelain never reports paths outside the
+    repo, so /tmp scratch can't trip this). Any OTHER dirty path — ground truth (definitions/),
+    the registry (argument/), another result's proofs/ workspace, scripts, report, anything —
+    means the prover overreached: that is Claude's job (provision-first), so flag it. Returns
+    the set of porcelain lines (status + path) for offending paths."""
+    allow = (ws.rstrip("/") + "/",) if ws else ()
     bad = set()
     for ln in _git_porcelain().splitlines():
         if len(ln) < 4:
@@ -137,8 +152,9 @@ def overreach_paths():
         p = ln[3:].strip().strip('"')
         if " -> " in p:                      # rename: take the destination
             p = p.split(" -> ", 1)[1]
-        if p.startswith("definitions/") or p.startswith("argument/"):
-            bad.add(ln.rstrip())
+        if any(p == a.rstrip("/") or p.startswith(a) for a in allow):
+            continue
+        bad.add(ln.rstrip())
     return bad
 
 
@@ -151,14 +167,23 @@ def run_codex(prompt, answer_path, log_path, sandbox="workspace-write", timeout=
     answer_path.unlink(missing_ok=True)
     with open(log_path, "w") as lf:
         try:
-            subprocess.run([CODEX, "exec", "--skip-git-repo-check", "-C", str(ROOT),
-                            "-m", CODEX_MODEL,
-                            "-c", f'model_reasoning_effort="{effort}"',
-                            "-s", sandbox, "-o", str(answer_path), "-"],
-                           input=prompt, text=True, stdout=lf, stderr=subprocess.STDOUT,
-                           timeout=timeout, cwd=ROOT)
+            r = subprocess.run([CODEX, "exec", "--skip-git-repo-check", "-C", str(ROOT),
+                                "-m", CODEX_MODEL,
+                                "-c", f'model_reasoning_effort="{effort}"',
+                                "-s", sandbox, "-o", str(answer_path), "-"],
+                               input=prompt, text=True, stdout=lf, stderr=subprocess.STDOUT,
+                               timeout=timeout, cwd=ROOT)
         except subprocess.TimeoutExpired:
             return "TIMEOUT"
+    # Quota/auth fast-fail (aism-cwt): a nonzero codex exit, or the usage-limit error in the
+    # log tail, means this call did no proof work — return a distinct sentinel (like TIMEOUT)
+    # so the round loop can detect dead rounds and abort instead of burning the round budget.
+    try:
+        tail = pathlib.Path(log_path).read_text(encoding="utf-8", errors="replace")[-8192:]
+    except OSError:
+        tail = ""
+    if getattr(r, "returncode", 0) or any(m in tail for m in CODEX_USAGE_LIMIT_MARKERS):
+        return "ERROR"
     return answer_path.read_text(encoding="utf-8") if answer_path.exists() else ""
 
 
@@ -286,19 +311,23 @@ def main(argv):
     ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--logdir", default=None)
     # Balloon tripwire: abort early (before spending another round of codex) when the tree is far
-    # past any legit size (validated trees this project topped out ~23-26 nodes; balloons hit 75-102),
-    # or when the pending set is not shrinking over several rounds with open challenges (thrash, not
-    # convergence). Aborting here SAVES the codex quota a doomed run would otherwise burn.
-    ap.add_argument("--node-cap", type=int, default=40,
-                    help="abort if live (non-archived) node count exceeds this (balloon guard)")
+    # past any legit size (validated trees in this repo run 14-52 total nodes; balloons hit
+    # 75-102 — thresholds live in scripts/af_constants.py, shared with the linker's brittleness
+    # warning), or when the pending set is not shrinking over several rounds with open challenges
+    # (thrash, not convergence). Aborting here SAVES the codex quota a doomed run would burn.
+    ap.add_argument("--node-cap", type=int, default=2 * NODE_SOFT_CAP,
+                    help="abort if live (non-archived) node count exceeds this (balloon guard; "
+                         f"default 2*NODE_SOFT_CAP = {2 * NODE_SOFT_CAP})")
     ap.add_argument("--stuck-rounds", type=int, default=3,
                     help="abort if pending count has not decreased over this many rounds while challenges are open")
     # Prover-overreach guard: a codex prover (repo-wide workspace-write) must write ONLY to its
     # proofs/<id>/ workspace. Twice now provers have edited registry shards / created phantom Layer-1
-    # shards / hand-provisioned defs. Abort the moment the prover dirties definitions/ or argument/ so
-    # Claude provisions the needed fact properly (byte-matched, correct layer) and re-runs.
+    # shards / hand-provisioned defs. Abort the moment the prover dirties ANY repo path outside its
+    # own workspace (definitions/, argument/, other proofs/, scripts/, report/, ...) so Claude
+    # provisions the needed fact properly (byte-matched, correct layer) and re-runs.
     ap.add_argument("--no-overreach-guard", action="store_true",
-                    help="disable the guard that aborts when a prover edits definitions/ or argument/")
+                    help="disable the guard that aborts when a prover writes outside its own "
+                         "proofs/<id>/ workspace")
     # Reasoning-effort tiering (user directive 2026-07-09): highest thinking for truly
     # creative/demanding conjectures, lower thinking for lower-priority mechanical jobs.
     ap.add_argument("--tier", choices=sorted(TIERS), default="creative",
@@ -322,24 +351,28 @@ def main(argv):
         log(f"ERROR: no workspace at {ws} (seed it first)")
         return 2
 
-    base_overreach = set() if a.no_overreach_guard else overreach_paths()
+    base_overreach = set() if a.no_overreach_guard else overreach_paths(ws)
 
     def check_overreach(when):
         if a.no_overreach_guard:
             return None
-        new = overreach_paths() - base_overreach
+        new = overreach_paths(ws) - base_overreach
         if not new:
             return None
-        log(f"PROVER-OVERREACH ({when}): the prover wrote OUTSIDE its workspace, into Layers 0/1:")
+        log(f"PROVER-OVERREACH ({when}): the prover wrote OUTSIDE its {ws}/ workspace:")
         for x in sorted(new):
             log(f"    {x}")
-        return ("PROVER-OVERREACH", f"prover dirtied definitions/ or argument/ during {when}")
+        return ("PROVER-OVERREACH", f"prover dirtied repo paths outside {ws}/ during {when}")
 
     if a.phase in ("all", "prove"):
         log(f"PROVER build dispatch (codex {CODEX_MODEL}, effort={prover_effort}; "
             f"verifiers at {verifier_effort})...")
         out = run_codex(prover_build_prompt(rid, ws), logdir / "prover-build.answer.txt",
                         logdir / "prover-build.log", effort=prover_effort)
+        if out == "ERROR":
+            log("ABORT: codex calls failing (quota/auth?) — nothing consumed, rerun after reset")
+            log(f"    (see {logdir}/prover-build.log tail for the codex error)")
+            return 4
         log(f"prover build done: {' '.join(out.split())[-280:]}")
         if check_overreach("prover build"):
             log("ABORTED [PROVER-OVERREACH]: review `git diff`; provision the needed fact YOURSELF "
@@ -351,7 +384,7 @@ def main(argv):
         return 0
 
     pool = cf.ThreadPoolExecutor(max_workers=a.workers)
-    pending_hist, abort = [], None
+    pending_hist, abort, dead_rounds = [], None, 0
     for rnd in range(a.max_rounds):
         af(ws, "reap")
         s = (af_json(ws, "status") or {}).get("statistics", {})
@@ -402,9 +435,22 @@ def main(argv):
                 run_codex, verifier_prompt(rid, ws, n, o),
                 logdir / f"verify-{n}-r{rnd}.answer.txt", logdir / f"verify-{n}-r{rnd}.log",
                 effort=verifier_effort)))
+        results = []
         for kind, n, fut in tasks:
-            tail = " ".join((fut.result() or "").split())[-160:]
+            out = fut.result() or ""
+            results.append(out)
+            tail = " ".join(out.split())[-160:]
             log(f"    {kind} {n}: {tail}")
+        # Codex-outage fast-fail (aism-cwt; incident 2026-07-10: a quota outage burned all 14
+        # rounds with empty outputs and no abort). INDEPENDENT of open_ch: if EVERY dispatched
+        # worker in a round comes back ERROR/empty, the round did nothing; two such consecutive
+        # rounds = a dead codex (quota/auth), not a proof problem — stop burning rounds.
+        dead_rounds = dead_rounds + 1 if all(r in ("", "ERROR") for r in results) else 0
+        if dead_rounds >= 2:
+            log("ABORT: codex calls failing (quota/auth?) — nothing consumed, rerun after reset")
+            abort = ("CODEX-DEAD", f"every worker returned ERROR/empty output for "
+                                   f"{dead_rounds} consecutive rounds (quota/auth outage)")
+            break
         ov = check_overreach(f"round {rnd}")
         if ov:
             abort = ov
@@ -426,11 +472,17 @@ def main(argv):
                 for ex in samples[lab][:3]:
                     log(f"        - {ex}")
         converging = len(pending_hist) >= 2 and pending_hist[-1] < max(pending_hist)
-        if abort and abort[0] == "PROVER-OVERREACH":
-            log("RECOMMEND: the prover edited Layers 0/1 (`git diff definitions/ argument/`). It hit a "
-                "missing fact and tried to provision it itself. Provision that fact YOURSELF as a "
-                "byte-matched cited def (correct layer; Rule 6), revert the prover's stray edits, "
-                "re-seed the workspace, and re-run. Do NOT reflect this run.")
+        if abort and abort[0] == "CODEX-DEAD":
+            log("RECOMMEND: codex is not doing work (usage quota exhausted or auth broken) — the af "
+                "tree is intact and NO round budget should be spent like this. Check `codex login` / "
+                "the usage limit reset time, then re-run the SAME command (`--phase verify` resumes "
+                "the existing tree; no rebuild).")
+        elif abort and abort[0] == "PROVER-OVERREACH":
+            log("RECOMMEND: the prover wrote outside its workspace (`git status --porcelain` / "
+                "`git diff` — see the flagged paths above). It hit a missing fact and tried to "
+                "provision it itself. Provision that fact YOURSELF as a byte-matched cited def "
+                "(correct layer; Rule 6), revert the prover's stray edits, re-seed the workspace, "
+                "and re-run. Do NOT reflect this run.")
         elif abort and abort[0] == "BALLOON":
             log("RECOMMEND: do NOT bump rounds — provision any MISSING in-scope fact (a byte-matched "
                 "def) and/or FACTOR the proof into registry sub-lemmas, then re-seed + re-orchestrate.")

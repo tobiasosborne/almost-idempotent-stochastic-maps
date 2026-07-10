@@ -89,6 +89,22 @@ warns = ag.check_brittleness(lemmas, {"a": 5, "b": 99}, threshold=12)
 check("small tree no warn", not has(warns, "proofs/a"))
 check("oversized tree warns REFACTOR", has(warns, "REFACTOR") and has(warns, "b"))
 
+# --- brittleness realignment (aism-s64): the default threshold is the ONE shared soft cap
+#     (scripts/af_constants.py, also read by af-orchestrate.py's balloon guard) — validated
+#     trees in this repo run 14-52 nodes, so the old 12 flagged ~20 healthy trees.
+import importlib.util as _ilu
+_spec_c = _ilu.spec_from_file_location("af_constants", ROOT / "scripts" / "af_constants.py")
+_afc = _ilu.module_from_spec(_spec_c); _spec_c.loader.exec_module(_afc)
+check("shared NODE_SOFT_CAP is 26", _afc.NODE_SOFT_CAP == 26)
+check("linker default threshold == shared NODE_SOFT_CAP", ag.NODE_THRESHOLD == _afc.NODE_SOFT_CAP)
+warns = ag.check_brittleness([L("a"), L("b")], {"a": 26, "b": 27})   # default threshold
+check("at-soft-cap tree (26) does not warn", not has(warns, "proofs/a"))
+check("just-above-soft-cap tree (27) warns", has(warns, "proofs/b"))
+# .get('workspace') fix: a shard record without a workspace key must not crash the linker
+warns = ag.check_brittleness([{"id": "c"}], {"c": 99})
+check("missing workspace key: no KeyError, warns with fallback path",
+      has(warns, "REFACTOR") and has(warns, "proofs/c"))
+
 # --- check_orphans ---
 lemmas = [L("a", af="validated", workspace="proofs/a"), L("b", af="none", workspace="proofs/b")]
 errs = ag.check_orphans(lemmas, {"proofs/a"})            # b has af=none so missing dir is OK

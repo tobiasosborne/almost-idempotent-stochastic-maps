@@ -19,12 +19,14 @@ The oracle's authority is the codex-built af ledger — an artifact external to 
 verdict to the registered inputs, so it goes stale if the ledger or shard change.
 """
 import json
+import os
 import pathlib
+import shutil
 import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
-AF = "/home/tobias/go/bin/af"
+AF = os.environ.get("AF") or shutil.which("af") or "/home/tobias/go/bin/af"
 
 
 def normalize(s):

@@ -74,5 +74,30 @@ check("a word swap in a short quote (no surviving long run) is caught", not ok)
 q = cr.extract_quote('HOS, refs/x.md:1, VERBATIM: "the real claim". NOTE: "a longer aside not the quote"')
 check("extract_quote prefers the VERBATIM run", q == "the real claim")
 
+# -------------------------------------------------------------------------------------------------
+# UN-VACUUM (aism-dbq): classify_and_check verdicts on the ABSENT-payload path.
+#
+# RED->GREEN evidence (documented per Rule 1): flip the absent-refs branch in check-refs.py back to
+#   `return {"verdict": "skip_noquote", ...}` and the "absent refs payload -> hard fail" assertion
+#   below goes RED (verdict skip_noquote != fail); restore the `"verdict": "fail"` and it goes GREEN.
+#   The skip_import assertion stays GREEN either way (proves the fix does NOT break dep-imports).
+# -------------------------------------------------------------------------------------------------
+
+# An external CLAIMING a refs/ verbatim quote whose payload is ABSENT must be a hard FAIL (not a skip):
+# refs/does-not-exist/... is guaranteed absent in the repo, so this exercises the real absent branch.
+r = cr.classify_and_check(
+    "GT-ghost",
+    'GHOST, refs/does-not-exist-xyz/none.md:1, VERBATIM: "some claimed verbatim words here"',
+    {})
+check("absent refs payload -> hard fail (un-vacuumed, no silent skip)", r["verdict"] == "fail")
+
+# A dep-IMPORT (proofs/<dep-id> path, NO refs locus) must STILL skip — the fix must not break the
+# 19 legitimate skip_import cases that are satisfied by the registry, not by a refs payload.
+r = cr.classify_and_check(
+    "lem-foo",
+    "imports proofs/lem-some-validated-dep (a prior validated lemma)",
+    {})
+check("dep-import (proofs/ path, no refs locus) still skip_import", r["verdict"] == "skip_import")
+
 print(f"\n{passed} passed, {failed} failed")
 raise SystemExit(1 if failed else 0)

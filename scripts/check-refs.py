@@ -13,7 +13,8 @@ freeform "source" string. Three kinds:
   (a) IMPORT external  — "source" references a prior proofs/<ws> validated lemma with NO refs/ locus.
                          verdict = skip_import (it imports a validated lemma, not a refs quote).
   (b) refs-quote       — "source" cites a refs/<path> locus AND contains a quoted verbatim string.
-                         verdict = pass / fail  (we CHECK the quote against the refs file).
+                         verdict = pass / fail  (we CHECK the quote against the refs file). An ABSENT
+                         refs payload is verdict = fail (cannot byte-verify => cannot pass; aism-dbq).
   (c) no quote         — neither an import nor an extractable refs quote.  verdict = skip_noquote (WARN).
 
 Matching (tuned to tolerate line-wrap / whitespace / markdown-emphasis noise but CATCH word-level
@@ -133,9 +134,14 @@ def classify_and_check(name, src, _cache):
     # (b) refs-quote external -> CHECK it.
     fp, path, exists = refs_file_for(refs_locus)
     if not exists:
-        return {"verdict": "skip_noquote", "refs_locus": refs_locus,
+        # UN-VACUUM (aism-dbq): an external that CLAIMS a refs/ verbatim quote but whose payload is
+        # absent cannot be byte-verified — so in --check it is a hard FAIL, never a silent skip. A
+        # green run must never mean "we couldn't look". (Dep-IMPORTs that carry a proofs/<dep-id>
+        # path and no refs locus are handled above as skip_import and are unaffected.)
+        return {"verdict": "fail", "refs_locus": refs_locus,
                 "claimed_quote_snippet": "",
-                "note": f"refs file {fp} ABSENT (payload gitignored?) — cannot verify"}
+                "note": f"refs file {fp} ABSENT — a claimed VERBATIM refs quote cannot be byte-verified "
+                        f"(fetch the payload into refs/ or remove the quote); L1 forbids an unverifiable pass"}
 
     if fp not in _cache:
         _cache[fp] = normalize(path.read_text(encoding="utf-8"))

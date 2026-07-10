@@ -17,26 +17,26 @@ python3 scripts/argument.py --check || fail "argument"
 
 echo "[check-all] numerics gate (every runs/ bundle: README + INDEX row + invariant; nothing masquerades as rigorous)"
 python3 scripts/check-runs.py --check || fail "check-runs"
+python3 scripts/gen-current-pointer.py --check || fail "current-pointer"
 
-echo "[check-all] report<->registry provenance sync"
-python3 scripts/check-provenance.py --check || fail "check-provenance"
+echo "[check-all] report<->registry provenance sync (+ latexmk build & undefined-ref scan via --build)"
+# --build folds the report compile into this step: latexmk into report/.build (never mutates the
+# tracked main.pdf) AND scans the log for undefined \ref/\Cref (which -halt-on-error does NOT fail on).
+# latexmk is incremental over report/.build, so this is the SINGLE report compile — the standalone
+# report-build block below is intentionally gone (would have been a duplicate). Skips cleanly (warn)
+# if latexmk is absent, exactly like the old block.
+python3 scripts/check-provenance.py --check --build || fail "check-provenance"
 
 echo "[check-all] sharded lab-book (master purity, shard headers, README/CATALOG cross-index)"
 bash scripts/check-report-shards.sh || fail "check-report-shards"
 
 echo "[check-all] tooling tests (TDD; port-and-verify)"
-for t in scripts/tests/test_argument.py scripts/tests/test_check_defs.py scripts/tests/test_check_refs.py scripts/tests/test_check_runs.py scripts/tests/test_af_orchestrate.py; do
+for t in scripts/tests/test_argument.py scripts/tests/test_check_defs.py scripts/tests/test_check_refs.py scripts/tests/test_check_provenance.py scripts/tests/test_check_runs.py scripts/tests/test_af_orchestrate.py scripts/tests/test_register_oracle.py; do
   [ -f "$t" ] || continue
   out=$(python3 "$t" 2>&1) || { echo "$out"; fail "$t"; }
 done
 
-# Report build is gated only when latexmk is available and the report has a main file.
-if command -v latexmk >/dev/null 2>&1 && [ -f report/main.tex ]; then
-  echo "[check-all] report build (latexmk -> report/.build; main.pdf not mutated)"
-  ( cd report && latexmk -pdf -interaction=nonstopmode -halt-on-error \
-      -outdir=.build main.tex >/dev/null 2>&1 ) || fail "report build (cd report && make to see errors)"
-else
-  echo "[check-all] report build SKIPPED (latexmk or report/main.tex absent)"
-fi
+# NOTE: the report build (latexmk -> report/.build) now runs inside the check-provenance --build step
+# above (single compile + undefined-reference scan). No separate build block here — see that step.
 
 echo "[check-all] OK"
