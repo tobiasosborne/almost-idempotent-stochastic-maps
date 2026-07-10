@@ -54,9 +54,9 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-OBS-LINEAR-LAW-FINITE-DELTA` | `argument/lemmas/obs-linear-law-finite-delta.md` | `e42a723d8f9a40b5` | Registry shard for `obs-linear-law-finite-delta` |
 | `ARG-OBS-SIGMA-HALO-NONROBUST` | `argument/lemmas/obs-sigma-halo-nonrobust.md` | `2149abf651bb54fa` | Registry shard for `obs-sigma-halo-nonrobust` |
 | `ARG-OP-CLASSICAL` | `argument/lemmas/op-classical.md` | `2ef7e965c5db0146` | Registry shard for `op-classical` |
-| `ARG-OP-EXPOSED-HULL` | `argument/lemmas/op-exposed-hull.md` | `32e37b1a400c883d` | Registry shard for `op-exposed-hull` |
+| `ARG-OP-EXPOSED-HULL` | `argument/lemmas/op-exposed-hull.md` | `82e185c9c9bb4d7d` | Registry shard for `op-exposed-hull` |
 | `ARG-PROP-APPROX-SIMPLEX` | `argument/lemmas/prop-approx-simplex.md` | `9f82860ad220c83c` | Registry shard for `prop-approx-simplex` |
-| `ARG-THM-CLASSICAL-FACTORIZATION` | `argument/lemmas/thm-classical-factorization.md` | `d8141d320ce37791` | Registry shard for `thm-classical-factorization` |
+| `ARG-THM-CLASSICAL-FACTORIZATION` | `argument/lemmas/thm-classical-factorization.md` | `e517b0e06f451ba9` | Registry shard for `thm-classical-factorization` |
 | `ARG-THM-CLUSTER` | `argument/lemmas/thm-cluster.md` | `a0b07d18715d720e` | Registry shard for `thm-cluster` |
 | `ARG-THM-CORNER-CONSTANTS` | `argument/lemmas/thm-corner-constants.md` | `5511fbf48c7a35db` | Registry shard for `thm-corner-constants` |
 | `ARG-THM-RANK-ONE` | `argument/lemmas/thm-rank-one.md` | `2934d0541289281a` | Registry shard for `thm-rank-one` |
