@@ -152,3 +152,27 @@ independent refuter searches, and for C specifically the missing step is isolate
 to the chord-demand-to-ray-certificate coupling UNDER tallness; the S/C/I creative
 waves inherit these fixtures (C: width bouquet; S: visibility-flip; I: W62
 bundle). The I-horn creative decomposition wave (aism-5wow) is in flight.
+
+## 2026-07-10 — W63 (session 17): the I horn DECOMPOSED (strategy artifact; verification in flight; delta on v25)
+
+Fresh codex ultra strategist-prover returned
+`docs/waves/2026-07-10-W63-artifacts/DECOMPOSITION-W63-I.md` (aism-5wow):
+node I (`conj-w62-isotropic-cotop-web-exclusion`) decomposed into TEN routine
+nodes (P priced-ray, T tall-halo-saturation, V dual-co-top-geography, E
+universal-exterior, ED/EW drift/width payer extraction, U ultra-compression,
+S0 rim-to-SL1b, L0 co-top-SL1a, SC selected-corner extraction; inline proofs in
+Appendix A, ALL still proposed pending the batched hostile verifier now in
+flight) + SIX creative leaves (D natural-drift, W natural-width, Sh shallow-rim,
+X off-diagonal, I-cap intersection-diagonal, D-cap disjoint-diagonal) with an
+explicit assembly (gamma_I/delta_I threaded) and a full K1-K8 kill-list
+crosswalk incl. exact fixture routing for all four refuter families.
+Binding-gap verdict: I is asymptotically an EMPTINESS theorem
+(Z_v(q_A) <= 3*tau^2/c_m always, so any gamma*tau lower bound empties the
+class below a ceiling) whose hard core is a TALL COMPLETION OBSTRUCTION.
+Structural headline: the isotropic core is routed through the W56 SL1a corner
+machinery into the SAME X/I/D cell trichotomy as the SL1a fronts — the L5
+minimax residual and the H-X/H-I/H-D leaves now share cell geometry; the
+sign-cube plateau threat is isolated in I-cap, the strongest positive mechanism
+(bounded-slab + robust starvation) points at D-cap. NOT claimed: any creative
+leaf, any status promotion; the routine batch is unverified until the verdict
+lands.
