@@ -116,3 +116,21 @@ retraction entry in docs/LEARNINGS.md), and `lem-hx-forced-exterior-coupling`
 (12/12). All five W60 engine lemmas now sit at the oracle rung. The H-X hard
 residual (route fork aism-ur9) now consumes a fully rigorous engine; paper-track
 reproduction filed (aism-mg7).
+
+## 2026-07-10 — W62: the L5 minimax DECOMPOSED and its routine batch PROVED (registry 158 -> 162; delta on v25)
+
+The L5-GAP-1 surface (aism-vuc, the W54 Branch-I premise) is re-verdicted and
+reduced. Strategist tree banked (DECOMPOSITION-W62-L5.md): the binding gap is an
+engine-payer mass-transport dual on the owned barycenter q_A, NOT a finite cover of
+Y_v (the W54 cover framing retired as main target). The routine batch R0-R3 is
+PROVED (L5; codex prover + fresh batched hostile verifier, 4/4 VALID):
+`lem-l5-mass-barycenter-dualization` (mass objective = S*Z_v(q_A)),
+`lem-l5-top-face-ray-formula` (Z_v as a one-pair outward visible-ray LP dual,
+attained), `lem-l5-positive-flow-foldback` (the P^2=P same-carrier allocation),
+`lem-l5-universal-exterior-payer` (THE new step: the af-validated engine forces
+row v itself to pay tau*S/8 outside EVERY half-ball; explicit ceiling
+min{1/16,(c_m/8)^2} — first consumer of the W61 T0 engine outside H-X).
+L5-GAP-1 now == S/C/I: three disjoint-exhaustive creative horns (shallow payer /
+drift-width chord / isotropic web) with named refuter shapes; assembly with
+threaded quantifiers banked. Next: the five L3 refuter deciders, then creative
+I -> C -> S.

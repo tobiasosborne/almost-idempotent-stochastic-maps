@@ -67,6 +67,10 @@ lem-hybrid-dual-certificate
 lem-intersection-witness-confinement
 lem-kernel-implies-hlc
 lem-l2-core-collapse
+lem-l5-mass-barycenter-dualization
+lem-l5-positive-flow-foldback
+lem-l5-top-face-ray-formula
+lem-l5-universal-exterior-payer
 lem-min-a-implies-height
 lem-negative-pivot-import
 lem-optimal-face-alpha-free-characterization
