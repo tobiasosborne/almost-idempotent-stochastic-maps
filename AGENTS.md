@@ -267,7 +267,12 @@ is **not** stood up on every result — only for a conjecture the user or the po
 1. **Claude (the orchestrator) ONLY orchestrates — NEVER verifies.** Dispatch codex workers, run
    `af status/jobs/get`, do the shard/graph/commit bookkeeping. **Never re-derive/judge a proof, and never
    run `af accept`/`af challenge` yourself.** Reasoning about a step's correctness poisons your context (L5).
-2. **Provers = fresh codex; verifiers = *separate* fresh codex; roles never mix.** Every prover is a
+2. **Provers = fresh codex; verifiers = *separate* fresh codex; roles never mix.**
+   **Batched verification is the DEFAULT for routine multi-lemma harvests** (one fresh
+   hostile verifier over the batch, per-shard verdict lines — the validated W56 pattern);
+   full single-target adversarial rounds are reserved for architecture decisions
+   (user-ratified 2026-07-10, docs/plans/2026-07-10-methodology-assessment.md).
+    Every prover is a
    brand-new `codex exec` (independent context); **every node is validated ONLY by a fresh codex verifier**
    — a new `codex exec`, told that finding a counterexample/gap/error is a BIG SUCCESS. Fresh per node;
    prover ≠ verifier ≠ challenger; bottom-up (a node reaches a verifier only once all its live children are
