@@ -903,3 +903,27 @@ claims remain uncodified/non-L0 pending fresh standalone prover/verifier passes.
   root in 3 rounds (7 nodes, all validated, taint clean). export.md written; shard
   flipped af: validated (mechanical ledger reflection); oracle registered;
   fr verify PASS (▣). The W55-W59 arc terminates at T0.
+
+## 2026-07-10 — Session 14 (close): the remediation program complete; OR-routes; bridges adjudicated
+
+- Remediation epic aism-9s3 executed end-to-end on user green-light: Phase 0 hotfixes;
+  Phase 1 gate integrity (OVERCLAIM red-green suite, un-vacuumed check-refs, anchor
+  whitelist as hard gate, quota fast-fail, widened overreach guard, NODE_SOFT_CAP=26,
+  register-oracle); Phase 3 tooling+docs (codex-dispatch, build-workspace, beads-sync
+  JSONL, CURRENT.md pointer, CHANGELOG two-tier policy, W59 wave doc, FINDINGS index);
+  the LAB-BOOK OVERHAUL in two rounds (paper-track re-scope, typeset math per the
+  cft-anyons model, 13 T0 shards, then 13 typeset statements for the old sections —
+  codex fidelity 13/13 FAITHFUL); Phase 2 registry codification (10 def shards, DAG
+  wiring singletons 18->14, 6 contracts shortened, conj->lem-halo-collapse rename
+  with an on-record correction of a premature verify claim).
+- Methodology assessment written + user-ratified P0: docs/plans/2026-07-10-
+  methodology-assessment.md. The P0 OR-route linker feature LANDED (routes: field,
+  120/120 tests, backward-compat snapshot): op-classical's machine-checked ancestor
+  closure 12 -> 41 — the live six-leaf surface is formally reachable from the goal.
+  Batched verification codified as the default. af->Lean trunk scoping filed (P1).
+- Bridge hostile pass (batched): lem-low-slab-cap-implies-min-a VALID-AS-CONDITIONAL
+  -> prescribed additions applied, proved (L5); lem-huddle-charge-assembly INVALID as
+  stated (Branch-II gap + unregistered L5 premise) -> in-shard DO-NOT-CONSUME verdict,
+  repair bead aism-pus.
+- Registry 155; T0 29; all gates green; everything pushed. W60 (the H-X
+  generalization wave) is the next mathematical wave.
