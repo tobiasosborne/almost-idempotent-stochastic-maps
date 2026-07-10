@@ -970,3 +970,27 @@ HANDOFF-item-0 lines executed without deciding the fork (which stays with the us
 - Lockstep: wave doc, CHANGELOG x3, HANDOFF rewritten, LEARNINGS, INDEX rows,
   UNWIRED follow-up filed (aism-mg7). Beads: aism-3nk/kup/zo1/8nt closed. Route fork
   aism-ur9 updated with the decider synthesis — decision with the user.
+
+## 2026-07-10 — Session 16 (cont.): W62 — the L5 minimax decomposed; routine batch proved
+
+Same session, after W61 close. User: "continue work" (fork aism-ur9 stays with
+the user, so capacity went to the next Tier-1 leaf).
+- Paper-track debt cleared first: report shards 21/22 reproduce the five validated
+  engine lemmas (verbatim contracts, af-export sketches, PROVENANCE rows, UNWIRED
+  cleaned; aism-mg7 closed).
+- W62 strategist (codex ultra) on L5-GAP-1 (aism-vuc): binding gap RE-VERDICTED —
+  engine-payer mass-transport dual on the owned barycenter q_A, NOT a finite cover
+  of Y_v (W54 cover framing retired). Tree: R0-R2 routine, R3 routine-hard, S/C/I
+  creative fork (disjoint-exhaustive), all-PASS kill-list, 5 named refuter shapes.
+- Routine batch R0-R3 PROVED (codex prover high; fresh batched hostile verifier
+  xhigh; 4/4 VALID, zero corrections). Registry 158->162: lem-l5-mass-barycenter-
+  dualization / -top-face-ray-formula / -positive-flow-foldback /
+  -universal-exterior-payer (row v pays tau*S/8 outside EVERY half-ball, explicit
+  ceiling min{1/16,(c_m/8)^2}; first consumer of the W61 T0 engine outside H-X).
+- I-horn L3 refuter batch: ALL THREE SHAPES BLOCKED (exact, reproduced; banked
+  runs/2026-07-10-w62-i-horn-refuter/): spike + fan die at tallness (H = 2delta),
+  fan also at width (Omega -> 3/4 vs 1/16), seeds resist tall completion.
+  TALLNESS BINDS FOR THE 3RD CONSECUTIVE INDEPENDENT REFUTER SEARCH.
+- L5-GAP-1 residual == S/C/I horns on a proved interface. I-first creative wave
+  filed (aism-5wow); S/C pre-creative shapes queued; aism-pus premise wording now
+  pinned to the W62 interface. All pushed.

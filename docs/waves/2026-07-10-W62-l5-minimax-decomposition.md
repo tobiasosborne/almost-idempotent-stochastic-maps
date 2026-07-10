@@ -82,7 +82,13 @@ tallness budgets permitted are the two exact height inequalities
 - **L5-GAP-1 residual after W62: the S/C/I creative fork only** — three
   disjoint-exhaustive horns on a proved reduction interface. The W54 BLOCKED
   verdict (missing dimension-free cover input) is retired.
-- L3 refuter decider (first batch: summit-axis spike; growing low-width
-  dual-simplex fan; tall completions of the W61/W55 seeds) dispatched —
-  in flight at session close; shapes 2/3 of §4.2 (shallow-counterweight
-  completion, two-prong bouquet) queued for the S/C pre-creative wave.
+- **L3 refuter decider (I-horn batch): ALL THREE SHAPES BLOCKED** (exact,
+  orchestrator-reproduced; `runs/2026-07-10-w62-i-horn-refuter/`): the spike
+  and fan families realize the dual-value/mass/floor structure but die at
+  tallness (H = 2*delta << 16*tau), the fan additionally at the width gate
+  (Omega -> 3/4 vs < 1/16), and the W61/W55 seeds resist the tested tall
+  completions (cubic height / exact order-one negativity margin). No genuine
+  L5 datum has ever been realized. **Tallness binds for the third consecutive
+  independent refuter search.** Non-proof green light for the I-first creative
+  wave (aism-5wow); the S/C pre-creative shapes (shallow-counterweight
+  completion, two-prong bouquet) remain queued.

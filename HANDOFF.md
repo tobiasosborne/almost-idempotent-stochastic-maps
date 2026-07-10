@@ -12,8 +12,9 @@ TRIGGER: session close, or a material change in the current frontier / next task
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
 2. Read the sketch named in **`docs/plans/CURRENT.md`** (currently v25) + the rolling
    `docs/plans/CHANGELOG.md` (two-tier policy: small deltas live there — read the
-   THREE 2026-07-10 W61 entries: engine pair validated; both deciders decided;
-   engine bank complete at the oracle rung).
+   FOUR 2026-07-10 W61/W62 entries: engine pair validated; both route-fork
+   deciders decided; engine bank complete at the oracle rung; the L5 minimax
+   decomposed with its routine batch proved).
    **STEWARDSHIP (user mandate, binding): reconciling the sketch/CHANGELOG with newly
    banked evidence is a FIRST-CLASS DELIVERABLE of every session (Rule 9).**
 3. **STANDING DIRECTIVES (user, binding):** (i) ALL mathematical capacity on the open
@@ -26,9 +27,9 @@ TRIGGER: session close, or a material change in the current frontier / next task
    after pull / `export` before push (committed JSONL, .beads/issues.jsonl).
 5. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-10, session 16 — W61 banked)
+## Current state (2026-07-10, session 16 — W61 + W62 banked)
 
-**Rigorous (af-validated, T0): 34. Registry: 158.** Session 16 (W61) af-validated
+**Rigorous (af-validated, T0): 34. Registry: 162.** Session 16 (W61) af-validated
 the ENTIRE W60 engine bank (serial orchestration train, fresh codex verifier per
 node, taint clean everywhere): `lem-hx-transverse-moment-identity` (14/14),
 `lem-hx-robust-scalar-starvation` (12/12, the T0-generalization proper),
@@ -62,9 +63,26 @@ X2/X3F/X3N/X4; X2 lane open, tallness flagged) vs Route B (Fable
 gamma-renegotiation via N4 + N5/N6; N5 restatement now a prerequisite, price +1
 routine-hard). The engine bank is rigorous and consumable by BOTH routes and L6.5.
 
-**THE OPEN SURFACE (six leaves, unchanged):** H-X (route fork above), H-D, H-I,
-SL1b, L6.5 residuals, L5 dual-face mass minimax (aism-vuc, double-valued — also the
-unregistered premise of the huddle assembly bridge aism-pus).
+**W62 (same session): the L5 minimax DECOMPOSED, routine batch PROVED.** Strategist
+tree banked (`docs/waves/2026-07-10-W62-artifacts/DECOMPOSITION-W62-L5.md`):
+binding gap re-verdicted as an engine-payer mass-transport dual on the owned
+barycenter q_A (the W54 finite-cover framing retired). Routine batch R0-R3 proved
+at L5 (4/4 VALID, fresh batched hostile verifier, zero corrections; registry
+158 -> 162): `lem-l5-mass-barycenter-dualization`, `lem-l5-top-face-ray-formula`,
+`lem-l5-positive-flow-foldback`, `lem-l5-universal-exterior-payer` (row v pays
+tau*S/8 outside EVERY half-ball, ceiling min{1/16,(c_m/8)^2} — first consumer of
+the W61 T0 engine outside H-X). **L5-GAP-1 residual == the S/C/I creative fork**
+(shallow payer / drift-width chord / isotropic web; disjoint-exhaustive on the
+proved interface). I-horn refuter batch: ALL BLOCKED
+(`runs/2026-07-10-w62-i-horn-refuter/`) — **tallness binds for the 3rd consecutive
+independent refuter search**; width gate independently repels the fan. Non-proof
+green light for the I-first creative wave (aism-5wow).
+
+**THE OPEN SURFACE (six leaves):** H-X (route fork above), H-D, H-I, SL1b, L6.5
+residuals, L5 minimax — the last now reduced to the S/C/I horns (aism-vuc; still
+double-valued: also the unregistered premise of the huddle assembly bridge
+aism-pus, whose premise wording should now be the L5-GAP-1 statement that
+lem-l5-mass-barycenter-dualization converts).
 
 **Process lessons (binding, in the W61 wave doc):** af orchestrations are STRICTLY
 SERIAL (the overreach guard is REPO-WIDE and flags any new dirt vs run start —
@@ -74,18 +92,21 @@ within seconds; wrapper logs go to the scratchpad.
 
 ## Next steps (ranked) — W62+
 
-0. **The route fork (aism-ur9, USER DECISION — now decider-informed).** On decision:
+0. **The route fork (aism-ur9, USER DECISION — now decider-informed)** and/or
+   **the I-horn creative wave (aism-5wow)** — both fully teed up; the L5 line
+   does not need the fork decision. On decision:
    Route A -> first creative wave per DECOMPOSITION-W60-CODEX.md §4 (X2 as
    prove-or-refute decider with the graft family as stress fixture; X3N/X3F
    parallel). Route B -> N5 restatement (freight-row/Gamma_f budget) + gamma-dial
    memo FIRST, then N6-before-N5 creative order per DECOMPOSITION-W60-FABLE.md §4.
    Either way the tallness signal suggests the winning mechanism must CONSUME
    H > 16*tau quantitatively.
-1. **L5 minimax (aism-vuc)**: double-valued (leaf + assembly-bridge premise).
-2. **Paper-track reproduction of the five validated engine lemmas (aism-mg7)** —
-   T0 results belong on the paper-track; currently UNWIRED-whitelisted.
-3. **E1-E5 codification + small-gauge bridge** (batched); **assembly-bridge repair**
-   (aism-pus).
+1. **L5 S/C pre-creative L3 shapes** (shallow-counterweight completion; two-prong
+   bouquet — DECOMPOSITION-W62-L5.md §4.2), then C and S creative waves.
+2. **assembly-bridge repair (aism-pus)** — register the L5 premise as the
+   L5-GAP-1 statement on the now-proved W62 interface; codify l2-attack §2.6-2.7.
+3. **E1-E5 codification + small-gauge bridge** (batched). (Paper-track engine
+   reproduction DONE — shards 21/22, aism-mg7 closed.)
 4. **SL1b** (easiest), **H-D/H-I** (creative mechanism waves; Fable candidates).
 5. Parked: af-elevation queue (aism-88r), aism-l1a (P2 polish), aism-cei (P1
    af->Lean trunk scoping), refs ingest (aism-5de), aism-nlg / aism-z98 (user
@@ -103,11 +124,14 @@ record: `docs/plans/2026-07-10-methodology-assessment.md`.
 
 ## What is intentionally NOT here
 
-- Any claim more than THIRTY-FOUR results are af-validated.
+- Any claim more than THIRTY-FOUR results are af-validated (the four W62 lem-l5-*
+  shards are L5-tier, NOT af-validated).
 - Any claim any leaf, the huddle charge, the Kernel Conjecture, or op-classical is
   proved. The deciders are L3 EVIDENCE: decider A does not prove X2; decider B does
   not refute N5/N6 as mathematical conjectures (tallness + Gamma_f clauses fail in
   its instance; N6 untouched).
 - Any claim the route fork is decided — it remains with the user (aism-ur9).
+- Any claim L5-GAP-1 is proved: only its routine reduction interface is; S/C/I are
+  open conjectures, and the refuter searches are L3 evidence, not emptiness.
 - `lem-huddle-charge-assembly` remains INVALID-as-stated / DO-NOT-CONSUME
   (aism-pus).
