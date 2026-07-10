@@ -27,13 +27,25 @@ TRIGGER: session close, or a material change in the current frontier / next task
    after pull / `export` before push (committed JSONL, .beads/issues.jsonl).
 5. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-10, session 14 close)
+## Current state (2026-07-10, session 15 — W60 banked)
 
-**Rigorous (af-validated, T0): 29. Registry: 155** (incl. the two Phase-2 bridges'
-final states). **op-classical's machine-checked ancestor closure: 41 nodes** — the
-OR-route linker feature (routes: field) landed and op-hlc declares BOTH routes
-(Kernel | MIN-A), so the three-cell SL1a surface, SL1b, L6.5, and the huddle system
-are now FORMALLY reachable from the goal (was: prose only, closure 12).
+**Rigorous (af-validated, T0): 29. Registry: 158** (session 15: +5 W60 engine-bank
+lemmas at L5 — `lem-hx-transverse-moment-identity`, `lem-hx-signed-variation-ledger`,
+`lem-hx-financing-floor`, `lem-hx-robust-scalar-starvation`,
+`lem-hx-forced-exterior-coupling`; codex prover + fresh hostile batched codex
+verifier; artifacts `docs/waves/2026-07-10-W60-artifacts/`). **W59 §HONEST-LIMITS
+gaps 1 (rank) and 2 (slab) are RETIRED at the mechanism level**; the tableau metric
+pin is relaxed to a window and zero-top to an O(δ) tail cap. Sketch **v25** is live.
+**op-classical's machine-checked ancestor closure: 41 nodes** — the OR-route linker
+feature (routes: field) landed and op-hlc declares BOTH routes (Kernel | MIN-A), so
+the three-cell SL1a surface, SL1b, L6.5, and the huddle system are FORMALLY
+reachable from the goal.
+
+**LIVE USER DECISION (aism-ur9): the W60 hard-residual route fork.** Route A
+(codex tree): named H-X exactly via X2/X3F/X3N/X4 (4 creative-hard, no surface
+change). Route B (Fable tree): γ-fattened three-cell renegotiation + N5/N6
+confinement (2 creative-hard + surface change + γ-dial). Two cheap L3 deciders
+(X2 graft search; leak-financing refuter) should run before creative spend.
 
 **THE OPEN SURFACE (unchanged mathematically — six leaves):**
 - **H-X** (`conj-sl1a-off-diagonal-cell`): T0-anchored by
@@ -58,12 +70,14 @@ registry codification (10 defs, DAG wiring, 6 contracts shortened, halo rename),
 P0 OR-route feature, and the bridge hostile pass (one proved conditional, one INVALID
 recorded in-shard, DO-NOT-CONSUME).
 
-## Next steps (ranked) — W60+
+## Next steps (ranked) — W61+
 
-0. **W60: the H-X generalization wave** (sketch v24 item 0): formulate the
-   moment-vs-budget ledger at the H-X tableau; decide which of (slab confinement /
-   rank / tableau constants) is the binding gap. Strategy pass (creative, out-of-box
-   prompt) then prover; batched verification.
+0. **The W60 route fork (aism-ur9, USER DECISION)** + its two cheap L3 deciders
+   (runnable pre-decision: codex X2 thin-transient-graft refuter search; Fable
+   leak-financing refuter at the N5/N6 constants). Then the chosen route's first
+   creative wave. **Engine-bank af-elevation** (prime:
+   lem-hx-robust-scalar-starvation; all five single minimal contracts) can run
+   in parallel with the decision.
 1. **L5 minimax** (aism-vuc): now double-valued (leaf + the assembly-bridge premise).
 2. **E1-E5 codification + the small-gauge bridge** (fresh standalone passes; batched).
 3. **The assembly-bridge repair** (aism-pus): codify l2-attack §2.6-2.7 intersecting-
