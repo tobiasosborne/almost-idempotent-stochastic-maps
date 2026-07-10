@@ -1,0 +1,3922 @@
+{
+  "schema": "w61-leak-financing-exact-v1",
+  "arithmetic": "All exact fields are rational strings; decimals are omitted from invariants.",
+  "verdict": "FINANCING INSTANCE FOUND (local N5(ii) geometry; not a selected-corner counterexample)",
+  "family": {
+    "parameter": "tau=2^-k, delta=tau^2, k>=8",
+    "construction": "thin-zero-face fixture + signed A-fiber split + transient X=(1-theta)A+theta*C",
+    "tested_k_range": [
+      8,
+      16
+    ],
+    "delta_tends_to_zero": true
+  },
+  "candidates": [
+    {
+      "id": "dyadic_k8",
+      "status": "FINANCING_INSTANCE_LOCAL_N5II",
+      "rigour_scope": "L3 exact construction; not a proof and not a selected-corner counterexample",
+      "parameters": {
+        "k": 8,
+        "tau": "1/256",
+        "delta": "1/65536",
+        "eps": "1/131072",
+        "t_star_A": "1/2048",
+        "kappa": "1/1024",
+        "rho": "1/64",
+        "K": "268437503/268435456",
+        "q": "2048/268437503",
+        "theta": "268437503/274882100224",
+        "D": "32769/16384",
+        "H": "2/268437503"
+      },
+      "labels": [
+        "a0",
+        "a1",
+        "z",
+        "c",
+        "d",
+        "x"
+      ],
+      "matrix": [
+        [
+          "268439551/268437503",
+          "-2048/268437503",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "268439551/268437503",
+          "-2048/268437503",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "268439551/268435456",
+          "-1/131072",
+          "0",
+          "1/268435456",
+          "-1/131072",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "274613662721/274880003072",
+          "-549227325442/72059242776881153",
+          "0",
+          "268437503/274882100224",
+          "0",
+          "0"
+        ]
+      ],
+      "row_point_fibers": [
+        {
+          "point": "A",
+          "indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "point": "Z",
+          "indices": [
+            2
+          ]
+        },
+        {
+          "point": "C",
+          "indices": [
+            3
+          ]
+        },
+        {
+          "point": "D",
+          "indices": [
+            4
+          ]
+        },
+        {
+          "point": "X",
+          "indices": [
+            5
+          ]
+        }
+      ],
+      "negative_masses": {
+        "a0": "2048/268437503",
+        "a1": "2048/268437503",
+        "z": "1/65536",
+        "c": "0",
+        "d": "0",
+        "x": "549227325442/72059242776881153"
+      },
+      "visible_set": [
+        "Z",
+        "C",
+        "D"
+      ],
+      "hidden_vertices": [
+        "A"
+      ],
+      "visible_margin_lower_bounds": {
+        "Z": "1",
+        "C": "274613662721/274882100224",
+        "D": "268435455/268437503"
+      },
+      "top_geometry": {
+        "v": "A",
+        "height": "2/268437503",
+        "H_over_tau": "512/268437503",
+        "phi_coefficients": [
+          "1",
+          "1023/1024",
+          "0",
+          "-1",
+          "1",
+          "0"
+        ],
+        "phi_constant": "-1",
+        "phi_values": {
+          "A": "2/268437503",
+          "Z": "0",
+          "C": "-2",
+          "D": "0",
+          "X": "-140739098443774/72059242776881153"
+        },
+        "z_values": {
+          "A": "0",
+          "Z": "2/268437503",
+          "C": "536875008/268437503",
+          "D": "2/268437503",
+          "X": "524292/268439551"
+        },
+        "h_coefficients": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1/2048",
+          "0"
+        ],
+        "h_values": {
+          "A": "0",
+          "Z": "0",
+          "C": "1",
+          "D": "1/2048",
+          "X": "268437503/274882100224"
+        },
+        "closest_point_to_A_in_convW": [
+          "268439551/268437503",
+          "-2048/268437503",
+          "0",
+          "1/268437503",
+          "-1/268437503",
+          "0"
+        ],
+        "X_convW_weights": {
+          "Z": "71988324000333824/72059242776881153",
+          "C": "70369549221887/72059242776881153",
+          "D": "549227325442/72059242776881153"
+        }
+      },
+      "hiddenness_witness_A": {
+        "far_set": [
+          "C",
+          "D"
+        ],
+        "lambda": {
+          "D": "1"
+        },
+        "alpha": {
+          "Z": "131072"
+        },
+        "beta": {
+          "C": "1/2048"
+        },
+        "sum_beta": "1/2048",
+        "balance_verified": true,
+        "always_tight_support": {
+          "T": [
+            "D"
+          ],
+          "O": [
+            "C"
+          ],
+          "Z": [
+            "Z"
+          ]
+        }
+      },
+      "pair": {
+        "freight_row": "X",
+        "carrier_row": "A",
+        "carrier_equals_top_v": true,
+        "carrier_distance_to_v": "0",
+        "separation_l": "1/512",
+        "band_lower_tau/4": "1/1024",
+        "band_upper_8tau": "1/32",
+        "l_chi_full_fiber_variation": "268437503/137441050112"
+      },
+      "engine": {
+        "psi_coefficients": [
+          "-512",
+          "512",
+          "0",
+          "512",
+          "0",
+          "0"
+        ],
+        "psi_constant": "137442098688/268437503",
+        "psi_values": {
+          "A": "0",
+          "Z": "-274615757825/70369280786432",
+          "C": "274882100224/268437503",
+          "D": "137442098688/268437503",
+          "X": "1"
+        },
+        "N": [
+          "A",
+          "Z",
+          "X"
+        ],
+        "F": [
+          "C",
+          "D"
+        ],
+        "A": "1",
+        "Lambda": "274882100224/268437503",
+        "d_by_full_fiber": {
+          "A": "-268437503/274882100224",
+          "Z": "0",
+          "C": "268437503/274882100224",
+          "D": "0",
+          "X": "0"
+        },
+        "demand": "9729807515746958013881116161/10141591549470818902570331275264",
+        "actual_joint_positive_mass_F": "268437503/274882100224",
+        "from_freight_X": "268437503/274882100224",
+        "from_carrier_A": "0",
+        "slack": "174014922190584559728334847/10141591549470818902570331275264",
+        "financing_fiber": "C",
+        "financing_fiber_z": "536875008/268437503",
+        "financing_fiber_h": "1"
+      },
+      "corner_audit": {
+        "f": "D",
+        "score": "8796562753535/18015085641332736",
+        "score_cap": "3/832",
+        "corner_points": [
+          "A",
+          "Z",
+          "D",
+          "X"
+        ],
+        "Gamma_total": "1",
+        "Gamma_Cf": "1",
+        "Gamma_BF": "1",
+        "Gamma_BN": "0",
+        "M_X_gamma_BF": "0",
+        "M_X_gamma_BN": "0",
+        "Gamma_X_A": "0"
+      },
+      "ledger_table": {
+        "engine_financing_floor": {
+          "applicable": true,
+          "actual": "268437503/274882100224",
+          "relation": ">=",
+          "bound": "9729807515746958013881116161/10141591549470818902570331275264",
+          "slack": "174014922190584559728334847/10141591549470818902570331275264",
+          "note": "All actual high-lever mass is P_x^+(C)=theta; P_u^+(F)=0."
+        },
+        "top_deficit_weighted_at_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "32769/2147500024",
+          "slack": "32769/2147500024",
+          "note": "Sharp banked cap nu_v*(2+4delta)."
+        },
+        "z_leak_at_4tau_sharp": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "262152/268437503",
+          "slack": "262152/268437503",
+          "note": "Threshold consequence using nu_v, stronger than the advertised delta cap."
+        },
+        "z_leak_at_4tau_advertised": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "32769/16777216",
+          "slack": "32769/16777216",
+          "note": "The N5 sketch's delta*(2+4delta)/(4tau) allowance."
+        },
+        "h_leak_at_4tau_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "131072/268437503",
+          "slack": "131072/268437503",
+          "note": "h-reproduction/sign-split cap; strictly slack because nu_v=q>0."
+        },
+        "zero_face_capacity_A_kappa": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "2048/268437503",
+          "slack": "2048/268437503",
+          "note": "Charged form kappa*m <= nu_A for the h-zero carrier/top."
+        },
+        "zero_face_capacity_Z_kappa": {
+          "applicable": true,
+          "actual": "1/274877906944",
+          "relation": "<=",
+          "bound": "1/65536",
+          "slack": "4194303/274877906944",
+          "note": "Charged form at the nonclone h-zero blocker Z."
+        },
+        "zero_face_capacity_Z_4tau": {
+          "applicable": true,
+          "actual": "1/17179869184",
+          "relation": "<=",
+          "bound": "1/65536",
+          "slack": "262143/17179869184",
+          "note": "Generic affine-exposer capacity at threshold 4tau."
+        },
+        "hiddenness_small_beta": {
+          "applicable": true,
+          "actual": "1/2048",
+          "relation": "<",
+          "bound": "1/1024",
+          "slack": "1/2048",
+          "note": "Exact witness lambda_D=1, alpha_Z=1/eps, beta_C=t."
+        },
+        "corner_mass_numerical_conclusion": {
+          "applicable": false,
+          "actual": "1",
+          "relation": ">=",
+          "bound": "58079731/109051904",
+          "slack": "50972173/109051904",
+          "note": "Conclusion holds numerically, but lem-sl1a-corner-ledger is not applicable: H>16tau fails."
+        },
+        "corner_exterior_coarse": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "1/2",
+          "slack": "1/2",
+          "note": "Numerical outside-corner accounting; same tallness failure prevents invoking the lemma."
+        },
+        "corner_exterior_from_exact_floor": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "50972173/109051904",
+          "slack": "50972173/109051904",
+          "note": "Numerical consequence of the printed floor, recorded without claiming its hypotheses."
+        },
+        "mass_split_A": {
+          "applicable": true,
+          "actual": "268439551/268437503",
+          "relation": "=",
+          "bound": "268439551/268437503",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_X": {
+          "applicable": true,
+          "actual": "72059792004206595/72059242776881153",
+          "relation": "=",
+          "bound": "72059792004206595/72059242776881153",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_D": {
+          "applicable": true,
+          "actual": "1",
+          "relation": "=",
+          "bound": "1",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_Z": {
+          "applicable": true,
+          "actual": "65537/65536",
+          "relation": "=",
+          "bound": "65537/65536",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        }
+      },
+      "selected_corner_clauses": {
+        "delta_at_most_2^-16": true,
+        "visible_set_nonempty_and_exactly_Z_C_D": true,
+        "v_is_hidden_top": true,
+        "H_gt_16tau": false,
+        "top_support_phi": true,
+        "admissible_exposer_h_at_v": true,
+        "corner_row_f_D_is_rho_far": true,
+        "corner_row_f_D_is_co_top": true,
+        "corner_score_at_f_D": true,
+        "legal_vertex_kernel": true,
+        "pair_X_A_lies_geometrically_in_Cf_and_BN": true,
+        "Gamma_f_assigns_positive_mass_to_pair_X_A": false,
+        "Gamma_f_BN_at_least_1/4": false,
+        "M_X_gamma_BN_gt_1/8": false,
+        "N6_far_carrier_geometry_for_financing_pair": false
+      }
+    },
+    {
+      "id": "dyadic_k9",
+      "status": "FINANCING_INSTANCE_LOCAL_N5II",
+      "rigour_scope": "L3 exact construction; not a proof and not a selected-corner counterexample",
+      "parameters": {
+        "k": 9,
+        "tau": "1/512",
+        "delta": "1/262144",
+        "eps": "1/524288",
+        "t_star_A": "1/4096",
+        "kappa": "1/2048",
+        "rho": "1/128",
+        "K": "2147487743/2147483648",
+        "q": "4096/2147487743",
+        "theta": "2147487743/4398063286272",
+        "D": "131073/65536",
+        "H": "2/2147487743"
+      },
+      "labels": [
+        "a0",
+        "a1",
+        "z",
+        "c",
+        "d",
+        "x"
+      ],
+      "matrix": [
+        [
+          "2147491839/2147487743",
+          "-4096/2147487743",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "2147491839/2147487743",
+          "-4096/2147487743",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "2147491839/2147483648",
+          "-1/524288",
+          "0",
+          "1/2147483648",
+          "-1/524288",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "4395915798529/4398054897664",
+          "-8791831597058/4611712402445029377",
+          "0",
+          "2147487743/4398063286272",
+          "0",
+          "0"
+        ]
+      ],
+      "row_point_fibers": [
+        {
+          "point": "A",
+          "indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "point": "Z",
+          "indices": [
+            2
+          ]
+        },
+        {
+          "point": "C",
+          "indices": [
+            3
+          ]
+        },
+        {
+          "point": "D",
+          "indices": [
+            4
+          ]
+        },
+        {
+          "point": "X",
+          "indices": [
+            5
+          ]
+        }
+      ],
+      "negative_masses": {
+        "a0": "4096/2147487743",
+        "a1": "4096/2147487743",
+        "z": "1/262144",
+        "c": "0",
+        "d": "0",
+        "x": "8791831597058/4611712402445029377"
+      },
+      "visible_set": [
+        "Z",
+        "C",
+        "D"
+      ],
+      "hidden_vertices": [
+        "A"
+      ],
+      "visible_margin_lower_bounds": {
+        "Z": "1",
+        "C": "4395915798529/4398063286272",
+        "D": "2147483647/2147487743"
+      },
+      "top_geometry": {
+        "v": "A",
+        "height": "2/2147487743",
+        "H_over_tau": "1024/2147487743",
+        "phi_coefficients": [
+          "1",
+          "2047/2048",
+          "0",
+          "-1",
+          "1",
+          "0"
+        ],
+        "phi_constant": "-1",
+        "phi_values": {
+          "A": "2/2147487743",
+          "Z": "0",
+          "C": "-2",
+          "D": "0",
+          "X": "-1501204170058410/1537237467481676459"
+        },
+        "z_values": {
+          "A": "0",
+          "Z": "2/2147487743",
+          "C": "4294975488/2147487743",
+          "D": "2/2147487743",
+          "X": "699052/715830613"
+        },
+        "h_coefficients": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1/4096",
+          "0"
+        ],
+        "h_values": {
+          "A": "0",
+          "Z": "0",
+          "C": "1",
+          "D": "1/4096",
+          "X": "2147487743/4398063286272"
+        },
+        "closest_point_to_A_in_convW": [
+          "2147491839/2147487743",
+          "-4096/2147487743",
+          "0",
+          "1/2147487743",
+          "-1/2147487743",
+          "0"
+        ],
+        "X_convW_weights": {
+          "Z": "4609451804358344704/4611712402445029377",
+          "C": "750602085029205/1537237467481676459",
+          "D": "8791831597058/4611712402445029377"
+        }
+      },
+      "hiddenness_witness_A": {
+        "far_set": [
+          "C",
+          "D"
+        ],
+        "lambda": {
+          "D": "1"
+        },
+        "alpha": {
+          "Z": "524288"
+        },
+        "beta": {
+          "C": "1/4096"
+        },
+        "sum_beta": "1/4096",
+        "balance_verified": true,
+        "always_tight_support": {
+          "T": [
+            "D"
+          ],
+          "O": [
+            "C"
+          ],
+          "Z": [
+            "Z"
+          ]
+        }
+      },
+      "pair": {
+        "freight_row": "X",
+        "carrier_row": "A",
+        "carrier_equals_top_v": true,
+        "carrier_distance_to_v": "0",
+        "separation_l": "1/1024",
+        "band_lower_tau/4": "1/2048",
+        "band_upper_8tau": "1/64",
+        "l_chi_full_fiber_variation": "2147487743/2199031643136"
+      },
+      "engine": {
+        "psi_coefficients": [
+          "-1024",
+          "1024",
+          "0",
+          "1024",
+          "0",
+          "0"
+        ],
+        "psi_constant": "2199035837440/2147487743",
+        "psi_values": {
+          "A": "0",
+          "Z": "-4395924183041/2251804107603968",
+          "C": "4398063286272/2147487743",
+          "D": "2199035837440/2147487743",
+          "X": "1"
+        },
+        "N": [
+          "A",
+          "Z",
+          "X"
+        ],
+        "F": [
+          "C",
+          "D"
+        ],
+        "A": "1",
+        "Lambda": "4398063286272/2147487743",
+        "d_by_full_fiber": {
+          "A": "-2147487743/4398063286272",
+          "Z": "0",
+          "C": "2147487743/4398063286272",
+          "D": "0",
+          "X": "0"
+        },
+        "demand": "10052169158145869433890733542401/20769385476135655536271565632045056",
+        "actual_joint_positive_mass_F": "2147487743/4398063286272",
+        "from_freight_X": "2147487743/4398063286272",
+        "from_carrier_A": "0",
+        "slack": "89113000949717196132870795263/20769385476135655536271565632045056",
+        "financing_fiber": "C",
+        "financing_fiber_z": "4294975488/2147487743",
+        "financing_fiber_h": "1"
+      },
+      "corner_audit": {
+        "f": "D",
+        "score": "281478734680063/1152932499203026944",
+        "score_cap": "3/1664",
+        "corner_points": [
+          "A",
+          "Z",
+          "D",
+          "X"
+        ],
+        "Gamma_total": "1",
+        "Gamma_Cf": "1",
+        "Gamma_BF": "1",
+        "Gamma_BN": "0",
+        "M_X_gamma_BF": "0",
+        "M_X_gamma_BN": "0",
+        "Gamma_X_A": "0"
+      },
+      "ledger_table": {
+        "engine_financing_floor": {
+          "applicable": true,
+          "actual": "2147487743/4398063286272",
+          "relation": ">=",
+          "bound": "10052169158145869433890733542401/20769385476135655536271565632045056",
+          "slack": "89113000949717196132870795263/20769385476135655536271565632045056",
+          "note": "All actual high-lever mass is P_x^+(C)=theta; P_u^+(F)=0."
+        },
+        "top_deficit_weighted_at_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "131073/34359803888",
+          "slack": "131073/34359803888",
+          "note": "Sharp banked cap nu_v*(2+4delta)."
+        },
+        "z_leak_at_4tau_sharp": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "1048584/2147487743",
+          "slack": "1048584/2147487743",
+          "note": "Threshold consequence using nu_v, stronger than the advertised delta cap."
+        },
+        "z_leak_at_4tau_advertised": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "131073/134217728",
+          "slack": "131073/134217728",
+          "note": "The N5 sketch's delta*(2+4delta)/(4tau) allowance."
+        },
+        "h_leak_at_4tau_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "524288/2147487743",
+          "slack": "524288/2147487743",
+          "note": "h-reproduction/sign-split cap; strictly slack because nu_v=q>0."
+        },
+        "zero_face_capacity_A_kappa": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "4096/2147487743",
+          "slack": "4096/2147487743",
+          "note": "Charged form kappa*m <= nu_A for the h-zero carrier/top."
+        },
+        "zero_face_capacity_Z_kappa": {
+          "applicable": true,
+          "actual": "1/4398046511104",
+          "relation": "<=",
+          "bound": "1/262144",
+          "slack": "16777215/4398046511104",
+          "note": "Charged form at the nonclone h-zero blocker Z."
+        },
+        "zero_face_capacity_Z_4tau": {
+          "applicable": true,
+          "actual": "1/274877906944",
+          "relation": "<=",
+          "bound": "1/262144",
+          "slack": "1048575/274877906944",
+          "note": "Generic affine-exposer capacity at threshold 4tau."
+        },
+        "hiddenness_small_beta": {
+          "applicable": true,
+          "actual": "1/4096",
+          "relation": "<",
+          "bound": "1/2048",
+          "slack": "1/4096",
+          "note": "Exact witness lambda_D=1, alpha_Z=1/eps, beta_C=t."
+        },
+        "corner_mass_numerical_conclusion": {
+          "applicable": false,
+          "actual": "1",
+          "relation": ">=",
+          "bound": "58079731/109051904",
+          "slack": "50972173/109051904",
+          "note": "Conclusion holds numerically, but lem-sl1a-corner-ledger is not applicable: H>16tau fails."
+        },
+        "corner_exterior_coarse": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "1/2",
+          "slack": "1/2",
+          "note": "Numerical outside-corner accounting; same tallness failure prevents invoking the lemma."
+        },
+        "corner_exterior_from_exact_floor": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "50972173/109051904",
+          "slack": "50972173/109051904",
+          "note": "Numerical consequence of the printed floor, recorded without claiming its hypotheses."
+        },
+        "mass_split_A": {
+          "applicable": true,
+          "actual": "2147491839/2147487743",
+          "relation": "=",
+          "bound": "2147491839/2147487743",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_X": {
+          "applicable": true,
+          "actual": "4611721194276626435/4611712402445029377",
+          "relation": "=",
+          "bound": "4611721194276626435/4611712402445029377",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_D": {
+          "applicable": true,
+          "actual": "1",
+          "relation": "=",
+          "bound": "1",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_Z": {
+          "applicable": true,
+          "actual": "262145/262144",
+          "relation": "=",
+          "bound": "262145/262144",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        }
+      },
+      "selected_corner_clauses": {
+        "delta_at_most_2^-16": true,
+        "visible_set_nonempty_and_exactly_Z_C_D": true,
+        "v_is_hidden_top": true,
+        "H_gt_16tau": false,
+        "top_support_phi": true,
+        "admissible_exposer_h_at_v": true,
+        "corner_row_f_D_is_rho_far": true,
+        "corner_row_f_D_is_co_top": true,
+        "corner_score_at_f_D": true,
+        "legal_vertex_kernel": true,
+        "pair_X_A_lies_geometrically_in_Cf_and_BN": true,
+        "Gamma_f_assigns_positive_mass_to_pair_X_A": false,
+        "Gamma_f_BN_at_least_1/4": false,
+        "M_X_gamma_BN_gt_1/8": false,
+        "N6_far_carrier_geometry_for_financing_pair": false
+      }
+    },
+    {
+      "id": "dyadic_k10",
+      "status": "FINANCING_INSTANCE_LOCAL_N5II",
+      "rigour_scope": "L3 exact construction; not a proof and not a selected-corner counterexample",
+      "parameters": {
+        "k": 10,
+        "tau": "1/1024",
+        "delta": "1/1048576",
+        "eps": "1/2097152",
+        "t_star_A": "1/8192",
+        "kappa": "1/4096",
+        "rho": "1/256",
+        "K": "17179877375/17179869184",
+        "q": "8192/17179877375",
+        "theta": "17179877375/70368811282432",
+        "D": "524289/262144",
+        "H": "2/17179877375"
+      },
+      "labels": [
+        "a0",
+        "a1",
+        "z",
+        "c",
+        "d",
+        "x"
+      ],
+      "matrix": [
+        [
+          "17179885567/17179877375",
+          "-8192/17179877375",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "17179885567/17179877375",
+          "-8192/17179877375",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "17179885567/17179869184",
+          "-1/2097152",
+          "0",
+          "1/17179869184",
+          "-1/2097152",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "70351631405057/70368777728000",
+          "-140703262810114/295148327357592346625",
+          "0",
+          "17179877375/70368811282432",
+          "0",
+          "0"
+        ]
+      ],
+      "row_point_fibers": [
+        {
+          "point": "A",
+          "indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "point": "Z",
+          "indices": [
+            2
+          ]
+        },
+        {
+          "point": "C",
+          "indices": [
+            3
+          ]
+        },
+        {
+          "point": "D",
+          "indices": [
+            4
+          ]
+        },
+        {
+          "point": "X",
+          "indices": [
+            5
+          ]
+        }
+      ],
+      "negative_masses": {
+        "a0": "8192/17179877375",
+        "a1": "8192/17179877375",
+        "z": "1/1048576",
+        "c": "0",
+        "d": "0",
+        "x": "140703262810114/295148327357592346625"
+      },
+      "visible_set": [
+        "Z",
+        "C",
+        "D"
+      ],
+      "hidden_vertices": [
+        "A"
+      ],
+      "visible_margin_lower_bounds": {
+        "Z": "1",
+        "C": "70351631405057/70368811282432",
+        "D": "17179869183/17179877375"
+      },
+      "top_geometry": {
+        "v": "A",
+        "height": "2/17179877375",
+        "H_over_tau": "2048/17179877375",
+        "phi_coefficients": [
+          "1",
+          "4095/4096",
+          "0",
+          "-1",
+          "1",
+          "0"
+        ],
+        "phi_constant": "-1",
+        "phi_values": {
+          "A": "2/17179877375",
+          "Z": "0",
+          "C": "-2",
+          "D": "0",
+          "X": "-144115291146682366/295148327357592346625"
+        },
+        "z_values": {
+          "A": "0",
+          "Z": "2/17179877375",
+          "C": "34359754752/17179877375",
+          "D": "2/17179877375",
+          "X": "8388612/17179885567"
+        },
+        "h_coefficients": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1/8192",
+          "0"
+        ],
+        "h_values": {
+          "A": "0",
+          "Z": "0",
+          "C": "1",
+          "D": "1/8192",
+          "X": "17179877375/70368811282432"
+        },
+        "closest_point_to_A_in_convW": [
+          "17179885567/17179877375",
+          "-8192/17179877375",
+          "0",
+          "1/17179877375",
+          "-1/17179877375",
+          "0"
+        ],
+        "X_convW_weights": {
+          "Z": "295076129008756195328/295148327357592346625",
+          "C": "72057645573341183/295148327357592346625",
+          "D": "140703262810114/295148327357592346625"
+        }
+      },
+      "hiddenness_witness_A": {
+        "far_set": [
+          "C",
+          "D"
+        ],
+        "lambda": {
+          "D": "1"
+        },
+        "alpha": {
+          "Z": "2097152"
+        },
+        "beta": {
+          "C": "1/8192"
+        },
+        "sum_beta": "1/8192",
+        "balance_verified": true,
+        "always_tight_support": {
+          "T": [
+            "D"
+          ],
+          "O": [
+            "C"
+          ],
+          "Z": [
+            "Z"
+          ]
+        }
+      },
+      "pair": {
+        "freight_row": "X",
+        "carrier_row": "A",
+        "carrier_equals_top_v": true,
+        "carrier_distance_to_v": "0",
+        "separation_l": "1/2048",
+        "band_lower_tau/4": "1/4096",
+        "band_upper_8tau": "1/128",
+        "l_chi_full_fiber_variation": "17179877375/35184405641216"
+      },
+      "engine": {
+        "psi_coefficients": [
+          "-2048",
+          "2048",
+          "0",
+          "2048",
+          "0",
+          "0"
+        ],
+        "psi_constant": "35184422418432/17179877375",
+        "psi_values": {
+          "A": "0",
+          "Z": "-70351664951297/72057628393472000",
+          "C": "70368811282432/17179877375",
+          "D": "35184422418432/17179877375",
+          "X": "1"
+        },
+        "N": [
+          "A",
+          "Z",
+          "X"
+        ],
+        "F": [
+          "C",
+          "D"
+        ],
+        "A": "1",
+        "Lambda": "70368811282432/17179877375",
+        "d_by_full_fiber": {
+          "A": "-17179877375/70368811282432",
+          "Z": "0",
+          "C": "17179877375/70368811282432",
+          "D": "0",
+          "X": "0"
+        },
+        "demand": "10338982967848482655295426202146817/42535397269815045420975379490799616000",
+        "actual_joint_positive_mass_F": "17179877375/70368811282432",
+        "from_freight_X": "17179877375/70368811282432",
+        "from_carrier_A": "0",
+        "slack": "45630554460216051148851781853183/42535397269815045420975379490799616000",
+        "financing_fiber": "C",
+        "financing_fiber_z": "34359754752/17179877375",
+        "financing_fiber_h": "1"
+      },
+      "corner_audit": {
+        "f": "D",
+        "score": "9007229318995967/73787152212470784000",
+        "score_cap": "3/3328",
+        "corner_points": [
+          "A",
+          "Z",
+          "D",
+          "X"
+        ],
+        "Gamma_total": "1",
+        "Gamma_Cf": "1",
+        "Gamma_BF": "1",
+        "Gamma_BN": "0",
+        "M_X_gamma_BF": "0",
+        "M_X_gamma_BN": "0",
+        "Gamma_X_A": "0"
+      },
+      "ledger_table": {
+        "engine_financing_floor": {
+          "applicable": true,
+          "actual": "17179877375/70368811282432",
+          "relation": ">=",
+          "bound": "10338982967848482655295426202146817/42535397269815045420975379490799616000",
+          "slack": "45630554460216051148851781853183/42535397269815045420975379490799616000",
+          "note": "All actual high-lever mass is P_x^+(C)=theta; P_u^+(F)=0."
+        },
+        "top_deficit_weighted_at_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "524289/549756076000",
+          "slack": "524289/549756076000",
+          "note": "Sharp banked cap nu_v*(2+4delta)."
+        },
+        "z_leak_at_4tau_sharp": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "4194312/17179877375",
+          "slack": "4194312/17179877375",
+          "note": "Threshold consequence using nu_v, stronger than the advertised delta cap."
+        },
+        "z_leak_at_4tau_advertised": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "524289/1073741824",
+          "slack": "524289/1073741824",
+          "note": "The N5 sketch's delta*(2+4delta)/(4tau) allowance."
+        },
+        "h_leak_at_4tau_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "2097152/17179877375",
+          "slack": "2097152/17179877375",
+          "note": "h-reproduction/sign-split cap; strictly slack because nu_v=q>0."
+        },
+        "zero_face_capacity_A_kappa": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "8192/17179877375",
+          "slack": "8192/17179877375",
+          "note": "Charged form kappa*m <= nu_A for the h-zero carrier/top."
+        },
+        "zero_face_capacity_Z_kappa": {
+          "applicable": true,
+          "actual": "1/70368744177664",
+          "relation": "<=",
+          "bound": "1/1048576",
+          "slack": "67108863/70368744177664",
+          "note": "Charged form at the nonclone h-zero blocker Z."
+        },
+        "zero_face_capacity_Z_4tau": {
+          "applicable": true,
+          "actual": "1/4398046511104",
+          "relation": "<=",
+          "bound": "1/1048576",
+          "slack": "4194303/4398046511104",
+          "note": "Generic affine-exposer capacity at threshold 4tau."
+        },
+        "hiddenness_small_beta": {
+          "applicable": true,
+          "actual": "1/8192",
+          "relation": "<",
+          "bound": "1/4096",
+          "slack": "1/8192",
+          "note": "Exact witness lambda_D=1, alpha_Z=1/eps, beta_C=t."
+        },
+        "corner_mass_numerical_conclusion": {
+          "applicable": false,
+          "actual": "1",
+          "relation": ">=",
+          "bound": "58079731/109051904",
+          "slack": "50972173/109051904",
+          "note": "Conclusion holds numerically, but lem-sl1a-corner-ledger is not applicable: H>16tau fails."
+        },
+        "corner_exterior_coarse": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "1/2",
+          "slack": "1/2",
+          "note": "Numerical outside-corner accounting; same tallness failure prevents invoking the lemma."
+        },
+        "corner_exterior_from_exact_floor": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "50972173/109051904",
+          "slack": "50972173/109051904",
+          "note": "Numerical consequence of the printed floor, recorded without claiming its hypotheses."
+        },
+        "mass_split_A": {
+          "applicable": true,
+          "actual": "17179885567/17179877375",
+          "relation": "=",
+          "bound": "17179885567/17179877375",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_X": {
+          "applicable": true,
+          "actual": "295148468060855156739/295148327357592346625",
+          "relation": "=",
+          "bound": "295148468060855156739/295148327357592346625",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_D": {
+          "applicable": true,
+          "actual": "1",
+          "relation": "=",
+          "bound": "1",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_Z": {
+          "applicable": true,
+          "actual": "1048577/1048576",
+          "relation": "=",
+          "bound": "1048577/1048576",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        }
+      },
+      "selected_corner_clauses": {
+        "delta_at_most_2^-16": true,
+        "visible_set_nonempty_and_exactly_Z_C_D": true,
+        "v_is_hidden_top": true,
+        "H_gt_16tau": false,
+        "top_support_phi": true,
+        "admissible_exposer_h_at_v": true,
+        "corner_row_f_D_is_rho_far": true,
+        "corner_row_f_D_is_co_top": true,
+        "corner_score_at_f_D": true,
+        "legal_vertex_kernel": true,
+        "pair_X_A_lies_geometrically_in_Cf_and_BN": true,
+        "Gamma_f_assigns_positive_mass_to_pair_X_A": false,
+        "Gamma_f_BN_at_least_1/4": false,
+        "M_X_gamma_BN_gt_1/8": false,
+        "N6_far_carrier_geometry_for_financing_pair": false
+      }
+    },
+    {
+      "id": "dyadic_k11",
+      "status": "FINANCING_INSTANCE_LOCAL_N5II",
+      "rigour_scope": "L3 exact construction; not a proof and not a selected-corner counterexample",
+      "parameters": {
+        "k": 11,
+        "tau": "1/2048",
+        "delta": "1/4194304",
+        "eps": "1/8388608",
+        "t_star_A": "1/16384",
+        "kappa": "1/8192",
+        "rho": "1/512",
+        "K": "137438969855/137438953472",
+        "q": "16384/137438969855",
+        "theta": "137438969855/1125900175269888",
+        "D": "2097153/1048576",
+        "H": "2/137438969855"
+      },
+      "labels": [
+        "a0",
+        "a1",
+        "z",
+        "c",
+        "d",
+        "x"
+      ],
+      "matrix": [
+        [
+          "137438986239/137438969855",
+          "-16384/137438969855",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "137438986239/137438969855",
+          "-16384/137438969855",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "137438986239/137438953472",
+          "-1/8388608",
+          "0",
+          "1/137438953472",
+          "-1/8388608",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1125762736300033/1125900041052160",
+          "-2251525472600066/18889472686603680825345",
+          "0",
+          "137438969855/1125900175269888",
+          "0",
+          "0"
+        ]
+      ],
+      "row_point_fibers": [
+        {
+          "point": "A",
+          "indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "point": "Z",
+          "indices": [
+            2
+          ]
+        },
+        {
+          "point": "C",
+          "indices": [
+            3
+          ]
+        },
+        {
+          "point": "D",
+          "indices": [
+            4
+          ]
+        },
+        {
+          "point": "X",
+          "indices": [
+            5
+          ]
+        }
+      ],
+      "negative_masses": {
+        "a0": "16384/137438969855",
+        "a1": "16384/137438969855",
+        "z": "1/4194304",
+        "c": "0",
+        "d": "0",
+        "x": "2251525472600066/18889472686603680825345"
+      },
+      "visible_set": [
+        "Z",
+        "C",
+        "D"
+      ],
+      "hidden_vertices": [
+        "A"
+      ],
+      "visible_margin_lower_bounds": {
+        "Z": "1",
+        "C": "1125762736300033/1125900175269888",
+        "D": "137438953471/137438969855"
+      },
+      "top_geometry": {
+        "v": "A",
+        "height": "2/137438969855",
+        "H_over_tau": "4096/137438969855",
+        "phi_coefficients": [
+          "1",
+          "8191/8192",
+          "0",
+          "-1",
+          "1",
+          "0"
+        ],
+        "phi_constant": "-1",
+        "phi_values": {
+          "A": "2/137438969855",
+          "Z": "0",
+          "C": "-2",
+          "D": "0",
+          "X": "-1537228947675851434/6296490895534560275115"
+        },
+        "z_values": {
+          "A": "0",
+          "Z": "2/137438969855",
+          "C": "274877939712/137438969855",
+          "D": "2/137438969855",
+          "X": "11184812/45812995413"
+        },
+        "h_coefficients": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1/16384",
+          "0"
+        ],
+        "h_values": {
+          "A": "0",
+          "Z": "0",
+          "C": "1",
+          "D": "1/16384",
+          "X": "137438969855/1125900175269888"
+        },
+        "closest_point_to_A_in_convW": [
+          "137438986239/137438969855",
+          "-16384/137438969855",
+          "0",
+          "1/137438969855",
+          "-1/137438969855",
+          "0"
+        ],
+        "X_convW_weights": {
+          "Z": "18887164591656694448128/18889472686603680825345",
+          "C": "768614473837925717/6296490895534560275115",
+          "D": "2251525472600066/18889472686603680825345"
+        }
+      },
+      "hiddenness_witness_A": {
+        "far_set": [
+          "C",
+          "D"
+        ],
+        "lambda": {
+          "D": "1"
+        },
+        "alpha": {
+          "Z": "8388608"
+        },
+        "beta": {
+          "C": "1/16384"
+        },
+        "sum_beta": "1/16384",
+        "balance_verified": true,
+        "always_tight_support": {
+          "T": [
+            "D"
+          ],
+          "O": [
+            "C"
+          ],
+          "Z": [
+            "Z"
+          ]
+        }
+      },
+      "pair": {
+        "freight_row": "X",
+        "carrier_row": "A",
+        "carrier_equals_top_v": true,
+        "carrier_distance_to_v": "0",
+        "separation_l": "1/4096",
+        "band_lower_tau/4": "1/8192",
+        "band_upper_8tau": "1/256",
+        "l_chi_full_fiber_variation": "137438969855/562950087634944"
+      },
+      "engine": {
+        "psi_coefficients": [
+          "-4096",
+          "4096",
+          "0",
+          "4096",
+          "0",
+          "0"
+        ],
+        "psi_constant": "562950154743808/137438969855",
+        "psi_values": {
+          "A": "0",
+          "Z": "-1125762870501377/2305843284074823680",
+          "C": "1125900175269888/137438969855",
+          "D": "562950154743808/137438969855",
+          "X": "1"
+        },
+        "N": [
+          "A",
+          "Z",
+          "X"
+        ],
+        "F": [
+          "C",
+          "D"
+        ],
+        "A": "1",
+        "Lambda": "1125900175269888/137438969855",
+        "d_by_full_fiber": {
+          "A": "-137438969855/1125900175269888",
+          "Z": "0",
+          "C": "137438969855/1125900175269888",
+          "D": "0",
+          "X": "0"
+        },
+        "demand": "10610464957606398741261797851351953409/87112337852837258859897545301875553730560",
+        "actual_joint_positive_mass_F": "137438969855/1125900175269888",
+        "from_freight_X": "137438969855/1125900175269888",
+        "from_carrier_A": "0",
+        "slack": "23364079043970902408250814145544191/87112337852837258859897545301875553730560",
+        "financing_fiber": "C",
+        "financing_fiber_z": "274877939712/137438969855",
+        "financing_fiber_h": "1"
+      },
+      "corner_audit": {
+        "f": "D",
+        "score": "288230616667799551/4722369297585321000960",
+        "score_cap": "3/6656",
+        "corner_points": [
+          "A",
+          "Z",
+          "D",
+          "X"
+        ],
+        "Gamma_total": "1",
+        "Gamma_Cf": "1",
+        "Gamma_BF": "1",
+        "Gamma_BN": "0",
+        "M_X_gamma_BF": "0",
+        "M_X_gamma_BN": "0",
+        "Gamma_X_A": "0"
+      },
+      "ledger_table": {
+        "engine_financing_floor": {
+          "applicable": true,
+          "actual": "137438969855/1125900175269888",
+          "relation": ">=",
+          "bound": "10610464957606398741261797851351953409/87112337852837258859897545301875553730560",
+          "slack": "23364079043970902408250814145544191/87112337852837258859897545301875553730560",
+          "note": "All actual high-lever mass is P_x^+(C)=theta; P_u^+(F)=0."
+        },
+        "top_deficit_weighted_at_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "2097153/8796094070720",
+          "slack": "2097153/8796094070720",
+          "note": "Sharp banked cap nu_v*(2+4delta)."
+        },
+        "z_leak_at_4tau_sharp": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "16777224/137438969855",
+          "slack": "16777224/137438969855",
+          "note": "Threshold consequence using nu_v, stronger than the advertised delta cap."
+        },
+        "z_leak_at_4tau_advertised": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "2097153/8589934592",
+          "slack": "2097153/8589934592",
+          "note": "The N5 sketch's delta*(2+4delta)/(4tau) allowance."
+        },
+        "h_leak_at_4tau_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "8388608/137438969855",
+          "slack": "8388608/137438969855",
+          "note": "h-reproduction/sign-split cap; strictly slack because nu_v=q>0."
+        },
+        "zero_face_capacity_A_kappa": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "16384/137438969855",
+          "slack": "16384/137438969855",
+          "note": "Charged form kappa*m <= nu_A for the h-zero carrier/top."
+        },
+        "zero_face_capacity_Z_kappa": {
+          "applicable": true,
+          "actual": "1/1125899906842624",
+          "relation": "<=",
+          "bound": "1/4194304",
+          "slack": "268435455/1125899906842624",
+          "note": "Charged form at the nonclone h-zero blocker Z."
+        },
+        "zero_face_capacity_Z_4tau": {
+          "applicable": true,
+          "actual": "1/70368744177664",
+          "relation": "<=",
+          "bound": "1/4194304",
+          "slack": "16777215/70368744177664",
+          "note": "Generic affine-exposer capacity at threshold 4tau."
+        },
+        "hiddenness_small_beta": {
+          "applicable": true,
+          "actual": "1/16384",
+          "relation": "<",
+          "bound": "1/8192",
+          "slack": "1/16384",
+          "note": "Exact witness lambda_D=1, alpha_Z=1/eps, beta_C=t."
+        },
+        "corner_mass_numerical_conclusion": {
+          "applicable": false,
+          "actual": "1",
+          "relation": ">=",
+          "bound": "58079731/109051904",
+          "slack": "50972173/109051904",
+          "note": "Conclusion holds numerically, but lem-sl1a-corner-ledger is not applicable: H>16tau fails."
+        },
+        "corner_exterior_coarse": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "1/2",
+          "slack": "1/2",
+          "note": "Numerical outside-corner accounting; same tallness failure prevents invoking the lemma."
+        },
+        "corner_exterior_from_exact_floor": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "50972173/109051904",
+          "slack": "50972173/109051904",
+          "note": "Numerical consequence of the printed floor, recorded without claiming its hypotheses."
+        },
+        "mass_split_A": {
+          "applicable": true,
+          "actual": "137438986239/137438969855",
+          "relation": "=",
+          "bound": "137438986239/137438969855",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_X": {
+          "applicable": true,
+          "actual": "18889474938129153425411/18889472686603680825345",
+          "relation": "=",
+          "bound": "18889474938129153425411/18889472686603680825345",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_D": {
+          "applicable": true,
+          "actual": "1",
+          "relation": "=",
+          "bound": "1",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_Z": {
+          "applicable": true,
+          "actual": "4194305/4194304",
+          "relation": "=",
+          "bound": "4194305/4194304",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        }
+      },
+      "selected_corner_clauses": {
+        "delta_at_most_2^-16": true,
+        "visible_set_nonempty_and_exactly_Z_C_D": true,
+        "v_is_hidden_top": true,
+        "H_gt_16tau": false,
+        "top_support_phi": true,
+        "admissible_exposer_h_at_v": true,
+        "corner_row_f_D_is_rho_far": true,
+        "corner_row_f_D_is_co_top": true,
+        "corner_score_at_f_D": true,
+        "legal_vertex_kernel": true,
+        "pair_X_A_lies_geometrically_in_Cf_and_BN": true,
+        "Gamma_f_assigns_positive_mass_to_pair_X_A": false,
+        "Gamma_f_BN_at_least_1/4": false,
+        "M_X_gamma_BN_gt_1/8": false,
+        "N6_far_carrier_geometry_for_financing_pair": false
+      }
+    },
+    {
+      "id": "dyadic_k12",
+      "status": "FINANCING_INSTANCE_LOCAL_N5II",
+      "rigour_scope": "L3 exact construction; not a proof and not a selected-corner counterexample",
+      "parameters": {
+        "k": 12,
+        "tau": "1/4096",
+        "delta": "1/16777216",
+        "eps": "1/33554432",
+        "t_star_A": "1/32768",
+        "kappa": "1/16384",
+        "rho": "1/1024",
+        "K": "1099511660543/1099511627776",
+        "q": "32768/1099511660543",
+        "theta": "1099511660543/18014399583207424",
+        "D": "8388609/4194304",
+        "H": "2/1099511660543"
+      },
+      "labels": [
+        "a0",
+        "a1",
+        "z",
+        "c",
+        "d",
+        "x"
+      ],
+      "matrix": [
+        [
+          "1099511693311/1099511660543",
+          "-32768/1099511660543",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1099511693311/1099511660543",
+          "-32768/1099511660543",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1099511693311/1099511627776",
+          "-1/33554432",
+          "0",
+          "1/1099511627776",
+          "-1/33554432",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "18013300071546881/18014399046336512",
+          "-36026600143093762/1208925927698823355727873",
+          "0",
+          "1099511660543/18014399583207424",
+          "0",
+          "0"
+        ]
+      ],
+      "row_point_fibers": [
+        {
+          "point": "A",
+          "indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "point": "Z",
+          "indices": [
+            2
+          ]
+        },
+        {
+          "point": "C",
+          "indices": [
+            3
+          ]
+        },
+        {
+          "point": "D",
+          "indices": [
+            4
+          ]
+        },
+        {
+          "point": "X",
+          "indices": [
+            5
+          ]
+        }
+      ],
+      "negative_masses": {
+        "a0": "32768/1099511660543",
+        "a1": "32768/1099511660543",
+        "z": "1/16777216",
+        "c": "0",
+        "d": "0",
+        "x": "36026600143093762/1208925927698823355727873"
+      },
+      "visible_set": [
+        "Z",
+        "C",
+        "D"
+      ],
+      "hidden_vertices": [
+        "A"
+      ],
+      "visible_margin_lower_bounds": {
+        "Z": "1",
+        "C": "18013300071546881/18014399583207424",
+        "D": "1099511627775/1099511660543"
+      },
+      "top_geometry": {
+        "v": "A",
+        "height": "2/1099511660543",
+        "H_over_tau": "8192/1099511660543",
+        "phi_coefficients": [
+          "1",
+          "16383/16384",
+          "0",
+          "-1",
+          "1",
+          "0"
+        ],
+        "phi_constant": "-1",
+        "phi_values": {
+          "A": "2/1099511660543",
+          "Z": "0",
+          "C": "-2",
+          "D": "0",
+          "X": "-147573959186611961854/1208925927698823355727873"
+        },
+        "z_values": {
+          "A": "0",
+          "Z": "2/1099511660543",
+          "C": "2199023321088/1099511660543",
+          "D": "2/1099511660543",
+          "X": "134217732/1099511693311"
+        },
+        "h_coefficients": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1/32768",
+          "0"
+        ],
+        "h_values": {
+          "A": "0",
+          "Z": "0",
+          "C": "1",
+          "D": "1/32768",
+          "X": "1099511660543/18014399583207424"
+        },
+        "closest_point_to_A_in_convW": [
+          "1099511693311/1099511660543",
+          "-32768/1099511660543",
+          "0",
+          "1/1099511660543",
+          "-1/1099511660543",
+          "0"
+        ],
+        "X_convW_weights": {
+          "Z": "1208852104692629906653184/1208925927698823355727873",
+          "C": "73786979593305980927/1208925927698823355727873",
+          "D": "36026600143093762/1208925927698823355727873"
+        }
+      },
+      "hiddenness_witness_A": {
+        "far_set": [
+          "C",
+          "D"
+        ],
+        "lambda": {
+          "D": "1"
+        },
+        "alpha": {
+          "Z": "33554432"
+        },
+        "beta": {
+          "C": "1/32768"
+        },
+        "sum_beta": "1/32768",
+        "balance_verified": true,
+        "always_tight_support": {
+          "T": [
+            "D"
+          ],
+          "O": [
+            "C"
+          ],
+          "Z": [
+            "Z"
+          ]
+        }
+      },
+      "pair": {
+        "freight_row": "X",
+        "carrier_row": "A",
+        "carrier_equals_top_v": true,
+        "carrier_distance_to_v": "0",
+        "separation_l": "1/8192",
+        "band_lower_tau/4": "1/16384",
+        "band_upper_8tau": "1/512",
+        "l_chi_full_fiber_variation": "1099511660543/9007199791603712"
+      },
+      "engine": {
+        "psi_coefficients": [
+          "-8192",
+          "8192",
+          "0",
+          "8192",
+          "0",
+          "0"
+        ],
+        "psi_constant": "9007200060039168/1099511660543",
+        "psi_values": {
+          "A": "0",
+          "Z": "-18013300608385025/73786978493794353152",
+          "C": "18014399583207424/1099511660543",
+          "D": "9007200060039168/1099511660543",
+          "X": "1"
+        },
+        "N": [
+          "A",
+          "Z",
+          "X"
+        ],
+        "F": [
+          "C",
+          "D"
+        ],
+        "A": "1",
+        "Lambda": "18014399583207424/1099511660543",
+        "d_by_full_fiber": {
+          "A": "-1099511660543/18014399583207424",
+          "Z": "0",
+          "C": "1099511660543/18014399583207424",
+          "D": "0",
+          "X": "0"
+        },
+        "demand": "10877074310684631771736403212634051993601/178405988172319390602378090646859426440413184",
+        "actual_joint_positive_mass_F": "1099511660543/18014399583207424",
+        "from_freight_X": "1099511660543/18014399583207424",
+        "from_carrier_A": "0",
+        "slack": "11962728829951486527847013311876005887/178405988172319390602378090646859426440413184",
+        "financing_fiber": "C",
+        "financing_fiber_z": "2199023321088/1099511660543",
+        "financing_fiber_h": "1"
+      },
+      "corner_audit": {
+        "f": "D",
+        "score": "9223373960991768575/302231499939379763183616",
+        "score_cap": "3/13312",
+        "corner_points": [
+          "A",
+          "Z",
+          "D",
+          "X"
+        ],
+        "Gamma_total": "1",
+        "Gamma_Cf": "1",
+        "Gamma_BF": "1",
+        "Gamma_BN": "0",
+        "M_X_gamma_BF": "0",
+        "M_X_gamma_BN": "0",
+        "Gamma_X_A": "0"
+      },
+      "ledger_table": {
+        "engine_financing_floor": {
+          "applicable": true,
+          "actual": "1099511660543/18014399583207424",
+          "relation": ">=",
+          "bound": "10877074310684631771736403212634051993601/178405988172319390602378090646859426440413184",
+          "slack": "11962728829951486527847013311876005887/178405988172319390602378090646859426440413184",
+          "note": "All actual high-lever mass is P_x^+(C)=theta; P_u^+(F)=0."
+        },
+        "top_deficit_weighted_at_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "8388609/140737492549504",
+          "slack": "8388609/140737492549504",
+          "note": "Sharp banked cap nu_v*(2+4delta)."
+        },
+        "z_leak_at_4tau_sharp": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "67108872/1099511660543",
+          "slack": "67108872/1099511660543",
+          "note": "Threshold consequence using nu_v, stronger than the advertised delta cap."
+        },
+        "z_leak_at_4tau_advertised": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "8388609/68719476736",
+          "slack": "8388609/68719476736",
+          "note": "The N5 sketch's delta*(2+4delta)/(4tau) allowance."
+        },
+        "h_leak_at_4tau_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "33554432/1099511660543",
+          "slack": "33554432/1099511660543",
+          "note": "h-reproduction/sign-split cap; strictly slack because nu_v=q>0."
+        },
+        "zero_face_capacity_A_kappa": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "32768/1099511660543",
+          "slack": "32768/1099511660543",
+          "note": "Charged form kappa*m <= nu_A for the h-zero carrier/top."
+        },
+        "zero_face_capacity_Z_kappa": {
+          "applicable": true,
+          "actual": "1/18014398509481984",
+          "relation": "<=",
+          "bound": "1/16777216",
+          "slack": "1073741823/18014398509481984",
+          "note": "Charged form at the nonclone h-zero blocker Z."
+        },
+        "zero_face_capacity_Z_4tau": {
+          "applicable": true,
+          "actual": "1/1125899906842624",
+          "relation": "<=",
+          "bound": "1/16777216",
+          "slack": "67108863/1125899906842624",
+          "note": "Generic affine-exposer capacity at threshold 4tau."
+        },
+        "hiddenness_small_beta": {
+          "applicable": true,
+          "actual": "1/32768",
+          "relation": "<",
+          "bound": "1/16384",
+          "slack": "1/32768",
+          "note": "Exact witness lambda_D=1, alpha_Z=1/eps, beta_C=t."
+        },
+        "corner_mass_numerical_conclusion": {
+          "applicable": false,
+          "actual": "1",
+          "relation": ">=",
+          "bound": "58079731/109051904",
+          "slack": "50972173/109051904",
+          "note": "Conclusion holds numerically, but lem-sl1a-corner-ledger is not applicable: H>16tau fails."
+        },
+        "corner_exterior_coarse": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "1/2",
+          "slack": "1/2",
+          "note": "Numerical outside-corner accounting; same tallness failure prevents invoking the lemma."
+        },
+        "corner_exterior_from_exact_floor": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "50972173/109051904",
+          "slack": "50972173/109051904",
+          "note": "Numerical consequence of the printed floor, recorded without claiming its hypotheses."
+        },
+        "mass_split_A": {
+          "applicable": true,
+          "actual": "1099511693311/1099511660543",
+          "relation": "=",
+          "bound": "1099511693311/1099511660543",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_X": {
+          "applicable": true,
+          "actual": "1208925963725423498821635/1208925927698823355727873",
+          "relation": "=",
+          "bound": "1208925963725423498821635/1208925927698823355727873",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_D": {
+          "applicable": true,
+          "actual": "1",
+          "relation": "=",
+          "bound": "1",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_Z": {
+          "applicable": true,
+          "actual": "16777217/16777216",
+          "relation": "=",
+          "bound": "16777217/16777216",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        }
+      },
+      "selected_corner_clauses": {
+        "delta_at_most_2^-16": true,
+        "visible_set_nonempty_and_exactly_Z_C_D": true,
+        "v_is_hidden_top": true,
+        "H_gt_16tau": false,
+        "top_support_phi": true,
+        "admissible_exposer_h_at_v": true,
+        "corner_row_f_D_is_rho_far": true,
+        "corner_row_f_D_is_co_top": true,
+        "corner_score_at_f_D": true,
+        "legal_vertex_kernel": true,
+        "pair_X_A_lies_geometrically_in_Cf_and_BN": true,
+        "Gamma_f_assigns_positive_mass_to_pair_X_A": false,
+        "Gamma_f_BN_at_least_1/4": false,
+        "M_X_gamma_BN_gt_1/8": false,
+        "N6_far_carrier_geometry_for_financing_pair": false
+      }
+    },
+    {
+      "id": "dyadic_k13",
+      "status": "FINANCING_INSTANCE_LOCAL_N5II",
+      "rigour_scope": "L3 exact construction; not a proof and not a selected-corner counterexample",
+      "parameters": {
+        "k": 13,
+        "tau": "1/8192",
+        "delta": "1/67108864",
+        "eps": "1/134217728",
+        "t_star_A": "1/65536",
+        "kappa": "1/32768",
+        "rho": "1/2048",
+        "K": "8796093087743/8796093022208",
+        "q": "65536/8796093087743",
+        "theta": "8796093087743/288230380446646272",
+        "D": "33554433/16777216",
+        "H": "2/8796093087743"
+      },
+      "labels": [
+        "a0",
+        "a1",
+        "z",
+        "c",
+        "d",
+        "x"
+      ],
+      "matrix": [
+        [
+          "8796093153279/8796093087743",
+          "-65536/8796093087743",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "8796093153279/8796093087743",
+          "-65536/8796093087743",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "8796093153279/8796093022208",
+          "-1/134217728",
+          "0",
+          "1/8796093022208",
+          "-1/134217728",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "288221584353558529/288230378299162624",
+          "-576443168707117058/77371254184700940495159297",
+          "0",
+          "8796093087743/288230380446646272",
+          "0",
+          "0"
+        ]
+      ],
+      "row_point_fibers": [
+        {
+          "point": "A",
+          "indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "point": "Z",
+          "indices": [
+            2
+          ]
+        },
+        {
+          "point": "C",
+          "indices": [
+            3
+          ]
+        },
+        {
+          "point": "D",
+          "indices": [
+            4
+          ]
+        },
+        {
+          "point": "X",
+          "indices": [
+            5
+          ]
+        }
+      ],
+      "negative_masses": {
+        "a0": "65536/8796093087743",
+        "a1": "65536/8796093087743",
+        "z": "1/67108864",
+        "c": "0",
+        "d": "0",
+        "x": "576443168707117058/77371254184700940495159297"
+      },
+      "visible_set": [
+        "Z",
+        "C",
+        "D"
+      ],
+      "hidden_vertices": [
+        "A"
+      ],
+      "visible_margin_lower_bounds": {
+        "Z": "1",
+        "C": "288221584353558529/288230380446646272",
+        "D": "8796093022207/8796093087743"
+      },
+      "top_geometry": {
+        "v": "A",
+        "height": "2/8796093087743",
+        "H_over_tau": "16384/8796093087743",
+        "phi_coefficients": [
+          "1",
+          "32767/32768",
+          "0",
+          "-1",
+          "1",
+          "0"
+        ],
+        "phi_constant": "-1",
+        "phi_values": {
+          "A": "2/8796093087743",
+          "Z": "0",
+          "C": "-2",
+          "D": "0",
+          "X": "-1574122178548555492010/25790418061566980165053099"
+        },
+        "z_values": {
+          "A": "0",
+          "Z": "2/8796093087743",
+          "C": "17592186175488/8796093087743",
+          "D": "2/8796093087743",
+          "X": "178956972/2932031051093"
+        },
+        "h_coefficients": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1/65536",
+          "0"
+        ],
+        "h_values": {
+          "A": "0",
+          "Z": "0",
+          "C": "1",
+          "D": "1/65536",
+          "X": "8796093087743/288230380446646272"
+        },
+        "closest_point_to_A_in_convW": [
+          "8796093153279/8796093087743",
+          "-65536/8796093087743",
+          "0",
+          "1/8796093087743",
+          "-1/8796093087743",
+          "0"
+        ],
+        "X_convW_weights": {
+          "Z": "77368892424989948954804224/77371254184700940495159297",
+          "C": "787061089274277746005/25790418061566980165053099",
+          "D": "576443168707117058/77371254184700940495159297"
+        }
+      },
+      "hiddenness_witness_A": {
+        "far_set": [
+          "C",
+          "D"
+        ],
+        "lambda": {
+          "D": "1"
+        },
+        "alpha": {
+          "Z": "134217728"
+        },
+        "beta": {
+          "C": "1/65536"
+        },
+        "sum_beta": "1/65536",
+        "balance_verified": true,
+        "always_tight_support": {
+          "T": [
+            "D"
+          ],
+          "O": [
+            "C"
+          ],
+          "Z": [
+            "Z"
+          ]
+        }
+      },
+      "pair": {
+        "freight_row": "X",
+        "carrier_row": "A",
+        "carrier_equals_top_v": true,
+        "carrier_distance_to_v": "0",
+        "separation_l": "1/16384",
+        "band_lower_tau/4": "1/32768",
+        "band_upper_8tau": "1/1024",
+        "l_chi_full_fiber_variation": "8796093087743/144115190223323136"
+      },
+      "engine": {
+        "psi_coefficients": [
+          "-16384",
+          "16384",
+          "0",
+          "16384",
+          "0",
+          "0"
+        ],
+        "psi_constant": "144115191297064960/8796093087743",
+        "psi_values": {
+          "A": "0",
+          "Z": "-288221586500976641/2361183259026740215808",
+          "C": "288230380446646272/8796093087743",
+          "D": "144115191297064960/8796093087743",
+          "X": "1"
+        },
+        "N": [
+          "A",
+          "Z",
+          "X"
+        ],
+        "F": [
+          "C",
+          "D"
+        ],
+        "A": "1",
+        "Lambda": "288230380446646272/8796093087743",
+        "d_by_full_fiber": {
+          "A": "-8796093087743/288230380446646272",
+          "Z": "0",
+          "C": "8796093087743/288230380446646272",
+          "D": "0",
+          "X": "0"
+        },
+        "demand": "11144247931863215745776376503122430946754561/365375422943895953520037508577682948934709805056",
+        "actual_joint_positive_mass_F": "8796093087743/288230380446646272",
+        "from_freight_X": "8796093087743/288230380446646272",
+        "from_carrier_A": "0",
+        "slack": "6124999705294914194316176039559347503103/365375422943895953520037508577682948934709805056",
+        "financing_fiber": "C",
+        "financing_fiber_z": "17592186175488/8796093087743",
+        "financing_fiber_h": "1"
+      },
+      "corner_audit": {
+        "f": "D",
+        "score": "295147920572482125823/19342813834407812446224384",
+        "score_cap": "3/26624",
+        "corner_points": [
+          "A",
+          "Z",
+          "D",
+          "X"
+        ],
+        "Gamma_total": "1",
+        "Gamma_Cf": "1",
+        "Gamma_BF": "1",
+        "Gamma_BN": "0",
+        "M_X_gamma_BF": "0",
+        "M_X_gamma_BN": "0",
+        "Gamma_X_A": "0"
+      },
+      "ledger_table": {
+        "engine_financing_floor": {
+          "applicable": true,
+          "actual": "8796093087743/288230380446646272",
+          "relation": ">=",
+          "bound": "11144247931863215745776376503122430946754561/365375422943895953520037508577682948934709805056",
+          "slack": "6124999705294914194316176039559347503103/365375422943895953520037508577682948934709805056",
+          "note": "All actual high-lever mass is P_x^+(C)=theta; P_u^+(F)=0."
+        },
+        "top_deficit_weighted_at_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "33554433/2251799830462208",
+          "slack": "33554433/2251799830462208",
+          "note": "Sharp banked cap nu_v*(2+4delta)."
+        },
+        "z_leak_at_4tau_sharp": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "268435464/8796093087743",
+          "slack": "268435464/8796093087743",
+          "note": "Threshold consequence using nu_v, stronger than the advertised delta cap."
+        },
+        "z_leak_at_4tau_advertised": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "33554433/549755813888",
+          "slack": "33554433/549755813888",
+          "note": "The N5 sketch's delta*(2+4delta)/(4tau) allowance."
+        },
+        "h_leak_at_4tau_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "134217728/8796093087743",
+          "slack": "134217728/8796093087743",
+          "note": "h-reproduction/sign-split cap; strictly slack because nu_v=q>0."
+        },
+        "zero_face_capacity_A_kappa": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "65536/8796093087743",
+          "slack": "65536/8796093087743",
+          "note": "Charged form kappa*m <= nu_A for the h-zero carrier/top."
+        },
+        "zero_face_capacity_Z_kappa": {
+          "applicable": true,
+          "actual": "1/288230376151711744",
+          "relation": "<=",
+          "bound": "1/67108864",
+          "slack": "4294967295/288230376151711744",
+          "note": "Charged form at the nonclone h-zero blocker Z."
+        },
+        "zero_face_capacity_Z_4tau": {
+          "applicable": true,
+          "actual": "1/18014398509481984",
+          "relation": "<=",
+          "bound": "1/67108864",
+          "slack": "268435455/18014398509481984",
+          "note": "Generic affine-exposer capacity at threshold 4tau."
+        },
+        "hiddenness_small_beta": {
+          "applicable": true,
+          "actual": "1/65536",
+          "relation": "<",
+          "bound": "1/32768",
+          "slack": "1/65536",
+          "note": "Exact witness lambda_D=1, alpha_Z=1/eps, beta_C=t."
+        },
+        "corner_mass_numerical_conclusion": {
+          "applicable": false,
+          "actual": "1",
+          "relation": ">=",
+          "bound": "58079731/109051904",
+          "slack": "50972173/109051904",
+          "note": "Conclusion holds numerically, but lem-sl1a-corner-ledger is not applicable: H>16tau fails."
+        },
+        "corner_exterior_coarse": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "1/2",
+          "slack": "1/2",
+          "note": "Numerical outside-corner accounting; same tallness failure prevents invoking the lemma."
+        },
+        "corner_exterior_from_exact_floor": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "50972173/109051904",
+          "slack": "50972173/109051904",
+          "note": "Numerical consequence of the printed floor, recorded without claiming its hypotheses."
+        },
+        "mass_split_A": {
+          "applicable": true,
+          "actual": "8796093153279/8796093087743",
+          "relation": "=",
+          "bound": "8796093153279/8796093087743",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_X": {
+          "applicable": true,
+          "actual": "77371254761144109202276355/77371254184700940495159297",
+          "relation": "=",
+          "bound": "77371254761144109202276355/77371254184700940495159297",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_D": {
+          "applicable": true,
+          "actual": "1",
+          "relation": "=",
+          "bound": "1",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_Z": {
+          "applicable": true,
+          "actual": "67108865/67108864",
+          "relation": "=",
+          "bound": "67108865/67108864",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        }
+      },
+      "selected_corner_clauses": {
+        "delta_at_most_2^-16": true,
+        "visible_set_nonempty_and_exactly_Z_C_D": true,
+        "v_is_hidden_top": true,
+        "H_gt_16tau": false,
+        "top_support_phi": true,
+        "admissible_exposer_h_at_v": true,
+        "corner_row_f_D_is_rho_far": true,
+        "corner_row_f_D_is_co_top": true,
+        "corner_score_at_f_D": true,
+        "legal_vertex_kernel": true,
+        "pair_X_A_lies_geometrically_in_Cf_and_BN": true,
+        "Gamma_f_assigns_positive_mass_to_pair_X_A": false,
+        "Gamma_f_BN_at_least_1/4": false,
+        "M_X_gamma_BN_gt_1/8": false,
+        "N6_far_carrier_geometry_for_financing_pair": false
+      }
+    },
+    {
+      "id": "dyadic_k14",
+      "status": "FINANCING_INSTANCE_LOCAL_N5II",
+      "rigour_scope": "L3 exact construction; not a proof and not a selected-corner counterexample",
+      "parameters": {
+        "k": 14,
+        "tau": "1/16384",
+        "delta": "1/268435456",
+        "eps": "1/536870912",
+        "t_star_A": "1/131072",
+        "kappa": "1/65536",
+        "rho": "1/4096",
+        "K": "70368744308735/70368744177664",
+        "q": "131072/70368744308735",
+        "theta": "70368744308735/4611686035607191552",
+        "D": "134217729/67108864",
+        "H": "2/70368744308735"
+      },
+      "labels": [
+        "a0",
+        "a1",
+        "z",
+        "c",
+        "d",
+        "x"
+      ],
+      "matrix": [
+        [
+          "70368744439807/70368744308735",
+          "-131072/70368744308735",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "70368744439807/70368744308735",
+          "-131072/70368744308735",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "70368744439807/70368744177664",
+          "-1/536870912",
+          "0",
+          "1/70368744177664",
+          "-1/536870912",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "4611615666862882817/4611686027017256960",
+          "-9223231333725765634/4951760184811496507031814145",
+          "0",
+          "70368744308735/4611686035607191552",
+          "0",
+          "0"
+        ]
+      ],
+      "row_point_fibers": [
+        {
+          "point": "A",
+          "indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "point": "Z",
+          "indices": [
+            2
+          ]
+        },
+        {
+          "point": "C",
+          "indices": [
+            3
+          ]
+        },
+        {
+          "point": "D",
+          "indices": [
+            4
+          ]
+        },
+        {
+          "point": "X",
+          "indices": [
+            5
+          ]
+        }
+      ],
+      "negative_masses": {
+        "a0": "131072/70368744308735",
+        "a1": "131072/70368744308735",
+        "z": "1/268435456",
+        "c": "0",
+        "d": "0",
+        "x": "9223231333725765634/4951760184811496507031814145"
+      },
+      "visible_set": [
+        "Z",
+        "C",
+        "D"
+      ],
+      "hidden_vertices": [
+        "A"
+      ],
+      "visible_margin_lower_bounds": {
+        "Z": "1",
+        "C": "4611615666862882817/4611686035607191552",
+        "D": "70368744177663/70368744308735"
+      },
+      "top_geometry": {
+        "v": "A",
+        "height": "2/70368744308735",
+        "H_over_tau": "32768/70368744308735",
+        "phi_coefficients": [
+          "1",
+          "65535/65536",
+          "0",
+          "-1",
+          "1",
+          "0"
+        ],
+        "phi_constant": "-1",
+        "phi_values": {
+          "A": "2/70368744308735",
+          "Z": "0",
+          "C": "-2",
+          "D": "0",
+          "X": "-151115727874038964420606/4951760184811496507031814145"
+        },
+        "z_values": {
+          "A": "0",
+          "Z": "2/70368744308735",
+          "C": "140737488617472/70368744308735",
+          "D": "2/70368744308735",
+          "X": "2147483652/70368744439807"
+        },
+        "h_coefficients": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1/131072",
+          "0"
+        ],
+        "h_values": {
+          "A": "0",
+          "Z": "0",
+          "C": "1",
+          "D": "1/131072",
+          "X": "70368744308735/4611686035607191552"
+        },
+        "closest_point_to_A_in_convW": [
+          "70368744439807/70368744308735",
+          "-131072/70368744308735",
+          "0",
+          "1/70368744308735",
+          "-1/70368744308735",
+          "0"
+        ],
+        "X_convW_weights": {
+          "Z": "4951684617724328153823838208/4951760184811496507031814145",
+          "C": "75557863937019482210303/4951760184811496507031814145",
+          "D": "9223231333725765634/4951760184811496507031814145"
+        }
+      },
+      "hiddenness_witness_A": {
+        "far_set": [
+          "C",
+          "D"
+        ],
+        "lambda": {
+          "D": "1"
+        },
+        "alpha": {
+          "Z": "536870912"
+        },
+        "beta": {
+          "C": "1/131072"
+        },
+        "sum_beta": "1/131072",
+        "balance_verified": true,
+        "always_tight_support": {
+          "T": [
+            "D"
+          ],
+          "O": [
+            "C"
+          ],
+          "Z": [
+            "Z"
+          ]
+        }
+      },
+      "pair": {
+        "freight_row": "X",
+        "carrier_row": "A",
+        "carrier_equals_top_v": true,
+        "carrier_distance_to_v": "0",
+        "separation_l": "1/32768",
+        "band_lower_tau/4": "1/65536",
+        "band_upper_8tau": "1/2048",
+        "l_chi_full_fiber_variation": "70368744308735/2305843017803595776"
+      },
+      "engine": {
+        "psi_coefficients": [
+          "-32768",
+          "32768",
+          "0",
+          "32768",
+          "0",
+          "0"
+        ],
+        "psi_constant": "2305843022098563072/70368744308735",
+        "psi_values": {
+          "A": "0",
+          "Z": "-4611615675452686337/75557863866650738032640",
+          "C": "4611686035607191552/70368744308735",
+          "D": "2305843022098563072/70368744308735",
+          "X": "1"
+        },
+        "N": [
+          "A",
+          "Z",
+          "X"
+        ],
+        "F": [
+          "C",
+          "D"
+        ],
+        "A": "1",
+        "Lambda": "4611686035607191552/70368744308735",
+        "d_by_full_fiber": {
+          "A": "-70368744308735/4611686035607191552",
+          "Z": "0",
+          "C": "70368744308735/4611686035607191552",
+          "D": "0",
+          "X": "0"
+        },
+        "demand": "11414845605669172676744460593610183979501715457/748288845282373287958196911628589177866751280414720",
+        "actual_joint_positive_mass_F": "70368744308735/4611686035607191552",
+        "from_freight_X": "70368744308735/4611686035607191552",
+        "from_carrier_A": "0",
+        "slack": "3136021048611522193943976249535845712134143/748288845282373287958196911628589177866751280414720",
+        "financing_fiber": "C",
+        "financing_fiber_z": "140737488617472/70368744308735",
+        "financing_fiber_h": "1"
+      },
+      "corner_audit": {
+        "f": "D",
+        "score": "9444733088884458651647/1237940050814577745961287680",
+        "score_cap": "3/53248",
+        "corner_points": [
+          "A",
+          "Z",
+          "D",
+          "X"
+        ],
+        "Gamma_total": "1",
+        "Gamma_Cf": "1",
+        "Gamma_BF": "1",
+        "Gamma_BN": "0",
+        "M_X_gamma_BF": "0",
+        "M_X_gamma_BN": "0",
+        "Gamma_X_A": "0"
+      },
+      "ledger_table": {
+        "engine_financing_floor": {
+          "applicable": true,
+          "actual": "70368744308735/4611686035607191552",
+          "relation": ">=",
+          "bound": "11414845605669172676744460593610183979501715457/748288845282373287958196911628589177866751280414720",
+          "slack": "3136021048611522193943976249535845712134143/748288845282373287958196911628589177866751280414720",
+          "note": "All actual high-lever mass is P_x^+(C)=theta; P_u^+(F)=0."
+        },
+        "top_deficit_weighted_at_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "134217729/36028797086072320",
+          "slack": "134217729/36028797086072320",
+          "note": "Sharp banked cap nu_v*(2+4delta)."
+        },
+        "z_leak_at_4tau_sharp": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "1073741832/70368744308735",
+          "slack": "1073741832/70368744308735",
+          "note": "Threshold consequence using nu_v, stronger than the advertised delta cap."
+        },
+        "z_leak_at_4tau_advertised": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "134217729/4398046511104",
+          "slack": "134217729/4398046511104",
+          "note": "The N5 sketch's delta*(2+4delta)/(4tau) allowance."
+        },
+        "h_leak_at_4tau_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "536870912/70368744308735",
+          "slack": "536870912/70368744308735",
+          "note": "h-reproduction/sign-split cap; strictly slack because nu_v=q>0."
+        },
+        "zero_face_capacity_A_kappa": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "131072/70368744308735",
+          "slack": "131072/70368744308735",
+          "note": "Charged form kappa*m <= nu_A for the h-zero carrier/top."
+        },
+        "zero_face_capacity_Z_kappa": {
+          "applicable": true,
+          "actual": "1/4611686018427387904",
+          "relation": "<=",
+          "bound": "1/268435456",
+          "slack": "17179869183/4611686018427387904",
+          "note": "Charged form at the nonclone h-zero blocker Z."
+        },
+        "zero_face_capacity_Z_4tau": {
+          "applicable": true,
+          "actual": "1/288230376151711744",
+          "relation": "<=",
+          "bound": "1/268435456",
+          "slack": "1073741823/288230376151711744",
+          "note": "Generic affine-exposer capacity at threshold 4tau."
+        },
+        "hiddenness_small_beta": {
+          "applicable": true,
+          "actual": "1/131072",
+          "relation": "<",
+          "bound": "1/65536",
+          "slack": "1/131072",
+          "note": "Exact witness lambda_D=1, alpha_Z=1/eps, beta_C=t."
+        },
+        "corner_mass_numerical_conclusion": {
+          "applicable": false,
+          "actual": "1",
+          "relation": ">=",
+          "bound": "58079731/109051904",
+          "slack": "50972173/109051904",
+          "note": "Conclusion holds numerically, but lem-sl1a-corner-ledger is not applicable: H>16tau fails."
+        },
+        "corner_exterior_coarse": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "1/2",
+          "slack": "1/2",
+          "note": "Numerical outside-corner accounting; same tallness failure prevents invoking the lemma."
+        },
+        "corner_exterior_from_exact_floor": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "50972173/109051904",
+          "slack": "50972173/109051904",
+          "note": "Numerical consequence of the printed floor, recorded without claiming its hypotheses."
+        },
+        "mass_split_A": {
+          "applicable": true,
+          "actual": "70368744439807/70368744308735",
+          "relation": "=",
+          "bound": "70368744439807/70368744308735",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_X": {
+          "applicable": true,
+          "actual": "4951760194034727840757579779/4951760184811496507031814145",
+          "relation": "=",
+          "bound": "4951760194034727840757579779/4951760184811496507031814145",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_D": {
+          "applicable": true,
+          "actual": "1",
+          "relation": "=",
+          "bound": "1",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_Z": {
+          "applicable": true,
+          "actual": "268435457/268435456",
+          "relation": "=",
+          "bound": "268435457/268435456",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        }
+      },
+      "selected_corner_clauses": {
+        "delta_at_most_2^-16": true,
+        "visible_set_nonempty_and_exactly_Z_C_D": true,
+        "v_is_hidden_top": true,
+        "H_gt_16tau": false,
+        "top_support_phi": true,
+        "admissible_exposer_h_at_v": true,
+        "corner_row_f_D_is_rho_far": true,
+        "corner_row_f_D_is_co_top": true,
+        "corner_score_at_f_D": true,
+        "legal_vertex_kernel": true,
+        "pair_X_A_lies_geometrically_in_Cf_and_BN": true,
+        "Gamma_f_assigns_positive_mass_to_pair_X_A": false,
+        "Gamma_f_BN_at_least_1/4": false,
+        "M_X_gamma_BN_gt_1/8": false,
+        "N6_far_carrier_geometry_for_financing_pair": false
+      }
+    },
+    {
+      "id": "dyadic_k15",
+      "status": "FINANCING_INSTANCE_LOCAL_N5II",
+      "rigour_scope": "L3 exact construction; not a proof and not a selected-corner counterexample",
+      "parameters": {
+        "k": 15,
+        "tau": "1/32768",
+        "delta": "1/1073741824",
+        "eps": "1/2147483648",
+        "t_star_A": "1/262144",
+        "kappa": "1/131072",
+        "rho": "1/8192",
+        "K": "562949953683455/562949953421312",
+        "q": "262144/562949953683455",
+        "theta": "562949953683455/73786976363557552128",
+        "D": "536870913/268435456",
+        "H": "2/562949953683455"
+      },
+      "labels": [
+        "a0",
+        "a1",
+        "z",
+        "c",
+        "d",
+        "x"
+      ],
+      "matrix": [
+        [
+          "562949953945599/562949953683455",
+          "-262144/562949953683455",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "562949953945599/562949953683455",
+          "-262144/562949953683455",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "562949953945599/562949953421312",
+          "-1/2147483648",
+          "0",
+          "1/562949953421312",
+          "-1/2147483648",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "73786413413603868673/73786976329197813760",
+          "-147572826827207737346/316912650499778082380736364545",
+          "0",
+          "562949953683455/73786976363557552128",
+          "0",
+          "0"
+        ]
+      ],
+      "row_point_fibers": [
+        {
+          "point": "A",
+          "indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "point": "Z",
+          "indices": [
+            2
+          ]
+        },
+        {
+          "point": "C",
+          "indices": [
+            3
+          ]
+        },
+        {
+          "point": "D",
+          "indices": [
+            4
+          ]
+        },
+        {
+          "point": "X",
+          "indices": [
+            5
+          ]
+        }
+      ],
+      "negative_masses": {
+        "a0": "262144/562949953683455",
+        "a1": "262144/562949953683455",
+        "z": "1/1073741824",
+        "c": "0",
+        "d": "0",
+        "x": "147572826827207737346/316912650499778082380736364545"
+      },
+      "visible_set": [
+        "Z",
+        "C",
+        "D"
+      ],
+      "hidden_vertices": [
+        "A"
+      ],
+      "visible_margin_lower_bounds": {
+        "Z": "1",
+        "C": "73786413413603868673/73786976363557552128",
+        "D": "562949953421311/562949953683455"
+      },
+      "top_geometry": {
+        "v": "A",
+        "height": "2/562949953683455",
+        "H_over_tau": "65536/562949953683455",
+        "phi_coefficients": [
+          "1",
+          "131071/131072",
+          "0",
+          "-1",
+          "1",
+          "0"
+        ],
+        "phi_constant": "-1",
+        "phi_values": {
+          "A": "2/562949953683455",
+          "Z": "0",
+          "C": "-2",
+          "D": "0",
+          "X": "-1611901093945402609805994/105637550166592694126912121515"
+        },
+        "z_values": {
+          "A": "0",
+          "Z": "2/562949953683455",
+          "C": "1125899907366912/562949953683455",
+          "D": "2/562949953683455",
+          "X": "2863311532/187649984648533"
+        },
+        "h_coefficients": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1/262144",
+          "0"
+        ],
+        "h_values": {
+          "A": "0",
+          "Z": "0",
+          "C": "1",
+          "D": "1/262144",
+          "X": "562949953683455/73786976363557552128"
+        },
+        "closest_point_to_A_in_convW": [
+          "562949953945599/562949953683455",
+          "-262144/562949953683455",
+          "0",
+          "1/562949953683455",
+          "-1/562949953683455",
+          "0"
+        ],
+        "X_convW_weights": {
+          "Z": "316910232500564337449613918208/316912650499778082380736364545",
+          "C": "805950546972701304902997/105637550166592694126912121515",
+          "D": "147572826827207737346/316912650499778082380736364545"
+        }
+      },
+      "hiddenness_witness_A": {
+        "far_set": [
+          "C",
+          "D"
+        ],
+        "lambda": {
+          "D": "1"
+        },
+        "alpha": {
+          "Z": "2147483648"
+        },
+        "beta": {
+          "C": "1/262144"
+        },
+        "sum_beta": "1/262144",
+        "balance_verified": true,
+        "always_tight_support": {
+          "T": [
+            "D"
+          ],
+          "O": [
+            "C"
+          ],
+          "Z": [
+            "Z"
+          ]
+        }
+      },
+      "pair": {
+        "freight_row": "X",
+        "carrier_row": "A",
+        "carrier_equals_top_v": true,
+        "carrier_distance_to_v": "0",
+        "separation_l": "1/65536",
+        "band_lower_tau/4": "1/131072",
+        "band_upper_8tau": "1/4096",
+        "l_chi_full_fiber_variation": "562949953683455/36893488181778776064"
+      },
+      "engine": {
+        "psi_coefficients": [
+          "-65536",
+          "65536",
+          "0",
+          "65536",
+          "0",
+          "0"
+        ],
+        "psi_constant": "36893488198958645248/562949953683455",
+        "psi_values": {
+          "A": "0",
+          "Z": "-73786413447963344897/2417851640355153961287680",
+          "C": "73786976363557552128/562949953683455",
+          "D": "36893488198958645248/562949953683455",
+          "X": "1"
+        },
+        "N": [
+          "A",
+          "Z",
+          "X"
+        ],
+        "F": [
+          "C",
+          "D"
+        ],
+        "A": "1",
+        "Lambda": "73786976363557552128/562949953683455",
+        "d_by_full_fiber": {
+          "A": "-562949953683455/73786976363557552128",
+          "Z": "0",
+          "C": "562949953683455/73786976363557552128",
+          "D": "0",
+          "X": "0"
+        },
+        "demand": "11690407472212548526937582499874102062273763934209/1532495544433999926004883942970202856888339562611343360",
+        "actual_joint_positive_mass_F": "562949953683455/73786976363557552128",
+        "from_freight_X": "562949953683455/73786976363557552128",
+        "from_carrier_A": "0",
+        "slack": "1605648212684006746084039082274471298424635391/1532495544433999926004883942970202856888339562611343360",
+        "financing_fiber": "C",
+        "financing_fiber_z": "1125899907366912/562949953683455",
+        "financing_fiber_h": "1"
+      },
+      "corner_audit": {
+        "f": "D",
+        "score": "302231455888819175555071/79228162698731637661870325760",
+        "score_cap": "3/106496",
+        "corner_points": [
+          "A",
+          "Z",
+          "D",
+          "X"
+        ],
+        "Gamma_total": "1",
+        "Gamma_Cf": "1",
+        "Gamma_BF": "1",
+        "Gamma_BN": "0",
+        "M_X_gamma_BF": "0",
+        "M_X_gamma_BN": "0",
+        "Gamma_X_A": "0"
+      },
+      "ledger_table": {
+        "engine_financing_floor": {
+          "applicable": true,
+          "actual": "562949953683455/73786976363557552128",
+          "relation": ">=",
+          "bound": "11690407472212548526937582499874102062273763934209/1532495544433999926004883942970202856888339562611343360",
+          "slack": "1605648212684006746084039082274471298424635391/1532495544433999926004883942970202856888339562611343360",
+          "note": "All actual high-lever mass is P_x^+(C)=theta; P_u^+(F)=0."
+        },
+        "top_deficit_weighted_at_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "536870913/576460752571857920",
+          "slack": "536870913/576460752571857920",
+          "note": "Sharp banked cap nu_v*(2+4delta)."
+        },
+        "z_leak_at_4tau_sharp": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "4294967304/562949953683455",
+          "slack": "4294967304/562949953683455",
+          "note": "Threshold consequence using nu_v, stronger than the advertised delta cap."
+        },
+        "z_leak_at_4tau_advertised": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "536870913/35184372088832",
+          "slack": "536870913/35184372088832",
+          "note": "The N5 sketch's delta*(2+4delta)/(4tau) allowance."
+        },
+        "h_leak_at_4tau_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "2147483648/562949953683455",
+          "slack": "2147483648/562949953683455",
+          "note": "h-reproduction/sign-split cap; strictly slack because nu_v=q>0."
+        },
+        "zero_face_capacity_A_kappa": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "262144/562949953683455",
+          "slack": "262144/562949953683455",
+          "note": "Charged form kappa*m <= nu_A for the h-zero carrier/top."
+        },
+        "zero_face_capacity_Z_kappa": {
+          "applicable": true,
+          "actual": "1/73786976294838206464",
+          "relation": "<=",
+          "bound": "1/1073741824",
+          "slack": "68719476735/73786976294838206464",
+          "note": "Charged form at the nonclone h-zero blocker Z."
+        },
+        "zero_face_capacity_Z_4tau": {
+          "applicable": true,
+          "actual": "1/4611686018427387904",
+          "relation": "<=",
+          "bound": "1/1073741824",
+          "slack": "4294967295/4611686018427387904",
+          "note": "Generic affine-exposer capacity at threshold 4tau."
+        },
+        "hiddenness_small_beta": {
+          "applicable": true,
+          "actual": "1/262144",
+          "relation": "<",
+          "bound": "1/131072",
+          "slack": "1/262144",
+          "note": "Exact witness lambda_D=1, alpha_Z=1/eps, beta_C=t."
+        },
+        "corner_mass_numerical_conclusion": {
+          "applicable": false,
+          "actual": "1",
+          "relation": ">=",
+          "bound": "58079731/109051904",
+          "slack": "50972173/109051904",
+          "note": "Conclusion holds numerically, but lem-sl1a-corner-ledger is not applicable: H>16tau fails."
+        },
+        "corner_exterior_coarse": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "1/2",
+          "slack": "1/2",
+          "note": "Numerical outside-corner accounting; same tallness failure prevents invoking the lemma."
+        },
+        "corner_exterior_from_exact_floor": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "50972173/109051904",
+          "slack": "50972173/109051904",
+          "note": "Numerical consequence of the printed floor, recorded without claiming its hypotheses."
+        },
+        "mass_split_A": {
+          "applicable": true,
+          "actual": "562949953945599/562949953683455",
+          "relation": "=",
+          "bound": "562949953945599/562949953683455",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_X": {
+          "applicable": true,
+          "actual": "316912650647350909207944101891/316912650499778082380736364545",
+          "relation": "=",
+          "bound": "316912650647350909207944101891/316912650499778082380736364545",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_D": {
+          "applicable": true,
+          "actual": "1",
+          "relation": "=",
+          "bound": "1",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_Z": {
+          "applicable": true,
+          "actual": "1073741825/1073741824",
+          "relation": "=",
+          "bound": "1073741825/1073741824",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        }
+      },
+      "selected_corner_clauses": {
+        "delta_at_most_2^-16": true,
+        "visible_set_nonempty_and_exactly_Z_C_D": true,
+        "v_is_hidden_top": true,
+        "H_gt_16tau": false,
+        "top_support_phi": true,
+        "admissible_exposer_h_at_v": true,
+        "corner_row_f_D_is_rho_far": true,
+        "corner_row_f_D_is_co_top": true,
+        "corner_score_at_f_D": true,
+        "legal_vertex_kernel": true,
+        "pair_X_A_lies_geometrically_in_Cf_and_BN": true,
+        "Gamma_f_assigns_positive_mass_to_pair_X_A": false,
+        "Gamma_f_BN_at_least_1/4": false,
+        "M_X_gamma_BN_gt_1/8": false,
+        "N6_far_carrier_geometry_for_financing_pair": false
+      }
+    },
+    {
+      "id": "dyadic_k16",
+      "status": "FINANCING_INSTANCE_LOCAL_N5II",
+      "rigour_scope": "L3 exact construction; not a proof and not a selected-corner counterexample",
+      "parameters": {
+        "k": 16,
+        "tau": "1/65536",
+        "delta": "1/4294967296",
+        "eps": "1/8589934592",
+        "t_star_A": "1/524288",
+        "kappa": "1/262144",
+        "rho": "1/16384",
+        "K": "4503599627894783/4503599627370496",
+        "q": "524288/4503599627894783",
+        "theta": "4503599627894783/1180591620992288948224",
+        "D": "2147483649/1073741824",
+        "H": "2/4503599627894783"
+      },
+      "labels": [
+        "a0",
+        "a1",
+        "z",
+        "c",
+        "d",
+        "x"
+      ],
+      "matrix": [
+        [
+          "4503599628419071/4503599627894783",
+          "-524288/4503599627894783",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "4503599628419071/4503599627894783",
+          "-524288/4503599627894783",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "4503599628419071/4503599627370496",
+          "-1/8589934592",
+          "0",
+          "1/4503599627370496",
+          "-1/8589934592",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1180587117392661053441/1180591620854849994752",
+          "-2361174234785322106882/20282409610735211141602218606593",
+          "0",
+          "4503599627894783/1180591620992288948224",
+          "0",
+          "0"
+        ]
+      ],
+      "row_point_fibers": [
+        {
+          "point": "A",
+          "indices": [
+            0,
+            1
+          ]
+        },
+        {
+          "point": "Z",
+          "indices": [
+            2
+          ]
+        },
+        {
+          "point": "C",
+          "indices": [
+            3
+          ]
+        },
+        {
+          "point": "D",
+          "indices": [
+            4
+          ]
+        },
+        {
+          "point": "X",
+          "indices": [
+            5
+          ]
+        }
+      ],
+      "negative_masses": {
+        "a0": "524288/4503599627894783",
+        "a1": "524288/4503599627894783",
+        "z": "1/4294967296",
+        "c": "0",
+        "d": "0",
+        "x": "2361174234785322106882/20282409610735211141602218606593"
+      },
+      "visible_set": [
+        "Z",
+        "C",
+        "D"
+      ],
+      "hidden_vertices": [
+        "A"
+      ],
+      "visible_margin_lower_bounds": {
+        "Z": "1",
+        "C": "1180587117392661053441/1180591620992288948224",
+        "D": "4503599627370495/4503599627894783"
+      },
+      "top_geometry": {
+        "v": "A",
+        "height": "2/4503599627894783",
+        "H_over_tau": "131072/4503599627894783",
+        "phi_coefficients": [
+          "1",
+          "262143/262144",
+          "0",
+          "-1",
+          "1",
+          "0"
+        ],
+        "phi_constant": "-1",
+        "phi_values": {
+          "A": "2/4503599627894783",
+          "Z": "0",
+          "C": "-2",
+          "D": "0",
+          "X": "-154742504937694097766875134/20282409610735211141602218606593"
+        },
+        "z_values": {
+          "A": "0",
+          "Z": "2/4503599627894783",
+          "C": "9007199255789568/4503599627894783",
+          "D": "2/4503599627894783",
+          "X": "34359738372/4503599628419071"
+        },
+        "h_coefficients": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1/524288",
+          "0"
+        ],
+        "h_values": {
+          "A": "0",
+          "Z": "0",
+          "C": "1",
+          "D": "1/524288",
+          "X": "4503599627894783/1180591620992288948224"
+        },
+        "closest_point_to_A_in_convW": [
+          "4503599628419071/4503599627894783",
+          "-524288/4503599627894783",
+          "0",
+          "1/4503599627894783",
+          "-1/4503599627894783",
+          "0"
+        ],
+        "X_convW_weights": {
+          "Z": "20282332237121568059768013062144/20282409610735211141602218606593",
+          "C": "77371252468847048883437567/20282409610735211141602218606593",
+          "D": "2361174234785322106882/20282409610735211141602218606593"
+        }
+      },
+      "hiddenness_witness_A": {
+        "far_set": [
+          "C",
+          "D"
+        ],
+        "lambda": {
+          "D": "1"
+        },
+        "alpha": {
+          "Z": "8589934592"
+        },
+        "beta": {
+          "C": "1/524288"
+        },
+        "sum_beta": "1/524288",
+        "balance_verified": true,
+        "always_tight_support": {
+          "T": [
+            "D"
+          ],
+          "O": [
+            "C"
+          ],
+          "Z": [
+            "Z"
+          ]
+        }
+      },
+      "pair": {
+        "freight_row": "X",
+        "carrier_row": "A",
+        "carrier_equals_top_v": true,
+        "carrier_distance_to_v": "0",
+        "separation_l": "1/131072",
+        "band_lower_tau/4": "1/262144",
+        "band_upper_8tau": "1/8192",
+        "l_chi_full_fiber_variation": "4503599627894783/590295810496144474112"
+      },
+      "engine": {
+        "psi_coefficients": [
+          "-131072",
+          "131072",
+          "0",
+          "131072",
+          "0",
+          "0"
+        ],
+        "psi_constant": "590295810564863950848/4503599627894783",
+        "psi_values": {
+          "A": "0",
+          "Z": "-1180587117530099482625/77371252464343449256067072",
+          "C": "1180591620992288948224/4503599627894783",
+          "D": "590295810564863950848/4503599627894783",
+          "X": "1"
+        },
+        "N": [
+          "A",
+          "Z",
+          "X"
+        ],
+        "F": [
+          "C",
+          "D"
+        ],
+        "A": "1",
+        "Lambda": "1180591620992288948224/4503599627894783",
+        "d_by_full_fiber": {
+          "A": "-4503599627894783/1180591620992288948224",
+          "Z": "0",
+          "C": "4503599627894783/1180591620992288948224",
+          "D": "0",
+          "X": "0"
+        },
+        "demand": "11971799325312360790050515397202317735081050661847041/3138550869520215338226942552757345239955025533605095931904",
+        "actual_joint_positive_mass_F": "4503599627894783/1180591620992288948224",
+        "from_freight_X": "4503599627894783/1180591620992288948224",
+        "from_carrier_A": "0",
+        "slack": "822093277574240950045736603702792607740739452927/3138550869520215338226942552757345239955025533605095931904",
+        "financing_fiber": "C",
+        "financing_fiber_z": "9007199255789568/4503599627894783",
+        "financing_fiber_h": "1"
+      },
+      "corner_audit": {
+        "f": "D",
+        "score": "9671406564798330598588415/5070602403864395532155311620096",
+        "score_cap": "3/212992",
+        "corner_points": [
+          "A",
+          "Z",
+          "D",
+          "X"
+        ],
+        "Gamma_total": "1",
+        "Gamma_Cf": "1",
+        "Gamma_BF": "1",
+        "Gamma_BN": "0",
+        "M_X_gamma_BF": "0",
+        "M_X_gamma_BN": "0",
+        "Gamma_X_A": "0"
+      },
+      "ledger_table": {
+        "engine_financing_floor": {
+          "applicable": true,
+          "actual": "4503599627894783/1180591620992288948224",
+          "relation": ">=",
+          "bound": "11971799325312360790050515397202317735081050661847041/3138550869520215338226942552757345239955025533605095931904",
+          "slack": "822093277574240950045736603702792607740739452927/3138550869520215338226942552757345239955025533605095931904",
+          "note": "All actual high-lever mass is P_x^+(C)=theta; P_u^+(F)=0."
+        },
+        "top_deficit_weighted_at_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "2147483649/9223372037928515584",
+          "slack": "2147483649/9223372037928515584",
+          "note": "Sharp banked cap nu_v*(2+4delta)."
+        },
+        "z_leak_at_4tau_sharp": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "17179869192/4503599627894783",
+          "slack": "17179869192/4503599627894783",
+          "note": "Threshold consequence using nu_v, stronger than the advertised delta cap."
+        },
+        "z_leak_at_4tau_advertised": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "2147483649/281474976710656",
+          "slack": "2147483649/281474976710656",
+          "note": "The N5 sketch's delta*(2+4delta)/(4tau) allowance."
+        },
+        "h_leak_at_4tau_v": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "8589934592/4503599627894783",
+          "slack": "8589934592/4503599627894783",
+          "note": "h-reproduction/sign-split cap; strictly slack because nu_v=q>0."
+        },
+        "zero_face_capacity_A_kappa": {
+          "applicable": true,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "524288/4503599627894783",
+          "slack": "524288/4503599627894783",
+          "note": "Charged form kappa*m <= nu_A for the h-zero carrier/top."
+        },
+        "zero_face_capacity_Z_kappa": {
+          "applicable": true,
+          "actual": "1/1180591620717411303424",
+          "relation": "<=",
+          "bound": "1/4294967296",
+          "slack": "274877906943/1180591620717411303424",
+          "note": "Charged form at the nonclone h-zero blocker Z."
+        },
+        "zero_face_capacity_Z_4tau": {
+          "applicable": true,
+          "actual": "1/73786976294838206464",
+          "relation": "<=",
+          "bound": "1/4294967296",
+          "slack": "17179869183/73786976294838206464",
+          "note": "Generic affine-exposer capacity at threshold 4tau."
+        },
+        "hiddenness_small_beta": {
+          "applicable": true,
+          "actual": "1/524288",
+          "relation": "<",
+          "bound": "1/262144",
+          "slack": "1/524288",
+          "note": "Exact witness lambda_D=1, alpha_Z=1/eps, beta_C=t."
+        },
+        "corner_mass_numerical_conclusion": {
+          "applicable": false,
+          "actual": "1",
+          "relation": ">=",
+          "bound": "58079731/109051904",
+          "slack": "50972173/109051904",
+          "note": "Conclusion holds numerically, but lem-sl1a-corner-ledger is not applicable: H>16tau fails."
+        },
+        "corner_exterior_coarse": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "1/2",
+          "slack": "1/2",
+          "note": "Numerical outside-corner accounting; same tallness failure prevents invoking the lemma."
+        },
+        "corner_exterior_from_exact_floor": {
+          "applicable": false,
+          "actual": "0",
+          "relation": "<=",
+          "bound": "50972173/109051904",
+          "slack": "50972173/109051904",
+          "note": "Numerical consequence of the printed floor, recorded without claiming its hypotheses."
+        },
+        "mass_split_A": {
+          "applicable": true,
+          "actual": "4503599628419071/4503599627894783",
+          "relation": "=",
+          "bound": "4503599628419071/4503599627894783",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_X": {
+          "applicable": true,
+          "actual": "20282409613096385376387540713475/20282409610735211141602218606593",
+          "relation": "=",
+          "bound": "20282409613096385376387540713475/20282409610735211141602218606593",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_D": {
+          "applicable": true,
+          "actual": "1",
+          "relation": "=",
+          "bound": "1",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        },
+        "mass_split_Z": {
+          "applicable": true,
+          "actual": "4294967297/4294967296",
+          "relation": "=",
+          "bound": "4294967297/4294967296",
+          "slack": "0",
+          "note": "sum P_i^+ = 1 + nu_i."
+        }
+      },
+      "selected_corner_clauses": {
+        "delta_at_most_2^-16": true,
+        "visible_set_nonempty_and_exactly_Z_C_D": true,
+        "v_is_hidden_top": true,
+        "H_gt_16tau": false,
+        "top_support_phi": true,
+        "admissible_exposer_h_at_v": true,
+        "corner_row_f_D_is_rho_far": true,
+        "corner_row_f_D_is_co_top": true,
+        "corner_score_at_f_D": true,
+        "legal_vertex_kernel": true,
+        "pair_X_A_lies_geometrically_in_Cf_and_BN": true,
+        "Gamma_f_assigns_positive_mass_to_pair_X_A": false,
+        "Gamma_f_BN_at_least_1/4": false,
+        "M_X_gamma_BN_gt_1/8": false,
+        "N6_far_carrier_geometry_for_financing_pair": false
+      }
+    }
+  ]
+}
