@@ -41,6 +41,8 @@ conj-top-deficit-coupling
 conj-zero-face-elimination
 cor-rank-two-visible
 lem-absorption-implies-low-slab-cap
+lem-huddle-charge-assembly
+lem-low-slab-cap-implies-min-a
 lem-affine-barycenter-identity
 lem-affine-exposer-row-capacity
 lem-averaged-deficit-charge

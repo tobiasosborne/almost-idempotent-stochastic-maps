@@ -21,9 +21,9 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-CONJ-DEGENERATE-PAYMENT` | `argument/lemmas/conj-degenerate-payment.md` | `3b7cd00d33cbf5fa` | Registry shard for `conj-degenerate-payment` |
 | `ARG-CONJ-DEGENERATE-TRANSPORT` | `argument/lemmas/conj-degenerate-transport.md` | `b68de13aaa480a15` | Registry shard for `conj-degenerate-transport` |
 | `ARG-CONJ-EX` | `argument/lemmas/conj-ex.md` | `150f2cf7b1925372` | Registry shard for `conj-ex` |
-| `ARG-CONJ-HALO-COLLAPSE` | `argument/lemmas/conj-halo-collapse.md` | `34f4de8d0861573d` | Registry shard for `conj-halo-collapse` |
+| `ARG-LEM-HALO-COLLAPSE` | `argument/lemmas/lem-halo-collapse.md` | `297e462fa69d03c7` | Registry shard for `lem-halo-collapse` (renamed from `conj-halo-collapse` 2026-07-10) |
 | `ARG-CONJ-KERNEL` | `argument/lemmas/conj-kernel.md` | `f010524f7cf199f0` | Registry shard for `conj-kernel` |
-| `ARG-CONJ-NO-FREE-FRONTIER` | `argument/lemmas/conj-no-free-frontier.md` | `070ea358dbc4c1b9` | Registry shard for `conj-no-free-frontier` |
+| `ARG-CONJ-NO-FREE-FRONTIER` | `argument/lemmas/conj-no-free-frontier.md` | `ae2798814ac899f5` | Registry shard for `conj-no-free-frontier` |
 | `ARG-CONJ-RH` | `argument/lemmas/conj-rh.md` | `c4b4885f2a17b4d7` | Registry shard for `conj-rh` |
 | `ARG-CONJ-SC` | `argument/lemmas/conj-sc.md` | `618c7511457521d6` | Registry shard for `conj-sc` |
 | `ARG-CONJ-SKINNY-SHADOW-CAP` | `argument/lemmas/conj-skinny-shadow-cap.md` | `c44aa05083b9e8c6` | Registry shard for `conj-skinny-shadow-cap` |
@@ -44,15 +44,15 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-LEM-FAN-PAYMENT-RESTRICTED` | `argument/lemmas/lem-fan-payment-restricted.md` | `5cea17b1c6fd6722` | Registry shard for `lem-fan-payment-restricted` |
 | `ARG-LEM-NEGPART-SUBADDITIVE` | `argument/lemmas/lem-negpart-subadditive.md` | `ef75f5da237ac853` | Registry shard for `lem-negpart-subadditive` |
 | `ARG-LEM-LEAKAGE` | `argument/lemmas/lem-leakage.md` | `ebedf751f8a1d2ab` | Registry shard for `lem-leakage` |
-| `ARG-LEM-MASS-SPLIT` | `argument/lemmas/lem-mass-split.md` | `634fdf3556b8f4ea` | Registry shard for `lem-mass-split` |
-| `ARG-LEM-RESIDUAL-LOWER` | `argument/lemmas/lem-residual-lower.md` | `3d4604e0725be091` | Registry shard for `lem-residual-lower` |
-| `ARG-LEM-RESIDUAL-UPPER` | `argument/lemmas/lem-residual-upper.md` | `dc6328ea2b22dd3e` | Registry shard for `lem-residual-upper` |
+| `ARG-LEM-MASS-SPLIT` | `argument/lemmas/lem-mass-split.md` | `7fe0b0de4b392d5c` | Registry shard for `lem-mass-split` |
+| `ARG-LEM-RESIDUAL-LOWER` | `argument/lemmas/lem-residual-lower.md` | `368090f8f6e2b61a` | Registry shard for `lem-residual-lower` |
+| `ARG-LEM-RESIDUAL-UPPER` | `argument/lemmas/lem-residual-upper.md` | `c062d9f2e84df296` | Registry shard for `lem-residual-upper` |
 | `ARG-LEM-WIGGLE-RIGIDITY` | `argument/lemmas/lem-wiggle-rigidity.md` | `8a2455f1281f7c41` | Registry shard for `lem-wiggle-rigidity` |
 | `ARG-OBS-DEEP-LEAKAGE` | `argument/lemmas/obs-deep-leakage.md` | `5824fd1d4ef9d890` | Registry shard for `obs-deep-leakage` |
 | `ARG-OBS-FWR-GAP` | `argument/lemmas/obs-fwr-gap.md` | `577a9461bf982794` | Registry shard for `obs-fwr-gap` |
 | `ARG-OBS-HEIGHT-COLLAPSE` | `argument/lemmas/obs-height-collapse.md` | `d7eb2ff172935af3` | Registry shard for `obs-height-collapse` |
 | `ARG-OBS-LINEAR-LAW-FINITE-DELTA` | `argument/lemmas/obs-linear-law-finite-delta.md` | `e42a723d8f9a40b5` | Registry shard for `obs-linear-law-finite-delta` |
-| `ARG-OBS-SIGMA-HALO-NONROBUST` | `argument/lemmas/obs-sigma-halo-nonrobust.md` | `cc2f80fb9fc80e45` | Registry shard for `obs-sigma-halo-nonrobust` |
+| `ARG-OBS-SIGMA-HALO-NONROBUST` | `argument/lemmas/obs-sigma-halo-nonrobust.md` | `2149abf651bb54fa` | Registry shard for `obs-sigma-halo-nonrobust` |
 | `ARG-OP-CLASSICAL` | `argument/lemmas/op-classical.md` | `2ef7e965c5db0146` | Registry shard for `op-classical` |
 | `ARG-OP-EXPOSED-HULL` | `argument/lemmas/op-exposed-hull.md` | `32e37b1a400c883d` | Registry shard for `op-exposed-hull` |
 | `ARG-PROP-APPROX-SIMPLEX` | `argument/lemmas/prop-approx-simplex.md` | `9f82860ad220c83c` | Registry shard for `prop-approx-simplex` |
@@ -67,7 +67,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-MASS-SPLIT` | `proofs/lem-mass-split/export.md` | `67002d8da8acec01` | `af` proof export for `lem-mass-split` |
 | `AF-LEM-RESIDUAL-LOWER` | `proofs/lem-residual-lower/export.md` | `e8fbf760d4954dad` | `af` proof export for `lem-residual-lower` |
 | `AF-LEM-RESIDUAL-UPPER` | `proofs/lem-residual-upper/export.md` | `05e247da7eb8db25` | `af` proof export for `lem-residual-upper` |
-| `AF-CONJ-HALO-COLLAPSE` | `proofs/conj-halo-collapse/export.md` | `216304dc1141dd42` | `af` proof export for `conj-halo-collapse` |
+| `AF-LEM-HALO-COLLAPSE` | `proofs/conj-halo-collapse/export.md` | `216304dc1141dd42` | `af` proof export for `lem-halo-collapse` (workspace dir kept at `proofs/conj-halo-collapse/`) |
 | `AF-LEM-FAN-PAYMENT-RESTRICTED` | `proofs/lem-fan-payment-restricted/export.md` | `7391a277652ba34b` | `af` proof export for `lem-fan-payment-restricted` |
 | `AF-LEM-NEGPART-SUBADDITIVE` | `proofs/lem-negpart-subadditive/export.md` | `fe2ceedc496256f6` | `af` proof export for `lem-negpart-subadditive` |
 | `AF-LEM-FAN-PAYMENT` | `proofs/lem-fan-payment/export.md` | `e5b82f20f763b68a` | `af` proof export for `lem-fan-payment` |
@@ -79,7 +79,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-PIVOT-REMOVING-MOVE` | `proofs/lem-pivot-removing-move/export.md` | `276e02185cab5cc3` | `af` proof export for `lem-pivot-removing-move` |
 | `ARG-LEM-HIDDENNESS-DUAL-WITNESS` | `argument/lemmas/lem-hiddenness-dual-witness.md` | `a89129996a8d06a7` | Registry shard for `lem-hiddenness-dual-witness` |
 | `AF-LEM-HIDDENNESS-DUAL-WITNESS` | `proofs/lem-hiddenness-dual-witness/export.md` | `d71d6c8842a42fd7` | `af` proof export for `lem-hiddenness-dual-witness` |
-| `ARG-LEM-ALWAYS-TIGHT-DUAL-SUPPORT` | `argument/lemmas/lem-always-tight-dual-support.md` | `fc21d6045ab3bd10` | Registry shard for `lem-always-tight-dual-support` |
+| `ARG-LEM-ALWAYS-TIGHT-DUAL-SUPPORT` | `argument/lemmas/lem-always-tight-dual-support.md` | `f277cfd1cf557222` | Registry shard for `lem-always-tight-dual-support` |
 | `AF-LEM-ALWAYS-TIGHT-DUAL-SUPPORT` | `proofs/lem-always-tight-dual-support/export.md` | `5627d564d97b0ce7` | `af` proof export for `lem-always-tight-dual-support` |
 | `ARG-LEM-HIDDENNESS-DEPTH-MARKOV` | `argument/lemmas/lem-hiddenness-depth-markov.md` | `1b9fba36bbd9e28c` | Registry shard for `lem-hiddenness-depth-markov` |
 | `AF-LEM-HIDDENNESS-DEPTH-MARKOV` | `proofs/lem-hiddenness-depth-markov/export.md` | `e47f169b3bd440ce` | `af` proof export for `lem-hiddenness-depth-markov` |
@@ -93,13 +93,13 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-ROW-ZERO-CAPACITY` | `proofs/lem-row-zero-capacity/export.md` | `58a4acc9f72797ca` | `af` proof export for `lem-row-zero-capacity` |
 | `ARG-LEM-HARMONIC-AFFINE-BRIDGE` | `argument/lemmas/lem-harmonic-affine-bridge.md` | `2b3d9266b79e3a35` | Registry shard for `lem-harmonic-affine-bridge` |
 | `AF-LEM-HARMONIC-AFFINE-BRIDGE` | `proofs/lem-harmonic-affine-bridge/export.md` | `fe417c19b4d62333` | `af` proof export for `lem-harmonic-affine-bridge` |
-| `ARG-LEM-PARAMETRIC-HALO-COLLAPSE` | `argument/lemmas/lem-parametric-halo-collapse.md` | `0e8cb1b2c1327f52` | Registry shard for `lem-parametric-halo-collapse` |
+| `ARG-LEM-PARAMETRIC-HALO-COLLAPSE` | `argument/lemmas/lem-parametric-halo-collapse.md` | `8c67fd4310b7725d` | Registry shard for `lem-parametric-halo-collapse` |
 | `AF-LEM-PARAMETRIC-HALO-COLLAPSE` | `proofs/lem-parametric-halo-collapse/export.md` | `12a8d1452a51a257` | `af` proof export for `lem-parametric-halo-collapse` |
 | `ARG-LEM-DEPTH-D-HALO-COLLAPSE` | `argument/lemmas/lem-depth-d-halo-collapse.md` | `35ce052128fc18a9` | Registry shard for `lem-depth-d-halo-collapse` |
 | `AF-LEM-DEPTH-D-HALO-COLLAPSE` | `proofs/lem-depth-d-halo-collapse/export.md` | `c22fed932acf9cb7` | `af` proof export for `lem-depth-d-halo-collapse` |
 | `ARG-LEM-GENUINE-DISINTEGRATION` | `argument/lemmas/lem-genuine-disintegration.md` | `e68f022493e5e777` | Registry shard for `lem-genuine-disintegration` |
 | `AF-LEM-GENUINE-DISINTEGRATION` | `proofs/lem-genuine-disintegration/export.md` | `926f1e024670b0e2` | `af` proof export for `lem-genuine-disintegration` |
-| `ARG-LEM-TOP-CONCENTRATION` | `argument/lemmas/lem-top-concentration.md` | `6e3fccb03531a783` | Registry shard for `lem-top-concentration` |
+| `ARG-LEM-TOP-CONCENTRATION` | `argument/lemmas/lem-top-concentration.md` | `9a94c19f6bbd5a1e` | Registry shard for `lem-top-concentration` |
 | `AF-LEM-TOP-CONCENTRATION` | `proofs/lem-top-concentration/export.md` | `835cacb8312e2d83` | `af` proof export for `lem-top-concentration` |
 | `ARG-LEM-STARVATION-COMPLETION-OBSTRUCTION` | `argument/lemmas/lem-starvation-completion-obstruction.md` | `a7ae8563e5777a18` | Registry shard for `lem-starvation-completion-obstruction` |
 | `AF-LEM-STARVATION-COMPLETION-OBSTRUCTION` | `proofs/lem-starvation-completion-obstruction/export.md` | `ed573c49836f7273` | `af` proof export for `lem-starvation-completion-obstruction` |
@@ -123,7 +123,7 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | conj:degenerate-payment | ARG-CONJ-DEGENERATE-PAYMENT | registry contract | OPEN | Status ledger anchor only; registry status `conjecture` (A8 payment horn). |
 | conj:degenerate-transport | ARG-CONJ-DEGENERATE-TRANSPORT | registry contract | OPEN | Status ledger anchor only; registry status `conjecture` (A12 transport gap). |
 | conj:ex | ARG-CONJ-EX | registry contract | OPEN | Status ledger anchor only; registry status `conjecture`. |
-| conj:halo-collapse | ARG-CONJ-HALO-COLLAPSE AF-CONJ-HALO-COLLAPSE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-2 tree on the factored workspace. |
+| lem:halo-collapse | ARG-LEM-HALO-COLLAPSE AF-LEM-HALO-COLLAPSE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; run-2 tree on the factored workspace. |
 | conj:kernel | ARG-CONJ-KERNEL | registry contract | OPEN | Status ledger anchor only; registry status `conjecture`. |
 | conj:no-free-frontier | ARG-CONJ-NO-FREE-FRONTIER | registry contract | OPEN | Status ledger anchor only; registry status `conjecture`. |
 | conj:rh | ARG-CONJ-RH | registry contract | OPEN | Status ledger anchor only; registry status `conjecture` (repaired orphan horn; exact coefficient floor 4 from obs-orphan-amplifier). |
@@ -139,7 +139,7 @@ field-theory argument (NON-rigorous); **NUMERICAL** = supported only by a `runs/
 | lem:cs-low-slab-pincer | ARG-LEM-CS-LOW-SLAB-PINCER AF-LEM-CS-LOW-SLAB-PINCER | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; minimal hypotheses, sharp at s = t*. |
 | lem:row-zero-capacity | ARG-LEM-ROW-ZERO-CAPACITY AF-LEM-ROW-ZERO-CAPACITY | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; rests on lem-harmonic-affine-bridge in the registry. |
 | lem:harmonic-affine-bridge | ARG-LEM-HARMONIC-AFFINE-BRIDGE AF-LEM-HARMONIC-AFFINE-BRIDGE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; two lines each direction. |
-| lem:parametric-halo-collapse | ARG-LEM-PARAMETRIC-HALO-COLLAPSE AF-LEM-PARAMETRIC-HALO-COLLAPSE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; imports mass-split, residual-lower, residual-upper; recovers conj-halo-collapse at a = 1/4. |
+| lem:parametric-halo-collapse | ARG-LEM-PARAMETRIC-HALO-COLLAPSE AF-LEM-PARAMETRIC-HALO-COLLAPSE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; imports mass-split, residual-lower, residual-upper; recovers lem-halo-collapse at a = 1/4. |
 | lem:depth-d-halo-collapse | ARG-LEM-DEPTH-D-HALO-COLLAPSE AF-LEM-DEPTH-D-HALO-COLLAPSE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; imports mass-split, residual-upper; calibrates against parametric-halo-collapse. |
 | lem:genuine-disintegration | ARG-LEM-GENUINE-DISINTEGRATION AF-LEM-GENUINE-DISINTEGRATION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; imports residual-upper; g-bootstrap step 3. |
 | lem:top-concentration | ARG-LEM-TOP-CONCENTRATION AF-LEM-TOP-CONCENTRATION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; first-principles support functional, no imports. |

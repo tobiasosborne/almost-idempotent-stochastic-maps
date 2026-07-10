@@ -1,8 +1,8 @@
 ---
 id: conj-gamma-emptiness
 kind: lemma
-contract: Capped Gamma-emptiness: for every rank-3 exact signed idempotent P (square real matrix with P^2 = P and all row sums equal to 1) with 0 < delta(P) <= 1/4 where delta(P) = max_i sum_l max(-P_il,0), every actual-row chart U = (u_0,u_1,u_2) whose rows p_{u_0}, p_{u_1}, p_{u_2} form a basis of the row space, which is theta-half (Vol(U)/Vol_max(P) >= 1/2, with Vol_max(P) the maximum Gram volume over actual-row charts) and minimizes Phi(U) = max_r Phi_r(U) among theta-half actual-row charts, where coordinates a_q(i) are defined by p_i = sum_q a_q(i)p_{u_q}, E_r(i) = max(sum_{q != r} max(-a_q(i),0) - (1 - a_r(i)), 0), and Phi_r(U) = sum_i max(P_{u_r i},0)E_r(i), every maximal pivot s with Phi_s(U) = Phi(U), and every non-chart row j whose pivot-removing chart V_j = U - u_s + j is theta-half admissible (|a_s(j)|*Vol(U)/Vol_max(P) >= 1/2), with new coordinates a_s^j(i) = a_s(i)/a_s(j) and a_q^j(i) = a_q(i) - a_s(i)a_q(j)/a_s(j) for q != s, Psi_j = sum_i max(P_{ji},0)*max(sum_{q != s} max(-a_q^j(i),0) - (1 - a_s^j(i)), 0), and Gamma_j = max over r != s of sum_i max(P_{u_r i},0)*max(sum_{q != r} max(-a_q^j(i),0) - (1 - a_r^j(i)), 0), it is NOT the case that Psi_j < Phi_s(U) <= Gamma_j.
-defs: def-signed-idempotent; def-negative-mass
+contract: Capped Gamma-emptiness: for every rank-3 exact signed idempotent P with 0 < delta(P) <= 1/4, every theta-half Phi-argmin actual-row chart U = (u_0,u_1,u_2) (notation of def-pivot), every maximal pivot s, and every non-chart row j whose pivot-removing chart V_j is theta-half admissible (def-pivot): it is NOT the case that Psi_j < Phi_s(U) <= Gamma_j.
+defs: def-signed-idempotent; def-negative-mass; def-pivot
 deps: 
 status: disproved
 af: none
@@ -10,6 +10,24 @@ provenance: docs/waves/2026-07-04-G11-capped-charge.md (0 clean (G) branches in 
 owner: A
 workspace: proofs/conj-gamma-emptiness
 ---
+
+**Contract rewritten 2026-07-10 (notation -> defs; aism-0mm); the pre-rewrite contract is preserved
+verbatim below.** The rank-3 chart machinery was moved into [[def-pivot]]; the MATHEMATICAL CONTENT is
+identical (this shard is `disproved`, so the rewrite is bookkeeping only).
+
+> PRE-REWRITE CONTRACT (verbatim): Capped Gamma-emptiness: for every rank-3 exact signed idempotent P
+> (square real matrix with P^2 = P and all row sums equal to 1) with 0 < delta(P) <= 1/4 where
+> delta(P) = max_i sum_l max(-P_il,0), every actual-row chart U = (u_0,u_1,u_2) whose rows p_{u_0},
+> p_{u_1}, p_{u_2} form a basis of the row space, which is theta-half (Vol(U)/Vol_max(P) >= 1/2, with
+> Vol_max(P) the maximum Gram volume over actual-row charts) and minimizes Phi(U) = max_r Phi_r(U)
+> among theta-half actual-row charts, where coordinates a_q(i) are defined by p_i = sum_q a_q(i)p_{u_q},
+> E_r(i) = max(sum_{q != r} max(-a_q(i),0) - (1 - a_r(i)), 0), and Phi_r(U) = sum_i max(P_{u_r i},0)E_r(i),
+> every maximal pivot s with Phi_s(U) = Phi(U), and every non-chart row j whose pivot-removing chart
+> V_j = U - u_s + j is theta-half admissible (|a_s(j)|*Vol(U)/Vol_max(P) >= 1/2), with new coordinates
+> a_s^j(i) = a_s(i)/a_s(j) and a_q^j(i) = a_q(i) - a_s(i)a_q(j)/a_s(j) for q != s, Psi_j = sum_i
+> max(P_{ji},0)*max(sum_{q != s} max(-a_q^j(i),0) - (1 - a_s^j(i)), 0), and Gamma_j = max over r != s of
+> sum_i max(P_{u_r i},0)*max(sum_{q != r} max(-a_q^j(i),0) - (1 - a_r^j(i)), 0), it is NOT the case that
+> Psi_j < Phi_s(U) <= Gamma_j.
 
 **DISPROVED 2026-07-05 (wave 15, same session as codification — the bounded attempt did its job).**
 Exact rank-3 counterexample, orchestrator-independently recomputed:

@@ -3,7 +3,7 @@ id: conj-min-a-w4
 kind: lemma
 contract: (CONJECTURE) MIN-A at width 4: for every exact signed idempotent P with 0 < delta(P) <= (17-12*sqrt(2))/2, nonempty visible set W(P), and height H > 13*tau (tau = sqrt(delta)), some hidden top vertex v has sigma_4(v) <= 1/2, where sigma_4(v) is the positive coefficient mass v places on rows at ell-1 distance > 4*tau from conv{p_w : w in W}.
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed; def-invisible-mass; def-height
-deps: 
+deps: lem-low-slab-cap-implies-min-a
 status: conjecture
 af: none
 provenance: W25 wave (docs/waves/2026-07-06-W25-step4-decider.md): the g-bootstrap's step 4 reduced to this single statement — prover M (worker-T1 partial) shows it contradicts lem-parametric-halo-collapse's forced mass in tall configs, closing H <= 13*tau; obstructor N (exact certificate, orchestrator-recomputed 17/17) proves the current fact-set CANNOT derive it — the mandatory missing input is HIDDENNESS (non-exposedness) of the deep vertices, never consumed by any banked lemma

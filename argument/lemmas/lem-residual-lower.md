@@ -21,7 +21,7 @@ inequality to `dist_1(p, C) <= ||p - c||_1`; subtract `s * dist_1(p, C)`.
 Only BSc-level notions are used (`l1` distance to a set, convex hull — common knowledge per L2), so
 `defs` is empty by design.
 
-**Role:** dep of [[conj-halo-collapse]] — applied with `p = p_v` (a hidden top vertex, so
+**Role:** dep of [[lem-halo-collapse]] — applied with `p = p_v` (a hidden top vertex, so
 `dist_1(p_j, C_W) <= H = dist_1(p_v, C_W)` for all rows), the `c_j` the genuine-pot masses `a_j^+`
 (`j` with `d_j > tau/4`), and `s = sigma_g < 1`.
 

@@ -66,15 +66,15 @@
         ]
       },
       {
-        "name": "af-conj-halo-collapse",
+        "name": "af-lem-halo-collapse",
         "cmd": [
           "python3",
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "conj-halo-collapse"
+          "lem-halo-collapse"
         ],
         "inputs": [
           "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/conj-halo-collapse/ledger",
-          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/conj-halo-collapse.md"
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-halo-collapse.md"
         ]
       },
       {

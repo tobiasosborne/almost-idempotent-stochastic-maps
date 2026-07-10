@@ -16,4 +16,4 @@ v's own self-coefficient when v sits (however slightly) outside `C_W`; an exact 
 `P_vv > 1` while staying a hidden vertex, driving `σ̃ > 1` and making `1−σ̃ < 0` — with ZERO mass on
 genuinely-outside recipients. Pure halo artifact, low height (`H/τ = 0.02`), kernel-irrelevant, but it
 exactly refutes the ε=0 phrasing of the cap. Statements must use the halo-robust `σ̃_g` (recipients at
-`dist ≥ τ/4`) — see [[conj-halo-collapse]] for the matching self-mass-immune collapse bound.
+`dist ≥ τ/4`) — see [[lem-halo-collapse]] for the matching self-mass-immune collapse bound.

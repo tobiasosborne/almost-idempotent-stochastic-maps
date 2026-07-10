@@ -2,7 +2,7 @@
 id: lem-always-tight-dual-support
 kind: lemma
 contract: Always-tight dual support: for the exposedness LP at a hidden geometrically distinct row vertex u of an exact signed idempotent P with delta(P) > 0 and nonempty visible set, every optimal hiddenness dual witness (lambda, alpha, beta), after deleting redundant centered-zero constraints, has supp(lambda) contained in T, supp(beta) contained in O, and supp(alpha) contained in Z, where T, O, Z are the rho-far, upper-box, and lower-box constraint families tight on the WHOLE primal optimal face; T is nonempty, and O is nonempty if and only if t*(u) > 0.
-defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed
+defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed; def-zero-face; def-dual-witness; def-actor-hull
 deps: lem-hiddenness-dual-witness
 status: proved
 af: validated

@@ -33,4 +33,4 @@ class count — a reduction to dead route c10. Additionally FAIL-1 (T2): the uni
 a pointwise exposedness claim vulnerable to the dense-regular-polygon insufficiency — the conjecture is
 plausibly FALSE as literally written. Deciders recorded in the artifact §6 (exact-instance FAIL-1
 search; the class-count question = open signed quantitative Baake–Sumner). The elevation-worthy piece
-of the finisher remains the bridge [[conj-halo-collapse]] only.
+of the finisher remains the bridge [[lem-halo-collapse]] only.

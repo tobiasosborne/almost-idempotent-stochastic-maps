@@ -3,7 +3,7 @@ id: conj-near-cluster-absorption
 kind: lemma
 contract: (CONJECTURE) Near-cluster absorption: there exist universal a >= 4, theta_0 in (0,1), and delta_0 > 0 such that for every exact signed idempotent P with 0 < delta(P) <= delta_0, nonempty visible set W(P), and hidden top vertex v of height H > ((5a/4 + 3/2)/theta_0)*tau (tau = sqrt(delta)): the positive mass v places on its rho-near deep cluster satisfies sum over {j : ||p_j - p_v||_1 < 4*tau, dist_1(p_j, conv W) > a*tau} of max(P_vj, 0) <= 1 - theta_0.
 defs: def-signed-idempotent; def-negative-mass; def-visible-set; def-exposed; def-invisible-mass; def-height
-deps: 
+deps: lem-huddle-charge-assembly
 status: conjecture
 af: none
 provenance: W38 wave (docs/waves/2026-07-07-W38-self-cluster.md): the residual content of conj-low-slab-cap after the session-11 five-route convergence (FINDINGS 2026-07-07; sketch v9) — named by worker AG's gap analysis, VAG-confirmed consistency of the S = 1 - O(tau) pure cluster with all banked identities

@@ -14,11 +14,11 @@ workspace: proofs/lem-mass-split
 **Purpose (factoring, aism-q7e).** The pot-bookkeeping identity behind every mass split in the
 halo-collapse argument: since row sums of an exact signed idempotent are 1
 (`sum_j a_j = 1` from `P 1 = 1`), decomposing `a_j = a_j^+ - a_j^-` and summing gives
-`sum_j a_j^+ = 1 + nu_v`. Elevation run 1 of [[conj-halo-collapse]] ballooned (49 > 40 nodes)
+`sum_j a_j^+ = 1 + nu_v`. Elevation run 1 of [[lem-halo-collapse]] ballooned (49 > 40 nodes)
 largely because this identity and its consequences were re-derived inline in multiple sibling
 subtrees; it is factored here as a standalone dep so provers import it instead.
 
-**Role:** dep of [[conj-halo-collapse]] (and available to any future ledger-style argument splitting
+**Role:** dep of [[lem-halo-collapse]] (and available to any future ledger-style argument splitting
 row-reproduction mass into pots).
 
 **af-VALIDATED IN-REPO 2026-07-02** (run 1, clean): 9-node adversarial tree, root `validated`, taint

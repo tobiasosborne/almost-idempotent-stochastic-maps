@@ -1,5 +1,5 @@
 ---
-id: conj-halo-collapse
+id: lem-halo-collapse
 kind: lemma
 contract: Halo-robust height collapse: for an exact signed idempotent P with 0 < delta(P) <= 1/4, nonempty visible set W(P), and hidden top vertex v of height H, let sigma be the invisible mass of v, sigma_g the halo-robust invisible mass (the positive coefficient mass v places on rows at ell-1 distance > tau/4 from conv W, tau = sqrt(delta)), and nu_v the row negative mass; then H * (1 - sigma_g) <= (sigma - sigma_g) * tau/4 + nu_v * (2 + 4*delta).
 defs: def-signed-idempotent; def-height; def-visible-set; def-invisible-mass; def-negative-mass
@@ -18,6 +18,16 @@ orchestrated only (§6); imports the three af-validated deps [[lem-mass-split]],
 `proofs/conj-halo-collapse/ledger/`; export: `proofs/conj-halo-collapse/export.md`. Status flip is
 the mechanical reflection of the codex ledger. (Run 1, pre-factoring, ballooned 49>40; the factoring
 cured it: 20 vs 49 nodes.)
+
+**Rename note (2026-07-10, Phase-0 item 3 / aism-bgx).** Renamed `conj-halo-collapse` ->
+`lem-halo-collapse`: a `proved`/`af: validated` result must not wear a `conj-` id (Rule 4). The
+CONTRACT is byte-unchanged (af contract-match preserved). The af **workspace directory is
+deliberately KEPT** at `proofs/conj-halo-collapse/` (the `workspace:` field still points there): the
+linker's orphan check keys on the `workspace:` field, not the id, so id≠dir is legal; keeping the dir
+avoids disturbing the validated af ledger, the export hash, and the absolute ledger path in
+`.frontier/portfolio.json` — the SAFEST option that keeps `check-all` green. All prose ledger paths
+`proofs/conj-halo-collapse/...` therefore remain accurate. `fr verify` for this claim must be
+re-run by the orchestrator (rename staleness).
 
 **Original framing (arm F wave-2 candidate).** The self-mass-immune refinement of the af-validated
 [[obs-height-collapse]]: recipients inside the `τ/4`-halo of `C_W` are priced at their actual distance

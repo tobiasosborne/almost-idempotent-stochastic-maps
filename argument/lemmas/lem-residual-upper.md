@@ -23,7 +23,7 @@ Proof shape (run-1 nodes 1.4.3.1–1.4.3.5): project each `p_j` onto `C` (projec
 Only BSc-level notions are used (`l1` distance to a set, convex hull — common knowledge per L2), so
 `defs` is empty by design.
 
-**Role:** dep of [[conj-halo-collapse]] — applied with the `b_j` the halo-pot masses (`a_j^+`, `j` in
+**Role:** dep of [[lem-halo-collapse]] — applied with the `b_j` the halo-pot masses (`a_j^+`, `j` in
 `B`: `0 <= d_j <= tau/4`, so `dist_1(p_j, C_W) <= tau/4` prices the first sum at
 `(sigma - sigma_g) * tau/4`), the `r_k` the negative-pot rows (`c_k = a_k^-`, `D_k = 2 + 4*delta` from
 the row-geometry clause of def-signed-idempotent), and `m = 1 - sigma_g` via [[lem-mass-split]].

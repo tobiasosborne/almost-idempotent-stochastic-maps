@@ -38,5 +38,14 @@ sum: `(H - a*tau) * sum_{j notin G_a} P_vj^+ <= nu_v*D`. QED.
 - Verifier O's wording caveat, kept: the sufficient closing cap is `M_v^4 <= 1/2 - delta -
   nu_v*(2+4*delta)/(H-4*tau)`; the `M+R` form in [[conj-min-a-w4]]'s body is sufficient-not-equivalent.
 
+**Dep-hygiene note (2026-07-10, Phase-2 audit aism-w59).** `deps:` is intentionally EMPTY and correct.
+The CONTRACT proof above is first-principles (ℓ1/ℓ∞ support functional + row reproduction, "no
+imports" per provenance) and does NOT consume any registry lemma. The references to
+[[lem-genuine-disintegration]], [[lem-parametric-halo-collapse]], and [[lem-mass-split]] occur ONLY in
+the "Role" and "Body consequences" sections, which are explicitly *not part of the contract* — they are
+downstream combinations that a CONSUMER of this lemma performs, not premises of it. Declaring them as
+`deps` would falsely enlarge this af-validated shard's dependency closure; they stay undeclared by
+design.
+
 **Rigour tier.** In-repo paper proof with independent fresh-codex review (L5; Review: line in the
 banking commit). NOT af-validated, NOT L0-rigorous; af-elevation candidate (deps: none).
