@@ -5,7 +5,8 @@ contract: For every finite exact signed idempotent P, every ordered pair (a,b) o
 defs: def-signed-idempotent; def-negative-mass
 deps: 
 status: proved
-af: none
+af: seeded
+workspace: proofs/lem-hx-signed-variation-ledger
 provenance: W60 wave (docs/waves/2026-07-10-W60-artifacts/): codex prover (gpt-5.6-sol, high) PROOFS-W60-ENGINE.md §E2; fresh hostile codex verifier (gpt-5.6-sol, xhigh), batched verdict VERDICT-W60-ENGINE.md line 'E2: VALID'. Reviewer != author.
 owner: B
 ---

@@ -5,7 +5,8 @@ contract: For every finite exact signed idempotent P, every ordered pair (a,b) o
 defs: def-signed-idempotent; def-negative-mass
 deps: lem-hx-transverse-moment-identity; lem-hx-signed-variation-ledger
 status: proved
-af: none
+af: seeded
+workspace: proofs/lem-hx-financing-floor
 provenance: W60 wave (docs/waves/2026-07-10-W60-artifacts/): codex prover (gpt-5.6-sol, high) PROOFS-W60-ENGINE.md §E3; fresh hostile codex verifier (gpt-5.6-sol, xhigh), batched verdict VERDICT-W60-ENGINE.md line 'E3: VALID-WITH-CORRECTIONS' (contract wording: the endpoint-pin normalization replaced by the difference-one condition chi(a)-chi(b)=1 actually used; correction applied in-file and here). Reviewer != author.
 owner: B
 ---

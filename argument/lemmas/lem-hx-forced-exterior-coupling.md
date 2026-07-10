@@ -5,7 +5,8 @@ contract: For every finite exact signed idempotent P, every pair of row indices 
 defs: def-signed-idempotent; def-negative-mass
 deps: lem-hx-financing-floor
 status: proved
-af: none
+af: seeded
+workspace: proofs/lem-hx-forced-exterior-coupling
 provenance: W60 wave (docs/waves/2026-07-10-W60-artifacts/): codex prover (gpt-5.6-sol, high) PROOFS-W60-ENGINE.md §E5; fresh hostile codex verifier (gpt-5.6-sol, xhigh), batched verdict VERDICT-W60-ENGINE.md line 'E5: VALID-WITH-CORRECTIONS' (scope: exact triviality threshold l <= 8*delta + 16*delta^2 recorded; correction applied in-file and here). Reviewer != author.
 owner: B
 ---
