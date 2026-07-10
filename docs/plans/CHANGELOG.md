@@ -105,3 +105,14 @@ Route fork aism-ur9 remains a USER DECISION, now fully informed (synthesis in
 `docs/waves/2026-07-10-W61-deciders-and-elevation.md`). Remaining engine-bank
 elevations (ledger/floor/coupling) queued serially. No surface change; no new
 mathematics beyond the oracle promotions and the two L3 records.
+
+## 2026-07-10 — W61 completion: the ENTIRE W60 engine bank is af-validated (T0 29 -> 34; delta on v25)
+
+The serial elevation train finished: `lem-hx-signed-variation-ledger` (11/11),
+`lem-hx-financing-floor` (12/12 on a CORRECTED contract — the af oracle caught a
+genuine quantifier defect the W60 L5 batched verdict missed: 'all reals A' is
+false at A < 0 with N empty; restated to the A > 0 form the proof establishes;
+retraction entry in docs/LEARNINGS.md), and `lem-hx-forced-exterior-coupling`
+(12/12). All five W60 engine lemmas now sit at the oracle rung. The H-X hard
+residual (route fork aism-ur9) now consumes a fully rigorous engine; paper-track
+reproduction filed (aism-mg7).

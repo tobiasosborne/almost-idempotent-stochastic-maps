@@ -944,3 +944,29 @@ DECISION aism-ur9 (Route A codex named-H-X X2/X3F/X3N/X4 vs Route B Fable
 gamma-renegotiation N4+N5/N6 + gamma dial); two cheap L3 deciders identified.
 Wave artifacts: docs/waves/2026-07-10-W60-artifacts/ (both strategist trees,
 prover proofs, hostile verdict, all briefs). Commits 49c985e..HEAD, all pushed.
+
+## 2026-07-10 — Session 16: W61 — route-fork deciders + full engine-bank af-elevation
+
+User directive: continue attacking Tier-1s, objective = decomposition. All three
+HANDOFF-item-0 lines executed without deciding the fork (which stays with the user):
+- af-elevation train (serial after guard lessons): ALL FIVE W60 engine-bank lemmas
+  af-VALIDATED, taint clean — moment identity 14/14, robust scalar starvation 12/12
+  (the prime), variation ledger 11/11, financing floor 12/12, forced exterior
+  coupling 12/12. T0 29 -> 34.
+- RETRACTION (docs/LEARNINGS.md): financing-floor contract quantified 'all reals A';
+  af verifiers exhibited the A<0 / N-empty reading false (missed by W60 prover AND
+  batched verifier). Corrected to A > 0 (what the proof establishes); consumers
+  unaffected; status proved retained for the corrected statement only.
+- Decider A (X2 graft refuter, codex xhigh, exact rationals): X2 NOT refuted —
+  graft family gets everything but tallness (H = O(tau^3)). Bundle
+  runs/2026-07-10-w61-x2-graft-refuter/.
+- Decider B (leak-financing refuter): FINANCING INSTANCE FOUND (local N5(ii)) —
+  ledger-only close dead as budgeted; N5 freight-row/Gamma_f budget restatement is
+  a Route-B prerequisite. Bundle runs/2026-07-10-w61-leak-financing-refuter/.
+- Convergent structural signal: TALLNESS is the binding wall in both searches.
+- Process lessons banked (W61 wave doc): overreach guard is REPO-WIDE; orchestrations
+  strictly serial; tree completely clean during runs; fr-log writes committed within
+  seconds; dispatch logs to scratchpad.
+- Lockstep: wave doc, CHANGELOG x3, HANDOFF rewritten, LEARNINGS, INDEX rows,
+  UNWIRED follow-up filed (aism-mg7). Beads: aism-3nk/kup/zo1/8nt closed. Route fork
+  aism-ur9 updated with the decider synthesis — decision with the user.

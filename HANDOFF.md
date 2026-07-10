@@ -10,101 +10,104 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read the sketch named in **`docs/plans/CURRENT.md`** (currently v24) + the rolling
+2. Read the sketch named in **`docs/plans/CURRENT.md`** (currently v25) + the rolling
    `docs/plans/CHANGELOG.md` (two-tier policy: small deltas live there — read the
-   2026-07-10 entries: OR-routes landed; closure 12 -> 41).
+   THREE 2026-07-10 W61 entries: engine pair validated; both deciders decided;
+   engine bank complete at the oracle rung).
    **STEWARDSHIP (user mandate, binding): reconciling the sketch/CHANGELOG with newly
    banked evidence is a FIRST-CLASS DELIVERABLE of every session (Rule 9).**
 3. **STANDING DIRECTIVES (user, binding):** (i) ALL mathematical capacity on the open
-   leaves (the proof does not work while leaves are open — "value per effort" applies
-   only WITHIN the leaf set); (ii) decompose by MECHANISM SEPARATION (the W56 wall:
-   one-hard-leaf-after-free-preprocessing is certified dead); (iii) creativity mandate:
-   proof-strategy subagents think outside the box, FINDINGS dead routes absolute;
-   (iv) mostly serial; Fable = author-only for the hardest creative steps; verification
-   fresh-codex-only, BATCHED by default for routine harvests (CLAUDE.md §6);
-   (v) no progress theatre.
+   leaves; (ii) decompose by MECHANISM SEPARATION (the W56 wall is certified dead);
+   (iii) creativity mandate for proof-strategy subagents, FINDINGS dead routes
+   absolute; (iv) mostly serial; Fable = author-only for the hardest creative steps;
+   verification fresh-codex-only, BATCHED by default for routine harvests
+   (CLAUDE.md §6); (v) no progress theatre.
 4. `fr board` + `bd ready`. Beads sync across devices: `scripts/beads-sync.sh import`
    after pull / `export` before push (committed JSONL, .beads/issues.jsonl).
 5. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-10, session 15 — W60 banked)
+## Current state (2026-07-10, session 16 — W61 banked)
 
-**Rigorous (af-validated, T0): 29. Registry: 158** (session 15: +5 W60 engine-bank
-lemmas at L5 — `lem-hx-transverse-moment-identity`, `lem-hx-signed-variation-ledger`,
-`lem-hx-financing-floor`, `lem-hx-robust-scalar-starvation`,
-`lem-hx-forced-exterior-coupling`; codex prover + fresh hostile batched codex
-verifier; artifacts `docs/waves/2026-07-10-W60-artifacts/`). **W59 §HONEST-LIMITS
-gaps 1 (rank) and 2 (slab) are RETIRED at the mechanism level**; the tableau metric
-pin is relaxed to a window and zero-top to an O(δ) tail cap. Sketch **v25** is live.
-**op-classical's machine-checked ancestor closure: 41 nodes** — the OR-route linker
-feature (routes: field) landed and op-hlc declares BOTH routes (Kernel | MIN-A), so
-the three-cell SL1a surface, SL1b, L6.5, and the huddle system are FORMALLY
-reachable from the goal.
+**Rigorous (af-validated, T0): 34. Registry: 158.** Session 16 (W61) af-validated
+the ENTIRE W60 engine bank (serial orchestration train, fresh codex verifier per
+node, taint clean everywhere): `lem-hx-transverse-moment-identity` (14/14),
+`lem-hx-robust-scalar-starvation` (12/12, the T0-generalization proper),
+`lem-hx-signed-variation-ledger` (11/11), `lem-hx-financing-floor` (12/12 on a
+CORRECTED contract), `lem-hx-forced-exterior-coupling` (12/12). **One retraction
+(docs/LEARNINGS.md):** the floor's W60 contract quantified 'all reals A' — false at
+A < 0 with N empty (af challenge ch-9388e571, concrete counterexample); restated to
+the A > 0 form the W60 proof establishes; consumers unaffected (A·l = 1/2 / A ≥ 4).
+The af oracle caught what BOTH the W60 prover and the batched hostile verifier
+missed.
 
-**LIVE USER DECISION (aism-ur9): the W60 hard-residual route fork.** Route A
-(codex tree): named H-X exactly via X2/X3F/X3N/X4 (4 creative-hard, no surface
-change). Route B (Fable tree): γ-fattened three-cell renegotiation + N5/N6
-confinement (2 creative-hard + surface change + γ-dial). Two cheap L3 deciders
-(X2 graft search; leak-financing refuter) should run before creative spend.
+**BOTH aism-ur9 route-fork L3 deciders are DECIDED and banked** (exact-rational,
+orchestrator-reproduced; synthesis in
+`docs/waves/2026-07-10-W61-deciders-and-elevation.md`):
+- **Decider A (X2 graft refuter): X2 NOT refuted.** The exact six-row factorized
+  graft family achieves Gamma_f -> 1, M_X -> 3/4, T_B -> 0 and every checked
+  selected-corner clause EXCEPT tallness (H = O(tau^3) << 16*tau, asymptotic).
+  Route A's X2 prove-or-refute lane is genuinely open; tallness is the
+  load-bearing hypothesis. Bundle: `runs/2026-07-10-w61-x2-graft-refuter/`.
+- **Decider B (leak-financing refuter): FINANCING INSTANCE FOUND (local N5(ii)
+  geometry).** The unconfined freight row pays the full engine demand with every
+  banked ledger slack. The ledger-only close of N5(ii) is dead as budgeted:
+  restating N5 with a freight-row/Gamma_f coupling budget is a Route-B
+  PREREQUISITE. Bundle: `runs/2026-07-10-w61-leak-financing-refuter/`.
+- **Convergent signal: TALLNESS (H > 16*tau) is the binding wall in both
+  searches** — the resource the adversary cannot manufacture and the current
+  ledgers do not consume.
 
-**THE OPEN SURFACE (unchanged mathematically — six leaves):**
-- **H-X** (`conj-sl1a-off-diagonal-cell`): T0-anchored by
-  `lem-starvation-completion-obstruction` (af-validated; the W55-W59 arc). Named gaps
-  to the cell: slab confinement / rank / tableau constants — the W60 generalization
-  wave is THE next mathematical wave (sketch v24 item 0).
-- **H-D**, **H-I** (the other two cells): genuinely open, no mechanism seed.
-- **SL1b**: easiest sibling, still untouched.
-- **L6.5 residuals**: E1-E5 codification, small-gauge bridge, mixed co-top straddle.
-- **L5 dual-face mass minimax** (aism-vuc): independent; NOTE it is also the
-  unregistered premise blocking the huddle assembly bridge (aism-pus) — closing it
-  pays twice.
+**LIVE USER DECISION (aism-ur9), now fully informed:** Route A (codex named-H-X via
+X2/X3F/X3N/X4; X2 lane open, tallness flagged) vs Route B (Fable
+gamma-renegotiation via N4 + N5/N6; N5 restatement now a prerequisite, price +1
+routine-hard). The engine bank is rigorous and consumable by BOTH routes and L6.5.
 
-**Session 14 delivered (all pushed through 0e734ae):** the W55-W59 gadget arc
-(T0 28 -> 29); the W56 three-cell SL1a surface; the FULL remediation program
-(5-audit synthesis, epic aism-9s3): gate integrity hardened (OVERCLAIM tests,
-un-vacuumed check-refs, anchor whitelist, quota fast-fail, widened overreach guard,
-NODE_SOFT_CAP), ops tooling (codex-dispatch/build-workspace/beads-sync), docs
-(CURRENT.md pointer, CHANGELOG, FINDINGS index, W59 wave doc), the LAB-BOOK OVERHAUL
-(paper-track; typeset math; 13 T0 shards; codex fidelity 13/13 FAITHFUL), Phase 2
-registry codification (10 defs, DAG wiring, 6 contracts shortened, halo rename), the
-P0 OR-route feature, and the bridge hostile pass (one proved conditional, one INVALID
-recorded in-shard, DO-NOT-CONSUME).
+**THE OPEN SURFACE (six leaves, unchanged):** H-X (route fork above), H-D, H-I,
+SL1b, L6.5 residuals, L5 dual-face mass minimax (aism-vuc, double-valued — also the
+unregistered premise of the huddle assembly bridge aism-pus).
 
-## Next steps (ranked) — W61+
+**Process lessons (binding, in the W61 wave doc):** af orchestrations are STRICTLY
+SERIAL (the overreach guard is REPO-WIDE and flags any new dirt vs run start —
+sibling workspaces, wave-doc drafts, even fr log writes); while a run is live the
+tree stays completely clean and any necessary repo write (fr log) is committed
+within seconds; wrapper logs go to the scratchpad.
 
-0. **The W60 route fork (aism-ur9, USER DECISION)** + its two cheap L3 deciders
-   (runnable pre-decision: codex X2 thin-transient-graft refuter search; Fable
-   leak-financing refuter at the N5/N6 constants). Then the chosen route's first
-   creative wave. **Engine-bank af-elevation** (prime:
-   lem-hx-robust-scalar-starvation; all five single minimal contracts) can run
-   in parallel with the decision.
-1. **L5 minimax** (aism-vuc): now double-valued (leaf + the assembly-bridge premise).
-2. **E1-E5 codification + the small-gauge bridge** (fresh standalone passes; batched).
-3. **The assembly-bridge repair** (aism-pus): codify l2-attack §2.6-2.7 intersecting-
-   hulls -> SL1a/SL1b as a registry lemma + register the L5 premise; re-verify.
-4. **SL1b** (easiest), **H-D/H-I** (need creative mechanism waves; Fable candidates).
-5. Parked: af-elevation queue (defs now exist for the contract shortening that gated
-   lem-top-deficit-price — aism-88r), aism-l1a (P2 polish), aism-cei (P1 af->Lean
-   trunk scoping), refs ingest (aism-5de). USER DECISIONS: aism-nlg (contract
-   rewording, awaiting your call), aism-z98 (DAG-blocked, not actually a user decision).
+## Next steps (ranked) — W62+
 
-## Standing rules (delta from session 13)
+0. **The route fork (aism-ur9, USER DECISION — now decider-informed).** On decision:
+   Route A -> first creative wave per DECOMPOSITION-W60-CODEX.md §4 (X2 as
+   prove-or-refute decider with the graft family as stress fixture; X3N/X3F
+   parallel). Route B -> N5 restatement (freight-row/Gamma_f budget) + gamma-dial
+   memo FIRST, then N6-before-N5 creative order per DECOMPOSITION-W60-FABLE.md §4.
+   Either way the tallness signal suggests the winning mechanism must CONSUME
+   H > 16*tau quantitatively.
+1. **L5 minimax (aism-vuc)**: double-valued (leaf + assembly-bridge premise).
+2. **Paper-track reproduction of the five validated engine lemmas (aism-mg7)** —
+   T0 results belong on the paper-track; currently UNWIRED-whitelisted.
+3. **E1-E5 codification + small-gauge bridge** (batched); **assembly-bridge repair**
+   (aism-pus).
+4. **SL1b** (easiest), **H-D/H-I** (creative mechanism waves; Fable candidates).
+5. Parked: af-elevation queue (aism-88r), aism-l1a (P2 polish), aism-cei (P1
+   af->Lean trunk scoping), refs ingest (aism-5de), aism-nlg / aism-z98 (user
+   decisions).
 
-Everything in CLAUDE.md §6 incl. the NEW batched-verification default. codex =
-gpt-5.6-sol (ultra creative / xhigh verify / high routine); quota outages: wrap long
-dispatches in `scripts/codex-dispatch.sh` (probe + reset-parse + retry). Worker
-workspaces: `scripts/build-workspace.sh <dir> [--waves ...] [--plans ...]`. Oracle
-registration: `scripts/register-oracle.py <rid>`. New sketch file => re-run
-`python3 scripts/gen-current-pointer.py` (gated). Session close: beads-sync export
-before push. The methodology decisions of record:
-`docs/plans/2026-07-10-methodology-assessment.md` (do not relitigate what
-demonstrably works).
+## Standing rules (delta from session 15)
+
+Everything in CLAUDE.md §6 incl. batched verification default. codex = gpt-5.6-sol
+(ultra creative / xhigh verify / high routine); wrap long dispatches in
+`scripts/codex-dispatch.sh` (point --log OUTSIDE the repo during orchestrations).
+Worker workspaces: `scripts/build-workspace.sh`. NEW (W61): orchestration guard
+discipline above; validated-deps flip order (dep before consumer); af export via
+stdout redirect (`af export -d <ws> > <ws>/export.md`). Methodology decisions of
+record: `docs/plans/2026-07-10-methodology-assessment.md`.
 
 ## What is intentionally NOT here
 
-- Any claim more than TWENTY-NINE results are af-validated; L5 is not L0.
+- Any claim more than THIRTY-FOUR results are af-validated.
 - Any claim any leaf, the huddle charge, the Kernel Conjecture, or op-classical is
-  proved. `lem-huddle-charge-assembly` is INVALID-as-stated (in-shard verdict):
-  DO NOT CONSUME until aism-pus lands.
-- Any claim the three-cell surface is strict progress (SL1a == the conjunction);
-  the OR-route closure growth is CODIFICATION of the known map, not new mathematics.
+  proved. The deciders are L3 EVIDENCE: decider A does not prove X2; decider B does
+  not refute N5/N6 as mathematical conjectures (tallness + Gamma_f clauses fail in
+  its instance; N6 untouched).
+- Any claim the route fork is decided — it remains with the user (aism-ur9).
+- `lem-huddle-charge-assembly` remains INVALID-as-stated / DO-NOT-CONSUME
+  (aism-pus).
