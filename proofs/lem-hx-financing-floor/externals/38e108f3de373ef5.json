@@ -1,0 +1,8 @@
+{
+  "id": "38e108f3de373ef5",
+  "name": "lem-hx-transverse-moment-identity",
+  "source": "imports validated registry lemma proofs/lem-hx-transverse-moment-identity — For every finite exact signed idempotent P, all points q0 != q1 of the row polytope K(P) = conv{p_i}, and every affine function chi on R^I with chi(q0) = 0 and chi(q1) = 1, the full row-point fibers satisfy sum_Q d_Q*chi(p_Q) = 1, where d_Q = sum_{j in Q}(q1_j - q0_j).",
+  "content_hash": "0b4b7fb74f83cd2b566cede64f98125bc461094f6877763085b3ca3db93380ba",
+  "created": "2026-07-10T12:45:20.233707836Z",
+  "notes": ""
+}

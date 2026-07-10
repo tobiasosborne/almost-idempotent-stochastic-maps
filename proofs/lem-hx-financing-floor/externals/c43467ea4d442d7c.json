@@ -1,0 +1,8 @@
+{
+  "id": "c43467ea4d442d7c",
+  "name": "lem-hx-signed-variation-ledger",
+  "source": "imports validated registry lemma proofs/lem-hx-signed-variation-ledger — For every finite exact signed idempotent P, every ordered pair (a,b) of points of the row polytope K(P), and every set S of full row-point fibers, sum_{Q in S} |d_Q| \u003c= a^+(S) + b^+(S) + nu(a) + nu(b), where d_Q = sum_{j in Q}(a_j - b_j), r^+(S) = sum_{Q in S} sum_{j in Q} max(r_j,0), and nu(r) = sum_j max(-r_j,0).",
+  "content_hash": "32c000cdb9f9a644a3cc9a2e4f0686e0ea30f9db79fb55d954e2a3699efa9361",
+  "created": "2026-07-10T12:45:20.240831924Z",
+  "notes": ""
+}

@@ -1,13 +1,13 @@
 ---
 id: lem-hx-financing-floor
 kind: lemma
-contract: For every finite exact signed idempotent P, every ordered pair (a,b) of points of the row polytope K(P) with a != b, every affine chi with chi(a) - chi(b) = 1, all reals A, Lambda > 0, and every set N of full row-point fibers with |chi(p_Q)| <= A for every Q in N and |chi(p_Q)| <= Lambda for every Q not in N, the complement F of N satisfies a^+(F) + b^+(F) >= (1 - A*l_chi)/Lambda - nu(a) - nu(b), where l_chi = sum_Q |d_Q| and d_Q = sum_{j in Q}(a_j - b_j).
+contract: For every finite exact signed idempotent P, every ordered pair (a,b) of points of the row polytope K(P) with a != b, every affine chi with chi(a) - chi(b) = 1, all reals A > 0 and Lambda > 0, and every set N of full row-point fibers with |chi(p_Q)| <= A for every Q in N and |chi(p_Q)| <= Lambda for every Q not in N, the complement F of N satisfies a^+(F) + b^+(F) >= (1 - A*l_chi)/Lambda - nu(a) - nu(b), where l_chi = sum_Q |d_Q| and d_Q = sum_{j in Q}(a_j - b_j).
 defs: def-signed-idempotent; def-negative-mass
 deps: lem-hx-transverse-moment-identity; lem-hx-signed-variation-ledger
 status: proved
 af: seeded
 workspace: proofs/lem-hx-financing-floor
-provenance: W60 wave (docs/waves/2026-07-10-W60-artifacts/): codex prover (gpt-5.6-sol, high) PROOFS-W60-ENGINE.md §E3; fresh hostile codex verifier (gpt-5.6-sol, xhigh), batched verdict VERDICT-W60-ENGINE.md line 'E3: VALID-WITH-CORRECTIONS' (contract wording: the endpoint-pin normalization replaced by the difference-one condition chi(a)-chi(b)=1 actually used; correction applied in-file and here). Reviewer != author.
+provenance: W60 wave (docs/waves/2026-07-10-W60-artifacts/): codex prover (gpt-5.6-sol, high) PROOFS-W60-ENGINE.md §E3; fresh hostile codex verifier (gpt-5.6-sol, xhigh), batched verdict VERDICT-W60-ENGINE.md line 'E3: VALID-WITH-CORRECTIONS' (contract wording: the endpoint-pin normalization replaced by the difference-one condition chi(a)-chi(b)=1 actually used; correction applied in-file and here). Reviewer != author. Quantifier correction 2026-07-10 (W61): 'all reals A' -> 'A > 0' after af verifier challenges (ch-9388e571 et al., proofs/lem-hx-financing-floor/ledger/) exhibited the A<0 reading false; reviewer = the fresh af verifiers, != author.
 owner: B
 ---
 
@@ -36,6 +36,16 @@ the W59 lever geometry.
 \((1-A\ell_\chi)/(2\delta)\) — a usage window, not a defect. The consumer chooses
 \((a,b,\chi,N,A,\Lambda)\) explicitly (no selectors, no tie-breaking).
 Clone-invariant. Signed picture.
+
+**Quantifier correction (2026-07-10, W61 af elevation).** The W60 contract read
+"all reals A, Lambda > 0"; on the reading with \(A\) ranging over all reals the
+statement is FALSE (with \(N=\varnothing\) the hypothesis on \(A\) is vacuous, and
+\(A<0\) inflates the claimed floor beyond what the unit moment supplies — af
+verifier challenge ch-9388e571 carries a concrete counterexample shape). The
+mechanism (split \(1\le A\sum_N|d_Q|+\Lambda\sum_F|d_Q|\)) requires \(A>0\), which
+is what the W60 proof establishes and what the contract now states. All consumers
+are unaffected: [[lem-hx-forced-exterior-coupling]] instantiates \(A\ell=1/2\);
+the route-fork actor scaffolds use \(A\ge4\). Recorded in `docs/LEARNINGS.md`.
 
 **Rigour tier.** L5 (fresh hostile codex, batched W60 verdict; wording correction
 applied as prescribed). NOT af-validated. af-elevation candidate. Consumer:
