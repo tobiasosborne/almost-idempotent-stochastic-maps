@@ -41,3 +41,40 @@ Compare the two trees; select/merge as orchestrator (strategy-level judgment, no
 proof verification); then a **fresh hostile codex interface check** (batched) on the
 selected assembly implication BEFORE any conjecture shards enter the registry.
 Nothing from this wave promotes any status.
+
+## HARVEST (same day)
+
+Both strategists returned full trees (artifacts:
+`2026-07-10-W60-artifacts/DECOMPOSITION-W60-FABLE.md`, `…-CODEX.md`).
+
+**Convergence — the routine engine bank.** Independently, both trees scalarize the
+T0 mechanism basis-free: a full-fiber affine moment identity (Fable N1 ≈ codex X0,
+codex form generalized to row-hull endpoint pairs), a two-sign-union variation
+ledger (Fable N2), and a close (Fable N3 financing floor / codex X1 robust scalar
+starvation with an O(δ) top-tail cap replacing fiberwise zero-top). Both claim this
+bank retires §HONEST-LIMITS gaps 1 (rank) and 2 (slab) and de-pins the tableau
+metric to a window; both rank it dispatch 1, batched. Fable adds N7 (forced
+exterior coupling, a guaranteed byproduct feeding L6.5).
+
+**Divergence — the hard-residual ROUTE FORK (user decision filed):**
+- *Route A (codex):* prove NAMED H-X exactly — X2 microfreight exclusion (with a
+  concrete refuter shape: thin transient graft; prove-or-refute lane), X3F/X3N
+  far/near actor selection (its binding-gap verdict), X4 top-tail regularization.
+  Four creative-hard nodes; no surface change; plus an H-X-selector fallback.
+- *Route B (Fable):* γ-fattened three-cell renegotiation (N4, γ = τ/4 or δ^{3/4}
+  dial) exporting strengthened H-I^γ/H-D^γ sibling burdens; two creative-hard
+  confinement conjectures (N5/N6, its binding-gap verdict = gap 3 generalized).
+  Fewer hard nodes; REQUIRES a surface change (user + sibling sign-off).
+
+**Actioned this leg:** merged routine engine batch dispatched to one codex prover
+(routine tier, high effort) — contracts E1–E5 below — to be followed by one fresh
+batched hostile verifier (W56 pattern) before any registry entry. Route fork + γ-dial
+escalated as a USER DECISION bead. Nothing promoted.
+
+Engine batch contracts (merged, signed picture, all clone-invariant):
+E1 = full-fiber affine moment identity at row-hull endpoint pairs (N1/X0 merged);
+E2 = two-sign-union variation ledger incl. synthetic-hull rows (N2 + ν(q) ≤ δ);
+E3 = financing floor (N3; consumer-chosen (r,s,ψ,N,A,Λ));
+E4 = robust scalar starvation with tail cap (X1; fixed (K_R,L,K_C) then universal
+     ceiling; T0-close fixture at (3,1,0));
+E5 = forced exterior coupling (N7; ball instantiation, δ=0 sanity fixture).
