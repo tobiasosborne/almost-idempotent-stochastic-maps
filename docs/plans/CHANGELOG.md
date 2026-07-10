@@ -134,3 +134,21 @@ L5-GAP-1 now == S/C/I: three disjoint-exhaustive creative horns (shallow payer /
 drift-width chord / isotropic web) with named refuter shapes; assembly with
 threaded quantifiers banked. Next: the five L3 refuter deciders, then creative
 I -> C -> S.
+
+## 2026-07-10 — W63 (session 17): S/C pre-creative deciders BOTH BLOCKED; the C width bouquet fails ONLY tallness (4th consecutive bind; delta on v25)
+
+No registry change (L3 evidence only; `runs/2026-07-10-w63-sc-decider/`, aism-3yyz).
+This completes the DECOMPOSITION-W62-L5.md §4.2 pre-creative decider program for
+all three horns. (i) The S shallow-counterweight completion is blocked exactly at
+hiddenness (the legal W61 factorized seed is cubic-height) and at the top-row
+tau^2 negativity budget; formally dialing the face equation to H/tau in [16,20]
+flips the proposed top VISIBLE (exact exposers exhibited) — tall + shallow-payer
+configurations fight hiddenness itself. (ii) The C two-prong width bouquet is a
+COMPLETE near-refuter: it satisfies C's entire center-uniform antecedent, enters
+the width branch (Omega -> 3/4), realizes the weighted chord, PAYS the C(b) engine
+demand through one reusable ballast fiber, and has Z_v(q_A)/tau -> 0 — failing
+ONLY H > 16*tau. Map consequence: tallness now binds in FOUR consecutive
+independent refuter searches, and for C specifically the missing step is isolated
+to the chord-demand-to-ray-certificate coupling UNDER tallness; the S/C/I creative
+waves inherit these fixtures (C: width bouquet; S: visibility-flip; I: W62
+bundle). The I-horn creative decomposition wave (aism-5wow) is in flight.
