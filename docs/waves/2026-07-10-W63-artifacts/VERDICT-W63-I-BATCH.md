@@ -1,0 +1,16 @@
+P: VALID — R0 gives the exact partially-selected full-fiber barycenter identity, every attained R1 minimizer has that value, and the top-deficit price gives the stated nonnegative upper chain with the same quantifiers.
+T: VALID — the halo-collapse inequality and \(\sigma_v\le1+\nu_v\) give \((H-\tau/4)(1-\sigma_g)\le\nu_v(D_0+\tau/4)\), and strict \(H>16\tau\) yields exactly the factor \(4\tau/63\), including the \(1-\sigma_g\le0\) case.
+V: VALID — selected far support makes the far set nonempty, positive exposedness gives \(t^*(v)>0\), and co-top witness pinning at \(c=4\), \(\delta\le1/4\), gives strict mass \(>13/16\) in \(G_v\) for every reduced optimal display.
+E: VALID — the selected measure is a full-fiber submeasure of mass \(S\ge c_m\) on the closed \(4\tau\)-far set, and \(\delta_{\rm rt}\le\min\{1/16,(c_m/8)^2\}\) (in particular via its third ceiling) permits the universal exterior-payer shard verbatim.
+ED: VALID — the transverse identity forces \(\ell_\chi>0\), so the corrected financing floor is called with distinct endpoints and \(A_{\rm lev}>0\); one full-fiber R2 foldback gives (A.3), whose worst-case right side is \(c_mb\tau/8\) and hence \(V\ge c_mb\tau/18>k_b\tau\).
+EW: VALID — the exact sign split gives \(s_+s_-\lVert q_+-q_-\rVert_1\ge\Omega/2\), the distinct synthetic pair legally satisfies the corrected financing-floor hypotheses, and after the single weighted full-fiber foldback (A.4) exceeds \(c_mb\tau/64=k_b\tau\).
+U: VALID — domination of the partially selected full-fiber measure by \(\omega\) gives \(\lVert q_A-r_\omega\rVert_1\le(M/S)\Omega\), the constant is \((4c_m+5)\tau/512<\tau/32\), and affine reproduction gives the universal exposer bound \(h(q_A)\le\delta/S\).
+S0: VALID — restricting \(\mu_A\) to the rim preserves exact scaled ownership and all support boundaries, while nonnegativity of every exposer and \(\tau\le c_m/4\) give the stated all-exposer moment bound.
+L0: VALID — the strict complement of the rim has mass \(1-\theta\), and deletion plus renormalization gives the exact conditional bounds; \(\tau/D_0\le1/8\) and \(\tau/c_m\le1/4\) yield respectively the strict \(33\tau/28\) and \(2\tau/7\) claims.
+SC: VALID — the score selector and corner ledger apply to L0's stronger SL1a constants for every legal kernel, the radial partition supplies a block of mass at least \(1/4\), and the exhaustive clone-invariant type partition gives \(1/4-1/8-1/16=1/16\) with all equality boundaries assigned as stated.
+
+ASSEMBLY: SOUND — the drift, width, rim, and three certificate cells exhaust the strict parent-I class without moving the sibling-C boundaries, all constants are fixed before the datum, and (2.2) correctly turns P's upper bound into \(Z_v(q_A)\le\gamma_I\tau/2\).
+
+## What I checked hardest
+
+I checked the actual registry contracts rather than the decomposition's paraphrases, especially the corrected \(A>0\) financing floor, the full-fiber order of positive parts in R2, and the universal-over-kernels corner ledger. I recomputed (A.3)--(A.7), including the \(s_+s_-\) weights and both \(1-\theta\) denominators; clone-split the ED, EW, U, S0, and L0 arguments conceptually with a partially selected fiber; and compared every strict/equality boundary and the \(\gamma_I,\delta_I\) threading against the W62 node-I interface.

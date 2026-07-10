@@ -71,6 +71,16 @@ lem-l5-mass-barycenter-dualization
 lem-l5-positive-flow-foldback
 lem-l5-top-face-ray-formula
 lem-l5-universal-exterior-payer
+lem-ihorn-priced-ray-package
+lem-ihorn-tall-halo-saturation
+lem-ihorn-dual-cotop-geography
+lem-ihorn-universal-exterior-package
+lem-ihorn-drift-payer-extraction
+lem-ihorn-width-payer-extraction
+lem-ihorn-ultra-compression
+lem-ihorn-rim-sl1b-package
+lem-ihorn-cotop-sl1a-package
+lem-ihorn-selected-corner-extraction
 lem-min-a-implies-height
 lem-negative-pivot-import
 lem-optimal-face-alpha-free-characterization

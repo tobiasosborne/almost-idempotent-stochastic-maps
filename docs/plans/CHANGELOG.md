@@ -176,3 +176,24 @@ sign-cube plateau threat is isolated in I-cap, the strongest positive mechanism
 (bounded-slab + robust starvation) points at D-cap. NOT claimed: any creative
 leaf, any status promotion; the routine batch is unverified until the verdict
 lands.
+
+## 2026-07-10 — W63 (session 17): I-horn routine batch VERIFIED 10/10 and codified (registry 162 -> 172; delta on v25)
+
+The fresh batched hostile codex verifier (xhigh) returned
+`docs/waves/2026-07-10-W63-artifacts/VERDICT-W63-I-BATCH.md`: ALL TEN routine
+nodes VALID, assembly SOUND, zero corrections (it recomputed (A.3)-(A.7) incl.
+the s_+s_- weights and 1-theta denominators, checked the corrected A > 0
+financing-floor calls, clone-split ED/EW/U/S0/L0, and audited every
+strict/equality boundary against the W62 node-I interface). Codified as
+registry shards `lem-ihorn-*` (priced-ray-package, tall-halo-saturation,
+dual-cotop-geography, universal-exterior-package, drift-payer-extraction,
+width-payer-extraction, ultra-compression, rim-sl1b-package, cotop-sl1a-package,
+selected-corner-extraction), all status proved (L5), UNWIRED-whitelisted.
+Map consequence: node I of the L5-GAP-1 trichotomy is now REDUCED on a proved
+interface to six creative leaves (D/W/Sh/X/I-cap/D-cap); the ultra-isotropic
+core routes through lem-ihorn-cotop-sl1a-package (constants STRONGER than the
+registered SL1a thresholds) and lem-ihorn-selected-corner-extraction into the
+same X/I/D cell trichotomy as the SL1a fronts. Open surface strictly reduced:
+the sign-cube threat is pinned in I-cap; D-cap has the strongest positive
+mechanism (bounded-slab + robust starvation). Next per §4: the six W63 L3
+decider shapes, then creative I-cap -> D-cap -> X -> Sh -> W -> D.
