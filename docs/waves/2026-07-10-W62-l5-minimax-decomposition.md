@@ -70,9 +70,19 @@ tallness budgets permitted are the two exact height inequalities
 
 ## Outcomes
 
-*(Filled as results land; a dispatch is not an outcome.)*
-
-- Strategist tree: BANKED (this wave's §The tree). Status: strategy artifact,
-  promotes nothing.
-- Routine batch R0-R3: prover dispatched (codex, batched-verify pattern) — see
-  below.
+- Strategist tree: BANKED. Status: strategy artifact, promotes nothing.
+- **Routine batch R0-R3: PROVED (L5).** Codex prover (high) + fresh batched
+  hostile codex verifier (xhigh): **4/4 VALID, zero corrections** (clone audits,
+  Lambda = 0/attainment edges, boundary arithmetic, small-counterexample hunts all
+  run). Registry 158 -> 162: `lem-l5-mass-barycenter-dualization`,
+  `lem-l5-top-face-ray-formula`, `lem-l5-positive-flow-foldback`,
+  `lem-l5-universal-exterior-payer` (prover strengthened the ceiling to
+  min{1/16, (c_m/8)^2}). Verifier's weakest-accepted-step note (the R3
+  allocation) and honest-scope caveats carried into the shard bodies.
+- **L5-GAP-1 residual after W62: the S/C/I creative fork only** — three
+  disjoint-exhaustive horns on a proved reduction interface. The W54 BLOCKED
+  verdict (missing dimension-free cover input) is retired.
+- L3 refuter decider (first batch: summit-axis spike; growing low-width
+  dual-simplex fan; tall completions of the W61/W55 seeds) dispatched —
+  in flight at session close; shapes 2/3 of §4.2 (shallow-counterweight
+  completion, two-prong bouquet) queued for the S/C pre-creative wave.
