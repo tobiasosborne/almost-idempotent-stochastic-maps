@@ -257,3 +257,18 @@ inherits the same repair. All three calibration matrices (the 4x4 I module,
 P_S, and the 8x8 block extension) recomputed and VERIFIED exactly, incl. the
 zero-top-ownership claim. Codification of the eight shards (R in corrected
 form) in flight.
+
+## 2026-07-11 — W64 (session 17): I-cap routine batch codified, R in corrected form (registry 172 -> 180; delta on v25)
+
+Eight shards installed: `lem-icap-{single-root-receiver-cap, score-bulk-production,
+kernel-bulk-census, common-receiver-ownership, tallness-spend,
+closed-diagonal-flow, type-i-structural-cost, priority-residual-split}` — all
+status proved (L5; codex ultra prover + fresh batched hostile codex verifier;
+R restated per the verifier-mandated priority-guard correction, recorded in its
+provenance). Map consequence: I-cap is REDUCED on a proved interface to six
+strictly smaller creative leaves (X_gap/X_near/I_far/I_near/D_gap/D_near) with
+the closed sign-cube packet isolated; combined with W63, the L5-GAP-1 tree now
+has TWO proved reduction layers below the W62 trichotomy. Session-17 registry
+total: 162 -> 180 (+18 proved, all hostile-verified, two verifier-mandated
+corrections caught). Creative queue (aism-72zn continues): D-cap next per the
+W63 order, then X, Sh, W, D, and the W64 six leaves.

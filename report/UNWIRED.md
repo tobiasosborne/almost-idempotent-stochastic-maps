@@ -81,6 +81,14 @@ lem-ihorn-ultra-compression
 lem-ihorn-rim-sl1b-package
 lem-ihorn-cotop-sl1a-package
 lem-ihorn-selected-corner-extraction
+lem-icap-single-root-receiver-cap
+lem-icap-score-bulk-production
+lem-icap-kernel-bulk-census
+lem-icap-common-receiver-ownership
+lem-icap-tallness-spend
+lem-icap-closed-diagonal-flow
+lem-icap-type-i-structural-cost
+lem-icap-priority-residual-split
 lem-min-a-implies-height
 lem-negative-pivot-import
 lem-optimal-face-alpha-free-characterization
