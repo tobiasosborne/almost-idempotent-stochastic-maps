@@ -994,3 +994,43 @@ the user, so capacity went to the next Tier-1 leaf).
 - L5-GAP-1 residual == S/C/I horns on a proved interface. I-first creative wave
   filed (aism-5wow); S/C pre-creative shapes queued; aism-pus premise wording now
   pinned to the W62 interface. All pushed.
+
+## 2026-07-11 — Session 17 (W63 + W64): the L5 minimax front decomposed two layers deep; registry 162 -> 180
+
+User directive: continue attacking the Tier-1s with DECOMPOSITION as the objective
+function. Ran the full pipeline (strategist-prover ultra -> batched hostile
+verifier xhigh -> codification) twice end-to-end on the L5-GAP-1 front, plus three
+exact L3 decider batches. Waves:
+
+- **W63a (aism-3yyz):** S/C pre-creative deciders BOTH BLOCKED
+  (runs/2026-07-10-w63-sc-decider/); the C width bouquet fails ONLY tallness
+  (4th consecutive bind) — C's missing step isolated to the
+  chord-demand-to-ray-certificate coupling under tallness.
+- **W63b (aism-5wow):** the I horn DECOMPOSED (DECOMPOSITION-W63-I.md): emptiness
+  framing via the priced ray package; 10 routine nodes proved 10/10 VALID and
+  codified as lem-ihorn-* (registry 162->172); the ultra-isotropic core routes
+  into the SAME X/I/D selected-corner trichotomy as the SL1a fronts (structural
+  unification); 6 creative leaves.
+- **W63c (aism-t20p):** six-shape decider ALL BLOCKED
+  (runs/2026-07-11-w63-ihorn-six-shape-decider/), zero I-base entrants, 5th
+  tallness bind; the natural diagonal plateau has M_I = 0 exactly and routes to
+  D — the sign-cube I cell has never been entered; first exact M_X > 1/8 ledger
+  (X fixture). Pre-creative program for all nine W62+W63 surfaces complete.
+- **W64 (aism-72zn, in progress):** I-cap DECOMPOSED (ICAP-ATTACK-W64.md):
+  score-bulk census -> arbitrary-kernel cell census -> constant top-owned cell
+  mass -> explicit T-spend -> internally-closed diagonal-flow package; hard core
+  isolated as the closed sign-cube packet; NEW exact 4x4/8x8 I-cell calibrations
+  (hostile-verified) show tall TOP OWNERSHIP, not intersection, is the real
+  obstruction. Verdict 7/8 VALID + R VALID-WITH-CORRECTION (priority guards —
+  the verifier exhibited exact overlap distributions; 2nd genuine defect caught
+  by the hostile pass this week). 8 shards codified as lem-icap-* in corrected
+  form (registry 172->180) via a fresh codex transcription worker +
+  orchestrator audit.
+
+Net: +18 proved (L5) shards, all reviewer != author; 3 run bundles; 7 CHANGELOG
+deltas; the L5-GAP-1 tree now has two proved reduction layers below the W62
+S/C/I trichotomy, and every open creative leaf is a proper constant-mass
+package. Convergent strategic signal: five refuter batches all died at tallness
+and/or the negativity budget — the winning mechanisms must consume H > 16*tau.
+Beads: aism-5wow, aism-3yyz, aism-t20p closed; aism-72zn claimed (creative queue
+continues); follow-ups in HANDOFF. All pushed.
