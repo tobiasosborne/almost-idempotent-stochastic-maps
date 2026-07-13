@@ -120,7 +120,9 @@ the repo; workspaces via scripts/build-workspace.sh in the scratchpad.
 ## Standing rules (delta from session 16)
 
 Everything in CLAUDE.md §6 (batched verification default; codex = gpt-5.6-sol,
-ultra creative / xhigh verify / high routine). NEW (session 17): decomposition is
+effort CAPPED at xhigh — ultra is unstable and spawns subagents indiscriminately
+(user, 2026-07-13); xhigh creative / xhigh verify / high routine). NEW (session
+17): decomposition is
 the standing objective function for Tier-1 attacks (user directive 2026-07-10);
 codification may be delegated to a fresh codex transcription worker IF the
 orchestrator audits frontmatter/deps/hypothesis-block fidelity and the linker

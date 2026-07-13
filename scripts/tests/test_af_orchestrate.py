@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
 Red-green tests for scripts/af-orchestrate.py — the codex worker dispatch layer.
-Asserts the model/effort tiering policy (user directive 2026-07-09): codex runs
-gpt-5.6-sol; highest thinking (ultra) for creative/demanding jobs, lower for routine.
+Asserts the model/effort tiering policy (user directive 2026-07-09, amended 2026-07-13):
+codex runs gpt-5.6-sol; effort CAPPED at xhigh (ultra is unstable and spawns subagents
+indiscriminately) — xhigh for creative/demanding jobs, lower for routine.
 subprocess.run is monkeypatched — no real codex is ever invoked.
 Run: python3 scripts/tests/test_af_orchestrate.py
 """
@@ -40,14 +41,17 @@ def check(name, cond):
 
 # --- model + tier policy constants ---
 check("default codex model is gpt-5.6-sol", orch.CODEX_MODEL == "gpt-5.6-sol")
-check("creative tier: prover at highest effort (ultra)",
-      orch.TIERS["creative"]["prover"] == "ultra")
+check("creative tier: prover at highest ALLOWED effort (xhigh)",
+      orch.TIERS["creative"]["prover"] == "xhigh")
 check("creative tier: verifier at xhigh", orch.TIERS["creative"]["verifier"] == "xhigh")
 check("routine tier: prover at lower effort (high)",
       orch.TIERS["routine"]["prover"] == "high")
 check("routine tier: verifier at high", orch.TIERS["routine"]["verifier"] == "high")
-check("every tier effort is a supported gpt-5.6-sol effort",
+check("every tier effort is an allowed effort",
       all(v in orch.CODEX_EFFORTS for t in orch.TIERS.values() for v in t.values()))
+check("effort cap: ultra and max are NOT allowed efforts (2026-07-13 directive)",
+      "ultra" not in orch.CODEX_EFFORTS and "max" not in orch.CODEX_EFFORTS)
+check("the cap constant is xhigh", orch.EFFORT_CAP == "xhigh")
 
 # --- run_codex command construction (subprocess.run monkeypatched) ---
 captured = {}
@@ -63,14 +67,24 @@ def fake_run(cmd, **kw):
 
 orch.subprocess.run = fake_run
 with tempfile.TemporaryDirectory() as td:
-    out = orch.run_codex("prompt", f"{td}/ans.txt", f"{td}/log.txt", effort="ultra")
+    out = orch.run_codex("prompt", f"{td}/ans.txt", f"{td}/log.txt", effort="xhigh")
     cmd = captured["cmd"]
     check("run_codex pins the model with -m gpt-5.6-sol",
           "-m" in cmd and cmd[cmd.index("-m") + 1] == "gpt-5.6-sol")
     check("run_codex passes the reasoning effort as a -c config override",
-          'model_reasoning_effort="ultra"' in cmd)
-    check("ultra effort gets the extended 3600s timeout", captured["timeout"] == 3600)
+          'model_reasoning_effort="xhigh"' in cmd)
+    check("xhigh effort gets the extended 3600s timeout", captured["timeout"] == 3600)
     check("answer file content is returned", out == "FAKE ANSWER")
+
+    # The hard cap: a programmatic caller passing ultra/max is clamped to xhigh —
+    # ultra must NEVER reach a codex command line (2026-07-13 directive).
+    orch.run_codex("prompt", f"{td}/ans-u.txt", f"{td}/log-u.txt", effort="ultra")
+    check("effort=ultra is clamped to xhigh on the command line",
+          'model_reasoning_effort="xhigh"' in captured["cmd"]
+          and 'ultra' not in " ".join(captured["cmd"]))
+    orch.run_codex("prompt", f"{td}/ans-m.txt", f"{td}/log-m.txt", effort="max")
+    check("effort=max is clamped to xhigh on the command line",
+          'model_reasoning_effort="xhigh"' in captured["cmd"])
 
     orch.run_codex("prompt", f"{td}/ans2.txt", f"{td}/log2.txt", effort="high")
     check("high effort keeps the 1800s timeout", captured["timeout"] == 1800)
@@ -99,11 +113,17 @@ ap_ok = True
 try:
     with tempfile.TemporaryDirectory() as td:
         rc = orch.main(["no-such-result-id", "--tier", "routine",
-                        "--prover-effort", "ultra", "--logdir", td])
+                        "--prover-effort", "xhigh", "--logdir", td])
 except SystemExit:
     ap_ok = False
 check("main accepts --tier/--prover-effort and stops at the missing workspace",
       ap_ok and rc == 2)
+bad_rejected = False
+try:
+    orch.main(["x", "--prover-effort", "ultra"])
+except SystemExit:
+    bad_rejected = True
+check("--prover-effort ultra is rejected by argparse (cap at xhigh)", bad_rejected)
 bad_rejected = False
 try:
     orch.main(["x", "--tier", "not-a-tier"])

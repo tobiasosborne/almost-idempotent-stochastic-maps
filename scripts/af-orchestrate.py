@@ -6,8 +6,10 @@ PROTOCOL (user-mandated, strict — see ~/.claude .../memory/af-verification-pro
     verifier jobs and reads `af status/jobs/get` for control flow. It NEVER judges a proof's
     correctness and never accepts/challenges itself.
   * PROVERS are codex (gpt-5.6-sol) runs; a prover may build/address multiple nodes.
-    Reasoning effort is TIERED per run (user directive 2026-07-09): `--tier creative`
-    (the default: prover=ultra, verifier=xhigh) for truly creative/demanding conjectures;
+    Reasoning effort is TIERED per run (user directive 2026-07-09; amended 2026-07-13:
+    effort is CAPPED at xhigh — ultra is unstable and spawns subagents indiscriminately):
+    `--tier creative` (the default: prover=xhigh, verifier=xhigh) for truly
+    creative/demanding conjectures;
     `--tier routine` (prover=high, verifier=high) for lower-priority mechanical
     elevations (e.g. single-shard corollaries from the parked queue). Fine-grained
     overrides: --prover-effort / --verifier-effort; model override: $CODEX_MODEL.
@@ -48,17 +50,19 @@ CODEX_MODEL = os.environ.get("CODEX_MODEL", "gpt-5.6-sol")
 # first marker; the second is the same message with a typographic apostrophe, just in case.
 CODEX_USAGE_LIMIT_MARKERS = ("You've hit your usage limit",
                              "You’ve hit your usage limit")
-# gpt-5.6-sol supported reasoning efforts (codex models cache): low..ultra.
-CODEX_EFFORTS = ("low", "medium", "high", "xhigh", "max", "ultra")
-# Effort tiers (user directive 2026-07-09): highest thinking for truly creative/demanding
-# jobs, lower thinking for lower-priority (mechanical) elevations.
+# Allowed reasoning efforts — CAPPED at xhigh (user directive 2026-07-13: ultra is
+# unstable and spawns subagents indiscriminately; max/ultra are deliberately absent).
+CODEX_EFFORTS = ("low", "medium", "high", "xhigh")
+EFFORT_CAP = "xhigh"
+# Effort tiers (user directive 2026-07-09, amended 2026-07-13): highest ALLOWED thinking
+# (xhigh) for truly creative/demanding jobs, lower for lower-priority (mechanical) elevations.
 TIERS = {
-    "creative": {"prover": "ultra", "verifier": "xhigh"},
+    "creative": {"prover": "xhigh", "verifier": "xhigh"},
     "routine": {"prover": "high", "verifier": "high"},
 }
 # Deeper reasoning needs more wall-clock before we declare a worker timed out.
-_EFFORT_TIMEOUT = {"low": 900, "medium": 1200, "high": 1800, "xhigh": 2400,
-                   "max": 3600, "ultra": 3600}
+# xhigh keeps the extended budget formerly given to ultra — creative provers run there now.
+_EFFORT_TIMEOUT = {"low": 900, "medium": 1200, "high": 1800, "xhigh": 3600}
 
 
 def af(ws, *args, timeout=60):
@@ -160,6 +164,8 @@ def overreach_paths(ws=None):
 
 def run_codex(prompt, answer_path, log_path, sandbox="workspace-write", timeout=None,
               effort="xhigh"):
+    if effort not in CODEX_EFFORTS:   # hard cap (2026-07-13): never let ultra/max through
+        effort = EFFORT_CAP
     if timeout is None:
         timeout = _EFFORT_TIMEOUT.get(effort, 1800)
     answer_path = pathlib.Path(answer_path)
@@ -328,15 +334,16 @@ def main(argv):
     ap.add_argument("--no-overreach-guard", action="store_true",
                     help="disable the guard that aborts when a prover writes outside its own "
                          "proofs/<id>/ workspace")
-    # Reasoning-effort tiering (user directive 2026-07-09): highest thinking for truly
-    # creative/demanding conjectures, lower thinking for lower-priority mechanical jobs.
+    # Reasoning-effort tiering (user directive 2026-07-09; amended 2026-07-13: capped at
+    # xhigh — ultra is unstable and spawns subagents indiscriminately): highest allowed
+    # thinking for creative/demanding conjectures, lower for mechanical jobs.
     ap.add_argument("--tier", choices=sorted(TIERS), default="creative",
-                    help="effort preset: creative = prover ultra / verifier xhigh (default); "
+                    help="effort preset: creative = prover xhigh / verifier xhigh (default); "
                          "routine = prover high / verifier high (mechanical elevations)")
     ap.add_argument("--prover-effort", choices=CODEX_EFFORTS, default=None,
-                    help="override the tier's prover reasoning effort")
+                    help="override the tier's prover reasoning effort (capped at xhigh)")
     ap.add_argument("--verifier-effort", choices=CODEX_EFFORTS, default=None,
-                    help="override the tier's verifier reasoning effort")
+                    help="override the tier's verifier reasoning effort (capped at xhigh)")
     a = ap.parse_args(argv)
     prover_effort = a.prover_effort or TIERS[a.tier]["prover"]
     verifier_effort = a.verifier_effort or TIERS[a.tier]["verifier"]
