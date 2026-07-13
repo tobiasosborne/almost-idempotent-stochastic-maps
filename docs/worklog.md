@@ -1034,3 +1034,43 @@ package. Convergent strategic signal: five refuter batches all died at tallness
 and/or the negativity budget — the winning mechanisms must consume H > 16*tau.
 Beads: aism-5wow, aism-3yyz, aism-t20p closed; aism-72zn claimed (creative queue
 continues); follow-ups in HANDOFF. All pushed.
+
+## 2026-07-13 — Session 18 (W65): D-cap decomposed; first full wave under the xhigh effort cap; registry 180 -> 187
+
+User directives: (1) cap codex reasoning effort at xhigh everywhere (ultra
+unstable — spawns subagents indiscriminately); (2) continue attacking the
+Tier-1s with DECOMPOSITION as the objective function.
+
+- Tooling first: effort cap enforced in af-orchestrate.py (CODEX_EFFORTS
+  low..xhigh, EFFORT_CAP, creative tier prover ultra->xhigh, run_codex clamp,
+  xhigh inherits the 3600s timeout), tests red-green 42/42, CLAUDE.md ==
+  AGENTS.md §6 + HANDOFF amended in lockstep (commit 0371dd8).
+- **W65 (aism-72zn): D-cap DECOMPOSED** (docs/waves/2026-07-13-W65-artifacts/):
+  full pipeline strategist-prover (codex xhigh) -> routine prover (codex high,
+  independent) -> batched hostile verifier (codex xhigh, third context) ->
+  transcription codifier (codex high) + orchestrator audit. DCAP-ATTACK-W65.md:
+  7 routine nodes (R0 root closure; B1-B5 kernel-arbitrary chain REDERIVED
+  hypothesis-honestly — no I-cap-scoped lem-icap-* consumed; R1 five-way 1/80
+  priority split) + 5 proper creative leaves (N, G<4, C0, A-esc, T-esc).
+  KEY SHARPENING: lem-hx-robust-scalar-starvation is rank/slab-free once
+  actorized, so the feared higher-rank slab escape == exactly the named A-esc
+  (actorization escape, >3delta from every actual row) + T-esc (rotating
+  scalar tail > delta) completion packages, each with a pinned refuter shape.
+  Assembly gamma_dis = 7c_m/960 conditional; emptiness ceiling explicit.
+- Verdict 7/7 (VERDICT-W65-DCAP-BATCH.md): six VALID + B5
+  VALID-WITH-CORRECTION — the routine prover SELF-FLAGGED the strategy doc's
+  undefined Xi_X in (B5.3) and supplied the (B5.C) inline definition; the
+  hostile verifier independently confirmed it as the unique legal reading and
+  recomputed every constants chain (1/42 census, c_m/768, (2+delta)e_delta,
+  2tau/15 T-spend, c_m/1024 overlap, (3,1,1) starvation call, 7c_m/960).
+  Third genuine defect caught by the multi-context pipeline in two weeks.
+- Codified: seven lem-dcap-* shards, B5 in corrected form (provenance names
+  the correction); INDEX/DAG regenerated; UNWIRED whitelisted; CHANGELOG W65
+  delta (delta on v25); check-all OK at 187 results / 0 errors.
+- Process signal: FIRST wave run entirely at the xhigh cap — deliverable
+  quality on par with the ultra-era W63/W64 waves, zero rework, no subagent
+  sprawl. The 4-role split (strategist / prover / verifier / codifier, all
+  fresh contexts) again caught a real defect before codification.
+- Beads: aism-nrag filed (W65 §4.2 pre-creative L3 decider batch — next);
+  aism-72zn updated (creative order: A-esc, T-esc, G<4, C0, N after deciders).
+  fr: 4 arm-B pulls + 2 orient (session open, effort-cap tooling).
