@@ -272,3 +272,36 @@ has TWO proved reduction layers below the W62 trichotomy. Session-17 registry
 total: 162 -> 180 (+18 proved, all hostile-verified, two verifier-mandated
 corrections caught). Creative queue (aism-72zn continues): D-cap next per the
 W63 order, then X, Sh, W, D, and the W64 six leaves.
+
+## 2026-07-13 — W65 (session 18): D-cap decomposed and its routine batch codified (registry 180 -> 187; delta on v25)
+
+The D-cap leaf `conj-w63-I-disjoint-diagonal-corner-exclusion` (ranked first in
+the W63/W64 creative order; strongest positive mechanism) is DECOMPOSED on the
+proved interface (`docs/waves/2026-07-13-W65-artifacts/DCAP-ATTACK-W65.md`):
+7 routine nodes + 5 proper creative leaves, full pipeline
+strategist-prover(xhigh) -> routine prover(high) -> batched hostile
+verifier(xhigh) with three independent codex contexts — FIRST wave under the
+2026-07-13 effort cap (ultra retired); deliverable quality on par with the
+ultra-era waves. Verdict 7/7: R0/B1/B2/B3/B4/R1 VALID, B5
+VALID-WITH-CORRECTION (Xi_X undefined in the strategy doc's (B5.3);
+routine prover self-flagged it, verifier confirmed the (B5.C) inline
+definition as the unique legal reading). Seven shards installed:
+`lem-dcap-{root-closure, score-bulk-transfer, kernel-bulk-census,
+common-ownership, tall-same-center-packet, closed-overlay,
+five-way-completion-split}` — all status proved (L5; B5 restated per the
+correction, recorded in its provenance; hypothesis-honesty audited: zero
+I-cap-scoped lem-icap-* consumption, B1-B5 rederived kernel-arbitrarily on
+the D-cap class).
+
+Map consequence — the KEY structural sharpening: `lem-hx-robust-scalar-starvation`
+is already rank- and slab-free once actorized, so the feared "higher-rank slab
+escape" of the D cell is NOT a diffuse threat but exactly TWO named completion
+packages with refuter shapes: A-esc (actorization escape: the synthetic
+zero-face displacement stays > 3*delta from every actual row displacement on
+constant D mass) and T-esc (scalar-tail escape: actual actors exist but
+Tail_1(u) > delta rotates with the carrier). D-cap == five proper creative
+leaves N / G<4 / C0 / A-esc / T-esc on the proved five-way 1/80 priority
+split, each targeting Z_v(q_A) >= c_m*tau/64 - (c_m/16)P_v^+(L_v), assembling
+to gamma_dis = 7*c_m/960 with an explicit emptiness ceiling. Creative order
+(W65 §4.3): A-esc, T-esc, G<4, C0, N — with pre-creative L3 decider shapes
+pinned in DCAP-ATTACK-W65.md §4.2. Creative queue (aism-72zn continues).

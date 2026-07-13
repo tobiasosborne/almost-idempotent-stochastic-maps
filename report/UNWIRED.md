@@ -89,6 +89,13 @@ lem-icap-tallness-spend
 lem-icap-closed-diagonal-flow
 lem-icap-type-i-structural-cost
 lem-icap-priority-residual-split
+lem-dcap-root-closure
+lem-dcap-score-bulk-transfer
+lem-dcap-kernel-bulk-census
+lem-dcap-common-ownership
+lem-dcap-tall-same-center-packet
+lem-dcap-closed-overlay
+lem-dcap-five-way-completion-split
 lem-min-a-implies-height
 lem-negative-pivot-import
 lem-optimal-face-alpha-free-characterization
