@@ -305,3 +305,31 @@ split, each targeting Z_v(q_A) >= c_m*tau/64 - (c_m/16)P_v^+(L_v), assembling
 to gamma_dis = 7*c_m/960 with an explicit emptiness ceiling. Creative order
 (W65 §4.3): A-esc, T-esc, G<4, C0, N — with pre-creative L3 decider shapes
 pinned in DCAP-ATTACK-W65.md §4.2. Creative queue (aism-72zn continues).
+
+## 2026-07-14 — W66 (session 19): D-cap five-leaf pre-creative decider batch — ALL BLOCKED, sixth tallness bind (delta on v25; no registry change)
+
+The DCAP-ATTACK-W65.md §4.2 decider program is COMPLETE
+(`runs/2026-07-14-w66-dcap-five-leaf-decider/`, bd aism-nrag; fresh codex
+xhigh worker, exact Fractions, orchestrator-reproduced): all five W65 creative
+leaves BLOCKED in the tested exact families (C0: PARTIAL definition-level
+by-catch), ZERO genuine I-base data, ZERO genuine refuters, and tallness
+(H > 16*tau) binds for the SIXTH consecutive independent exact batch. Both
+mandatory unit tests pass (the W63 diagonal plateau routes to D with M_I = 0,
+M_D = 1023/1024 and fails tallness; the W55 A0=5 completion reproduces its
+exact order-one finance negativity and is rejected, never mislabeled a
+refuter).
+
+Map consequences (evidence-level, L3 — no sketch-node status changes):
+(i) the factorized W63 plateau with its UNIQUE singleton reduced display is
+the first exact LOCAL C0 cell entrant (eta_D*(C0) = 1-2*tau; g/tau ~ 4,
+A ~ 2/tau, ell/tau = 2*tau) — an adverse fixture for the C0 leaf, but its
+leaf-hypothesis antecedent fails (selection not far, omega mass 0, short,
+D_leaf > 0); (ii) NO tested family even reaches the A-esc actorization window
+(ell < tau/2 routes to C0 first) — an A-esc refuter must beat the
+ell >= tau/2 gate on constant D mass while tall; (iii) the T-esc
+residual/tail shape has only ever been exhibited together with order-one
+finance-row negativity — the creative T-esc proof should target exactly this
+incompatibility; (iv) the decisive wall is tallness TOGETHER WITH a legal far
+selected mass and a nonempty ultra omega package. Non-proof green light for
+the creative queue in the W65 §4.3 order (aism-72zn: A-esc, T-esc, G<4, C0,
+N), now fully decider-informed.
