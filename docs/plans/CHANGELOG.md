@@ -366,3 +366,42 @@ ceiling delta <= (3K+19)^(-2) with Tail_1 >= tau/15 — no rank/slab
 hypotheses. Creative order (W67 §4.3): DTR first (best-conditioned target so
 far), its growing-rank decider in parallel, then HES (macroscopic h_u >=
 tau/32 subcase first). Creative queue (aism-72zn continues).
+
+## 2026-07-14 — W68 (session 19): the assembly bridge REPAIRED and the L5-GAP-1 parent registered (registry 192 -> 194 + 1 rewrite; delta on v25)
+
+The 2026-07-10 INVALID verdict on `lem-huddle-charge-assembly` (aism-pus) is
+DISCHARGED by executing its own repair recipe
+(`docs/waves/2026-07-14-W68-artifacts/`): fresh codex xhigh prover -> fresh
+xhigh hostile verifier, 3/3 VALID-WITH-CORRECTION (all corrections
+registry-schema level; zero mathematical defects). Three registry changes:
+
+1. **`conj-l5-gap-1` REGISTERED** (conjecture, no deps — the verifier ruled
+   deps are proof imports, not attack-tree arrows): the dual-face mass
+   minimax, verbatim-consistent with the W54 verdict item 2 and the W62
+   pinned target. The entire W62-W67 reduction tree (lem-l5-*, lem-ihorn-*,
+   lem-icap-*, lem-dcap-*, lem-aesc-*) now has its parent formally in the
+   DAG (relation recorded in the shard body until a reduction lemma actually
+   concludes it).
+2. **`lem-intersection-branch-production` PROVED (L5)**: the previously
+   missing Branch-II implication — the L2-core intersecting-hulls
+   configuration produces either the SL1a-forbidden probability measure
+   (barycenter 2.2*tau, exposer (16/13)*kappa) or the SL1b-forbidden
+   sub-probability measure (mass >= tau/(2+4*delta)) — codified from
+   l2-attack §§2.6-2.7 with a genuine dependency repair: the prose "B5"
+   co-top clause is NOT in lem-intersection-witness-confinement's contract;
+   the proved lem-top-witness-third-actor supplies it (13/16 at c = 4).
+3. **`lem-huddle-charge-assembly` REWRITTEN: stated/DO-NOT-CONSUME ->
+   proved (conditional)**: explicitly conditional two-branch contract on
+   {SL1a, SL1b, cotop-web-coupling, conj-l5-gap-1} with
+   delta_0 = min{delta_a, delta_b, delta_c, delta_5(c_*/2), 1/4,
+   (c_5*c_*/6)^2}; intersection branch via the production lemma; disjoint
+   branch via coupling + L5 at c_m = c_*/2 + lem-top-deficit-price;
+   lem-l2-core-collapse dropped (production works at configuration level);
+   AG-1/AG-2 discharged as real deps (lem-hiddenness-dual-witness +
+   lem-positive-exposedness-margin), not "modulo" prose.
+
+Map consequence: the known broken link between the L5 minimax campaign and
+the SL1a/kernel trunk is CLOSED. The W62-W67 pillar now feeds a proved
+conditional bridge; the four named conjectures (SL1a, SL1b, cotop-web-
+coupling, L5-GAP-1) are the complete conditional surface of the tall
+near-cluster charge. aism-pus CLOSED.

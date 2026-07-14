@@ -42,6 +42,8 @@ conj-zero-face-elimination
 cor-rank-two-visible
 lem-absorption-implies-low-slab-cap
 lem-huddle-charge-assembly
+lem-intersection-branch-production
+conj-l5-gap-1
 lem-low-slab-cap-implies-min-a
 lem-affine-barycenter-identity
 lem-affine-exposer-row-capacity
