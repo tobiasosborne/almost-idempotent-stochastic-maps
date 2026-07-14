@@ -1074,3 +1074,45 @@ Tier-1s with DECOMPOSITION as the objective function.
 - Beads: aism-nrag filed (W65 §4.2 pre-creative L3 decider batch — next);
   aism-72zn updated (creative order: A-esc, T-esc, G<4, C0, N after deciders).
   fr: 4 arm-B pulls + 2 orient (session open, effort-cap tooling).
+
+## 2026-07-14 — Session 19 (W66 + W67 + W68): the D-cap deciders, A-esc decomposed, and the assembly bridge REPAIRED; registry 187 -> 194
+
+User directive: continue attacking the Tier-1s with DECOMPOSITION as the
+objective function. Three full waves, all fresh-codex pipelines, plus a
+mid-session strategic assessment (user asked "are we moving the needle?" —
+answer: yes at the mechanism level, flagged the broken bridge + route fork +
+elevation backlog as the accelerants; then acted on the bridge).
+
+- **W66 (aism-nrag, closed):** five-leaf D-cap L3 decider batch
+  (runs/2026-07-14-w66-dcap-five-leaf-decider/, orchestrator-reproduced,
+  exit 0). ALL BLOCKED; C0 PARTIAL definition-level entrant (first exact
+  local C0 cell, eta_D*(C0) = 1-2*tau); zero refuters; SIXTH consecutive
+  tallness bind; A-esc window never reached; T-esc shape only with order-one
+  finance negativity; both unit tests pass. Green light for the creative
+  queue in W65 §4.3 order.
+- **W67 (aism-72zn, continues):** A-esc DECOMPOSED (AESC-ATTACK-W67.md;
+  strategist xhigh -> independent routine prover high -> batched hostile
+  verifier xhigh). 5/5 (SEP VALID-WITH-CORRECTION: affine functional applied
+  to a displacement, corrected to the linear part — 4th genuine defect
+  caught upstream). Codified lem-aesc-{synthetic-finance-tail-amplification,
+  synthetic-finance-fixed-k, guarded-hull-split, common-tail-union,
+  separation-geography} (187->192). KEY: the starvation engine now prices
+  SYNTHETIC finance rows (hull-near missing actor => Tail_1 > tau/8,
+  tau-scale, rank/slab-free). A-esc == HES + DTR, both with pinned
+  growing-rank refuter shapes and the exact (EC)/E-line accounting.
+- **W68 (aism-pus, closed): the assembly bridge REPAIRED** per the exact
+  2026-07-10 verdict recipe (prover xhigh -> hostile verifier xhigh, 3/3
+  VALID-WITH-CORRECTION, zero mathematical defects; corrections all
+  registry-schema level incl. the deps-semantics ruling now codified in
+  HANDOFF). conj-l5-gap-1 REGISTERED (the W62-W67 tree's formal parent);
+  lem-intersection-branch-production PROVED (L5; prose "B5" honestly
+  replaced by lem-top-witness-third-actor); lem-huddle-charge-assembly
+  stated/DO-NOT-CONSUME -> proved-conditional on exactly {SL1a, SL1b,
+  conj-cotop-web-coupling, conj-l5-gap-1} (192->194). The tall near-cluster
+  charge now has a fully proved conditional chain to four named conjectures.
+
+Sketch superseded v25 -> v26 (2026-07-14-top-down-proof-sketch-v26.md);
+CURRENT.md regenerated; three CHANGELOG deltas; HANDOFF rewritten. Beads:
+aism-nrag, aism-pus closed; aism-72zn continues (DTR next). Pipeline note:
+one stray scratch dir from a path typo was created and removed; workers
+xhigh/high per the effort cap throughout. All pushed.
