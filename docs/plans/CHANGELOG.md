@@ -333,3 +333,36 @@ incompatibility; (iv) the decisive wall is tallness TOGETHER WITH a legal far
 selected mass and a nonempty ultra omega package. Non-proof green light for
 the creative queue in the W65 §4.3 order (aism-72zn: A-esc, T-esc, G<4, C0,
 N), now fully decider-informed.
+
+## 2026-07-14 — W67 (session 19): A-esc decomposed and its routine batch codified (registry 187 -> 192; delta on v25)
+
+The A-esc leaf `conj-w65-dcap-actorization-escape-exclusion` (first in the W65
+§4.3 creative order) is DECOMPOSED on the proved interface
+(`docs/waves/2026-07-14-W67-artifacts/AESC-ATTACK-W67.md`), full pipeline
+strategist(xhigh) -> independent routine prover(high) -> batched hostile
+verifier(xhigh), three codex contexts. Verdict 5/5: SF, SF-K, HS, TU VALID;
+SEP VALID-WITH-CORRECTION (the strategist applied an affine functional to a
+displacement; corrected to the linear part — 4th genuine defect caught
+upstream of codification). Five shards installed: `lem-aesc-{synthetic-
+finance-tail-amplification, synthetic-finance-fixed-k, guarded-hull-split,
+common-tail-union, separation-geography}` — all proved (L5; SEP in corrected
+form, correction named in provenance).
+
+Map consequence — the KEY mechanism extension: the starvation engine now
+prices SYNTHETIC finance rows. On the A-esc window, if the missing actor
+x_u = p_u - A~_u(q~_u - p_u) is within 3*delta of the row HULL K(P) (not of
+any actual row), then Tail_1(u) > tau/8 — a tau-scale cost, rank- and
+slab-free, consuming only rP = r, mass 1, nu(r) <= delta and
+lem-hx-transverse-moment-identity. With the guarded hull split (1/160) and
+the one-foldback tail union (P_f*^+(U_tail) > tau/2560), A-esc == exactly TWO
+strictly smaller creative residuals: HES (hull-exterior separator
+synchronization; refuter = growing-rank rotating-separator crown) and DTR
+(diffuse-tail ray conversion; refuter = growing-rank tall completion with
+rotating incidence, distributing W55's order-one finance negativity). Both
+target the stronger same-center inequality (EC) with the exact E line
+(c_m*tau/64 at p_f*) and the shallow subtraction before B4. Fixed-K fallback:
+assuming an actor residual <= K*delta on 1/160 mass REMOVES A-esc at explicit
+ceiling delta <= (3K+19)^(-2) with Tail_1 >= tau/15 — no rank/slab
+hypotheses. Creative order (W67 §4.3): DTR first (best-conditioned target so
+far), its growing-rank decider in parallel, then HES (macroscopic h_u >=
+tau/32 subcase first). Creative queue (aism-72zn continues).

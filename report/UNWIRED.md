@@ -96,6 +96,11 @@ lem-dcap-common-ownership
 lem-dcap-tall-same-center-packet
 lem-dcap-closed-overlay
 lem-dcap-five-way-completion-split
+lem-aesc-synthetic-finance-tail-amplification
+lem-aesc-synthetic-finance-fixed-k
+lem-aesc-guarded-hull-split
+lem-aesc-common-tail-union
+lem-aesc-separation-geography
 lem-min-a-implies-height
 lem-negative-pivot-import
 lem-optimal-face-alpha-free-characterization
