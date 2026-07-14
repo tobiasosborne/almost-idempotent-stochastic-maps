@@ -1116,3 +1116,34 @@ CURRENT.md regenerated; three CHANGELOG deltas; HANDOFF rewritten. Beads:
 aism-nrag, aism-pus closed; aism-72zn continues (DTR next). Pipeline note:
 one stray scratch dir from a path typo was created and removed; workers
 xhigh/high per the effort cap throughout. All pushed.
+
+## 2026-07-14 — Session 20 (W69, wind-up): route fork decided ROUTE A; the DTR pair banked
+
+Short wind-up session (user: "no strong feeling about the H-X fork; continue
+work", then "wind up gracefully").
+
+- **Route fork aism-ur9 DECIDED: ROUTE A** (codex named-H-X via
+  X2/X3F/X3N/X4), strategist decision under explicit user delegation.
+  Rationale on the issue: no surface change (Route B needs strengthened
+  sibling burdens + sign-off), decider-informed (W61: X2 unrefuted at
+  tallness; Route-B ledger-only N5(ii) close dead). Route B = recorded
+  fallback; issue stays open as the Route A execution item.
+- **W69 DTR pair** (per AESC-ATTACK-W67 §4.3, both fresh codex xhigh):
+  - Decider BANKED (runs/2026-07-14-w69-dtr-growing-rank-decider/,
+    orchestrator-reproduced exit 0): PARTIAL — growing rank (certified 4..32)
+    realizes the local DTR geometry with exactly ZERO finance negativity
+    (local D_EC = -7/64 < 0; the finance-distribution threat is real
+    locally), but every global gate fails by exact rank-uniform margins (R0
+    ownership excess 1/8, H/tau = 0, shallow mass 1, empty ultra omega),
+    D_leaf > 0 throughout, and no margin improves with rank. Zero entrants,
+    zero refuters. Take-away: the DTR proof must price root-to-top
+    synchronization, not local negativity.
+  - Attack BANKED RAW (docs/waves/2026-07-14-W69-artifacts/DTR-ATTACK-W69.md,
+    objective (c), UNVERIFIED): DTR reduced to the named POTI problem
+    (pinned-deficit oriented-tail-incidence) via the canonical overlap
+    rho = min{m_A, eta_D*|_B} and the claimed conversion S*Z_v(q_A) >= G_phi;
+    residuals POTI-0/POTI(+); actor-free weakened conversion with exact
+    loss. Downstream pipeline filed as aism-cmk0 (FIRST next session).
+
+CHANGELOG W69 delta appended; HANDOFF updated (session-20 block + W70+ queue);
+no registry change this session (still 194, T0 34, sketch v26). All pushed.

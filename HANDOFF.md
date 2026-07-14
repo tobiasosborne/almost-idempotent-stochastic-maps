@@ -27,7 +27,36 @@ TRIGGER: session close, or a material change in the current frontier / next task
    `export` before push.
 5. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-14, session 19 — W66+W67+W68 banked)
+## Current state (2026-07-14, session 20 close — W69 pair banked; session 19 = W66+W67+W68)
+
+**Session 20 (wind-up):** the H-X route fork **aism-ur9 is DECIDED: ROUTE A**
+(codex named-H-X via X2/X3F/X3N/X4) — strategist decision under explicit user
+delegation ("no strong feeling"); rationale on the issue (no surface change +
+decider-informed; Route B = recorded fallback); the issue stays open as the
+Route A execution item. Then the W69 DTR pair (AESC-ATTACK-W67 §4.3):
+
+- **W69 decider (runs/2026-07-14-w69-dtr-growing-rank-decider/, L3,
+  orchestrator-reproduced):** PARTIAL — the sharpest decider finding to date:
+  growing rank (certified 4..32) realizes the LOCAL DTR geometry with exactly
+  ZERO finance negativity (rank really distributes W55's cost; local
+  D_EC < 0), but every GLOBAL gate fails by exact rank-uniform margins (R0
+  ownership excess 1/8, H/tau = 0, shallow mass 1, empty ultra omega) and
+  D_leaf > 0 throughout; NO margin improves with rank. Zero entrants/refuters.
+  **Creative implication: the DTR proof must price root-to-top
+  synchronization, not local negativity.**
+- **W69 attack (docs/waves/2026-07-14-W69-artifacts/DTR-ATTACK-W69.md,
+  banked RAW, objective (c), UNVERIFIED):** DTR reduced to the named **POTI**
+  problem (pinned-deficit oriented-tail-incidence) via the canonical root/top
+  overlap rho = min{m_A, eta_D*|_B} and the claimed-routine conversion
+  S*Z_v(q_A) >= G_phi (POTI-R); two proper residuals POTI-0/POTI(+) + an
+  actor-free weakened conversion with exact loss. **NOTHING verified yet —
+  the downstream pipeline is bd `aism-cmk0` (FIRST TASK NEXT SESSION):**
+  independent routine prover (high) on the routine batch incl. POTI-R,
+  batched hostile verifier (xhigh), codifier + orchestrator audit,
+  CHANGELOG/sketch reconciliation. Circularity guard stands: the repaired
+  bridge is NOT consumable inside the DTR tree.
+
+## Session-19 state (registry 194, sketch v26 — unchanged below)
 
 **Rigorous (af-validated, T0): 34. Registry: 194 (+7 proved L5 + 1 conjecture
 registered + 1 rewrite this session, all fresh-codex hostile-verified).**
@@ -75,16 +104,17 @@ HES/DTR (W67, replacing A-esc). Unchanged fronts: H-X route fork (aism-ur9,
 USER DECISION), H-D, H-I, SL1b, L6.5, E1-E5, small-gauge bridge,
 af-elevation queue (aism-88r).
 
-## Next steps (ranked) — W69+
+## Next steps (ranked) — W70+
 
-0. **DTR creative attack (aism-72zn)** — W67 §4.3 order: one root, one
-   canonical common receiver set, tau/2560 floor, one B4 center, one top
-   ray; target is the exact (EC) line, not a ledger. Run its growing-rank
-   L3 decider IN PARALLEL (shapes pinned in AESC-ATTACK-W67.md §4.2:
-   D_EC and D_leaf diagnostics are NOT interchangeable). Then HES
-   (macroscopic h_u >= tau/32 subcase first).
-1. **The route fork (aism-ur9, USER DECISION, decider-informed since W60)**
-   — Route A (codex named-H-X) vs Route B (Fable gamma-renegotiation).
+0. **aism-cmk0 (FIRST): the W69 downstream pipeline** — routine-prove +
+   batched hostile-verify + codify DTR-ATTACK-W69.md (the POTI-R conversion
+   is the highest-value hostile check: it claims exact row reproduction +
+   mass-barycenter dualization + an attained ray certificate produce
+   S*Z_v(q_A) >= G_phi); then HES (macroscopic h_u >= tau/32 subcase first).
+1. **Route A execution (aism-ur9, DECIDED 2026-07-14):** stand up the named
+   H-X wave — X2 microfreight exclusion (prove-or-refute; the W61 graft
+   fixture is the refuter shape), X3F/X3N far/near actor selection, X4
+   top-tail regularization; all consume the T0 engine bank.
 2. **af-elevation queue (aism-88r):** prime candidates:
    lem-aesc-synthetic-finance-tail-amplification (engine-adjacent, single
    minimal contract), lem-intersection-branch-production (bridge-critical),
