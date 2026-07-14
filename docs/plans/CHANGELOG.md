@@ -405,3 +405,31 @@ the SL1a/kernel trunk is CLOSED. The W62-W67 pillar now feeds a proved
 conditional bridge; the four named conjectures (SL1a, SL1b, cotop-web-
 coupling, L5-GAP-1) are the complete conditional surface of the tall
 near-cluster charge. aism-pus CLOSED.
+
+## 2026-07-14 — W69 (session 20): the DTR pair — POTI reduction banked raw + the growing-rank decider (delta on v26; no registry change)
+
+Session 20 (wind-up session): the route fork aism-ur9 was decided ROUTE A
+(codex named-H-X) by the strategist under explicit user delegation ("no
+strong feeling"; rationale on the issue: no surface change + decider-informed;
+Route B recorded as fallback). Then the DTR pair per AESC-ATTACK-W67 §4.3:
+
+- **W69 decider (runs/2026-07-14-w69-dtr-growing-rank-decider/, L3,
+  reproduced):** PARTIAL — the sharpest decider finding to date. Growing rank
+  (certified 4..32, no clones/transients) DOES realize the local DTR geometry
+  with exactly ZERO finance negativity (local D_EC = -7/64 < 0): the feared
+  finance-distribution mechanism is real locally. But every GLOBAL gate fails
+  by exact rank-uniform margins (R0 ownership excess exactly 1/8; H/tau = 0;
+  shallow mass 1; empty ultra omega), D_leaf > 0 at every rank, and NO gate
+  margin improves with rank. Zero entrants, zero refuters. Creative
+  implication: DTR's proof must price global root-to-top synchronization,
+  not local negativity.
+- **W69 attack (DTR-ATTACK-W69.md, banked RAW — objective (c), UNVERIFIED):**
+  DTR reduced to the named **pinned-deficit oriented-tail-incidence problem
+  (POTI)** via the canonical root/top overlap rho = min{m_A, eta_D*|_B} (not
+  the B5 overlay) and the oriented tail charge G_phi; the claimed-routine
+  inequality S*Z_v(q_A) >= G_phi (POTI-R) converts oriented tail incidence
+  into the top ray, splitting DTR into two proper residuals POTI-0 /
+  POTI(+), plus a quantitative ACTOR-FREE weakened conversion with exact
+  loss and separate D_POTI / D_EC / D_leaf decider targets. NOTHING in this
+  doc is verified: the routine batch (incl. POTI-R) awaits the independent
+  prover + batched hostile verifier (bd aism-cmk0) before any codification.
