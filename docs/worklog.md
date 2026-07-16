@@ -1147,3 +1147,51 @@ work", then "wind up gracefully").
 
 CHANGELOG W69 delta appended; HANDOFF updated (session-20 block + W70+ queue);
 no registry change this session (still 194, T0 34, sketch v26). All pushed.
+
+## 2026-07-16 — Session 21 (W70 + W71 + W72): DTR/POTI verified and codified; the ownership trade-off law; POTI-0 decomposed (verification pending)
+
+User directive: continue attacking the Tier-1s with DECOMPOSITION as the
+objective function. Three waves, all fresh-codex pipelines on arm B.
+
+- **W70 (aism-cmk0, CLOSED):** the W69 DTR->POTI reduction VERIFIED and
+  codified. Routine prover (high) -> batched hostile verifier (xhigh):
+  **4/4 VALID, ZERO corrections — the cleanest batch verdict of the
+  campaign** (the verifier discharged the two highest-risk checks: the
+  z-scope is lem-top-deficit-price's literal scope at EVERY row index, and
+  the dualization is literally about the un-normalized m_A). Codifier
+  (high) + orchestrator audit: registry 194 -> 200 — lem-dtr-{canonical-
+  overlap, oriented-tail-ray-conversion (S*Z_v(q_A) >= G_phi),
+  tail-coherent-conversion (the first PROVED quantitatively weakened
+  theorem on the A-esc front, actor-free, exact loss), poti-assembly
+  (conditional exact (EC) + strict 7*c_m*tau/960)} + registered
+  conj-dtr-{zero-oriented-surplus, positive-oriented-surplus-gap}-
+  exclusion. Diagnostics proved ORDERED (D_leaf >= D_EC >= D_POTI/S).
+  Sketch v27 (absorbs Route A decision too); CHANGELOG; CURRENT.
+- **W71 (banked):** the POTI-0 zero-overlap growing-rank decider
+  (runs/2026-07-16-w71-poti0-zero-overlap-decider/, xhigh, orchestrator-
+  reproduced exit 0): BLOCKED — 0 entrants/refuters; headline = the exact
+  trade-off law max_i nu(P_i) = beta*a: R0 root ownership (beta >= 1/8)
+  exactly incompatible with the negativity gate (beta <= tau^2/a) at every
+  rank and tau — the ownership repair cost -> 1/8, NOT rank-distributable
+  (inverts W69 one level up). Support disjointness only OUTSIDE the gate;
+  orientation starvation never reached; SEVENTH consecutive tallness bind;
+  the proved W70 orderings pass exactly (D_EC = D_POTI/S throughout).
+- **W72 (aism-x0up, continues):** POTI-0 DECOMPOSED
+  (POTI0-ATTACK-W72.md, strategist xhigh, objectives (a)+(c)): POTI-0 ==
+  [S0 exact cause split] + [RX zero-overlap exchange ledger, exact price
+  sigma_B >= w_*M_B - e_delta] + [O48 fixed-level starvation ledger, one
+  new legal foldback on the public slab V_48] + TWO disjoint creative
+  residuals RDSE (rho(1)=0; escape = selected-root dilution w_*->0) and
+  LDHR-48 (orientation starvation; escape = r=O(tau) or rotating huddle).
+  KEY negative: the W71 law is FAMILY-SPECIFIC — the whole-class escape is
+  w_* dilution, unbounded below on the pinned interface. Routine batch
+  proved standalone by an independent prover (appendix banked, zero
+  self-reported defects); **the batched hostile verifier was INTERRUPTED
+  (background task stopped) before producing a verdict — the batch is
+  UNVERIFIED and nothing is codified.** Re-dispatch = first task next
+  session (brief committed).
+
+Waves logged (fr): W70 progress, W71 progress, W72 progress (unverified) —
+all EXPLOIT B. aism-cmk0 closed; aism-x0up filed/claimed (the post-DTR
+surface). No af orchestration this session (elevation queue aism-88r
+untouched; L5:T0 now ~66:34 and rising — flag for priority). All pushed.
