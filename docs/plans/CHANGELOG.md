@@ -433,3 +433,32 @@ Route B recorded as fallback). Then the DTR pair per AESC-ATTACK-W67 §4.3:
   loss and separate D_POTI / D_EC / D_leaf decider targets. NOTHING in this
   doc is verified: the routine batch (incl. POTI-R) awaits the independent
   prover + batched hostile verifier (bd aism-cmk0) before any codification.
+
+## 2026-07-16 — v27 / W70 (session 21): the DTR/POTI routine batch VERIFIED and codified (registry 194 -> 200)
+
+The aism-cmk0 pipeline ran end-to-end on DTR-ATTACK-W69.md: fresh routine
+prover (gpt-5.6-sol, high) -> fresh batched hostile verifier (gpt-5.6-sol,
+xhigh) -> fresh transcription codifier (high) + orchestrator audit.
+**VERDICT-W70-DTR-BATCH.md: 4/4 VALID, ZERO corrections — the cleanest
+batch verdict of the campaign.** The verifier explicitly discharged the two
+highest-risk checks: the pinned-deficit bounds 0 <= z <= D_0 hold at EVERY
+row index (lem-top-deficit-price's literal scope — not an extension), and
+lem-l5-mass-barycenter-dualization is literally about the un-normalized
+m_A (no hidden renormalization).
+
+Codified (six shards, W68 deps-semantics):
+- lem-dtr-canonical-overlap (COV, proved L5)
+- lem-dtr-oriented-tail-ray-conversion (POTI-R, proved L5): S*Z_v(q_A) >= G_phi
+- lem-dtr-tail-coherent-conversion (TC, proved L5) — the first PROVED
+  quantitatively weakened theorem on the A-esc front (actor-free, exact
+  loss r_0*alpha*lambda/(16S))
+- lem-dtr-poti-assembly (proved L5, conditional; conclusion not consumable
+  unconditionally)
+- conj-dtr-zero-oriented-surplus-exclusion (POTI-0, registered open)
+- conj-dtr-positive-oriented-surplus-gap-exclusion (POTI+, registered open)
+
+Map consequence: **DTR == POTI-0 + POTI+ through a proved conditional
+chain**; the A-esc creative surface is now HES + POTI-0 + POTI+, each
+strictly smaller than its predecessor; the diagnostics D_POTI/D_EC/D_leaf
+are proved ordered. Sketch v27 created (Tier-1 leaf set changed + absorbs
+the session-20 Route A decision); CURRENT.md regenerated.
