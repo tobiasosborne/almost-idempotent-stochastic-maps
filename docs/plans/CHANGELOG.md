@@ -481,3 +481,25 @@ Support disjointness (rho(1) = G_phi = 0) was reached only OUTSIDE the
 gate; orientation starvation never reached. The proved W70 orderings pass
 exactly on every certified instance (D_EC = D_POTI/S throughout). Tier-1
 leaf set unchanged (POTI-0/POTI+/HES); v27 stands.
+
+## 2026-07-16 — W72 single-wave delta (session 21): POTI-0 attack banked RAW; routine batch proved standalone; verification INTERRUPTED (no sketch bump)
+
+docs/waves/2026-07-16-W70-artifacts/POTI0-ATTACK-W72.md (fresh codex
+strategist xhigh, objectives (a)+(c)): POTI-0 == [S0 exact cause split
+rho(1)=0 vs orientation starvation] + [RX root-selection exchange ledger —
+the exact zero-overlap price sigma_B >= w_*M_B - e_delta] + [O48 fixed-level
+starvation ledger — every overlapped carrier forces > tau/16 tail mass into
+the single public slab {z < 48*tau}, folded to the top row with one new
+legal foldback] + TWO named disjoint proper-subclass creative residuals:
+RDSE (root-dilution selected-support exchange, owns rho(1)=0; exact escape
+= selected-root dilution w_*->0, unbounded below on the pinned interface)
+and LDHR-48 (low-deficit huddle ray, owns starvation; exact escape =
+r=O(tau) or a rotating near-top huddle). KEY negative: the W71 order-one
+ownership law is FAMILY-SPECIFIC, not the general mechanism. The routine
+batch (S0/RX/O48/ASM2) was proved standalone by an independent fresh prover
+(APPENDIX-W72-poti0-proofs.md); the batched hostile verifier was
+INTERRUPTED before producing a verdict — the batch is UNVERIFIED and
+NOTHING is codified. The sketch is NOT bumped: POTI-0 == RDSE + LDHR-48
+becomes a map change only when the verdict lands (first task next session,
+brief committed: BRIEF-W72-POTI0-VERIFIER.md). Tier-1 leaf set formally
+unchanged (POTI-0/POTI+/HES); v27 stands.
