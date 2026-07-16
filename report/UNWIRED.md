@@ -103,6 +103,12 @@ lem-aesc-synthetic-finance-fixed-k
 lem-aesc-guarded-hull-split
 lem-aesc-common-tail-union
 lem-aesc-separation-geography
+lem-dtr-canonical-overlap
+lem-dtr-oriented-tail-ray-conversion
+lem-dtr-tail-coherent-conversion
+lem-dtr-poti-assembly
+conj-dtr-zero-oriented-surplus-exclusion
+conj-dtr-positive-oriented-surplus-gap-exclusion
 lem-min-a-implies-height
 lem-negative-pivot-import
 lem-optimal-face-alpha-free-characterization
