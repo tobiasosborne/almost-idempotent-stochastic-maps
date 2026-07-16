@@ -462,3 +462,22 @@ chain**; the A-esc creative surface is now HES + POTI-0 + POTI+, each
 strictly smaller than its predecessor; the diagnostics D_POTI/D_EC/D_leaf
 are proved ordered. Sketch v27 created (Tier-1 leaf set changed + absorbs
 the session-20 Route A decision); CURRENT.md regenerated.
+
+## 2026-07-16 — W71 single-wave delta (session 21): the POTI-0 zero-overlap decider — BLOCKED with an exact ownership trade-off law (no sketch bump; L3 only)
+
+runs/2026-07-16-w71-poti0-zero-overlap-decider/ (fresh codex xhigh,
+orchestrator-reproduced exit 0): 0 entrants, 0 POTI-0 refuters, 0 POTI+
+window entrants; SEVENTH consecutive tallness bind. Headline: in the exact
+anchor/probe growing-rank family the trade-off law max_i nu(P_i) = beta*a
+makes R0 root ownership (beta >= 1/8) and the negativity gate
+(beta <= tau^2/a) exactly incompatible at every rank and tau — the
+root-ownership repair cost tends to 1/8 and does NOT distribute with rank.
+This inverts W69 one level up (local DTR geometry free; ROOT OWNERSHIP
+order-one) and names the creative target for the POTI-0 attack: prove that
+carrier ownership + the delta negativity budget force either positive
+canonical overlap (rho(1) > 0) or an order-one cost — the root-to-top
+synchronization price, now with an exact family witnessing the mechanism.
+Support disjointness (rho(1) = G_phi = 0) was reached only OUTSIDE the
+gate; orientation starvation never reached. The proved W70 orderings pass
+exactly on every certified instance (D_EC = D_POTI/S throughout). Tier-1
+leaf set unchanged (POTI-0/POTI+/HES); v27 stands.
