@@ -503,3 +503,61 @@ NOTHING is codified. The sketch is NOT bumped: POTI-0 == RDSE + LDHR-48
 becomes a map change only when the verdict lands (first task next session,
 brief committed: BRIEF-W72-POTI0-VERIFIER.md). Tier-1 leaf set formally
 unchanged (POTI-0/POTI+/HES); v27 stands.
+
+## 2026-07-23 — v28 (W73 + W73b + W74F wave 1): a SECOND, independent route enters the map
+
+Three sessions' worth of state that v27 never absorbed, plus the wave that
+follows from it.
+
+**W73 (strategy reset).** A user-mandated fresh-perspective session (6 repo
+summarizers + 3 literature researchers + 4 independent codex xhigh
+strategists) produced two things v27 does not contain: (i) the confirmation
+that op-classical is posed as OPEN in the 2024-25 literature, with Kitaev
+(arXiv:2405.02434) identifying the same mechanism and proving an adjacent
+dimension-free factorization theorem, and SBD (arXiv:2405.01532) proving the
+sharp dimension-free sqrt(eps) repair for the classical FIXED-POINT sibling;
+(ii) **Route F** — an architecture two strategists converged on
+independently, which bypasses the entire signed-geometry trunk (no exposed
+hulls, hidden vertices, charts, heights, no Kernel/(EX)). Both papers are now
+ingested and pinned under refs/ (aism-5de).
+
+**W73b (the decisive audit).** A fresh hostile codex auditor, source-first
+against the byte-verified tex: Q1 VALID (the imported statement is exactly
+what Route F needs, incl. tensor-extended multiplicativity and the map
+orientations), Q2 VALID-WITH-CORRECTIONS (universality explicitly claimed
+and enforced by design, constants never extracted), **Q3 INVALID** (the
+printed proof of th_factorization uses a FALSE direct-sum diagonal formula at
+tex:1254 / tex:2780-2783 — exact C+C counterexample — and rests on
+th_main_ext, whose amplified proof is outline-level at tex:1542-1557), Q4
+VALID (the cb-lift identity F0, both directions), Q5 VALID (all F2-F3
+constants re-derived). Two findings matter more than the headline: the real
+flaw is SMALLER than the sibling repo's C14 diagnosis (the auditor PROVED the
+positivity argument entrywise given an exact central diagonal, and supplied an
+elementary Haar / phase-balanced repair; lem_RC and the Upsilon' construction
+survive fully), and the PRINCIPAL BLOCKER is th_main_ext, not the diagonal.
+Residual risk register: (1) th_main_ext at amplified strength; (2) a universal
+constant ledger; (3) the exact whole-algebra diagonal repair + use-site
+recheck; (4) no unproved cone-projection shortcut; (5) full audit of
+th_almost_idemp (tex:2239-2723); (6) PRH standalone; (7) provenance closure.
+
+**W74F wave 1 (2026-07-23, user directive: concerted effort on Route F).**
+Four fresh codex gpt-5.6-sol xhigh workers, one per disjoint register item,
+briefs committed: W74F-A PRH proof (item 6, aism-6m8v) · W74F-B diagonal
+repair + use-site ledger (items 3+4, aism-0m77) · W74F-C **decomposition** of
+th_main_ext + universality ledger (items 1+2, aism-2r3m) · W74F-D per-block
+audit of th_almost_idemp (item 5, aism-7gqw). Epic aism-enze. All are
+prover/auditor output; a batched hostile verification pass gates codification.
+
+**Map changes in v28:** Route F added as a second candidate route with
+per-step statuses (F0/F2/F3/F5 audit-VALID *conditional on* F1; F1's printed
+proof invalid; F4/PRH unverified); the residual register installed as the new
+Tier-1 face; **PRH named as the load-bearing independent asset** — it
+establishes op-classical <= "a positive approximate retract exists" whether or
+not the Kitaev import ever closes; Route X (RTS / APAL / QCMP) registered as
+the in-repo fallback shape with the carrier lemma as its engine; RDSE/LDHR-48
+creative attacks PAUSED (user directive; the strategists' altitude diagnosis
+is the stated reason and is itself unverified); the W72 verification debt
+carried forward explicitly.
+
+**Promotes nothing.** Registry unchanged at 200, T0 at 34. Route F is a
+CONDITIONAL reduction whose sole large import has an INVALID-as-printed proof.
