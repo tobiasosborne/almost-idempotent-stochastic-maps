@@ -1,31 +1,107 @@
 {
-  "_comment": "Reproducible reconstruction manifest for refs/. fetch!=null => byte-reproducible from the pinned arXiv id (verified: the recorded bytes were byte-matched against the official arXiv source this session); fetch==null => content-addressed cache only ($EXTPROP_REFS_CACHE/<sha256>). Hashes are authoritative (== refs/manifest/checksums.sha256). Keep in sync with checksums.sha256; rebuild the payload with `python3 scripts/fetch-refs.py`.",
-  "arxiv_verified": [
-    "2007.11433"
-  ],
-  "files": [
-    {
-      "path": "baake-sumner-2007.11433/equal-fin.tex",
-      "sha256": "f358c71c066293f80c1f2cebd1bfb6b46489bf25320bccef7c5ec6b464b3aa01",
-      "source_id": "baake-sumner-2007.11433",
-      "fetch": {
-        "kind": "arxiv-eprint-member",
-        "id": "2007.11433"
-      }
-    },
-    {
-      "path": "hognas-mukherjea/hognas-mukherjea-2011.pdf",
-      "sha256": "d74844072a1b96a29acbae5586e42c641fcc17721f55b89184b95dbcf25fa649",
-      "source_id": "hognas-mukherjea",
-      "fetch": null,
-      "note": "cache-only; acquire manually — copyrighted Springer book (2nd ed. 2011), no public reproducible source. User-supplied PDF; restore from $EXTPROP_REFS_CACHE/<sha256>."
-    },
-    {
-      "path": "hognas-mukherjea/hognas-mukherjea-2011.txt",
-      "sha256": "ac5e74eb1c346c249632a53442b8015e736753973e5262c9fb09077359f30885",
-      "source_id": "hognas-mukherjea",
-      "fetch": null,
-      "note": "cache-only; acquire manually — local `pdftotext -layout` extraction of the copyrighted book (greppable loci; byte-quote against this .txt). Not fetch-reproducible."
-    }
-  ]
+ "_comment": "Reproducible reconstruction manifest for refs/. fetch!=null => byte-reproducible from the pinned arXiv id (verified: the recorded bytes were byte-matched against the official arXiv source this session); fetch==null => content-addressed cache only ($EXTPROP_REFS_CACHE/<sha256>). Hashes are authoritative (== refs/manifest/checksums.sha256). Keep in sync with checksums.sha256; rebuild the payload with `python3 scripts/fetch-refs.py`.",
+ "arxiv_verified": [
+  "2007.11433",
+  "2405.02434",
+  "2405.01532"
+ ],
+ "files": [
+  {
+   "path": "baake-sumner-2007.11433/equal-fin.tex",
+   "sha256": "f358c71c066293f80c1f2cebd1bfb6b46489bf25320bccef7c5ec6b464b3aa01",
+   "source_id": "baake-sumner-2007.11433",
+   "fetch": {
+    "kind": "arxiv-eprint-member",
+    "id": "2007.11433"
+   }
+  },
+  {
+   "path": "hognas-mukherjea/hognas-mukherjea-2011.pdf",
+   "sha256": "d74844072a1b96a29acbae5586e42c641fcc17721f55b89184b95dbcf25fa649",
+   "source_id": "hognas-mukherjea",
+   "fetch": null,
+   "note": "cache-only; acquire manually \u2014 copyrighted Springer book (2nd ed. 2011), no public reproducible source. User-supplied PDF; restore from $EXTPROP_REFS_CACHE/<sha256>."
+  },
+  {
+   "path": "hognas-mukherjea/hognas-mukherjea-2011.txt",
+   "sha256": "ac5e74eb1c346c249632a53442b8015e736753973e5262c9fb09077359f30885",
+   "source_id": "hognas-mukherjea",
+   "fetch": null,
+   "note": "cache-only; acquire manually \u2014 local `pdftotext -layout` extraction of the copyrighted book (greppable loci; byte-quote against this .txt). Not fetch-reproducible."
+  },
+  {
+   "path": "kitaev-2405.02434/approximate_algebras.tex",
+   "sha256": "e7eb512a2ec2438d139c581fe48c017a6ffdc87c37f6fa7492159b757a9a9acb",
+   "source_id": "kitaev-2405.02434",
+   "fetch": {
+    "kind": "arxiv-eprint-member",
+    "id": "2405.02434"
+   }
+  },
+  {
+   "path": "kitaev-2405.02434/source.tar.gz",
+   "sha256": "aed5b4c9ba0d62143ad5db70c3210fe35dfac3f6cc8021b6125ad1da4040c38c",
+   "source_id": "kitaev-2405.02434",
+   "fetch": {
+    "kind": "arxiv-eprint",
+    "id": "2405.02434"
+   },
+   "note": "the full e-print bundle; byte-identical to https://arxiv.org/e-print/2405.02434 (verified 2026-07-23)"
+  },
+  {
+   "path": "salzmann-bergh-datta-2405.01532/2405.01532.tar.gz",
+   "sha256": "2ed2319f598376ed0d09333ff30877741c04a8c3521be4bbebec70c7ce896b75",
+   "source_id": "salzmann-bergh-datta-2405.01532",
+   "fetch": {
+    "kind": "arxiv-eprint",
+    "id": "2405.01532"
+   },
+   "note": "downloaded directly from arXiv 2026-07-23"
+  },
+  {
+   "path": "salzmann-bergh-datta-2405.01532/main.tex",
+   "sha256": "a378b33b789874178d5a5ee0f80972f737f7e001d0a0ce2cb0e728456e00198f",
+   "source_id": "salzmann-bergh-datta-2405.01532",
+   "fetch": {
+    "kind": "arxiv-eprint-member",
+    "id": "2405.01532"
+   }
+  },
+  {
+   "path": "salzmann-bergh-datta-2405.01532/FixedPoints.tex",
+   "sha256": "d4d1e6f9d2afd837c840731b984e40163a0e3c2d0ff0c97c004d96ed06f5140a",
+   "source_id": "salzmann-bergh-datta-2405.01532",
+   "fetch": {
+    "kind": "arxiv-eprint-member",
+    "id": "2405.01532"
+   }
+  },
+  {
+   "path": "salzmann-bergh-datta-2405.01532/Definitions_and_Setup.tex",
+   "sha256": "7d5e9c0334393c0d675ee8931e94f4af951cd72d985f07fe636ff5dc9ab9f99b",
+   "source_id": "salzmann-bergh-datta-2405.01532",
+   "fetch": {
+    "kind": "arxiv-eprint-member",
+    "id": "2405.01532"
+   }
+  },
+  {
+   "path": "salzmann-bergh-datta-2405.01532/Preliminaries.tex",
+   "sha256": "9b101282e2a0bfb102727358721dc1dc57109b049296da6403707e4330868052",
+   "source_id": "salzmann-bergh-datta-2405.01532",
+   "fetch": {
+    "kind": "arxiv-eprint-member",
+    "id": "2405.01532"
+   }
+  },
+  {
+   "path": "salzmann-bergh-datta-2405.01532/Introduction.tex",
+   "sha256": "38a3331f0e11cf2fd9fa01862aea6f3326ac5d86f3225f3acaa8f3db0ba8779b",
+   "source_id": "salzmann-bergh-datta-2405.01532",
+   "fetch": {
+    "kind": "arxiv-eprint-member",
+    "id": "2405.01532"
+   }
+  }
+ ]
 }
