@@ -64,23 +64,26 @@ produced strategy, an audit verdict, and dispatched provers, not registry result
   `refs/kitaev-2405.02434/approximate_algebras.tex` (SHA256 `e7eb512a…`) and
   `refs/salzmann-bergh-datta-2405.01532/`.
 
-### W74-F wave 1 — IN FLIGHT at session write-time
+### W74-F wave 1 — DONE and hostile-verified 4/4
 
-Four fresh codex `gpt-5.6-sol` **xhigh** workers, one per disjoint item of the residual
-risk register; briefs committed under `docs/plans/2026-07-23-W74F-artifacts/`; epic
-**aism-enze** (P0):
+Four fresh codex `gpt-5.6-sol` **xhigh** workers, one per disjoint register item (epic
+**aism-enze** P0; all four issues now CLOSED), then a single fresh **batched hostile
+verifier** over the whole batch (`VERDICT-W74F-BATCH.md`, tex SHA re-checked, W73b audit
+not treated as an oracle): **A · B · C · D all VALID, no correction required to any
+target.** Artifacts under `docs/plans/2026-07-23-W74F-artifacts/`:
 
-| wave | register item | issue | output file (in the same dir) |
-|---|---|---|---|
-| W74F-A | 6 — PRH | aism-6m8v | `PROOF-W74F-A-PRH.md` |
-| W74F-B | 3+4 — diagonal repair, no cone shortcut | aism-0m77 | `PROOF-W74F-B-DIAGONAL.md` |
-| W74F-C | 1+2 — `th_main_ext` DECOMPOSITION + universality ledger | aism-2r3m | `DECOMP-W74F-C-THMAINEXT.md` |
-| W74F-D | 5 — `th_almost_idemp` per-block audit | aism-7gqw | `AUDIT-W74F-D-ALMOSTIDEMP.md` |
+| wave | register item | verified result |
+|---|---|---|
+| A `PROOF-W74F-A-PRH.md` | 6 — PRH | `‖MA−I_k‖≤ε<1/2` ⟹ stochastic idempotent `E`, `‖AM−E‖≤2√(2ε)`; `√ε` **intrinsically sharp** (family with every `F` at `≥√(ε/2)`). Constant dispute settled at `2√2`. |
+| B `PROOF-W74F-B-DIAGONAL.md` | 3+4 | `tex:1254`/`2780-2783` formula non-central; finite **phase-balanced** repair exact, projective norm **1, block-count-free**, diagonal of the *exact* `ℬ`; CP-ization entrywise; **no cone shortcut**. |
+| C `DECOMP-W74F-C-THMAINEXT.md` | 1+2 | `th_main_ext` == **H-CB + EXT-CB** (only two gaps); rest established/mechanical; `tex:1551-1555` squared correction proved; ledger conditional on those two. |
+| D `AUDIT-W74F-D-ALMOSTIDEMP.md` | 5 | diagrammatic core dimension-free at **10η** after local source type/index fixes; extended interface survives. |
 
-All four are **prover/auditor output only**. Nothing enters the registry before a fresh
-**batched hostile verifier** pass (CLAUDE.md §6). If a worker died mid-run, its brief is
-committed and re-dispatchable verbatim; check the file's presence and its
-`STATUS: UNVERIFIED …` first line.
+Cross-target (verified): constants consistent once `ε_AI` / `K` / `ε_PRH` are kept
+distinct; conditional finish `‖Q−E‖ ≤ (K+4√(2K))√η`; **no circularity**. This does NOT
+close Route F: it leaves **H-CB, EXT-CB, the unconditional `K`/`η_K` ledger**, and
+this-repo codification/provenance open. A hostile-verified L5 result is **not**
+af-validated and **not yet a registry shard** — registry unchanged at 200, T0 at 34.
 
 ### Why PRH matters independently of Kitaev
 
@@ -107,18 +110,24 @@ constant (`2√2` vs `3`); settling that is part of W74F-A.
 
 ## Next steps (ranked) — W74-F and after
 
-0. **Harvest W74-F wave 1.** For each of the four outputs: bank RAW and honestly tagged
-   (`UNVERIFIED`), then dispatch ONE fresh **batched hostile verifier** over the batch
-   with per-target verdict lines (the validated W56/W70 pattern). Orchestrator performs
-   no mathematical judgment (L5). Only then codify survivors as registry shards.
-1. **Wave 2 is defined by W74F-C's output.** Its (c)-classified nodes — the genuine gaps
-   in `th_main_ext` — are the actual remaining mathematics of Route F. Attack them in
-   (difficulty × load-bearing) order, one fresh prover each, decomposition first.
-   If W74F-C reports that the theorem may be **false** at the claimed uniformity, that is
-   the most important finding available and it re-routes everything: escalate to the user.
-2. **PRH through the full pipeline and then af-elevate it** (aism-6m8v → aism-h9qc). It
-   is small, self-contained, and the natural next af workspace — CLAUDE.md §6, strictly
-   serial, tree clean while live.
+0. **Codify the four hostile-verified survivors (aism-zbcm, P0).** Registry shards at
+   `proved-mod-audit` / `stated` (NOT af-validated, NOT proved). PRH first — it is
+   standalone, complete, and the load-bearing independent asset; state it as
+   *op-classical ⇐ "a positive approximate retract exists"*. Needs a def-vocabulary pass
+   (stochastic idempotent, approximate retract, extended ε-C*-algebra, diagonal, Ha-map)
+   — some defs may need user ratification (arm-G aism-l70 precedent → **Stop condition**,
+   escalate before adding/changing a definition). May be delegated to a fresh codex
+   transcription worker IF the orchestrator audits fidelity and gates pass (W70). Blocks
+   PRH af-elevation (aism-h9qc).
+1. **Wave 2 = prove-or-refute H-CB (aism-wwur, P0), then EXT-CB (aism-9lb7).** H-CB is the
+   first `th_main_ext` gap: uniform-in-`n` column-Hilbert / operator-module estimates for
+   `1_{M_n}⊗Ha^Q_{P,R}`; the danger is a hidden `n`-factor behind the source's
+   "straightforward" (`tex:1555`). One fresh prover, decomposition-first. **CRITICAL
+   FORK:** a *counterexample* to H-CB challenges `th_main_ext`'s claimed dimension-free
+   uniformity — that re-routes the whole campaign and must be **escalated**, not worked
+   around. EXT-CB assumes H-CB. Then the unconditional `K`/`η_K` ledger.
+2. **af-elevate PRH** (aism-h9qc, after codification): small, self-contained, the natural
+   next af workspace — CLAUDE.md §6, strictly serial, tree clean while live.
 3. **Discharge the W72 debt** (aism-x0up): re-dispatch `BRIEF-W72-POTI0-VERIFIER.md`
    (workspace rebuild recipe in `docs/plans/CHANGELOG.md`'s W72 entry), or retire the
    batch explicitly with a certificate.

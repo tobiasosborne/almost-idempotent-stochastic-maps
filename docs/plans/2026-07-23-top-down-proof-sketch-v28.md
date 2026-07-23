@@ -138,6 +138,40 @@ Dispatched 2026-07-23 (fresh codex `gpt-5.6-sol` xhigh, disjoint targets, briefs
 All four are PROVER/AUDITOR output only. **Hostile verification is a separate batched
 pass** (CLAUDE.md §6); nothing from this wave enters the registry before it clears one.
 
+**Wave-1 verdict (VERDICT-W74F-BATCH.md, fresh codex xhigh hostile verifier, one pass
+over all four, tex SHA re-checked, W73b audit NOT treated as an oracle): A · B · C · D
+all VALID, no correction required to any target.** The verified transcribable statements:
+
+- **A (PRH).** For positive unital `A: ℓ∞(k)→ℓ∞(n)`, `M: ℓ∞(n)→ℓ∞(k)` with
+  `‖MA−I_k‖_{∞→∞} ≤ ε < 1/2`, there is a stochastic idempotent `E` with
+  `‖AM−E‖_{∞→∞} ≤ 2√(2ε)`; and there are examples with `ε↓0` for which *every*
+  stochastic idempotent `F` has `‖AM−F‖ ≥ √(ε/2)` (the `√` sharp up to constants,
+  intrinsic to PRH). The verifier re-derived the `ε→mass` factor 2, `N Â = I_k` exact,
+  and the max-over-rows assembly.
+- **B.** The `tex:1254` / `tex:2780-2783` formula is confirmed non-central; the finite
+  **phase-balanced** repair is exact on both diagonal identities with projective norm and
+  downstream coefficient sum **exactly 1, block-count-free**; it is a diagonal of the
+  *exact* algebra `ℬ`; CP-ization re-proved entrywise from involution-preservation alone;
+  no cone projection.
+- **C.** The decomposition is confirmed **complete and correctly classified**:
+  `th_main_ext` == **H-CB + EXT-CB** (the only two gaps), everything else
+  established/mechanical, and the `tex:1551-1555` squared-norm correction follows.
+- **D.** The `th_almost_idemp` diagrammatic core is confirmed dimension-free at **10η**
+  after the stated source type/index fixes; the extended interface survives.
+
+Cross-target: constants compatible once `ε_AI` (D), `K` (the factorization constant,
+existing only *after* C's two gaps close and B's repair is inserted) and
+`ε_PRH = ‖MA−I_k‖` are kept distinct; conditional finish `‖Q−E‖ ≤ (K+4√(2K))√η`. **No
+circularity** — none of A–D assumes `th_factorization` to prove an ingredient of it.
+
+**This does NOT discharge the register.** What is now verified: PRH complete (A); the
+diagonal repair exact and shortcut-free (B); `th_almost_idemp` at 10η (D); and
+`th_main_ext` *reduced* to two named gaps (C). What remains **open**: **H-CB**;
+**EXT-CB** (assuming H-CB); the final unconditional `K`/`η_K` ledger; and literal-source
++ this-repo codification/provenance closure before any promotion beyond
+`proved-mod-audit`. Route F is still a **conditional** reduction. Registry unchanged at
+200, T0 at 34 — a hostile-verified L5 result is not af-validated.
+
 **PRH is the load-bearing independent asset.** Even if the Kitaev import never closes,
 PRH establishes a new, clean reduction on the map — *op-classical ⇐ "a positive
 approximate retract exists"* (`‖AM−Q‖ = O(η)`, `‖MA−I‖ = O(η)`, `A, M` stochastic) —
@@ -166,11 +200,15 @@ alternative has been conditioned away."
 
 ## Tier-1 order (updated — user directive 2026-07-23: concerted effort on Route F)
 
-0. **Route F closure (aism-enze, P0).** W74F-A/B/C/D → batched hostile verification →
-   codification of survivors → af-elevation of the elementary ones (PRH first). Wave 2 is
-   determined by W74F-C's (c)-nodes: those are the actual mathematics remaining.
-1. **PRH through the full pipeline regardless of F1** (aism-6m8v then aism-h9qc): it is
-   the independent asset and the cleanest new reduction target on the map.
+0. **Route F closure (aism-enze, P0).** Wave 1 DONE and hostile-verified 4/4 (above).
+   Immediate next: (i) **codify the four survivors** as registry shards at
+   `proved-mod-audit` / `stated` (PRH first — it is standalone and complete); (ii)
+   **wave 2 = prove-or-refute H-CB**, the strategist's and verifier's shared top pick; a
+   refutation challenges `th_main_ext`'s claimed uniformity and re-routes the campaign
+   (escalate). Then EXT-CB assuming H-CB, then the unconditional `K`/`η_K` ledger.
+1. **af-elevate PRH** once codified (aism-6m8v → aism-h9qc): it is the independent asset,
+   standalone, elementary, and the cleanest new af workspace — it installs
+   *op-classical ⇐ "a positive approximate retract exists"* regardless of F1.
 2. **The owed W72 verification** (aism-x0up): banked work is verified or explicitly
    retired — no third state. Creative attacks on RDSE / LDHR-48 remain **PAUSED** pending
    Route F triage (user directive; strategist altitude diagnosis is the reason, and that
@@ -191,7 +229,11 @@ alternative has been conditioned away."
   import has an **INVALID-as-printed** proof; the repair is specified but unproved.
 - Not that any of F0–F5 is a registry result: registry is unchanged at 200, T0 at 34.
   F0/F2/F3/F5 are audit-VALID *conditional on F1*, which is not established.
-- Not that PRH is proved — two unverified derivations with disagreeing constants.
+- Not that Route F is closed. Wave 1 is hostile-verified 4/4, but that leaves H-CB +
+  EXT-CB + the unconditional ledger open, and nothing is codified yet. A
+  hostile-verified L5 result is **not** af-validated and **not** yet a registry shard.
+- Not that PRH's `2√2` is optimal — only that the `2√2`-vs-`3` discrepancy is settled and
+  the `√ε` exponent is sharp up to constants (best universal constant left open).
 - Not that the Kitaev statement is wrong. The audit's finding is about the **printed
   proof**, not the theorem; the theorem may well be true and provable.
 - Not that the W72/POTI subtree is retired — only paused, with its verification still owed.

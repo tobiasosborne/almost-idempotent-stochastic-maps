@@ -561,3 +561,34 @@ carried forward explicitly.
 
 **Promotes nothing.** Registry unchanged at 200, T0 at 34. Route F is a
 CONDITIONAL reduction whose sole large import has an INVALID-as-printed proof.
+
+## 2026-07-23 — v28 wave-1 verdict (W74-F): the batched hostile verifier returns A/B/C/D all VALID
+
+The four wave-1 prover/auditor artifacts (banked raw and unverified earlier this
+session) cleared a single fresh codex xhigh hostile verifier
+(VERDICT-W74F-BATCH.md), one pass over the batch, tex SHA re-checked, W73b audit
+NOT treated as an oracle: **A VALID · B VALID · C VALID · D VALID, no correction
+required to any target**. Verified transcribable statements banked for A (PRH:
+||AM-E|| <= 2sqrt(2eps) with the sqrt intrinsic-sharpness family), B (finite
+phase-balanced diagonal, projective norm exactly 1, block-count-free, exact
+algebra B, entrywise CP-ization, no cone projection), C (th_main_ext ==
+H-CB + EXT-CB, decomposition confirmed complete and correctly classified), D
+(th_almost_idemp diagrammatic core dimension-free at 10eta). Cross-target: the
+constant chain is consistent once eps_AI / K / eps_PRH are kept distinct, the
+conditional finish is ||Q-E|| <= (K+4sqrt(2K))sqrt(eta), and there is NO
+circularity (no target assumes th_factorization to prove an ingredient of it).
+
+Net effect on Route F's residual register: item 6 (PRH) proved; items 3+4 (the
+diagonal repair, no cone shortcut) discharged; item 5 (th_almost_idemp)
+discharged mod local source edits; items 1+2 REDUCED from "prove the outline" to
+two named amplified gaps **H-CB** (uniform column-Hilbert / operator-module
+estimates for 1_{M_n}(x)Ha, where the risk is a hidden n-factor) and **EXT-CB**
+(the amplified extension lemma on one level-one unitary), plus the final
+unconditional K/eta_K ledger. Route F remains a CONDITIONAL reduction; the
+principal next attack is H-CB (a refutation would challenge th_main_ext's claimed
+uniformity).
+
+Sketch v28 updated in place (Map change 3 gains the verdict block; Tier-1 order 0
+now reads codify-survivors then prove-or-refute-H-CB). Promotes nothing: registry
+200, T0 34 — a hostile-verified L5 result is not af-validated and not yet a
+registry shard; codification is the next mechanical step.
