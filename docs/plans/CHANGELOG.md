@@ -639,3 +639,21 @@ eta_K lacks the guard e_split/(C_pre*C_A). The K formula and the PRH finish
 amendments. Wave 3b (aism-xpxk, in flight): extract the Stage-1 packet
 (C_split, e_split) from tex:915-969 and re-verify the corrected reset chain. Route F
 remains proved-mod-audit-complete EXCEPT this one named packet.
+
+## 2026-07-24 — v30 (W74F waves 3/3b): the Route F relative K/eta_K ledger CLOSES — Route F is proved-mod-audit COMPLETE
+
+Wave 3 (K-ledger) was REJECTED by its fresh hostile verifier (INVALID: the MAIN-CB
+Stage-1 lem_nontriv_projection split packet had no named coefficient/threshold; K
+formula and PRH finish confirmed VALID even there). Wave 3b extracted the packet
+(C_split, e_split from tex:915-969; all-level via the tex:1475 isometry; corrected
+reset chain C_main = max{C_co, C_split}; eta_K guard e_split/(C_pre*C_A)); its fresh
+hostile verifier returned VALID-WITH-CORRECTIONS (tex:943 isolation expansion
+dimension-free; two wording/ledger corrections recorded) — ledger CLOSED at
+proved-mod-audit. Codified per the verbatim-endorsed contracts: lem-routef-k-ledger
+(new; registry 215) + lem-thmainext-conditional restated (C_E/epsilon_E assembly).
+
+ROUTE F IS proved-mod-audit COMPLETE: op-classical <= repaired-Kitaev-chain + PRH,
+finish ||Q-E|| <= (K+4sqrt(2K))sqrt(eta), every node fresh-codex hostile-verified and
+codified. NOT rigorous (L0): T0 unchanged at 34; nothing af-validated. New Tier-1
+face = L0 closure: PRH af-elevation first (aism-h9qc), then a decomposition pass to
+factor the large chain below the af brittleness envelope before seeding.

@@ -10,114 +10,99 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read the sketch named in **`docs/plans/CURRENT.md`** (now **v29**, the 2026-07-24
-   W74F-wave-2 delta — *both `th_main_ext` gaps close at L5; the W72 debt is
-   discharged*) + the rolling `docs/plans/CHANGELOG.md` (newest entry = v29).
+2. Read the sketch named in **`docs/plans/CURRENT.md`** (now **v30**, the 2026-07-24
+   wave-3 delta — *Route F is proved-mod-audit COMPLETE; the remaining open work is
+   L0 closure*) + the rolling `docs/plans/CHANGELOG.md` (newest entry = v30).
    **STEWARDSHIP (user mandate, binding): reconciling the sketch/CHANGELOG with newly
    banked evidence is a FIRST-CLASS DELIVERABLE of every session (Rule 9).**
-3. Then read `docs/plans/2026-07-24-W74F-wave2-artifacts/` — the wave-2 proofs and
-   verdicts (`PROOF-W74F-E-HCB.md` + `VERDICT-W74F-E-HCB.md`, `PROOF-W74F-F-EXTCB.md`
-   + `VERDICT-W74F-F-EXTCB.md`), and the codification reports.
-4. **STANDING DIRECTIVES (user, binding):** (i) ALL mathematical capacity on the open
-   leaves; (ii) decomposition is the objective function of every Tier-1 attack;
-   (iii) creativity mandate for proof-strategy subagents, FINDINGS dead routes
-   absolute; (iv) mostly serial; Fable = author-only for the hardest creative steps;
-   verification fresh-codex-only, BATCHED by default (CLAUDE.md §6); (v) no progress
-   theatre; (vi) codex effort CAPPED at xhigh; (vii) **Route F is the P0 direction**
-   (2026-07-23); (viii) RDSE/LDHR-48 creative attacks PAUSED (2026-07-23).
+3. The full W74F wave-2/3 record lives in
+   `docs/plans/2026-07-24-W74F-wave2-artifacts/` (briefs, proofs, and — decisive —
+   the verdicts: `VERDICT-W74F-E-HCB.md`, `VERDICT-W74F-F-EXTCB.md`,
+   `VERDICT-W74F-G-KLEDGER.md` (INVALID — instructive), `VERDICT-W74F-H-STAGE1.md`).
+4. **STANDING DIRECTIVES (user, binding):** (i) all mathematical capacity on the open
+   leaves; (ii) decomposition as objective function; (iii) creativity mandate,
+   FINDINGS dead routes absolute; (iv) mostly serial; verification fresh-codex-only,
+   batched by default (§6); (v) no progress theatre; (vi) codex capped at xhigh;
+   (vii) Route F is P0; (viii) RDSE/LDHR-48 attacks PAUSED.
 5. `fr board` + `bd ready`. Beads sync: `scripts/beads-sync.sh import` after pull /
-   `export` before push.
+   `export` before push (run with **bash**, not sh).
 6. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-24, session 23 — W74F wave 2 + W72 discharge)
+## Current state (2026-07-24, session 23 close — W74F waves 2, 3, 3b + W72 discharge)
 
-**Rigorous (af-validated, T0): 34 — unchanged. Registry: 214 (was 200).**
-Session 23 was an orchestration session under the user mandate "orchestrate work on
-the ultimate proof; delegate all work to codex gpt-5.6-sol xhigh": five prover/verifier
-/codifier dispatches, every landing banked, verified (fresh hostile codex), codified,
-and gated.
+**Rigorous (af-validated, T0): 34 — unchanged. Registry: 215 (was 200).**
 
-### The headline: `th_main_ext` — Route F's principal blocker — is CLOSED at L5
+### The headline: ROUTE F IS `proved-mod-audit` COMPLETE
 
-- **H-CB proved** (`conj-hcb` → `proved-mod-audit`, aism-wwur closed). Fresh prover +
-  separate fresh hostile verifier (VALID-WITH-CORRECTIONS). `C_H = 4000c`,
-  `e_H = 1/(10000c)`, relative to the sanctioned COMP-CB/COL-HILB constants;
-  dimension-free; no `n`-growth family. Genuine finding: the unconditional `h_{P,P}`
-  inverse is FALSE (exact `ℂ⊕ℂ` counterexample); the contract now carries the
-  verifier's exact conditional-inverse clause — precisely what `lem_extension`
-  consumes. A refinement, not an escalation.
-- **EXT-CB proved** (`conj-extcb` → `proved-mod-audit`, dep `conj-hcb`, aism-9lb7
-  closed). VALID-WITH-CORRECTIONS. One level-one unitary carries every amplification
-  via the transported-corner construction (verifier-confirmed);
-  `C_ext = C_merge[1+5C_H+20C_app(C_H+1)]`; one proof-level correction (`e_sel`
-  enlargement), no contract amendment.
-- Through `lem-thmainext-conditional`, **`th_main_ext` holds at the proved-mod-audit
-  rung**. The Route F chain F0–F5 is proved-mod-audit end-to-end **except** the
-  unconditional `K`/`η_K` extraction; conditional finish `‖Q−E‖ ≤ (K+4√(2K))√η`.
-- **NOTHING new is af-validated.** All wave-2 statuses rest on single fresh hostile
-  codex passes (the batched-verification default) — one rung below T0, honestly
-  tagged.
+Every node of
+`op-classical ⇐ F0 cb-lift ⇐ th_factorization (⇐ th_main_ext ⇐ H-CB + EXT-CB +
+Stage-1 packet; + th_almost_idemp interface; + repaired diagonal) ⇐ F2/F3 ⇐ PRH ⇐
+finish` is now hostile-verified (fresh codex prover ≠ fresh codex verifier, per node)
+and codified. Final composite: universal relative `K ≥ 1`, `η_K > 0`
+(dimension/amplification/block-free) with
+`‖Q−E‖_{∞→∞} ≤ (K+4√(2K))√η` for `η ≤ η_K` — the sharp exponent 1/2 preserved.
 
-### Also this session
+Session flips (each a mechanical reflection of an external verdict):
+- `conj-hcb` → `proved-mod-audit`, contract amended to the verifier's exact
+  conditional-inverse clause (the unconditional inverse is FALSE — exact `ℂ⊕ℂ`
+  counterexample).
+- `conj-extcb` → `proved-mod-audit` (transported-corner construction confirmed; dep
+  `conj-hcb`).
+- `lem-thmainext-conditional` restated to the endorsed `C_E`/`ε_E` assembly contract.
+- `lem-routef-k-ledger` NEW at `proved-mod-audit` — closed after a genuine hostile
+  REJECTION: the first ledger (wave 3) was INVALID for one missing Stage-1 packet
+  (`lem_nontriv_projection`, `tex:1419-1425`); wave 3b extracted `C_split`/`e_split`
+  and the corrected reset chain, and its own fresh verifier closed it.
+- W72 discharged: POTI-0 batch verified 4/4 VALID + codified (6 shards); POTI-0 ==
+  RDSE + LDHR-48 at `proved-mod-audit`; residuals registered, PAUSED.
 
-- **Wave-1 survivors codified** (aism-zbcm closed; registry 200 → 208): `lem-prh` +
-  `lem-prh-sharpness` (constant settled at `2√2`; the PRH reduction *op-classical ⇐
-  positive-approximate-retract-exists* is now a registry fact), diagonal repair +
-  CP-ization, the two gap conjectures (since closed), the conditional assembly, the
-  `th_almost_idemp` audit import. **Four draft definitions AWAIT USER RATIFICATION:**
-  `def-positive-approximate-retract` (original), `def-extended-epsilon-cstar-algebra`,
-  `def-ha-map`, `def-fd-cstar-diagonal` (cited byte-verbatim, SHA-verified).
-- **W72 debt discharged** (aism-x0up): the interrupted POTI-0 batched hostile verifier
-  was re-run from a rebuilt `build-workspace.sh` snapshot — **S0/RX/O48/ASM2 all
-  VALID**, cross-cutting clean — then codified (registry 208 → 214): S0/RX/O48 +
-  conditional assembly `proved-mod-audit`; RDSE + LDHR-48 registered as `conjecture`
-  (empty deps, attacks PAUSED). POTI-0 == RDSE + LDHR-48 is now a proved-mod-audit
-  conditional reduction on the signed trunk.
-- **IN FLIGHT at session close: the wave-3 unconditional `K`/`η_K` ledger prover**
-  (aism-xpxk, fresh codex xhigh, `BRIEF-W74F-G-KLEDGER.md` →
-  `LEDGER-W74F-G-K.md`). If its output is not yet banked when you read this, check
-  `docs/plans/2026-07-24-W74F-wave2-artifacts/` for the artifact; it must go through
-  a fresh hostile verifier before any codification (no third state).
+**Rigour honesty (the only sentence that matters): NOTHING above is rigorous by L0.**
+`proved-mod-audit` = hostile-verified paper proof, one rung below T0. The repaired
+chain is not byte-verbatim citable (the source's printed proof was invalid); af/Lean
+is the only approved route up.
 
-## Next steps (ranked)
+### Pending USER decisions
 
-0. **Land wave 3** (aism-xpxk): bank the K-ledger prover output RAW, dispatch a fresh
-   hostile verifier, then codify the closed relative `K`/`η_K` chain (statuses per
-   verdict). The one possibly-new inequality is the raw-step/reset threshold check
-   (DECOMP §7 item 10) — if the prover flags it unclosable, that is a named gap, not
-   a footnote.
-1. **PRH af-elevation** (aism-h9qc, unblocked): the first Route F node to attempt T0.
-   CLAUDE.md §6 verbatim; seed with the `lem-prh` contract; strictly serial; registry
-   tree clean while the orchestration runs (banking flips AFTER it lands).
-2. **User decisions pending:** (a) ratify or amend the four draft definitions;
-   (b) whether to af-elevate the H-CB/EXT-CB chain next (both are large — factor per
-   §6 playbook before seeding); (c) the parked decisions (aism-ur9, aism-z98,
-   aism-l1a, aism-cei, aism-nlg).
-3. **Route X deciders** (aism-ea2f): cheap kill-or-confirm; keeps the fallback priced
-   while Route F converges. Do not start a Route X proof campaign before they run.
-4. **af-elevation queue** (aism-88r): L5:T0 now ≈ 86:34 and widening — the queue is
-   the long-term debt sink. Prime candidates unchanged.
-5. Signed-trunk surface (SL1a cells, sigma-cap, halo-robust finisher): behind Route F
-   in priority, not retired. POTI+/HES/RDSE/LDHR-48 stay PAUSED until the user lifts
-   the pause.
+1. **Ratify the four draft definitions** (`def-positive-approximate-retract`
+   original; `def-extended-epsilon-cstar-algebra`, `def-ha-map`,
+   `def-fd-cstar-diagonal` cited byte-verbatim, SHA-verified).
+2. **Sanction the L0-closure campaign shape** (next steps 0–1 below) — af-elevation
+   order and how to factor the large chain.
+3. Parked: aism-ur9, aism-z98, aism-l1a, aism-cei, aism-nlg.
+
+## Next steps (ranked) — the new Tier-1 face is L0 closure
+
+0. **PRH af-elevation** (aism-h9qc): small, elementary, self-contained — the natural
+   first T0 attempt of the Route F chain. CLAUDE.md §6 verbatim: seed with the
+   `lem-prh` contract via `seed-af-workspaces.py`, `af-orchestrate.py` backgrounded,
+   strictly serial, registry tree CLEAN while live (banking flips only after it
+   lands).
+1. **Decomposition pass for the large chain** (file a bead): H-CB, EXT-CB, Stage-1,
+   the assembly, and the ledger each exceed the af brittleness envelope as single
+   trees. The task is to factor them into registry sub-lemmas below `>12`-node/depth-3
+   before ANY af seeding. Decomposition-first is the standing objective function.
+2. **Route X deciders** (aism-ea2f): cheap kill-or-confirm; keeps the fallback priced.
+3. **af-elevation queue** (aism-88r): L5:T0 ≈ 87:34 and widening.
+4. Signed trunk (SL1a cells, sigma-cap, halo-robust finisher): parked behind Route F;
+   POTI+/HES/RDSE/LDHR-48 PAUSED until the user lifts the pause.
 
 ## Standing rules (delta from session 22)
 
-CLAUDE.md §6 unchanged. New precedent this session: **verdict-driven contract
-amendment** — when a hostile verifier's contract-impact note supplies an exact
-replacement clause, the orchestrator applies it as a MECHANICAL reflection of the
-external verdict (recorded in the shard body + commit), never as its own judgment.
-Literature-import discipline unchanged: a theorem whose printed proof is invalid is
-not importable until repaired HERE (th_main_ext is now such a repair, at L5).
+Two precedents added this session:
+- **Verdict-driven contract amendment/restatement**: when a hostile verdict's
+  registry-impact note supplies exact contract text, the orchestrator applies it as a
+  mechanical reflection (recorded in body + commit), never as its own judgment.
+- **A hostile REJECTION is a normal, valuable cycle** (wave 3 → 3b): bank the INVALID
+  verdict, dispatch the named repair, re-verify fresh. Banked work is verified or
+  explicitly retired — no third state (upheld twice this session: W72, wave 3).
 
 ## What is intentionally NOT here
 
-- Any claim that op-classical is proved, or that Route F is rigorous. The chain is
-  `proved-mod-audit` end-to-end modulo the in-flight `K`/`η_K` extraction; L0 rigour
-  = af-validated/byte-cited/Lean ONLY; **T0 is still 34**.
-- Any numerical `K` or `η_K` — the source's unnamed big-O constants make the ledger
-  relative by construction.
-- Any claim that the four new definitions are ratified (pending user sign-off).
-- Any claim that RDSE/LDHR-48 moved (registered, paused), or that the strategists'
-  altitude diagnosis became a theorem (banked interpretation).
+- Any claim that op-classical is proved/rigorous, that T0 moved off **34**, or that
+  any hostile verdict equals af-validation.
+- Any numerical `K`/`η_K` (relative expressions only — the source prints no decimals
+  and none were invented).
+- Any claim that the four draft definitions are ratified.
+- Any claim that RDSE/LDHR-48 or the signed trunk moved (they did not), or that the
+  strategists' altitude diagnosis became a theorem (banked interpretation).
 - Any emptiness claim from the tallness-bound decider batches: L3 evidence only.

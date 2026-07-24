@@ -1220,3 +1220,18 @@ delegate all work to codex exec gpt-5.6-sol xhigh." Five dispatches, all landed:
 Sketch v29 + CHANGELOG + HANDOFF reconciled. T0 unchanged at 34. Four draft defs
 await user ratification. Every status flip is a mechanical reflection of a fresh
 hostile codex verdict; the orchestrator verified nothing itself (L5/§6).
+
+## 2026-07-24 — session 23 addendum (waves 3/3b: the ledger closes after one hostile rejection)
+
+Wave 3 K-ledger REJECTED by its fresh hostile verifier (INVALID: Stage-1
+lem_nontriv_projection packet unnamed; K formula + PRH finish confirmed VALID).
+Wave 3b extracted the packet (C_split/e_split, corrected reset chain, eta_K
+guard); fresh hostile verifier: VALID-WITH-CORRECTIONS — ledger CLOSED at
+proved-mod-audit. Codified per verbatim-endorsed contracts: lem-routef-k-ledger
+(new, registry 215) + lem-thmainext-conditional restated. aism-xpxk closed.
+
+ROUTE F IS proved-mod-audit COMPLETE. T0 unchanged at 34; the new Tier-1 face is
+L0 closure (PRH af-elevation first, then decomposition of the large chain below
+the af brittleness envelope). Sketch v30 + CHANGELOG + HANDOFF reconciled.
+The wave-3 rejection is the session's best evidence the pipeline works: a
+plausible closure claim with one unnamed constant did NOT leak into the record.
