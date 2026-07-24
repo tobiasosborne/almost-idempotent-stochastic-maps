@@ -5,7 +5,7 @@ contract: Single-compression transfer: there are universal C_co < infinity and e
 defs: def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion; def-delta-projection; def-compressed-corner
 deps: lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities; lem-compcb-amplified-almost-containment; lem-compcb-corner-algebra; lem-compcb-rectangular-product
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (DECOMP COMP-CB; Stage-1 SPLIT-C); VERDICT-FUDW-DECOMP-V3.md §D
 owner: A
 workspace: proofs/lem-compcb-single-compression-transfer
