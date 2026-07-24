@@ -25,7 +25,7 @@ graph LR
   conj-extcb["conj-extcb<br/>conjecture/none"]
   conj-far-low-slab-cap["conj-far-low-slab-cap<br/>conjecture/none"]
   conj-gamma-emptiness["conj-gamma-emptiness<br/>disproved/none"]
-  conj-hcb["conj-hcb<br/>conjecture/none"]
+  conj-hcb["conj-hcb<br/>proved-mod-audit/none"]
   conj-kernel["conj-kernel<br/>conjecture/none"]
   conj-l5-gap-1["conj-l5-gap-1<br/>conjecture/none"]
   conj-low-slab-cap["conj-low-slab-cap<br/>conjecture/none"]
