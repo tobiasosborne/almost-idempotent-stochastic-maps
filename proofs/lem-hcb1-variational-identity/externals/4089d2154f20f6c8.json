@@ -1,0 +1,8 @@
+{
+  "id": "4089d2154f20f6c8",
+  "name": "lem-compcb-row-column-product-CONTRACT",
+  "source": "proofs/lem-compcb-row-column-product (af-validated 2026-07-25, 20 taint clean). FULL VALIDATED CONTRACT: Row-column compressed-product estimate: universal C_rc, e_rc such that for e \u003c= e_rc, delta-projections P,Q, n \u003e= 1, X,Y in M_{n,1} tensor S_{P,Q}: ||Co_Q(Y^dagger X) - Y^dagger X|| \u003c= C_rc*e*||Y||*||X||.",
+  "content_hash": "77605f344d6db70f4391033f0b87c4f87a4c6d5a69a173c17266a62aeda94d97",
+  "created": "2026-07-24T23:25:14.304130455Z",
+  "notes": ""
+}

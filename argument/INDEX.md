@@ -112,7 +112,7 @@
 | `lem-halo-collapse` | lemma | proved | validated | A | Halo-robust height collapse: for an exact signed idempotent P with 0 < delta(P) … |
 | `lem-harmonic-affine-bridge` | lemma | proved | validated | A | Harmonic-affine bridge: for an exact signed idempotent P with rows p_i = (P_ij)_… |
 | `lem-harmonic-line-coordinate-row-balance` | lemma | proved | none | A | Harmonic line-coordinate row balance: for an exact signed idempotent P and any a… |
-| `lem-hcb-column-hilbert-squared` | lemma | proved-mod-audit | seeded | A | Corrected amplified column-Hilbert estimate: there are universal C_col < infinit… |
+| `lem-hcb-column-hilbert-squared` | lemma | proved | validated | A | Corrected amplified column-Hilbert estimate: there are universal C_col < infinit… |
 | `lem-hcb0-compressed-associator` | lemma | proved | validated | A | Uniform compressed associator: there are universal C_as < infinity and e_as > 0 … |
 | `lem-hcb1-column-action` | lemma | proved-mod-audit | none | A | Uniform Ha column action: there are universal C_act < infinity and e_act > 0 suc… |
 | `lem-hcb1-variational-identity` | lemma | proved-mod-audit | seeded | A | Amplified Ha variational identity: there is a universal e_var > 0 such that ever… |
