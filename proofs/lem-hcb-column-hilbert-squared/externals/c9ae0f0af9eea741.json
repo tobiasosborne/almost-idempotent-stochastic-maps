@@ -1,0 +1,8 @@
+{
+  "id": "c9ae0f0af9eea741",
+  "name": "lem-compcb-entrywise-compression-naturality-CONTRACT",
+  "source": "proofs/lem-compcb-entrywise-compression-naturality (af-validated 2026-07-25, 4/4 taint clean). FULL VALIDATED CONTRACT: Entrywise compression naturality: universal e_nat \u003e 0 such that for e=delta+epsilon \u003c= e_nat, Q a delta-projection in an extended epsilon-C*-algebra A, n \u003e= 1, E_{11} the (1,1) matrix unit of M_n: every Z in A satisfies Co_{I_n tensor Q, I_n tensor Q}(E_{11} tensor Z) = E_{11} tensor Co_Q(Z).",
+  "content_hash": "9fd592cff42f15e9045ec00cb2011eec90b276f6551aabd4b0b4155cda095dab",
+  "created": "2026-07-24T23:05:41.492680004Z",
+  "notes": ""
+}
