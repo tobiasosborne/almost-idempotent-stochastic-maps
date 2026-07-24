@@ -5,7 +5,7 @@ contract: Amplification naturality of the power-series functional calculus: let 
 defs: def-theta-idempotent-approximation
 deps:
 status: stated
-af: none
+af: seeded
 provenance: factored out of proofs/lem-compcb-amplified-compression per the STUCK-abort tripwire classification (2026-07-24, challenges ch-56b93288d4201d17 / ch-dd07e65848cdbb97 / ch-32a052f1130ec348 all name this equation); statement extracted mechanically from the challenge/verifier text; UNPROVED here (status stated) pending its own af pass
 owner: A
 workspace: proofs/lem-compcb-amplification-naturality
