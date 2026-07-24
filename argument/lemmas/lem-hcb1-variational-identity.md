@@ -5,7 +5,7 @@ contract: Amplified Ha variational identity: there is a universal e_var > 0 such
 defs: def-ha-map; def-hcb-datum
 deps: lem-compcb-amplified-compression-identities
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: PROOF-W74F-E-HCB.md §4; VERDICT-W74F-E-HCB.md HCB-1a (VALID); DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D
 owner: A
 workspace: proofs/lem-hcb1-variational-identity

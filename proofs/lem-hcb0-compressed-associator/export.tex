@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Uniform compressed associator: there are universal C\_as <...}
+\step{1} Uniform compressed associator: there are universal C\_as < infinity and e\_as > 0 such that every H-CB datum with e <= e\_as and all compatible amplified rectangular A,B,C satisfy ||(A dot B) dot C-A dot (B dot C)|| <= C\_as*e*||A||||B||||C||. \steptag{validated} \\[6pt]
+\step{1.1} Let C\_co<infinity and e\_co>0 be the universal constants supplied by lem-compcb-rectangular-product, and set e\_as=min(e\_co,1) and C\_as=2*C\_co*(2+C\_co)+4*C\_co+1; these are universal, finite, and e\_as>0. \steptag{validated} \\[6pt]
+\step{1.1.1} By lem-compcb-rectangular-product, there exist universal C\_co<infinity and e\_co>0 for which, whenever e<=e\_co, every compatible amplified rectangular pair X,Y obeys ||X dot Y-XY||<=C\_co*e*||X||||Y||. \steptag{validated} \\[4pt]
+\step{1.1.2} Because the minimum of two positive universal constants is positive and universal, e\_as=min(e\_co,1)>0; because finite universal constants are closed under addition and multiplication, C\_as=2*C\_co*(2+C\_co)+4*C\_co+1 is finite and universal. \steptag{validated} \\[4pt]
+\step{1.2} Fix an H-CB datum with e=delta+epsilon<=e\_as and compatible amplified rectangular A,B,C. Then ||A dot B|| <= (1+epsilon+C\_co*e)||A||||B|| and ||B dot C|| <= (1+epsilon+C\_co*e)||B||||C||. \steptag{validated} \\[6pt]
+\step{1.2.1} Applying lem-compcb-rectangular-product to the compatible pair A,B and using e<=e\_as<=e\_co gives ||A dot B-AB||<=C\_co*e||A||||B||; the triangle inequality and ||AB||<=(1+epsilon)||A||||B|| from the epsilon-Banach-C*-norm axioms therefore give ||A dot B||<=(1+epsilon+C\_co*e)||A||||B||. \steptag{validated} \\[4pt]
+\step{1.2.2} The identical argument applied to the compatible pair B,C gives ||B dot C||<=(1+epsilon+C\_co*e)||B||||C||. \steptag{validated} \\[4pt]
+\step{1.3} The compressed associator has the exact telescoping expansion ((A dot B) dot C-(A dot B)C)+(((A dot B)C-(AB)C))+(((AB)C-A(BC)))+(A(BC)-A(B dot C))+(A(B dot C)-A dot (B dot C)). \steptag{validated} \\[4pt]
+\step{1.4} For the five summands in that expansion, their norms are respectively at most C\_co*e*(1+epsilon+C\_co*e)||A||||B||||C||, (1+epsilon)*C\_co*e||A||||B||||C||, epsilon||A||||B||||C||, (1+epsilon)*C\_co*e||A||||B||||C||, and C\_co*e*(1+epsilon+C\_co*e)||A||||B||||C||. \steptag{validated} \\[6pt]
+\step{1.4.1} For the compatible pair A dot B,C, lem-compcb-rectangular-product gives ||(A dot B) dot C-(A dot B)C||<=C\_co*e||A dot B||||C||; substituting node 1.2's bound for ||A dot B|| yields the first stated estimate. \steptag{validated} \\[4pt]
+\step{1.4.2} Bilinearity gives (A dot B)C-(AB)C=(A dot B-AB)C. The epsilon-Banach-C*-norm bound and lem-compcb-rectangular-product for A,B give its norm at most (1+epsilon)||A dot B-AB||||C||<=(1+epsilon)C\_co*e||A||||B||||C||. \steptag{validated} \\[4pt]
+\step{1.4.3} The epsilon-Banach-C*-associator axiom applied to A,B,C is exactly ||(AB)C-A(BC)||<=epsilon||A||||B||||C||. \steptag{validated} \\[4pt]
+\step{1.4.4} Bilinearity gives A(BC)-A(B dot C)=A(BC-B dot C). The epsilon-Banach-C*-norm bound and lem-compcb-rectangular-product for B,C give its norm at most (1+epsilon)||A||||BC-B dot C||<=(1+epsilon)C\_co*e||A||||B||||C||. \steptag{validated} \\[4pt]
+\step{1.4.5} For the compatible pair A,B dot C, lem-compcb-rectangular-product gives ||A dot (B dot C)-A(B dot C)||<=C\_co*e||A||||B dot C||; symmetry of the norm under sign and node 1.2's bound for ||B dot C|| yield the fifth stated estimate. \steptag{validated} \\[4pt]
+\step{1.5} The triangle inequality, epsilon<=e<=1, and C\_co*e<=C\_co imply the associator norm is at most [2*C\_co*(2+C\_co)+4*C\_co+1]e||A||||B||||C||=C\_as*e||A||||B||||C||, completing the uniform estimate. \steptag{validated} \\[6pt]
+\step{1.5.1} Applying the triangle inequality to node 1.3 and then node 1.4 gives the coefficient [2*C\_co*(1+epsilon+C\_co*e)+2*(1+epsilon)*C\_co+epsilon/e] multiplying e||A||||B||||C|| (with the epsilon term bounded directly by e, so no division is needed when e=0). \steptag{validated} \\[6pt]
+\step{1.5.1.1} Let N=||A||||B||||C|| and denote the five summands of the validated telescoping expansion in node 1.3, in order, by T1,...,T5. Independently of node 1.4, the permitted inputs establish all five estimates: for the compatible pairs (A dot B,C) and (A,B dot C), lem-compcb-rectangular-product together with validated nodes 1.2.1 and 1.2.2 gives ||T1||<=C\_co*e*(1+epsilon+C\_co*e)N and ||T5||<=C\_co*e*(1+epsilon+C\_co*e)N; bilinearity gives T2=(A dot B-AB)C and T4=A(BC-B dot C), so the epsilon-Banach-C*-norm bound and lem-compcb-rectangular-product for (A,B) and (B,C) give ||T2||<=(1+epsilon)C\_co*e*N and ||T4||<=(1+epsilon)C\_co*e*N; finally the epsilon-Banach-C*-associator axiom gives ||T3||<=epsilon*N. \steptag{validated} \\[4pt]
+\step{1.5.1.2} Using node 1.3 and the five estimates just established in node 1.5.1.1, the triangle inequality yields ||(A dot B) dot C-A dot (B dot C)|| <= \{2*C\_co*e*(1+epsilon+C\_co*e)+2*(1+epsilon)*C\_co*e+epsilon\}||A||||B||||C||. If e>0 this is exactly the coefficient [2*C\_co*(1+epsilon+C\_co*e)+2*(1+epsilon)*C\_co+epsilon/e] times e||A||||B||||C||. If e=0, then 0<=epsilon<=e gives epsilon=0 and every displayed error bound is zero, so the same conclusion holds without forming epsilon/e. \steptag{validated} \\[4pt]
+\step{1.5.2} Since 0<=epsilon<=e<=1, one has 1+epsilon+C\_co*e<=2+C\_co, 1+epsilon<=2, and epsilon<=e; hence the preceding sum is at most [2*C\_co*(2+C\_co)+4*C\_co+1]e||A||||B||||C||=C\_as*e||A||||B||||C||. \steptag{validated} \\[6pt]
+\step{1.5.2.1} Let C\_co\textasciicircum{}old and e\_co be witnesses supplied by lem-compcb-rectangular-product, and set C\_co:=max\{C\_co\textasciicircum{}old,0\}. This replacement preserves the upstream estimate: since e>=0 and ||A||||B||>=0, C\_co>=C\_co\textasciicircum{}old implies C\_co\textasciicircum{}old*e*||A||||B||<=C\_co*e*||A||||B||, so ||A dot B-AB||<=C\_co*e*||A||||B|| still holds for every compatible pair. Thus C\_co is finite, universal, and nonnegative, and all occurrences of C\_co in this proof may and shall denote this normalized witness. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
