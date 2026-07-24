@@ -5,7 +5,7 @@ contract: Positive-retract hardening (PRH): let k,n >= 1 and let A:l-infinity(k)
 defs: def-positive-approximate-retract; def-stochastic
 deps:
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §§1-6; hostile batch verdict VERDICT-W74F-BATCH.md §A (VALID, no correction); report lem:prh
 owner: A
 workspace: proofs/lem-prh

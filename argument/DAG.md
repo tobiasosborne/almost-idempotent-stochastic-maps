@@ -158,7 +158,7 @@ graph LR
   lem-pivot-removing-move["lem-pivot-removing-move<br/>proved/validated"]
   lem-positive-exposedness-margin["lem-positive-exposedness-margin<br/>proved/none"]
   lem-positive-row-straddle-gamma-lower["lem-positive-row-straddle-gamma-lower<br/>proved/none"]
-  lem-prh["lem-prh<br/>proved-mod-audit/none"]
+  lem-prh["lem-prh<br/>proved-mod-audit/seeded"]
   lem-prh-sharpness["lem-prh-sharpness<br/>proved-mod-audit/none"]
   lem-psi-corner-trap["lem-psi-corner-trap<br/>proved/none"]
   lem-radial-alpha-bound["lem-radial-alpha-bound<br/>proved/none"]
