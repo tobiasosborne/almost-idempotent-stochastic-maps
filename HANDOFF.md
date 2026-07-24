@@ -10,88 +10,92 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read the sketch named in **`docs/plans/CURRENT.md`** (now **v30** — *Route F is
-   proved-mod-audit COMPLETE; the open work is L0 closure*) + `docs/plans/CHANGELOG.md`
-   (newest entry = v30). **STEWARDSHIP mandate binding (Rule 9).**
-3. Read **`docs/plans/2026-07-24-af-elevation-campaign.md`** — the L0 campaign ground
-   plan (epic **aism-xuvw**). The full W74F evidence base is in
-   `docs/plans/2026-07-24-W74F-wave2-artifacts/` (proofs + hostile verdicts).
-4. **PRH af-elevation is DONE**: `proofs/lem-prh` root validated (14/14, taint
-   clean), `lem-prh` = `proved` / `af: validated`, export banked, aism-h9qc closed.
-   No orchestration is live at handoff. **Campaign process lesson (hard-won, honor
-   it): the af overreach guard is porcelain-WIDE — ANY dirty/untracked file outside
-   the live workspace aborts the run; make NO repo edits at all while an
-   orchestration is live** (run #1 aborted on the orchestrator's own mid-run docs
-   write; relaunch over the intact tree then validated cleanly).
-5. **STANDING DIRECTIVES (user, binding):** (i) capacity on the open leaves;
+2. Read the sketch named in **`docs/plans/CURRENT.md`** (now **v31** — *the Route F
+   chain is FACTORED; phases 2–3 of the L0 campaign are unblocked*) +
+   `docs/plans/CHANGELOG.md` (newest entry = v31). **STEWARDSHIP mandate binding
+   (Rule 9).**
+3. Read `docs/plans/2026-07-24-af-elevation-campaign.md` (campaign ground plan,
+   epic **aism-xuvw**) and the fudw design/verdict lineage in
+   `docs/plans/2026-07-24-fudw-decomposition-artifacts/` (v1/v2/v3 designs +
+   hostile verdicts; the v3 verdict's registry-impact section is the authority
+   for what was codified).
+4. **The decomposition pass (aism-fudw) is DONE and CLOSED**: after a 3-round
+   adversarial design loop (6 fresh codex workers), the v3 verdict's safe
+   seed-first subset was codified — **33 registry shards** (COMP 8 / H-CB 14 /
+   EXT 6 / Stage-1 2 / finish leaves 3; 28 `proved-mod-audit` + 5 `stated`, all
+   `af: none`; registry **248**) + **12 `draft` defs**. Parents untouched. The
+   MAIN-CB/ledger remainder + 5 GAP interfaces are QUARANTINED in **aism-0163**
+   (blocks phase 4 only). `lem-routef-k-ledger` is under a DO-NOT-REWIRE-OR-SEED
+   guard until reviewed F2/F3 contracts exist.
+5. **BLOCKED ON USER (surface these first):**
+   (a) **ratification of the 12 new draft defs** (list: CODIFY-FUDW-REPORT.md
+   §RATIFICATION NEEDED) — needed before locking; phase-2 seeding can proceed
+   with drafts but locking requires recorded sign-off (Rule 7);
+   (b) **the F2/F3 bridge contracts decision** (aism-0163) — the v3 verdict left
+   them uncontracted; phase 4 cannot seed without them.
+6. **STANDING DIRECTIVES (user, binding):** (i) capacity on the open leaves;
    (ii) decomposition as objective function; (iii) FINDINGS dead routes absolute;
-   (iv) mostly serial; verification fresh-codex-only; af per §6 (Claude orchestrates,
-   never judges); (v) no progress theatre; (vi) codex capped at xhigh; (vii) Route F
-   / its L0 closure is P0; (viii) RDSE/LDHR-48 attacks PAUSED.
-6. `fr board` + `bd ready`; beads sync via **bash** `scripts/beads-sync.sh`.
-7. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
+   (iv) mostly serial; verification fresh-codex-only; af per §6 (Claude
+   orchestrates, never judges); (v) no progress theatre; (vi) codex capped at
+   xhigh; (vii) Route F L0 closure is P0; (viii) RDSE/LDHR-48 PAUSED.
+   Session-24 addition (user): sonnet subagents for queries; general work
+   delegated to codex `gpt-5.6-sol` xhigh; Claude monitors.
+7. `fr board` + `bd ready`; beads sync via **bash** `scripts/beads-sync.sh`.
+8. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-24, session 23 FINAL — W74F waves 2/3/3b + W72 + campaign launch)
+## Current state (2026-07-24, session 24 — the fudw decomposition campaign)
 
-**Rigorous (af-validated, T0): 35 — `lem-prh` VALIDATED at session close (14/14
-nodes, taint clean; campaign phase 0 COMPLETE). Registry: 215. Definitions: 23, the
-four W74F defs LOCKED on recorded user ratification (2026-07-24).**
+**Rigorous (af-validated, T0): 35** (unchanged; `lem-prh` is the sole Route F T0
+node). **Registry: 248** (215 + 33). **Definitions: 35** (23 + 12 new drafts).
+Working tree clean at handoff; no orchestration live; no codex worker running.
 
-### Route F is `proved-mod-audit` COMPLETE (sketch v30)
+### What session 24 did (details: worklog + the artifacts dir)
 
-`op-classical ⇐ F0 cb-lift ⇐ th_factorization (⇐ th_main_ext ⇐ H-CB + EXT-CB +
-Stage-1 packet; + th_almost_idemp interface; + repaired diagonal) ⇐ F2/F3 ⇐ PRH`,
-finish `‖Q−E‖_{∞→∞} ≤ (K+4√(2K))√η` for `η ≤ η_K`, all constants relative and
-dimension-free, every node fresh-codex hostile-verified and codified. Key shards:
-`lem-prh`(+sharpness), `conj-hcb` (amended conditional-inverse contract),
-`conj-extcb`, `lem-thmainext-conditional` (restated), `lem-routef-k-ledger`,
-`lem-kitaev-diagonal-repair`(+CP-ization), `lem-kitaev-almost-idemp-audit`.
-The wave-3 ledger was REJECTED once by its hostile verifier (missing Stage-1 packet)
-and closed only after the wave-3b repair — the pipeline demonstrably catches
-plausible-but-incomplete closure claims.
-
-**NOT rigorous by L0.** `proved-mod-audit` = one rung below T0; nothing in the chain
-is af-validated or byte-citable (the source's printed proof was invalid; ours is a
-repair). W72 side-theatre: POTI-0 debt discharged and codified (POTI-0 == RDSE +
-LDHR-48 at proved-mod-audit; residuals PAUSED).
-
-### The L0 af-elevation campaign is LAUNCHED (epic aism-xuvw)
-
-- **Phase 0 — COMPLETE:** `lem-prh` af-validated (see START-HERE #4); T0 = 35.
-- **Phase 1 — aism-fudw (unblocked, do BETWEEN orchestrations):** factor H-CB /
-  EXT-CB / Stage-1 / assembly / ledger proofs into af-sized registry sub-lemmas.
-- **Phases 2–5 (dep-chained):** aism-niwk (H-CB) → aism-fgr7 (EXT-CB) → aism-5byv
-  (Stage-1 + assembly + ledger) → aism-y81y (F0/F2/F3 codification + the
-  `op-classical` root tree).
-- Ordering law, workflow loop, and failure surface: the campaign plan doc.
+- Launched the L0 campaign phase 1 (aism-fudw): 7 fresh codex dispatches total
+  (design architect; hostile reviewer; repair architect; reviewer #2; repair
+  architect #2; reviewer #3; transcription worker) — strictly one at a time.
+- All three hostile reviews returned INVALID **on the design layer** (contract
+  drift, unproduced constants, compound contracts); the underlying Route F
+  mathematics was never faulted. v3's verdict endorsed a 77-row inventory and
+  named the safe seed-first subset; ONLY that subset was transcribed.
+- One network outage mid-review: codex auto-reconnected; nothing lost.
+- Process precedent upheld: bank INVALID → narrowest repair → fresh re-review;
+  after 3 rounds, harvest the verdict-blessed subset rather than loop to v4.
 
 ## Next steps (ranked)
 
-0. **Run the decomposition pass** (aism-fudw) — no orchestration is live. Its
-   output gates phases 2–5. Surface the Stage-1 topological-input provisioning
-   (Lefschetz–Hopf refs/defs) early.
-1. **Phase 2 (aism-niwk)** once 1 lands: Ha/COL-HILB def layer + HCB-0..4 workspaces.
-2. Route X deciders (aism-ea2f) — unchanged fallback pricing.
-3. af-elevation queue (aism-88r) for non-Route-F debt; signed trunk stays parked;
-   pauses stand.
+0. **Surface the two user decisions** (START-HERE #5): def ratification (12
+   drafts) + F2/F3 bridge contracts.
+1. **Phase 2 (aism-niwk, unblocked): af-elevate the H-CB subtree.** Order:
+   (a) provision the Ha/COL-HILB def layer as af-consumable defs (byte-matched
+   `af def-add` from `refs/kitaev-2405.02434/approximate_algebras.tex` where the
+   *definitions* are sound); (b) seed COMP leaves first
+   (`scripts/seed-af-workspaces.py`, contract VERBATIM), bottom-up by deps
+   (`python3 scripts/argument.py --show <id>` for the order); (c) one
+   `af-orchestrate.py` at a time, backgrounded, **NO repo edits while live**
+   (porcelain-wide guard); (d) banking flips after landing.
+2. **Phase 3 (aism-fgr7, unblocked after H-CB)**: EXT-CB subtree, same loop.
+3. **aism-0163 (blocks phase 4)**: focused repair of the quarantined MAIN/ledger
+   rows per the v3 verdict's exact corrections + fresh hostile review; needs the
+   F2/F3 decision. Also acquire the 7 Stage-1 external topology sources into
+   `refs/` (provisioning risk flagged since the campaign plan).
+4. Route X deciders (aism-ea2f) — unchanged fallback pricing.
 
-## Standing rules (delta from session 22)
+## Standing rules (delta from session 23)
 
-- **Verdict-driven contract amendment/restatement** (new precedent): exact contract
-  text from a hostile verdict's registry-impact note is applied as a mechanical
-  reflection, recorded in body + commit.
-- **A hostile REJECTION is a normal cycle** (wave 3 → 3b): bank INVALID, repair the
-  named gap, re-verify fresh. No third state for banked work (upheld twice).
-- af campaign rules: strictly serial; clean registry tree while live; single minimal
-  elevation contracts; banking flips after landing.
+- The fudw loop hard-codified: a design is transcribed ONLY from a hostile
+  verdict's registry-impact section (verdict text wins over design text); when a
+  verdict names a safe subset, transcribe that subset and quarantine the rest in
+  a bead — no v4 design loops on a converging lineage.
+- Codification workers run at `high` (routine transcription); design/review at
+  `xhigh` (architecture). All fresh, all single-use, roles never mix.
 
 ## What is intentionally NOT here
 
-- Any claim op-classical is proved/rigorous, or that a hostile verdict equals
-  af-validation.
-- Any numerical `K`/`η_K` (relative expressions only).
-- Any claim beyond exactly **35** af-validated results (`lem-prh` is the sole new
-  one; `lem-prh-sharpness` remains proved-mod-audit — elevate separately if wanted).
-- Any movement on RDSE/LDHR-48, the signed trunk, or the strategists' altitude
-  diagnosis (banked interpretation only).
-- Any emptiness claim from the tallness-bound deciders: L3 evidence only.
+- Any claim op-classical is proved/rigorous. T0 is exactly **35**.
+- Any claim the 33 new shards are more than `proved-mod-audit`/`stated`
+  transcriptions of hostile-verified proofs (af: none, every one).
+- Any transcription of the quarantined rows or the 5 GAP interfaces (GAP-EA,
+  GAP-S1-POLAR-CONTRACT, GAP-MAIN-STRUCTURE, GAP-LEDGER-DOMAINS, F2/F3).
+- Any movement on RDSE/LDHR-48, the signed trunk, or numerical `K`/`η_K`.
+- Any locked status for the 12 new draft defs (user ratification pending).

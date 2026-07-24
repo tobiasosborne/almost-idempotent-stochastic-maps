@@ -668,3 +668,17 @@ of the codex ledger); export banked. The Route F chain now has its FIRST T0 node
 op-classical <= positive-approximate-retract-exists reduction is af-validated.
 L0-campaign phase 0 complete; next = the decomposition pass (aism-fudw) while no
 orchestration is live, then lem-prh-sharpness or the H-CB subtree per the plan.
+
+## v31 — 2026-07-24, fudw decomposition delta (new numbered file)
+
+The Route F chain is FACTORED. Three-round adversarial design loop (6 fresh codex
+workers; all 3 hostile reviews INVALID on the whole, converging to the v3 verdict's
+77-row honest inventory + named safe seed-first subset; underlying Route F math
+never faulted — every defect was factoring-layer). Codified the safe subset ONLY:
+33 shards (COMP 8, H-CB 14, EXT 6, Stage-1 2, finish leaves 3; 28 proved-mod-audit
++ 5 stated, af: none; registry 215 -> 248) + 12 draft defs (RATIFICATION NEEDED).
+Quarantined (design-doc-only, aism-0163, blocks phase 4 only): MAIN-CB assembly,
+ledger rows, GAP-EA / GAP-S1-POLAR-CONTRACT / GAP-MAIN-STRUCTURE /
+GAP-LEDGER-DOMAINS, uncontracted F2/F3 bridge; lem-routef-k-ledger under a
+DO-NOT-REWIRE guard. aism-fudw CLOSED; phases 2-3 (H-CB, EXT-CB elevation)
+unblocked. Artifacts: docs/plans/2026-07-24-fudw-decomposition-artifacts/.

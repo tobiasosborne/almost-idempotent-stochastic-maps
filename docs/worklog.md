@@ -1260,3 +1260,34 @@ The relaunched orchestration completed: root validated, 14/14 nodes, taint clean
 7 rounds. lem-prh banked at proved / af: validated (export.md/tex committed);
 ledger row updated; aism-h9qc closed (campaign phase 0 done). Registry 215,
 T0 = 35. First Route F node at T0.
+
+## 2026-07-24 — session 24: the fudw decomposition campaign (phase 1 of the L0 af-elevation epic)
+
+User mandate: commence campaign orchestration, delegate generically to codex gpt-5.6-sol
+xhigh, monitor. Claimed aism-fudw. Ran a 3-round adversarial design loop, strictly
+serial, 7 fresh codex workers total, every artifact + verdict banked in
+docs/plans/2026-07-24-fudw-decomposition-artifacts/:
+
+- v1 design (64 shards) -> hostile INVALID (5 blockers: missing COMP-CB subtree,
+  EXT semantic cycle, compound Stage-1 packet, unfactored MAIN-CB, ledger drops).
+- v2 repair (84 shards, 5/5 dispositioned) -> hostile INVALID (structural residue;
+  shape confirmed: no cycles, no status inflation).
+- v3 repair (92 shards, 28/28 dispositioned) -> hostile INVALID on the whole BUT
+  the verdict supplied exact withdrawals, corrected contracts, a 77-row honest
+  inventory, and a NAMED safe seed-first subset. No v4 (armed trigger honored).
+- Codified the safe subset only: 33 shards (28 pma + 5 stated, af none; registry
+  215 -> 248) + 12 draft defs; parents byte-untouched; orchestrator line audit
+  clean; [check-all] OK throughout. Commit d05be5b.
+
+Key finding for the record: all three rejections were factoring-layer (contract
+drift, unproduced constants, compound contracts) — the underlying Route F wave-2
+mathematics was never faulted by any of the three independent hostile reviewers.
+
+Beads: aism-fudw CLOSED; aism-0163 created for the quarantined remainder
+(MAIN/ledger + 4 GAP ids + uncontracted F2/F3 bridge), blocks aism-5byv (phase 4)
+only; phases 2-3 (aism-niwk, aism-fgr7) UNBLOCKED. Sketch v31 + CHANGELOG +
+CURRENT pointer + HANDOFF reconciled (Rule 9). One network outage mid-review;
+codex auto-reconnected, nothing lost.
+
+USER DECISIONS PENDING: ratify the 12 draft defs; decide the F2/F3 bridge
+contracts (aism-0163).
