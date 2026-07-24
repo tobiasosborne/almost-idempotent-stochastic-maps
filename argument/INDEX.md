@@ -73,7 +73,7 @@
 | `lem-compcb-compressed-unit-norm` | lemma | proved | validated | A | Compressed-unit norm estimate: there are universal C_co < infinity and e_co > 0 … |
 | `lem-compcb-corner-algebra` | lemma | proved | validated | A | Uniform compressed-corner algebra: there are universal C_ca < infinity and e_ca … |
 | `lem-compcb-rectangular-product` | lemma | proved | validated | A | Uniform rectangular compressed-product estimate: there are universal C_co < infi… |
-| `lem-compcb-single-compression-transfer` | lemma | proved-mod-audit | seeded | A | Single-compression transfer: there are universal C_co < infinity and e_co > 0 su… |
+| `lem-compcb-single-compression-transfer` | lemma | proved | validated | A | Single-compression transfer: there are universal C_co < infinity and e_co > 0 su… |
 | `lem-conditional-g-near-exposer` | lemma | proved | none | A | Conditional g-near-exposer: for an exact signed idempotent P with delta(P) > 0, … |
 | `lem-cotop-witness-pinning` | lemma | proved | none | A | Co-top witness pinning: for an exact signed idempotent P with 0 < delta(P) <= 1/… |
 | `lem-cross-pivot-cancellation` | lemma | proved | validated | A | Cross-pivot cancellation: let P be a rank-3 exact signed idempotent (square real… |
