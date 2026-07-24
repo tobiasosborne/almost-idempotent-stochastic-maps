@@ -592,3 +592,38 @@ Sketch v28 updated in place (Map change 3 gains the verdict block; Tier-1 order 
 now reads codify-survivors then prove-or-refute-H-CB). Promotes nothing: registry
 200, T0 34 — a hostile-verified L5 result is not af-validated and not yet a
 registry shard; codification is the next mechanical step.
+
+## 2026-07-24 — v29 (W74F wave 2 + W72 discharge): both th_main_ext gaps close at L5
+
+**Wave-1 codification (aism-zbcm).** Registry 200 → 208: lem-prh (+sharpness, constant
+2*sqrt(2), sqrt(eps) intrinsically sharp), lem-kitaev-diagonal-repair (+ CP-ization
+corollary), conj-hcb, conj-extcb, lem-thmainext-conditional, lem-kitaev-almost-idemp-audit.
+Four draft definitions pending user ratification (3 cited byte-verbatim from the pinned
+Kitaev tex, 1 original). The PRH reduction (op-classical <= positive-approximate-retract-
+exists) is now a registry fact.
+
+**Wave 2 (aism-wwur, aism-9lb7).** One fresh codex xhigh prover + one SEPARATE fresh
+hostile codex xhigh verifier per gap:
+- H-CB: VALID-WITH-CORRECTIONS. C_H = 4000c, e_H = 1/(10000c) relative to the sanctioned
+  COMP-CB/COL-HILB constants; no n-growth family. The unconditional h_{P,P} inverse is
+  FALSE (exact C+C counterexample); conj-hcb amended to the verifier's exact
+  conditional-inverse clause (the form lem_extension consumes) and flipped
+  proved-mod-audit. Not an escalation — refinement, not refutation.
+- EXT-CB: VALID-WITH-CORRECTIONS. Transported-corner construction (gamma_jk =
+  h_jk^{-1} mu_jk, gamma_11 = v) confirmed: one level-one unitary carries every
+  amplification; C_ext = C_merge[1+5C_H+20C_app(C_H+1)]. One proof-level correction
+  (close-idempotent normalization folded into e_sel); no contract amendment; conj-extcb
+  flipped proved-mod-audit with dep conj-hcb.
+Through lem-thmainext-conditional, th_main_ext now holds at the proved-mod-audit rung —
+the W73b principal blocker is closed at L5. Route F residual surface: the unconditional
+K/eta_K ledger (wave 3, aism-xpxk, prover in flight) + PRH af-elevation (aism-h9qc).
+
+**W72 debt discharged (aism-x0up).** Re-dispatched batched hostile verifier from a
+rebuilt build-workspace.sh snapshot: S0/RX/O48/ASM2 all VALID, cross-cutting clean.
+Codified (registry 208 → 214): S0/RX/O48 + conditional assembly proved-mod-audit;
+RDSE + LDHR-48 registered as conjectures (attacks remain PAUSED). POTI-0 == RDSE +
+LDHR-48 is now a proved-mod-audit conditional reduction.
+
+**Not claimed:** op-classical proved; any new af-validation (T0 = 34); numerical K;
+ratified definitions. All new statuses are proved-mod-audit via single fresh hostile
+passes (the batched-verification default), one rung below T0.

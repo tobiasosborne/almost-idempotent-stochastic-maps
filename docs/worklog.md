@@ -1195,3 +1195,28 @@ Waves logged (fr): W70 progress, W71 progress, W72 progress (unverified) —
 all EXPLOIT B. aism-cmk0 closed; aism-x0up filed/claimed (the post-DTR
 surface). No af orchestration this session (elevation queue aism-88r
 untouched; L5:T0 now ~66:34 and rising — flag for priority). All pushed.
+
+## 2026-07-24 — session 23 (W74F wave 2 + W72 discharge; orchestration under user mandate)
+
+User mandate: "orchestrate work on the ultimate proof; monitor; deal proactively;
+delegate all work to codex exec gpt-5.6-sol xhigh." Five dispatches, all landed:
+
+1. Wave-1 codification (fresh codex transcriber, orchestrator fidelity audit):
+   8 shards + 4 draft defs, registry 200→208; aism-zbcm closed. PRH reduction
+   (op-classical <= positive-approximate-retract-exists) now a registry fact.
+2. H-CB prover + separate fresh hostile verifier: VALID-WITH-CORRECTIONS;
+   conj-hcb amended (conditional-inverse clause per verdict) and flipped
+   proved-mod-audit; C_H=4000c dimension-free; C+C counterexample kills the
+   unconditional inverse. aism-wwur closed. No escalation.
+3. EXT-CB prover + separate fresh hostile verifier: VALID-WITH-CORRECTIONS;
+   transported-corner construction confirmed; conj-extcb flipped proved-mod-audit
+   (dep conj-hcb). aism-9lb7 closed; epic aism-enze auto-closed. th_main_ext ==
+   CLOSED at L5 through lem-thmainext-conditional.
+4. W72 POTI-0 batched hostile verifier re-dispatched from rebuilt workspace:
+   S0/RX/O48/ASM2 all VALID; codified (6 shards, registry 208→214). The W72
+   verification debt is discharged; RDSE/LDHR-48 registered as paused conjectures.
+5. Wave-3 K/eta_K ledger prover dispatched (aism-xpxk) — in flight at close.
+
+Sketch v29 + CHANGELOG + HANDOFF reconciled. T0 unchanged at 34. Four draft defs
+await user ratification. Every status flip is a mechanical reflection of a fresh
+hostile codex verdict; the orchestrator verified nothing itself (L5/§6).
