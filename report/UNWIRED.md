@@ -191,6 +191,8 @@ lem-routef-prh-finish
 lem-routef-f2-positive-unital-compression
 lem-routef-f3-retract-defect
 lem-compcb-amplification-naturality
+lem-compcb-entrywise-compression-naturality
+lem-compcb-row-column-product
 obs-gamma-capacity-scale-blind
 obs-gamma-two-level-class-count-wall
 obs-rank3-t1-boundary
