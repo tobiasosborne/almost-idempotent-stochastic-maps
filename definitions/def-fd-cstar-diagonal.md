@@ -3,7 +3,7 @@ id: def-fd-cstar-diagonal
 term: diagonal of a finite-dimensional C*-algebra
 aliases: finite-dimensional C*-algebra diagonal; algebra diagonal
 kind: cited
-status: draft
+status: locked
 source: kitaev-2405.02434
 locus: approximate_algebras.tex:1233-1242
 sha256: e7eb512a2ec2438d
@@ -28,4 +28,4 @@ XD=DX\quad\text{for all }\, X\in\calB,\qquad \pi(D)=I_\calB.
 `\(\mathcal B\)` is a finite-dimensional `\(C^*\)`-algebra.
 
 **Provenance.** Byte-verbatim from the pinned source at the recorded locus and
-SHA256 prefix.  The shard remains `draft` pending user ratification.
+SHA256 prefix.  User-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).

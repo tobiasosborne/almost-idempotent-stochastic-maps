@@ -3,7 +3,7 @@ id: def-extended-epsilon-cstar-algebra
 term: extended ε-C*-algebra
 aliases: extended epsilon-C*-algebra; extended approximate C*-algebra
 kind: cited
-status: draft
+status: locked
 source: kitaev-2405.02434
 locus: approximate_algebras.tex:1477-1479
 sha256: e7eb512a2ec2438d
@@ -19,4 +19,4 @@ An \emph{extended $\eps$-$C^*$ algebra} is a complete self-adjoint operator spac
 `\(\varepsilon\)` and `\(\Ma n\)` as `\(M_n\)`.
 
 **Provenance.** Byte-verbatim from the pinned source at the recorded locus and
-SHA256 prefix.  The shard remains `draft` pending user ratification.
+SHA256 prefix.  User-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).

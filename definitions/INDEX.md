@@ -8,16 +8,16 @@
 | `def-co-top` | co-top | original | draft | internal |
 | `def-dual-witness` | hiddenness dual witness | original | draft | internal |
 | `def-exposed` | exposed vertex | consensus | locked | internal |
-| `def-extended-epsilon-cstar-algebra` | extended ε-C*-algebra | cited | draft | kitaev-2405.02434 |
-| `def-fd-cstar-diagonal` | diagonal of a finite-dimensional C*-algebra | cited | draft | kitaev-2405.02434 |
-| `def-ha-map` | Ha-map | cited | draft | kitaev-2405.02434 |
+| `def-extended-epsilon-cstar-algebra` | extended ε-C*-algebra | cited | locked | kitaev-2405.02434 |
+| `def-fd-cstar-diagonal` | diagonal of a finite-dimensional C*-algebra | cited | locked | kitaev-2405.02434 |
+| `def-ha-map` | Ha-map | cited | locked | kitaev-2405.02434 |
 | `def-height` | height | original | locked | internal |
 | `def-invisible-mass` | invisible mass | original | locked | internal |
 | `def-near-cluster` | near-cluster | original | draft | internal |
 | `def-near-positive-projection` | near-positive projection | original | locked | internal |
 | `def-negative-mass` | negative mass | original | locked | internal |
 | `def-pivot` | pivot (chart) | original | draft | internal |
-| `def-positive-approximate-retract` | positive approximate retract | original | draft | internal |
+| `def-positive-approximate-retract` | positive approximate retract | original | locked | internal |
 | `def-selected-corner` | selected-corner configuration | original | draft | internal |
 | `def-signed-idempotent` | exact signed idempotent | original | locked | internal |
 | `def-slab` | slab | original | draft | internal |

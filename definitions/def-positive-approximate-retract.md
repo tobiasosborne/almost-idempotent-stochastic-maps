@@ -3,11 +3,11 @@ id: def-positive-approximate-retract
 term: positive approximate retract
 aliases: positive retract pair; PRH datum
 kind: original
-status: draft
+status: locked
 source: internal
 locus: project formulation transcribed from docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §§1,4
 sha256: -
-consensus: W74F transcription draft; user ratification pending
+consensus: user-ratified 2026-07-24 (tobiasosborne, in-session sign-off)
 ---
 
 **Statement.** A *positive approximate retract* between finite commutative
@@ -29,4 +29,4 @@ does not assert that such a pair exists for any particular almost-idempotent
 map.
 
 **Provenance.** Project formulation extracted from the W74F-A PRH artifact.
-This is an `original` definition at `status: draft`; it is not ratified.
+User-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).

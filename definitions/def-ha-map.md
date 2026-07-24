@@ -3,7 +3,7 @@ id: def-ha-map
 term: Ha-map
 aliases: Ha map; Kitaev Ha-map
 kind: cited
-status: draft
+status: locked
 source: kitaev-2405.02434
 locus: approximate_algebras.tex:1146-1149
 sha256: e7eb512a2ec2438d
@@ -22,4 +22,4 @@ Let $Q$ be a one-dimensional $\delta$-projection in an $\eps$-$C^*$ algebra $\ca
 **Notation.** Registry contracts use `Ha` for the source macro `\(\Ha\)`.
 
 **Provenance.** Byte-verbatim from the pinned source at the recorded locus and
-SHA256 prefix.  The shard remains `draft` pending user ratification.
+SHA256 prefix.  User-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).
