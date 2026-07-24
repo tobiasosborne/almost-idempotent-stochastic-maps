@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-07-24T17:52:55.265332054Z","conjecture":"Compressed-unit norm estimate: there are universal C_co \u003c infinity and e_co \u003e 0 such that, for e=delta+epsilon \u003c= e_co, every delta-projection T satisfies ||u_T|| \u003c= 1+C_co*e, and every nonvanishing T satisfies abs(||u_T||-1) \u003c= C_co*e.","author":"orchestrator"}

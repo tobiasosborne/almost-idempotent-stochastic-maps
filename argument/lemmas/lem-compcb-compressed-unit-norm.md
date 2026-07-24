@@ -5,7 +5,7 @@ contract: Compressed-unit norm estimate: there are universal C_co < infinity and
 defs: def-extended-epsilon-cstar-algebra; def-delta-projection; def-compressed-corner
 deps: lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (H-CB verdict:72-83); VERDICT-W74F-E-HCB.md HCB-3 correction; VERDICT-FUDW-DECOMP-V3.md §D
 owner: A
 workspace: proofs/lem-compcb-compressed-unit-norm

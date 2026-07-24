@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Uniform rectangular compressed-product estimate: there ar...}
+\step{1} Uniform rectangular compressed-product estimate: there are universal C\_co < infinity and e\_co > 0 such that, for e=delta+epsilon <= e\_co, every compatible amplified rectangular pair satisfies ||A dot B-AB|| <= C\_co*e*||A||||B||. \steptag{validated} \\[6pt]
+\step{1.1} The cited compressed-corner estimate supplies universal constants C\_corner < infinity and e\_corner > 0 such that in every epsilon-C*-algebra, for delta-projections U,V,W and e=delta+epsilon <= e\_corner, all X in S\_\{U,V\} and Y in S\_\{V,W\} satisfy ||Co\_\{U,W\}(XY)-XY|| <= C\_corner*e*||X||||Y||. \steptag{validated} \\[6pt]
+\step{1.1.1} By def-compressed-corner, for any triple U,V,W of delta-projections in an epsilon-C*-algebra, X dot Y=Co\_\{U,W\}(XY) on S\_\{U,V\} x S\_\{V,W\}, and ||X dot Y-XY|| <= O(delta+epsilon)||X||||Y||. \steptag{validated} \\[4pt]
+\step{1.1.2} Unpacking the universal big-O assertion in def-compressed-corner gives constants C\_corner < infinity and e\_corner > 0, independent of the algebra, projections, and elements, for which the bound in node 1.1.1 is at most C\_corner*(delta+epsilon)*||X||||Y|| whenever delta+epsilon <= e\_corner. \steptag{validated} \\[4pt]
+\step{1.2} For every compatible amplified rectangular pair A,B at level n, the amplified ambient space and corners meet the hypotheses of the estimate in node 1.1, and the amplified compressed product is A dot B=Co\_\{P\_n,R\_n\}(AB). \steptag{validated} \\[6pt]
+\step{1.2.1} By def-extended-epsilon-cstar-algebra, if the ambient space is an extended epsilon-C*-algebra then M\_n tensor A is an epsilon-C*-algebra for every n >= 1; moreover P\_n=I\_n tensor P is a delta-projection whenever P is, since P\_n\textasciicircum{}dagger=P\_n, P\_n\textasciicircum{}2-P\_n=I\_n tensor (P\textasciicircum{}2-P), and the block-diagonal operator norm satisfies ||I\_n tensor Z||=||Z||, and likewise for Q\_n and R\_n. \steptag{validated} \\[4pt]
+\step{1.2.2} For e <= e\_cmp, applying lem-compcb-amplified-compression to the pairs (P,Q), (Q,R), and (P,R) gives M\_n tensor S\_\{P,Q\}=S\_\{P\_n,Q\_n\}, M\_n tensor S\_\{Q,R\}=S\_\{Q\_n,R\_n\}, M\_n tensor S\_\{P,R\}=S\_\{P\_n,R\_n\}, together with 1\_\{M\_n\} tensor Co\_\{P,Q\}=Co\_\{P\_n,Q\_n\} and the analogous two identities; lem-compcb-amplified-compression-identities additionally gives the idempotence and dagger identities for these amplified compression maps. \steptag{validated} \\[4pt]
+\step{1.2.3} Thus a compatible amplified rectangular pair has A in S\_\{P\_n,Q\_n\} and B in S\_\{Q\_n,R\_n\}; by def-compressed-corner its amplified compressed product is the ordinary compressed product in M\_n tensor A, namely A dot B=Co\_\{P\_n,R\_n\}(AB), which belongs to S\_\{P\_n,R\_n\}. \steptag{validated} \\[4pt]
+\step{1.3} Taking C\_co=C\_corner and e\_co=min(e\_corner,e\_cmp), where e\_cmp is the universal threshold supplied by the validated amplification dependencies, and applying node 1.1 to the amplified data from node 1.2 proves ||A dot B-AB|| <= C\_co*e*||A||||B|| uniformly in n. \steptag{validated} \\[6pt]
+\step{1.3.1} The choices C\_co=C\_corner and e\_co=min(e\_corner,e\_cmp) are universal, finite and positive; if e <= e\_co then both the compressed-corner estimate of node 1.1 and the amplification identifications of node 1.2 apply. \steptag{validated} \\[4pt]
+\step{1.3.2} Applying node 1.1 inside the epsilon-C*-algebra M\_n tensor A to U=P\_n, V=Q\_n, W=R\_n, X=A, Y=B, and then using A dot B=Co\_\{P\_n,R\_n\}(AB) from node 1.2 yields ||A dot B-AB|| <= C\_corner*e*||A||||B||=C\_co*e*||A||||B||, with constants independent of n and all compatible data. \steptag{validated} \\[4pt]
+\step{1.4} In node 1, the phrase compatible amplified rectangular pair is an explicit abbreviation for the following data: an extended epsilon-C*-algebra calA; an integer n >= 1; delta-projections P,Q,R in calA; P\_n=I\_n tensor P, Q\_n=I\_n tensor Q, and R\_n=I\_n tensor R; elements A in S\_\{P\_n,Q\_n\} and B in S\_\{Q\_n,R\_n\}; and the compressed product A dot B defined, as in def-compressed-corner applied inside M\_n tensor calA, by A dot B=Co\_\{P\_n,R\_n\}(AB). Thus the quantifier every compatible amplified rectangular pair in node 1 ranges over exactly these data and no others. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
