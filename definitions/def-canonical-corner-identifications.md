@@ -3,11 +3,11 @@ id: def-canonical-corner-identifications
 term: canonical corner identifications
 aliases: canonical J maps; canonical column and row identifications
 kind: original
-status: draft
+status: locked
 source: internal
 locus: PROOF-W74F-E-HCB.md §8.1; DESIGN-FUDW-DECOMP-v3.md §4.1
 sha256: -
-consensus: unaudited transcription pending ratification
+consensus: user-ratified 2026-07-24 (tobiasosborne, in-session sign-off; delegated ratification for consensus/original tiers)
 ---
 
 **Statement.** After identifying the one-dimensional corner

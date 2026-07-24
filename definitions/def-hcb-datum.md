@@ -3,11 +3,11 @@ id: def-hcb-datum
 term: closed H-CB datum
 aliases: H-CB datum
 kind: original
-status: draft
+status: locked
 source: internal
 locus: DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package
 sha256: -
-consensus: unaudited transcription pending ratification
+consensus: user-ratified 2026-07-24 (tobiasosborne, in-session sign-off; delegated ratification for consensus/original tiers)
 ---
 
 **Statement.** A *closed H-CB datum* consists of an extended

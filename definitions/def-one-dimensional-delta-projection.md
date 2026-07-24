@@ -3,7 +3,8 @@ id: def-one-dimensional-delta-projection
 term: one-dimensional δ-projection and equivalence
 aliases: one-dimensional delta-projection; equivalent delta-projections
 kind: cited
-status: draft
+status: locked
+consensus: user-ratified 2026-07-24 (tobiasosborne, in-session sign-off: byte-match-to-source criterion for cited; delegated ratification for consensus/original)
 source: kitaev-2405.02434
 locus: approximate_algebras.tex:1066,1187
 sha256: e7eb512a2ec2438d

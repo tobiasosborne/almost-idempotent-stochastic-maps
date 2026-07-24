@@ -3,11 +3,11 @@ id: def-extended-delta-inclusion
 term: extended δ-inclusion and isomorphism
 aliases: extended delta-inclusion; extended delta-isomorphism
 kind: consensus
-status: draft
+status: locked
 source: internal
 locus: harmonization of approximate_algebras.tex:443-456,1477-1484 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1
 sha256: -
-consensus: unaudited transcription pending ratification
+consensus: user-ratified 2026-07-24 (tobiasosborne, in-session sign-off; delegated ratification for consensus/original tiers)
 ---
 
 **Statement.** An *extended \(\delta\)-inclusion* is a linear map \(v\) for
