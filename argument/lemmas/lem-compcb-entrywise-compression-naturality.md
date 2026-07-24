@@ -5,7 +5,7 @@ contract: Entrywise compression naturality: there is a universal e_nat > 0 such 
 defs: def-extended-epsilon-cstar-algebra; def-delta-projection; def-compressed-corner; def-theta-idempotent-approximation
 deps: lem-compcb-amplified-compression; lem-compcb-amplification-naturality
 status: stated
-af: none
+af: seeded
 provenance: factored out of proofs/lem-hcb-column-hilbert-squared per the 3rd-stall tripwire (2026-07-25, challenge ch-bbab9bd04b44dd6b node 1.3.1.4 — statement extracted mechanically from the challenge text); UNPROVED here pending its own af pass
 owner: A
 workspace: proofs/lem-compcb-entrywise-compression-naturality

@@ -1,0 +1,8 @@
+{
+  "id": "f058400038e0f0a6",
+  "name": "lem-compcb-amplified-compression-CONTRACT",
+  "source": "proofs/lem-compcb-amplified-compression (af-validated 2026-07-24, 13/13 taint clean). FULL VALIDATED CONTRACT: Amplified compression identity: there is a universal e_cmp \u003e 0 such that, whenever e=delta+epsilon \u003c= e_cmp, every pair of delta-projections P,Q in an extended epsilon-C*-algebra and every n \u003e= 1 satisfy 1_{M_n} tensor Co_{P,Q}=Co_{I_n tensor P,I_n tensor Q} and M_n tensor S_{P,Q}=S_{I_n tensor P,I_n tensor Q}.",
+  "content_hash": "b09dbf2f317864e9d1a2c3d0432a029eb54c4ab97443c4daecc5c077f0273666",
+  "created": "2026-07-24T22:34:50.211438703Z",
+  "notes": ""
+}

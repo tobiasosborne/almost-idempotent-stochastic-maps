@@ -72,7 +72,7 @@
 | `lem-compcb-compressed-unit-action` | lemma | proved | validated | A | Uniform compressed-unit action: there are universal C_co < infinity and e_co > 0… |
 | `lem-compcb-compressed-unit-norm` | lemma | proved | validated | A | Compressed-unit norm estimate: there are universal C_co < infinity and e_co > 0 … |
 | `lem-compcb-corner-algebra` | lemma | proved | validated | A | Uniform compressed-corner algebra: there are universal C_ca < infinity and e_ca … |
-| `lem-compcb-entrywise-compression-naturality` | lemma | stated | none | A | Entrywise compression naturality: there is a universal e_nat > 0 such that, when… |
+| `lem-compcb-entrywise-compression-naturality` | lemma | stated | seeded | A | Entrywise compression naturality: there is a universal e_nat > 0 such that, when… |
 | `lem-compcb-rectangular-product` | lemma | proved | validated | A | Uniform rectangular compressed-product estimate: there are universal C_co < infi… |
 | `lem-compcb-row-column-product` | lemma | stated | none | A | Row-column compressed-product estimate: there are universal C_rc < infinity and … |
 | `lem-compcb-single-compression-transfer` | lemma | proved | validated | A | Single-compression transfer: there are universal C_co < infinity and e_co > 0 su… |
