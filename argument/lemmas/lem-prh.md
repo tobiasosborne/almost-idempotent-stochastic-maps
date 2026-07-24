@@ -4,15 +4,18 @@ kind: lemma
 contract: Positive-retract hardening (PRH): let k,n >= 1 and let A:l-infinity(k)->l-infinity(n) and M:l-infinity(n)->l-infinity(k) be positive unital maps (equivalently, have probability-vector rows); if ||MA-I_k||_{infinity->infinity} <= epsilon with 0 <= epsilon < 1/2, then there is a stochastic idempotent E:l-infinity(n)->l-infinity(n) with ||AM-E||_{infinity->infinity} <= 2*sqrt(2*epsilon).
 defs: def-positive-approximate-retract; def-stochastic
 deps:
-status: proved-mod-audit
-af: seeded
-provenance: docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §§1-6; hostile batch verdict VERDICT-W74F-BATCH.md §A (VALID, no correction); report lem:prh
+status: proved
+af: validated
+provenance: af-validated 2026-07-24 (proofs/lem-prh, 14/14 nodes validated, taint clean, export.md/tex; orchestration af-orchestrate.py, fresh codex provers + fresh per-node codex verifiers); paper-track PROOF-W74F-A-PRH.md §§1-6 + VERDICT-W74F-BATCH.md §A; report lem:prh
 owner: A
 workspace: proofs/lem-prh
 ---
 
-**Status.** Hostile-verified paper proof, hence `proved-mod-audit`; not
-`af`-validated and not L0-rigorous.
+**Status.** **af-validated (T0), 2026-07-24**: root + all 13 children
+validated, taint clean, by fresh codex per-node verifiers under
+`af-orchestrate.py` (Claude orchestrated only). Export at
+`proofs/lem-prh/export.{md,tex}`. This is the first Route F node at the
+top repository rigour rung short of Lean.
 
 **Transcribed construction.** For
 \(\lambda=\sqrt{\varepsilon/2}\), use the disjoint cores

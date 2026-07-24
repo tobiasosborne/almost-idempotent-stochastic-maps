@@ -657,3 +657,14 @@ finish ||Q-E|| <= (K+4sqrt(2K))sqrt(eta), every node fresh-codex hostile-verifie
 codified. NOT rigorous (L0): T0 unchanged at 34; nothing af-validated. New Tier-1
 face = L0 closure: PRH af-elevation first (aism-h9qc), then a decomposition pass to
 factor the large chain below the af brittleness envelope before seeding.
+
+### v30 delta — 2026-07-24, PRH is af-VALIDATED (T0 34 -> 35)
+
+proofs/lem-prh: root + 13 children all validated, taint clean (fresh codex provers,
+fresh per-node codex verifiers, af-orchestrate.py; one false-positive overreach abort
+mid-campaign — orchestrator mid-run docs write; guard is porcelain-wide — relaunched
+over the intact tree). lem-prh flipped proved / af: validated (mechanical reflection
+of the codex ledger); export banked. The Route F chain now has its FIRST T0 node: the
+op-classical <= positive-approximate-retract-exists reduction is af-validated.
+L0-campaign phase 0 complete; next = the decomposition pass (aism-fudw) while no
+orchestration is live, then lem-prh-sharpness or the H-CB subtree per the plan.

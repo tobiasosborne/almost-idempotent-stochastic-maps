@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Positive-retract hardening (PRH): let k,n >= 1 and let A:...}
+\step{1} Positive-retract hardening (PRH): let k,n >= 1 and let A:l-infinity(k)->l-infinity(n) and M:l-infinity(n)->l-infinity(k) be positive unital maps (equivalently, have probability-vector rows); if ||MA-I\_k|$|\_\{infinity-\rangle$infinity\} <= epsilon with 0 <= epsilon < 1/2, then there is a stochastic idempotent E:l-infinity(n)->l-infinity(n) with ||AM-E|$|\_\{infinity-\rangle$infinity\} <= 2*sqrt(2*epsilon). \steptag{validated} \\[6pt]
+\step{1.1} Zero-defect case: if epsilon=0, then ||MA-I\_k||=0 gives MA=I\_k; E:=AM is row-stochastic, E\textasciicircum{}2=A(MA)M=AM=E, and ||AM-E||=0, so the required conclusion holds. \steptag{validated} \\[4pt]
+\step{1.2} Positive-defect case: if 0<epsilon<1/2 under the hypotheses of node 1, then there is a stochastic idempotent E with ||AM-E|$|\_\{infinity-\rangle$infinity\} <= 2*sqrt(2*epsilon). \steptag{validated} \\[6pt]
+\step{1.2.1} Core lemma: assume 0<epsilon<1/2 and write the probability rows of A as a\_i=(a\_\{i1\},...,a\_\{ik\}) and those of M as mu\_s=(mu\_s(1),...,mu\_s(n)). Put lambda=sqrt(epsilon/2), C\_s=\{i:a\_\{is\}>1-lambda\}, and beta\_s=mu\_s(C\_s\textasciicircum{}c). Then D\_s:=sum\_i mu\_s(i)(1-a\_\{is\}) <= epsilon/2 for every s, the sets C\_s are pairwise disjoint, and beta\_s <= epsilon/(2*lambda)=lambda<1. \steptag{validated} \\[6pt]
+\step{1.2.1.1} Coordinate defect identity: for every s, the s-th row of MA is the probability vector sum\_i mu\_s(i)a\_i, and therefore ||(MA)\_\{s,*\}-e\_s||\_1=2(1-(MA)\_\{ss\})=2*sum\_i mu\_s(i)(1-a\_\{is\})=2D\_s. The operator-norm hypothesis hence gives D\_s<=epsilon/2. \steptag{validated} \\[4pt]
+\step{1.2.1.2} Threshold consequences: with lambda=sqrt(epsilon/2), if distinct s,t had i in C\_s intersect C\_t, then a\_\{is\}+a\_\{it\}>2(1-lambda)>1, contradicting that a\_i is a probability vector. Thus the C\_s are pairwise disjoint. Also 1-a\_\{is\}>=lambda on C\_s\textasciicircum{}c, so lambda*beta\_s<=D\_s<=epsilon/2; since lambda\textasciicircum{}2=epsilon/2 and 0<epsilon<1/2, beta\_s<=epsilon/(2lambda)=lambda<1/2<1. \steptag{validated} \\[4pt]
+\step{1.2.1.3} Corrected threshold estimate (replacing the false strict estimate in node 1.2.1.2): because C\_s=\{i:a\_\{is\}>1-lambda\}, membership i in C\_s\textasciicircum{}c means a\_\{is\}<=1-lambda and hence 1-a\_\{is\}>=lambda. Since every mu\_s(i)>=0, D\_s=sum\_i mu\_s(i)(1-a\_\{is\})>=sum\_\{i in C\_s\textasciicircum{}c\}mu\_s(i)(1-a\_\{is\})>=lambda*sum\_\{i in C\_s\textasciicircum{}c\}mu\_s(i)=lambda*beta\_s. Here lambda=sqrt(epsilon/2)>0, so beta\_s<=D\_s/lambda<=epsilon/(2*lambda)=lambda. Moreover epsilon<1/2 gives lambda=sqrt(epsilon/2)<1/2<1. Thus the weak inequality beta\_s<=lambda asserted by the parent follows; no strict inequality beta\_s<lambda is claimed or needed. \steptag{validated} \\[4pt]
+\step{1.2.2} Exact construction lemma: given probability rows a\_i and mu\_s and a number 0<lambda<1/2 with pairwise disjoint C\_s=\{i:a\_\{is\}>1-lambda\} and beta\_s:=mu\_s(C\_s\textasciicircum{}c)<1, define nu\_s(i):=mu\_s(i)1\_\{C\_s\}(i)/(1-beta\_s), let N have rows nu\_s, and let hatA have row e\_s on C\_s and row a\_i outside the union of the C\_s. Then N and hatA are positive unital, N hatA=I\_k, and E:=hatA N is a stochastic idempotent. \steptag{validated} \\[6pt]
+\step{1.2.2.1} Conditioning and right-inverse identity: because beta\_s<1, nu\_s is entrywise nonnegative and sum\_i nu\_s(i)=mu\_s(C\_s)/(1-beta\_s)=1. Pairwise disjointness makes hatA well-defined, and each of its rows is a probability vector. Moreover the s-th row of N hatA is sum\_\{i in C\_s\} mu\_s(i)e\_s/(1-beta\_s)=e\_s, so N hatA=I\_k. \steptag{validated} \\[4pt]
+\step{1.2.2.2} Idempotent conclusion: the product E:=hatA N is a positive unital endomorphism of l-infinity(n), hence row-stochastic, and (hatA N)\textasciicircum{}2=hatA(N hatA)N=hatA I\_k N=hatA N=E. Thus E is a stochastic idempotent in the sense of def-stochastic. \steptag{validated} \\[4pt]
+\step{1.2.3} Error lemma: in the positive-defect setup of the core lemma, for N, hatA, and E from the exact construction lemma one has ||AM-E|$|\_\{infinity-\rangle$infinity\} <= epsilon/lambda+2*lambda = 2*sqrt(2*epsilon). \steptag{validated} \\[6pt]
+\step{1.2.3.1} Conditioning estimate: for each s, nu\_s is mu\_s conditioned on C\_s, so ||mu\_s-nu\_s||\_1=2*mu\_s(C\_s\textasciicircum{}c)=2*beta\_s<=epsilon/lambda. Hence ||M-N|$|\_\{infinity-\rangle$infinity\}<=epsilon/lambda. Since every probability-row map A is an infinity-norm contraction, ||A(M-N)|$|\_\{infinity-\rangle$infinity\}<=epsilon/lambda. \steptag{validated} \\[4pt]
+\step{1.2.3.2} Core-replacement estimate and sum: outside the union of the C\_s, the corresponding row of (A-hatA)N is zero. If i is in C\_s, that row is (a\_i-e\_s)N=sum\_t a\_\{it\}nu\_t-nu\_s, whose l1 norm is at most (1-a\_\{is\})+sum\_\{t not equal s\}a\_\{it\}=2(1-a\_\{is\})<2*lambda because every nu\_t is a probability vector. Thus ||(A-hatA)N|$|\_\{infinity-\rangle$infinity\}<=2*lambda. Since AM-E=A(M-N)+(A-hatA)N, the triangle inequality gives ||AM-E||<=epsilon/lambda+2*lambda=2*sqrt(2*epsilon). \steptag{validated} \\[6pt]
+\step{1.2.3.2.1} Local conditioning-contraction estimate, proved from the root hypotheses: put B=M-N. For each s, ||(MA)\_\{s,*\}-e\_s||\_1<=epsilon; since (MA)\_\{s,*\} is a probability vector, this norm equals 2(1-(MA)\_\{ss\})=2*sum\_i mu\_s(i)(1-a\_\{is\}), so D\_s:=sum\_i mu\_s(i)(1-a\_\{is\})<=epsilon/2. On C\_s\textasciicircum{}c one has 1-a\_\{is\}>=lambda, hence lambda*beta\_s<=D\_s and beta\_s<=epsilon/(2*lambda)<1. Because nu\_s is mu\_s conditioned on C\_s, the l1 difference on C\_s has total beta\_s and that on C\_s\textasciicircum{}c has total beta\_s, so ||mu\_s-nu\_s||\_1=2*beta\_s<=epsilon/lambda. Therefore ||B|$|\_\{infinity-\rangle$infinity\}<=epsilon/lambda. Finally, for every row i, sum\_j |(AB)\_\{ij\}|<=sum\_s a\_\{is\} sum\_j |B\_\{sj\}|<=max\_s sum\_j |B\_\{sj\}| because a\_i is a probability vector. Thus ||A(M-N)|$|\_\{infinity-\rangle$infinity\}=||AB|$|\_\{infinity-\rangle$infinity\}<=epsilon/lambda. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

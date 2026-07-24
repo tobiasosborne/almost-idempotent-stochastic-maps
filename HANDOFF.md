@@ -16,20 +16,13 @@ TRIGGER: session close, or a material change in the current frontier / next task
 3. Read **`docs/plans/2026-07-24-af-elevation-campaign.md`** — the L0 campaign ground
    plan (epic **aism-xuvw**). The full W74F evidence base is in
    `docs/plans/2026-07-24-W74F-wave2-artifacts/` (proofs + hostile verdicts).
-4. **⚠ CHECK FIRST: is the PRH af orchestration still running?**
-   `ps -C codex` / `af status -d proofs/lem-prh`. Launched at session-23 close
-   (`af-orchestrate.py lem-prh --workers 3 --max-rounds 8 --node-cap 40`,
-   backgrounded), **relaunched once**: the first run ABORTED on a FALSE-POSITIVE
-   overreach — the orchestrator's own campaign doc was written mid-run, and the
-   guard is **porcelain-wide (ANY dirty/untracked file outside the workspace
-   aborts), not just definitions/+argument/** — hard-won lesson, honor it. The
-   prover build had already completed: a 12-node PRH tree (zero-defect case /
-   core lemma / exact construction / error lemma), all `pending`. The relaunch
-   proceeds to fresh-verifier rounds over that tree. **While ANY orchestration is
-   live, make NO repo edits at all.** If it landed: root `validated` → `af export`,
-   flip `lem-prh` `status`→`proved`/`af: validated` (mechanical reflection),
-   regenerate, gate, commit; aborted → classify per §6 (MISSING fact / DAG dep /
-   genuine gap), never just bump rounds.
+4. **PRH af-elevation is DONE**: `proofs/lem-prh` root validated (14/14, taint
+   clean), `lem-prh` = `proved` / `af: validated`, export banked, aism-h9qc closed.
+   No orchestration is live at handoff. **Campaign process lesson (hard-won, honor
+   it): the af overreach guard is porcelain-WIDE — ANY dirty/untracked file outside
+   the live workspace aborts the run; make NO repo edits at all while an
+   orchestration is live** (run #1 aborted on the orchestrator's own mid-run docs
+   write; relaunch over the intact tree then validated cleanly).
 5. **STANDING DIRECTIVES (user, binding):** (i) capacity on the open leaves;
    (ii) decomposition as objective function; (iii) FINDINGS dead routes absolute;
    (iv) mostly serial; verification fresh-codex-only; af per §6 (Claude orchestrates,
@@ -40,8 +33,9 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 ## Current state (2026-07-24, session 23 FINAL — W74F waves 2/3/3b + W72 + campaign launch)
 
-**Rigorous (af-validated, T0): 34. Registry: 215. Definitions: 23, the four W74F defs
-now LOCKED on recorded user ratification (2026-07-24).**
+**Rigorous (af-validated, T0): 35 — `lem-prh` VALIDATED at session close (14/14
+nodes, taint clean; campaign phase 0 COMPLETE). Registry: 215. Definitions: 23, the
+four W74F defs LOCKED on recorded user ratification (2026-07-24).**
 
 ### Route F is `proved-mod-audit` COMPLETE (sketch v30)
 
@@ -63,8 +57,7 @@ LDHR-48 at proved-mod-audit; residuals PAUSED).
 
 ### The L0 af-elevation campaign is LAUNCHED (epic aism-xuvw)
 
-- **Phase 0 — LIVE:** `proofs/lem-prh` seeded (contract-match) and its orchestration
-  running in background at session close (see START-HERE #4).
+- **Phase 0 — COMPLETE:** `lem-prh` af-validated (see START-HERE #4); T0 = 35.
 - **Phase 1 — aism-fudw (unblocked, do BETWEEN orchestrations):** factor H-CB /
   EXT-CB / Stage-1 / assembly / ledger proofs into af-sized registry sub-lemmas.
 - **Phases 2–5 (dep-chained):** aism-niwk (H-CB) → aism-fgr7 (EXT-CB) → aism-5byv
@@ -74,15 +67,12 @@ LDHR-48 at proved-mod-audit; residuals PAUSED).
 
 ## Next steps (ranked)
 
-0. **Land the PRH orchestration** (START-HERE #4) — bank mechanically, or classify
-   the abort. Then `lem-prh-sharpness` as its own small elevation if desired (never
-   bundled — single-minimal-contract rule).
-1. **Run the decomposition pass** (aism-fudw) while no orchestration is live. Its
+0. **Run the decomposition pass** (aism-fudw) — no orchestration is live. Its
    output gates phases 2–5. Surface the Stage-1 topological-input provisioning
    (Lefschetz–Hopf refs/defs) early.
-2. **Phase 2 (aism-niwk)** once 1 lands: Ha/COL-HILB def layer + HCB-0..4 workspaces.
-3. Route X deciders (aism-ea2f) — unchanged fallback pricing.
-4. af-elevation queue (aism-88r) for non-Route-F debt; signed trunk stays parked;
+1. **Phase 2 (aism-niwk)** once 1 lands: Ha/COL-HILB def layer + HCB-0..4 workspaces.
+2. Route X deciders (aism-ea2f) — unchanged fallback pricing.
+3. af-elevation queue (aism-88r) for non-Route-F debt; signed trunk stays parked;
    pauses stand.
 
 ## Standing rules (delta from session 22)
@@ -97,10 +87,11 @@ LDHR-48 at proved-mod-audit; residuals PAUSED).
 
 ## What is intentionally NOT here
 
-- Any claim op-classical is proved/rigorous, that T0 moved off **34**, or that a
-  hostile verdict equals af-validation.
+- Any claim op-classical is proved/rigorous, or that a hostile verdict equals
+  af-validation.
 - Any numerical `K`/`η_K` (relative expressions only).
-- Any claim that PRH's af run has succeeded — it is in flight, unjudged.
+- Any claim beyond exactly **35** af-validated results (`lem-prh` is the sole new
+  one; `lem-prh-sharpness` remains proved-mod-audit — elevate separately if wanted).
 - Any movement on RDSE/LDHR-48, the signed trunk, or the strategists' altitude
   diagnosis (banked interpretation only).
 - Any emptiness claim from the tallness-bound deciders: L3 evidence only.

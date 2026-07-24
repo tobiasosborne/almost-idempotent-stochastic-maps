@@ -147,7 +147,7 @@
 | `lem-pivot-removing-move` | lemma | proved | validated | A | Pivot-removing max-stationarity: let P be a rank-3 exact signed idempotent (squa… |
 | `lem-positive-exposedness-margin` | lemma | proved | none | A | Positive exposedness margin: for an exact signed idempotent P with rho = 4*tau >… |
 | `lem-positive-row-straddle-gamma-lower` | lemma | proved | none | A | Positive-row straddle Gamma lower bound: for an exact signed idempotent P, a vec… |
-| `lem-prh` | lemma | proved-mod-audit | seeded | A | Positive-retract hardening (PRH): let k,n >= 1 and let A:l-infinity(k)->l-infini… |
+| `lem-prh` | lemma | proved | validated | A | Positive-retract hardening (PRH): let k,n >= 1 and let A:l-infinity(k)->l-infini… |
 | `lem-prh-sharpness` | lemma | proved-mod-audit | none | A | PRH square-root sharpness: for every 0 < lambda < 1/2 there are positive unital … |
 | `lem-psi-corner-trap` | lemma | proved | none | A | Psi normalization and corner trap: for an exact signed idempotent P with 0 < del… |
 | `lem-radial-alpha-bound` | lemma | proved | none | A | Conditional radial alpha bound: for an exact signed idempotent P with delta(P) >… |

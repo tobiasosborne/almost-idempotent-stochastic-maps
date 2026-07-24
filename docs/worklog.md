@@ -1253,3 +1253,10 @@ after all edits were committed; verification rounds proceed over the intact tree
 Session 23 totals: registry 200 -> 215; th_main_ext closed at L5; Route F
 proved-mod-audit COMPLETE; W72 debt discharged; sketch v28 -> v30; 4 defs locked;
 one hostile REJECTION correctly caught and repaired (wave 3 -> 3b); T0 unchanged 34.
+
+## 2026-07-24 — session 23 postscript: PRH af-validated (T0 34 -> 35)
+
+The relaunched orchestration completed: root validated, 14/14 nodes, taint clean,
+7 rounds. lem-prh banked at proved / af: validated (export.md/tex committed);
+ledger row updated; aism-h9qc closed (campaign phase 0 done). Registry 215,
+T0 = 35. First Route F node at T0.
