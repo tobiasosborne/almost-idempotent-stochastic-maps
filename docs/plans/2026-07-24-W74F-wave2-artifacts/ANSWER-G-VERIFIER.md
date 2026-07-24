@@ -1,0 +1,3 @@
+Wrote [VERDICT-W74F-G-KLEDGER.md](/home/tobias/Projects/almost-idempotent-stochastic-maps/docs/plans/2026-07-24-W74F-wave2-artifacts/VERDICT-W74F-G-KLEDGER.md).
+
+Overall verdict: **INVALID**. MAIN-CB Stage 1 lacks a named coefficient and threshold for the fresh nontrivial-projection/split packet. The \(K\) arithmetic and PRH finish are valid, but the displayed \(\eta_K\) is not yet sufficient for the entire pipeline. No git commands were run.
