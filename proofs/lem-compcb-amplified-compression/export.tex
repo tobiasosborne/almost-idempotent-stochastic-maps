@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Amplified compression identity: there is a universal e\_cm...}
+\step{1} Amplified compression identity: there is a universal e\_cmp > 0 such that, whenever e=delta+epsilon <= e\_cmp, every pair of delta-projections P,Q in an extended epsilon-C*-algebra and every n >= 1 satisfy 1\_\{M\_n\} tensor Co\_\{P,Q\}=Co\_\{I\_n tensor P,I\_n tensor Q\} and M\_n tensor S\_\{P,Q\}=S\_\{I\_n tensor P,I\_n tensor Q\}. \steptag{validated} \\[6pt]
+\step{1.1} Uniform threshold and amplified delta-projections: there is a universal e\_cmp>0 such that, if e=delta+epsilon<=e\_cmp, then for every n>=1 the elements P\_n=I\_n tensor P and Q\_n=I\_n tensor Q are delta-projections in the epsilon-C*-algebra M\_n tensor A and the theta power series defining both Co\_\{P,Q\} and Co\_\{P\_n,Q\_n\} is in its convergence domain. \steptag{validated} \\[6pt]
+\step{1.1.1} Amplified projections: by def-extended-epsilon-cstar-algebra, every M\_n tensor A is an epsilon-C*-algebra with the compatible matrix multiplication, involution, unit, and diagonal amplification norm. Thus, using def-delta-projection, P\_n=I\_n tensor P satisfies P\_n\textasciicircum{}dagger=P\_n and ||P\_n\textasciicircum{}2-P\_n||=||I\_n tensor(P\textasciicircum{}2-P)||=||P\textasciicircum{}2-P||<=delta; likewise Q\_n is a delta-projection, uniformly in n. \steptag{validated} \\[4pt]
+\step{1.1.2} Uniform convergence threshold: writing A\_\{P,Q\}=(L\_P R\_Q+R\_Q L\_P)/2 and T\_\{P,Q\}=2A\_\{P,Q\}-I, def-compressed-corner gives ||A\_\{P,Q\}\textasciicircum{}2-A\_\{P,Q\}||<=C e with one universal C in every epsilon-C*-algebra; hence the exact operator-algebra identity T\_\{P,Q\}\textasciicircum{}2-I=4(A\_\{P,Q\}\textasciicircum{}2-A\_\{P,Q\}) gives ||T\_\{P,Q\}\textasciicircum{}2-I||<=4Ce. The same C applies in every M\_n tensor A to P\_n,Q\_n, so choosing universal e\_cmp>0 with 4C e\_cmp<1 puts both T\_\{P,Q\} and every T\_\{P\_n,Q\_n\} in the theta/sgn domain specified by theta-idempotent-approximation-map. \steptag{validated} \\[4pt]
+\step{1.2} Algebraic amplification of compression: whenever the relevant theta functional calculi are defined, 1\_\{M\_n\} tensor Co\_\{P,Q\}=Co\_\{P\_n,Q\_n\}, where P\_n=I\_n tensor P and Q\_n=I\_n tensor Q. \steptag{validated} \\[6pt]
+\step{1.2.1} Pre-compression amplifies exactly: for X=[x\_ij] in M\_n tensor A, L\_\{P\_n\}R\_\{Q\_n\}(X)=[P(x\_ij Q)] and R\_\{Q\_n\}L\_\{P\_n\}(X)=[(P x\_ij)Q]. Consequently T\_\{P\_n,Q\_n\}=I\_n tensor T\_\{P,Q\} for T\_\{P,Q\}=L\_P R\_Q+R\_Q L\_P-I. \steptag{validated} \\[4pt]
+\step{1.2.2} Use the actual entrywise amplification Gamma\_n:B(A)->B(M\_n tensor A), not the diagonal embedding into M\_n(B(A)). For fixed n, Gamma\_n is a bounded unital algebra homomorphism, so it commutes with the norm-convergent power series defining theta. Since 1.2.1 gives Gamma\_n(T\_\{P,Q\})=T\_\{P\_n,Q\_n\} and the theta series is defined at both arguments, Gamma\_n(Co\_\{P,Q\})=Co\_\{P\_n,Q\_n\}. \steptag{validated} \\[6pt]
+\step{1.2.2.1} For fixed n define Gamma\_n:B(A)->B(M\_n tensor A) by Gamma\_n(U)([x\_ij])=[U(x\_ij)]. This map is bounded: coordinate compression in the concrete operator space gives ||x\_ij||<=||X|| for X=[x\_ij], while [U(x\_ij)]=sum\_\{i,j\} E\_ij tensor U(x\_ij) and ||E\_ij tensor y||=||y||, hence ||Gamma\_n(U)X||<=n\textasciicircum{}2||U||||X|| and ||Gamma\_n(U)||<=n\textasciicircum{}2||U||. Entrywise evaluation also gives Gamma\_n(I)=I and Gamma\_n(UV)=Gamma\_n(U)Gamma\_n(V). Thus Gamma\_n is a continuous unital algebra homomorphism; no isometry or uniform-in-n bound is asserted. By validated node 1.2.1, Gamma\_n(T\_\{P,Q\})=T\_\{P\_n,Q\_n\}. \steptag{validated} \\[4pt]
+\step{1.2.2.2} Put T=T\_\{P,Q\} and R=T\textasciicircum{}2-I. On ||R||<1, theta-idempotent-approximation-map defines theta(T) by the norm-convergent inverse-square-root power series: theta(T)=(I+T sum\_\{k>=0\} b\_k R\textasciicircum{}k)/2, where b\_k are the scalar Taylor coefficients of (1+z)\textasciicircum{}(-1/2). For every partial sum s\_N, the unital algebra-homomorphism identities from 1.2.2.1 give Gamma\_n(s\_N(T))=s\_N(Gamma\_n(T)) and Gamma\_n(R)=Gamma\_n(T)\textasciicircum{}2-I. Boundedness of Gamma\_n permits passage to the norm limit. The separately established convergence condition at T\_\{P\_n,Q\_n\}=Gamma\_n(T) identifies the target limit with theta(Gamma\_n(T)); hence Gamma\_n(theta(T\_\{P,Q\}))=theta(T\_\{P\_n,Q\_n\}). \steptag{validated} \\[4pt]
+\step{1.2.2.3} By def-compressed-corner, Co\_\{P,Q\}=theta(T\_\{P,Q\}) and Co\_\{P\_n,Q\_n\}=theta(T\_\{P\_n,Q\_n\}). Node 1.2.2.2 therefore gives Co\_\{P\_n,Q\_n\}=Gamma\_n(Co\_\{P,Q\})=I\_n tensor Co\_\{P,Q\}, where the last expression denotes the entrywise amplification of the operator Co\_\{P,Q\}. \steptag{validated} \\[4pt]
+\step{1.3} Range identification: if 1\_\{M\_n\} tensor Co\_\{P,Q\}=Co\_\{P\_n,Q\_n\}, then M\_n tensor S\_\{P,Q\}=S\_\{P\_n,Q\_n\}. \steptag{validated} \\[6pt]
+\step{1.3.1} Entrywise range lemma: for any linear map C:A->A and finite n, Im(I\_n tensor C)=M\_n tensor Im(C). Indeed every output has entries C(x\_ij), and conversely finitely many entrywise preimages x\_ij assemble into one matrix preimage. \steptag{validated} \\[4pt]
+\step{1.3.2} By def-compressed-corner, S\_\{P,Q\}=Im(Co\_\{P,Q\}) and S\_\{P\_n,Q\_n\}=Im(Co\_\{P\_n,Q\_n\}); therefore the entrywise range lemma and I\_n tensor Co\_\{P,Q\}=Co\_\{P\_n,Q\_n\} give M\_n tensor S\_\{P,Q\}=S\_\{P\_n,Q\_n\}. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
