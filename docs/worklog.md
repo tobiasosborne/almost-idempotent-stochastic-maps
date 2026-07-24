@@ -1235,3 +1235,21 @@ L0 closure (PRH af-elevation first, then decomposition of the large chain below
 the af brittleness envelope). Sketch v30 + CHANGELOG + HANDOFF reconciled.
 The wave-3 rejection is the session's best evidence the pipeline works: a
 plausible closure claim with one unnamed constant did NOT leak into the record.
+
+## 2026-07-24 — session 23 close (defs ratified; L0 af-elevation campaign launched)
+
+User ratified all four W74F definitions (locked, sign-off recorded). L0 campaign
+laid: plan doc docs/plans/2026-07-24-af-elevation-campaign.md; epic aism-xuvw with
+dep-chained phases (PRH aism-h9qc LIVE -> decomposition aism-fudw -> H-CB aism-niwk
+-> EXT-CB aism-fgr7 -> Stage-1/assembly/ledger aism-5byv -> glue/root aism-y81y).
+
+PRH af run #1: prover build SUCCEEDED (12-node tree: zero-defect / core lemma /
+exact construction / error lemma, all pending) then ABORTED on a FALSE-POSITIVE
+overreach — the orchestrator wrote the campaign doc mid-run; the guard is
+porcelain-WIDE (any dirty file outside the workspace), not just defs/argument.
+Process lesson recorded in HANDOFF. Relaunched as the final action of the session
+after all edits were committed; verification rounds proceed over the intact tree.
+
+Session 23 totals: registry 200 -> 215; th_main_ext closed at L5; Route F
+proved-mod-audit COMPLETE; W72 debt discharged; sketch v28 -> v30; 4 defs locked;
+one hostile REJECTION correctly caught and repaired (wave 3 -> 3b); T0 unchanged 34.
