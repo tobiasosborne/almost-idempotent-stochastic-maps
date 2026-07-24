@@ -5,7 +5,7 @@ contract: Uniform compressed associator: there are universal C_as < infinity and
 defs: def-hcb-datum; def-compressed-associator
 deps: lem-compcb-rectangular-product
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: PROOF-W74F-E-HCB.md §3; VERDICT-W74F-E-HCB.md HCB-0 (VALID); DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D
 owner: A
 workspace: proofs/lem-hcb0-compressed-associator

@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-07-24T20:28:13.570574983Z","conjecture":"Uniform compressed associator: there are universal C_as \u003c infinity and e_as \u003e 0 such that every H-CB datum with e \u003c= e_as and all compatible amplified rectangular A,B,C satisfy ||(A dot B) dot C-A dot (B dot C)|| \u003c= C_as*e*||A||||B||||C||.","author":"orchestrator"}

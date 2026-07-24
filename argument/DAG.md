@@ -122,7 +122,7 @@ graph LR
   lem-harmonic-affine-bridge["lem-harmonic-affine-bridge<br/>proved/validated"]
   lem-harmonic-line-coordinate-row-balance["lem-harmonic-line-coordinate-row-balance<br/>proved/none"]
   lem-hcb-column-hilbert-squared["lem-hcb-column-hilbert-squared<br/>proved-mod-audit/none"]
-  lem-hcb0-compressed-associator["lem-hcb0-compressed-associator<br/>proved-mod-audit/none"]
+  lem-hcb0-compressed-associator["lem-hcb0-compressed-associator<br/>proved-mod-audit/seeded"]
   lem-hcb1-column-action["lem-hcb1-column-action<br/>proved-mod-audit/none"]
   lem-hcb1-variational-identity["lem-hcb1-variational-identity<br/>proved-mod-audit/none"]
   lem-hcb2-amplified-adjointness["lem-hcb2-amplified-adjointness<br/>proved-mod-audit/none"]
