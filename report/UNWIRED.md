@@ -109,6 +109,12 @@ lem-dtr-tail-coherent-conversion
 lem-dtr-poti-assembly
 conj-dtr-zero-oriented-surplus-exclusion
 conj-dtr-positive-oriented-surplus-gap-exclusion
+conj-w72-poti0-exact-cause-split
+conj-w72-poti0-root-selection-exchange-ledger
+conj-w72-poti0-fixed-level-starvation-ledger
+conj-w72-poti0-root-dilution-selected-support-exchange
+conj-w72-poti0-low-deficit-huddle-ray-48
+conj-w72-poti0-routine-conditional-assembly
 lem-min-a-implies-height
 lem-negative-pivot-import
 lem-optimal-face-alpha-free-characterization
@@ -158,4 +164,3 @@ obs-zero-face-perturbation-collapse
 op-hlc
 prop-f2-t1-equivalence
 ```
-
