@@ -5,7 +5,7 @@ contract: Uniform compressed-corner algebra: there are universal C_ca < infinity
 defs: def-extended-epsilon-cstar-algebra; def-delta-projection; def-compressed-corner
 deps: lem-compcb-amplified-compression-identities; lem-compcb-rectangular-product; lem-compcb-compressed-unit-action; lem-compcb-compressed-unit-norm
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (DECOMP:152-183; TeX 1077-1082); VERDICT-FUDW-DECOMP-V3.md §§1.2,2.2,D
 owner: A
 workspace: proofs/lem-compcb-corner-algebra
