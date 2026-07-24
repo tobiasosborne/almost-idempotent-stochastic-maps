@@ -1,0 +1,3 @@
+Created [VERDICT-W74F-H-STAGE1.md](/home/tobias/Projects/almost-idempotent-stochastic-maps/docs/plans/2026-07-24-W74F-wave2-artifacts/VERDICT-W74F-H-STAGE1.md:277).
+
+Overall verdict: **VALID-WITH-CORRECTIONS**. The relative \(K/\eta_K\) ledger is closed at `proved-mod-audit`; the verdict identifies two required bookkeeping corrections concerning per-corner defects and the explicit nonvanishing threshold. No git commands were run.
