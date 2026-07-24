@@ -1,0 +1,1 @@
+[VERDICT-poti0-batch.md](/tmp/claude-1000/-home-tobias-Projects-almost-idempotent-stochastic-maps/d0649755-a069-4541-b56e-5ebfebf1d081/scratchpad/w72-poti0-verify/VERDICT-poti0-batch.md)
