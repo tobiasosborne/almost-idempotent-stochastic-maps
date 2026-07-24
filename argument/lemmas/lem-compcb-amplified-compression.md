@@ -5,7 +5,7 @@ contract: Amplified compression identity: there is a universal e_cmp > 0 such th
 defs: def-extended-epsilon-cstar-algebra; def-delta-projection; def-compressed-corner
 deps:
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (DECOMP:152-183; TeX 1054-1064,1542-1544); VERDICT-FUDW-DECOMP-V3.md §§2.2,D
 owner: A
 workspace: proofs/lem-compcb-amplified-compression
