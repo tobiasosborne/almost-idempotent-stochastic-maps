@@ -1,0 +1,8 @@
+{
+  "id": "496528b3f2164bab",
+  "name": "lem-compcb-amplification-naturality",
+  "source": "proofs/lem-compcb-amplification-naturality (af-validated 2026-07-24, 12/12 taint clean): Amplification naturality of the power-series functional calculus: for iota_n: B -\u003e M_n(B) the unital isometric amplification and f a power series on ||X-x_0I||\u003cr, f(iota_n(X)) = iota_n(f(X)); in particular theta(iota_n(2P-I)) = iota_n(theta(2P-I)) whenever ||(2P-I)^2-I||\u003c1.",
+  "content_hash": "d1261c546ca230efa7f0984925fb300e82ca78bd3d6059c5c450b0d70ed7eed2",
+  "created": "2026-07-24T17:24:14.74330718Z",
+  "notes": ""
+}
