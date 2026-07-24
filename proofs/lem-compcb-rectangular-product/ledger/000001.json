@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-07-24T17:41:30.24600807Z","conjecture":"Uniform rectangular compressed-product estimate: there are universal C_co \u003c infinity and e_co \u003e 0 such that, for e=delta+epsilon \u003c= e_co, every compatible amplified rectangular pair satisfies ||A dot B-AB|| \u003c= C_co*e*||A||||B||.","author":"orchestrator"}

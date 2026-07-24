@@ -72,7 +72,7 @@
 | `lem-compcb-compressed-unit-action` | lemma | proved-mod-audit | none | A | Uniform compressed-unit action: there are universal C_co < infinity and e_co > 0… |
 | `lem-compcb-compressed-unit-norm` | lemma | proved-mod-audit | none | A | Compressed-unit norm estimate: there are universal C_co < infinity and e_co > 0 … |
 | `lem-compcb-corner-algebra` | lemma | proved-mod-audit | none | A | Uniform compressed-corner algebra: there are universal C_ca < infinity and e_ca … |
-| `lem-compcb-rectangular-product` | lemma | proved-mod-audit | none | A | Uniform rectangular compressed-product estimate: there are universal C_co < infi… |
+| `lem-compcb-rectangular-product` | lemma | proved-mod-audit | seeded | A | Uniform rectangular compressed-product estimate: there are universal C_co < infi… |
 | `lem-compcb-single-compression-transfer` | lemma | proved-mod-audit | none | A | Single-compression transfer: there are universal C_co < infinity and e_co > 0 su… |
 | `lem-conditional-g-near-exposer` | lemma | proved | none | A | Conditional g-near-exposer: for an exact signed idempotent P with delta(P) > 0, … |
 | `lem-cotop-witness-pinning` | lemma | proved | none | A | Co-top witness pinning: for an exact signed idempotent P with 0 < delta(P) <= 1/… |

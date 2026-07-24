@@ -5,7 +5,7 @@ contract: Uniform rectangular compressed-product estimate: there are universal C
 defs: def-extended-epsilon-cstar-algebra; def-delta-projection; def-compressed-corner
 deps: lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (DECOMP COMP-CB; H-CB (1.1)); PROOF-W74F-E-HCB.md §1.2; VERDICT-W74F-DECOMP-V3.md §D
 owner: A
 workspace: proofs/lem-compcb-rectangular-product

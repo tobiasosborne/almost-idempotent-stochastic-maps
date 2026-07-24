@@ -83,7 +83,7 @@ graph LR
   lem-compcb-compressed-unit-action["lem-compcb-compressed-unit-action<br/>proved-mod-audit/none"]
   lem-compcb-compressed-unit-norm["lem-compcb-compressed-unit-norm<br/>proved-mod-audit/none"]
   lem-compcb-corner-algebra["lem-compcb-corner-algebra<br/>proved-mod-audit/none"]
-  lem-compcb-rectangular-product["lem-compcb-rectangular-product<br/>proved-mod-audit/none"]
+  lem-compcb-rectangular-product["lem-compcb-rectangular-product<br/>proved-mod-audit/seeded"]
   lem-compcb-single-compression-transfer["lem-compcb-single-compression-transfer<br/>proved-mod-audit/none"]
   lem-conditional-g-near-exposer["lem-conditional-g-near-exposer<br/>proved/none"]
   lem-cotop-witness-pinning["lem-cotop-witness-pinning<br/>proved/none"]
