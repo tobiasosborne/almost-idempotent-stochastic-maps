@@ -1,0 +1,3 @@
+Created [VERDICT-W74F-F-EXTCB.md](/home/tobias/Projects/almost-idempotent-stochastic-maps/docs/plans/2026-07-24-W74F-wave2-artifacts/VERDICT-W74F-F-EXTCB.md).
+
+Overall verdict: **VALID-WITH-CORRECTIONS**. The transported-corner construction is valid and dimension-free. The required correction makes the level-one close-idempotent normalization explicit in EXTCB-1 and folds its universal threshold into \(e_{\rm sel}\). No Git commands were run.
