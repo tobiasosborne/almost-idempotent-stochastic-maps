@@ -1,0 +1,8 @@
+{
+  "id": "e145a20597fccc88",
+  "name": "lem-compcb-amplified-compression-CONTRACT",
+  "source": "proofs/lem-compcb-amplified-compression (af-validated, 13/13 taint clean). FULL VALIDATED CONTRACT: Amplified compression identity: for e \u003c= e_cmp: 1_{M_n} tensor Co_{P,Q}=Co_{I_n tensor P,I_n tensor Q} and M_n tensor S_{P,Q}=S_{I_n tensor P,I_n tensor Q}.",
+  "content_hash": "3b42017f7f31111fae893e703c84af0dd6994f2be779ab233144df509521d7e3",
+  "created": "2026-07-24T23:34:47.47429758Z",
+  "notes": ""
+}

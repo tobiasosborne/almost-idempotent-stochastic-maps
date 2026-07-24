@@ -1,0 +1,8 @@
+{
+  "id": "b6f2659e21bc91be",
+  "name": "lem-compcb-amplified-compression-identities-CONTRACT",
+  "source": "proofs/lem-compcb-amplified-compression-identities (af-validated, 7/7 taint clean). FULL VALIDATED CONTRACT: Amplified compression identities: for e \u003c= e_cmp, A an extended epsilon-C*-algebra, P,Q delta-projections in A, n \u003e= 1, X in M_n tensor A: Co_{P_n,Q_n}^2=Co_{P_n,Q_n} and Co_{P_n,Q_n}(X)^dagger=Co_{Q_n,P_n}(X^dagger).",
+  "content_hash": "2eddae310f2f22aad34a10757e61056d55b06ba5dc8452e6104024a9b8455dfb",
+  "created": "2026-07-24T23:34:47.480353938Z",
+  "notes": ""
+}
