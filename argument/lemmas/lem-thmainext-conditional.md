@@ -1,20 +1,27 @@
 ---
 id: lem-thmainext-conditional
 kind: lemma
-contract: Conditional th_main_ext assembly: assuming conj-hcb (H-CB) and conj-extcb (EXT-CB), every finite-dimensional extended epsilon-C*-algebra A is carried by one map v from a finite-dimensional C*-algebra B at full amplified O(epsilon) strength with a universal constant; the assembly includes the corrected estimate |<X,X>_n-||X||_{n,1}^2| <= C(delta+epsilon)||X||_{n,1}^2 and, with the verified diagonal CP-ization and th_almost_idemp interface, yields the conditional universal K=max{K_DeltaUpsilon,K_mult,K_UpsilonDelta,1} and a positive threshold eta_K given by the finite minimum ledger of DECOMP-W74F-C-THMAINEXT.md §5.
+contract: Extended th_main_ext assembly: there are universal C_E < infinity and epsilon_E > 0 such that every finite-dimensional extended epsilon-C*-algebra A, for 0 <= epsilon <= epsilon_E, is carried by one extended C_E*epsilon-isomorphism v:B->A from a finite-dimensional C*-algebra; the assembly uses the corrected squared COL-HILB estimate and the hostile-verified H-CB (conj-hcb), EXT-CB (conj-extcb), and Stage-1 reset packets, with constants independent of dimension, amplification level, and block data.
 defs: def-extended-epsilon-cstar-algebra; def-fd-cstar-diagonal
-deps: conj-hcb; conj-extcb; cor-kitaev-diagonal-cpization; lem-kitaev-almost-idemp-audit
+deps: conj-hcb; conj-extcb
 status: proved-mod-audit
 af: none
-provenance: docs/plans/2026-07-23-W74F-artifacts/DECOMP-W74F-C-THMAINEXT.md §§3-5; hostile batch verdict VERDICT-W74F-BATCH.md §C and Cross-target checks (VALID, no correction); report lem:thmainext-conditional
+provenance: docs/plans/2026-07-23-W74F-artifacts/DECOMP-W74F-C-THMAINEXT.md §§3-5 (assembly + corrected COL-HILB); PROOF-W74F-H-STAGE1.md (Stage-1 reset packet); hostile verdicts VERDICT-W74F-BATCH.md §C, VERDICT-W74F-E-HCB.md, VERDICT-W74F-F-EXTCB.md, VERDICT-W74F-H-STAGE1.md (contract restatement endorsed verbatim by the H-verdict); report lem:thmainext-conditional
 owner: A
 workspace: proofs/lem-thmainext-conditional
 ---
 
-**Status.** Hostile-verified conditional paper proof, hence
-`proved-mod-audit`; the two conjecture premises are named in both the
-contract and `deps`.  It is not `af`-validated and does not prove either
-premise.
+**Status.** Hostile-verified paper proof, hence `proved-mod-audit`; not
+`af`-validated and not L0-rigorous.
+
+**Contract restatement (2026-07-24).** Originally registered as an
+explicitly conditional assembly ("assuming conj-hcb and conj-extcb");
+both premises are now themselves `proved-mod-audit` (hostile-verified
+this session) and the Stage-1 reset packet closed, so the contract was
+restated to the exact text endorsed by `VERDICT-W74F-H-STAGE1.md`'s
+registry-impact note.  The conditional `K`/`eta_K` clause moved to its
+own node [[lem-routef-k-ledger]]; the id keeps its historical name (ids
+are stable).
 
 **MAIN-CB assembly.** The transcribed invariant is that every extension,
 binary merge, and error-reduction step produces one level-one map whose
