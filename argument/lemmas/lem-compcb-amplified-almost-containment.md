@@ -5,7 +5,7 @@ contract: Amplified almost-containment: there are universal C_ac < infinity and 
 defs: def-extended-epsilon-cstar-algebra; def-delta-projection; def-compressed-corner
 deps: lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (DECOMP:154-181; TeX 1068-1075); VERDICT-FUDW-DECOMP-V3.md §§1.2,2.2,D
 owner: A
 workspace: proofs/lem-compcb-amplified-almost-containment
