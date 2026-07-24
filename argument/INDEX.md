@@ -65,7 +65,7 @@
 | `lem-clone-invariant-row-complexity` | lemma | proved | none | B | For every finite exact signed idempotent P, the numbers R(P) of geometrically di… |
 | `lem-cluster-return-flow` | lemma | proved | none | A | Cluster return-flow: for an exact signed idempotent P, any row-index subset C, a… |
 | `lem-collateral-import` | lemma | proved | validated | A | Collateral import bound: let P be a rank-3 exact signed idempotent (square real … |
-| `lem-compcb-amplification-naturality` | lemma | stated | seeded | A | Amplification naturality of the power-series functional calculus: let B be a uni… |
+| `lem-compcb-amplification-naturality` | lemma | proved | validated | A | Amplification naturality of the power-series functional calculus: let B be a uni… |
 | `lem-compcb-amplified-almost-containment` | lemma | proved-mod-audit | none | A | Amplified almost-containment: there are universal C_ac < infinity and e_ac > 0 s… |
 | `lem-compcb-amplified-compression` | lemma | proved-mod-audit | seeded | A | Amplified compression identity: there is a universal e_cmp > 0 such that, whenev… |
 | `lem-compcb-amplified-compression-identities` | lemma | proved-mod-audit | seeded | A | Amplified compression identities: there is a universal e_cmp > 0 such that, when… |

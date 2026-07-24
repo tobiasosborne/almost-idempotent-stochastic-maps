@@ -4,8 +4,8 @@ kind: lemma
 contract: Amplification naturality of the power-series functional calculus: let B be a unital Banach algebra, iota_n: B -> M_n(B) the unital amplification X -> 1_{M_n} tensor X (an isometric unital homomorphism), and f given on ||X - x_0 I|| < r by the power series f(X) = a_0 I + sum_{m>=1} a_m (X - x_0 I)^m; then for every X in B with ||X - x_0 I|| < r, f(iota_n(X)) is defined and f(iota_n(X)) = iota_n(f(X)); in particular, whenever ||(2P-I)^2 - I|| < 1, theta(iota_n(2P-I)) = iota_n(theta(2P-I)) with theta(X) = (I + sgn(X))/2.
 defs: def-theta-idempotent-approximation
 deps:
-status: stated
-af: seeded
+status: proved
+af: validated
 provenance: factored out of proofs/lem-compcb-amplified-compression per the STUCK-abort tripwire classification (2026-07-24, challenges ch-56b93288d4201d17 / ch-dd07e65848cdbb97 / ch-32a052f1130ec348 all name this equation); statement extracted mechanically from the challenge/verifier text; UNPROVED here (status stated) pending its own af pass
 owner: A
 workspace: proofs/lem-compcb-amplification-naturality

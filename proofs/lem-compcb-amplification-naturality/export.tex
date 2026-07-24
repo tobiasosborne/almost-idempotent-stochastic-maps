@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Amplification naturality of the power-series functional c...}
+\step{1} Amplification naturality of the power-series functional calculus: let B be a unital Banach algebra, iota\_n: B -> M\_n(B) the unital amplification X -> 1\_\{M\_n\} tensor X (an isometric unital homomorphism), and f given on ||X - x\_0 I|| < r by the power series f(X) = a\_0 I + sum\_\{m>=1\} a\_m (X - x\_0 I)\textasciicircum{}m; then for every X in B with ||X - x\_0 I|| < r, f(iota\_n(X)) is defined and f(iota\_n(X)) = iota\_n(f(X)); in particular, whenever ||(2P-I)\textasciicircum{}2 - I|| < 1, theta(iota\_n(2P-I)) = iota\_n(theta(2P-I)) with theta(X) = (I + sgn(X))/2. \steptag{validated} \\[6pt]
+\step{1.1} Under the general hypotheses of node 1, for every X with ||X-x\_0 I\_B||<r, the defining series in M\_n(B) converges and satisfies f(iota\_n(X))=iota\_n(f(X)). \steptag{validated} \\[6pt]
+\step{1.1.1} Unitality, multiplicativity, and isometry give iota\_n(I\_B)=I\_M, iota\_n(X)-x\_0 I\_M=iota\_n(X-x\_0 I\_B), ||iota\_n(X)-x\_0 I\_M||=||X-x\_0 I\_B||<r, and (iota\_n(X)-x\_0 I\_M)\textasciicircum{}m=iota\_n((X-x\_0 I\_B)\textasciicircum{}m) for every integer m>=0. \steptag{validated} \\[4pt]
+\step{1.1.2} For every N, if S\_N=a\_0 I\_B+sum\_\{m=1\}\textasciicircum{}N a\_m(X-x\_0 I\_B)\textasciicircum{}m and T\_N=a\_0 I\_M+sum\_\{m=1\}\textasciicircum{}N a\_m(iota\_n(X)-x\_0 I\_M)\textasciicircum{}m, linearity, unitality, and multiplicativity of iota\_n give T\_N=iota\_n(S\_N). \steptag{validated} \\[4pt]
+\step{1.1.3} If S\_N converges in B to f(X) and T\_N=iota\_n(S\_N) for every N, then the isometry iota\_n is continuous, so T\_N converges to iota\_n(f(X)); since the power-series definition identifies the same T\_N-limit as f(iota\_n(X)), uniqueness of limits gives both definedness and f(iota\_n(X))=iota\_n(f(X)). \steptag{validated} \\[4pt]
+\step{1.2} Let Y=2P-I\_B and assume ||Y\textasciicircum{}2-I\_B||<1. Directly from the registered power-series definition of sgn and theta, theta(iota\_n(Y))=iota\_n(theta(Y)). \steptag{validated} \\[6pt]
+\step{1.2.1} For c\_m=binom(-1/2,m), the binomial series h(w)=sum\_\{m>=0\}c\_m w\textasciicircum{}m has radius one and is the analytic inverse-square-root branch h(w)=(1+w)\textasciicircum{}(-1/2); hence the registered power-series functional calculus represents Z\textasciicircum{}(-1/2) by sum\_\{m>=0\}c\_m(Z-I)\textasciicircum{}m whenever ||Z-I||<1. \steptag{validated} \\[6pt]
+\step{1.2.1.1} The coefficients c\_m=binom(-1/2,m) satisfy c\_0=1 and c\_m/c\_\{m-1\}=-(2m-1)/(2m) for m>=1; therefore lim\_m |c\_m/c\_\{m-1\}|=1, so the ratio test gives radius of convergence exactly one for h(w)=sum\_\{m>=0\}c\_m w\textasciicircum{}m. \steptag{validated} \\[4pt]
+\step{1.2.1.2} On |w|<1 termwise differentiation is valid, and the coefficient recurrence gives 2(1+w)h'(w)+h(w)=0; hence d[(1+w)h(w)\textasciicircum{}2]/dw=0, while h(0)=1, so (1+w)h(w)\textasciicircum{}2=1 and h is the inverse-square-root branch normalized by h(0)=1. \steptag{validated} \\[4pt]
+\step{1.2.1.3} For a unital Banach algebra A and ||Z-I\_A||<1, H=sum\_\{m>=0\}c\_m(Z-I\_A)\textasciicircum{}m converges absolutely in norm; absolute convergence permits the same Cauchy products as the scalar identity, giving ZH\textasciicircum{}2=I\_A, and the normalization H=I\_A+terms of positive degree identifies H with the analytic branch Z\textasciicircum{}(-1/2) used by the registered power-series functional calculus. \steptag{validated} \\[4pt]
+\step{1.2.2} Assuming the binomial-series representation of the inverse-square-root branch on ||Z-I||<1, isometry and multiplicativity imply (iota\_n(Y)\textasciicircum{}2)\textasciicircum{}(-1/2)=iota\_n((Y\textasciicircum{}2)\textasciicircum{}(-1/2)) whenever ||Y\textasciicircum{}2-I\_B||<1. \steptag{validated} \\[4pt]
+\step{1.2.3} If (iota\_n(Y)\textasciicircum{}2)\textasciicircum{}(-1/2)=iota\_n((Y\textasciicircum{}2)\textasciicircum{}(-1/2)), then the registered definitions and homomorphism properties give sgn(iota\_n(Y))=iota\_n(sgn(Y)) and consequently theta(iota\_n(Y))=iota\_n(theta(Y)). \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
