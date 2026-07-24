@@ -1,0 +1,8 @@
+{
+  "id": "3950777c6b8c0848",
+  "name": "lem-compcb-corner-algebra-CONTRACT",
+  "source": "proofs/lem-compcb-corner-algebra (af-validated 2026-07-24, 14/14 taint clean). FULL VALIDATED CONTRACT: Uniform compressed-corner algebra: there are universal C_ca \u003c infinity and e_ca \u003e 0 such that, whenever e=delta+epsilon \u003c= e_ca and P is a nonvanishing delta-projection, S_P with the compressed product, inherited involution, and compressed unit u_P=Co_P(P) is an extended C_ca*e-C*-algebra.",
+  "content_hash": "31ab45d65f2e8582dc2e06d0156071df57276a264a4e4ffc20775104355f2229",
+  "created": "2026-07-24T23:58:36.99072193Z",
+  "notes": ""
+}

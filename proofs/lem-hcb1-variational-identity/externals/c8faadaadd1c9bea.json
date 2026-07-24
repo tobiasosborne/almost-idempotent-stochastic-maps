@@ -1,0 +1,8 @@
+{
+  "id": "c8faadaadd1c9bea",
+  "name": "lem-compcb-compressed-unit-norm-CONTRACT",
+  "source": "proofs/lem-compcb-compressed-unit-norm (af-validated 2026-07-24, 15/15 taint clean). FULL VALIDATED CONTRACT: Compressed-unit norm estimate: there are universal C_co \u003c infinity and e_co \u003e 0 such that, for e=delta+epsilon \u003c= e_co, every delta-projection T satisfies ||u_T|| \u003c= 1+C_co*e, and every nonvanishing T satisfies abs(||u_T||-1) \u003c= C_co*e. (Here u_T = Co_T(T) is the compressed unit — NOTE the distinction from the column-Hilbert normalization factor wtQ = Co_Q(Q); at T=Q these coincide: u_Q = Co_Q(Q) = wtQ.)",
+  "content_hash": "e18d0766d7b6f93fc6209bb711be7b19c7a5db5f1597a7e1a3bb513e1ec2e54a",
+  "created": "2026-07-24T23:58:37.011899401Z",
+  "notes": ""
+}

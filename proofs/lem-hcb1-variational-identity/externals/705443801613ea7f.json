@@ -1,0 +1,8 @@
+{
+  "id": "705443801613ea7f",
+  "name": "lem-compcb-amplified-compression-identities",
+  "source": "imports validated registry lemma proofs/lem-compcb-amplified-compression-identities — Amplified compression identities: there is a universal e_cmp \u003e 0 such that, whenever A is an extended epsilon-C*-algebra, e=delta+epsilon \u003c= e_cmp, P,Q are delta-projections in A, n \u003e= 1, and X is in M_n tensor A, one has Co_{P_n,Q_n}^2=Co_{P_n,Q_n} and Co_{P_n,Q_n}(X)^dagger=Co_{Q_n,P_n}(X^dagger), where P_n=I_n tensor P and Q_n=I_n tensor Q.",
+  "content_hash": "e916dbbc81dfc90418e86278d494337ccfa3b7ded5fa84136d832f64349f34c1",
+  "created": "2026-07-24T23:35:29.082617818Z",
+  "notes": ""
+}
