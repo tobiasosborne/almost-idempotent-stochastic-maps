@@ -4,8 +4,8 @@ kind: lemma
 contract: Amplified compression identities: there is a universal e_cmp > 0 such that, whenever A is an extended epsilon-C*-algebra, e=delta+epsilon <= e_cmp, P,Q are delta-projections in A, n >= 1, and X is in M_n tensor A, one has Co_{P_n,Q_n}^2=Co_{P_n,Q_n} and Co_{P_n,Q_n}(X)^dagger=Co_{Q_n,P_n}(X^dagger), where P_n=I_n tensor P and Q_n=I_n tensor Q.
 defs: def-extended-epsilon-cstar-algebra; def-delta-projection; def-compressed-corner
 deps: lem-compcb-amplified-compression
-status: proved-mod-audit
-af: seeded
+status: proved
+af: validated
 provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (DECOMP:152-183; TeX 1054-1064,1542-1544); VERDICT-FUDW-DECOMP-V3.md §§2.2,D
 owner: A
 workspace: proofs/lem-compcb-amplified-compression-identities

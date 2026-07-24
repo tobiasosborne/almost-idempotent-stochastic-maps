@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Amplified compression identities: there is a universal e\_...}
+\step{1} Amplified compression identities: there is a universal e\_cmp > 0 such that, whenever A is an extended epsilon-C*-algebra, e=delta+epsilon <= e\_cmp, P,Q are delta-projections in A, n >= 1, and X is in M\_n tensor A, one has Co\_\{P\_n,Q\_n\}\textasciicircum{}2=Co\_\{P\_n,Q\_n\} and Co\_\{P\_n,Q\_n\}(X)\textasciicircum{}dagger=Co\_\{Q\_n,P\_n\}(X\textasciicircum{}dagger), where P\_n=I\_n tensor P and Q\_n=I\_n tensor Q. \steptag{validated} \\[6pt]
+\step{1.1} Threshold and amplification identification: let e\_cmp>0 be the universal constant supplied by lem-compcb-amplified-compression. If e=delta+epsilon<=e\_cmp, P,Q are delta-projections in the extended epsilon-C*-algebra A, and n>=1, then with P\_n=I\_n tensor P and Q\_n=I\_n tensor Q one has Co\_\{P\_n,Q\_n\}=1\_\{M\_n\} tensor Co\_\{P,Q\}; applying the same cited lemma to the ordered pair (Q,P) also gives Co\_\{Q\_n,P\_n\}=1\_\{M\_n\} tensor Co\_\{Q,P\}. \steptag{validated} \\[4pt]
+\step{1.2} Level-one exact identities: for the compression maps T=Co\_\{P,Q\} and U=Co\_\{Q,P\}, def-compressed-corner gives T\textasciicircum{}2=T and T(x)\textasciicircum{}dagger=U(x\textasciicircum{}dagger) for every x in A. \steptag{validated} \\[4pt]
+\step{1.3} Entrywise amplification transfer: if linear maps T,U on a self-adjoint operator space satisfy T\textasciicircum{}2=T and T(x)\textasciicircum{}dagger=U(x\textasciicircum{}dagger) for every x, then for every n>=1 their canonical amplifications T\_n=1\_\{M\_n\} tensor T and U\_n=1\_\{M\_n\} tensor U satisfy T\_n\textasciicircum{}2=T\_n and T\_n(X)\textasciicircum{}dagger=U\_n(X\textasciicircum{}dagger) for every X in M\_n tensor A. \steptag{validated} \\[6pt]
+\step{1.3.1} Amplified idempotence entrywise: for X=[x\_ij] in M\_n tensor A, the definition of the canonical amplification gives (T\_n\textasciicircum{}2 X)\_ij=T(T(x\_ij))=(T\textasciicircum{}2)(x\_ij)=T(x\_ij)=(T\_n X)\_ij; hence T\_n\textasciicircum{}2=T\_n. \steptag{validated} \\[4pt]
+\step{1.3.2} Amplified adjoint symmetry entrywise: for X=[x\_ij] in M\_n tensor A, matrix involution and canonical amplification give (T\_n(X)\textasciicircum{}dagger)\_ij=T(x\_ji)\textasciicircum{}dagger=U(x\_ji\textasciicircum{}dagger), while (U\_n(X\textasciicircum{}dagger))\_ij=U((X\textasciicircum{}dagger)\_ij)=U(x\_ji\textasciicircum{}dagger); hence T\_n(X)\textasciicircum{}dagger=U\_n(X\textasciicircum{}dagger). \steptag{validated} \\[4pt]
+\step{1.4} Contract reconciliation and final discharge: the current registry contract in argument/lemmas/lem-compcb-amplified-compression-identities.md is exactly the present node-1 statement, including that A is an extended epsilon-C*-algebra and P,Q are delta-projections in A. Hence child 1.1 uses no hypothesis absent from the advertised contract. For the universal e\_cmp supplied there, 1.1 identifies Co\_\{P\_n,Q\_n\} and Co\_\{Q\_n,P\_n\} with the respective canonical amplifications; 1.2 gives level-one idempotence and adjoint symmetry; and 1.3 transfers those two identities to every n and X. Therefore children 1.1--1.3 prove node 1 as presently registered, and there is no remaining contract drift. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
