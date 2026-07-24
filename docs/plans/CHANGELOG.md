@@ -627,3 +627,15 @@ LDHR-48 is now a proved-mod-audit conditional reduction.
 **Not claimed:** op-classical proved; any new af-validation (T0 = 34); numerical K;
 ratified definitions. All new statuses are proved-mod-audit via single fresh hostile
 passes (the batched-verification default), one rung below T0.
+
+### v29 delta — 2026-07-24, wave-3 K-ledger verdict: INVALID, one Stage-1 packet dangling
+
+The wave-3 relative K/eta_K ledger (LEDGER-W74F-G-K.md) failed hostile verification
+for exactly one reason: the MAIN-CB Stage-1 lem_nontriv_projection split construction
+(tex:1419-1425) has no named universal coefficient/threshold; the fresh split
+inclusion is not a compression, so the reset bound does not cover its raw packet and
+eta_K lacks the guard e_split/(C_pre*C_A). The K formula and the PRH finish
+(K+4sqrt(2K))sqrt(eta) were confirmed VALID. Nothing codified; no contract
+amendments. Wave 3b (aism-xpxk, in flight): extract the Stage-1 packet
+(C_split, e_split) from tex:915-969 and re-verify the corrected reset chain. Route F
+remains proved-mod-audit-complete EXCEPT this one named packet.
