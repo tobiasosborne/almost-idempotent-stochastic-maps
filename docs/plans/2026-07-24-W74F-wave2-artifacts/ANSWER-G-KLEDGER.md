@@ -1,0 +1,3 @@
+Created [LEDGER-W74F-G-K.md](/home/tobias/Projects/almost-idempotent-stochastic-maps/docs/plans/2026-07-24-W74F-wave2-artifacts/LEDGER-W74F-G-K.md).
+
+It includes the closed relative constant chain, MAIN-CB reset inequality, explicit \(C_E,\varepsilon_E,K,\eta_K\), corrected thresholds including \(e_{\rm sel}\), Route F finish, and defect/rigour register. The pinned TeX hash matched. No git commands were run or other files edited.
