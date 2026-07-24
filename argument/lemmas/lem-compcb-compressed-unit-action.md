@@ -5,7 +5,7 @@ contract: Uniform compressed-unit action: there are universal C_co < infinity an
 defs: def-extended-epsilon-cstar-algebra; def-delta-projection; def-compressed-corner
 deps: lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities; lem-compcb-rectangular-product
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (H-CB (1.1); H-CB verdict); PROOF-W74F-E-HCB.md §1.2; VERDICT-W74F-E-HCB.md HCB-3 correction; VERDICT-FUDW-DECOMP-V3.md §D
 owner: A
 workspace: proofs/lem-compcb-compressed-unit-action

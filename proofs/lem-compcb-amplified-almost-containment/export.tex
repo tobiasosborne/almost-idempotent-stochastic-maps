@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Amplified almost-containment: there are universal C\_ac < ...}
+\step{1} Amplified almost-containment: there are universal C\_ac < infinity and e\_ac > 0 such that, whenever e=delta+epsilon <= e\_ac, P\_1,P,Q\_1,Q are delta-projections with ||P\_1 P-P\_1||,||Q\_1 Q-Q\_1|| <= delta, every n >= 1, and X in M\_n tensor S\_\{P\_1,Q\_1\}, one has ||Co\_\{P\_n,Q\_n\}(X)-X|| <= C\_ac*e*||X||. \steptag{validated} \\[6pt]
+\step{1.1} Uniform amplified setup: there are universal k\_co<infinity and e\_0>0 such that, for e<=e\_0, writing A\_n=M\_n tensor A and R\_n=I\_n tensor R, the four amplified projections P\_\{1,n\},P\_n,Q\_\{1,n\},Q\_n are delta-projections of norm at most B:=3, satisfy ||P\_n P\_\{1,n\}-P\_\{1,n\}||<=delta and ||Q\_\{1,n\}Q\_n-Q\_\{1,n\}||<=delta, and every pair of delta-projections R,S in A\_n obeys ||Co\_\{R,S\}(Z)-R(ZS)||<=k\_co e||Z|| and ||Co\_\{R,S\}(Z)-(RZ)S||<=k\_co e||Z||. \steptag{validated} \\[6pt]
+\step{1.1.1} Amplification and containment bounds: by def-extended-epsilon-cstar-algebra, A\_n is an epsilon-C*-algebra, I\_n tensor(-) preserves the relevant products, involution, and norm; hence each R\_n for R in \{P\_1,P,Q\_1,Q\} is a delta-projection. Moreover P\_nP\_\{1,n\}-P\_\{1,n\}=I\_n tensor(PP\_1-P\_1)=I\_n tensor(P\_1P-P\_1)\textasciicircum{}dagger has norm at most delta, while Q\_\{1,n\}Q\_n-Q\_\{1,n\}=I\_n tensor(Q\_1Q-Q\_1) has norm at most delta. \steptag{validated} \\[4pt]
+\step{1.1.2} Uniform norm and comparison constants: if epsilon,delta<=1/2, the epsilon-C*-axioms and def-delta-projection give (1-epsilon)||R\_n||\textasciicircum{}2<=||R\_n\textasciicircum{}2||<=||R\_n||+delta, so ||R\_n||<=3. By def-compressed-corner there are universal k\_co<infinity and a positive smallness threshold e\_co such that in every A\_n, ||Co\_\{R,S\}(Z)-R(ZS)|| and ||Co\_\{R,S\}(Z)-(RZ)S|| are at most k\_co e||Z||. Take e\_0 to be the minimum of 1/2, e\_co, and the positive universal thresholds in lem-compcb-amplified-compression and lem-compcb-amplified-compression-identities. \steptag{validated} \\[4pt]
+\step{1.2} Source-corner control: for X in M\_n tensor S\_\{P\_1,Q\_1\}, one has Co\_\{P\_\{1,n\},Q\_\{1,n\}\}(X)=X and consequently ||X-P\_\{1,n\}(XQ\_\{1,n\})||<=k\_co e||X|| and ||X-(P\_\{1,n\}X)Q\_\{1,n\}||<=k\_co e||X||. \steptag{validated} \\[6pt]
+\step{1.2.1} Corner identification and fixed-point step: lem-compcb-amplified-compression gives M\_n tensor S\_\{P\_1,Q\_1\}=S\_\{P\_\{1,n\},Q\_\{1,n\}\}. Thus X lies in the image of Co\_\{P\_\{1,n\},Q\_\{1,n\}\} by def-compressed-corner. Writing X=Co\_\{P\_\{1,n\},Q\_\{1,n\}\}(Y), the idempotence supplied by lem-compcb-amplified-compression-identities gives Co\_\{P\_\{1,n\},Q\_\{1,n\}\}(X)=Co\_\{P\_\{1,n\},Q\_\{1,n\}\}\textasciicircum{}2(Y)=X. \steptag{validated} \\[4pt]
+\step{1.2.2} Apply the two comparison estimates from node 1.1 to R=P\_\{1,n\}, S=Q\_\{1,n\}, Z=X. Replacing Co\_\{P\_\{1,n\},Q\_\{1,n\}\}(X) by X using the fixed-point step yields ||X-P\_\{1,n\}(XQ\_\{1,n\})||<=k\_co e||X|| and ||X-(P\_\{1,n\}X)Q\_\{1,n\}||<=k\_co e||X||. \steptag{validated} \\[4pt]
+\step{1.3} Transferred almost-invariance: under the same hypotheses, both ||P\_nX-X|| and ||XQ\_n-X|| are at most L e||X||, where L:=k\_co(2B+1)+2B(B\textasciicircum{}2+2) and B=3. \steptag{validated} \\[6pt]
+\step{1.3.1} Left estimate: put D=P\_\{1,n\}(XQ\_\{1,n\}) and Y=XQ\_\{1,n\}. By node 1.2, ||X-D||<=k\_co e||X||. Submultiplicativity, ||P\_n||,||P\_\{1,n\}||,||Q\_\{1,n\}||<=B, 1+epsilon<=2, the epsilon-associativity axiom, and node 1.1 give ||P\_nX-X||<=||P\_n(X-D)||+||P\_n(P\_\{1,n\}Y)-P\_\{1,n\}Y||+||D-X||<=2Bk\_co e||X||+[epsilon B\textasciicircum{}2+(1+epsilon)delta]||Y||+k\_co e||X||. Since ||Y||<=2B||X|| and epsilon,delta<=e, this is at most [k\_co(2B+1)+2B(B\textasciicircum{}2+2)]e||X||=Le||X||. \steptag{validated} \\[4pt]
+\step{1.3.2} Right estimate: put D=(P\_\{1,n\}X)Q\_\{1,n\} and Y=P\_\{1,n\}X. By node 1.2, ||X-D||<=k\_co e||X||. Using submultiplicativity and epsilon-associativity exactly as on the left, now with ||Q\_\{1,n\}Q\_n-Q\_\{1,n\}||<=delta from node 1.1, one gets ||XQ\_n-X||<=||(X-D)Q\_n||+||(YQ\_\{1,n\})Q\_n-YQ\_\{1,n\}||+||D-X||<=2Bk\_co e||X||+[epsilon B\textasciicircum{}2+(1+epsilon)delta]||Y||+k\_co e||X||. Since ||Y||<=2B||X||, this is at most Le||X||. \steptag{validated} \\[4pt]
+\step{1.4} Final assembly: the first compression comparison and transferred almost-invariance imply ||Co\_\{P\_n,Q\_n\}(X)-X||<=[k\_co+(2B+1)L]e||X||; choosing e\_ac=e\_0 and C\_ac=k\_co+(2B+1)L proves node 1 with universal positive finite constants. \steptag{validated} \\[6pt]
+\step{1.4.1} Validated node 1.1.2 supplies universal k\_co<infinity and e\_0>0, B=3, ||P\_n||<=B, and ||Co\_\{P\_n,Q\_n\}(X)-P\_n(XQ\_n)||<=k\_co e||X||; validated nodes 1.3.1 and 1.3.2 supply ||P\_nX-X||<=Le||X|| and ||XQ\_n-X||<=Le||X||. Therefore, by linearity of left multiplication, the triangle inequality, and ||P\_nY||<=(1+epsilon)||P\_n||||Y|| with 1+epsilon<=2, one has ||Co\_\{P\_n,Q\_n\}(X)-X||<=[k\_co+(2B+1)L]e||X||. Thus C\_ac:=k\_co+(2B+1)L is finite and universal and e\_ac:=e\_0 is positive and universal, proving the asserted contract. \steptag{validated} \\[6pt]
+\step{1.4.1.1} Use only the validated premises 1.1.2, 1.3.1, and 1.3.2. Insert P\_n(XQ\_n) and P\_nX, and use linearity of Y mapsto P\_nY to obtain ||Co\_\{P\_n,Q\_n\}(X)-X|| <= ||Co\_\{P\_n,Q\_n\}(X)-P\_n(XQ\_n)|| + ||P\_n(XQ\_n-X)|| + ||P\_nX-X||. Node 1.1.2 bounds the first term by k\_co e||X|| and gives ||P\_n||<=B and e\_0<=1/2; nodes 1.3.2 and 1.3.1 respectively give ||XQ\_n-X||<=Le||X|| and ||P\_nX-X||<=Le||X||. Since epsilon<=e<=e\_0<=1/2, submultiplicativity yields ||P\_n(XQ\_n-X)|| <= (1+epsilon)||P\_n||||XQ\_n-X|| <= 2BL e||X||. Consequently the displayed sum is at most [k\_co+(2B+1)L]e||X||. With B=3 and finite universal k\_co,L, C\_ac:=k\_co+(2B+1)L is finite universal, and e\_ac:=e\_0>0 is universal. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
