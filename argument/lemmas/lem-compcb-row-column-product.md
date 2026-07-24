@@ -5,7 +5,7 @@ contract: Row-column compressed-product estimate: there are universal C_rc < inf
 defs: def-extended-epsilon-cstar-algebra; def-delta-projection; def-compressed-corner; def-column-hilbert-corner
 deps: lem-compcb-rectangular-product; lem-compcb-amplified-compression
 status: stated
-af: none
+af: seeded
 provenance: factored out of proofs/lem-hcb-column-hilbert-squared per the 3rd-stall tripwire (2026-07-25, challenge ch-80ba7318f6e1e540 node 1.3.2 — the validated rectangular-product contract quantifies over square M_m amplifications only; the row/column pair (Y^dagger, X) needs its own estimate); UNPROVED here pending its own af pass
 owner: A
 workspace: proofs/lem-compcb-row-column-product
