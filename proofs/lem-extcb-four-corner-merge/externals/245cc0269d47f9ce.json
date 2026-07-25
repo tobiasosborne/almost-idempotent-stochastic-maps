@@ -1,8 +1,0 @@
-{
-  "id": "245cc0269d47f9ce",
-  "name": "lem-compcb-amplified-almost-containment-CONTRACT",
-  "source": "proofs/lem-compcb-amplified-almost-containment (af-validated, taint clean). FULL VALIDATED CONTRACT: Amplified almost-containment: there are universal C_ac \u003c infinity and e_ac \u003e 0 such that, whenever e=delta+epsilon \u003c= e_ac, P_1,P,Q_1,Q are delta-projections with ||P_1 P-P_1||,||Q_1 Q-Q_1|| \u003c= delta, every n \u003e= 1, and X in M_n tensor S_{P_1,Q_1}, one has ||Co_{P_n,Q_n}(X)-X|| \u003c= C_ac*e*||X||.",
-  "content_hash": "3fdffd7a08e1933438fce9a32b7366deca2546ccec0f125b2625f13b91275a92",
-  "created": "2026-07-25T13:16:09.84809943Z",
-  "notes": ""
-}
