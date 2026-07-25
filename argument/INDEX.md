@@ -14,7 +14,7 @@
 | `conj-extcb` | lemma | proved-mod-audit | none | A | EXT-CB: there are universal C_ext < infinity and e_ext > 0 such that if e=delta+… |
 | `conj-far-low-slab-cap` | lemma | conjecture | none | A | (CONJECTURE) Far very-low-slab coefficient cap: there exist universal a_0 >= 4, … |
 | `conj-gamma-emptiness` | lemma | disproved | none | A | Capped Gamma-emptiness: for every rank-3 exact signed idempotent P with 0 < delt… |
-| `conj-hcb` | lemma | proved-mod-audit | seeded | A | H-CB: there are universal C_H < infinity and e_H > 0 such that, whenever e=delta… |
+| `conj-hcb` | lemma | proved | validated | A | H-CB: there are universal C_H < infinity and e_H > 0 such that, whenever e=delta… |
 | `conj-kernel` | open-problem | conjecture | none | A | (CONJECTURE) Kernel Conjecture: there are universal delta_0>0 and B<inf (n-free)… |
 | `conj-l5-gap-1` | lemma | conjecture | none | B | There exists a universal c_5 > 0 such that, for every fixed universal c_m > 0, t… |
 | `conj-low-slab-cap` | lemma | conjecture | none | A | (CONJECTURE) Low-slab coefficient cap: there exist universal a > 0, theta in (0,… |
