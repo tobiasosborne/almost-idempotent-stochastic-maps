@@ -5,7 +5,7 @@ contract: Exact amplified Ha adjointness: there is a universal e_adj > 0 such th
 defs: def-ha-map; def-hcb-datum
 deps: lem-compcb-amplified-compression-identities
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: PROOF-W74F-E-HCB.md §6.1; VERDICT-W74F-E-HCB.md HCB-2 (VALID); DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D
 owner: A
 workspace: proofs/lem-hcb2-amplified-adjointness

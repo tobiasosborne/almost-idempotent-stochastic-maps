@@ -1,0 +1,8 @@
+{
+  "id": "454f6afc2794a3df",
+  "name": "lem-hcb0-compressed-associator-CONTRACT",
+  "source": "proofs/lem-hcb0-compressed-associator (af-validated, taint clean). FULL VALIDATED CONTRACT: Uniform compressed associator: there are universal C_as \u003c infinity and e_as \u003e 0 such that every H-CB datum with e \u003c= e_as and all compatible amplified rectangular A,B,C satisfy ||(A dot B) dot C-A dot (B dot C)|| \u003c= C_as*e*||A||||B||||C||.",
+  "content_hash": "904298b71b1750dbd54b6d357629569294547bbb248b6ecdf1c0fb37f2e61ff5",
+  "created": "2026-07-25T01:13:32.578508102Z",
+  "notes": ""
+}

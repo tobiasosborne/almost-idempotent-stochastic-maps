@@ -1,0 +1,1 @@
+{"type":"def_added","timestamp":"2026-07-25T01:13:32.502796184Z","definition":{"id":"6c50ca4de05bb9c8","name":"nonvanishing-delta-projection","definition":"Byte-matched (tex:918-930): P^\\dag=P, ||P^2-P|| \u003c= \\delta; ||P|| \u003c= O(\\delta) or | ||P||-1 | \u003c= O(\\delta+\\eps); nonvanishing = second alternative.","created":"2026-07-25T01:13:32.502188089Z"}}
