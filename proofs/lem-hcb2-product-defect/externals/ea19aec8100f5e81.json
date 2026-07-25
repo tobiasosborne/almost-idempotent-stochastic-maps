@@ -1,0 +1,8 @@
+{
+  "id": "ea19aec8100f5e81",
+  "name": "lem-compcb-compressed-unit-action-CONTRACT",
+  "source": "proofs/lem-compcb-compressed-unit-action (af-validated, taint clean). FULL VALIDATED CONTRACT: Uniform compressed-unit action: there are universal C_co \u003c infinity and e_co \u003e 0 such that, for e=delta+epsilon \u003c= e_co, every compatible amplified rectangular corner satisfies ||u_T dot A-A|| \u003c= C_co*e*||A|| and ||A dot u_R-A|| \u003c= C_co*e*||A||.",
+  "content_hash": "4fbc06a646f8d98dd98cbb06405e9cd249cb64a13e870c7268934e74cd717d02",
+  "created": "2026-07-25T01:47:04.493063345Z",
+  "notes": ""
+}

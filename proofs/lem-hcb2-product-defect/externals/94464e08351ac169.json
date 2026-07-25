@@ -1,0 +1,8 @@
+{
+  "id": "94464e08351ac169",
+  "name": "lem-hcb2-amplified-adjointness-CONTRACT",
+  "source": "proofs/lem-hcb2-amplified-adjointness (af-validated, taint clean). FULL VALIDATED CONTRACT: Exact amplified Ha adjointness: there is a universal e_adj \u003e 0 such that every H-CB datum with e \u003c= e_adj, every n \u003e= 1, and every Z in M_n tensor S_{P,R} satisfy (Ha^Q_{P,R})_n(Z)^dagger=(Ha^Q_{R,P})_n(Z^dagger).",
+  "content_hash": "3408f198efc4a1432c33a4dea902b9690860997b1594aae897e2ad264e8083ee",
+  "created": "2026-07-25T01:47:04.328847312Z",
+  "notes": ""
+}
