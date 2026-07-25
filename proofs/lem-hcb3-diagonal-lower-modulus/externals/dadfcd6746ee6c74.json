@@ -1,0 +1,8 @@
+{
+  "id": "dadfcd6746ee6c74",
+  "name": "lem-compcb-amplification-naturality-CONTRACT",
+  "source": "proofs/lem-compcb-amplification-naturality (af-validated, taint clean). FULL VALIDATED CONTRACT: Amplification naturality of the power-series functional calculus: let B be a unital Banach algebra, iota_n: B -\u003e M_n(B) the unital amplification X -\u003e 1_{M_n} tensor X (an isometric unital homomorphism), and f given on ||X - x_0 I|| \u003c r by the power series f(X) = a_0 I + sum_{m\u003e=1} a_m (X - x_0 I)^m; then for every X in B with ||X - x_0 I|| \u003c r, f(iota_n(X)) is defined and f(iota_n(X)) = iota_n(f(X)); in particular, whenever ||(2P-I)^2 - I|| \u003c 1, theta(iota_n(2P-I)) = iota_n(theta(2P-I)) with theta(X) = (I + sgn(X))/2.",
+  "content_hash": "1d26f75a56a5f68e2104f85b2a47a8d7b61d575d4d15651d6410226669f44d0f",
+  "created": "2026-07-25T08:55:02.322887876Z",
+  "notes": ""
+}
