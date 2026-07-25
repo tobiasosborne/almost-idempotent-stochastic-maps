@@ -11,10 +11,14 @@ owner: A
 workspace: proofs/conj-extcb
 ---
 
-**Status.** Hostile-verified paper proof (fresh codex prover, separate
-fresh hostile codex verifier, VALID-WITH-CORRECTIONS), hence
-`proved-mod-audit`; not `af`-validated and not L0-rigorous.  The id keeps
-its historical `conj-` slug; ids are stable.
+**Status.** **af-validated (L0-rigorous), 2026-07-25**: root node 1
+validated/clean in `proofs/conj-extcb` (46 nodes: 40 validated + 6
+archived, taint clean 46/46; fresh codex verifier per node incl. root);
+banked ▣ via external oracle `af-conj-extcb` with a passing `fr verify`
+on `proofs/conj-extcb/export.md`.  Historical rung before elevation:
+hostile-verified paper proof (VALID-WITH-CORRECTIONS), i.e.
+`proved-mod-audit`.  The id keeps its historical `conj-` slug; ids are
+stable.
 
 **Proof shape (transcribed).** One level-one unitary
 \(U_1:\mathbb C^r\to H_1\) from the exact-target APPROX-CB representation;
