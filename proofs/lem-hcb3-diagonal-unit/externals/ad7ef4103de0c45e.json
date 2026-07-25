@@ -1,0 +1,8 @@
+{
+  "id": "ad7ef4103de0c45e",
+  "name": "lem-compcb-compressed-unit-action",
+  "source": "imports validated registry lemma proofs/lem-compcb-compressed-unit-action — Uniform compressed-unit action: there are universal C_co \u003c infinity and e_co \u003e 0 such that, for e=delta+epsilon \u003c= e_co, every compatible amplified rectangular corner satisfies ||u_T dot A-A|| \u003c= C_co*e*||A|| and ||A dot u_R-A|| \u003c= C_co*e*||A||.",
+  "content_hash": "59b0e47a6e33e0763205534048c2250e83a9360c78d016b174d22c1dba0210f1",
+  "created": "2026-07-25T02:38:00.540590078Z",
+  "notes": ""
+}

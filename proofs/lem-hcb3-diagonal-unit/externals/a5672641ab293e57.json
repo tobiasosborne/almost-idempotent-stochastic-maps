@@ -1,0 +1,8 @@
+{
+  "id": "a5672641ab293e57",
+  "name": "lem-hcb1-column-action",
+  "source": "imports validated registry lemma proofs/lem-hcb1-column-action — Uniform Ha column action: there are universal C_act \u003c infinity and e_act \u003e 0 such that every H-CB datum with e \u003c= e_act, every n \u003e= 1, Z in M_n tensor S_{P,R}, and X in M_{n,1} tensor S_{R,Q} satisfy q_P((Ha^Q_{P,R})_n(Z)X-Z dot X) \u003c= C_act*e*||Z||*q_R(X).",
+  "content_hash": "4da062b245cb7ede440cde4c680f7b15771a164b08d6b1ce5cebabe1a86cb4e8",
+  "created": "2026-07-25T02:38:00.533636298Z",
+  "notes": ""
+}

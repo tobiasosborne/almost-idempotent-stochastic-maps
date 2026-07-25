@@ -1,0 +1,1 @@
+{"type":"def_added","timestamp":"2026-07-25T03:01:31.939107199Z","definition":{"id":"b1f663c843bca8f9","name":"compressed-product-display","definition":"Byte-matched (tex:1077-1083): X\\cdot Y = Co_{P,R}(XY); ||X\\cdot Y - XY|| \u003c= O(delta+eps)||X|| ||Y||; nonvanishing P: S_P is an O(delta+eps)-C*-algebra with unit wtP.","created":"2026-07-25T03:01:31.938395021Z"}}
