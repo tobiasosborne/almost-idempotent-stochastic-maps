@@ -118,11 +118,11 @@
 | `lem-hcb1-variational-identity` | lemma | proved | validated | A | Amplified Ha variational identity: there is a universal e_var > 0 such that ever… |
 | `lem-hcb2-amplified-adjointness` | lemma | proved | validated | A | Exact amplified Ha adjointness: there is a universal e_adj > 0 such that every H… |
 | `lem-hcb2-product-defect` | lemma | proved | validated | A | Uniform amplified Ha product defect: there are universal C_prod < infinity and e… |
-| `lem-hcb3-diagonal-inverse` | lemma | proved-mod-audit | seeded | A | Diagonal Ha inverse propagation: there are universal C_inv < infinity and e_inv … |
+| `lem-hcb3-diagonal-inverse` | lemma | proved | validated | A | Diagonal Ha inverse propagation: there are universal C_inv < infinity and e_inv … |
 | `lem-hcb3-diagonal-lower-modulus` | lemma | proved | validated | A | Diagonal Ha lower-modulus propagation: there are universal C_diag < infinity and… |
 | `lem-hcb3-diagonal-unit` | lemma | proved | validated | A | Uniform diagonal Ha unit estimate: there are universal C_unit < infinity and e_u… |
 | `lem-hcb3-diagonal-upper-norm` | lemma | proved | validated | A | Uniform diagonal Ha upper norm: there are universal C_up < infinity and e_up > 0… |
-| `lem-hcb3-offdiagonal-inverse` | lemma | proved-mod-audit | none | A | Off-diagonal Ha inverse propagation: there are universal C_rect < infinity and e… |
+| `lem-hcb3-offdiagonal-inverse` | lemma | proved-mod-audit | seeded | A | Off-diagonal Ha inverse propagation: there are universal C_rect < infinity and e… |
 | `lem-hcb3-uniform-square-lower` | lemma | proved | validated | A | Uniform square lower estimate: there are universal K_sq < infinity and e_sq > 0 … |
 | `lem-hcb4-canonical-closeness` | lemma | proved-mod-audit | none | A | Canonical Ha closeness: there are universal C_sp < infinity and e_sp > 0 such th… |
 | `lem-hcb4-canonical-gram` | lemma | proved-mod-audit | none | A | Canonical corner Gram estimate: there are universal C_J < infinity and e_J > 0 s… |
