@@ -125,7 +125,7 @@
 | `lem-hcb3-offdiagonal-inverse` | lemma | proved | validated | A | Off-diagonal Ha inverse propagation: there are universal C_rect < infinity and e… |
 | `lem-hcb3-uniform-square-lower` | lemma | proved | validated | A | Uniform square lower estimate: there are universal K_sq < infinity and e_sq > 0 … |
 | `lem-hcb4-canonical-closeness` | lemma | proved-mod-audit | none | A | Canonical Ha closeness: there are universal C_sp < infinity and e_sp > 0 such th… |
-| `lem-hcb4-canonical-gram` | lemma | proved-mod-audit | none | A | Canonical corner Gram estimate: there are universal C_J < infinity and e_J > 0 s… |
+| `lem-hcb4-canonical-gram` | lemma | proved-mod-audit | seeded | A | Canonical corner Gram estimate: there are universal C_J < infinity and e_J > 0 s… |
 | `lem-hcb4-canonical-inverse` | lemma | proved-mod-audit | none | A | Canonical Ha inverse estimate: there are universal C_sp,inv < infinity and e_sp,… |
 | `lem-hiddenness-alpha-slab-leakage` | lemma | proved | seeded | A | Hiddenness alpha-slab leakage: for an exact signed idempotent P with delta(P) > … |
 | `lem-hiddenness-depth-markov` | lemma | proved | validated | A | Hiddenness depth-Markov: for an exact signed idempotent P with delta(P) > 0, non… |

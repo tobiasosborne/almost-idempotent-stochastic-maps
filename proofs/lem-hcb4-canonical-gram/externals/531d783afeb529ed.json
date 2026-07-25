@@ -1,0 +1,8 @@
+{
+  "id": "531d783afeb529ed",
+  "name": "lem-hcb3-offdiagonal-inverse-CONTRACT",
+  "source": "proofs/lem-hcb3-offdiagonal-inverse (af-validated, taint clean). FULL VALIDATED CONTRACT: Off-diagonal Ha inverse propagation: there are universal C_rect \u003c infinity and e_rect \u003e 0 such that, for every H-CB datum with e \u003c= e_rect, if Ha^Q_{P,R} is bijective at level one and Ha^Q_{R,R} has level-one lower modulus at least 1/4, then every amplification of Ha^Q_{P,R} is bijective with inverse norm at most 1+C_rect*e.",
+  "content_hash": "db315b5191c331c251d39bc8d6fa31456252622830dd881415d7645567462b60",
+  "created": "2026-07-25T11:00:16.630523871Z",
+  "notes": ""
+}

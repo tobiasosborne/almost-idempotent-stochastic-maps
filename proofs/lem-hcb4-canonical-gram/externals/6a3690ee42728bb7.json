@@ -1,0 +1,8 @@
+{
+  "id": "6a3690ee42728bb7",
+  "name": "lem-compcb-compressed-unit-norm",
+  "source": "imports validated registry lemma proofs/lem-compcb-compressed-unit-norm — Compressed-unit norm estimate: there are universal C_co \u003c infinity and e_co \u003e 0 such that, for e=delta+epsilon \u003c= e_co, every delta-projection T satisfies ||u_T|| \u003c= 1+C_co*e, and every nonvanishing T satisfies abs(||u_T||-1) \u003c= C_co*e.",
+  "content_hash": "2212539d1c40ed989119ff741f98f00d48c6549411b27ba0f3655fbac9c0dde6",
+  "created": "2026-07-25T11:00:16.478656681Z",
+  "notes": ""
+}
