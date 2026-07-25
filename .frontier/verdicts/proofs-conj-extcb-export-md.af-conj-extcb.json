@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/conj-extcb/export.md",
+  "oracle": "af-conj-extcb",
+  "result": "pass",
+  "claim_hash": "00494481438b5a7972ef68b6b06de370c533e2887b28f41916c9a2d5df8e3b31",
+  "oracle_digest": "ed05c299c0d07794cad3b029261687610bf09fe378f991f7322c835e7dbe580f",
+  "inputs_hash": "a8529323f4410a6a89e3660956a702c673dbddcffef300f3dcc17787d02d6146",
+  "ts": "2026-07-25T21:39:09.312Z"
+}
