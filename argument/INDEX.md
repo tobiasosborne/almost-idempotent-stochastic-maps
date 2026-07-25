@@ -121,7 +121,7 @@
 | `lem-hcb3-diagonal-inverse` | lemma | proved-mod-audit | none | A | Diagonal Ha inverse propagation: there are universal C_inv < infinity and e_inv … |
 | `lem-hcb3-diagonal-lower-modulus` | lemma | proved-mod-audit | none | A | Diagonal Ha lower-modulus propagation: there are universal C_diag < infinity and… |
 | `lem-hcb3-diagonal-unit` | lemma | proved | validated | A | Uniform diagonal Ha unit estimate: there are universal C_unit < infinity and e_u… |
-| `lem-hcb3-diagonal-upper-norm` | lemma | proved-mod-audit | seeded | A | Uniform diagonal Ha upper norm: there are universal C_up < infinity and e_up > 0… |
+| `lem-hcb3-diagonal-upper-norm` | lemma | proved | validated | A | Uniform diagonal Ha upper norm: there are universal C_up < infinity and e_up > 0… |
 | `lem-hcb3-offdiagonal-inverse` | lemma | proved-mod-audit | none | A | Off-diagonal Ha inverse propagation: there are universal C_rect < infinity and e… |
 | `lem-hcb4-canonical-closeness` | lemma | proved-mod-audit | none | A | Canonical Ha closeness: there are universal C_sp < infinity and e_sp > 0 such th… |
 | `lem-hcb4-canonical-gram` | lemma | proved-mod-audit | none | A | Canonical corner Gram estimate: there are universal C_J < infinity and e_J > 0 s… |
