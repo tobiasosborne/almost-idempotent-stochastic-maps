@@ -130,7 +130,7 @@ graph LR
   lem-hcb2-amplified-adjointness["lem-hcb2-amplified-adjointness<br/>proved/validated"]
   lem-hcb2-product-defect["lem-hcb2-product-defect<br/>proved/validated"]
   lem-hcb3-diagonal-inverse["lem-hcb3-diagonal-inverse<br/>proved-mod-audit/none"]
-  lem-hcb3-diagonal-lower-modulus["lem-hcb3-diagonal-lower-modulus<br/>proved-mod-audit/none"]
+  lem-hcb3-diagonal-lower-modulus["lem-hcb3-diagonal-lower-modulus<br/>proved-mod-audit/seeded"]
   lem-hcb3-diagonal-unit["lem-hcb3-diagonal-unit<br/>proved/validated"]
   lem-hcb3-diagonal-upper-norm["lem-hcb3-diagonal-upper-norm<br/>proved/validated"]
   lem-hcb3-offdiagonal-inverse["lem-hcb3-offdiagonal-inverse<br/>proved-mod-audit/none"]

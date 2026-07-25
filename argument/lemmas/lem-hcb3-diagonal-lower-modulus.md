@@ -5,7 +5,7 @@ contract: Diagonal Ha lower-modulus propagation: there are universal C_diag < in
 defs: def-ha-map; def-hcb-datum
 deps: lem-hcb2-amplified-adjointness; lem-hcb2-product-defect
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: PROOF-W74F-E-HCB.md §7.3; VERDICT-W74F-E-HCB.md HCB-3 conditional correction; DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D
 owner: A
 workspace: proofs/lem-hcb3-diagonal-lower-modulus
