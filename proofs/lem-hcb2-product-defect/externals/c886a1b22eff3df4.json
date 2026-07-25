@@ -1,0 +1,8 @@
+{
+  "id": "c886a1b22eff3df4",
+  "name": "lem-compcb-amplified-compression",
+  "source": "imports validated registry lemma proofs/lem-compcb-amplified-compression — Amplified compression identity: there is a universal e_cmp \u003e 0 such that, whenever e=delta+epsilon \u003c= e_cmp, every pair of delta-projections P,Q in an extended epsilon-C*-algebra and every n \u003e= 1 satisfy 1_{M_n} tensor Co_{P,Q}=Co_{I_n tensor P,I_n tensor Q} and M_n tensor S_{P,Q}=S_{I_n tensor P,I_n tensor Q}.",
+  "content_hash": "bd57b369028d6df32709248f9e3f1bc3980495e1b44e1e0b7a77a2cb4e4c0d8d",
+  "created": "2026-07-25T02:24:46.660203093Z",
+  "notes": ""
+}

@@ -5,7 +5,7 @@ contract: Uniform diagonal Ha unit estimate: there are universal C_unit < infini
 defs: def-ha-map; def-hcb-datum
 deps: lem-hcb1-column-action; lem-compcb-compressed-unit-action
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: PROOF-W74F-E-HCB.md §7.1; VERDICT-W74F-E-HCB.md HCB-3 (VALID-WITH-CORRECTIONS); DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D
 owner: A
 workspace: proofs/lem-hcb3-diagonal-unit

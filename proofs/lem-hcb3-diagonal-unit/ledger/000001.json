@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-07-25T02:37:17.909942647Z","conjecture":"Uniform diagonal Ha unit estimate: there are universal C_unit \u003c infinity and e_unit \u003e 0 such that every H-CB datum with e \u003c= e_unit and every n \u003e= 1 satisfy ||(Ha^Q_{P,P})_n(I_n tensor u_P)-I|| \u003c= C_unit*e.","author":"orchestrator"}

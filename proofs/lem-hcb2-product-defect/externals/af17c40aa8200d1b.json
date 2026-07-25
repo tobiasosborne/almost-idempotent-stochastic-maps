@@ -1,0 +1,8 @@
+{
+  "id": "af17c40aa8200d1b",
+  "name": "lem-hcb0-compressed-associator",
+  "source": "imports validated registry lemma proofs/lem-hcb0-compressed-associator — Uniform compressed associator: there are universal C_as \u003c infinity and e_as \u003e 0 such that every H-CB datum with e \u003c= e_as and all compatible amplified rectangular A,B,C satisfy ||(A dot B) dot C-A dot (B dot C)|| \u003c= C_as*e*||A||||B||||C||.",
+  "content_hash": "1c6a1e596a6bc95865604d517a6d3a53cb2e97ebec4d178b46083d396db7b7f2",
+  "created": "2026-07-25T02:24:13.370543027Z",
+  "notes": ""
+}

@@ -1,0 +1,8 @@
+{
+  "id": "9b3c59cf3fcd68e0",
+  "name": "lem-compcb-rectangular-product",
+  "source": "imports validated registry lemma proofs/lem-compcb-rectangular-product — Uniform rectangular compressed-product estimate: there are universal C_co \u003c infinity and e_co \u003e 0 such that, for e=delta+epsilon \u003c= e_co, every compatible amplified rectangular pair satisfies ||A dot B-AB|| \u003c= C_co*e*||A||||B||.",
+  "content_hash": "ed17f6d1a7f869393dd397d2b44aaafdcd4790fcfbcebce7d4089acceec83892",
+  "created": "2026-07-25T02:24:13.399717932Z",
+  "notes": ""
+}
