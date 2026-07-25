@@ -1,0 +1,108 @@
+% SHARD-ID: AISM-18-HCB1-COLUMN-ACTION
+% SHARD-TITLE: The uniform Ha column action
+% SHARD-SUMMARY: Reproduces lem-hcb1-column-action, the af-validated estimate that the amplified Ha map acts on columns like left multiplication up to O(e).
+% SHARD-SUMMARY: Explains the compressed-unit nondegeneracy proved inside the operator algebra, the defect pairing, and the self-pairing cancellation that avoids Riesz duality.
+% SHARD-KEYWORDS: lem-hcb1-column-action, af validated, Ha map, column action, nondegeneracy, self-pairing
+\section{The uniform Ha column action}\label{sec:hcb1-column-action}
+
+\begin{lemma}[\texttt{lem-hcb1-column-action}]\label{lem:hcb1-column-action}
+There are universal $C_{\mathrm{act}}<\infty$ and $\comb_{\mathrm{act}}>0$ such that every
+H-CB datum with $\comb\le \comb_{\mathrm{act}}$, every $n\ge1$, every
+$Z\in\Amp{n}{\Cnr{P}{R}}$ and every $X\in\Matr{n}{1}\otimes\Cnr{R}{Q}$ satisfy
+\begin{equation}\label{eq:ca-main}
+  \colq{P}\bigl(\Han{Q}{P}{R}{n}(Z)X-Z\cpr X\bigr)
+  \;\le\;C_{\mathrm{act}}\,\comb\,\nrm{Z}\,\colq{R}(X).
+\end{equation}
+\emph{Transcription note.} $\colq{P}(U)=\ipa{U}{U}^{1/2}$ is the column-Hilbert norm of
+\texttt{def-column-hilbert-corner} on $\Matr{n}{1}\otimes\Cnr{P}{Q}$, and likewise
+$\colq{R}$; $\nrm{Z}$ is the ambient norm.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Uniform Ha column action: there are universal C_act < infinity and e_act > 0 such that every H-CB datum with e <= e_act, every n >= 1, Z in M_n tensor S_{P,R}, and X in M_{n,1} tensor S_{R,Q} satisfy q_P((Ha^Q_{P,R})_n(Z)X-Z dot X) <= C_act*e*||Z||*q_R(X).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Throughout put $D:=\Han{Q}{P}{R}{n}(Z)X-Z\cpr X$, the object to be bounded.
+
+\emph{Nondegeneracy of the compressed unit.} Everything is divided by
+$\nrm{\cunit{Q}}$ at the end, so a lower bound is needed. Two ingredients combine. First,
+$\nrm{\cunit{Q}-Q}\le K_1\comb$. This is proved \emph{inside the associative operator
+algebra} $B(\mathcal A)$, not in the ambient $\ecs$-$C^*$-algebra, which is only
+approximately associative --- a distinction the tree makes explicitly. With $L=L_Q$,
+$R=R_Q$ and $\mathrm A=LR+RL-I$ one has $\Cos{Q}=\theta(\mathrm A)$; the
+$\dproj$-projection dichotomy bounds $\nrm{Q}$, hence $\nrm{L},\nrm{R}$, and the
+$\ecs$-associator and $\dproj$-projection bounds give
+$\nrm{LR-RL}=O(\comb)$, $\nrm{L^{2}-L}=O(\comb)$, $\nrm{R^{2}-R}=O(\comb)$; from these,
+$T=\tfrac12(LR+RL)$ satisfies $\nrm{T^{2}-T}\le C_T\comb$ and so
+$\nrm{\mathrm A^{2}-I}=4\nrm{T^{2}-T}\le4C_T\comb$. Writing $r=Q^{2}-Q$ and keeping the
+displayed parentheses, $(\mathrm A-I)Q=2r+Qr+rQ$, so $\nrm{(\mathrm A-I)Q}\le C_Q\comb$.
+Finally, below the threshold making $\nrm{\mathrm A^{2}-I}<\tfrac12$, the series
+$B=(\mathrm A^{2})^{-1/2}$ converges and factors as $B-I=(\mathrm A^{2}-I)K(\mathrm A^{2})$;
+since $\mathrm A$ commutes with $B$ and $K(\mathrm A^{2})$, one gets the clean
+factorisation $\theta(\mathrm A)-I=(\mathrm A-I)H(\mathrm A)$ with
+$\nrm{H(\mathrm A)}\le C_H$, whence
+$\nrm{\cunit{Q}-Q}=\nrm{(\theta(\mathrm A)-I)Q}\le C_HC_Q\comb$.
+Second, $\nrm{Q}\ge1-K_0\comb$, which holds \emph{provided $Q$ is nonvanishing}. The tree
+runs this branch strictly conditionally --- it refuses to infer nonvanishing from
+one-dimensionality --- and discharges the antecedent only later, from the registered
+bridge $\dim\Cnrs{Q}=1\Rightarrow\Cnrs{Q}\ne0\Rightarrow Q$ nonvanishing. Combining the
+two by the reverse triangle inequality and shrinking the threshold gives
+\begin{equation}\label{eq:ca-cu}
+  \nrm{\cunit{Q}}\;\ge\;c_u:=\tfrac12 .
+\end{equation}
+
+\emph{Column-norm comparison.} By \texttt{lem-hcb-column-hilbert-squared},
+$\bigl\lvert\colq{T}(U)^{2}-\colnrm{U}^{2}\bigr\rvert\le C_{\mathrm{col}}\comb\colnrm{U}^{2}$
+for $T=P$ and $T=R$; with $C_{\mathrm{col}}\comb\le\tfrac12$ all terms are nonnegative and
+taking square roots gives
+$(1-C_{\mathrm{col}}\comb)^{1/2}\colnrm{U}\le\colq{T}(U)\le(1+C_{\mathrm{col}}\comb)^{1/2}\colnrm{U}$,
+in particular $\colnrm{U}\le\sqrt2\,\colq{T}(U)$.
+
+\emph{Defect pairing.} By \texttt{lem-hcb1-variational-identity},
+$2\,\ipa{Y}{D}\,\cunit{Q}=\bigl(Y\dg\cpr Z\bigr)\cpr X-Y\dg\cpr\bigl(Z\cpr X\bigr)$ for
+every compatible column $Y$. The right-hand side is precisely the compressed associator
+of $A=Y\dg$, $B=Z$, $C=X$ (\texttt{def-compressed-associator}), so
+\texttt{lem-hcb0-compressed-associator} bounds it by
+$C_{\mathrm{as}}\comb\nrm{Y\dg}\nrm{Z}\colnrm{X}$, and the involution is isometric, so
+$\nrm{Y\dg}=\colnrm{Y}$. Taking norms on the left and using absolute homogeneity,
+\begin{equation}\label{eq:ca-pairing}
+  2\,\bigl\lvert\ipa{Y}{D}\bigr\rvert\,\nrm{\cunit{Q}}
+  \;\le\;C_{\mathrm{as}}\,\comb\,\colnrm{Y}\,\nrm{Z}\,\colnrm{X}.
+\end{equation}
+
+\emph{Assembly by self-pairing.} Insert \eqref{eq:ca-cu} and the two norm comparisons into
+\eqref{eq:ca-pairing}: for every compatible $Y$,
+\[
+  \bigl\lvert\ipa{Y}{D}\bigr\rvert\;\le\;2C_{\mathrm{as}}\,\comb\,\colq{P}(Y)\,\nrm{Z}\,\colq{R}(X).
+\]
+Now the finishing move avoids any duality argument: since both
+$\Han{Q}{P}{R}{n}(Z)X$ and $Z\cpr X$ lie in $\Matr{n}{1}\otimes\Cnr{P}{Q}$, so does $D$,
+and $Y=D$ is an admissible test vector. Substituting it gives
+$\colq{P}(D)^{2}=\ipa{D}{D}\le2C_{\mathrm{as}}\comb\nrm{Z}\colq{R}(X)\,\colq{P}(D)$; if
+$\colq{P}(D)=0$ the conclusion is immediate, and otherwise one divides. Hence
+\eqref{eq:ca-main} with $C_{\mathrm{act}}=2C_{\mathrm{as}}$.
+
+\emph{Two recorded refinements.} The tree first proved the terminal cancellation only
+\emph{conditionally}, explicitly declining to divide by an unavailable $c_u$ and carrying
+a node that says so; the unconditional root appears only after the nonvanishing bridge is
+registered, and the earlier negative conclusion is marked stale rather than deleted.
+Separately, the threshold is set as $\comb_{\mathrm{act}}=t/2$ for
+$t=\min(\comb_u,\comb_{\mathrm{col}},\comb_{\mathrm{var}},\comb_{\mathrm{as}},1/(2\max(C_{\mathrm{col}},1)))$
+so that the strict inequalities required upstream hold even at the endpoint, and the
+degenerate case $C_{\mathrm{col}}=0$ is split off so that the reciprocal
+$1/(2C_{\mathrm{col}})$ is never formed.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb1-column-action}: 38 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-hcb-column-hilbert-squared},
+\texttt{lem-hcb0-compressed-associator} and
+\texttt{lem-hcb1-variational-identity}. This is the first genuinely quantitative statement
+about the Ha map: it says that $\Han{Q}{P}{R}{n}(Z)$ is, to within $O(\comb)$, left
+multiplication by $Z$. Everything later in the tier is built on it ---
+\texttt{lem-hcb2-product-defect} (\S\ref{sec:hcb2-product-defect}),
+\texttt{lem-hcb3-diagonal-unit} (\S\ref{sec:hcb3-diagonal-unit}) --- and it is a declared
+dependency of the not-yet-validated \texttt{lem-hcb4-canonical-closeness}.

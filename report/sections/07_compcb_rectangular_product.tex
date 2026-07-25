@@ -1,0 +1,87 @@
+% SHARD-ID: AISM-07-COMPCB-RECTANGULAR-PRODUCT
+% SHARD-TITLE: The uniform rectangular compressed-product estimate
+% SHARD-SUMMARY: Reproduces lem-compcb-rectangular-product, the af-validated bound comparing the compressed and ambient products uniformly in the amplification level.
+% SHARD-SUMMARY: Explains the unpacking of the level-one big-O constant and the amplified verification of its hypotheses, and records the tree's explicit definition of a compatible amplified rectangular pair.
+% SHARD-KEYWORDS: lem-compcb-rectangular-product, af validated, compressed product, rectangular pair, uniform constant, amplification
+\section{The uniform rectangular compressed-product estimate}\label{sec:compcb-rectangular-product}
+
+\begin{lemma}[\texttt{lem-compcb-rectangular-product}]\label{lem:compcb-rectangular-product}
+There are universal $C_{\mathrm{co}}<\infty$ and $\comb_{\mathrm{co}}>0$ such that, for
+$\comb=\dproj+\ecs\le \comb_{\mathrm{co}}$, every compatible amplified rectangular pair
+$A,B$ satisfies
+\begin{equation}\label{eq:rp-main}
+  \nrm{A\cpr B-AB}\;\le\;C_{\mathrm{co}}\,\comb\,\nrm{A}\,\nrm{B}.
+\end{equation}
+\emph{Transcription note.} The tree fixes ``compatible amplified rectangular pair'' as an
+explicit abbreviation, and the quantifier in \eqref{eq:rp-main} ranges over exactly these
+data and no others: an extended $\ecs$-$C^*$-algebra $\mathcal A$; an integer $n\ge1$;
+$\dproj$-projections $P,Q,R$ in $\mathcal A$; the amplifications
+$P_n=\ampel{n}{P}$, $Q_n=\ampel{n}{Q}$, $R_n=\ampel{n}{R}$; elements
+$A\in\Cnr{P_n}{Q_n}$ and $B\in\Cnr{Q_n}{R_n}$; and the compressed product
+$A\cpr B=\Co{P_n}{R_n}(AB)$ formed as in \texttt{def-compressed-corner} inside
+$\Amp{n}{\mathcal A}$. In particular both factors live in one \emph{square}
+amplification $\Amp{n}{\mathcal A}$ --- a restriction that later forces a separate
+row/column statement (\S\ref{sec:compcb-row-column-product}).
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Uniform rectangular compressed-product estimate: there are universal C_co < infinity and e_co > 0 such that, for e=delta+epsilon <= e_co, every compatible amplified rectangular pair satisfies ||A dot B-AB|| <= C_co*e*||A||||B||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The shape of the argument is: unpack a level-one universal estimate into named constants,
+verify that the amplified data satisfy its hypotheses, and apply it inside
+$\Amp{n}{\mathcal A}$. No new analysis is done at level $n$; the whole point is that none
+is needed.
+
+\emph{Unpacking the level-one estimate.} \texttt{def-compressed-corner} states, for any
+triple $U,V,W$ of $\dproj$-projections in an $\ecs$-$C^*$-algebra, that
+$X\cpr Y=\Co{U}{W}(XY)$ on $\Cnr{U}{V}\times\Cnr{V}{W}$ and that
+$\nrm{X\cpr Y-XY}\le O(\dproj+\ecs)\nrm{X}\nrm{Y}$. The tree makes the big-O explicit:
+there are constants $C_{\mathrm{corner}}<\infty$ and $\comb_{\mathrm{corner}}>0$,
+independent of the algebra, of the projections and of the elements, such that the bound
+reads $C_{\mathrm{corner}}\comb\nrm{X}\nrm{Y}$ whenever $\comb\le \comb_{\mathrm{corner}}$.
+This independence is the reason the final constant is uniform in $n$: the level-one
+estimate is a statement about \emph{every} $\ecs$-$C^*$-algebra, and $\Amp{n}{\mathcal A}$
+is one of them.
+
+\emph{The amplified data are admissible.} Because $\mathcal A$ is extended,
+$\Amp{n}{\mathcal A}$ is an $\ecs$-$C^*$-algebra for every $n$; and $P_n$ is a
+$\dproj$-projection whenever $P$ is, since $P_n\dg=P_n$,
+$P_n^2-P_n=\ampel{n}{(P^2-P)}$ and the block-diagonal norm satisfies
+$\nrm{\ampel{n}{Z}}=\nrm{Z}$ --- likewise for $Q_n,R_n$. Applying
+\texttt{lem-compcb-amplified-compression} to the three pairs $(P,Q)$, $(Q,R)$, $(P,R)$
+identifies the amplified corners with $\Amp{n}{\Cnr{P}{Q}}$, $\Amp{n}{\Cnr{Q}{R}}$,
+$\Amp{n}{\Cnr{P}{R}}$ and the amplified compressions with the entrywise amplifications;
+\texttt{lem-compcb-amplified-compression-identities} supplies the idempotence and dagger
+identities for those maps. Hence a compatible amplified rectangular pair really is an
+ordinary rectangular pair in $\Amp{n}{\mathcal A}$, and its amplified compressed product
+is literally the ordinary compressed product there, $A\cpr B=\Co{P_n}{R_n}(AB)$, which
+lands in $\Cnr{P_n}{R_n}$.
+
+\emph{Assembly.} Take
+\[
+  C_{\mathrm{co}}=C_{\mathrm{corner}},\qquad
+  \comb_{\mathrm{co}}=\min\bigl(\comb_{\mathrm{corner}},\comb_{\mathrm{cmp}}\bigr),
+\]
+with $\comb_{\mathrm{cmp}}$ the threshold of the amplification dependencies; both are
+universal, finite and positive. For $\comb\le \comb_{\mathrm{co}}$ the level-one estimate
+applies inside $\Amp{n}{\mathcal A}$ with $U=P_n$, $V=Q_n$, $W=R_n$, $X=A$, $Y=B$, and
+gives \eqref{eq:rp-main} with constants independent of $n$ and of all the data.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-compcb-rectangular-product}: 12 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-compcb-amplified-compression} and
+\texttt{lem-compcb-amplified-compression-identities}. This is the workhorse estimate of
+the COMP tier --- the licence to replace a compressed product by an ambient product at
+cost $O(\comb)$ --- and it is invoked by almost everything downstream:
+\texttt{lem-compcb-compressed-unit-action}, \texttt{lem-compcb-row-column-product},
+\texttt{lem-hcb0-compressed-associator}, \texttt{lem-compcb-corner-algebra},
+\texttt{lem-hcb-column-hilbert-squared},
+\texttt{lem-compcb-single-compression-transfer} and
+\texttt{lem-hcb2-product-defect}. Its square-amplification compatibility clause is a real
+restriction, not a formality: \S\ref{sec:compcb-row-column-product} exists precisely
+because a row/column pair fails it.

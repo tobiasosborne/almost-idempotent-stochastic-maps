@@ -6,7 +6,7 @@ defs: def-extended-epsilon-cstar-algebra; def-fd-cstar-diagonal
 deps: conj-hcb; conj-extcb
 status: proved-mod-audit
 af: none
-provenance: docs/plans/2026-07-23-W74F-artifacts/DECOMP-W74F-C-THMAINEXT.md §§3-5 (assembly + corrected COL-HILB); PROOF-W74F-H-STAGE1.md (Stage-1 reset packet); hostile verdicts VERDICT-W74F-BATCH.md §C, VERDICT-W74F-E-HCB.md, VERDICT-W74F-F-EXTCB.md, VERDICT-W74F-H-STAGE1.md (contract restatement endorsed verbatim by the H-verdict); report lem:thmainext-conditional
+provenance: docs/plans/2026-07-23-W74F-artifacts/DECOMP-W74F-C-THMAINEXT.md §§3-5 (assembly + corrected COL-HILB); PROOF-W74F-H-STAGE1.md (Stage-1 reset packet); hostile verdicts VERDICT-W74F-BATCH.md §C, VERDICT-W74F-E-HCB.md, VERDICT-W74F-F-EXTCB.md, VERDICT-W74F-H-STAGE1.md (contract restatement endorsed verbatim by the H-verdict)
 owner: A
 workspace: proofs/lem-thmainext-conditional
 ---

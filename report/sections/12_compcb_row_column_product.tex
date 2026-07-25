@@ -1,0 +1,99 @@
+% SHARD-ID: AISM-12-COMPCB-ROW-COLUMN-PRODUCT
+% SHARD-TITLE: The row-column compressed-product estimate
+% SHARD-SUMMARY: Reproduces lem-compcb-row-column-product, the af-validated compressed-versus-ambient comparison for a row times a column.
+% SHARD-SUMMARY: Explains the square embedding into one extra block, the isometry of zero-padding, and the reduction to the validated rectangular-product estimate.
+% SHARD-KEYWORDS: lem-compcb-row-column-product, af validated, row-column product, zero padding, square embedding, compressed product
+\section{The row-column compressed-product estimate}\label{sec:compcb-row-column-product}
+
+\begin{lemma}[\texttt{lem-compcb-row-column-product}]\label{lem:compcb-row-column-product}
+There are universal $C_{\mathrm{rc}}<\infty$ and $\comb_{\mathrm{rc}}>0$ such that,
+whenever $\comb=\dproj+\ecs\le \comb_{\mathrm{rc}}$, $P,Q$ are $\dproj$-projections in an
+extended $\ecs$-$C^*$-algebra $\mathcal A$, $n\ge1$, and
+$X,Y\in\Matr{n}{1}\otimes\Cnr{P}{Q}$, one has
+\begin{equation}\label{eq:rc-main}
+  \nrm{\Cos{Q}\bigl(Y\dg X\bigr)-Y\dg X}\;\le\;C_{\mathrm{rc}}\,\comb\,\nrm{Y}\,\nrm{X},
+\end{equation}
+where $Y\dg X$ is the ambient product of the $1\times n$ row $Y\dg$ with the $n\times1$
+column $X$.
+\emph{Transcription note.} The product $Y\dg X$ is a single element of $\mathcal A$, not a
+matrix: the row and column contract. This is exactly why
+\texttt{lem-compcb-rectangular-product} does not apply directly --- its compatibility
+clause requires both factors inside one \emph{square} amplification.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Row-column compressed-product estimate: there are universal C_rc < infinity and e_rc > 0 such that, whenever e = delta+epsilon <= e_rc, P,Q are delta-projections in an extended epsilon-C*-algebra A, n >= 1, and X,Y are in M_{n,1} tensor S_{P,Q}, one has ||Co_Q(Y^dagger X) - Y^dagger X|| <= C_rc*e*||Y||*||X||, where Y^dagger X is the ambient product of the 1-by-n row Y^dagger with the n-by-1 column X.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Set $C_{\mathrm{rc}}=C_{\mathrm{co}}$ and
+$\comb_{\mathrm{rc}}=\min(\comb_{\mathrm{co}},\comb_{\mathrm{cmp}})$ with the constants of
+\texttt{lem-compcb-rectangular-product} and \texttt{lem-compcb-amplified-compression},
+and fix arbitrary admissible data. The whole proof is a change of ambient size: embed the
+row/column pair as off-diagonal blocks of one square amplification, apply the validated
+square estimate there, and read the result off the single occupied entry.
+
+\emph{The embedding.} Use the decomposition $\mathbb C^{n+1}=\mathbb C^{n}\oplus\mathbb C$
+and let
+\[
+  C_X=\begin{pmatrix}0&X\\0&0\end{pmatrix},
+  \qquad
+  R_Y=\begin{pmatrix}0&0\\ Y\dg&0\end{pmatrix}
+\]
+in $\Amp{n+1}{\mathcal A}$. Writing $X=(X_i)$ and $Y=(Y_i)$ with entries in
+$\Cnr{P}{Q}$, the dagger identity of \texttt{def-compressed-corner} gives
+$Y_i\dg\in\Cnr{Q}{P}$, so $X$ has entries in $\Cnr{P}{Q}$ and $Y\dg$ has entries in
+$\Cnr{Q}{P}$ with the indicated orientations. Since
+$\comb\le \comb_{\mathrm{cmp}}$, \texttt{lem-compcb-amplified-compression} at level $n+1$
+identifies $\Amp{n+1}{\Cnr{P}{Q}}=\Cnr{\ampel{n+1}{P}}{\ampel{n+1}{Q}}$ and the
+transposed statement, so zero-padding puts $C_X$ and $R_Y$ in exactly those compatible
+corners. The padding is isometric: in the operator-space matrix norms, insertion by a
+scalar coordinate isometry and extraction by its adjoint are both contractive, hence
+equalities; and involution is isometric because $\mathcal A$ is self-adjoint. Therefore
+\begin{equation}\label{eq:rc-iso}
+  \nrm{C_X}=\nrm{X},\qquad \nrm{R_Y}=\nrm{Y\dg}=\nrm{Y},
+\end{equation}
+and $(R_Y,C_X)$ is a compatible \emph{square} amplified rectangular pair --- the right
+projection of the first factor and the left projection of the second are both
+$\ampel{n+1}{P}$.
+
+\emph{One occupied entry.} Ordinary block multiplication gives
+\[
+  R_YC_X=\operatorname{diag}\bigl(0_{n\times n},\,Y\dg X\bigr),
+\]
+every other block containing a zero factor. On the compressed side,
+\texttt{def-compressed-corner} applied to the triple
+$(\ampel{n+1}{Q},\ampel{n+1}{P},\ampel{n+1}{Q})$ gives
+$R_Y\cpr C_X=\Cos{\ampel{n+1}{Q}}(R_YC_X)$, using the abbreviation $\Co{S}{S}=\Cos{S}$;
+and \texttt{lem-compcb-amplified-compression} applied to the pair $(Q,Q)$ at level $n+1$
+says $\Cos{\ampel{n+1}{Q}}=\ampl{n+1}\Cos{Q}$, an entrywise map. Applying it to the
+diagonal block matrix above,
+\begin{equation}\label{eq:rc-blocks}
+  R_Y\cpr C_X=\operatorname{diag}\bigl(0_{n\times n},\,\Cos{Q}(Y\dg X)\bigr).
+\end{equation}
+
+\emph{Conclusion.} Since $\comb\le \comb_{\mathrm{co}}$ and $(R_Y,C_X)$ is compatible,
+\texttt{lem-compcb-rectangular-product} yields
+$\nrm{R_Y\cpr C_X-R_YC_X}\le C_{\mathrm{co}}\comb\nrm{R_Y}\nrm{C_X}$. By
+\eqref{eq:rc-blocks} the left-hand difference is the zero-padded element with single entry
+$\Cos{Q}(Y\dg X)-Y\dg X$, whose norm equals the norm of that entry by the same corner
+isometry as in \eqref{eq:rc-iso}; and \eqref{eq:rc-iso} converts the right-hand side.
+This is \eqref{eq:rc-main} with $C_{\mathrm{rc}}=C_{\mathrm{co}}$. Both thresholds are
+positive universal constants, so $\comb_{\mathrm{rc}}>0$, and universal generalisation
+over the arbitrary data completes the proof.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-compcb-row-column-product}: 20 nodes (18 \texttt{validated}, 2
+superseded nodes archived), root \texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-compcb-rectangular-product} and
+\texttt{lem-compcb-amplified-compression}. This shard was factored out of the
+column-Hilbert workspace at a recorded third stall: the blocking challenge observed that
+the validated rectangular-product contract quantifies only over square amplifications, so
+the pair $(Y\dg,X)$ --- a $1\times n$ row against an $n\times1$ column --- simply does not
+satisfy its hypotheses, and the gap had to be closed by a statement of its own rather than
+by an instantiation. It has one registry consumer,
+\texttt{lem-hcb-column-hilbert-squared}
+(\S\ref{sec:hcb-column-hilbert-squared}), where $Y=X$ and the estimate becomes the bridge
+between the column inner product and the ambient norm.

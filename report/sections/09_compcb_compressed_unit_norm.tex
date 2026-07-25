@@ -1,0 +1,99 @@
+% SHARD-ID: AISM-09-COMPCB-COMPRESSED-UNIT-NORM
+% SHARD-TITLE: The compressed-unit norm estimate
+% SHARD-SUMMARY: Reproduces lem-compcb-compressed-unit-norm, the af-validated one-sided bound for every delta-projection and two-sided bound for nonvanishing ones.
+% SHARD-SUMMARY: Explains the vanishing/nonvanishing dichotomy, the direct comparison of the compressed unit with the projection, and the audit that forced the byte-matched norm axioms to be provisioned.
+% SHARD-KEYWORDS: lem-compcb-compressed-unit-norm, af validated, compressed unit, nonvanishing projection, dichotomy, missing-axiom audit
+\section{The compressed-unit norm estimate}\label{sec:compcb-compressed-unit-norm}
+
+\begin{lemma}[\texttt{lem-compcb-compressed-unit-norm}]\label{lem:compcb-compressed-unit-norm}
+There are universal $C_{\mathrm{co}}<\infty$ and $\comb_{\mathrm{co}}>0$ such that, for
+$\comb=\dproj+\ecs\le \comb_{\mathrm{co}}$,
+\begin{equation}\label{eq:cun-upper}
+  \nrm{\cunit{T}}\;\le\;1+C_{\mathrm{co}}\,\comb
+  \qquad\text{for every $\dproj$-projection }T,
+\end{equation}
+and
+\begin{equation}\label{eq:cun-two-sided}
+  \bigl\lvert\,\nrm{\cunit{T}}-1\,\bigr\rvert\;\le\;C_{\mathrm{co}}\,\comb
+  \qquad\text{for every \emph{nonvanishing} $T$.}
+\end{equation}
+\emph{Transcription note.} $\cunit{T}=\Cos{T}(T)$ is the compressed unit of
+\texttt{def-compressed-corner}; ``nonvanishing'' is the second branch of the alternative
+in \texttt{def-delta-projection}. The asymmetry is deliberate and load-bearing: the
+two-sided bound is \emph{false} in general, since a $\dproj$-projection may fall in the
+small branch $\nrm{T}=O(\dproj)$, in which case $\cunit{T}$ is small rather than close to
+a unit.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Compressed-unit norm estimate: there are universal C_co < infinity and e_co > 0 such that, for e=delta+epsilon <= e_co, every delta-projection T satisfies ||u_T|| <= 1+C_co*e, and every nonvanishing T satisfies abs(||u_T||-1) <= C_co*e.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+This shard's tree is instructive twice over, because its first attempt was audited and
+found unsound, and the audit --- not the estimate --- is what is validated in the early
+nodes.
+
+\emph{The blocked first attempt.} The originally registered inputs
+(\texttt{def-extended-epsilon-cstar-algebra} together with
+\texttt{def-compressed-corner}) yield only the $\dproj$-projection dichotomy, the identity
+$\cunit{T}=\Cos{T}(T)$, and the comparison
+$\nrm{\Cos{T}-L_TR_T}\le k\comb$. They do \emph{not} yield the quantitative
+multiplication bound $\nrm{XY}\le(1+\ecs)\nrm{X}\nrm{Y}$ --- the extended definition says
+only that each $\Amp{n}{\mathcal A}$ \emph{is} an $\ecs$-$C^*$-algebra, without supplying
+that term's quantitative axioms --- nor any unit-norm axiom that would give
+\eqref{eq:cun-two-sided} from ``$\Cnrs{T}$ is an $O(\comb)$-$C^*$-algebra with unit
+$\cunit{T}$''. A closure audit node records this verdict explicitly and refuses the root:
+without those axioms there is no sound bridge from the permitted premises to the
+contract.
+
+\emph{The repair.} The missing quantitative content was then registered in the workspace
+as byte-matched externals --- the $\ecs$-$C^*$ norm axioms
+(\texttt{epsilon-banach-cstar-norm-axioms}) and the nonvanishing alternative --- and each
+$O(\cdot)$ in them unpacked into a named universal constant after shrinking the
+threshold. That gives universal $a,b,k<\infty$ and $\comb_0>0$ such that for
+$\comb\le \comb_0$: (i) every $\dproj$-projection $T$ satisfies $\nrm{T}\le a\dproj$ or is
+nonvanishing; (ii) $\nrm{XY}\le(1+\ecs)\nrm{X}\nrm{Y}$; (iii) $\cunit{T}=\Cos{T}(T)$ with
+$\nrm{\Cos{T}-L_TR_T}\le k\comb$; and (iv) nonvanishing $T$ obeys
+$\lvert\nrm{T}-1\rvert\le b\comb$.
+
+\emph{Small branch.} Suppose $\nrm{T}\le a\dproj$ and $\comb\le\min(\comb_0,1)$. Since
+$(L_TR_T)(T)=T(T^2)$, two applications of (ii) give
+$\nrm{(L_TR_T)(T)}\le(1+\ecs)^2\nrm{T}^3\le4a^3\comb^3\le4a^3\comb$, while (iii) gives
+$\nrm{\cunit{T}-(L_TR_T)(T)}\le k\comb\nrm{T}\le ka\comb^2\le ka\comb$. Hence
+$\nrm{\cunit{T}}\le D\comb$ with $D=4a^3+ka$, and in particular
+$\nrm{\cunit{T}}\le1+D\comb$. Note that here the compressed unit is \emph{small}, which is
+why no two-sided statement can hold.
+
+\emph{Nonvanishing branch.} Shrink $\comb_0$ so that $\comb_0\le1$ and $b\comb_0\le1$;
+then (iv) gives $\nrm{T}\le2$. The compressed unit is compared directly with $T$ rather
+than through any unit axiom: bilinearity gives
+$T(T^2)-T=T(T^2-T)+(T^2-T)$, so by (iii), (ii) and $\nrm{T^2-T}\le\dproj$,
+\[
+  \nrm{\cunit{T}-T}
+  \le\nrm{\cunit{T}-(L_TR_T)(T)}+\nrm{T(T^2)-T}
+  \le k\comb\nrm{T}+(1+\ecs)\nrm{T}\dproj+\dproj
+  \le(2k+5)\comb .
+\]
+The reverse triangle inequality together with (iv) then gives
+$\bigl\lvert\nrm{\cunit{T}}-1\bigr\rvert\le(2k+5+b)\comb$, hence also the upper bound.
+
+\emph{Assembly.} With $\comb_{\mathrm{co}}$ the shrunken threshold and
+$C_{\mathrm{co}}=\max\bigl(4a^3+ka,\;2k+5+b\bigr)$, the dichotomy routes every
+$\dproj$-projection to one of the two branches: the first gives \eqref{eq:cun-upper}, the
+second gives \eqref{eq:cun-upper} and \eqref{eq:cun-two-sided}. The final assembly node
+states expressly that it uses neither the superseded audit node nor any compressed-unit
+norm axiom.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-compcb-compressed-unit-norm}: 15 nodes (12 \texttt{validated}, 3
+superseded nodes archived), root \texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-compcb-amplified-compression} and
+\texttt{lem-compcb-amplified-compression-identities}. It supplies the unit-size input to
+\texttt{lem-compcb-corner-algebra} (\S\ref{sec:compcb-corner-algebra}) and to
+\texttt{lem-hcb-column-hilbert-squared} (\S\ref{sec:hcb-column-hilbert-squared}); in the
+latter it is applied to the one-dimensional projection $Q$ of an H-CB datum, which is why
+the nonvanishing hypothesis of \eqref{eq:cun-two-sided} has to be discharged there by a
+separate bridge rather than assumed.

@@ -6,7 +6,7 @@ defs: def-extended-epsilon-cstar-algebra; def-delta-projection; def-compressed-c
 deps: lem-compcb-amplified-compression; lem-compcb-amplification-naturality
 status: proved
 af: validated
-provenance: factored out of proofs/lem-hcb-column-hilbert-squared per the 3rd-stall tripwire (2026-07-25, challenge ch-bbab9bd04b44dd6b node 1.3.1.4 — statement extracted mechanically from the challenge text); UNPROVED here pending its own af pass
+provenance: factored out of proofs/lem-hcb-column-hilbert-squared per the 3rd-stall tripwire (2026-07-25, challenge ch-bbab9bd04b44dd6b node 1.3.1.4 — statement extracted mechanically from the challenge text); UNPROVED here pending its own af pass; report lem:compcb-entrywise-compression-naturality
 owner: A
 workspace: proofs/lem-compcb-entrywise-compression-naturality
 ---

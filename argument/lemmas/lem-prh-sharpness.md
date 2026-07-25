@@ -6,7 +6,7 @@ defs: def-positive-approximate-retract; def-stochastic
 deps:
 status: proved-mod-audit
 af: none
-provenance: docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §7; hostile batch verdict VERDICT-W74F-BATCH.md §A (VALID, no correction); report lem:prh-sharpness
+provenance: docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §7; hostile batch verdict VERDICT-W74F-BATCH.md §A (VALID, no correction)
 owner: A
 workspace: proofs/lem-prh-sharpness
 ---

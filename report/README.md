@@ -39,26 +39,31 @@ mid-check.
 
 | # | SHARD-ID | file |
 |---|----------|------|
+<!-- Shard-order rows for report/README.md ("Shard order (id -> file)" table).
+     Replace the existing table body with these 23 rows, in this order. -->
+
+| # | SHARD-ID | file |
+|---|----------|------|
 | 00 | `AISM-00-OVERVIEW` | `report/sections/00_overview.tex` |
 | 01 | `AISM-01-CLASSICAL-EQUIV` | `report/sections/01_classical_equiv.tex` |
-| 02 | `AISM-02-HEIGHT-COLLAPSE` | `report/sections/02_height_collapse.tex` |
-| 03 | `AISM-03-MASS-SPLIT` | `report/sections/03_mass_split.tex` |
-| 04 | `AISM-04-RESIDUAL-LOWER` | `report/sections/04_residual_lower.tex` |
-| 05 | `AISM-05-RESIDUAL-UPPER` | `report/sections/05_residual_upper.tex` |
-| 06 | `AISM-06-HALO-COLLAPSE` | `report/sections/06_halo_collapse.tex` |
-| 07 | `AISM-07-FACTORIZATION` | `report/sections/07_factorization.tex` |
-| 08 | `AISM-08-ZEROSUM-TRIANGLE` | `report/sections/08_zerosum_triangle.tex` |
-| 09 | `AISM-09-WEIGHTED-MIN` | `report/sections/09_weighted_min.tex` |
-| 10 | `AISM-10-FAN-PAYMENT` | `report/sections/10_fan_payment.tex` |
-| 11 | `AISM-11-NEGPART-SUBADDITIVE` | `report/sections/11_negpart_subadditive.tex` |
-| 12 | `AISM-12-FAN-PAYMENT-RESTRICTED` | `report/sections/12_fan_payment_restricted.tex` |
-| 14 | `AISM-14-PIVOT-REMOVING-MOVE` | `report/sections/14_pivot_removing_move.tex` |
-| 15 | `AISM-15-HIDDENNESS-DUAL-WITNESS` | `report/sections/15_hiddenness_dual_witness.tex` |
-| 16 | `AISM-16-WITNESS-CONSEQUENCES` | `report/sections/16_witness_consequences.tex` |
-| 17 | `AISM-17-SLAB-CAPACITY-PRIMITIVES` | `report/sections/17_slab_capacity_primitives.tex` |
-| 18 | `AISM-18-PARAMETRIC-HALO-COLLAPSE` | `report/sections/18_parametric_halo_collapse.tex` |
-| 19 | `AISM-19-GENUINE-DISINTEGRATION` | `report/sections/19_genuine_disintegration.tex` |
-| 20 | `AISM-20-STARVATION-OBSTRUCTION` | `report/sections/20_starvation_obstruction.tex` |
-| 21 | `AISM-21-HX-FINANCING-ENGINE` | `report/sections/21_hx_financing_engine.tex` |
-| 22 | `AISM-22-HX-STARVATION-COUPLING` | `report/sections/22_hx_starvation_coupling.tex` |
-| 13 | `AISM-13-STATUS-LEDGER` | `report/sections/13_discussion.tex` |
+| 02 | `AISM-02-PRH` | `report/sections/02_prh.tex` |
+| 03 | `AISM-03-COMPCB-AMPLIFICATION-NATURALITY` | `report/sections/03_compcb_amplification_naturality.tex` |
+| 04 | `AISM-04-COMPCB-AMPLIFIED-COMPRESSION` | `report/sections/04_compcb_amplified_compression.tex` |
+| 05 | `AISM-05-COMPCB-AMPLIFIED-COMPRESSION-IDENTITIES` | `report/sections/05_compcb_amplified_compression_identities.tex` |
+| 06 | `AISM-06-COMPCB-ENTRYWISE-COMPRESSION-NATURALITY` | `report/sections/06_compcb_entrywise_compression_naturality.tex` |
+| 07 | `AISM-07-COMPCB-RECTANGULAR-PRODUCT` | `report/sections/07_compcb_rectangular_product.tex` |
+| 08 | `AISM-08-COMPCB-AMPLIFIED-ALMOST-CONTAINMENT` | `report/sections/08_compcb_amplified_almost_containment.tex` |
+| 09 | `AISM-09-COMPCB-COMPRESSED-UNIT-NORM` | `report/sections/09_compcb_compressed_unit_norm.tex` |
+| 10 | `AISM-10-HCB2-AMPLIFIED-ADJOINTNESS` | `report/sections/10_hcb2_amplified_adjointness.tex` |
+| 11 | `AISM-11-COMPCB-COMPRESSED-UNIT-ACTION` | `report/sections/11_compcb_compressed_unit_action.tex` |
+| 12 | `AISM-12-COMPCB-ROW-COLUMN-PRODUCT` | `report/sections/12_compcb_row_column_product.tex` |
+| 13 | `AISM-13-HCB0-COMPRESSED-ASSOCIATOR` | `report/sections/13_hcb0_compressed_associator.tex` |
+| 14 | `AISM-14-COMPCB-CORNER-ALGEBRA` | `report/sections/14_compcb_corner_algebra.tex` |
+| 15 | `AISM-15-HCB-COLUMN-HILBERT-SQUARED` | `report/sections/15_hcb_column_hilbert_squared.tex` |
+| 16 | `AISM-16-COMPCB-SINGLE-COMPRESSION-TRANSFER` | `report/sections/16_compcb_single_compression_transfer.tex` |
+| 17 | `AISM-17-HCB1-VARIATIONAL-IDENTITY` | `report/sections/17_hcb1_variational_identity.tex` |
+| 18 | `AISM-18-HCB1-COLUMN-ACTION` | `report/sections/18_hcb1_column_action.tex` |
+| 19 | `AISM-19-HCB2-PRODUCT-DEFECT` | `report/sections/19_hcb2_product_defect.tex` |
+| 20 | `AISM-20-HCB3-DIAGONAL-UNIT` | `report/sections/20_hcb3_diagonal_unit.tex` |
+| 21 | `AISM-21-HCB3-DIAGONAL-UPPER-NORM` | `report/sections/21_hcb3_diagonal_upper_norm.tex` |
+| 22 | `AISM-22-STATUS-OUTLOOK` | `report/sections/22_status_outlook.tex` |

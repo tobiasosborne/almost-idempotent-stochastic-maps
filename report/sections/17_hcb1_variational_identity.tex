@@ -1,0 +1,91 @@
+% SHARD-ID: AISM-17-HCB1-VARIATIONAL-IDENTITY
+% SHARD-TITLE: The amplified Ha variational identity
+% SHARD-SUMMARY: Reproduces lem-hcb1-variational-identity, the af-validated exact identity expressing the Ha defect as a compressed associator.
+% SHARD-SUMMARY: Explains the entrywise expansion, the summation of the level-one defining relation, and the cancellation against the amplified column display.
+% SHARD-KEYWORDS: lem-hcb1-variational-identity, af validated, Ha map, variational identity, associator, contract amendment
+\section{The amplified Ha variational identity}\label{sec:hcb1-variational-identity}
+
+\begin{lemma}[\texttt{lem-hcb1-variational-identity}]\label{lem:hcb1-variational-identity}
+There is a universal $\comb_{\mathrm{var}}>0$ such that every H-CB datum with
+$\comb\le \comb_{\mathrm{var}}$, every $n\ge1$, every $Z\in\Amp{n}{\Cnr{P}{R}}$,
+$X\in\Matr{n}{1}\otimes\Cnr{R}{Q}$ and $Y\in\Matr{n}{1}\otimes\Cnr{P}{Q}$ satisfy
+\begin{equation}\label{eq:vi-main}
+  2\,\ipa{Y}{\Han{Q}{P}{R}{n}(Z)X-Z\cpr X}\;\Cos{Q}(Q)
+  \;=\;\bigl(Y\dg\cpr Z\bigr)\cpr X-Y\dg\cpr\bigl(Z\cpr X\bigr).
+\end{equation}
+\emph{Transcription note.} The identity is \emph{exact}; the threshold only guarantees
+that the objects involved are defined. Its content is that the ``Ha defect'' --- the
+difference between letting $\Ha{Q}{P}{R}(Z)$ act on a column and simply multiplying by
+$Z$ --- is, after pairing, literally the compressed associator of
+\texttt{def-compressed-associator} for the triple $(Y\dg,Z,X)$.
+\emph{Contract amendment.} The codified contract originally wrote the normalising factor
+as $\cunit{Q}$; the ratified \texttt{def-ha-map} identity and the column-Hilbert displays
+write it as $\widetilde Q=\Cos{Q}(Q)$. The contract now spells out $\Cos{Q}(Q)$. These are
+definitionally the same element --- the compressed unit is $\cunit{Q}=\Cos{Q}(Q)$ --- so
+this was pure notation typing, neither a strengthening nor a weakening.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Amplified Ha variational identity: there is a universal e_var > 0 such that every H-CB datum with e <= e_var, every n >= 1, Z in M_n tensor S_{P,R}, X in M_{n,1} tensor S_{R,Q}, and Y in M_{n,1} tensor S_{P,Q} satisfy 2*<Y,(Ha^Q_{P,R})_n(Z)X-Z dot X>*Co_Q(Q)=(Y^dagger dot Z) dot X-Y^dagger dot (Z dot X).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{Threshold.} Take
+$\comb_{\mathrm{var}}=\min(\comb_{\mathrm{cmp}},\comb_{\mathrm{col}})$, the thresholds of
+\texttt{lem-compcb-amplified-compression-identities} and
+\texttt{lem-hcb-column-hilbert-squared}, and fix an arbitrary datum and arbitrary
+$n,Z,X,Y$.
+
+\emph{Entrywise dictionary.} Write $Z=(Z_{ij})_{1\le i,j\le n}$, $X=(X_j)_j$,
+$Y=(Y_i)_i$. Matrix amplification, the matrix compressed product and the amplified
+sesquilinear form unfold as
+\[
+  \bigl(\Han{Q}{P}{R}{n}(Z)X\bigr)_i=\sum_j\Ha{Q}{P}{R}(Z_{ij})(X_j),
+  \quad
+  (Z\cpr X)_i=\sum_jZ_{ij}\cpr X_j,
+\]
+\[
+  \bigl(Y\dg\cpr Z\bigr)_j=\sum_iY_i\dg\cpr Z_{ij},
+  \qquad
+  \ipa{Y}{W}=\sum_i\ipo{Y_i}{W_i}.
+\]
+
+\emph{Summing the level-one relation.} For each pair $(i,j)$, the defining relation of
+\texttt{def-ha-map}, applied to $Z_{ij}\in\Cnr{P}{R}$, $X_j\in\Cnr{R}{Q}$ and
+$Y_i\in\Cnr{P}{Q}$, gives
+\[
+  2\,\ipo{Y_i}{\Ha{Q}{P}{R}(Z_{ij})(X_j)}\,\Cos{Q}(Q)
+  =\bigl(Y_i\dg\cpr Z_{ij}\bigr)\cpr X_j+Y_i\dg\cpr\bigl(Z_{ij}\cpr X_j\bigr).
+\]
+Summing over $i,j$ and using the dictionary together with sesquilinearity,
+\begin{equation}\label{eq:vi-sum}
+  2\,\ipa{Y}{\Han{Q}{P}{R}{n}(Z)X}\,\Cos{Q}(Q)
+  =\sum_{i,j}\Bigl[\bigl(Y_i\dg\cpr Z_{ij}\bigr)\cpr X_j+Y_i\dg\cpr\bigl(Z_{ij}\cpr X_j\bigr)\Bigr].
+\end{equation}
+
+\emph{The column display.} The registered amplified column-Hilbert display
+$Y\dg\cpr W=\ipa{Y}{W}\Cos{Q}(Q)$, applied to $W=Z\cpr X$ and expanded entrywise, gives
+\begin{equation}\label{eq:vi-display}
+  \ipa{Y}{Z\cpr X}\,\Cos{Q}(Q)=Y\dg\cpr(Z\cpr X)=\sum_{i,j}Y_i\dg\cpr\bigl(Z_{ij}\cpr X_j\bigr).
+\end{equation}
+
+\emph{Cancellation.} Associating only as displayed --- this is the point where the two
+sides differ --- ordinary matrix multiplication gives
+$\bigl(Y\dg\cpr Z\bigr)\cpr X=\sum_{i,j}\bigl(Y_i\dg\cpr Z_{ij}\bigr)\cpr X_j$, whereas
+$Y\dg\cpr(Z\cpr X)=\sum_{i,j}Y_i\dg\cpr\bigl(Z_{ij}\cpr X_j\bigr)$. Subtracting twice
+\eqref{eq:vi-display} from \eqref{eq:vi-sum} and using sesquilinearity in the second
+variable, the doubled $Y_i\dg\cpr(Z_{ij}\cpr X_j)$ sum cancels once and reverses sign,
+leaving exactly \eqref{eq:vi-main}. Since the datum and $n,Z,X,Y$ were arbitrary and
+$\comb_{\mathrm{var}}$ is universal and positive, the lemma follows.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb1-variational-identity}: 8 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-compcb-amplified-compression-identities} and
+\texttt{lem-hcb-column-hilbert-squared}. It is the conversion device of the H-CB tier: on
+its own it proves no estimate, but it turns every bound on the compressed associator into
+a bound on the Ha defect. Its single consumer is
+\texttt{lem-hcb1-column-action} (\S\ref{sec:hcb1-column-action}), where it is combined
+with \texttt{lem-hcb0-compressed-associator} and the nondegeneracy of $\cunit{Q}$.

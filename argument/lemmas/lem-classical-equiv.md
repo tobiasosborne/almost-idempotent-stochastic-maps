@@ -6,7 +6,7 @@ defs: def-stochastic; def-signed-idempotent; def-negative-mass; def-almost-idemp
 deps: 
 status: proved
 af: validated
-provenance: docs/ingest (classical-portfolio; contracts verbatim from ../almost-idempotent-positive-maps/argument/lemmas or report/kernel-conjecture.tex)
+provenance: docs/ingest (classical-portfolio; contracts verbatim from ../almost-idempotent-positive-maps/argument/lemmas or report/kernel-conjecture.tex); report lem:classical-equiv
 owner: A
 workspace: proofs/lem-classical-equiv
 ---

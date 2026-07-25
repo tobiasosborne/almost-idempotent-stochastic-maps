@@ -1,0 +1,61 @@
+% SHARD-ID: AISM-06-COMPCB-ENTRYWISE-COMPRESSION-NATURALITY
+% SHARD-TITLE: Entrywise compression naturality at a matrix unit
+% SHARD-SUMMARY: Reproduces lem-compcb-entrywise-compression-naturality, the af-validated slotwise action of an amplified compression on an E11-supported element.
+% SHARD-SUMMARY: Explains the specialization of the amplification identity to a square corner and the elementary-tensor evaluation that finishes it.
+% SHARD-KEYWORDS: lem-compcb-entrywise-compression-naturality, af validated, matrix unit, elementary tensor, compression, slotwise action
+\section{Entrywise compression naturality at a matrix unit}\label{sec:compcb-entrywise-compression-naturality}
+
+\begin{lemma}[\texttt{lem-compcb-entrywise-compression-naturality}]\label{lem:compcb-entrywise-compression-naturality}
+There is a universal $\comb_{\mathrm{nat}}>0$ such that, whenever
+$\comb=\dproj+\ecs\le \comb_{\mathrm{nat}}$, $Q$ is a $\dproj$-projection in an extended
+$\ecs$-$C^*$-algebra $\mathcal A$, $n\ge1$, and $E_{11}$ is the $(1,1)$ matrix unit of
+$\Mat{n}$, every $Z\in\mathcal A$ satisfies
+\begin{equation}\label{eq:ecn-main}
+  \Co{\ampel{n}{Q}}{\ampel{n}{Q}}\bigl(E_{11}\otimes Z\bigr)\;=\;E_{11}\otimes\Cos{Q}(Z).
+\end{equation}
+\emph{Transcription note.} $\Cos{Q}$ is the $P=Q$ abbreviation $\Co{Q}{Q}$ of
+\texttt{def-compressed-corner}. The point of the statement is that the amplified
+compression does not merely preserve the corner but acts \emph{in the single occupied
+slot}, leaving the zero blocks zero.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Entrywise compression naturality: there is a universal e_nat > 0 such that, whenever e = delta+epsilon <= e_nat, Q is a delta-projection in an extended epsilon-C*-algebra A, n >= 1, and E_{11} is the (1,1) matrix unit of M_n, every Z in A satisfies Co_{I_n tensor Q, I_n tensor Q}(E_{11} tensor Z) = E_{11} tensor Co_Q(Z).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Set $\comb_{\mathrm{nat}}:=\comb_{\mathrm{cmp}}$, the universal threshold supplied by
+\texttt{lem-compcb-amplified-compression}. That lemma is an equality of \emph{linear
+maps} on $\Mat{n}(\mathcal A)$, and the proof consists of specializing it and then
+evaluating.
+
+Specializing the imported identity to the pair $(P,Q)=(Q,Q)$ gives
+\[
+  \Co{\ampel{n}{Q}}{\ampel{n}{Q}}\;=\;\ampl{n}\Co{Q}{Q}\;=\;\ampl{n}\Cos{Q},
+\]
+the last equality being nothing but the abbreviation $\Co{Q}{Q}=\Cos{Q}$ recorded in
+\texttt{def-compressed-corner}. This is where the whole quantitative content of the
+statement sits: the threshold, the $\theta$-domain control and the amplification
+argument are all inherited from \texttt{lem-compcb-amplified-compression}, which in turn
+rests on \texttt{lem-compcb-amplification-naturality}.
+
+What remains is a one-line evaluation. For any linear $T:\mathcal A\to\mathcal A$ the
+tensor amplification acts on elementary tensors by
+$(\ampl{n}T)(X\otimes Z)=X\otimes T(Z)$; taking $T=\Cos{Q}$ and $X=E_{11}$ gives
+\eqref{eq:ecn-main}.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-compcb-entrywise-compression-naturality}: 4 nodes, all
+\texttt{validated}, root \texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports \texttt{lem-compcb-amplified-compression}
+and \texttt{lem-compcb-amplification-naturality}. Like
+\S\ref{sec:compcb-amplification-naturality}, this shard exists because of a recorded
+stall: the column-Hilbert workspace (\S\ref{sec:hcb-column-hilbert-squared}) reached its
+third consecutive stall on exactly the identity \eqref{eq:ecn-main}, whose statement was
+then extracted mechanically from the blocking challenge and validated on its own. It is a
+strictly sharper statement than the $\ampl{n}$-clause it specializes --- that clause
+identifies two maps, whereas \eqref{eq:ecn-main} asserts what happens to a
+\emph{single-slot} element --- and that sharper form is what the column-Hilbert estimate
+consumes. It has one registry consumer,
+\texttt{lem-hcb-column-hilbert-squared}.

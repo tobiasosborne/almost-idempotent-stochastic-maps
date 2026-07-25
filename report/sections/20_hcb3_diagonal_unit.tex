@@ -1,0 +1,93 @@
+% SHARD-ID: AISM-20-HCB3-DIAGONAL-UNIT
+% SHARD-TITLE: The uniform diagonal Ha unit estimate
+% SHARD-SUMMARY: Reproduces lem-hcb3-diagonal-unit, the af-validated statement that the amplified Ha map sends the amplified compressed unit to an approximate identity operator.
+% SHARD-SUMMARY: Explains the direct level-n bound on the amplified unit, the two-term split into a column-action defect and a unit-action defect, and the coordinate-sum conversion.
+% SHARD-KEYWORDS: lem-hcb3-diagonal-unit, af validated, Ha map, compressed unit, approximate identity, coordinate sum
+\section{The uniform diagonal Ha unit estimate}\label{sec:hcb3-diagonal-unit}
+
+\begin{lemma}[\texttt{lem-hcb3-diagonal-unit}]\label{lem:hcb3-diagonal-unit}
+There are universal $C_{\mathrm{unit}}<\infty$ and $\comb_{\mathrm{unit}}>0$ such that
+every H-CB datum with $\comb\le \comb_{\mathrm{unit}}$ and every $n\ge1$ satisfy
+\begin{equation}\label{eq:du-main}
+  \bigl\lVert\Han{Q}{P}{P}{n}\bigl(\ampel{n}{\cunit{P}}\bigr)-I\bigr\rVert
+  \;\le\;C_{\mathrm{unit}}\,\comb .
+\end{equation}
+\emph{Transcription note.} $\cunit{P}=\Cos{P}(P)$ is the compressed unit of the corner
+$\Cnrs{P}$, $\ampel{n}{\cunit{P}}$ its diagonal amplification, and $I$ the identity
+operator on the amplified column space $\Matr{n}{1}\otimes\Cnr{P}{Q}$; the norm is the
+operator norm.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Uniform diagonal Ha unit estimate: there are universal C_unit < infinity and e_unit > 0 such that every H-CB datum with e <= e_unit and every n >= 1 satisfy ||(Ha^Q_{P,P})_n(I_n tensor u_P)-I|| <= C_unit*e.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Write $U=\ampel{n}{\cunit{P}}$. The estimate is pointwise on columns, then a supremum.
+
+\emph{A uniform bound on the amplified unit.} The obvious route --- bound $\nrm{\cunit{P}}$
+at level one and appeal to isometry of the diagonal amplification --- is \emph{not} taken,
+and the tree says why: no registered input supplies that isometry. Instead $\nrm{U}$ is
+bounded directly at level $n$ by a $C^*$-style argument. Put $t=\nrm{U}$. The
+$\ecs$-$C^*$ norm axioms at level $n$ give $\nrm{U\dg U}\ge(1-\ecs)t^{2}\ge(1-\comb)t^{2}$
+and $\nrm{U\dg}=t$; the compressed-product display in the amplified $P,P$ corner gives
+$\nrm{U\dg U-U\dg\cpr U}\le C_{\mathrm{pr}}\comb t^{2}$; and
+\texttt{lem-compcb-compressed-unit-action}, in its right-unit form with $A=U\dg$, gives
+$\nrm{U\dg\cpr U-U\dg}\le C_{\mathrm{co}}\comb t$. Chaining,
+\[
+  (1-\comb)t^{2}\;\le\;\nrm{U\dg U}\;\le\;C_{\mathrm{pr}}\comb t^{2}+(1+C_{\mathrm{co}}\comb)t .
+\]
+If $t=0$ there is nothing to prove; otherwise divide by $t$ to get
+$\bigl[1-(1+C_{\mathrm{pr}})\comb\bigr]t\le1+C_{\mathrm{co}}\comb$, and choosing
+$\comb_u\le1/\bigl[2(1+C_{\mathrm{pr}})\bigr]$ makes the bracket at least $\tfrac12$, so
+\begin{equation}\label{eq:du-Ku}
+  \nrm{U}\;\le\;K_u:=2\bigl(1+C_{\mathrm{co}}\comb_u\bigr),
+\end{equation}
+uniformly in $n$.
+
+\emph{Two defects.} For a column $X\in\Matr{n}{1}\otimes\Cnr{P}{Q}$ split
+\begin{equation}\label{eq:du-split}
+  \bigl(\Han{Q}{P}{P}{n}(U)-I\bigr)X
+  =\bigl(\Han{Q}{P}{P}{n}(U)X-U\cpr X\bigr)+\bigl(U\cpr X-X\bigr).
+\end{equation}
+The first bracket is a column-action defect: \texttt{lem-hcb1-column-action} with $R=P$
+and $Z=U$ gives $\colq{P}\bigl(\Han{Q}{P}{P}{n}(U)X-U\cpr X\bigr)\le C_{\mathrm{act}}\comb\nrm{U}\colq{P}(X)$,
+which \eqref{eq:du-Ku} turns into $C_{\mathrm{act}}K_u\comb\colq{P}(X)$.
+
+The second bracket says that the amplified compressed unit is an approximate identity on
+columns, and it is assembled coordinatewise. Multiplication by the block-diagonal
+$U=\ampel{n}{\cunit{P}}$ acts entrywise, so writing $X=(X_1,\dots,X_n)^{\mathsf T}$ and
+applying \texttt{lem-compcb-compressed-unit-action} in each level-one $P,Q$ corner gives
+$\nrm{\cunit{P}\cpr X_j-X_j}\le C_{\mathrm{co}}\comb\nrm{X_j}$ for every $j$. The level-one
+norm/inner-product comparison registered with \texttt{def-ha-map} and the column-Hilbert
+displays supplies a universal $\kappa$ with $\colq{P}(Y)\le\kappa\nrm{Y}$ and
+$\nrm{Y}\le\kappa\colq{P}(Y)$, so each coordinate estimate becomes
+$\colq{P}(\cunit{P}\cpr X_j-X_j)\le\kappa^{2}C_{\mathrm{co}}\comb\,\colq{P}(X_j)$. Finally
+the coordinate-sum display $\colq{P}\bigl((Y_j)_j\bigr)^{2}=\sum_j\colq{P}(Y_j)^{2}$ lets
+the squared coordinate estimates be summed, giving
+$\colq{P}(U\cpr X-X)\le\kappa^{2}C_{\mathrm{co}}\comb\,\colq{P}(X)$ uniformly in $n$; the
+existential constant $C_{\mathrm{co}}$ is then simply replaced by the larger universal
+$\kappa^{2}C_{\mathrm{co}}$ and the notation retained.
+
+\emph{Conclusion.} Setting $\comb_0=\tfrac12\min(\comb_u,\comb_{\mathrm{act}},\comb_{\mathrm{co}})$
+and applying the $\colq{P}$ triangle inequality to \eqref{eq:du-split},
+\[
+  \colq{P}\Bigl(\bigl(\Han{Q}{P}{P}{n}(U)-I\bigr)X\Bigr)
+  \;\le\;\bigl(C_{\mathrm{act}}K_u+C_{\mathrm{co}}\bigr)\comb\,\colq{P}(X),
+\]
+and passing to the operator norm gives \eqref{eq:du-main} with
+$C_{\mathrm{unit}}=C_{\mathrm{act}}K_u+C_{\mathrm{co}}$ and
+$\comb_{\mathrm{unit}}=\comb_0$.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb3-diagonal-unit}: 18 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-hcb1-column-action} and
+\texttt{lem-compcb-compressed-unit-action}. It is one of the estimates the parent
+contract \texttt{conj-hcb} collects --- the clause asserting that the amplified Ha map is
+approximately unital --- and it has no validated registry consumers of its own.
+\texttt{conj-hcb} is \texttt{proved-mod-audit} and \texttt{af: none}: it is not rigorous
+here, and neither it nor this lemma bears on the status of \texttt{op-classical}, which
+remains open.

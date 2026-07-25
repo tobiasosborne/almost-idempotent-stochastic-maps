@@ -6,7 +6,7 @@ defs: def-extended-epsilon-cstar-algebra
 deps:
 status: proved-mod-audit
 af: none
-provenance: docs/plans/2026-07-23-W74F-artifacts/AUDIT-W74F-D-ALMOSTIDEMP.md Executive verdict, Explicit estimate engine, Interface, and Hostile bottom line; hostile batch verdict VERDICT-W74F-BATCH.md §D (VALID, no correction); report lem:kitaev-almost-idemp-audit
+provenance: docs/plans/2026-07-23-W74F-artifacts/AUDIT-W74F-D-ALMOSTIDEMP.md Executive verdict, Explicit estimate engine, Interface, and Hostile bottom line; hostile batch verdict VERDICT-W74F-BATCH.md §D (VALID, no correction)
 owner: B
 workspace: proofs/lem-kitaev-almost-idemp-audit
 ---

@@ -1,0 +1,100 @@
+% SHARD-ID: AISM-19-HCB2-PRODUCT-DEFECT
+% SHARD-TITLE: The uniform amplified Ha product defect
+% SHARD-SUMMARY: Reproduces lem-hcb2-product-defect, the af-validated bound on the failure of the amplified Ha map to be multiplicative.
+% SHARD-SUMMARY: Explains the amplified column-norm calibration, the uniform Ha operator bound, and the four-term telescope evaluated on columns.
+% SHARD-KEYWORDS: lem-hcb2-product-defect, af validated, Ha map, product defect, telescope, operator norm
+\section{The uniform amplified Ha product defect}\label{sec:hcb2-product-defect}
+
+\begin{lemma}[\texttt{lem-hcb2-product-defect}]\label{lem:hcb2-product-defect}
+There are universal $C_{\mathrm{prod}}<\infty$ and $\comb_{\mathrm{prod}}>0$ such that
+every H-CB datum with $\comb\le \comb_{\mathrm{prod}}$, every $n\ge1$, every
+$Z\in\Amp{n}{\Cnr{P}{S}}$ and every $W\in\Amp{n}{\Cnr{S}{R}}$ satisfy
+\begin{equation}\label{eq:pd-main}
+  \bigl\lVert\Han{Q}{P}{R}{n}(Z\cpr W)-\Han{Q}{P}{S}{n}(Z)\,\Han{Q}{S}{R}{n}(W)\bigr\rVert
+  \;\le\;C_{\mathrm{prod}}\,\comb\,\nrm{Z}\,\nrm{W}.
+\end{equation}
+\emph{Transcription note.} On the left the juxtaposition of the two amplified Ha maps is
+composition of operators between amplified column spaces, whereas $Z\cpr W$ is the
+compressed product in the ambient corner; the norm is the operator norm of
+\texttt{def-ha-map}. So the statement is that $\Ha{Q}{\cdot}{\cdot}$ is multiplicative up
+to $O(\comb)$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Uniform amplified Ha product defect: there are universal C_prod < infinity and e_prod > 0 such that every H-CB datum with e <= e_prod, every n >= 1, Z in M_n tensor S_{P,S}, and W in M_n tensor S_{S,R} satisfy ||(Ha^Q_{P,R})_n(Z dot W)-(Ha^Q_{P,S})_n(Z)(Ha^Q_{S,R})_n(W)|| <= C_prod*e*||Z||||W||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{Calibration.} Three uniform facts are set up first. The whole-column identity
+$X\dg\cpr X=\colq{T}(X)^{2}\cunit{Q}$ of \texttt{def-column-hilbert-corner}, combined with
+\texttt{lem-compcb-rectangular-product} and the $\ecs$-$C^*$ norm axioms, gives
+$\bigl\lvert\,\nrm{X\dg\cpr X}-\nrm{X}^{2}\bigr\rvert\le(C_{\mathrm{co}}+1)\comb\nrm{X}^{2}$;
+since $Q$ is one-dimensional it is nonvanishing by the registered bridge, so
+$\cunit{Q}$ is the unit of an $O(\comb)$-$C^*$ corner and its norm is within
+$O(\comb)$ of $1$. Shrinking the threshold, this calibrates the column norm against the
+ambient norm,
+\begin{equation}\label{eq:pd-cal}
+  \tfrac12\nrm{X}\;\le\;\colq{T}(X)\;\le\;2\nrm{X}.
+\end{equation}
+Next, the rectangular estimate and $\nrm{AB}\le(1+\ecs)\nrm{A}\nrm{B}$ give
+$\nrm{A\cpr B}\le K_0\nrm{A}\nrm{B}$ with $K_0=2+C_{\mathrm{co}}$; and for a
+square-by-column pair, \eqref{eq:pd-cal} converts this into the multiplier bound
+$\colq{P}(A\cpr X)\le K_{\mathrm{mul}}\nrm{A}\colq{R}(X)$ with
+$K_{\mathrm{mul}}=4K_0$. Finally, \texttt{lem-hcb1-column-action} together with the
+multiplier bound gives a uniform operator bound for the Ha map itself,
+\begin{equation}\label{eq:pd-opbound}
+  \bigl\lVert\Han{Q}{A}{B}{n}(U)\bigr\rVert\;\le\;K_H\nrm{U},
+  \qquad K_H:=K_{\mathrm{mul}}+C_{\mathrm{act}} .
+\end{equation}
+
+\emph{The telescope.} Abbreviate $H_{A,B}(U):=\Han{Q}{A}{B}{n}(U)$. For every compatible
+column $X$ the following identity is exact, obtained by adding and subtracting compressed
+multiplications:
+\begin{align}\label{eq:pd-telescope}
+  \bigl[H_{P,R}(Z\cpr W)-H_{P,S}(Z)H_{S,R}(W)\bigr]X
+  &=\bigl[H_{P,R}(Z\cpr W)X-(Z\cpr W)\cpr X\bigr] \notag\\
+  &\quad+\bigl[(Z\cpr W)\cpr X-Z\cpr(W\cpr X)\bigr] \notag\\
+  &\quad+Z\cpr\bigl[W\cpr X-H_{S,R}(W)X\bigr] \notag\\
+  &\quad+\bigl[Z\cpr H_{S,R}(W)X-H_{P,S}(Z)H_{S,R}(W)X\bigr].
+\end{align}
+Each bracket is one of the two estimates already available. The first is a column-action
+defect for the element $Z\cpr W$, so
+\texttt{lem-hcb1-column-action} and $\nrm{Z\cpr W}\le K_0\nrm{Z}\nrm{W}$ bound it by
+$C_{\mathrm{act}}K_0\comb\nrm{Z}\nrm{W}\colq{R}(X)$. The second is the compressed
+associator, bounded by \texttt{lem-hcb0-compressed-associator} in the ambient norm by
+$C_{\mathrm{as}}\comb\nrm{Z}\nrm{W}\nrm{X}$; converting both ends through
+\eqref{eq:pd-cal} costs two factors of $2$, giving
+$4C_{\mathrm{as}}\comb\nrm{Z}\nrm{W}\colq{R}(X)$. The third is the column-action defect
+for $W$, pushed through the square-by-column multiplier bound for $Z$, giving
+$K_{\mathrm{mul}}C_{\mathrm{act}}\comb\nrm{Z}\nrm{W}\colq{R}(X)$. The fourth is the
+column-action defect for $Z$ evaluated on the column $H_{S,R}(W)X$, whose column norm is
+controlled by the operator bound \eqref{eq:pd-opbound}, giving
+$C_{\mathrm{act}}K_H\comb\nrm{Z}\nrm{W}\colq{R}(X)$.
+
+\emph{Conclusion.} Applying the $\colq{P}$ triangle inequality to
+\eqref{eq:pd-telescope} and adding the four bounds gives the pointwise estimate with
+\[
+  C_*:=C_{\mathrm{act}}K_0+4C_{\mathrm{as}}+C_{\mathrm{act}}K_{\mathrm{mul}}+C_{\mathrm{act}}K_H .
+\]
+Taking the supremum over columns with $\colq{R}(X)=1$ converts it into the operator-norm
+statement \eqref{eq:pd-main}, with $C_{\mathrm{prod}}=C_*$ and
+$\comb_{\mathrm{prod}}=\min\{\comb_{\mathrm{cmp}},\comb_{\mathrm{co}},\comb_{\mathrm{as}},\comb_{\mathrm{act}},\comb_q,1\}$;
+\texttt{lem-compcb-amplified-compression} is what guarantees that all the corners and
+compressed products appearing at level $n$ are the compatible amplified objects the
+imported estimates quantify over.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb2-product-defect}: 12 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-hcb0-compressed-associator},
+\texttt{lem-hcb1-column-action},
+\texttt{lem-compcb-rectangular-product} and
+\texttt{lem-compcb-amplified-compression}. Together with the exact adjointness of
+\S\ref{sec:hcb2-amplified-adjointness} it makes $\Ha{Q}{\cdot}{\cdot}$ an approximate
+$*$-homomorphism at every amplification level, which is exactly the input the norm
+estimates of the next tier consume: it feeds
+\texttt{lem-hcb3-diagonal-upper-norm} (\S\ref{sec:hcb3-diagonal-upper-norm}) and the
+not-yet-validated \texttt{lem-hcb3-diagonal-lower-modulus} and
+\texttt{lem-hcb3-offdiagonal-inverse}.

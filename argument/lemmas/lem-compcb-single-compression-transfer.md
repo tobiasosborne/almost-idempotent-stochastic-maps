@@ -6,7 +6,7 @@ defs: def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion; def-delt
 deps: lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities; lem-compcb-amplified-almost-containment; lem-compcb-corner-algebra; lem-compcb-rectangular-product
 status: proved
 af: validated
-provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (DECOMP COMP-CB; Stage-1 SPLIT-C); VERDICT-FUDW-DECOMP-V3.md §D
+provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (DECOMP COMP-CB; Stage-1 SPLIT-C); VERDICT-FUDW-DECOMP-V3.md §D; report lem:compcb-single-compression-transfer
 owner: A
 workspace: proofs/lem-compcb-single-compression-transfer
 ---

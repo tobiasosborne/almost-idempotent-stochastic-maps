@@ -6,7 +6,7 @@ defs: def-hcb-datum; def-column-hilbert-corner
 deps: lem-compcb-rectangular-product; lem-compcb-compressed-unit-norm; lem-compcb-entrywise-compression-naturality; lem-compcb-row-column-product
 status: proved
 af: validated
-provenance: PROOF-W74F-E-HCB.md §§1.2,5; VERDICT-W74F-E-HCB.md HCB-1b; DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D
+provenance: PROOF-W74F-E-HCB.md §§1.2,5; VERDICT-W74F-E-HCB.md HCB-1b; DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D; report lem:hcb-column-hilbert-squared
 owner: A
 workspace: proofs/lem-hcb-column-hilbert-squared
 ---

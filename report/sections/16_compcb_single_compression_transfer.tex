@@ -1,0 +1,109 @@
+% SHARD-ID: AISM-16-COMPCB-SINGLE-COMPRESSION-TRANSFER
+% SHARD-TITLE: Single-compression transfer of an extended inclusion
+% SHARD-SUMMARY: Reproduces lem-compcb-single-compression-transfer, the af-validated statement that restricting an extended inclusion to an ideal and compressing once yields an extended inclusion.
+% SHARD-SUMMARY: Explains the ideal-unit projection, the exact dagger and unit clauses, the compression-closeness estimate, and the four-term multiplicativity telescope.
+% SHARD-KEYWORDS: lem-compcb-single-compression-transfer, af validated, extended inclusion, ideal, compression, multiplicativity telescope
+\section{Single-compression transfer of an extended inclusion}\label{sec:compcb-single-compression-transfer}
+
+\begin{lemma}[\texttt{lem-compcb-single-compression-transfer}]\label{lem:compcb-single-compression-transfer}
+There are universal $C_{\mathrm{co}}<\infty$ and $\comb_{\mathrm{co}}>0$ such that
+restricting an extended $\alpha$-inclusion to one ideal and following it by one compatible
+amplified compression produces an extended $C_{\mathrm{co}}(\alpha+\ecs)$-inclusion
+whenever $\alpha+\ecs\le \comb_{\mathrm{co}}$.
+\emph{Transcription note.} The tree fixes the datum: $\mathcal A$ an extended
+$\ecs$-$C^*$-algebra, $\mathcal B$ an exact unital $C^*$-algebra, $\mathcal J\subseteq
+\mathcal B$ a unital direct-summand ideal with unit $q$, and
+$v:\mathcal B\to\mathcal A$ an extended $\alpha$-inclusion
+(\texttt{def-extended-delta-inclusion}). The ``compatible single compression'' is
+\[
+  P:=v(q),\qquad T:=\Cos{P}\circ v|_{\mathcal J},
+\]
+and throughout $\comb=\alpha+\ecs$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Single-compression transfer: there are universal C_co < infinity and e_co > 0 such that restricting an extended alpha-inclusion to one ideal and following it by one compatible amplified compression produces an extended C_co*(alpha+epsilon)-inclusion whenever alpha+epsilon <= e_co.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{The projection and the ledger.} Since $q=q\dg=q^{2}$ with $\nrm{q}=1$ in the exact
+$C^*$-algebra $\mathcal B$, the inclusion clauses give $P\dg=v(q\dg)=P$,
+$\nrm{P^{2}-P}=\nrm{v(q)v(q)-v(q^{2})}\le\alpha$ and $1-\alpha\le\nrm{P}\le1+\alpha$; so
+$P$ is an $\alpha$-projection and, for small $\comb$, a \emph{nonvanishing} one, its norm
+lying in the second alternative of \texttt{def-delta-projection}. That is what licenses
+\texttt{lem-compcb-corner-algebra} to make $\Cnrs{P}$ an extended
+$C_{\mathrm{ca}}\comb$-$C^*$-algebra --- the target structure. The remaining ledger
+constants are $k_{\mathrm{cmp}}$ from the compression comparison
+$\nrm{\Cos{P_n}(Z)-(P_nZ)P_n}\le k_{\mathrm{cmp}}\comb\nrm{Z}$, then $D=2k_{\mathrm{cmp}}+5$
+and $K_N=D+1$, together with $C_r,\comb_r$ from
+\texttt{lem-compcb-rectangular-product}.
+
+\emph{The exact clauses.} By tensor functoriality
+$T_n=\mathrm{id}_{\Mat{n}}\otimes T=(\mathrm{id}_{\Mat{n}}\otimes\Cos{P})\circ v_n$, and
+\texttt{lem-compcb-amplified-compression} rewrites this as $T_n=\Cos{P_n}\circ v_n$ with
+range $\Img\Cos{P_n}=\Cnrs{P_n}=\Amp{n}{\Cnrs{P}}$; linearity is inherited from $v_n$ and
+$\Cos{P_n}$. Two clauses hold \emph{exactly}, with no error term. The star clause of the
+extended inclusion gives $v_n(x\dg)=v_n(x)\dg$, and
+\texttt{lem-compcb-amplified-compression-identities} for the square pair $(P_n,P_n)$ gives
+$\Cos{P_n}(Z\dg)=\Cos{P_n}(Z)\dg$, so $T_n(x\dg)=T_n(x)\dg$. And the unit of
+$\Amp{n}{\mathcal J}$ is $q_n=\ampel{n}{q}$ with $v_n(q_n)=P_n$, so
+\[
+  T_n(q_n)=\Cos{P_n}(P_n)=\ampel{n}{\Cos{P}(P)}=\ampel{n}{\cunit{P}} :
+\]
+the unit defect is zero.
+
+\emph{Compression closeness.} Because $q$ is the unit of the ideal, $q_nx=xq_n=x$ for
+$x\in\Amp{n}{\mathcal J}$, so with $Z=v_n(x)$ the multiplicative clause of the inclusion
+gives $\nrm{P_nZ-Z}\le\alpha\nrm{x}$ and $\nrm{ZP_n-Z}\le\alpha\nrm{x}$, while its norm
+clause gives $\nrm{P_n}\le1+\alpha$ and $\nrm{Z}\le(1+\alpha)\nrm{x}$. Combining with the
+compression comparison and $\comb\le\tfrac12$,
+\begin{equation}\label{eq:sct-close}
+  \nrm{T_n(x)-v_n(x)}
+  \le\nrm{\Cos{P_n}(Z)-(P_nZ)P_n}+\nrm{(P_nZ)P_n-Z}
+  \le D\,\comb\,\nrm{x},
+\end{equation}
+uniformly in $n$; the second term is bounded by
+$\bigl[(1+\ecs)(1+\alpha)+1\bigr]\alpha\nrm{x}\le5\comb\nrm{x}$.
+
+\emph{Norm distortion.} The inclusion gives
+$(1-\alpha)\nrm{x}\le\nrm{v_n(x)}\le(1+\alpha)\nrm{x}$; with \eqref{eq:sct-close} the
+triangle and reverse-triangle inequalities give
+\begin{equation}\label{eq:sct-norm}
+  (1-K_N\comb)\nrm{x}\;\le\;\nrm{T_n(x)}\;\le\;(1+K_N\comb)\nrm{x},\qquad K_N=D+1 .
+\end{equation}
+
+\emph{Multiplicativity.} Insert $v_n(xy)$, $v_n(x)v_n(y)$ and $T_n(x)T_n(y)$ between
+$T_n(xy)$ and $T_n(x)\cpr T_n(y)$. The first term is $\le D\comb\nrm{x}\nrm{y}$ by
+\eqref{eq:sct-close}, using that $\Amp{n}{\mathcal J}$ is an exact $C^*$-algebra --- so its
+norm is genuinely submultiplicative, $\nrm{xy}\le\nrm{x}\nrm{y}$. The second is
+$\le\alpha\nrm{x}\nrm{y}$ by the multiplicative clause. The third, after inserting
+$T_n(x)v_n(y)$, is $\le2D(K_N+3)\comb\nrm{x}\nrm{y}$ by \eqref{eq:sct-close},
+\eqref{eq:sct-norm} and the $\ecs$-product bound. The fourth needs a naturality
+observation: for $A,B\in\Amp{n}{\Cnrs{P}}$ the amplified compressed product has entries
+$\sum_k\Cos{P}(a_{ik}b_{kj})=\Cos{P}\bigl(\sum_ka_{ik}b_{kj}\bigr)$, i.e. it equals
+$\Cos{P_n}(AB)$ --- so it \emph{is} the rectangular compressed product for the compatible
+triple $(P_n,P_n,P_n)$, not merely an element of the same space, and
+\texttt{lem-compcb-rectangular-product} applies, giving
+$\le C_r(1+K_N)^{2}\comb\nrm{x}\nrm{y}$. Summing,
+$K_M:=D+1+2D(K_N+3)+C_r(1+K_N)^{2}$ works.
+
+\emph{Assembly.} With $C_{\mathrm{co}}=\max\{1,C_{\mathrm{ca}},K_N,K_M\}$ and
+$\comb_{\mathrm{co}}$ the positive minimum of all thresholds used,
+\texttt{def-extended-delta-inclusion} makes each $T_n$ a $C_{\mathrm{co}}\comb$-inclusion;
+since $n$ was arbitrary and every constant is universal, $T$ is an extended
+$C_{\mathrm{co}}(\alpha+\ecs)$-inclusion, with no dependence on the amplification level or
+the ideal's dimension.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-compcb-single-compression-transfer}: 33 nodes (32 \texttt{validated}, 1
+superseded node archived), root \texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-compcb-amplified-compression},
+\texttt{lem-compcb-amplified-compression-identities},
+\texttt{lem-compcb-amplified-almost-containment},
+\texttt{lem-compcb-corner-algebra} and
+\texttt{lem-compcb-rectangular-product}; it is the only consumer of the almost-containment
+lemma. Unlike the rest of the COMP tier it is not used by the H-CB tier: it is the
+transfer primitive aimed at the still-open EXT and Stage-1 assembly, where inclusions have
+to be pushed through compressions repeatedly. It has no validated registry consumers yet.

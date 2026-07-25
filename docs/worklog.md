@@ -1312,3 +1312,20 @@ CODEX-DEAD mid-run (5/13, tree intact, resumable). Probe confirms: usage limit
 until Jul 29 2026 9:08 AM. Session tally: T0 34 -> 53 (19 af-validated results),
 COMP + HCB-0/1/2 tiers complete + diagonal-unit, F2/F3 closed+registered, 12
 defs ratified, fudw closed. USER DECISION pending: credits now vs resume Jul 29.
+
+## 2026-07-25 — report rescope: fresh lab-book on the live Route F chain (user mandate)
+
+The report/ lab-book was rescoped from the retired kernel-route surface to the
+live L0-campaign chain. An opus subagent authored prose LaTeX shards for the 21
+af-validated live-chain lemmas (classical-equiv bridge, PRH, 11 COMP tier, 8
+H-CB tier): typeset statement + byte-verbatim contract anchor + a prose account
+of each af-validated tree (no verbatim af text, no new proofs/definitions),
+plus fresh overview and status/outlook (30-id deprecation table). Assembly was
+mechanical: 23 sections swapped, main.tex preamble additions + include list,
+README order, SHARD_CATALOG, PROVENANCE rebuilt (hashes recomputed live, 21
+claim rows), UNWIRED reconciled (-19 newly anchored, +69 off-route), stale
+report tokens stripped (8 shards), report tokens added (20 shards), and the
+Rule-9 body-status drift in 13 flipped registry shards fixed. Trial build 47pp
+clean; [check-all] OK. Prose is opus-authored with mechanical fidelity checks
+(contract byte-match, label match); independent hostile review of the prose vs
+the exports is filed as follow-up (reviewer != author).

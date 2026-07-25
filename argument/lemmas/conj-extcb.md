@@ -6,7 +6,7 @@ defs: def-extended-epsilon-cstar-algebra; def-ha-map
 deps: conj-hcb
 status: proved-mod-audit
 af: none
-provenance: docs/plans/2026-07-24-W74F-wave2-artifacts/PROOF-W74F-F-EXTCB.md (prover); hostile verdict VERDICT-W74F-F-EXTCB.md (VALID-WITH-CORRECTIONS, no contract amendment; conj-hcb recorded as proof dependency per the verdict); decomposition DECOMP-W74F-C-THMAINEXT.md §3 EXT-CB; report conj:extcb
+provenance: docs/plans/2026-07-24-W74F-wave2-artifacts/PROOF-W74F-F-EXTCB.md (prover); hostile verdict VERDICT-W74F-F-EXTCB.md (VALID-WITH-CORRECTIONS, no contract amendment; conj-hcb recorded as proof dependency per the verdict); decomposition DECOMP-W74F-C-THMAINEXT.md §3 EXT-CB
 owner: A
 workspace: proofs/conj-extcb
 ---

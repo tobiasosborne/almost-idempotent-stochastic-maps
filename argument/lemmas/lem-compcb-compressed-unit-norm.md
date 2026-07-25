@@ -6,7 +6,7 @@ defs: def-extended-epsilon-cstar-algebra; def-delta-projection; def-compressed-c
 deps: lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities
 status: proved
 af: validated
-provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (H-CB verdict:72-83); VERDICT-W74F-E-HCB.md HCB-3 correction; VERDICT-FUDW-DECOMP-V3.md §D
+provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (H-CB verdict:72-83); VERDICT-W74F-E-HCB.md HCB-3 correction; VERDICT-FUDW-DECOMP-V3.md §D; report lem:compcb-compressed-unit-norm
 owner: A
 workspace: proofs/lem-compcb-compressed-unit-norm
 ---

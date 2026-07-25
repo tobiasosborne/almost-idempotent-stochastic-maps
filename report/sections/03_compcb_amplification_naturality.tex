@@ -1,0 +1,86 @@
+% SHARD-ID: AISM-03-COMPCB-AMPLIFICATION-NATURALITY
+% SHARD-TITLE: Amplification naturality of the functional calculus
+% SHARD-SUMMARY: Reproduces lem-compcb-amplification-naturality, the af-validated commutation of a power-series functional calculus with the unital amplification.
+% SHARD-SUMMARY: Explains the partial-sum transport argument and the binomial identification of the inverse-square-root branch used for the theta specialization.
+% SHARD-KEYWORDS: lem-compcb-amplification-naturality, af validated, functional calculus, amplification, theta map, binomial series
+\section{Amplification naturality of the functional calculus}\label{sec:compcb-amplification-naturality}
+
+\begin{lemma}[\texttt{lem-compcb-amplification-naturality}]\label{lem:compcb-amplification-naturality}
+Let $\mathcal B$ be a unital Banach algebra and let
+$\iota_n:\mathcal B\to\Mat{n}(\mathcal B)$, $X\mapsto\ampl{n}X$, be the unital
+amplification, an isometric unital homomorphism. Let $f$ be given on
+$\nrm{X-x_0I}<r$ by the power series
+\begin{equation}\label{eq:an-series}
+  f(X)=a_0I+\sum_{m\ge1}a_m\,(X-x_0I)^{m}.
+\end{equation}
+Then for every $X\in\mathcal B$ with $\nrm{X-x_0I}<r$ the element $f(\iota_n(X))$ is
+defined and
+\begin{equation}\label{eq:an-natural}
+  f(\iota_n(X))=\iota_n(f(X)).
+\end{equation}
+In particular, whenever $\nrm{(2P-I)^2-I}<1$,
+\[
+  \theta\bigl(\iota_n(2P-I)\bigr)=\iota_n\bigl(\theta(2P-I)\bigr),
+  \qquad \theta(X)=\tfrac12\bigl(I+\sgn X\bigr).
+\]
+\emph{Transcription note.} $\theta$ and $\sgn$ are the power-series functional calculus
+of \texttt{def-theta-idempotent-approximation}; only its definitional displays are in
+scope here. The norm is the ambient Banach-algebra norm.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Amplification naturality of the power-series functional calculus: let B be a unital Banach algebra, iota_n: B -> M_n(B) the unital amplification X -> 1_{M_n} tensor X (an isometric unital homomorphism), and f given on ||X - x_0 I|| < r by the power series f(X) = a_0 I + sum_{m>=1} a_m (X - x_0 I)^m; then for every X in B with ||X - x_0 I|| < r, f(iota_n(X)) is defined and f(iota_n(X)) = iota_n(f(X)); in particular, whenever ||(2P-I)^2 - I|| < 1, theta(iota_n(2P-I)) = iota_n(theta(2P-I)) with theta(X) = (I + sgn(X))/2.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{The general statement.} Three structural facts about $\iota_n$ do all the work.
+Unitality gives $\iota_n(I_{\mathcal B})=I_{\Mat{n}(\mathcal B)}$, hence
+$\iota_n(X)-x_0I=\iota_n(X-x_0I)$; isometry then transports the convergence hypothesis
+verbatim, $\nrm{\iota_n(X)-x_0I}=\nrm{X-x_0I}<r$, so the series
+\eqref{eq:an-series} evaluated at $\iota_n(X)$ is inside its domain; and
+multiplicativity gives $(\iota_n(X)-x_0I)^{m}=\iota_n\bigl((X-x_0I)^{m}\bigr)$ for every
+$m\ge0$. Consequently the $N$-th partial sums correspond exactly,
+\[
+  T_N=a_0I+\sum_{m=1}^{N}a_m(\iota_n(X)-x_0I)^{m}=\iota_n(S_N),
+  \qquad S_N=a_0I+\sum_{m=1}^{N}a_m(X-x_0I)^{m}.
+\]
+Since $S_N\to f(X)$ in $\mathcal B$ and $\iota_n$ is isometric, hence continuous,
+$T_N\to\iota_n(f(X))$. The power-series definition identifies the limit of the same
+sequence $T_N$ with $f(\iota_n(X))$, so uniqueness of limits yields both definedness and
+\eqref{eq:an-natural}. No property of $\iota_n$ beyond continuity, unitality and
+multiplicativity is used.
+
+\emph{The $\theta$ specialization.} Here the functional calculus is not a single series
+but a composite built from the inverse square root, so the tree first pins that branch
+down. With $c_m=\binom{-1/2}{m}$ one has $c_0=1$ and $c_m/c_{m-1}=-(2m-1)/(2m)$, whose
+modulus tends to $1$; the ratio test therefore gives radius exactly one for
+$h(w)=\sum_{m\ge0}c_mw^{m}$. On $|w|<1$ termwise differentiation is legitimate and the
+coefficient recurrence is precisely the differential equation
+$2(1+w)h'(w)+h(w)=0$; hence $\frac{d}{dw}\bigl[(1+w)h(w)^2\bigr]=0$, and $h(0)=1$ gives
+$(1+w)h(w)^2=1$. So $h$ \emph{is} the analytic inverse-square-root branch normalised at
+$1$.
+
+Transporting this to a unital Banach algebra: for $\nrm{Z-I}<1$ the series
+$H=\sum_{m\ge0}c_m(Z-I)^{m}$ converges absolutely in norm, and absolute convergence
+licenses the same Cauchy products as in the scalar identity, so $ZH^2=I$; the
+normalisation $H=I+(\text{terms of positive degree})$ identifies $H$ with the branch
+$Z^{-1/2}$ used by the registered calculus. Applying the general statement to this series
+with $Z=Y^2$, $Y=2P-I$, gives
+$\bigl(\iota_n(Y)^2\bigr)^{-1/2}=\iota_n\bigl((Y^2)^{-1/2}\bigr)$ whenever
+$\nrm{Y^2-I}<1$; multiplicativity then propagates the identity through
+$\sgn(Y)=Y(Y^2)^{-1/2}$ and finally through $\theta=\tfrac12(I+\sgn)$.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-compcb-amplification-naturality}: 12 nodes, all \texttt{validated},
+root \texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} This lemma exists because of a stall, and the shape
+of the campaign record is worth stating: three separate blocking challenges in the first
+orchestration of \texttt{lem-compcb-amplified-compression} named this one identity, so it
+was factored out into its own shard and validated first, bottom-up. It has no
+dependencies. It is imported by \texttt{lem-compcb-amplified-compression}
+(\S\ref{sec:compcb-amplified-compression}) and by
+\texttt{lem-compcb-entrywise-compression-naturality}
+(\S\ref{sec:compcb-entrywise-compression-naturality}), and it is the reason every
+compression identity in the COMP tier holds at \emph{every} amplification level rather
+than only at level one.

@@ -6,13 +6,14 @@ defs: def-ha-map; def-hcb-datum
 deps: lem-hcb1-column-action; lem-compcb-compressed-unit-action
 status: proved
 af: validated
-provenance: PROOF-W74F-E-HCB.md §7.1; VERDICT-W74F-E-HCB.md HCB-3 (VALID-WITH-CORRECTIONS); DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D
+provenance: PROOF-W74F-E-HCB.md §7.1; VERDICT-W74F-E-HCB.md HCB-3 (VALID-WITH-CORRECTIONS); DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D; report lem:hcb3-diagonal-unit
 owner: A
 workspace: proofs/lem-hcb3-diagonal-unit
 ---
 
-**Status.** Hostile-verdict-compatible paper-proof transcription at
-`proved-mod-audit`; not `af`-validated and not L0-rigorous.
+**Status.** `proved`; `af: validated` — root-validated, taint-clean
+adversarial tree (mechanical ledger reflection; export at
+`proofs/lem-hcb3-diagonal-unit/export.md`).
 
 **Provenance.** `PROOF-W74F-E-HCB.md` §7.1 and
 `VERDICT-W74F-E-HCB.md` HCB-3; admitted by

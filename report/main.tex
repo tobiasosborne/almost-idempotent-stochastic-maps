@@ -67,32 +67,91 @@
 \author{(scientific-exploration repo; see PRD.md / CLAUDE.md)}
 \date{\today}
 
+% --- report-rewrite additions (2026-07-25; semantic macros for the COMP/H-CB tiers) ---
+% =====================================================================
+% preamble-additions.tex — semantic macros introduced by the FRESH shards
+% (the signed–stochastic bridge, PRH, the COMP tier, the H-CB tier).
+%
+% MERGE these into the "domain macros" block of report/main.tex.  Every
+% command below is NEW: none collides with the commands already defined
+% there (\Rn, \simplex, \opnorm, \lone, \linf, \negmass, \defect, \tsq,
+% \rowdiam, \vis, \height, \tstar, \posp, \negp, \contractquote, \conv,
+% \dist, \distone, \argmin, \supp, \rank, \Vol).
+%
+% Naming discipline: these are NOTATION macros only.  Every mathematical
+% term they render is defined exactly once in definitions/ (L2); the
+% shards reference those shards by id and never restate them.
+% =====================================================================
+
+% --- scalar defect parameters of the approximate-C* setting -----------
+% NOTE: \dproj renders the same glyph as \negmass but is a DIFFERENT
+% quantity: it is the delta of a delta-projection (||P^2-P|| <= delta,
+% def-delta-projection), NOT the negative mass of the signed picture.
+\newcommand{\dproj}{\delta}          % delta-projection defect
+\newcommand{\ecs}{\varepsilon}       % ambient extended epsilon-C*-algebra parameter
+\newcommand{\comb}{e}                % combined defect e = delta + epsilon
+
+% --- ambient norms, involution, operators -----------------------------
+\newcommand{\nrm}[1]{\lVert #1\rVert}          % unsubscripted ambient / operator-space norm
+\newcommand{\dg}{^{\dagger}}                    % involution of an epsilon-C*-algebra
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\Ker}{Ker}
+
+% --- matrix amplification ---------------------------------------------
+\newcommand{\Mat}[1]{M_{#1}}                    % M_n
+\newcommand{\Matr}[2]{M_{#1,#2}}                % M_{n,1} etc.
+\newcommand{\ampl}[1]{1_{M_{#1}}\otimes}        % the unital amplification 1_{M_n} tensor (-)
+\newcommand{\Amp}[2]{M_{#1}\otimes #2}          % M_n tensor A
+\newcommand{\ampel}[2]{I_{#1}\otimes #2}        % I_n tensor P
+
+% --- compressed corners (def-compressed-corner) ------------------------
+\newcommand{\Co}[2]{\mathrm{Co}_{#1,#2}}        % Co_{P,Q}
+\newcommand{\Cos}[1]{\mathrm{Co}_{#1}}          % Co_P  (the P=Q abbreviation)
+\newcommand{\Cnr}[2]{\mathcal S_{#1,#2}}        % S_{P,Q}
+\newcommand{\Cnrs}[1]{\mathcal S_{#1}}          % S_P
+\newcommand{\cpr}{\mathbin{\cdot}}              % the compressed product X . Y
+\newcommand{\cunit}[1]{u_{#1}}                  % compressed unit u_T = Co_T(T)
+
+% --- column-Hilbert structure (def-column-hilbert-corner) --------------
+\newcommand{\colq}[1]{q_{#1}}                   % the column-Hilbert norm q_P
+\newcommand{\colnrm}[1]{\lVert #1\rVert_{n,1}}  % the amplified column norm
+\newcommand{\ipa}[2]{\langle #1,#2\rangle_{n}}  % amplified column inner product
+\newcommand{\ipo}[2]{\langle #1,#2\rangle}      % level-one column inner product
+
+% --- the Ha map (def-ha-map) -------------------------------------------
+\newcommand{\Ha}[3]{\mathrm{Ha}^{#1}_{#2,#3}}                    % Ha^Q_{P,R}
+\newcommand{\Han}[4]{\bigl(\mathrm{Ha}^{#1}_{#2,#3}\bigr)_{#4}}  % (Ha^Q_{P,R})_n
+
+% --- finite commutative C*-algebras (the Route F / PRH level) ----------
+\newcommand{\linfd}[1]{\ell^{\infty}(#1)}       % l-infinity(k)
+
 \begin{document}
 \maketitle
 
 % Ordered shard includes:
+
 \include{sections/00_overview}
 \include{sections/01_classical_equiv}
-\include{sections/02_height_collapse}
-\include{sections/03_mass_split}
-\include{sections/04_residual_lower}
-\include{sections/05_residual_upper}
-\include{sections/06_halo_collapse}
-\include{sections/07_factorization}
-\include{sections/08_zerosum_triangle}
-\include{sections/09_weighted_min}
-\include{sections/10_fan_payment}
-\include{sections/11_negpart_subadditive}
-\include{sections/12_fan_payment_restricted}
-\include{sections/14_pivot_removing_move}
-\include{sections/15_hiddenness_dual_witness}
-\include{sections/16_witness_consequences}
-\include{sections/17_slab_capacity_primitives}
-\include{sections/18_parametric_halo_collapse}
-\include{sections/19_genuine_disintegration}
-\include{sections/20_starvation_obstruction}
-\include{sections/21_hx_financing_engine}
-\include{sections/22_hx_starvation_coupling}
-\include{sections/13_discussion}
-
+\include{sections/02_prh}
+\include{sections/03_compcb_amplification_naturality}
+\include{sections/04_compcb_amplified_compression}
+\include{sections/05_compcb_amplified_compression_identities}
+\include{sections/06_compcb_entrywise_compression_naturality}
+\include{sections/07_compcb_rectangular_product}
+\include{sections/08_compcb_amplified_almost_containment}
+\include{sections/09_compcb_compressed_unit_norm}
+\include{sections/10_hcb2_amplified_adjointness}
+\include{sections/11_compcb_compressed_unit_action}
+\include{sections/12_compcb_row_column_product}
+\include{sections/13_hcb0_compressed_associator}
+\include{sections/14_compcb_corner_algebra}
+\include{sections/15_hcb_column_hilbert_squared}
+\include{sections/16_compcb_single_compression_transfer}
+\include{sections/17_hcb1_variational_identity}
+\include{sections/18_hcb1_column_action}
+\include{sections/19_hcb2_product_defect}
+\include{sections/20_hcb3_diagonal_unit}
+\include{sections/21_hcb3_diagonal_upper_norm}
+\include{sections/22_status_outlook}
 \end{document}

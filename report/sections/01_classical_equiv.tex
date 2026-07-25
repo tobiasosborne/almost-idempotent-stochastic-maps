@@ -1,46 +1,110 @@
 % SHARD-ID: AISM-01-CLASSICAL-EQUIV
 % SHARD-TITLE: The signed-stochastic bridge
-% SHARD-SUMMARY: Reproduces the registry contract for lem-classical-equiv, one of the af-validated rigorous results.
-% SHARD-SUMMARY: Summarizes the clean 29-node proof tree and records its role as the signed-to-stochastic bridge.
-% SHARD-KEYWORDS: lem-classical-equiv, af validated, signed picture, stochastic picture, bridge
+% SHARD-SUMMARY: Reproduces lem-classical-equiv, the af-validated equivalence of the signed and stochastic formulations up to universal constants.
+% SHARD-SUMMARY: Gives a prose account of the binomial-series construction forward and the positive-part renormalisation backward, with the explicit constants of the tree.
+% SHARD-KEYWORDS: lem-classical-equiv, af validated, signed picture, stochastic picture, bridge, binomial series
 \section{The signed-stochastic bridge}\label{sec:classical-equiv}
 
 \begin{lemma}[\texttt{lem-classical-equiv}]\label{lem:classical-equiv}
-The signed-idempotent and stochastic-idempotent formulations of classical
-stability are equivalent up to universal constants. There is a universal
-$C>0$ such that:
+The signed-idempotent and stochastic-idempotent formulations of classical stability are
+equivalent up to universal constants. There is a universal $C>0$ such that:
 \begin{enumerate}
 \item (stochastic $\to$ signed) if $Q$ is row-stochastic with
-  $\opnorm{Q^2-Q}\le\defect$, then $P=\theta(2Q-1)$ is a signed affine
-  retraction (\texttt{def-signed-idempotent}) satisfying
-  $\opnorm{P-Q}\le C\defect$ and negative mass $\negmass\le C\defect$;
-\item (signed $\to$ stochastic) conversely, row-normalising the positive
-  parts $\posp{p_i}$ of a signed idempotent $P$ yields a row-stochastic $Q$
-  with $\opnorm{P-Q}\le 2\negmass$ and
-  $\opnorm{Q^2-Q}\le 6\negmass+4\negmass^2$.
+  $\opnorm{Q^2-Q}\le\defect$, then $P=\theta(2Q-1)$ is a signed affine retraction
+  (\texttt{def-signed-idempotent}) satisfying $\opnorm{P-Q}\le C\defect$ and negative
+  mass $\negmass\le C\defect$;
+\item (signed $\to$ stochastic) conversely, row-normalising the positive parts
+  $\posp{p_i}$ of a signed idempotent $P$ yields a row-stochastic $Q$ with
+  $\opnorm{P-Q}\le 2\negmass$ and $\opnorm{Q^2-Q}\le 6\negmass+4\negmass^2$.
 \end{enumerate}
 \emph{Transcription note.} The contract writes the map norm as $\lVert\cdot\rVert$
-without a subscript; per \texttt{CONVENTIONS.md}~(b) it is the $\infty\!\to\!\infty$
-map norm $\opnorm{\cdot}$. The operator $\theta$ (the signed retraction
-$\theta(2Q-1)$) is carried verbatim from the contract, which does not expand it.
+without a subscript; per \texttt{CONVENTIONS.md}~(b) it is the $\infty\!\to\!\infty$ map
+norm $\opnorm{\cdot}$. The operator $\theta$ is carried verbatim from the contract,
+which does not expand it; the validated tree instantiates it as the functional calculus
+$\theta(X)=\tfrac12(I+\sgn X)$ of \texttt{def-theta-idempotent-approximation}.
 \end{lemma}
 
 \noindent\textbf{Registry contract (verbatim).}
 \contractquote{The signed-idempotent and stochastic-idempotent formulations of classical stability are equivalent up to universal constants: Q row-stochastic with ||Q^2-Q|| <= eta gives P=theta(2Q-1) signed affine retraction with ||P-Q|| <= C eta and neg mass delta <= C eta, and conversely row-normalising p_i^+ gives Q with ||P-Q|| <= 2 delta, ||Q^2-Q|| <= 6 delta+4 delta^2.}
 
-\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated}.
-This is one of the rigorous in-repo results.
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{Forward direction.} Put $X=2Q-I$. Row-stochasticity gives $X\mathbf1=\mathbf1$ and
+$\opnorm{X}\le3$, while the algebraic identity
+\begin{equation}\label{eq:ce-square}
+  X^2-I=4\,(Q^2-Q)
+\end{equation}
+converts the almost-idempotence hypothesis into $\opnorm{X^2-I}\le4\defect$. Write
+$Y=X^2-I$. Two properties of $Y$ drive everything: $Y\mathbf1=0$ (because
+$X\mathbf1=\mathbf1$ forces $X^2\mathbf1=\mathbf1$), and $\opnorm{Y}\le4\defect\le\tfrac12$
+once $\defect\le\tfrac18$.
 
-\noindent\textbf{Proof tree.} The registry shard records a 29-node
-adversarial tree with root \texttt{validated} and clean taint.  The
-human-readable export is
-\texttt{proofs/lem-classical-equiv/export.md}; the export also records
-the earlier missing-definition challenge and its repair by importing
-\texttt{def-negative-mass}.
+The smallness of $Y$ puts the inverse square root inside its convergence radius: the
+binomial series
+\[
+  B=(I+Y)^{-1/2}=\sum_{m\ge0}\binom{-\tfrac12}{m}Y^{m}
+\]
+converges absolutely in the map norm. Being a norm limit of polynomials in $Y=X^2-I$, the
+operator $B$ commutes with $X$; since $Y\mathbf1=0$ kills every positive power,
+$B\mathbf1=\mathbf1$; and the absolute coefficient sum gives the quantitative bound
+$\opnorm{B-I}\le(1-t)^{-1/2}-1\le 2t$ at $t=\opnorm{Y}\le\tfrac12$, hence
+$\opnorm{B-I}\le8\defect$. The scalar identity $\bigl((1+z)^{-1/2}\bigr)^2(1+z)=1$
+transfers to the absolutely convergent series in $Y$, so $B^2X^2=I$; commutation then
+makes $S=XB$ an exact involution,
+\[
+  S^2=XBXB=X^2B^2=I,\qquad S\mathbf1=XB\mathbf1=X\mathbf1=\mathbf1,
+\]
+with $S-X=X(B-I)$ and therefore $\opnorm{S-X}\le3\cdot8\defect=24\defect$.
 
-\noindent\textbf{Role in the chain.} This bridge is the authorized way
-to move between \texttt{op-classical}'s stochastic formulation and the
-signed exact-idempotent registry.  It is a dependency for the inherited
-simplex, rank-one, and approximate-simplex reductions, but those
-downstream reductions remain \texttt{proved-mod-audit} unless and until
-they clear an L0 gate.
+Setting $P=\theta(X)=\tfrac12(I+S)$ now gives $P\mathbf1=\mathbf1$ and
+$P^2=\tfrac14(I+2S+S^2)=\tfrac12(I+S)=P$, so $P$ is an exact signed idempotent in the
+sense of \texttt{def-signed-idempotent}. Since $Q=\tfrac12(I+X)$, the difference is
+$P-Q=\tfrac12(S-X)$ and hence $\opnorm{P-Q}\le12\defect$. Finally the negative mass:
+row-stochastic $Q$ is entrywise nonnegative (\texttt{def-stochastic}), so for every entry
+$\max\{-P_{ij},0\}\le\lvert P_{ij}-Q_{ij}\rvert$ --- trivially where $P_{ij}\ge0$, and
+because $-P_{ij}\le Q_{ij}-P_{ij}$ where $P_{ij}<0$. Summing over $j$ and maximising over
+$i$ gives, with $\negmass$ as in \texttt{def-negative-mass},
+\begin{equation}\label{eq:ce-negmass}
+  \negmass(P)\;\le\;\opnorm{P-Q}\;\le\;12\defect .
+\end{equation}
+So $C=12$ serves. The export records an instructive scope correction here: the
+negative-mass step was first blocked because \texttt{def-negative-mass} --- although
+permitted by the registry shard --- had not been registered inside the workspace, and the
+tree carried an explicit gap certificate rather than the estimate; registering the
+definition discharged it.
+
+\emph{Converse direction.} Let $P$ be an exact signed idempotent with negative mass
+$\negmass$. Split each row into disjointly supported nonnegative parts,
+$p_i=\posp{p_i}-\negp{p_i}$, and set $a_i=\sum_k(P_{ik})_-\le\negmass$. Total mass one
+(\texttt{def-signed-idempotent}) gives $\sum_k\posp{p_{ik}}=1+a_i$, so
+\[
+  q_i=\frac{\posp{p_i}}{1+a_i}
+\]
+is a probability vector and the matrix $Q$ with rows $q_i$ is row-stochastic. The
+correction $e_i=q_i-p_i$ is
+\[
+  e_i=\negp{p_i}-\frac{a_i}{1+a_i}\,\posp{p_i},
+\]
+a difference of two disjointly supported vectors of $\ell^1$-mass $a_i$ each; hence
+$\lone{e_i}=2a_i\le2\negmass$ and $\opnorm{P-Q}\le2\negmass$.
+
+For the idempotence defect, write $D=Q-P$. The row-geometry clause of
+\texttt{def-signed-idempotent} gives $\opnorm{P}\le1+2\negmass$, hence
+$\opnorm{P-I}\le2+2\negmass$. Using $P^2=P$ exactly, each row satisfies the exact
+decomposition
+\begin{equation}\label{eq:ce-defect}
+  q_iQ-q_i=e_i(P-I)+q_iD .
+\end{equation}
+Since $q_i$ is a probability vector, $\lone{q_iD}\le\opnorm{D}\le2\negmass$, while
+$\lone{e_i(P-I)}\le2\negmass\,(2+2\negmass)$. Adding,
+$\opnorm{Q^2-Q}\le6\negmass+4\negmass^2$, exactly as contracted.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-classical-equiv}: a 29-node tree (21 live nodes validated, 8
+superseded nodes archived), root \texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} This is the licence to move between the two
+pictures of \S\ref{sec:overview}, and the only such licence in the registry. It has no
+dependencies. Everything stated in the signed picture reaches the stochastic
+formulation of \texttt{op-classical} only through it, and only up to the universal
+constants above; \texttt{op-classical} itself remains open.

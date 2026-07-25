@@ -1,0 +1,101 @@
+% SHARD-ID: AISM-08-COMPCB-AMPLIFIED-ALMOST-CONTAINMENT
+% SHARD-TITLE: Amplified almost-containment of corners
+% SHARD-SUMMARY: Reproduces lem-compcb-amplified-almost-containment, the af-validated statement that an inner corner is almost fixed by an outer compression.
+% SHARD-SUMMARY: Explains the uniform norm ledger, the fixed-point step in the source corner, and the transfer of almost-invariance to the outer projections.
+% SHARD-KEYWORDS: lem-compcb-amplified-almost-containment, af validated, almost containment, corner inclusion, approximate associativity, uniform constants
+\section{Amplified almost-containment of corners}\label{sec:compcb-amplified-almost-containment}
+
+\begin{lemma}[\texttt{lem-compcb-amplified-almost-containment}]\label{lem:compcb-amplified-almost-containment}
+There are universal $C_{\mathrm{ac}}<\infty$ and $\comb_{\mathrm{ac}}>0$ such that,
+whenever $\comb=\dproj+\ecs\le \comb_{\mathrm{ac}}$, the elements $P_1,P,Q_1,Q$ are
+$\dproj$-projections with
+\begin{equation}\label{eq:aac-hyp}
+  \nrm{P_1P-P_1}\le\dproj,\qquad \nrm{Q_1Q-Q_1}\le\dproj,
+\end{equation}
+and $n\ge1$, every $X\in\Amp{n}{\Cnr{P_1}{Q_1}}$ satisfies
+\begin{equation}\label{eq:aac-main}
+  \nrm{\Co{P_n}{Q_n}(X)-X}\;\le\;C_{\mathrm{ac}}\,\comb\,\nrm{X},
+\end{equation}
+with $P_n=\ampel{n}{P}$, $Q_n=\ampel{n}{Q}$.
+\emph{Transcription note.} Hypothesis \eqref{eq:aac-hyp} is the approximate form of
+``$P_1\le P$ and $Q_1\le Q$''; the conclusion says that the inner corner
+$\Cnr{P_1}{Q_1}$ sits almost inside the outer one, uniformly at every amplification
+level.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Amplified almost-containment: there are universal C_ac < infinity and e_ac > 0 such that, whenever e=delta+epsilon <= e_ac, P_1,P,Q_1,Q are delta-projections with ||P_1 P-P_1||,||Q_1 Q-Q_1|| <= delta, every n >= 1, and X in M_n tensor S_{P_1,Q_1}, one has ||Co_{P_n,Q_n}(X)-X|| <= C_ac*e*||X||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{A uniform ledger.} All four elements amplify to $\dproj$-projections in
+$\Amp{n}{\mathcal A}$, and the containment hypotheses amplify too, with the involution
+converting one side into the other:
+$P_nP_{1,n}-P_{1,n}=\ampel{n}{(PP_1-P_1)}=\ampel{n}{(P_1P-P_1)}\dg$ has norm at most
+$\dproj$, and $Q_{1,n}Q_n-Q_{1,n}=\ampel{n}{(Q_1Q-Q_1)}$ likewise. A crude but uniform
+norm bound is also available: for $\ecs,\dproj\le\tfrac12$ the $\ecs$-$C^*$ axioms and
+\texttt{def-delta-projection} give
+$(1-\ecs)\nrm{R_n}^2\le\nrm{R_n^2}\le\nrm{R_n}+\dproj$, hence $\nrm{R_n}\le B:=3$ for each
+of the four. Finally \texttt{def-compressed-corner} supplies one universal
+$k_{\mathrm{co}}$ with
+\begin{equation}\label{eq:aac-bracket}
+  \nrm{\Co{R}{S}(Z)-R(ZS)}\le k_{\mathrm{co}}\comb\nrm{Z},
+  \qquad
+  \nrm{\Co{R}{S}(Z)-(RZ)S}\le k_{\mathrm{co}}\comb\nrm{Z},
+\end{equation}
+in every $\Amp{n}{\mathcal A}$. The threshold $\comb_0$ is the minimum of $\tfrac12$, the
+threshold behind \eqref{eq:aac-bracket}, and those of the two amplification dependencies.
+
+\emph{Control in the source corner.} By \texttt{lem-compcb-amplified-compression},
+$\Amp{n}{\Cnr{P_1}{Q_1}}=\Cnr{P_{1,n}}{Q_{1,n}}$, so $X$ lies in the image of
+$\Co{P_{1,n}}{Q_{1,n}}$; idempotence
+(\texttt{lem-compcb-amplified-compression-identities}) then upgrades membership to the
+fixed-point identity $\Co{P_{1,n}}{Q_{1,n}}(X)=X$. Feeding this into
+\eqref{eq:aac-bracket} with $R=P_{1,n}$, $S=Q_{1,n}$, $Z=X$ replaces the compression by
+$X$ itself and yields the two bracketings
+\begin{equation}\label{eq:aac-source}
+  \nrm{X-P_{1,n}(XQ_{1,n})}\le k_{\mathrm{co}}\comb\nrm{X},
+  \qquad
+  \nrm{X-(P_{1,n}X)Q_{1,n}}\le k_{\mathrm{co}}\comb\nrm{X}.
+\end{equation}
+
+\emph{Transfer to the outer projections.} The claim is that $X$ is almost invariant under
+$P_n$ on the left and $Q_n$ on the right, with a universal
+$L:=k_{\mathrm{co}}(2B+1)+2B(B^2+2)$. For the left estimate put $D=P_{1,n}(XQ_{1,n})$ and
+$Y=XQ_{1,n}$, and telescope
+\[
+  P_nX-X=P_n(X-D)+\bigl(P_nD-D\bigr)+(D-X).
+\]
+The outer terms are controlled by \eqref{eq:aac-source} and submultiplicativity. The
+middle term is where the containment hypothesis and the \emph{approximate}
+associativity of an $\ecs$-$C^*$-algebra both enter: $P_nD-D=P_n(P_{1,n}Y)-P_{1,n}Y$ is
+bounded by $\bigl[\ecs B^2+(1+\ecs)\dproj\bigr]\nrm{Y}$, since re-associating costs
+$\ecs\nrm{P_n}\nrm{P_{1,n}}\nrm{Y}$ and $(P_nP_{1,n}-P_{1,n})Y$ costs
+$(1+\ecs)\dproj\nrm{Y}$. With $\nrm{Y}\le2B\nrm{X}$ and $\ecs,\dproj\le\comb$ the three
+terms sum to at most $L\comb\nrm{X}$. The right estimate is the mirror image, run with
+$D=(P_{1,n}X)Q_{1,n}$, $Y=P_{1,n}X$ and the hypothesis
+$\nrm{Q_{1,n}Q_n-Q_{1,n}}\le\dproj$.
+
+\emph{Assembly.} Insert $P_n(XQ_n)$ and $P_nX$:
+\[
+  \nrm{\Co{P_n}{Q_n}(X)-X}
+  \le\nrm{\Co{P_n}{Q_n}(X)-P_n(XQ_n)}+\nrm{P_n(XQ_n-X)}+\nrm{P_nX-X}.
+\]
+The first term is $\le k_{\mathrm{co}}\comb\nrm{X}$ by \eqref{eq:aac-bracket}; the second
+is $\le(1+\ecs)\nrm{P_n}\,L\comb\nrm{X}\le2BL\comb\nrm{X}$; the third is
+$\le L\comb\nrm{X}$. Hence \eqref{eq:aac-main} holds with
+$C_{\mathrm{ac}}=k_{\mathrm{co}}+(2B+1)L$ and $\comb_{\mathrm{ac}}=\comb_0$, both finite,
+positive and universal.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-compcb-amplified-almost-containment}: 13 nodes, all
+\texttt{validated}, root \texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-compcb-amplified-compression} and
+\texttt{lem-compcb-amplified-compression-identities}. It is the corner-inclusion
+primitive of the COMP tier: it says that once a corner is approximately contained in
+another, the outer compression is a near-identity on it, again with one constant at every
+level. Its registry consumer is
+\texttt{lem-compcb-single-compression-transfer}
+(\S\ref{sec:compcb-single-compression-transfer}).

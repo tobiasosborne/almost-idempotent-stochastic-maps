@@ -6,13 +6,14 @@ defs: def-ha-map; def-hcb-datum
 deps: lem-hcb0-compressed-associator; lem-hcb1-column-action; lem-compcb-rectangular-product; lem-compcb-amplified-compression
 status: proved
 af: validated
-provenance: PROOF-W74F-E-HCB.md §6.2; VERDICT-W74F-E-HCB.md HCB-2 (VALID); DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D
+provenance: PROOF-W74F-E-HCB.md §6.2; VERDICT-W74F-E-HCB.md HCB-2 (VALID); DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D; report lem:hcb2-product-defect
 owner: A
 workspace: proofs/lem-hcb2-product-defect
 ---
 
-**Status.** Hostile-verified paper-proof transcription at
-`proved-mod-audit`; not `af`-validated and not L0-rigorous.
+**Status.** `proved`; `af: validated` — root-validated, taint-clean
+adversarial tree (mechanical ledger reflection; export at
+`proofs/lem-hcb2-product-defect/export.md`).
 
 **Provenance.** `PROOF-W74F-E-HCB.md` §6.2 and
 `VERDICT-W74F-E-HCB.md` HCB-2; admitted by

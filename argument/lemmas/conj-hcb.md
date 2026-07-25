@@ -6,7 +6,7 @@ defs: def-extended-epsilon-cstar-algebra; def-ha-map
 deps:
 status: proved-mod-audit
 af: none
-provenance: docs/plans/2026-07-24-W74F-wave2-artifacts/PROOF-W74F-E-HCB.md (prover); hostile verdict VERDICT-W74F-E-HCB.md (VALID-WITH-CORRECTIONS, contract amended to the verifier's exact clause); decomposition DECOMP-W74F-C-THMAINEXT.md §3 H-CB; report conj:hcb
+provenance: docs/plans/2026-07-24-W74F-wave2-artifacts/PROOF-W74F-E-HCB.md (prover); hostile verdict VERDICT-W74F-E-HCB.md (VALID-WITH-CORRECTIONS, contract amended to the verifier's exact clause); decomposition DECOMP-W74F-C-THMAINEXT.md §3 H-CB
 owner: A
 workspace: proofs/conj-hcb
 ---

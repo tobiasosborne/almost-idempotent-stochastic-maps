@@ -1,0 +1,105 @@
+% SHARD-ID: AISM-14-COMPCB-CORNER-ALGEBRA
+% SHARD-TITLE: The compressed corner as an extended approximate C*-algebra
+% SHARD-SUMMARY: Reproduces lem-compcb-corner-algebra, the af-validated statement that a nonvanishing compressed corner is an extended C_ca*e-C*-algebra.
+% SHARD-SUMMARY: Explains the obligation-by-obligation verification of the axioms at every matrix level and the constant ledger that unifies them.
+% SHARD-KEYWORDS: lem-compcb-corner-algebra, af validated, compressed corner, extended C*-algebra, operator space, axiom verification
+\section{The compressed corner as an extended approximate \texorpdfstring{$C^*$}{C*}-algebra}\label{sec:compcb-corner-algebra}
+
+\begin{lemma}[\texttt{lem-compcb-corner-algebra}]\label{lem:compcb-corner-algebra}
+There are universal $C_{\mathrm{ca}}<\infty$ and $\comb_{\mathrm{ca}}>0$ such that,
+whenever $\comb=\dproj+\ecs\le \comb_{\mathrm{ca}}$ and $P$ is a nonvanishing
+$\dproj$-projection, the corner $\Cnrs{P}$ --- equipped with the compressed product, the
+inherited involution and the compressed unit $\cunit{P}=\Cos{P}(P)$ --- is an extended
+$C_{\mathrm{ca}}\comb$-$C^*$-algebra.
+\emph{Transcription note.} ``Extended'' is as in
+\texttt{def-extended-epsilon-cstar-algebra}: not merely that $\Cnrs{P}$ satisfies the
+approximate $C^*$ axioms, but that \emph{every} $\Amp{n}{\Cnrs{P}}$ does, with the
+\emph{same} parameter $C_{\mathrm{ca}}\comb$, independent of $n$. That uniformity is the
+whole content.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Uniform compressed-corner algebra: there are universal C_ca < infinity and e_ca > 0 such that, whenever e=delta+epsilon <= e_ca and P is a nonvanishing delta-projection, S_P with the compressed product, inherited involution, and compressed unit u_P=Co_P(P) is an extended C_ca*e-C*-algebra.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree is organised as one node per axiom family, over a shared constant ledger, with a
+preliminary step that moves everything to level $n$ at once.
+
+\emph{Constant ledger and amplified setup.} Let $C_r,\comb_r$ come from
+\texttt{lem-compcb-rectangular-product}; $C_u,\comb_u$ from
+\texttt{lem-compcb-compressed-unit-action}; $C_N,\comb_N$ from
+\texttt{lem-compcb-compressed-unit-norm}; and $\comb_i$ from
+\texttt{lem-compcb-amplified-compression-identities}. Put
+\[
+  K_p=C_r+1,\quad K_a=2C_r(K_p+3)+1,\quad
+  C_{\mathrm{ca}}=\max\{K_p,K_a,C_u,C_N\},\quad
+  \comb_{\mathrm{ca}}=\min\{\comb_r,\comb_u,\comb_N,\comb_i,1\}.
+\]
+With $P_n=\ampel{n}{P}$, the tree then \emph{derives inside itself} --- from
+\texttt{def-compressed-corner} and the registered $\theta$ calculus, rather than importing
+it --- the naturality $\Cos{P_n}=\mathrm{id}_{\Mat{n}}\otimes\Cos{P}$: writing
+$T_P=L_PR_P+R_PL_P-1$, multiplication by the block-diagonal $P_n$ acts entrywise so
+$T_{P_n}=\mathrm{id}_{\Mat{n}}\otimes T_P$; powers of $T_{P_n}-x_0I$ amplify by induction;
+so every partial sum of the $\theta$ series is the amplification of the corresponding
+level-one partial sum, and at fixed finite $n$ the norm limits agree. Consequently
+$\Cnrs{P_n}=\Amp{n}{\Cnrs{P}}$, the $P_n$-compressed product of $[X_{ij}],[Y_{jk}]$ has
+entries $\Cos{P}(\sum_jX_{ij}Y_{jk})=\sum_j X_{ij}\cpr Y_{jk}$ --- exactly the matrix
+amplification of the compressed product --- and $\Cos{P_n}(P_n)=\ampel{n}{\Cos{P}(P)}$.
+Also $P_n$ is a $\dproj$-projection, so all four imported estimates apply at every level.
+
+\emph{Operator space and completeness.} \texttt{lem-compcb-amplified-compression-identities}
+gives $\Cos{P_n}^2=\Cos{P_n}$, so $\Cnrs{P_n}=\Img\Cos{P_n}$ is a closed subspace of the
+complete space $\Amp{n}{\mathcal A}$ and hence complete in the inherited norm. With the
+inherited matrix norms $\Cnrs{P}$ is therefore a complete operator space.
+
+\emph{Multiplication and associator.} By
+\texttt{lem-compcb-rectangular-product} and the ambient bound
+$\nrm{AB}\le(1+\ecs)\nrm{A}\nrm{B}$, one gets
+$\nrm{A\cpr B}\le(1+K_p\comb)\nrm{A}\nrm{B}$. For the associator, insert successively
+$(A\cpr B)C$, $(AB)C$, $A(BC)$ and $A(B\cpr C)$ between the two associations; the two
+outer rectangular errors cost $C_r\comb(1+K_p\comb)N$ each, the two errors obtained by
+multiplying $A\cpr B-AB$ or $BC-B\cpr C$ by an ambient factor cost $(1+\ecs)C_r\comb N$
+each, and the ambient associator costs $\ecs N$, where $N=\nrm{A}\nrm{B}\nrm{C}$. With
+$\ecs\le \comb\le1$ the total is at most $K_a\comb N$.
+
+\emph{Involution.} If $A\in\Cnrs{P_n}$ then $A=\Cos{P_n}(A)$, so the imported dagger
+identity gives $A\dg=\Cos{P_n}(A\dg)$ and the inherited isometric involution preserves the
+corner. Anti-multiplicativity is exact:
+$(A\cpr B)\dg=\Cos{P_n}\bigl((AB)\dg\bigr)=\Cos{P_n}(B\dg A\dg)=B\dg\cpr A\dg$. The unit is
+fixed, $\cunit{P,n}\dg=\Cos{P_n}(P_n\dg)=\cunit{P,n}$, since $P_n\dg=P_n$. Finally the
+lower $C^*$-norm bound: the rectangular estimate applied to $A\dg$ and $A$, isometry of
+the involution, and the ambient lower estimate give
+\[
+  \nrm{A\dg\cpr A}\;\ge\;\nrm{A\dg A}-C_r\comb\nrm{A}^2\;\ge\;\bigl(1-\ecs-C_r\comb\bigr)\nrm{A}^2
+  \;\ge\;\bigl(1-(C_r+1)\comb\bigr)\nrm{A}^2 .
+\]
+
+\emph{Unit.} \texttt{lem-compcb-compressed-unit-action} applied to the amplified square
+corner gives $\nrm{\cunit{P,n}\cpr A-A}\le C_u\comb\nrm{A}$ and its right-hand mirror at
+every $n$. For the unit norm, each $P_n$ is a $\dproj$-projection with
+$\nrm{P_n}=\nrm{P}$, so the \emph{nonvanishing} alternative passes from $P$ to $P_n$; that
+is exactly the hypothesis under which
+\texttt{lem-compcb-compressed-unit-norm} gives the two-sided
+$\bigl\lvert\nrm{\cunit{P,n}}-1\bigr\rvert\le C_N\comb$, uniformly in $n$. This is where
+the nonvanishing hypothesis of the contract is used, and why it cannot be dropped.
+
+Collecting the four families under the ledger constants gives the extended
+$C_{\mathrm{ca}}\comb$-$C^*$ structure.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-compcb-corner-algebra}: 14 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-compcb-amplified-compression-identities},
+\texttt{lem-compcb-rectangular-product},
+\texttt{lem-compcb-compressed-unit-action} and
+\texttt{lem-compcb-compressed-unit-norm}. It is the output of the COMP tier: it converts a
+bundle of separate estimates into a single \emph{structure} that later tiers may use as a
+black box. Its registry consumers are
+\texttt{lem-compcb-single-compression-transfer}
+(\S\ref{sec:compcb-single-compression-transfer}),
+\texttt{lem-hcb3-diagonal-upper-norm} (\S\ref{sec:hcb3-diagonal-upper-norm}) --- where the
+matrix-uniform product axiom is precisely the input that a level-one statement could not
+supply --- and the not-yet-validated \texttt{lem-hcb3-diagonal-lower-modulus}.

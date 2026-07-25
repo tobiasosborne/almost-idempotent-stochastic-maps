@@ -6,7 +6,7 @@ defs: def-fd-cstar-diagonal
 deps:
 status: proved-mod-audit
 af: none
-provenance: docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-B-DIAGONAL.md §§2-3; hostile batch verdict VERDICT-W74F-BATCH.md §B (VALID, no correction); report lem:kitaev-diagonal-repair
+provenance: docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-B-DIAGONAL.md §§2-3; hostile batch verdict VERDICT-W74F-BATCH.md §B (VALID, no correction)
 owner: B
 workspace: proofs/lem-kitaev-diagonal-repair
 ---

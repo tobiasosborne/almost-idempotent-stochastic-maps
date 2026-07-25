@@ -1,0 +1,88 @@
+% SHARD-ID: AISM-13-HCB0-COMPRESSED-ASSOCIATOR
+% SHARD-TITLE: The uniform compressed associator estimate
+% SHARD-SUMMARY: Reproduces lem-hcb0-compressed-associator, the af-validated bound on the failure of associativity of the compressed product.
+% SHARD-SUMMARY: Explains the five-term telescope through the ambient product, the role of the epsilon-associator axiom, and the endpoint-safe constant bookkeeping.
+% SHARD-KEYWORDS: lem-hcb0-compressed-associator, af validated, associator, compressed product, telescope, uniform constants
+\section{The uniform compressed associator estimate}\label{sec:hcb0-compressed-associator}
+
+\begin{lemma}[\texttt{lem-hcb0-compressed-associator}]\label{lem:hcb0-compressed-associator}
+There are universal $C_{\mathrm{as}}<\infty$ and $\comb_{\mathrm{as}}>0$ such that every
+H-CB datum with $\comb\le \comb_{\mathrm{as}}$ and all compatible amplified rectangular
+$A,B,C$ satisfy
+\begin{equation}\label{eq:as-main}
+  \nrm{(A\cpr B)\cpr C-A\cpr(B\cpr C)}\;\le\;C_{\mathrm{as}}\,\comb\,\nrm{A}\,\nrm{B}\,\nrm{C}.
+\end{equation}
+\emph{Transcription note.} The left-hand side is the compressed associator of
+\texttt{def-compressed-associator}; ``compatible amplified rectangular'' is the datum
+fixed in \S\ref{sec:compcb-rectangular-product}, here for a composable triple. Both the
+compressed product and the ambient product are only \emph{approximately} associative --- the
+ambient one by the $\ecs$-associator axiom of an $\ecs$-$C^*$-algebra --- so the content
+is that the two failures add up to a single $O(\comb)$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Uniform compressed associator: there are universal C_as < infinity and e_as > 0 such that every H-CB datum with e <= e_as and all compatible amplified rectangular A,B,C satisfy ||(A dot B) dot C-A dot (B dot C)|| <= C_as*e*||A||||B||||C||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Let $C_{\mathrm{co}},\comb_{\mathrm{co}}$ be the universal witnesses of
+\texttt{lem-compcb-rectangular-product} and set
+\[
+  \comb_{\mathrm{as}}=\min(\comb_{\mathrm{co}},1),
+  \qquad
+  C_{\mathrm{as}}=2C_{\mathrm{co}}(2+C_{\mathrm{co}})+4C_{\mathrm{co}}+1 .
+\]
+
+\emph{A product-norm bound.} For a compatible pair, the rectangular estimate plus the
+ambient bound $\nrm{AB}\le(1+\ecs)\nrm{A}\nrm{B}$ from the $\ecs$-$C^*$ norm axioms give
+\begin{equation}\label{eq:as-prodnorm}
+  \nrm{A\cpr B}\le\bigl(1+\ecs+C_{\mathrm{co}}\comb\bigr)\nrm{A}\nrm{B},
+\end{equation}
+and likewise for $B\cpr C$. This is what keeps the outer terms of the telescope below from
+degrading.
+
+\emph{The telescope.} The compressed associator has the exact five-term expansion
+\begin{align}\label{eq:as-telescope}
+  (A\cpr B)\cpr C-A\cpr(B\cpr C)
+  &=\bigl[(A\cpr B)\cpr C-(A\cpr B)C\bigr]
+   +\bigl[(A\cpr B)C-(AB)C\bigr] \notag\\
+  &\quad+\bigl[(AB)C-A(BC)\bigr]
+   +\bigl[A(BC)-A(B\cpr C)\bigr]
+   +\bigl[A(B\cpr C)-A\cpr(B\cpr C)\bigr],
+\end{align}
+which routes both associations through the ambient product and isolates the ambient
+associator in the middle.
+
+Write $N=\nrm{A}\nrm{B}\nrm{C}$. The first and fifth terms are rectangular-product errors
+for the compatible pairs $(A\cpr B,C)$ and $(A,B\cpr C)$, so by
+\eqref{eq:as-prodnorm} each is at most
+$C_{\mathrm{co}}\comb(1+\ecs+C_{\mathrm{co}}\comb)N$. The second and fourth are the
+rectangular-product errors for $(A,B)$ and $(B,C)$ multiplied by one ambient factor ---
+bilinearity gives $(A\cpr B)C-(AB)C=(A\cpr B-AB)C$ and
+$A(BC)-A(B\cpr C)=A(BC-B\cpr C)$ --- so each is at most
+$(1+\ecs)C_{\mathrm{co}}\comb N$. The third is precisely the $\ecs$-associator axiom,
+$\nrm{(AB)C-A(BC)}\le\ecs N$.
+
+\emph{Summation.} Adding and using $0\le\ecs\le \comb\le1$, so that
+$1+\ecs+C_{\mathrm{co}}\comb\le2+C_{\mathrm{co}}$ and $1+\ecs\le2$, gives
+\eqref{eq:as-main} with the stated $C_{\mathrm{as}}$.
+
+Two pieces of hygiene in the tree are worth recording, since they shape the constant. The
+summation is written so that the ambient-associator term is bounded directly by $\comb N$
+rather than as $(\ecs/\comb)\cdot \comb N$, because at the endpoint $\comb=0$ one has
+$\ecs=0$ and every error vanishes --- the quotient $\ecs/\comb$ is never formed. And the
+upstream witness is normalised to $C_{\mathrm{co}}:=\max\{C_{\mathrm{co}},0\}$, which
+cannot weaken the imported estimate since $\comb\nrm{A}\nrm{B}\ge0$, but does make the
+sign-sensitive arithmetic above valid.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb0-compressed-associator}: 20 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-compcb-rectangular-product}. It is the base of the H-CB tier: the defining
+relation of the Ha map (\texttt{def-ha-map}) pairs an element against precisely the
+difference of the two associations $(Y\dg\cpr Z)\cpr X$ and $Y\dg\cpr(Z\cpr X)$, so
+\eqref{eq:as-main} is exactly the estimate that turns that relation into a quantitative
+bound. It feeds \texttt{lem-hcb1-column-action} (\S\ref{sec:hcb1-column-action}) and
+\texttt{lem-hcb2-product-defect} (\S\ref{sec:hcb2-product-defect}).

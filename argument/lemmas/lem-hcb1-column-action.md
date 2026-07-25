@@ -6,13 +6,14 @@ defs: def-ha-map; def-hcb-datum; def-compressed-associator
 deps: lem-hcb-column-hilbert-squared; lem-hcb0-compressed-associator; lem-hcb1-variational-identity
 status: proved
 af: validated
-provenance: PROOF-W74F-E-HCB.md §5; VERDICT-W74F-E-HCB.md HCB-1b (VALID); DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D
+provenance: PROOF-W74F-E-HCB.md §5; VERDICT-W74F-E-HCB.md HCB-1b (VALID); DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D; report lem:hcb1-column-action
 owner: A
 workspace: proofs/lem-hcb1-column-action
 ---
 
-**Status.** Hostile-verified paper-proof transcription at
-`proved-mod-audit`; not `af`-validated and not L0-rigorous.
+**Status.** `proved`; `af: validated` — root-validated, taint-clean
+adversarial tree (mechanical ledger reflection; export at
+`proofs/lem-hcb1-column-action/export.md`).
 
 **Provenance.** `PROOF-W74F-E-HCB.md` §5 and
 `VERDICT-W74F-E-HCB.md` HCB-1b; admitted by

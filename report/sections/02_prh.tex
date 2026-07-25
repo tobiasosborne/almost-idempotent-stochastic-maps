@@ -1,0 +1,123 @@
+% SHARD-ID: AISM-02-PRH
+% SHARD-TITLE: Positive-retract hardening
+% SHARD-SUMMARY: Reproduces lem-prh, the af-validated hardening of a positive approximate retract into an exact stochastic idempotent.
+% SHARD-SUMMARY: Explains the disjoint-core construction, the conditioning and core-replacement error terms, and the optimisation giving the sharp 2*sqrt(2*epsilon) rate.
+% SHARD-KEYWORDS: lem-prh, af validated, positive approximate retract, stochastic idempotent, disjoint cores, square-root rate
+\section{Positive-retract hardening}\label{sec:prh}
+
+\begin{lemma}[\texttt{lem-prh}]\label{lem:prh}
+Let $k,n\ge1$ and let
+\[
+  A:\linfd{k}\longrightarrow\linfd{n},
+  \qquad
+  M:\linfd{n}\longrightarrow\linfd{k}
+\]
+be positive unital maps --- equivalently, maps whose matrices have probability-vector
+rows. If
+\[
+  \opnorm{MA-I_k}\;\le\;\varepsilon,\qquad 0\le\varepsilon<\tfrac12,
+\]
+then there is a stochastic idempotent $E:\linfd{n}\to\linfd{n}$
+(\texttt{def-stochastic}) with
+\begin{equation}\label{eq:prh-target}
+  \opnorm{AM-E}\;\le\;2\sqrt{2\varepsilon}.
+\end{equation}
+\emph{Transcription note.} The pair $(A,M)$ is the datum of
+\texttt{def-positive-approximate-retract}, with retract defect
+$\varepsilon_{\mathrm{ret}}=\opnorm{MA-I_k}$. Following the validated tree, $A$ is
+presented by rows $a_i\in\Delta_k$ indexed by $i\in\{1,\dots,n\}$ and $M$ by rows
+$\mu_s$ indexed by $s\in\{1,\dots,k\}$, so that the $s$-th row of $MA$ is the
+probability vector $\sum_i\mu_s(i)\,a_i$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Positive-retract hardening (PRH): let k,n >= 1 and let A:l-infinity(k)->l-infinity(n) and M:l-infinity(n)->l-infinity(k) be positive unital maps (equivalently, have probability-vector rows); if ||MA-I_k||_{infinity->infinity} <= epsilon with 0 <= epsilon < 1/2, then there is a stochastic idempotent E:l-infinity(n)->l-infinity(n) with ||AM-E||_{infinity->infinity} <= 2*sqrt(2*epsilon).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree splits on the defect. If $\varepsilon=0$ the hypothesis reads $MA=I_k$ exactly,
+and then $E:=AM$ is already row-stochastic with $E^2=A(MA)M=AM=E$, so
+\eqref{eq:prh-target} holds with error $0$. The substance is the case
+$0<\varepsilon<\tfrac12$.
+
+\emph{The scale and the cores.} Fix
+\[
+  \lambda=\sqrt{\varepsilon/2},\qquad
+  C_s=\{\,i:\ a_{is}>1-\lambda\,\},\qquad
+  \beta_s=\mu_s(C_s^{c}).
+\]
+The single quantitative input is a coordinate defect identity. The $s$-th row of $MA$ is
+the probability vector $\sum_i\mu_s(i)a_i$, and for probability vectors the $\ell^1$
+distance to the basis vector $e_s$ is governed by one coordinate:
+\begin{equation}\label{eq:prh-defect}
+  \lone{(MA)_{s,*}-e_s}=2\bigl(1-(MA)_{ss}\bigr)=2\sum_i\mu_s(i)\,(1-a_{is})=:2D_s,
+\end{equation}
+so the norm hypothesis is exactly $D_s\le\varepsilon/2$ for every $s$. Two consequences
+follow. First, the cores are pairwise disjoint: if $i\in C_s\cap C_t$ with $s\ne t$ then
+$a_{is}+a_{it}>2(1-\lambda)>1$ (using $\lambda<\tfrac12$, which is where
+$\varepsilon<\tfrac12$ enters), contradicting that $a_i$ is a probability vector. Second,
+off the core one has $1-a_{is}\ge\lambda$, so dropping the on-core terms of the
+nonnegative sum $D_s$ gives $\lambda\beta_s\le D_s\le\varepsilon/2$, whence
+\begin{equation}\label{eq:prh-beta}
+  \beta_s\;\le\;\frac{\varepsilon}{2\lambda}\;=\;\lambda\;<\;\tfrac12 .
+\end{equation}
+The tree records a correction at this point: an earlier node asserted the strict
+inequality $\beta_s<\lambda$, which the threshold $a_{is}\le1-\lambda$ off the core does
+not give; the weak form \eqref{eq:prh-beta} is what holds and all that is used.
+
+\emph{The exact construction.} Condition each decoder row on its core and replace each
+encoder row inside a core by a basis vector:
+\[
+  \nu_s(i)=\frac{\mu_s(i)\,\mathbf1_{C_s}(i)}{1-\beta_s},
+  \qquad
+  \widehat A\ \text{has row}\ e_s\ \text{on}\ C_s\ \text{and row}\ a_i\ \text{off}\ \textstyle\bigcup_s C_s .
+\]
+Both are well defined: $\beta_s<1$ makes $\nu_s$ a probability vector, and disjointness of
+the cores makes $\widehat A$ unambiguous. The construction is engineered so that the
+retraction becomes \emph{exact}: the $s$-th row of $N\widehat A$ is
+$\sum_{i\in C_s}\mu_s(i)e_s/(1-\beta_s)=e_s$, i.e.
+\begin{equation}\label{eq:prh-exact}
+  N\widehat A=I_k,\qquad\text{hence}\qquad E:=\widehat AN\ \text{satisfies}\ E^2=\widehat A(N\widehat A)N=\widehat AN=E .
+\end{equation}
+As a product of positive unital maps, $E$ is row-stochastic, so it is a stochastic
+idempotent in the sense of \texttt{def-stochastic}.
+
+\emph{The two error terms.} Write $AM-E=A(M-N)+(A-\widehat A)N$ and bound the summands
+separately.
+
+For the conditioning term, $\nu_s$ is $\mu_s$ conditioned on $C_s$, so the two rows differ
+by mass $\beta_s$ removed from $C_s^c$ and mass $\beta_s$ redistributed on $C_s$; hence
+$\lone{\mu_s-\nu_s}=2\beta_s\le\varepsilon/\lambda$ by \eqref{eq:prh-beta} and
+$\opnorm{M-N}\le\varepsilon/\lambda$. Because $A$ has probability rows it is an
+$\infty\!\to\!\infty$ contraction --- concretely,
+$\sum_j\lvert(AB)_{ij}\rvert\le\sum_s a_{is}\sum_j\lvert B_{sj}\rvert\le\opnorm{B}$ ---
+so $\opnorm{A(M-N)}\le\varepsilon/\lambda$.
+
+For the core-replacement term, the rows of $(A-\widehat A)N$ vanish outside
+$\bigcup_sC_s$. For $i\in C_s$ the corresponding row is $\sum_t a_{it}\nu_t-\nu_s$, and
+since every $\nu_t$ is a probability vector its $\ell^1$ norm is at most
+$(1-a_{is})+\sum_{t\ne s}a_{it}=2(1-a_{is})<2\lambda$. Hence
+$\opnorm{(A-\widehat A)N}\le2\lambda$.
+
+\emph{Optimisation.} Adding the two bounds,
+\[
+  \opnorm{AM-E}\;\le\;\frac{\varepsilon}{\lambda}+2\lambda ,
+\]
+and the choice $\lambda=\sqrt{\varepsilon/2}$ balances the two terms at the common value
+$\sqrt{2\varepsilon}$, giving \eqref{eq:prh-target}. The square-root rate is intrinsic to
+this balance: conditioning costs $\varepsilon/\lambda$ and core replacement costs
+$2\lambda$, and no choice of threshold does better than their geometric mean.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-prh}: 14 nodes, all \texttt{validated}, root \texttt{validated}, taint
+clean.
+
+\noindent\textbf{Role in the chain.} \texttt{lem-prh} has no registry dependencies. It is
+the finishing step of the live route: it installs the reduction of \texttt{op-classical}
+to the \emph{existence} of a positive approximate retract for a given almost-idempotent
+$Q$ --- stochastic $A,M$ with $\opnorm{AM-Q}=O(\defect)$ and $\opnorm{MA-I}=O(\defect)$ ---
+after which \eqref{eq:prh-target} delivers the exact idempotent at rate $\sqrt{\defect}$.
+Producing such a pair is what the COMP and H-CB tiers below are ultimately for, and that
+production is \emph{not} established: \texttt{lem-prh} is a conditional finisher, and
+\texttt{op-classical} remains open. Downstream registry consumers are
+\texttt{lem-routef-prh-finish} and \texttt{lem-routef-k-ledger}, both non-rigorous.

@@ -25,169 +25,162 @@ verbatim), and keywords.
 
 ## `AISM-00-OVERVIEW`
 - **File:** `report/sections/00_overview.tex`
-- **Title:** Roadmap and rigour status
-- **Summary:** Orients the lab-book around the open target op-classical and the report's strict rigour boundary.
-- **Summary:** Records the linear-law versus sqrt-envelope headline as orientation, not as a promoted theorem.
-- **Keywords:** overview, op-classical, rigour ladder, linear law, sharp exponent
+- **Title:** Orientation and rigour boundary
+- **Summary:** States the open target op-classical and fixes the two equivalent pictures bridged by lem-classical-equiv.
+- **Summary:** Describes the four af-validated blocks reproduced here: the bridge, PRH, the COMP tier, and the H-CB tier.
+- **Summary:** Records the honesty boundary: only af-validated results appear as lemmas; everything else stays outside this document.
+- **Keywords:** overview, op-classical, rigour ladder, signed picture, stochastic picture, COMP tier, H-CB tier
 
 ## `AISM-01-CLASSICAL-EQUIV`
 - **File:** `report/sections/01_classical_equiv.tex`
 - **Title:** The signed-stochastic bridge
-- **Summary:** Reproduces the registry contract for lem-classical-equiv, one of the af-validated rigorous results.
-- **Summary:** Summarizes the clean 29-node proof tree and records its role as the signed-to-stochastic bridge.
-- **Keywords:** lem-classical-equiv, af validated, signed picture, stochastic picture, bridge
+- **Summary:** Reproduces lem-classical-equiv, the af-validated equivalence of the signed and stochastic formulations up to universal constants.
+- **Summary:** Gives a prose account of the binomial-series construction forward and the positive-part renormalisation backward, with the explicit constants of the tree.
+- **Keywords:** lem-classical-equiv, af validated, signed picture, stochastic picture, bridge, binomial series
 
-## `AISM-02-HEIGHT-COLLAPSE`
-- **File:** `report/sections/02_height_collapse.tex`
-- **Title:** Height collapse
-- **Summary:** Reproduces the registry contract for obs-height-collapse as an af-validated rigorous obstruction.
-- **Summary:** Summarizes the clean 19-node proof tree and its role in isolating the remaining sigma-cap input.
-- **Keywords:** obs-height-collapse, af validated, height, invisible mass, sigma cap
+## `AISM-02-PRH`
+- **File:** `report/sections/02_prh.tex`
+- **Title:** Positive-retract hardening
+- **Summary:** Reproduces lem-prh, the af-validated hardening of a positive approximate retract into an exact stochastic idempotent.
+- **Summary:** Explains the disjoint-core construction, the conditioning and core-replacement error terms, and the optimisation giving the sharp 2*sqrt(2*epsilon) rate.
+- **Keywords:** lem-prh, af validated, positive approximate retract, stochastic idempotent, disjoint cores, square-root rate
 
-## `AISM-03-MASS-SPLIT`
-- **File:** `report/sections/03_mass_split.tex`
-- **Title:** Mass split bookkeeping
-- **Summary:** Reproduces the registry contract for lem-mass-split, an af-validated row-sum identity.
-- **Summary:** Summarizes the clean 9-node proof tree and its role as a factored dependency of halo collapse.
-- **Keywords:** lem-mass-split, af validated, negative mass, row sum, halo collapse
+## `AISM-03-COMPCB-AMPLIFICATION-NATURALITY`
+- **File:** `report/sections/03_compcb_amplification_naturality.tex`
+- **Title:** Amplification naturality of the functional calculus
+- **Summary:** Reproduces lem-compcb-amplification-naturality, the af-validated commutation of a power-series functional calculus with the unital amplification.
+- **Summary:** Explains the partial-sum transport argument and the binomial identification of the inverse-square-root branch used for the theta specialization.
+- **Keywords:** lem-compcb-amplification-naturality, af validated, functional calculus, amplification, theta map, binomial series
 
-## `AISM-04-RESIDUAL-LOWER`
-- **File:** `report/sections/04_residual_lower.tex`
-- **Title:** Convex outsourcing
-- **Summary:** Reproduces the registry contract for lem-residual-lower, an af-validated frame-free convexity fact.
-- **Summary:** Summarizes the clean 32-live-node proof tree and its lower-bound role in halo collapse.
-- **Keywords:** lem-residual-lower, af validated, convex outsourcing, l1 distance, halo collapse
+## `AISM-04-COMPCB-AMPLIFIED-COMPRESSION`
+- **File:** `report/sections/04_compcb_amplified_compression.tex`
+- **Title:** The amplified compression identity
+- **Summary:** Reproduces lem-compcb-amplified-compression, the af-validated identification of the amplified compression map and corner with their entrywise amplifications.
+- **Summary:** Explains the uniform theta-domain threshold, the entrywise operator amplification that replaces the diagonal embedding, and the range identification.
+- **Keywords:** lem-compcb-amplified-compression, af validated, compression map, amplification, compressed corner, theta domain
 
-## `AISM-05-RESIDUAL-UPPER`
-- **File:** `report/sections/05_residual_upper.tex`
-- **Title:** Residual distance bound
-- **Summary:** Reproduces the registry contract for lem-residual-upper, an af-validated frame-free convexity fact.
-- **Summary:** Summarizes the clean 49-live-node proof tree and records the tracked refactor warning honestly.
-- **Keywords:** lem-residual-upper, af validated, residual distance, l1 distance, halo collapse
+## `AISM-05-COMPCB-AMPLIFIED-COMPRESSION-IDENTITIES`
+- **File:** `report/sections/05_compcb_amplified_compression_identities.tex`
+- **Title:** Idempotence and adjoint symmetry of amplified compressions
+- **Summary:** Reproduces lem-compcb-amplified-compression-identities, the af-validated amplified idempotence and dagger-symmetry of the compression maps.
+- **Summary:** Explains the transfer of two exact level-one identities through the entrywise amplification, and records the verdict-driven contract amendment binding the ambient algebra.
+- **Keywords:** lem-compcb-amplified-compression-identities, af validated, idempotence, involution, amplification, contract amendment
 
-## `AISM-06-HALO-COLLAPSE`
-- **File:** `report/sections/06_halo_collapse.tex`
-- **Title:** Halo-robust height collapse
-- **Summary:** Reproduces the registry contract for lem-halo-collapse, the af-validated halo-robust bridge.
-- **Summary:** Records the run-1 balloon, the factoring into three sub-lemmas, and the clean 20-node run-2 tree.
-- **Keywords:** lem-halo-collapse, af validated, height collapse, halo-robust, invisible mass, bridge
+## `AISM-06-COMPCB-ENTRYWISE-COMPRESSION-NATURALITY`
+- **File:** `report/sections/06_compcb_entrywise_compression_naturality.tex`
+- **Title:** Entrywise compression naturality at a matrix unit
+- **Summary:** Reproduces lem-compcb-entrywise-compression-naturality, the af-validated slotwise action of an amplified compression on an E11-supported element.
+- **Summary:** Explains the specialization of the amplification identity to a square corner and the elementary-tensor evaluation that finishes it.
+- **Keywords:** lem-compcb-entrywise-compression-naturality, af validated, matrix unit, elementary tensor, compression, slotwise action
 
-## `AISM-07-FACTORIZATION`
-- **File:** `report/sections/07_factorization.tex`
-- **Title:** Factorization bound
-- **Summary:** Reproduces the registry contract for lem-factorization, the af-validated (EX) composition link.
-- **Summary:** Summarizes the clean 11-live-node run-1 tree and notes the tightness claim was not elevated.
-- **Keywords:** lem-factorization, af validated, factorization, chart scores, (EX) composition
+## `AISM-07-COMPCB-RECTANGULAR-PRODUCT`
+- **File:** `report/sections/07_compcb_rectangular_product.tex`
+- **Title:** The uniform rectangular compressed-product estimate
+- **Summary:** Reproduces lem-compcb-rectangular-product, the af-validated bound comparing the compressed and ambient products uniformly in the amplification level.
+- **Summary:** Explains the unpacking of the level-one big-O constant and the amplified verification of its hypotheses, and records the tree's explicit definition of a compatible amplified rectangular pair.
+- **Keywords:** lem-compcb-rectangular-product, af validated, compressed product, rectangular pair, uniform constant, amplification
 
-## `AISM-08-ZEROSUM-TRIANGLE`
-- **File:** `report/sections/08_zerosum_triangle.tex`
-- **Title:** Zero-sum triangle bound
-- **Summary:** Reproduces the registry contract for lem-zerosum-triangle, an af-validated negative-part triangle inequality.
-- **Summary:** Summarizes the clean 10-node run-1 tree and its role as the first factored dependency of the fan payment lemma.
-- **Keywords:** lem-zerosum-triangle, af validated, negative part, zero coordinate sum, triangle inequality
+## `AISM-08-COMPCB-AMPLIFIED-ALMOST-CONTAINMENT`
+- **File:** `report/sections/08_compcb_amplified_almost_containment.tex`
+- **Title:** Amplified almost-containment of corners
+- **Summary:** Reproduces lem-compcb-amplified-almost-containment, the af-validated statement that an inner corner is almost fixed by an outer compression.
+- **Summary:** Explains the uniform norm ledger, the fixed-point step in the source corner, and the transfer of almost-invariance to the outer projections.
+- **Keywords:** lem-compcb-amplified-almost-containment, af validated, almost containment, corner inclusion, approximate associativity, uniform constants
 
-## `AISM-09-WEIGHTED-MIN`
-- **File:** `report/sections/09_weighted_min.tex`
-- **Title:** Weighted minimum bound
-- **Summary:** Reproduces the registry contract for lem-weighted-min, an af-validated averaging selection bound.
-- **Summary:** Summarizes the clean 8-node tree and its role as the support-averaging step of the fan payment proof.
-- **Keywords:** lem-weighted-min, af validated, weighted average, support averaging, index selection
+## `AISM-09-COMPCB-COMPRESSED-UNIT-NORM`
+- **File:** `report/sections/09_compcb_compressed_unit_norm.tex`
+- **Title:** The compressed-unit norm estimate
+- **Summary:** Reproduces lem-compcb-compressed-unit-norm, the af-validated one-sided bound for every delta-projection and two-sided bound for nonvanishing ones.
+- **Summary:** Explains the vanishing/nonvanishing dichotomy, the direct comparison of the compressed unit with the projection, and the audit that forced the byte-matched norm axioms to be provisioned.
+- **Keywords:** lem-compcb-compressed-unit-norm, af validated, compressed unit, nonvanishing projection, dichotomy, missing-axiom audit
 
-## `AISM-10-FAN-PAYMENT`
-- **File:** `report/sections/10_fan_payment.tex`
-- **Title:** Zero-sum fan payment
-- **Summary:** Reproduces the registry contract for lem-fan-payment, the af-validated all-mass fan payment inequality.
-- **Summary:** Summarizes the factored 15-node run-3 tree after two balloon aborts and its role behind the plateau-2 constant.
-- **Keywords:** lem-fan-payment, af validated, fan payment, plateau 2, payment horn
+## `AISM-10-HCB2-AMPLIFIED-ADJOINTNESS`
+- **File:** `report/sections/10_hcb2_amplified_adjointness.tex`
+- **Title:** Exact adjointness of the amplified Ha map
+- **Summary:** Reproduces lem-hcb2-amplified-adjointness, the af-validated exact identity relating the operator adjoint of an amplified Ha map to the involution of its argument.
+- **Summary:** Explains the exact product-reversal identity, the level-one uniqueness argument in the Ha defining relation, and the blockwise transport to amplifications.
+- **Keywords:** lem-hcb2-amplified-adjointness, af validated, Ha map, adjointness, involution, product reversal
 
-## `AISM-11-NEGPART-SUBADDITIVE`
-- **File:** `report/sections/11_negpart_subadditive.tex`
-- **Title:** Negative-part subadditivity
-- **Summary:** Reproduces the registry contract for lem-negpart-subadditive, an af-validated pointwise subadditivity bound.
-- **Summary:** Summarizes the clean 16-node run-1 tree and its role as the pre-factored barycenter step of the D-restricted fan proof.
-- **Keywords:** lem-negpart-subadditive, af validated, negative part, subadditivity, barycenter step
+## `AISM-11-COMPCB-COMPRESSED-UNIT-ACTION`
+- **File:** `report/sections/11_compcb_compressed_unit_action.tex`
+- **Title:** The uniform compressed-unit action
+- **Summary:** Reproduces lem-compcb-compressed-unit-action, the af-validated statement that compressed units act as approximate two-sided identities on rectangular corners.
+- **Summary:** Explains the comparison of the compressed unit with its projection, the ambient action estimate, and the final passage to the compressed product.
+- **Keywords:** lem-compcb-compressed-unit-action, af validated, compressed unit, approximate identity, rectangular corner, uniform constants
 
-## `AISM-12-FAN-PAYMENT-RESTRICTED`
-- **File:** `report/sections/12_fan_payment_restricted.tex`
-- **Title:** D-restricted zero-sum fan payment
-- **Summary:** Reproduces the registry contract for lem-fan-payment-restricted, af-validated with sharp constant two plus root two.
-- **Summary:** Summarizes the clean 27-node run-1 tree and records that constant two is exactly refuted for this variant.
-- **Keywords:** lem-fan-payment-restricted, af validated, D-restricted, sharp constant, payment horn
+## `AISM-12-COMPCB-ROW-COLUMN-PRODUCT`
+- **File:** `report/sections/12_compcb_row_column_product.tex`
+- **Title:** The row-column compressed-product estimate
+- **Summary:** Reproduces lem-compcb-row-column-product, the af-validated compressed-versus-ambient comparison for a row times a column.
+- **Summary:** Explains the square embedding into one extra block, the isometry of zero-padding, and the reduction to the validated rectangular-product estimate.
+- **Keywords:** lem-compcb-row-column-product, af validated, row-column product, zero padding, square embedding, compressed product
 
-## `AISM-14-PIVOT-REMOVING-MOVE`
-- **File:** `report/sections/14_pivot_removing_move.tex`
-- **Title:** Pivot-removing max-stationarity
-- **Summary:** Reproduces the registry contract for lem-pivot-removing-move, the af-validated pivot-removing chart move.
-- **Summary:** Summarizes the clean 9-node zero-challenge run-1 tree and its role as the minimality tool of the argmin engine.
-- **Keywords:** lem-pivot-removing-move, af validated, pivot removing, max stationarity, argmin, collateral
+## `AISM-13-HCB0-COMPRESSED-ASSOCIATOR`
+- **File:** `report/sections/13_hcb0_compressed_associator.tex`
+- **Title:** The uniform compressed associator estimate
+- **Summary:** Reproduces lem-hcb0-compressed-associator, the af-validated bound on the failure of associativity of the compressed product.
+- **Summary:** Explains the five-term telescope through the ambient product, the role of the epsilon-associator axiom, and the endpoint-safe constant bookkeeping.
+- **Keywords:** lem-hcb0-compressed-associator, af validated, associator, compressed product, telescope, uniform constants
 
-## `AISM-15-HIDDENNESS-DUAL-WITNESS`
-- **File:** `report/sections/15_hiddenness_dual_witness.tex`
-- **Title:** The hiddenness dual witness and its always-tight support
-- **Summary:** Reproduces lem-hiddenness-dual-witness, the af-validated LP-dual witness attached to a hidden row vertex.
-- **Summary:** Reproduces lem-always-tight-dual-support, the af-validated complementary-slackness localisation of that witness.
-- **Summary:** Typesets the exposedness LP, its dual, and the complementarity identity that both proofs turn on.
-- **Keywords:** lem-hiddenness-dual-witness, lem-always-tight-dual-support, af validated, exposedness LP, LP duality, complementary slackness
+## `AISM-14-COMPCB-CORNER-ALGEBRA`
+- **File:** `report/sections/14_compcb_corner_algebra.tex`
+- **Title:** The compressed corner as an extended approximate C*-algebra
+- **Summary:** Reproduces lem-compcb-corner-algebra, the af-validated statement that a nonvanishing compressed corner is an extended C_ca*e-C*-algebra.
+- **Summary:** Explains the obligation-by-obligation verification of the axioms at every matrix level and the constant ledger that unifies them.
+- **Keywords:** lem-compcb-corner-algebra, af validated, compressed corner, extended C*-algebra, operator space, axiom verification
 
-## `AISM-16-WITNESS-CONSEQUENCES`
-- **File:** `report/sections/16_witness_consequences.tex`
-- **Title:** Consequences of the hiddenness witness: depth-Markov, far-row certificate, top-slab companion
-- **Summary:** Reproduces lem-hiddenness-depth-markov, the af-validated Markov bound concentrating the witness mass near the top depth.
-- **Summary:** Reproduces lem-row-far-dual-certificate and lem-top-slab-companion, the af-validated margin bound and far-row existence statement.
-- **Summary:** Typesets the l1 support-functional deficit and the weighted-average arguments the three proofs share.
-- **Keywords:** lem-hiddenness-depth-markov, lem-row-far-dual-certificate, lem-top-slab-companion, af validated, support functional, Markov inequality, exposedness margin
+## `AISM-15-HCB-COLUMN-HILBERT-SQUARED`
+- **File:** `report/sections/15_hcb_column_hilbert_squared.tex`
+- **Title:** The corrected amplified column-Hilbert estimate
+- **Summary:** Reproduces lem-hcb-column-hilbert-squared, the af-validated comparison of the amplified column inner product with the squared column norm.
+- **Summary:** Explains the three scalar estimates and their synthesis, and records the withdrawn zero-padding route that forced two new dependencies.
+- **Keywords:** lem-hcb-column-hilbert-squared, af validated, column Hilbert, squared estimate, withdrawn route, nonvanishing bridge
 
-## `AISM-17-SLAB-CAPACITY-PRIMITIVES`
-- **File:** `report/sections/17_slab_capacity_primitives.tex`
-- **Title:** Slab and capacity primitives for harmonic test functions
-- **Summary:** Reproduces lem-cs-low-slab-pincer and lem-row-zero-capacity, the af-validated Chebyshev-slab and row-zero capacity bounds.
-- **Summary:** Reproduces lem-harmonic-affine-bridge, the af-validated equivalence between P-harmonic vectors and affine functions of the rows.
-- **Summary:** Typesets the single row-reproduction identity that all three elementary primitives share.
-- **Keywords:** lem-cs-low-slab-pincer, lem-row-zero-capacity, lem-harmonic-affine-bridge, af validated, row reproduction, negative mass, harmonic vector
+## `AISM-16-COMPCB-SINGLE-COMPRESSION-TRANSFER`
+- **File:** `report/sections/16_compcb_single_compression_transfer.tex`
+- **Title:** Single-compression transfer of an extended inclusion
+- **Summary:** Reproduces lem-compcb-single-compression-transfer, the af-validated statement that restricting an extended inclusion to an ideal and compressing once yields an extended inclusion.
+- **Summary:** Explains the ideal-unit projection, the exact dagger and unit clauses, the compression-closeness estimate, and the four-term multiplicativity telescope.
+- **Keywords:** lem-compcb-single-compression-transfer, af validated, extended inclusion, ideal, compression, multiplicativity telescope
 
-## `AISM-18-PARAMETRIC-HALO-COLLAPSE`
-- **File:** `report/sections/18_parametric_halo_collapse.tex`
-- **Title:** Parametric and depth-d halo collapse
-- **Summary:** Reproduces lem-parametric-halo-collapse, the af-validated width-parametric generalisation of the halo-collapse bridge.
-- **Summary:** Reproduces lem-depth-d-halo-collapse, the af-validated non-top-row version with an explicit deeper-row correction term.
-- **Summary:** Typesets the residual-split convexity argument that reduces both bounds to the frame-free residual estimates.
-- **Keywords:** lem-parametric-halo-collapse, lem-depth-d-halo-collapse, af validated, halo collapse, residual split, invisible mass, height
+## `AISM-17-HCB1-VARIATIONAL-IDENTITY`
+- **File:** `report/sections/17_hcb1_variational_identity.tex`
+- **Title:** The amplified Ha variational identity
+- **Summary:** Reproduces lem-hcb1-variational-identity, the af-validated exact identity expressing the Ha defect as a compressed associator.
+- **Summary:** Explains the entrywise expansion, the summation of the level-one defining relation, and the cancellation against the amplified column display.
+- **Keywords:** lem-hcb1-variational-identity, af validated, Ha map, variational identity, associator, contract amendment
 
-## `AISM-19-GENUINE-DISINTEGRATION`
-- **File:** `report/sections/19_genuine_disintegration.tex`
-- **Title:** Genuine-mass disintegration and top concentration
-- **Summary:** Reproduces lem-genuine-disintegration, the af-validated bound splitting halo mass into hidden-vertex mass and a shallow remainder.
-- **Summary:** Reproduces lem-top-concentration, the af-validated bound on the positive mass a hidden top vertex places outside the genuine set.
-- **Summary:** Typesets the depth-convexity and support-functional deficit arguments driving the g-bootstrap.
-- **Keywords:** lem-genuine-disintegration, lem-top-concentration, af validated, genuine mass, g-bootstrap, depth convexity, support functional
+## `AISM-18-HCB1-COLUMN-ACTION`
+- **File:** `report/sections/18_hcb1_column_action.tex`
+- **Title:** The uniform Ha column action
+- **Summary:** Reproduces lem-hcb1-column-action, the af-validated estimate that the amplified Ha map acts on columns like left multiplication up to O(e).
+- **Summary:** Explains the compressed-unit nondegeneracy proved inside the operator algebra, the defect pairing, and the self-pairing cancellation that avoids Riesz duality.
+- **Keywords:** lem-hcb1-column-action, af validated, Ha map, column action, nondegeneracy, self-pairing
 
-## `AISM-20-STARVATION-OBSTRUCTION`
-- **File:** `report/sections/20_starvation_obstruction.tex`
-- **Title:** The bounded-slab starvation completion obstruction
-- **Summary:** Reproduces lem-starvation-completion-obstruction, the af-validated K-free non-existence result for a rank-three starvation configuration.
-- **Summary:** Typesets the unit-moment identity and the fiber-budget bound whose contradiction drives the proof.
-- **Summary:** Records the paper-proof provenance and the role of the obstruction in closing the exchange-starvation leaf.
-- **Keywords:** lem-starvation-completion-obstruction, af validated, starvation, rank three, unit moment, exterior budget, K-free
+## `AISM-19-HCB2-PRODUCT-DEFECT`
+- **File:** `report/sections/19_hcb2_product_defect.tex`
+- **Title:** The uniform amplified Ha product defect
+- **Summary:** Reproduces lem-hcb2-product-defect, the af-validated bound on the failure of the amplified Ha map to be multiplicative.
+- **Summary:** Explains the amplified column-norm calibration, the uniform Ha operator bound, and the four-term telescope evaluated on columns.
+- **Keywords:** lem-hcb2-product-defect, af validated, Ha map, product defect, telescope, operator norm
 
-## `AISM-21-HX-FINANCING-ENGINE`
-- **File:** `report/sections/21_hx_financing_engine.tex`
-- **Title:** The H-X financing engine: unit moment, sign-union ledger, financing floor
-- **Summary:** Reproduces the three af-validated W60/W61 engine lemmas lem-hx-transverse-moment-identity, lem-hx-signed-variation-ledger, and lem-hx-financing-floor.
-- **Summary:** Typesets the basis-free unit transverse moment, the two-sign-union budget converter, and their arithmetic assembly into the high-lever financing floor.
-- **Summary:** Records the W61 quantifier correction on the floor (all reals A restated to A > 0) and the af provenance of all three results.
-- **Keywords:** lem-hx-transverse-moment-identity, lem-hx-signed-variation-ledger, lem-hx-financing-floor, af validated, unit moment, sign union, financing floor, H-X engine
+## `AISM-20-HCB3-DIAGONAL-UNIT`
+- **File:** `report/sections/20_hcb3_diagonal_unit.tex`
+- **Title:** The uniform diagonal Ha unit estimate
+- **Summary:** Reproduces lem-hcb3-diagonal-unit, the af-validated statement that the amplified Ha map sends the amplified compressed unit to an approximate identity operator.
+- **Summary:** Explains the direct level-n bound on the amplified unit, the two-term split into a column-action defect and a unit-action defect, and the coordinate-sum conversion.
+- **Keywords:** lem-hcb3-diagonal-unit, af validated, Ha map, compressed unit, approximate identity, coordinate sum
 
-## `AISM-22-HX-STARVATION-COUPLING`
-- **File:** `report/sections/22_hx_starvation_coupling.tex`
-- **Title:** Robust scalar starvation and forced exterior coupling
-- **Summary:** Reproduces the af-validated lem-hx-robust-scalar-starvation, the rank-free slab-free generalization of the starvation obstruction with an explicit universal ceiling.
-- **Summary:** Reproduces the af-validated lem-hx-forced-exterior-coupling, the first forced long-range positive-financing lower bound.
-- **Summary:** Records the exact T0 calibration, the verifier's tail-cap near-counterexample, and the af provenance of both results.
-- **Keywords:** lem-hx-robust-scalar-starvation, lem-hx-forced-exterior-coupling, af validated, starvation, top-tail cap, tableau window, forced coupling, H-X engine
+## `AISM-21-HCB3-DIAGONAL-UPPER-NORM`
+- **File:** `report/sections/21_hcb3_diagonal_upper_norm.tex`
+- **Title:** The uniform diagonal Ha upper norm
+- **Summary:** Reproduces lem-hcb3-diagonal-upper-norm, the af-validated bound making the amplified diagonal Ha map a contraction up to 1+O(e).
+- **Summary:** Explains the matrix-uniform square estimate, the quadratic recurrence for the operator norm, and the scalar root argument that closes it.
+- **Keywords:** lem-hcb3-diagonal-upper-norm, af validated, Ha map, operator norm, quadratic recurrence, corner algebra
 
-## `AISM-13-STATUS-LEDGER`
-- **File:** `report/sections/13_discussion.tex`
-- **Title:** Status ledger for non-validated registry results
-- **Summary:** Anchors every registry result not already reproduced as an af-validated section.
-- **Summary:** Preserves each remaining result's honest status without promoting inherited or numerical claims.
-- **Keywords:** status ledger, provenance, proved-mod-audit, conjecture, numerical, open
+## `AISM-22-STATUS-OUTLOOK`
+- **File:** `report/sections/22_status_outlook.tex`
+- **Title:** Status and outlook
+- **Summary:** Records what this report validates, what remains on the live H-CB and EXT queue, and the quarantined assembly interface.
+- **Summary:** Tabulates the results removed from the previous report as a route-pivot record, each with its retained registry status.
+- **Keywords:** status, outlook, conj-hcb, EXT tier, quarantine, route pivot, deprecation table

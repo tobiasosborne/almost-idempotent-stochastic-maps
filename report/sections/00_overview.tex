@@ -1,56 +1,112 @@
 % SHARD-ID: AISM-00-OVERVIEW
-% SHARD-TITLE: Roadmap and rigour status
-% SHARD-SUMMARY: Orients the lab-book around the open target op-classical and the report's strict rigour boundary.
-% SHARD-SUMMARY: Records the linear-law versus sqrt-envelope headline as orientation, not as a promoted theorem.
-% SHARD-KEYWORDS: overview, op-classical, rigour ladder, linear law, sharp exponent
-\section{Roadmap and rigour status}\label{sec:overview}
+% SHARD-TITLE: Orientation and rigour boundary
+% SHARD-SUMMARY: States the open target op-classical and fixes the two equivalent pictures bridged by lem-classical-equiv.
+% SHARD-SUMMARY: Describes the four af-validated blocks reproduced here: the bridge, PRH, the COMP tier, and the H-CB tier.
+% SHARD-SUMMARY: Records the honesty boundary: only af-validated results appear as lemmas; everything else stays outside this document.
+% SHARD-KEYWORDS: overview, op-classical, rigour ladder, signed picture, stochastic picture, COMP tier, H-CB tier
+\section{Orientation and rigour boundary}\label{sec:overview}
 
-This lab-book is the \emph{paper-track} of the project: it reproduces the af-validated (T0) results of
-the registry in \texttt{argument/} together with a thin spine of open conjectures that orients them. It
-is deliberately \emph{not} a mirror of the whole registry --- the non-rigorous results (inherited
-\texttt{proved-mod-audit}, \texttt{conjecture}, \texttt{numerical}, \texttt{heuristic}) are anchored
-once, honestly, in the status ledger of \S\ref{sec:status-ledger} and are never restated as theorems
-here. The north star is \texttt{op-classical}; its status is \emph{open}, and its status-ledger anchor
-is \ref{op:classical}. The definitions used below are the canonical shards \texttt{def-stochastic},
-\texttt{def-almost-idempotent}, \texttt{def-near-positive-projection}, \texttt{def-signed-idempotent},
-\texttt{def-negative-mass}, \texttt{def-height}, \texttt{def-visible-set}, \texttt{def-invisible-mass},
-and \texttt{def-exposed}; this report references those identifiers and introduces no parallel
-definitions.
+\subsection*{The north star, and its status}
 
-The target itself is the classical (stochastic) stability statement: there are universal constants
-$\eta_0,C>0$ such that every row-stochastic $Q$ with $\opnorm{Q^2-Q}\le\eta\le\eta_0$ admits a
-stochastic idempotent $E$ with
+The target of this project is the classical (stochastic) stability statement
+\texttt{op-classical}: there are universal constants $\eta_0,C>0$, independent of the
+dimension, such that every row-stochastic $Q$ with
+$\opnorm{Q^2-Q}\le\defect\le\eta_0$ admits a stochastic idempotent $E$
+(\texttt{def-stochastic}) with
 \begin{equation}\label{eq:ov-target}
-  \opnorm{Q-E}\;\le\;C\sqrt{\eta},
+  \opnorm{Q-E}\;\le\;C\sqrt{\defect},
 \end{equation}
-with the exponent $\tfrac12$ sharp. This remains \textbf{open} in this repo.
+the exponent $\tfrac12$ being sharp.
 
-The rigorous line is narrow by design. A result may be called rigorous here only when it is byte-matched
-to a local theorem under \texttt{refs/}, validated in an \texttt{af} workspace, or Lean-proved. At the
-time of this shard the registry records \textbf{29 af-validated results}. Those reproduced as full
-sections of this report are the signed--stochastic bridge \ref{lem:classical-equiv}; the halo-collapse
-family \ref{obs:height-collapse}, \ref{lem:mass-split}, \ref{lem:residual-lower},
-\ref{lem:residual-upper}, \ref{lem:halo-collapse}, \ref{lem:parametric-halo-collapse},
-\ref{lem:depth-d-halo-collapse}, \ref{lem:genuine-disintegration}, \ref{lem:top-concentration}; the
-$(EX)$/factorization and fan-payment chain \ref{lem:factorization}, \ref{lem:zerosum-triangle},
-\ref{lem:weighted-min}, \ref{lem:fan-payment}, \ref{lem:negpart-subadditive},
-\ref{lem:fan-payment-restricted}; the argmin engine \ref{lem:pivot-removing-move}; the hiddenness
-witnesses and their consequences \ref{lem:hiddenness-dual-witness}, \ref{lem:always-tight-dual-support},
-\ref{lem:hiddenness-depth-markov}, \ref{lem:row-far-dual-certificate}, \ref{lem:top-slab-companion}; the
-slab/capacity primitives \ref{lem:cs-low-slab-pincer}, \ref{lem:row-zero-capacity},
-\ref{lem:harmonic-affine-bridge}; and the starvation obstruction
-\ref{lem:starvation-completion-obstruction}. Every other registry result remains anchored only in the
-status ledger, with its lower-rung status left intact.
+\textbf{This is OPEN.} Nothing in this document proves it, and nothing in this
+document should be read as evidence that it is close to proved. What follows is a
+rigorous \emph{partial} record: the components of the currently live route that have
+cleared this repository's top in-repo rigour rung.
 
-The working headline is itself status-sensitive. The inherited campaign distinguishes the
-realizable-family \emph{linear law} from the worst-case \emph{$\sqrt{}$-envelope}: along the realizable
-family the tight relation between negative mass $\negmass$ and height $\height$ is
-\[
-  \negmass=\tfrac12\,\height\qquad\text{(linear)},
-\]
-while the quadratic form $\negmass\gtrsim\height^2$ is only the worst-case envelope, binding because
-$\height\le O(\tsq)=O(\sqrt{\negmass})$. The $\sqrt{\eta}$ exponent of \eqref{eq:ov-target} is
-nonetheless sharp, certified by the family \texttt{ex-hume} (anchored at \ref{ex:hume}), which is still
-\texttt{proved-mod-audit} here rather than one of the rigorous results. Crossing between the signed and
-stochastic pictures should cite the validated bridge \ref{lem:classical-equiv} rather than
-re-normalising notation locally.
+\subsection*{Two pictures, one bridge}
+
+Two equivalent formulations are in play throughout. In the \emph{stochastic picture}
+the object is a genuinely positive row-stochastic $Q$ that is only approximately
+idempotent, with defect $\defect$ measured in the $\infty\!\to\!\infty$ map norm
+(\texttt{def-almost-idempotent}). In the \emph{signed picture} the object is an exact
+signed affine retraction $P$ --- $P\mathbf1=\mathbf1$ and $P^2=P$ \emph{exactly}
+(\texttt{def-signed-idempotent}) --- whose failure of positivity is quarantined in the
+single scalar $\negmass$, the negative mass (\texttt{def-negative-mass}). The two are
+interchangeable up to universal constants, and the licence to cross between them is
+\texttt{lem-classical-equiv} (\S\ref{sec:classical-equiv}); a bound must always name
+the picture it lives in and cite the bridge when it crosses.
+
+\subsection*{What this report contains}
+
+Four blocks, in dependency order.
+
+\begin{enumerate}
+\item \textbf{The bridge} (\S\ref{sec:classical-equiv}). \texttt{lem-classical-equiv},
+  the signed$\leftrightarrow$stochastic equivalence, with explicit constants in both
+  directions.
+
+\item \textbf{Positive-retract hardening} (\S\ref{sec:prh}). \texttt{lem-prh} converts a
+  \emph{positive approximate retract} --- a pair of positive unital maps $A,M$ between
+  finite commutative $C^*$-algebras whose composite $MA$ is $\varepsilon$-close to the
+  identity (\texttt{def-positive-approximate-retract}) --- into an exact stochastic
+  idempotent at distance $2\sqrt{2\varepsilon}$. It is the step that turns approximate
+  retraction data into the exact object \eqref{eq:ov-target} asks for, at the sharp
+  square-root rate.
+
+\item \textbf{The COMP tier} (\S\S\ref{sec:compcb-amplification-naturality}--\ref{sec:compcb-single-compression-transfer},
+  interleaved). This tier builds, over an \emph{extended} $\ecs$-$C^*$-algebra
+  (\texttt{def-extended-epsilon-cstar-algebra}), the approximate corner calculus of
+  $\dproj$-projections: the compressed corners $\Cnr{P}{Q}$, the compression maps
+  $\Co{P}{Q}$ and the compressed product (\texttt{def-compressed-corner}). Its content
+  is that all of this is \emph{matrix-uniform}: every estimate holds at every
+  amplification level $n$ with one constant. The keystones are the amplification
+  identity $\ampl{n}\Co{P}{Q}=\Co{\ampel{n}{P}}{\ampel{n}{Q}}$, the uniform
+  rectangular-product estimate, and the statement that a nonvanishing corner $\Cnrs{P}$
+  is itself an \emph{extended} $O(\comb)$-$C^*$-algebra --- the object the next tier
+  needs.
+
+\item \textbf{The H-CB tier} (\S\S\ref{sec:hcb2-amplified-adjointness}--\ref{sec:hcb3-diagonal-upper-norm},
+  interleaved). Over a closed H-CB datum (\texttt{def-hcb-datum}) this tier establishes
+  the amplified estimates for the map $\Ha{Q}{P}{R}$ of \texttt{def-ha-map}: the
+  column-Hilbert comparison, the variational identity that defines it, its column
+  action, exact adjointness, its multiplicative defect, and the diagonal unit and
+  upper-norm estimates --- all uniform in $n$.
+\end{enumerate}
+
+\subsection*{The honesty boundary}
+
+Three rules govern what may appear here.
+
+\emph{Only af-validated results are stated as lemmas.} Every numbered lemma below is a
+registry result whose adversarial proof tree has root node \texttt{validated} with clean
+taint, produced by fresh \texttt{codex} provers and \emph{separate} fresh per-node
+verifiers; the orchestrator never judged a proof. Each shard records the node count and
+names its workspace. Nothing else in the registry --- the inherited
+\texttt{proved-mod-audit} transcriptions, the \texttt{conjecture} rows, the
+\texttt{numerical} evidence, the \texttt{heuristic} arguments --- is restated here as a
+theorem; those keep their tags in \texttt{argument/} and are surveyed, without promotion,
+in \S\ref{sec:status-outlook}.
+
+\emph{Every lemma is exactly as strong as its registry contract.} Each statement is a
+typeset transcription of the one-line \texttt{contract} of its \texttt{argument/} shard,
+reproduced byte-verbatim beneath it. Where a contract is deliberately conditional or
+one-sided --- the two-sided compressed-unit bound only for \emph{nonvanishing}
+projections, the level-one hypotheses of the inverse tier --- that shape is load-bearing
+and is preserved. In particular a level-one conclusion is never glossed as a
+matrix-uniform one.
+
+\emph{No definition is restated.} Terms resolve to their canonical
+\texttt{definitions/} shards, cited by \texttt{def-} identifier. Where a proof tree
+consumed a byte-matched auxiliary registered inside its own \texttt{af} workspace ---
+the $\ecs$-$C^*$ norm axioms, the compressed-product display, the one-dimensional
+nonvanishing bridge --- it is named as such, and identified as a workspace external
+rather than a registry definition.
+
+\subsection*{What is deliberately absent}
+
+No claim, direct or implied, that \texttt{op-classical} follows. The H-CB tier feeds the
+parent contract \texttt{conj-hcb}, which is \textbf{open} (\texttt{proved-mod-audit},
+\texttt{af: none}); beyond it lie the EXT tier and a quarantined assembly interface. The
+route is a route, not a proof. Also absent: any numerical statement (those live in
+\texttt{runs/}, and are never rigorous), and the earlier signed-geometry material, which
+is off the live route and inventoried in \S\ref{sec:status-outlook}.

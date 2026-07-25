@@ -6,7 +6,7 @@ defs: def-stochastic; def-extended-epsilon-cstar-algebra
 deps: lem-thmainext-conditional; cor-kitaev-diagonal-cpization; lem-kitaev-almost-idemp-audit; lem-prh
 status: proved-mod-audit
 af: none
-provenance: docs/plans/2026-07-24-W74F-wave2-artifacts/LEDGER-W74F-G-K.md (ledger) + PROOF-W74F-H-STAGE1.md (Stage-1 packet); hostile verdicts VERDICT-W74F-G-KLEDGER.md (INVALID as first written — Stage-1 packet missing) then VERDICT-W74F-H-STAGE1.md (VALID-WITH-CORRECTIONS — ledger CLOSED at proved-mod-audit; contract text endorsed verbatim by the verifier); report lem:routef-k-ledger
+provenance: docs/plans/2026-07-24-W74F-wave2-artifacts/LEDGER-W74F-G-K.md (ledger) + PROOF-W74F-H-STAGE1.md (Stage-1 packet); hostile verdicts VERDICT-W74F-G-KLEDGER.md (INVALID as first written — Stage-1 packet missing) then VERDICT-W74F-H-STAGE1.md (VALID-WITH-CORRECTIONS — ledger CLOSED at proved-mod-audit; contract text endorsed verbatim by the verifier)
 owner: A
 workspace: proofs/lem-routef-k-ledger
 ---

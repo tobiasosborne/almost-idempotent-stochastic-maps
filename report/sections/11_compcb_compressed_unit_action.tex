@@ -1,0 +1,105 @@
+% SHARD-ID: AISM-11-COMPCB-COMPRESSED-UNIT-ACTION
+% SHARD-TITLE: The uniform compressed-unit action
+% SHARD-SUMMARY: Reproduces lem-compcb-compressed-unit-action, the af-validated statement that compressed units act as approximate two-sided identities on rectangular corners.
+% SHARD-SUMMARY: Explains the comparison of the compressed unit with its projection, the ambient action estimate, and the final passage to the compressed product.
+% SHARD-KEYWORDS: lem-compcb-compressed-unit-action, af validated, compressed unit, approximate identity, rectangular corner, uniform constants
+\section{The uniform compressed-unit action}\label{sec:compcb-compressed-unit-action}
+
+\begin{lemma}[\texttt{lem-compcb-compressed-unit-action}]\label{lem:compcb-compressed-unit-action}
+There are universal $C_{\mathrm{co}}<\infty$ and $\comb_{\mathrm{co}}>0$ such that, for
+$\comb=\dproj+\ecs\le \comb_{\mathrm{co}}$, every compatible amplified rectangular corner
+satisfies
+\begin{equation}\label{eq:cua-main}
+  \nrm{\cunit{T}\cpr A-A}\le C_{\mathrm{co}}\,\comb\,\nrm{A},
+  \qquad
+  \nrm{A\cpr \cunit{R}-A}\le C_{\mathrm{co}}\,\comb\,\nrm{A}.
+\end{equation}
+\emph{Transcription note.} As spelled out in the tree, the datum is an extended
+$\ecs$-$C^*$-algebra $\mathcal A$, an $n\ge1$, $\dproj$-projections $T,R$ with
+$T_n=\ampel{n}{T}$, $R_n=\ampel{n}{R}$, and an element $A\in\Cnr{T_n}{R_n}$; the
+compressed units are $\cunit{T,n}=\Co{T_n}{T_n}(T_n)$ and
+$\cunit{R,n}=\Co{R_n}{R_n}(R_n)$. By \texttt{lem-compcb-amplified-compression} these
+equal $\ampel{n}{\Cos{T}(T)}$ and $\ampel{n}{\Cos{R}(R)}$, which is the notation
+$\cunit{T},\cunit{R}$ of the contract.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Uniform compressed-unit action: there are universal C_co < infinity and e_co > 0 such that, for e=delta+epsilon <= e_co, every compatible amplified rectangular corner satisfies ||u_T dot A-A|| <= C_co*e*||A|| and ||A dot u_R-A|| <= C_co*e*||A||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The estimate is assembled in three layers: replace the compressed units by the
+projections, act with the projections in the \emph{ambient} product, then replace the
+ambient product by the compressed one.
+
+\emph{Primitive bounds.} Since $\mathcal A$ is extended, $\Amp{n}{\mathcal A}$ is an
+$\ecs$-$C^*$-algebra and $T_n,R_n$ are $\dproj$-projections there
+(adjoints and products amplify entrywise and $\nrm{\ampel{n}{Z}}=\nrm{Z}$). Unpacking the
+$O(\cdot)$ terms of \texttt{def-delta-projection} and \texttt{def-compressed-corner} gives
+universal $a,k<\infty$ and $\comb_0\le1$ such that every $\dproj$-projection $S$ obeys
+$\nrm{S}\le a\dproj$ or $\nrm{S}\le1+a\comb$ --- so $\nrm{T_n},\nrm{R_n}\le M:=\max(a,1+a)$
+in either branch --- and such that each compression is within $k\comb$ of both
+$L\cdot R$ orderings. Idempotence of the amplified compression
+(\texttt{lem-compcb-amplified-compression-identities}) also gives the fixed-point identity
+$A=\Co{T_n}{R_n}(A)$.
+
+\emph{Compressed unit versus projection.} For $S\in\{T_n,R_n\}$ and $\cunit{S}=\Co{S}{S}(S)$
+one has $(L_SR_S)(S)=S(S^2)$, and bilinearity gives $S(S^2)-S=S(S^2-S)+(S^2-S)$. With
+$\nrm{S^2-S}\le\dproj$, the multiplication bound, and
+$\nrm{\Co{S}{S}-L_SR_S}\le k\comb$,
+\begin{equation}\label{eq:cua-unit}
+  \nrm{\cunit{S}-S}\;\le\;k\comb\nrm{S}+(1+\ecs)\nrm{S}\dproj+\dproj
+  \;\le\;K_u\comb,\qquad K_u:=kM+2M+1,
+\end{equation}
+and hence $\nrm{\cunit{S}}\le M+K_u$, uniformly in $n$.
+
+\emph{Ambient action of the projections.} Put $D=T_n(AR_n)$. The fixed-point identity and
+the compression comparison give $\nrm{A-D}\le k\comb\nrm{A}$, and one telescopes
+\[
+  T_nA-A=T_n(A-D)+\bigl(T_nD-D\bigr)+(D-A).
+\]
+The outer terms cost $2Mk\comb\nrm{A}$ and $k\comb\nrm{A}$. For the middle term write
+$Y=AR_n$, so that $T_nD-D=T_n(T_nY)-T_nY$; approximate associativity contributes
+$\ecs M^2\nrm{Y}$ and $\nrm{T_n^2-T_n}\le\dproj$ contributes $2\dproj\nrm{Y}$, and
+$\nrm{Y}\le2M\nrm{A}$. Altogether $\nrm{T_nA-A}\le K_T\comb\nrm{A}$ with
+$K_T=2Mk+2M(M^2+2)+k$; the right-hand estimate $\nrm{AR_n-A}\le K_R\comb\nrm{A}$ is the
+mirror argument with $D=(T_nA)R_n$ and the same constant. Substituting the units via
+\eqref{eq:cua-unit} --- $\nrm{(\cunit{T,n}-T_n)A}\le2K_u\comb\nrm{A}$ and symmetrically ---
+gives the ambient form
+\begin{equation}\label{eq:cua-ambient}
+  \nrm{\cunit{T,n}A-A}\le K_a\comb\nrm{A},\quad
+  \nrm{A\,\cunit{R,n}-A}\le K_a\comb\nrm{A},\qquad
+  K_a:=\max(K_T,K_R)+2K_u .
+\end{equation}
+
+\emph{From ambient to compressed.} The pairs $(\cunit{T,n},A)$ and $(A,\cunit{R,n})$ are
+compatible amplified rectangular pairs in the exact sense required by
+\texttt{lem-compcb-rectangular-product}, which therefore gives universal $C_p$ with
+$\nrm{\cunit{T,n}\cpr A-\cunit{T,n}A}\le C_p\comb\nrm{\cunit{T,n}}\nrm{A}$ and its mirror.
+Combining with \eqref{eq:cua-ambient} and $\nrm{\cunit{S}}\le M+K_u$ yields
+\eqref{eq:cua-main} with
+\[
+  C_{\mathrm{co}}=K_a+C_p\,(M+K_u),
+  \qquad
+  \comb_{\mathrm{co}}=\min\bigl(\comb_0,\comb_p,\comb_{\mathrm{cmp}},\comb_{\mathrm{id}},1\bigr),
+\]
+all universal and independent of $n$, $\mathcal A$, $T$, $R$, $A$.
+
+A bookkeeping remark: the later nodes of the export re-derive
+\eqref{eq:cua-unit}--\eqref{eq:cua-ambient} in ``dependency-closed'' form, so that the
+final assembly rests only on validated premises and not on any node still pending at the
+time. The mathematics is unchanged; the restructuring is what let the tree close
+bottom-up.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-compcb-compressed-unit-action}: 20 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-compcb-amplified-compression},
+\texttt{lem-compcb-amplified-compression-identities} and
+\texttt{lem-compcb-rectangular-product}. It supplies the unit axiom needed by
+\texttt{lem-compcb-corner-algebra} (\S\ref{sec:compcb-corner-algebra}) --- a corner cannot
+be an approximate $C^*$-algebra without an approximate unit --- and it is the input that
+drives the diagonal unit estimate \texttt{lem-hcb3-diagonal-unit}
+(\S\ref{sec:hcb3-diagonal-unit}).

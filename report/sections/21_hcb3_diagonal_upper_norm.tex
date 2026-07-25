@@ -1,0 +1,112 @@
+% SHARD-ID: AISM-21-HCB3-DIAGONAL-UPPER-NORM
+% SHARD-TITLE: The uniform diagonal Ha upper norm
+% SHARD-SUMMARY: Reproduces lem-hcb3-diagonal-upper-norm, the af-validated bound making the amplified diagonal Ha map a contraction up to 1+O(e).
+% SHARD-SUMMARY: Explains the matrix-uniform square estimate, the quadratic recurrence for the operator norm, and the scalar root argument that closes it.
+% SHARD-KEYWORDS: lem-hcb3-diagonal-upper-norm, af validated, Ha map, operator norm, quadratic recurrence, corner algebra
+\section{The uniform diagonal Ha upper norm}\label{sec:hcb3-diagonal-upper-norm}
+
+\begin{lemma}[\texttt{lem-hcb3-diagonal-upper-norm}]\label{lem:hcb3-diagonal-upper-norm}
+There are universal $C_{\mathrm{up}}<\infty$ and $\comb_{\mathrm{up}}>0$ such that every
+H-CB datum with $\comb\le \comb_{\mathrm{up}}$, every $n\ge1$ and every
+$Z\in\Amp{n}{\Cnrs{P}}$ satisfy
+\begin{equation}\label{eq:un-main}
+  \bigl\lVert\Han{Q}{P}{P}{n}(Z)\bigr\rVert\;\le\;\bigl(1+C_{\mathrm{up}}\,\comb\bigr)\nrm{Z}.
+\end{equation}
+\emph{Transcription note.} The left norm is the operator norm on maps of the amplified
+column space; $\nrm{Z}$ is the ambient norm of $Z$ in $\Amp{n}{\Cnrs{P}}$. The estimate is
+uniform in $n$, which is the whole difficulty: the level-one statement is a routine
+consequence of the corner structure, the matrix-uniform one is not.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Uniform diagonal Ha upper norm: there are universal C_up < infinity and e_up > 0 such that every H-CB datum with e <= e_up, every n >= 1, and every Z in M_n tensor S_P satisfy ||(Ha^Q_{P,P})_n(Z)|| <= (1+C_up*e)||Z||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Write $h_n=\Han{Q}{P}{P}{n}$ and $b_n=\nrm{h_n}$ for its operator norm; the goal is
+$b_n\le1+C_{\mathrm{up}}\comb$ for every $n$.
+
+\emph{The matrix-uniform square estimate.} The first ingredient is
+\begin{equation}\label{eq:un-square}
+  \nrm{Z\dg\cpr Z}\;\le\;(1+\kappa\comb)\nrm{Z}^{2},
+  \qquad Z\in\Amp{n}{\Cnrs{P}},
+\end{equation}
+with $\kappa=C_{\mathrm{ca}}$ and threshold $\comb_{\mathrm{sq}}=\comb_{\mathrm{ca}}$. If
+$\Cnrs{P}=0$ then $\Amp{n}{\Cnrs{P}}=0$ for every $n$, so $Z=0$ and
+\eqref{eq:un-square} is trivial. Otherwise $\Cnrs{P}\ne0$ puts $P$ in the nonvanishing
+branch of the $\dproj$-projection dichotomy, and
+\texttt{lem-compcb-corner-algebra} makes $\Cnrs{P}$ an \emph{extended}
+$C_{\mathrm{ca}}\comb$-$C^*$-algebra --- so, by the meaning of ``extended'', every
+$\Amp{n}{\Cnrs{P}}$ is a $C_{\mathrm{ca}}\comb$-$C^*$-algebra with the \emph{same}
+parameter, independent of $n$. Its product upper axiom together with isometry of the
+inherited involution then gives \eqref{eq:un-square}.
+
+This is the shard's instructive correction, and it explains the shape of the dependency
+list. An earlier audit of the tree found that the permitted inputs at that time --- the
+compressed-product display, the level-one $\ecs$-$C^*$ axioms,
+\texttt{def-hcb-datum} (data and notation only), and the two Ha lemmas --- gave
+\eqref{eq:un-square} at $n=1$ and \emph{nowhere else}: passing to arbitrary $n$ was not an
+inference from any allowed premise but a genuinely missing amplified-corner theorem. Once
+\texttt{lem-compcb-corner-algebra} became an allowed dependency, the negative audit nodes
+became obsolete and are marked as such.
+
+\emph{A quadratic recurrence for $b_n$.} Finiteness of $b_n$ is established without any
+finite-dimensionality assumption on $\Cnrs{P}$. From the defining Ha relation and the
+level-one bounds --- $\nrm{A\cpr B}\le K_{\mathrm{dot}}\nrm{A}\nrm{B}$, the two-sided
+comparison $c_q^{-1}\nrm{X}\le\colq{}(X)\le c_q\nrm{X}$, and $\nrm{\cunit{Q}}\ge c_u>0$
+(with $Q$ nonvanishing because it is one-dimensional) --- one gets
+$2\lvert\ipo{Y}{h(Z)X}\rvert\,\nrm{\cunit{Q}}\le2K_{\mathrm{dot}}^{2}\nrm{Y}\nrm{Z}\nrm{X}$,
+hence $\lvert\ipo{Y}{h(Z)X}\rvert\le K_1\colq{}(Y)\nrm{Z}\colq{}(X)$ with
+$K_1=K_{\mathrm{dot}}^{2}c_q^{2}/c_u$, and Hilbert-space duality in the $\colq{}$ norm
+gives $\nrm{h(Z)}\le K_1\nrm{Z}$ at level one. For fixed finite $n$, $h_n(Z)=[h(Z_{ij})]$
+on the Hilbert direct sum, so
+$\nrm{h_n(Z)}\le\bigl(\sum_{i,j}\nrm{h(Z_{ij})}^{2}\bigr)^{1/2}\le nK_1\nrm{Z}$, using
+contractivity of matrix-coordinate compressions. Crude in $n$, but finite --- which is all
+that is needed to \emph{form} $b_n$ and take a supremum.
+
+Now let $\comb\le\min(\comb_{\mathrm{sq}},\comb_{\mathrm{prod}},\comb_{\mathrm{adj}})$ and
+$Z\in E_n:=\Amp{n}{\Cnrs{P}}$. Put $T=h_n(Z)$. The operator $C^*$-identity gives
+$\nrm{T}^{2}=\nrm{T\dg T}$; \texttt{lem-hcb2-amplified-adjointness} identifies
+$T\dg=h_n(Z\dg)$ --- exactly, which is what makes this move legitimate; and
+\texttt{lem-hcb2-product-defect} with all three corner indices equal to $P$ gives
+$\nrm{h_n(Z\dg)h_n(Z)-h_n(Z\dg\cpr Z)}\le C_{\mathrm{prod}}\comb\nrm{Z}^{2}$. Chaining
+with boundedness of $h_n$ and \eqref{eq:un-square},
+\[
+  \nrm{h_n(Z)}^{2}
+  \;\le\;b_n\nrm{Z\dg\cpr Z}+C_{\mathrm{prod}}\comb\nrm{Z}^{2}
+  \;\le\;\bigl[(1+\kappa\comb)b_n+C_{\mathrm{prod}}\comb\bigr]\nrm{Z}^{2}.
+\]
+If $E_n=\{0\}$ then $b_n=0$ and the recurrence below holds trivially; otherwise the unit
+sphere of $E_n$ is nonempty, $b_n$ is a finite supremum over it, and
+$\sup\nrm{h_n(Z)}^{2}=\bigl(\sup\nrm{h_n(Z)}\bigr)^{2}=b_n^{2}$, so
+\begin{equation}\label{eq:un-recurrence}
+  b_n^{2}\;\le\;(1+\kappa\comb)\,b_n+C_{\mathrm{prod}}\comb .
+\end{equation}
+
+\emph{The root argument.} It remains to solve \eqref{eq:un-recurrence}. For nonnegative
+$b,\comb,\kappa,C$ with $b^{2}\le ab+C\comb$ and $a=1+\kappa\comb$, set
+$x=1+(\kappa+C)\comb$ and $f(t)=t^{2}-at-C\comb$. Direct expansion gives
+$f(x)=C(\kappa+C)\comb^{2}\ge0$, and $f$ is strictly increasing on $[x,\infty)$ because
+$2x-a=1+(\kappa+2C)\comb>0$. The hypothesis is $f(b)\le0$; if $b>x$ then monotonicity
+would give $f(b)>f(x)\ge0$, a contradiction. Hence $b\le x$.
+
+Applying this with $b=b_n$ and $C=C_{\mathrm{prod}}$ gives
+$b_n\le1+(\kappa+C_{\mathrm{prod}})\comb$ for every $n$, which is \eqref{eq:un-main} with
+$C_{\mathrm{up}}=\kappa+C_{\mathrm{prod}}$ and
+$\comb_{\mathrm{up}}=\min(\comb_{\mathrm{sq}},\comb_{\mathrm{prod}},\comb_{\mathrm{adj}})$;
+both are universal.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb3-diagonal-upper-norm}: 30 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-hcb2-amplified-adjointness},
+\texttt{lem-hcb2-product-defect} and
+\texttt{lem-compcb-corner-algebra}. It is the upper half of the norm control that the
+parent contract \texttt{conj-hcb} requires; the matching lower half,
+\texttt{lem-hcb3-diagonal-lower-modulus}, is \emph{not} validated --- it is mid-validation
+at the time of writing --- and the inverse and canonical tiers beyond it are
+\texttt{af: none}. \texttt{conj-hcb} itself is \texttt{proved-mod-audit}, i.e. open at this
+repository's rigour ladder, and nothing here bears on the status of
+\texttt{op-classical}.

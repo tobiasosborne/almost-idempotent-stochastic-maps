@@ -1,0 +1,79 @@
+% SHARD-ID: AISM-05-COMPCB-AMPLIFIED-COMPRESSION-IDENTITIES
+% SHARD-TITLE: Idempotence and adjoint symmetry of amplified compressions
+% SHARD-SUMMARY: Reproduces lem-compcb-amplified-compression-identities, the af-validated amplified idempotence and dagger-symmetry of the compression maps.
+% SHARD-SUMMARY: Explains the transfer of two exact level-one identities through the entrywise amplification, and records the verdict-driven contract amendment binding the ambient algebra.
+% SHARD-KEYWORDS: lem-compcb-amplified-compression-identities, af validated, idempotence, involution, amplification, contract amendment
+\section{Idempotence and adjoint symmetry of amplified compressions}\label{sec:compcb-amplified-compression-identities}
+
+\begin{lemma}[\texttt{lem-compcb-amplified-compression-identities}]\label{lem:compcb-amplified-compression-identities}
+There is a universal $\comb_{\mathrm{cmp}}>0$ such that, whenever $\mathcal A$ is an
+extended $\ecs$-$C^*$-algebra, $\comb=\dproj+\ecs\le \comb_{\mathrm{cmp}}$, $P,Q$ are
+$\dproj$-projections in $\mathcal A$, $n\ge1$, and $X\in\Amp{n}{\mathcal A}$, one has
+\begin{equation}\label{eq:aci-both}
+  \Co{P_n}{Q_n}^{\,2}=\Co{P_n}{Q_n},
+  \qquad
+  \Co{P_n}{Q_n}(X)\dg=\Co{Q_n}{P_n}\bigl(X\dg\bigr),
+\end{equation}
+where $P_n=\ampel{n}{P}$ and $Q_n=\ampel{n}{Q}$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Amplified compression identities: there is a universal e_cmp > 0 such that, whenever A is an extended epsilon-C*-algebra, e=delta+epsilon <= e_cmp, P,Q are delta-projections in A, n >= 1, and X is in M_n tensor A, one has Co_{P_n,Q_n}^2=Co_{P_n,Q_n} and Co_{P_n,Q_n}(X)^dagger=Co_{Q_n,P_n}(X^dagger), where P_n=I_n tensor P and Q_n=I_n tensor Q.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The argument is short because the amplification lemma has already done the structural
+work; what remains is to check that two \emph{exact} level-one identities survive the
+passage to matrices.
+
+\emph{Identification.} Take $\comb_{\mathrm{cmp}}$ to be the universal constant supplied
+by \texttt{lem-compcb-amplified-compression}. For $\comb\le \comb_{\mathrm{cmp}}$ that
+lemma gives $\Co{P_n}{Q_n}=\ampl{n}\Co{P}{Q}$, and --- applied a second time to the
+\emph{ordered} pair $(Q,P)$, which is a distinct instance --- also
+$\Co{Q_n}{P_n}=\ampl{n}\Co{Q}{P}$. Both amplified compressions are therefore canonical
+amplifications of level-one maps.
+
+\emph{The level-one identities.} Writing $T=\Co{P}{Q}$ and $U=\Co{Q}{P}$,
+\texttt{def-compressed-corner} states exactly $T^2=T$ and $T(x)\dg=U(x\dg)$ for all
+$x\in\mathcal A$. These are equalities, not estimates; no smallness is consumed by them,
+and the threshold above is needed only for the identification step.
+
+\emph{Entrywise transfer.} Let $T,U$ be any linear maps on a self-adjoint operator space
+satisfying those two identities, and let $T_n=\ampl{n}T$, $U_n=\ampl{n}U$. For
+$X=[x_{ij}]$, idempotence is checked slotwise,
+\[
+  (T_n^2X)_{ij}=T\bigl(T(x_{ij})\bigr)=(T^2)(x_{ij})=T(x_{ij})=(T_nX)_{ij},
+\]
+so $T_n^2=T_n$. Adjoint symmetry combines the matrix involution with the slotwise action:
+the $(i,j)$ entry of $T_n(X)\dg$ is $T(x_{ji})\dg=U\bigl(x_{ji}\dg\bigr)$, while the
+$(i,j)$ entry of $U_n(X\dg)$ is $U\bigl((X\dg)_{ij}\bigr)=U\bigl(x_{ji}\dg\bigr)$. The
+transposition of indices is what makes the \emph{swap} $\Co{P_n}{Q_n}\mapsto\Co{Q_n}{P_n}$
+in \eqref{eq:aci-both} the right statement. Combining the identification with the transfer
+gives the lemma.
+
+\emph{A recorded contract amendment.} The export's final node is a contract-reconciliation
+step, and it documents why the statement is shaped as it is. The originally codified
+contract left the ambient algebra unbound: a challenge observed that the proof used, but
+the contract never asserted, that $\mathcal A$ is an extended $\ecs$-$C^*$-algebra with
+$P,Q$ in $\mathcal A$. The contract was amended to the prover's corrected root text ---
+the version reproduced above --- as a mechanical, verdict-driven typing repair. The added
+clauses are the intended and already-used hypotheses of the source argument, so nothing
+was strengthened or weakened.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-compcb-amplified-compression-identities}: 7 nodes, all
+\texttt{validated}, root \texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-compcb-amplified-compression}. These two identities are the algebraic
+skeleton on which every quantitative COMP estimate is hung: idempotence is what makes
+``$X$ lies in the corner'' equivalent to ``$X$ is fixed by its compression'', and the
+dagger swap is what lets an estimate proved on one side of a rectangular corner be read
+on the other. It is imported by \texttt{lem-compcb-rectangular-product},
+\texttt{lem-compcb-amplified-almost-containment},
+\texttt{lem-compcb-compressed-unit-norm},
+\texttt{lem-compcb-compressed-unit-action},
+\texttt{lem-compcb-corner-algebra},
+\texttt{lem-compcb-single-compression-transfer},
+\texttt{lem-hcb2-amplified-adjointness} and
+\texttt{lem-hcb1-variational-identity}.

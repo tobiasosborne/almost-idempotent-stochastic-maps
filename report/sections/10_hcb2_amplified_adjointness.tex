@@ -1,0 +1,99 @@
+% SHARD-ID: AISM-10-HCB2-AMPLIFIED-ADJOINTNESS
+% SHARD-TITLE: Exact adjointness of the amplified Ha map
+% SHARD-SUMMARY: Reproduces lem-hcb2-amplified-adjointness, the af-validated exact identity relating the operator adjoint of an amplified Ha map to the involution of its argument.
+% SHARD-SUMMARY: Explains the exact product-reversal identity, the level-one uniqueness argument in the Ha defining relation, and the blockwise transport to amplifications.
+% SHARD-KEYWORDS: lem-hcb2-amplified-adjointness, af validated, Ha map, adjointness, involution, product reversal
+\section{Exact adjointness of the amplified Ha map}\label{sec:hcb2-amplified-adjointness}
+
+\begin{lemma}[\texttt{lem-hcb2-amplified-adjointness}]\label{lem:hcb2-amplified-adjointness}
+There is a universal $\comb_{\mathrm{adj}}>0$ such that every H-CB datum with
+$\comb\le \comb_{\mathrm{adj}}$, every $n\ge1$ and every $Z\in\Amp{n}{\Cnr{P}{R}}$
+satisfy
+\begin{equation}\label{eq:adj-main}
+  \Han{Q}{P}{R}{n}(Z)\dg\;=\;\Han{Q}{R}{P}{n}\bigl(Z\dg\bigr).
+\end{equation}
+\emph{Transcription note.} The datum is that of \texttt{def-hcb-datum} and
+$\Ha{Q}{P}{R}$ is the map of \texttt{def-ha-map}; $\comb=\dproj+\ecs$. The two daggers in
+\eqref{eq:adj-main} are different operations: on the left it is the Hilbert-space adjoint
+of the operator $\Han{Q}{P}{R}{n}(Z)$ between amplified column spaces, on the right it is
+the involution of the ambient algebra applied to $Z$. The identity is \emph{exact} --- no
+$O(\comb)$ error --- and the threshold is needed only so that the sesquilinear forms
+involved are genuine inner products.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Exact amplified Ha adjointness: there is a universal e_adj > 0 such that every H-CB datum with e <= e_adj, every n >= 1, and every Z in M_n tensor S_{P,R} satisfy (Ha^Q_{P,R})_n(Z)^dagger=(Ha^Q_{R,P})_n(Z^dagger).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{Threshold.} Set $\comb_{\mathrm{adj}}=\min(\comb_{\mathrm{cmp}},\comb_{\mathrm{ip}})$,
+where $\comb_{\mathrm{cmp}}$ comes from
+\texttt{lem-compcb-amplified-compression-identities} and $\comb_{\mathrm{ip}}$ is a
+universal smallness threshold below which the Euclidean sesquilinear forms of
+\texttt{def-ha-map} and of the column-Hilbert displays are genuine inner products --- such
+a threshold exists because those forms agree with the norms up to a $1\pm O(\comb)$
+factor. Fix an arbitrary datum, $n$ and $Z$.
+
+\emph{Corner symmetries.} Applying
+\texttt{lem-compcb-amplified-compression-identities} at $n=1$: if
+$a\in\Cnr{A}{B}=\Img\Co{A}{B}$ then $a=\Co{A}{B}(a)$, so
+$a\dg=\Co{B}{A}(a\dg)$ and $a\dg\in\Cnr{B}{A}$; and since $Q\dg=Q$, the compressed unit
+$\widetilde Q=\Cos{Q}(Q)$ is Hermitian.
+
+\emph{Exact product reversal.} The pivotal algebraic fact is
+\begin{equation}\label{eq:adj-reversal}
+  (a\cpr b)\dg=b\dg\cpr a\dg
+  \qquad (a\in\Cnr{A}{B},\ b\in\Cnr{B}{C}),
+\end{equation}
+and it is \emph{exact}. The proof is three substitutions: the compressed-product display
+gives $a\cpr b=\Co{A}{C}(ab)$; the imported identities at $n=1$ give
+$\Co{A}{C}(ab)\dg=\Co{C}{A}\bigl((ab)\dg\bigr)$; the involution axiom gives
+$(ab)\dg=b\dg a\dg$; and a second use of the display, legitimate because the reversed
+corner memberships were just established, gives
+$\Co{C}{A}(b\dg a\dg)=b\dg\cpr a\dg$. No associativity estimate and no approximation
+enter. The tree records a correction here worth one sentence: an earlier audit node
+concluded that \eqref{eq:adj-reversal} was \emph{not} derivable, because the formula
+$a\cpr b=\Co{A}{C}(ab)$ had not been registered as an allowed input in the workspace;
+after the compressed-product display was registered, that negative conclusion --- and the
+associated demand for further definition provisioning --- was explicitly withdrawn.
+
+\emph{Level one.} Fix $z\in\Cnr{P}{R}$ and put $T=\Ha{Q}{P}{R}(z)$. The defining relation
+of \texttt{def-ha-map} reads, for all $x\in\Cnr{R}{Q}$ and $y\in\Cnr{P}{Q}$,
+\begin{equation}\label{eq:adj-defining}
+  (y\dg\cpr z)\cpr x+y\dg\cpr(z\cpr x)=2\,\ipo{y}{Tx}\,\widetilde Q .
+\end{equation}
+Apply $\dg$ to \eqref{eq:adj-defining}. On the left, \eqref{eq:adj-reversal} reverses each
+compressed product, turning the two summands into
+$x\dg\cpr(z\dg\cpr y)$ and $(x\dg\cpr z\dg)\cpr y$. On the right, $\widetilde Q$ is
+Hermitian and the scalar is conjugated, and conjugate symmetry together with the
+definition of the Hilbert-space adjoint gives
+$\overline{\ipo{y}{Tx}}=\ipo{Tx}{y}=\ipo{x}{T\dg y}$. Thus for all $x,y$,
+\[
+  (x\dg\cpr z\dg)\cpr y+x\dg\cpr(z\dg\cpr y)=2\,\ipo{x}{T\dg y}\,\widetilde Q .
+\]
+This is precisely the defining relation of \texttt{def-ha-map} for the pair $(R,P)$, the
+symbol $z\dg$, the input $y$ and the test vector $x$; and that relation determines its
+solution uniquely. Hence $\Ha{Q}{R}{P}(z\dg)y=T\dg y$ for every $y$, i.e.
+$\Ha{Q}{R}{P}(z\dg)=\Ha{Q}{P}{R}(z)\dg$.
+
+\emph{Amplification.} Write $Z=[Z_{ij}]$. By the amplification convention of the
+contract, $\Han{Q}{P}{R}{n}(Z)$ is the block operator $[\Ha{Q}{P}{R}(Z_{ij})]$ from the
+$n$-fold Hilbert direct sum of $\Cnr{R}{Q}$ to that of $\Cnr{P}{Q}$; its Hilbert-space
+adjoint therefore has $(i,j)$ block $\Ha{Q}{P}{R}(Z_{ji})\dg$. On the other side,
+$(Z\dg)_{ij}=Z_{ji}\dg$, which lies in $\Cnr{R}{P}$ by the corner symmetry above, so the
+$(i,j)$ block of $\Han{Q}{R}{P}{n}(Z\dg)$ is $\Ha{Q}{R}{P}(Z_{ji}\dg)$. The level-one
+identity equates the two blockwise, and equality of all blocks is \eqref{eq:adj-main}.
+Since $n$ and $Z$ were arbitrary, the lemma follows.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb2-amplified-adjointness}: 21 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-compcb-amplified-compression-identities}. Being exact rather than approximate,
+it is what allows a $C^*$-identity argument to be run on the amplified Ha map: it is used
+in \texttt{lem-hcb3-diagonal-upper-norm} (\S\ref{sec:hcb3-diagonal-upper-norm}) to
+identify $\Han{Q}{P}{P}{n}(Z)\dg$ with $\Han{Q}{P}{P}{n}(Z\dg)$ inside
+$\nrm{T}^2=\nrm{T\dg T}$, and it is a declared dependency of the not-yet-validated
+lower-modulus, off-diagonal-inverse and canonical-closeness lemmas of the remaining H-CB
+queue.

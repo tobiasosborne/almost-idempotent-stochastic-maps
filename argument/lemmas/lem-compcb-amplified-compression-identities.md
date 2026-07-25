@@ -6,13 +6,14 @@ defs: def-extended-epsilon-cstar-algebra; def-delta-projection; def-compressed-c
 deps: lem-compcb-amplified-compression
 status: proved
 af: validated
-provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (DECOMP:152-183; TeX 1054-1064,1542-1544); VERDICT-FUDW-DECOMP-V3.md §§2.2,D
+provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (DECOMP:152-183; TeX 1054-1064,1542-1544); VERDICT-FUDW-DECOMP-V3.md §§2.2,D; report lem:compcb-amplified-compression-identities
 owner: A
 workspace: proofs/lem-compcb-amplified-compression-identities
 ---
 
-**Status.** Faithful safe-subset transcription at `proved-mod-audit`; it is
-not `cited`, not `af`-validated, and not L0-rigorous.
+**Status.** `proved`; `af: validated` — root-validated, taint-clean
+adversarial tree (mechanical ledger reflection; export at
+`proofs/lem-compcb-amplified-compression-identities/export.md`).
 
 **Provenance.** `DESIGN-FUDW-DECOMP-v3.md` §2.1 at the recorded source loci;
 safe-subset authorization and faithfulness finding in

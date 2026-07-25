@@ -1,0 +1,103 @@
+% SHARD-ID: AISM-04-COMPCB-AMPLIFIED-COMPRESSION
+% SHARD-TITLE: The amplified compression identity
+% SHARD-SUMMARY: Reproduces lem-compcb-amplified-compression, the af-validated identification of the amplified compression map and corner with their entrywise amplifications.
+% SHARD-SUMMARY: Explains the uniform theta-domain threshold, the entrywise operator amplification that replaces the diagonal embedding, and the range identification.
+% SHARD-KEYWORDS: lem-compcb-amplified-compression, af validated, compression map, amplification, compressed corner, theta domain
+\section{The amplified compression identity}\label{sec:compcb-amplified-compression}
+
+\begin{lemma}[\texttt{lem-compcb-amplified-compression}]\label{lem:compcb-amplified-compression}
+There is a universal $\comb_{\mathrm{cmp}}>0$ such that, whenever
+$\comb=\dproj+\ecs\le \comb_{\mathrm{cmp}}$, every pair of $\dproj$-projections $P,Q$ in
+an extended $\ecs$-$C^*$-algebra and every $n\ge1$ satisfy
+\begin{equation}\label{eq:ac-maps}
+  \ampl{n}\Co{P}{Q}\;=\;\Co{\ampel{n}{P}}{\ampel{n}{Q}}
+\end{equation}
+and
+\begin{equation}\label{eq:ac-corners}
+  \Amp{n}{\Cnr{P}{Q}}\;=\;\Cnr{\ampel{n}{P}}{\ampel{n}{Q}} .
+\end{equation}
+\emph{Transcription note.} $\Co{P}{Q}$ and $\Cnr{P}{Q}$ are the compression map and
+compressed corner of \texttt{def-compressed-corner}; $\dproj$-projections are as in
+\texttt{def-delta-projection}, and ``extended'' is as in
+\texttt{def-extended-epsilon-cstar-algebra}, so that every $\Amp{n}{\mathcal A}$ is
+itself an $\ecs$-$C^*$-algebra. On the left of \eqref{eq:ac-maps} $\ampl{n}(\cdot)$
+denotes the entrywise amplification of an \emph{operator} on $\mathcal A$; on the right
+$\ampel{n}{P}$ is the amplified \emph{element}.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Amplified compression identity: there is a universal e_cmp > 0 such that, whenever e=delta+epsilon <= e_cmp, every pair of delta-projections P,Q in an extended epsilon-C*-algebra and every n >= 1 satisfy 1_{M_n} tensor Co_{P,Q}=Co_{I_n tensor P,I_n tensor Q} and M_n tensor S_{P,Q}=S_{I_n tensor P,I_n tensor Q}.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{A uniform threshold.} Write $P_n=\ampel{n}{P}$, $Q_n=\ampel{n}{Q}$. Because
+$\mathcal A$ is \emph{extended}, each $\Amp{n}{\mathcal A}$ is an $\ecs$-$C^*$-algebra
+with compatible matrix multiplication, involution, unit and amplification norm; since
+$P_n\dg=P_n$ and $\nrm{P_n^2-P_n}=\nrm{\ampel{n}{(P^2-P)}}=\nrm{P^2-P}\le\dproj$, the
+amplified elements are $\dproj$-projections \emph{with the same $\dproj$, uniformly in
+$n$}. Next, the compression is the value of $\theta$ at a fixed operator: writing
+$\mathrm A_{P,Q}=\tfrac12(L_PR_Q+R_QL_P)$ and $T_{P,Q}=2\mathrm A_{P,Q}-I$,
+\texttt{def-compressed-corner} supplies a single universal $C$ with
+$\nrm{\mathrm A_{P,Q}^2-\mathrm A_{P,Q}}\le C\comb$ in \emph{every} $\ecs$-$C^*$-algebra,
+and the exact operator identity
+\begin{equation}\label{eq:ac-theta-domain}
+  T_{P,Q}^2-I=4\bigl(\mathrm A_{P,Q}^2-\mathrm A_{P,Q}\bigr)
+\end{equation}
+converts this into $\nrm{T_{P,Q}^2-I}\le4C\comb$. Since the same $C$ applies inside every
+$\Amp{n}{\mathcal A}$ to the pair $(P_n,Q_n)$, choosing $\comb_{\mathrm{cmp}}$ with
+$4C\comb_{\mathrm{cmp}}<1$ puts $T_{P,Q}$ and every $T_{P_n,Q_n}$ simultaneously inside the
+$\theta$/$\sgn$ domain of \texttt{def-theta-idempotent-approximation}. Uniformity of the
+threshold in $n$ is exactly what \eqref{eq:ac-theta-domain} buys.
+
+\emph{The amplification is entrywise, not diagonal.} Left and right multiplication by the
+block-diagonal $P_n,Q_n$ act slotwise: for $X=[x_{ij}]$ one has
+$L_{P_n}R_{Q_n}(X)=[P(x_{ij}Q)]$ and $R_{Q_n}L_{P_n}(X)=[(Px_{ij})Q]$, whence
+$T_{P_n,Q_n}=\ampl{n}T_{P,Q}$. Here the tree records a correction that is genuinely
+load-bearing. The relevant map is \emph{not} the diagonal embedding of $B(\mathcal A)$
+into $\Mat{n}\bigl(B(\mathcal A)\bigr)$ but the entrywise operator amplification
+\[
+  \Gamma_n:B(\mathcal A)\to B(\Amp{n}{\mathcal A}),\qquad
+  \Gamma_n(U)\bigl([x_{ij}]\bigr)=[U(x_{ij})],
+\]
+and the tree proves exactly the properties $\Gamma_n$ has and no more: coordinate
+compression gives $\nrm{x_{ij}}\le\nrm{X}$ and $\nrm{E_{ij}\otimes y}=\nrm{y}$, so
+$\nrm{\Gamma_n(U)}\le n^2\nrm{U}$ --- bounded at each fixed $n$, with \emph{no} claim of
+isometry and \emph{no} uniform-in-$n$ operator bound; and entrywise evaluation gives
+$\Gamma_n(I)=I$ and $\Gamma_n(UV)=\Gamma_n(U)\Gamma_n(V)$. Boundedness at fixed $n$ is all
+that is needed, because the $\theta$ series is a norm limit for each fixed $n$
+separately.
+
+\emph{Transporting $\theta$.} Put $T=T_{P,Q}$ and $R=T^2-I$. On $\nrm{R}<1$ the
+registered calculus writes $\theta(T)=\tfrac12\bigl(I+T\sum_{k\ge0}b_kR^{k}\bigr)$ with
+$b_k$ the Taylor coefficients of $(1+z)^{-1/2}$ --- the branch identified in
+\texttt{lem-compcb-amplification-naturality}. Since $\Gamma_n$ is a unital algebra
+homomorphism it commutes with every partial sum and satisfies
+$\Gamma_n(R)=\Gamma_n(T)^2-I$; boundedness lets one pass to the norm limit; and the
+threshold above guarantees that the limit at $\Gamma_n(T)=T_{P_n,Q_n}$ is the value
+$\theta(T_{P_n,Q_n})$. Hence
+$\Gamma_n(\theta(T_{P,Q}))=\theta(T_{P_n,Q_n})$, which by
+$\Co{P}{Q}=\theta(T_{P,Q})$ is precisely \eqref{eq:ac-maps}.
+
+\emph{Ranges.} For any linear $C:\mathcal A\to\mathcal A$ and finite $n$ one has
+$\Img(\ampl{n}C)=\Amp{n}{\Img C}$: every output has entries $C(x_{ij})$, and conversely
+finitely many entrywise preimages assemble into a single matrix preimage. Since
+$\Cnr{P}{Q}=\Img\Co{P}{Q}$ by \texttt{def-compressed-corner}, applying this to
+\eqref{eq:ac-maps} gives \eqref{eq:ac-corners}.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-compcb-amplified-compression}: 13 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-compcb-amplification-naturality}. This is the structural keystone of the COMP
+tier: every later result that says ``uniformly in $n$'' does so because
+\eqref{eq:ac-maps}--\eqref{eq:ac-corners} let a level-one fact be read at level $n$ with
+no loss. It is imported by \texttt{lem-compcb-amplified-compression-identities},
+\texttt{lem-compcb-entrywise-compression-naturality},
+\texttt{lem-compcb-rectangular-product},
+\texttt{lem-compcb-amplified-almost-containment},
+\texttt{lem-compcb-compressed-unit-norm},
+\texttt{lem-compcb-compressed-unit-action},
+\texttt{lem-compcb-row-column-product},
+\texttt{lem-compcb-single-compression-transfer} and
+\texttt{lem-hcb2-product-defect}.

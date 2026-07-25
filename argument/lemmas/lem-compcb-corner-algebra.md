@@ -6,13 +6,14 @@ defs: def-extended-epsilon-cstar-algebra; def-delta-projection; def-compressed-c
 deps: lem-compcb-amplified-compression-identities; lem-compcb-rectangular-product; lem-compcb-compressed-unit-action; lem-compcb-compressed-unit-norm
 status: proved
 af: validated
-provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (DECOMP:152-183; TeX 1077-1082); VERDICT-FUDW-DECOMP-V3.md §§1.2,2.2,D
+provenance: DESIGN-FUDW-DECOMP-v3.md §2.1 (DECOMP:152-183; TeX 1077-1082); VERDICT-FUDW-DECOMP-V3.md §§1.2,2.2,D; report lem:compcb-corner-algebra
 owner: A
 workspace: proofs/lem-compcb-corner-algebra
 ---
 
-**Status.** Faithful safe-subset transcription at `proved-mod-audit`; it is
-not `cited`, not `af`-validated, and not L0-rigorous.
+**Status.** `proved`; `af: validated` — root-validated, taint-clean
+adversarial tree (mechanical ledger reflection; export at
+`proofs/lem-compcb-corner-algebra/export.md`).
 
 **Provenance.** `DESIGN-FUDW-DECOMP-v3.md` §2.1 at the recorded source loci;
 safe-subset authorization and COMP faithfulness finding in

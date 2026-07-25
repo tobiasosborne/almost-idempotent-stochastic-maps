@@ -1,0 +1,107 @@
+% SHARD-ID: AISM-15-HCB-COLUMN-HILBERT-SQUARED
+% SHARD-TITLE: The corrected amplified column-Hilbert estimate
+% SHARD-SUMMARY: Reproduces lem-hcb-column-hilbert-squared, the af-validated comparison of the amplified column inner product with the squared column norm.
+% SHARD-SUMMARY: Explains the three scalar estimates and their synthesis, and records the withdrawn zero-padding route that forced two new dependencies.
+% SHARD-KEYWORDS: lem-hcb-column-hilbert-squared, af validated, column Hilbert, squared estimate, withdrawn route, nonvanishing bridge
+\section{The corrected amplified column-Hilbert estimate}\label{sec:hcb-column-hilbert-squared}
+
+\begin{lemma}[\texttt{lem-hcb-column-hilbert-squared}]\label{lem:hcb-column-hilbert-squared}
+There are universal $C_{\mathrm{col}}<\infty$ and $\comb_{\mathrm{col}}>0$ such that every
+H-CB datum with $\comb\le \comb_{\mathrm{col}}$, every $n\ge1$ and every
+$X\in\Matr{n}{1}\otimes\Cnr{P}{Q}$ satisfy
+\begin{equation}\label{eq:ch-main}
+  \Bigl\lvert\,\ipa{X}{X}-\colnrm{X}^{2}\,\Bigr\rvert
+  \;\le\;C_{\mathrm{col}}\,\comb\,\colnrm{X}^{2}.
+\end{equation}
+\emph{Transcription note.} $\ipa{\cdot}{\cdot}$ is the amplified column inner product of
+\texttt{def-column-hilbert-corner}, defined by $Y\dg\cpr X=\ipa{Y}{X}\,\cunit{Q}$ with
+$\cunit{Q}=\Cos{Q}(Q)$, and $\colnrm{\cdot}$ is the ambient norm on the column space. The
+word ``corrected'' in the contract refers to the fact that this is the \emph{squared}
+comparison: the unsquared display at the corresponding place in the pinned source is
+known to be false and is deliberately excluded from \texttt{def-column-hilbert-corner}.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Corrected amplified column-Hilbert estimate: there are universal C_col < infinity and e_col > 0 such that every H-CB datum with e <= e_col, every n >= 1, and every X in M_{n,1} tensor S_{P,Q} satisfy abs(<X,X>_n-||X||_{n,1}^2) <= C_col*e*||X||_{n,1}^2.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{Scalarisation.} Fix an admissible datum, $n$ and $X$, and abbreviate
+\[
+  r=\colnrm{X},\qquad h=\ipa{X}{X},\qquad a=\nrm{\cunit{Q}},\qquad b=\nrm{X\dg X}.
+\]
+The column space is a Hilbert space for its defined inner product, so $h\ge0$ is real, and
+the defining amplified display of \texttt{def-column-hilbert-corner} at $Y=X$ reads
+\begin{equation}\label{eq:ch-display}
+  X\dg\cpr X=h\,\cunit{Q}.
+\end{equation}
+The proof is then the interaction of three scalar estimates for $h,a,b,r$.
+
+\emph{(i) The compressed-versus-ambient comparison.} Applying
+\texttt{lem-compcb-row-column-product} with $Y=X$ gives
+$\nrm{\Cos{Q}(X\dg X)-X\dg X}\le C_{\mathrm{rc}}\comb\,r^{2}$; and
+$\Cos{Q}(X\dg X)=X\dg\cpr X=h\,\cunit{Q}$ by \eqref{eq:ch-display}. Absolute homogeneity
+and the reverse triangle inequality therefore give
+\begin{equation}\label{eq:ch-i}
+  \lvert ha-b\rvert\;=\;\bigl\lvert\nrm{h\,\cunit{Q}}-\nrm{X\dg X}\bigr\rvert
+  \;\le\;\nrm{h\,\cunit{Q}-X\dg X}\;\le\;C_{\mathrm{rc}}\comb\,r^{2}.
+\end{equation}
+
+\emph{(ii) The $C^*$ comparison.} The $\ecs$-$C^*$ lower norm axiom at the amplified
+rectangular level gives $b\ge(1-\ecs)r^{2}$, and submultiplicativity together with
+isometry of the involution gives $b\le(1+\ecs)\nrm{X\dg}\,r=(1+\ecs)r^{2}$. Hence
+\begin{equation}\label{eq:ch-ii}
+  \lvert b-r^{2}\rvert\;\le\;\ecs\,r^{2}\;\le\;\comb\,r^{2}.
+\end{equation}
+
+\emph{(iii) The compressed unit is close to a unit.} Applying
+\texttt{lem-compcb-compressed-unit-norm} with $T=Q$ gives $\lvert a-1\rvert\le C\comb$,
+and with $C\comb\le\tfrac12$ also $a\ge\tfrac12$. This step needs $Q$ \emph{nonvanishing},
+which the datum does not literally state --- \texttt{def-hcb-datum} says only that $Q$ is
+a \emph{one-dimensional} $\dproj$-projection. The tree first records this as a genuine
+gap, then closes it by a registered bridge: one-dimensionality means
+$\dim\Cnrs{Q}=1$, so $\Cnrs{Q}\ne0$; and $\Cnrs{Q}=0$ characterises the first (vanishing)
+alternative of \texttt{def-delta-projection}; hence $Q$ lies in the second alternative,
+i.e. is nonvanishing.
+
+\emph{Synthesis.} Enlarge the constant and shrink the threshold so that one pair
+$C\ge1$, $\comb_0\le1/(2C)$ serves all three estimates. Then \eqref{eq:ch-i} and
+\eqref{eq:ch-ii} give $\lvert ha-r^{2}\rvert\le(C+1)\comb r^{2}$. The exact scalar identity
+\begin{equation}\label{eq:ch-identity}
+  a\,(h-r^{2})=(ha-r^{2})+r^{2}(1-a)
+\end{equation}
+combined with $\lvert a-1\rvert\le C\comb$ then yields
+$a\lvert h-r^{2}\rvert\le(2C+1)\comb r^{2}$, and dividing by $a\ge\tfrac12$ gives
+\eqref{eq:ch-main} with $C_{\mathrm{col}}=4C+2$ and $\comb_{\mathrm{col}}=\comb_0$.
+
+\emph{The withdrawn route.} A substantial part of this tree is a \emph{negative} audit,
+and it is the reason two of the four dependencies exist. The natural first attempt was to
+square-pad the column, $X_c=Xe_1^{*}$ and $X_r=X_c\dg$, and apply
+\texttt{lem-compcb-rectangular-product} to the pair $(X_r,X_c)$. The audit found that
+under this shard's allowed inputs none of the three needed identifications was available:
+the corner memberships $\Amp{n}{\Cnr{P}{Q}}=\Cnr{P_n}{Q_n}$ and
+$\bigl(\Cnr{P}{Q}\bigr)\dg\subseteq\Cnr{Q}{P}$, the compressed-product identity
+$X_r\cpr X_c=E_{11}\otimes(X\dg\cpr X)$, and the matrix-norm identifications
+$\nrm{X_c}=r$ and $\nrm{E_{11}\otimes z}=\nrm{z}$. Each affirmative claim was withdrawn
+rather than repaired in place; a further over-claim --- that the failure of this one
+construction proved an \emph{exhaustive} impossibility --- was also withdrawn when
+challenged. The actual repair was structural: register
+\texttt{lem-compcb-row-column-product} and
+\texttt{lem-compcb-entrywise-compression-naturality} as registry dependencies, after which
+step (i) above applies directly, with no square embedding and no $E_{11}$ identification
+needed at this level.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb-column-hilbert-squared}: 50 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-compcb-rectangular-product},
+\texttt{lem-compcb-compressed-unit-norm},
+\texttt{lem-compcb-entrywise-compression-naturality} and
+\texttt{lem-compcb-row-column-product}. It is the analytic hinge of the H-CB tier: it
+makes the column-Hilbert norm $\colq{P}$ and the ambient norm interchangeable up to
+$1\pm O(\comb)$, which is what lets estimates proved in one be read in the other. It feeds
+\texttt{lem-hcb1-variational-identity} (\S\ref{sec:hcb1-variational-identity}),
+\texttt{lem-hcb1-column-action} (\S\ref{sec:hcb1-column-action}) and the
+not-yet-validated \texttt{lem-hcb4-canonical-closeness}.
