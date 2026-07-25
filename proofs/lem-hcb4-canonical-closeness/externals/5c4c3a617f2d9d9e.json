@@ -1,0 +1,8 @@
+{
+  "id": "5c4c3a617f2d9d9e",
+  "name": "lem-hcb3-uniform-square-lower",
+  "source": "imports validated registry lemma proofs/lem-hcb3-uniform-square-lower — Uniform square lower estimate: there are universal K_sq \u003c infinity and e_sq \u003e 0 such that every H-CB datum with e \u003c= e_sq, every n \u003e= 1, and every Z in M_n tensor S_P satisfy ||Z^dagger dot Z|| \u003e= (1-K_sq*e)||Z||^2.",
+  "content_hash": "5174f06af7bfd15ef9a012652d1a5d2582880b62ee3dea776044d189d8ccc581",
+  "created": "2026-07-25T11:14:45.098177786Z",
+  "notes": ""
+}

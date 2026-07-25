@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-07-25T11:14:44.873468259Z","conjecture":"Canonical Ha closeness: there are universal C_sp \u003c infinity and e_sp \u003e 0 such that every H-CB datum with e \u003c= e_sp satisfies max{||(Ha^Q_{P,Q})_n-J_{P,Q,n}||,||(Ha^Q_{Q,P})_n-J_{Q,P,n}||} \u003c= C_sp*e for every n \u003e= 1.","author":"orchestrator"}

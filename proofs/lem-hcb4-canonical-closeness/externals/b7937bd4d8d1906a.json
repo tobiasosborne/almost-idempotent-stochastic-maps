@@ -1,0 +1,8 @@
+{
+  "id": "b7937bd4d8d1906a",
+  "name": "lem-hcb-column-hilbert-squared",
+  "source": "imports validated registry lemma proofs/lem-hcb-column-hilbert-squared — Corrected amplified column-Hilbert estimate: there are universal C_col \u003c infinity and e_col \u003e 0 such that every H-CB datum with e \u003c= e_col, every n \u003e= 1, and every X in M_{n,1} tensor S_{P,Q} satisfy abs(\u003cX,X\u003e_n-||X||_{n,1}^2) \u003c= C_col*e*||X||_{n,1}^2.",
+  "content_hash": "9c7a8c52e863ce2959466a6e6f43e9ea2b05edd3c3ee2e4875aded0cd3a1831d",
+  "created": "2026-07-25T11:14:45.065211476Z",
+  "notes": ""
+}

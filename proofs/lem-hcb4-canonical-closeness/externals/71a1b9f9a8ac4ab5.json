@@ -1,0 +1,8 @@
+{
+  "id": "71a1b9f9a8ac4ab5",
+  "name": "lem-hcb3-diagonal-lower-modulus-CONTRACT",
+  "source": "proofs/lem-hcb3-diagonal-lower-modulus (af-validated, taint clean). FULL VALIDATED CONTRACT: Diagonal Ha lower-modulus propagation: there are universal C_diag \u003c infinity and e_diag \u003e 0 such that, for every H-CB datum with e \u003c= e_diag, if the level-one lower modulus of Ha^Q_{P,P} is at least 1/4, then ||(Ha^Q_{P,P})_n(Z)|| \u003e= (1-C_diag*e)||Z|| for every n \u003e= 1 and Z in M_n tensor S_P.",
+  "content_hash": "b4e1ce39b954089648f383cf7a5951f8f5b3041e74aba5a047dea86f62aae852",
+  "created": "2026-07-25T11:14:45.217212295Z",
+  "notes": ""
+}

@@ -1,0 +1,8 @@
+{
+  "id": "9fb6a48668c6d04c",
+  "name": "lem-hcb4-canonical-gram",
+  "source": "imports validated registry lemma proofs/lem-hcb4-canonical-gram — Canonical corner Gram estimate: there are universal C_J \u003c infinity and e_J \u003e 0 such that every H-CB datum with e \u003c= e_J, every n \u003e= 1, and every Z in either special P,Q corner satisfy (1-C_J*e)||Z|| \u003c= ||J_n(Z)|| \u003c= (1+C_J*e)||Z||.",
+  "content_hash": "10e83d7aeb113c14b09075c01c4a50fc658816f0b835c04ba558bc236b3647a5",
+  "created": "2026-07-25T11:14:45.084735041Z",
+  "notes": ""
+}
