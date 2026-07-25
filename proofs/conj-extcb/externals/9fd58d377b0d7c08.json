@@ -1,0 +1,8 @@
+{
+  "id": "9fd58d377b0d7c08",
+  "name": "lem-extcb1-cross-corner-dimension",
+  "source": "imports validated registry lemma proofs/lem-extcb1-cross-corner-dimension — EXT-CB cross-corner dimension: there is a universal e_sel \u003e 0 such that every EXT-CB datum with e \u003c= e_sel satisfies (dim S_{P,Q},dim S_{Q,Q})=(r,1).",
+  "content_hash": "f65c97fcc9718ea01187ea8e86bc38d2951120e8010bd1d0f9b982c5036ce499",
+  "created": "2026-07-25T19:38:32.449667367Z",
+  "notes": ""
+}

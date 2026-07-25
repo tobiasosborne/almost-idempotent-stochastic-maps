@@ -11,7 +11,7 @@
 | `conj-dtr-positive-oriented-surplus-gap-exclusion` | lemma | conjecture | none | B | For c_m = 1/4, with b = c_m/128, delta_rt = min(2^(-16), (c_m/4)^2, (c_m*b/120)^… |
 | `conj-dtr-zero-oriented-surplus-exclusion` | lemma | conjecture | none | B | For c_m = 1/4, with b = c_m/128, delta_rt = min(2^(-16), (c_m/4)^2, (c_m*b/120)^… |
 | `conj-ex` | open-problem | conjecture | none | A | (CONJECTURE) (EX) working form: every rank->=3 exact signed idempotent P with de… |
-| `conj-extcb` | lemma | proved-mod-audit | none | A | EXT-CB: there are universal C_ext < infinity and e_ext > 0 such that if e=delta+… |
+| `conj-extcb` | lemma | proved-mod-audit | seeded | A | EXT-CB: there are universal C_ext < infinity and e_ext > 0 such that if e=delta+… |
 | `conj-far-low-slab-cap` | lemma | conjecture | none | A | (CONJECTURE) Far very-low-slab coefficient cap: there exist universal a_0 >= 4, … |
 | `conj-gamma-emptiness` | lemma | disproved | none | A | Capped Gamma-emptiness: for every rank-3 exact signed idempotent P with 0 < delt… |
 | `conj-hcb` | lemma | proved | validated | A | H-CB: there are universal C_H < infinity and e_H > 0 such that, whenever e=delta… |
@@ -104,7 +104,7 @@
 | `lem-extcb-one-dimensional-corner-dimension` | lemma | proved | validated | A | Level-one one-dimensional corner dimension: for sufficiently small universal del… |
 | `lem-extcb-one-dimensional-product` | lemma | proved | validated | A | Level-one one-dimensional corner product: there are universal C_PQR < infinity a… |
 | `lem-extcb1-close-corner-dimension` | lemma | proved | validated | A | Close-compression range invariance: there is a universal e_close > 0 such that, … |
-| `lem-extcb1-cross-corner-dimension` | lemma | proved-mod-audit | seeded | A | EXT-CB cross-corner dimension: there is a universal e_sel > 0 such that every EX… |
+| `lem-extcb1-cross-corner-dimension` | lemma | proved | validated | A | EXT-CB cross-corner dimension: there is a universal e_sel > 0 such that every EX… |
 | `lem-factorization` | lemma | proved | validated | A | Factorization bound: let P be an exact signed idempotent (square real matrix wit… |
 | `lem-fan-payment` | lemma | proved | validated | A | Zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite family with ve… |
 | `lem-fan-payment-restricted` | lemma | proved | validated | A | D-restricted zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite f… |
