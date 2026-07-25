@@ -1,0 +1,8 @@
+{
+  "id": "1e9144a8f9fc29a7",
+  "name": "lem-extcb-corner-dimension-additivity-CONTRACT",
+  "source": "proofs/lem-extcb-corner-dimension-additivity (af-validated, taint clean). FULL VALIDATED CONTRACT: Level-one corner-dimension additivity: for two finite-dimensional commutative C*-algebras with projection bases and non-unital sufficiently accurate inclusions v,w, the compressed corner S_{v(I),w(I)} is linearly bijective to the direct sum over j,k of S_{v(Pi_j),w(Sigma_k)}.",
+  "content_hash": "80cd3169eff1e23f27562adb4da0ed3c0f72d5b956c3f1fbc5e7e40db8a0455e",
+  "created": "2026-07-25T13:16:10.055939526Z",
+  "notes": ""
+}
