@@ -1,0 +1,8 @@
+{
+  "id": "add6aac016f5b510",
+  "name": "lem-hcb1-variational-identity",
+  "source": "imports validated registry lemma proofs/lem-hcb1-variational-identity — Amplified Ha variational identity: there is a universal e_var \u003e 0 such that every H-CB datum with e \u003c= e_var, every n \u003e= 1, Z in M_n tensor S_{P,R}, X in M_{n,1} tensor S_{R,Q}, and Y in M_{n,1} tensor S_{P,Q} satisfy 2*\u003cY,(Ha^Q_{P,R})_n(Z)X-Z dot X\u003e*Co_Q(Q)=(Y^dagger dot Z) dot X-Y^dagger dot (Z dot X).",
+  "content_hash": "60de13a8758a3d2491ddefb9af8169b4d22c972a2b28eec29b003ec08b710fed",
+  "created": "2026-07-25T11:56:19.032250855Z",
+  "notes": ""
+}

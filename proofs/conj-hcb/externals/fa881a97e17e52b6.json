@@ -1,0 +1,8 @@
+{
+  "id": "fa881a97e17e52b6",
+  "name": "lem-hcb3-diagonal-unit",
+  "source": "imports validated registry lemma proofs/lem-hcb3-diagonal-unit — Uniform diagonal Ha unit estimate: there are universal C_unit \u003c infinity and e_unit \u003e 0 such that every H-CB datum with e \u003c= e_unit and every n \u003e= 1 satisfy ||(Ha^Q_{P,P})_n(I_n tensor u_P)-I|| \u003c= C_unit*e.",
+  "content_hash": "73cbd98546c820ad1b272a3df7b20352e57d3b7fde2247049cd002a83a9908b4",
+  "created": "2026-07-25T11:56:19.060691707Z",
+  "notes": ""
+}

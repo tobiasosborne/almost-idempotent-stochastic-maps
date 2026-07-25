@@ -1,0 +1,8 @@
+{
+  "id": "723c74269f3f0a72",
+  "name": "lem-hcb3-diagonal-inverse",
+  "source": "imports validated registry lemma proofs/lem-hcb3-diagonal-inverse — Diagonal Ha inverse propagation: there are universal C_inv \u003c infinity and e_inv \u003e 0 such that, for every H-CB datum with e \u003c= e_inv, if Ha^Q_{P,P} has level-one lower modulus at least 1/4 and is bijective at level one, then every amplification is bijective and ||((Ha^Q_{P,P})_n)^(-1)|| \u003c= 1+C_inv*e.",
+  "content_hash": "7a67b444d342751c52245f441a079f556da00be0a33b167a3a5dfa0bc9ab8d7f",
+  "created": "2026-07-25T11:56:19.08335226Z",
+  "notes": ""
+}

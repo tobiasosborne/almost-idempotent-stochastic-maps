@@ -1,0 +1,8 @@
+{
+  "id": "f2f28bed7cf2d646",
+  "name": "lem-hcb3-offdiagonal-inverse",
+  "source": "imports validated registry lemma proofs/lem-hcb3-offdiagonal-inverse — Off-diagonal Ha inverse propagation: there are universal C_rect \u003c infinity and e_rect \u003e 0 such that, for every H-CB datum with e \u003c= e_rect, if Ha^Q_{P,R} is bijective at level one and Ha^Q_{R,R} has level-one lower modulus at least 1/4, then every amplification of Ha^Q_{P,R} is bijective with inverse norm at most 1+C_rect*e.",
+  "content_hash": "ca594f9bd70b0b6a33f8ca9e58a62ace9d501a9868192e42fa7afebf2ae68de7",
+  "created": "2026-07-25T11:56:19.092757567Z",
+  "notes": ""
+}

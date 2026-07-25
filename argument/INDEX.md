@@ -14,7 +14,7 @@
 | `conj-extcb` | lemma | proved-mod-audit | none | A | EXT-CB: there are universal C_ext < infinity and e_ext > 0 such that if e=delta+… |
 | `conj-far-low-slab-cap` | lemma | conjecture | none | A | (CONJECTURE) Far very-low-slab coefficient cap: there exist universal a_0 >= 4, … |
 | `conj-gamma-emptiness` | lemma | disproved | none | A | Capped Gamma-emptiness: for every rank-3 exact signed idempotent P with 0 < delt… |
-| `conj-hcb` | lemma | proved-mod-audit | none | A | H-CB: there are universal C_H < infinity and e_H > 0 such that, whenever e=delta… |
+| `conj-hcb` | lemma | proved-mod-audit | seeded | A | H-CB: there are universal C_H < infinity and e_H > 0 such that, whenever e=delta… |
 | `conj-kernel` | open-problem | conjecture | none | A | (CONJECTURE) Kernel Conjecture: there are universal delta_0>0 and B<inf (n-free)… |
 | `conj-l5-gap-1` | lemma | conjecture | none | B | There exists a universal c_5 > 0 such that, for every fixed universal c_m > 0, t… |
 | `conj-low-slab-cap` | lemma | conjecture | none | A | (CONJECTURE) Low-slab coefficient cap: there exist universal a > 0, theta in (0,… |
@@ -126,7 +126,7 @@
 | `lem-hcb3-uniform-square-lower` | lemma | proved | validated | A | Uniform square lower estimate: there are universal K_sq < infinity and e_sq > 0 … |
 | `lem-hcb4-canonical-closeness` | lemma | proved | validated | A | Canonical Ha closeness: there are universal C_sp < infinity and e_sp > 0 such th… |
 | `lem-hcb4-canonical-gram` | lemma | proved | validated | A | Canonical corner Gram estimate: there are universal C_J < infinity and e_J > 0 s… |
-| `lem-hcb4-canonical-inverse` | lemma | proved-mod-audit | seeded | A | Canonical Ha inverse estimate: there are universal C_sp,inv < infinity and e_sp,… |
+| `lem-hcb4-canonical-inverse` | lemma | proved | validated | A | Canonical Ha inverse estimate: there are universal C_sp,inv < infinity and e_sp,… |
 | `lem-hiddenness-alpha-slab-leakage` | lemma | proved | seeded | A | Hiddenness alpha-slab leakage: for an exact signed idempotent P with delta(P) > … |
 | `lem-hiddenness-depth-markov` | lemma | proved | validated | A | Hiddenness depth-Markov: for an exact signed idempotent P with delta(P) > 0, non… |
 | `lem-hiddenness-dual-witness` | lemma | proved | validated | A | Hiddenness dual witness: for an exact signed idempotent P and a hidden row verte… |

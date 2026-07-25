@@ -1,0 +1,8 @@
+{
+  "id": "09c169d84427ca23",
+  "name": "lem-hcb3-diagonal-upper-norm",
+  "source": "imports validated registry lemma proofs/lem-hcb3-diagonal-upper-norm — Uniform diagonal Ha upper norm: there are universal C_up \u003c infinity and e_up \u003e 0 such that every H-CB datum with e \u003c= e_up, every n \u003e= 1, and every Z in M_n tensor S_P satisfy ||(Ha^Q_{P,P})_n(Z)|| \u003c= (1+C_up*e)||Z||.",
+  "content_hash": "c206119366691a7cdd221805d5d272422da362df93723836f38249adb31267ec",
+  "created": "2026-07-25T11:56:19.068681447Z",
+  "notes": ""
+}
