@@ -34,15 +34,13 @@ TRIGGER: session close, or a material change in the current frontier / next task
    in `refs-staging/`: Hatcher [NOTE: Künneth locus is Thm 3.15 in the
    canonical PDF, not the design's 3.16; cite Cor 3.39 for top-cohomology],
    Cairns 1935, Arkowitz–Brown 2004; log in `refs-staging/ACQUIRED.md`).
-6. **Report waves 3+3b (scratchpad, landing pending):** 11 prose shards for
-   the phase-2/3 harvest authored (opus) at
-   `<scratchpad>/report-wave3/` with WIRING.md landing plan; batched hostile
-   prose-vs-export review (W56 pattern) = 7/11 VALID first pass, all 12
-   contract quotes byte-matched; verdict-specified corrections to shards
-   26/27/28/35 + WIRING §G2 in application; fresh re-verify of the four,
-   then land per WIRING.md (includes SHARD_CATALOG/PROVENANCE/UNWIRED/
-   main.tex wiring + stale-status fixes in existing shards). Two review
-   catches already landed as registry hygiene (commit 8d0a5061).
+6. **Report waves 3/3b/3c LANDED (commit 92e103d8):** 37 shards / 77pp —
+   the full phase-2/3 harvest in prose (conj-hcb, hcb3-offdiagonal-inverse,
+   hcb4-canonical trio, seven EXT lemmas, the conj-extcb capstone, recounted
+   outlook: 37 reproduced + 33 off-route = 70). Two batched fresh-codex
+   hostile reviews + verdict-driven corrections; all landing gates green.
+   **Remaining report debt (aism-h0mp):** the 21 session-25 prose shards
+   (00–24 set) still need their batched hostile prose-vs-export pass.
 7. **STANDING DIRECTIVES (user, binding):** (i) capacity on the open leaves;
    (ii) decomposition as objective function; (iii) FINDINGS dead routes
    absolute; (iv) mostly serial; verification fresh-codex-only; af per §6

@@ -14,6 +14,18 @@ After adding a new numbered sketch file, re-run `python3 scripts/gen-current-poi
 
 
 
+## v33 delta — 2026-07-26 (session 26: report waves 3/3b/3c LANDED)
+
+Map delta over v33 (no new numbered file; report surface only): the 12-shard
+prose set for the phase-2/3 harvest is landed (commit 92e103d8) — report now
+37 shards / 77pp; conj-extcb capstone written up; outlook recounted 37
+reproduced + 33 off-route = 70 proved/validated with per-count derivation
+comments; 9 existing shards' stale status text fixed; UNWIRED −13. Review
+chain: two batched fresh-codex hostile passes + verdict-driven corrections;
+E-hash finding adjudicated in WIRING's favor against the live repo.
+Remaining report debt: the 21 session-25 prose shards (aism-h0mp original
+scope) still need their batched hostile prose-vs-export pass.
+
 ## v33 — 2026-07-25 (session 26: phase-3 closure)
 
 New numbered file `2026-07-25-top-down-proof-sketch-v33.md` (phase boundary).
