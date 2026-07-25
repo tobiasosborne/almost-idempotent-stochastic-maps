@@ -27,7 +27,7 @@ verbatim), and keywords.
 - **File:** `report/sections/00_overview.tex`
 - **Title:** Orientation and rigour boundary
 - **Summary:** States the open target op-classical and fixes the two equivalent pictures bridged by lem-classical-equiv.
-- **Summary:** Describes the four af-validated blocks reproduced here: the bridge, PRH, the COMP tier, and the H-CB tier.
+- **Summary:** Describes the five af-validated blocks reproduced here: the bridge, PRH, the COMP tier, the H-CB tier, and the H-CB-parent/EXT tier.
 - **Summary:** Records the honesty boundary: only af-validated results appear as lemmas; everything else stays outside this document.
 - **Keywords:** overview, op-classical, rigour ladder, signed picture, stochastic picture, COMP tier, H-CB tier
 

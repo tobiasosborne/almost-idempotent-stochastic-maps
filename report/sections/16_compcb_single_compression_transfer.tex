@@ -98,12 +98,9 @@ the ideal's dimension.
 \texttt{proofs/lem-compcb-single-compression-transfer}: 33 nodes (32 \texttt{validated}, 1
 superseded node archived), root \texttt{validated}, taint clean.
 
-\noindent\textbf{Role in the chain.} Imports
-\texttt{lem-compcb-amplified-compression},
-\texttt{lem-compcb-amplified-compression-identities},
-\texttt{lem-compcb-amplified-almost-containment},
-\texttt{lem-compcb-corner-algebra} and
-\texttt{lem-compcb-rectangular-product}; it is the only consumer of the almost-containment
-lemma. Unlike the rest of the COMP tier it is not used by the H-CB tier: it is the
-transfer primitive aimed at the still-open EXT and Stage-1 assembly, where inclusions have
-to be pushed through compressions repeatedly. It has no validated registry consumers yet.
+\noindent\textbf{Role in the chain.} This is the single-compression transfer primitive aimed at compression-based
+EXT and Stage-1 assembly, where inclusions have to be pushed through
+compressions repeatedly.  The EXT parent \texttt{conj-extcb} is now
+\texttt{proved} with \texttt{af: validated}; the broader assembly carrier
+\texttt{lem-thmainext-conditional} remains \texttt{proved-mod-audit} with
+\texttt{af: none}.  This lemma has no registry consumers.

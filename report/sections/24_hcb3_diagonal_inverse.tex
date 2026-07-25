@@ -47,8 +47,8 @@ Both are universal, $\comb_{\mathrm{inv}}>0$, and the choice is made precisely s
 \end{equation}
 
 \emph{Bijectivity amplifies exactly.} Fix an admissible datum and an arbitrary $n\ge1$.
-This step uses the \emph{first} hypothesis and nothing else, and it involves no estimate
-at all. By the meaning of matrix amplification, $T_n\bigl([Z_{ij}]\bigr)=[T(Z_{ij})]$ acts
+This step uses the \emph{bijectivity} hypothesis and nothing else.
+By the meaning of matrix amplification, $T_n\bigl([Z_{ij}]\bigr)=[T(Z_{ij})]$ acts
 slotwise. Surjectivity therefore passes upward: for any target $[Y_{ij}]$ the matrix
 $[T^{-1}(Y_{ij})]$ is a preimage. So does injectivity: $T_n([Z_{ij}])=0$ forces
 $T(Z_{ij})=0$ for every $i,j$, hence $Z_{ij}=0$ for every $i,j$ and $[Z_{ij}]=0$. Thus
@@ -61,7 +61,7 @@ entrywise inversion alone gives no uniform norm control, which is why the second
 hypothesis is needed.
 
 \emph{The imported lower bound.} Since $\comb\le \comb_{\mathrm{inv}}\le \comb_{\mathrm{diag}}$
-and the level-one lower modulus is at least $\tfrac14$ by the \emph{second} hypothesis,
+and the level-one lower-modulus hypothesis is at least $\tfrac14$,
 \texttt{lem-hcb3-diagonal-lower-modulus} applies verbatim and gives
 \begin{equation}\label{eq:di-lower}
   \nrm{T_n(Z)}\;\ge\;\bigl(1-C_{\mathrm{diag}}\comb\bigr)\nrm{Z}

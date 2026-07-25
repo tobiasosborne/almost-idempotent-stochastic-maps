@@ -53,9 +53,5 @@ and \texttt{lem-compcb-amplification-naturality}. Like
 \S\ref{sec:compcb-amplification-naturality}, this shard exists because of a recorded
 stall: the column-Hilbert workspace (\S\ref{sec:hcb-column-hilbert-squared}) reached its
 third consecutive stall on exactly the identity \eqref{eq:ecn-main}, whose statement was
-then extracted mechanically from the blocking challenge and validated on its own. It is a
-strictly sharper statement than the $\ampl{n}$-clause it specializes --- that clause
-identifies two maps, whereas \eqref{eq:ecn-main} asserts what happens to a
-\emph{single-slot} element --- and that sharper form is what the column-Hilbert estimate
-consumes. It has one registry consumer,
+then extracted mechanically from the blocking challenge and validated on its own. It is an explicit single-slot specialization of the $\ampl{n}$-clause: that clause identifies two maps, while \eqref{eq:ecn-main} records its value on the single-slot element needed downstream. It has one registry consumer,
 \texttt{lem-hcb-column-hilbert-squared}.
