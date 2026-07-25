@@ -1,0 +1,8 @@
+{
+  "id": "841de20c467eeac4",
+  "name": "lem-hcb4-canonical-closeness",
+  "source": "imports validated registry lemma proofs/lem-hcb4-canonical-closeness — Canonical Ha closeness: there are universal C_sp \u003c infinity and e_sp \u003e 0 such that every H-CB datum with e \u003c= e_sp satisfies max{||(Ha^Q_{P,Q})_n-J_{P,Q,n}||,||(Ha^Q_{Q,P})_n-J_{Q,P,n}||} \u003c= C_sp*e for every n \u003e= 1.",
+  "content_hash": "31e2743ffc05eeb40a7dad2c36a0f9e72c1db17fc2585bb313193c54988d6de2",
+  "created": "2026-07-25T11:28:01.966692648Z",
+  "notes": ""
+}
