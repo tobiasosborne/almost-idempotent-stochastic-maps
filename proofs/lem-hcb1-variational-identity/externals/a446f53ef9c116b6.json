@@ -1,0 +1,8 @@
+{
+  "id": "a446f53ef9c116b6",
+  "name": "lem-compcb-row-column-product-CONTRACT",
+  "source": "proofs/lem-compcb-row-column-product (af-validated, taint clean). FULL VALIDATED CONTRACT: Row-column compressed-product estimate: there are universal C_rc \u003c infinity and e_rc \u003e 0 such that, whenever e = delta+epsilon \u003c= e_rc, P,Q are delta-projections in an extended epsilon-C*-algebra A, n \u003e= 1, and X,Y are in M_{n,1} tensor S_{P,Q}, one has ||Co_Q(Y^dagger X) - Y^dagger X|| \u003c= C_rc*e*||Y||*||X||, where Y^dagger X is the ambient product of the 1-by-n row Y^dagger with the n-by-1 column X.",
+  "content_hash": "ff583491075142fff7c74309be8b07bc53b9649749b42c7c43760b071a71643f",
+  "created": "2026-07-25T00:05:51.345414388Z",
+  "notes": ""
+}

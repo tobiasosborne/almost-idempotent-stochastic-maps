@@ -1,8 +1,0 @@
-{
-  "id": "c4754595f44f7461",
-  "name": "lem-hcb-column-hilbert-squared-CONTRACT",
-  "source": "proofs/lem-hcb-column-hilbert-squared (af-validated, 50/50 taint clean). FULL VALIDATED CONTRACT: Corrected amplified column-Hilbert estimate: universal C_col, e_col such that every H-CB datum with e \u003c= e_col, n \u003e= 1, X in M_{n,1} tensor S_{P,Q} satisfy abs(\u003cX,X\u003e_n-||X||_{n,1}^2) \u003c= C_col*e*||X||_{n,1}^2 with \u003c.,.\u003e_n the coordinate-sum inner product of 1dQ_ip_ext.",
-  "content_hash": "d283a83bf917c05410050548af67a7f792d8315f6f851b7cf5406ccd9bbc424e",
-  "created": "2026-07-24T23:34:47.456068924Z",
-  "notes": ""
-}

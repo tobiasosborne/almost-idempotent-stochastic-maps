@@ -1,8 +1,0 @@
-{
-  "id": "90f859a7aceb1e8d",
-  "name": "lem-compcb-single-compression-transfer-CONTRACT",
-  "source": "proofs/lem-compcb-single-compression-transfer (af-validated 2026-07-24, 33 taint clean). FULL VALIDATED CONTRACT: Single-compression transfer: there are universal C_co \u003c infinity and e_co \u003e 0 such that restricting an extended alpha-inclusion to one ideal and following it by one compatible amplified compression produces an extended C_co*(alpha+epsilon)-inclusion whenever alpha+epsilon \u003c= e_co.",
-  "content_hash": "aa40ddab0dcf455de7a62768fd7809656938d4b4a083624238f5ab8a58e4436e",
-  "created": "2026-07-24T23:58:37.048364261Z",
-  "notes": ""
-}

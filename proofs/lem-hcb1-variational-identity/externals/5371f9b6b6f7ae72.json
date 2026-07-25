@@ -1,8 +1,0 @@
-{
-  "id": "5371f9b6b6f7ae72",
-  "name": "lem-compcb-row-column-product-CONTRACT",
-  "source": "proofs/lem-compcb-row-column-product (af-validated, 20/20 taint clean). FULL VALIDATED CONTRACT: Row-column compressed-product estimate: universal C_rc, e_rc such that for e \u003c= e_rc, X,Y in M_{n,1} tensor S_{P,Q}: ||Co_Q(Y^dagger X) - Y^dagger X|| \u003c= C_rc*e*||Y||*||X||.",
-  "content_hash": "c1e27d3cdf55de028c25810ffd355b7a8e2de0f1e5029191c5482e2bf16a6909",
-  "created": "2026-07-24T23:34:47.468206709Z",
-  "notes": ""
-}
