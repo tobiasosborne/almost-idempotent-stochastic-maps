@@ -11,7 +11,7 @@
 | `conj-dtr-positive-oriented-surplus-gap-exclusion` | lemma | conjecture | none | B | For c_m = 1/4, with b = c_m/128, delta_rt = min(2^(-16), (c_m/4)^2, (c_m*b/120)^… |
 | `conj-dtr-zero-oriented-surplus-exclusion` | lemma | conjecture | none | B | For c_m = 1/4, with b = c_m/128, delta_rt = min(2^(-16), (c_m/4)^2, (c_m*b/120)^… |
 | `conj-ex` | open-problem | conjecture | none | A | (CONJECTURE) (EX) working form: every rank->=3 exact signed idempotent P with de… |
-| `conj-extcb` | lemma | proved-mod-audit | seeded | A | EXT-CB: there are universal C_ext < infinity and e_ext > 0 such that if e=delta+… |
+| `conj-extcb` | lemma | proved | validated | A | EXT-CB: there are universal C_ext < infinity and e_ext > 0 such that if e=delta+… |
 | `conj-far-low-slab-cap` | lemma | conjecture | none | A | (CONJECTURE) Far very-low-slab coefficient cap: there exist universal a_0 >= 4, … |
 | `conj-gamma-emptiness` | lemma | disproved | none | A | Capped Gamma-emptiness: for every rank-3 exact signed idempotent P with 0 < delt… |
 | `conj-hcb` | lemma | proved | validated | A | H-CB: there are universal C_H < infinity and e_H > 0 such that, whenever e=delta… |

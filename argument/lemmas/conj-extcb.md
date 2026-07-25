@@ -4,8 +4,8 @@ kind: lemma
 contract: EXT-CB: there are universal C_ext < infinity and e_ext > 0 such that if e=delta+epsilon <= e_ext, P,Q are delta-projections in an extended epsilon-C*-algebra A with ||P+Q-I|| <= delta, v:M_r->S_P is an extended delta-isomorphism, dim S_Q=1 at level one, and S_{P,Q} is nonzero, then there is one map v_+:M_{r+1}->A whose every amplification is a C_ext*e-isomorphism; the same level-one unitary and the same four corner maps carry all amplification levels, with constants independent of r, n, and dim A.
 defs: def-extended-epsilon-cstar-algebra; def-ha-map; def-delta-projection; def-extended-delta-inclusion; def-extcb-datum
 deps: conj-hcb; lem-extcb-one-dimensional-product; lem-extcb-corner-dimension-additivity; lem-extcb-four-corner-norm; lem-extcb-four-corner-merge; lem-extcb-one-dimensional-corner-dimension; lem-extcb1-close-corner-dimension; lem-extcb1-cross-corner-dimension; lem-compcb-corner-algebra; lem-hcb3-uniform-square-lower
-status: proved-mod-audit
-af: seeded
+status: proved
+af: validated
 provenance: docs/plans/2026-07-24-W74F-wave2-artifacts/PROOF-W74F-F-EXTCB.md (prover); hostile verdict VERDICT-W74F-F-EXTCB.md (VALID-WITH-CORRECTIONS, no contract amendment; conj-hcb recorded as proof dependency per the verdict); decomposition DECOMP-W74F-C-THMAINEXT.md §3 EXT-CB
 owner: A
 workspace: proofs/conj-extcb
