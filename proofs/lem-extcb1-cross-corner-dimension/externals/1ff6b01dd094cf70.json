@@ -1,0 +1,8 @@
+{
+  "id": "1ff6b01dd094cf70",
+  "name": "lem-extcb-four-corner-merge-CONTRACT",
+  "source": "proofs/lem-extcb-four-corner-merge (af-validated, taint clean). FULL VALIDATED CONTRACT: Complete four-corner merge: there are universal C_merge \u003c infinity and a_merge \u003e 0 such that four fixed bijective level-one corner maps satisfying def-four-corner-merging-datum with common defect rho and rho+epsilon \u003c= a_merge combine into one extended C_merge*(rho+epsilon)-isomorphism.",
+  "content_hash": "581f87782bcc17de7fa82909986fd6e87f01574ee78972bb27b8cb42adc9dd1c",
+  "created": "2026-07-25T18:45:23.606306374Z",
+  "notes": ""
+}

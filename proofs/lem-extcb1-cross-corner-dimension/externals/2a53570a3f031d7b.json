@@ -1,0 +1,8 @@
+{
+  "id": "2a53570a3f031d7b",
+  "name": "lem-hcb2-product-defect-CONTRACT",
+  "source": "proofs/lem-hcb2-product-defect (af-validated, taint clean). FULL VALIDATED CONTRACT: Uniform amplified Ha product defect: there are universal C_prod \u003c infinity and e_prod \u003e 0 such that every H-CB datum with e \u003c= e_prod, every n \u003e= 1, Z in M_n tensor S_{P,S}, and W in M_n tensor S_{S,R} satisfy ||(Ha^Q_{P,R})_n(Z dot W)-(Ha^Q_{P,S})_n(Z)(Ha^Q_{S,R})_n(W)|| \u003c= C_prod*e*||Z||||W||.",
+  "content_hash": "87ee9058a97783b97c4c8cf5660e3d738e63290bc21889b750f1f6ee81766af4",
+  "created": "2026-07-25T18:45:23.523918372Z",
+  "notes": ""
+}

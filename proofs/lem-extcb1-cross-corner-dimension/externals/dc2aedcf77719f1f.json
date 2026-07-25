@@ -1,0 +1,8 @@
+{
+  "id": "dc2aedcf77719f1f",
+  "name": "lem-extcb1-close-corner-dimension",
+  "source": "imports validated registry lemma proofs/lem-extcb1-close-corner-dimension — Close-compression range invariance: there is a universal e_close \u003e 0 such that, in an EXT-CB datum with e \u003c= e_close, the compression ranges S_{v(I_r),Q} and S_{P,Q} have the same dimension.",
+  "content_hash": "1d53992eeac385128f054766e89278e350f3196f725db2617ca066c888d7f274",
+  "created": "2026-07-25T18:45:23.371845641Z",
+  "notes": ""
+}
