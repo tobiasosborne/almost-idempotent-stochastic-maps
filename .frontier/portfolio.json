@@ -6,6 +6,18 @@
     "max_blocks_per_turn": 2,
     "oracles": [
       {
+        "name": "af-conj-extcb",
+        "cmd": [
+          "python3",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "conj-extcb"
+        ],
+        "inputs": [
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/proofs/conj-extcb/ledger",
+          "/home/tobias/Projects/almost-idempotent-stochastic-maps/argument/lemmas/conj-extcb.md"
+        ]
+      },
+      {
         "name": "af-conj-hcb",
         "cmd": [
           "python3",
