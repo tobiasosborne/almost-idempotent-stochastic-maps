@@ -6,7 +6,7 @@ defs: def-four-corner-merging-datum; def-extended-epsilon-cstar-algebra; def-com
 deps: lem-compcb-corner-algebra; lem-hcb3-uniform-square-lower
 status: proved
 af: validated
-provenance: factored out of proofs/lem-extcb-four-corner-merge per the 3rd-stall tripwire (2026-07-25, node 1.3 / challenges ch-d3060d3ae953118f, ch-d809d25e1f7853a7, ch-0fda8a3c0b65233a — statement extracted mechanically from the tree text, assembly notation from validated node 1.1); UNPROVED here pending its own af pass
+provenance: factored out of proofs/lem-extcb-four-corner-merge per the 3rd-stall tripwire (2026-07-25, node 1.3 / challenges ch-d3060d3ae953118f, ch-d809d25e1f7853a7, ch-0fda8a3c0b65233a — statement extracted mechanically from the tree text, assembly notation from validated node 1.1); subsequently af-validated in its own run (proofs/lem-extcb-four-corner-norm, 18/18, session 25)
 owner: A
 workspace: proofs/lem-extcb-four-corner-norm
 ---
