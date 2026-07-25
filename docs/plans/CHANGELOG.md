@@ -14,6 +14,24 @@ After adding a new numbered sketch file, re-run `python3 scripts/gen-current-poi
 
 
 
+## v33 — 2026-07-25 (session 26: phase-3 closure)
+
+New numbered file `2026-07-25-top-down-proof-sketch-v33.md` (phase boundary).
+T0 69 → 70: **conj-extcb parent af-validated** (46 nodes, 40 validated + 6
+archived, taint clean; resumed from the session-25 stop with zero loss; ▣
+banked via oracle `af-conj-extcb`, `fr verify` pass; bead aism-fgr7 closed)
+— both named th_main_ext gaps (H-CB, EXT-CB) now L0. Concurrently, run
+off-repo and landed at the boundary: the aism-0163 V4 repair cycle
+(repair → hostile verify VALID-WITH-CORRECTIONS → corrections applied) —
+`DESIGN-FUDW-DECOMP-v4.1.md` is current, inventory 79 = 57/15/7 + 15 GAP
+reservations; phase 4 now single-gated on the four genuine GAP families +
+def sign-offs + topology byte-match. Stage-1 topology refs 3/7 acquired
+legally (Hatcher [Künneth locus 3.15-not-3.16 flag], Cairns 1935,
+Arkowitz–Brown 2004); Lee + Granas–Dugundji = USER escalation. Report waves
+3+3b authored (11 shards); batched hostile prose review 7/11 VALID first
+pass, corrections in flight; two registry-hygiene fixes landed from review
+catches.
+
 ## v32 delta — 2026-07-25 (session 25 close: phase-3 sweep, user-directed stop)
 
 Map delta over v32 (no new numbered file; parent mid-run): T0 62 -> 69 — all
