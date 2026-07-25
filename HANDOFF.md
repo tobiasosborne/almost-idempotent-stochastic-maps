@@ -45,9 +45,20 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 ## Current state (2026-07-24, session 24 — the fudw decomposition campaign)
 
-**Rigorous (af-validated, T0): 35** (unchanged; `lem-prh` is the sole Route F T0
-node). **Registry: 248** (215 + 33). **Definitions: 35** (23 + 12 new drafts).
-Working tree clean at handoff; no orchestration live; no codex worker running.
+**Rigorous (af-validated, T0): 49** (mid-campaign checkpoint 2026-07-25: the whole
+COMP tier (8+naturality) + HCB-0 + column-hilbert-squared (the corrected
+false-display estimate, 50/50) + the variational identity + 2 factored
+micro-lemmas are all af-validated). **Registry: 253.** **Definitions: 36, all
+locked** (12 fudw defs user-ratified 2026-07-24; +def-theta draft->locked path
+pending only if challenged). F2/F3 bridge lemmas REGISTERED (hostile-verified).
+Working tree clean at checkpoint; hcb1-column-action seeded, orchestration
+launching. Process laws learned this campaign (BINDING for phase 2 cont.):
+(i) every workspace gets the FULL validated-contract battery as full-text
+externals at seeding + the complete def kit (theta layer, norm axioms,
+nonvanishing, column-hilbert displays with the false 1dQ_ip_norm_ext excluded
+LOUDLY); (ii) contract typing defects (unbound ambient, u_Q/wtQ) are amended
+mechanically from the challenge text (verdict-driven precedent) then re-seeded;
+(iii) 3rd stall on one cluster => factor micro-lemmas from the challenge text.
 
 ### What session 24 did (details: worklog + the artifacts dir)
 

@@ -1291,3 +1291,16 @@ codex auto-reconnected, nothing lost.
 
 USER DECISIONS PENDING: ratify the 12 draft defs; decide the F2/F3 bridge
 contracts (aism-0163).
+
+## 2026-07-25 — session 24 continued: phase-2 execution (COMP tier complete; HCB tier rolling)
+
+T0 34 -> 49 across ~19 orchestration outcomes. COMP tier COMPLETE at T0 (all 8
+shards + factored amplification-naturality). HCB: hcb0, column-hilbert-squared
+(50/50 — the corrected false-display estimate), variational-identity (post
+u_Q->Co_Q(Q) contract amendment), + 2 factored micro-lemmas (entrywise
+naturality, row-column product). F2/F3 bridge closed + registered (fresh prover
++ fresh hostile verifier, VALID-WITH-CORRECTIONS). 12 fudw defs ratified+locked
+(user sign-off). Stall playbook exercised repeatedly: missing-def provisioning
+(theta layer, norm axioms, inner-product displays), 2 contract amendments from
+challenge text, 3 micro-lemma factorings — every resolution mechanical, zero
+overclaims, all [check-all] green, pushed continuously.
