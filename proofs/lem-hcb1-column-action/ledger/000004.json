@@ -1,0 +1,1 @@
+{"type":"def_added","timestamp":"2026-07-25T00:13:16.873038553Z","definition":{"id":"1d78d63b2fab3c26","name":"epsilon-banach-cstar-norm-axioms","definition":"Byte-matched (tex:408-436): ||XY|| \u003c= (1+\\eps)||X|| ||Y||; associator bound; involution and C*-bound; approx or exact unit; I^\\dag=I.","created":"2026-07-25T00:13:16.872507703Z"}}

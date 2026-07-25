@@ -5,7 +5,7 @@ contract: Uniform Ha column action: there are universal C_act < infinity and e_a
 defs: def-ha-map; def-hcb-datum; def-compressed-associator
 deps: lem-hcb-column-hilbert-squared; lem-hcb0-compressed-associator; lem-hcb1-variational-identity
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: PROOF-W74F-E-HCB.md §5; VERDICT-W74F-E-HCB.md HCB-1b (VALID); DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D
 owner: A
 workspace: proofs/lem-hcb1-column-action
