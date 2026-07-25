@@ -1329,3 +1329,24 @@ Rule-9 body-status drift in 13 flipped registry shards fixed. Trial build 47pp
 clean; [check-all] OK. Prose is opus-authored with mechanical fidelity checks
 (contract byte-match, label match); independent hostile review of the prose vs
 the exports is filed as follow-up (reviewer != author).
+
+## 2026-07-25 (cont.) — session 25: PHASE 2 CLOSED (T0 53 -> 62); report rescoped
+
+Resumed at the codex quota reset. Nine af-validations landed: diagonal-upper-norm
+(30/30 after promoting corner-algebra to first-class — the STUCK abort was a
+missing registry dep), the factored uniform-square-lower (18/18; balloon-tripwire
+template), diagonal-lower-modulus (29/29 after the zero-corner spine repair),
+diagonal-inverse (5/5), offdiagonal-inverse (16/16), canonical-gram (9/9),
+canonical-closeness (11/11), canonical-inverse (19/19 after def-compressed-corner
+provision), and the conj-hcb PARENT (11/11 first-pass; every clause discharged
+against a first-class validated import; ▣ banked via oracle af-conj-hcb).
+Process laws distilled and pinned in HANDOFF/v32: dep alignment (7 consecutive
+first-passes after adoption), default first-class set, cumulative 15-def kit,
+tripwire factoring. One spurious overreach abort (own fr-append), one external
+codex outage (watcher auto-resumed after 35min).
+
+Report rescoped per user mandate: fresh lab-book on the live chain (26 shards,
+24 prose lemma write-ups by an opus author, mechanical fidelity checks, 53pp
+pdf), kernel-route surface deprecated to UNWIRED. Hostile prose-vs-export
+review filed. Sketch v32 + CHANGELOG + CURRENT + HANDOFF reconciled (Rule 9).
+Phase 3 (EXT-CB) queue opened.

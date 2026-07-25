@@ -12,6 +12,18 @@ Old numbered files remain immutable for line citations.
 After adding a new numbered sketch file, re-run `python3 scripts/gen-current-pointer.py` to refresh
 `docs/plans/CURRENT.md` (CLAUDE.md Rule 9).
 
+
+## v32 — 2026-07-25 (session 25: phase-2 closure)
+
+New numbered file `2026-07-25-top-down-proof-sketch-v32.md` (phase boundary).
+T0 35 → 62: the ENTIRE H-CB subtree is af-validated — COMP prerequisites,
+hcb0–hcb4 tiers (incl. the factored `lem-hcb3-uniform-square-lower` and the
+conditional lower-modulus/inverse lemmas), and the `conj-hcb` parent (11/11
+first-pass; ▣ banked via oracle `af-conj-hcb`). Phase 3 (EXT-CB, aism-fgr7)
+is the live runway; queue and the binding process laws (dep alignment,
+default first-class set, 15-def cumulative kit, tripwire factoring) recorded
+in v32. Report rescoped to the live chain (user mandate; 26 shards, hostile
+prose review pending).
 ## Retrofit entries (v20–v24, backfilled 2026-07-10)
 
 ### v20 — 2026-07-10, W56 SL1a-surface delta
