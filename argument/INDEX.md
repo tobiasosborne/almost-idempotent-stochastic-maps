@@ -100,7 +100,7 @@
 | `lem-exposed-circuit` | lemma | proved-mod-audit | none | A | For a signed affine retraction with neg mass <= delta: (i) a (rho,kappa)-exposed… |
 | `lem-extcb-corner-dimension-additivity` | lemma | proved | validated | A | Level-one corner-dimension additivity: for two finite-dimensional commutative C*… |
 | `lem-extcb-four-corner-merge` | lemma | stated | seeded | A | Complete four-corner merge: there are universal C_merge < infinity and a_merge >… |
-| `lem-extcb-four-corner-norm` | lemma | stated | seeded | A | Four-corner assembled norm estimate: there are universal K_norm < infinity and e… |
+| `lem-extcb-four-corner-norm` | lemma | proved | validated | A | Four-corner assembled norm estimate: there are universal K_norm < infinity and e… |
 | `lem-extcb-one-dimensional-corner-dimension` | lemma | stated | none | A | Level-one one-dimensional corner dimension: for sufficiently small universal del… |
 | `lem-extcb-one-dimensional-product` | lemma | proved | validated | A | Level-one one-dimensional corner product: there are universal C_PQR < infinity a… |
 | `lem-extcb1-close-corner-dimension` | lemma | proved-mod-audit | none | A | Close-compression range invariance: there is a universal e_close > 0 such that, … |
