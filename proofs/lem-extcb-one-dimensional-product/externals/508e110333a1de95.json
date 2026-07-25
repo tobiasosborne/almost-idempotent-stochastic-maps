@@ -1,0 +1,8 @@
+{
+  "id": "508e110333a1de95",
+  "name": "lem-hcb-column-hilbert-squared-CONTRACT",
+  "source": "proofs/lem-hcb-column-hilbert-squared (af-validated, taint clean). FULL VALIDATED CONTRACT: Corrected amplified column-Hilbert estimate: there are universal C_col \u003c infinity and e_col \u003e 0 such that every H-CB datum with e \u003c= e_col, every n \u003e= 1, and every X in M_{n,1} tensor S_{P,Q} satisfy abs(\u003cX,X\u003e_n-||X||_{n,1}^2) \u003c= C_col*e*||X||_{n,1}^2.",
+  "content_hash": "8f3e2681c39ac0588df8c86a245e1844df361aa4263fbcba2b1f24b76f45cc14",
+  "created": "2026-07-25T12:12:09.330522886Z",
+  "notes": ""
+}

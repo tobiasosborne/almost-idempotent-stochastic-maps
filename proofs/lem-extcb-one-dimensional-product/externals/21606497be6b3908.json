@@ -1,0 +1,8 @@
+{
+  "id": "21606497be6b3908",
+  "name": "lem-hcb1-variational-identity-CONTRACT",
+  "source": "proofs/lem-hcb1-variational-identity (af-validated, taint clean). FULL VALIDATED CONTRACT: Amplified Ha variational identity: there is a universal e_var \u003e 0 such that every H-CB datum with e \u003c= e_var, every n \u003e= 1, Z in M_n tensor S_{P,R}, X in M_{n,1} tensor S_{R,Q}, and Y in M_{n,1} tensor S_{P,Q} satisfy 2*\u003cY,(Ha^Q_{P,R})_n(Z)X-Z dot X\u003e*Co_Q(Q)=(Y^dagger dot Z) dot X-Y^dagger dot (Z dot X).",
+  "content_hash": "fbf63804c63d9e6e576aa78b7153127c085d21211be213274d8ecf2890842b6b",
+  "created": "2026-07-25T12:12:09.27432048Z",
+  "notes": ""
+}
