@@ -23,8 +23,6 @@ are ignored by the parser (`load_unwired`). Two sections:
 conj-degenerate-payment
 conj-degenerate-transport
 conj-ex
-conj-extcb
-conj-hcb
 conj-kernel
 conj-no-free-frontier
 conj-rh
@@ -98,7 +96,6 @@ conj-low-slab-cap
 conj-min-a-w4
 conj-near-cluster-absorption
 conj-nsc
-lem-extcb-four-corner-norm
 conj-rank3-cluster-zero-face-reach
 conj-shallow-counterweight-exclusion
 conj-sl1a-deep-diagonal-cell
@@ -226,16 +223,6 @@ lem-zero-face-exchange-identity
 lem-zero-face-localization
 lem-zero-face-one-sixteenth-capacity-kill
 lem-zero-face-vertex-support
-lem-hcb3-offdiagonal-inverse
-lem-hcb4-canonical-gram
-lem-hcb4-canonical-closeness
-lem-hcb4-canonical-inverse
-lem-extcb-one-dimensional-product
-lem-extcb-one-dimensional-corner-dimension
-lem-extcb-corner-dimension-additivity
-lem-extcb-four-corner-merge
-lem-extcb1-close-corner-dimension
-lem-extcb1-cross-corner-dimension
 lem-stage1-quantitative-inverse-function
 lem-stage1-exact-unit-rectification
 lem-routef-functional-calculus-closeness

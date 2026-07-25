@@ -49,6 +49,10 @@ mid-check.
      ADDENDUM (2026-07-25): 22 uniform-square-lower, 23 diagonal-lower-modulus,
      24 diagonal-inverse; status/outlook renumbered 22 -> 25. -->
 
+<!-- ADDENDUM (waves 3 + 3b + 3c): 25 hcb3-offdiagonal-inverse, 26-28 the hcb4 canonical layer,
+     29 hcb (H-CB parent), 30-34 the EXT front end, 35 extcb (EXT parent);
+     status/outlook renumbered 25 -> 36. -->
+
 | # | SHARD-ID | file |
 |---|----------|------|
 | 00 | `AISM-00-OVERVIEW` | `report/sections/00_overview.tex` |
@@ -76,4 +80,15 @@ mid-check.
 | 22 | `AISM-22-HCB3-UNIFORM-SQUARE-LOWER` | `report/sections/22_hcb3_uniform_square_lower.tex` |
 | 23 | `AISM-23-HCB3-DIAGONAL-LOWER-MODULUS` | `report/sections/23_hcb3_diagonal_lower_modulus.tex` |
 | 24 | `AISM-24-HCB3-DIAGONAL-INVERSE` | `report/sections/24_hcb3_diagonal_inverse.tex` |
-| 25 | `AISM-25-STATUS-OUTLOOK` | `report/sections/25_status_outlook.tex` |
+| 25 | `AISM-25-HCB3-OFFDIAGONAL-INVERSE` | `report/sections/25_hcb3_offdiagonal_inverse.tex` |
+| 26 | `AISM-26-HCB4-CANONICAL-GRAM` | `report/sections/26_hcb4_canonical_gram.tex` |
+| 27 | `AISM-27-HCB4-CANONICAL-CLOSENESS` | `report/sections/27_hcb4_canonical_closeness.tex` |
+| 28 | `AISM-28-HCB4-CANONICAL-INVERSE` | `report/sections/28_hcb4_canonical_inverse.tex` |
+| 29 | `AISM-29-HCB` | `report/sections/29_hcb.tex` |
+| 30 | `AISM-30-EXTCB-ONE-DIMENSIONAL-CORNERS` | `report/sections/30_extcb_one_dimensional_corners.tex` |
+| 31 | `AISM-31-EXTCB-CORNER-DIMENSION-ADDITIVITY` | `report/sections/31_extcb_corner_dimension_additivity.tex` |
+| 32 | `AISM-32-EXTCB1-DIMENSION-SELECTION` | `report/sections/32_extcb1_dimension_selection.tex` |
+| 33 | `AISM-33-EXTCB-FOUR-CORNER-NORM` | `report/sections/33_extcb_four_corner_norm.tex` |
+| 34 | `AISM-34-EXTCB-FOUR-CORNER-MERGE` | `report/sections/34_extcb_four_corner_merge.tex` |
+| 35 | `AISM-35-EXTCB` | `report/sections/35_extcb.tex` |
+| 36 | `AISM-36-STATUS-OUTLOOK` | `report/sections/36_status_outlook.tex` |

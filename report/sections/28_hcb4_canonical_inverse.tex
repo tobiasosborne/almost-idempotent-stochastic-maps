@@ -1,0 +1,122 @@
+% SHARD-ID: AISM-28-HCB4-CANONICAL-INVERSE
+% SHARD-TITLE: The canonical Ha inverse estimate
+% SHARD-SUMMARY: Reproduces lem-hcb4-canonical-inverse, the af-validated complete bijectivity of the two special Ha maps with amplified inverses within O(e) of the canonical ones.
+% SHARD-SUMMARY: Explains the canonical inverse bound, the quantitative Neumann step, and the closed-corner completeness branch required for the Banach target.
+% SHARD-KEYWORDS: lem-hcb4-canonical-inverse, af validated, Neumann series, complete bijectivity, Banach target, closed corner
+\section{The canonical Ha inverse estimate}\label{sec:hcb4-canonical-inverse}
+
+\begin{lemma}[\texttt{lem-hcb4-canonical-inverse}]\label{lem:hcb4-canonical-inverse}
+There are universal $C_{\mathrm{sp,inv}}<\infty$ and $\comb_{\mathrm{sp,inv}}>0$ such that
+every H-CB datum with $\comb\le \comb_{\mathrm{sp,inv}}$ has the special maps
+$\Ha{Q}{P}{Q}$ and $\Ha{Q}{Q}{P}$ completely bijective, with their amplified inverses
+differing from the corresponding canonical inverses by at most
+\begin{equation}\label{eq:ci-main}
+  \bigl\lVert\bigl(\Han{Q}{P}{Q}{n}\bigr)^{-1}-J_{P,Q,n}^{-1}\bigr\rVert
+  \;\le\;C_{\mathrm{sp,inv}}\,\comb ,
+\end{equation}
+and likewise for the row pair $\bigl(\Han{Q}{Q}{P}{n},J_{Q,P,n}\bigr)$.
+\emph{Transcription note.} ``Completely bijective'' means bijective at \emph{every}
+amplification level $n\ge1$, not merely at level one; and the estimate is uniform in $n$.
+Unlike the diagonal and off-diagonal inverse statements of
+\S\S\ref{sec:hcb3-diagonal-inverse}--\ref{sec:hcb3-offdiagonal-inverse}, this lemma is
+\emph{unconditional}: no level-one hypothesis is assumed, because the comparison map
+$J_n$ is bijective by construction and the smallness of $\comb$ does the rest.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Canonical Ha inverse estimate: there are universal C_sp,inv < infinity and e_sp,inv > 0 such that every H-CB datum with e <= e_sp,inv has the special maps Ha^Q_{P,Q} and Ha^Q_{Q,P} completely bijective, with their amplified inverses differing from the corresponding canonical inverses by at most C_sp,inv*e.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The mathematics is a perturbation of an invertible map by a small one; the length of the
+tree is due almost entirely to justifying that the target space is Banach, which is where
+the Neumann series lives.
+
+\emph{The ledger and the canonical inverse.} Let $C_J,\comb_J$ come from
+\texttt{lem-hcb4-canonical-gram} (\S\ref{sec:hcb4-canonical-gram}) and
+$C_{\mathrm{sp}},\comb_{\mathrm{sp}}$ from \texttt{lem-hcb4-canonical-closeness}
+(\S\ref{sec:hcb4-canonical-closeness}), and put
+\begin{equation}\label{eq:ci-ledger}
+  \comb_{\mathrm{sp,inv}}:=\min\Bigl\{\comb_J,\ \comb_{\mathrm{sp}},\
+    \tfrac1{4(C_J+C_{\mathrm{sp}}+1)}\Bigr\},
+  \qquad
+  C_{\mathrm{sp,inv}}:=4\bigl(C_{\mathrm{sp}}+1\bigr).
+\end{equation}
+The last entry of the threshold forces both $C_J\comb\le\tfrac14$ and
+$C_{\mathrm{sp}}\comb\le\tfrac14$ simultaneously. For either special ordered corner and
+every $n$, the canonical map $J_n$ is the amplified coefficient-space identification of
+\texttt{def-canonical-corner-identifications} --- the column map, or the row map defined as
+its adjoint --- hence an algebraic linear bijection onto the indicated operator corner,
+with the corresponding canonical inverse. Its inverse is bounded: the lower half of the
+Gram estimate reads $\lVert J_nZ\rVert\ge(1-C_J\comb)\nrm{Z}$, and applying it to
+$Z=J_n^{-1}Y$ with $C_J\comb\le\tfrac14$ gives
+\begin{equation}\label{eq:ci-jinv}
+  \bigl\lVert J_n^{-1}\bigr\rVert\;\le\;\tfrac43 .
+\end{equation}
+
+\emph{The quantitative Neumann step.} The abstract step used twice below is: if
+$J:X\to Y$ is a bounded bijection onto a \emph{Banach} space $Y$ with
+$\lVert J^{-1}\rVert\le\tfrac43$, and $A:X\to Y$ satisfies
+$\lVert A-J\rVert\le C_{\mathrm{sp}}\comb$ with $C_{\mathrm{sp}}\comb\le\tfrac14$, then
+$A$ is bijective and $\lVert A^{-1}-J^{-1}\rVert\le\tfrac83C_{\mathrm{sp}}\comb$. Put
+$T:=(A-J)J^{-1}:Y\to Y$, so that $A=(I_Y+T)J$ and
+$\lVert T\rVert\le\lVert A-J\rVert\lVert J^{-1}\rVert\le\tfrac43C_{\mathrm{sp}}\comb
+\le\tfrac13$. Since $Y$ is Banach so is $B(Y)$, and the partial sums
+$S_N=\sum_{k=0}^{N}(-T)^{k}$ are Cauchy there by
+$\sum_{k\ge0}\lVert T\rVert^{k}\le(1-\lVert T\rVert)^{-1}$; passing to the limit in the
+finite geometric identities $(I_Y+T)S_N=S_N(I_Y+T)=I_Y-(-T)^{N+1}$ and using
+$\lVert T\rVert^{N+1}\to0$ identifies the limit as the two-sided inverse, with
+$\lVert(I_Y+T)^{-1}\rVert\le\tfrac32$. Then $A^{-1}=J^{-1}(I_Y+T)^{-1}$ and
+$(I_Y+T)^{-1}-I_Y=-(I_Y+T)^{-1}T$ give
+\begin{equation}\label{eq:ci-neumann}
+  \bigl\lVert A^{-1}-J^{-1}\bigr\rVert
+  \;\le\;\tfrac43\cdot\tfrac32\cdot\tfrac43\,C_{\mathrm{sp}}\comb
+  \;=\;\tfrac83\,C_{\mathrm{sp}}\,\comb .
+\end{equation}
+
+\emph{Why the targets are Banach.} This is not a formality, and the tree does not treat it
+as one. In an H-CB datum the ambient $\mathcal A$ is complete by
+\texttt{def-extended-epsilon-cstar-algebra}, and \texttt{def-compressed-corner} states that
+$\Co{P}{Q}$ is an exact bounded idempotent with
+$\Cnr{P}{Q}=\Img\Co{P}{Q}=\Ker(1-\Co{P}{Q})$; a kernel of a continuous map is closed, and a
+closed subspace of a Banach space is Banach, so $\Cnr{P}{Q}$ is complete in the
+\emph{inherited} norm. The norm actually carried by the target is the Euclidean one, and
+the two are equivalent by the Gram estimate at $n=1$: there $J_{P,Q,1}(Z)c=Zc$, so
+$\lVert J_{P,Q,1}(Z)\rVert=\lVert Z\rVert_{\mathrm{Euc}}$ and
+$(1-C_J\comb)\nrm{Z}\le\lVert Z\rVert_{\mathrm{Euc}}\le(1+C_J\comb)\nrm{Z}$ with
+$C_J\comb\le\tfrac14$. Hence $(\Cnr{P}{Q},\lVert\cdot\rVert_{\mathrm{Euc}})$ is complete,
+its finite Hilbertian sum $\mathbb C^{n}\otimes\Cnr{P}{Q}$ is complete, and since
+$B(E,F)$ is Banach whenever $F$ is, both actual targets
+$B(\mathbb C^{n},\mathbb C^{n}\otimes\Cnr{P}{Q})$ and
+$B(\mathbb C^{n}\otimes\Cnr{P}{Q},\mathbb C^{n})$ --- the column and row targets of
+\texttt{def-ha-map} and \texttt{def-canonical-corner-identifications} --- are Banach.
+
+\emph{Assembly.} Fix $n\ge1$ and either special corner, and let $A_n$ be
+$\Han{Q}{P}{Q}{n}$ or $\Han{Q}{Q}{P}{n}$. Canonical closeness gives
+$\lVert A_n-J_n\rVert\le C_{\mathrm{sp}}\comb$, \eqref{eq:ci-jinv} gives the bijection $J_n$
+with $\lVert J_n^{-1}\rVert\le\tfrac43$, and \eqref{eq:ci-ledger} gives
+$C_{\mathrm{sp}}\comb\le\tfrac14$; so the Neumann step applies and
+$\lVert A_n^{-1}-J_n^{-1}\rVert\le\tfrac83C_{\mathrm{sp}}\comb\le
+4(C_{\mathrm{sp}}+1)\comb=C_{\mathrm{sp,inv}}\comb$. The constants do not depend on $n$ or
+on the corner, so both special maps are completely bijective with the uniform estimate
+\eqref{eq:ci-main}.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb4-canonical-inverse}: 19 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean. Six of the nineteen exported nodes form the completeness
+branch.
+
+\noindent\textbf{Role in the chain.} Registry imports:
+\texttt{lem-hcb4-canonical-gram},
+\texttt{lem-hcb4-canonical-closeness},
+\texttt{lem-compcb-corner-algebra} and
+\texttt{lem-hcb3-uniform-square-lower}; the exported tree visibly consumes the first two.
+Its \texttt{defs} line records \texttt{def-ha-map}, \texttt{def-hcb-datum},
+\texttt{def-canonical-corner-identifications}, \texttt{def-compressed-corner} (the
+range/kernel identity) and \texttt{def-extended-epsilon-cstar-algebra} (completeness of
+$\mathcal A$); the last two are consumed essentially in the validated
+closed-corner completeness branch. Downstream, this lemma is one of
+the sixteen declared dependencies of \texttt{conj-hcb} (\S\ref{sec:hcb}); the parent's own
+exported tree cites eight suppliers directly and this is not among them, so the parent
+consumes it through the registry rather than in its validated derivation. Nothing here
+bears on \texttt{op-classical}, which is open.

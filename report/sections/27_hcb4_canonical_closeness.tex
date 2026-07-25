@@ -1,0 +1,122 @@
+% SHARD-ID: AISM-27-HCB4-CANONICAL-CLOSENESS
+% SHARD-TITLE: Canonical Ha closeness
+% SHARD-SUMMARY: Reproduces lem-hcb4-canonical-closeness, the af-validated O(e) closeness of the two special Ha maps to the canonical corner identifications, uniformly in the amplification level.
+% SHARD-SUMMARY: Explains the normalised compressed-unit scalar that carries the whole defect, the adjoint reduction to the column action, and the exact scalarisation of the comparison term.
+% SHARD-KEYWORDS: lem-hcb4-canonical-closeness, af validated, Ha map, canonical identification, compressed unit normalisation, adjoint reduction
+\section{Canonical Ha closeness}\label{sec:hcb4-canonical-closeness}
+
+\begin{lemma}[\texttt{lem-hcb4-canonical-closeness}]\label{lem:hcb4-canonical-closeness}
+There are universal $C_{\mathrm{sp}}<\infty$ and $\comb_{\mathrm{sp}}>0$ such that every
+H-CB datum with $\comb\le \comb_{\mathrm{sp}}$ satisfies
+\begin{equation}\label{eq:cc-main}
+  \max\bigl\{\lVert\Han{Q}{P}{Q}{n}-J_{P,Q,n}\rVert,\;
+             \lVert\Han{Q}{Q}{P}{n}-J_{Q,P,n}\rVert\bigr\}
+  \;\le\;C_{\mathrm{sp}}\,\comb
+  \qquad\text{for every }n\ge1 .
+\end{equation}
+\emph{Transcription note.} Both differences are taken between maps defined on the same
+amplified corner --- $\Amp{n}{\Cnr{P}{Q}}$ in the first case, $\Amp{n}{\Cnr{Q}{P}}$ in the
+second --- and the outer norm is the induced one: the supremum over $Z$ of the operator
+norm of the difference, divided by $\nrm{Z}$. The estimate is \emph{unconditional}: unlike
+the inverse and lower-modulus results of \S\S\ref{sec:hcb3-diagonal-lower-modulus}
+--\ref{sec:hcb3-offdiagonal-inverse} it assumes nothing about the level-one behaviour of
+any map.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Canonical Ha closeness: there are universal C_sp < infinity and e_sp > 0 such that every H-CB datum with e <= e_sp satisfies max{||(Ha^Q_{P,Q})_n-J_{P,Q,n}||,||(Ha^Q_{Q,P})_n-J_{Q,P,n}||} <= C_sp*e for every n >= 1.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree has three movements: a scalar normalisation, the column estimate, and the same
+adjoint transfer used in \S\ref{sec:hcb4-canonical-gram}. The organising observation is
+that the \emph{entire} discrepancy between the special Ha map and the canonical map is
+carried by one number --- the amount by which the compressed unit $\cunit{Q}$ fails to be
+a unit vector for the column-Hilbert norm $\colq{Q}$.
+
+\emph{The normalised compressed unit.} There are universal $A<\infty$ and $\comb_0>0$ such
+that, for $\comb\le \comb_0$, the scalar
+\begin{equation}\label{eq:cc-alpha}
+  \alpha:=\colq{Q}(\cunit{Q})
+\end{equation}
+is strictly positive, the normalised element $q_0=\alpha^{-1}\cunit{Q}$ of
+\texttt{def-canonical-corner-identifications} satisfies $\colq{Q}(q_0)=1$ by absolute
+homogeneity, and $\lvert\alpha-1\rvert\le A\comb$. Two estimates combine. First,
+\texttt{lem-compcb-corner-algebra} (\S\ref{sec:compcb-corner-algebra}) applied with
+$P=Q$ --- legitimate because $Q$ is nonvanishing, by the registered
+one-dimensional-to-nonvanishing bridge --- makes $\Cnrs{Q}$ an extended
+$\gamma$-$C^*$-algebra with $\gamma=C_{\mathrm{ca}}\comb$ and unit $\cunit{Q}$, so the
+$\ecs$-Banach $C^*$ norm axioms give $\lvert\nrm{\cunit{Q}}-1\rvert\le\gamma$; after
+imposing $\comb\le\min\{\comb_{\mathrm{ca}},1/(2\max\{C_{\mathrm{ca}},1\})\}$ one has
+$\tfrac12\le\nrm{\cunit{Q}}\le\tfrac32$ and in particular $\cunit{Q}\ne0$. Second,
+\texttt{lem-hcb-column-hilbert-squared} (\S\ref{sec:hcb-column-hilbert-squared}) at $n=1$,
+with its variable corner specialised to $Q$ and $X=\cunit{Q}\in\Cnrs{Q}$, compares the
+inner product with the norm: $\ipo{\cunit{Q}}{\cunit{Q}}=\alpha^{2}$, so
+$\lvert\alpha^{2}-\nrm{\cunit{Q}}^{2}\rvert\le C_{\mathrm{col}}\comb\nrm{\cunit{Q}}^{2}$,
+and for $C_{\mathrm{col}}\comb\le\tfrac12$ the inequality
+$\lvert\sqrt{1+t}-1\rvert\le\lvert t\rvert$ on $\lvert t\rvert\le\tfrac12$ gives
+$\alpha>0$ and $\lvert\alpha/\nrm{\cunit{Q}}-1\rvert\le C_{\mathrm{col}}\comb$. Adding the
+two through $\nrm{\cunit{Q}}\le\tfrac32$,
+\[
+  \lvert\alpha-1\rvert\le\lvert\alpha-\nrm{\cunit{Q}}\rvert+\lvert\nrm{\cunit{Q}}-1\rvert
+  \le\bigl(\tfrac32C_{\mathrm{col}}+C_{\mathrm{ca}}\bigr)\comb,
+\]
+so $A=2C_{\mathrm{col}}+C_{\mathrm{ca}}$ works, with $\comb_0$ the minimum of the
+thresholds just used.
+
+\emph{The column estimate.} Fix $n\ge1$ and $Z\in\Amp{n}{\Cnr{P}{Q}}$ and put
+$H:=\Han{Q}{P}{Q}{n}(Z)$. The comparison is made \emph{on the adjoint side}, where the
+column-action lemma is directly applicable. By
+\texttt{lem-hcb2-amplified-adjointness} (\S\ref{sec:hcb2-amplified-adjointness}),
+$H\dg=\Han{Q}{Q}{P}{n}(Z\dg)$, and by \texttt{def-canonical-corner-identifications},
+$J_{P,Q,n}(Z)\dg=J_{Q,P,n}(Z\dg)$; so it suffices to compare those two. Applying
+\texttt{lem-hcb1-column-action} (\S\ref{sec:hcb1-column-action}) with corner variables
+$(Q,P)$, matrix symbol $Z\dg$ and an arbitrary column $X$, and using $\nrm{Z\dg}=\nrm{Z}$,
+\begin{equation}\label{eq:cc-act}
+  \colq{Q}\bigl(H\dg X-Z\dg\cpr X\bigr)\;\le\;C_{\mathrm{act}}\,\comb\,\nrm{Z}\,\colq{P}(X).
+\end{equation}
+The remaining term is exactly scalar. Put $d:=J_{P,Q,n}(Z)\dg X\in\mathbb C^{n}$.
+Entrywise, the column-Hilbert displays and the defining formula for $J$ give
+$[Z\dg\cpr X]_i=\sum_k Z_{ki}\dg\cpr X_k=d_i\,\cunit{Q}$; under the canonical
+identification by $q_0$ that vector \emph{is} $\alpha d$, whereas $J_{P,Q,n}(Z)\dg X$ is
+$d$. Hence
+\begin{equation}\label{eq:cc-scalar}
+  \colq{Q}\bigl(Z\dg\cpr X-J_{P,Q,n}(Z)\dg X\bigr)
+  \;=\;\lvert\alpha-1\rvert\,\lVert d\rVert_{2}
+  \;\le\;A\,\comb\,(1+C_J\comb)\,\nrm{Z}\,\colq{P}(X),
+\end{equation}
+the last step bounding $\lVert d\rVert_2$ by $\lVert J_{P,Q,n}(Z)\rVert\,\colq{P}(X)$ and
+then invoking \texttt{lem-hcb4-canonical-gram} (\S\ref{sec:hcb4-canonical-gram}) --- its
+only use in this proof. Shrinking $\comb$ below $\comb_0$, the two external thresholds,
+$\comb_J$ and $1/\max\{C_J,1\}$ makes the factor $(1+C_J\comb)$ at most $2$, so adding
+\eqref{eq:cc-act} and \eqref{eq:cc-scalar} by the triangle inequality and taking the
+supremum over nonzero $X$ gives
+$\lVert H\dg-J_{P,Q,n}(Z)\dg\rVert\le C_{*}\comb\nrm{Z}$ with
+$C_{*}=C_{\mathrm{act}}+2A$; Hilbert-space adjunction preserves the operator norm, so
+$\lVert H-J_{P,Q,n}(Z)\rVert$ obeys the same bound. No constant and no threshold depends
+on $n$.
+
+\emph{Row transfer and completion.} For $W\in\Amp{n}{\Cnr{Q}{P}}$, adjointness gives
+$\Han{Q}{Q}{P}{n}(W)=\bigl(\Han{Q}{P}{Q}{n}(W\dg)\bigr)\dg$ and the definition gives
+$J_{Q,P,n}(W)=J_{P,Q,n}(W\dg)\dg$; with $\nrm{W\dg}=\nrm{W}$ and adjoint norm invariance,
+the column estimate transfers verbatim. Taking suprema over nonzero $Z$ and $W$ turns both
+pointwise bounds into map-norm bounds, so \eqref{eq:cc-main} holds with
+$C_{\mathrm{sp}}=C_{*}$ and $\comb_{\mathrm{sp}}$ the positive minimum of the thresholds
+collected above.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb4-canonical-closeness}: 11 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Registry imports:
+\texttt{lem-hcb-column-hilbert-squared},
+\texttt{lem-hcb1-column-action},
+\texttt{lem-hcb2-amplified-adjointness},
+\texttt{lem-hcb4-canonical-gram},
+\texttt{lem-compcb-corner-algebra} and
+\texttt{lem-hcb3-uniform-square-lower}; the exported tree visibly consumes the first five.
+It is the ``canonical-identity closeness'' clause of the parent \texttt{conj-hcb}
+(\S\ref{sec:hcb}) --- one of the eight suppliers that parent's tree cites directly --- and
+it supplies the hypothesis $\lVert A_n-J_n\rVert\le C_{\mathrm{sp}}\comb$ of the Neumann
+step in \S\ref{sec:hcb4-canonical-inverse}. Nothing here bears on \texttt{op-classical},
+which is open.

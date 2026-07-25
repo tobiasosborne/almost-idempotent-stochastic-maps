@@ -199,9 +199,86 @@ verbatim), and keywords.
 - **Summary:** Explains the exact entrywise inversion, the imported lower-modulus bound, and the elementary reciprocal estimate that produces the 1+C_inv*e inverse norm.
 - **Keywords:** lem-hcb3-diagonal-inverse, af validated, Ha map, bijectivity, inverse norm, entrywise amplification
 
-## `AISM-25-STATUS-OUTLOOK`
-- **File:** `report/sections/25_status_outlook.tex`
+## `AISM-25-HCB3-OFFDIAGONAL-INVERSE`
+- **File:** `report/sections/25_hcb3_offdiagonal_inverse.tex`
+- **Title:** Off-diagonal Ha inverse propagation
+- **Summary:** Reproduces lem-hcb3-offdiagonal-inverse, the af-validated rectangular counterpart of the diagonal inverse estimate.
+- **Summary:** Explains the rectangular square estimate, the adjoint-product route to an amplified lower modulus anchored at the diagonal index, and the reciprocal bound.
+- **Keywords:** lem-hcb3-offdiagonal-inverse, af validated, Ha map, rectangular corner, lower modulus, inverse norm
+
+## `AISM-26-HCB4-CANONICAL-GRAM`
+- **File:** `report/sections/26_hcb4_canonical_gram.tex`
+- **Title:** The canonical corner Gram estimate
+- **Summary:** Reproduces lem-hcb4-canonical-gram, the af-validated two-sided comparison of the ambient corner norm with the norm of the canonical identification.
+- **Summary:** Explains the exact Gram scalarisation, the two uniform inputs it is fed, the scalar square-root passage, and the adjoint transfer to the row corner.
+- **Keywords:** lem-hcb4-canonical-gram, af validated, canonical corner identification, Gram scalarisation, compressed unit, row transfer
+
+## `AISM-27-HCB4-CANONICAL-CLOSENESS`
+- **File:** `report/sections/27_hcb4_canonical_closeness.tex`
+- **Title:** Canonical Ha closeness
+- **Summary:** Reproduces lem-hcb4-canonical-closeness, the af-validated O(e) closeness of the two special Ha maps to the canonical corner identifications, uniformly in the amplification level.
+- **Summary:** Explains the normalised compressed-unit scalar that carries the whole defect, the adjoint reduction to the column action, and the exact scalarisation of the comparison term.
+- **Keywords:** lem-hcb4-canonical-closeness, af validated, Ha map, canonical identification, compressed unit normalisation, adjoint reduction
+
+## `AISM-28-HCB4-CANONICAL-INVERSE`
+- **File:** `report/sections/28_hcb4_canonical_inverse.tex`
+- **Title:** The canonical Ha inverse estimate
+- **Summary:** Reproduces lem-hcb4-canonical-inverse, the af-validated complete bijectivity of the two special Ha maps with amplified inverses within O(e) of the canonical ones.
+- **Summary:** Explains the canonical inverse bound, the quantitative Neumann step, and the closed-corner completeness branch required for the Banach target.
+- **Keywords:** lem-hcb4-canonical-inverse, af validated, Neumann series, complete bijectivity, Banach target, closed corner
+
+## `AISM-29-HCB`
+- **File:** `report/sections/29_hcb.tex`
+- **Title:** The H-CB parent contract
+- **Summary:** Reproduces conj-hcb, the af-validated parent statement of the H-CB tier, assembled from the validated tier lemmas with one universal constant pair.
+- **Summary:** Explains the aggregation of thresholds and coefficients, the clause-by-clause discharge, and the refuted unconditional inverse clause that forced the conditional wording.
+- **Keywords:** conj-hcb, af validated, H-CB tier, constant aggregation, conditional inverse, contract amendment
+
+## `AISM-30-EXTCB-ONE-DIMENSIONAL-CORNERS`
+- **File:** `report/sections/30_extcb_one_dimensional_corners.tex`
+- **Title:** One-dimensional corner calculus
+- **Summary:** Reproduces lem-extcb-one-dimensional-product and lem-extcb-one-dimensional-corner-dimension, the af-validated multiplicativity of the compressed product through a one-dimensional middle projection and its dimension corollary.
+- **Summary:** Explains the scalarisation of the compressed square, the three-term squared-norm comparison and the square-root passage, then the injective-transport argument bounding the corner dimension.
+- **Keywords:** lem-extcb-one-dimensional-product, lem-extcb-one-dimensional-corner-dimension, af validated, one-dimensional projection, compressed product, corner dimension
+
+## `AISM-31-EXTCB-CORNER-DIMENSION-ADDITIVITY`
+- **File:** `report/sections/31_extcb_corner_dimension_additivity.tex`
+- **Title:** Corner-dimension additivity
+- **Summary:** Reproduces lem-extcb-corner-dimension-additivity, the af-validated splitting of a compressed corner over two projection bases into the direct sum of its blocks.
+- **Summary:** Explains the binary splitting lemma and its Neumann inversion, the transport of the second index by the involution, and the two finite inductions that assemble the double sum.
+- **Keywords:** lem-extcb-corner-dimension-additivity, af validated, projection basis, binary splitting, Neumann series, direct sum
+
+## `AISM-32-EXTCB1-DIMENSION-SELECTION`
+- **File:** `report/sections/32_extcb1_dimension_selection.tex`
+- **Title:** Dimension selection in an EXT-CB datum
+- **Summary:** Reproduces lem-extcb1-close-corner-dimension and lem-extcb1-cross-corner-dimension, the af-validated identification of the cross-corner dimensions of an EXT-CB datum as (r,1).
+- **Summary:** Explains the close-idempotent range transport, the matrix-unit normalisation of the transported diagonal, and the dichotomy that additivity converts into the count r.
+- **Keywords:** lem-extcb1-close-corner-dimension, lem-extcb1-cross-corner-dimension, af validated, close idempotents, matrix units, corner dimension, EXT-CB datum
+
+## `AISM-33-EXTCB-FOUR-CORNER-NORM`
+- **File:** `report/sections/33_extcb_four_corner_norm.tex`
+- **Title:** The four-corner assembled norm estimate
+- **Summary:** Reproduces lem-extcb-four-corner-norm, the af-validated two-sided norm control of the map assembled from four corner maps, uniform in the amplification level.
+- **Summary:** Explains the coarse block conditioning, the sixteen-term square defect, and the scalar C*-bootstrap that upgrades crude constants to 1 plus or minus O(e).
+- **Keywords:** lem-extcb-four-corner-norm, af validated, four-corner merging datum, block conditioning, square defect, C* bootstrap
+
+## `AISM-34-EXTCB-FOUR-CORNER-MERGE`
+- **File:** `report/sections/34_extcb_four_corner_merge.tex`
+- **Title:** The complete four-corner merge
+- **Summary:** Reproduces lem-extcb-four-corner-merge, the af-validated assembly of four fixed bijective level-one corner maps into a single extended isomorphism.
+- **Summary:** Explains the single-level-one-map assembly, the multiplicative defect, the Neumann coverage argument for surjectivity, and the counterexample that forced the total-defect smallness hypothesis.
+- **Keywords:** lem-extcb-four-corner-merge, af validated, merge, extended isomorphism, Neumann coverage, contract amendment, counterexample
+
+## `AISM-35-EXTCB`
+- **File:** `report/sections/35_extcb.tex`
+- **Title:** The EXT-CB parent contract
+- **Summary:** Reproduces conj-extcb, the af-validated parent statement of the EXT tier: one map on M_{r+1} extending a level-one datum, carried at every amplification by one unitary and four fixed corner maps.
+- **Summary:** Explains the dimension-free exact-target correction, the spatial four-corner system transported through the level-one Ha inverses, the ordered use of the conditional H-CB clauses, and the merge that closes the tier.
+- **Keywords:** conj-extcb, af validated, EXT tier, exact-target correction, Newton iteration, spatial four-corner system, merge
+
+## `AISM-36-STATUS-OUTLOOK`
+- **File:** `report/sections/36_status_outlook.tex`
 - **Title:** Status and outlook
-- **Summary:** Records what this report validates, what remains on the live H-CB and EXT queue, and the quarantined assembly interface.
-- **Summary:** Tabulates the results removed from the previous report as a route-pivot record, each with its retained registry status.
-- **Keywords:** status, outlook, conj-hcb, EXT tier, quarantine, route pivot, deprecation table
+- **Summary:** Records what this report validates, where the live route now stops, and the quarantined assembly interface.
+- **Summary:** Tabulates the validated registry results not reproduced on the live route, with every row traced to the generated argument index.
+- **Keywords:** status, outlook, conj-hcb, conj-extcb, registry index, live route, off-route table

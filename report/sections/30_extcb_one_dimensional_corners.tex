@@ -1,0 +1,132 @@
+% SHARD-ID: AISM-30-EXTCB-ONE-DIMENSIONAL-CORNERS
+% SHARD-TITLE: One-dimensional corner calculus
+% SHARD-SUMMARY: Reproduces lem-extcb-one-dimensional-product and lem-extcb-one-dimensional-corner-dimension, the af-validated multiplicativity of the compressed product through a one-dimensional middle projection and its dimension corollary.
+% SHARD-SUMMARY: Explains the scalarisation of the compressed square, the three-term squared-norm comparison and the square-root passage, then the injective-transport argument bounding the corner dimension.
+% SHARD-KEYWORDS: lem-extcb-one-dimensional-product, lem-extcb-one-dimensional-corner-dimension, af validated, one-dimensional projection, compressed product, corner dimension
+\section{One-dimensional corner calculus}\label{sec:extcb-one-dimensional-corners}
+
+The EXT tier works with the corners of a \emph{closed EXT-CB datum}
+(\texttt{def-extcb-datum}) and asks for one map on a matrix algebra of one larger size.
+The two results of this section are its arithmetic base: through a one-dimensional
+$\dproj$-projection the compressed product is multiplicative on norms up to $1\pm
+O(\comb)$, and consequently a corner between two one-dimensional projections is at most a
+line. Both are level-one statements; the amplified content of the tier is carried
+elsewhere.
+
+\begin{lemma}[\texttt{lem-extcb-one-dimensional-product}]\label{lem:extcb-one-dimensional-product}
+There are universal $C_{PQR}<\infty$ and $\comb_{PQR}>0$ such that, for
+$\comb=\dproj+\ecs\le \comb_{PQR}$, if $Q$ is one-dimensional then
+\begin{equation}\label{eq:pqr-main}
+  \bigl\lvert\,\nrm{X\cpr Y}-\nrm{X}\nrm{Y}\,\bigr\rvert\;\le\;C_{PQR}\,\comb\,\nrm{X}\nrm{Y}
+  \qquad\text{for }X\in\Cnr{P}{Q},\ Y\in\Cnr{Q}{R}.
+\end{equation}
+\emph{Transcription note.} One-dimensionality is required of the \emph{middle} index $Q$
+--- the index shared by the two corners --- and of nothing else; $P$ and $R$ are arbitrary
+$\dproj$-projections. ``One-dimensional'' means $\dim\Cnrs{Q}=1$
+(\texttt{def-one-dimensional-delta-projection}), and the statement is level-one.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Level-one one-dimensional corner product: there are universal C_PQR < infinity and e_PQR > 0 such that, for e=delta+epsilon <= e_PQR, if Q is one-dimensional then abs(||X dot Y||-||X||||Y||) <= C_PQR*e*||X||||Y|| for X in S_{P,Q} and Y in S_{Q,R}.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree proves the \emph{squared} comparison and takes a square root at the end; the
+squared form is what the algebra produces, because the only handle on $X$ is
+$X\dg\cpr X$.
+
+\emph{A uniform ledger.} One-dimensionality gives $\Cnrs{Q}\ne0$, and vanishing of the
+corner characterises the small alternative of \texttt{def-delta-projection}; hence $Q$ is
+nonvanishing and \texttt{lem-compcb-corner-algebra} makes $\Cnrs{Q}$ an extended
+$C_{\mathrm{ca}}\comb$-$C^*$-algebra with unit $\cunit{Q}=\Cos{Q}(Q)$ and
+$\lvert\nrm{\cunit{Q}}-1\rvert\le C_{\mathrm{ca}}\comb$. The dichotomy bounds
+$\nrm{P},\nrm{Q},\nrm{R}$ by a universal $B$; the compressed-product display supplies a
+universal $C_{\mathrm{dot}}$ with
+$\nrm{A\cpr B-AB}\le C_{\mathrm{dot}}\comb\nrm{A}\nrm{B}$ on compatible pairs. One
+consequence is used repeatedly: $\cunit{Q}$ is a left unit on $\Cnr{Q}{R}$ up to
+$O(\comb)$,
+\begin{equation}\label{eq:pqr-leftunit}
+  \nrm{\cunit{Q}Y-Y}\;\le\;C_L\,\comb\,\nrm{Y},
+\end{equation}
+obtained by combining $\nrm{\cunit{Q}-Q}=O(\comb)$ (from
+$\Cos{Q}(A)=Q(AQ)+O(\comb)\nrm{A}$ and $\nrm{Q^{2}-Q}\le\dproj$) with
+$\nrm{QY-Y}=O(\comb)\nrm{Y}$ (from $Y=\Co{Q}{R}(Y)=Q(YR)+O(\comb)\nrm{Y}$ and one
+associator move). Write $C_0$ for the maximum of these constants and shrink the threshold
+below $1/(2C_0)$, so that $\nrm{\cunit{Q}}\ge\tfrac12$.
+
+\emph{Scalarisation.} Fix $X\in\Cnr{P}{Q}$. The compression adjoint identity puts $X\dg$
+in $\Cnr{Q}{P}$, so $a:=X\dg\cpr X$ lies in $\Cnrs{Q}$; since $\dim\Cnrs{Q}=1$ and
+$\cunit{Q}\ne0$, the unit spans, and $a=h\,\cunit{Q}$ for a unique scalar $h$, real
+because $a\dg=a$ and $\cunit{Q}\dg=\cunit{Q}$. Comparing $a$ with the ambient square and
+using the $\ecs$-$C^*$ axioms,
+$\lvert\nrm{a}-\nrm{X}^{2}\rvert\le(C_0+1)\comb\nrm{X}^{2}$; and
+$\nrm{a}=\lvert h\rvert\,\nrm{\cunit{Q}}$ together with
+$\lvert\nrm{\cunit{Q}}-1\rvert\le C_0\comb$ and $\nrm{\cunit{Q}}\ge\tfrac12$ converts this
+into
+\begin{equation}\label{eq:pqr-coeff}
+  \bigl\lvert\,\lvert h\rvert-\nrm{X}^{2}\,\bigr\rvert\;\le\;C_1\,\comb\,\nrm{X}^{2},
+  \qquad \lvert h\rvert\;\le\;C_h\nrm{X}^{2}.
+\end{equation}
+
+\emph{The squared comparison.} Put $r=\nrm{X}$, $s=\nrm{Y}$, $W=X\cpr Y$ and $Z=XY$ for
+the ambient product. Three estimates combine. First,
+$\nrm{W-Z}\le C_0\comb\,rs$ and $\lvert\nrm{Z\dg Z}-\nrm{Z}^{2}\rvert\le\ecs\nrm{Z}^{2}$
+give $\lvert\nrm{W}^{2}-\nrm{Z\dg Z}\rvert\le C_3\comb\,r^{2}s^{2}$. Second, exact
+anti-multiplicativity of the involution, two applications of the $\ecs$-associator axiom,
+the replacement of $X\dg X$ by $a=h\,\cunit{Q}$ and then \eqref{eq:pqr-leftunit} give
+\begin{equation}\label{eq:pqr-assoc}
+  \bigl\lVert(XY)\dg(XY)-h\,Y\dg Y\bigr\rVert\;\le\;C_4\,\comb\,r^{2}s^{2}.
+\end{equation}
+Third, $\lvert\nrm{Y\dg Y}-s^{2}\rvert\le\ecs s^{2}$ and \eqref{eq:pqr-coeff} give
+$\lvert\nrm{h\,Y\dg Y}-r^{2}s^{2}\rvert\le C_5\comb\,r^{2}s^{2}$. The reverse triangle
+inequality then yields
+$\lvert\nrm{W}^{2}-r^{2}s^{2}\rvert\le C_2\comb\,r^{2}s^{2}$ with $C_2=C_3+C_4+C_5$.
+
+\emph{Square root.} If $rs=0$ then $X=0$ or $Y=0$, and bilinearity of the compressed
+product makes $W=0$, so \eqref{eq:pqr-main} holds exactly. Otherwise $\nrm{W}+rs\ge rs>0$
+and the factorisation $\lvert\alpha-\beta\rvert=\lvert\alpha^{2}-\beta^{2}\rvert/(\alpha+\beta)$
+for nonnegative $\alpha,\beta$ turns the squared comparison into \eqref{eq:pqr-main} with
+$C_{PQR}=C_2$ and $\comb_{PQR}$ the minimum of the finitely many universal thresholds.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-extcb-one-dimensional-product}: 25 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\begin{lemma}[\texttt{lem-extcb-one-dimensional-corner-dimension}]\label{lem:extcb-one-dimensional-corner-dimension}
+For sufficiently small universal $\dproj+\ecs$, if $P$ and $Q$ are one-dimensional
+$\dproj$-projections then $\dim\Cnr{P}{Q}\le1$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Level-one one-dimensional corner dimension: for sufficiently small universal delta+epsilon, if P and Q are one-dimensional delta-projections then dim S_{P,Q} <= 1.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Set $\comb_0=\min\{\comb_{PQR},\,1/(2(C_{PQR}+1))\}$ and let
+$\comb\le \comb_0$. For nonzero $X,Y\in\Cnr{P}{Q}$ the compression adjoint identity puts
+$X\dg$ in $\Cnr{Q}{P}$ with $\nrm{X\dg}=\nrm{X}$, and $X\dg\cpr Y$ lies in $\Cnrs{Q}$.
+Apply Lemma~\ref{lem:extcb-one-dimensional-product} to the triple $(Q,P,Q)$ --- whose
+middle index is $P$, one-dimensional by hypothesis --- to get
+\begin{equation}\label{eq:1dcd-lower}
+  \nrm{X\dg\cpr Y}\;\ge\;(1-C_{PQR}\comb)\,\nrm{X}\nrm{Y}\;\ge\;\tfrac12\nrm{X}\nrm{Y}\;>\;0 .
+\end{equation}
+This is the whole analytic content; the rest is linear algebra. If $\Cnr{P}{Q}=0$ there is
+nothing to prove. Otherwise fix a nonzero $X$ and let $T_X:\Cnr{P}{Q}\to\Cnrs{Q}$ be
+$T_X(Y)=X\dg\cpr Y$, linear because the compressed product is bilinear. By
+\eqref{eq:1dcd-lower}, $T_X(Y)\ne0$ whenever $Y\ne0$, so $\Ker T_X=0$; an injective linear
+map into $\Cnrs{Q}$, which is one-dimensional by hypothesis, forces
+$\dim\Cnr{P}{Q}\le\dim\Cnrs{Q}=1$.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-extcb-one-dimensional-corner-dimension}: 8 nodes, all
+\texttt{validated}, root \texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Both lemmas import
+\texttt{lem-compcb-corner-algebra} and \texttt{lem-hcb3-uniform-square-lower}; the second
+imports the first. Together they are the approximate-$C^*$ substitute for the exact fact
+that a corner through a rank-one projection is a line: the product statement is the
+result the pinned source invokes for transitivity of equivalence of one-dimensional
+$\dproj$-projections (\texttt{def-one-dimensional-delta-projection}), and the dimension
+statement is consumed by \texttt{lem-extcb1-cross-corner-dimension}
+(\S\ref{sec:extcb1-dimension-selection}), which is where that transitivity is actually
+used.

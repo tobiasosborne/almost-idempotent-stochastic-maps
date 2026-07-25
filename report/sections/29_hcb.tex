@@ -1,0 +1,130 @@
+% SHARD-ID: AISM-29-HCB
+% SHARD-TITLE: The H-CB parent contract
+% SHARD-SUMMARY: Reproduces conj-hcb, the af-validated parent statement of the H-CB tier, assembled from the validated tier lemmas with one universal constant pair.
+% SHARD-SUMMARY: Explains the aggregation of thresholds and coefficients, the clause-by-clause discharge, and the refuted unconditional inverse clause that forced the conditional wording.
+% SHARD-KEYWORDS: conj-hcb, af validated, H-CB tier, constant aggregation, conditional inverse, contract amendment
+\section{The H-CB parent contract}\label{sec:hcb}
+
+\begin{lemma}[\texttt{conj-hcb}]\label{conj:hcb}
+There are universal $C_H<\infty$ and $\comb_H>0$ such that, whenever
+$\comb=\dproj+\ecs\le \comb_H$, $Q$ is a level-one one-dimensional
+$\dproj$-projection in an extended $\ecs$-$C^*$-algebra $\mathcal A$, and $P,R,S$ are
+$\dproj$-projections, the maps $\ampl{n}\Ha{Q}{P}{R}$ --- read, under the
+\textup{COL-HILB} identification, as operators from $\mathbb C^{n}\otimes\Cnr{R}{Q}$ to
+$\mathbb C^{n}\otimes\Cnr{P}{Q}$ --- satisfy for every $n$ the adjoint equality, a product
+defect at most $C_H\comb\nrm{Z}\nrm{W}$, and the uniform unit, upper-norm, homomorphism
+and canonical-identity closeness estimates required by \texttt{lem\_extension}; moreover
+\begin{enumerate}
+\item if the level-one lower modulus of $\Ha{Q}{P}{P}$ is at least $\tfrac14$, then every
+  amplification has lower modulus at least $1-C_H\comb$;
+\item if $\Ha{Q}{P}{P}$ is \emph{also} bijective at level one, then every amplification is
+  bijective with inverse norm at most $1+C_H\comb$;
+\item the analogous off-diagonal inverse bound for $\Ha{Q}{P}{R}$ is asserted \emph{only}
+  when $\Ha{Q}{P}{R}$ is bijective at level one and $\Ha{Q}{R}{R}$ satisfies the diagonal
+  lower-modulus hypothesis;
+\end{enumerate}
+all constants independent of $n$, $\dim\mathcal A$, block count and block dimensions.
+\emph{Transcription note.} \texttt{lem\_extension} is a label in the pinned source, not a
+registry identifier: it names the consumer whose required estimate list this contract is
+calibrated to. The three clauses above are conditional as written; nothing in this
+document establishes their level-one hypotheses for any particular datum.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{H-CB: there are universal C_H < infinity and e_H > 0 such that, whenever e=delta+epsilon <= e_H, Q is a level-one one-dimensional delta-projection in an extended epsilon-C*-algebra A, and P,R,S are delta-projections, the maps 1_{M_n} tensor Ha^Q_{P,R}, under the COL-HILB identification with operators on C^n tensor S_{R,Q} and C^n tensor S_{P,Q}, satisfy for every n the adjoint equality, product defect at most C_H*e*||Z||||W||, and the uniform unit, upper-norm, homomorphism, and canonical-identity closeness estimates required by lem_extension; moreover, if the level-one lower modulus of Ha^Q_{P,P} is at least 1/4, then every amplification has lower modulus at least 1-C_H*e, and if Ha^Q_{P,P} is also bijective at level one then every amplification is bijective with inverse norm at most 1+C_H*e; the analogous off-diagonal inverse bound for Ha^Q_{P,R} is asserted only when Ha^Q_{P,R} is bijective at level one and Ha^Q_{R,R} satisfies that diagonal lower-modulus hypothesis; all constants independent of n, dim A, block count, and block dimensions.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree is a \emph{composition}: eleven nodes, one for the constant ledger, one per
+asserted clause, one for uniformity. No new analysis is done at this level, and that is
+the point --- every estimate has already been proved matrix-uniformly in
+\S\S\ref{sec:hcb2-amplified-adjointness}--\ref{sec:hcb3-offdiagonal-inverse} and in the
+canonical tier (\S\S\ref{sec:hcb4-canonical-gram}--\ref{sec:hcb4-canonical-inverse}), so
+the parent's only work is to exhibit one constant pair that serves them all
+simultaneously.
+
+\emph{The ledger.} Let the named coefficients and thresholds be those supplied by
+\texttt{lem-hcb2-amplified-adjointness} ($\comb_{\mathrm{adj}}$),
+\texttt{lem-hcb2-product-defect} ($C_{\mathrm{prod}},\comb_{\mathrm{prod}}$),
+\texttt{lem-hcb3-diagonal-unit} ($C_{\mathrm{unit}},\comb_{\mathrm{unit}}$),
+\texttt{lem-hcb3-diagonal-upper-norm} ($C_{\mathrm{up}},\comb_{\mathrm{up}}$),
+\texttt{lem-hcb3-diagonal-lower-modulus} ($C_{\mathrm{diag}},\comb_{\mathrm{diag}}$),
+\texttt{lem-hcb3-diagonal-inverse} ($C_{\mathrm{inv}},\comb_{\mathrm{inv}}$),
+\texttt{lem-hcb3-offdiagonal-inverse} ($C_{\mathrm{rect}},\comb_{\mathrm{rect}}$) and
+\texttt{lem-hcb4-canonical-closeness} ($C_{\mathrm{sp}},\comb_{\mathrm{sp}}$). Put
+\begin{equation}\label{eq:hcb-ledger}
+  C_H:=\max\{1,C_{\mathrm{prod}},C_{\mathrm{unit}},C_{\mathrm{up}},C_{\mathrm{diag}},
+             C_{\mathrm{inv}},C_{\mathrm{rect}},C_{\mathrm{sp}}\},
+  \qquad
+  \comb_H:=\min\{1,\comb_{\mathrm{adj}},\comb_{\mathrm{prod}},\comb_{\mathrm{unit}},
+             \comb_{\mathrm{up}},\comb_{\mathrm{diag}},\comb_{\mathrm{inv}},
+             \comb_{\mathrm{rect}},\comb_{\mathrm{sp}}\}.
+\end{equation}
+A finite maximum of finite universal constants is finite and universal; a finite minimum
+of positive universal thresholds is positive and universal. Consequently $\comb\le
+\comb_H$ meets \emph{every} imported threshold at once, and each imported error
+coefficient is dominated by $C_H$ --- which is the only step where the clauses interact.
+
+\emph{The clauses.} Each is now the corresponding import, read at $\comb\le \comb_H$ and
+with its coefficient enlarged to $C_H$. For $Z\in\Amp{n}{\Cnr{P}{R}}$ the adjoint clause
+is the exact identity $\Han{Q}{P}{R}{n}(Z)\dg=\Han{Q}{R}{P}{n}(Z\dg)$; for
+$Z\in\Amp{n}{\Cnr{P}{S}}$ and $W\in\Amp{n}{\Cnr{S}{R}}$ the product-defect clause is
+\begin{equation}\label{eq:hcb-prod}
+  \bigl\lVert\Han{Q}{P}{R}{n}(Z\cpr W)-\Han{Q}{P}{S}{n}(Z)\,\Han{Q}{S}{R}{n}(W)\bigr\rVert
+  \;\le\;C_H\,\comb\,\nrm{Z}\nrm{W},
+\end{equation}
+which is simultaneously the asserted uniform amplified homomorphism estimate; the unit
+clause is $\lVert\Han{Q}{P}{P}{n}(\ampel{n}{\cunit{P}})-I\rVert\le C_H\comb$; the
+upper-norm clause is $\lVert\Han{Q}{P}{P}{n}(Z)\rVert\le(1+C_H\comb)\nrm{Z}$; and the
+canonical-identity clause is
+\[
+  \max\bigl\{\lVert\Han{Q}{P}{Q}{n}-J_{P,Q,n}\rVert,\;
+             \lVert\Han{Q}{Q}{P}{n}-J_{Q,P,n}\rVert\bigr\}\;\le\;C_H\,\comb,
+\]
+with $J$ the maps fixed by \texttt{def-canonical-corner-identifications}. The three
+conditional clauses are, in order, \texttt{lem-hcb3-diagonal-lower-modulus},
+\texttt{lem-hcb3-diagonal-inverse} (\S\ref{sec:hcb3-diagonal-inverse}) and
+\texttt{lem-hcb3-offdiagonal-inverse} (\S\ref{sec:hcb3-offdiagonal-inverse}), each
+carrying its level-one hypotheses unchanged into the parent statement.
+
+\emph{Uniformity.} The witnesses \eqref{eq:hcb-ledger} are finite maxima and minima of
+universal quantities only. No entry depends on $n$, on $\dim\mathcal A$, on the block
+count or on the block dimensions, and no clause involves an entrywise sum over the
+amplification index; the hostile verifier looked for an $n$-growth family and found none.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/conj-hcb}: 11 nodes, all \texttt{validated}, root \texttt{validated}, taint
+clean. The identifier keeps its historical \texttt{conj-} slug; registry ids are stable.
+
+\noindent\textbf{Contract amendment of record.} The conjecture as originally transcribed
+asserted the inverse estimate \emph{unconditionally}. That clause is false: an exact
+$\mathbb C\oplus\mathbb C$ counterexample refutes it, and the hostile verifier confirmed
+the refutation as genuine. The contract above carries the verifier's replacement clause
+verbatim. The verifier also recorded that this does not weaken what the EXT tier
+consumes, because at the point of use the relevant map $h_{11}$ is first shown to be a
+level-one $O(\comb)$-isomorphism, so both conditional hypotheses are met at a universal
+smallness threshold. Three further corrections were wording-level: the compressed-unit
+input splits into a general upper bound and a nonvanishing-only two-sided bound; the
+phrase ``established separately'' means a universal $1-O(\comb)$ lower bound
+threshold-shrunk to $\tfrac14$, not bare bijectivity; and bijectivity of the canonical
+corners comes from the Neumann condition, not from two-sided norm bounds alone.
+
+\noindent\textbf{Role in the chain.} The registry shard lists sixteen dependencies --- the
+whole COMP-fed H-CB tier including \texttt{lem-hcb0-compressed-associator},
+\texttt{lem-hcb-column-hilbert-squared}, \texttt{lem-hcb1-variational-identity},
+\texttt{lem-hcb1-column-action}, \texttt{lem-compcb-corner-algebra},
+\texttt{lem-hcb3-uniform-square-lower} and the canonical tier
+\texttt{lem-hcb4-canonical-gram} (\S\ref{sec:hcb4-canonical-gram}),
+\texttt{lem-hcb4-canonical-closeness} (\S\ref{sec:hcb4-canonical-closeness}),
+\texttt{lem-hcb4-canonical-inverse} (\S\ref{sec:hcb4-canonical-inverse}); the exported
+tree cites eight of them directly, the others entering through those eight. All sixteen
+are \texttt{proved} with \texttt{af: validated}, and all sixteen are now reproduced in
+this document. Downstream, \texttt{conj-hcb} is the principal input to
+\texttt{conj-extcb} (\S\ref{sec:extcb}), itself \texttt{proved} with
+\texttt{af: validated} and reproduced below; the conditional clauses above are consumed
+there, after their level-one hypotheses have been established. The registry shard
+additionally records the paper-proof's
+explicit relative witnesses $C_H=4000c$ and $\comb_H=1/(10000c)$, with $c$ the maximum of
+the sanctioned COMP-CB and corrected COL-HILB constants; the validated tree does not use
+them, deriving \eqref{eq:hcb-ledger} instead. Nothing here bears on \texttt{op-classical},
+which is open.

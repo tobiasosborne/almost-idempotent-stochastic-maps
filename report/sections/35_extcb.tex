@@ -1,0 +1,204 @@
+% SHARD-ID: AISM-35-EXTCB
+% SHARD-TITLE: The EXT-CB parent contract
+% SHARD-SUMMARY: Reproduces conj-extcb, the af-validated parent statement of the EXT tier: one map on M_{r+1} extending a level-one datum, carried at every amplification by one unitary and four fixed corner maps.
+% SHARD-SUMMARY: Explains the dimension-free exact-target correction, the spatial four-corner system transported through the level-one Ha inverses, the ordered use of the conditional H-CB clauses, and the merge that closes the tier.
+% SHARD-KEYWORDS: conj-extcb, af validated, EXT tier, exact-target correction, Newton iteration, spatial four-corner system, merge
+\section{The EXT-CB parent contract}\label{sec:extcb}
+
+\begin{lemma}[\texttt{conj-extcb}]\label{conj:extcb}
+There are universal $C_{\mathrm{ext}}<\infty$ and $\comb_{\mathrm{ext}}>0$ such that if
+$\comb=\dproj+\ecs\le \comb_{\mathrm{ext}}$, $P,Q$ are $\dproj$-projections in an extended
+$\ecs$-$C^*$-algebra $\mathcal A$ with $\nrm{P+Q-I}\le\dproj$, $v:\Mat{r}\to\Cnrs{P}$ is an
+extended $\dproj$-isomorphism, $\dim\Cnrs{Q}=1$ at level one, and $\Cnr{P}{Q}\ne0$, then
+there is one map $v_+:\Mat{r+1}\to\mathcal A$ whose every amplification is a
+$C_{\mathrm{ext}}\comb$-isomorphism; the same level-one unitary and the same four corner
+maps carry all amplification levels, with constants independent of $r$, $n$ and
+$\dim\mathcal A$.
+\emph{Transcription note.} The hypothesis list is exactly \texttt{def-extcb-datum}; the
+conclusion's ``isomorphism'' is \texttt{def-extended-delta-inclusion} read at accuracy
+$C_{\mathrm{ext}}\comb$. The clause $\dim\Cnrs{Q}=1$ is used \emph{only} at level one: no
+amplification of $Q$ is anywhere called one-dimensional. The final clause is not
+decoration --- it is the content of ``CB'': one unitary and four fixed level-one maps serve
+every $n$, so nothing is chosen level by level.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{EXT-CB: there are universal C_ext < infinity and e_ext > 0 such that if e=delta+epsilon <= e_ext, P,Q are delta-projections in an extended epsilon-C*-algebra A with ||P+Q-I|| <= delta, v:M_r->S_P is an extended delta-isomorphism, dim S_Q=1 at level one, and S_{P,Q} is nonzero, then there is one map v_+:M_{r+1}->A whose every amplification is a C_ext*e-isomorphism; the same level-one unitary and the same four corner maps carry all amplification levels, with constants independent of r, n, and dim A.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Put $P_1=P$, $P_2=Q$, $H_j=\Cnr{P_j}{Q}$, $K_1=\mathbb C^{r}$, $K_2=\mathbb C$ and
+$h_{jk}=\Ha{Q}{P_j}{P_k}$. The hypotheses are a closed EXT-CB datum, so for $\comb$ below
+the universal $\comb_{\mathrm{sel}}$ of \texttt{lem-extcb1-cross-corner-dimension}
+(\S\ref{sec:extcb1-dimension-selection}) the cross corners have dimensions $\dim H_1=r$ and
+$\dim H_2=1$. Fix once and for all a unitary $U_2:K_2\to H_2$.
+
+\emph{A dimension-free exact-target correction.} The tree proves in-workspace, from no
+external theorem, the following. \emph{There are universal $a_{\mathrm{corr}}>0$ and
+$C_{\mathrm{corr}}<\infty$ such that if $\mathcal B$ is a finite-dimensional $C^*$-algebra,
+$H$ a finite-dimensional Hilbert space, and $T:\mathcal B\to B(H)$ is linear,
+$\dagger$-preserving and satisfies $\nrm{T_n(XY)-T_n(X)T_n(Y)}\le a\nrm{X}\nrm{Y}$ and
+$\nrm{T_n(I)-I}\le a$ at every $n$, with $0\le a\le a_{\mathrm{corr}}$, then one unital
+$\dagger$-homomorphism $\mu:\mathcal B\to B(H)$ satisfies
+$\nrm{\mu_n-T_n}\le C_{\mathrm{corr}}a$ at every $n$ --- the same level-one $\mu$ at every
+amplification.} It is a Newton iteration on the multiplicative defect.
+
+At $\nrm{X}=1$, $\dagger$-preservation and the defect estimate give
+$\nrm{T_n(X)}^{2}\le\nrm{T_n(X\dg X)}+a$, so $M_n=\nrm{T_n}$ obeys $M_n^{2}\le M_n+a$ and
+$\nrm{T}_{\mathrm{cb}}\le2$ for $a\le1$. Fixing a state $\phi$ on $\mathcal B$,
+$S_0(x)=T(x)+\phi(x)(I-T(I))$ is $\dagger$-preserving and \emph{exactly} unital, with
+$\nrm{S_0-T}_{\mathrm{cb}}\le a$, $\nrm{S_0}_{\mathrm{cb}}\le3$ and multiplicative defect
+$b_0\le c_ua$, $c_u=7$. Normalised Haar measure on the compact unitary group of
+$\mathcal B$ gives $D=\int U\dg\otimes U\,dU$, in finite dimension a finite convex
+combination $\sum_sp_s\,U_s\dg\otimes U_s$ of projective norm one, with $XD=DX$ and
+$\mathrm{mult}(D)=I$ by invariance. For a defect $G$ of a map $S$, the correction
+$w'(x)=\sum_sS(p_sU_s\dg)G(U_s,x)$ then obeys
+$\nrm{w'}_{\mathrm{cb}}\le\nrm{S}_{\mathrm{cb}}\nrm{G}$, and at level $n$ the same formula
+is $\ampl{n}w'$ entrywise, because the diagonal identity moves arbitrary matrix entries.
+This is the step that makes every correction \emph{one level-one map} with $n$-free,
+dimension-free bounds.
+
+Now the Newton step. Let $S$ be exactly unital, $\dagger$-preserving,
+$\nrm{S}_{\mathrm{cb}}\le4$, with defect $G$ of uniform amplified bilinear norm $b$; put
+$w''(x)=w'(x\dg)\dg$, $w=(w'+w'')/2$ and $S^{+}=S+w$. Since $G(y,I)=G(I,y)=0$ one has
+$w(I)=0$, so $S^{+}$ is still exactly unital and $\dagger$-preserving, with
+$\nrm{w}_{\mathrm{cb}}\le4b$. Exact associativity in $B(H)$ gives
+$S(x)G(y,z)-G(xy,z)+G(x,yz)-G(x,y)S(z)=0$, and expanding $S(x)w(y)-w(xy)+w(x)S(y)$ with
+$XD=DX$, $\mathrm{mult}(D)=I$ and $S(I)=I$ cancels $G$ exactly to first order, every
+surviving term carrying two defect factors; a triangle estimate gives
+$\nrm{G_{S^{+}}}\le K_Nb^{2}$ at every amplification, for one numerical universal $K_N$,
+while $\nrm{S^{+}-S}_{\mathrm{cb}}\le4b$. Choosing $a_{\mathrm{corr}}$ with
+$K_Nc_ua_{\mathrm{corr}}\le\tfrac12$ and $8c_ua_{\mathrm{corr}}<1$ and iterating from
+$S_0$, the recursion $b_{k+1}\le K_Nb_k^{2}$ gives $b_k\le b_02^{-k}$, hence
+$\nrm{S_k-S_0}_{\mathrm{cb}}\le\sum_{j<k}4b_j\le8b_0\le8c_ua<1$ and
+$\nrm{S_k}_{\mathrm{cb}}<4$, so every iteration is licensed --- including the degenerate
+case $b_0=0$, where every increment vanishes. The sequence converges in cb norm to one
+unital $\dagger$-preserving $\mu$; continuity of multiplication and $b_k\to0$ give
+$\mu(xy)=\mu(x)\mu(y)$, and cb convergence means every $\mu_n$ is the amplification of that
+same level-one $\mu$. Finally $\nrm{\mu-T}_{\mathrm{cb}}\le a+8c_ua$, i.e.\
+$C_{\mathrm{corr}}=1+8c_u=57$.
+
+\emph{One spatial four-corner system.} Let $T=h_{11}\circ v$. For $X,Y\in\Amp{n}{\Mat{r}}$,
+\texttt{def-extended-delta-inclusion} gives
+$\nrm{v_n(XY)-v_n(X)\cpr v_n(Y)}\le\dproj\nrm{X}\nrm{Y}$,
+$\nrm{v_n(X)}\le(1+\dproj)\nrm{X}$, exact $\dagger$-preservation and the compressed unit
+estimate in $\Cnrs{P}$; feeding these through the upper-norm, product, unit and adjoint
+clauses of \texttt{conj-hcb} (\S\ref{sec:hcb}) yields
+\[
+  \nrm{T_n(XY)-T_n(X)T_n(Y)}\le\bigl[(1+C_H\comb)\dproj+C_H\comb(1+\dproj)^{2}\bigr]\nrm{X}\nrm{Y},
+  \qquad \nrm{T_n(I)-I}\le A_0\comb ,
+\]
+so below one universal ceiling both defects are at most $A_0\comb$ with $A_0=4(C_H+1)$,
+uniformly in $n$, $r$ and $\dim\mathcal A$. The correction now applies, in two cases that
+exhaust $\comb\ge0$: if $\comb=0$ then $\dproj=\ecs=0$, both defects vanish, $T$ is itself
+an exact unital $\dagger$-homomorphism and one takes $\mu_{11}:=T$; if $\comb>0$, shrink
+the threshold so that $a=A_0\comb<a_{\mathrm{corr}}$ and correct. Either way there is one
+level-one unital $\dagger$-homomorphism $\mu_{11}:\Mat{r}\to B(H_1)$ with
+\begin{equation}\label{eq:extcb-mu11}
+  \nrm{\mu_{11,n}-h_{11,n}v_n}\;\le\;\kappa\comb\quad\text{for every }n,
+  \qquad \kappa=C_{\mathrm{corr}}A_0 .
+\end{equation}
+It is unital and nonzero, so its kernel is a two-sided ideal in the simple algebra
+$\Mat{r}$ and vanishes; domain and codomain both have dimension $r^{2}$ by the level-one
+count, so it is onto. A unital $\dagger$-isomorphism between full matrix algebras preserves
+matrix units, hence is spatial: there is one unitary $U_1:\mathbb C^{r}\to H_1$ with
+$\mu_{11}(A)=U_1AU_1\dg$. With the already fixed $U_2$, set $\mu_{jk}(A)=U_jAU_k\dg$. These
+four fixed level-one maps are exact, completely isometric, adjoint-compatible and
+multiplicative at every amplification via $\ampl{n}U_j$, with no level-dependent choice.
+
+\emph{The conditional H-CB clauses, in the required order.} Shrink the threshold so that
+$\kappa\comb<1$ and $C_H\comb<\tfrac14$. Since $\mu_{11}$ is invertible and
+$\nrm{T-\mu_{11}}<1$, Neumann inversion makes $T$ bijective at level one; $v$ is bijective,
+so $h_{11}$ is, and for $Z=v(A)$ one has
+$\nrm{h_{11}(Z)}/\nrm{Z}\ge(1-\kappa\comb)/(1+\dproj)>\tfrac14$. The canonical-identity
+closeness clause of \texttt{conj-hcb} makes each of $h_{12},h_{21},h_{22}$ a strict-norm
+perturbation of its canonical level-one bijection, hence level-one bijective by Neumann
+inversion, and gives $h_{22}$ level-one lower modulus above $\tfrac14$. \emph{Only now} are
+the conditional clauses invoked: the diagonal clause for $h_{11}$ and $h_{22}$, then the
+off-diagonal clause for $h_{12}$ anchored at $h_{22}$ and for $h_{21}$ anchored at
+$h_{11}$. Every $h_{jk,n}$ is then bijective with
+\begin{equation}\label{eq:extcb-hinv}
+  (1-C_H\comb)\nrm{Z}\le\nrm{h_{jk,n}(Z)}\le(1+C_H\comb)\nrm{Z},
+  \qquad \nrm{h_{jk,n}^{-1}}\le1+C_H\comb ,
+\end{equation}
+and $h_{jk,n}^{-1}=\ampl{n}h_{jk}^{-1}$ by uniqueness of inverses, so no inverse is chosen
+afresh at level $n$. The order is the delicate point, and the hostile verifier checked it:
+the parent's inverse clauses are conditional (\S\ref{sec:hcb}), and their level-one
+hypotheses are established \emph{before} use, never assumed.
+
+\emph{Four fixed corner maps form a merging datum.} Put $\gamma_{11}=v$ and
+$\gamma_{jk}=h_{jk}^{-1}\circ\mu_{jk}$ for $(j,k)\ne(1,1)$, and
+$d_{jk,n}=h_{jk,n}\gamma_{jk,n}-\mu_{jk,n}$. Off $(1,1)$ the composition is exact, so
+$d_{jk,n}=0$; at $(1,1)$, \eqref{eq:extcb-mu11} gives $\nrm{d_{11,n}}\le\kappa\comb$.
+\emph{Involution} is exact: off $(1,1)$, exact H-CB adjointness and spatial adjoint
+compatibility give $h_{kj,n}\bigl(\gamma_{jk,n}(X)\dg\bigr)=h_{kj,n}\gamma_{kj,n}(X\dg)$
+and injectivity of $h_{kj,n}$ cancels it, while $\gamma_{11,n}=v_n$ preserves $\dagger$
+exactly. For the \emph{product}, \eqref{eq:extcb-hinv} and isometry of $\mu$ give
+$\nrm{\gamma_{jk,n}(X)}\le(1+C_H\comb)(1+\kappa\comb)\nrm{X}\le\tfrac{25}{16}\nrm{X}\le2\nrm{X}$;
+with $D=\gamma_{jl,n}(XY)-\gamma_{jk,n}(X)\cpr\gamma_{kl,n}(Y)$, the product-defect clause
+of \texttt{conj-hcb} supplies $E$ with $\nrm{E}\le4C_H\comb\nrm{X}\nrm{Y}$ and the exact
+spatial multiplication $\mu_{jl,n}(XY)=\mu_{jk,n}(X)\mu_{kl,n}(Y)$ turns the comparison into
+\[
+  h_{jl,n}(D)=d_{jl,n}(XY)-\mu_{jk,n}(X)d_{kl,n}(Y)-d_{jk,n}(X)\mu_{kl,n}(Y)
+              -d_{jk,n}(X)d_{kl,n}(Y)-E ,
+\]
+whence $\nrm{h_{jl,n}(D)}\le[3\kappa+\kappa^{2}\comb+4C_H]\comb\nrm{X}\nrm{Y}
+\le4(C_H+\kappa)\comb\nrm{X}\nrm{Y}$ and, applying $\nrm{h_{jl,n}^{-1}}\le\tfrac54$,
+$\nrm{D}\le5(C_H+\kappa)\comb\nrm{X}\nrm{Y}$. For the \emph{unit and norm} clauses,
+spatiality gives $\mu_{jj,n}(I)=I$, so the H-CB diagonal-unit estimate,
+$\nrm{\cunit{P_j}-P_j}\le C_H\comb$ and \eqref{eq:extcb-hinv} give
+$\nrm{\gamma_{jj,n}(I)-\ampel{n}{P_j}}\le3(C_H+\kappa)\comb$, while isometry of $\mu$ and
+the $d$-bound give
+$(1-(C_H+\kappa)\comb)\nrm{X}\le\nrm{\gamma_{jk,n}(X)}\le(1+2(C_H+\kappa)\comb)\nrm{X}$.
+Finally $\gamma_{11}=v$ is bijective by hypothesis and every other $\gamma_{jk}$ composes
+two bijections. Since the source block projections in $\Mat{r+1}=B(K_1\oplus K_2)$ are
+exactly complementary and $\nrm{P_1+P_2-I}\le\dproj\le\comb$, every clause of
+\texttt{def-four-corner-merging-datum} holds with the one common defect $\rho=D_0\comb$,
+$D_0=5(C_H+\kappa)$ enlarged so that $D_0\ge1$, for the same four fixed level-one maps at
+every amplification.
+
+\emph{Merge, and the root.} Let $\comb_{\mathrm{ext}}$ be the positive minimum of the
+thresholds above, of $a_{\mathrm{merge}}/(D_0+1)$, and of the finitely many Neumann and
+$\tfrac14$ ceilings. Then $\rho+\ecs\le(D_0+1)\comb\le a_{\mathrm{merge}}$, so
+\texttt{lem-extcb-four-corner-merge} (\S\ref{sec:extcb-four-corner-merge}) --- whose norm
+half is \texttt{lem-extcb-four-corner-norm} (\S\ref{sec:extcb-four-corner-norm}) --- applies
+and returns the single sum map $v_+:\Mat{r+1}\to\mathcal A$ as an extended
+$C_{\mathrm{merge}}(\rho+\ecs)$-isomorphism, hence an extended
+$C_{\mathrm{ext}}\comb$-isomorphism with $C_{\mathrm{ext}}=C_{\mathrm{merge}}(D_0+1)$.
+Its $n$-th map is $\ampl{n}v_+$, assembled from $\ampl{n}U_1$, $\ampl{n}U_2$ and the same
+four $\gamma_{jk}$; every constant used is universal, so none depends on $r$, on $n$, on
+$\dim\mathcal A$ or on the block data. That is the root.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/conj-extcb}: 40 nodes \texttt{validated} plus 6 \texttt{archived}, root
+\texttt{validated}, taint clean. The archived nodes are dependency-gated duplicates
+superseded by siblings that discharge the same step from validated material only: they are
+not part of the validated spine, and nothing above rests on them. The identifier keeps its
+historical \texttt{conj-} slug; registry ids are stable.
+
+\noindent\textbf{Correction of record (proof-level, not contract-level).} The registry
+shard records one verifier-mandated correction: the level-one close-idempotent
+normalisation in the selection step must be explicit --- the added-dimension corner is
+stated for $\widehat P=v(I_r)$, with $\nrm{\widehat P-P}=O(\comb)$ and range identification
+by close idempotents --- and the selection threshold must cover it, at a universal
+threshold with no $r$- or level-dependence. That is what
+\texttt{lem-extcb1-close-corner-dimension} (\S\ref{sec:extcb1-dimension-selection})
+supplies; the contract itself was not amended.
+
+\noindent\textbf{Role in the chain.} The registry shard lists ten dependencies:
+\texttt{conj-hcb} (\S\ref{sec:hcb}), the EXT front end
+(\S\S\ref{sec:extcb-one-dimensional-corners}--\ref{sec:extcb-four-corner-merge}),
+\texttt{lem-compcb-corner-algebra} (\S\ref{sec:compcb-corner-algebra}) and
+\texttt{lem-hcb3-uniform-square-lower} (\S\ref{sec:hcb3-uniform-square-lower}); all ten are
+\texttt{proved} with \texttt{af: validated} and all ten are reproduced in this document.
+The exported tree cites four directly --- \texttt{conj-hcb},
+\texttt{lem-extcb1-cross-corner-dimension}, \texttt{lem-extcb-four-corner-merge},
+\texttt{lem-extcb-four-corner-norm} --- the rest entering through the selection lemma. The
+registry body additionally records the paper-proof's witness in the expanded form
+$C_{\mathrm{ext}}=C_{\mathrm{merge}}[1+5C_H+20C_{\mathrm{app}}(C_H+1)]$; the validated tree
+does not use it, deriving $C_{\mathrm{merge}}(D_0+1)$ instead. Downstream, \texttt{conj-extcb}
+with \texttt{conj-hcb} discharges both gap nodes of the extended assembly, whose registry
+carrier \texttt{lem-thmainext-conditional} is \texttt{proved-mod-audit} with
+\texttt{af: none} --- \textbf{open} here and \textbf{not} reproduced --- and the
+unconditional end-to-end constant ledger for that route remains separate open work.
+Nothing here bears on \texttt{op-classical}, which is open.

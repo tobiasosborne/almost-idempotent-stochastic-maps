@@ -1,0 +1,121 @@
+% SHARD-ID: AISM-26-HCB4-CANONICAL-GRAM
+% SHARD-TITLE: The canonical corner Gram estimate
+% SHARD-SUMMARY: Reproduces lem-hcb4-canonical-gram, the af-validated two-sided comparison of the ambient corner norm with the norm of the canonical identification.
+% SHARD-SUMMARY: Explains the exact Gram scalarisation, the two uniform inputs it is fed, the scalar square-root passage, and the adjoint transfer to the row corner.
+% SHARD-KEYWORDS: lem-hcb4-canonical-gram, af validated, canonical corner identification, Gram scalarisation, compressed unit, row transfer
+\section{The canonical corner Gram estimate}\label{sec:hcb4-canonical-gram}
+
+\begin{lemma}[\texttt{lem-hcb4-canonical-gram}]\label{lem:hcb4-canonical-gram}
+There are universal $C_J<\infty$ and $\comb_J>0$ such that every H-CB datum with
+$\comb\le \comb_J$, every $n\ge1$ and every $Z$ in either special $P,Q$ corner satisfy
+\begin{equation}\label{eq:cg-main}
+  (1-C_J\comb)\,\nrm{Z}\;\le\;\bigl\lVert J_n(Z)\bigr\rVert\;\le\;(1+C_J\comb)\,\nrm{Z}.
+\end{equation}
+\emph{Transcription note.} The \emph{special} corners are the two involving the
+one-dimensional projection of the datum: $Z\in\Amp{n}{\Cnr{P}{Q}}$ with $J_n=J_{P,Q,n}$
+the canonical column identification, or $Z\in\Amp{n}{\Cnr{Q}{P}}$ with $J_n=J_{Q,P,n}$ the
+canonical row identification, both fixed by
+\texttt{def-canonical-corner-identifications}. The two sides of \eqref{eq:cg-main} carry
+\emph{different} norms: $\nrm{Z}$ is the ambient operator-space norm of the amplified
+corner, while $\lVert J_n(Z)\rVert$ is the operator norm of the resulting map between
+amplified column spaces --- the Euclidean norm of \texttt{def-ha-map}. The content of the
+lemma is therefore that the canonical identification, which is pure notation and carries
+no estimate of its own, is a $1\pm O(\comb)$ isometry between those two norms, uniformly
+in $n$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Canonical corner Gram estimate: there are universal C_J < infinity and e_J > 0 such that every H-CB datum with e <= e_J, every n >= 1, and every Z in either special P,Q corner satisfy (1-C_J*e)||Z|| <= ||J_n(Z)|| <= (1+C_J*e)||Z||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree proves the column case and transfers the row case to it. The column case is one
+exact identity fed by two uniform inputs, followed by a scalar computation; there is no
+analysis beyond the two imports.
+
+\emph{Exact Gram scalarisation.} Fix an admissible datum, $n\ge1$ and
+$Z\in\Amp{n}{\Cnr{P}{Q}}$, and put $G:=J_{P,Q,n}(Z)\dg J_{P,Q,n}(Z)\in\Mat{n}$. Reading
+the defining formula of \texttt{def-canonical-corner-identifications} against the
+column-Hilbert inner-product displays of \texttt{def-column-hilbert-corner} and the
+compressed-product display, the compressed square of $Z$ is computed entrywise:
+\begin{equation}\label{eq:cg-entry}
+  \bigl[Z\dg\cpr Z\bigr]_{ij}
+  \;=\;\sum_k\ipo{Z_{ki}}{Z_{kj}}\,\cunit{Q}
+  \;=\;G_{ij}\,\cunit{Q},
+  \qquad\text{that is}\qquad
+  Z\dg\cpr Z\;=\;G\otimes\cunit{Q}.
+\end{equation}
+This is an identity, not an estimate. Two norm facts turn it into one. The Ruan
+scalar-tensor invariance among the operator-space matrix-norm axioms gives
+$\nrm{G\otimes\cunit{Q}}=\nrm{G}\,\nrm{\cunit{Q}}$, and the Hilbert-space Gram identity
+gives $\nrm{G}=\lVert J_{P,Q,n}(Z)\rVert^{2}$. Hence
+\begin{equation}\label{eq:cg-scalar}
+  \bigl\lVert Z\dg\cpr Z\bigr\rVert
+  \;=\;\bigl\lVert J_{P,Q,n}(Z)\bigr\rVert^{2}\,\nrm{\cunit{Q}} .
+\end{equation}
+Everything after this point is bookkeeping on two scalars: the compressed square on the
+left and the compressed unit on the right.
+
+\emph{The two uniform inputs.} There are universal $A,B<\infty$, valid below a universal
+threshold, with
+\begin{equation}\label{eq:cg-inputs}
+  \bigl\lvert\,\lVert Z\dg\cpr Z\rVert-\nrm{Z}^{2}\,\bigr\rvert\le A\,\comb\,\nrm{Z}^{2},
+  \qquad
+  \bigl\lvert\,\nrm{\cunit{Q}}-1\,\bigr\rvert\le B\,\comb .
+\end{equation}
+For the first, the $\ecs$-$C^*$ norm axioms of \texttt{def-extended-epsilon-cstar-algebra}
+place the \emph{ambient} square $\nrm{Z\dg Z}$ between $(1-\ecs)\nrm{Z}^{2}$ and
+$(1+\ecs)\nrm{Z}^{2}$ at level $n$, while
+\texttt{lem-compcb-rectangular-product} (\S\ref{sec:compcb-rectangular-product}) applied to
+the compatible amplified pair $(Z\dg,Z)$ gives
+$\lVert Z\dg\cpr Z-Z\dg Z\rVert\le C_r\comb\nrm{Z}^{2}$; since $\ecs\le\comb$, the reverse
+triangle inequality yields the first bound with $A=C_r+1$, uniformly in $n$. For the
+second, \texttt{lem-compcb-compressed-unit-norm}
+(\S\ref{sec:compcb-compressed-unit-norm}) gives $\lvert\nrm{\cunit{Q}}-1\rvert\le
+C_u\comb$ once $Q$ is known to be \emph{nonvanishing}; the datum states only that $Q$ is
+one-dimensional, and the gap is closed as elsewhere in this tier by the registered bridge
+$\dim\Cnrs{Q}=1\Rightarrow\Cnrs{Q}\ne0\Rightarrow Q$ nonvanishing. So $B=C_u$.
+
+\emph{The scalar passage.} Assume $Z\ne0$ (for $Z=0$ both sides of \eqref{eq:cg-main}
+vanish) and put $x:=\lVert J_{P,Q,n}(Z)\rVert/\nrm{Z}$. Dividing \eqref{eq:cg-scalar} by
+$\nrm{Z}^{2}$ gives $x^{2}\nrm{\cunit{Q}}=\lVert Z\dg\cpr Z\rVert/\nrm{Z}^{2}$, so
+\eqref{eq:cg-inputs} confines
+\[
+  x^{2}\;\in\;\Bigl[\tfrac{1-A\comb}{1+B\comb},\ \tfrac{1+A\comb}{1-B\comb}\Bigr].
+\]
+Take $\comb_{\mathrm{col}}$ no larger than the two external thresholds, $1/(2\max\{B,1\})$
+and $1/\max\{A+B,1\}$. Then the denominators are bounded away from $0$ and the two ends
+simplify to $x^{2}\ge1-(A+B)\comb$ and $x^{2}\le1+2(A+B)\comb$. Finally
+$\sqrt{1-t}\ge1-t$ for $t\in[0,1]$ and $\sqrt{1+t}\le1+t/2$ for $t\ge0$ convert these into
+\begin{equation}\label{eq:cg-col}
+  1-(A+B)\comb\;\le\;x\;\le\;1+(A+B)\comb,
+\end{equation}
+which is \eqref{eq:cg-main} for the column corner with $C_{\mathrm{col}}=A+B$. The
+asymmetric factor $2$ in the upper bound for $x^{2}$ is exactly what the sharper
+square-root inequality absorbs, so the same constant serves both sides.
+
+\emph{Row transfer.} For $Z\in\Amp{n}{\Cnr{Q}{P}}$ put $W:=Z\dg\in\Amp{n}{\Cnr{P}{Q}}$.
+The self-adjoint operator-space axiom gives $\nrm{W}=\nrm{Z}$ at every level;
+\texttt{def-canonical-corner-identifications} \emph{defines} the row map by
+$J_{Q,P,n}(Z)=J_{P,Q,n}(W)\dg$; and Hilbert-space adjunction preserves the operator norm.
+Applying the column case to $W$ therefore returns both row inequalities with the same
+constants, so $C_J=C_{\mathrm{col}}$ and $\comb_J=\comb_{\mathrm{col}}$ serve the root.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb4-canonical-gram}: 9 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Registry imports:
+\texttt{lem-compcb-rectangular-product},
+\texttt{lem-compcb-compressed-unit-norm},
+\texttt{lem-compcb-corner-algebra} and
+\texttt{lem-hcb3-uniform-square-lower}; the exported tree visibly consumes the first two,
+the remaining two being available but unused in the validated derivation. This is the base
+of the canonical layer of the H-CB tier. Canonical closeness
+(\S\ref{sec:hcb4-canonical-closeness}) uses it once, to convert
+$\lVert J_{P,Q,n}(Z)\rVert$ into $\nrm{Z}$; the canonical inverse estimate
+(\S\ref{sec:hcb4-canonical-inverse}) uses its lower half twice, once for the bound
+$\lVert J_n^{-1}\rVert\le\tfrac43$ and once for the norm equivalence that makes the
+Neumann target complete. Through those two it reaches the canonical-identity clause of the
+parent \texttt{conj-hcb} (\S\ref{sec:hcb}), which lists it among its sixteen dependencies.
+Nothing here bears on \texttt{op-classical}, which is open.

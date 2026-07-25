@@ -9,7 +9,7 @@ hashed proof/consensus file. Results original to this project are marked `ORIGIN
 
 Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 
-> **Current report surface.** The section shards reproduce twenty-six of the twenty-nine `af`-validated
+> **Current report surface.** The section shards reproduce thirty-seven of the seventy `af`-validated
 > registry results (the paper-track T0 spine) and anchor every remaining registry result in the status
 > ledger. Non-rigorous registry statuses are copied honestly; the ledger rows below are anchors, not
 > promotions.
@@ -75,6 +75,32 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-HCB3-DIAGONAL-LOWER-MODULUS` | `proofs/lem-hcb3-diagonal-lower-modulus/export.md` | `4b0a3aa54c13ce2d` | `af` proof export for `lem-hcb3-diagonal-lower-modulus` |
 | `ARG-LEM-HCB3-DIAGONAL-INVERSE` | `argument/lemmas/lem-hcb3-diagonal-inverse.md` | `bd9f655e16d64392` | Registry shard for `lem-hcb3-diagonal-inverse` |
 | `AF-LEM-HCB3-DIAGONAL-INVERSE` | `proofs/lem-hcb3-diagonal-inverse/export.md` | `7bf03119e8aa18a6` | `af` proof export for `lem-hcb3-diagonal-inverse` |
+| `ARG-LEM-HCB3-OFFDIAGONAL-INVERSE` | `argument/lemmas/lem-hcb3-offdiagonal-inverse.md` | `ae44e4c30e481156` | Registry shard for `lem-hcb3-offdiagonal-inverse` |
+| `AF-LEM-HCB3-OFFDIAGONAL-INVERSE` | `proofs/lem-hcb3-offdiagonal-inverse/export.md` | `8e0654cec4ce118f` | `af` proof export for `lem-hcb3-offdiagonal-inverse` |
+| `ARG-LEM-HCB4-CANONICAL-GRAM` | `argument/lemmas/lem-hcb4-canonical-gram.md` | `789fbbaefd0d1fbc` | Registry shard for `lem-hcb4-canonical-gram` |
+| `AF-LEM-HCB4-CANONICAL-GRAM` | `proofs/lem-hcb4-canonical-gram/export.md` | `a12f20742b28bdee` | `af` proof export for `lem-hcb4-canonical-gram` |
+| `ARG-LEM-HCB4-CANONICAL-CLOSENESS` | `argument/lemmas/lem-hcb4-canonical-closeness.md` | `a3d2e9ddded6f79a` | Registry shard for `lem-hcb4-canonical-closeness` |
+| `AF-LEM-HCB4-CANONICAL-CLOSENESS` | `proofs/lem-hcb4-canonical-closeness/export.md` | `336ce36ecd5bbfb5` | `af` proof export for `lem-hcb4-canonical-closeness` |
+| `ARG-LEM-HCB4-CANONICAL-INVERSE` | `argument/lemmas/lem-hcb4-canonical-inverse.md` | `0e61a08b0d6157ff` | Registry shard for `lem-hcb4-canonical-inverse` |
+| `AF-LEM-HCB4-CANONICAL-INVERSE` | `proofs/lem-hcb4-canonical-inverse/export.md` | `0a3da88fbf702f9a` | `af` proof export for `lem-hcb4-canonical-inverse` |
+| `ARG-CONJ-HCB` | `argument/lemmas/conj-hcb.md` | `de52bbad964e45ef` | Registry shard for `conj-hcb` |
+| `AF-CONJ-HCB` | `proofs/conj-hcb/export.md` | `8818e7d0952d7343` | `af` proof export for `conj-hcb` |
+| `ARG-LEM-EXTCB-ONE-DIMENSIONAL-PRODUCT` | `argument/lemmas/lem-extcb-one-dimensional-product.md` | `ce1cfccd673787c4` | Registry shard for `lem-extcb-one-dimensional-product` |
+| `AF-LEM-EXTCB-ONE-DIMENSIONAL-PRODUCT` | `proofs/lem-extcb-one-dimensional-product/export.md` | `e154fae299637b1d` | `af` proof export for `lem-extcb-one-dimensional-product` |
+| `ARG-LEM-EXTCB-ONE-DIMENSIONAL-CORNER-DIMENSION` | `argument/lemmas/lem-extcb-one-dimensional-corner-dimension.md` | `5764c43280c08261` | Registry shard for `lem-extcb-one-dimensional-corner-dimension` |
+| `AF-LEM-EXTCB-ONE-DIMENSIONAL-CORNER-DIMENSION` | `proofs/lem-extcb-one-dimensional-corner-dimension/export.md` | `0e4440d7635b5943` | `af` proof export for `lem-extcb-one-dimensional-corner-dimension` |
+| `ARG-LEM-EXTCB-CORNER-DIMENSION-ADDITIVITY` | `argument/lemmas/lem-extcb-corner-dimension-additivity.md` | `517d59f6fd2b3f05` | Registry shard for `lem-extcb-corner-dimension-additivity` |
+| `AF-LEM-EXTCB-CORNER-DIMENSION-ADDITIVITY` | `proofs/lem-extcb-corner-dimension-additivity/export.md` | `83aaabfed5dfb04b` | `af` proof export for `lem-extcb-corner-dimension-additivity` |
+| `ARG-LEM-EXTCB1-CLOSE-CORNER-DIMENSION` | `argument/lemmas/lem-extcb1-close-corner-dimension.md` | `a6c30bde11080b1c` | Registry shard for `lem-extcb1-close-corner-dimension` |
+| `AF-LEM-EXTCB1-CLOSE-CORNER-DIMENSION` | `proofs/lem-extcb1-close-corner-dimension/export.md` | `3a26c1b3f960edc8` | `af` proof export for `lem-extcb1-close-corner-dimension` |
+| `ARG-LEM-EXTCB1-CROSS-CORNER-DIMENSION` | `argument/lemmas/lem-extcb1-cross-corner-dimension.md` | `f9a6aa8b2fbb4791` | Registry shard for `lem-extcb1-cross-corner-dimension` |
+| `AF-LEM-EXTCB1-CROSS-CORNER-DIMENSION` | `proofs/lem-extcb1-cross-corner-dimension/export.md` | `59ce65ddb29e6f75` | `af` proof export for `lem-extcb1-cross-corner-dimension` |
+| `ARG-LEM-EXTCB-FOUR-CORNER-NORM` | `argument/lemmas/lem-extcb-four-corner-norm.md` | `b7c4ab7ce44519b0` | Registry shard for `lem-extcb-four-corner-norm` |
+| `AF-LEM-EXTCB-FOUR-CORNER-NORM` | `proofs/lem-extcb-four-corner-norm/export.md` | `670ead004d58b5bf` | `af` proof export for `lem-extcb-four-corner-norm` |
+| `ARG-LEM-EXTCB-FOUR-CORNER-MERGE` | `argument/lemmas/lem-extcb-four-corner-merge.md` | `3a2724066e5735e0` | Registry shard for `lem-extcb-four-corner-merge` |
+| `AF-LEM-EXTCB-FOUR-CORNER-MERGE` | `proofs/lem-extcb-four-corner-merge/export.md` | `35c643ae943968aa` | `af` proof export for `lem-extcb-four-corner-merge` |
+| `ARG-CONJ-EXTCB` | `argument/lemmas/conj-extcb.md` | `80bd2795d2be2fd8` | Registry shard for `conj-extcb` |
+| `AF-CONJ-EXTCB` | `proofs/conj-extcb/export.md` | `00494481438b5a79` | `af` proof export for `conj-extcb` |
 
 ## Per-claim ledger
 
@@ -104,3 +130,16 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | lem:hcb3-uniform-square-lower | ARG-LEM-HCB3-UNIFORM-SQUARE-LOWER AF-LEM-HCB3-UNIFORM-SQUARE-LOWER | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-hcb3-uniform-square-lower`. |
 | lem:hcb3-diagonal-lower-modulus | ARG-LEM-HCB3-DIAGONAL-LOWER-MODULUS AF-LEM-HCB3-DIAGONAL-LOWER-MODULUS | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-hcb3-diagonal-lower-modulus`. |
 | lem:hcb3-diagonal-inverse | ARG-LEM-HCB3-DIAGONAL-INVERSE AF-LEM-HCB3-DIAGONAL-INVERSE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-hcb3-diagonal-inverse`. |
+| lem:hcb3-offdiagonal-inverse | ARG-LEM-HCB3-OFFDIAGONAL-INVERSE AF-LEM-HCB3-OFFDIAGONAL-INVERSE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-hcb3-offdiagonal-inverse`. |
+| lem:hcb4-canonical-gram | ARG-LEM-HCB4-CANONICAL-GRAM AF-LEM-HCB4-CANONICAL-GRAM | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-hcb4-canonical-gram`. |
+| lem:hcb4-canonical-closeness | ARG-LEM-HCB4-CANONICAL-CLOSENESS AF-LEM-HCB4-CANONICAL-CLOSENESS | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-hcb4-canonical-closeness`. |
+| lem:hcb4-canonical-inverse | ARG-LEM-HCB4-CANONICAL-INVERSE AF-LEM-HCB4-CANONICAL-INVERSE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-hcb4-canonical-inverse`. |
+| conj:hcb | ARG-CONJ-HCB AF-CONJ-HCB | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/conj-hcb`; conditional inverse clauses reproduced as amended. |
+| lem:extcb-one-dimensional-product | ARG-LEM-EXTCB-ONE-DIMENSIONAL-PRODUCT AF-LEM-EXTCB-ONE-DIMENSIONAL-PRODUCT | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-extcb-one-dimensional-product`. |
+| lem:extcb-one-dimensional-corner-dimension | ARG-LEM-EXTCB-ONE-DIMENSIONAL-CORNER-DIMENSION AF-LEM-EXTCB-ONE-DIMENSIONAL-CORNER-DIMENSION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-extcb-one-dimensional-corner-dimension`. |
+| lem:extcb-corner-dimension-additivity | ARG-LEM-EXTCB-CORNER-DIMENSION-ADDITIVITY AF-LEM-EXTCB-CORNER-DIMENSION-ADDITIVITY | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-extcb-corner-dimension-additivity`. |
+| lem:extcb1-close-corner-dimension | ARG-LEM-EXTCB1-CLOSE-CORNER-DIMENSION AF-LEM-EXTCB1-CLOSE-CORNER-DIMENSION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-extcb1-close-corner-dimension`. |
+| lem:extcb1-cross-corner-dimension | ARG-LEM-EXTCB1-CROSS-CORNER-DIMENSION AF-LEM-EXTCB1-CROSS-CORNER-DIMENSION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-extcb1-cross-corner-dimension`. |
+| lem:extcb-four-corner-norm | ARG-LEM-EXTCB-FOUR-CORNER-NORM AF-LEM-EXTCB-FOUR-CORNER-NORM | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-extcb-four-corner-norm`. |
+| lem:extcb-four-corner-merge | ARG-LEM-EXTCB-FOUR-CORNER-MERGE AF-LEM-EXTCB-FOUR-CORNER-MERGE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-extcb-four-corner-merge`; smallness hypothesis reproduced in its amended (total-defect) form. |
+| conj:extcb | ARG-CONJ-EXTCB AF-CONJ-EXTCB | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/conj-extcb` (40 validated + 6 archived); the recorded correction is proof-level, not a contract amendment. |

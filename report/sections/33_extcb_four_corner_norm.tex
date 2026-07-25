@@ -1,0 +1,119 @@
+% SHARD-ID: AISM-33-EXTCB-FOUR-CORNER-NORM
+% SHARD-TITLE: The four-corner assembled norm estimate
+% SHARD-SUMMARY: Reproduces lem-extcb-four-corner-norm, the af-validated two-sided norm control of the map assembled from four corner maps, uniform in the amplification level.
+% SHARD-SUMMARY: Explains the coarse block conditioning, the sixteen-term square defect, and the scalar C*-bootstrap that upgrades crude constants to 1 plus or minus O(e).
+% SHARD-KEYWORDS: lem-extcb-four-corner-norm, af validated, four-corner merging datum, block conditioning, square defect, C* bootstrap
+\section{The four-corner assembled norm estimate}\label{sec:extcb-four-corner-norm}
+
+\begin{lemma}[\texttt{lem-extcb-four-corner-norm}]\label{lem:extcb-four-corner-norm}
+There are universal $K_{\mathrm{norm}}<\infty$ and $\comb_{\mathrm{norm}}>0$ such that,
+for every four-corner merging datum with $\comb=\rho+\ecs\le \comb_{\mathrm{norm}}$, every
+$n\ge1$ and every $X\in\Amp{n}{\mathcal B}$, the assembled map
+$\gamma_n=\alpha_n\Gamma_n\mu_n$, where
+\[
+  \mu_n(X)=\bigl((\ampel{n}{\Pi_j})\,X\,(\ampel{n}{\Pi_k})\bigr)_{j,k},
+  \qquad
+  \Gamma_n=\bigoplus_{j,k}\gamma_{jk,n},
+  \qquad
+  \alpha_n\bigl((Y_{jk})\bigr)=\sum_{j,k}Y_{jk},
+\]
+satisfies
+\begin{equation}\label{eq:fcn-main}
+  (1-K_{\mathrm{norm}}\comb)\nrm{X}\;\le\;\nrm{\gamma_n(X)}\;\le\;(1+K_{\mathrm{norm}}\comb)\nrm{X}.
+\end{equation}
+\emph{Transcription note.} $\rho$ is the \emph{datum's} common defect bound of
+\texttt{def-four-corner-merging-datum} --- involution compatibility, compressed-product
+compatibility, diagonal-unit approximation, two-sided norm control, and the quantitative
+complementarity $\nrm{P_1+P_2-I}\le\rho$ of the target projections --- and not the
+signed-picture scale of the same name in \texttt{CONVENTIONS.md}. The four maps
+$\gamma_{jk}$ are \emph{fixed} at level one and reused at every amplification: $\gamma_n$
+is not a separately chosen family.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Four-corner assembled norm estimate: there are universal K_norm < infinity and e_norm > 0 such that, for every four-corner merging datum with e = rho+epsilon <= e_norm, every n >= 1, and every X in M_n tensor B, the assembled map gamma_n = alpha_n Gamma_n mu_n (where mu_n(X) = ((I_n tensor Pi_j) X (I_n tensor Pi_k))_{j,k}, Gamma_n is the direct sum of the four fixed amplifications gamma_{jk,n}, and alpha_n((Y_jk)) = sum_{jk} Y_jk) satisfies (1-K_norm*e)||X|| <= ||gamma_n(X)|| <= (1+K_norm*e)||X||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The estimate is proved in three stages, and the order matters: crude two-sided bounds
+first, an approximate multiplicativity of the \emph{square} second, and only then a scalar
+bootstrap that turns the crude constants into $1\pm O(\comb)$. A direct triangle-inequality
+attack on \eqref{eq:fcn-main} does not work, because the four blocks can cancel.
+
+\emph{Stage 1: block conditioning.} Put $\pi_j=\ampel{n}{\Pi_j}$ and $X_{jk}=\pi_jX\pi_k$.
+The source projections are exactly complementary, so $X=\sum_{jk}X_{jk}$,
+$\nrm{X_{jk}}\le\nrm{X}$ and
+\begin{equation}\label{eq:fcn-blocks}
+  \max_{jk}\nrm{X_{jk}}\;\le\;\nrm{X}\;\le\;\sum_{jk}\nrm{X_{jk}}\;\le\;4\max_{jk}\nrm{X_{jk}} .
+\end{equation}
+On the target side put $p_j=\ampel{n}{P_j}$ and $C_{jk}=\ampl{n}\Co{P_j}{P_k}$. The
+compression construction commutes with amplification --- the operator
+$L_{P_j}R_{P_k}+R_{P_k}L_{P_j}-1$ amplifies entrywise, every partial sum of the defining
+power series satisfies $f_N(T_n)=\ampl{n}f_N(T)$, and matrix entries are bounded
+coordinate maps --- so $C_{jk}=\Co{p_j}{p_k}$ is genuinely the compression built inside
+$\Amp{n}{\mathcal A}$ and $\Img C_{jk}=\Amp{n}{\Cnr{P_j}{P_k}}$. Quantitative
+complementarity gives $\nrm{p_j^{2}-p_j}\le\rho$ and $\nrm{p_1+p_2-I}\le\rho$, whence
+$\nrm{p_j}\le2$ and, for $j\ne l$, $\nrm{p_jp_l}\le4\comb$. Consequently $C_{jk}$ fixes its
+own corner and almost annihilates the other three:
+$\nrm{C_{jk}(Y_{lm})}\le L_c\comb\nrm{Y_{lm}}$ for $(j,k)\ne(l,m)$, with universal $L_c$.
+With $\beta(Y)=(C_{jk}Y)_{jk}$ and the max norm on the fourfold sum this reads
+$\nrm{\beta\alpha-I}\le3L_c\comb$ and $\nrm{\beta}\le M_c$. Feeding
+\eqref{eq:fcn-blocks} and the datum's two-sided norm clause through this extraction gives
+universal $c_{\mathrm{blk}}>0$ and $B_{\mathrm{blk}}<\infty$ --- concretely
+$c_{\mathrm{blk}}=1/(16M_c)$ and $B_{\mathrm{blk}}=5$ --- with
+\begin{equation}\label{eq:fcn-crude}
+  c_{\mathrm{blk}}\nrm{X}\;\le\;\nrm{\gamma_n(X)}\;\le\;B_{\mathrm{blk}}\nrm{X},
+  \qquad\text{uniformly in }n .
+\end{equation}
+
+\emph{Stage 2: the square defect.} For $U$ in the $jk$ target corner and $V$ in the $lm$
+one, two cases occur. If $k=l$ the compressed-product estimate applies at matrix level:
+$\nrm{UV-U\cpr V}\le c_c\comb\nrm{U}\nrm{V}$. If $k\ne l$ the product is \emph{small}:
+replacing $U,V$ by their compressed representatives $p_j(Up_k)$ and $p_l(Vp_m)$ and moving
+the middle factors together by exactly three $\ecs$-associator steps exposes the factor
+$p_kp_l$, so $\nrm{UV}\le K_{\mathrm{inc}}\comb\nrm{U}\nrm{V}$. Expanding
+$\gamma_n(X\dg X)$ and $\gamma_n(X)\dg\gamma_n(X)$ over the blocks produces sixteen terms,
+eight compatible and eight incompatible; the compatible ones are matched using the datum's
+involution and compressed-product clauses, the incompatible ones are simply small. Hence
+\begin{equation}\label{eq:fcn-sq}
+  \bigl\lVert\gamma_n(X\dg X)-\gamma_n(X)\dg\gamma_n(X)\bigr\rVert\;\le\;D_{\mathrm{sq}}\comb\nrm{X}^{2},
+  \qquad D_{\mathrm{sq}}=8\bigl(4+2c_c+2K_{\mathrm{inc}}\bigr).
+\end{equation}
+
+\emph{Stage 3: the scalar bootstrap.} Fix $n$ and let $a_n$ and $b_n$ be the infimum and
+supremum of $\nrm{\gamma_n(X)}/\nrm{X}$ over $X\ne0$; by \eqref{eq:fcn-crude},
+$0<c_{\mathrm{blk}}\le a_n\le b_n\le5$. The source is an exact $C^*$-algebra, so
+$\nrm{X\dg X}=\nrm{X}^{2}$. For the upper bound, the target lower $C^*$ inequality and
+\eqref{eq:fcn-sq} give
+$(1-\ecs)\nrm{\gamma_n(X)}^{2}\le\nrm{\gamma_n(X\dg X)}+D_{\mathrm{sq}}\comb\nrm{X}^{2}
+\le(b_n+D_{\mathrm{sq}}\comb)\nrm{X}^{2}$, so a maximising sequence yields
+$(1-\ecs)b_n^{2}\le b_n+D_{\mathrm{sq}}\comb$; if $b_n>1$ then
+$b_n-1\le b_n(b_n-1)\le\ecs b_n^{2}+D_{\mathrm{sq}}\comb\le(25+D_{\mathrm{sq}})\comb$.
+For the lower bound, the same identity read in the other direction gives
+$a_n\le(1+\ecs)a_n^{2}+D_{\mathrm{sq}}\comb$, and if $a_n<1$ then
+$c_{\mathrm{blk}}(1-a_n)\le a_n(1-a_n)\le(25+D_{\mathrm{sq}})\comb$. Therefore
+\[
+  b_n\le1+(25+D_{\mathrm{sq}})\comb,
+  \qquad
+  a_n\ge1-\frac{25+D_{\mathrm{sq}}}{c_{\mathrm{blk}}}\,\comb ,
+\]
+which is \eqref{eq:fcn-main} with
+$K_{\mathrm{norm}}=\max\{25+D_{\mathrm{sq}},(25+D_{\mathrm{sq}})/c_{\mathrm{blk}}\}$ and
+$\comb_{\mathrm{norm}}$ the minimum of the universal ceilings of Stages~1 and~2 (and,
+harmlessly, $1/(2K_{\mathrm{norm}})$). The crude constant $c_{\mathrm{blk}}$ survives only
+in $K_{\mathrm{norm}}$: it is what prevents the bootstrap from being vacuous, not what the
+final estimate looks like.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-extcb-four-corner-norm}: 18 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports \texttt{lem-compcb-corner-algebra} and
+\texttt{lem-hcb3-uniform-square-lower}. This shard exists because of a recorded
+\emph{third-stall} classification: three successive orchestrations of
+\texttt{lem-extcb-four-corner-merge} stalled on exactly this claim, so it was factored out
+of that tree --- its statement extracted mechanically from the blocking challenges, with
+the assembly maps written out from an already-validated node --- and validated on its own.
+Its single registry consumer is \texttt{lem-extcb-four-corner-merge}
+(\S\ref{sec:extcb-four-corner-merge}), which uses it as the entire norm-control half of
+the merge.

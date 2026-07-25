@@ -1,0 +1,108 @@
+% SHARD-ID: AISM-31-EXTCB-CORNER-DIMENSION-ADDITIVITY
+% SHARD-TITLE: Corner-dimension additivity
+% SHARD-SUMMARY: Reproduces lem-extcb-corner-dimension-additivity, the af-validated splitting of a compressed corner over two projection bases into the direct sum of its blocks.
+% SHARD-SUMMARY: Explains the binary splitting lemma and its Neumann inversion, the transport of the second index by the involution, and the two finite inductions that assemble the double sum.
+% SHARD-KEYWORDS: lem-extcb-corner-dimension-additivity, af validated, projection basis, binary splitting, Neumann series, direct sum
+\section{Corner-dimension additivity}\label{sec:extcb-corner-dimension-additivity}
+
+\begin{lemma}[\texttt{lem-extcb-corner-dimension-additivity}]\label{lem:extcb-corner-dimension-additivity}
+For two finite-dimensional commutative $C^*$-algebras with projection bases and
+non-unital sufficiently accurate inclusions $v,w$, the compressed corner
+$\Cnr{v(I)}{w(I)}$ is linearly bijective to
+\begin{equation}\label{eq:add-main}
+  \bigoplus_{j,k}\ \Cnr{v(\Pi_j)}{w(\Sigma_k)} .
+\end{equation}
+\emph{Transcription note.} ``Projection basis'' is \texttt{def-projection-basis}
+($\Pi_j\dg=\Pi_j$, $\Pi_j\Pi_k=\delta_{jk}\Pi_k$, $\sum_j\Pi_j=I$, and likewise
+$\{\Sigma_k\}$); ``inclusion'' is \texttt{def-extended-delta-inclusion}, and
+\emph{non-unital} means the unit of the source need not be carried to the unit of the
+ambient algebra --- $v(I)$ is only an approximate projection there. ``Sufficiently
+accurate'' is a universal ceiling on the inclusion defect plus the ambient $\ecs$; the
+tree fixes it as the minimum of finitely many universal thresholds, independent of the
+two basis cardinalities. The conclusion is a \emph{linear} bijection, bounded with bounded
+inverse; no isometry and no bound uniform in the number of blocks is asserted, and none is
+needed downstream, where only the dimension count is consumed.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Level-one corner-dimension additivity: for two finite-dimensional commutative C*-algebras with projection bases and non-unital sufficiently accurate inclusions v,w, the compressed corner S_{v(I),w(I)} is linearly bijective to the direct sum over j,k of S_{v(Pi_j),w(Sigma_k)}.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree proves one binary splitting lemma, transports it across the second index by the
+involution, and then runs two finite inductions. Write $P_j=v(\Pi_j)$, $Q_k=w(\Sigma_k)$,
+$P_{[1,j]}=\sum_{r\le j}P_r$ and $Q_{[1,k]}=\sum_{s\le k}Q_s$.
+
+\emph{Images of a projection basis.} Each $\Pi_j$ and each partial sum
+$\sum_{r<j}\Pi_r$ is an exact Hermitian projection of norm one in the source, and
+distinct basis projections annihilate each other. Since $v$ is linear, star-preserving,
+$\dproj$-multiplicative and two-sidedly norm-bounded, every image is Hermitian with norm
+at most $1+\dproj$ and $\nrm{P_j^{2}-P_j}\le\dproj$; the partial-sum identities
+$P_{[1,j]}=P_{[1,j-1]}+P_j$ and $P_{[1,p]}=v(I)$ are \emph{exact}, by linearity alone,
+while orthogonality survives only approximately,
+\begin{equation}\label{eq:add-orth}
+  \nrm{P_{[1,j-1]}P_j}\le\dproj,\qquad \nrm{P_jP_{[1,j-1]}}\le\dproj ,
+\end{equation}
+the second from the first by star-preservation. The same holds for $w$ and the $Q_k$.
+This mixture --- exact additivity, approximate orthogonality --- is what the splitting
+lemma is built to consume.
+
+\emph{Binary splitting.} Let $R=R_0+R_1$ and $T$ be uniformly bounded approximate
+projections with $R_0,R_1$ approximately orthogonal, and let $\comb$ dominate the ambient
+associativity and product errors, all projection defects and both orthogonality defects.
+Define
+\[
+  A(X_0,X_1)=\Co{R}{T}(X_0+X_1),\qquad
+  B(X)=\bigl(\Co{R_0}{T}X,\ \Co{R_1}{T}X\bigr),
+\]
+bounded and linear because every compression is a bounded idempotent whose range is the
+displayed corner. The calculus of \texttt{def-compressed-corner} gives, uniformly,
+$X=U(XV)+O(\comb)\nrm{X}$ for $X\in\Cnr{U}{V}$. Hence for $X_i\in\Cnr{R_i}{T}$, expanding
+$R=R_0+R_1$ reproduces $X_i$ from the matching summand and leaves
+$O(\comb)\nrm{X_i}$ from the other --- one reassociation plus $R_{1-i}R_i=O(\comb)$ ---
+so $\Co{R}{T}X_i=X_i+O(\comb)\nrm{X_i}$; applying $\Co{R_a}{T}$ and using
+$R_aR_i=\delta_{ai}R_i+O(\comb)$ gives $\Co{R_a}{T}\Co{R}{T}X_i=\delta_{ai}X_i+O(\comb)\nrm{X_i}$,
+i.e.\ $\nrm{BA-I}\le C\comb$ for the max norm on the sum. In the other order, for
+$X\in\Cnr{R}{T}$ the same replacement gives $X=R(XT)+O(\comb)\nrm{X}$ and
+$\Co{R_i}{T}X=R_i(XT)+O(\comb)\nrm{X}$; adding the two and using $R_0+R_1=R$
+\emph{exactly} gives $\Co{R_0}{T}X+\Co{R_1}{T}X=X+O(\comb)\nrm{X}$, and applying the
+bounded $\Co{R}{T}$, which fixes $X$, gives $\nrm{AB-I}\le C\comb$. Shrink the universal
+threshold so that $C\comb<1$: the Neumann series invert $BA$ and $AB$, so $(BA)^{-1}B$ is
+a left inverse of $A$ and $B(AB)^{-1}$ a right inverse; a map with both is a bounded
+linear bijection.
+
+\emph{The second index.} By the compression adjoint identity and isometry of the
+involution, $X\mapsto X\dg$ is a conjugate-linear isometric bijection
+$\Cnr{U}{V}\to\Cnr{V}{U}$. Conjugating the first-index assembly for a split
+$T=T_0+T_1$ by this map on domain and codomain gives a \emph{complex}-linear bounded
+bijection --- two conjugate-linear maps around a complex-linear one --- and the adjoint
+identity identifies it with the canonical second-index assembly
+$\Cnr{R}{T_0}\oplus\Cnr{R}{T_1}\to\Cnr{R}{T}$. No second calculation is needed.
+
+\emph{Two inductions.} Fix $j$. The base $k=1$ is the identity, since $Q_{[1,1]}=Q_1$
+exactly; for $k\ge2$ the second-index splitting applies to
+$Q_{[1,k]}=Q_{[1,k-1]}+Q_k$, whose hypotheses are supplied uniformly by
+\eqref{eq:add-orth}. Finite induction over the $q$ basis projections, composing each step
+with the preceding bijection and using $Q_{[1,q]}=w(I)$, produces a bounded linear
+bijection $\Cnr{P_j}{w(I)}\to\bigoplus_k\Cnr{P_j}{Q_k}$. The first-index splitting run
+along $P_{[1,j]}=P_{[1,j-1]}+P_j$ produces, in the same way,
+$\Cnr{v(I)}{w(I)}\to\bigoplus_j\Cnr{P_j}{w(I)}$. Composing the second with the direct sum
+of the first family and reassociating the finite double sum --- an isometric relabelling
+--- gives \eqref{eq:add-main}. Each direct sum of finitely many bounded bijections is
+bounded with bounded inverse, the bound being a maximum over a finite index set.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-extcb-corner-dimension-additivity}: 39 nodes, all \texttt{validated},
+root \texttt{validated}, taint clean. Several of those nodes are \emph{re-derivations}:
+where a child had been written to consume a still-pending sibling, the tree carries a
+sharper child that discharges the same step from validated material only. That is a
+validation-ordering artifact of the bottom-up protocol, not additional mathematics; the
+mathematical content is the four movements above.
+
+\noindent\textbf{Role in the chain.} Imports \texttt{lem-compcb-corner-algebra} and
+\texttt{lem-hcb3-uniform-square-lower}. It is the counting engine of the EXT tier: a
+corner over a matrix-unit basis decomposes into its blocks, so a dimension over a
+composite projection is the sum of the dimensions over its parts. Its single registry
+consumer is \texttt{lem-extcb1-cross-corner-dimension}
+(\S\ref{sec:extcb1-dimension-selection}), which applies it to the diagonal subalgebra of
+$\Mat{r}$ and to the scalars, and reads off $\dim\Cnr{v(I_r)}{Q}=r\,d$.

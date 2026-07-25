@@ -1,0 +1,116 @@
+% SHARD-ID: AISM-25-HCB3-OFFDIAGONAL-INVERSE
+% SHARD-TITLE: Off-diagonal Ha inverse propagation
+% SHARD-SUMMARY: Reproduces lem-hcb3-offdiagonal-inverse, the af-validated rectangular counterpart of the diagonal inverse estimate.
+% SHARD-SUMMARY: Explains the rectangular square estimate, the adjoint-product route to an amplified lower modulus anchored at the diagonal index, and the reciprocal bound.
+% SHARD-KEYWORDS: lem-hcb3-offdiagonal-inverse, af validated, Ha map, rectangular corner, lower modulus, inverse norm
+\section{Off-diagonal Ha inverse propagation}\label{sec:hcb3-offdiagonal-inverse}
+
+\begin{lemma}[\texttt{lem-hcb3-offdiagonal-inverse}]\label{lem:hcb3-offdiagonal-inverse}
+There are universal $C_{\mathrm{rect}}<\infty$ and $\comb_{\mathrm{rect}}>0$ such that,
+for every H-CB datum with $\comb\le \comb_{\mathrm{rect}}$, \emph{if $\Ha{Q}{P}{R}$ is
+bijective at level one and $\Ha{Q}{R}{R}$ has level-one lower modulus at least
+$\tfrac14$}, then every amplification of $\Ha{Q}{P}{R}$ is bijective with
+\begin{equation}\label{eq:odi-main}
+  \bigl\lVert\bigl(\Han{Q}{P}{R}{n}\bigr)^{-1}\bigr\rVert\;\le\;1+C_{\mathrm{rect}}\,\comb .
+\end{equation}
+\emph{Transcription note.} The two level-one hypotheses are placed on \emph{different}
+maps: bijectivity is assumed of the rectangular map $\Ha{Q}{P}{R}$ itself, the
+lower-modulus hypothesis of the \emph{diagonal} map $\Ha{Q}{R}{R}$ at the target index.
+Neither is discharged here, and neither implies the other. This is the same conditional
+shape as \S\ref{sec:hcb3-diagonal-inverse}, inherited from the verdict that made the
+corresponding clause of \texttt{conj-hcb} conditional.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Off-diagonal Ha inverse propagation: there are universal C_rect < infinity and e_rect > 0 such that, for every H-CB datum with e <= e_rect, if Ha^Q_{P,R} is bijective at level one and Ha^Q_{R,R} has level-one lower modulus at least 1/4, then every amplification of Ha^Q_{P,R} is bijective with inverse norm at most 1+C_rect*e.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Write $T_n:=\Han{Q}{P}{R}{n}$ and $D_n:=\Han{Q}{R}{R}{n}$. The tree has four movements:
+a constant ledger, a rectangular square estimate, the passage to a lower modulus for
+$T_n$, and a reciprocal bound. Only the third movement uses the diagonal hypothesis, and
+it uses it through \texttt{lem-hcb3-diagonal-lower-modulus} rather than re-proving it.
+
+\emph{Constants.} Let $C_{\mathrm{prod}},\comb_{\mathrm{prod}}$ come from
+\texttt{lem-hcb2-product-defect}, let $C_{\mathrm{diag}},\comb_{\mathrm{diag}}$ come from
+\texttt{lem-hcb3-diagonal-lower-modulus}, and let $\comb_{\mathrm{adj}}$ be the threshold
+of \texttt{lem-hcb2-amplified-adjointness}. The universal $O(\comb)$ constant of the
+compressed-product display (a workspace external, not a registry lemma) is unpacked as a
+finite $C_{\mathrm{cp}}$ valid below a positive $\comb_{\mathrm{cp}}$. Put
+\[
+  B:=1+C_{\mathrm{cp}},\qquad
+  A:=\max\{1,\;C_{\mathrm{diag}}+B+C_{\mathrm{prod}}\},\qquad
+  C_{\mathrm{rect}}:=2A,
+\]
+\[
+  \comb_{\mathrm{rect}}:=\min\Bigl\{\comb_{\mathrm{adj}},\comb_{\mathrm{prod}},
+  \comb_{\mathrm{diag}},\comb_{\mathrm{cp}},\tfrac1{2A}\Bigr\}>0 .
+\]
+The last entry is what makes $A\comb\le\tfrac12$ throughout, and every subsequent
+coefficient nonnegative.
+
+\emph{The rectangular square estimate.} Fix an admissible datum, an arbitrary $n\ge1$ and
+$Z\in\Amp{n}{\Cnr{P}{R}}$. Left and right multiplication by $\ampel{n}{P}$ and
+$\ampel{n}{R}$ act entrywise, so the operator to which the $\theta$ calculus is applied
+amplifies as $\ampl{n}(\cdot)$ and the registered power series gives
+$\Co{\ampel{n}{P}}{\ampel{n}{R}}=\ampl{n}\Co{P}{R}$; hence $Z$ lies in the rectangular
+corner of the amplified algebra, $Z\dg$ in the reversed one, and $Z\dg\cpr Z$ is the
+compressed product formed \emph{inside} $\Amp{n}{\mathcal A}$. Comparing it with the
+ambient product and using the amplified lower $C^*$ axiom,
+\begin{equation}\label{eq:odi-square}
+  \nrm{Z\dg\cpr Z}\;\ge\;\bigl(1-\ecs-C_{\mathrm{cp}}\comb\bigr)\nrm{Z}^{2}
+  \;\ge\;\bigl(1-B\comb\bigr)\nrm{Z}^{2},
+\end{equation}
+uniformly in $n$. Note that this is a \emph{rectangular} statement and is derived here
+from the compressed-product display and the norm axioms; the diagonal statement
+\texttt{lem-hcb3-uniform-square-lower} is not the vehicle.
+
+\emph{Lower modulus for the rectangular map.} Instantiate
+\texttt{lem-hcb2-product-defect} at corner indices $(R,P,R)$ with first factor $Z\dg$ and
+second factor $Z$; by \texttt{lem-hcb2-amplified-adjointness} the first image is
+$(\Ha{Q}{R}{P})_n(Z\dg)=T_n(Z)\dg$, and the $C^*$ identity for bounded operators between
+the amplified column spaces gives $\nrm{T_n(Z)\dg T_n(Z)}=\nrm{T_n(Z)}^{2}$. Hence
+\begin{equation}\label{eq:odi-pd}
+  \nrm{T_n(Z)}^{2}\;\ge\;\nrm{D_n(Z\dg\cpr Z)}-C_{\mathrm{prod}}\comb\nrm{Z}^{2}.
+\end{equation}
+The diagonal hypothesis now enters exactly once: applying
+\texttt{lem-hcb3-diagonal-lower-modulus} at the index $R$ to $X=Z\dg\cpr Z$ gives
+$\nrm{D_n(X)}\ge(1-C_{\mathrm{diag}}\comb)\nrm{X}$, and $1-C_{\mathrm{diag}}\comb\ge
+1-A\comb\ge\tfrac12>0$ licenses multiplying \eqref{eq:odi-square} by it. Substituting into
+\eqref{eq:odi-pd} and discarding the nonnegative quadratic remainder,
+\[
+  \nrm{T_n(Z)}^{2}
+  \;\ge\;\bigl[(1-C_{\mathrm{diag}}\comb)(1-B\comb)-C_{\mathrm{prod}}\comb\bigr]\nrm{Z}^{2}
+  \;\ge\;\bigl[1-(C_{\mathrm{diag}}+B+C_{\mathrm{prod}})\comb\bigr]\nrm{Z}^{2}
+  \;\ge\;(1-A\comb)\nrm{Z}^{2}.
+\]
+Since $0\le A\comb\le\tfrac12$ and $\sqrt{1-x}\ge1-x$ on $[0,1]$,
+\begin{equation}\label{eq:odi-lower}
+  \nrm{T_n(Z)}\;\ge\;(1-A\comb)\nrm{Z}.
+\end{equation}
+
+\emph{Bijectivity and the reciprocal bound.} Bijectivity amplifies algebraically and with
+no estimate: $\Ha{Q}{P}{R}$ is linear with a two-sided linear inverse $S$ by the first
+hypothesis, $T_n=\ampl{n}\Ha{Q}{P}{R}$ acts slotwise, and $\ampl{n}S$ is a two-sided
+inverse for it. For a target $Y$ put $Z=T_n^{-1}Y$; then \eqref{eq:odi-lower} reads
+$\nrm{Y}\ge(1-A\comb)\nrm{Z}$, and $1/(1-x)\le1+2x$ for $x=A\comb\in[0,\tfrac12]$ gives
+$\nrm{T_n^{-1}Y}\le(1+2A\comb)\nrm{Y}=(1+C_{\mathrm{rect}}\comb)\nrm{Y}$. The datum and
+$n$ were arbitrary and the constants are universal, which is \eqref{eq:odi-main}.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb3-offdiagonal-inverse}: 16 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Registry imports:
+\texttt{lem-hcb2-amplified-adjointness},
+\texttt{lem-hcb2-product-defect},
+\texttt{lem-hcb3-diagonal-lower-modulus},
+\texttt{lem-compcb-corner-algebra},
+\texttt{lem-hcb3-uniform-square-lower} and
+\texttt{lem-hcb3-diagonal-inverse}; the exported tree visibly consumes the first three,
+the remaining three being available but unused in the validated derivation. Together with
+\S\S\ref{sec:hcb3-diagonal-unit}--\ref{sec:hcb3-diagonal-inverse} this completes the
+third layer of the H-CB tier: the diagonal maps are controlled on both sides, and the
+rectangular maps inherit an inverse bound from the diagonal anchor at their target index.
+It is the last clause consumed by the parent \texttt{conj-hcb}
+(\S\ref{sec:hcb}). Nothing here bears on \texttt{op-classical}, which is open.

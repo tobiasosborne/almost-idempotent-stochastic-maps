@@ -1,0 +1,132 @@
+% SHARD-ID: AISM-34-EXTCB-FOUR-CORNER-MERGE
+% SHARD-TITLE: The complete four-corner merge
+% SHARD-SUMMARY: Reproduces lem-extcb-four-corner-merge, the af-validated assembly of four fixed bijective level-one corner maps into a single extended isomorphism.
+% SHARD-SUMMARY: Explains the single-level-one-map assembly, the multiplicative defect, the Neumann coverage argument for surjectivity, and the counterexample that forced the total-defect smallness hypothesis.
+% SHARD-KEYWORDS: lem-extcb-four-corner-merge, af validated, merge, extended isomorphism, Neumann coverage, contract amendment, counterexample
+\section{The complete four-corner merge}\label{sec:extcb-four-corner-merge}
+
+\begin{lemma}[\texttt{lem-extcb-four-corner-merge}]\label{lem:extcb-four-corner-merge}
+There are universal $C_{\mathrm{merge}}<\infty$ and $a_{\mathrm{merge}}>0$ such that four
+fixed bijective level-one corner maps satisfying \texttt{def-four-corner-merging-datum}
+with common defect $\rho$ and $\rho+\ecs\le a_{\mathrm{merge}}$ combine into one extended
+$C_{\mathrm{merge}}(\rho+\ecs)$-isomorphism.
+\emph{Transcription note.} The smallness hypothesis constrains the \emph{total} defect
+$\rho+\ecs$, not $\rho$ alone; that is a verdict-driven amendment of the transcribed
+contract, and the record of why it cannot be dropped is reproduced below. ``Extended
+isomorphism'' is \texttt{def-extended-delta-inclusion}: every amplification is a
+$\delta$-homomorphism with two-sided $(1\pm\delta)$ norm bounds, and the level-one map is
+bijective.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Complete four-corner merge: there are universal C_merge < infinity and a_merge > 0 such that four fixed bijective level-one corner maps satisfying def-four-corner-merging-datum with common defect rho and rho+epsilon <= a_merge combine into one extended C_merge*(rho+epsilon)-isomorphism.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Write $\pi_j=\ampel{n}{\Pi_j}$, $X_{jk}=\pi_jX\pi_k$, and let $\mu_n,\Gamma_n,\alpha_n$
+and $\gamma_n=\alpha_n\Gamma_n\mu_n$ be the assembly maps of
+\S\ref{sec:extcb-four-corner-norm}. Set $\comb=\rho+\ecs$.
+
+\emph{One map, not a family.} Exact source complementarity gives
+$\pi_j\pi_k=\delta_{jk}\pi_j$, $\pi_1+\pi_2=I$ and $X=\sum_{jk}X_{jk}$; since the four
+$\gamma_{jk,n}$ are the amplifications of the same four level-one maps,
+\begin{equation}\label{eq:fcm-single}
+  \gamma_n=\ampl{n}\gamma_1,\qquad
+  \gamma_1(X)=\sum_{j,k}\gamma_{jk}(\Pi_jX\Pi_k).
+\end{equation}
+This is the structural point of the lemma: the conclusion is about \emph{one} linear map
+and its amplifications, so nothing may be chosen level by level. Two clauses follow at
+once. Adjoints of source corners transpose indices, $(\pi_jX\pi_k)\dg=\pi_kX\dg\pi_j$, and
+the datum's involution clause matches them, so $\gamma_n(X\dg)=\gamma_n(X)\dg$
+\emph{exactly}. The source unit has only diagonal blocks, so
+$\gamma_n(I)-I$ splits into the two diagonal-unit errors and
+$\ampl{n}(P_1+P_2-I)$, whose norm equals its level-one value by the direct-sum norm
+axiom; hence
+\begin{equation}\label{eq:fcm-unit}
+  \nrm{\gamma_n(I)-I}\;\le\;3\rho ,\qquad\text{uniformly in }n .
+\end{equation}
+
+\emph{Corner separation and the multiplicative defect.} As in
+\S\ref{sec:extcb-four-corner-norm}, compression commutes with amplification, so all
+matrix-level corner estimates are available with level-one constants; and from
+$p_kp_l=p_k(s-I)+(p_kI-p_k)-(p_k^{2}-p_k)$ with $s=p_1+p_2$ one gets
+$\nrm{p_kp_l}\le5\comb$ for $k\ne l$ once $\comb\le\tfrac14$. Hence a product of corner
+elements is compressed-product-close when the middle indices match
+($\nrm{UV-U\cpr V}\le c_{\mathrm{prod}}\comb\nrm{U}\nrm{V}$) and is itself small when they
+do not ($\nrm{UV}\le c_{\mathrm{cross}}\comb\nrm{U}\nrm{V}$, by three associator moves
+that expose $p_kp_l$). Expanding $\gamma_n(XY)$ and $\gamma_n(X)\gamma_n(Y)$ over the
+blocks gives sixteen terms --- eight with matching middle index, compared through the
+datum's compressed-product clause, and eight without, which are small --- so
+\begin{equation}\label{eq:fcm-mult}
+  \nrm{\gamma_n(XY)-\gamma_n(X)\gamma_n(Y)}\;\le\;D_{\mathrm{mult}}\,\comb\,\nrm{X}\nrm{Y},
+  \qquad D_{\mathrm{mult}}=8\bigl[1+2c_{\mathrm{prod}}+2c_{\mathrm{cross}}\bigr],
+\end{equation}
+independently of $n$ and of all dimensions.
+
+\emph{Norm control.} The datum and the assembly \eqref{eq:fcm-single} are exactly the
+hypotheses of \texttt{lem-extcb-four-corner-norm}
+(\S\ref{sec:extcb-four-corner-norm}), which supplies the two-sided bound
+$(1-K_{\mathrm{norm}}\comb)\nrm{X}\le\nrm{\gamma_n(X)}\le(1+K_{\mathrm{norm}}\comb)\nrm{X}$
+at every level simultaneously.
+
+\emph{Coverage, and bijectivity at level one.} Injectivity of $\gamma_1$ is immediate from
+the lower bound once $K_{\mathrm{norm}}\comb\le\tfrac12$. Surjectivity is the delicate
+half, and it is obtained without assuming that the target corner sum is direct: with
+$\beta(Y)=(\Co{P_j}{P_k}Y)_{jk}$, each compression is $O(\comb)$-close to
+$Y\mapsto P_j(YP_k)$, so $\alpha_1\beta$ is $O(\comb)$-close to $Y\mapsto s(Ys)$ with
+$s=P_1+P_2$ --- an identity of bilinearity alone, no associativity used --- and
+$\nrm{s-I}\le\rho$ together with the product and approximate-unit axioms gives
+\begin{equation}\label{eq:fcm-cov}
+  \nrm{\alpha_1\beta-I}\;\le\;C_{\mathrm{cov}}\comb .
+\end{equation}
+Choosing $\comb$ with $C_{\mathrm{cov}}\comb<1$ makes $\alpha_1\beta$ invertible by its
+Neumann series, so $Y=\alpha_1\bigl(\beta((\alpha_1\beta)^{-1}Y)\bigr)$ for every $Y$ and
+$\alpha_1$ is onto. Now $\mu_1$ is a bijection by exact source complementarity, $\Gamma_1$
+is a bijection because all four fixed level-one maps are bijective by hypothesis, and
+$\alpha_1$ is onto; therefore $\gamma_1=\alpha_1\Gamma_1\mu_1$ is onto, hence bijective,
+and every $\ampl{n}\gamma_1$ is algebraically bijective with inverse
+$\ampl{n}\gamma_1^{-1}$.
+
+\emph{Conclusion.} Let $a_{\mathrm{merge}}$ be the minimum of the thresholds above ---
+$\comb_{\mathrm{corner}}$, $\comb_{\mathrm{norm}}$, $\comb_{\mathrm{cov}}$,
+$1/(2K_{\mathrm{norm}})$ and the universal compression radius --- and put
+$C_{\mathrm{merge}}=\max\{3,D_{\mathrm{mult}},K_{\mathrm{norm}}\}$. Then
+\eqref{eq:fcm-unit} and \eqref{eq:fcm-mult} make every amplification a
+$C_{\mathrm{merge}}\comb$-homomorphism, the norm lemma supplies the two-sided
+$(1\pm C_{\mathrm{merge}}\comb)$ bounds, and level-one bijectivity supplies the
+isomorphism clause; \texttt{def-extended-delta-inclusion} then returns exactly the
+asserted extended $C_{\mathrm{merge}}(\rho+\ecs)$-isomorphism.
+
+\paragraph{Why the hypothesis is on the total defect.} The transcribed contract bounded
+only $\rho$, leaving $\ecs$ free. That version is \emph{false}, and the tree records an
+exact counterexample rather than a repair. Take $\mathcal A=\mathbb C^{3}$ with
+coordinatewise involution, the multiplication
+$(a,b,c)(a',b',c')=(aa',bb',0)$ and designated unit $I=(1,1,0)$: at every matrix level
+this is an extended $1$-$C^*$-algebra, the lower $C^*$ inequality being vacuous at
+$\ecs=1$. The elements $P_1=(1,0,0)$ and $P_2=(0,1,0)$ are exact projections with
+$P_1+P_2=I$, so $\rho=0$; the registered $\theta$ formula gives $\Cos{P_j}=E_j$ and
+$\Co{P_j}{P_k}=0$ for $j\ne k$, so the four target corners are
+$\mathbb C P_1,0,0,\mathbb C P_2$. With $\mathcal B=\mathbb C^{2}$ and its exact
+structure, the two diagonal identities and the two zero maps form a datum with common
+defect $\rho=0$ whose four maps are bijective complete isometries; yet the assembled map
+is $\gamma(a,b)=(a,b,0)$, which is not surjective, and no linear bijection
+$\mathbb C^{2}\to\mathbb C^{3}$ exists at all. So $\rho$ may be arbitrarily small while
+the conclusion fails, and only a ceiling on $\rho+\ecs$ repairs it. The prover amended the
+root accordingly and the fresh verifiers validated the amended statement; the registry
+contract carries that amended root verbatim, and downstream consumption supplies a small
+ambient $\ecs$, so the conditional form is the consumable one.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-extcb-four-corner-merge}: 22 nodes \texttt{validated} plus 4
+\texttt{archived}, root \texttt{validated}, taint clean. The archived nodes are
+dependency-gated duplicates superseded by children that discharge the same step from
+validated material only.
+
+\noindent\textbf{Role in the chain.} Imports \texttt{lem-compcb-corner-algebra},
+\texttt{lem-hcb3-uniform-square-lower} and \texttt{lem-extcb-four-corner-norm}
+(\S\ref{sec:extcb-four-corner-norm}). It is the assembly primitive of the EXT tier: given
+the block shape selected in \S\ref{sec:extcb1-dimension-selection} and four corner maps
+matched to it, the merge produces the single map that the tier's conclusion is about. Its
+consumer is \texttt{conj-extcb} (\S\ref{sec:extcb}), now \texttt{proved} with
+\texttt{af: validated}: this merge is the last step of that proof. Nothing here bears on
+\texttt{op-classical}, which is open.

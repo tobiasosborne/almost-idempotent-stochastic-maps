@@ -1,0 +1,149 @@
+% SHARD-ID: AISM-36-STATUS-OUTLOOK
+% SHARD-TITLE: Status and outlook
+% SHARD-SUMMARY: Records what this report validates, where the live route now stops, and the quarantined assembly interface.
+% SHARD-SUMMARY: Tabulates the validated registry results not reproduced on the live route, with every row traced to the generated argument index.
+% SHARD-KEYWORDS: status, outlook, conj-hcb, conj-extcb, registry index, live route, off-route table
+\section{Status and outlook}\label{sec:status-outlook}
+
+\subsection*{What is validated here}
+
+% Count derivation: 37 is the number of explicitly listed reproduced ids below; each has status proved and af validated in repo-inputs/argument-INDEX.md.
+The preceding sections reproduce thirty-seven registry results, each \texttt{proved} with
+\texttt{af: validated}: the signed--stochastic bridge
+\texttt{lem-classical-equiv} (\S\ref{sec:classical-equiv});
+positive-retract hardening \texttt{lem-prh} (\S\ref{sec:prh}); the COMP tier ---
+\texttt{lem-compcb-amplification-naturality},
+\texttt{lem-compcb-amplified-compression},
+\texttt{lem-compcb-amplified-compression-identities},
+\texttt{lem-compcb-entrywise-compression-naturality},
+\texttt{lem-compcb-rectangular-product},
+\texttt{lem-compcb-amplified-almost-containment},
+\texttt{lem-compcb-compressed-unit-norm},
+\texttt{lem-compcb-compressed-unit-action},
+\texttt{lem-compcb-row-column-product},
+\texttt{lem-compcb-corner-algebra},
+\texttt{lem-compcb-single-compression-transfer};
+the H-CB tier ---
+\texttt{lem-hcb0-compressed-associator},
+\texttt{lem-hcb-column-hilbert-squared},
+\texttt{lem-hcb1-variational-identity},
+\texttt{lem-hcb1-column-action},
+\texttt{lem-hcb2-amplified-adjointness},
+\texttt{lem-hcb2-product-defect},
+\texttt{lem-hcb3-diagonal-unit},
+\texttt{lem-hcb3-diagonal-upper-norm},
+\texttt{lem-hcb3-uniform-square-lower},
+\texttt{lem-hcb3-diagonal-lower-modulus},
+\texttt{lem-hcb3-diagonal-inverse},
+\texttt{lem-hcb3-offdiagonal-inverse} ---
+its canonical layer ---
+\texttt{lem-hcb4-canonical-gram},
+\texttt{lem-hcb4-canonical-closeness},
+\texttt{lem-hcb4-canonical-inverse} ---
+together with the tier's parent contract \texttt{conj-hcb} (\S\ref{sec:hcb}); and the
+front end of the EXT tier ---
+\texttt{lem-extcb-one-dimensional-product},
+\texttt{lem-extcb-one-dimensional-corner-dimension},
+\texttt{lem-extcb-corner-dimension-additivity},
+\texttt{lem-extcb1-close-corner-dimension},
+\texttt{lem-extcb1-cross-corner-dimension},
+\texttt{lem-extcb-four-corner-norm},
+\texttt{lem-extcb-four-corner-merge};
+and, closing that tier, its parent contract \texttt{conj-extcb} (\S\ref{sec:extcb}).
+% Count derivation: 70 is the number of rows with status proved and af validated in repo-inputs/argument-INDEX.md.
+The supplied generated registry index contains \textbf{70} results with that status pair.
+% Count derivation: 33 is 70 index rows with status proved/af validated minus the 37 reproduced ids listed above.
+The remaining thirty-three such rows are listed in the table below.
+
+The headline also needs qualifications. The inverse and lower-modulus results
+--- \texttt{lem-hcb3-diagonal-lower-modulus}, \texttt{lem-hcb3-diagonal-inverse},
+\texttt{lem-hcb3-offdiagonal-inverse} and the corresponding clauses of
+\texttt{conj-hcb} --- are validated as \emph{conditional} statements. Their level-one
+hypotheses are established in exactly one place in this document and for exactly one
+datum: \S\ref{sec:extcb} establishes them for the EXT-CB datum, in the order the tree
+fixes, before invoking the clauses. Nothing else here supplies them for any datum. Their
+conditional shape is itself a correction of record: the parent's inverse clause was
+unconditional until an exact $\mathbb C\oplus\mathbb C$ counterexample refuted it.
+\texttt{lem-extcb-four-corner-merge} (\S\ref{sec:extcb-four-corner-merge}) carries
+a smallness hypothesis on the \emph{total} defect $\rho+\ecs$; the transcribed version
+that constrained $\rho$ alone is false, and the refuting example is
+reproduced there. Both corrections were produced by hostile verification, and both are
+reasons to distrust unconditional restatements of this material.
+
+\subsection*{What is next, and what it is not}
+
+With \S\ref{sec:hcb} the H-CB tier is closed, and with \S\ref{sec:extcb} so is the EXT
+tier: \texttt{conj-extcb} is \texttt{proved} with \texttt{af: validated} and is reproduced
+above as Lemma~\ref{conj:extcb}. What it delivers is one extension step --- from
+$\Mat{r}$ to $\Mat{r+1}$, at one universal accuracy, with one unitary and four fixed
+corner maps serving every amplification level. It is not an induction, and nothing here
+iterates it.
+
+Beyond the EXT tier lies the assembly, and that is where the live route now stops.
+% Status derivation: lem-thmainext-conditional is recorded proved-mod-audit / af: none in repo-inputs/argument-INDEX.md.
+Its registry carrier \texttt{lem-thmainext-conditional} is \texttt{proved-mod-audit} with
+\texttt{af: none} --- \textbf{open} at this document's rigour bar, and \textbf{not}
+reproduced here. The MAIN-CB assembly rows and the ledger rows are
+explicitly \emph{not} in the pipeline and must not be treated as pending detail. They
+are \textbf{quarantined} pending a focused repair and a fresh hostile review, along with
+the named gap interfaces (exact-target approximation, the polar contract, the MAIN
+structure, the ledger domains, and the final bridge); and several external
+topology sources are not yet in \texttt{refs/}, which is a provisioning risk, not a proof
+step. The unconditional end-to-end constant ledger for Route F remains separate open work.
+
+The honest summary is therefore: the base, the middle and both tier parents of the live
+route have been made rigorous here, and the assembly above them is quarantined.
+\texttt{op-classical} is \textbf{open}.
+
+\subsection*{Validated registry results not reproduced here}
+
+The table is the exact set difference between the supplied index rows carrying
+\texttt{proved}/\texttt{validated} and the reproduced ids listed above. Its ordering
+follows the generated index.
+
+\begin{longtable}{@{}p{0.46\textwidth}p{0.20\textwidth}p{0.28\textwidth}@{}}
+\toprule
+Registry id & Status & Note \\
+\midrule
+\endhead
+\texttt{lem-always-tight-dual-support} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-collateral-import} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-cross-pivot-cancellation} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-cs-low-slab-pincer} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-depth-d-halo-collapse} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-factorization} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-fan-payment} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-fan-payment-restricted} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-genuine-disintegration} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-halo-collapse} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-harmonic-affine-bridge} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-hiddenness-depth-markov} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-hiddenness-dual-witness} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-hx-financing-floor} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-hx-forced-exterior-coupling} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-hx-robust-scalar-starvation} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-hx-signed-variation-ledger} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-hx-transverse-moment-identity} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-import-reduction} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-mass-split} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-negpart-subadditive} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-parametric-halo-collapse} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-pivot-removing-move} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-residual-lower} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-residual-upper} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-row-far-dual-certificate} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-row-zero-capacity} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-starvation-completion-obstruction} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-top-concentration} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-top-slab-companion} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-weighted-min} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{lem-zerosum-triangle} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\texttt{obs-height-collapse} & \texttt{proved}, \texttt{af: validated} & off the live route; registry record retained \\
+\bottomrule
+\end{longtable}
+
+\noindent
+Each id and status pair in the table is transcribed from
+\texttt{repo-inputs/argument-INDEX.md}. In particular, \texttt{conj-extcb} is absent from
+the table because it is \emph{reproduced} above (\S\ref{sec:extcb}), not because of its
+status: the index records it as \texttt{proved} with \texttt{af: validated}.

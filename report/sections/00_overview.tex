@@ -65,13 +65,19 @@ Four blocks, in dependency order.
   is itself an \emph{extended} $O(\comb)$-$C^*$-algebra --- the object the next tier
   needs.
 
-\item \textbf{The H-CB tier} (\S\S\ref{sec:hcb2-amplified-adjointness}--\ref{sec:hcb3-diagonal-inverse},
+\item \textbf{The H-CB tier} (\S\S\ref{sec:hcb2-amplified-adjointness}--\ref{sec:hcb4-canonical-inverse},
   interleaved). Over a closed H-CB datum (\texttt{def-hcb-datum}) this tier establishes
   the amplified estimates for the map $\Ha{Q}{P}{R}$ of \texttt{def-ha-map}: the
   column-Hilbert comparison, the variational identity that defines it, its column
   action, exact adjointness, its multiplicative defect, the diagonal unit and
   upper-norm estimates, and --- under explicit level-one hypotheses --- the diagonal
   lower modulus and the diagonal inverse bound, all uniform in $n$.
+
+\item \textbf{The H-CB parent contract and EXT tier} (\S\ref{sec:hcb} and
+  \S\S\ref{sec:extcb-one-dimensional-corners}--\ref{sec:extcb}). This tier develops
+  corner arithmetic through a one-dimensional index, the dimension selection $(r,1)$
+  of an EXT-CB datum, the four-corner merge, and the EXT parent that adds one dimension
+  to a level-one datum.
 \end{enumerate}
 
 \subsection*{The honesty boundary}
@@ -106,8 +112,11 @@ rather than a registry definition.
 \subsection*{What is deliberately absent}
 
 No claim, direct or implied, that \texttt{op-classical} follows. The H-CB tier feeds the
-parent contract \texttt{conj-hcb}, which is \textbf{open} (\texttt{proved-mod-audit},
-\texttt{af: none}); beyond it lie the EXT tier and a quarantined assembly interface. The
-route is a route, not a proof. Also absent: any numerical statement (those live in
+parent contract \texttt{conj-hcb} (\S\ref{sec:hcb}), and that in turn feeds the EXT
+parent \texttt{conj-extcb} (\S\ref{sec:extcb}); both are \texttt{proved} with
+\texttt{af: validated}. What is open beyond them is the assembly, whose registry carrier
+\texttt{lem-thmainext-conditional} is \texttt{proved-mod-audit} with \texttt{af: none},
+together with the quarantined assembly interface. The route is a route, not a proof.
+Also absent: any numerical statement (those live in
 \texttt{runs/}, and are never rigorous), and the earlier signed-geometry material, which
 is off the live route and inventoried in \S\ref{sec:status-outlook}.

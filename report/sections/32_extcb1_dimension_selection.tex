@@ -1,0 +1,167 @@
+% SHARD-ID: AISM-32-EXTCB1-DIMENSION-SELECTION
+% SHARD-TITLE: Dimension selection in an EXT-CB datum
+% SHARD-SUMMARY: Reproduces lem-extcb1-close-corner-dimension and lem-extcb1-cross-corner-dimension, the af-validated identification of the cross-corner dimensions of an EXT-CB datum as (r,1).
+% SHARD-SUMMARY: Explains the close-idempotent range transport, the matrix-unit normalisation of the transported diagonal, and the dichotomy that additivity converts into the count r.
+% SHARD-KEYWORDS: lem-extcb1-close-corner-dimension, lem-extcb1-cross-corner-dimension, af validated, close idempotents, matrix units, corner dimension, EXT-CB datum
+\section{Dimension selection in an EXT-CB datum}\label{sec:extcb1-dimension-selection}
+
+A closed EXT-CB datum (\texttt{def-extcb-datum}) carries $\dproj$-projections $P,Q$ with
+$\nrm{P+Q-I}\le\dproj$, an extended $\dproj$-isomorphism $v:\Mat{r}\to\Cnrs{P}$,
+$\dim\Cnrs{Q}=1$ and $\Cnr{P}{Q}\ne0$. Nothing in the datum says how large the cross
+corner is. The two lemmas of this section settle it: the corner has dimension exactly
+$r$, and the diagonal $Q$-corner exactly $1$ --- the shape needed to build one map on
+$\Mat{r+1}$. The first lemma is the technical enabler; the second is the count.
+
+\begin{lemma}[\texttt{lem-extcb1-close-corner-dimension}]\label{lem:extcb1-close-corner-dimension}
+There is a universal $\comb_{\mathrm{close}}>0$ such that, in an EXT-CB datum with
+$\comb\le \comb_{\mathrm{close}}$, the compression ranges $\Cnr{v(I_r)}{Q}$ and
+$\Cnr{P}{Q}$ have the same dimension.
+\emph{Transcription note.} $v(I_r)$ is the image of the \emph{source} unit; it is an
+approximate projection close to $P$, not equal to it, and the two corners it and $P$ cut
+out are literally different subspaces. Only their dimensions are claimed equal.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Close-compression range invariance: there is a universal e_close > 0 such that, in an EXT-CB datum with e <= e_close, the compression ranges S_{v(I_r),Q} and S_{P,Q} have the same dimension.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Write $R=v(I_r)$, $E=\Co{R}{Q}$ and $F=\Co{P}{Q}$.
+
+\emph{$R$ is close to $P$, and is itself an approximate projection.} Bijectivity of $v$
+onto $\Cnrs{P}$ makes that corner nonzero, so $P$ is nonvanishing; $\dim\Cnrs{Q}=1$ makes
+$Q$ nonvanishing; the nonvanishing alternative of \texttt{def-delta-projection} then
+bounds $\nrm{P},\nrm{Q}$ by a universal $M_1$. By
+\texttt{lem-compcb-corner-algebra} the corner $\Cnrs{P}$ is an extended
+$C_{\mathrm{ca}}\comb$-$C^*$-algebra with unit $\cunit{P}=\Cos{P}(P)$, and the unit clause
+for the extended $\dproj$-isomorphism $v$ gives $\nrm{R-\cunit{P}}\le\dproj$; combining
+with $\nrm{\cunit{P}-P(PP)}=O(\comb)\nrm{P}$ and
+$\nrm{P(PP)-P}\le\bigl((1+\ecs)\nrm{P}+1\bigr)\dproj$ yields
+\begin{equation}\label{eq:close-RP}
+  \nrm{R-P}\;\le\;C_1\comb .
+\end{equation}
+Star-preservation gives $R\dg=R$, $\dproj$-multiplicativity gives $\nrm{R\cpr R-R}\le\dproj$
+inside $\Cnrs{P}$, and the compressed-versus-ambient comparison converts this into
+$\nrm{R^{2}-R}\le C_2\comb$ in $\mathcal A$: $R$ is a $(C_R\comb)$-projection there.
+
+\emph{Two close bounded idempotents.} With the common adjusted defect
+$\dproj'=C_R\comb$, the pairs $(R,Q)$ and $(P,Q)$ both satisfy the hypotheses of
+\texttt{lem-compcb-amplified-compression-identities} at $n=1$, so $E^{2}=E$ and
+$F^{2}=F$. Each compression is $O(\comb)$-close to the corresponding
+left-times-right multiplication, and
+$\bigl(L_RR_Q-L_PR_Q\bigr)(X)=(R-P)(XQ)$ has norm at most
+$(1+\ecs)^{2}\nrm{R-P}\nrm{Q}\nrm{X}$; with \eqref{eq:close-RP} this gives universal
+$C_0,M_0$ with
+\begin{equation}\label{eq:close-EF}
+  \nrm{E-F}\;\le\;C_0\comb,\qquad \nrm{E}\;\le\;M_0 .
+\end{equation}
+
+\emph{Range transport.} If $E,F$ are bounded idempotents on a Banach space with
+$\nrm{E}\le M$ and $\nrm{E-F}(2M+1)<1$, put $W=FE+(I-F)(I-E)$. Idempotence gives the two
+exact identities
+\begin{equation}\label{eq:close-W}
+  W-I=(F-E)(2E-I),\qquad WE=FW=FE ,
+\end{equation}
+so $\nrm{W-I}\le\nrm{F-E}(2\nrm{E}+1)<1$ and $W$ is invertible by its Neumann series.
+The relation $WE=FW$ sends $\Img E$ into $\Img F$ and, read as $EW^{-1}=W^{-1}F$,
+sends $\Img F$ back; hence $W$ restricts to a linear bijection $\Img E\to\Img F$ and the
+two ranges have equal dimension. Taking
+$\comb_{\mathrm{close}}$ below the thresholds of the two preceding steps and below
+$1/[2C_0(2M_0+1)]$ makes \eqref{eq:close-EF} satisfy that hypothesis, and
+$\Img\Co{R}{Q}=\Cnr{R}{Q}$, $\Img\Co{P}{Q}=\Cnr{P}{Q}$ finish it.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-extcb1-close-corner-dimension}: 16 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean. This lemma exists because a hostile verdict on the EXT-CB
+transcription demanded that the level-one close-idempotent normalisation be made
+explicit, and that the selection threshold cover it.
+
+\begin{lemma}[\texttt{lem-extcb1-cross-corner-dimension}]\label{lem:extcb1-cross-corner-dimension}
+There is a universal $\comb_{\mathrm{sel}}>0$ such that every EXT-CB datum with
+$\comb\le \comb_{\mathrm{sel}}$ satisfies
+\begin{equation}\label{eq:sel-main}
+  \bigl(\dim\Cnr{P}{Q},\ \dim\Cnr{Q}{Q}\bigr)=(r,1).
+\end{equation}
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{EXT-CB cross-corner dimension: there is a universal e_sel > 0 such that every EXT-CB datum with e <= e_sel satisfies (dim S_{P,Q},dim S_{Q,Q})=(r,1).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The count is produced by transporting the diagonal matrix units through $v$, showing that
+each transported unit is a one-dimensional projection equivalent to all the others, and
+then summing.
+
+\emph{Two inclusions.} Let $D_r\subseteq\Mat{r}$ be the diagonal subalgebra with
+projection basis $\Pi_a=E_{aa}$, let $v_D$ be the restriction of $v$ to $D_r$, put
+$R_a=v(E_{aa})$, and let $w:\mathbb C\to\mathcal A$ be $w(\lambda)=\lambda Q$, whose
+source has the one-element projection basis $\{1\}$. Restriction preserves linearity,
+star-preservation, $\dproj$-multiplicativity and the two-sided norm bounds, and the
+compressed product on $\Cnrs{P}$ differs from the ambient one by $O(\comb)$ on bounded
+elements, so $v_D$ is a non-unital $O(\comb)$-inclusion into $\mathcal A$ with
+$v_D(I)=v(I_r)$, uniformly in $r$. For $w$: nonvanishing of $Q$ gives
+$\lvert\nrm{Q}-1\rvert\le C_{\mathrm{nv}}\comb$, the operator-space axioms give the exact
+cross-norm identity $\nrm{X\otimes Q}=\nrm{X}\nrm{Q}$ at every level, and
+$\nrm{(XY)\otimes Q-(X\otimes Q)(Y\otimes Q)}=\nrm{(XY)\otimes(Q-Q^{2})}\le\dproj\nrm{X}\nrm{Y}$;
+so every amplification of $w$ is an $O(\comb)$-inclusion as well.
+
+\emph{The transported matrix units.} For $a,b\le r$ let $c_{ab}(X)=E_{aa}XE_{bb}$ on
+$\Mat{r}$ and put $T_{ab}=v\,c_{ab}\,v^{-1}\Cos{P}$. Since $\Cos{P}$ is an idempotent with
+range $\Cnrs{P}=\Img v$, one has $\Cos{P}v=v$ and $v^{-1}\Cos{P}v=\mathrm{id}$; as
+$c_{ab}^{2}=c_{ab}$ with one-dimensional range, $T_{ab}$ is an \emph{exact} bounded
+idempotent of rank one, with range $\mathbb C\,v(E_{ab})$. The tree then compares it with
+the corresponding compression: uniformly in $a,b$ and $r$,
+\begin{equation}\label{eq:sel-Tcomp}
+  \nrm{\Co{R_a}{R_b}-T_{ab}}\;\le\;C_m\comb .
+\end{equation}
+Three fixed-length estimates give this --- each $R_a$ is a Hermitian $C_1\comb$-projection
+(from $\nrm{E_{aa}}=1$, $\dproj$-multiplicativity and the compressed-versus-ambient
+comparison); the subordination bound
+$\nrm{R_a(XR_b)-R_a\bigl((\Cos{P}X)R_b\bigr)}\le C_s\comb\nrm{X}$, a finite telescope using
+$R_i=\Cos{P}(R_i)$ and $\Cos{P}(Y)=P(YP)+O(\comb)\nrm{Y}$; and the transported-source
+comparison $\nrm{T_{ab}X-R_a\bigl((\Cos{P}X)R_b\bigr)}\le C_3\comb\nrm{X}$, from two
+applications of $\dproj$-multiplicativity in $\Mat{r}$ and the corner-algebra bounds ---
+together with $\nrm{\Co{R_a}{R_b}X-R_a(XR_b)}\le C_4\comb\nrm{X}$. Since all source
+matrix factors have norm one, no constant depends on $r$.
+
+\emph{Rank invariance.} If $E,F$ are bounded idempotents with $\nrm{E-F}<1$ then
+$x\in\Img E$ with $Fx=0$ gives $x=Ex=(E-F)x$, hence $x=0$; interchanging $E$ and $F$ gives
+the reverse, so the two ranges have equal dimension when either is finite-dimensional.
+Shrinking $\comb$ so that $C_m\comb<1$ and applying this to \eqref{eq:sel-Tcomp} gives
+$\dim\Cnr{R_a}{R_b}=\rank T_{ab}=1$ for all $a,b$: taking $a=b$, each $R_a$ is a
+one-dimensional projection; taking $a\ne b$, the $R_a$ are pairwise equivalent in the
+sense of \texttt{def-one-dimensional-delta-projection}.
+
+\emph{Dichotomy, additivity, selection.} Put $d_a=\dim\Cnr{R_a}{Q}$. By
+\texttt{lem-extcb-one-dimensional-corner-dimension}
+(\S\ref{sec:extcb-one-dimensional-corners}), applied to the one-dimensional projections
+$R_a$ and $Q$ with the enlarged common accuracy, $d_a\le1$, so $d_a\in\{0,1\}$. The values
+coincide: if some $d_b=1$ then $R_b$ is equivalent to $Q$, every $R_a$ is equivalent to
+$R_b$, and transitivity of equivalence --- the registered property whose source proof is
+the one-dimensional product lemma of \S\ref{sec:extcb-one-dimensional-corners} --- gives
+$d_a=1$ for all $a$; otherwise all $d_a=0$. Write $d$ for the common value. Now
+\texttt{lem-extcb-corner-dimension-additivity}
+(\S\ref{sec:extcb-corner-dimension-additivity}), applied to $D_r$ and $\mathbb C$ with the
+inclusions $v_D,w$, gives a linear bijection
+$\Cnr{v(I_r)}{Q}\to\bigoplus_{a=1}^{r}\Cnr{R_a}{Q}$ and hence
+$\dim\Cnr{v(I_r)}{Q}=\sum_a d_a=r\,d$; Lemma~\ref{lem:extcb1-close-corner-dimension} turns
+this into $\dim\Cnr{P}{Q}=r\,d$. The datum assumes $\Cnr{P}{Q}\ne0$ and $r\ge1$, so
+$d\ne0$, i.e.\ $d=1$ and $\dim\Cnr{P}{Q}=r$. Finally $\Cnr{Q}{Q}=\Cnrs{Q}$ has dimension
+$1$ by hypothesis, and $\comb_{\mathrm{sel}}$ is the minimum of the finitely many
+universal thresholds used, giving \eqref{eq:sel-main}.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-extcb1-cross-corner-dimension}: 30 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} The close-corner lemma imports
+\texttt{lem-compcb-amplified-compression-identities},
+\texttt{lem-compcb-corner-algebra} and \texttt{lem-hcb3-uniform-square-lower}; the
+cross-corner lemma imports both of the preceding sections and the close-corner lemma. The
+pair is the \emph{selection} step of the EXT tier: it is what licenses treating
+$\Cnr{P}{Q}$ as an $r$-dimensional column and $\Cnrs{Q}$ as a line, i.e.\ the block shape
+that the four-corner merge (\S\ref{sec:extcb-four-corner-merge}) assembles into a single
+map on $\Mat{r+1}$. Its consumer is \texttt{conj-extcb} (\S\ref{sec:extcb}), now
+\texttt{proved} with \texttt{af: validated}; the close-corner lemma is there because a
+hostile verdict on that parent demanded it.
