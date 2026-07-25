@@ -1,1 +1,1 @@
-{"type":"def_added","timestamp":"2026-07-25T01:47:04.305082765Z","definition":{"id":"6986e3f1542b1e64","name":"one-dimensional-projection-nonvanishing","definition":"Byte-matched (tex:1066): dim S_P=1 implies S_P != 0 hence nonvanishing.","created":"2026-07-25T01:47:04.304245694Z"}}
+{"type":"def_added","timestamp":"2026-07-25T02:23:05.526296368Z","definition":{"id":"2cdc8ce62bc7ad05","name":"one-dimensional-projection-nonvanishing","definition":"Byte-matched (tex:1066): dim S_P=1 =\u003e nonvanishing.","created":"2026-07-25T02:23:05.525138641Z"}}
