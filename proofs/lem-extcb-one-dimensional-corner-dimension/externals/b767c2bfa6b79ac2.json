@@ -1,0 +1,8 @@
+{
+  "id": "b767c2bfa6b79ac2",
+  "name": "lem-extcb-one-dimensional-product",
+  "source": "imports validated registry lemma proofs/lem-extcb-one-dimensional-product — Level-one one-dimensional corner product: there are universal C_PQR \u003c infinity and e_PQR \u003e 0 such that, for e=delta+epsilon \u003c= e_PQR, if Q is one-dimensional then abs(||X dot Y||-||X||||Y||) \u003c= C_PQR*e*||X||||Y|| for X in S_{P,Q} and Y in S_{Q,R}.",
+  "content_hash": "88884b2a502955b525b3386d4ddfab1378ae10c195ab46cd7bddd9485c06d9f9",
+  "created": "2026-07-25T18:17:14.966543897Z",
+  "notes": ""
+}

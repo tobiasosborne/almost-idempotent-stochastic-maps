@@ -1,0 +1,8 @@
+{
+  "id": "922218e09c9d47bb",
+  "name": "lem-hcb4-canonical-inverse-CONTRACT",
+  "source": "proofs/lem-hcb4-canonical-inverse (af-validated, taint clean). FULL VALIDATED CONTRACT: Canonical Ha inverse estimate: there are universal C_sp,inv \u003c infinity and e_sp,inv \u003e 0 such that every H-CB datum with e \u003c= e_sp,inv has the special maps Ha^Q_{P,Q} and Ha^Q_{Q,P} completely bijective, with their amplified inverses differing from the corresponding canonical inverses by at most C_sp,inv*e.",
+  "content_hash": "6b2028411b0c68d2bdd5cd71aaca908771342be7a19505d977ae255fa1cd98b8",
+  "created": "2026-07-25T18:17:15.169748597Z",
+  "notes": ""
+}

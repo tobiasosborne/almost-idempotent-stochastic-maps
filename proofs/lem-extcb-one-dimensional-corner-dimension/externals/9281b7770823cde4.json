@@ -1,0 +1,8 @@
+{
+  "id": "9281b7770823cde4",
+  "name": "lem-hcb4-canonical-closeness-CONTRACT",
+  "source": "proofs/lem-hcb4-canonical-closeness (af-validated, taint clean). FULL VALIDATED CONTRACT: Canonical Ha closeness: there are universal C_sp \u003c infinity and e_sp \u003e 0 such that every H-CB datum with e \u003c= e_sp satisfies max{||(Ha^Q_{P,Q})_n-J_{P,Q,n}||,||(Ha^Q_{Q,P})_n-J_{Q,P,n}||} \u003c= C_sp*e for every n \u003e= 1.",
+  "content_hash": "bf32084797450675106db80aaae03142c9f0044a1b0f9e8ed316251262cb73ab",
+  "created": "2026-07-25T18:17:15.161798127Z",
+  "notes": ""
+}
