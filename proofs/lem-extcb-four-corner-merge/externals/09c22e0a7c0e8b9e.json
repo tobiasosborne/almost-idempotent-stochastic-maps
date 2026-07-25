@@ -1,0 +1,8 @@
+{
+  "id": "09c22e0a7c0e8b9e",
+  "name": "lem-hcb3-diagonal-inverse-CONTRACT",
+  "source": "proofs/lem-hcb3-diagonal-inverse (af-validated, taint clean). FULL VALIDATED CONTRACT: Diagonal Ha inverse propagation: there are universal C_inv \u003c infinity and e_inv \u003e 0 such that, for every H-CB datum with e \u003c= e_inv, if Ha^Q_{P,P} has level-one lower modulus at least 1/4 and is bijective at level one, then every amplification is bijective and ||((Ha^Q_{P,P})_n)^(-1)|| \u003c= 1+C_inv*e.",
+  "content_hash": "bb81b99cdc8064f0ddc5376e67ce5c6260c4e9ed758bd0ca575e15f6bf33737b",
+  "created": "2026-07-25T17:35:48.586268144Z",
+  "notes": ""
+}

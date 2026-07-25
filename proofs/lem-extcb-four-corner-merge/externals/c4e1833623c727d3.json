@@ -1,8 +1,0 @@
-{
-  "id": "c4e1833623c727d3",
-  "name": "lem-hcb1-column-action-CONTRACT",
-  "source": "proofs/lem-hcb1-column-action (af-validated, taint clean). FULL VALIDATED CONTRACT: Uniform Ha column action: there are universal C_act \u003c infinity and e_act \u003e 0 such that every H-CB datum with e \u003c= e_act, every n \u003e= 1, Z in M_n tensor S_{P,R}, and X in M_{n,1} tensor S_{R,Q} satisfy q_P((Ha^Q_{P,R})_n(Z)X-Z dot X) \u003c= C_act*e*||Z||*q_R(X).",
-  "content_hash": "ee01bb41731afe0f5c2858b8f35da449ab19bc83cfb76e544fffe2428b1e55f0",
-  "created": "2026-07-25T17:34:44.065081342Z",
-  "notes": ""
-}

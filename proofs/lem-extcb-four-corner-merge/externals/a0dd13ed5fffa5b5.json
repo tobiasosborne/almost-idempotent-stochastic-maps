@@ -1,0 +1,8 @@
+{
+  "id": "a0dd13ed5fffa5b5",
+  "name": "lem-hcb3-diagonal-unit-CONTRACT",
+  "source": "proofs/lem-hcb3-diagonal-unit (af-validated, taint clean). FULL VALIDATED CONTRACT: Uniform diagonal Ha unit estimate: there are universal C_unit \u003c infinity and e_unit \u003e 0 such that every H-CB datum with e \u003c= e_unit and every n \u003e= 1 satisfy ||(Ha^Q_{P,P})_n(I_n tensor u_P)-I|| \u003c= C_unit*e.",
+  "content_hash": "2c2785bf64d17f9702612d9c7f10f0bb65310c9403abcaf992e20e4335e619af",
+  "created": "2026-07-25T17:35:48.470525919Z",
+  "notes": ""
+}

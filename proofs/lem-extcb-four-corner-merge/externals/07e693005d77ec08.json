@@ -1,0 +1,8 @@
+{
+  "id": "07e693005d77ec08",
+  "name": "lem-hcb4-canonical-gram-CONTRACT",
+  "source": "proofs/lem-hcb4-canonical-gram (af-validated, taint clean). FULL VALIDATED CONTRACT: Canonical corner Gram estimate: there are universal C_J \u003c infinity and e_J \u003e 0 such that every H-CB datum with e \u003c= e_J, every n \u003e= 1, and every Z in either special P,Q corner satisfy (1-C_J*e)||Z|| \u003c= ||J_n(Z)|| \u003c= (1+C_J*e)||Z||.",
+  "content_hash": "df8d4d1fb862b351f998fb0fb349e3c063e2bf1e0739f1f6236db04200759069",
+  "created": "2026-07-25T17:35:48.601570192Z",
+  "notes": ""
+}

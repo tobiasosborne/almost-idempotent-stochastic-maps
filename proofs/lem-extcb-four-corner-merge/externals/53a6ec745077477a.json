@@ -1,0 +1,8 @@
+{
+  "id": "53a6ec745077477a",
+  "name": "conj-hcb-CONTRACT",
+  "source": "proofs/conj-hcb (af-validated, taint clean). FULL VALIDATED CONTRACT: H-CB: there are universal C_H \u003c infinity and e_H \u003e 0 such that, whenever e=delta+epsilon \u003c= e_H, Q is a level-one one-dimensional delta-projection in an extended epsilon-C*-algebra A, and P,R,S are delta-projections, the maps 1_{M_n} tensor Ha^Q_{P,R}, under the COL-HILB identification with operators on C^n tensor S_{R,Q} and C^n tensor S_{P,Q}, satisfy for every n the adjoint equality, product defect at most C_H*e*||Z||||W||, and the uniform unit, upper-norm, homomorphism, and canonical-identity closeness estimates required by lem_extension; moreover, if the level-one lower modulus of Ha^Q_{P,P} is at least 1/4, then every amplification has lower modulus at least 1-C_H*e, and if Ha^Q_{P,P} is also bijective at level one then every amplification is bijective with inverse norm at most 1+C_H*e; the analogous off-diagonal inverse bound for Ha^Q_{P,R} is asserted only when Ha^Q_{P,R} is bijective at level one and Ha^Q_{R,R} satisfies that diagonal lower-modulus hypothesis; all constants independent of n, dim A, block count, and block dimensions.",
+  "content_hash": "c1030e8e1d62cbc6a6d3e0e1b0724ae6dad8773837e21fb7f27029a2f3503309",
+  "created": "2026-07-25T17:35:48.622672596Z",
+  "notes": ""
+}
