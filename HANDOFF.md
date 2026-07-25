@@ -27,12 +27,12 @@ TRIGGER: session close, or a material change in the current frontier / next task
    MAIN-CB/ledger remainder + 5 GAP interfaces are QUARANTINED in **aism-0163**
    (blocks phase 4 only). `lem-routef-k-ledger` is under a DO-NOT-REWIRE-OR-SEED
    guard until reviewed F2/F3 contracts exist.
-5. **BLOCKED ON USER (surface these first):**
-   (a) **ratification of the 12 new draft defs** (list: CODIFY-FUDW-REPORT.md
-   §RATIFICATION NEEDED) — needed before locking; phase-2 seeding can proceed
-   with drafts but locking requires recorded sign-off (Rule 7);
-   (b) **the F2/F3 bridge contracts decision** (aism-0163) — the v3 verdict left
-   them uncontracted; phase 4 cannot seed without them.
+5. **User decisions RESOLVED (2026-07-24, recorded in-session):**
+   (a) all 12 fudw defs RATIFIED and locked (byte-match criterion; delegated
+   for consensus/original tiers); (b) F2/F3 bridge closed via prover wave —
+   both contracts hostile-verified (VERDICT-F2F3-BRIDGE.md, VALID-WITH-
+   CORRECTIONS) and registered as lem-routef-f2-positive-unital-compression /
+   lem-routef-f3-retract-defect (proved-mod-audit).
 6. **STANDING DIRECTIVES (user, binding):** (i) capacity on the open leaves;
    (ii) decomposition as objective function; (iii) FINDINGS dead routes absolute;
    (iv) mostly serial; verification fresh-codex-only; af per §6 (Claude
@@ -43,7 +43,7 @@ TRIGGER: session close, or a material change in the current frontier / next task
 7. `fr board` + `bd ready`; beads sync via **bash** `scripts/beads-sync.sh`.
 8. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-24, session 24 — the fudw decomposition campaign)
+## Current state (2026-07-25 checkpoint, session 24 — fudw done; phase 2 executing)
 
 **Rigorous (af-validated, T0): 49** (mid-campaign checkpoint 2026-07-25: the whole
 COMP tier (8+naturality) + HCB-0 + column-hilbert-squared (the corrected
@@ -103,10 +103,10 @@ mechanically from the challenge text (verdict-driven precedent) then re-seeded;
 
 ## What is intentionally NOT here
 
-- Any claim op-classical is proved/rigorous. T0 is exactly **35**.
-- Any claim the 33 new shards are more than `proved-mod-audit`/`stated`
-  transcriptions of hostile-verified proofs (af: none, every one).
+- Any claim op-classical is proved/rigorous. T0 is exactly **49** (each one a
+  root-validated taint-clean af tree; everything else in the chain remains
+  `proved-mod-audit`/`stated`).
 - Any transcription of the quarantined rows or the 5 GAP interfaces (GAP-EA,
   GAP-S1-POLAR-CONTRACT, GAP-MAIN-STRUCTURE, GAP-LEDGER-DOMAINS, F2/F3).
 - Any movement on RDSE/LDHR-48, the signed trunk, or numerical `K`/`η_K`.
-- Any locked status for the 12 new draft defs (user ratification pending).
+- (12-def ratification RESOLVED 2026-07-24 — see START-HERE #5.)
