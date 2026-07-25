@@ -1369,3 +1369,40 @@ seeded on 10 first-class validated imports; user stopped the session mid-run
 at 9/29 validated — af ledger append-only, ZERO loss, resume command in
 HANDOFF item 4. Report addendum landed earlier (26 shards, 53pp). All work
 committed and pushed continuously; [check-all] green throughout.
+
+## 2026-07-25/26 — session 26: PHASE 3 CLOSED (conj-extcb ▣, T0 70); v4.1 repair landed; report waves 3/3b/3c landed fully hostile-reviewed
+
+Resumed the user-stopped conj-extcb orchestration (zero ledger loss) and
+closed it in 21 rounds at routine tier: root validated, 46 nodes (40
+validated + 6 archived), taint clean. Full close protocol executed: export,
+banking flip, regenerate, gate, oracle af-conj-extcb registered (text
+surgery on portfolio.json per the documented format-drift fallback),
+fr verify PASS, ▣ banked, bead aism-fgr7 closed. Both named th_main_ext
+gaps (H-CB, EXT-CB) are now L0-rigorous.
+
+Pipelined off-repo while the run was live (overreach guard; all landed at
+the boundary): (1) the aism-0163 V4 repair cycle — fresh-codex repair
+applying the v3 verdict's Registry impact A/B/C, separate fresh-codex
+hostile verify VALID-WITH-CORRECTIONS, corrections applied; landed as
+DESIGN-FUDW-DECOMP-v4.1.md (79 contracted = 57/15/7, 15 GAP reservations,
+20 defs); phase 4 is now single-gated on the four genuine GAP families +
+user items. (2) Stage-1 topology refs: 3/7 acquired legally into
+refs-staging (Hatcher [Künneth locus is Thm 3.15 in the canonical PDF, not
+the design's 3.16 — flagged], Cairns 1935, Arkowitz–Brown 2004); Lee +
+Granas–Dugundji have no legal open copy — USER escalation. (3) Report
+waves 3/3b/3c: 12 prose shards for the phase-2/3 harvest (incl. the
+conj-extcb capstone), two batched fresh-codex hostile reviews +
+verdict-driven corrections, landed at 92e103d8 (37 shards, 77pp). The
+legacy session-25 shards then got their own batched hostile pass
+(16-VALID/25, 0 INVALID, 9 corrected at e94fed08) — EVERY report prose
+shard is now reviewer!=author verified; aism-h0mp closed.
+
+Registry hygiene from review catches: lem-hcb4-canonical-inverse defs line
+(workspace-provisioned defs are invisible to the linker — recorded),
+lem-extcb-four-corner-norm stale provenance tail, conj-extcb body Status
+paragraph. Sketch v33 + CHANGELOG deltas + HANDOFF rewrites at both
+boundaries. Filed aism-fbh8: GAP-EA discharge candidate — the validated
+conj-extcb node-1.2 subtree IS a dimension-free exact-target correction
+lemma (C_corr=57); factoring it is the queued first phase-4 wave (design
+decision on the contract form required). All work committed and pushed
+continuously; [check-all] green throughout.
