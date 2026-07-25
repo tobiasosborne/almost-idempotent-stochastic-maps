@@ -1,0 +1,110 @@
+% SHARD-ID: AISM-24-HCB3-DIAGONAL-INVERSE
+% SHARD-TITLE: Diagonal Ha inverse propagation
+% SHARD-SUMMARY: Reproduces lem-hcb3-diagonal-inverse, the af-validated propagation of level-one bijectivity and lower modulus to bijectivity of every amplification.
+% SHARD-SUMMARY: Explains the exact entrywise inversion, the imported lower-modulus bound, and the elementary reciprocal estimate that produces the 1+C_inv*e inverse norm.
+% SHARD-KEYWORDS: lem-hcb3-diagonal-inverse, af validated, Ha map, bijectivity, inverse norm, entrywise amplification
+\section{Diagonal Ha inverse propagation}\label{sec:hcb3-diagonal-inverse}
+
+\begin{lemma}[\texttt{lem-hcb3-diagonal-inverse}]\label{lem:hcb3-diagonal-inverse}
+There are universal $C_{\mathrm{inv}}<\infty$ and $\comb_{\mathrm{inv}}>0$ such that, for
+every H-CB datum with $\comb\le \comb_{\mathrm{inv}}$, \emph{if $\Ha{Q}{P}{P}$ has
+level-one lower modulus at least $\tfrac14$ and is bijective at level one}, then every
+amplification is bijective and
+\begin{equation}\label{eq:di-main}
+  \bigl\lVert\bigl(\Han{Q}{P}{P}{n}\bigr)^{-1}\bigr\rVert\;\le\;1+C_{\mathrm{inv}}\,\comb .
+\end{equation}
+\emph{Transcription note.} \textbf{Both} level-one hypotheses are load-bearing and neither
+is discharged here: the conclusion is asserted only for those data whose level-one map is
+\emph{already} bijective \emph{and} already has lower modulus at least $\tfrac14$. The two
+are used at genuinely different points of the proof --- bijectivity supplies the inverse,
+the lower modulus supplies its norm --- and neither implies the other in this setting. The
+conditional shape is the corrected one, inherited from the same verdict that made the
+lower-modulus clause of \texttt{conj-hcb} conditional after an unconditional inverse claim
+was refuted by an exact $\mathbb C\oplus\mathbb C$ counterexample.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Diagonal Ha inverse propagation: there are universal C_inv < infinity and e_inv > 0 such that, for every H-CB datum with e <= e_inv, if Ha^Q_{P,P} has level-one lower modulus at least 1/4 and is bijective at level one, then every amplification is bijective and ||((Ha^Q_{P,P})_n)^(-1)|| <= 1+C_inv*e.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree is short --- five nodes --- because the analytic work has already been done by
+\texttt{lem-hcb3-diagonal-lower-modulus} (\S\ref{sec:hcb3-diagonal-lower-modulus}); what
+remains is an exact algebraic step and one scalar inequality. Write $T:=\Ha{Q}{P}{P}$ and
+$T_n:=\Han{Q}{P}{P}{n}$.
+
+\emph{Constants.} Let $C_{\mathrm{diag}},\comb_{\mathrm{diag}}$ be universal witnesses
+supplied by \texttt{lem-hcb3-diagonal-lower-modulus}. Enlarging $C_{\mathrm{diag}}$ only
+weakens that external conclusion, so one may take $C_{\mathrm{diag}}>0$ and set
+\[
+  \comb_{\mathrm{inv}}:=\min\Bigl\{\comb_{\mathrm{diag}},\ \tfrac1{2C_{\mathrm{diag}}}\Bigr\},
+  \qquad
+  C_{\mathrm{inv}}:=2C_{\mathrm{diag}} .
+\]
+Both are universal, $\comb_{\mathrm{inv}}>0$, and the choice is made precisely so that
+\begin{equation}\label{eq:di-half}
+  0\le C_{\mathrm{diag}}\comb\le\tfrac12
+  \qquad\text{whenever }0\le \comb\le \comb_{\mathrm{inv}} .
+\end{equation}
+
+\emph{Bijectivity amplifies exactly.} Fix an admissible datum and an arbitrary $n\ge1$.
+This step uses the \emph{first} hypothesis and nothing else, and it involves no estimate
+at all. By the meaning of matrix amplification, $T_n\bigl([Z_{ij}]\bigr)=[T(Z_{ij})]$ acts
+slotwise. Surjectivity therefore passes upward: for any target $[Y_{ij}]$ the matrix
+$[T^{-1}(Y_{ij})]$ is a preimage. So does injectivity: $T_n([Z_{ij}])=0$ forces
+$T(Z_{ij})=0$ for every $i,j$, hence $Z_{ij}=0$ for every $i,j$ and $[Z_{ij}]=0$. Thus
+$T_n$ is bijective and, moreover,
+\begin{equation}\label{eq:di-entrywise}
+  (T_n)^{-1}\ \text{is the entrywise amplification of }T^{-1} .
+\end{equation}
+Note what is \emph{not} claimed: nothing here bounds $\lVert(T_n)^{-1}\rVert$ ---
+entrywise inversion alone gives no uniform norm control, which is why the second
+hypothesis is needed.
+
+\emph{The imported lower bound.} Since $\comb\le \comb_{\mathrm{inv}}\le \comb_{\mathrm{diag}}$
+and the level-one lower modulus is at least $\tfrac14$ by the \emph{second} hypothesis,
+\texttt{lem-hcb3-diagonal-lower-modulus} applies verbatim and gives
+\begin{equation}\label{eq:di-lower}
+  \nrm{T_n(Z)}\;\ge\;\bigl(1-C_{\mathrm{diag}}\comb\bigr)\nrm{Z}
+  \qquad\text{for every }Z\in\Amp{n}{\Cnrs{P}} .
+\end{equation}
+This is the only place the $\tfrac14$ hypothesis enters, and it enters through the
+imported lemma rather than being re-proved.
+
+\emph{The reciprocal estimate.} Combine the two. For an arbitrary target element $Y$, put
+$Z=(T_n)^{-1}Y$, which exists by \eqref{eq:di-entrywise}; then \eqref{eq:di-lower} reads
+$\nrm{Y}=\nrm{T_n(Z)}\ge(1-C_{\mathrm{diag}}\comb)\nrm{Z}$. By \eqref{eq:di-half} the
+quantity $x:=C_{\mathrm{diag}}\comb$ lies in $[0,\tfrac12]$, and on that interval the
+elementary identity
+\[
+  \frac1{1-x}=1+\frac{x}{1-x}\;\le\;1+2x
+\]
+holds because $1-x\ge\tfrac12$. Therefore
+\[
+  \bigl\lVert(T_n)^{-1}Y\bigr\rVert
+  \;\le\;\bigl(1-C_{\mathrm{diag}}\comb\bigr)^{-1}\nrm{Y}
+  \;\le\;\bigl(1+2C_{\mathrm{diag}}\comb\bigr)\nrm{Y}
+  \;=\;\bigl(1+C_{\mathrm{inv}}\comb\bigr)\nrm{Y}.
+\]
+Since the datum and $n$ were arbitrary, every amplification is bijective with the inverse
+bound \eqref{eq:di-main}, and the constants are universal. The restriction to
+$x\le\tfrac12$ is not cosmetic: it is what converts the reciprocal into a linear bound in
+$\comb$, and it is exactly what the choice of $\comb_{\mathrm{inv}}$ secures.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb3-diagonal-inverse}: 5 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean; first pass, two rounds, no challenges surviving.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-hcb3-diagonal-lower-modulus},
+\texttt{lem-hcb2-amplified-adjointness},
+\texttt{lem-hcb2-product-defect},
+\texttt{lem-compcb-corner-algebra} and
+\texttt{lem-hcb3-uniform-square-lower}. It completes the diagonal block of the H-CB tier:
+with \S\ref{sec:hcb3-diagonal-upper-norm} and \S\ref{sec:hcb3-diagonal-lower-modulus} it
+says that, \emph{under the two level-one hypotheses}, the amplified diagonal Ha map is a
+bijection whose norm and inverse norm are both within $O(\comb)$ of $1$. The matching
+off-diagonal statement \texttt{lem-hcb3-offdiagonal-inverse} is not validated, the hcb4
+canonical tier is \texttt{af: none}, and the parent \texttt{conj-hcb} remains
+\texttt{proved-mod-audit}. Nothing here bears on the status of \texttt{op-classical},
+which is open.

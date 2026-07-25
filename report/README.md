@@ -44,6 +44,13 @@ mid-check.
 
 | # | SHARD-ID | file |
 |---|----------|------|
+<!-- Shard-order rows for report/README.md ("Shard order (id -> file)" table).
+     Replace the existing table body with these 26 rows, in this order.
+     ADDENDUM (2026-07-25): 22 uniform-square-lower, 23 diagonal-lower-modulus,
+     24 diagonal-inverse; status/outlook renumbered 22 -> 25. -->
+
+| # | SHARD-ID | file |
+|---|----------|------|
 | 00 | `AISM-00-OVERVIEW` | `report/sections/00_overview.tex` |
 | 01 | `AISM-01-CLASSICAL-EQUIV` | `report/sections/01_classical_equiv.tex` |
 | 02 | `AISM-02-PRH` | `report/sections/02_prh.tex` |
@@ -66,4 +73,7 @@ mid-check.
 | 19 | `AISM-19-HCB2-PRODUCT-DEFECT` | `report/sections/19_hcb2_product_defect.tex` |
 | 20 | `AISM-20-HCB3-DIAGONAL-UNIT` | `report/sections/20_hcb3_diagonal_unit.tex` |
 | 21 | `AISM-21-HCB3-DIAGONAL-UPPER-NORM` | `report/sections/21_hcb3_diagonal_upper_norm.tex` |
-| 22 | `AISM-22-STATUS-OUTLOOK` | `report/sections/22_status_outlook.tex` |
+| 22 | `AISM-22-HCB3-UNIFORM-SQUARE-LOWER` | `report/sections/22_hcb3_uniform_square_lower.tex` |
+| 23 | `AISM-23-HCB3-DIAGONAL-LOWER-MODULUS` | `report/sections/23_hcb3_diagonal_lower_modulus.tex` |
+| 24 | `AISM-24-HCB3-DIAGONAL-INVERSE` | `report/sections/24_hcb3_diagonal_inverse.tex` |
+| 25 | `AISM-25-STATUS-OUTLOOK` | `report/sections/25_status_outlook.tex` |

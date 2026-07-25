@@ -69,6 +69,12 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-HCB3-DIAGONAL-UNIT` | `proofs/lem-hcb3-diagonal-unit/export.md` | `caeb9b93fb761bd8` | `af` proof export for `lem-hcb3-diagonal-unit` |
 | `ARG-LEM-HCB3-DIAGONAL-UPPER-NORM` | `argument/lemmas/lem-hcb3-diagonal-upper-norm.md` | `ecb0f4c046f5fc21` | Registry shard for `lem-hcb3-diagonal-upper-norm` |
 | `AF-LEM-HCB3-DIAGONAL-UPPER-NORM` | `proofs/lem-hcb3-diagonal-upper-norm/export.md` | `c34e1710967eaf2b` | `af` proof export for `lem-hcb3-diagonal-upper-norm` |
+| `ARG-LEM-HCB3-UNIFORM-SQUARE-LOWER` | `argument/lemmas/lem-hcb3-uniform-square-lower.md` | `c9dbdb7f834c999e` | Registry shard for `lem-hcb3-uniform-square-lower` |
+| `AF-LEM-HCB3-UNIFORM-SQUARE-LOWER` | `proofs/lem-hcb3-uniform-square-lower/export.md` | `dabba7ee13e6be01` | `af` proof export for `lem-hcb3-uniform-square-lower` |
+| `ARG-LEM-HCB3-DIAGONAL-LOWER-MODULUS` | `argument/lemmas/lem-hcb3-diagonal-lower-modulus.md` | `1691acf1207ee77e` | Registry shard for `lem-hcb3-diagonal-lower-modulus` |
+| `AF-LEM-HCB3-DIAGONAL-LOWER-MODULUS` | `proofs/lem-hcb3-diagonal-lower-modulus/export.md` | `4b0a3aa54c13ce2d` | `af` proof export for `lem-hcb3-diagonal-lower-modulus` |
+| `ARG-LEM-HCB3-DIAGONAL-INVERSE` | `argument/lemmas/lem-hcb3-diagonal-inverse.md` | `bd9f655e16d64392` | Registry shard for `lem-hcb3-diagonal-inverse` |
+| `AF-LEM-HCB3-DIAGONAL-INVERSE` | `proofs/lem-hcb3-diagonal-inverse/export.md` | `7bf03119e8aa18a6` | `af` proof export for `lem-hcb3-diagonal-inverse` |
 
 ## Per-claim ledger
 
@@ -95,3 +101,6 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | lem:hcb2-product-defect | ARG-LEM-HCB2-PRODUCT-DEFECT AF-LEM-HCB2-PRODUCT-DEFECT | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-hcb2-product-defect`. |
 | lem:hcb3-diagonal-unit | ARG-LEM-HCB3-DIAGONAL-UNIT AF-LEM-HCB3-DIAGONAL-UNIT | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-hcb3-diagonal-unit`. |
 | lem:hcb3-diagonal-upper-norm | ARG-LEM-HCB3-DIAGONAL-UPPER-NORM AF-LEM-HCB3-DIAGONAL-UPPER-NORM | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-hcb3-diagonal-upper-norm`. |
+| lem:hcb3-uniform-square-lower | ARG-LEM-HCB3-UNIFORM-SQUARE-LOWER AF-LEM-HCB3-UNIFORM-SQUARE-LOWER | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-hcb3-uniform-square-lower`. |
+| lem:hcb3-diagonal-lower-modulus | ARG-LEM-HCB3-DIAGONAL-LOWER-MODULUS AF-LEM-HCB3-DIAGONAL-LOWER-MODULUS | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-hcb3-diagonal-lower-modulus`. |
+| lem:hcb3-diagonal-inverse | ARG-LEM-HCB3-DIAGONAL-INVERSE AF-LEM-HCB3-DIAGONAL-INVERSE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-hcb3-diagonal-inverse`. |

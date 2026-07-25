@@ -104,9 +104,12 @@ both are universal.
 \texttt{lem-hcb2-amplified-adjointness},
 \texttt{lem-hcb2-product-defect} and
 \texttt{lem-compcb-corner-algebra}. It is the upper half of the norm control that the
-parent contract \texttt{conj-hcb} requires; the matching lower half,
-\texttt{lem-hcb3-diagonal-lower-modulus}, is \emph{not} validated --- it is mid-validation
-at the time of writing --- and the inverse and canonical tiers beyond it are
-\texttt{af: none}. \texttt{conj-hcb} itself is \texttt{proved-mod-audit}, i.e. open at this
-repository's rigour ladder, and nothing here bears on the status of
-\texttt{op-classical}.
+parent contract \texttt{conj-hcb} requires; the matching lower half is
+\texttt{lem-hcb3-diagonal-lower-modulus} (\S\ref{sec:hcb3-diagonal-lower-modulus}), which
+is validated but only \emph{conditionally} --- it assumes a level-one lower modulus of at
+least $\tfrac14$, a hypothesis nothing in this document supplies, and the diagonal
+inverse estimate \texttt{lem-hcb3-diagonal-inverse}
+(\S\ref{sec:hcb3-diagonal-inverse}) inherits it. The off-diagonal inverse and the
+canonical tier beyond them are \texttt{af: none}, and \texttt{conj-hcb} itself is
+\texttt{proved-mod-audit}, i.e. open at this repository's rigour ladder; nothing here
+bears on the status of \texttt{op-classical}.

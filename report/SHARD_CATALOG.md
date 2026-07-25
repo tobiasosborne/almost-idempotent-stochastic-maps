@@ -178,8 +178,29 @@ verbatim), and keywords.
 - **Summary:** Explains the matrix-uniform square estimate, the quadratic recurrence for the operator norm, and the scalar root argument that closes it.
 - **Keywords:** lem-hcb3-diagonal-upper-norm, af validated, Ha map, operator norm, quadratic recurrence, corner algebra
 
-## `AISM-22-STATUS-OUTLOOK`
-- **File:** `report/sections/22_status_outlook.tex`
+## `AISM-22-HCB3-UNIFORM-SQUARE-LOWER`
+- **File:** `report/sections/22_hcb3_uniform_square_lower.tex`
+- **Title:** The uniform square lower estimate
+- **Summary:** Reproduces lem-hcb3-uniform-square-lower, the af-validated matrix-uniform lower bound for the compressed square of a corner element.
+- **Summary:** Explains the two-branch argument: a vanishing projection collapses the corner to zero via the theta calculus, and a nonvanishing one inherits the lower C*-axiom at every level.
+- **Keywords:** lem-hcb3-uniform-square-lower, af validated, lower C* axiom, vanishing corner, theta calculus, corner algebra
+
+## `AISM-23-HCB3-DIAGONAL-LOWER-MODULUS`
+- **File:** `report/sections/23_hcb3_diagonal_lower_modulus.tex`
+- **Title:** Diagonal Ha lower-modulus propagation
+- **Summary:** Reproduces lem-hcb3-diagonal-lower-modulus, the af-validated propagation of a level-one lower-modulus hypothesis to every amplification.
+- **Summary:** Explains the quadratic root gap, the dichotomy for the level-n lower moduli, and the Ruan halving plus dyadic bootstrap that carries the level-one bound upward.
+- **Keywords:** lem-hcb3-diagonal-lower-modulus, af validated, lower modulus, quadratic recurrence, Ruan axioms, dyadic bootstrap
+
+## `AISM-24-HCB3-DIAGONAL-INVERSE`
+- **File:** `report/sections/24_hcb3_diagonal_inverse.tex`
+- **Title:** Diagonal Ha inverse propagation
+- **Summary:** Reproduces lem-hcb3-diagonal-inverse, the af-validated propagation of level-one bijectivity and lower modulus to bijectivity of every amplification.
+- **Summary:** Explains the exact entrywise inversion, the imported lower-modulus bound, and the elementary reciprocal estimate that produces the 1+C_inv*e inverse norm.
+- **Keywords:** lem-hcb3-diagonal-inverse, af validated, Ha map, bijectivity, inverse norm, entrywise amplification
+
+## `AISM-25-STATUS-OUTLOOK`
+- **File:** `report/sections/25_status_outlook.tex`
 - **Title:** Status and outlook
 - **Summary:** Records what this report validates, what remains on the live H-CB and EXT queue, and the quarantined assembly interface.
 - **Summary:** Tabulates the results removed from the previous report as a route-pivot record, each with its retained registry status.

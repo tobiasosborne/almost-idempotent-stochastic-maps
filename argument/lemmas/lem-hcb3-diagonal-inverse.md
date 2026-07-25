@@ -6,7 +6,7 @@ defs: def-ha-map; def-hcb-datum
 deps: lem-hcb3-diagonal-lower-modulus; lem-hcb2-amplified-adjointness; lem-hcb2-product-defect; lem-compcb-corner-algebra; lem-hcb3-uniform-square-lower
 status: proved
 af: validated
-provenance: PROOF-W74F-E-HCB.md §7.3 (7.10); VERDICT-W74F-E-HCB.md HCB-3 conditional correction; DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D
+provenance: PROOF-W74F-E-HCB.md §7.3 (7.10); VERDICT-W74F-E-HCB.md HCB-3 conditional correction; DESIGN-FUDW-DECOMP-v3.md §2.1; VERDICT-FUDW-DECOMP-V3.md §D; report lem:hcb3-diagonal-inverse
 owner: A
 workspace: proofs/lem-hcb3-diagonal-inverse
 ---

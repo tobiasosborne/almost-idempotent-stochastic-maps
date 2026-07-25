@@ -98,7 +98,6 @@ conj-low-slab-cap
 conj-min-a-w4
 conj-near-cluster-absorption
 conj-nsc
-lem-hcb3-uniform-square-lower
 conj-rank3-cluster-zero-face-reach
 conj-shallow-counterweight-exclusion
 conj-sl1a-deep-diagonal-cell
@@ -226,8 +225,6 @@ lem-zero-face-exchange-identity
 lem-zero-face-localization
 lem-zero-face-one-sixteenth-capacity-kill
 lem-zero-face-vertex-support
-lem-hcb3-diagonal-lower-modulus
-lem-hcb3-diagonal-inverse
 lem-hcb3-offdiagonal-inverse
 lem-hcb4-canonical-gram
 lem-hcb4-canonical-closeness

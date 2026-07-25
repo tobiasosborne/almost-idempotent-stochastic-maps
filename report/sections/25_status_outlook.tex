@@ -1,4 +1,4 @@
-% SHARD-ID: AISM-22-STATUS-OUTLOOK
+% SHARD-ID: AISM-25-STATUS-OUTLOOK
 % SHARD-TITLE: Status and outlook
 % SHARD-SUMMARY: Records what this report validates, what remains on the live H-CB and EXT queue, and the quarantined assembly interface.
 % SHARD-SUMMARY: Tabulates the results removed from the previous report as a route-pivot record, each with its retained registry status.
@@ -7,7 +7,7 @@
 
 \subsection*{What is validated here}
 
-The preceding sections reproduce twenty-one registry results, each \texttt{proved} with
+The preceding sections reproduce twenty-four registry results, each \texttt{proved} with
 \texttt{af: validated}: the signed--stochastic bridge (\S\ref{sec:classical-equiv});
 positive-retract hardening (\S\ref{sec:prh}); the COMP tier ---
 \texttt{lem-compcb-amplification-naturality},
@@ -29,27 +29,37 @@ and the H-CB tier ---
 \texttt{lem-hcb2-amplified-adjointness},
 \texttt{lem-hcb2-product-defect},
 \texttt{lem-hcb3-diagonal-unit},
-\texttt{lem-hcb3-diagonal-upper-norm}.
-These are the results of the \emph{live} route. The registry's total count of
-\texttt{af: validated} results is larger, because it also carries the validated
-signed-geometry material listed at the end of this section; that material is off the
-live route and is not reproduced here.
+\texttt{lem-hcb3-diagonal-upper-norm},
+\texttt{lem-hcb3-uniform-square-lower},
+\texttt{lem-hcb3-diagonal-lower-modulus},
+\texttt{lem-hcb3-diagonal-inverse}.
+These are the results of the \emph{live} route; the registry's total count of
+\texttt{af: validated} results now stands at \textbf{58}, the balance being the validated
+signed-geometry material listed at the end of this section, which is off the live route
+and is not reproduced here.
+
+One qualification belongs in the headline. The last two of the twenty-four,
+\texttt{lem-hcb3-diagonal-lower-modulus} and \texttt{lem-hcb3-diagonal-inverse}, are
+validated as \emph{conditional} statements. The first propagates a level-one lower
+modulus of at least $\tfrac14$ to every amplification; the second, assuming in addition
+that the level-one map is bijective, propagates bijectivity with a $1+O(\comb)$ inverse
+bound. Nothing in this document establishes either hypothesis for any particular datum.
+Their conditional shape is itself a correction of record --- the corresponding clause of
+the parent contract was unconditional until an exact $\mathbb C\oplus\mathbb C$
+counterexample refuted it.
 
 \subsection*{What is next, and what it is not}
 
-The immediate queue continues the H-CB tier bottom-up. In order:
-\texttt{lem-hcb3-diagonal-lower-modulus} (the lower-modulus companion to
-\S\ref{sec:hcb3-diagonal-upper-norm}; mid-validation at the time of writing, hence
-excluded from this document), then
-\texttt{lem-hcb3-diagonal-inverse} and \texttt{lem-hcb3-offdiagonal-inverse}, then the
-canonical tier \texttt{lem-hcb4-canonical-gram},
-\texttt{lem-hcb4-canonical-inverse} and \texttt{lem-hcb4-canonical-closeness}. Only when
-all of these are validated can the parent contract \texttt{conj-hcb} be attempted;
-\texttt{conj-hcb} is at present \texttt{proved-mod-audit} with \texttt{af: none} --- a
-hostile-verified paper proof, one rung below rigorous here. Its contract is deliberately
-\emph{conditional}: an earlier unconditional inverse clause was refuted by an exact
-$\mathbb C\oplus\mathbb C$ counterexample and replaced by the verifier's conditional
-form, which is why the inverse lemmas above carry level-one hypotheses.
+The immediate queue continues the H-CB tier bottom-up:
+\texttt{lem-hcb3-offdiagonal-inverse}, validated (16/16, taint clean) as this revision
+closed --- its prose write-up follows in the next wave --- then the canonical tier \texttt{lem-hcb4-canonical-gram}, \texttt{lem-hcb4-canonical-inverse}
+and \texttt{lem-hcb4-canonical-closeness}. Only when all of these are validated can the
+parent contract \texttt{conj-hcb} be attempted; \texttt{conj-hcb} is at present
+\texttt{proved-mod-audit} with \texttt{af: none} --- a hostile-verified paper proof, one
+rung below rigorous here. The off-diagonal inverse inherits the same conditional shape as
+its diagonal counterpart, and that is why \S\ref{sec:hcb3-diagonal-lower-modulus} and
+\S\ref{sec:hcb3-diagonal-inverse} keep their hypotheses in the statements rather than
+absorbing them into a threshold.
 
 Beyond \texttt{conj-hcb} lies the EXT tier (\texttt{conj-extcb} and the
 \texttt{lem-extcb*} family), and beyond that the assembly. Two items are explicitly

@@ -1,0 +1,139 @@
+% SHARD-ID: AISM-23-HCB3-DIAGONAL-LOWER-MODULUS
+% SHARD-TITLE: Diagonal Ha lower-modulus propagation
+% SHARD-SUMMARY: Reproduces lem-hcb3-diagonal-lower-modulus, the af-validated propagation of a level-one lower-modulus hypothesis to every amplification.
+% SHARD-SUMMARY: Explains the quadratic root gap, the dichotomy for the level-n lower moduli, and the Ruan halving plus dyadic bootstrap that carries the level-one bound upward.
+% SHARD-KEYWORDS: lem-hcb3-diagonal-lower-modulus, af validated, lower modulus, quadratic recurrence, Ruan axioms, dyadic bootstrap
+\section{Diagonal Ha lower-modulus propagation}\label{sec:hcb3-diagonal-lower-modulus}
+
+\begin{lemma}[\texttt{lem-hcb3-diagonal-lower-modulus}]\label{lem:hcb3-diagonal-lower-modulus}
+There are universal $C_{\mathrm{diag}}<\infty$ and $\comb_{\mathrm{diag}}>0$ such that,
+for every H-CB datum with $\comb\le \comb_{\mathrm{diag}}$, \emph{if the level-one lower
+modulus of $\Ha{Q}{P}{P}$ is at least $\tfrac14$}, then
+\begin{equation}\label{eq:dlm-main}
+  \bigl\lVert\Han{Q}{P}{P}{n}(Z)\bigr\rVert\;\ge\;\bigl(1-C_{\mathrm{diag}}\,\comb\bigr)\nrm{Z}
+  \qquad\text{for every }n\ge1\text{ and }Z\in\Amp{n}{\Cnrs{P}} .
+\end{equation}
+\emph{Transcription note.} The hypothesis is load-bearing and is \emph{not} discharged
+here: the conclusion is asserted only for those data whose level-one map already has lower
+modulus $\ge\tfrac14$. (This conditional shape is the corrected one; the corresponding
+clause of the parent contract \texttt{conj-hcb} was made conditional after an
+unconditional inverse claim was refuted by an exact $\mathbb C\oplus\mathbb C$
+counterexample.) The ``lower modulus'' of a bounded linear map is the largest $c$ with
+$\nrm{\cdot}\ge c\nrm{\cdot}$, i.e. the infimum of the norm ratios over nonzero arguments.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Diagonal Ha lower-modulus propagation: there are universal C_diag < infinity and e_diag > 0 such that, for every H-CB datum with e <= e_diag, if the level-one lower modulus of Ha^Q_{P,P} is at least 1/4, then ||(Ha^Q_{P,P})_n(Z)|| >= (1-C_diag*e)||Z|| for every n >= 1 and Z in M_n tensor S_P.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Write $T_n=\Han{Q}{P}{P}{n}$ throughout.
+
+\emph{The root gap.} Let $C_{\mathrm{prod}},\comb_{\mathrm{prod}}$ come from
+\texttt{lem-hcb2-product-defect} --- normalised to $C_{\mathrm{prod}}\ge0$, which cannot
+weaken that estimate since $\comb\nrm{Z}\nrm{W}\ge0$ --- let
+$K_{\mathrm{sq}},\comb_{\mathrm{sq}}$ come from
+\texttt{lem-hcb3-uniform-square-lower}, and put
+\[
+  C_{\mathrm{diag}}:=K_{\mathrm{sq}}+4C_{\mathrm{prod}},
+  \qquad A:=1-K_{\mathrm{sq}}\comb,\qquad B:=C_{\mathrm{prod}}\comb .
+\]
+Choose $\comb_{\mathrm{diag}}>0$ below $\comb_{\mathrm{prod}}$, $\comb_{\mathrm{sq}}$ and
+$\comb_{\mathrm{adj}}$ (from \texttt{lem-hcb2-amplified-adjointness}) and small enough
+that $A\ge\tfrac34$, $A^{2}-4B\ge0$, $4B<\tfrac18$ and $C_{\mathrm{diag}}\comb\le\tfrac12$;
+each requirement is a continuity condition at $\comb=0$, where $A=1$ and $A^{2}-4B=1$, and
+is vacuous if the relevant constant vanishes, so the intersection is a positive universal
+interval. Let $r_\mp=\tfrac12\bigl(A\mp\sqrt{A^{2}-4B}\bigr)$ be the roots of
+$x^{2}-Ax+B$. Rationalising the smaller root --- legitimate because the denominator is at
+least $A>0$, including when $B=0$ --- gives
+\begin{equation}\label{eq:dlm-roots}
+  0\le r_-=\frac{2B}{A+\sqrt{A^{2}-4B}}\le\frac{2B}{A}\le\tfrac83B\le4B<\tfrac18,
+  \qquad
+  r_+=A-r_-\ \ge\ 1-C_{\mathrm{diag}}\comb\ \ge\ \tfrac12 .
+\end{equation}
+The gap between $r_-<\tfrac18$ and $r_+\ge\tfrac12$ is the whole mechanism: any quantity
+known to satisfy the quadratic inequality and to exceed $\tfrac18$ is forced up to $r_+$.
+
+\emph{The zero-corner branch.} If $\Cnrs{P}=\{0\}$ then $\Amp{m}{\Cnrs{P}}=\{0\}$ for
+every $m$, so the only admissible $Z$ is $0$; linearity gives $T_m(0)=0$ and
+$(1-C_{\mathrm{diag}}\comb)\nrm{Z}=0$, so \eqref{eq:dlm-main} holds at every level. The
+tree keeps this branch strictly separate, and \emph{no} lower modulus $a_m$ is defined in
+it --- the infimum below would be over an empty set of ratios.
+
+\emph{The dichotomy on the nonzero branch.} Assume $\Cnrs{P}\ne\{0\}$ and pick
+$0\ne x\in\Cnrs{P}$. For each $n$ the element $E_{11}\otimes x$ is a nonzero member of
+$\Amp{n}{\Cnrs{P}}$ --- the operator-space direct-sum axiom gives
+$\nrm{\operatorname{diag}(x,0,\dots,0)}=\nrm{x}>0$ --- so the ratio set
+$R_n=\bigl\{\nrm{T_n(Z)}/\nrm{Z}:0\ne Z\in\Amp{n}{\Cnrs{P}}\bigr\}$ is nonempty and
+$a_n:=\inf R_n$ is a finite nonnegative real.
+
+Fix $Z$. The $C^*$-identity in the bounded-operator target gives
+$\nrm{T_n(Z)}^{2}=\nrm{T_n(Z)\dg T_n(Z)}$; \texttt{lem-hcb2-amplified-adjointness}
+identifies $T_n(Z)\dg=T_n(Z\dg)$ \emph{exactly}; and
+\texttt{lem-hcb2-product-defect}, applied with all three corner indices equal to $P$ and
+with the factors $Z\dg,Z$, gives
+\begin{equation}\label{eq:dlm-square}
+  \nrm{T_n(Z)}^{2}\;\ge\;\bigl\lVert T_n\bigl(Z\dg\cpr Z\bigr)\bigr\rVert-C_{\mathrm{prod}}\comb\nrm{Z}^{2},
+\end{equation}
+the involution being isometric. Applying the defining property $\nrm{T_n(X)}\ge a_n\nrm{X}$
+at $X=Z\dg\cpr Z$ and then \texttt{lem-hcb3-uniform-square-lower} --- multiplication by
+$a_n\ge0$ preserving the inequality --- turns \eqref{eq:dlm-square} into
+$\nrm{T_n(Z)}^{2}\ge\bigl[A\,a_n-B\bigr]\nrm{Z}^{2}$. Dividing by $\nrm{Z}^{2}$ and taking
+the infimum over nonzero $Z$, using that $\inf\{r^{2}:r\in R\}=(\inf R)^{2}$ for a nonempty
+$R\subseteq[0,\infty)$ with finite infimum, gives
+\begin{equation}\label{eq:dlm-quadratic}
+  a_n^{2}\;\ge\;A\,a_n-B,
+  \qquad\text{i.e.}\qquad (a_n-r_-)(a_n-r_+)\ge0 ,
+\end{equation}
+so $a_n\le r_-$ or $a_n\ge r_+$: the level-$n$ lower modulus cannot sit in the gap.
+
+\emph{Propagation upward.} Two operator-space facts move the moduli between levels. First
+a halving estimate: writing $Z\in\Amp{2n}{\Cnrs{P}}$ as a $2\times2$ matrix of $n\times n$
+blocks and factoring
+$Z=\mathrm A\cdot\operatorname{diag}(Z_{11},Z_{12},Z_{21},Z_{22})\cdot\mathrm B$ with the
+explicit scalar matrices
+$\mathrm A=\bigl[\begin{smallmatrix}I&I&0&0\\0&0&I&I\end{smallmatrix}\bigr]$ and
+$\mathrm B=\bigl[\begin{smallmatrix}I&0\\0&I\\I&0\\0&I\end{smallmatrix}\bigr]$ of norm
+$\sqrt2$, the Ruan axioms give $\nrm{Z}\le2\max_{i,j}\nrm{Z_{ij}}$; and since $T_{2n}$ is
+the entrywise amplification of $T_n$, compression to the $(i,j)$ target block gives
+$\nrm{T_{2n}(Z)}\ge\max_{i,j}\nrm{T_n(Z_{ij})}$. Hence
+$\nrm{T_{2n}(Z)}\ge a_n\max_{i,j}\nrm{Z_{ij}}\ge\tfrac12a_n\nrm{Z}$, i.e.
+$a_{2n}\ge a_n/2$. Second a monotonicity: the zero-corner inclusion
+$Z\mapsto\operatorname{diag}(Z,0_k)$ is isometric by the direct-sum axiom and is carried by
+$T_m$ to $\operatorname{diag}(T_n(Z),0_k)$ of the same norm, so $a_n\ge a_m$ whenever
+$n\le m$.
+
+Now the bootstrap. The hypothesis of the lemma is exactly $a_1\ge\tfrac14$, while
+\eqref{eq:dlm-roots} gives $r_-<\tfrac18$; so $a_1>r_-$ and \eqref{eq:dlm-quadratic} at
+$n=1$ forces $a_1\ge r_+$. Inductively, if $a_{2^{k}}\ge r_+$ then the halving estimate
+gives
+\[
+  a_{2^{k+1}}\;\ge\;\tfrac12a_{2^{k}}\;\ge\;\tfrac12 r_+\;\ge\;\tfrac12\bigl(1-C_{\mathrm{diag}}\comb\bigr)\;\ge\;\tfrac14\;>\;r_- ,
+\]
+using $C_{\mathrm{diag}}\comb\le\tfrac12$; so the dichotomy at level $2^{k+1}$ again
+excludes the lower alternative and $a_{2^{k+1}}\ge r_+$. Ordinary induction gives
+$a_{2^{k}}\ge r_+$ for every $k\ge0$. Note that the halving alone would degrade the bound
+geometrically; it is the \emph{gap} that repairs it at each step.
+
+\emph{Conclusion.} For arbitrary $n$ choose a power of two $m\ge n$. Monotonicity gives
+$a_n\ge a_m\ge r_+$, and \eqref{eq:dlm-roots} gives $r_+\ge1-C_{\mathrm{diag}}\comb$.
+Hence $\nrm{T_n(Z)}\ge a_n\nrm{Z}\ge(1-C_{\mathrm{diag}}\comb)\nrm{Z}$ for every $Z$,
+which together with the zero-corner branch is \eqref{eq:dlm-main}; the constants are
+universal and $\comb_{\mathrm{diag}}>0$.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb3-diagonal-lower-modulus}: 29 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports
+\texttt{lem-hcb2-amplified-adjointness},
+\texttt{lem-hcb2-product-defect},
+\texttt{lem-compcb-corner-algebra} and
+\texttt{lem-hcb3-uniform-square-lower}. Together with
+\texttt{lem-hcb3-diagonal-upper-norm} (\S\ref{sec:hcb3-diagonal-upper-norm}) it pins the
+amplified diagonal Ha map between $1\pm O(\comb)$ --- but only under the level-one
+hypothesis, which nothing here supplies. It is the input to
+\texttt{lem-hcb3-diagonal-inverse} (\S\ref{sec:hcb3-diagonal-inverse}), which inherits
+that hypothesis, and to the not-yet-validated
+\texttt{lem-hcb3-offdiagonal-inverse}. The parent \texttt{conj-hcb} remains
+\texttt{proved-mod-audit} with \texttt{af: none}, and \texttt{op-classical} remains open.

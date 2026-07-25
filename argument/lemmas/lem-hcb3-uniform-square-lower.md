@@ -6,7 +6,7 @@ defs: def-hcb-datum; def-extended-epsilon-cstar-algebra
 deps: lem-compcb-corner-algebra
 status: proved
 af: validated
-provenance: factored out of proofs/lem-hcb3-diagonal-lower-modulus per the balloon tripwire (2026-07-25, node 1.1 / challenges ch-f39f17d9fb40be92, ch-f6597fc7968c250c — statement extracted mechanically from the tree text); UNPROVED here pending its own af pass
+provenance: factored out of proofs/lem-hcb3-diagonal-lower-modulus per the balloon tripwire (2026-07-25, node 1.1 / challenges ch-f39f17d9fb40be92, ch-f6597fc7968c250c — statement extracted mechanically from the tree text); UNPROVED here pending its own af pass; report lem:hcb3-uniform-square-lower
 owner: A
 workspace: proofs/lem-hcb3-uniform-square-lower
 ---

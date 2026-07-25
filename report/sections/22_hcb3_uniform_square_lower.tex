@@ -1,0 +1,95 @@
+% SHARD-ID: AISM-22-HCB3-UNIFORM-SQUARE-LOWER
+% SHARD-TITLE: The uniform square lower estimate
+% SHARD-SUMMARY: Reproduces lem-hcb3-uniform-square-lower, the af-validated matrix-uniform lower bound for the compressed square of a corner element.
+% SHARD-SUMMARY: Explains the two-branch argument: a vanishing projection collapses the corner to zero via the theta calculus, and a nonvanishing one inherits the lower C*-axiom at every level.
+% SHARD-KEYWORDS: lem-hcb3-uniform-square-lower, af validated, lower C* axiom, vanishing corner, theta calculus, corner algebra
+\section{The uniform square lower estimate}\label{sec:hcb3-uniform-square-lower}
+
+\begin{lemma}[\texttt{lem-hcb3-uniform-square-lower}]\label{lem:hcb3-uniform-square-lower}
+There are universal $K_{\mathrm{sq}}<\infty$ and $\comb_{\mathrm{sq}}>0$ such that every
+H-CB datum with $\comb\le \comb_{\mathrm{sq}}$, every $n\ge1$ and every
+$Z\in\Amp{n}{\Cnrs{P}}$ satisfy
+\begin{equation}\label{eq:usl-main}
+  \nrm{Z\dg\cpr Z}\;\ge\;\bigl(1-K_{\mathrm{sq}}\,\comb\bigr)\nrm{Z}^{2}.
+\end{equation}
+\emph{Transcription note.} The datum is that of \texttt{def-hcb-datum} and
+$\comb=\dproj+\ecs$; $\cpr$ is the compressed product on the corner
+$\Cnrs{P}$ of \texttt{def-compressed-corner}, and $\dg$ the inherited involution. No
+hypothesis is placed on $P$ beyond its being one of the datum's
+$\dproj$-projections --- in particular \emph{no} nonvanishing assumption --- which is
+what makes the statement usable as a black box downstream.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Uniform square lower estimate: there are universal K_sq < infinity and e_sq > 0 such that every H-CB datum with e <= e_sq, every n >= 1, and every Z in M_n tensor S_P satisfy ||Z^dagger dot Z|| >= (1-K_sq*e)||Z||^2.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree splits on the $\dproj$-projection dichotomy of
+\texttt{def-delta-projection}. The nonvanishing branch is a citation; the vanishing branch
+is the work, and it is settled by showing that the corner is then \emph{literally zero}.
+
+\emph{The vanishing branch.} Suppose $P$ is not nonvanishing, so the registered dichotomy
+puts it in the small alternative $\nrm{P}\le C_v\dproj$ for a universal $C_v$ and
+$\comb$ below a universal threshold. Put $T=L_PR_P+R_PL_P$. The $\ecs$-Banach product
+bound gives
+\[
+  \nrm{T}\;\le\;2(1+\ecs)^{2}\nrm{P}^{2}\;\le\;2(1+\comb)^{2}C_v^{2}\comb^{2},
+\]
+so after a further universal shrink of the threshold one may assume $\nrm{T}<\tfrac13$.
+
+At that point the $\theta$ calculus of \texttt{def-theta-idempotent-approximation}
+evaluates in closed form. Write $U=I-T$ and $X=T-I=-U$. Since $\nrm{T}<\tfrac13$ the
+Neumann series $\sum_{k\ge0}T^{k}$ converges absolutely to $U^{-1}$; and
+$X^{2}-I=-2T+T^{2}$ has norm at most $2\nrm{T}+\nrm{T}^{2}<\tfrac79<1$, so the registered
+binomial series defining $(X^{2})^{-1/2}$ converges absolutely. The two absolutely
+convergent series are then identified through their scalar counterparts: on the disc
+$\lvert z\rvert<\tfrac13$ one has $\mathrm{Re}(1-z)>0$, so the branch of the square root
+normalised to $1$ at $z=0$ satisfies
+$\bigl((1-z)^{2}\bigr)^{-1/2}=(1-z)^{-1}=\sum_{k\ge0}z^{k}$; the two sides therefore have
+identical Taylor coefficients at $0$, and evaluating both at the single Banach-algebra
+element $T$ gives $(X^{2})^{-1/2}=U^{-1}$. Consequently
+\begin{equation}\label{eq:usl-theta}
+  \sgn(X)=X\,(X^{2})^{-1/2}=(-U)U^{-1}=-I,
+  \qquad
+  \theta(X)=\tfrac12\bigl(I+\sgn X\bigr)=0 .
+\end{equation}
+Since the registered compression construction is
+$\Cos{P}=\theta\bigl(L_PR_P+R_PL_P-I\bigr)=\theta(T-I)$, \eqref{eq:usl-theta} gives
+$\Cos{P}=0$ and hence $\Cnrs{P}=\Img\Cos{P}=\{0\}$.
+
+\emph{The nonvanishing branch.} If $P$ \emph{is} nonvanishing and
+$\comb\le \comb_{\mathrm{ca}}$, then \texttt{lem-compcb-corner-algebra} makes $\Cnrs{P}$,
+with the compressed product, the inherited involution and the compressed unit, an
+\emph{extended} $C_{\mathrm{ca}}\comb$-$C^*$-algebra. By the meaning of ``extended'' in
+\texttt{def-extended-epsilon-cstar-algebra}, every $\Amp{n}{\Cnrs{P}}$ is then a
+$C_{\mathrm{ca}}\comb$-$C^*$-algebra with the \emph{same} parameter, independently of $n$,
+and its lower $C^*$-axiom applied to $Z$ reads exactly
+$\nrm{Z\dg\cpr Z}\ge(1-C_{\mathrm{ca}}\comb)\nrm{Z}^{2}$. This --- and not any level-one
+estimate --- is where the uniformity in $n$ comes from.
+
+\emph{Exhaustion.} Set
+\[
+  K_{\mathrm{sq}}=C_{\mathrm{ca}},
+  \qquad
+  \comb_{\mathrm{sq}}=\min\Bigl\{\comb_{\mathrm{ca}},\,\comb_v,\,\tfrac1{2\max\{1,C_{\mathrm{ca}}\}}\Bigr\}>0 .
+\]
+The two branches exhaust the possibilities for $P$. In the nonvanishing branch the
+displayed axiom is \eqref{eq:usl-main}; in the vanishing branch
+$\Amp{n}{\Cnrs{P}}=\{0\}$, so the only admissible $Z$ is $0$ and \eqref{eq:usl-main} reads
+$0\ge0$. The tree also records an explicit endpoint check: since
+$\comb_{\mathrm{sq}}\le \comb_{\mathrm{ca}}$, the nonvanishing branch applies even at
+$\comb=\comb_{\mathrm{sq}}=\comb_{\mathrm{ca}}$, so no boundary point is omitted.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-hcb3-uniform-square-lower}: 18 nodes, all \texttt{validated}, root
+\texttt{validated}, taint clean.
+
+\noindent\textbf{Role in the chain.} Imports \texttt{lem-compcb-corner-algebra}. This
+shard exists because of a recorded balloon abort: the first orchestration of
+\texttt{lem-hcb3-diagonal-lower-modulus} tripped the node cap on exactly this claim, so it
+was factored out of that tree --- its statement extracted mechanically from the blocking
+challenges --- and validated on its own, bottom-up. Its value to the parent is that it
+carries the vanishing case internally, so the downstream argument may use
+\eqref{eq:usl-main} without re-splitting on the dichotomy. Its single registry consumer is
+\texttt{lem-hcb3-diagonal-lower-modulus} (\S\ref{sec:hcb3-diagonal-lower-modulus}).
