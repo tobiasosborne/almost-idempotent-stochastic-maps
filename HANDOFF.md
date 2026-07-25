@@ -51,8 +51,18 @@ false-display estimate, 50/50) + the variational identity + 2 factored
 micro-lemmas are all af-validated). **Registry: 253.** **Definitions: 36, all
 locked** (12 fudw defs user-ratified 2026-07-24; +def-theta draft->locked path
 pending only if challenged). F2/F3 bridge lemmas REGISTERED (hostile-verified).
-Working tree clean at checkpoint; hcb1-column-action seeded, orchestration
-launching. Process laws learned this campaign (BINDING for phase 2 cont.):
+**CAMPAIGN PAUSED (2026-07-25): codex usage limit exhausted — resets Jul 29
+2026 9:08 AM (or purchase credits at chatgpt.com/codex/settings/usage). USER
+DECISION: buy credits to continue now, or resume Jul 29.** In-flight:
+proofs/lem-hcb3-diagonal-upper-norm banked mid-run (5/13 validated, tree
+intact, NOTHING consumed by the outage); resume with:
+`python3 scripts/af-orchestrate.py lem-hcb3-diagonal-upper-norm --workers 3
+--max-rounds 16 --node-cap 40 --tier routine --phase verify`.
+Remaining phase-2 queue after it: hcb3-diagonal-lower-modulus ->
+hcb3-diagonal-inverse -> hcb3-offdiagonal-inverse -> hcb4-canonical-gram ->
+hcb4-canonical-inverse -> hcb4-canonical-closeness -> conj-hcb parent
+(seeding pattern: registry deps first-class + the 7-def kit + full-contract
+externals — see the process laws below). Process laws learned this campaign (BINDING for phase 2 cont.):
 (i) every workspace gets the FULL validated-contract battery as full-text
 externals at seeding + the complete def kit (theta layer, norm axioms,
 nonvanishing, column-hilbert displays with the false 1dQ_ip_norm_ext excluded

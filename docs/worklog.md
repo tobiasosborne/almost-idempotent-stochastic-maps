@@ -1304,3 +1304,11 @@ naturality, row-column product). F2/F3 bridge closed + registered (fresh prover
 (theta layer, norm axioms, inner-product displays), 2 contract amendments from
 challenge text, 3 micro-lemma factorings — every resolution mechanical, zero
 overclaims, all [check-all] green, pushed continuously.
+
+## 2026-07-25 (cont.) — phase-2 run halted by codex quota exhaustion
+
+T0 reached 53 (hcb3-diagonal-unit 18/18). hcb3-diagonal-upper-norm aborted
+CODEX-DEAD mid-run (5/13, tree intact, resumable). Probe confirms: usage limit
+until Jul 29 2026 9:08 AM. Session tally: T0 34 -> 53 (19 af-validated results),
+COMP + HCB-0/1/2 tiers complete + diagonal-unit, F2/F3 closed+registered, 12
+defs ratified, fudw closed. USER DECISION pending: credits now vs resume Jul 29.
