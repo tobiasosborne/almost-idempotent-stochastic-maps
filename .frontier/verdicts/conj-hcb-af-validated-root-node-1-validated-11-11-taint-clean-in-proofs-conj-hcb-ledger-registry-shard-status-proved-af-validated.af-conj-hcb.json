@@ -1,0 +1,9 @@
+{
+  "claim": "conj-hcb af-validated: root node 1 validated, 11/11 taint clean, in proofs/conj-hcb ledger; registry shard status proved / af: validated",
+  "oracle": "af-conj-hcb",
+  "result": "fail",
+  "claim_hash": "db89b9aa75c3201e848bb094aaca6aa6b5efe26ab00375d2327224f020ca3cb1",
+  "oracle_digest": "c186a269ae6f9e90c90d38beadf50f4cb9c76461dc95eba19147962fb938db38",
+  "inputs_hash": "de52bbad964e45efd0758f4f7814132c9049e09bdbffc6249eef8ef5a5de5c02",
+  "ts": "2026-07-25T12:07:15.287Z"
+}

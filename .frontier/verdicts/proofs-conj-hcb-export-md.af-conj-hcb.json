@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/conj-hcb/export.md",
+  "oracle": "af-conj-hcb",
+  "result": "pass",
+  "claim_hash": "8818e7d0952d7343f328ed3d5cb73d00e17259447d1d6c9e2c1372b6f6a24897",
+  "oracle_digest": "c186a269ae6f9e90c90d38beadf50f4cb9c76461dc95eba19147962fb938db38",
+  "inputs_hash": "de52bbad964e45efd0758f4f7814132c9049e09bdbffc6249eef8ef5a5de5c02",
+  "ts": "2026-07-25T12:08:49.383Z"
+}
