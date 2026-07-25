@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-07-25T08:11:00.04486861Z","conjecture":"Uniform square lower estimate: there are universal K_sq \u003c infinity and e_sq \u003e 0 such that every H-CB datum with e \u003c= e_sq, every n \u003e= 1, and every Z in M_n tensor S_P satisfy ||Z^dagger dot Z|| \u003e= (1-K_sq*e)||Z||^2.","author":"orchestrator"}

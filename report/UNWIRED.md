@@ -28,6 +28,7 @@ conj-low-slab-cap
 conj-min-a-w4
 conj-near-cluster-absorption
 conj-nsc
+lem-hcb3-uniform-square-lower
 conj-rank3-cluster-zero-face-reach
 conj-shallow-counterweight-exclusion
 conj-sl1a-deep-diagonal-cell
