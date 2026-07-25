@@ -98,6 +98,7 @@ conj-low-slab-cap
 conj-min-a-w4
 conj-near-cluster-absorption
 conj-nsc
+lem-extcb-four-corner-norm
 conj-rank3-cluster-zero-face-reach
 conj-shallow-counterweight-exclusion
 conj-sl1a-deep-diagonal-cell
