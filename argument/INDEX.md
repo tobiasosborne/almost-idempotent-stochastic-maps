@@ -101,9 +101,9 @@
 | `lem-extcb-corner-dimension-additivity` | lemma | proved | validated | A | Level-one corner-dimension additivity: for two finite-dimensional commutative C*… |
 | `lem-extcb-four-corner-merge` | lemma | proved | validated | A | Complete four-corner merge: there are universal C_merge < infinity and a_merge >… |
 | `lem-extcb-four-corner-norm` | lemma | proved | validated | A | Four-corner assembled norm estimate: there are universal K_norm < infinity and e… |
-| `lem-extcb-one-dimensional-corner-dimension` | lemma | stated | seeded | A | Level-one one-dimensional corner dimension: for sufficiently small universal del… |
+| `lem-extcb-one-dimensional-corner-dimension` | lemma | proved | validated | A | Level-one one-dimensional corner dimension: for sufficiently small universal del… |
 | `lem-extcb-one-dimensional-product` | lemma | proved | validated | A | Level-one one-dimensional corner product: there are universal C_PQR < infinity a… |
-| `lem-extcb1-close-corner-dimension` | lemma | proved-mod-audit | none | A | Close-compression range invariance: there is a universal e_close > 0 such that, … |
+| `lem-extcb1-close-corner-dimension` | lemma | proved-mod-audit | seeded | A | Close-compression range invariance: there is a universal e_close > 0 such that, … |
 | `lem-extcb1-cross-corner-dimension` | lemma | proved-mod-audit | none | A | EXT-CB cross-corner dimension: there is a universal e_sel > 0 such that every EX… |
 | `lem-factorization` | lemma | proved | validated | A | Factorization bound: let P be an exact signed idempotent (square real matrix wit… |
 | `lem-fan-payment` | lemma | proved | validated | A | Zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite family with ve… |

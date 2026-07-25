@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-07-25T18:25:51.123488825Z","conjecture":"Close-compression range invariance: there is a universal e_close \u003e 0 such that, in an EXT-CB datum with e \u003c= e_close, the compression ranges S_{v(I_r),Q} and S_{P,Q} have the same dimension.","author":"orchestrator"}

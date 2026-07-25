@@ -1,0 +1,8 @@
+{
+  "id": "d0e896532d533864",
+  "name": "lem-extcb-one-dimensional-corner-dimension-CONTRACT",
+  "source": "proofs/lem-extcb-one-dimensional-corner-dimension (af-validated, taint clean). FULL VALIDATED CONTRACT: Level-one one-dimensional corner dimension: for sufficiently small universal delta+epsilon, if P and Q are one-dimensional delta-projections then dim S_{P,Q} \u003c= 1.",
+  "content_hash": "39d73a0e89f5d69d5a78b3ec9c137ea3e2f1dcb8bc615d5039dbdf34db16468f",
+  "created": "2026-07-25T18:25:51.638852269Z",
+  "notes": ""
+}

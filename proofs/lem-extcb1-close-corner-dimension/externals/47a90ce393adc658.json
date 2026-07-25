@@ -1,0 +1,8 @@
+{
+  "id": "47a90ce393adc658",
+  "name": "lem-extcb-four-corner-norm-CONTRACT",
+  "source": "proofs/lem-extcb-four-corner-norm (af-validated, taint clean). FULL VALIDATED CONTRACT: Four-corner assembled norm estimate: there are universal K_norm \u003c infinity and e_norm \u003e 0 such that, for every four-corner merging datum with e = rho+epsilon \u003c= e_norm, every n \u003e= 1, and every X in M_n tensor B, the assembled map gamma_n = alpha_n Gamma_n mu_n (where mu_n(X) = ((I_n tensor Pi_j) X (I_n tensor Pi_k))_{j,k}, Gamma_n is the direct sum of the four fixed amplifications gamma_{jk,n}, and alpha_n((Y_jk)) = sum_{jk} Y_jk) satisfies (1-K_norm*e)||X|| \u003c= ||gamma_n(X)|| \u003c= (1+K_norm*e)||X||.",
+  "content_hash": "9b1a3857c5eb066cec44524f029e40145ae7640e64fa5f1eabe53894b2b93dcc",
+  "created": "2026-07-25T18:25:51.62068554Z",
+  "notes": ""
+}
