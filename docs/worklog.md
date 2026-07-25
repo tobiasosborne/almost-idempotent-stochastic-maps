@@ -1350,3 +1350,22 @@ Report rescoped per user mandate: fresh lab-book on the live chain (26 shards,
 pdf), kernel-route surface deprecated to UNWIRED. Hostile prose-vs-export
 review filed. Sketch v32 + CHANGELOG + CURRENT + HANDOFF reconciled (Rule 9).
 Phase 3 (EXT-CB) queue opened.
+
+## 2026-07-25 (cont.) — session 25 close: phase 3 swept to the parent; user-directed stop
+
+Post-phase-2 the EXT-CB sweep validated all 7 lemmas (T0 62 -> 69):
+one-dimensional-product 25/25, corner-dimension-additivity 39/39 (largest
+tree), four-corner-norm 18/18 (tripwire-factored from the merge's thrice-
+stalled 1.3.x norm cluster), four-corner-merge 22+4arch (clean re-seed on the
+factored import; rm -rf-not-git-rm gotcha recorded via bd remember),
+one-dimensional-corner-dimension 8/8, close-corner-dimension 16/16,
+cross-corner-dimension 30/30. Two ratified content corrections, both
+adversarially surfaced: the merging-datum def's quantitative-complementarity
+amendment (user-ratified; transcription fidelity to tex:1326) and the merge
+contract's smallness hypothesis (rho+epsilon <= a_merge — the linker's
+contract-match gate caught the prover's mid-run root amendment at the banking
+flip; registry amended to the validated root verbatim). conj-extcb parent
+seeded on 10 first-class validated imports; user stopped the session mid-run
+at 9/29 validated — af ledger append-only, ZERO loss, resume command in
+HANDOFF item 4. Report addendum landed earlier (26 shards, 53pp). All work
+committed and pushed continuously; [check-all] green throughout.

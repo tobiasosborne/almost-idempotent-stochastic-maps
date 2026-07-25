@@ -13,6 +13,18 @@ After adding a new numbered sketch file, re-run `python3 scripts/gen-current-poi
 `docs/plans/CURRENT.md` (CLAUDE.md Rule 9).
 
 
+
+## v32 delta — 2026-07-25 (session 25 close: phase-3 sweep, user-directed stop)
+
+Map delta over v32 (no new numbered file; parent mid-run): T0 62 -> 69 — all
+7 EXT-CB lemmas af-validated (incl. the tripwire-factored
+lem-extcb-four-corner-norm); conj-extcb parent mid-elevation (9/29, resumable,
+HANDOFF item 4). Two ratified corrections: def-four-corner-merging-datum
+quantitative-complementarity amendment (fidelity to tex:1326);
+lem-extcb-four-corner-merge contract smallness hypothesis amended to the
+validated root (contract-match gate catch). Phase 3 closes on the parent's
+resume; then aism-0163 (phase 4) is the sole gap between the L0 campaign and
+the full Route F chain.
 ## v32 — 2026-07-25 (session 25: phase-2 closure)
 
 New numbered file `2026-07-25-top-down-proof-sketch-v32.md` (phase boundary).
