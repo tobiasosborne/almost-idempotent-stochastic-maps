@@ -1,0 +1,8 @@
+{
+  "id": "3b90c74bb1716f9f",
+  "name": "lem-stage1-quantitative-inverse-function-CONTRACT",
+  "source": "proofs/lem-stage1-quantitative-inverse-function (af-validated, taint clean). FULL VALIDATED CONTRACT: Quantitative inverse-function control: if V:X-\u003eY is a Banach-space isomorphism and f:B_r(x_0)-\u003eY is C^1 with ||V^(-1)Df(x)-I|| \u003c= c \u003c 1, then f is injective, (1-c)||x_1-x_2|| \u003c= ||V^(-1)(f(x_1)-f(x_2))|| \u003c= (1+c)||x_1-x_2||, and f(B_r(x_0)) contains f(x_0)+V(B_{(1-c)r}(0)).",
+  "content_hash": "bfbde93b98cbb1ee6903ecf270aa71a105c5863fbb27503dd4bfd3322e8d425f",
+  "created": "2026-07-26T07:39:09.754668116Z",
+  "notes": ""
+}

@@ -224,7 +224,7 @@ graph LR
   lem-sl1a-corner-ledger["lem-sl1a-corner-ledger<br/>proved/none"]
   lem-sl1a-score-selector["lem-sl1a-score-selector<br/>proved/none"]
   lem-sl1a-three-cell-reduction["lem-sl1a-three-cell-reduction<br/>proved/none"]
-  lem-stage1-exact-unit-rectification["lem-stage1-exact-unit-rectification<br/>proved-mod-audit/none"]
+  lem-stage1-exact-unit-rectification["lem-stage1-exact-unit-rectification<br/>proved-mod-audit/seeded"]
   lem-stage1-quantitative-inverse-function["lem-stage1-quantitative-inverse-function<br/>proved/validated"]
   lem-starvation-completion-obstruction["lem-starvation-completion-obstruction<br/>proved/validated"]
   lem-thmainext-conditional["lem-thmainext-conditional<br/>proved-mod-audit/none"]

@@ -5,7 +5,7 @@ contract: Dimension-free exact-unit rectification: there are universal C_unit < 
 defs: def-epsilon-cstar-algebra
 deps: lem-stage1-quantitative-inverse-function
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: PROOF-W74F-H-STAGE1.md §1 SPLIT-A (1.1); VERDICT-W74F-H-STAGE1.md Construction exact-unit rectification (VALID); DESIGN-FUDW-DECOMP-v3.md §2.4; VERDICT-FUDW-DECOMP-V3.md §§4.1,B,D
 owner: A
 workspace: proofs/lem-stage1-exact-unit-rectification
