@@ -1406,3 +1406,47 @@ conj-extcb node-1.2 subtree IS a dimension-free exact-target correction
 lemma (C_corr=57); factoring it is the queued first phase-4 wave (design
 decision on the contract form required). All work committed and pushed
 continuously; [check-all] green throughout.
+
+## 2026-07-26 — session 27 close (device migration + refs complete + SIX elevations, T0 70 -> 76 + report modernization + LEARNINGS retraction)
+
+New device (tobiasosborne home). Migration repairs: beads imported from committed JSONL (196
+issues); portfolio.json oracle paths text-surgered (98 rewrites, 33->36 oracles, fr verify
+smoke pass); core.hooksPath rewired (the pre-commit gate was INERT on this device — one red
+commit slipped, caught and re-gated). Refs COMPLETE: all 11 manifest payloads (H-M
+byte-identical from Springer via TIB VPN — same sha as the 2026-06-11 personal download);
+refs-staging rebuilt (all re-downloads byte-identical); Lee GTM218 + Granas-Dugundji ACQUIRED
+(TIB); 5 topology sources promoted to refs/ with manifest rows (21/21 sha-verified); loci
+pinned by codex xhigh (Kunneth = Hatcher Thm 3.15 NOT 3.16; Lefschetz-Hopf carries the
+maximal-simplex hypothesis — contract narrowed, consumer obligation flagged; G-D index-sign =
+Thms (8.4)+(8.5) composition; top-cohomology = Thm 3.26 + UCT); 7 lem-topology-* rows landed
+at stated; 2 cited defs locked on byte-match.
+
+Elevations (all xhigh/xhigh, S6, first-run validations): quantitative-IFT (14 nodes),
+exact-unit-rectification (6), routef-prh-finish (22), kitaev-almost-idemp-audit (24 — the FH
+gateway), functional-calculus-closeness (11), ai-defect-linearization (13). ALL SIX v4.1 SD
+safe/gateway leaves T0. Banking incidents: one guard false-positive (my mid-run commit staged
+during the check-all window; resumed zero-loss) and one REAL bank-gate catch — the ai-defect
+prover expanded the root statement; oracle AND linker refused the contract mismatch
+independently; user ratified verbatim adoption of the validated root (new precedent, recorded
+in HANDOFF).
+
+Report modernization (user-directed, 3 Opus waves + integrator + hostile reviews): typeset-
+first strategy-scoped definitions layer (37/38, macro-table v1 audited: 26/26 rows OK, 2
+provenance corrections applied, 0 meaning drift); Route-F DAG atlas (110 nodes/213 edges,
+landscape, GAP edges explicit); campaign-stats layer (both repos incl. progenitor: 683+174
+commits, 644 fr cycles, 2386 adversarial jobs, 1550 nodes; extract/render split design);
+frontmatter headline. 43 shards / 140pp / three CI-gated generators. Hostile review of the
+prose wave: VALID-WITH-CORRECTIONS, 4 corrections applied (incl. 'last edge of Route F'
+overclaim reworded); the prose writer caught L0 drift in my banking flips (fixed).
+
+LEARNINGS: user escalation over the 'no unsolved math remains' vs GAP-families contradiction
+-> formal partial retraction of the session-23 'Route F proved-mod-audit COMPLETE' headline
+(15 rows demoted by the v3 verdict were never LEARNINGS-logged; now they are, with the
+process lesson: headline demotions require a LEARNINGS entry in the demoting commit). User
+walked through the full mechanics (eta_A local-radius story); calibration delivered: no
+conjecture needed, remainder = constant-chasing + two proof-writing pockets + the K-finiteness
+composition as the honest residual risk.
+
+User delegation recorded (bd memory): ratification defaults accepted queue-wide. T0 70 -> 76;
+registry 255 -> 262; report 37 -> 43 shards. Follow-ups filed: aux tracking policy,
+repo-root-relative oracles.
