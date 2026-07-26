@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-ai-defect-linearization/export.md",
+  "oracle": "af-lem-routef-ai-defect-linearization",
+  "result": "pass",
+  "claim_hash": "5937e0adf1fdb1c8db8a43b40e4ff0717ed61fafed66bc563902ab6b846f714c",
+  "oracle_digest": "efa7fabc1bc7120de21c1cb47c397bb0413042ef528d04ef85264579db898e22",
+  "inputs_hash": "76b5b46cabb9091584616f33cbedcae61cd03fcb7f75159270b7092a3ab5ec43",
+  "ts": "2026-07-26T11:03:01.642Z"
+}

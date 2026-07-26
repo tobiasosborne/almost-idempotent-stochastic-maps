@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Approximate-algebra defect linearization: set C\_theta=12*...}
+\step{1} Approximate-algebra defect linearization: set C\_theta=12*(sqrt(2)-1). There are universal C\_A < infinity and eta\_A > 0, with C\_A=20+(211/8)*C\_theta, such that for every nonzero Hilbert space H, every UCP map Phi:B(H)->B(H), and every eta satisfying 0 <= eta <= eta\_A and ||Phi\textasciicircum{}2-Phi||\_cb <= eta, if tilde-Phi=(1/2)*(I+(2*Phi-I)*(I-4*(Phi-Phi\textasciicircum{}2))\textasciicircum{}(-1/2)), A=Im(tilde-Phi), X star Y=tilde-Phi(XY), r=(3/2)*((1-4*eta)\textasciicircum{}(-1/2)-1), and epsilon\_AI(eta)=max\{r,20*eta+2*((1+r)\textasciicircum{}5-1),3*r-r\textasciicircum{}2\}, then the inherited operator-space norms, involution, and unit together with star make A an extended epsilon\_AI(eta)-C*-algebra and epsilon\_AI(eta) <= C\_A*eta. \steptag{validated} \\[6pt]
+\step{1.1} By lem-kitaev-almost-idemp-audit, there is a universal eta\_* > 0 such that, after shrinking eta\_* below 1/4 if necessary, under that lemma's hypotheses and notation and for 0 <= eta <= eta\_*, A=Im(tilde-Phi) is an extended epsilon\_AI(eta)-C*-algebra with epsilon\_AI(eta)=max\{r,20eta+2(M\textasciicircum{}5-1),3r-r\textasciicircum{}2\}, where r=(3/2)((1-4eta)\textasciicircum{}(-1/2)-1) and M=1+r. \steptag{validated} \\[4pt]
+\step{1.2} For the constant C\_theta=12*(sqrt(2)-1) fixed by lem-routef-functional-calculus-closeness, every 0 <= eta <= 7/64 satisfies 0 <= r <= C\_theta*eta, r <= 1/2, and 2*((1+r)\textasciicircum{}5-1) <= (211/8)*r, where r=(3/2)*((1-4eta)\textasciicircum{}(-1/2)-1). \steptag{validated} \\[6pt]
+\step{1.2.1} The external lemma lem-routef-functional-calculus-closeness fixes C\_theta=12*(sqrt(2)-1); in particular C\_theta is a positive universal constant because sqrt(2)>1. \steptag{validated} \\[4pt]
+\step{1.2.2} For eta=0 one has r=0. For 0<eta<=7/64<1/8, put t=sqrt(1-4eta). Then r/eta=6/(t*(1+t)) and t>=1/sqrt(2), so r/eta<=12/(sqrt(2)+1)=12*(sqrt(2)-1)=C\_theta. Thus 0<=r<=C\_theta*eta throughout 0<=eta<=7/64. \steptag{validated} \\[4pt]
+\step{1.2.3} If 0<=eta<=7/64, then 1-4eta>=9/16, so (1-4eta)\textasciicircum{}(-1/2)<=4/3 and therefore r=(3/2)*((1-4eta)\textasciicircum{}(-1/2)-1)<=1/2. \steptag{validated} \\[4pt]
+\step{1.2.4} For 0<=r<=1/2, the binomial identity gives 2*((1+r)\textasciicircum{}5-1)=2*r*(5+10*r+10*r\textasciicircum{}2+5*r\textasciicircum{}3+r\textasciicircum{}4). The parenthesized polynomial is increasing for r>=0 and at r=1/2 equals 211/16, hence 2*((1+r)\textasciicircum{}5-1)<=(211/8)*r. \steptag{validated} \\[4pt]
+\step{1.3} The conclusions of nodes 1.1 and 1.2 imply the root contract: choose eta\_A=min\{eta\_*,7/64\} and C\_A=20+(211/8)*C\_theta; then eta\_A>0 is universal, A is the required extended epsilon\_AI(eta)-C*-algebra for 0 <= eta <= eta\_A, and epsilon\_AI(eta) <= C\_A*eta. \steptag{validated} \\[6pt]
+\step{1.3.1} With eta\_A=min\{eta\_*,7/64\}, eta\_A is universal and strictly positive; for every 0<=eta<=eta\_A, node 1.1 applies because eta<=eta\_*, and all estimates in node 1.2 apply because eta<=7/64. \steptag{validated} \\[4pt]
+\step{1.3.2} Using M=1+r and node 1.2, 20*eta+2*(M\textasciicircum{}5-1) <= 20*eta+(211/8)*r <= (20+(211/8)*C\_theta)*eta=C\_A*eta. \steptag{validated} \\[4pt]
+\step{1.3.3} Since C\_theta>0, C\_A-C\_theta=20+(203/8)*C\_theta>0 and C\_A-3*C\_theta=20+(187/8)*C\_theta>0. Thus node 1.2 gives r<=C\_A*eta and 3*r-r\textasciicircum{}2<=3*r<=C\_A*eta. \steptag{validated} \\[4pt]
+\step{1.3.4} For 0<=eta<=eta\_A, node 1.1 supplies the extended epsilon\_AI(eta)-C*-algebra structure and the displayed maximum formula. Nodes 1.3.2 and 1.3.3 bound every entry of that maximum by C\_A*eta, so epsilon\_AI(eta)<=C\_A*eta; this is exactly the root conclusion with the stated C\_A and eta\_A. \steptag{validated} \\[4pt]
+\step{1.4} Let eta\_* > 0 be the universal threshold supplied by node 1.1, already shrunk below 1/4, and set eta\_A=min\{eta\_*,7/64\}. Fix an arbitrary nonzero Hilbert space H, an arbitrary UCP map Phi:B(H)->B(H), and eta with 0<=eta<=eta\_A and ||Phi\textasciicircum{}2-Phi||\_cb<=eta; define tilde-Phi, A, star, r, and epsilon\_AI(eta) exactly as in the amended root. Then eta<=eta\_* and eta<1/4, so all hypotheses of node 1.1 are satisfied and it gives the stated extended epsilon\_AI(eta)-C*-algebra structure with epsilon\_AI(eta)=max\{r,20*eta+2*((1+r)\textasciicircum{}5-1),3*r-r\textasciicircum{}2\}. Also eta<=7/64, so node 1.2 gives 0<=r<=C\_theta*eta, r<=1/2, and 2*((1+r)\textasciicircum{}5-1)<=(211/8)*r. Therefore 20*eta+2*((1+r)\textasciicircum{}5-1)<=(20+(211/8)*C\_theta)*eta=C\_A*eta. Moreover C\_A-C\_theta=20+(203/8)*C\_theta>0 and C\_A-3*C\_theta=20+(187/8)*C\_theta>0, whence r<=C\_A*eta and 3*r-r\textasciicircum{}2<=3*r<=C\_A*eta. Every entry in the displayed maximum is thus at most C\_A*eta. Since H, Phi, and eta were arbitrary under the amended hypotheses, this proves the amended root; eta\_A is positive and universal because eta\_* is. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
