@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-topology-kunneth-cross-product/export.md",
+  "oracle": "af-lem-topology-kunneth-cross-product",
+  "result": "pass",
+  "claim_hash": "3e5a2f68cffaa6b86eddc23cfc207eb0425d5e835ac08625315e89a9e05aced6",
+  "oracle_digest": "73f5c79bb7b6ee1d6efae6b37b691bf72ab8e1c1526f4893bb8aa6c3aa1695d0",
+  "inputs_hash": "86ac7535f7406a12bf7866f805ec1510b6bb00e8b29fe77f5cae863cb8618389",
+  "ts": "2026-07-26T13:08:03.198Z"
+}

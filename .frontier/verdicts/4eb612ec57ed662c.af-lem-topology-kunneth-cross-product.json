@@ -1,0 +1,9 @@
+{
+  "claim": "lem-topology-kunneth-cross-product af-validated in-repo (7-node tree, taint clean)",
+  "oracle": "af-lem-topology-kunneth-cross-product",
+  "result": "fail",
+  "claim_hash": "4eb612ec57ed662c8930270fb17b6a4ce37bcc1e579b8f406fa3918497fd4a83",
+  "oracle_digest": "73f5c79bb7b6ee1d6efae6b37b691bf72ab8e1c1526f4893bb8aa6c3aa1695d0",
+  "inputs_hash": "86ac7535f7406a12bf7866f805ec1510b6bb00e8b29fe77f5cae863cb8618389",
+  "ts": "2026-07-26T13:07:38.765Z"
+}

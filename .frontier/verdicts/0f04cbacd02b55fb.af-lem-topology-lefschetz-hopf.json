@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-topology-lefschetz-hopf/export.md",
+  "oracle": "af-lem-topology-lefschetz-hopf",
+  "result": "pass",
+  "claim_hash": "b9f16164a9fffc4a8fc61e96336d9ddadb926380406f5b0aac568c732a8ee58a",
+  "oracle_digest": "a1cb6ea05d5274758979a5b374884999343740939e4ebe78ae0944cd0531df25",
+  "inputs_hash": "8d2188709cd4d0c08ea6cc4af9aeacb1b5bc8a66da6ea329036847cb309f7db7",
+  "ts": "2026-07-26T13:08:03.099Z"
+}

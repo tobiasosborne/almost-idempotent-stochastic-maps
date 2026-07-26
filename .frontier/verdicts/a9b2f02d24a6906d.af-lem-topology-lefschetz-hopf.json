@@ -1,0 +1,9 @@
+{
+  "claim": "lem-topology-lefschetz-hopf af-validated in-repo (2-node tree, taint clean)",
+  "oracle": "af-lem-topology-lefschetz-hopf",
+  "result": "fail",
+  "claim_hash": "a9b2f02d24a6906d880cc35867a8f04463c7b9697f7303a22e639de8482542b3",
+  "oracle_digest": "a1cb6ea05d5274758979a5b374884999343740939e4ebe78ae0944cd0531df25",
+  "inputs_hash": "8d2188709cd4d0c08ea6cc4af9aeacb1b5bc8a66da6ea329036847cb309f7db7",
+  "ts": "2026-07-26T13:07:38.685Z"
+}
