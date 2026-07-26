@@ -178,6 +178,20 @@
    "source_id": "granas-dugundji",
    "fetch": null,
    "note": "cache-only; local pdftotext -layout extraction (byte-quote against this .txt)."
+  },
+  {
+   "path": "munkres-elementary-differential-topology/munkres-elementary-differential-topology.pdf",
+   "sha256": "7157fa3f5b9876d75424e6b7dbbca9eb2a8cb8ac4e7df3b9f12c83d3902fc016",
+   "source_id": "munkres-elementary-differential-topology",
+   "fetch": null,
+   "note": "cache-only; user-supplied scanned copy (Windows Downloads, 2026-07-26); copyright, no public URL"
+  },
+  {
+   "path": "munkres-elementary-differential-topology/munkres-elementary-differential-topology.txt",
+   "sha256": "9fcbbac92a09926498c1caba8fafa61b1a3568033485b3977edc523cc0459e5d",
+   "source_id": "munkres-elementary-differential-topology",
+   "fetch": null,
+   "note": "cache-only; per-page tesseract OCR (400dpi, psm 3) of the scanned pdf \u2014 typewriter-era scan, superscripts garble (e.g. 'c\u2122'/'cr' for C^r); Thm 10.6 statement visually confirmed against the p.108 page image 2026-07-26"
   }
  ]
 }
