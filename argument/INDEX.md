@@ -230,7 +230,7 @@
 | `lem-topology-hopf-structure` | lemma | proved | validated | A | Hopf structure theorem in the form consumed by Stage 1: a finite-dimensional con… |
 | `lem-topology-kunneth-cross-product` | lemma | proved | validated | A | Cohomological Kunneth isomorphism over R: for CW complexes X and Y with each H^k… |
 | `lem-topology-lefschetz-hopf` | lemma | proved | validated | A | Lefschetz-Hopf formula (maximal-simplex form): if f:X->X is a map of a finite po… |
-| `lem-topology-local-index-sign` | lemma | stated | seeded | A | Nondegenerate local fixed-point index: if x is an isolated fixed point of a smoo… |
+| `lem-topology-local-index-sign` | lemma | proved | validated | A | Nondegenerate local fixed-point index: if x is an isolated fixed point of a smoo… |
 | `lem-topology-orientable-top-cohomology` | lemma | proved | validated | A | Top cohomology of a closed orientable manifold: if M is a connected compact orie… |
 | `lem-topology-quotient-manifold` | lemma | proved | validated | A | Quotient manifold theorem: if a Lie group G acts smoothly, freely, and properly … |
 | `lem-two-observable-pencil-bound` | lemma | proved | none | A | Two-observable pencil bound: for an exact signed idempotent P, a hidden row vert… |

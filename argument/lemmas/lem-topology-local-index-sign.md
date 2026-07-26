@@ -4,8 +4,8 @@ kind: lemma
 contract: Nondegenerate local fixed-point index: if x is an isolated fixed point of a smooth self-map f of a compact orientable manifold with det(I-Df_x) != 0, then its local fixed-point index is sgn det(I-Df_x).
 defs: def-lefschetz-fixed-point-data
 deps:
-status: stated
-af: seeded
+status: proved
+af: validated
 provenance: granas-dugundji granas-dugundji-fixed-point-theory.txt:14700-14708 (Thm (8.5), Leray-Schauder formula, Ch. IV §12.8, pp.328-329) + granas-dugundji-fixed-point-theory.txt:12089-12094 (Thm (8.4), Brouwer degree sgn det, Ch. IV §10.8, p.267) — two-theorem composition, loci pinned 2026-07-26; DESIGN-FUDW-DECOMP-v4.1.md §2.3
 owner: A
 workspace: proofs/lem-topology-local-index-sign
@@ -21,9 +21,10 @@ CONSUMER OBLIGATION: `lem-stage1-extra-fixed-class` must supply smoothness,
 compactness, and orientability at its application site (same pattern as the
 Lefschetz-Hopf maximal-simplex obligation).
 
-**Status.** Local source-result transcription at `stated`; to be af-elevated
-with the two byte-matched externals. Not `cited`, not af-validated, not
-L0-rigorous yet.
+**Status.** af-VALIDATED in-repo (2026-07-26, session 28): 23-node tree under
+the user-ratified narrowed contract (smooth self-map of a compact orientable
+manifold — root amended in-place, 21 previously validated nodes retained),
+taint clean 23/23. Export at `proofs/lem-topology-local-index-sign/export.md`.
 
 **Source loci (pinned).** Granas–Dugundji, *Fixed Point Theory* (2003):
 (i) Theorem (8.4) (Ch. IV §10.8, p. 267, txt:12089-12094): for f:U->R^n
