@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-quantitative-inverse-function/export.md",
+  "oracle": "af-lem-stage1-quantitative-inverse-function",
+  "result": "pass",
+  "claim_hash": "02b1732b79c2a6792d593895af22f79ea5aa8d8e517ff02b7977d9e59d6f9dba",
+  "oracle_digest": "8e1c572482a0cb1b3a5c1e185a77bfb2fda7df7e2dfe70cbba4cd3cd742c6d67",
+  "inputs_hash": "b3e42718268a2d64b17ee8bd2d3ee57b91c6aa8fa38d66a6008f75885b284715",
+  "ts": "2026-07-26T07:34:55.599Z"
+}
