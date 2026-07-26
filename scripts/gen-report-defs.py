@@ -11,15 +11,42 @@ report content is a DETERMINISTIC PROJECTION of the shards, in the same spirit a
 generated argument/INDEX.md and argument/DAG.md: the shard stays the single source of truth,
 this script renders it, and `--check` fails the gate when the committed render is stale.
 
+TWO OWNER DIRECTIVES GOVERN THE OUTPUT (2026-07-26).
+
+  (1) TYPESET-FIRST.  EVERY rendered definition's PRIMARY display is a properly typeset
+      amsthm `definition` body — real math, real prose.  Byte-verbatim monospace is NEVER
+      the definition; it is demoted to a small, clearly-labelled "Source check
+      (byte-verbatim)" block printed AFTER the statement, as the second check.
+      Where does the typeset statement come from?  A deterministic, shard-driven rule:
+        (a) the shard's harmonised `**Statement …**` section if it has one (it exists
+            precisely to be the readable form), else
+        (b) the shard's byte-verbatim `**Byte-verbatim source text.**` fenced blocks,
+            translated to compilable LaTeX by the MACRO-TRANSLATION TABLE below.
+      A fragment that cannot be translated with confidence is NEVER guessed at: the part
+      that does translate is typeset, and the rest is flagged LOUDLY in the rendered page
+      (a `defflag` block) and listed in MANIFEST.md.  Meaning is never silently altered.
+
+  (2) SCOPED TO THE CURRENT PROOF STRATEGY.  Only definitions the live Route-F landing
+      chain actually needs are rendered.  "The chain" is not re-derived here: this script
+      IMPORTS scripts/gen-report-dag.py and reuses its `select_subgraph()` verbatim, so the
+      atlas and the vocabulary can never disagree about what the strategy is.  The rendered
+      set is the union of
+        (a) the `defs:` imports of every registry shard in that subgraph,
+        (b) the `defs:` imports of every registry shard reproduced in report/sections/,
+        (c) the transitive [[def-…]] statement-region crosslink closure of (a) U (b),
+      and everything outside it is dropped, with an honest generated paragraph at the end of
+      the section naming the dropped ids.
+
 OUTPUT (default report/generated/defs/, all files GENERATED — never hand-edit):
-  _all.tex                          loader: rendering macros (\providecommand-guarded) + \input
-                                    of the layer files, in reading order
-  layer-1-classical-picture.tex     one \begin{definition} ... \end{definition} + provenance
-  layer-2-approximate-cstar.tex     block per shard, grouped by conceptual layer
-  layer-3-internal-packages.tex
+  _all.tex                          loader: rendering macros (\providecommand-guarded) +
+                                    \input of the (non-empty) layer files, in reading order,
+                                    + the out-of-scope paragraph
+  layer-1-classical-picture.tex     one \begin{definition} … \end{definition} + provenance
+  layer-2-approximate-cstar.tex     note + optional source-check block per shard, grouped by
+  layer-3-internal-packages.tex     conceptual layer.  An EMPTY layer emits no file at all.
   MANIFEST.md                       the id -> layer/order/label/kind/status/provenance table
                                     (a lookup twin of definitions/INDEX.md, for humans and for
-                                    the DAG generator)
+                                    the DAG generator) + the scope ledger + the flag list
 The prose that frames this material is HAND-WRITTEN and lives in the report shard
 report/sections/00a_definitions.tex; that shard \inputs generated/defs/_all.  Prose refers to
 definitions, never restates them.
@@ -30,7 +57,9 @@ READING ORDER (deterministic; no per-definition hand curation anywhere in this f
    `**Ratification` run-in label — and take every `[[def-...]]` crosslink in it as an edge
    "this definition USES that one".  Links in the Notes/provenance tail are see-also pointers
    and are deliberately NOT edges (they are frequently mutual and carry no reading order).
-2. LAYERS (conceptual grouping, derived from the data, not curated):
+   The same region rule defines the closure (c) of the scoping directive above.
+2. LAYERS (conceptual grouping, derived from the data, not curated), computed on the
+   IN-SCOPE set only:
      layer 1  the LARGEST connected component of the undirected statement graph (ties broken by
               the lexicographically smallest member id).  In this repo that is the classical
               signed/stochastic picture — the component every classical-geometry term hangs off.
@@ -51,7 +80,9 @@ CROSSLINK SCHEME.  Every rendered definition gets \hypertarget{def:<slug>}{} and
 (def-co-top -> def:co-top) — the repo-wide id->label transform that scripts/check-provenance.py
 already uses (`labels_of`).  Lemma shards may therefore write \Cref{def:co-top}, and the DAG
 page may link to the same anchors.  Inside a rendered statement:
-  [[def-x|text]] / [[def-x]]  -> \hyperref[def:x]{...}
+  [[def-x|text]] / [[def-x]]  -> \hyperref[def:x]{...}  IF def-x is itself rendered; a link to
+                                 an out-of-scope definition would dangle, so it degrades to a
+                                 plain \texttt{def-x}.
   [[lem-x]] etc.              -> \hyperref[<report label>]{\texttt{lem-x}} when the registry
                                  shard is anchored in report/ (its `provenance: report <label>`
                                  token, or the id transform, resolves to a \label in
@@ -59,24 +90,20 @@ page may link to the same anchors.  Inside a rendered statement:
   --dag-anchors                -> additionally link unanchored registry ids to \hyperref[dag:<id>]
                                  (OFF by default: emitting a \ref to a label that does not exist
                                  yet would be an undefined reference, which check-provenance
-                                 --build promotes to a hard error.  Turn it on in the same commit
-                                 that lands scripts/gen-report-dag.py).
+                                 --build promotes to a hard error.  Both gate invocations pass
+                                 it; only ids that really carry a dag: hypertarget are linked.)
 Each definition also carries a pointer line: the canonical shard path, the registry results that
 import it (report-anchored ones hyperlinked), and the DAG/index twins.
 
-MARKDOWN -> LATEX, AND THE HONEST FALLBACK.  Shard bodies are markdown with LaTeX-ish math.  The
-converter protects code spans and math spans FIRST (their bytes are never rewritten except for
-the unicode table below), then escapes LaTeX specials in the remaining prose, then applies the
-markdown constructs actually in use (run-in bold, emphasis, bullet lists, fenced source blocks).
-A block that does not convert CLEANLY — unbalanced math delimiters, a stray backslash outside
-math, an unmapped non-ASCII character, unbalanced braces in the emitted LaTeX, or a math span
-that uses a macro the report preamble does not define (a source-private \eps, \calA, …) — is NOT patched
-up and NOT silently mangled: it is emitted as a faithful byte-verbatim quote instead, the
-definition is flagged in the rendered output with a visible rendering note, and the fallback is
-listed on stdout and in MANIFEST.md.  Fenced ```blocks``` (the byte-verbatim source text of a
-`cited` shard) are ALWAYS quoted verbatim, one detokenized line at a time inside the house
-rule-delimited quote block (the \contractquote pattern of report/main.tex), so long source lines
-wrap instead of running off the page.
+MARKDOWN -> LATEX.  Shard bodies are markdown with LaTeX-ish math.  The converter protects code
+spans and math spans FIRST (their bytes are never rewritten except for the unicode table and the
+macro-translation table below), then escapes LaTeX specials in the remaining prose, then applies
+the markdown constructs actually in use (run-in bold, emphasis, bullet lists).  A block that does
+not convert CLEANLY — unbalanced math delimiters, a stray backslash outside math, an unmapped
+non-ASCII character, unbalanced braces in the emitted LaTeX, or a math span that still uses an
+undefined macro after translation — is NOT patched up and NOT silently mangled: it is emitted as
+a faithful byte-verbatim quote instead, the definition carries a visible flag, and the fallback
+is listed on stdout and in MANIFEST.md.
 
 CLI
   python3 scripts/gen-report-defs.py                 # (re)write report/generated/defs/
@@ -84,9 +111,12 @@ CLI
   python3 scripts/gen-report-defs.py --out DIR       # render elsewhere (build tests)
   python3 scripts/gen-report-defs.py --root DIR      # treat DIR as the repo root
   python3 scripts/gen-report-defs.py --dag-anchors   # link unanchored ids to dag:<id> anchors
-Stdlib only; output depends on nothing but the repo contents (no timestamps, no dict order).
+  python3 scripts/gen-report-defs.py --scope-report  # print the scope ledger, write nothing
+Stdlib only (the single non-stdlib import is the repo's own scripts/gen-report-dag.py); output
+depends on nothing but the repo contents (no timestamps, no dict order).
 """
 import argparse
+import importlib.util
 import os
 import pathlib
 import re
@@ -99,6 +129,7 @@ DEF_DIR_NAME = "definitions"
 LEM_DIR_NAME = os.path.join("argument", "lemmas")
 SECTIONS_NAME = os.path.join("report", "sections")
 DEFAULT_OUT = os.path.join("report", "generated", "defs")
+DAG_GENERATOR = os.path.join("scripts", "gen-report-dag.py")
 
 GEN_WARNING = (
     "% GENERATED by scripts/gen-report-defs.py — DO NOT HAND-EDIT.\n"
@@ -120,6 +151,15 @@ LAYER_FILE = {key: f"layer-{i+1}-{key}.tex" for i, (key, _t) in enumerate(LAYERS
 TAIL_LABEL_RE = re.compile(
     r"\*\*(?:Notes|Provenance|Status|Notation|Scope|Specialization|Specialisation|Ratification)"
 )
+
+# The three section kinds a shard body is split into.  A label is recognised ONLY from this
+# closed vocabulary, so a mid-paragraph run-in bold (`**cluster vertex**`, `**top-deficit**`)
+# is never mistaken for a section heading.
+SEC_STATEMENT_RE = re.compile(r"^\*\*Statement[^*]*\*\*", re.M)
+SEC_SOURCE_RE = re.compile(r"^\*\*Byte-verbatim source text\.\*\*", re.M)
+SEC_TAIL_RE = re.compile(
+    r"^\*\*(?:Notes|Provenance|Status|Notation|Scope|Specialization|Specialisation|"
+    r"Ratification)[^*]*\*\*", re.M)
 
 REGISTRY_PREFIXES = ("lem-", "thm-", "prop-", "cor-", "conj-", "op-", "obs-", "ex-")
 
@@ -159,12 +199,11 @@ ESCAPES = {
 
 PH_OPEN, PH_CLOSE = "\x00", "\x01"          # placeholder sentinels (never appear in sources)
 
-# Math spans are passed through byte-identically, so a shard that quotes the SOURCE's private
-# macros (\eps, \calA, \Ma, …) inside real math would not compile.  Every control sequence in a
-# math span is therefore checked against: this base list of standard LaTeX/amsmath/amssymb
-# commands, plus everything report/main.tex defines (parsed at run time).  Anything else makes
-# the block fall back to a byte-verbatim quote — never a silent mangling, never a broken build.
-# A standard command missing from this list only costs a (reported) verbatim fallback.
+# Every control sequence that survives into emitted LaTeX is checked against: this base list of
+# standard LaTeX/amsmath/amssymb commands, plus everything report/main.tex defines (parsed at
+# run time).  Anything else makes the block fall back to a byte-verbatim quote — never a silent
+# mangling, never a broken build.  A standard command missing from this list only costs a
+# (reported) verbatim fallback.
 BASE_MACROS = set("""
 alpha beta gamma delta epsilon varepsilon zeta eta theta vartheta iota kappa lambda mu nu xi
 pi varpi rho varrho sigma varsigma tau upsilon phi varphi chi psi omega Gamma Delta Theta Lambda
@@ -187,12 +226,135 @@ gcd hom ker log ln lg sin cos tan cot sec csc sinh cosh tanh coth arcsin arccos 
 quad qquad hspace vspace smallskip medskip bigskip par noindent phantom hphantom vphantom mbox
 hbox nonumber label ref eqref begin end array matrix pmatrix bmatrix vmatrix cases aligned
 split gathered substack intertext mathstrut strut relax ldotp cdotp thinspace negthinspace mathbin mathrel mathop
-mathord mathopen mathclose mathpunct mathinner nobreakspace allowbreak
+mathord mathopen mathclose mathpunct mathinner nobreakspace allowbreak mkern mskip
 """.split())
 
 MACRO_DEF_RE = re.compile(
     r"\\(?:new|renew|provide)command\*?\s*\{?\\([A-Za-z]+)\}?"
     r"|\\DeclareMathOperator\*?\s*\{\\([A-Za-z]+)\}")
+
+
+# ======================================================================================
+# THE MACRO-TRANSLATION TABLE  (version 1)
+# ======================================================================================
+# WHY.  A `cited` shard quotes the pinned source's OWN TeX, which is written in that source's
+# private macro dialect (\eps, \calA, \Co, \Ma{n}, …).  Those macros are not defined in
+# report/main.tex, so the quoted bytes cannot be typeset as-is.  Before this table existed the
+# generator's only honest option was to print the bytes in a detokenized monospace block — which
+# is faithful but unreadable, and made the byte-verbatim quote *be* the definition.
+#
+# WHAT IT IS.  An EXPLICIT, DETERMINISTIC, AUDITABLE substitution table: source macro name ->
+# the expansion the SOURCE ITSELF gives it, written in commands report/main.tex already has.
+# Every mapping below is byte-checked against the pinned source's own preamble:
+#     refs/kitaev-2405.02434/approximate_algebras.tex   (sha256 prefix e7eb512a2ec2438d)
+# and the source line number that defines it is recorded on the row.  Nothing here is invented;
+# a translation is a change of SPELLING, never of meaning.  Two deliberate, documented glyph-only
+# deviations are listed under "KNOWN GLYPH-ONLY DEVIATIONS" at the end of the table.
+#
+# HOW IT IS APPLIED.
+#   * to a `cited` shard's fenced source-TeX block: the WHOLE table (those bytes are the
+#     source's, so \Co there means the source's \Co);
+#   * to a math span inside project-written markdown prose: only the rows whose macro name
+#     report/main.tex does NOT itself define.  report/main.tex defines \Co, \Ha, \Img, \Ker and
+#     \sgn with its own (different, argument-taking) meanings, and a project-authored statement
+#     that writes \Co{P}{Q} means the REPORT's macro.  Translating it would be exactly the silent
+#     meaning change this table exists to avoid, so those rows are held back there.
+#
+# AFTER TRANSLATION the result is validated (macros defined, braces balanced, $ balanced, no #,
+# no bare _ ^ & outside math, ASCII only).  A block that fails validation is NOT emitted as
+# mathematics: the definition carries a loud on-page flag and the bytes go to the source check.
+TRANSLATION_TABLE_VERSION = 1
+
+# --- rows with no argument: \<name> -> replacement -------------------------------------
+# (macro, replacement, source line in approximate_algebras.tex, the source's own definition)
+MACRO_TABLE_0 = [
+    # --- blackboard-bold and calligraphic alphabets ------------------------------------
+    ("RR",       r"\mathbb{R}",              47, r"\newcommand{\RR}{\mathbb{R}}"),
+    ("CC",       r"\mathbb{C}",              48, r"\newcommand{\CC}{\mathbb{C}}"),
+    ("calA",     r"\mathcal{A}",             50, r"\newcommand{\calA}{\mathcal{A}}"),
+    ("calB",     r"\mathcal{B}",             51, r"\newcommand{\calB}{\mathcal{B}}"),
+    ("calS",     r"\mathcal{S}",             68, r"\newcommand{\calS}{\mathcal{S}}"),
+    # --- upright operator letters (compressions, corners, bounded maps) ----------------
+    ("Bo",       r"\mathbf{B}",             107, r"\newcommand{\Bo}{\mathbf{B}}"),
+    ("La",       r"\mathrm{L}",             108, r"\newcommand{\La}{\mathrm{L}}"),
+    ("Ra",       r"\mathrm{R}",             109, r"\newcommand{\Ra}{\mathrm{R}}"),
+    ("Co",       r"\mathrm{C}",             110, r"\newcommand{\Co}{\mathrm{C}}"),
+    ("Ha",       r"\mathrm{H}",             111, r"\newcommand{\Ha}{\mathrm{H}}"),
+    ("Euc",      r"\mathrm{E}",             116, r"\newcommand{\Euc}{\mathrm{E}}"),
+    # --- named operators (\DeclareMathOperator -> \operatorname, identical semantics) ---
+    ("Ker",      r"\operatorname{Ker}",      88, r"\DeclareMathOperator{\Ker}{Ker}"),
+    ("Img",      r"\operatorname{Im}",       89, r"\DeclareMathOperator{\Img}{Im}"),
+    ("Tr",       r"\operatorname{Tr}",       92, r"\DeclareMathOperator{\Tr}{Tr}"),
+    ("sgn",      r"\operatorname{sgn}",      93, r"\DeclareMathOperator{\sgn}{sgn}"),
+    ("ind",      r"\operatorname{ind}",      96, r"\DeclareMathOperator{\ind}{ind}"),
+    ("Ta",       r"\operatorname{T}",        97, r"\DeclareMathOperator{\Ta}{T}"),
+    # --- accents, spacing, products, delimiters ----------------------------------------
+    ("wt",       r"\widetilde",             117, r"\newcommand{\wt}{\widetilde}"),
+    ("ts",       r"\mkern1mu",               77, r"\newcommand{\ts}{\mkern1mu}"),
+    ("hotimes",  r"\mathbin{\hat{\otimes}}", 85, r"\newcommand{\hotimes}{\mathbin{\hat{\otimes}}}"),
+    ("blangle",  r"\bigl\langle",           120, r"\newcommand{\blangle}{\bigl\langle}"),
+    ("brangle",  r"\bigr\rangle",           121, r"\newcommand{\brangle}{\bigr\rangle}"),
+    # --- greek shorthand ----------------------------------------------------------------
+    ("eps",      r"\varepsilon",            126, r"\newcommand{\eps}{\varepsilon}"),
+    # --- KERNEL NORMALIZATION (separate section in the manifest; NOT a source-defined mapping) ---
+    # Hostile table audit 2026-07-26: this row's claim is limited to math-mode glyph
+    # equivalence in the LaTeX2e kernel; it is NOT "the expansion the source itself gives".
+    # \dag is the LaTeX2e kernel's dagger (\dagger in math mode); the source does not redefine
+    # it.  Mapped to \dagger so the check below sees a command it knows.  Same glyph, same slot.
+    ("dag",      r"\dagger",                 -1, r"LaTeX2e kernel: \dag = \dagger in math mode"),
+]
+
+# --- rows that consume braced arguments: \<name>{a}{b} -> template % (a, b) -------------
+# (macro, nargs, python format template, source line, the source's own definition)
+MACRO_TABLE_N = [
+    ("bbraket", 2, r"\bigl\langle{%s},\mkern1mu{%s}\bigr\rangle", 124,
+     r"\newcommand*{\bbraket}[2]{\blangle{#1},\mkern1mu{#2}\brangle}  (\blangle/\brangle inlined)"),
+    ("braket",  2, r"\langle{%s},{%s}\rangle", 123,
+     r"\newcommand*{\braket}[2]{\langle{#1},{#2}\rangle}"),
+    ("Ma",      1, r"\mathbf{M}_{%s}", 118,
+     r"\newcommand*{\Ma}[1]{\mathbf{M}_{#1}}"),
+]
+
+# --- structural rewrites (not macro expansions; documented one by one) ------------------
+# \label{k}          DROPPED.  A source label defines an anchor in the SOURCE document; keeping
+#                    it would either clash with our own labels or dangle.  Nothing is lost: the
+#                    key is still visible in the byte-verbatim source check below the statement.
+# \ref{k}/\eqref{k}  Rendered as the source's own key in brackets, \textup{[\texttt{k}]}, NEVER as
+#                    a live \ref (which would be an undefined reference and a hard build error).
+#                    The reader can find the key in the pinned source.
+# \begin{equation}   Starred: \begin{equation*}.  We strip the source's labels, so an equation
+# \begin{alignat}{n} number here would be an un-referenceable decoration in OUR numbering.  The
+# \begin{align} …    starred forms are mathematically identical.  Column specifiers ({n} after
+#                    alignat) are left untouched.
+# \begin{Definition} Theorem-environment DELIMITERS of the source (Definition/Lemma/Proposition/
+# \begin{Lemma} …    Remark/…) are dropped, opening and closing independently, so an excerpt that
+#                    quotes only the head of a source environment cannot unbalance our LaTeX.
+#                    Dropping the delimiter drops only the source's own numbering and framing;
+#                    the shard's Status/Provenance prose is where the shard records what part of
+#                    a source environment it does and does not adopt.
+# any other env      REFUSED (flagged, verbatim) — never guessed at.
+MATH_ENVS_TO_STAR = ("equation", "align", "alignat", "gather", "multline", "flalign")
+MATH_ENVS_KEEP = ("equation*", "align*", "alignat*", "gather*", "multline*", "flalign*",
+                  "aligned", "split", "gathered", "cases", "array", "matrix", "pmatrix",
+                  "bmatrix", "vmatrix", "Bmatrix", "smallmatrix")
+PROSE_ENVS_KEEP = ("itemize", "enumerate", "center")
+THEOREM_ENVS_TO_DROP = ("Definition", "Lemma", "Proposition", "Theorem", "Corollary",
+                        "Remark", "Example", "Proof", "Conjecture", "Claim", "Notation",
+                        "definition", "lemma", "proposition", "theorem", "corollary",
+                        "remark", "example", "proof")
+ALIGN_FAMILY = ("align", "alignat", "flalign", "array", "matrix", "cases", "aligned",
+                "split", "gathered", "smallmatrix", "pmatrix", "bmatrix", "vmatrix", "Bmatrix")
+
+# --- KNOWN GLYPH-ONLY DEVIATIONS (declared, not hidden) ---------------------------------
+# 1. The source does `\renewcommand{\le}{\leqslant}` and `\renewcommand{\ge}{\geqslant}`
+#    (lines 131-132).  We leave \le and \ge alone: the slanted glyph is a house style of that
+#    paper, the relation is the same, and \le/\ge are what the rest of this lab-book uses.
+# 2. \ts is the source's 1mu thin space (line 77).  We emit \mkern1mu, i.e. the source's own
+#    expansion, so even the spacing is unchanged.
+DEVIATIONS = [
+    (r"\le, \ge", r"the source renews these to \leqslant / \geqslant (lines 131-132); "
+                  r"we keep the upright \le / \ge --- the same relation, this lab-book's glyph"),
+]
 
 
 class Refuse(Exception):
@@ -253,15 +415,15 @@ def load_report_labels(root):
     return labels
 
 
-def load_allowed_macros(root):
-    r"""BASE_MACROS plus every command report/main.tex defines (\newcommand/\DeclareMathOperator)."""
-    allowed = set(BASE_MACROS)
+def load_main_macros(root):
+    r"""Just the commands report/main.tex itself defines (\newcommand/\DeclareMathOperator)."""
+    defined = set()
     master = pathlib.Path(root) / "report" / "main.tex"
     if master.is_file():
         for line in master.read_text(encoding="utf-8").splitlines():
             for m in MACRO_DEF_RE.finditer(strip_tex_comment(line)):
-                allowed.add(m.group(1) or m.group(2))
-    return allowed
+                defined.add(m.group(1) or m.group(2))
+    return defined
 
 
 def strip_tex_comment(line):
@@ -328,7 +490,11 @@ def components(defs, edges):
         return x
 
     for a in sorted(edges):
+        if a not in parent:
+            continue
         for b in edges[a]:
+            if b not in parent:
+                continue
             ra, rb = find(a), find(b)
             if ra != rb:
                 parent[max(ra, rb)] = min(ra, rb)
@@ -425,6 +591,238 @@ def order_layer(nodes, edges):
     return out
 
 
+# ---------------------------------------------------------------- scope (directive 2)
+
+def load_dag_generator(root):
+    """Import scripts/gen-report-dag.py (never re-implement its subgraph rule); None if absent."""
+    path = pathlib.Path(root) / DAG_GENERATOR
+    if not path.is_file():
+        return None
+    spec = importlib.util.spec_from_file_location("_gen_report_dag", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def strategy_scope(root, defs, edges):
+    """The definitions the CURRENT PROOF STRATEGY needs; see the module docstring, directive 2.
+
+    Returns (rendered_ids:set, dropped_ids:sorted list, provenance:dict).  If the DAG generator
+    is unavailable (a stripped test tree) the scope degrades OPENLY to "everything", recorded in
+    the provenance dict, rather than silently dropping material.
+    """
+    mod = load_dag_generator(root)
+    if mod is None:
+        return set(defs), [], {"mode": "unscoped (scripts/gen-report-dag.py not found)",
+                               "subgraph": 0, "anchored": 0, "seed": 0}
+    reg = mod.Registry(pathlib.Path(root))
+    nodes, _edges = mod.select_subgraph(reg)
+    seed = set()
+    for rid in nodes:                                  # (a) the Route-F landing subgraph
+        seed |= set(reg.by[rid].get("defs", []))
+    anchored = sorted(rid for rid in reg.by if reg.report_label(rid))
+    for rid in anchored:                               # (b) the reproduced report lemma shards
+        seed |= set(reg.by[rid].get("defs", []))
+    seed = {d for d in seed if d in defs}
+    keep = set(seed)                                   # (c) statement-region crosslink closure
+    stack = sorted(keep)
+    while stack:
+        n = stack.pop()
+        for d in edges.get(n, []):
+            if d in defs and d not in keep:
+                keep.add(d)
+                stack.append(d)
+    return keep, sorted(set(defs) - keep), {
+        "mode": "Route-F landing chain (scripts/gen-report-dag.py select_subgraph)",
+        "subgraph": len(nodes), "anchored": len(anchored), "seed": len(seed)}
+
+
+# ---------------------------------------------------------------- macro translation
+
+_TRANS_0 = sorted(MACRO_TABLE_0, key=lambda r: (-len(r[0]), r[0]))
+_TRANS_N = sorted(MACRO_TABLE_N, key=lambda r: (-len(r[0]), r[0]))
+_REF_RE = re.compile(r"\\(?:eq)?ref\{([^}]*)\}")
+_LABEL_RE = re.compile(r"\\label\{[^}]*\}")
+# A \label on a line of its own must take the WHOLE line with it: leaving the blank line behind
+# inserts a \par, which is fatal inside an alignat/gather body ("Paragraph ended before
+# \alignat* was complete").  Whole-line labels are stripped first, inline ones after.
+_LABEL_LINE_RE = re.compile(r"(?m)^[ \t]*\\label\{[^}]*\}[ \t]*\n")
+_BEGIN_RE = re.compile(r"\\begin\{([A-Za-z*]+)\}")
+_END_RE = re.compile(r"\\end\{([A-Za-z*]+)\}")
+
+
+def _braced_arg(text, i):
+    """Read one balanced {...} argument starting at text[i]; returns (arg, next_index)."""
+    while i < len(text) and text[i] in " \t\n":
+        i += 1
+    if i >= len(text) or text[i] != "{":
+        raise Refuse("macro-translation: a table macro is used without a braced argument")
+    depth, j = 0, i
+    while j < len(text):
+        if text[j] == "\\":
+            j += 2
+            continue
+        if text[j] == "{":
+            depth += 1
+        elif text[j] == "}":
+            depth -= 1
+            if depth == 0:
+                return text[i + 1:j], j + 1
+        j += 1
+    raise Refuse("macro-translation: unbalanced braces in a macro argument")
+
+
+def _apply_narg(text, name, nargs, template, fired):
+    pat = re.compile(r"\\" + name + r"(?![A-Za-z])")
+    out, pos = [], 0
+    while True:
+        m = pat.search(text, pos)
+        if not m:
+            out.append(text[pos:])
+            return "".join(out)
+        out.append(text[pos:m.start()])
+        i = m.end()
+        args = []
+        for _ in range(nargs):
+            a, i = _braced_arg(text, i)
+            args.append(a)
+        out.append(template % tuple(args))
+        fired.add("\\" + name)
+        pos = i
+
+
+def _tt_key(key):
+    """A source label/ref key, escaped for \\texttt."""
+    return "".join(ESCAPES.get(ch, r"\textbackslash{}" if ch == "\\" else ch) for ch in key)
+
+
+def translate_macros(text, held_back=frozenset()):
+    """Apply the macro-translation table.  Returns (text, fired:set of '\\name').
+
+    `held_back` names rows that must NOT fire here (see "HOW IT IS APPLIED" on the table).
+    """
+    fired = set()
+    for name, nargs, template, _line, _srcdef in _TRANS_N:
+        if name in held_back or ("\\" + name) not in text:
+            continue
+        text = _apply_narg(text, name, nargs, template, fired)
+    for name, repl, _line, _srcdef in _TRANS_0:
+        if name in held_back:
+            continue
+        pat = re.compile(r"\\" + name + r"(?![A-Za-z])")
+        if pat.search(text):
+            text = pat.sub(lambda _m, r=repl: r, text)
+            fired.add("\\" + name)
+    return text, fired
+
+
+def translate_structure(text):
+    """Apply the structural rewrites of the table.  Returns (text, notes:set)."""
+    notes = set()
+    if _LABEL_RE.search(text):
+        text = _LABEL_LINE_RE.sub("", text)
+        text = _LABEL_RE.sub("", text)
+        notes.add("source-internal " + r"\label" + "s dropped")
+    if _REF_RE.search(text):
+        text = _REF_RE.sub(
+            lambda m: r"\textup{[\texttt{" + _tt_key(m.group(1)) + "}]}", text)
+        notes.add("source cross-reference keys shown in brackets")
+
+    def begin(m):
+        env = m.group(1)
+        if env in MATH_ENVS_TO_STAR:
+            notes.add("display environments unnumbered (labels are stripped)")
+            return r"\begin{" + env + "*}"
+        if env in MATH_ENVS_KEEP or env in PROSE_ENVS_KEEP:
+            return m.group(0)
+        if env in THEOREM_ENVS_TO_DROP:
+            notes.add("source theorem-environment delimiters dropped")
+            return ""
+        raise Refuse(f"macro-translation: unknown environment {env!r}")
+
+    def end(m):
+        env = m.group(1)
+        if env in MATH_ENVS_TO_STAR:
+            return r"\end{" + env + "*}"
+        if env in MATH_ENVS_KEEP or env in PROSE_ENVS_KEEP:
+            return m.group(0)
+        if env in THEOREM_ENVS_TO_DROP:
+            return ""
+        raise Refuse(f"macro-translation: unknown environment {env!r}")
+
+    text = _BEGIN_RE.sub(begin, text)
+    text = _END_RE.sub(end, text)
+    return text, notes
+
+
+def _strip_math_regions(text):
+    """Blank out every math region so the remainder can be checked as text mode."""
+    out = text
+    for env in sorted({e.rstrip("*") for e in
+                       MATH_ENVS_TO_STAR + MATH_ENVS_KEEP + ALIGN_FAMILY}):
+        out = re.sub(r"\\begin\{" + env + r"\*?\}.*?\\end\{" + env + r"\*?\}", " ", out,
+                     flags=re.S)
+    out = re.sub(r"\$\$.*?\$\$", " ", out, flags=re.S)
+    out = re.sub(r"\\\[.*?\\\]", " ", out, flags=re.S)
+    out = re.sub(r"\\\(.*?\\\)", " ", out, flags=re.S)
+    out = re.sub(r"\$[^$]*\$", " ", out, flags=re.S)
+    return out
+
+
+def validate_latex(text, allowed, where):
+    """Refuse anything that could break the build or change meaning.  Silence is never an option."""
+    check_ascii(text, where)
+    if "#" in text:
+        raise Refuse("a '#' survives translation (a macro parameter would break the build)")
+    for m in re.finditer(r"\\([A-Za-z]+)", text):
+        if m.group(1) not in allowed:
+            raise Refuse(f"\\{m.group(1)} is not defined by report/main.tex and is not in the "
+                         f"translation table (a source-private macro?)")
+    if text.count("{") != text.count("}"):
+        raise Refuse("unbalanced braces after translation")
+    if text.count("$") % 2:
+        raise Refuse("unbalanced $ math delimiter after translation")
+    residue = _strip_math_regions(text)
+    for ch, why in (("&", "alignment tab"), ("_", "subscript"), ("^", "superscript")):
+        if re.search(r"(?<!\\)" + re.escape(ch), residue):
+            raise Refuse(f"a bare '{ch}' ({why}) survives outside math mode")
+    return text
+
+
+_MATH_DELIM_RE = re.compile(r"\$|\\\(|\\\[|\\begin\{[A-Za-z]+\*?\}")
+
+
+def translate_source_block(raw, allowed, held_back=frozenset()):
+    """Source TeX -> compilable LaTeX.  Returns (latex, fired:set, notes:set); raises Refuse.
+
+    A fenced source block is one of exactly two things, told apart by a crisp, mechanical test —
+    does the block contain ANY math delimiter or environment of its own (`$`, `\\(`, `\\[`,
+    `\\begin{…}`)?
+
+      YES -> source PROSE that contains mathematics.  It is already complete LaTeX and is
+             emitted as text-mode material.
+      NO  -> the naked BODY of a source display: the shard quoted the interior of the source's
+             own `equation`/`gather` and elided the wrapper (see e.g.
+             def-theta-idempotent-approximation, whose loci 505-510/517-520/527-528 sit inside
+             `\\begin{gather}`/`\\begin{equation}` in the pinned source).  Such a body has no
+             legal reading in text mode, so it is restored to a display environment — `gather*`,
+             which is exactly what a `\\\\`-separated run of independent display lines is.  The
+             restoration is RECORDED in the definition's translation note, never silent.
+
+    Either way the result is validated afterwards; a misjudged block therefore fails loudly
+    instead of shipping.
+    """
+    text, fired = translate_macros(raw, held_back=held_back)
+    text, notes = translate_structure(text)
+    text = map_unicode(text)
+    if not _MATH_DELIM_RE.search(text):
+        text = "\\begin{gather*}\n" + text.strip() + "\n\\end{gather*}"
+        notes.add("the shard quotes the naked body of a source display; "
+                  "restored to a display environment")
+    validate_latex(text, allowed, "translated source block")
+    return text.strip(), fired, notes
+
+
 # ---------------------------------------------------------------- markdown -> latex
 
 def _stash(store, latex):
@@ -458,20 +856,22 @@ def convert_code_spans(text, store):
     return re.sub(r"`([^`\n]+)`", repl, text)
 
 
-def check_macros(math, allowed):
-    """Every control sequence in a math span must be defined by the report preamble."""
-    for m in re.finditer(r"\\([A-Za-z]+)", math):
-        if m.group(1) not in allowed:
-            raise Refuse(f"math uses \\{m.group(1)}, which report/main.tex does not define "
-                         f"(a source-private macro?)")
-
-
 def convert_math(text, store, ctx):
-    """Protect $$…$$, \\[…\\], \\(…\\), $…$ — bytes preserved, unicode mapped in math mode."""
+    """Protect $$…$$, \\[…\\], \\(…\\), $…$ — bytes preserved but for the unicode and macro tables.
+
+    A math span written in project prose is translated with the HELD-BACK table (see the table's
+    "HOW IT IS APPLIED"): rows whose macro report/main.tex defines itself are left alone there.
+    """
     def wrap(open_, close_):
         def repl(m):
-            check_macros(m.group(1), ctx["macros"])
-            return _stash(store, open_ + map_unicode(m.group(1), math_mode=True) + close_)
+            math = map_unicode(m.group(1), math_mode=True)
+            math, fired = translate_macros(math, held_back=ctx["held_back"])
+            ctx["fired"].update(fired)
+            for cs in re.finditer(r"\\([A-Za-z]+)", math):
+                if cs.group(1) not in ctx["macros"]:
+                    raise Refuse(f"math uses \\{cs.group(1)}, which report/main.tex does not "
+                                 f"define and the translation table does not cover")
+            return _stash(store, open_ + math + close_)
         return repl
 
     text = re.sub(r"\$\$(.+?)\$\$", wrap("\\[", "\\]"), text, flags=re.S)
@@ -489,7 +889,10 @@ def convert_links(text, store, ctx):
         target, disp = m.group(1), m.group(2)
         if target in ctx["defs"]:
             body = convert_inline(disp, ctx) if disp else r"\texttt{" + tt(target) + "}"
-            return _stash(store, r"\hyperref[" + label_of(target) + "]{" + body + "}")
+            if target in ctx["rendered"]:
+                return _stash(store, r"\hyperref[" + label_of(target) + "]{" + body + "}")
+            # out of the current proof strategy's scope: rendered nowhere, so never linked
+            return _stash(store, body)
         if target.startswith(REGISTRY_PREFIXES):
             shown = r"\texttt{" + tt(target) + "}"
             lab = ctx["anchor"].get(target)
@@ -587,10 +990,9 @@ def convert_paragraph(block, ctx):
 
 def verbatim_quote(raw):
     r"""The house byte-verbatim presentation: one \detokenize'd line per source line inside the
-    rule-delimited quote block (report/main.tex's \contractquote pattern), so that very long
-    source lines wrap at spaces instead of running off the page.  Raises Refuse when a line is
-    not \detokenize-safe (a `%`, unbalanced braces, a `#`, or an unmappable character), so the
-    caller can drop to a plain verbatim environment."""
+    rule-delimited quote block, so that very long source lines wrap at spaces instead of running
+    off the page.  Raises Refuse when a line is not \detokenize-safe (a `%`, unbalanced braces,
+    a `#`, or an unmappable character), so the caller can drop to a plain verbatim environment."""
     out = ["\\begin{defsourcequote}"]
     for line in raw.split("\n"):
         if not line.strip():
@@ -610,6 +1012,14 @@ def plain_verbatim(raw):
         raw = map_unicode(raw)                     # verbatim cannot carry raw unicode
     body = "\n".join(line.replace("\\end{verbatim}", "\\end {verbatim}") for line in raw.split("\n"))
     return "\\begin{verbatim}\n" + body + "\n\\end{verbatim}"
+
+
+def quote_source(raw):
+    """The byte-verbatim rendering of one source block, in whichever form is safe."""
+    try:
+        return verbatim_quote(raw)
+    except Refuse:
+        return plain_verbatim(raw)
 
 
 def split_blocks(body):
@@ -640,26 +1050,37 @@ def split_blocks(body):
     return blocks
 
 
-def render_body(did, body, ctx):
-    """Render a shard body; returns (latex, [fallback reasons])."""
-    chunks, fallbacks = [], []
-    for kind, raw in split_blocks(body):
-        if kind == "fence":
-            try:
-                chunks.append(verbatim_quote(raw))
-            except Refuse as exc:
-                fallbacks.append(f"source block quoted with plain verbatim ({exc})")
-                chunks.append(plain_verbatim(raw))
-            continue
-        try:
-            chunks.append(convert_paragraph(raw, ctx))
-        except Refuse as exc:
-            fallbacks.append(f"block quoted verbatim ({exc}): {raw.strip()[:60]!r}")
-            try:
-                chunks.append(verbatim_quote(raw))
-            except Refuse:
-                chunks.append(plain_verbatim(raw))
-    return "\n\n".join(chunks), fallbacks
+# ---------------------------------------------------------------- shard sectioning
+
+def split_sections(body):
+    """Shard body -> ordered [(kind, text)] with kind in {'statement','source','tail','lead'}.
+
+    Boundaries come from the CLOSED label vocabulary above, so an emphasised term at the start
+    of a line inside a statement is never mistaken for a section heading.
+    """
+    marks = []
+    for kind, rx in (("statement", SEC_STATEMENT_RE), ("source", SEC_SOURCE_RE),
+                     ("tail", SEC_TAIL_RE)):
+        for m in rx.finditer(body):
+            marks.append((m.start(), kind))
+    marks.sort()
+    out = []
+    if not marks:
+        return [("lead", body)] if body.strip() else []
+    if body[:marks[0][0]].strip():
+        out.append(("lead", body[:marks[0][0]].strip("\n")))
+    for i, (pos, kind) in enumerate(marks):
+        end = marks[i + 1][0] if i + 1 < len(marks) else len(body)
+        chunk = body[pos:end].strip("\n")
+        if chunk.strip():
+            out.append((kind, chunk))
+    return out
+
+
+def strip_section_label(text, rx):
+    """Drop the run-in bold label that opens a section (it is re-supplied by the renderer)."""
+    m = rx.match(text)
+    return text[m.end():].lstrip(" \n") if m else text
 
 
 # ---------------------------------------------------------------- rendering
@@ -671,13 +1092,102 @@ KIND_GLOSS = {
 }
 
 
-def render_meta(did, d, ctx):
-    """The provenance/pointer block printed under a definition (footnotesize, quiet)."""
+def render_markdown(chunks, ctx, flags, what):
+    """Render a list of markdown chunks; a chunk that refuses is quoted verbatim and FLAGGED."""
+    out = []
+    for chunk in chunks:
+        for kind, raw in split_blocks(chunk):
+            if kind == "fence":
+                flags.append(f"{what}: a fenced block is quoted byte-verbatim (not typeset)")
+                out.append(quote_source(raw))
+                continue
+            try:
+                out.append(convert_paragraph(raw, ctx))
+            except Refuse as exc:
+                flags.append(f"{what}: a paragraph did not typeset ({exc}) — "
+                             f"{raw.strip()[:60]!r}")
+                out.append(flag_block(f"This paragraph could not be typeset: {exc}. "
+                                      f"Its bytes follow, unaltered."))
+                out.append(quote_source(raw))
+    return "\n\n".join(out)
+
+
+def flag_block(message):
+    r"""A LOUD, on-page flag.  Nothing is ever quietly dropped or quietly reshaped."""
+    return "\\begin{defflag}\n" + tex_sentence(message) + "\n\\end{defflag}"
+
+
+def tex_sentence(text):
+    """Escape a generator-authored sentence (never shard content) for LaTeX text mode."""
+    return "".join(ESCAPES.get(ch, r"\textbackslash{}" if ch == "\\" else ch) for ch in text)
+
+
+def render_statement(did, d, ctx):
+    """The PRIMARY typeset body of a definition (directive 1).  Returns (latex, info)."""
+    secs = split_sections(d["body"])
+    flags = []
+    stmts = [strip_section_label(t, SEC_STATEMENT_RE) for k, t in secs if k == "statement"]
+    leads = [t for k, t in secs if k == "lead"]
+    sources = [t for k, t in secs if k == "source"]
+    tails = [t for k, t in secs if k == "tail"]
+    info = {"origin": None, "fired": set(), "notes": set(), "flags": flags,
+            "source_blocks": [], "tails": tails}
+
+    # The byte-verbatim section of a `cited` shard, kept in reading order: its fenced blocks are
+    # the source's bytes, and any prose between them is the shard's own caption for them.
+    source_seq = []
+    for chunk in sources:
+        for kind, raw in split_blocks(chunk):
+            if kind == "fence":
+                info["source_blocks"].append(raw)
+                source_seq.append(("fence", raw))
+            elif raw.strip() and not SEC_SOURCE_RE.match(raw):
+                source_seq.append(("text", raw))
+
+    # (a) the shard's own harmonised statement, when it has one — it exists to be the readable
+    #     form, so it always wins.
+    if stmts or leads:
+        info["origin"] = "shard"
+        return render_markdown(leads + stmts, ctx, flags, "statement"), info
+
+    # (b) otherwise TYPESET THE SOURCE TeX through the macro-translation table, keeping the
+    #     shard's captions in place around the displays they introduce.
+    info["origin"] = "translated"
+    parts = []
+    for kind, raw in source_seq:
+        if kind == "text":
+            parts.append(render_markdown([raw], ctx, flags, "source caption"))
+            continue
+        try:
+            latex, fired, notes = translate_source_block(raw, ctx["macros"])
+            info["fired"] |= fired
+            info["notes"] |= notes
+            parts.append(latex)
+        except Refuse as exc:
+            flags.append(f"source block NOT typeset ({exc})")
+            parts.append(flag_block(
+                "This fragment of the pinned source could not be translated into typeset "
+                "mathematics without risking a change of meaning (" + str(exc) + "). It is "
+                "therefore left untranslated; its bytes are in the source check below."))
+    if not parts:
+        info["origin"] = "empty"
+        flags.append("the shard body carries neither a Statement section nor source text")
+        parts.append(flag_block("This shard carries no statement and no source text."))
+    return "\n\n".join(p for p in parts if p.strip()), info
+
+
+def render_meta(did, d, ctx, info):
+    """The compact provenance block printed under a definition (footnotesize, quiet)."""
     fm = d["fm"]
     kind = fm.get("kind", "?")
     lines = []
-    lines.append(r"\textbf{Kind.} " + KIND_GLOSS.get(kind, tt(kind))
-                 + r"; \texttt{status: " + tt(fm.get("status", "?")) + "}.")
+
+    aliases = fm.get("aliases", "").strip()
+    head = r"\textbf{Kind.} " + KIND_GLOSS.get(kind, tt(kind)) \
+        + r"; \texttt{status: " + tt(fm.get("status", "?")) + "}."
+    if aliases:
+        head += r"\quad\textbf{Aliases.} " + convert_inline(aliases, ctx) + "."
+    lines.append(head)
 
     prov = [r"\textbf{Provenance.} \texttt{source: " + tt(fm.get("source", "?")) + "}"]
     if fm.get("locus"):
@@ -690,6 +1200,20 @@ def render_meta(did, d, ctx):
     if fm.get("consensus"):
         prov.append("record: " + tt(fm["consensus"]))
     lines.append("; ".join(prov) + ".")
+
+    if info["origin"] == "translated":
+        fired = ", ".join(r"\texttt{" + tt(f) + "}" for f in sorted(info["fired"]))
+        note = (r"\textbf{Typeset from the source.} The statement above is the pinned source's "
+                r"own text, set by \emph{macro-translation table v"
+                + str(TRANSLATION_TABLE_VERSION)
+                + r"} of \texttt{scripts/gen-report-defs.py} --- spelling only, never meaning")
+        if fired:
+            note += ": " + fired
+        extra = sorted(info["notes"])
+        if extra:
+            note += "; " + "; ".join(tex_sentence(n) for n in extra)
+        note += ". The byte-verbatim source is reproduced below as the second check."
+        lines.append(note)
 
     users = ctx["users"].get(did, [])
     anchored = [(u, ctx["anchor"][u]) for u in users if u in ctx["anchor"]]
@@ -714,48 +1238,82 @@ def render_meta(did, d, ctx):
 
     lines.append(r"\textbf{Canonical shard.} \texttt{" + tt(d["path"])
                  + r"}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.")
-    if ctx["fallbacks"].get(did):
-        lines.append(r"\textbf{Rendering note.} " + str(len(ctx["fallbacks"][did]))
-                     + " block(s) of this shard could not be typeset cleanly and are shown "
-                     + "byte-verbatim above; see \\texttt{report/generated/defs/MANIFEST.md}.")
+
+    # The shard's own Notes/Status/Scope/Notation tail is METADATA, not the definition: it is
+    # rendered here, small and after the statement, with its run-in bold label kept.
+    tail = render_markdown(info["tails"], ctx, info["flags"], "shard note")
+    if tail.strip():
+        lines.append(tail)
+
+    if info["flags"]:
+        lines.append(r"\textbf{Rendering note.} " + str(len(info["flags"]))
+                     + " block(s) of this shard are flagged above; see "
+                     + r"\texttt{report/generated/defs/MANIFEST.md}.")
     return "\\begin{defnote}\n" + "\n\\par\n".join(lines) + "\n\\end{defnote}"
+
+
+def render_source_check(did, d, info):
+    """The demoted second check: the shard's byte-verbatim source text, clearly labelled."""
+    if not info["source_blocks"]:
+        return ""
+    fm = d["fm"]
+    where = fm.get("source", "?")
+    if fm.get("locus"):
+        where += ", " + fm["locus"]
+    out = [r"\defsourcecheckhead{Source check (byte-verbatim) --- \texttt{" + tt(where) + "}}"]
+    out += [quote_source(raw) for raw in info["source_blocks"]]
+    return "\n".join(out)
 
 
 def render_definition(did, d, ctx):
     fm = d["fm"]
-    body, fallbacks = render_body(did, d["body"], ctx)
-    ctx["fallbacks"][did] = fallbacks
+    body, info = render_statement(did, d, ctx)
+    ctx["info"][did] = info
     term = convert_inline(fm.get("term", did), ctx)
-    aliases = fm.get("aliases", "").strip()
-    head = [f"%% ---- {did} " + "-" * max(4, 66 - len(did)),
-            r"\hypertarget{" + label_of(did) + "}{}%",
-            r"\begin{definition}[" + term + r"\normalfont{} (\texttt{" + tt(did) + "})]"
-            + r"\label{" + label_of(did) + "}"]
-    if aliases:
-        head.append(r"\emph{Aliases:} " + convert_inline(aliases, ctx) + r"\par\smallskip")
-    head.append(body)
-    head.append(r"\end{definition}")
-    head.append(render_meta(did, d, ctx))
-    return "\n".join(head)
+    parts = [f"%% ---- {did} " + "-" * max(4, 66 - len(did)),
+             r"\hypertarget{" + label_of(did) + "}{}%",
+             r"\begin{definition}[" + term + r"\normalfont{} (\texttt{" + tt(did) + "})]"
+             + r"\label{" + label_of(did) + "}",
+             body,
+             r"\end{definition}",
+             render_meta(did, d, ctx, info)]
+    check = render_source_check(did, d, info)
+    if check:
+        parts.append(check)
+    return "\n".join(p for p in parts if p)
 
 
 MACROS = r"""
 % --- rendering macros for the generated definitions (\providecommand: report/main.tex may
-% --- override them; the visual language mirrors \contractquote there) -------------------
+% --- override them).  Three visual registers, in descending loudness:
+% ---   definition  : the amsthm statement — THE definition (typeset, full size)
+% ---   defnote     : the compact provenance/pointer line beneath it (footnotesize)
+% ---   defsource*  : the demoted byte-verbatim SECOND CHECK (scriptsize, rule-delimited)
+% --- plus defflag, the loud on-page marker for anything the generator would not typeset.
 \ifdefined\defsourcequote\else
   \newenvironment{defsourcequote}{%
-    \par\addvspace{0.5\baselineskip}\footnotesize
-    \noindent\hrulefill\par\nobreak\vspace{0.35ex}%
+    \par\addvspace{0.35\baselineskip}\scriptsize
+    \noindent\hrulefill\par\nobreak\vspace{0.3ex}%
     \ttfamily\frenchspacing\raggedright\sloppy}%
-   {\par\vspace{0.35ex}\noindent\hrulefill\par\addvspace{0.5\baselineskip}}
+   {\par\vspace{0.3ex}\noindent\hrulefill\par\addvspace{0.5\baselineskip}}
 \fi
 \providecommand{\defsourceline}[1]{\noindent\detokenize{#1}\par}
 \providecommand{\defsourcegap}{\par\addvspace{0.4\baselineskip}}
+\providecommand{\defsourcecheckhead}[1]{%
+  \par\addvspace{0.35\baselineskip}\nobreak
+  \noindent{\footnotesize\scshape #1}\par\nobreak}
 \ifdefined\defnote\else
   \newenvironment{defnote}{%
     \par\addvspace{0.35\baselineskip}\footnotesize\raggedright\sloppy
     \noindent\ignorespaces}%
    {\par\addvspace{0.5\baselineskip}}
+\fi
+\ifdefined\defflag\else
+  \newenvironment{defflag}{%
+    \par\addvspace{0.4\baselineskip}\footnotesize\raggedright\sloppy
+    \noindent\hrulefill\par\nobreak\vspace{0.3ex}%
+    \noindent\textbf{NOT TYPESET.}\enspace\ignorespaces}%
+   {\par\vspace{0.3ex}\noindent\hrulefill\par\addvspace{0.4\baselineskip}}
 \fi
 """.strip("\n")
 
@@ -769,7 +1327,28 @@ def render_layer_file(key, title, ids, defs, ctx):
     return "\n".join(parts).rstrip("\n") + "\n"
 
 
-def render_all_file(order_by_layer):
+def render_out_of_scope(dropped):
+    """The honest closing paragraph of the section (directive 2)."""
+    if not dropped:
+        return ["% every canonical definition is inside the current proof strategy's closure",
+                r"\par\addvspace{0.8\baselineskip}\noindent",
+                r"Every canonical definition in \texttt{definitions/} lies inside the current "
+                r"proof strategy's dependency closure; none is withheld.", ""]
+    n = len(dropped)
+    noun = "definitions" if n != 1 else "definition"
+    verb = "are" if n != 1 else "is"
+    they = "They remain" if n != 1 else "It remains"
+    ids = ", ".join(r"\texttt{" + tt(d) + "}" for d in dropped)
+    return ["% out-of-scope definitions (directive: render only what the strategy needs)",
+            r"\par\addvspace{0.8\baselineskip}\noindent",
+            f"{n} further canonical {noun} in \\texttt{{definitions/}} {verb} outside the "
+            f"current proof strategy's dependency closure and {verb} not rendered here. "
+            + f"{they} canonical --- the shard is the single source of truth either way --- and "
+              r"reachable at the shard path and through \texttt{definitions/INDEX.md}:",
+            r"{\footnotesize\par\smallskip\noindent " + ids + r"\par}", ""]
+
+
+def render_all_file(order_by_layer, dropped):
     parts = [GEN_WARNING, MACROS, ""]
     for key, title in LAYERS:
         if not order_by_layer.get(key):
@@ -777,44 +1356,94 @@ def render_all_file(order_by_layer):
         parts.append(f"% {title}")
         parts.append(r"\input{generated/defs/" + LAYER_FILE[key][:-4] + "}")
         parts.append("")
+    parts += render_out_of_scope(dropped)
     return "\n".join(parts).rstrip("\n") + "\n"
 
 
-def render_manifest(order_by_layer, defs, ctx):
+def render_manifest(order_by_layer, defs, ctx, dropped, scope):
     rows = ["<!-- GENERATED by scripts/gen-report-defs.py — do not hand-edit. -->",
             "# Generated report definitions — manifest",
             "",
             "Reading order, layer assignment and rendering status of every `definitions/*.md`",
             "shard projected into the report.  The shard is the single source of truth (CLAUDE.md",
             "L2); this table and the `.tex` files beside it are a deterministic projection of it.",
+            "",
+            "## Scope (directive: render only what the current proof strategy needs)",
+            "",
+            f"- selection rule: **{scope['mode']}**",
+            f"- registry results in the strategy subgraph: **{scope['subgraph']}**; "
+            f"registry results anchored in `report/sections/`: **{scope['anchored']}**",
+            f"- definitions they import directly: **{scope['seed']}**; after the statement-region",
+            f"  `[[def-…]]` closure: **{len(defs)}** rendered, **{len(dropped)}** dropped",
             ""]
+    if dropped:
+        rows += ["Dropped (outside the closure; canonical, just not reproduced here):", ""]
+        rows += [f"- `{d}`" for d in dropped]
+        rows.append("")
     n = 0
     for key, title in LAYERS:
         ids = order_by_layer.get(key, [])
         if not ids:
             continue
         rows += [f"## {title}", "",
-                 "| # | id | label | kind | status | source | locus | sha256 | registry uses | in report |",
-                 "|---|---|---|---|---|---|---|---|---|---|"]
+                 "| # | id | label | kind | status | statement | source check | source | locus | sha256 | registry uses | in report |",
+                 "|---|---|---|---|---|---|---|---|---|---|---|---|"]
         for did in ids:
             n += 1
             fm = defs[did]["fm"]
+            info = ctx["info"][did]
             users = ctx["users"].get(did, [])
             anchored = [u for u in users if u in ctx["anchor"]]
-            rows.append("| {} | `{}` | `{}` | {} | {} | `{}` | `{}` | `{}` | {} | {} |".format(
+            rows.append("| {} | `{}` | `{}` | {} | {} | {} | {} | `{}` | `{}` | `{}` | {} | {} |".format(
                 n, did, label_of(did), fm.get("kind", "?"), fm.get("status", "?"),
+                {"shard": "shard statement",
+                 "translated": f"translated (table v{TRANSLATION_TABLE_VERSION})",
+                 "empty": "**MISSING**"}.get(info["origin"], info["origin"]),
+                len(info["source_blocks"]) or "—",
                 fm.get("source", "?"), fm.get("locus", "").replace("|", "\\|"),
                 fm.get("sha256", "-"), len(users), len(anchored)))
         rows.append("")
-    fb = {k: v for k, v in ctx["fallbacks"].items() if v}
-    rows += ["## Rendering fallbacks", ""]
-    if not fb:
-        rows += ["None: every block of every shard converted cleanly to typeset LaTeX.", ""]
+
+    rows += ["## Macro-translation table v%d" % TRANSLATION_TABLE_VERSION, "",
+             "Every mapping in THIS table is the expansion the pinned source itself gives the macro",
+             "(`refs/kitaev-2405.02434/approximate_algebras.tex`, sha256 prefix `e7eb512a2ec2438d`);",
+             "the source line that defines it is quoted.  Translation changes spelling, never meaning.",
+             "",
+             "| source macro | rendered as | source line | the source's own definition |",
+             "|---|---|---|---|"]
+    for name, repl, line, srcdef in sorted(MACRO_TABLE_0, key=lambda r: r[0].lower()):
+        if line <= 0:
+            continue  # kernel normalizations: separate section below (hostile audit 2026-07-26)
+        rows.append("| `\\{}` | `{}` | {} | `{}` |".format(name, repl, line, srcdef))
+    for name, nargs, template, line, srcdef in sorted(MACRO_TABLE_N, key=lambda r: r[0].lower()):
+        shown = template.replace("%s", "#1", 1).replace("%s", "#2", 1)
+        rows.append("| `\\{}` ({} arg{}) | `{}` | {} | `{}` |".format(
+            name, nargs, "s" if nargs != 1 else "", shown, line, srcdef))
+    kern = [(n, r, d) for n, r, l, d in MACRO_TABLE_0 if l <= 0]
+    if kern:
+        rows += ["", "### Kernel normalization (NOT source-defined; claim limited to math-mode glyph equivalence)", ""]
+        for n, r, d in sorted(kern):
+            rows.append("- `\\{}` -> `{}` --- {}".format(n, r, d))
+    rows += ["", "Structural rewrites: `\\label{…}` dropped; `\\ref{k}`/`\\eqref{k}` shown as the",
+             "source's own key in brackets (never a live `\\ref`, which would dangle); display",
+             "environments starred (labels are stripped, so a number would be un-referenceable);",
+             "source theorem-environment delimiters dropped, opening and closing independently.",
+             "Declared glyph-only deviations:", ""]
+    for what, why in DEVIATIONS:
+        rows.append(f"- `{what}` — {why}")
+    rows += ["", "Held back in project-written prose math (report/main.tex defines these itself,",
+             "with different, argument-taking meanings): "
+             + ", ".join("`\\" + n + "`" for n in sorted(ctx["held_back"])) + ".", ""]
+
+    flags = {k: v["flags"] for k, v in ctx["info"].items() if v["flags"]}
+    rows += ["## Flags", ""]
+    if not flags:
+        rows += ["None: every rendered definition has a fully typeset statement.", ""]
     else:
-        rows += ["Blocks that did not convert cleanly are quoted byte-verbatim instead of being",
-                 "reshaped (see the generator docstring).  One bullet per affected shard:", ""]
-        for did in sorted(fb):
-            for reason in fb[did]:
+        rows += ["Anything the generator would not typeset is flagged LOUDLY on the page as well",
+                 "as here.  One bullet per affected shard:", ""]
+        for did in sorted(flags):
+            for reason in flags[did]:
                 rows.append(f"- `{did}` — {reason}")
         rows.append("")
     return "\n".join(rows)
@@ -823,7 +1452,7 @@ def render_manifest(order_by_layer, defs, ctx):
 # ---------------------------------------------------------------- driver
 
 def _dag_anchor_ids(ctx):
-    """ids that actually carry a \hypertarget{dag:<id>} in the generated DAG atlas.
+    """ids that actually carry a \\hypertarget{dag:<id>} in the generated DAG atlas.
     Linking an id without an anchor is an undefined reference (hard build error):
     the atlas is deliberately scoped to the Route-F landing chain, so defs may
     reference registry ids outside it — those render unlinked. Cached on ctx."""
@@ -840,13 +1469,17 @@ def _dag_anchor_ids(ctx):
 
 def build(root, dag_anchors=False):
     """Compute every output file: {relative filename: text}.  Pure w.r.t. the filesystem read."""
-    defs = load_definitions(root)
+    all_defs = load_definitions(root)
     registry = load_registry(root)
     texlabels = load_report_labels(root)
-    edges = build_edges(defs)
+    all_edges = build_edges(all_defs)
+
+    keep, dropped, scope = strategy_scope(root, all_defs, all_edges)
+    defs = {k: v for k, v in all_defs.items() if k in keep}
+    edges = {k: [d for d in v if d in keep] for k, v in all_edges.items() if k in keep}
     layers = assign_layers(defs, edges)
 
-    users = {did: [] for did in defs}
+    users = {did: [] for did in all_defs}
     for rid in sorted(registry):
         for tok in re.split(r"[;,\s]+", registry[rid].get("defs", "")):
             if tok in users:
@@ -857,9 +1490,12 @@ def build(root, dag_anchors=False):
         if lab:
             anchor[rid] = lab
 
-    ctx = {"defs": defs, "registry": registry, "users": users, "anchor": anchor,
-           "macros": load_allowed_macros(root), "root": pathlib.Path(root),
-           "dag_anchors": dag_anchors, "fallbacks": {}}
+    main_macros = load_main_macros(root)
+    table_names = {r[0] for r in MACRO_TABLE_0} | {r[0] for r in MACRO_TABLE_N}
+    ctx = {"defs": all_defs, "rendered": set(defs), "registry": registry, "users": users,
+           "anchor": anchor, "macros": BASE_MACROS | main_macros, "root": pathlib.Path(root),
+           "held_back": table_names & main_macros, "dag_anchors": dag_anchors,
+           "info": {}, "fired": set()}
 
     order_by_layer = {}
     for key, _title in LAYERS:
@@ -871,9 +1507,9 @@ def build(root, dag_anchors=False):
         ids = order_by_layer.get(key, [])
         if ids:
             files[LAYER_FILE[key]] = render_layer_file(key, title, ids, defs, ctx)
-    files["_all.tex"] = render_all_file(order_by_layer)
-    files["MANIFEST.md"] = render_manifest(order_by_layer, defs, ctx)
-    return files, ctx
+    files["_all.tex"] = render_all_file(order_by_layer, dropped)
+    files["MANIFEST.md"] = render_manifest(order_by_layer, defs, ctx, dropped, scope)
+    return files, ctx, dropped, scope
 
 
 def main(argv):
@@ -886,14 +1522,30 @@ def main(argv):
     ap.add_argument("--out", default=None, help=f"output directory (default: {DEFAULT_OUT})")
     ap.add_argument("--dag-anchors", action="store_true",
                     help="link unanchored registry ids to dag:<id> anchors (needs gen-report-dag)")
+    ap.add_argument("--scope-report", action="store_true",
+                    help="print the scope ledger and the per-definition statement origin; write nothing")
     args = ap.parse_args(argv)
 
     root = pathlib.Path(args.root).resolve()
     out = pathlib.Path(args.out) if args.out else root / DEFAULT_OUT
-    files, ctx = build(root, dag_anchors=args.dag_anchors)
+    files, ctx, dropped, scope = build(root, dag_anchors=args.dag_anchors)
 
-    fallbacks = sorted((did, r) for did, rs in ctx["fallbacks"].items() for r in rs)
-    ndefs = sum(1 for _ in (root / DEF_DIR_NAME).glob("def-*.md"))
+    flags = sorted((did, r) for did, v in ctx["info"].items() for r in v["flags"])
+    nrender = len(ctx["info"])
+    ntotal = sum(1 for _ in (root / DEF_DIR_NAME).glob("def-*.md"))
+    ntrans = sum(1 for v in ctx["info"].values() if v["origin"] == "translated")
+
+    if args.scope_report:
+        print(f"scope rule: {scope['mode']}")
+        print(f"  strategy subgraph results : {scope['subgraph']}")
+        print(f"  report-anchored results   : {scope['anchored']}")
+        print(f"  definitions rendered      : {nrender} of {ntotal}")
+        print(f"  definitions dropped       : {len(dropped)} ({', '.join(dropped) or '-'})")
+        for did in sorted(ctx["info"]):
+            v = ctx["info"][did]
+            print(f"    {did:42s} {v['origin']:11s} "
+                  f"source-blocks={len(v['source_blocks'])} flags={len(v['flags'])}")
+        return 0
 
     if args.check:
         problems = []
@@ -916,8 +1568,9 @@ def main(argv):
             for p in problems:
                 print(f"  ! {p}", file=sys.stderr)
             return 1
-        print(f"gen-report-defs --check: OK ({ndefs} definitions, {len(files)} generated files, "
-              f"{len(fallbacks)} verbatim fallback block(s))")
+        print(f"gen-report-defs --check: OK ({nrender} of {ntotal} definitions in the strategy "
+              f"scope, {ntrans} typeset via translation table v{TRANSLATION_TABLE_VERSION}, "
+              f"{len(files)} generated files, {len(flags)} flag(s))")
         return 0
 
     out.mkdir(parents=True, exist_ok=True)
@@ -926,9 +1579,11 @@ def main(argv):
     for path in sorted(out.iterdir()):
         if path.is_file() and path.name not in files:
             print(f"gen-report-defs: NOTE stale file left in place: {path}", file=sys.stderr)
-    print(f"gen-report-defs: wrote {len(files)} file(s) to {out} ({ndefs} definitions)")
-    for did, reason in fallbacks:
-        print(f"  fallback: {did} — {reason}")
+    print(f"gen-report-defs: wrote {len(files)} file(s) to {out} "
+          f"({nrender} of {ntotal} definitions rendered, {len(dropped)} out of scope, "
+          f"{ntrans} typeset via translation table v{TRANSLATION_TABLE_VERSION})")
+    for did, reason in flags:
+        print(f"  flag: {did} — {reason}")
     return 0
 
 

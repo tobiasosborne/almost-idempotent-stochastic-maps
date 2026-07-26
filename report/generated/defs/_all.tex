@@ -4,21 +4,35 @@
 % The gate `python3 scripts/gen-report-defs.py --check` fails when this file is stale.
 
 % --- rendering macros for the generated definitions (\providecommand: report/main.tex may
-% --- override them; the visual language mirrors \contractquote there) -------------------
+% --- override them).  Three visual registers, in descending loudness:
+% ---   definition  : the amsthm statement — THE definition (typeset, full size)
+% ---   defnote     : the compact provenance/pointer line beneath it (footnotesize)
+% ---   defsource*  : the demoted byte-verbatim SECOND CHECK (scriptsize, rule-delimited)
+% --- plus defflag, the loud on-page marker for anything the generator would not typeset.
 \ifdefined\defsourcequote\else
   \newenvironment{defsourcequote}{%
-    \par\addvspace{0.5\baselineskip}\footnotesize
-    \noindent\hrulefill\par\nobreak\vspace{0.35ex}%
+    \par\addvspace{0.35\baselineskip}\scriptsize
+    \noindent\hrulefill\par\nobreak\vspace{0.3ex}%
     \ttfamily\frenchspacing\raggedright\sloppy}%
-   {\par\vspace{0.35ex}\noindent\hrulefill\par\addvspace{0.5\baselineskip}}
+   {\par\vspace{0.3ex}\noindent\hrulefill\par\addvspace{0.5\baselineskip}}
 \fi
 \providecommand{\defsourceline}[1]{\noindent\detokenize{#1}\par}
 \providecommand{\defsourcegap}{\par\addvspace{0.4\baselineskip}}
+\providecommand{\defsourcecheckhead}[1]{%
+  \par\addvspace{0.35\baselineskip}\nobreak
+  \noindent{\footnotesize\scshape #1}\par\nobreak}
 \ifdefined\defnote\else
   \newenvironment{defnote}{%
     \par\addvspace{0.35\baselineskip}\footnotesize\raggedright\sloppy
     \noindent\ignorespaces}%
    {\par\addvspace{0.5\baselineskip}}
+\fi
+\ifdefined\defflag\else
+  \newenvironment{defflag}{%
+    \par\addvspace{0.4\baselineskip}\footnotesize\raggedright\sloppy
+    \noindent\hrulefill\par\nobreak\vspace{0.3ex}%
+    \noindent\textbf{NOT TYPESET.}\enspace\ignorespaces}%
+   {\par\vspace{0.3ex}\noindent\hrulefill\par\addvspace{0.4\baselineskip}}
 \fi
 
 % The classical picture: the signed and stochastic vocabulary
@@ -29,3 +43,8 @@
 
 % Project-internal packaging: hypothesis data and derived notation
 \input{generated/defs/layer-3-internal-packages}
+
+% out-of-scope definitions (directive: render only what the strategy needs)
+\par\addvspace{0.8\baselineskip}\noindent
+1 further canonical definition in \texttt{definitions/} is outside the current proof strategy's dependency closure and is not rendered here. It remains canonical --- the shard is the single source of truth either way --- and reachable at the shard path and through \texttt{definitions/INDEX.md}:
+{\footnotesize\par\smallskip\noindent \texttt{def-\allowbreak{}pivot}\par}

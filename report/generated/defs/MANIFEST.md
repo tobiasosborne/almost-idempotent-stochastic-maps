@@ -5,62 +5,119 @@ Reading order, layer assignment and rendering status of every `definitions/*.md`
 shard projected into the report.  The shard is the single source of truth (CLAUDE.md
 L2); this table and the `.tex` files beside it are a deterministic projection of it.
 
+## Scope (directive: render only what the current proof strategy needs)
+
+- selection rule: **Route-F landing chain (scripts/gen-report-dag.py select_subgraph)**
+- registry results in the strategy subgraph: **110**; registry results anchored in `report/sections/`: **40**
+- definitions they import directly: **36**; after the statement-region
+  `[[def-…]]` closure: **37** rendered, **1** dropped
+
+Dropped (outside the closure; canonical, just not reproduced here):
+
+- `def-pivot`
+
 ## The classical picture: the signed and stochastic vocabulary
 
-| # | id | label | kind | status | source | locus | sha256 | registry uses | in report |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 | `def-negative-mass` | `def:negative-mass` | original | locked | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:esi, δ(P)); row polytope from ../almost-idempotent-positive-maps/definitions/def-stochastic.md` | `-` | 164 | 1 |
-| 2 | `def-signed-idempotent` | `def:signed-idempotent` | original | locked | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (Definition, exact signed idempotent)` | `-` | 186 | 1 |
-| 3 | `def-stochastic` | `def:stochastic` | consensus | locked | `internal` | `adopted from ../almost-idempotent-positive-maps/definitions/def-stochastic.md` | `-` | 17 | 3 |
-| 4 | `def-almost-idempotent` | `def:almost-idempotent` | consensus | locked | `internal` | `adopted from ../almost-idempotent-positive-maps/definitions/def-almost-idempotent.md (stochastic specialization)` | `-` | 4 | 1 |
-| 5 | `def-exposed` | `def:exposed` | consensus | locked | `internal` | `adapted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:vertex, def:exposed); ../almost-idempotent-positive-maps/definitions/def-exposed.md` | `-` | 129 | 0 |
-| 6 | `def-visible-set` | `def:visible-set` | original | locked | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:scales, def:exposed)` | `-` | 137 | 0 |
-| 7 | `def-height` | `def:height` | original | locked | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (Definition: Height)` | `-` | 112 | 0 |
-| 8 | `def-actor-hull` | `def:actor-hull` | original | draft | `internal` | `internal; first pinned in argument/lemmas/lem-downhill-cotop-conic-mass.md and lem-always-tight-dual-support.md` | `-` | 27 | 0 |
-| 9 | `def-dual-witness` | `def:dual-witness` | original | draft | `internal` | `internal; first pinned in argument/lemmas/lem-hiddenness-dual-witness.md` | `-` | 1 | 0 |
-| 10 | `def-zero-face` | `def:zero-face` | original | draft | `internal` | `internal; first pinned in argument/lemmas/lem-zero-face-localization.md and lem-always-tight-dual-support.md` | `-` | 2 | 0 |
-| 11 | `def-co-top` | `def:co-top` | original | draft | `internal` | `internal; first pinned in argument/lemmas/lem-cotop-witness-pinning.md and lem-downhill-cotop-conic-mass.md` | `-` | 40 | 0 |
-| 12 | `def-invisible-mass` | `def:invisible-mass` | original | locked | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (Definition: Invisible mass σ̃_v; Remark: Halo robustness)` | `-` | 35 | 0 |
-| 13 | `def-near-cluster` | `def:near-cluster` | original | draft | `internal` | `internal; first pinned in argument/lemmas/conj-near-cluster-absorption.md` | `-` | 3 | 0 |
-| 14 | `def-near-positive-projection` | `def:near-positive-projection` | original | locked | `internal` | `adopted from ../almost-idempotent-positive-maps/definitions/def-near-positive-projection.md (commutative shadow)` | `-` | 2 | 0 |
-| 15 | `def-pivot` | `def:pivot` | original | draft | `internal` | `internal; first pinned in argument/lemmas/lem-pivot-removing-move.md (and inlined verbatim in conj-b-restricted / conj-gamma-emptiness)` | `-` | 2 | 0 |
-| 16 | `def-top-support-functional` | `def:top-support-functional` | original | draft | `internal` | `internal; first pinned in argument/lemmas/lem-top-deficit-price.md and lem-top-support-dual-face.md` | `-` | 39 | 0 |
-| 17 | `def-selected-corner` | `def:selected-corner` | original | draft | `internal` | `internal; first pinned (inlined verbatim) in argument/lemmas/lem-sl1a-three-cell-reduction.md and the three conj-sl1a-*-cell shards` | `-` | 37 | 0 |
-| 18 | `def-top-deficit` | `def:top-deficit` | original | draft | `internal` | `internal; first pinned in argument/lemmas/lem-top-deficit-price.md and lem-top-support-dual-face.md` | `-` | 0 | 0 |
-| 19 | `def-slab` | `def:slab` | original | draft | `internal` | `internal; first pinned across argument/lemmas/conj-low-slab-cap.md, lem-cs-low-slab-pincer.md, lem-top-slab-companion.md` | `-` | 2 | 0 |
+| # | id | label | kind | status | statement | source check | source | locus | sha256 | registry uses | in report |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | `def-negative-mass` | `def:negative-mass` | original | locked | shard statement | — | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:esi, δ(P)); row polytope from ../almost-idempotent-positive-maps/definitions/def-stochastic.md` | `-` | 164 | 1 |
+| 2 | `def-signed-idempotent` | `def:signed-idempotent` | original | locked | shard statement | — | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (Definition, exact signed idempotent)` | `-` | 186 | 1 |
+| 3 | `def-stochastic` | `def:stochastic` | consensus | locked | shard statement | — | `internal` | `adopted from ../almost-idempotent-positive-maps/definitions/def-stochastic.md` | `-` | 17 | 3 |
+| 4 | `def-almost-idempotent` | `def:almost-idempotent` | consensus | locked | shard statement | — | `internal` | `adopted from ../almost-idempotent-positive-maps/definitions/def-almost-idempotent.md (stochastic specialization)` | `-` | 4 | 1 |
+| 5 | `def-exposed` | `def:exposed` | consensus | locked | shard statement | — | `internal` | `adapted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:vertex, def:exposed); ../almost-idempotent-positive-maps/definitions/def-exposed.md` | `-` | 129 | 0 |
+| 6 | `def-visible-set` | `def:visible-set` | original | locked | shard statement | — | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:scales, def:exposed)` | `-` | 137 | 0 |
+| 7 | `def-height` | `def:height` | original | locked | shard statement | — | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (Definition: Height)` | `-` | 112 | 0 |
+| 8 | `def-actor-hull` | `def:actor-hull` | original | draft | shard statement | — | `internal` | `internal; first pinned in argument/lemmas/lem-downhill-cotop-conic-mass.md and lem-always-tight-dual-support.md` | `-` | 27 | 0 |
+| 9 | `def-dual-witness` | `def:dual-witness` | original | draft | shard statement | — | `internal` | `internal; first pinned in argument/lemmas/lem-hiddenness-dual-witness.md` | `-` | 1 | 0 |
+| 10 | `def-zero-face` | `def:zero-face` | original | draft | shard statement | — | `internal` | `internal; first pinned in argument/lemmas/lem-zero-face-localization.md and lem-always-tight-dual-support.md` | `-` | 2 | 0 |
+| 11 | `def-co-top` | `def:co-top` | original | draft | shard statement | — | `internal` | `internal; first pinned in argument/lemmas/lem-cotop-witness-pinning.md and lem-downhill-cotop-conic-mass.md` | `-` | 40 | 0 |
+| 12 | `def-invisible-mass` | `def:invisible-mass` | original | locked | shard statement | — | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (Definition: Invisible mass σ̃_v; Remark: Halo robustness)` | `-` | 35 | 0 |
+| 13 | `def-near-cluster` | `def:near-cluster` | original | draft | shard statement | — | `internal` | `internal; first pinned in argument/lemmas/conj-near-cluster-absorption.md` | `-` | 3 | 0 |
+| 14 | `def-near-positive-projection` | `def:near-positive-projection` | original | locked | shard statement | — | `internal` | `adopted from ../almost-idempotent-positive-maps/definitions/def-near-positive-projection.md (commutative shadow)` | `-` | 2 | 0 |
+| 15 | `def-top-support-functional` | `def:top-support-functional` | original | draft | shard statement | — | `internal` | `internal; first pinned in argument/lemmas/lem-top-deficit-price.md and lem-top-support-dual-face.md` | `-` | 39 | 0 |
+| 16 | `def-selected-corner` | `def:selected-corner` | original | draft | shard statement | — | `internal` | `internal; first pinned (inlined verbatim) in argument/lemmas/lem-sl1a-three-cell-reduction.md and the three conj-sl1a-*-cell shards` | `-` | 37 | 0 |
+| 17 | `def-top-deficit` | `def:top-deficit` | original | draft | shard statement | — | `internal` | `internal; first pinned in argument/lemmas/lem-top-deficit-price.md and lem-top-support-dual-face.md` | `-` | 0 | 0 |
+| 18 | `def-slab` | `def:slab` | original | draft | shard statement | — | `internal` | `internal; first pinned across argument/lemmas/conj-low-slab-cap.md, lem-cs-low-slab-pincer.md, lem-top-slab-companion.md` | `-` | 2 | 0 |
 
 ## The approximate $C^{*}$-algebra vocabulary (transcribed from the pinned source)
 
-| # | id | label | kind | status | source | locus | sha256 | registry uses | in report |
-|---|---|---|---|---|---|---|---|---|---|
-| 20 | `def-column-hilbert-corner` | `def:column-hilbert-corner` | cited | locked | `kitaev-2405.02434` | `approximate_algebras.tex:1123-1128,1546-1550` | `e7eb512a2ec2438d` | 2 | 2 |
-| 21 | `def-compressed-corner` | `def:compressed-corner` | cited | locked | `kitaev-2405.02434` | `approximate_algebras.tex:1054-1066,1077-1082` | `e7eb512a2ec2438d` | 17 | 17 |
-| 22 | `def-delta-projection` | `def:delta-projection` | cited | locked | `kitaev-2405.02434` | `approximate_algebras.tex:917-920,926-929` | `e7eb512a2ec2438d` | 15 | 15 |
-| 23 | `def-epsilon-cstar-algebra` | `def:epsilon-cstar-algebra` | cited | locked | `kitaev-2405.02434` | `approximate_algebras.tex:407-440` | `e7eb512a2ec2438d` | 4 | 4 |
-| 24 | `def-extended-epsilon-cstar-algebra` | `def:extended-epsilon-cstar-algebra` | cited | locked | `kitaev-2405.02434` | `approximate_algebras.tex:1477-1479` | `e7eb512a2ec2438d` | 20 | 16 |
-| 25 | `def-fd-cstar-diagonal` | `def:fd-cstar-diagonal` | cited | locked | `kitaev-2405.02434` | `approximate_algebras.tex:1233-1242` | `e7eb512a2ec2438d` | 3 | 0 |
-| 26 | `def-h-space-left-inversion` | `def:h-space-left-inversion` | cited | locked | `kitaev-2405.02434` | `approximate_algebras.tex:895-912` | `e7eb512a2ec2438d` | 1 | 0 |
-| 27 | `def-ha-map` | `def:ha-map` | cited | locked | `kitaev-2405.02434` | `approximate_algebras.tex:1146-1149` | `e7eb512a2ec2438d` | 13 | 13 |
-| 28 | `def-lefschetz-fixed-point-data` | `def:lefschetz-fixed-point-data` | cited | locked | `kitaev-2405.02434` | `approximate_algebras.tex:961-967` | `e7eb512a2ec2438d` | 2 | 0 |
-| 29 | `def-one-dimensional-delta-projection` | `def:one-dimensional-delta-projection` | cited | locked | `kitaev-2405.02434` | `approximate_algebras.tex:1066,1187` | `e7eb512a2ec2438d` | 3 | 3 |
-| 30 | `def-projection-basis` | `def:projection-basis` | cited | locked | `kitaev-2405.02434` | `approximate_algebras.tex:1361` | `e7eb512a2ec2438d` | 2 | 2 |
-| 31 | `def-theta-idempotent-approximation` | `def:theta-idempotent-approximation` | cited | draft | `kitaev-2405.02434` | `approximate_algebras.tex:505-528 (displays Taylor_simple, Taylor_simple_bound, abs_sgn, and the theta display inside Proposition prop_P — ONLY the definitional displays are cited; the Proposition's claims are NOT citable and must be re-proved)` | `e7eb512a2ec2438d` | 2 | 2 |
+| # | id | label | kind | status | statement | source check | source | locus | sha256 | registry uses | in report |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 19 | `def-column-hilbert-corner` | `def:column-hilbert-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1123-1128,1546-1550` | `e7eb512a2ec2438d` | 2 | 2 |
+| 20 | `def-compressed-corner` | `def:compressed-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1054-1066,1077-1082` | `e7eb512a2ec2438d` | 17 | 17 |
+| 21 | `def-delta-projection` | `def:delta-projection` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:917-920,926-929` | `e7eb512a2ec2438d` | 15 | 15 |
+| 22 | `def-epsilon-cstar-algebra` | `def:epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:407-440` | `e7eb512a2ec2438d` | 4 | 4 |
+| 23 | `def-extended-epsilon-cstar-algebra` | `def:extended-epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1477-1479` | `e7eb512a2ec2438d` | 20 | 16 |
+| 24 | `def-fd-cstar-diagonal` | `def:fd-cstar-diagonal` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1233-1242` | `e7eb512a2ec2438d` | 3 | 0 |
+| 25 | `def-h-space-left-inversion` | `def:h-space-left-inversion` | cited | locked | shard statement | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:895-912` | `e7eb512a2ec2438d` | 1 | 0 |
+| 26 | `def-ha-map` | `def:ha-map` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1146-1149` | `e7eb512a2ec2438d` | 13 | 13 |
+| 27 | `def-lefschetz-fixed-point-data` | `def:lefschetz-fixed-point-data` | cited | locked | shard statement | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:961-967` | `e7eb512a2ec2438d` | 2 | 0 |
+| 28 | `def-one-dimensional-delta-projection` | `def:one-dimensional-delta-projection` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1066,1187` | `e7eb512a2ec2438d` | 3 | 3 |
+| 29 | `def-projection-basis` | `def:projection-basis` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1361` | `e7eb512a2ec2438d` | 2 | 2 |
+| 30 | `def-theta-idempotent-approximation` | `def:theta-idempotent-approximation` | cited | draft | translated (table v1) | 3 | `kitaev-2405.02434` | `approximate_algebras.tex:505-528 (displays Taylor_simple, Taylor_simple_bound, abs_sgn, and the theta display inside Proposition prop_P — ONLY the definitional displays are cited; the Proposition's claims are NOT citable and must be re-proved)` | `e7eb512a2ec2438d` | 2 | 2 |
 
 ## Project-internal packaging: hypothesis data and derived notation
 
-| # | id | label | kind | status | source | locus | sha256 | registry uses | in report |
-|---|---|---|---|---|---|---|---|---|---|
-| 32 | `def-canonical-corner-identifications` | `def:canonical-corner-identifications` | original | locked | `internal` | `PROOF-W74F-E-HCB.md §8.1; DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 4 | 4 |
-| 33 | `def-compressed-associator` | `def:compressed-associator` | original | locked | `internal` | `PROOF-W74F-E-HCB.md §3; DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 2 | 2 |
-| 34 | `def-extcb-datum` | `def:extcb-datum` | original | locked | `internal` | `DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package` | `-` | 3 | 3 |
-| 35 | `def-extended-delta-inclusion` | `def:extended-delta-inclusion` | consensus | locked | `internal` | `harmonization of approximate_algebras.tex:443-456,1477-1484 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 4 | 4 |
-| 36 | `def-four-corner-merging-datum` | `def:four-corner-merging-datum` | original | locked | `internal` | `project packaging of approximate_algebras.tex:1325-1345 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 2 | 2 |
-| 37 | `def-hcb-datum` | `def:hcb-datum` | original | locked | `internal` | `DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package` | `-` | 15 | 15 |
-| 38 | `def-positive-approximate-retract` | `def:positive-approximate-retract` | original | locked | `internal` | `project formulation transcribed from docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §§1,4` | `-` | 3 | 2 |
+| # | id | label | kind | status | statement | source check | source | locus | sha256 | registry uses | in report |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 31 | `def-canonical-corner-identifications` | `def:canonical-corner-identifications` | original | locked | shard statement | — | `internal` | `PROOF-W74F-E-HCB.md §8.1; DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 4 | 4 |
+| 32 | `def-compressed-associator` | `def:compressed-associator` | original | locked | shard statement | — | `internal` | `PROOF-W74F-E-HCB.md §3; DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 2 | 2 |
+| 33 | `def-extcb-datum` | `def:extcb-datum` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package` | `-` | 3 | 3 |
+| 34 | `def-extended-delta-inclusion` | `def:extended-delta-inclusion` | consensus | locked | shard statement | — | `internal` | `harmonization of approximate_algebras.tex:443-456,1477-1484 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 4 | 4 |
+| 35 | `def-four-corner-merging-datum` | `def:four-corner-merging-datum` | original | locked | shard statement | — | `internal` | `project packaging of approximate_algebras.tex:1325-1345 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 2 | 2 |
+| 36 | `def-hcb-datum` | `def:hcb-datum` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package` | `-` | 15 | 15 |
+| 37 | `def-positive-approximate-retract` | `def:positive-approximate-retract` | original | locked | shard statement | — | `internal` | `project formulation transcribed from docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §§1,4` | `-` | 3 | 2 |
 
-## Rendering fallbacks
+## Macro-translation table v1
 
-Blocks that did not convert cleanly are quoted byte-verbatim instead of being
-reshaped (see the generator docstring).  One bullet per affected shard:
+Every mapping in THIS table is the expansion the pinned source itself gives the macro
+(`refs/kitaev-2405.02434/approximate_algebras.tex`, sha256 prefix `e7eb512a2ec2438d`);
+the source line that defines it is quoted.  Translation changes spelling, never meaning.
 
-- `def-four-corner-merging-datum` — block quoted verbatim (math uses \eps, which report/main.tex does not define (a source-private macro?)): '**Statement.** An *amplified four-corner merging datum* cons'
+| source macro | rendered as | source line | the source's own definition |
+|---|---|---|---|
+| `\blangle` | `\bigl\langle` | 120 | `\newcommand{\blangle}{\bigl\langle}` |
+| `\Bo` | `\mathbf{B}` | 107 | `\newcommand{\Bo}{\mathbf{B}}` |
+| `\brangle` | `\bigr\rangle` | 121 | `\newcommand{\brangle}{\bigr\rangle}` |
+| `\calA` | `\mathcal{A}` | 50 | `\newcommand{\calA}{\mathcal{A}}` |
+| `\calB` | `\mathcal{B}` | 51 | `\newcommand{\calB}{\mathcal{B}}` |
+| `\calS` | `\mathcal{S}` | 68 | `\newcommand{\calS}{\mathcal{S}}` |
+| `\CC` | `\mathbb{C}` | 48 | `\newcommand{\CC}{\mathbb{C}}` |
+| `\Co` | `\mathrm{C}` | 110 | `\newcommand{\Co}{\mathrm{C}}` |
+| `\eps` | `\varepsilon` | 126 | `\newcommand{\eps}{\varepsilon}` |
+| `\Euc` | `\mathrm{E}` | 116 | `\newcommand{\Euc}{\mathrm{E}}` |
+| `\Ha` | `\mathrm{H}` | 111 | `\newcommand{\Ha}{\mathrm{H}}` |
+| `\hotimes` | `\mathbin{\hat{\otimes}}` | 85 | `\newcommand{\hotimes}{\mathbin{\hat{\otimes}}}` |
+| `\Img` | `\operatorname{Im}` | 89 | `\DeclareMathOperator{\Img}{Im}` |
+| `\ind` | `\operatorname{ind}` | 96 | `\DeclareMathOperator{\ind}{ind}` |
+| `\Ker` | `\operatorname{Ker}` | 88 | `\DeclareMathOperator{\Ker}{Ker}` |
+| `\La` | `\mathrm{L}` | 108 | `\newcommand{\La}{\mathrm{L}}` |
+| `\Ra` | `\mathrm{R}` | 109 | `\newcommand{\Ra}{\mathrm{R}}` |
+| `\RR` | `\mathbb{R}` | 47 | `\newcommand{\RR}{\mathbb{R}}` |
+| `\sgn` | `\operatorname{sgn}` | 93 | `\DeclareMathOperator{\sgn}{sgn}` |
+| `\Ta` | `\operatorname{T}` | 97 | `\DeclareMathOperator{\Ta}{T}` |
+| `\Tr` | `\operatorname{Tr}` | 92 | `\DeclareMathOperator{\Tr}{Tr}` |
+| `\ts` | `\mkern1mu` | 77 | `\newcommand{\ts}{\mkern1mu}` |
+| `\wt` | `\widetilde` | 117 | `\newcommand{\wt}{\widetilde}` |
+| `\bbraket` (2 args) | `\bigl\langle{#1},\mkern1mu{#2}\bigr\rangle` | 124 | `\newcommand*{\bbraket}[2]{\blangle{#1},\mkern1mu{#2}\brangle}  (\blangle/\brangle inlined)` |
+| `\braket` (2 args) | `\langle{#1},{#2}\rangle` | 123 | `\newcommand*{\braket}[2]{\langle{#1},{#2}\rangle}` |
+| `\Ma` (1 arg) | `\mathbf{M}_{#1}` | 118 | `\newcommand*{\Ma}[1]{\mathbf{M}_{#1}}` |
+
+### Kernel normalization (NOT source-defined; claim limited to math-mode glyph equivalence)
+
+- `\dag` -> `\dagger` --- LaTeX2e kernel: \dag = \dagger in math mode
+
+Structural rewrites: `\label{…}` dropped; `\ref{k}`/`\eqref{k}` shown as the
+source's own key in brackets (never a live `\ref`, which would dangle); display
+environments starred (labels are stripped, so a number would be un-referenceable);
+source theorem-environment delimiters dropped, opening and closing independently.
+Declared glyph-only deviations:
+
+- `\le, \ge` — the source renews these to \leqslant / \geqslant (lines 131-132); we keep the upright \le / \ge --- the same relation, this lab-book's glyph
+
+Held back in project-written prose math (report/main.tex defines these itself,
+with different, argument-taking meanings): `\Co`, `\Ha`, `\Img`, `\Ker`, `\sgn`.
+
+## Flags
+
+None: every rendered definition has a fully typeset statement.

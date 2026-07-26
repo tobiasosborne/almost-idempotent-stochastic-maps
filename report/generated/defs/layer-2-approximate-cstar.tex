@@ -9,9 +9,38 @@
 %% ---- def-column-hilbert-corner -----------------------------------------
 \hypertarget{def:column-hilbert-corner}{}%
 \begin{definition}[level-one and amplified column-Hilbert corner\normalfont{} (\texttt{def-\allowbreak{}column-\allowbreak{}hilbert-\allowbreak{}corner})]\label{def:column-hilbert-corner}
-\emph{Aliases:} column-Hilbert corner; amplified column space\par\smallskip
-\textbf{Byte-verbatim source text.}
+Let $P$ and $Q$ be $\delta$-projections in an $\varepsilon$-$C^*$ algebra. If $Q$ is one-dimensional, then $\mathcal{S}_{P,Q}$ is a Hilbert space with the inner product $\langle{\cdot},{\cdot}\rangle$ defined by the equation
+\begin{equation*}
+Y^\dagger\cdot X=\langle{Y},{X}\rangle\,\widetilde{Q}\qquad (X,Y\in\mathcal{S}_{P,Q}),
+\end{equation*}
+where $Y^\dagger\cdot X=\mathrm{C}_{Q}(Y^{\dagger}X)$ and $\widetilde{Q}=\mathrm{C}_Q(Q)$.
 
+\noindent\textbf{One-dimensional projections and the corresponding Hilbert spaces.} Lemma~\textup{[\texttt{lem\_PQ\_Hilb}]} says that if $P,Q\in\mathcal{A}$ are $\delta$-projections and $Q$ is one-dimensional, then the space $\mathcal{S}_{P,Q}$ is equipped with the Hermitian inner product given by \textup{[\texttt{1dQ\_ip}]}. The extended version of this space, $\mathbb{C}^n\otimes\mathcal{S}_{P,Q}=\mathbf{M}_{n,1}\otimes\mathcal{S}_{P,Q}$, satisfies essentially the same equation:
+\begin{equation*}
+Y^\dagger\cdot X=\langle{Y},{X}\rangle\,\widetilde{Q}\qquad (X,Y\in\mathbf{M}_{n,1}\otimes\mathcal{S}_{P,Q}),
+\end{equation*}
+where $\langle{Y},{X}\rangle=\sum_{l}\langle{[Y]_{l1}},{[X]_{l1}}\rangle$.
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.\quad\textbf{Aliases.} column-Hilbert corner; amplified column space.
+\par
+\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}1123-\allowbreak{}1128,\allowbreak{}1546-\allowbreak{}1550}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}24 (tobiasosborne,\allowbreak{} in-\allowbreak{}session sign-\allowbreak{}off:\allowbreak{} byte-\allowbreak{}match-\allowbreak{}to-\allowbreak{}source criterion for cited;\allowbreak{} delegated ratification for consensus/\allowbreak{}original).
+\par
+\textbf{Typeset from the source.} The statement above is the pinned source's own text, set by \emph{macro-translation table v1} of \texttt{scripts/gen-report-defs.py} --- spelling only, never meaning: \texttt{\textbackslash{}CC}, \texttt{\textbackslash{}Co}, \texttt{\textbackslash{}Ma}, \texttt{\textbackslash{}braket}, \texttt{\textbackslash{}calA}, \texttt{\textbackslash{}calS}, \texttt{\textbackslash{}dag}, \texttt{\textbackslash{}eps}, \texttt{\textbackslash{}wt}; display environments unnumbered (labels are stripped); source cross-reference keys shown in brackets; source theorem-environment delimiters dropped; source-internal \textbackslash{}labels dropped. The byte-verbatim source is reproduced below as the second check.
+\par
+\textbf{Used in this report by} \hyperref[lem:compcb-row-column-product]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}row-\allowbreak{}column-\allowbreak{}product}}, \hyperref[lem:hcb-column-hilbert-squared]{\texttt{lem-\allowbreak{}hcb-\allowbreak{}column-\allowbreak{}hilbert-\allowbreak{}squared}} (2 registry results import it in total; see \texttt{argument/INDEX.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}column-\allowbreak{}hilbert-\allowbreak{}corner.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
+\textbf{Status.} Draft transcription; ratification is required before locking. The
+known false unsquared display at source lines 1551-1555 is deliberately not
+part of this definition.
+
+\textbf{Provenance.} Byte-verbatim from the pinned source at the recorded loci
+and SHA256 prefix; the exclusion is required by \texttt{DESIGN-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}v3.\allowbreak{}md}
+\S{}4.1 and is consistent with \texttt{VERDICT-\allowbreak{}W74F-\allowbreak{}H-\allowbreak{}STAGE1.\allowbreak{}md}.
+\end{defnote}
+\defsourcecheckhead{Source check (byte-verbatim) --- \texttt{kitaev-\allowbreak{}2405.\allowbreak{}02434,\allowbreak{} approximate\_algebras.\allowbreak{}tex:\allowbreak{}1123-\allowbreak{}1128,\allowbreak{}1546-\allowbreak{}1550}}
 \begin{defsourcequote}
 \defsourceline{\begin{Lemma}\label{lem_PQ_Hilb}}
 \defsourceline{Let $P$ and $Q$ be $\delta$-projections in an $\eps$-$C^*$ algebra. If $Q$ is one-dimensional, then $\calS_{P,Q}$ is a Hilbert space with the inner product $\braket{\cdot}{\cdot}$ defined by the equation}
@@ -20,7 +49,6 @@
 \defsourceline{\end{equation}}
 \defsourceline{where $Y^\dag\cdot X=\Co_{Q}(Y^{\dag}X)$ and $\wt{Q}=\Co_Q(Q)$.}
 \end{defsourcequote}
-
 \begin{defsourcequote}
 \defsourceline{\noindent\textbf{One-dimensional projections and the corresponding Hilbert spaces.} Lemma~\ref{lem_PQ_Hilb} says that if $P,Q\in\calA$ are $\delta$-projections and $Q$ is one-dimensional, then the space $\calS_{P,Q}$ is equipped with the Hermitian inner product given by \eqref{1dQ_ip}. The extended version of this space, $\CC^n\otimes\calS_{P,Q}=\Ma{n,1}\otimes\calS_{P,Q}$, satisfies essentially the same equation:}
 \defsourceline{\begin{equation}\label{1dQ_ip_ext}}
@@ -29,30 +57,48 @@
 \defsourceline{where $\braket{Y}{X}=\sum_{l}\braket{[Y]_{l1}}{[X]_{l1}}$.}
 \end{defsourcequote}
 
-\textbf{Status.} Draft transcription; ratification is required before locking. The
-known false unsquared display at source lines 1551-1555 is deliberately not
-part of this definition.
-
-\textbf{Provenance.} Byte-verbatim from the pinned source at the recorded loci
-and SHA256 prefix; the exclusion is required by \texttt{DESIGN-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}v3.\allowbreak{}md}
-\S{}4.1 and is consistent with \texttt{VERDICT-\allowbreak{}W74F-\allowbreak{}H-\allowbreak{}STAGE1.\allowbreak{}md}.
-\end{definition}
-\begin{defnote}
-\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.
-\par
-\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}1123-\allowbreak{}1128,\allowbreak{}1546-\allowbreak{}1550}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}24 (tobiasosborne,\allowbreak{} in-\allowbreak{}session sign-\allowbreak{}off:\allowbreak{} byte-\allowbreak{}match-\allowbreak{}to-\allowbreak{}source criterion for cited;\allowbreak{} delegated ratification for consensus/\allowbreak{}original).
-\par
-\textbf{Used in this report by} \hyperref[lem:compcb-row-column-product]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}row-\allowbreak{}column-\allowbreak{}product}}, \hyperref[lem:hcb-column-hilbert-squared]{\texttt{lem-\allowbreak{}hcb-\allowbreak{}column-\allowbreak{}hilbert-\allowbreak{}squared}} (2 registry results import it in total; see \texttt{argument/INDEX.md}).
-\par
-\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}column-\allowbreak{}hilbert-\allowbreak{}corner.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
-\end{defnote}
-
 %% ---- def-compressed-corner ---------------------------------------------
 \hypertarget{def:compressed-corner}{}%
 \begin{definition}[compressed corner\normalfont{} (\texttt{def-\allowbreak{}compressed-\allowbreak{}corner})]\label{def:compressed-corner}
-\emph{Aliases:} compression map; compressed product; compressed unit\par\smallskip
-\textbf{Byte-verbatim source text.}
+To each pair of projections $(P,Q)$ in a $C^*$ algebra $\mathcal{B}$, one assigns the vector space $\mathcal{S}_{P,Q}=\{PXQ:\,X\in\mathcal{B}\}$. In this section, we discuss an approximate version of this construction. Recall that a $\delta$-projection in an $\varepsilon$-$C^*$ algebra $\mathcal{A}$ is a Hermitian element $P$ such that $\|P^2-P\|\le\delta$. For each pair $(P,Q)$ of $\delta$-projections, there are two slightly different maps that could be called ``compressions'': $\mathrm{L}_P\mathrm{R}_Q\colon X\mapsto P(XQ)$ and $\mathrm{R}_Q\mathrm{L}_P\colon X\mapsto (PX)Q$. We will use their symmetric combination, $\frac{1}{2}(\mathrm{L}_P\mathrm{R}_Q+\mathrm{R}_Q\mathrm{L}_P)$. It is an $O(\delta+\varepsilon)$-idempotent element of the algebra of operators acting on $\mathcal{A}$, and therefore, can be approximated by an idempotent using Proposition~\textup{[\texttt{prop\_P}]}. The \emph{compression map} thus defined,
+\begin{equation*}
+\mathrm{C}_{P,Q}\colon\mathcal{A}\to\mathcal{A},\qquad
+\mathrm{C}_{P,Q}=\theta(\mathrm{L}_P\mathrm{R}_Q+\mathrm{R}_Q\mathrm{L}_P-1),
+\end{equation*}
+satisfies the equations
+\begin{equation*}
+\mathrm{C}_{P,Q}^2=\mathrm{C}_{P,Q},\qquad\:
+\mathrm{C}_{P,Q}(X)^\dagger=\mathrm{C}_{Q,P}(X^\dagger)\quad\: (X\in\mathcal{A}),
+\end{equation*}
+and both $\|\mathrm{L}_P\mathrm{R}_Q-\mathrm{C}_{P,Q}\|$ and $\|\mathrm{R}_Q\mathrm{L}_P-\mathrm{C}_{P,Q}\|$ are bounded by $O(\delta+\varepsilon)$. The image of this map, $\mathcal{S}_{P,Q}=\operatorname{Im}\mathrm{C}_{P,Q}=\operatorname{Ker}(1-\mathrm{C}_{P,Q})$, is a closed linear subspace of $\mathcal{A}$. There is a variant of this construction where only $\mathrm{L}_P$ or only $\mathrm{R}_Q$ is applied, and one writes $\mathrm{C}_{P,1},\mathcal{S}_{P,1}$ or $\mathrm{C}_{1,Q},\mathcal{S}_{1,Q}$, respectively. (This is the same as $\mathrm{C}_{P,I}$, etc.\ if the unit is exact.)
 
+When $P=Q$, the abbreviations $\mathrm{C}_{P}$, $\mathcal{S}_P$ are used.
+
+For any triple $(P,Q,R)$ of $\delta$-projections, one defines the \emph{compressed product} between elements of the corresponding subspaces:
+\begin{equation*}
+(X,Y)\mapsto X\cdot Y\,\colon\,
+\mathcal{S}_{P,Q}\times\mathcal{S}_{Q,R}\to \mathcal{S}_{P,R},\qquad X\cdot Y=\mathrm{C}_{P,R}(XY).
+\end{equation*}
+It is close to the ambient product in $\mathcal{A}$, namely, $\|X\cdot Y-XY\|\le O(\delta+\varepsilon)\|X\|\mkern1mu\|Y\|$. If $P$ is a nonvanishing projection, the compressed product turns the Banach space $\mathcal{S}_P$ (which is closed under the involution $X\mapsto X^\dagger$) into an $O(\delta+\varepsilon)$-$C^*$ algebra with unit $\widetilde{P}=\mathrm{C}_{P}(P)$.\medskip
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.\quad\textbf{Aliases.} compression map; compressed product; compressed unit.
+\par
+\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}1054-\allowbreak{}1066,\allowbreak{}1077-\allowbreak{}1082}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}24 (tobiasosborne,\allowbreak{} in-\allowbreak{}session sign-\allowbreak{}off:\allowbreak{} byte-\allowbreak{}match-\allowbreak{}to-\allowbreak{}source criterion for cited;\allowbreak{} delegated ratification for consensus/\allowbreak{}original).
+\par
+\textbf{Typeset from the source.} The statement above is the pinned source's own text, set by \emph{macro-translation table v1} of \texttt{scripts/gen-report-defs.py} --- spelling only, never meaning: \texttt{\textbackslash{}Co}, \texttt{\textbackslash{}Img}, \texttt{\textbackslash{}Ker}, \texttt{\textbackslash{}La}, \texttt{\textbackslash{}Ra}, \texttt{\textbackslash{}calA}, \texttt{\textbackslash{}calB}, \texttt{\textbackslash{}calS}, \texttt{\textbackslash{}dag}, \texttt{\textbackslash{}eps}, \texttt{\textbackslash{}ts}, \texttt{\textbackslash{}wt}; display environments unnumbered (labels are stripped); source cross-reference keys shown in brackets; source-internal \textbackslash{}labels dropped. The byte-verbatim source is reproduced below as the second check.
+\par
+\textbf{Used in this report by} \hyperref[lem:compcb-amplified-almost-containment]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}almost-\allowbreak{}containment}}, \hyperref[lem:compcb-amplified-compression]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}compression}}, \hyperref[lem:compcb-amplified-compression-identities]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}compression-\allowbreak{}identities}}, \hyperref[lem:compcb-compressed-unit-action]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}compressed-\allowbreak{}unit-\allowbreak{}action}}, \hyperref[lem:compcb-compressed-unit-norm]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}compressed-\allowbreak{}unit-\allowbreak{}norm}}, \hyperref[lem:compcb-corner-algebra]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}corner-\allowbreak{}algebra}} and 11 further reproduced results (17 registry results import it in total; see \texttt{argument/INDEX.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}compressed-\allowbreak{}corner.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
+\textbf{Status.} Draft transcription; ratification is required before locking.
+
+\textbf{Provenance.} Byte-verbatim from the pinned source at the recorded loci
+and SHA256 prefix; provisioned by \texttt{DESIGN-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}v3.\allowbreak{}md} \S{}4.1 and admitted
+only for the safe subset by \texttt{VERDICT-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}V3.\allowbreak{}md} \S{}D.
+\end{defnote}
+\defsourcecheckhead{Source check (byte-verbatim) --- \texttt{kitaev-\allowbreak{}2405.\allowbreak{}02434,\allowbreak{} approximate\_algebras.\allowbreak{}tex:\allowbreak{}1054-\allowbreak{}1066,\allowbreak{}1077-\allowbreak{}1082}}
 \begin{defsourcequote}
 \defsourceline{To each pair of projections $(P,Q)$ in a $C^*$ algebra $\calB$, one assigns the vector space $\calS_{P,Q}=\{PXQ:\,X\in\calB\}$. In this section, we discuss an approximate version of this construction. Recall that a $\delta$-projection in an $\eps$-$C^*$ algebra $\calA$ is a Hermitian element $P$ such that $\|P^2-P\|\le\delta$. For each pair $(P,Q)$ of $\delta$-projections, there are two slightly different maps that could be called ``compressions'': $\La_P\Ra_Q\colon X\mapsto P(XQ)$ and $\Ra_Q\La_P\colon X\mapsto (PX)Q$. We will use their symmetric combination, $\frac{1}{2}(\La_P\Ra_Q+\Ra_Q\La_P)$. It is an $O(\delta+\eps)$-idempotent element of the algebra of operators acting on $\calA$, and therefore, can be approximated by an idempotent using Proposition~\ref{prop_P}. The \emph{compression map} thus defined,}
 \defsourceline{\begin{equation}}
@@ -68,7 +114,6 @@ and SHA256 prefix; the exclusion is required by \texttt{DESIGN-\allowbreak{}FUDW
 \defsourcegap
 \defsourceline{When $P=Q$, the abbreviations $\Co_{P}$, $\calS_P$ are used.}
 \end{defsourcequote}
-
 \begin{defsourcequote}
 \defsourceline{For any triple $(P,Q,R)$ of $\delta$-projections, one defines the \emph{compressed product} between elements of the corresponding subspaces:}
 \defsourceline{\begin{equation}\label{compr_prod}}
@@ -78,35 +123,43 @@ and SHA256 prefix; the exclusion is required by \texttt{DESIGN-\allowbreak{}FUDW
 \defsourceline{It is close to the ambient product in $\calA$, namely, $\|X\cdot Y-XY\|\le O(\delta+\eps)\|X\|\ts\|Y\|$. If $P$ is a nonvanishing projection, the compressed product turns the Banach space $\calS_P$ (which is closed under the involution $X\mapsto X^\dag$) into an $O(\delta+\eps)$-$C^*$ algebra with unit $\wt{P}=\Co_{P}(P)$.\medskip}
 \end{defsourcequote}
 
+%% ---- def-delta-projection ----------------------------------------------
+\hypertarget{def:delta-projection}{}%
+\begin{definition}[$\delta$-projection and nonvanishing alternative\normalfont{} (\texttt{def-\allowbreak{}delta-\allowbreak{}projection})]\label{def:delta-projection}
+A \emph{projection} in an $\varepsilon$-$C^*$ algebra $\mathcal{A}$ is a Hermitian element $P$ such that $P^2=P$. Such elements are generally hard to come by, see Remark~\textup{[\texttt{rem\_X2}]}, so will content ourselves with \emph{$\delta$-projections} for sufficiently small $\delta$. They are defined by the conditions
+\begin{equation*}
+P^\dagger=P,\qquad \|P^2-P\|\le\delta.
+\end{equation*}
+
+\begin{equation*}
+\|P\|\le O(\delta)\quad \text{or}\quad \bigl|\|P\|-1\bigr|\le O(\delta+\varepsilon).
+\end{equation*}
+A $\delta$-projection is called \emph{nonvanishing} if the second alternative holds. If $P$ is a $\delta$-projection, then $I-P$ is a $\delta'$-projection, where $\delta'=\delta$ if $\mathcal{A}$ has exact unit and $\delta'=\delta+O(\varepsilon)$ in general. A $\delta$-projection $P$ is called \emph{nontrivial} if both $P$ and $I-P$ are nonvanishing.
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.\quad\textbf{Aliases.} delta-projection; nonvanishing delta-projection.
+\par
+\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}917-\allowbreak{}920,\allowbreak{}926-\allowbreak{}929}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}24 (tobiasosborne,\allowbreak{} in-\allowbreak{}session sign-\allowbreak{}off:\allowbreak{} byte-\allowbreak{}match-\allowbreak{}to-\allowbreak{}source criterion for cited;\allowbreak{} delegated ratification for consensus/\allowbreak{}original).
+\par
+\textbf{Typeset from the source.} The statement above is the pinned source's own text, set by \emph{macro-translation table v1} of \texttt{scripts/gen-report-defs.py} --- spelling only, never meaning: \texttt{\textbackslash{}calA}, \texttt{\textbackslash{}dag}, \texttt{\textbackslash{}eps}; display environments unnumbered (labels are stripped); source cross-reference keys shown in brackets; source-internal \textbackslash{}labels dropped. The byte-verbatim source is reproduced below as the second check.
+\par
+\textbf{Used in this report by} \hyperref[conj:extcb]{\texttt{conj-\allowbreak{}extcb}}, \hyperref[conj:hcb]{\texttt{conj-\allowbreak{}hcb}}, \hyperref[lem:compcb-amplified-almost-containment]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}almost-\allowbreak{}containment}}, \hyperref[lem:compcb-amplified-compression]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}compression}}, \hyperref[lem:compcb-amplified-compression-identities]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}compression-\allowbreak{}identities}}, \hyperref[lem:compcb-compressed-unit-action]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}compressed-\allowbreak{}unit-\allowbreak{}action}} and 9 further reproduced results (15 registry results import it in total; see \texttt{argument/INDEX.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}delta-\allowbreak{}projection.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
 \textbf{Status.} Draft transcription; ratification is required before locking.
 
 \textbf{Provenance.} Byte-verbatim from the pinned source at the recorded loci
 and SHA256 prefix; provisioned by \texttt{DESIGN-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}v3.\allowbreak{}md} \S{}4.1 and admitted
 only for the safe subset by \texttt{VERDICT-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}V3.\allowbreak{}md} \S{}D.
-\end{definition}
-\begin{defnote}
-\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.
-\par
-\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}1054-\allowbreak{}1066,\allowbreak{}1077-\allowbreak{}1082}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}24 (tobiasosborne,\allowbreak{} in-\allowbreak{}session sign-\allowbreak{}off:\allowbreak{} byte-\allowbreak{}match-\allowbreak{}to-\allowbreak{}source criterion for cited;\allowbreak{} delegated ratification for consensus/\allowbreak{}original).
-\par
-\textbf{Used in this report by} \hyperref[lem:compcb-amplified-almost-containment]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}almost-\allowbreak{}containment}}, \hyperref[lem:compcb-amplified-compression]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}compression}}, \hyperref[lem:compcb-amplified-compression-identities]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}compression-\allowbreak{}identities}}, \hyperref[lem:compcb-compressed-unit-action]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}compressed-\allowbreak{}unit-\allowbreak{}action}}, \hyperref[lem:compcb-compressed-unit-norm]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}compressed-\allowbreak{}unit-\allowbreak{}norm}}, \hyperref[lem:compcb-corner-algebra]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}corner-\allowbreak{}algebra}} and 11 further reproduced results (17 registry results import it in total; see \texttt{argument/INDEX.md}).
-\par
-\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}compressed-\allowbreak{}corner.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
 \end{defnote}
-
-%% ---- def-delta-projection ----------------------------------------------
-\hypertarget{def:delta-projection}{}%
-\begin{definition}[$\delta$-projection and nonvanishing alternative\normalfont{} (\texttt{def-\allowbreak{}delta-\allowbreak{}projection})]\label{def:delta-projection}
-\emph{Aliases:} delta-projection; nonvanishing delta-projection\par\smallskip
-\textbf{Byte-verbatim source text.}
-
+\defsourcecheckhead{Source check (byte-verbatim) --- \texttt{kitaev-\allowbreak{}2405.\allowbreak{}02434,\allowbreak{} approximate\_algebras.\allowbreak{}tex:\allowbreak{}917-\allowbreak{}920,\allowbreak{}926-\allowbreak{}929}}
 \begin{defsourcequote}
 \defsourceline{A \emph{projection} in an $\eps$-$C^*$ algebra $\calA$ is a Hermitian element $P$ such that $P^2=P$. Such elements are generally hard to come by, see Remark~\ref{rem_X2}, so will content ourselves with \emph{$\delta$-projections} for sufficiently small $\delta$. They are defined by the conditions}
 \defsourceline{\begin{equation}\label{delta_P}}
 \defsourceline{P^\dag=P,\qquad \|P^2-P\|\le\delta.}
 \defsourceline{\end{equation}}
 \end{defsourcequote}
-
 \begin{defsourcequote}
 \defsourceline{\begin{equation}\label{P_alternatives}}
 \defsourceline{\|P\|\le O(\delta)\quad \text{or}\quad \bigl|\|P\|-1\bigr|\le O(\delta+\eps).}
@@ -114,28 +167,53 @@ only for the safe subset by \texttt{VERDICT-\allowbreak{}FUDW-\allowbreak{}DECOM
 \defsourceline{A $\delta$-projection is called \emph{nonvanishing} if the second alternative holds. If $P$ is a $\delta$-projection, then $I-P$ is a $\delta'$-projection, where $\delta'=\delta$ if $\calA$ has exact unit and $\delta'=\delta+O(\eps)$ in general. A $\delta$-projection $P$ is called \emph{nontrivial} if both $P$ and $I-P$ are nonvanishing.}
 \end{defsourcequote}
 
-\textbf{Status.} Draft transcription; ratification is required before locking.
-
-\textbf{Provenance.} Byte-verbatim from the pinned source at the recorded loci
-and SHA256 prefix; provisioned by \texttt{DESIGN-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}v3.\allowbreak{}md} \S{}4.1 and admitted
-only for the safe subset by \texttt{VERDICT-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}V3.\allowbreak{}md} \S{}D.
-\end{definition}
-\begin{defnote}
-\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.
-\par
-\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}917-\allowbreak{}920,\allowbreak{}926-\allowbreak{}929}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}24 (tobiasosborne,\allowbreak{} in-\allowbreak{}session sign-\allowbreak{}off:\allowbreak{} byte-\allowbreak{}match-\allowbreak{}to-\allowbreak{}source criterion for cited;\allowbreak{} delegated ratification for consensus/\allowbreak{}original).
-\par
-\textbf{Used in this report by} \hyperref[conj:extcb]{\texttt{conj-\allowbreak{}extcb}}, \hyperref[conj:hcb]{\texttt{conj-\allowbreak{}hcb}}, \hyperref[lem:compcb-amplified-almost-containment]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}almost-\allowbreak{}containment}}, \hyperref[lem:compcb-amplified-compression]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}compression}}, \hyperref[lem:compcb-amplified-compression-identities]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}compression-\allowbreak{}identities}}, \hyperref[lem:compcb-compressed-unit-action]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}compressed-\allowbreak{}unit-\allowbreak{}action}} and 9 further reproduced results (15 registry results import it in total; see \texttt{argument/INDEX.md}).
-\par
-\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}delta-\allowbreak{}projection.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
-\end{defnote}
-
 %% ---- def-epsilon-cstar-algebra -----------------------------------------
 \hypertarget{def:epsilon-cstar-algebra}{}%
 \begin{definition}[$\varepsilon$-$C^{*}$-algebra\normalfont{} (\texttt{def-\allowbreak{}epsilon-\allowbreak{}cstar-\allowbreak{}algebra})]\label{def:epsilon-cstar-algebra}
-\emph{Aliases:} epsilon-$C^{*}$-algebra; approximate $C^{*}$-algebra\par\smallskip
-\textbf{Byte-verbatim source text.}
+An \emph{$\varepsilon$-Banach algebra} is a Banach space $\mathcal{A}$ endowed with a bilinear multiplication map $\mathcal{A}\times \mathcal{A}\to \mathcal{A}$ such that
+\begin{alignat*}{2}
+\|XY\| &\le (1+\varepsilon)\mkern1mu\|X\|\mkern1mu\|Y\|\qquad &&(X,Y\in \mathcal{A}),\\[2pt]
+\|(XY)Z-X(YZ)\| &\le \varepsilon\mkern1mu\|X\|\mkern1mu\|Y\|\mkern1mu\|Z\|\qquad &&(X,Y,Z\in \mathcal{A}).
+\end{alignat*}
+Such an algebra is called \emph{$\varepsilon'$-commutative} if
+\begin{equation*}
+\|XY-YX\|\le \varepsilon'\mkern1mu\|X\|\mkern1mu\|Y\|\qquad (X,Y\in \mathcal{A}).
+\end{equation*}
+A \emph{$*\varepsilon$-Banach algebra} is a complex $\varepsilon$-Banach algebra with a conjugate linear involution $X\mapsto X^\dagger$ satisfying the equations
+\begin{equation*}
+\|X^\dagger\|=\|X\|,\qquad (XY)^\dagger=Y^\dagger X^\dagger\qquad (X,Y\in \mathcal{A}).
+\end{equation*}
+An \emph{$\varepsilon$-$C^*$ algebra} is one with this additional property:
+\begin{equation*}
+\|X^{\dagger}X\|\ge (1-\varepsilon)\mkern1mu\|X\|^{2}\qquad (X\in \mathcal{A}).
+\end{equation*}
+(A bound from the other side, $\|X^{\dagger}X\|\le (1+\varepsilon)\mkern1mu\|X\|^{2}$, follows from \textup{[\texttt{ax\_prodnorm}]} and \textup{[\texttt{ax\_*}]}.) We assume that all algebras are unital. The unit element $I\in\mathcal{A}$ should satisfy the approximate or exact conditions
+\begin{alignat*}{4}
+\|XI&-X\|\le\varepsilon\mkern1mu\|X\|,\qquad &\|IX&-X\|\le\varepsilon\mkern1mu\|X\|,\qquad
+&\bigl|\|I\|&-1\bigr|\le\varepsilon\qquad &&\text{(by default)},\quad \text{or}\\[2pt]
+XI&=X,\qquad &IX&=X,\qquad
+&\|I\|&=1\qquad &&\text{(if specified)}.
+\end{alignat*}
+If the involution is defined, one also requires that $I^\dagger=I$.
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.\quad\textbf{Aliases.} epsilon-$C^{*}$-algebra; approximate $C^{*}$-algebra.
+\par
+\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}407-\allowbreak{}440}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}24 (tobiasosborne,\allowbreak{} in-\allowbreak{}session sign-\allowbreak{}off:\allowbreak{} byte-\allowbreak{}match-\allowbreak{}to-\allowbreak{}source criterion for cited;\allowbreak{} delegated ratification for consensus/\allowbreak{}original).
+\par
+\textbf{Typeset from the source.} The statement above is the pinned source's own text, set by \emph{macro-translation table v1} of \texttt{scripts/gen-report-defs.py} --- spelling only, never meaning: \texttt{\textbackslash{}calA}, \texttt{\textbackslash{}dag}, \texttt{\textbackslash{}eps}, \texttt{\textbackslash{}ts}; display environments unnumbered (labels are stripped); source cross-reference keys shown in brackets; source theorem-environment delimiters dropped; source-internal \textbackslash{}labels dropped. The byte-verbatim source is reproduced below as the second check.
+\par
+\textbf{Used in this report by} \hyperref[lem:extcb-corner-dimension-additivity]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}corner-\allowbreak{}dimension-\allowbreak{}additivity}}, \hyperref[lem:extcb-one-dimensional-corner-dimension]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}one-\allowbreak{}dimensional-\allowbreak{}corner-\allowbreak{}dimension}}, \hyperref[lem:extcb-one-dimensional-product]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}one-\allowbreak{}dimensional-\allowbreak{}product}}, \hyperref[lem:stage1-exact-unit-rectification]{\texttt{lem-\allowbreak{}stage1-\allowbreak{}exact-\allowbreak{}unit-\allowbreak{}rectification}} (4 registry results import it in total; see \texttt{argument/INDEX.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}epsilon-\allowbreak{}cstar-\allowbreak{}algebra.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
+\textbf{Status.} Draft transcription; ratification is required before locking.
 
+\textbf{Provenance.} Byte-verbatim from the pinned source at the recorded locus
+and SHA256 prefix; provisioned by \texttt{DESIGN-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}v3.\allowbreak{}md} \S{}4.1 and admitted
+only for the safe subset by \texttt{VERDICT-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}V3.\allowbreak{}md} \S{}D.
+\end{defnote}
+\defsourcecheckhead{Source check (byte-verbatim) --- \texttt{kitaev-\allowbreak{}2405.\allowbreak{}02434,\allowbreak{} approximate\_algebras.\allowbreak{}tex:\allowbreak{}407-\allowbreak{}440}}
 \begin{defsourcequote}
 \defsourceline{\begin{Definition}}
 \defsourceline{An \emph{$\eps$-Banach algebra} is a Banach space $\calA$ endowed with a bilinear multiplication map $\calA\times \calA\to \calA$ such that}
@@ -173,54 +251,65 @@ only for the safe subset by \texttt{VERDICT-\allowbreak{}FUDW-\allowbreak{}DECOM
 \defsourceline{\end{Definition}}
 \end{defsourcequote}
 
-\textbf{Status.} Draft transcription; ratification is required before locking.
-
-\textbf{Provenance.} Byte-verbatim from the pinned source at the recorded locus
-and SHA256 prefix; provisioned by \texttt{DESIGN-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}v3.\allowbreak{}md} \S{}4.1 and admitted
-only for the safe subset by \texttt{VERDICT-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}V3.\allowbreak{}md} \S{}D.
-\end{definition}
-\begin{defnote}
-\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.
-\par
-\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}407-\allowbreak{}440}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}24 (tobiasosborne,\allowbreak{} in-\allowbreak{}session sign-\allowbreak{}off:\allowbreak{} byte-\allowbreak{}match-\allowbreak{}to-\allowbreak{}source criterion for cited;\allowbreak{} delegated ratification for consensus/\allowbreak{}original).
-\par
-\textbf{Used in this report by} \hyperref[lem:extcb-corner-dimension-additivity]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}corner-\allowbreak{}dimension-\allowbreak{}additivity}}, \hyperref[lem:extcb-one-dimensional-corner-dimension]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}one-\allowbreak{}dimensional-\allowbreak{}corner-\allowbreak{}dimension}}, \hyperref[lem:extcb-one-dimensional-product]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}one-\allowbreak{}dimensional-\allowbreak{}product}}, \hyperref[lem:stage1-exact-unit-rectification]{\texttt{lem-\allowbreak{}stage1-\allowbreak{}exact-\allowbreak{}unit-\allowbreak{}rectification}} (4 registry results import it in total; see \texttt{argument/INDEX.md}).
-\par
-\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}epsilon-\allowbreak{}cstar-\allowbreak{}algebra.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
-\end{defnote}
-
 %% ---- def-extended-epsilon-cstar-algebra --------------------------------
 \hypertarget{def:extended-epsilon-cstar-algebra}{}%
 \begin{definition}[extended $\varepsilon$-$C^{*}$-algebra\normalfont{} (\texttt{def-\allowbreak{}extended-\allowbreak{}epsilon-\allowbreak{}cstar-\allowbreak{}algebra})]\label{def:extended-epsilon-cstar-algebra}
-\emph{Aliases:} extended epsilon-$C^{*}$-algebra; extended approximate $C^{*}$-algebra\par\smallskip
-\textbf{Byte-verbatim source text.}
-
-\begin{defsourcequote}
-\defsourceline{An \emph{extended $\eps$-$C^*$ algebra} is a complete self-adjoint operator space $\calA$ with a multiplication and a unit that make each space $\Ma{n}\otimes\calA$ into an $\eps$-$C^*$ algebra. An \emph{extended $\delta$-homomorphism} is a linear map $v\colon\calA'\to\calA''$ such that for each $n$, the map $1_{\Ma{n}}\otimes v\colon \Ma{n}\otimes\calA'\to\Ma{n}\otimes\calA''$ is a $\delta$-homomorphism.}
-\end{defsourcequote}
-
+An \emph{extended $\varepsilon$-$C^*$ algebra} is a complete self-adjoint operator space $\mathcal{A}$ with a multiplication and a unit that make each space $\mathbf{M}_{n}\otimes\mathcal{A}$ into an $\varepsilon$-$C^*$ algebra. An \emph{extended $\delta$-homomorphism} is a linear map $v\colon\mathcal{A}'\to\mathcal{A}''$ such that for each $n$, the map $1_{\mathbf{M}_{n}}\otimes v\colon \mathbf{M}_{n}\otimes\mathcal{A}'\to\mathbf{M}_{n}\otimes\mathcal{A}''$ is a $\delta$-homomorphism.
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.\quad\textbf{Aliases.} extended epsilon-$C^{*}$-algebra; extended approximate $C^{*}$-algebra.
+\par
+\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}1477-\allowbreak{}1479}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}.
+\par
+\textbf{Typeset from the source.} The statement above is the pinned source's own text, set by \emph{macro-translation table v1} of \texttt{scripts/gen-report-defs.py} --- spelling only, never meaning: \texttt{\textbackslash{}Ma}, \texttt{\textbackslash{}calA}, \texttt{\textbackslash{}eps}. The byte-verbatim source is reproduced below as the second check.
+\par
+\textbf{Used in this report by} \hyperref[conj:extcb]{\texttt{conj-\allowbreak{}extcb}}, \hyperref[conj:hcb]{\texttt{conj-\allowbreak{}hcb}}, \hyperref[lem:compcb-amplified-almost-containment]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}almost-\allowbreak{}containment}}, \hyperref[lem:compcb-amplified-compression]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}compression}}, \hyperref[lem:compcb-amplified-compression-identities]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}compression-\allowbreak{}identities}}, \hyperref[lem:compcb-compressed-unit-action]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}compressed-\allowbreak{}unit-\allowbreak{}action}} and 10 further reproduced results (20 registry results import it in total; see \texttt{argument/INDEX.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}extended-\allowbreak{}epsilon-\allowbreak{}cstar-\allowbreak{}algebra.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
 \textbf{Notation.} Registry contracts write the source's \texttt{\textbackslash{}(\textbackslash{}eps\textbackslash{})} as
 \texttt{\textbackslash{}(\textbackslash{}varepsilon\textbackslash{})} and \texttt{\textbackslash{}(\textbackslash{}Ma n\textbackslash{})} as \texttt{\textbackslash{}(M\_n\textbackslash{})}.
 
 \textbf{Provenance.} Byte-verbatim from the pinned source at the recorded locus and
 SHA256 prefix.  User-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).
-\end{definition}
-\begin{defnote}
-\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.
-\par
-\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}1477-\allowbreak{}1479}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}.
-\par
-\textbf{Used in this report by} \hyperref[conj:extcb]{\texttt{conj-\allowbreak{}extcb}}, \hyperref[conj:hcb]{\texttt{conj-\allowbreak{}hcb}}, \hyperref[lem:compcb-amplified-almost-containment]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}almost-\allowbreak{}containment}}, \hyperref[lem:compcb-amplified-compression]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}compression}}, \hyperref[lem:compcb-amplified-compression-identities]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplified-\allowbreak{}compression-\allowbreak{}identities}}, \hyperref[lem:compcb-compressed-unit-action]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}compressed-\allowbreak{}unit-\allowbreak{}action}} and 10 further reproduced results (20 registry results import it in total; see \texttt{argument/INDEX.md}).
-\par
-\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}extended-\allowbreak{}epsilon-\allowbreak{}cstar-\allowbreak{}algebra.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
 \end{defnote}
+\defsourcecheckhead{Source check (byte-verbatim) --- \texttt{kitaev-\allowbreak{}2405.\allowbreak{}02434,\allowbreak{} approximate\_algebras.\allowbreak{}tex:\allowbreak{}1477-\allowbreak{}1479}}
+\begin{defsourcequote}
+\defsourceline{An \emph{extended $\eps$-$C^*$ algebra} is a complete self-adjoint operator space $\calA$ with a multiplication and a unit that make each space $\Ma{n}\otimes\calA$ into an $\eps$-$C^*$ algebra. An \emph{extended $\delta$-homomorphism} is a linear map $v\colon\calA'\to\calA''$ such that for each $n$, the map $1_{\Ma{n}}\otimes v\colon \Ma{n}\otimes\calA'\to\Ma{n}\otimes\calA''$ is a $\delta$-homomorphism.}
+\end{defsourcequote}
 
 %% ---- def-fd-cstar-diagonal ---------------------------------------------
 \hypertarget{def:fd-cstar-diagonal}{}%
 \begin{definition}[diagonal of a finite-dimensional $C^{*}$-algebra\normalfont{} (\texttt{def-\allowbreak{}fd-\allowbreak{}cstar-\allowbreak{}diagonal})]\label{def:fd-cstar-diagonal}
-\emph{Aliases:} finite-dimensional $C^{*}$-algebra diagonal; algebra diagonal\par\smallskip
-\textbf{Byte-verbatim source text.}
+For arbitrary $\tilde{D}=\sum_{j}A_j\otimes B_j\in\mathcal{B}\otimes\mathcal{B}$ and $X\in\mathcal{B}$, we write
+\begin{equation*}
+X\tilde{D}=\sum_{j}XA_j\otimes B_j,\qquad
+\tilde{D}X=\sum_{j}A_j\otimes B_jX,\qquad
+\pi(\tilde{D})=\sum_{j}A_jB_j.
+\end{equation*}
+These operations extend from $\mathcal{B}\otimes\mathcal{B}$ to $\mathcal{B}\mathbin{\hat{\otimes}}\mathcal{B}$. An element $D\in\mathcal{B}\mathbin{\hat{\otimes}}\mathcal{B}$ is called a \emph{diagonal} if
+\begin{equation*}
+XD=DX\quad\text{for all }\, X\in\mathcal{B},\qquad \pi(D)=I_\mathcal{B}.
+\end{equation*}
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.\quad\textbf{Aliases.} finite-dimensional $C^{*}$-algebra diagonal; algebra diagonal.
+\par
+\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}1233-\allowbreak{}1242}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}.
+\par
+\textbf{Typeset from the source.} The statement above is the pinned source's own text, set by \emph{macro-translation table v1} of \texttt{scripts/gen-report-defs.py} --- spelling only, never meaning: \texttt{\textbackslash{}calB}, \texttt{\textbackslash{}hotimes}; display environments unnumbered (labels are stripped). The byte-verbatim source is reproduced below as the second check.
+\par
+\textbf{Used by} 3 registry results, none of them reproduced in this report (exploration track; see \texttt{argument/INDEX.md} and \texttt{report/UNWIRED.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}fd-\allowbreak{}cstar-\allowbreak{}diagonal.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
+\textbf{Specialization.} The registry uses this definition only when
+\texttt{\textbackslash{}(\textbackslash{}mathcal B\textbackslash{})} is a finite-dimensional \texttt{\textbackslash{}(C\textasciicircum{}*\textbackslash{})}-algebra.
 
+\textbf{Provenance.} Byte-verbatim from the pinned source at the recorded locus and
+SHA256 prefix.  User-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).
+\end{defnote}
+\defsourcecheckhead{Source check (byte-verbatim) --- \texttt{kitaev-\allowbreak{}2405.\allowbreak{}02434,\allowbreak{} approximate\_algebras.\allowbreak{}tex:\allowbreak{}1233-\allowbreak{}1242}}
 \begin{defsourcequote}
 \defsourceline{For arbitrary $\tilde{D}=\sum_{j}A_j\otimes B_j\in\calB\otimes\calB$ and $X\in\calB$, we write}
 \defsourceline{\begin{equation}}
@@ -234,28 +323,39 @@ SHA256 prefix.  User-ratified and locked 2026-07-24 (tobiasosborne, in-session s
 \defsourceline{\end{equation}}
 \end{defsourcequote}
 
-\textbf{Specialization.} The registry uses this definition only when
-\texttt{\textbackslash{}(\textbackslash{}mathcal B\textbackslash{})} is a finite-dimensional \texttt{\textbackslash{}(C\textasciicircum{}*\textbackslash{})}-algebra.
-
-\textbf{Provenance.} Byte-verbatim from the pinned source at the recorded locus and
-SHA256 prefix.  User-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).
-\end{definition}
-\begin{defnote}
-\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.
-\par
-\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}1233-\allowbreak{}1242}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}.
-\par
-\textbf{Used by} 3 registry results, none of them reproduced in this report (exploration track; see \texttt{argument/INDEX.md} and \texttt{report/UNWIRED.md}).
-\par
-\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}fd-\allowbreak{}cstar-\allowbreak{}diagonal.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
-\end{defnote}
-
 %% ---- def-h-space-left-inversion ----------------------------------------
 \hypertarget{def:h-space-left-inversion}{}%
 \begin{definition}[H-space and left inversion\normalfont{} (\texttt{def-\allowbreak{}h-\allowbreak{}space-\allowbreak{}left-\allowbreak{}inversion})]\label{def:h-space-left-inversion}
-\emph{Aliases:} H-space; associative H-space; inversion map; left inversion map\par\smallskip
-\textbf{Byte-verbatim source text.}
-
+An \emph{H-space} is a topological space $M$ with basepoint
+$e$ and a continuous multiplication $\mu\colon M\times M\to M$ with $\mu(e,e)=e$
+such that $x\mapsto\mu(x,e)$ and $x\mapsto\mu(e,x)$ are each basepoint-preserving
+homotopic to the identity. It is \emph{associative} if the two triple-product maps are
+homotopic. An \emph{inversion map} is a continuous basepoint-preserving
+$\sigma\colon M\to M$ with both $x\mapsto\mu(\sigma(x),x)$ and
+$x\mapsto\mu(x,\sigma(x))$ homotopic to the constant map $e$; when only the first
+homotopy is required, $\sigma$ is a \emph{left inversion map}.
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.\quad\textbf{Aliases.} H-space; associative H-space; inversion map; left inversion map.
+\par
+\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}895-\allowbreak{}912}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: byte-\allowbreak{}match lock per definitions/\allowbreak{}README.\allowbreak{}md (cited criterion);\allowbreak{} provisioned by DESIGN-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}v4.\allowbreak{}1.\allowbreak{}md \S{}4.\allowbreak{}1 (kind "cited /\allowbreak{} lock after byte-\allowbreak{}match").
+\par
+\textbf{Used by} 1 registry result, none of them reproduced in this report (exploration track; see \texttt{argument/INDEX.md} and \texttt{report/UNWIRED.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}h-\allowbreak{}space-\allowbreak{}left-\allowbreak{}inversion.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
+\textbf{Notes / provenance.} Definition only (per the DESIGN-FUDW-DECOMP-v4.1 \S{}4.1
+register row: ``pinned TeX 895--912, definition only'') --- no claim about $\mathcal U$
+or any Stage-1 object is carried by this shard. Source typo note: the source
+writes $\mu\colon M\to M$ for the multiplication map's type where
+$\mu\colon M\times M\to M$ is meant (its uses $\mu(x,y)$ are two-argument
+throughout); the harmonised statement records the corrected type. Elisions
+\texttt{[...\allowbreak{}]} in the verbatim block skip source sentences about the specific space
+$\mathcal U$ (claims, not definition content). Used by the Stage-1 topology rows
+\texttt{lem-\allowbreak{}topology-\allowbreak{}hopf-\allowbreak{}structure} and (via fixed-point data) the Lefschetz rows; see
+\hyperref[def:lefschetz-fixed-point-data]{\texttt{def-\allowbreak{}lefschetz-\allowbreak{}fixed-\allowbreak{}point-\allowbreak{}data}}.
+\end{defnote}
+\defsourcecheckhead{Source check (byte-verbatim) --- \texttt{kitaev-\allowbreak{}2405.\allowbreak{}02434,\allowbreak{} approximate\_algebras.\allowbreak{}tex:\allowbreak{}895-\allowbreak{}912}}
 \begin{defsourcequote}
 \defsourceline{By definition, an \emph{H-space} is a topological space $M$ with a basepoint $e$ and a continuous multiplication map $\mu\colon M\to M$ such that $\mu(e,e)=e$ and}
 \defsourceline{\begin{equation}\label{H-unit}}
@@ -277,42 +377,32 @@ SHA256 prefix.  User-ratified and locked 2026-07-24 (tobiasosborne, in-session s
 \defsourceline{[...] When only the existence of that homotopy is required, $\sigma$ is called a \emph{left inversion map}.}
 \end{defsourcequote}
 
-\textbf{Statement (harmonised).} An \emph{H-space} is a topological space $M$ with basepoint
-$e$ and a continuous multiplication $\mu\colon M\times M\to M$ with $\mu(e,e)=e$
-such that $x\mapsto\mu(x,e)$ and $x\mapsto\mu(e,x)$ are each basepoint-preserving
-homotopic to the identity. It is \emph{associative} if the two triple-product maps are
-homotopic. An \emph{inversion map} is a continuous basepoint-preserving
-$\sigma\colon M\to M$ with both $x\mapsto\mu(\sigma(x),x)$ and
-$x\mapsto\mu(x,\sigma(x))$ homotopic to the constant map $e$; when only the first
-homotopy is required, $\sigma$ is a \emph{left inversion map}.
-
-\textbf{Notes / provenance.} Definition only (per the DESIGN-FUDW-DECOMP-v4.1 \S{}4.1
-register row: ``pinned TeX 895--912, definition only'') --- no claim about $\mathcal U$
-or any Stage-1 object is carried by this shard. Source typo note: the source
-writes $\mu\colon M\to M$ for the multiplication map's type where
-$\mu\colon M\times M\to M$ is meant (its uses $\mu(x,y)$ are two-argument
-throughout); the harmonised statement records the corrected type. Elisions
-\texttt{[...\allowbreak{}]} in the verbatim block skip source sentences about the specific space
-$\mathcal U$ (claims, not definition content). Used by the Stage-1 topology rows
-\texttt{lem-\allowbreak{}topology-\allowbreak{}hopf-\allowbreak{}structure} and (via fixed-point data) the Lefschetz rows; see
-\hyperref[def:lefschetz-fixed-point-data]{\texttt{def-\allowbreak{}lefschetz-\allowbreak{}fixed-\allowbreak{}point-\allowbreak{}data}}.
-\end{definition}
-\begin{defnote}
-\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.
-\par
-\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}895-\allowbreak{}912}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: byte-\allowbreak{}match lock per definitions/\allowbreak{}README.\allowbreak{}md (cited criterion);\allowbreak{} provisioned by DESIGN-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}v4.\allowbreak{}1.\allowbreak{}md \S{}4.\allowbreak{}1 (kind "cited /\allowbreak{} lock after byte-\allowbreak{}match").
-\par
-\textbf{Used by} 1 registry result, none of them reproduced in this report (exploration track; see \texttt{argument/INDEX.md} and \texttt{report/UNWIRED.md}).
-\par
-\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}h-\allowbreak{}space-\allowbreak{}left-\allowbreak{}inversion.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
-\end{defnote}
-
 %% ---- def-ha-map --------------------------------------------------------
 \hypertarget{def:ha-map}{}%
 \begin{definition}[Ha-map\normalfont{} (\texttt{def-\allowbreak{}ha-\allowbreak{}map})]\label{def:ha-map}
-\emph{Aliases:} Ha map; Kitaev Ha-map\par\smallskip
-\textbf{Byte-verbatim source text.}
+Let $Q$ be a one-dimensional $\delta$-projection in an $\varepsilon$-$C^*$ algebra $\mathcal{A}$. For any $\delta$-projections $P,R\in\mathcal{A}$, we define a map $\mathrm{H}^{Q}_{P,R}\colon\mathcal{S}_{P,R}\to\mathbf{B}(\mathcal{S}_{R,Q},\mathcal{S}_{P,Q})$. (Here $\mathbf{B}(\mathcal{S}_{R,Q},\mathcal{S}_{P,Q})$ is the space of bounded linear maps from $\mathcal{S}_{R,Q}$ to $\mathcal{S}_{P,Q}$ with the norm induced by the Euclidean norm $\|X\|_\mathrm{E}=\sqrt{\langle{X},{X}\rangle}$. Due to inequality \textup{[\texttt{1dQ\_ip\_norm}]}, the latter is equal to $\|X\|$ up to a $1\pm O(\varepsilon+\delta)$ factor.) For each $Z\in\mathcal{S}_{P,R}$ and $X\in\mathcal{S}_{R,Q}$, the element $\mathrm{H}^{Q}_{P,R}(Z)(X)\in\mathcal{S}_{P,Q}$ is defined by the condition
+\begin{equation*}
+(Y^\dagger\cdot Z)\cdot X+Y^\dagger\cdot(Z\cdot X)
+=2\,\bigl\langle{Y},\mkern1mu{\mathrm{H}^{Q}_{P,R}(Z)(X)}\bigr\rangle\,\widetilde{Q}\quad \text{for all }\,Y\in\mathcal{S}_{P,Q}.
+\end{equation*}
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.\quad\textbf{Aliases.} Ha map; Kitaev Ha-map.
+\par
+\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}1146-\allowbreak{}1149}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}.
+\par
+\textbf{Typeset from the source.} The statement above is the pinned source's own text, set by \emph{macro-translation table v1} of \texttt{scripts/gen-report-defs.py} --- spelling only, never meaning: \texttt{\textbackslash{}Bo}, \texttt{\textbackslash{}Euc}, \texttt{\textbackslash{}Ha}, \texttt{\textbackslash{}bbraket}, \texttt{\textbackslash{}braket}, \texttt{\textbackslash{}calA}, \texttt{\textbackslash{}calS}, \texttt{\textbackslash{}dag}, \texttt{\textbackslash{}eps}, \texttt{\textbackslash{}wt}; display environments unnumbered (labels are stripped); source cross-reference keys shown in brackets; source-internal \textbackslash{}labels dropped. The byte-verbatim source is reproduced below as the second check.
+\par
+\textbf{Used in this report by} \hyperref[conj:extcb]{\texttt{conj-\allowbreak{}extcb}}, \hyperref[conj:hcb]{\texttt{conj-\allowbreak{}hcb}}, \hyperref[lem:hcb1-column-action]{\texttt{lem-\allowbreak{}hcb1-\allowbreak{}column-\allowbreak{}action}}, \hyperref[lem:hcb1-variational-identity]{\texttt{lem-\allowbreak{}hcb1-\allowbreak{}variational-\allowbreak{}identity}}, \hyperref[lem:hcb2-amplified-adjointness]{\texttt{lem-\allowbreak{}hcb2-\allowbreak{}amplified-\allowbreak{}adjointness}}, \hyperref[lem:hcb2-product-defect]{\texttt{lem-\allowbreak{}hcb2-\allowbreak{}product-\allowbreak{}defect}} and 7 further reproduced results (13 registry results import it in total; see \texttt{argument/INDEX.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}ha-\allowbreak{}map.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
+\textbf{Notation.} Registry contracts use \texttt{Ha} for the source macro \texttt{\textbackslash{}(\textbackslash{}Ha\textbackslash{})}.
 
+\textbf{Provenance.} Byte-verbatim from the pinned source at the recorded locus and
+SHA256 prefix.  User-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).
+\end{defnote}
+\defsourcecheckhead{Source check (byte-verbatim) --- \texttt{kitaev-\allowbreak{}2405.\allowbreak{}02434,\allowbreak{} approximate\_algebras.\allowbreak{}tex:\allowbreak{}1146-\allowbreak{}1149}}
 \begin{defsourcequote}
 \defsourceline{Let $Q$ be a one-dimensional $\delta$-projection in an $\eps$-$C^*$ algebra $\calA$. For any $\delta$-projections $P,R\in\calA$, we define a map $\Ha^{Q}_{P,R}\colon\calS_{P,R}\to\Bo(\calS_{R,Q},\calS_{P,Q})$. (Here $\Bo(\calS_{R,Q},\calS_{P,Q})$ is the space of bounded linear maps from $\calS_{R,Q}$ to $\calS_{P,Q}$ with the norm induced by the Euclidean norm $\|X\|_\Euc=\sqrt{\braket{X}{X}}$. Due to inequality \eqref{1dQ_ip_norm}, the latter is equal to $\|X\|$ up to a $1\pm O(\eps+\delta)$ factor.) For each $Z\in\calS_{P,R}$ and $X\in\calS_{R,Q}$, the element $\Ha^{Q}_{P,R}(Z)(X)\in\calS_{P,Q}$ is defined by the condition}
 \defsourceline{\begin{equation}\label{Ha_def}}
@@ -321,27 +411,37 @@ $\mathcal U$ (claims, not definition content). Used by the Stage-1 topology rows
 \defsourceline{\end{equation}}
 \end{defsourcequote}
 
-\textbf{Notation.} Registry contracts use \texttt{Ha} for the source macro \texttt{\textbackslash{}(\textbackslash{}Ha\textbackslash{})}.
-
-\textbf{Provenance.} Byte-verbatim from the pinned source at the recorded locus and
-SHA256 prefix.  User-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).
-\end{definition}
-\begin{defnote}
-\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.
-\par
-\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}1146-\allowbreak{}1149}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}.
-\par
-\textbf{Used in this report by} \hyperref[conj:extcb]{\texttt{conj-\allowbreak{}extcb}}, \hyperref[conj:hcb]{\texttt{conj-\allowbreak{}hcb}}, \hyperref[lem:hcb1-column-action]{\texttt{lem-\allowbreak{}hcb1-\allowbreak{}column-\allowbreak{}action}}, \hyperref[lem:hcb1-variational-identity]{\texttt{lem-\allowbreak{}hcb1-\allowbreak{}variational-\allowbreak{}identity}}, \hyperref[lem:hcb2-amplified-adjointness]{\texttt{lem-\allowbreak{}hcb2-\allowbreak{}amplified-\allowbreak{}adjointness}}, \hyperref[lem:hcb2-product-defect]{\texttt{lem-\allowbreak{}hcb2-\allowbreak{}product-\allowbreak{}defect}} and 7 further reproduced results (13 registry results import it in total; see \texttt{argument/INDEX.md}).
-\par
-\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}ha-\allowbreak{}map.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
-\end{defnote}
-
 %% ---- def-lefschetz-fixed-point-data ------------------------------------
 \hypertarget{def:lefschetz-fixed-point-data}{}%
 \begin{definition}[Lefschetz number and local fixed-point index\normalfont{} (\texttt{def-\allowbreak{}lefschetz-\allowbreak{}fixed-\allowbreak{}point-\allowbreak{}data})]\label{def:lefschetz-fixed-point-data}
-\emph{Aliases:} Lefschetz number; fixed point index; fixed-point index; ind(f,x); Lambda(f)\par\smallskip
-\textbf{Byte-verbatim source text.}
-
+For a smooth self-map $f$ of a compact orientable
+manifold $M$: at a fixed point $x$ with $\det(1-f'(x))\ne0$ (where
+$f'(x)\colon T_xM\to T_xM$ is the differential), the \emph{fixed point index} is
+$\operatorname{ind}(f,x)=\operatorname{sgn}\det(1-f'(x))$; the \emph{Lefschetz number}
+is $\Lambda(f)=\sum_k(-1)^k\operatorname{Tr}f^{*k}$, where
+$f^{*k}\colon H^k(M;\mathbb R)\to H^k(M;\mathbb R)$ is the induced map on real
+cohomology.
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.\quad\textbf{Aliases.} Lefschetz number; fixed point index; fixed-point index; ind(f,x); Lambda(f).
+\par
+\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}961-\allowbreak{}967}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: byte-\allowbreak{}match lock per definitions/\allowbreak{}README.\allowbreak{}md (cited criterion);\allowbreak{} provisioned by DESIGN-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}v4.\allowbreak{}1.\allowbreak{}md \S{}4.\allowbreak{}1 (kind "cited /\allowbreak{} lock after byte-\allowbreak{}match").
+\par
+\textbf{Used by} 2 registry results, none of them reproduced in this report (exploration track; see \texttt{argument/INDEX.md} and \texttt{report/UNWIRED.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}lefschetz-\allowbreak{}fixed-\allowbreak{}point-\allowbreak{}data.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
+\textbf{Notes / provenance.} Definitions only (per the DESIGN-FUDW-DECOMP-v4.1 \S{}4.1
+register row: ``pinned TeX 957--967, definitions only''): this shard carries the two
+displayed definitions and NO theorem content --- in particular it does not assert
+the Lefschetz--Hopf identity $\sum_{x\in\operatorname{Fix}(f)}\operatorname{ind}(f,x)=\Lambda(f)$
+(that is the separate result row \texttt{lem-\allowbreak{}topology-\allowbreak{}lefschetz-\allowbreak{}hopf}, to be \texttt{cited}
+from Arkowitz--Brown), nor the index-sign theorem (\texttt{lem-\allowbreak{}topology-\allowbreak{}local-\allowbreak{}index-\allowbreak{}sign},
+Granas--Dugundji). The source's index formula is stated in the nondegenerate
+($\det\ne0$) smooth case; the general topological index the theorem rows use is
+the standard one in their own sources. See \hyperref[def:h-space-left-inversion]{\texttt{def-\allowbreak{}h-\allowbreak{}space-\allowbreak{}left-\allowbreak{}inversion}}.
+\end{defnote}
+\defsourcecheckhead{Source check (byte-verbatim) --- \texttt{kitaev-\allowbreak{}2405.\allowbreak{}02434,\allowbreak{} approximate\_algebras.\allowbreak{}tex:\allowbreak{}961-\allowbreak{}967}}
 \begin{defsourcequote}
 \defsourceline{The \emph{fixed point index} $\ind(f,x)$ and the \emph{Lefschetz number} $\Lambda(f)$ are defined as follows:}
 \defsourceline{\begin{alignat}{2}}
@@ -352,118 +452,101 @@ SHA256 prefix.  User-ratified and locked 2026-07-24 (tobiasosborne, in-session s
 \defsourceline{\end{alignat}}
 \end{defsourcequote}
 
-\textbf{Statement (harmonised).} For a smooth self-map $f$ of a compact orientable
-manifold $M$: at a fixed point $x$ with $\det(1-f'(x))\ne0$ (where
-$f'(x)\colon T_xM\to T_xM$ is the differential), the \emph{fixed point index} is
-$\operatorname{ind}(f,x)=\operatorname{sgn}\det(1-f'(x))$; the \emph{Lefschetz number}
-is $\Lambda(f)=\sum_k(-1)^k\operatorname{Tr}f^{*k}$, where
-$f^{*k}\colon H^k(M;\mathbb R)\to H^k(M;\mathbb R)$ is the induced map on real
-cohomology.
-
-\textbf{Notes / provenance.} Definitions only (per the DESIGN-FUDW-DECOMP-v4.1 \S{}4.1
-register row: ``pinned TeX 957--967, definitions only''): this shard carries the two
-displayed definitions and NO theorem content --- in particular it does not assert
-the Lefschetz--Hopf identity $\sum_{x\in\operatorname{Fix}(f)}\operatorname{ind}(f,x)=\Lambda(f)$
-(that is the separate result row \texttt{lem-\allowbreak{}topology-\allowbreak{}lefschetz-\allowbreak{}hopf}, to be \texttt{cited}
-from Arkowitz--Brown), nor the index-sign theorem (\texttt{lem-\allowbreak{}topology-\allowbreak{}local-\allowbreak{}index-\allowbreak{}sign},
-Granas--Dugundji). The source's index formula is stated in the nondegenerate
-($\det\ne0$) smooth case; the general topological index the theorem rows use is
-the standard one in their own sources. See \hyperref[def:h-space-left-inversion]{\texttt{def-\allowbreak{}h-\allowbreak{}space-\allowbreak{}left-\allowbreak{}inversion}}.
-\end{definition}
-\begin{defnote}
-\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.
-\par
-\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}961-\allowbreak{}967}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: byte-\allowbreak{}match lock per definitions/\allowbreak{}README.\allowbreak{}md (cited criterion);\allowbreak{} provisioned by DESIGN-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}v4.\allowbreak{}1.\allowbreak{}md \S{}4.\allowbreak{}1 (kind "cited /\allowbreak{} lock after byte-\allowbreak{}match").
-\par
-\textbf{Used by} 2 registry results, none of them reproduced in this report (exploration track; see \texttt{argument/INDEX.md} and \texttt{report/UNWIRED.md}).
-\par
-\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}lefschetz-\allowbreak{}fixed-\allowbreak{}point-\allowbreak{}data.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
-\end{defnote}
-
 %% ---- def-one-dimensional-delta-projection ------------------------------
 \hypertarget{def:one-dimensional-delta-projection}{}%
 \begin{definition}[one-dimensional $\delta$-projection and equivalence\normalfont{} (\texttt{def-\allowbreak{}one-\allowbreak{}dimensional-\allowbreak{}delta-\allowbreak{}projection})]\label{def:one-dimensional-delta-projection}
-\emph{Aliases:} one-dimensional delta-projection; equivalent delta-projections\par\smallskip
-\textbf{Byte-verbatim source text.}
+When $P=Q$, the abbreviations $\mathrm{C}_{P}$, $\mathcal{S}_P$ are used. It is clear that $\mathcal{S}_P=0$ if and only if $P$ is sufficiently close to $0$ as described by the first alternative in \textup{[\texttt{P\_alternatives}]}. (Recall that in the opposite case, we call $P$ ``nonvanishing''.) Similarly, $\mathrm{C}_P=1$ and $\mathcal{S}_P=\mathcal{A}$ if and only if $P$ is close to $I$. If $\dim\mathcal{S}_P=1$, we say that $P$ is a \emph{one-dimensional $\delta$-projection}.
 
-\begin{defsourcequote}
-\defsourceline{When $P=Q$, the abbreviations $\Co_{P}$, $\calS_P$ are used. It is clear that $\calS_P=0$ if and only if $P$ is sufficiently close to $0$ as described by the first alternative in \eqref{P_alternatives}. (Recall that in the opposite case, we call $P$ ``nonvanishing''.) Similarly, $\Co_P=1$ and $\calS_P=\calA$ if and only if $P$ is close to $I$. If $\dim\calS_P=1$, we say that $P$ is a \emph{one-dimensional $\delta$-projection}.}
-\end{defsourcequote}
-
-\begin{defsourcequote}
-\defsourceline{One-dimensional $\delta$-projections $P$ and $Q$ are called \emph{equivalent} if $\dim\calS_{P,Q}=1$. This is indeed an equivalence relation; in particular, it is transitive due to Lemma~\ref{lem_PQR}.}
-\end{defsourcequote}
-
+One-dimensional $\delta$-projections $P$ and $Q$ are called \emph{equivalent} if $\dim\mathcal{S}_{P,Q}=1$. This is indeed an equivalence relation; in particular, it is transitive due to Lemma~\textup{[\texttt{lem\_PQR}]}.
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.\quad\textbf{Aliases.} one-dimensional delta-projection; equivalent delta-projections.
+\par
+\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}1066,\allowbreak{}1187}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}24 (tobiasosborne,\allowbreak{} in-\allowbreak{}session sign-\allowbreak{}off:\allowbreak{} byte-\allowbreak{}match-\allowbreak{}to-\allowbreak{}source criterion for cited;\allowbreak{} delegated ratification for consensus/\allowbreak{}original).
+\par
+\textbf{Typeset from the source.} The statement above is the pinned source's own text, set by \emph{macro-translation table v1} of \texttt{scripts/gen-report-defs.py} --- spelling only, never meaning: \texttt{\textbackslash{}Co}, \texttt{\textbackslash{}calA}, \texttt{\textbackslash{}calS}; source cross-reference keys shown in brackets. The byte-verbatim source is reproduced below as the second check.
+\par
+\textbf{Used in this report by} \hyperref[conj:hcb]{\texttt{conj-\allowbreak{}hcb}}, \hyperref[lem:extcb-one-dimensional-corner-dimension]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}one-\allowbreak{}dimensional-\allowbreak{}corner-\allowbreak{}dimension}}, \hyperref[lem:extcb-one-dimensional-product]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}one-\allowbreak{}dimensional-\allowbreak{}product}} (3 registry results import it in total; see \texttt{argument/INDEX.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}one-\allowbreak{}dimensional-\allowbreak{}delta-\allowbreak{}projection.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
 \textbf{Status.} Locked after the cited-definition byte-match criterion was user-ratified on 2026-07-24.
 
 \textbf{Provenance.} Byte-verbatim from the pinned source at the recorded loci
 and SHA256 prefix; provisioned by \texttt{DESIGN-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}v3.\allowbreak{}md} \S{}4.1 and admitted
 only for the safe subset by \texttt{VERDICT-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}V3.\allowbreak{}md} \S{}D.
-\end{definition}
-\begin{defnote}
-\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.
-\par
-\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}1066,\allowbreak{}1187}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}24 (tobiasosborne,\allowbreak{} in-\allowbreak{}session sign-\allowbreak{}off:\allowbreak{} byte-\allowbreak{}match-\allowbreak{}to-\allowbreak{}source criterion for cited;\allowbreak{} delegated ratification for consensus/\allowbreak{}original).
-\par
-\textbf{Used in this report by} \hyperref[conj:hcb]{\texttt{conj-\allowbreak{}hcb}}, \hyperref[lem:extcb-one-dimensional-corner-dimension]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}one-\allowbreak{}dimensional-\allowbreak{}corner-\allowbreak{}dimension}}, \hyperref[lem:extcb-one-dimensional-product]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}one-\allowbreak{}dimensional-\allowbreak{}product}} (3 registry results import it in total; see \texttt{argument/INDEX.md}).
-\par
-\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}one-\allowbreak{}dimensional-\allowbreak{}delta-\allowbreak{}projection.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
 \end{defnote}
+\defsourcecheckhead{Source check (byte-verbatim) --- \texttt{kitaev-\allowbreak{}2405.\allowbreak{}02434,\allowbreak{} approximate\_algebras.\allowbreak{}tex:\allowbreak{}1066,\allowbreak{}1187}}
+\begin{defsourcequote}
+\defsourceline{When $P=Q$, the abbreviations $\Co_{P}$, $\calS_P$ are used. It is clear that $\calS_P=0$ if and only if $P$ is sufficiently close to $0$ as described by the first alternative in \eqref{P_alternatives}. (Recall that in the opposite case, we call $P$ ``nonvanishing''.) Similarly, $\Co_P=1$ and $\calS_P=\calA$ if and only if $P$ is close to $I$. If $\dim\calS_P=1$, we say that $P$ is a \emph{one-dimensional $\delta$-projection}.}
+\end{defsourcequote}
+\begin{defsourcequote}
+\defsourceline{One-dimensional $\delta$-projections $P$ and $Q$ are called \emph{equivalent} if $\dim\calS_{P,Q}=1$. This is indeed an equivalence relation; in particular, it is transitive due to Lemma~\ref{lem_PQR}.}
+\end{defsourcequote}
 
 %% ---- def-projection-basis ----------------------------------------------
 \hypertarget{def:projection-basis}{}%
 \begin{definition}[projection basis of a finite-dimensional commutative $C^{*}$-algebra\normalfont{} (\texttt{def-\allowbreak{}projection-\allowbreak{}basis})]\label{def:projection-basis}
-\emph{Aliases:} projection basis\par\smallskip
-\textbf{Byte-verbatim source text.}
-
-\begin{defsourcequote}
-\defsourceline{The second application of Lemma~\ref{lem_merging} involves an auxiliary statement about $\delta$-projections $P_1,\dots,P_p,Q_1,\dots,Q_q$ satisfying certain conditions, which will be formulated in terms of inclusions of finite-dimensional commutative $C^*$ algebras. Such an algebra $\calB$ is described by a \emph{projection basis} $\{\Pi_1,\dots,\Pi_n\}\subseteq\calB$ such that $\Pi_j^\dag=\Pi_j$,\, $\Pi_j\Pi_k=\delta_{jk}\Pi_k$, and $\sum_{j=1}^{n}\Pi_j=I$.}
-\end{defsourcequote}
-
+The second application of Lemma~\textup{[\texttt{lem\_merging}]} involves an auxiliary statement about $\delta$-projections $P_1,\dots,P_p,Q_1,\dots,Q_q$ satisfying certain conditions, which will be formulated in terms of inclusions of finite-dimensional commutative $C^*$ algebras. Such an algebra $\mathcal{B}$ is described by a \emph{projection basis} $\{\Pi_1,\dots,\Pi_n\}\subseteq\mathcal{B}$ such that $\Pi_j^\dagger=\Pi_j$,\, $\Pi_j\Pi_k=\delta_{jk}\Pi_k$, and $\sum_{j=1}^{n}\Pi_j=I$.
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.\quad\textbf{Aliases.} projection basis.
+\par
+\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}1361}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}24 (tobiasosborne,\allowbreak{} in-\allowbreak{}session sign-\allowbreak{}off:\allowbreak{} byte-\allowbreak{}match-\allowbreak{}to-\allowbreak{}source criterion for cited;\allowbreak{} delegated ratification for consensus/\allowbreak{}original).
+\par
+\textbf{Typeset from the source.} The statement above is the pinned source's own text, set by \emph{macro-translation table v1} of \texttt{scripts/gen-report-defs.py} --- spelling only, never meaning: \texttt{\textbackslash{}calB}, \texttt{\textbackslash{}dag}; source cross-reference keys shown in brackets. The byte-verbatim source is reproduced below as the second check.
+\par
+\textbf{Used in this report by} \hyperref[lem:extcb-corner-dimension-additivity]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}corner-\allowbreak{}dimension-\allowbreak{}additivity}}, \hyperref[lem:extcb1-cross-corner-dimension]{\texttt{lem-\allowbreak{}extcb1-\allowbreak{}cross-\allowbreak{}corner-\allowbreak{}dimension}} (2 registry results import it in total; see \texttt{argument/INDEX.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}projection-\allowbreak{}basis.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
 \textbf{Status.} Draft transcription; ratification is required before locking.
 
 \textbf{Provenance.} Byte-verbatim from the pinned source at the recorded locus
 and SHA256 prefix; provisioned by \texttt{DESIGN-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}v3.\allowbreak{}md} \S{}4.1 and admitted
 only for the safe subset by \texttt{VERDICT-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}V3.\allowbreak{}md} \S{}D.
-\end{definition}
-\begin{defnote}
-\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: locked}.
-\par
-\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}1361}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}; record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}24 (tobiasosborne,\allowbreak{} in-\allowbreak{}session sign-\allowbreak{}off:\allowbreak{} byte-\allowbreak{}match-\allowbreak{}to-\allowbreak{}source criterion for cited;\allowbreak{} delegated ratification for consensus/\allowbreak{}original).
-\par
-\textbf{Used in this report by} \hyperref[lem:extcb-corner-dimension-additivity]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}corner-\allowbreak{}dimension-\allowbreak{}additivity}}, \hyperref[lem:extcb1-cross-corner-dimension]{\texttt{lem-\allowbreak{}extcb1-\allowbreak{}cross-\allowbreak{}corner-\allowbreak{}dimension}} (2 registry results import it in total; see \texttt{argument/INDEX.md}).
-\par
-\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}projection-\allowbreak{}basis.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
 \end{defnote}
+\defsourcecheckhead{Source check (byte-verbatim) --- \texttt{kitaev-\allowbreak{}2405.\allowbreak{}02434,\allowbreak{} approximate\_algebras.\allowbreak{}tex:\allowbreak{}1361}}
+\begin{defsourcequote}
+\defsourceline{The second application of Lemma~\ref{lem_merging} involves an auxiliary statement about $\delta$-projections $P_1,\dots,P_p,Q_1,\dots,Q_q$ satisfying certain conditions, which will be formulated in terms of inclusions of finite-dimensional commutative $C^*$ algebras. Such an algebra $\calB$ is described by a \emph{projection basis} $\{\Pi_1,\dots,\Pi_n\}\subseteq\calB$ such that $\Pi_j^\dag=\Pi_j$,\, $\Pi_j\Pi_k=\delta_{jk}\Pi_k$, and $\sum_{j=1}^{n}\Pi_j=I$.}
+\end{defsourcequote}
 
 %% ---- def-theta-idempotent-approximation --------------------------------
 \hypertarget{def:theta-idempotent-approximation}{}%
 \begin{definition}[theta idempotent-approximation map\normalfont{} (\texttt{def-\allowbreak{}theta-\allowbreak{}idempotent-\allowbreak{}approximation})]\label{def:theta-idempotent-approximation}
-\emph{Aliases:} theta map; functional-calculus idempotent approximation\par\smallskip
-\textbf{Byte-verbatim source text.}
-
 Power-series functional calculus (tex:505-510):
 
-\begin{defsourcequote}
-\defsourceline{f(X)=a_0I+\sum_{n=1}^{\infty}a_n(X-x_0I)^n\quad\:}
-\defsourceline{\text{if }\, \|X-x_0I\|<r,\\}
-\defsourceline{\|f(X)-f(x_0I)\|\le \sum_{n=1}^{\infty}|a_n|\ts\|X-x_0I\|^n.}
-\end{defsourcequote}
+\begin{gather*}
+f(X)=a_0I+\sum_{n=1}^{\infty}a_n(X-x_0I)^n\quad\:
+\text{if }\, \|X-x_0I\|<r,\\
+\|f(X)-f(x_0I)\|\le \sum_{n=1}^{\infty}|a_n|\mkern1mu\|X-x_0I\|^n.
+\end{gather*}
 
 Absolute value and sign (tex:517-520):
 
-\begin{defsourcequote}
-\defsourceline{|X|=(X^2)^{1/2},\qquad \sgn(X)=X(X^2)^{-1/2}\qquad\quad}
-\defsourceline{\bigl(\|X^2-x_0^2I\|<x_0^2\bigr).}
-\end{defsourcequote}
+\begin{gather*}
+|X|=(X^2)^{1/2},\qquad \operatorname{sgn}(X)=X(X^2)^{-1/2}\qquad\quad
+\bigl(\|X^2-x_0^2I\|<x_0^2\bigr).
+\end{gather*}
 
 The theta map (tex:527-528, the definitional display of Proposition \texttt{prop\_P}):
 
-\begin{defsourcequote}
-\defsourceline{\wt{P}=\theta(2P-I),\qquad}
-\defsourceline{\text{where}\quad \theta(X)=\frac{1}{2}\bigl(I+\sgn(X)\bigr).}
-\end{defsourcequote}
-
+\begin{gather*}
+\widetilde{P}=\theta(2P-I),\qquad
+\text{where}\quad \theta(X)=\frac{1}{2}\bigl(I+\operatorname{sgn}(X)\bigr).
+\end{gather*}
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: draft}.\quad\textbf{Aliases.} theta map; functional-calculus idempotent approximation.
+\par
+\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}505-\allowbreak{}528 (displays Taylor\_simple,\allowbreak{} Taylor\_simple\_bound,\allowbreak{} abs\_sgn,\allowbreak{} and the theta display inside Proposition prop\_P ---\allowbreak{} ONLY the definitional displays are cited;\allowbreak{} the Proposition's claims are NOT citable and must be re-\allowbreak{}proved)}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}.
+\par
+\textbf{Typeset from the source.} The statement above is the pinned source's own text, set by \emph{macro-translation table v1} of \texttt{scripts/gen-report-defs.py} --- spelling only, never meaning: \texttt{\textbackslash{}sgn}, \texttt{\textbackslash{}ts}, \texttt{\textbackslash{}wt}; the shard quotes the naked body of a source display; restored to a display environment. The byte-verbatim source is reproduced below as the second check.
+\par
+\textbf{Used in this report by} \hyperref[lem:compcb-amplification-naturality]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplification-\allowbreak{}naturality}}, \hyperref[lem:compcb-entrywise-compression-naturality]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}entrywise-\allowbreak{}compression-\allowbreak{}naturality}} (2 registry results import it in total; see \texttt{argument/INDEX.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}theta-\allowbreak{}idempotent-\allowbreak{}approximation.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
 \textbf{Scope note.} This is the map \texttt{theta} referenced by the compression-map
 display \texttt{Co\_\{P,\allowbreak{}Q\}=\textbackslash{}theta(\textbackslash{}La\_P\textbackslash{}Ra\_Q+\textbackslash{}Ra\_Q\textbackslash{}La\_P-\allowbreak{}1)} in
 \hyperref[def:compressed-corner]{\texttt{def-\allowbreak{}compressed-\allowbreak{}corner}} (tex:1057). The neighbouring Proposition's
@@ -473,13 +556,18 @@ not definitions --- they enter the registry only as re-proved results.
 \textbf{Ratification.} Draft pending recorded sign-off; expected to lock under the
 user's recorded byte-match criterion (2026-07-24: ``if they match the source
 then they are valid'').
-\end{definition}
-\begin{defnote}
-\textbf{Kind.} cited (byte-matched to a pinned source under \texttt{refs/}); \texttt{status: draft}.
-\par
-\textbf{Provenance.} \texttt{source: kitaev-\allowbreak{}2405.\allowbreak{}02434}; locus \texttt{approximate\_algebras.\allowbreak{}tex:\allowbreak{}505-\allowbreak{}528 (displays Taylor\_simple,\allowbreak{} Taylor\_simple\_bound,\allowbreak{} abs\_sgn,\allowbreak{} and the theta display inside Proposition prop\_P ---\allowbreak{} ONLY the definitional displays are cited;\allowbreak{} the Proposition's claims are NOT citable and must be re-\allowbreak{}proved)}; \textsc{sha256} prefix \texttt{e7eb512a2ec2438d}.
-\par
-\textbf{Used in this report by} \hyperref[lem:compcb-amplification-naturality]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}amplification-\allowbreak{}naturality}}, \hyperref[lem:compcb-entrywise-compression-naturality]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}entrywise-\allowbreak{}compression-\allowbreak{}naturality}} (2 registry results import it in total; see \texttt{argument/INDEX.md}).
-\par
-\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}theta-\allowbreak{}idempotent-\allowbreak{}approximation.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
 \end{defnote}
+\defsourcecheckhead{Source check (byte-verbatim) --- \texttt{kitaev-\allowbreak{}2405.\allowbreak{}02434,\allowbreak{} approximate\_algebras.\allowbreak{}tex:\allowbreak{}505-\allowbreak{}528 (displays Taylor\_simple,\allowbreak{} Taylor\_simple\_bound,\allowbreak{} abs\_sgn,\allowbreak{} and the theta display inside Proposition prop\_P ---\allowbreak{} ONLY the definitional displays are cited;\allowbreak{} the Proposition's claims are NOT citable and must be re-\allowbreak{}proved)}}
+\begin{defsourcequote}
+\defsourceline{f(X)=a_0I+\sum_{n=1}^{\infty}a_n(X-x_0I)^n\quad\:}
+\defsourceline{\text{if }\, \|X-x_0I\|<r,\\}
+\defsourceline{\|f(X)-f(x_0I)\|\le \sum_{n=1}^{\infty}|a_n|\ts\|X-x_0I\|^n.}
+\end{defsourcequote}
+\begin{defsourcequote}
+\defsourceline{|X|=(X^2)^{1/2},\qquad \sgn(X)=X(X^2)^{-1/2}\qquad\quad}
+\defsourceline{\bigl(\|X^2-x_0^2I\|<x_0^2\bigr).}
+\end{defsourcequote}
+\begin{defsourcequote}
+\defsourceline{\wt{P}=\theta(2P-I),\qquad}
+\defsourceline{\text{where}\quad \theta(X)=\frac{1}{2}\bigl(I+\sgn(X)\bigr).}
+\end{defsourcequote}

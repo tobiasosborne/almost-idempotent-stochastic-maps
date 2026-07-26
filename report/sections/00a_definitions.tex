@@ -1,9 +1,9 @@
 % SHARD-ID: AISM-00A-DEFINITIONS
 % SHARD-TITLE: The vocabulary
-% SHARD-SUMMARY: Frames the generated definitions layer: every term used in this report is stated once, projected verbatim from its canonical definitions/ shard by scripts/gen-report-defs.py.
-% SHARD-SUMMARY: Gives the rigour-ladder legend for definition kinds and statuses, the signed/stochastic reading guidance, and the def:<slug> crosslink scheme.
-% SHARD-SUMMARY: Records the honesty boundary of the layer: a locked cited definition certifies provenance, never truth, and a definition is never proved.
-% SHARD-KEYWORDS: definitions, vocabulary, generated projection, rigour ladder, cited, consensus, original, crosslinks, signed picture, stochastic picture
+% SHARD-SUMMARY: Frames the generated definitions layer: every term the current proof strategy needs is stated once, typeset from its canonical definitions/ shard by scripts/gen-report-defs.py.
+% SHARD-SUMMARY: Explains the two rules that govern the layer -- typeset statement first with the byte-verbatim source demoted to a second check, and scope restricted to the Route-F dependency closure -- plus the macro-translation table that makes a quoted source compile.
+% SHARD-SUMMARY: Gives the rigour-ladder legend for definition kinds and statuses, the signed/stochastic reading guidance and the def:<slug> crosslink scheme, and records the honesty boundary: a locked cited definition certifies provenance, never truth, and a definition is never proved.
+% SHARD-KEYWORDS: definitions, vocabulary, generated projection, macro-translation table, source check, proof-strategy scope, rigour ladder, cited, consensus, original, crosslinks, signed picture, stochastic picture
 \section{The vocabulary}\label{sec:definitions}
 
 \subsection*{What this section is, and why it is generated}
@@ -24,19 +24,45 @@ below are a deterministic projection of it, produced by
 that \texttt{argument/INDEX.md} and \texttt{argument/DAG.md} are produced from the registry
 shards. The generator's \texttt{--check} mode fails the local gate whenever the committed
 projection differs from a fresh render, so a definition edited in \texttt{definitions/} and
-not re-rendered here cannot be committed.
+not re-rendered here cannot be committed. Nothing in this section may be edited in place:
+corrections belong in the named shard, after which the projection is regenerated.
 
-Two consequences are worth stating plainly. First, nothing in this section may be edited in
-place: corrections belong in the named shard, after which the projection is regenerated.
-Second, the projection is faithful rather than pretty. Where a shard's body did not convert
-cleanly into typeset mathematics --- an unbalanced delimiter, or a span written in the private
-macros of a quoted source --- the generator quotes the bytes verbatim instead of reshaping
-them, and says so in that definition's rendering note; the surviving fallbacks are listed in
-\texttt{report/generated/defs/MANIFEST.md}. The rule-delimited quote blocks that carry the
-byte-verbatim source text of a \texttt{cited} shard are set with \TeX's detokenizer, which
-prints a control word followed by one space; apart from that spacing artefact, and from the
-line breaks the quote block inserts to keep long source lines inside the text block, what is
-printed is the source's own bytes.
+\subsection*{The statement is the definition; the source text is the second check}
+
+Each entry is a typeset \texttt{definition} environment, and that environment is the
+definition. Underneath it sits a small provenance block; underneath that, where the shard
+carries one, a \textsc{source check (byte-verbatim)} block. The order is deliberate. A
+definition transcribed from the literature is only usable if it can be \emph{read}, and a
+block of detokenized monospace is not a readable definition; but the byte-verbatim text is
+what the repository's \texttt{cited} criterion actually locks (\texttt{L1}), so it cannot
+simply be dropped. It is therefore kept and demoted: the small print at the end, against
+which the typeset statement above may be checked, rather than the statement itself.
+
+Where a shard carries a harmonised \textbf{Statement} section, that section is what is
+typeset --- it exists in the shard precisely to be the readable form, and it is where a
+transcription's known corrections are recorded. Where the shard's only content is the
+pinned source's own \TeX{}, the generator typesets \emph{that}, through an explicit
+macro-translation table. The table exists because a quoted source is written in that
+source's private macro dialect ($\backslash$\texttt{eps}, $\backslash$\texttt{calA},
+$\backslash$\texttt{Co}, \dots), which this document's preamble does not define. Every row
+of the table maps a source macro to the expansion \emph{the source itself gives it}, taken
+from that source's own preamble and recorded with the line number that defines it; the
+table is reproduced in full in \texttt{report/generated/defs/MANIFEST.md} for audit, together
+with its two declared glyph-only deviations. Translation changes spelling, never meaning.
+Each definition typeset this way says so in its provenance block, names the table version,
+and lists the macros that fired.
+
+The honesty boundary is mechanical, not editorial. A translated fragment is validated before
+it is emitted --- every surviving control sequence must be one this document defines, braces
+and math delimiters must balance, no alignment or script character may escape math mode ---
+and a fragment that fails is \emph{not} typeset. It is replaced on the page by a loud
+\textbf{NOT TYPESET} block naming the reason, its bytes are left to the source check below,
+and it is listed in \texttt{report/generated/defs/MANIFEST.md}. Partial success is allowed:
+what translates is typeset, what does not is flagged, and nothing in between is guessed at.
+As of this render there are no such flags. The byte-verbatim blocks themselves are set with
+\TeX's detokenizer, which prints a control word followed by one space; apart from that
+spacing artefact, and from the line breaks the quote block inserts to keep long source lines
+inside the text block, what is printed is the source's own bytes.
 
 \subsection*{Reading the kind and status of a definition}
 
@@ -90,28 +116,43 @@ ambient approximate-$C^{*}$ parameter, never the retract defect of
 Definition~\ref{def:positive-approximate-retract}. When a bound is quoted, the picture and
 the parameter must be named with it.
 
-\subsection*{Order of presentation}
+\subsection*{Which definitions appear here}
 
-The three groups below are computed, not curated. The first is the connected component of
-the crosslink graph that the classical signed and stochastic vocabulary forms: those
-definitions genuinely define each other, and they are ordered so that a term appears after
-everything its statement uses, with mutually recursive clusters
+This section renders the vocabulary of the \emph{current proof strategy}, not the whole
+Layer-0 database. The strategy is the Route-F landing chain, and it is not re-described
+here: the generator imports \texttt{scripts/gen-report-dag.py} and reuses the very same
+subgraph computation that draws the atlas of \S\ref{sec:argument-dag}, so the map and the
+vocabulary cannot drift apart. A definition is rendered when it is imported by a registry
+result in that subgraph, or by a registry result reproduced in this document, or when it is
+reached from one of those by following the \texttt{[[def-\dots]]} crosslinks that the
+rendered statements themselves use. Anything outside that closure is not printed, and a
+generated paragraph at the end of the section says how many such definitions there are and
+names them; they remain canonical in \texttt{definitions/} and in
+\texttt{definitions/INDEX.md}, they are simply not part of what this document needs. A
+crosslink pointing at one of them degrades to a bare identifier rather than to a link this
+document could not honour.
+
+The three groups below are computed from that set, not curated. The first is the connected
+component of the crosslink graph that the classical signed and stochastic vocabulary forms:
+those definitions genuinely define each other, and they are ordered so that a term appears
+after everything its statement uses, with mutually recursive clusters
 (negative mass, signed idempotent, stochastic idempotent; exposedness and the visible set)
 kept together. The second group is the approximate-$C^{*}$ vocabulary transcribed from the
 pinned source, which is the language of the tiers reproduced in
 \S\S\ref{sec:compcb-amplification-naturality}--\ref{sec:extcb}. The third is the
 project-internal packaging built over that language: the datum bundles that fix the
-hypotheses of a tier, and the notation the proofs of that tier share.
+hypotheses of a tier, and the notation the proofs of that tier share. A group with no
+member in scope would not be printed at all.
 
-One honest asymmetry follows from the report's current scope. The classical group is the
-vocabulary of the signed-geometry exploration, most of whose results are off the live
-route and therefore recorded in \texttt{argument/} and whitelisted in
-\texttt{report/UNWIRED.md} rather than reproduced here. Those definitions are printed all
-the same --- they are the canonical vocabulary, they are what the earlier and the
-surrounding registry material means, and the target \texttt{op-classical} of
-\S\ref{sec:overview} is stated in their terms. Each definition's pointer line says how many
-registry results import it and which of those, if any, appear in this document; a term with
-no reproduced consumer is exploration vocabulary, and the pointer line says so instead of
+One honest asymmetry survives the scoping. Being \emph{needed by} the strategy is a much
+weaker condition than being \emph{proved on} it: much of the classical group is the
+vocabulary of the signed-geometry trunk, whose results are ancestors of the target but are
+recorded in \texttt{argument/} and whitelisted in \texttt{report/UNWIRED.md} rather than
+reproduced here. Those definitions belong in this section --- the target
+\texttt{op-classical} of \S\ref{sec:overview} is stated in their terms --- but the reader
+should not read their presence as a claim that the surrounding argument is in this
+document. Each definition's pointer line says how many registry results import it and which
+of those, if any, appear here; a term with no reproduced consumer says so instead of
 leaving the reader to guess.
 
 \subsection*{Citing a definition}
@@ -121,9 +162,9 @@ Every definition carries \texttt{\textbackslash label\{def:}\textit{slug}\texttt
 first hyphen replaced by a colon --- \texttt{def-co-top} becomes \texttt{def:co-top}. That
 is the same identifier-to-label transform the provenance gate uses for results, so a lemma
 section may write \texttt{\textbackslash ref\{def:co-top\}} and the knowledge-graph page
-may anchor at the same target. Inside the generated statements, a crosslink to another
-definition is a live link, and a crosslink to a registry result is a live link whenever
-that result is reproduced in this document; otherwise it is printed as a bare identifier,
+may anchor at the same target. Inside the generated statements, a crosslink is a live link
+exactly when its target is in this document --- a definition rendered in this section, or a
+registry result reproduced in a later one --- and otherwise is printed as a bare identifier,
 because a link into material this document does not contain would be a promise it cannot
 keep. Each definition also names its canonical shard path, so the reader can go from the
 page to the source of truth in one step, and from there to
