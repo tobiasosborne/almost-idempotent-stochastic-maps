@@ -1,0 +1,136 @@
+% SHARD-ID: AISM-38-STAGE1-EXACT-UNIT
+% SHARD-TITLE: Dimension-free exact-unit rectification
+% SHARD-SUMMARY: Reproduces lem-stage1-exact-unit-rectification, the af-validated replacement of an approximate unit by an exact one: every epsilon-C*-algebra with small enough defect carries, on the same involutive normed space, an exact unit and a product at distance O(epsilon) from the original.
+% SHARD-SUMMARY: Explains the norm-one self-adjoint rescaling of the unit, the Hermitian norming functional obtained by Hahn-Banach and symmetrisation, and the rank-one correction of the product that makes the new unit exactly two-sided.
+% SHARD-SUMMARY: Records the hostile challenge and its counterexample, the explicit universal witnesses, and the two hypotheses the exported tree carries but never uses.
+% SHARD-KEYWORDS: lem-stage1-exact-unit-rectification, af validated, epsilon-C*-algebra, exact unit, Hahn-Banach, Hermitian functional, rank-one correction, Stage 1
+\section{Dimension-free exact-unit rectification}\label{sec:stage1-exact-unit}
+
+\begin{lemma}[\texttt{lem-stage1-exact-unit-rectification}]\label{lem:stage1-exact-unit-rectification}
+There are universal constants $C_{\mathrm{unit}}<\infty$ and $\ecs_{\mathrm{unit}}>0$ such
+that every finite-dimensional $\ecs_X$-$C^*$-algebra $\mathcal A$
+(\texttt{def-epsilon-cstar-algebra}) with $\ecs_X\le \ecs_{\mathrm{unit}}$ admits, on the
+same involutive normed space, an exact unit $J$ and a bilinear product $\bdot$ with
+\begin{equation}\label{eq:eur-main}
+  \nrm{J-I_X}\;\le\;C_{\mathrm{unit}}\,\ecs_X,
+  \qquad
+  \nrm{x\bdot y-xy}\;\le\;C_{\mathrm{unit}}\,\ecs_X\nrm{x}\nrm{y}
+  \quad(x,y\in\mathcal A).
+\end{equation}
+\emph{Transcription note.} ``On the same involutive normed space'' is a real restriction and
+not a formality: the underlying vector space, its norm and its involution are untouched, and
+only the multiplication and the distinguished unit are replaced. ``Exact unit'' has exactly the
+meaning of Definition~\ref{def:epsilon-cstar-algebra}; no alternative definition is
+introduced here. $I_X$ denotes
+the given approximate unit, and the threshold written $\ecs_{\mathrm{unit}}$ here is the
+contract's \texttt{e\_unit} --- a ceiling on $\ecs_X$ alone, not on a combined defect. What
+the statement asserts about $\bdot$ is exactly
+\eqref{eq:eur-main} together with the exactness of $J$: \emph{no} clause claims that
+$(\mathcal A,\bdot,J)$ is again an $\ecs'$-$C^*$-algebra, and the validated tree estimates
+neither the associativity defect nor the product-norm constant of $\bdot$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Dimension-free exact-unit rectification: there are universal C_unit < infinity and e_unit > 0 such that every finite-dimensional epsilon_X-C*-algebra with epsilon_X <= e_unit admits on the same involutive normed space an exact unit J and product bold-dot with ||J-I_X|| <= C_unit*epsilon_X and ||x bold-dot y-xy|| <= C_unit*epsilon_X*||x||||y||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The construction is explicit and the constants are exhibited: the tree closes with the
+universal witnesses
+\begin{equation}\label{eq:eur-constants}
+  \ecs_{\mathrm{unit}}=\tfrac12,\qquad C_{\mathrm{unit}}=8 .
+\end{equation}
+It proceeds in four steps --- rescale the unit, produce a Hermitian norming functional,
+correct the product by three terms of rank one in each argument, and estimate.
+
+\emph{A norm-one self-adjoint unit.} Write $I=I_X$, $a=\nrm{I}$ and $J=I/a$. The
+approximate-unit clause of \texttt{def-epsilon-cstar-algebra} gives $\lvert a-1\rvert\le\ecs_X$,
+so $\ecs_X\le\tfrac12$ forces $a\ge\tfrac12>0$ and $J$ is defined. Then $\nrm{J}=1$;
+$J\dg=J$ because $I\dg=I$ and $a$ is a positive real; and
+\begin{equation}\label{eq:eur-J}
+  \nrm{J-I}=\lvert 1-a\rvert\le\ecs_X .
+\end{equation}
+This is the only place the self-adjointness of $J$ is produced, and the next step consumes
+it.
+
+\emph{A Hermitian norming functional at $J$.} On the one-dimensional subspace $\mathbb CJ$
+define $g(\alpha J)=\alpha$; since $\nrm{\alpha J}=\lvert\alpha\rvert$ this has norm one, and
+complex Hahn--Banach extends it to a complex-linear $\psi:\mathcal A\to\mathbb C$ with
+$\nrm{\psi}=1$ and $\psi(J)=1$. Put $\psi^{\sharp}(x)=\overline{\psi(x\dg)}$. Because the
+involution is conjugate-linear, isometric and bijective, $\psi^{\sharp}$ is again
+complex-linear of norm one, and $J\dg=J$ gives
+$\psi^{\sharp}(J)=\overline{\psi(J\dg)}=\overline{\psi(J)}=1$. Hence
+$\varphi=\tfrac12(\psi+\psi^{\sharp})$ is complex-linear with $\nrm{\varphi}\le1$,
+$\varphi(J)=1$ --- so in fact $\nrm{\varphi}=1$, since $1=\lvert\varphi(J)\rvert\le\nrm{\varphi}\nrm{J}$ ---
+and is Hermitian:
+\begin{equation}\label{eq:eur-phi}
+  \varphi(x\dg)=\overline{\varphi(x)},\qquad \varphi(J)=1,\qquad \nrm{\varphi}=1 .
+\end{equation}
+
+\emph{The corrected product.} Define, bilinearly,
+\begin{equation}\label{eq:eur-product}
+  x\bdot y\;:=\;xy+\varphi(x)\bigl(y-Jy\bigr)+\varphi(y)\bigl(x-xJ\bigr)
+              -\varphi(x)\varphi(y)\bigl(J-JJ\bigr).
+\end{equation}
+Substituting $x=J$ and using $\varphi(J)=1$, the first correction term cancels $Jy$ against
+$y$ and the last two terms cancel each other, giving $J\bdot y=y$; symmetrically
+$x\bdot J=x$. With $\nrm{J}=1$ and $J\dg=J$ this is exactly the exact-unit condition of
+\texttt{def-epsilon-cstar-algebra}. The involution is unchanged and remains compatible:
+Hermiticity \eqref{eq:eur-phi}, the axiom $(xy)\dg=y\dg x\dg$, $J\dg=J$ and
+$(JJ)\dg=JJ$ give $(x\bdot y)\dg=y\dg\bdot x\dg$ term by term, so the construction really
+does live on the same involutive normed space.
+
+\emph{The estimate.} For any $z$, the product-norm axiom, \eqref{eq:eur-J} and the
+approximate-unit axiom give
+\[
+  \nrm{Jz-z}\;\le\;\nrm{(J-I)z}+\nrm{Iz-z}
+  \;\le\;\bigl((1+\ecs_X)\ecs_X+\ecs_X\bigr)\nrm{z}=(2+\ecs_X)\ecs_X\nrm{z},
+\]
+and likewise $\nrm{zJ-z}\le(2+\ecs_X)\ecs_X\nrm{z}$; taking $z=J$ and using $\nrm{J}=1$ also
+gives $\nrm{J-JJ}\le(2+\ecs_X)\ecs_X$. Since $\nrm{\varphi}=1$, the three correction terms of
+\eqref{eq:eur-product} are each bounded by $(2+\ecs_X)\ecs_X\nrm{x}\nrm{y}$, so
+\[
+  \nrm{x\bdot y-xy}\;\le\;3(2+\ecs_X)\ecs_X\nrm{x}\nrm{y}
+  \;\le\;\tfrac{15}{2}\,\ecs_X\nrm{x}\nrm{y}\;\le\;8\,\ecs_X\nrm{x}\nrm{y}
+  \qquad\text{for }\ecs_X\le\tfrac12 ,
+\]
+while \eqref{eq:eur-J} gives $\nrm{J-I_X}\le\ecs_X\le8\ecs_X$. That is \eqref{eq:eur-main}
+with the witnesses \eqref{eq:eur-constants}, and it is the root.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-stage1-exact-unit-rectification}: 6 nodes created and 6 \texttt{validated},
+root \texttt{validated}, taint clean; one challenge raised and resolved. The workspace
+registers one definition import, \texttt{def-epsilon-cstar-algebra}, byte-matched to its
+pinned source, and two external imports naming the validated contract of
+\texttt{lem-stage1-quantitative-inverse-function} (\S\ref{sec:stage1-quantitative-ift}).
+
+\noindent\textbf{Correction of record (proof-level, not contract-level).} The Hahn--Banach
+step drew a \emph{gap} challenge with a counterexample. As first written, the node asserted
+only that $J$ has norm one and then symmetrised $\psi$; but $\psi^{\sharp}(J)=1$ needs
+$J\dg=J$, and without it the symmetrisation can destroy the value at $J$. The verifier's
+example: $\mathcal A=\mathbb C$ with $z\dg=\overline z$, $J=i$ and $\psi(z)=-iz$ --- a
+complex-linear functional of norm one with $\psi(J)=1$ --- gives $\psi^{\sharp}(z)=iz$,
+hence $\psi^{\sharp}(J)=-1$ and $\varphi=0$, so $\varphi(J)=0$; indeed no Hermitian
+complex-linear functional takes the value $1$ at $i$. The repair was a child node deriving
+$J\dg=J$ from the rescaling step and using it explicitly, which is why the account above
+records self-adjointness where it does. The registry contract was not amended.
+
+\noindent\textbf{Two hypotheses that are carried but not used.} First, \emph{finite
+dimension}: no node of the exported tree invokes it --- the rescaling, Hahn--Banach,
+symmetrisation and norm estimates are all dimension-free --- so it is carried from the
+contract, not consumed by the proof. Second, the \emph{dependency}: the registry lists
+\texttt{lem-stage1-quantitative-inverse-function} as a \texttt{dep} and the workspace
+registers it as a byte-matched external, but no node of the exported tree invokes that
+contract; the rectification here is elementary. The dependency edge is the one fixed by the
+governing verdict for the Stage-1 package, and it is recorded rather than exercised. Both
+observations are about the exported tree, not about the contract, which stands as
+transcribed.
+
+\noindent\textbf{Role in the chain.} Registry \texttt{defs}:
+\texttt{def-epsilon-cstar-algebra}. Registry \texttt{deps}:
+\texttt{lem-stage1-quantitative-inverse-function}
+(\S\ref{sec:stage1-quantitative-ift}), which is \texttt{proved} with \texttt{af: validated}
+and reproduced in this document. Downstream, the Stage-1 decomposition rows that would
+consume an exactly unital model are \emph{not} \texttt{af}-validated and are \textbf{not}
+reproduced here; in particular nothing in this document assembles this rectification into a
+statement about almost-idempotent maps. \texttt{op-classical} is \textbf{open}.

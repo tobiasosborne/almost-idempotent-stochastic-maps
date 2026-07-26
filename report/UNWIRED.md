@@ -223,11 +223,8 @@ lem-zero-face-exchange-identity
 lem-zero-face-localization
 lem-zero-face-one-sixteenth-capacity-kill
 lem-zero-face-vertex-support
-lem-stage1-quantitative-inverse-function
-lem-stage1-exact-unit-rectification
 lem-routef-functional-calculus-closeness
 lem-routef-ai-defect-linearization
-lem-routef-prh-finish
 lem-routef-f2-positive-unital-compression
 lem-routef-f3-retract-defect
 obs-gamma-capacity-scale-blind

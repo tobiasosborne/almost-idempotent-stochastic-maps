@@ -126,12 +126,21 @@
 % --- finite commutative C*-algebras (the Route F / PRH level) ----------
 \newcommand{\linfd}[1]{\ell^{\infty}(#1)}       % l-infinity(k)
 
+% --- the Stage-1 rectified product (lem-stage1-exact-unit-rectification) ---
+\newcommand{\bdot}{\mathbin{\bm{\cdot}}}        % the rectified product x . y ("bold-dot")
+
+% --- argument-DAG atlas (GENERATED; see scripts/gen-report-dag.py) ---
+% Loads pdflscape/adjustbox/xcolor/tikz, the Okabe-Ito status palette, the node styles, and the
+% crosslink macros \dagref{<registry-id>} / \dagdef{<def-id>} / \dagphase{<key>}{<text>}.
+\input{generated/dag/preamble}
+
 \begin{document}
 \maketitle
 
 % Ordered shard includes:
 
 \include{sections/00_overview}
+\include{sections/00a_definitions}
 \include{sections/01_classical_equiv}
 \include{sections/02_prh}
 \include{sections/03_compcb_amplification_naturality}
@@ -167,5 +176,9 @@
 \include{sections/33_extcb_four_corner_norm}
 \include{sections/34_extcb_four_corner_merge}
 \include{sections/35_extcb}
-\include{sections/36_status_outlook}
+\include{sections/36_routef_prh_finish}
+\include{sections/37_stage1_quantitative_ift}
+\include{sections/38_stage1_exact_unit}
+\include{sections/39_argument_dag}
+\include{sections/40_status_outlook}
 \end{document}

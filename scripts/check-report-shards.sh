@@ -72,7 +72,9 @@ for include in "${includes[@]}"; do
     fail "duplicate SHARD-ID $id"
   else
     seen_ids["$id"]=1
-    file_prefix="$(basename "$file" | cut -c1-2)"
+    # NN, or NN<letter> for a shard inserted between two existing numbers without
+    # renumbering the rest (the SHARD-ID grammar above already allows AISM-NN<L>-...).
+    file_prefix="$(basename "$file" | sed -nE 's/^([0-9]{2}[a-zA-Z]?).*/\1/p' | tr 'a-z' 'A-Z')"
     if [[ "$id" != ${PREFIX}-"$file_prefix"-* ]]; then
       fail "$file has SHARD-ID $id, expected prefix ${PREFIX}-$file_prefix-"
     fi

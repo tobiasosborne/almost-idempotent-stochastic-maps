@@ -31,6 +31,14 @@ verbatim), and keywords.
 - **Summary:** Records the honesty boundary: only af-validated results appear as lemmas; everything else stays outside this document.
 - **Keywords:** overview, op-classical, rigour ladder, signed picture, stochastic picture, COMP tier, H-CB tier
 
+## `AISM-00A-DEFINITIONS`
+- **File:** `report/sections/00a_definitions.tex`
+- **Title:** The vocabulary
+- **Summary:** Frames the generated definitions layer: every term used in this report is stated once, projected verbatim from its canonical definitions/ shard by scripts/gen-report-defs.py.
+- **Summary:** Gives the rigour-ladder legend for definition kinds and statuses, the signed/stochastic reading guidance, and the def:<slug> crosslink scheme.
+- **Summary:** Records the honesty boundary of the layer: a locked cited definition certifies provenance, never truth, and a definition is never proved.
+- **Keywords:** definitions, vocabulary, generated projection, rigour ladder, cited, consensus, original, crosslinks, signed picture, stochastic picture
+
 ## `AISM-01-CLASSICAL-EQUIV`
 - **File:** `report/sections/01_classical_equiv.tex`
 - **Title:** The signed-stochastic bridge
@@ -276,8 +284,40 @@ verbatim), and keywords.
 - **Summary:** Explains the dimension-free exact-target correction, the spatial four-corner system transported through the level-one Ha inverses, the ordered use of the conditional H-CB clauses, and the merge that closes the tier.
 - **Keywords:** conj-extcb, af validated, EXT tier, exact-target correction, Newton iteration, spatial four-corner system, merge
 
-## `AISM-36-STATUS-OUTLOOK`
-- **File:** `report/sections/36_status_outlook.tex`
+## `AISM-36-ROUTEF-PRH-FINISH`
+- **File:** `report/sections/36_routef_prh_finish.tex`
+- **Title:** The Route F finish edge
+- **Summary:** Reproduces lem-routef-prh-finish, the af-validated conditional PRH finish edge within Route F: retract data for a row-stochastic Q at defect eta yields a stochastic idempotent within (K+4*sqrt(2K))*sqrt(eta).
+- **Summary:** Explains the scalar preparation that converts the hypothesis eta-window into the PRH window, the exhaustive dimension split guarding the import of lem-prh, and the two-term triangle finish.
+- **Summary:** States plainly that this is an implication whose antecedent is supplied by no result reproduced here, so no unconditional square-root bound follows and op-classical stays open.
+- **Keywords:** lem-routef-prh-finish, af validated, Route F, positive approximate retract, stochastic idempotent, square-root rate, conditional finish
+
+## `AISM-37-STAGE1-QUANTITATIVE-IFT`
+- **File:** `report/sections/37_stage1_quantitative_ift.tex`
+- **Title:** Quantitative inverse-function control
+- **Summary:** Reproduces lem-stage1-quantitative-inverse-function, the af-validated statement that a C1 map whose derivative stays uniformly close to a fixed Banach-space isomorphism is injective, two-sidedly controlled on secants, and covers a definite ball.
+- **Summary:** Explains the normalisation to a perturbation of the identity, the segment plus Banach-valued fundamental-theorem estimate for the secant error, and the centred covering by a contraction on a closed ball.
+- **Summary:** Records the three hostile challenges the tree survived, including the counterexample that forced the covering step to be specialised to the map it is applied to.
+- **Keywords:** lem-stage1-quantitative-inverse-function, af validated, inverse function theorem, secant estimate, Banach fixed point, covering, Stage 1
+
+## `AISM-38-STAGE1-EXACT-UNIT`
+- **File:** `report/sections/38_stage1_exact_unit.tex`
+- **Title:** Dimension-free exact-unit rectification
+- **Summary:** Reproduces lem-stage1-exact-unit-rectification, the af-validated replacement of an approximate unit by an exact one: every epsilon-C*-algebra with small enough defect carries, on the same involutive normed space, an exact unit and a product at distance O(epsilon) from the original.
+- **Summary:** Explains the norm-one self-adjoint rescaling of the unit, the Hermitian norming functional obtained by Hahn-Banach and symmetrisation, and the rank-one correction of the product that makes the new unit exactly two-sided.
+- **Summary:** Records the hostile challenge and its counterexample, the explicit universal witnesses, and the two hypotheses the exported tree carries but never uses.
+- **Keywords:** lem-stage1-exact-unit-rectification, af validated, epsilon-C*-algebra, exact unit, Hahn-Banach, Hermitian functional, rank-one correction, Stage 1
+
+## `AISM-39-ARGUMENT-DAG`
+- **File:** `report/sections/39_argument_dag.tex`
+- **Title:** Argument-DAG atlas: the Route-F proof chain for op-classical
+- **Summary:** Generated atlas of the sub-DAG that carries the argument landing op-classical: the transitive deps/routes closure of the root together with the Route-F families, drawn layered and landscape, one detail page per phase.
+- **Summary:** Nodes are colour- and glyph-coded by rigour rung (af-validated / cited / proved / seeded / proved-mod-audit-or-conjecture / stated / open) using the same proof_class function that colours the Mermaid twin argument/DAG.md, so the two views cannot disagree.
+- **Summary:** Every node carries the anchor dag:<id> and links back to its report statement; the design-pending GAP compositions are drawn dashed and are explicitly NOT registry edges.
+- **Keywords:** argument DAG, atlas, Route F, op-classical, dependency graph, rigour ladder, generated figure, crosslink anchors, GAP composition
+
+## `AISM-40-STATUS-OUTLOOK`
+- **File:** `report/sections/40_status_outlook.tex`
 - **Title:** Status and outlook
 - **Summary:** Records what this report validates, where the live route now stops, and the quarantined assembly interface.
 - **Summary:** Tabulates the validated registry results not reproduced on the live route, with every row traced to the generated argument index.

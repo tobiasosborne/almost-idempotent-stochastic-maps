@@ -1,0 +1,137 @@
+% SHARD-ID: AISM-36-ROUTEF-PRH-FINISH
+% SHARD-TITLE: The Route F finish edge
+% SHARD-SUMMARY: Reproduces lem-routef-prh-finish, the af-validated conditional PRH finish edge within Route F: retract data for a row-stochastic Q at defect eta yields a stochastic idempotent within (K+4*sqrt(2K))*sqrt(eta).
+% SHARD-SUMMARY: Explains the scalar preparation that converts the hypothesis eta-window into the PRH window, the exhaustive dimension split guarding the import of lem-prh, and the two-term triangle finish.
+% SHARD-SUMMARY: States plainly that this is an implication whose antecedent is supplied by no result reproduced here, so no unconditional square-root bound follows and op-classical stays open.
+% SHARD-KEYWORDS: lem-routef-prh-finish, af validated, Route F, positive approximate retract, stochastic idempotent, square-root rate, conditional finish
+\section{The Route F finish edge}\label{sec:routef-prh-finish}
+
+\begin{lemma}[\texttt{lem-routef-prh-finish}]\label{lem:routef-prh-finish}
+Let $A:\linfd{k}\to\linfd{n}$ and $M:\linfd{n}\to\linfd{k}$ be positive unital maps and let
+$Q:\linfd{n}\to\linfd{n}$ be row-stochastic. If $K\ge1$,
+\begin{equation}\label{eq:rpf-window}
+  0\;\le\;\defect\;\le\;\min\bigl\{(24K)^{-1},\,1\bigr\},
+\end{equation}
+and
+\begin{equation}\label{eq:rpf-hyp}
+  \opnorm{Q-AM}\;\le\;K\defect,
+  \qquad
+  \opnorm{MA-I}\;\le\;\frac{3K\defect}{1-3K\defect},
+\end{equation}
+then there is a stochastic idempotent $E$ (\texttt{def-stochastic}) with
+\begin{equation}\label{eq:rpf-target}
+  \opnorm{Q-E}\;\le\;\bigl(K+4\sqrt{2K}\bigr)\sqrt{\defect}.
+\end{equation}
+\emph{Transcription note.} Both displays in \eqref{eq:rpf-hyp} are \emph{hypotheses}: the
+pair $(A,M)$ --- the datum of \texttt{def-positive-approximate-retract} --- is given, and
+nothing in this statement, or anywhere in this document, manufactures it from $Q$. The
+denominator in \eqref{eq:rpf-hyp} is positive precisely because of the window
+\eqref{eq:rpf-window}. The constant in \eqref{eq:rpf-target} is inherited from the
+hypothesis constant $K$ and is universal only to the extent that $K$ is; no result
+reproduced here fixes a value of $K$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Route F PRH finish: let A:l-infinity(k)->l-infinity(n) and M:l-infinity(n)->l-infinity(k) be positive unital maps and let Q be row-stochastic; if K >= 1, 0 <= eta <= min{(24*K)^(-1),1}, ||Q-AM||_{infinity->infinity} <= K*eta, and ||MA-I||_{infinity->infinity} <= 3*K*eta/(1-3*K*eta), then there is a stochastic idempotent E with ||Q-E||_{infinity->infinity} <= (K+4*sqrt(2*K))*sqrt(eta).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree has three steps --- a scalar preparation, one import of \texttt{lem-prh}
+(\S\ref{sec:prh}) guarded by a dimension split, and a triangle-inequality finish --- and a
+synthesis node that assembles them.
+
+\emph{Scalar preparation.} Put $x=3K\defect$ and
+\begin{equation}\label{eq:rpf-eps}
+  \varepsilon:=\frac{3K\defect}{1-3K\defect}=\frac{x}{1-x}.
+\end{equation}
+The window \eqref{eq:rpf-window} with $K\ge1$ gives $0\le x\le\tfrac18$, hence
+$1-x\ge\tfrac78>0$, so \eqref{eq:rpf-eps} is well defined and
+\[
+  0\;\le\;\varepsilon\;\le\;\tfrac87x\;\le\;\tfrac17\;<\;\tfrac12,
+  \qquad
+  \varepsilon\;\le\;\tfrac{24}{7}K\defect\;\le\;4K\defect .
+\]
+Separately, $0\le\defect\le1$ gives $\defect^{2}\le\defect$, i.e.\
+$\defect\le\sqrt{\defect}$, and multiplying by $K\ge1$,
+\begin{equation}\label{eq:rpf-root}
+  K\defect\;\le\;K\sqrt{\defect}.
+\end{equation}
+The two bounds on $\varepsilon$ are the whole point of the preparation: the first puts
+$\varepsilon$ inside the PRH window $[0,\tfrac12)$, the second is what converts a
+$\sqrt{\varepsilon}$ rate into a $\sqrt{\defect}$ rate.
+
+\emph{The PRH import, with an exhaustive dimension split.} By \eqref{eq:rpf-eps} the second
+hypothesis of \eqref{eq:rpf-hyp} reads exactly $\opnorm{MA-I_k}\le\varepsilon$ with
+$0\le\varepsilon<\tfrac12$, which is the hypothesis of \texttt{lem-prh}. That lemma,
+however, is stated for $k,n\ge1$, and the contract above assumes no dimension bound; the
+tree therefore splits, and the split is exhaustive. If $k,n\ge1$, then
+\texttt{def-positive-approximate-retract} identifies $A$ and $M$ as positive unital maps
+with probability-vector rows, every premise of \texttt{lem-prh} is met, and it returns a
+stochastic idempotent $E:\linfd{n}\to\linfd{n}$ with
+\begin{equation}\label{eq:rpf-prh}
+  \opnorm{AM-E}\;\le\;2\sqrt{2\varepsilon}.
+\end{equation}
+The mixed degenerate cases cannot occur: if $k=0<n$ then each of the $n$ rows of $A$ is the
+empty vector, of coordinate sum $0$ rather than $1$, contradicting the probability-row
+requirement, and the same argument applied to $M$ excludes $n=0<k$. There remains $k=n=0$,
+where $\linfd{0}$ is the zero space, its unique endomorphism is the empty $0\times0$
+matrix, which is entrywise nonnegative, fixes the (empty) all-ones vector and is
+idempotent --- a stochastic idempotent by \texttt{def-stochastic} --- and satisfies
+$AM=E$, so \eqref{eq:rpf-prh} holds with error $0$. In every admissible dimension, then,
+such an $E$ exists, and \texttt{lem-prh} is never invoked outside its stated domain.
+
+\emph{The finish.} Writing $Q-E=(Q-AM)+(AM-E)$, the triangle inequality for
+$\opnorm{\cdot}$ with the first hypothesis of \eqref{eq:rpf-hyp} and \eqref{eq:rpf-prh}
+gives $\opnorm{Q-E}\le K\defect+2\sqrt{2\varepsilon}$. Monotonicity and multiplicativity of
+the square root on the nonnegative reals turn $\varepsilon\le4K\defect$ into
+$2\sqrt{2\varepsilon}\le2\sqrt{8K\defect}=4\sqrt{2K}\sqrt{\defect}$, and with
+\eqref{eq:rpf-root},
+\[
+  \opnorm{Q-E}\;\le\;K\sqrt{\defect}+4\sqrt{2K}\sqrt{\defect}
+  \;=\;\bigl(K+4\sqrt{2K}\bigr)\sqrt{\defect},
+\]
+which is \eqref{eq:rpf-target}.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-routef-prh-finish}: 22 nodes created and 22 \texttt{validated}, root
+\texttt{validated}, taint clean; three challenges raised and three resolved, four node
+amendments. The workspace registers two definition imports,
+\texttt{def-positive-approximate-retract} and \texttt{def-stochastic}, and two external
+imports carrying the validated contract of \texttt{lem-prh}.
+
+\noindent\textbf{Correction of record (proof-level, not contract-level).} All three
+challenges were the same defect, raised three times at three heights of the tree: the
+import node asserted a direct application of \texttt{lem-prh} while neither the root
+contract nor either definition supplies that lemma's premise $k,n\ge1$, so the invocation
+was, as written, outside the external's stated domain --- and the $k=n=0$ branch is
+admissible under the root's hypotheses. The repair was not to weaken anything but to make
+the dichotomy explicit and to discharge the degenerate branch by hand, which is the form
+reproduced above. The degenerate case is a formality; the protocol nonetheless refused the
+import until it was discharged, which is exactly the guard one wants on a
+hypothesis-carrying external. The registry contract was not amended.
+
+\noindent\textbf{What this closes, and what it does not.} This is the validated conditional PRH finish edge within Route F
+and it is now \texttt{af}-validated, but it is an \emph{implication}. Its antecedent --- a
+positive unital pair $(A,M)$ with $\opnorm{Q-AM}\le K\defect$ and
+$\opnorm{MA-I}\le3K\defect/(1-3K\defect)$ for a dimension-free $K$ --- is supplied by no
+result reproduced in this document. The registry rows that would supply it are
+\texttt{lem-routef-f2-positive-unital-compression} (the positive unital pair),
+\texttt{lem-routef-f3-retract-defect} (the retract-defect bound, whose conclusion is
+literally the second hypothesis here), \texttt{lem-routef-k-ledger} (the dimension-free
+$K$), together with \texttt{lem-routef-ai-defect-linearization} and
+\texttt{lem-routef-functional-calculus-closeness} upstream of those, and the assembly
+carrier \texttt{lem-thmainext-conditional}; every one of them is \texttt{proved-mod-audit}
+with \texttt{af: none} --- \textbf{open} at this document's rigour bar and \textbf{not}
+reproduced here (\S\ref{sec:status-outlook}). Consequently nothing here yields an
+unconditional $\sqrt{\defect}$ bound for a row-stochastic $Q$, and \texttt{op-classical} is
+\textbf{open}. The shape of \eqref{eq:rpf-target} is the shape the target asks for; the
+antecedent is the whole remaining problem on this route.
+
+\noindent\textbf{Role in the chain.} Registry \texttt{defs}:
+\texttt{def-positive-approximate-retract}, \texttt{def-stochastic}. Registry
+\texttt{deps}: \texttt{lem-prh} (\S\ref{sec:prh}), \texttt{proved} with
+\texttt{af: validated} and reproduced above --- the single mathematical import, and the
+only place the square-root rate is produced. The registry records no result depending on
+this one; \texttt{lem-routef-f2-positive-unital-compression} and
+\texttt{lem-routef-f3-retract-defect} name it in their shard bodies as the consumer they
+feed, which is the direction of the eventual chain, not a current dependency edge.

@@ -9,7 +9,7 @@ hashed proof/consensus file. Results original to this project are marked `ORIGIN
 
 Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 
-> **Current report surface.** The section shards reproduce thirty-seven of the seventy `af`-validated
+> **Current report surface.** The section shards reproduce forty of the seventy-three `af`-validated
 > registry results (the paper-track T0 spine) and anchor every remaining registry result in the status
 > ledger. Non-rigorous registry statuses are copied honestly; the ledger rows below are anchors, not
 > promotions.
@@ -101,6 +101,12 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-EXTCB-FOUR-CORNER-MERGE` | `proofs/lem-extcb-four-corner-merge/export.md` | `35c643ae943968aa` | `af` proof export for `lem-extcb-four-corner-merge` |
 | `ARG-CONJ-EXTCB` | `argument/lemmas/conj-extcb.md` | `80bd2795d2be2fd8` | Registry shard for `conj-extcb` |
 | `AF-CONJ-EXTCB` | `proofs/conj-extcb/export.md` | `00494481438b5a79` | `af` proof export for `conj-extcb` |
+| `ARG-LEM-ROUTEF-PRH-FINISH` | `argument/lemmas/lem-routef-prh-finish.md` | `fec398d9c0e43ce0` | Registry shard for `lem-routef-prh-finish` |
+| `AF-LEM-ROUTEF-PRH-FINISH` | `proofs/lem-routef-prh-finish/export.md` | `92bfc4b03f32d8de` | `af` proof export for `lem-routef-prh-finish` |
+| `ARG-LEM-STAGE1-QUANTITATIVE-INVERSE-FUNCTION` | `argument/lemmas/lem-stage1-quantitative-inverse-function.md` | `ac066290155079b6` | Registry shard for `lem-stage1-quantitative-inverse-function` |
+| `AF-LEM-STAGE1-QUANTITATIVE-INVERSE-FUNCTION` | `proofs/lem-stage1-quantitative-inverse-function/export.md` | `02b1732b79c2a679` | `af` proof export for `lem-stage1-quantitative-inverse-function` |
+| `ARG-LEM-STAGE1-EXACT-UNIT-RECTIFICATION` | `argument/lemmas/lem-stage1-exact-unit-rectification.md` | `e2495d769c449a3b` | Registry shard for `lem-stage1-exact-unit-rectification` |
+| `AF-LEM-STAGE1-EXACT-UNIT-RECTIFICATION` | `proofs/lem-stage1-exact-unit-rectification/export.md` | `0c53546d8d71f1dc` | `af` proof export for `lem-stage1-exact-unit-rectification` |
 
 ## Per-claim ledger
 
@@ -143,3 +149,6 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | lem:extcb-four-corner-norm | ARG-LEM-EXTCB-FOUR-CORNER-NORM AF-LEM-EXTCB-FOUR-CORNER-NORM | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-extcb-four-corner-norm`. |
 | lem:extcb-four-corner-merge | ARG-LEM-EXTCB-FOUR-CORNER-MERGE AF-LEM-EXTCB-FOUR-CORNER-MERGE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-extcb-four-corner-merge`; smallness hypothesis reproduced in its amended (total-defect) form. |
 | conj:extcb | ARG-CONJ-EXTCB AF-CONJ-EXTCB | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/conj-extcb` (40 validated + 6 archived); the recorded correction is proof-level, not a contract amendment. |
+| lem:routef-prh-finish | ARG-LEM-ROUTEF-PRH-FINISH AF-LEM-ROUTEF-PRH-FINISH | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-routef-prh-finish` (22 nodes); the recorded correction is proof-level (dimension split guarding the `lem-prh` import), not a contract amendment. |
+| lem:stage1-quantitative-inverse-function | ARG-LEM-STAGE1-QUANTITATIVE-INVERSE-FUNCTION AF-LEM-STAGE1-QUANTITATIVE-INVERSE-FUNCTION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-stage1-quantitative-inverse-function` (14 nodes); no external or definition imports. |
+| lem:stage1-exact-unit-rectification | ARG-LEM-STAGE1-EXACT-UNIT-RECTIFICATION AF-LEM-STAGE1-EXACT-UNIT-RECTIFICATION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-stage1-exact-unit-rectification` (6 nodes); the registry dep on `lem-stage1-quantitative-inverse-function` is registered as an external but not exercised by the exported tree — noted in the shard. |

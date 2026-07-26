@@ -20,7 +20,7 @@ When $P=Q$, the abbreviations $\Co_{P}$, $\calS_P$ are used. It is clear that $\
 One-dimensional $\delta$-projections $P$ and $Q$ are called \emph{equivalent} if $\dim\calS_{P,Q}=1$. This is indeed an equivalence relation; in particular, it is transitive due to Lemma~\ref{lem_PQR}.
 ```
 
-**Status.** Draft transcription; ratification is required before locking.
+**Status.** Locked after the cited-definition byte-match criterion was user-ratified on 2026-07-24.
 
 **Provenance.** Byte-verbatim from the pinned source at the recorded loci
 and SHA256 prefix; provisioned by `DESIGN-FUDW-DECOMP-v3.md` §4.1 and admitted

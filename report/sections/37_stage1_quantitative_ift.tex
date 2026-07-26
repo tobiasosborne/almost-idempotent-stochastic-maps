@@ -1,0 +1,130 @@
+% SHARD-ID: AISM-37-STAGE1-QUANTITATIVE-IFT
+% SHARD-TITLE: Quantitative inverse-function control
+% SHARD-SUMMARY: Reproduces lem-stage1-quantitative-inverse-function, the af-validated statement that a C1 map whose derivative stays uniformly close to a fixed Banach-space isomorphism is injective, two-sidedly controlled on secants, and covers a definite ball.
+% SHARD-SUMMARY: Explains the normalisation to a perturbation of the identity, the segment plus Banach-valued fundamental-theorem estimate for the secant error, and the centred covering by a contraction on a closed ball.
+% SHARD-SUMMARY: Records the three hostile challenges the tree survived, including the counterexample that forced the covering step to be specialised to the map it is applied to.
+% SHARD-KEYWORDS: lem-stage1-quantitative-inverse-function, af validated, inverse function theorem, secant estimate, Banach fixed point, covering, Stage 1
+\section{Quantitative inverse-function control}\label{sec:stage1-quantitative-ift}
+
+\begin{lemma}[\texttt{lem-stage1-quantitative-inverse-function}]\label{lem:stage1-quantitative-inverse-function}
+Let $X,Y$ be Banach spaces, let $V:X\to Y$ be a Banach-space isomorphism, let
+$B_r(x_0)\subset X$ be the open ball of radius $r>0$ about $x_0$, and let
+$f:B_r(x_0)\to Y$ be $C^{1}$ with
+\begin{equation}\label{eq:qift-hyp}
+  \nrm{V^{-1}Df(x)-I_X}\;\le\;c\;<\;1
+  \qquad\text{for every }x\in B_r(x_0).
+\end{equation}
+Then $f$ is injective,
+\begin{equation}\label{eq:qift-secant}
+  (1-c)\nrm{x_1-x_2}\;\le\;\nrm{V^{-1}\bigl(f(x_1)-f(x_2)\bigr)}\;\le\;(1+c)\nrm{x_1-x_2}
+  \qquad (x_1,x_2\in B_r(x_0)),
+\end{equation}
+and the image contains a definite ball transported by $V$:
+\begin{equation}\label{eq:qift-cover}
+  f(x_0)+V\bigl(B_{(1-c)r}(0)\bigr)\;\subseteq\;f\bigl(B_r(x_0)\bigr).
+\end{equation}
+\emph{Transcription note.} The comparison operator $V$ is \emph{fixed} and the bound
+\eqref{eq:qift-hyp} is uniform on the whole ball; nothing here is stated at, or centred on,
+$Df(x_0)$. The covering radius $(1-c)r$ is measured in the \emph{source} and then pushed
+forward, so \eqref{eq:qift-cover} guarantees an image of the $V$-transported ball, which is
+in general not a norm ball of $Y$. All three conclusions are quantitative in the single
+scalar $c$; no smallness beyond $c<1$ is assumed.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Quantitative inverse-function control: if V:X->Y is a Banach-space isomorphism and f:B_r(x_0)->Y is C^1 with ||V^(-1)Df(x)-I|| <= c < 1, then f is injective, (1-c)||x_1-x_2|| <= ||V^(-1)(f(x_1)-f(x_2))|| <= (1+c)||x_1-x_2||, and f(B_r(x_0)) contains f(x_0)+V(B_{(1-c)r}(0)).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree is self-contained: it imports no definition shard and no external theorem, so the
+two classical ingredients it needs --- a Banach-valued fundamental theorem of calculus and
+the contraction-mapping principle --- are proved inside the workspace rather than cited.
+The argument runs in two independent halves, the secant estimate and the covering, joined
+only by a common normalisation.
+
+\emph{Normalisation.} Put $F(x)=V^{-1}\bigl(f(x)-f(x_0)\bigr)$ on $B_r(x_0)$. Then $F$ is
+$C^{1}$ with $DF(x)=V^{-1}Df(x)$ and $F(x_0)=0$, so the hypothesis \eqref{eq:qift-hyp}
+reads exactly $\nrm{DF(x)-I_X}\le c$: the map has been turned into a perturbation of the
+identity of $X$, and the target space no longer appears except through $V^{-1}$.
+
+\emph{The secant-error estimate.} The core step is: if a $C^{1}$ map $F$ on the open ball
+satisfies $\nrm{DF-I_X}\le c$ throughout, then
+\begin{equation}\label{eq:qift-secant-error}
+  \nrm{F(x_1)-F(x_2)-(x_1-x_2)}\;\le\;c\nrm{x_1-x_2}
+  \qquad (x_1,x_2\in B_r(x_0)).
+\end{equation}
+Fix $x_1,x_2$, put $d=x_1-x_2$ and $\gamma(t)=x_2+td$; convexity of the ball keeps
+$\gamma([0,1])$ inside the domain, which is where openness and convexity --- and nothing
+else about the domain --- are used. For $q(t)=F(\gamma(t))-F(x_2)-td$ the chain rule gives
+$q'(t)=\bigl(DF(\gamma(t))-I_X\bigr)d$, hence $\nrm{q'(t)}\le c\nrm{d}$ on $[0,1]$. The
+tree then proves, for a $C^{1}$ curve $q:[0,1]\to X$, that
+$q(1)-q(0)=\int_0^1q'(t)\,dt$: continuity of $q'$ makes its tagged Riemann sums converge in
+norm to the Bochner/Riemann integral while the matching sums of increments telescope to
+$q(1)-q(0)$; the norm inequality for that integral gives
+$\nrm{q(1)-q(0)}\le\int_0^1\nrm{q'(t)}\,dt$. With $q(1)-q(0)=F(x_1)-F(x_2)-d$ this is
+\eqref{eq:qift-secant-error}.
+
+\emph{From the secant error to \eqref{eq:qift-secant} and injectivity.} The remaining step
+is a two-line normed-space deduction, isolated in the tree as its own node: if
+$\nrm{a-d}\le c\nrm{d}$ then the reverse and ordinary triangle inequalities give
+$(1-c)\nrm{d}\le\nrm{a}\le(1+c)\nrm{d}$, and when $c<1$ the vanishing of $a$ forces $d=0$.
+Applying this with $d=x_1-x_2$ and $a=F(x_1)-F(x_2)=V^{-1}(f(x_1)-f(x_2))$ yields
+\eqref{eq:qift-secant}; the strict positivity of $1-c$ then yields injectivity of $f$.
+
+\emph{The centred covering.} Let $g(h)=V^{-1}\bigl(f(x_0+h)-f(x_0)\bigr)$ on $B_r(0)$, so
+$g(0)=0$, $\nrm{Dg(h)-I_X}\le c$, and the segment argument above applies verbatim to give
+$\nrm{(g(h)-g(k))-(h-k)}\le c\nrm{h-k}$. Fix $z$ with $\nrm{z}<(1-c)r$ and choose $\rho$
+with $0<\rho<r$ and $\nrm{z}<(1-c)\rho$ --- the strict inequality is what buys the room for
+the next line. On the closed ball $K=\{h\in X:\nrm{h}\le\rho\}$, which is complete because
+$X$ is, set
+\[
+  T(h)\;=\;z+h-g(h).
+\]
+The secant bound gives $\nrm{T(h)-T(k)}\le c\nrm{h-k}$, and taking $k=0$ with $g(0)=0$
+gives $\nrm{h-g(h)}\le c\nrm{h}$, whence $\nrm{T(h)}\le\nrm{z}+c\rho<\rho$. So $T$ is a
+$c$-contraction of the complete metric space $K$ into itself. The tree proves the
+fixed-point principle in place: the iterates $h_{n+1}=T(h_n)$ satisfy
+$d(h_{n+1},h_n)\le c^{n}d(h_1,h_0)$, the geometric bound
+$d(h_m,h_n)\le c^{n}d(h_1,h_0)/(1-c)$ makes them Cauchy, completeness supplies a limit $h$,
+and $d(T(h),h)\le c\,d(h,h_n)+d(h_{n+1},h)\to0$ identifies it as a fixed point. Then
+$h\in K\subset B_r(0)$ and $T(h)=h$ says precisely $g(h)=z$.
+
+\emph{The translation back.} For \emph{this} $g$ the defining identity is
+$Vg(h)=f(x_0+h)-f(x_0)$. Hence $g(h)=z$ gives $f(x_0+h)=f(x_0)+Vz$, and every
+$y\in f(x_0)+V(B_{(1-c)r}(0))$ is $f(x_0+h)$ with $x_0+h\in B_r(x_0)$. That is
+\eqref{eq:qift-cover}, and with it the root. The fixed point lives in $X$; $Y$ enters only
+through $V^{-1}$.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-stage1-quantitative-inverse-function}: 14 nodes created and 14
+\texttt{validated}, root \texttt{validated}, taint clean; three challenges raised and three
+resolved, two node amendments. No definition imports and no external imports are registered
+in the workspace.
+
+\noindent\textbf{Corrections of record (proof-level, not contract-level).} The tree reached
+its verdict only after three hostile challenges, and the shape of the final nodes is their
+residue. (i) A \emph{dependencies} challenge at the Newton--Leibniz node: as first written
+it was a leaf that silently borrowed the curve $q$, its formula and its derivative bound
+from a \emph{pending} sibling node, which the protocol forbids; it was repaired by a child
+node carrying the abstract estimate and its instantiation together. (ii) A \emph{type-error}
+challenge at the fixed-point node: the universal statement was phrased for an arbitrary
+complete metric space but written with norm differences $\nrm{h_{n+1}-h_n}$, which is
+ill-typed there; it was amended to the metric $d$. (iii) A \emph{scope} challenge at the
+covering node, with a concrete counterexample: as first written, that node asserted the
+translation ``$g(h)=z$ implies $y=f(x_0+h)$'' for an \emph{arbitrary} map $g$ satisfying
+only $g(0)=0$ and the secant bound. Take $X=Y=\mathbb R$, $V=I$, $x_0=0$, $r=1$,
+$c=\tfrac12$ and $f(x)=\tfrac32x$; then $g(h)=h$ is admissible in that sense, and for
+$z=h=\tfrac14$ one has $y=f(0)+Vz=\tfrac14$ while $f(0+h)=\tfrac38$. The node was amended to
+state the covering for an arbitrary admissible $g$ but the translation \emph{only} for the
+specific $g$ of the normalisation, and a further node makes that specialisation explicit.
+The registry contract itself was not amended.
+
+\noindent\textbf{Role in the chain.} The registry shard lists no \texttt{deps} and no
+\texttt{defs}: this is a leaf of the knowledge DAG, an item of standard Banach-space
+calculus re-established here at this document's rigour bar rather than cited, because no
+matching local source sits in \texttt{refs/}. Its one registered registry consumer is
+\texttt{lem-stage1-exact-unit-rectification} (\S\ref{sec:stage1-exact-unit}), whose
+workspace imports this validated contract as a byte-matched external --- see the caveat
+recorded there about how that import is actually used. Both results belong to the Stage-1
+front of the FUDW decomposition, which is otherwise not reproduced in this document.
+Nothing here bears on \texttt{op-classical}, which is open.

@@ -1,0 +1,132 @@
+% SHARD-ID: AISM-00A-DEFINITIONS
+% SHARD-TITLE: The vocabulary
+% SHARD-SUMMARY: Frames the generated definitions layer: every term used in this report is stated once, projected verbatim from its canonical definitions/ shard by scripts/gen-report-defs.py.
+% SHARD-SUMMARY: Gives the rigour-ladder legend for definition kinds and statuses, the signed/stochastic reading guidance, and the def:<slug> crosslink scheme.
+% SHARD-SUMMARY: Records the honesty boundary of the layer: a locked cited definition certifies provenance, never truth, and a definition is never proved.
+% SHARD-KEYWORDS: definitions, vocabulary, generated projection, rigour ladder, cited, consensus, original, crosslinks, signed picture, stochastic picture
+\section{The vocabulary}\label{sec:definitions}
+
+\subsection*{What this section is, and why it is generated}
+
+Every later section names its terms by \texttt{def-} identifier and never restates them.
+This section is where those identifiers resolve. It reproduces the project's Layer-0
+definitions database --- one shard per term under \texttt{definitions/} --- as typeset
+definitions, in a deliberate reading order, each carrying its own provenance.
+
+The material below is \emph{generated}, and that is a load-bearing design decision rather
+than a convenience. The governing law of this repository is that each term is defined
+exactly once (\texttt{CLAUDE.md}~L2): a second, hand-maintained statement of a definition
+inside the paper is drift, and drift here is fatal, because a lemma proved against one
+reading of $\negmass$ or of exposedness and quoted against another is a wrong result that
+no gate would catch. So the canonical shard stays the single source of truth and the pages
+below are a deterministic projection of it, produced by
+\texttt{scripts/gen-report-defs.py} into \texttt{report/generated/defs/} in the same way
+that \texttt{argument/INDEX.md} and \texttt{argument/DAG.md} are produced from the registry
+shards. The generator's \texttt{--check} mode fails the local gate whenever the committed
+projection differs from a fresh render, so a definition edited in \texttt{definitions/} and
+not re-rendered here cannot be committed.
+
+Two consequences are worth stating plainly. First, nothing in this section may be edited in
+place: corrections belong in the named shard, after which the projection is regenerated.
+Second, the projection is faithful rather than pretty. Where a shard's body did not convert
+cleanly into typeset mathematics --- an unbalanced delimiter, or a span written in the private
+macros of a quoted source --- the generator quotes the bytes verbatim instead of reshaping
+them, and says so in that definition's rendering note; the surviving fallbacks are listed in
+\texttt{report/generated/defs/MANIFEST.md}. The rule-delimited quote blocks that carry the
+byte-verbatim source text of a \texttt{cited} shard are set with \TeX's detokenizer, which
+prints a control word followed by one space; apart from that spacing artefact, and from the
+line breaks the quote block inserts to keep long source lines inside the text block, what is
+printed is the source's own bytes.
+
+\subsection*{Reading the kind and status of a definition}
+
+Each definition is followed by a small provenance block naming its \emph{kind}, its
+\emph{status}, its source, its locus, and --- for literature transcriptions --- the
+\textsc{sha256} prefix of the pinned source file. The vocabulary of that block is the
+repository's rigour ladder applied to definitions, and it is not the same ladder that
+grades results.
+
+\begin{itemize}
+\item \texttt{cited} --- transcribed from the literature and byte-matched to a local source
+  under \texttt{refs/} at the recorded locus and hash. The gate
+  \texttt{scripts/check-defs.py} recomputes that hash. What this certifies is
+  \emph{provenance}: that the text below is what the source says. It certifies nothing
+  about whether the source's claim is true, and several of the cited shards here carry
+  explicit scope notes recording exactly which neighbouring assertions of the source are
+  \emph{not} part of the definition.
+\item \texttt{consensus} --- a formulation this project adopted and agreed on, with no
+  single external source to byte-match against.
+\item \texttt{original} --- a notion introduced here, typically to name a configuration or
+  a hypothesis package that the exploration kept re-inlining.
+\end{itemize}
+
+\noindent The status is orthogonal. \texttt{locked} means usable downstream: byte-verified
+for a \texttt{cited} shard, signed off for a \texttt{consensus} or \texttt{original} one.
+\texttt{draft} means the shard is pinned but not yet gated --- fine as working vocabulary,
+and flagged whenever a validated result leans on it. A definition is never
+\texttt{proved}: it carries no truth claim, so there is nothing in it to prove. When a
+statement about a defined object needs to be true, it is a registry result with its own
+status, not a clause smuggled into the vocabulary.
+
+\subsection*{The two pictures, and which one a term lives in}
+
+The single most reliable way to misread this project is to forget which picture a symbol
+belongs to. The stochastic picture holds genuinely positive row-stochastic maps that are
+only approximately idempotent (Definition~\ref{def:stochastic},
+Definition~\ref{def:almost-idempotent}). The signed picture holds exactly idempotent
+signed affine retractions whose failure of positivity is quarantined in a single scalar
+(Definition~\ref{def:signed-idempotent}, Definition~\ref{def:negative-mass}); everything
+built on row geometry --- exposedness, the visible set, height, invisible mass --- is
+stated there. The licence to cross between the pictures, with explicit constants, is
+\texttt{lem-classical-equiv} (\S\ref{sec:classical-equiv}), and it is the only such
+licence.
+
+Two symbol collisions are deliberate in the sources and are preserved rather than silently
+renamed. The letter $\negmass$ denotes the negative mass of a signed idempotent in the
+classical layer and the defect of a $\delta$-projection in the approximate-$C^{*}$ layer
+(Definition~\ref{def:delta-projection}); these are different quantities, and
+\texttt{CONVENTIONS.md} is the registry that keeps them apart. Likewise $\ecs$ is the
+ambient approximate-$C^{*}$ parameter, never the retract defect of
+Definition~\ref{def:positive-approximate-retract}. When a bound is quoted, the picture and
+the parameter must be named with it.
+
+\subsection*{Order of presentation}
+
+The three groups below are computed, not curated. The first is the connected component of
+the crosslink graph that the classical signed and stochastic vocabulary forms: those
+definitions genuinely define each other, and they are ordered so that a term appears after
+everything its statement uses, with mutually recursive clusters
+(negative mass, signed idempotent, stochastic idempotent; exposedness and the visible set)
+kept together. The second group is the approximate-$C^{*}$ vocabulary transcribed from the
+pinned source, which is the language of the tiers reproduced in
+\S\S\ref{sec:compcb-amplification-naturality}--\ref{sec:extcb}. The third is the
+project-internal packaging built over that language: the datum bundles that fix the
+hypotheses of a tier, and the notation the proofs of that tier share.
+
+One honest asymmetry follows from the report's current scope. The classical group is the
+vocabulary of the signed-geometry exploration, most of whose results are off the live
+route and therefore recorded in \texttt{argument/} and whitelisted in
+\texttt{report/UNWIRED.md} rather than reproduced here. Those definitions are printed all
+the same --- they are the canonical vocabulary, they are what the earlier and the
+surrounding registry material means, and the target \texttt{op-classical} of
+\S\ref{sec:overview} is stated in their terms. Each definition's pointer line says how many
+registry results import it and which of those, if any, appear in this document; a term with
+no reproduced consumer is exploration vocabulary, and the pointer line says so instead of
+leaving the reader to guess.
+
+\subsection*{Citing a definition}
+
+Every definition carries \texttt{\textbackslash label\{def:}\textit{slug}\texttt{\}} and a matching
+\texttt{\textbackslash hypertarget}, where \textit{slug} is the shard identifier with its
+first hyphen replaced by a colon --- \texttt{def-co-top} becomes \texttt{def:co-top}. That
+is the same identifier-to-label transform the provenance gate uses for results, so a lemma
+section may write \texttt{\textbackslash ref\{def:co-top\}} and the knowledge-graph page
+may anchor at the same target. Inside the generated statements, a crosslink to another
+definition is a live link, and a crosslink to a registry result is a live link whenever
+that result is reproduced in this document; otherwise it is printed as a bare identifier,
+because a link into material this document does not contain would be a promise it cannot
+keep. Each definition also names its canonical shard path, so the reader can go from the
+page to the source of truth in one step, and from there to
+\texttt{definitions/INDEX.md} and \texttt{argument/DAG.md}.
+
+\input{generated/defs/_all}

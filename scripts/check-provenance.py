@@ -445,7 +445,7 @@ def run_build(report_dir=REPORT_DIR, build_dir=BUILD_DIR):
         proc = subprocess.run(
             ["latexmk", "-pdf", "-interaction=nonstopmode", "-halt-on-error",
              f"-output-directory={build_dir}", "main.tex"],
-            cwd=str(report_dir), capture_output=True, text=True, timeout=600)
+            cwd=str(report_dir), capture_output=True, text=True, errors="replace", timeout=600)
     except subprocess.TimeoutExpired:
         return ["latexmk timed out after 600s compiling report/main.tex"], []
     if proc.returncode != 0:

@@ -19,6 +19,18 @@ echo "[check-all] numerics gate (every runs/ bundle: README + INDEX row + invari
 python3 scripts/check-runs.py --check || fail "check-runs"
 python3 scripts/gen-current-pointer.py --check || fail "current-pointer"
 
+echo "[check-all] report definitions render (generated projection of definitions/ shards; L2)"
+# The report's definitions section is a deterministic projection of definitions/*.md. A shard
+# edited without re-rendering would leave the paper stating an older definition — exactly the
+# drift L2 forbids — so the committed render must equal a fresh one.
+python3 scripts/gen-report-defs.py --check --dag-anchors || fail "gen-report-defs"
+
+echo "[check-all] report argument-DAG atlas freshness (generated .tex == a fresh render of the shards)"
+# Same contract as argument.py's INDEX/DAG staleness check: the committed report/generated/dag/*.tex
+# and report/sections/39_argument_dag.tex must equal a fresh render of argument/lemmas/*.md. A shard
+# whose status/af/deps changed without regenerating the atlas is STALE => the commit is blocked.
+python3 scripts/gen-report-dag.py --check || fail "gen-report-dag"
+
 echo "[check-all] report<->registry provenance sync (+ latexmk build & undefined-ref scan via --build)"
 # --build folds the report compile into this step: latexmk into report/.build (never mutates the
 # tracked main.pdf) AND scans the log for undefined \ref/\Cref (which -halt-on-error does NOT fail on).
