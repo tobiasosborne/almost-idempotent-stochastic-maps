@@ -31,6 +31,12 @@ echo "[check-all] report argument-DAG atlas freshness (generated .tex == a fresh
 # whose status/af/deps changed without regenerating the atlas is STALE => the commit is blocked.
 python3 scripts/gen-report-dag.py --check || fail "gen-report-dag"
 
+echo "[check-all] report campaign-statistics layer freshness (regenerate + byte-compare against the committed snapshot)"
+# Split-generator design: only the RENDER half is gated (snapshot -> .tex), so this stays green across
+# ordinary commits; refreshing the numbers is the deliberate `--extract` step. A drift advisory is
+# printed (never fatal) when the committed snapshot is behind the live data.
+python3 scripts/gen-report-stats.py --check || fail "gen-report-stats"
+
 echo "[check-all] report<->registry provenance sync (+ latexmk build & undefined-ref scan via --build)"
 # --build folds the report compile into this step: latexmk into report/.build (never mutates the
 # tracked main.pdf) AND scans the log for undefined \ref/\Cref (which -halt-on-error does NOT fail on).

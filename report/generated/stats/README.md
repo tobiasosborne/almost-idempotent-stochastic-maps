@@ -15,7 +15,7 @@ UPDATE POLICY: hand-maintained, in lockstep with scripts/gen-report-stats.py (CL
 | `campaign-extract.json` | `--extract` (mines both repositories) | the render half; nothing else |
 | `preamble.tex` | render | `report/main.tex` preamble (`\input`) |
 | `headline.tex` | render | `report/main.tex`, right after `\maketitle` (`\input`) |
-| `body.tex` | render | `report/sections/36_campaign_statistics.tex` (`\input`) |
+| `body.tex` | render | `report/sections/40_campaign_statistics.tex` (`\input`) |
 
 ## The two halves, and why
 

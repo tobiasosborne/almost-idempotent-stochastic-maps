@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-07-26T10:43:55Z",
+ "extracted_at": "2026-07-26T11:08:31Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-07-26T10:43:55Z",
+  "mined_at": "2026-07-26T11:08:31Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -458,29 +458,29 @@
  "schema": 1,
  "successor": {
   "af": {
-   "amendments_total": 173,
-   "challenges_total": 244,
+   "amendments_total": 180,
+   "challenges_total": 257,
    "entry_types": {
     "approach_tried": 1,
-    "challenge_raised": 244,
-    "challenge_resolved": 237,
-    "def_added": 463,
-    "node_amended": 173,
+    "challenge_raised": 257,
+    "challenge_resolved": 250,
+    "def_added": 470,
+    "node_amended": 180,
     "node_archived": 37,
-    "node_created": 1328,
-    "node_validated": 1277,
-    "nodes_claimed": 2170,
-    "nodes_released": 2170,
-    "proof_initialized": 80
+    "node_created": 1418,
+    "node_validated": 1367,
+    "nodes_claimed": 2314,
+    "nodes_released": 2314,
+    "proof_initialized": 86
    },
-   "ledger_entries": 8180,
-   "nodes_total": 1328,
+   "ledger_entries": 8694,
+   "nodes_total": 1418,
    "owner_roles": {
-    "prover (fix round)": 280,
-    "prover (initial build)": 304,
-    "verifier": 1586
+    "prover (fix round)": 294,
+    "prover (initial build)": 327,
+    "verifier": 1693
    },
-   "root_validated": 70,
+   "root_validated": 76,
    "seeded_not_validated": 10,
    "validation_days": {
     "2026-07-02": 7,
@@ -491,9 +491,10 @@
     "2026-07-07": 9,
     "2026-07-10": 6,
     "2026-07-24": 14,
-    "2026-07-25": 22
+    "2026-07-25": 22,
+    "2026-07-26": 6
    },
-   "workspaces": 80,
+   "workspaces": 86,
    "workspaces_detail": [
     {
      "amendments": 0,
@@ -1474,6 +1475,22 @@
     {
      "amendments": 0,
      "archived": 0,
+     "challenges": 5,
+     "challenges_resolved": 5,
+     "claims": 39,
+     "defs_imported": 1,
+     "first_ts": "2026-07-26T08:18:45.083105164Z",
+     "id": "lem-kitaev-almost-idemp-audit",
+     "last_ts": "2026-07-26T10:06:37.341948784Z",
+     "ledger_entries": 138,
+     "max_round": 12,
+     "nodes": 24,
+     "root_validated": "2026-07-26T10:06:37.321059135Z",
+     "validated": 24
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
      "challenges": 1,
      "challenges_resolved": 1,
      "claims": 13,
@@ -1600,6 +1617,54 @@
      "validated": 49
     },
     {
+     "amendments": 1,
+     "archived": 0,
+     "challenges": 1,
+     "challenges_resolved": 1,
+     "claims": 19,
+     "defs_imported": 2,
+     "first_ts": "2026-07-26T10:21:51.505143585Z",
+     "id": "lem-routef-ai-defect-linearization",
+     "last_ts": "2026-07-26T10:42:46.511309274Z",
+     "ledger_entries": 70,
+     "max_round": 5,
+     "nodes": 13,
+     "root_validated": "2026-07-26T10:42:42.147114232Z",
+     "validated": 13
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 17,
+     "defs_imported": 1,
+     "first_ts": "2026-07-26T10:08:20.343245524Z",
+     "id": "lem-routef-functional-calculus-closeness",
+     "last_ts": "2026-07-26T10:20:22.611018231Z",
+     "ledger_entries": 58,
+     "max_round": 3,
+     "nodes": 11,
+     "root_validated": "2026-07-26T10:20:19.450360249Z",
+     "validated": 11
+    },
+    {
+     "amendments": 4,
+     "archived": 0,
+     "challenges": 3,
+     "challenges_resolved": 3,
+     "claims": 34,
+     "defs_imported": 2,
+     "first_ts": "2026-07-26T07:52:16.274617491Z",
+     "id": "lem-routef-prh-finish",
+     "last_ts": "2026-07-26T08:17:20.052354685Z",
+     "ledger_entries": 125,
+     "max_round": 8,
+     "nodes": 22,
+     "root_validated": "2026-07-26T08:17:20.032813189Z",
+     "validated": 22
+    },
+    {
      "amendments": 2,
      "archived": 0,
      "challenges": 3,
@@ -1630,6 +1695,38 @@
      "nodes": 18,
      "root_validated": "2026-07-07T16:36:49.38557897Z",
      "validated": 18
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 1,
+     "challenges_resolved": 1,
+     "claims": 9,
+     "defs_imported": 1,
+     "first_ts": "2026-07-26T07:39:09.711062586Z",
+     "id": "lem-stage1-exact-unit-rectification",
+     "last_ts": "2026-07-26T07:51:07.311287362Z",
+     "ledger_entries": 34,
+     "max_round": 4,
+     "nodes": 6,
+     "root_validated": "2026-07-26T07:51:03.179825013Z",
+     "validated": 6
+    },
+    {
+     "amendments": 2,
+     "archived": 0,
+     "challenges": 3,
+     "challenges_resolved": 3,
+     "claims": 26,
+     "defs_imported": 0,
+     "first_ts": "2026-07-26T07:01:58.749577275Z",
+     "id": "lem-stage1-quantitative-inverse-function",
+     "last_ts": "2026-07-26T07:33:45.461180875Z",
+     "ledger_entries": 89,
+     "max_round": 4,
+     "nodes": 14,
+     "root_validated": "2026-07-26T07:33:41.985200396Z",
+     "validated": 14
     },
     {
      "amendments": 0,
@@ -1831,15 +1928,15 @@
    }
   },
   "definitions": {
-   "definitions": 36,
+   "definitions": 38,
    "kind": {
-    "cited": 10,
+    "cited": 12,
     "consensus": 4,
     "original": 22
    },
    "status": {
     "draft": 11,
-    "locked": 25
+    "locked": 27
    }
   },
   "docs": {
@@ -1849,8 +1946,8 @@
    "lit-review": 1,
    "plans": 50,
    "recon": 1,
-   "report_shard_lines": 4186,
-   "report_shards": 38,
+   "report_shard_lines": 4795,
+   "report_shards": 43,
    "tooling-feedback": 2,
    "waves": 107
   },
@@ -1863,7 +1960,7 @@
     "RETIRED-ROUTE": 1,
     "WALL": 10
    },
-   "retractions": 2,
+   "retractions": 3,
    "stop_markers": 16
   },
   "frontier": {
@@ -1888,8 +1985,9 @@
      "progress": 3
     },
     "FH": {
-     "banked": 2,
+     "banked": 5,
      "died": 1,
+     "dispatch": 3,
      "progress": 99
     },
     "G": {
@@ -1897,9 +1995,10 @@
      "progress": 19
     },
     "R": {
-     "banked": 28,
+     "banked": 31,
      "died": 1,
-     "progress": 8
+     "dispatch": 6,
+     "progress": 13
     }
    },
    "arm_span": {
@@ -1925,7 +2024,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-07-25T22:54:50.718Z"
+     "last": "2026-07-26T11:03:43.147Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -1933,7 +2032,7 @@
     },
     "R": {
      "first": "2026-07-02T07:04:29.532Z",
-     "last": "2026-07-07T17:15:37.407Z"
+     "last": "2026-07-26T10:53:39.607Z"
     }
    },
    "arms": {
@@ -1942,9 +2041,9 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 102,
+    "FH": 108,
     "G": 21,
-    "R": 37
+    "R": 51
    },
    "banked_per_day": {
     "2026-07-02": 7,
@@ -1954,16 +2053,18 @@
     "2026-07-06": 3,
     "2026-07-07": 9,
     "2026-07-10": 1,
-    "2026-07-25": 2
+    "2026-07-25": 2,
+    "2026-07-26": 6
    },
    "decisions": {
-    "EXPLOIT": 286,
+    "EXPLOIT": 297,
     "EXPLORE": 11,
     "PIVOT": 3
    },
    "evidence_classes": {
-    "af": 80,
+    "af": 86,
     "af-validated": 1,
+    "analysis": 2,
     "audit": 5,
     "census": 1,
     "codification": 2,
@@ -1983,7 +2084,7 @@
     "proof": 5,
     "proof-draft": 1,
     "proof-raw": 4,
-    "prose": 8,
+    "prose": 11,
     "prover": 29,
     "reconciliation": 1,
     "refs": 1,
@@ -1999,19 +2100,20 @@
     "wave": 24
    },
    "evidence_tiers": {
-    "T0": 78,
-    "T1": 116,
+    "T0": 84,
+    "T1": 121,
     "T2": 108
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-07-26T06:40:03.038Z",
-   "max_cycle": 612,
+   "last_ts": "2026-07-26T11:03:43.147Z",
+   "max_cycle": 644,
    "outcomes": {
-    "banked": 33,
+    "banked": 39,
     "died": 6,
     "discovery": 3,
-    "orient": 309,
-    "progress": 260,
+    "dispatch": 9,
+    "orient": 321,
+    "progress": 265,
     "refuted": 1
    },
    "per_day": {
@@ -2031,16 +2133,16 @@
     "2026-07-23": 11,
     "2026-07-24": 65,
     "2026-07-25": 95,
-    "2026-07-26": 1
+    "2026-07-26": 33
    },
-   "records": 612,
-   "worker_jobs": 377,
+   "records": 644,
+   "worker_jobs": 395,
    "worker_models": {
     "codex": 338,
     "codex-gpt-5.6-sol": 8,
     "fable": 10,
-    "gpt-5.6-sol": 1,
-    "opus": 15,
+    "gpt-5.6-sol": 15,
+    "opus": 19,
     "sonnet": 5
    },
    "worker_roles": {
@@ -2054,13 +2156,13 @@
     "decider": 1,
     "measurer": 1,
     "obstructor": 1,
-    "prover": 180,
+    "prover": 191,
     "refuter": 7,
     "researcher": 2,
     "strategist": 6,
     "summarizer": 1,
     "transcriber": 4,
-    "verifier": 140
+    "verifier": 147
    },
    "workers": {
     "codex / adversary": 2,
@@ -2084,10 +2186,11 @@
     "fable / author": 7,
     "fable / prover": 2,
     "fable / strategist": 1,
-    "gpt-5.6-sol / prover": 1,
+    "gpt-5.6-sol / prover": 8,
+    "gpt-5.6-sol / verifier": 7,
     "opus / auditor": 1,
     "opus / author": 5,
-    "opus / prover": 6,
+    "opus / prover": 10,
     "opus / researcher": 1,
     "opus / strategist": 2,
     "sonnet / acquirer": 1,
@@ -2100,9 +2203,9 @@
   "git": {
    "active_days": 17,
    "authors": {
-    "tobiasosborne": 683
+    "tobiasosborne": 731
    },
-   "commits": 683,
+   "commits": 731,
    "first_day": "2026-07-02",
    "last_day": "2026-07-26",
    "per_day": {
@@ -2122,7 +2225,7 @@
     "2026-07-23": 16,
     "2026-07-24": 111,
     "2026-07-25": 165,
-    "2026-07-26": 13
+    "2026-07-26": 61
    },
    "subject_prefixes": {
     "W61": 13,
@@ -2130,18 +2233,18 @@
     "W65": 4,
     "W67": 4,
     "W72": 5,
-    "W73b": 4,
     "W74-F": 7,
     "W74F": 5,
-    "af": 82,
-    "fr": 14,
-    "fr log": 92,
-    "fr orient": 63,
+    "af": 94,
+    "fr": 16,
+    "fr dispatch": 9,
+    "fr log": 102,
+    "fr orient": 72,
     "fudw": 9,
-    "report": 5
+    "report": 6
    }
   },
-  "path_name": "agent-ad79636b2ebfcd24a",
+  "path_name": "almost-idempotent-stochastic-maps",
   "portfolio": {
    "arms": [
     {
@@ -2197,33 +2300,38 @@
    ],
    "frontier": "The Kernel/(EX) conjecture: every rank->=3 signed idempotent P with delta<=1/4 has a theta-1/2 actual-row chart U0 with max_s Phi_s(U0) <= C0*delta (C0=1 empirically); equivalently every hidden row vertex with invisible mass > sqrt(delta) has height <= B*sqrt(delta). This one input closes op-classical via HLC <= op-exposed-hull <= op-classical.",
    "goal": "Prove op-classical: universal eta0,C>0 (dimension-free) such that every row-stochastic Q with ||Q^2-Q||_{inf->inf} <= eta <= eta0 admits a stochastic idempotent E with ||Q-E||_{inf->inf} <= C*sqrt(eta) (sharp exponent 1/2).",
-   "verdict_files": 40
+   "verdict_files": 47
   },
   "refs": {
-   "locked_files": 11,
+   "locked_files": 21,
    "source_ids": [
     "baake-sumner-2007.11433",
     "hognas-mukherjea",
     "kitaev-2405.02434",
-    "salzmann-bergh-datta-2405.01532"
+    "salzmann-bergh-datta-2405.01532",
+    "hatcher-algebraic-topology",
+    "cairns-1935",
+    "arkowitz-brown-2004",
+    "lee-smooth-manifolds",
+    "granas-dugundji"
    ],
-   "sources": 4
+   "sources": 9
   },
   "registry": {
    "af": {
-    "none": 175,
+    "none": 176,
     "seeded": 10,
-    "validated": 70
+    "validated": 76
    },
    "kind": {
     "corollary": 2,
-    "lemma": 226,
+    "lemma": 233,
     "obstruction": 13,
     "open-problem": 6,
     "proposition": 2,
     "theorem": 6
    },
-   "results": 255,
+   "results": 262,
    "status": {
     "conjecture": 31,
     "disproved": 2,
@@ -2231,9 +2339,9 @@
     "numerical": 2,
     "obstruction": 1,
     "open": 3,
-    "proved": 183,
-    "proved-mod-audit": 30,
-    "stated": 1
+    "proved": 189,
+    "proved-mod-audit": 25,
+    "stated": 7
    }
   },
   "runs": {
@@ -2284,10 +2392,10 @@
    }
   },
   "tooling": {
-   "gate_lines": 1884,
+   "gate_lines": 1893,
    "gate_scripts": 7,
-   "script_files": 26,
-   "script_lines": 6387,
+   "script_files": 28,
+   "script_lines": 9050,
    "test_files": 7,
    "test_lines": 1292
   },

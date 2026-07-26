@@ -14,6 +14,15 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 > ledger. Non-rigorous registry statuses are copied honestly; the ledger rows below are anchors, not
 > promotions.
 
+> **Meta-sections carry no ledger rows.** `sections/40_campaign_statistics.tex` (`AISM-40`) is a
+> *meta* shard: it reports on the campaign — commit calendar, controller arms, `af` elevation
+> metrics, artifact counts — and states no mathematical claim, defines no term, and reproduces no
+> registry result. It therefore has no per-claim ledger row and no source-registry key here. Its
+> body is machine-generated from a committed data snapshot by `scripts/gen-report-stats.py`; the
+> provenance of every figure in it is the artifact it counts, and the freshness of the whole layer is
+> gated by `python3 scripts/gen-report-stats.py --check` inside `scripts/check-all.sh`
+> (see `report/generated/stats/README.md`).
+
 > **Current report surface (2026-07-25 rescope).** The section shards reproduce the af-validated
 > lemmas of the live Route F chain (bridge, PRH, COMP tier, H-CB tier). Results off the live route
 > keep their registry records and statuses; they are whitelisted in `UNWIRED.md`, not reproduced here.
