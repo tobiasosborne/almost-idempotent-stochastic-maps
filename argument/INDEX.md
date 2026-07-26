@@ -225,8 +225,8 @@
 | `lem-top-witness-third-actor` | lemma | proved | none | A | Top-witness third actor: for an exact signed idempotent P with 0 < delta(P) <= 1… |
 | `lem-topology-finite-triangulation` | lemma | stated | seeded | A | Finite triangulation of compact C^1 manifolds: every compact C^1 manifold is hom… |
 | `lem-topology-hopf-structure` | lemma | stated | seeded | A | Hopf structure theorem in the form consumed by Stage 1: a finite-dimensional con… |
-| `lem-topology-kunneth-cross-product` | lemma | stated | seeded | A | Cohomological Kunneth isomorphism over R: for CW complexes X and Y with each H^k… |
-| `lem-topology-lefschetz-hopf` | lemma | stated | seeded | A | Lefschetz-Hopf formula (maximal-simplex form): if f:X->X is a map of a finite po… |
+| `lem-topology-kunneth-cross-product` | lemma | proved | validated | A | Cohomological Kunneth isomorphism over R: for CW complexes X and Y with each H^k… |
+| `lem-topology-lefschetz-hopf` | lemma | proved | validated | A | Lefschetz-Hopf formula (maximal-simplex form): if f:X->X is a map of a finite po… |
 | `lem-topology-local-index-sign` | lemma | stated | seeded | A | Nondegenerate local fixed-point index: if x is an isolated fixed point of a C^1 … |
 | `lem-topology-orientable-top-cohomology` | lemma | stated | seeded | A | Top cohomology of a closed orientable manifold: if M is a connected compact orie… |
 | `lem-topology-quotient-manifold` | lemma | stated | seeded | A | Quotient manifold theorem: if a Lie group G acts smoothly, freely, and properly … |

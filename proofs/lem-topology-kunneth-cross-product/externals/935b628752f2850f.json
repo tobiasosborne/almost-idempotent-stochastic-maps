@@ -1,8 +1,8 @@
 {
   "id": "935b628752f2850f",
   "name": "GT-hatcher-AT-thm-3.15",
-  "source": "refs/hatcher-algebraic-topology/AT.txt:13505-13506 VERBATIM: \"cohomology ring as a graded ring: a ring A with a decomposition as a sum\nk≥0 Ak\"",
-  "content_hash": "ec78ec6664484e489a1d079a9b7d85d793eea026fcad167891db25a8db82be84",
+  "source": "refs/hatcher-algebraic-topology/AT.txt:13505-13506 VERBATIM: \"Theorem 3.15. The cross product H ∗ (X; R) ⊗R H ∗ (Y ; R)→H ∗ (X × Y ; R) is an isomorphism of rings if X and Y are CW complexes and H k (Y ; R) is a finitely generated\nfree R module for all k .\"",
+  "content_hash": "17365e1b7d03bad83b3aa7000936712792ceb8fc77b1b47bf12f70c767845bdc",
   "created": "2026-07-26T11:31:49.090755995Z",
-  "notes": ""
+  "notes": "Corrected pre-existing mismatched quote against the shard-pinned local source before prover use."
 }

@@ -4,16 +4,17 @@ kind: lemma
 contract: Cohomological Kunneth isomorphism over R: for CW complexes X and Y with each H^k(Y;R) a finitely generated free R-module, the cross product H*(X;R) (x)_R H*(Y;R) -> H*(X x Y;R) is an isomorphism of rings; in particular this holds over the field R = reals for finite-CW spaces with finite-dimensional cohomology.
 defs:
 deps:
-status: stated
-af: seeded
+status: proved
+af: validated
 provenance: hatcher-algebraic-topology AT.txt:13505-13506 (Theorem 3.15 in THIS printing — NOT 3.16; the v4.1 register's "Thm 3.16" locus is off by one, flagged to the design owner in the ACQUIRED log 2026-07-25 and confirmed 2026-07-26); DESIGN-FUDW-DECOMP-v4.1.md §2.3
 owner: A
 workspace: proofs/lem-topology-kunneth-cross-product
 ---
 
-**Status.** Local source-result transcription at `stated`; to be af-elevated
-as a 1-node tree with the byte-matched external. Not `cited`, not
-af-validated, not L0-rigorous yet.
+**Status.** af-VALIDATED in-repo (2026-07-26, session 28): 7-node tree (the
+Hatcher Thm 3.15 external + the finite-CW / finite-dimensional real-coefficient
+specialization steps), taint clean 7/7. Export at
+`proofs/lem-topology-kunneth-cross-product/export.md`.
 
 **Source locus (pinned).** Hatcher, Theorem 3.15 (txt:13505-13506): "The
 cross product H∗(X;R) ⊗_R H∗(Y;R) → H∗(X×Y;R) is an isomorphism of rings if X

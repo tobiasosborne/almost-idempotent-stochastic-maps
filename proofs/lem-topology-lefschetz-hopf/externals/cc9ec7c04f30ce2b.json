@@ -1,8 +1,8 @@
 {
   "id": "cc9ec7c04f30ce2b",
   "name": "GT-arkowitz-brown-2004-thm-1.2",
-  "source": "refs/arkowitz-brown-2004/arkowitz-brown-lefschetz-hopf-2004.txt:124-126 VERBATIM: \"One of the classical results of fixed-point theory is the following theorem.\nTheorem 1.2 (Lefschetz-Hopf). If f : X → X is a map of a finite polyhedron with a finite\nset of fixed points, each of which lies in a maximal simplex of X, then L( f ) is the sum of the\"",
-  "content_hash": "3a04af32378f16e662c14e59e0995e0158fb0b839b44cdf6c5dc54271c191f29",
+  "source": "refs/arkowitz-brown-2004/arkowitz-brown-lefschetz-hopf-2004.txt:124-126 VERBATIM: \"Theorem 1.2 (Lefschetz-Hopf). If f : X → X is a map of a finite polyhedron with a finite\nset of fixed points, each of which lies in a maximal simplex of X, then L( f ) is the sum of the\nindices of all the fixed points of f .\"",
+  "content_hash": "2ce56e215bfa9fcb7a392caa90585f7974f41cde2383e6ffb7742d85e66098ad",
   "created": "2026-07-26T11:31:49.054083751Z",
-  "notes": ""
+  "notes": "Corrected the pre-existing citation truncation: the former source stopped before line 126; this source is byte-verbatim lines 124-126 permitted by the registry shard."
 }

@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Lefschetz-Hopf formula (maximal-simplex form): if f:X->X ...}
+\step{1} Lefschetz-Hopf formula (maximal-simplex form): if f:X->X is a map of a finite polyhedron with a finite set of fixed points, each of which lies in a maximal simplex of X, then the Lefschetz number L(f) is the sum of the indices of all the fixed points of f. \steptag{validated} \\[6pt]
+\step{1.1} By the registered external GT-arkowitz-brown-2004-thm-1.2 (verbatim Theorem 1.2, Lefschetz-Hopf): If f : X → X is a map of a finite polyhedron with a finite set of fixed points, each of which lies in a maximal simplex of X, then L( f ) is the sum of the indices of all the fixed points of f. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
