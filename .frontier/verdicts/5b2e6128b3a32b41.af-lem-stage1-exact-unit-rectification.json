@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-exact-unit-rectification/export.md",
+  "oracle": "af-lem-stage1-exact-unit-rectification",
+  "result": "pass",
+  "claim_hash": "0c53546d8d71f1dce5c91767a0b92761142824c1c11e07b9457a557a85a0c785",
+  "oracle_digest": "ac1648c1da236da2c7410143c5cb6a4ab349550f59bfa06bfeab704d35125262",
+  "inputs_hash": "e0b420cd9f2d305d6ca40d751d785329e9715b64f9176fe03404cc651a8eb100",
+  "ts": "2026-07-26T07:51:35.363Z"
+}

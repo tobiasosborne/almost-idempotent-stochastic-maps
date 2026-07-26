@@ -213,7 +213,7 @@
 | `lem-sl1a-corner-ledger` | lemma | proved | none | B | For every exact signed idempotent P with 0 < delta(P) <= 2^(-16) and nonempty vi… |
 | `lem-sl1a-score-selector` | lemma | proved | none | B | For every exact signed idempotent P with delta(P) > 0, nonempty visible set W, a… |
 | `lem-sl1a-three-cell-reduction` | lemma | proved | none | B | SL1a three-cell reduction: if conj-sl1a-off-diagonal-cell (constant delta_X), co… |
-| `lem-stage1-exact-unit-rectification` | lemma | proved-mod-audit | seeded | A | Dimension-free exact-unit rectification: there are universal C_unit < infinity a… |
+| `lem-stage1-exact-unit-rectification` | lemma | proved | validated | A | Dimension-free exact-unit rectification: there are universal C_unit < infinity a… |
 | `lem-stage1-quantitative-inverse-function` | lemma | proved | validated | A | Quantitative inverse-function control: if V:X->Y is a Banach-space isomorphism a… |
 | `lem-starvation-completion-obstruction` | lemma | proved | validated | B | Bounded-slab starvation completion obstruction (K-free): for every finite I, eve… |
 | `lem-thmainext-conditional` | lemma | proved-mod-audit | none | A | Extended th_main_ext assembly: there are universal C_E < infinity and epsilon_E … |

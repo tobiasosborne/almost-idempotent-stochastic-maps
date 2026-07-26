@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Dimension-free exact-unit rectification: there are univer...}
+\step{1} Dimension-free exact-unit rectification: there are universal C\_unit < infinity and e\_unit > 0 such that every finite-dimensional epsilon\_X-C*-algebra with epsilon\_X <= e\_unit admits on the same involutive normed space an exact unit J and product bold-dot with ||J-I\_X|| <= C\_unit*epsilon\_X and ||x bold-dot y-xy|| <= C\_unit*epsilon\_X*||x||||y||. \steptag{validated} \\[6pt]
+\step{1.1} Fix an epsilon\_X-C*-algebra A as in def-epsilon-cstar-algebra and assume 0 <= epsilon\_X <= 1/2. Put I=I\_X, a=||I||, and J=I/a. The approximate-unit axiom gives |a-1|<=epsilon\_X, hence a>=1/2, so J is defined; moreover ||J||=1, J\textasciicircum{}dagger=J because I\textasciicircum{}dagger=I, and ||J-I||=|1-a|<=epsilon\_X. \steptag{validated} \\[4pt]
+\step{1.2} There is a complex-linear functional phi:A->C with ||phi||=1, phi(J)=1, and phi(x\textasciicircum{}dagger)=overline(phi(x)) for every x. Indeed, complex Hahn-Banach gives a norm-one complex-linear psi with psi(J)=1. The map psi\_sharp(x)=overline(psi(x\textasciicircum{}dagger)) is complex-linear of norm one, and phi=(psi+psi\_sharp)/2 has norm at most one, is Hermitian, and takes value one at the norm-one vector J; therefore ||phi||=1. \steptag{validated} \\[6pt]
+\step{1.2.1} By validated node 1.1, ||J||=1 and J\textasciicircum{}dagger=J. On the one-dimensional complex subspace C J define g(alpha J)=alpha. Since ||alpha J||=|alpha|, g has norm one; complex Hahn-Banach extends g to a complex-linear psi:A->C with ||psi||=1 and psi(J)=1. Define psi\_sharp(x)=overline(psi(x\textasciicircum{}dagger)). Because the involution is conjugate-linear and isometric, psi\_sharp is complex-linear and ||psi\_sharp||=||psi||=1 (the involution is bijective, being an involution). Self-adjointness of J now gives psi\_sharp(J)=overline(psi(J\textasciicircum{}dagger))=overline(psi(J))=1. Thus phi=(psi+psi\_sharp)/2 is complex-linear, satisfies ||phi||<=1 and phi(J)=1, and obeys phi(x\textasciicircum{}dagger)=overline(phi(x)) by direct expansion and (x\textasciicircum{}dagger)\textasciicircum{}dagger=x. Finally 1=|phi(J)|<=||phi||||J||=||phi||, so ||phi||=1. This proves exactly the assertion of node 1.2 and repairs the missing use of J\textasciicircum{}dagger=J. \steptag{validated} \\[4pt]
+\step{1.3} Using J and phi from the preceding steps, define the bilinear product x bold-dot y := xy + phi(x)(y-Jy) + phi(y)(x-xJ) - phi(x)phi(y)(J-JJ). Then J bold-dot y=y and x bold-dot J=x for all x,y, by substituting phi(J)=1 and cancelling the two copies of J-JJ. Thus J is a two-sided exact unit; together with ||J||=1 and J\textasciicircum{}dagger=J this is the exact-unit condition of def-epsilon-cstar-algebra. The unchanged involution is compatible with bold-dot: Hermiticity of phi, (xy)\textasciicircum{}dagger=y\textasciicircum{}dagger x\textasciicircum{}dagger, J\textasciicircum{}dagger=J, and (JJ)\textasciicircum{}dagger=JJ give (x bold-dot y)\textasciicircum{}dagger=y\textasciicircum{}dagger bold-dot x\textasciicircum{}dagger term by term. Hence the construction is on the same involutive normed space. \steptag{validated} \\[4pt]
+\step{1.4} For any z, the product-norm and approximate-unit axioms in def-epsilon-cstar-algebra and ||J-I||<=epsilon\_X give ||Jz-z|| <= ||(J-I)z||+||Iz-z|| <= ((1+epsilon\_X)epsilon\_X+epsilon\_X)||z||=(2+epsilon\_X)epsilon\_X||z||, and likewise ||zJ-z|| <= (2+epsilon\_X)epsilon\_X||z||. Taking z=J also gives ||J-JJ|| <= (2+epsilon\_X)epsilon\_X because ||J||=1. Since ||phi||=1, the defining correction therefore satisfies ||x bold-dot y-xy|| <= 3(2+epsilon\_X)epsilon\_X||x||||y|| <= (15/2)epsilon\_X||x||||y|| <= 8epsilon\_X||x||||y||. Along with ||J-I\_X||<=epsilon\_X<=8epsilon\_X, this proves the root with the universal choices e\_unit=1/2 and C\_unit=8. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
