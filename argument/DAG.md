@@ -172,7 +172,7 @@ graph LR
   lem-intersection-branch-production["lem-intersection-branch-production<br/>proved/none"]
   lem-intersection-witness-confinement["lem-intersection-witness-confinement<br/>proved/none"]
   lem-kernel-implies-hlc["lem-kernel-implies-hlc<br/>proved/none"]
-  lem-kitaev-almost-idemp-audit["lem-kitaev-almost-idemp-audit<br/>proved-mod-audit/none"]
+  lem-kitaev-almost-idemp-audit["lem-kitaev-almost-idemp-audit<br/>proved-mod-audit/seeded"]
   lem-kitaev-diagonal-repair["lem-kitaev-diagonal-repair<br/>proved-mod-audit/none"]
   lem-l2-core-collapse["lem-l2-core-collapse<br/>proved/none"]
   lem-l5-mass-barycenter-dualization["lem-l5-mass-barycenter-dualization<br/>proved/none"]
