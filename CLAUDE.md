@@ -190,6 +190,9 @@ python3 scripts/check-refs.py --check          # verbatim-quote provenance gate 
 python3 scripts/check-provenance.py --check    # report/lab-book ↔ registry sync (labels/sources/status/overclaim)
 python3 scripts/check-runs.py --check          # numerics: every runs/ bundle has README+schema+INDEX row + invariant
 sh scripts/check-report-shards.sh              # sharded lab-book: master purity, shard headers, INDEX/CATALOG sync
+python3 scripts/gen-report-defs.py --check --dag-anchors   # generated defs layer freshness (report/generated/defs/)
+python3 scripts/gen-report-dag.py --check      # generated Route-F DAG atlas freshness (report/generated/dag/)
+python3 scripts/gen-report-stats.py --check    # generated campaign-stats freshness; refresh snapshot: --extract
 python3 scripts/fetch-refs.py --status         # reproducible refs/ reconstruction: present/fetchable/cache/missing
 cd refs && sha256sum -c manifest/checksums.sha256     # ground-truth integrity (payload gitignored)
 cd report && make                              # latexmk -pdf → report/main.pdf (the internal sharded lab-book)
@@ -356,7 +359,9 @@ definitions/            Layer 0 — def-<slug>.md shards + README (schema) + IND
 argument/               Layer 1 — lemmas/<id>.md shards + README + INDEX + DAG (generated Mermaid)
 proofs/<id>/            Layer 2 — af workspaces (OPT-IN; orchestrated per §6)
 report/                 internal sharded LaTeX lab-book (main.tex + sections/NN_*.tex) + SHARD_CATALOG.md
-                        + PROVENANCE.md + Makefile
+                        + PROVENANCE.md + Makefile; report/generated/{defs,dag,stats}/ are MACHINE-WRITTEN
+                        layers (a thin shard \inputs each; never hand-edit; each has a --check freshness
+                        gate wired into check-all.sh; regenerate via the scripts above)
 runs/<date>-<slug>/     numerical experiments — one bundle per run (README + data + figures)  [L3]
 data/SCHEMA.md          CSV/column contracts for run outputs
 refs/                   ground truth — <source-id>/ (gitignored payload) + manifest/ (tracked)
