@@ -277,3 +277,61 @@ index is sgn det(I − Df)).
   text, so it cannot serve as ground truth for the local-index-sign theorem itself. Not
   ingested as a substitute for the same reason.
 - **Escalation: obtainable only via institutional/library access or purchase.**
+
+---
+
+## 2026-07-26 device-migration rebuild addendum
+
+Rebuilt on the new device from the committed snapshot. Items 9 (Hatcher) and 11
+(Arkowitz-Brown) re-downloaded from their recorded URLs, SHA256 byte-identical.
+Item 10 (Cairns 1935): the recorded Project Euclid article-slug URL is now ALSO
+Incapsula-blocked (returns the challenge HTML). Working alternative found —
+the AMS open journal archive canonical path serves BYTE-IDENTICAL content
+(same SHA256 2b36c50098bf57da716f76ae9716c0d44759c4e6fd3a51a7035c24e654d7104c):
+https://www.ams.org/journals/bull/1935-41-08/S0002-9904-1935-06140-3/S0002-9904-1935-06140-3.pdf
+Older items (2-8: chakraborty-rao, douglas, ando, flor, hoffman, luo-pang,
+meyer) NOT re-downloaded yet (per migration notes: only when a task needs
+them). NOTE: item 7 (Luo-Pang) was originally acquired via TIB VPN — may need
+VPN again. Items 12/13 (Lee, Granas-Dugundji) remain USER escalations.
+
+---
+
+## 2026-07-26 TIB-VPN acquisitions (items 12/13 CLEARED + refs/ payload restored)
+
+User logged onto TIB VPN; Springer institutional access live. All downloads
+below via link.springer.com canonical full-book/article PDF endpoints (legal
+institutional access, not mirrors).
+
+### Item 12 — Lee, "Introduction to Smooth Manifolds," 2nd ed. (GTM 218) — NOW ACQUIRED
+- URL: https://link.springer.com/content/pdf/10.1007/978-1-4419-9982-5.pdf
+- File: `lee-smooth-manifolds-2ed.pdf`
+- SHA256: `1460301b65117af485281447ead9e226265af918740c6178660e67e2b26ae273`
+- 723 pages, PDF 1.4. Extraction (`-layout`): usable.
+- Target locus CONFIRMED verbatim: "Theorem 21.10 (Quotient Manifold Theorem).
+  Suppose G is a Lie group acting…" (txt line 25748).
+
+### Item 13 — Granas & Dugundji, "Fixed Point Theory" (Springer 2003) — NOW ACQUIRED
+- URL: https://link.springer.com/content/pdf/10.1007/978-0-387-21593-8.pdf
+- File: `granas-dugundji-fixed-point-theory.pdf`
+- SHA256: `49a75a2e443a3075c062a07f9306155aec780f5bd4942e856de6dc938b8219c0`
+- 706 pages, PDF 1.4. Extraction (`-layout`): usable (OCR-ish artifacts, greppable).
+- Candidate locus for `lem-topology-local-index-sign`: "J(T, 0) = sgndet(I - T)"
+  (txt line 14615); exact differentiable-statement locus to be pinned at the
+  per-def promotion step.
+
+### refs/ payload RESTORED — Högnäs–Mukherjea 2011
+- URL: https://link.springer.com/content/pdf/10.1007/978-0-387-77548-7.pdf
+- Springer served bytes IDENTICAL to the user's 2026-06-11 personal download:
+  SHA256 `d74844072a1b96a29acbae5586e42c641fcc17721f55b89184b95dbcf25fa649`
+  == the pinned manifest hash. Local `pdftotext -layout` reproduced the pinned
+  .txt byte-exactly too. Copied into `refs/hognas-mukherjea/`;
+  `sha256sum -c manifest/checksums.sha256` passes on ALL 11 payloads.
+
+### Older items 2–8 — ALL re-downloaded, ALL SHA256 byte-identical to the log
+chakraborty-rao, douglas, ando, flor, hoffman, luo-pang (Springer, VPN),
+meyer. .txt re-extracted for each.
+
+### Still FAILED / not needed
+- Item 1 (Chakraborty–Mukherjea, AMS Contemp. Math. 516) — not on any current
+  queue; not retried.
+- Whitehead 1940 — superseded by Cairns (item 10).
