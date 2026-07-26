@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-topology-quotient-manifold/export.md",
+  "oracle": "af-lem-topology-quotient-manifold",
+  "result": "pass",
+  "claim_hash": "84e78dfe41ae4871238f7948fc548b3469cb3b64b268d05640bbe22f3b109a7c",
+  "oracle_digest": "46b1de9fa5421abfa617d40a9a22c9204dac81941cdce0c67313f743a3508f48",
+  "inputs_hash": "b3c901e2bc2c25250533f6026ccf1ee4c2c988f7f7dcc33a9159024f7f0ec6e8",
+  "ts": "2026-07-26T15:17:11.866Z"
+}

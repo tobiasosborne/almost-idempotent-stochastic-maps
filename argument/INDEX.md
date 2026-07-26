@@ -100,7 +100,7 @@
 | `lem-exposed-circuit` | lemma | proved-mod-audit | none | A | For a signed affine retraction with neg mass <= delta: (i) a (rho,kappa)-exposed… |
 | `lem-extcb-corner-dimension-additivity` | lemma | proved | validated | A | Level-one corner-dimension additivity: for two finite-dimensional commutative C*… |
 | `lem-extcb-exact-target-approximation` | lemma | stated | none | A | Exact-target complete approximation: there are universal C_app<infinity and a_ap… |
-| `lem-extcb-exact-target-correction` | lemma | proved | none | A | There are universal a_corr>0 and C_corr<infinity with the following property: if… |
+| `lem-extcb-exact-target-correction` | lemma | proved | seeded | A | There are universal a_corr>0 and C_corr<infinity with the following property: if… |
 | `lem-extcb-four-corner-merge` | lemma | proved | validated | A | Complete four-corner merge: there are universal C_merge < infinity and a_merge >… |
 | `lem-extcb-four-corner-norm` | lemma | proved | validated | A | Four-corner assembled norm estimate: there are universal K_norm < infinity and e… |
 | `lem-extcb-one-dimensional-corner-dimension` | lemma | proved | validated | A | Level-one one-dimensional corner dimension: for sufficiently small universal del… |

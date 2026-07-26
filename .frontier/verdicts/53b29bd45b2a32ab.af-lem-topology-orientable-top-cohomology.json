@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-topology-orientable-top-cohomology/export.md",
+  "oracle": "af-lem-topology-orientable-top-cohomology",
+  "result": "pass",
+  "claim_hash": "6b73714461ca25431016d5ef0fd58eddef2490221cf1657a105be051ea3f4ede",
+  "oracle_digest": "2d5ba88cf87dc5c84bd139a3bf3780ee476945b4baef08cf3a686c0a8b419cd3",
+  "inputs_hash": "4f5ee794aafef4f505790f17eb9be72fe54446864745e1a3bc676331ed76a931",
+  "ts": "2026-07-26T15:17:11.786Z"
+}

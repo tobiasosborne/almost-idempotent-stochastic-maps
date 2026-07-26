@@ -111,7 +111,7 @@ graph LR
   lem-exposed-circuit["lem-exposed-circuit<br/>proved-mod-audit/none"]
   lem-extcb-corner-dimension-additivity["lem-extcb-corner-dimension-additivity<br/>proved/validated"]
   lem-extcb-exact-target-approximation["lem-extcb-exact-target-approximation<br/>stated/none"]
-  lem-extcb-exact-target-correction["lem-extcb-exact-target-correction<br/>proved/none"]
+  lem-extcb-exact-target-correction["lem-extcb-exact-target-correction<br/>proved/seeded"]
   lem-extcb-four-corner-merge["lem-extcb-four-corner-merge<br/>proved/validated"]
   lem-extcb-four-corner-norm["lem-extcb-four-corner-norm<br/>proved/validated"]
   lem-extcb-one-dimensional-corner-dimension["lem-extcb-one-dimensional-corner-dimension<br/>proved/validated"]

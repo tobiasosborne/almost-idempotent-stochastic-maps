@@ -1,0 +1,8 @@
+{
+  "id": "166a66c38a3383d7",
+  "name": "GT-kitaev-operator-space-axioms",
+  "source": "refs/kitaev-2405.02434/approximate_algebras.tex:1454-1463 VERBATIM: \"A complex vector space $\\calL$ is called an \\emph{operator space} if each space $\\Ma{n}\\otimes\\calL$ (for $n=1,2,\\ldots$) is equipped with a norm $\\|\\cdot\\|_n$ satisfying the following axioms: \\begin{alignat}{2} \\label{ax_R1} \\|AXB\\|_n \u0026\\le\\|A\\|\\ts\\|X\\|_k\\ts\\|B\\|\\qquad \u0026 \u0026(A\\in\\Ma{n,k},\\quad B\\in\\Ma{k,n},\\quad X\\in\\Ma{k}\\otimes\\calL),\\\\[3pt] \\label{ax_R2} \\left\\|\\begin{pmatrix}X\u00260\\\\ 0\u0026Y\\end{pmatrix}\\right\\|_{k+n} \u0026=\\max\\bigl\\{\\|X\\|_k,\\|Y\\|_n\\bigr\\}\\qquad \u0026 \u0026 (X\\in\\Ma{k}\\otimes\\calL,\\quad Y\\in\\Ma{n}\\otimes\\calL). \\end{alignat} The norm on $\\calL$ itself is defined by identifying $\\calL$ with $\\Ma{1}\\otimes\\calL$. An operator space is called \\emph{self-adjoint} if it is equipped with a conjugate linear involution $\\dagger$ that preserves all norms $\\|\\cdot\\|_n$.\"",
+  "content_hash": "896f153462ad5e278769e4ed2a364e18f503ccdee04d49c29eddf41f877d8fd6",
+  "created": "2026-07-26T15:17:43.29246956Z",
+  "notes": ""
+}

@@ -5,7 +5,8 @@ contract: There are universal a_corr>0 and C_corr<infinity with the following pr
 defs: def-fd-cstar-diagonal; def-extended-epsilon-cstar-algebra
 deps:
 status: proved
-af: none
+af: seeded
+workspace: proofs/lem-extcb-exact-target-correction
 provenance: proofs/conj-extcb ledger node 1.2 (af-validated 2026-07-25, taint clean; children 1.2.1-1.2.3 + endpoint repairs 1.2.3.1, 1.2.3.1.1) — contract adopted VERBATIM per the banking precedent; DESIGN-GAP-EA.md §2.1 (aism-fbh8, design codex job 2026-07-26)
 owner: A
 ---
