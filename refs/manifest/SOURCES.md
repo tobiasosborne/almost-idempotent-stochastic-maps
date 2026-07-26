@@ -23,6 +23,11 @@ locus (`check-refs.py`); the recorded SHA256 pins the exact bytes. Verify integr
 | `hognas-mukherjea` | G. Högnäs, A. Mukherjea, *Probability Measures on Semigroups*, 2nd ed., Springer 2011, ISBN 978-0-387-77548-7 | Springer (Probability and Its Applications) | 2026-06-11 | `refs/hognas-mukherjea/hognas-mukherjea-2011.pdf` (+ `.txt`) | `d74844072a1b96a2` | the δ=0 classification anchor — idempotent probability measures (Thms 1.11 / 1.12 / 1.16); copyright, cache-only |
 | `kitaev-2405.02434` | A. Kitaev, *Almost-idempotent quantum channels and approximate C\*-algebras*, arXiv:2405.02434v2 (Feb 2025) | arXiv:2405.02434 [math.OA] | 2026-07-23 | `refs/kitaev-2405.02434/approximate_algebras.tex` (+ `source.tar.gz`) | `e7eb512a2ec2438d` | Route F (fr arm FH) sole import — `th_factorization` (tex:2730, "Thm 12.3"): two-sided O(η) UCP factorization through a finite-dim C\*-algebra with tensor-extended approximate multiplicativity; arXiv e-print reproducible + byte-verified |
 | `salzmann-bergh-datta-2405.01532` | R. Salzmann, B. Bergh, N. Datta, *Robustness of Fixed Points of Quantum Channels and Application to Approximate Quantum Markov Chains*, arXiv:2405.01532 (May 2024) | arXiv:2405.01532 [quant-ph] | 2026-07-23 | `refs/salzmann-bergh-datta-2405.01532/FixedPoints.tex` (+ full e-print) | `d4d1e6f9d2afd837` | sharp dimension-free √ε fixed-point repair (thm:FixClassical + optimality remark) — the depolarizing-blend mechanism + the √η-sharpness external anchor (`ex-hume` cross-check); arXiv e-print reproducible |
+| `hatcher-algebraic-topology` | A. Hatcher, *Algebraic Topology*, Cambridge Univ. Press 2002 (author's free canonical PDF, 560pp printing) | https://pi.math.cornell.edu/~hatcher/AT/AT.pdf | 2026-07-26 | `refs/hatcher-algebraic-topology/AT.pdf` (+ `.txt`) | `bebb3032bf9021b9` | Stage-1 topology rows: top cohomology (Thm 3.26 + UCT; Cor 3.39), Künneth cross-product (Thm 3.15 — NOT 3.16 in this printing), Hopf structure (Thm 3C.4); URL-reproducible |
+| `cairns-1935` | S. S. Cairns, *Triangulation of the manifold of class one*, Bull. Amer. Math. Soc. 41(8) (1935), 549–552 | AMS open journal archive (see lock) | 2026-07-26 | `refs/cairns-1935/cairns-triangulation-1935.pdf` (+ `.txt`) | `2b36c50098bf57da` | Stage-1 topology row `lem-topology-finite-triangulation` (unnumbered THEOREM, p. 549); URL-reproducible; byte-identical to the Project Euclid copy |
+| `arkowitz-brown-2004` | M. Arkowitz, R. F. Brown, *The Lefschetz–Hopf theorem and axioms for the Lefschetz number*, Fixed Point Theory Appl. 2004:1, 1–11 (Hindawi OA) | https://link.springer.com/content/pdf/10.1155/S1687182004308120.pdf | 2026-07-26 | `refs/arkowitz-brown-2004/arkowitz-brown-lefschetz-hopf-2004.pdf` (+ `.txt`) | `63da10be018c802f` | Stage-1 topology row `lem-topology-lefschetz-hopf` (Thm 1.2, maximal-simplex form); URL-reproducible (open access) |
+| `lee-smooth-manifolds` | J. M. Lee, *Introduction to Smooth Manifolds*, 2nd ed., Springer GTM 218, 2012 | SpringerLink (TIB institutional access) | 2026-07-26 | `refs/lee-smooth-manifolds/lee-smooth-manifolds-2ed.pdf` (+ `.txt`) | `1460301b65117af4` | Stage-1 topology row `lem-topology-quotient-manifold` (Thm 21.10, Quotient Manifold Theorem); copyright, cache-only |
+| `granas-dugundji` | A. Granas, J. Dugundji, *Fixed Point Theory*, Springer Monographs in Mathematics, 2003 | SpringerLink (TIB institutional access) | 2026-07-26 | `refs/granas-dugundji/granas-dugundji-fixed-point-theory.pdf` (+ `.txt`) | `49a75a2e443a3075` | Stage-1 topology row `lem-topology-local-index-sign` (Thms (8.4) p.267 + (8.5) pp.328–329); copyright, cache-only |
 
 **Provenance status (this ingest).** Both sources are FOUND-AND-PINNED: the bytes exist locally and the
 recorded 16-hex prefixes are real SHA256 values computed from the on-disk files (they byte-match the
@@ -79,3 +84,16 @@ contraction (Lemma PertUniqueFix). Role: (i) the multi-block blend pattern for R
 (`2405.01532.tar.gz`, **byte-identical to `https://arxiv.org/e-print/2405.01532` — downloaded directly
 2026-07-23**, `2ed2319f598376ed…`) + the extracted key members (`main.tex`, `FixedPoints.tex`,
 `Definitions_and_Setup.tex`, `Preliminaries.tex`, `Introduction.tex`).
+
+
+## hatcher-algebraic-topology / cairns-1935 / arkowitz-brown-2004 / lee-smooth-manifolds / granas-dugundji (Stage-1 topology promotion, 2026-07-26)
+
+The five Stage-1 topology sources of `DESIGN-FUDW-DECOMP-v4.1.md` §2.3/§4.2, promoted together
+from `refs-staging/` (acquisition log: `docs/plans/2026-07-26-refs-staging-ACQUIRED-snapshot.md`,
+loci-pinning verdicts: the R-arm harvest of 2026-07-26). Hatcher/Cairns/Arkowitz–Brown are
+URL-reproducible open access; Lee and Granas–Dugundji are copyrighted Springer books acquired via
+TIB institutional access (cache-only, `fetch: null`). Exact theorem loci and hypothesis-match
+verdicts are recorded in the seven `lem-topology-*` registry shards. Locus corrections vs the
+design register: Künneth is Thm 3.15 (not 3.16) in the canonical Hatcher printing; the
+Arkowitz–Brown Lefschetz–Hopf theorem carries the maximal-simplex hypothesis (contract narrowed
+accordingly, user-ratified-by-delegation 2026-07-26).

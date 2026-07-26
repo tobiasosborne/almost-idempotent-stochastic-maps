@@ -102,6 +102,82 @@
     "kind": "arxiv-eprint-member",
     "id": "2405.01532"
    }
+  },
+  {
+   "path": "hatcher-algebraic-topology/AT.pdf",
+   "sha256": "bebb3032bf9021b956da3bd070eb6c67dc662cf849be9cdf6679f677560e5618",
+   "source_id": "hatcher-algebraic-topology",
+   "fetch": {
+    "kind": "url",
+    "url": "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf"
+   }
+  },
+  {
+   "path": "hatcher-algebraic-topology/AT.txt",
+   "sha256": "9f69088c02fbe1354fdc342c495ac04a59c9a8d16e4517ce2d6b7d989cf1cf06",
+   "source_id": "hatcher-algebraic-topology",
+   "fetch": null,
+   "note": "cache-only; local pdftotext extraction of AT.pdf (greppable loci; byte-quote against this .txt). Not fetch-reproducible."
+  },
+  {
+   "path": "cairns-1935/cairns-triangulation-1935.pdf",
+   "sha256": "2b36c50098bf57da716f76ae9716c0d44759c4e6fd3a51a7035c24e654d7104c",
+   "source_id": "cairns-1935",
+   "fetch": {
+    "kind": "url",
+    "url": "https://www.ams.org/journals/bull/1935-41-08/S0002-9904-1935-06140-3/S0002-9904-1935-06140-3.pdf"
+   }
+  },
+  {
+   "path": "cairns-1935/cairns-triangulation-1935.txt",
+   "sha256": "7b7d10c6ebcd0dbda095a45254f9b6fc897299f59ae677048f73cfb6baad9c05",
+   "source_id": "cairns-1935",
+   "fetch": null,
+   "note": "cache-only; local pdftotext extraction. The Project Euclid article-slug URL is Incapsula-blocked; the AMS URL above serves byte-identical content."
+  },
+  {
+   "path": "arkowitz-brown-2004/arkowitz-brown-lefschetz-hopf-2004.pdf",
+   "sha256": "63da10be018c802f2a53b21ba53ab4e7de23aa04d506508b549c40ee5ce7b21f",
+   "source_id": "arkowitz-brown-2004",
+   "fetch": {
+    "kind": "url",
+    "url": "https://link.springer.com/content/pdf/10.1155/S1687182004308120.pdf"
+   }
+  },
+  {
+   "path": "arkowitz-brown-2004/arkowitz-brown-lefschetz-hopf-2004.txt",
+   "sha256": "782021b35ca890703644ab2e7fba9014e42d2c211d335424c6ca97ad73571445",
+   "source_id": "arkowitz-brown-2004",
+   "fetch": null,
+   "note": "cache-only; local pdftotext extraction."
+  },
+  {
+   "path": "lee-smooth-manifolds/lee-smooth-manifolds-2ed.pdf",
+   "sha256": "1460301b65117af485281447ead9e226265af918740c6178660e67e2b26ae273",
+   "source_id": "lee-smooth-manifolds",
+   "fetch": null,
+   "note": "cache-only; copyrighted Springer GTM 218, acquired via TIB institutional access 2026-07-26; no public reproducible source."
+  },
+  {
+   "path": "lee-smooth-manifolds/lee-smooth-manifolds-2ed.txt",
+   "sha256": "324b7d8b1f70d40eb7608919e3c9cef93628215fa9e9f0816cb4c9549f058b3c",
+   "source_id": "lee-smooth-manifolds",
+   "fetch": null,
+   "note": "cache-only; local pdftotext -layout extraction (byte-quote against this .txt)."
+  },
+  {
+   "path": "granas-dugundji/granas-dugundji-fixed-point-theory.pdf",
+   "sha256": "49a75a2e443a3075c062a07f9306155aec780f5bd4942e856de6dc938b8219c0",
+   "source_id": "granas-dugundji",
+   "fetch": null,
+   "note": "cache-only; copyrighted Springer monograph, acquired via TIB institutional access 2026-07-26; no public reproducible source."
+  },
+  {
+   "path": "granas-dugundji/granas-dugundji-fixed-point-theory.txt",
+   "sha256": "5d28349acffad060e60545d20422fae8ecf3895ada77b4131690da96a5839788",
+   "source_id": "granas-dugundji",
+   "fetch": null,
+   "note": "cache-only; local pdftotext -layout extraction (byte-quote against this .txt)."
   }
  ]
 }
