@@ -210,7 +210,7 @@ graph LR
   lem-routef-ai-defect-linearization["lem-routef-ai-defect-linearization<br/>proved-mod-audit/none"]
   lem-routef-f2-positive-unital-compression["lem-routef-f2-positive-unital-compression<br/>proved-mod-audit/none"]
   lem-routef-f3-retract-defect["lem-routef-f3-retract-defect<br/>proved-mod-audit/none"]
-  lem-routef-functional-calculus-closeness["lem-routef-functional-calculus-closeness<br/>proved-mod-audit/none"]
+  lem-routef-functional-calculus-closeness["lem-routef-functional-calculus-closeness<br/>proved-mod-audit/seeded"]
   lem-routef-k-ledger["lem-routef-k-ledger<br/>proved-mod-audit/none"]
   lem-routef-prh-finish["lem-routef-prh-finish<br/>proved/validated"]
   lem-row-far-dual-certificate["lem-row-far-dual-certificate<br/>proved/validated"]
