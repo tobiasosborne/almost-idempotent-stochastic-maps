@@ -1,0 +1,8 @@
+{
+  "id": "faef8b3507aa9665",
+  "name": "GT-lee-2ed-thm-21-10-corrected",
+  "source": "refs/lee-smooth-manifolds/lee-smooth-manifolds-2ed.txt:25748-25754 VERBATIM: \"Theorem 21.10 (Quotient Manifold Theorem). Suppose G is a Lie group acting\nsmoothly, freely, and properly on a smooth manifold M . Then the orbit space M=G\nis a topological manifold of dimension equal to dim M \u0006 dim G, and has a unique\n\fQuotients of Manifolds by Group Actions                                                        545\n\nsmooth structure with the property that the quotient map \u0003 W M ! M=G is a smooth\nsubmersion.\"",
+  "content_hash": "99ad3785d32dc9e399f7fcdbc7b6e3949f9c4bf822621fddaa92102654da5b27",
+  "created": "2026-07-26T12:34:11.308586259Z",
+  "notes": ""
+}

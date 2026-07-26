@@ -1,0 +1,8 @@
+{
+  "id": "12791431a66b6073",
+  "name": "GT-hatcher-AT-field-UCT",
+  "source": "refs/hatcher-algebraic-topology/AT.txt:12385-12394 VERBATIM: \"The universal coefficient theorem has a simpler form if we take coefficients in\na field F for both homology and cohomology. In §2.2 we defined the homology\ngroups Hn (X; F ) as the homology groups of the chain complex of free F modules\nCn (X; F ) , where Cn (X; F ) has basis the singular n simplices in X . The dual complex HomF (Cn (X; F ), F ) of F module homomorphisms is the same as Hom(Cn (X), F )\nsince both can be identified with the functions from singular n simplices to F . Hence\nthe homology groups of the dual complex HomF (Cn (X; F ), F ) are the cohomology\ngroups H n (X; F ) . In the generalization of the universal coefficient theorem to the\ncase of modules over a principal ideal domain, the ExtF terms vanish since F is a\nfield, so we obtain isomorphisms\nH n (X; F ) ≈ HomF (Hn (X; F ), F )\"",
+  "content_hash": "81eb71141818b04e6cb21b2f22a630ce3f4e2a226549ea2351afc4523d3eea4a",
+  "created": "2026-07-26T11:43:50.585571335Z",
+  "notes": ""
+}

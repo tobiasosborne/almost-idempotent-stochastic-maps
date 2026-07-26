@@ -1,8 +1,8 @@
 {
   "id": "e1788e8ced2fa90c",
   "name": "GT-granas-dugundji-thm-8.5-leray-schauder",
-  "source": "refs/granas-dugundji/granas-dugundji-fixed-point-theory.txt:14700-14708 VERBATIM: \"(a) S and the vertical boundary   av     of V are disjoint,\n    (b) Fix(fa) eVa, Fix(fb) n Vb = 0.\nBy excision, i(fa, Va) = i(fa, Ua ) =1= 0, and because S n av   = 0, the general\nhomotopy invariance (6.3) gives i(fa, Va) = i(fb, Vb) =1= 0. On the other hand,\n\n§12. Fixed Point Index in ANRs                                             321\n\nFix(jb) n Vb = 0 shows that i(jb, Vb) = O. This contradiction completes the\nproof.                                                                    0\"",
-  "content_hash": "fd75e230cb113640b82c03ee322b2ec0efe31164ffe62f671bee307a7cb0eada",
+  "source": "refs/granas-dugundji/granas-dugundji-fixed-point-theory.txt:14700-14708 VERBATIM: \"(8.5)     THEOREM (Leray- Schauder formula). Let E be a Banach space,\n          U C E open , and F : U ~ E a compact map with F(xo) = Xo E U.\n\f§12. Fixed Point Index in ANRs                                                              329\n\n        Assume that F is differentiable at Xo and that 1 is not an eigenvalue\n        of F'(xo) E X(E, E). Then:\n        (a) Xo is an isolated fixed point for F and J(F, xo) = J(F' (xo) , 0),\n        (b) J(F,xo) = (-1),8, where (3 is the sum of the algebraic multiplici-\n            ties of the characteristic values of F' (xo) lying in (0, 1).\"",
+  "content_hash": "f9adf7abd2428d28b02e1a1d16e260d2169c661a8130c117b62b95b7fe971b6d",
   "created": "2026-07-26T11:31:49.103843284Z",
-  "notes": ""
+  "notes": "Corrected malformed initial registration to the shard-pinned byte-verbatim theorem statement."
 }

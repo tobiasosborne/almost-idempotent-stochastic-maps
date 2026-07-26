@@ -4,16 +4,17 @@ kind: lemma
 contract: Top cohomology of a closed orientable manifold: if M is a connected compact orientable d-manifold without boundary, then H^d(M;R) != 0.
 defs:
 deps:
-status: stated
-af: seeded
+status: proved
+af: validated
 provenance: hatcher-algebraic-topology AT.txt:14704-14711 (Theorem 3.26: H_n(M;Z)=Z for closed connected orientable) + AT.txt:12385-12394 (field-coefficient UCT) + AT.txt:15531-15534 (Cor 3.39: H^n(M;Z)=Z) — Thm 3.26 + UCT covers the row exactly, loci pinned 2026-07-26; DESIGN-FUDW-DECOMP-v4.1.md §2.3
 owner: A
 workspace: proofs/lem-topology-orientable-top-cohomology
 ---
 
-**Status.** Local source-result transcription at `stated`; to be af-elevated
-with the byte-matched externals. Not `cited`, not af-validated, not
-L0-rigorous yet.
+**Status.** af-VALIDATED in-repo (2026-07-26, session 28): 14-node tree
+(Hatcher Thm 3.26 + field-coefficient UCT + Cor 3.39 externals composed),
+taint clean 14/14. Export at
+`proofs/lem-topology-orientable-top-cohomology/export.md`.
 
 **Source loci (pinned).** Hatcher, *Algebraic Topology* (author's canonical
 560pp PDF): Theorem 3.26 (txt:14704-14711) — for M a closed connected

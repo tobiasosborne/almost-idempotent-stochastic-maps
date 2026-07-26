@@ -1,0 +1,8 @@
+{
+  "id": "f16f47f8c49b465c",
+  "name": "GT-hatcher-AT-thm-3.26",
+  "source": "refs/hatcher-algebraic-topology/AT.txt:14704-14711 VERBATIM: \"Theorem 3.26. Let M be a closed connected n manifold. Then :\n(a) If M is R orientable, the map Hn (M; R)→Hn (M || x; R) ≈ R is an isomorphism\nfor all x ∈ M .\n(b) If M is not R orientable, the map Hn (M; R)→Hn (M || x; R) ≈ R is injective with\nimage { r ∈ R | 2r = 0 } for all x ∈ M .\n(c) Hi (M; R) = 0 for i \u003e n .\nIn particular, Hn (M; Z) is Z or 0 depending on whether M is orientable or not,\nand in either case Hn (M; Z2 ) = Z2 .\"",
+  "content_hash": "586dc3f0f151aadd8fd75420021d76bf28c0a05579be034920f136c15194411e",
+  "created": "2026-07-26T11:43:50.579118849Z",
+  "notes": ""
+}

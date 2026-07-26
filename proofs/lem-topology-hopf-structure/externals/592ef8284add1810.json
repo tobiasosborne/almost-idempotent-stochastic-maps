@@ -1,8 +1,8 @@
 {
   "id": "592ef8284add1810",
   "name": "GT-hatcher-AT-hopf-algebra-definition",
-  "source": "refs/hatcher-algebraic-topology/AT.txt:17654-17677 VERBATIM: \"The Cohomology Cross Product\n\nIn §3.2 we defined a cross product\n×\n\nH k (X; R)× H ℓ (Y ; R) -------→ H k+ℓ (X × Y ; R)\nin terms of the cup product. Let us now describe the alternative approach in which\nthe cross product is defined directly via cellular cohomology, and then cup product\nis defined in terms of this cross product.\nThe cellular definition of cohomology cross product is very much like the definition in homology. Given CW complexes X and Y , define a cross product of cellular\ncochains ϕ ∈ C k (X; R) and ψ ∈ C ℓ (Y ; R) by setting\nk\nk\n(ϕ× ψ)(eα\n× eβℓ ) = ϕ(eα\n)ψ(eβℓ )\n\nand letting ϕ× ψ take the value 0 on (k + ℓ) cells of X × Y which are not the product\nof a k cell of X with an ℓ cell of Y . Another way of saying this is to use the convention\n\n\nThe General Künneth Formula\"",
-  "content_hash": "f3e066ae19aa88efffeb8d5ec8b3b14cf0f825867987c381ecf903a98e7aa0dc",
+  "source": "refs/hatcher-algebraic-topology/AT.txt:17654-17677 VERBATIM: \"We can summarize this situation by saying that H ∗ (X; R) is a Hopf algebra, that\nL\nn\nover a commutative base ring R , satisfying the\nis, a graded algebra A =\nn≥0 A\n\nfollowing two conditions:\n\n(1) There is an identity element 1 ∈ A0 such that the map R →A0 , r ֏ r · 1 , is an\nisomorphism. In this case one says A is connected.\n(2) There is a diagonal or coproduct ∆ : A→A ⊗ A , a homomorphism of graded alP\n′\n′′\ngebras satisfying ∆(α) = α ⊗ 1 + 1 ⊗ α + i α′i ⊗ α′′\ni where |αi | \u003e 0 and |αi | \u003e 0 ,\nfor all α with |α| \u003e 0 .\n\nHere and in what follows we take ⊗ to mean ⊗R . The multiplication in A ⊗ A is given\n\nby the standard formula (α ⊗ β)(γ ⊗ δ) = (−1)|β||γ| (αγ ⊗ βδ) . For a general Hopf\nalgebra the multiplication is not assumed to be either associative or commutative (in\nthe graded sense), though in the example of H ∗ (X; R) for X an H–space the algebra\nstructure is of course associative and commutative.\"",
+  "content_hash": "058f47a164d8ea99c06fc7a8868ef08793ad03c7f334ee1f528efa787a0efc98",
   "created": "2026-07-26T11:31:49.139717744Z",
-  "notes": ""
+  "notes": "Corrected stale excerpt to the shard-authorized byte-verbatim locus before prover use."
 }

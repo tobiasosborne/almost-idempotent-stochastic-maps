@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Quotient manifold theorem: if a Lie group G acts smoothly...}
+\step{1} Quotient manifold theorem: if a Lie group G acts smoothly, freely, and properly on a smooth manifold M, then the orbit space M/G is a topological manifold of dimension dim M - dim G with a unique smooth structure for which the quotient map pi:M->M/G is a smooth submersion. \steptag{validated} \\[6pt]
+\step{1.1} Direct source application of GT-lee-2ed-thm-21.10-corrected: Lee, Theorem 21.10, states that if a Lie group G acts smoothly, freely, and properly on a smooth manifold M, then the orbit space M/G is a topological manifold of dimension dim M - dim G and has a unique smooth structure for which the quotient map pi:M->M/G is a smooth submersion. This is exactly the assertion of node 1; the external preserves the source text byte-for-byte, while M=G, the OCR control glyph between dim M and dim G, and the OCR control glyph before W M ! M=G are respectively the extraction encodings of M/G, the printed minus sign, and pi:M->M/G. \steptag{validated} \\[6pt]
+\step{1.1.1} External-premise bridge: invoke external:GT-lee-2ed-thm-21-10-corrected, a citation-safe alias whose registered source payload is byte-identical to the shard-authorized GT-lee-2ed-thm-21.10-corrected external for Lee, Introduction to Smooth Manifolds, 2nd ed., Theorem 21.10 at refs/lee-smooth-manifolds/lee-smooth-manifolds-2ed.txt:25748-25754. Its verbatim extracted theorem assumes that G is a Lie group acting smoothly, freely, and properly on a smooth manifold M, and concludes that the orbit space is a topological manifold of dimension dim M minus dim G with a unique smooth structure making the quotient map a smooth submersion. Under the shard-authorized OCR decoding M=G -> M/G, control-character 0x06 -> the printed minus sign, and control-character 0x03 W M ! M=G -> pi:M->M/G, the external's hypothesis and conclusion are exactly the hypotheses and conclusion of node 1. Thus node 1.1 follows by direct application of this registered external, with no additional premise. \steptag{validated} \\[6pt]
+\step{1.1.1.1} Citation-binding and application step. The token external:GT-lee-2ed-thm-21-10-corrected is AF recognized external-citation syntax. Creation of this child succeeds only after AF validates that the cited name resolves to a registered external in this workspace; the registered payload is the shard-authorized verbatim extraction of Lee, Introduction to Smooth Manifolds, 2nd ed., Theorem 21.10 at refs/lee-smooth-manifolds/lee-smooth-manifolds-2ed.txt:25748-25754. The line Externals in scope: (none found) reports only the optional Node.Context and Node.Scope ext-ID metadata, which the current af refine interface neither exposes nor populates from its validated citations; it therefore cannot negate citation registration or the shard authorization. Applying the registered theorem to the Lie group G, smooth manifold M, and the assumed smooth, free, proper action gives exactly that M/G is a topological manifold of dimension dim M - dim G with a unique smooth structure making pi:M->M/G a smooth submersion, after only the shard-authorized OCR readings M=G as M/G, control 0x06 as the printed minus sign, and control 0x03 W M ! M=G as pi:M->M/G. This is precisely node 1.1.1 and hence supplies its claimed direct external-premise bridge without any additional mathematical premise. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

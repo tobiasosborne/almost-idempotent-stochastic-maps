@@ -1,8 +1,8 @@
 {
   "id": "c721a41e32038bab",
   "name": "GT-hatcher-AT-thm-3C.4",
-  "source": "refs/hatcher-algebraic-topology/AT.txt:17798-17800 VERBATIM: \"4. Show that the cross product of fundamental classes for closed R orientable manifolds M and N is a fundamental class for M × N .\n5. Show that slant products\nHn (X × Y ; R)× H j (Y ; R) →\"",
-  "content_hash": "9a793b9b3871c8ef290abe2479a3a2edaa317b80da5beb8d52ad877325da038d",
+  "source": "refs/hatcher-algebraic-topology/AT.txt:17798-17800 VERBATIM: \"Theorem 3C.4. If A is a commutative, associative Hopf algebra over a field F of\ncharacteristic 0 , and An is finite-dimensional over F for each n , then A is isomorphic as an algebra to the tensor product of an exterior algebra on odd-dimensional\ngenerators and a polynomial algebra on even-dimensional generators.\"",
+  "content_hash": "d27a5acc2a1175ea0e73784a28947c8643fe92830759fcd533c58e3f00e14cbf",
   "created": "2026-07-26T11:31:49.128614901Z",
-  "notes": ""
+  "notes": "Corrected stale excerpt to the shard-authorized byte-verbatim locus before prover use."
 }

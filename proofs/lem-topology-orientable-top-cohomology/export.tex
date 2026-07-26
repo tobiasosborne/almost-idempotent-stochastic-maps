@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Top cohomology of a closed orientable manifold: if M is a...}
+\step{1} Top cohomology of a closed orientable manifold: if M is a connected compact orientable d-manifold without boundary, then H\textasciicircum{}d(M;R) != 0. \steptag{validated} \\[6pt]
+\step{1.1} Under the hypotheses of node 1, H\_d(M; R) is isomorphic to R (here R denotes the real coefficient field). \steptag{validated} \\[6pt]
+\step{1.1.1} Compact without boundary is exactly 'closed' in the manifold terminology used by GT-hatcher-AT-thm-3.26; hence the root hypotheses make M a closed connected d-manifold. \steptag{validated} \\[4pt]
+\step{1.1.2} Under the hypotheses of node 1, M is R-orientable for the real coefficient field R. This is proved without any change-of-coefficients assertion: GT-hatcher-AT-cor-3.39 over R supplies nonzero top cohomology, GT-hatcher-AT-field-UCT then forces H\_d(M;R) to be nonzero, and GT-hatcher-AT-thm-3.26(b) rules out failure of R-orientability because \{r in R : 2r=0\}=\{0\}. \steptag{validated} \\[6pt]
+\step{1.1.2.1} Apply GT-hatcher-AT-cor-3.39 in its field-coefficient form with the field R, k=0, and the nonzero unit class 1 in H\textasciicircum{}0(M;R). Since M is closed, connected, and orientable, the corollary gives a class beta in H\textasciicircum{}d(M;R) such that 1 cup beta is a generator of H\textasciicircum{}d(M;R) (equivalently, of its one-dimensional top-degree R-space). In particular H\textasciicircum{}d(M;R) is nonzero. \steptag{validated} \\[4pt]
+\step{1.1.2.2} By GT-hatcher-AT-field-UCT, H\textasciicircum{}d(M;R) is isomorphic to Hom\_R(H\_d(M;R),R). If H\_d(M;R) were zero, this Hom-space would be zero, contrary to node 1.1.2.1. Hence H\_d(M;R) is nonzero. \steptag{validated} \\[4pt]
+\step{1.1.2.3} If M were not R-orientable, GT-hatcher-AT-thm-3.26(b) would give an injective map H\_d(M;R) -> H\_d(M||x;R) ≅ R whose image is \{r in R : 2r=0\}. Since R is the real field, this image is \{0\}; injectivity would force H\_d(M;R)=0, contradicting node 1.1.2.2. Therefore M is R-orientable. \steptag{validated} \\[4pt]
+\step{1.1.3} Applying GT-hatcher-AT-thm-3.26(a) with n=d and coefficient ring R to this closed connected R-orientable manifold gives H\_d(M; R) ≅ R. \steptag{validated} \\[4pt]
+\step{1.2} By GT-hatcher-AT-field-UCT with X=M, F=R (the real field), and n=d, H\textasciicircum{}d(M; R) is isomorphic to Hom\_R(H\_d(M; R), R). \steptag{validated} \\[4pt]
+\step{1.3} If H\_d(M; R) is isomorphic to the real field R, then Hom\_R(H\_d(M; R), R) is nonzero. \steptag{validated} \\[6pt]
+\step{1.3.1} Assume an R-linear isomorphism phi: H\_d(M; R) -> R, as supplied by the antecedent. \steptag{validated} \\[4pt]
+\step{1.3.2} The isomorphism phi is an element of Hom\_R(H\_d(M; R), R) and is not the zero map, since its image is all of R and 1 in R is nonzero. \steptag{validated} \\[4pt]
+\step{1.3.3} Therefore Hom\_R(H\_d(M; R), R) contains a nonzero element and is a nonzero vector space. \steptag{validated} \\[4pt]
+\step{1.4} An isomorphism H\textasciicircum{}d(M; R) ≅ Hom\_R(H\_d(M; R), R) to a nonzero vector space implies H\textasciicircum{}d(M; R) != 0. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

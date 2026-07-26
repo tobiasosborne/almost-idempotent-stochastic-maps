@@ -1,0 +1,8 @@
+{
+  "id": "5607a6b93ce0a053",
+  "name": "GT-hatcher-AT-cor-3.39",
+  "source": "refs/hatcher-algebraic-topology/AT.txt:15531-15534 VERBATIM: \"Corollary 3.39. If M is a closed connected orientable n manifold, then an element\nα ∈ H k (M; Z) generates an infinite cyclic summand of H k (M; Z) iff there exists an\nelement β ∈ H n−k (M; Z) such that α ` β is a generator of H n (M; Z) ≈ Z . With\ncoefficients in a field this holds for any α ≠ 0 .\"",
+  "content_hash": "23174b9575dfce37217da219ebca1a7162ef34957824ea7eb4245e458fb08f78",
+  "created": "2026-07-26T11:43:50.591255774Z",
+  "notes": ""
+}
