@@ -4,8 +4,8 @@ kind: lemma
 contract: Corrected th_almost_idemp audit: let H be nonzero and let Phi:B(H)->B(H) be UCP with ||Phi^2-Phi||_cb <= eta < 1/4; for tilde-Phi=(1/2)(I+(2Phi-I)(I-4(Phi-Phi^2))^(-1/2)), A=Im(tilde-Phi), and X star Y=tilde-Phi(XY), one has tilde-Phi^2=tilde-Phi, both amplified associativity identities Phi_assoc1 and Phi_assoc2 have error at most 10*eta*||X||||Y||||Z|| after the local source type/index corrections, and for sufficiently small universal eta the inherited operator-space norms, involution, and unit make A an extended epsilon_AI(eta)-C*-algebra with epsilon_AI=max{r,20eta+2(M^5-1),3r-r^2}=O(eta), r=(3/2)((1-4eta)^(-1/2)-1), M=1+r, dimension-free at every amplification.
 defs: def-extended-epsilon-cstar-algebra
 deps:
-status: proved-mod-audit
-af: seeded
+status: proved
+af: validated
 provenance: docs/plans/2026-07-23-W74F-artifacts/AUDIT-W74F-D-ALMOSTIDEMP.md Executive verdict, Explicit estimate engine, Interface, and Hostile bottom line; hostile batch verdict VERDICT-W74F-BATCH.md §D (VALID, no correction)
 owner: B
 workspace: proofs/lem-kitaev-almost-idemp-audit

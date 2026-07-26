@@ -161,7 +161,7 @@
 | `lem-intersection-branch-production` | lemma | proved | none | A | With the universal constant delta_B = 1/4, every exact signed idempotent P with … |
 | `lem-intersection-witness-confinement` | lemma | proved | none | A | Intersection-branch witness confinement: for an exact signed idempotent P with 0… |
 | `lem-kernel-implies-hlc` | lemma | proved | none | A | Kernel implies HLC: if there are universal delta_0>0 and B<inf (n-free) such tha… |
-| `lem-kitaev-almost-idemp-audit` | lemma | proved-mod-audit | seeded | B | Corrected th_almost_idemp audit: let H be nonzero and let Phi:B(H)->B(H) be UCP … |
+| `lem-kitaev-almost-idemp-audit` | lemma | proved | validated | B | Corrected th_almost_idemp audit: let H be nonzero and let Phi:B(H)->B(H) be UCP … |
 | `lem-kitaev-diagonal-repair` | lemma | proved-mod-audit | none | B | Kitaev diagonal repair: the direct-sum diagonal formula printed at approximate_a… |
 | `lem-l2-core-collapse` | lemma | proved | none | A | L2-core collapse: the W54 tree's Branch-II leaf L2-v2 is EQUIVALENT to bare inte… |
 | `lem-l5-mass-barycenter-dualization` | lemma | proved | none | B | For every exact signed idempotent P with delta(P) > 0, nonempty visible set W, a… |

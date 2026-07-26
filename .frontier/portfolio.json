@@ -433,6 +433,18 @@
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-prh-finish/ledger",
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-prh-finish.md"
         ]
+      },
+      {
+        "name": "af-lem-kitaev-almost-idemp-audit",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-kitaev-almost-idemp-audit"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-kitaev-almost-idemp-audit/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-kitaev-almost-idemp-audit.md"
+        ]
       }
     ]
   },

@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-kitaev-almost-idemp-audit/export.md",
+  "oracle": "af-lem-kitaev-almost-idemp-audit",
+  "result": "pass",
+  "claim_hash": "42a7ef80243c557cb76ec5fdc91787995367d4e48866778028200ed66492e090",
+  "oracle_digest": "523cd3992676c1c350f6a9a812ec6fb6177a4adc93a2e78064a0f3ca2ed90508",
+  "inputs_hash": "918b0afb488f55a4c4d1a2911b52c811348b6e03fb173cb6c3153f2382cd23dd",
+  "ts": "2026-07-26T10:07:21.728Z"
+}
