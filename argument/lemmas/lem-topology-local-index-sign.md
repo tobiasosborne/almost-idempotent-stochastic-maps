@@ -1,7 +1,7 @@
 ---
 id: lem-topology-local-index-sign
 kind: lemma
-contract: Nondegenerate local fixed-point index: if x is an isolated fixed point of a C^1 self-map f with det(I-Df_x) != 0, then its local fixed-point index is sgn det(I-Df_x).
+contract: Nondegenerate local fixed-point index: if x is an isolated fixed point of a smooth self-map f of a compact orientable manifold with det(I-Df_x) != 0, then its local fixed-point index is sgn det(I-Df_x).
 defs: def-lefschetz-fixed-point-data
 deps:
 status: stated
@@ -10,6 +10,16 @@ provenance: granas-dugundji granas-dugundji-fixed-point-theory.txt:14700-14708 (
 owner: A
 workspace: proofs/lem-topology-local-index-sign
 ---
+
+**SCOPE NARROWING (user-ratified in-session, 2026-07-26).** The original
+transcription quantified over an unqualified C^1 self-map; the af verifier
+(node 1.5 challenge) correctly refused the closure because
+`def-lefschetz-fixed-point-data` defines the local index only for smooth
+self-maps of compact orientable manifolds. The contract is narrowed to that
+scope (option (a)); the Granas-Dugundji two-theorem composition covers it.
+CONSUMER OBLIGATION: `lem-stage1-extra-fixed-class` must supply smoothness,
+compactness, and orientability at its application site (same pattern as the
+Lefschetz-Hopf maximal-simplex obligation).
 
 **Status.** Local source-result transcription at `stated`; to be af-elevated
 with the two byte-matched externals. Not `cited`, not af-validated, not
