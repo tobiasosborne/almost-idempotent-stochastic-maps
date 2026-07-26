@@ -445,6 +445,18 @@
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-kitaev-almost-idemp-audit/ledger",
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-kitaev-almost-idemp-audit.md"
         ]
+      },
+      {
+        "name": "af-lem-routef-functional-calculus-closeness",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-routef-functional-calculus-closeness"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-functional-calculus-closeness/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-functional-calculus-closeness.md"
+        ]
       }
     ]
   },

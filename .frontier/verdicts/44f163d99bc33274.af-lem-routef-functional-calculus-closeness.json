@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-functional-calculus-closeness/export.md",
+  "oracle": "af-lem-routef-functional-calculus-closeness",
+  "result": "pass",
+  "claim_hash": "34034f78f7f93cfbc457c8f7f9d40aa29ac6b91076034b2bda3ad095e3e2c8f1",
+  "oracle_digest": "f326e99633aaddc042bb625e9660cf47091c572d70c2b10d4de74227580b47d6",
+  "inputs_hash": "92f5958aa79f1d20d877c29387f676de1a5e00de15d4f9c608ddc792ef8eefa7",
+  "ts": "2026-07-26T10:20:54.382Z"
+}

@@ -199,7 +199,7 @@
 | `lem-routef-ai-defect-linearization` | lemma | proved-mod-audit | none | A | Approximate-algebra defect linearization: there are universal C_A < infinity and… |
 | `lem-routef-f2-positive-unital-compression` | lemma | proved-mod-audit | none | A | Route F F2 positive-unital compression: let K >= 1 be a dimension-independent co… |
 | `lem-routef-f3-retract-defect` | lemma | proved-mod-audit | none | A | Route F F3 retract defect: let K >= 1 be a dimension-independent constant, n,k >… |
-| `lem-routef-functional-calculus-closeness` | lemma | proved-mod-audit | seeded | A | Functional-calculus closeness: for 0 <= eta <= 1/8, the exact functional-calculu… |
+| `lem-routef-functional-calculus-closeness` | lemma | proved | validated | A | Functional-calculus closeness: for 0 <= eta <= 1/8, the exact functional-calculu… |
 | `lem-routef-k-ledger` | lemma | proved-mod-audit | none | A | Relative Route F factorization ledger: there are universal K >= 1 and eta_K > 0,… |
 | `lem-routef-prh-finish` | lemma | proved | validated | A | Route F PRH finish: let A:l-infinity(k)->l-infinity(n) and M:l-infinity(n)->l-in… |
 | `lem-row-far-dual-certificate` | lemma | proved | validated | A | Row-far dual certificate: for an exact signed idempotent P and a geometrically d… |
