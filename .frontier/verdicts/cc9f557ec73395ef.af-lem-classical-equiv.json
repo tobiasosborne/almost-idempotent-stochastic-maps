@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-classical-equiv/export.md",
+  "oracle": "af-lem-classical-equiv",
+  "result": "pass",
+  "claim_hash": "35b46507291c6cb03e389571dd9dc2d4b266bf4cbc02ceb58d869548def8771c",
+  "oracle_digest": "07e3db448a9189e90b25f5928662aa681a11e6e323ac87e337f789c66bc7cc1c",
+  "inputs_hash": "b9e615e904722f43fff07978abe10ec4c2ecb4a0a1fc437ba90e81ad9b1ab226",
+  "ts": "2026-07-26T07:04:30.944Z"
+}
