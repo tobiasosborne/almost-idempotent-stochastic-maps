@@ -5,7 +5,7 @@ contract: Quantitative inverse-function control: if V:X->Y is a Banach-space iso
 defs:
 deps:
 status: stated
-af: none
+af: seeded
 provenance: DESIGN-FUDW-DECOMP-v3.md §2.4 (TeX 562-592); PROOF-W74F-H-STAGE1.md §1 SPLIT-A; VERDICT-W74F-H-STAGE1.md Construction exact-unit rectification; VERDICT-FUDW-DECOMP-V3.md §§4.1,D
 owner: A
 workspace: proofs/lem-stage1-quantitative-inverse-function
