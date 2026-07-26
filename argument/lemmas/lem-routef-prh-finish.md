@@ -5,7 +5,7 @@ contract: Route F PRH finish: let A:l-infinity(k)->l-infinity(n) and M:l-infinit
 defs: def-positive-approximate-retract; def-stochastic
 deps: lem-prh
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: LEDGER-W74F-G-K.md §5; VERDICT-W74F-G-KLEDGER.md Finish (VALID); VERDICT-W74F-H-STAGE1.md Scope and finish (VALID); DESIGN-FUDW-DECOMP-v3.md §2.5; VERDICT-FUDW-DECOMP-V3.md §§4.3,B,D
 owner: A
 workspace: proofs/lem-routef-prh-finish

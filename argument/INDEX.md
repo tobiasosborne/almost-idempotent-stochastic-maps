@@ -201,7 +201,7 @@
 | `lem-routef-f3-retract-defect` | lemma | proved-mod-audit | none | A | Route F F3 retract defect: let K >= 1 be a dimension-independent constant, n,k >… |
 | `lem-routef-functional-calculus-closeness` | lemma | proved-mod-audit | none | A | Functional-calculus closeness: for 0 <= eta <= 1/8, the exact functional-calculu… |
 | `lem-routef-k-ledger` | lemma | proved-mod-audit | none | A | Relative Route F factorization ledger: there are universal K >= 1 and eta_K > 0,… |
-| `lem-routef-prh-finish` | lemma | proved-mod-audit | none | A | Route F PRH finish: let A:l-infinity(k)->l-infinity(n) and M:l-infinity(n)->l-in… |
+| `lem-routef-prh-finish` | lemma | proved-mod-audit | seeded | A | Route F PRH finish: let A:l-infinity(k)->l-infinity(n) and M:l-infinity(n)->l-in… |
 | `lem-row-far-dual-certificate` | lemma | proved | validated | A | Row-far dual certificate: for an exact signed idempotent P and a geometrically d… |
 | `lem-row-zero-capacity` | lemma | proved | validated | A | Row-zero capacity: for an exact signed idempotent P, a row index i, and any vect… |
 | `lem-self-defect-shadow` | lemma | proved | none | A | Self-defect shadow: for an exact signed idempotent P and a row index v with P_vv… |

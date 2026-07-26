@@ -212,7 +212,7 @@ graph LR
   lem-routef-f3-retract-defect["lem-routef-f3-retract-defect<br/>proved-mod-audit/none"]
   lem-routef-functional-calculus-closeness["lem-routef-functional-calculus-closeness<br/>proved-mod-audit/none"]
   lem-routef-k-ledger["lem-routef-k-ledger<br/>proved-mod-audit/none"]
-  lem-routef-prh-finish["lem-routef-prh-finish<br/>proved-mod-audit/none"]
+  lem-routef-prh-finish["lem-routef-prh-finish<br/>proved-mod-audit/seeded"]
   lem-row-far-dual-certificate["lem-row-far-dual-certificate<br/>proved/validated"]
   lem-row-zero-capacity["lem-row-zero-capacity<br/>proved/validated"]
   lem-self-defect-shadow["lem-self-defect-shadow<br/>proved/none"]
