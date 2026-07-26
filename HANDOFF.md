@@ -10,82 +10,81 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read the sketch named in **`docs/plans/CURRENT.md`**. STEWARDSHIP mandate binding (Rule 9);
-   NOTE: the sketch has NOT yet been reconciled with session 27's six new T0 results — that
-   reconciliation is next-step 5 below and is OPEN DEBT.
-3. **Rigorous (af-validated, T0): 76.** Registry: 262. Session 27 (2026-07-26, this device)
-   banked SIX elevations, all first-run, all taint-clean:
-   `lem-stage1-quantitative-inverse-function` (71st, 14 nodes),
-   `lem-stage1-exact-unit-rectification` (72nd, 6),
-   `lem-routef-prh-finish` (73rd, 22),
-   `lem-kitaev-almost-idemp-audit` (74th, 24 — the FH gateway),
-   `lem-routef-functional-calculus-closeness` (75th, 11),
-   `lem-routef-ai-defect-linearization` (76th, 13).
-   **ALL SIX v4.1 §D safe/gateway phase-4 leaves are now T0.**
-4. **Remaining Route-F opens = genuine mathematics, precisely fenced:** the four GAP families
-   (v4.1 §2.6: GAP-EA, GAP-S1-POLAR-CONTRACT, GAP-MAIN-STRUCTURE, GAP-LEDGER-DOMAINS with its
-   14 local-radius rows) + the assemblies (`lem-thmainext-conditional`, `lem-routef-k-ledger`,
-   F0/F2/F3 root composition, phase 5 `aism-y81y`). **READ `docs/LEARNINGS.md` (2026-07-26
-   entry) before repeating any "only verification remains" claim** — the session-23 "Route F
-   proved-mod-audit COMPLETE" headline is PARTIALLY RETRACTED (15 rows were demoted by the v3
-   verdict). Honest framing: no conjecture and no new idea is needed; fresh proofs with derived
-   local domains ARE needed. The user has been walked through this in full (2026-07-26).
-5. **Report (43 shards, 140pp) now has THREE machine-written, CI-gated layers:**
-   `report/generated/defs/` (typeset-first definitions, Route-F-scoped, 37/38, macro-translation
-   table v1 hostile-audited), `report/generated/dag/` (the 110-node/213-edge Route-F atlas,
-   landscape, dag:<id> anchors), `report/generated/stats/` (campaign forensics both repos,
-   frontmatter headline). Each has `--check` wired into `check-all.sh`; regenerate after ANY
-   registry/status change (the gates force it). Shard order: 00a defs · 00–35 · 36–38 new
-   lemmas · 39 atlas · 40 stats · 41 status_outlook.
-6. **Banking precedent (user-ratified 2026-07-26):** if a prover expands the seeded root
-   statement and the verifiers validate the expansion, the registry contract is replaced by the
-   validated root VERBATIM at banking (no orchestrator equivalence judgment); the oracle+linker
-   contract-match refusals force the reconciliation (ai-defect-linearization case).
-7. **USER DELEGATION (2026-07-26, recorded in bd memory `user-ratification-delegation-…`):**
-   recommended defaults accepted for the whole ratification queue — v4.1 datum defs lock on
-   verbatim provisioning, Lefschetz–Hopf contract narrowed to the exact maximal-simplex source
-   statement (consumer obligation flagged on `lem-stage1-extra-fixed-class`), F2/F3 contracts
-   accepted as registered, aism-z98/aism-ur9 defaults. Modifications still escalate.
-8. **This device is fully migrated:** refs/ 21/21 payloads verified (Lee + Granas–Dugundji
-   acquired via TIB VPN; Cairns via the AMS URL — Project Euclid is bot-blocked), all 5 Stage-1
-   topology sources promoted with manifest rows, 7 lem-topology-* rows landed at `stated` with
-   pinned loci, portfolio.json oracle paths migrated (36 oracles), hooks rewired
-   (core.hooksPath=.beads/hooks), beads imported from JSONL.
+2. Read the sketch named in **`docs/plans/CURRENT.md`** (now **v34**, 2026-07-26 — reconciled
+   with sessions 27 AND 28; the v33 reconciliation debt is CLEARED). Stewardship mandate
+   binding (Rule 9).
+3. **Rigorous (af-validated, T0): 82.** Registry: 264. Session 28 (2026-07-26, this device)
+   banked SIX elevations:
+   `lem-topology-lefschetz-hopf` (77th, 2 nodes), `lem-topology-kunneth-cross-product`
+   (78th, 7), `lem-topology-orientable-top-cohomology` (79th, 14),
+   `lem-topology-quotient-manifold` (80th, 4), `lem-topology-hopf-structure` (81st, 13),
+   and **`lem-extcb-exact-target-correction` (82nd, 6 nodes, first-pass, zero challenges) —
+   GAP-EA, the first of the four v4.1 GAP families, is DISCHARGED at L0** (aism-fbh8 closed;
+   design cycle: codex design job → `docs/plans/2026-07-26-GAP-EA-design/DESIGN-GAP-EA.md`
+   option (a) → verbatim landing → 6-node elevation exactly on budget).
+4. **USER DECISIONS PENDING (two new, filed as P1 beads):**
+   (a) **IMPROVE-CB contract narrowing** (DESIGN-GAP-EA §2.3/§4.8): add the pinned source's
+   finite-dim-source + ε ≤ ε_max^cb hypotheses before `lem-maincb-error-improvement` seeds;
+   also its dep switches to the general correction row. Register MODIFICATION — outside the
+   verbatim delegation. Do NOT seed IMPROVE-CB unnarrowed.
+   (b) **`lem-topology-local-index-sign` scope gap** (21/23 validated, parked): the contract's
+   unqualified C¹ self-map exceeds `def-lefschetz-fixed-point-data`'s compact-orientable
+   scope. Narrow the contract (checking the `lem-stage1-extra-fixed-class` consumer) vs
+   re-scope the def (L2 ripple).
+5. **Two parked topology trees** (ledgers preserved, both ~90% validated):
+   `finite-triangulation` (19/23; node-1.5 modus_ponens bookkeeping thrash — process repair
+   bead filed) and `local-index-sign` (see 4b). The other five topology rows are T0.
+6. **ORCHESTRATION LAWS (session 28, banked to bd memory — READ BEFORE RUNNING af):**
+   (i) af orchestrations are strictly SEQUENTIAL per checkout (parallel runs mutually abort
+   via the porcelain-snapshot overreach guard); (ii) pre-create any new repo dir a codex job
+   will write mid-run; (iii) commits land ONLY in zero-live-run windows — the Stop-hook-forced
+   fr logging appends to `.frontier/log.jsonl` and kills a live run whose baseline was
+   committed-clean. All seven session-28 aborts were process-level; zero mathematical
+   refutations (campaign total stays 2,386+ adversarial jobs, zero route-level refutations).
+7. **fr circuit-breaker is ARMED: FH "stalled ×2"** (elevations bank T0 but don't move the
+   OPEN line). The logged decision is **EXPLORE XE next cycle** (Route X deciders:
+   aggregate-peak, QCMP ratio, quotient-refinement/cross-financing) before further FH
+   exploitation. Do not relax the breaker (Rule 5 / §9).
+8. Standing user mandates (2026-07-26, unchanged): codex = `gpt-5.6-sol`, effort capped
+   `xhigh`; batched verification default; banking precedent (validated root replaces contract
+   verbatim); ratification-queue delegation (verbatim provisioning only, modifications
+   escalate); signed trunk PAUSED.
 9. `fr board` + `bd ready`; beads sync via `bash scripts/beads-sync.sh export` at close.
 10. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
-## Current state (2026-07-26, session 27 close)
+## Current state (2026-07-26, session 28 close)
 
-Session 27 = device migration repair + refs completion + six first-run elevations + the full
-report modernization (definitions layer, DAG atlas, stats layer — three Opus worktree/scratchpad
-waves, each hostile-reviewed, two guard/gate incidents both resolved) + the LEARNINGS partial
-retraction (user escalation). Process lessons banked in the worklog entry: (i) with the
-pre-commit hook active, mid-orchestration commits can trip the porcelain-wide overreach guard
-during the check-all window — quiesce commits while a run is live; (ii) codex `-o -` writes a
-literal `-` file; (iii) the fr bank gate refuses non-oracle artifacts (▣ is af-only) — report
-prose logs as △ T1.
+Session 28 = the af-elevation campaign orchestrated end-to-end under the user mandate "work
+through the af elevations, look for blockers/strange behaviour": 7 workspaces seeded with 11
+byte-matched refs externals (+1 more at GAP-EA seeding, check-refs all green), 6 elevations
+banked (5 topology + GAP-EA correction), 2 precise diagnoses on the parked trees, 3
+orchestration-infrastructure laws discovered and codified, the GAP-EA design→land→seed→elevate
+cycle completed in-session, and the v34 sketch delta clearing the Rule-9 reconciliation debt
+(sessions 27+28). All work oracle-verified (`fr verify` PASS ×6) and committed.
 
 ## Next steps (ranked)
 
-1. **GAP-EA discharge (`aism-fbh8`):** factor the validated `conj-extcb` node-1.2 exact-target
-   correction subtree into a registry lemma; codex design job then af-elevation. Closest to
-   pure extraction; unblocks the EXT-dependent MAIN rows.
-2. **GAP-LEDGER-DOMAINS:** the 14 local-radius producers per v4.1 §D ordering — per-row codex
-   derivations of dependency-produced radii (the `(C_T+C_Δ′)η ≤ ½` pattern), then contracts,
-   then elevations. `lem-routef-k-finiteness` last (the load-bearing composition).
-3. **GAP-S1-POLAR-CONTRACT + GAP-MAIN-STRUCTURE:** formula-level polar contracts; factor the
-   split/merge/reset induction into the eight MAIN `stated` targets (v4.1 §3.3 branches).
-4. **Cheap wins, interleave:** the seven 1-node topology elevations (byte-matched externals now
-   in refs/); the `lem-stage1-extra-fixed-class` maximal-simplex obligation needs a design note.
-5. **Rule 9 debt:** reconcile `docs/plans/CURRENT.md` (sketch) with the six new T0 results and
-   the GAP framing of this handoff; supersede by dated file + `gen-current-pointer.py`.
-6. Housekeeping beads: `report/sections/*.aux` tracking policy; repo-root-relative oracle paths
-   (worktree portability); the 12 dormant signed-trunk draft defs.
+1. **Honor the breaker: XE decider wave** (aism-ea2f) — aggregate-peak / QCMP ratio /
+   quotient-refinement deciders; then return to FH exploitation.
+2. **User decisions 4a/4b** unblock: IMPROVE-CB seeding (after narrowing) and the
+   local-index-sign finish.
+3. **Bridge row elevation** (`lem-extcb-exact-target-approximation`, 2–3 nodes, bead filed) —
+   cheap, unblocked now.
+4. **GAP-LEDGER-DOMAINS** (the largest remaining family): 14 per-row codex derivations of
+   dependency-produced local radii per v4.1 §D ordering; `lem-routef-k-finiteness` last.
+5. **GAP-S1-POLAR-CONTRACT + GAP-MAIN-STRUCTURE**: polar contracts, then the eight MAIN
+   `stated` targets (gated on 4a).
+6. **finite-triangulation repair** (bead filed): re-type node 1.5's inference or archive+
+   restate; then a short finishing run.
+7. Housekeeping (carried): `report/sections/*.aux` tracking policy; repo-root-relative oracle
+   paths; the 12 dormant signed-trunk draft defs.
 
 ## What is intentionally NOT here
 
-- Any claim `op-classical` is proved. It is OPEN. T0 = 76; everything above the six leaves
-  (GAP families, assemblies, root) is design-only or `proved-mod-audit`/`stated`.
-- Any promise the GAP families will close — expected (all audited-and-attacked pieces have
-  validated so far; 2,386 adversarial jobs, zero route-level refutations) but not banked.
+- Any claim `op-classical` is proved. It is OPEN. T0 = 82; the GAP families
+  (LEDGER-DOMAINS, S1-POLAR, MAIN-STRUCTURE), the assemblies
+  (`lem-thmainext-conditional`, `lem-routef-k-ledger`, F0/F2/F3), and phase 5 remain
+  design-only or `proved-mod-audit`/`stated`. The LEARNINGS 2026-07-26 partial retraction
+  stands: fresh proofs with derived local domains ARE needed on the demoted rows.
+- Any promise the remaining GAP families will close — expected but not banked.
 - Signed-trunk movement (RDSE/LDHR-48 stay PAUSED per standing directive viii).

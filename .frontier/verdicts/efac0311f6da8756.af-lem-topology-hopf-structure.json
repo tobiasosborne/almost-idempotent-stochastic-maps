@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-topology-hopf-structure/export.md",
+  "oracle": "af-lem-topology-hopf-structure",
+  "result": "pass",
+  "claim_hash": "5bde489150603788fc3e695d434da14b2fe40db5c87c9f5a61686baba4c02ead",
+  "oracle_digest": "f5ceda777bb4f93939c267e95e270d4fa8b4dc64bbc8ccae5bdfed10aae8faa1",
+  "inputs_hash": "a2506524152700eec98a1f0c73af98b8a7d73ce6acda67349fb527d999950cf6",
+  "ts": "2026-07-26T16:44:41.515Z"
+}

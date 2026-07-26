@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-extcb-exact-target-correction/export.md",
+  "oracle": "af-lem-extcb-exact-target-correction",
+  "result": "pass",
+  "claim_hash": "12b85415f8b961c51cb1a1dd9dfaa21c936c581f45e0f112cc63bbcef98f7280",
+  "oracle_digest": "19f74e580f959259c6ed13c4e42babe2c50a6a860f573423b284586f52dc28aa",
+  "inputs_hash": "96f050696ae6e584f171a272bcdabfde0a849b6db04945cb13bce6b2a7bec077",
+  "ts": "2026-07-26T16:44:41.600Z"
+}

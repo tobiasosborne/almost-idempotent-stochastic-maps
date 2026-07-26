@@ -517,6 +517,30 @@
      "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-quotient-manifold/ledger",
      "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-quotient-manifold.md"
     ]
+   },
+   {
+    "name": "af-lem-topology-hopf-structure",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-topology-hopf-structure"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-hopf-structure/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-hopf-structure.md"
+    ]
+   },
+   {
+    "name": "af-lem-extcb-exact-target-correction",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-extcb-exact-target-correction"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-extcb-exact-target-correction/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-extcb-exact-target-correction.md"
+    ]
    }
   ]
  },

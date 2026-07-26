@@ -1450,3 +1450,42 @@ composition as the honest residual risk.
 User delegation recorded (bd memory): ratification defaults accepted queue-wide. T0 70 -> 76;
 registry 255 -> 262; report 37 -> 43 shards. Follow-ups filed: aux tracking policy,
 repo-root-relative oracles.
+
+## 2026-07-26 — session 28 (af-elevation campaign orchestration; Fable 5)
+
+User mandate: "orchestrate work on the campaign; codex gpt-5.6-sol xhigh generically; work
+through the af elevations, look for blockers/strange behaviour." Outcome: **T0 76 → 82.**
+
+**Banked (all fresh-codex proved, separate-fresh-codex verified, oracle fr-verified):**
+- `lem-topology-lefschetz-hopf` (77th; 2 nodes, first-pass canary)
+- `lem-topology-kunneth-cross-product` (78th; 7 nodes)
+- `lem-topology-orientable-top-cohomology` (79th; 14 nodes, three Hatcher loci composed)
+- `lem-topology-quotient-manifold` (80th; 4 nodes; external-attachment challenge resolved)
+- `lem-topology-hopf-structure` (81st; 13 nodes; finite-dim corollary derived in-tree)
+- `lem-extcb-exact-target-correction` (82nd; 6 nodes, first-pass, zero challenges) —
+  **GAP-EA DISCHARGED at L0**, the first of the four v4.1 GAP families. Full cycle in-session:
+  codex design job → DESIGN-GAP-EA.md (option (a): verbatim node-1.2 row + M_r bridge;
+  hostile audit caught the 6-node-not-4 transcription requirement and the C_corr=57
+  over-banking trap) → verbatim landing → seeding (3 def-adds + operator-space axioms
+  byte-matched external) → elevation exactly on the designed budget. aism-fbh8 closed.
+
+**Parked with diagnoses:** `finite-triangulation` 19/23 (node-1.5 modus_ponens premise-shape
+thrash; repair bead) · `local-index-sign` 21/23 (GENUINE contract/def scope gap: unqualified
+C¹ self-map vs def-lefschetz-fixed-point-data's compact-orientable scope; USER-DECISION bead).
+
+**Escalations filed (P1):** IMPROVE-CB contract narrowing (DESIGN-GAP-EA §2.3, register
+modification, outside verbatim delegation) · the local-index-sign scope decision.
+
+**Orchestration-infrastructure laws discovered (banked to bd memory):** (i) af orchestrations
+strictly sequential per checkout — parallel runs mutually abort via the porcelain-snapshot
+overreach guard (all 6 parallel first-attempt runs aborted; zero genuine overreach);
+(ii) pre-create new repo dirs for mid-run codex writers (dir-collapse in porcelain);
+(iii) commits only in zero-live-run windows — the Stop-hook-forced fr log append killed a
+live run whose baseline was committed-clean. Also observed: fresh-verifier strictness
+variance (the same cite-external-in-statement pattern accepted by one verifier, refused by
+another — resolved by embedding the verbatim text / formal attachment); a prover
+self-correcting a truncated seeded external (check-refs stayed green).
+
+**Docs:** sketch v34 (sessions 27+28 delta; CURRENT.md repointed — the v33 reconciliation
+debt from session 27 is CLEARED); HANDOFF rewritten; 2 GAP-EA rows UNWIRED-whitelisted
+pending report anchoring. Breaker: FH stalled ×2 → next cycle EXPLORE XE (logged).
