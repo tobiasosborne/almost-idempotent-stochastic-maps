@@ -1,0 +1,8 @@
+{
+  "id": "c86f51948f321608",
+  "name": "lem-prh",
+  "source": "imports validated registry lemma proofs/lem-prh — Positive-retract hardening (PRH): let k,n \u003e= 1 and let A:l-infinity(k)-\u003el-infinity(n) and M:l-infinity(n)-\u003el-infinity(k) be positive unital maps (equivalently, have probability-vector rows); if ||MA-I_k||_{infinity-\u003einfinity} \u003c= epsilon with 0 \u003c= epsilon \u003c 1/2, then there is a stochastic idempotent E:l-infinity(n)-\u003el-infinity(n) with ||AM-E||_{infinity-\u003einfinity} \u003c= 2*sqrt(2*epsilon).",
+  "content_hash": "0df0dde41dd67bec19515fc55fd49c2aae3e5e983d1556aae9b2586e8e26e018",
+  "created": "2026-07-26T07:53:01.220755816Z",
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-prh-finish/export.md",
+  "oracle": "af-lem-routef-prh-finish",
+  "result": "pass",
+  "claim_hash": "92bfc4b03f32d8de2b2ed94b23d19853977eeb97f7858442a93f23ff0f7e46ec",
+  "oracle_digest": "66b879d4f1241c87dcca6a665d5949ba56585306b428ab71884dcf26df532ef1",
+  "inputs_hash": "bde422a6f2e5f7250709d97ee3d145e56a9d7021a7343a24814c3dd341d01d41",
+  "ts": "2026-07-26T08:17:45.328Z"
+}
