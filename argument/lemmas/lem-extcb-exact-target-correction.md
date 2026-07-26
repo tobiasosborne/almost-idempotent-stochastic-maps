@@ -5,17 +5,18 @@ contract: There are universal a_corr>0 and C_corr<infinity with the following pr
 defs: def-fd-cstar-diagonal; def-extended-epsilon-cstar-algebra
 deps:
 status: proved
-af: seeded
+af: validated
 workspace: proofs/lem-extcb-exact-target-correction
 provenance: proofs/conj-extcb ledger node 1.2 (af-validated 2026-07-25, taint clean; children 1.2.1-1.2.3 + endpoint repairs 1.2.3.1, 1.2.3.1.1) — contract adopted VERBATIM per the banking precedent; DESIGN-GAP-EA.md §2.1 (aism-fbh8, design codex job 2026-07-26)
 owner: A
 ---
 
-**Status.** GAP-EA discharge row (DESIGN-GAP-EA.md option (a)): the central
-theorem sentence of af-validated `conj-extcb` node 1.2, adopted verbatim. The
-mathematical assertion is validated inside `proofs/conj-extcb` (taint clean),
-but no standalone workspace exists yet — hence `proved` / `af: none`. Only a
-standalone af run moves this row to `af: validated`.
+**Status.** af-VALIDATED in-repo (2026-07-26, session 28): standalone 6-node
+tree exactly per DESIGN-GAP-EA §3.1 (norm-one Haar diagonal; explicit Newton
+correction K_N=18; degenerate-safe convergence with C_corr=57 established in
+the proof body, deliberately not in the contract), taint clean 6/6,
+first-pass, zero challenges. GAP-EA IS DISCHARGED at L0. Export at
+`proofs/lem-extcb-exact-target-correction/export.md`.
 
 **Content.** Dimension-free exact-target correction: a linear dagger-preserving
 map with amplification-uniform multiplicative and unit defects at most

@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Hopf structure theorem in the form consumed by Stage 1: a...}
+\step{1} Hopf structure theorem in the form consumed by Stage 1: a finite-dimensional connected graded-commutative bialgebra over a characteristic-zero field is an exterior algebra on odd-degree homogeneous generators. \steptag{validated} \\[6pt]
+\step{1.1} Let A be a finite-dimensional connected graded-commutative bialgebra over a characteristic-zero field F, where the compound phrase 'connected graded' is used in the nonnegative grading convention fixed by GT-hatcher-AT-hopf-algebra-definition: A = direct-sum\_\{n>=0\} A\_n and A\_0 = F·1. Then A satisfies every hypothesis of GT-hatcher-AT-thm-3C.4, with 'Hopf algebra' understood exactly as in GT-hatcher-AT-hopf-algebra-definition. \steptag{validated} \\[6pt]
+\step{1.1.1} By the standard meaning of graded bialgebra, A is a unital associative graded F-algebra and its coproduct Δ:A→A⊗\_F A is a degree-preserving algebra homomorphism with counit ε; the stated graded-commutativity supplies Hatcher's commutativity in the graded sense. \steptag{validated} \\[4pt]
+\step{1.1.2} Connectedness says A\_0=F·1, with F→A\_0, r↦r1, an isomorphism, exactly condition (1) of GT-hatcher-AT-hopf-algebra-definition. \steptag{validated} \\[4pt]
+\step{1.1.3} For homogeneous a∈A\_n with n>0, degree preservation gives Δ(a)∈⊕\_\{i=0\}\textasciicircum{}n A\_i⊗A\_\{n-i\}, while the graded counit ε:A→F vanishes on A\_i for i>0. Because A\_0=F·1, the endpoint components have forms b⊗1 and 1⊗c. Applying the counit identities (id⊗ε)Δ(a)=a=(ε⊗id)Δ(a), all positive-degree terms vanish and the endpoint coefficients are forced to be b=a=c. Every remaining summand has both tensor factors of positive degree. Thus Δ(a)=a⊗1+1⊗a+Σ\_i a'\_i⊗a''\_i with |a'\_i|,|a''\_i|>0, exactly condition (2) of GT-hatcher-AT-hopf-algebra-definition. \steptag{validated} \\[4pt]
+\step{1.1.4} Total finite-dimensionality of A implies each graded piece A\_n is finite-dimensional; together with the assumed characteristic zero and the preceding associative, graded-commutative Hopf-algebra conditions, this verifies all hypotheses of GT-hatcher-AT-thm-3C.4. \steptag{validated} \\[4pt]
+\step{1.1.5} Terminology check: the nonnegative grading is part of the hypothesis, not a consequence of A\_0 = F·1. The allowed definition GT-hatcher-AT-hopf-algebra-definition begins with A = direct-sum\_\{n>=0\} A\_n; node 1.1 now explicitly adopts that convention for the compound phrase connected graded. Therefore A\_n = 0 for n<0. In particular, exterior\_Q(x) with |x|=-1 is a Z-graded counterexample only to a broader statement not asserted here, and is not an instance of node 1.1 or the root contract under its registered convention. \steptag{validated} \\[4pt]
+\step{1.2} By GT-hatcher-AT-thm-3C.4, A is isomorphic as an algebra to Λ\_F(V\_odd) ⊗\_F F[V\_even], where the exterior-algebra generators are homogeneous of odd degree and the polynomial-algebra generators are homogeneous of even degree. \steptag{validated} \\[4pt]
+\step{1.3} The polynomial factor F[V\_even] has no generators: otherwise the displayed tensor-product algebra, and hence A, would be infinite-dimensional over F, contrary to the hypothesis. \steptag{validated} \\[6pt]
+\step{1.3.1} Suppose for contradiction that V\_even contains a polynomial generator x. By the defining vector-space basis of a polynomial algebra, the monomials 1,x,x\textasciicircum{}2,… are linearly independent in F[V\_even], so F[V\_even] is infinite-dimensional over F. \steptag{validated} \\[4pt]
+\step{1.3.2} The map j:F[V\_even]→Λ\_F(V\_odd)⊗\_F F[V\_even], p↦1⊗p, is injective: the exterior algebra has the augmentation ε\_Λ sending 1 to 1 and every positive exterior degree to 0, and (ε\_Λ⊗id)∘j=id. \steptag{validated} \\[4pt]
+\step{1.3.3} Hence Λ\_F(V\_odd)⊗\_F F[V\_even] is infinite-dimensional; the isomorphism of 1.2 would make A infinite-dimensional, contradicting A's assumed total finite-dimensionality. Therefore V\_even is empty. \steptag{validated} \\[4pt]
+\step{1.4} Since the polynomial algebra on the empty generator set is F and Λ\_F(V\_odd) ⊗\_F F is canonically Λ\_F(V\_odd), A is an exterior algebra on odd-degree homogeneous generators, as claimed. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

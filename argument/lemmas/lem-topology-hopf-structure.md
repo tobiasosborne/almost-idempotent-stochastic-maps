@@ -4,16 +4,18 @@ kind: lemma
 contract: Hopf structure theorem in the form consumed by Stage 1: a finite-dimensional connected graded-commutative bialgebra over a characteristic-zero field is an exterior algebra on odd-degree homogeneous generators.
 defs: def-h-space-left-inversion
 deps:
-status: stated
-af: seeded
+status: proved
+af: validated
 provenance: hatcher-algebraic-topology AT.txt:17798-17800 (Theorem 3C.4 — the consumed row is a finite-dimensional COROLLARY of the printed exterior-tensor-polynomial statement, not its verbatim form; Hopf-algebra definition/connectedness at txt:17654-17677; loci pinned 2026-07-26); DESIGN-FUDW-DECOMP-v4.1.md §2.3
 owner: A
 workspace: proofs/lem-topology-hopf-structure
 ---
 
-**Status.** Local source-result transcription at `stated`; to be af-elevated
-as a small tree with the byte-matched external. Not `cited`, not
-af-validated, not L0-rigorous yet.
+**Status.** af-VALIDATED in-repo (2026-07-26, session 28): 13-node tree
+(Hatcher Thm 3C.4 + the Hopf-algebra definition externals; the
+finite-dimensional no-polynomial-factor corollary derived in-tree), taint
+clean 13/13, first-pass on the clean re-run. Export at
+`proofs/lem-topology-hopf-structure/export.md`.
 
 **Source locus (pinned).** Hatcher, Theorem 3C.4 (txt:17798-17800): "If A is
 a commutative, associative Hopf algebra over a field F of characteristic 0,
