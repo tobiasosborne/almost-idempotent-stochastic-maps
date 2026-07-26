@@ -19,6 +19,9 @@ are ignored by the parser (`load_unwired`). Two sections:
 ## Frontier (exploration-track, unanchored by design)
 
 ```
+# --- 2026-07-26 GAP-EA discharge rows (aism-fbh8): pre-elevation; anchor into report on af validation ---
+lem-extcb-exact-target-correction
+lem-extcb-exact-target-approximation
 # --- 2026-07-25 report rescope: off-live-route results, registry records retained ---
 conj-degenerate-payment
 conj-degenerate-transport

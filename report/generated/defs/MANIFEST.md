@@ -8,7 +8,7 @@ L2); this table and the `.tex` files beside it are a deterministic projection of
 ## Scope (directive: render only what the current proof strategy needs)
 
 - selection rule: **Route-F landing chain (scripts/gen-report-dag.py select_subgraph)**
-- registry results in the strategy subgraph: **110**; registry results anchored in `report/sections/`: **40**
+- registry results in the strategy subgraph: **112**; registry results anchored in `report/sections/`: **40**
 - definitions they import directly: **36**; after the statement-region
   `[[def-…]]` closure: **37** rendered, **1** dropped
 
@@ -47,8 +47,8 @@ Dropped (outside the closure; canonical, just not reproduced here):
 | 20 | `def-compressed-corner` | `def:compressed-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1054-1066,1077-1082` | `e7eb512a2ec2438d` | 17 | 17 |
 | 21 | `def-delta-projection` | `def:delta-projection` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:917-920,926-929` | `e7eb512a2ec2438d` | 15 | 15 |
 | 22 | `def-epsilon-cstar-algebra` | `def:epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:407-440` | `e7eb512a2ec2438d` | 4 | 4 |
-| 23 | `def-extended-epsilon-cstar-algebra` | `def:extended-epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1477-1479` | `e7eb512a2ec2438d` | 20 | 16 |
-| 24 | `def-fd-cstar-diagonal` | `def:fd-cstar-diagonal` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1233-1242` | `e7eb512a2ec2438d` | 3 | 0 |
+| 23 | `def-extended-epsilon-cstar-algebra` | `def:extended-epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1477-1479` | `e7eb512a2ec2438d` | 22 | 16 |
+| 24 | `def-fd-cstar-diagonal` | `def:fd-cstar-diagonal` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1233-1242` | `e7eb512a2ec2438d` | 4 | 0 |
 | 25 | `def-h-space-left-inversion` | `def:h-space-left-inversion` | cited | locked | shard statement | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:895-912` | `e7eb512a2ec2438d` | 1 | 0 |
 | 26 | `def-ha-map` | `def:ha-map` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1146-1149` | `e7eb512a2ec2438d` | 13 | 13 |
 | 27 | `def-lefschetz-fixed-point-data` | `def:lefschetz-fixed-point-data` | cited | locked | shard statement | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:961-967` | `e7eb512a2ec2438d` | 2 | 0 |
