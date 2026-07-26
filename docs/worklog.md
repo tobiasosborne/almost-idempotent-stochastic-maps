@@ -1504,3 +1504,59 @@ contract re-pinned to the compact-smooth form, root amended, external byte-match
 Munkres re-run ballooned (prover re-derives the triangulation-definition unpacking) — parked
 on `aism-j5t9` with the exact fix: provision the C^r-triangulation DEFINITION external.
 Final: T0 = 83, 6/7 topology + GAP-EA discharged; registry 265 (IMPROVE-CB row added).
+
+## 2026-07-26 — Session 29: the critical-path de-risk campaign (W75–W77; design→audit→repair cycle on the three riskiest fronts)
+
+**Context.** The user rage-quit the prior (session-29a) agent mid-work: its W74 XE-decider
+recommendation had presented fallback-path work (Route X deciders) as critical-path de-risking.
+W74 was VOIDED (zero artifacts existed; `aism-ea2f` deferred), and the user issued the governing
+mandate: *"there is only one priority: de-risk the critical path... starting with the riskiest
+and working down."* The session also demanded and received the honest strategy reconciliation:
+the LEARNINGS 2026-07-26 partial retraction is the canonical account (Route F viable, no open
+conjecture, but the 15 demoted rows are genuine unproved mathematics, not verification labour).
+
+**The campaign.** `docs/plans/2026-07-26-critical-path-risk-register.md` written (ranked fronts:
+1 S1-POLAR, 2 MAIN-STRUCTURE, 3 LEDGER-DOMAINS, 4 F0-assembly; Route X explicitly off-path;
+risk calibration paragraph added after user challenge — the campaign tests OUR
+transcription/formalization, not the truth of Kitaev's theorems). Then one full
+design → fresh-hostile-audit → fresh-repair cycle on fronts 1–3: **8 fresh codex jobs
+(gpt-5.6-sol, xhigh; one routine-tier), 3-wide parallel in pre-created dirs, zero incidents.**
+
+**Outcomes (all artifacts NON-RIGOROUS design docs; nothing landed/seeded/promoted; T0 stays 83):**
+- **W75 S1-POLAR** (`aism-cxza`): v1 design CLOSABLE (8 rows) → audit REDESIGN (3 blockers:
+  C¹→smooth seam vs the landed smooth-hypothesis topology rows — a NEW genuine Kitaev prose gap,
+  TeX 795–807 vs 947–954; non-self-contained contracts; missing dep edge) → **v2 DESIGNED-CLOSABLE:
+  9 analytic rows + 6 downstream contract repairs; the smoothness seam closes WITHOUT approximation
+  (the maps are smooth outright, smooth IFT; no index-data transfer needed; Munkres EDT SHA-pinned
+  but unneeded).**
+- **W76 MAIN-STRUCTURE** (`aism-qum7`): design found v4.1's 8 MAIN rows structurally WRONG
+  (four-corner bijectivity misuse for direct-sum sources; binary merge non-iterable at ≥3 classes;
+  missing zero-corner transport; reset-threshold omissions; missing assembly producers) → audit
+  CONFIRMED all five defects (v4.1 MAIN definitively dead as written) but REFUTED the first repair
+  (threshold cycles, assumed transport, wrong compression form, incomplete induction data) →
+  **v2 acyclic repair** (nested-corner comparison; outer-compression transfer; conditional
+  equivalence/cross-union before the reset ledger; recombination on the complete one-class family)
+  with ONE escalated sequencing gate **G-S1** (three Stage-1 split producers land after polar).
+- **W77 LEDGER-DOMAINS** (`aism-2ehu`): design closed 13/14 with a claimed terminal GAP (reset
+  package unlanded + ε_max^cb omission — CONVERGING with W76's defect #4 from an independent
+  direction) → audit: one radius defect (Υ′ Choi-multiplicity nonvanishing; exact fix (2C_R)⁻¹),
+  four dep corrections, and the terminal GAP ruled OVERSTATED → **v2: all 14 rows close;
+  η_K = min{ρ_fac,(24K)⁻¹,1} via the landed `lem-thmainext-conditional` interface — the ledger
+  front is DECOUPLED from the MAIN reset repair.**
+
+**Route-level findings across all 8 hostile jobs: ZERO.** No dimension-dependent constant, no
+Kitaev-theorem error, no unclosable gap. Kitaev prose gaps found+repaired-by-design: TeX 906
+(straight-path right inverse), TeX 883–888 (printed erratum, unconsumed), the C¹→smooth jump.
+
+**Strategy clarifications delivered in-chat (now in HANDOFF §6):** the corollary-of-Kitaev
+decomposition (~60-70% constant-bookkeeping / ~25-35% his-strategy-our-proofs / ~10% genuinely
+ours, mostly banked); Kitaev claims only encoding+decoding, never almost⇒near — the stochastic
+almost⇒near is OUR F2→F3→PRH with the ex-hume-forced η→√η exponent drop; SBD comparison (no
+implication either way; strictly stronger on the almost-idempotent subclass; their optimality =
+our external sharpness anchor).
+
+**Close.** User-directed stop mid-campaign: repair-v2 workers TaskStopped after their deliverable
+writes (files intact; ANSWER summaries expendable). Next-session plan = bead **W78** (three v2
+re-audits → consolidated user-ratification package → F0 design → landing per the ratified order).
+Gate green at close. fr: FH un-stalled via genuine frontier reductions; user breaker-override on
+record; NO-WAVE and dispatch/harvest discipline maintained throughout (cycles 671–686).
