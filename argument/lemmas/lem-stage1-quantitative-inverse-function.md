@@ -11,9 +11,10 @@ owner: A
 workspace: proofs/lem-stage1-quantitative-inverse-function
 ---
 
-**Status.** Local source-result transcription at `stated`; the permitted
-artifacts consume it but do not independently establish it in-repo. It is
-not `cited`, not `af`-validated, and not L0-rigorous.
+**Status.** af-VALIDATED in-repo (2026-07-26): 14-node tree, taint clean,
+fresh-codex prover/verifier protocol (§6); export in
+`proofs/lem-stage1-quantitative-inverse-function/export.md`; banking oracle
+`af-lem-stage1-quantitative-inverse-function`, `fr verify` pass. L0-rigorous.
 
 **Provenance.** `DESIGN-FUDW-DECOMP-v3.md` §2.4 and
 `PROOF-W74F-H-STAGE1.md` §1 SPLIT-A; safe-subset authorization in

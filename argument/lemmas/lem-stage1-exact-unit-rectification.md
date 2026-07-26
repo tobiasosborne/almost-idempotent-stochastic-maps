@@ -11,9 +11,12 @@ owner: A
 workspace: proofs/lem-stage1-exact-unit-rectification
 ---
 
-**Status.** Hostile-verified paper-proof transcription at
-`proved-mod-audit`; the inverse-function dependency is included exactly as
-corrected by the v3 verdict. It is not L0-rigorous.
+**Status.** af-VALIDATED in-repo (2026-07-26): 6-node tree, taint clean,
+fresh-codex prover/verifier protocol (§6); consumes the validated
+[[lem-stage1-quantitative-inverse-function]] external and byte-matched
+`def-epsilon-cstar-algebra`; export in
+`proofs/lem-stage1-exact-unit-rectification/export.md`; banking oracle
+registered, `fr verify` pass. L0-rigorous.
 
 **Provenance.** `PROOF-W74F-H-STAGE1.md` §1 SPLIT-A and
 `VERDICT-W74F-H-STAGE1.md`; dependency correction and safe-subset

@@ -11,9 +11,10 @@ owner: A
 workspace: proofs/lem-routef-prh-finish
 ---
 
-**Status.** Hostile-reviewed detached-finish transcription at
-`proved-mod-audit`; it depends only on the already validated `lem-prh`, as
-corrected by the v3 verdict. This shard itself is not `af`-validated.
+**Status.** af-VALIDATED in-repo (2026-07-26): 22-node tree, taint clean,
+fresh-codex prover/verifier protocol (§6); consumes the validated
+[[lem-prh]] external; export in `proofs/lem-routef-prh-finish/export.md`;
+banking oracle registered, `fr verify` pass. L0-rigorous.
 
 **Provenance.** `LEDGER-W74F-G-K.md` §5 and both hostile finish verdicts;
 dependency correction and safe-subset authorization in
