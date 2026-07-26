@@ -207,7 +207,7 @@ graph LR
   lem-residual-lower["lem-residual-lower<br/>proved/validated"]
   lem-residual-upper["lem-residual-upper<br/>proved/validated"]
   lem-rho-near-residual-cancellation["lem-rho-near-residual-cancellation<br/>proved/none"]
-  lem-routef-ai-defect-linearization["lem-routef-ai-defect-linearization<br/>proved-mod-audit/none"]
+  lem-routef-ai-defect-linearization["lem-routef-ai-defect-linearization<br/>proved-mod-audit/seeded"]
   lem-routef-f2-positive-unital-compression["lem-routef-f2-positive-unital-compression<br/>proved-mod-audit/none"]
   lem-routef-f3-retract-defect["lem-routef-f3-retract-defect<br/>proved-mod-audit/none"]
   lem-routef-functional-calculus-closeness["lem-routef-functional-calculus-closeness<br/>proved/validated"]

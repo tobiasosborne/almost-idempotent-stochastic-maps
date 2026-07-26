@@ -196,7 +196,7 @@
 | `lem-residual-lower` | lemma | proved | validated | A | Convex outsourcing: let C be the convex hull of finitely many points of R^n, and… |
 | `lem-residual-upper` | lemma | proved | validated | A | Residual distance bound: let C be the convex hull of finitely many points of R^n… |
 | `lem-rho-near-residual-cancellation` | lemma | proved | none | A | Residual cancellation at a hidden top: for an exact signed idempotent P with del… |
-| `lem-routef-ai-defect-linearization` | lemma | proved-mod-audit | none | A | Approximate-algebra defect linearization: there are universal C_A < infinity and… |
+| `lem-routef-ai-defect-linearization` | lemma | proved-mod-audit | seeded | A | Approximate-algebra defect linearization: there are universal C_A < infinity and… |
 | `lem-routef-f2-positive-unital-compression` | lemma | proved-mod-audit | none | A | Route F F2 positive-unital compression: let K >= 1 be a dimension-independent co… |
 | `lem-routef-f3-retract-defect` | lemma | proved-mod-audit | none | A | Route F F3 retract defect: let K >= 1 be a dimension-independent constant, n,k >… |
 | `lem-routef-functional-calculus-closeness` | lemma | proved | validated | A | Functional-calculus closeness: for 0 <= eta <= 1/8, the exact functional-calculu… |

@@ -5,7 +5,7 @@ contract: Approximate-algebra defect linearization: there are universal C_A < in
 defs: def-almost-idempotent; def-extended-epsilon-cstar-algebra
 deps: lem-kitaev-almost-idemp-audit; lem-routef-functional-calculus-closeness
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: LEDGER-W74F-G-K.md §1.1 (1.1); VERDICT-W74F-G-KLEDGER.md Symbol table and checks 2-4; DESIGN-FUDW-DECOMP-v3.md §2.5; VERDICT-FUDW-DECOMP-V3.md §D
 owner: A
 workspace: proofs/lem-routef-ai-defect-linearization
