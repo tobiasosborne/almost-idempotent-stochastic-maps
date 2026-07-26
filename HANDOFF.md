@@ -47,8 +47,13 @@ TRIGGER: session close, or a material change in the current frontier / next task
    (Claude orchestrates, never judges); (v) no progress theatre; (vi) codex
    capped at xhigh; (vii) Route F L0 closure is P0; (viii) RDSE/LDHR-48
    PAUSED; (ix) refs acquisition legal open-access only (2026-07-25).
-8. `fr board` + `bd ready`; beads sync via `bash scripts/beads-sync.sh export`.
-9. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
+8. **NEW DEVICE?** Read `docs/plans/2026-07-26-device-migration-notes.md`
+   first — it lists exactly what gitignored/untracked state to reconstruct
+   (refs payloads via `fetch-refs.py`; refs-staging re-downloads from the
+   committed ACQUIRED snapshot; af caches rebuild from ledgers; report via
+   `make`; beads via `bd dolt pull`).
+9. `fr board` + `bd ready`; beads sync via `bash scripts/beads-sync.sh export`.
+10. Gate: `sh scripts/check-all.sh` → `[check-all] OK`.
 
 ## Current state (2026-07-25, session 26 — phase-3 closure boundary)
 
