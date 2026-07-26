@@ -5,7 +5,7 @@ contract: Cohomological Kunneth isomorphism over R: for CW complexes X and Y wit
 defs:
 deps:
 status: stated
-af: none
+af: seeded
 provenance: hatcher-algebraic-topology AT.txt:13505-13506 (Theorem 3.15 in THIS printing — NOT 3.16; the v4.1 register's "Thm 3.16" locus is off by one, flagged to the design owner in the ACQUIRED log 2026-07-25 and confirmed 2026-07-26); DESIGN-FUDW-DECOMP-v4.1.md §2.3
 owner: A
 workspace: proofs/lem-topology-kunneth-cross-product

@@ -1,0 +1,8 @@
+{
+  "id": "c721a41e32038bab",
+  "name": "GT-hatcher-AT-thm-3C.4",
+  "source": "refs/hatcher-algebraic-topology/AT.txt:17798-17800 VERBATIM: \"4. Show that the cross product of fundamental classes for closed R orientable manifolds M and N is a fundamental class for M × N .\n5. Show that slant products\nHn (X × Y ; R)× H j (Y ; R) →\"",
+  "content_hash": "9a793b9b3871c8ef290abe2479a3a2edaa317b80da5beb8d52ad877325da038d",
+  "created": "2026-07-26T11:31:49.128614901Z",
+  "notes": ""
+}

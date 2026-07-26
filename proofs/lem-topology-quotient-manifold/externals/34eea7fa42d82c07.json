@@ -1,0 +1,8 @@
+{
+  "id": "34eea7fa42d82c07",
+  "name": "GT-lee-2ed-thm-21.10",
+  "source": "refs/lee-smooth-manifolds/lee-smooth-manifolds-2ed.txt:25748-25754 VERBATIM: \"Instead of considering Lie groups as abstract objects, Lie worked with vector\nfields on open subsets of Euclidean space, and the (local) group actions they gen-\nerate. Define a local Lie group to be an open subset U in some finite-dimensional\nvector space V , together with an element e 2 U and smooth maps mW U \u0002 U ! V\n(multiplication) and i W U ! V (inversion), satisfying the following identities for all\ng; h; k sufficiently close to e that both sides are defined:\n                   \u0002           \u0003     \u0002         \u0003\"",
+  "content_hash": "beef594d815e72a92aeb319499663cda5fab16fe2f076954f78f1b5cda3de582",
+  "created": "2026-07-26T11:31:49.076153533Z",
+  "notes": ""
+}

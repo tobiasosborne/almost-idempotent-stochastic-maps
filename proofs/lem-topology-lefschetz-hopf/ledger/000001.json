@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-07-26T11:31:22.843259593Z","conjecture":"Lefschetz-Hopf formula (maximal-simplex form): if f:X-\u003eX is a map of a finite polyhedron with a finite set of fixed points, each of which lies in a maximal simplex of X, then the Lefschetz number L(f) is the sum of the indices of all the fixed points of f.","author":"orchestrator"}

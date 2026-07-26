@@ -5,7 +5,7 @@ contract: Finite triangulation of compact C^1 manifolds: every compact C^1 manif
 defs:
 deps:
 status: stated
-af: none
+af: seeded
 provenance: cairns-1935 cairns-triangulation-1935.txt:47-50 (unnumbered THEOREM, p.549 — MATCH via compactness/finite subcover, loci pinned 2026-07-26); DESIGN-FUDW-DECOMP-v4.1.md §2.3
 owner: A
 workspace: proofs/lem-topology-finite-triangulation

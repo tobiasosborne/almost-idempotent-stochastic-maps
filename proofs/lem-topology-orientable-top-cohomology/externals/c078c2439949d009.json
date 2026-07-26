@@ -1,0 +1,8 @@
+{
+  "id": "c078c2439949d009",
+  "name": "GT-hatcher-AT-cor-3.39",
+  "source": "refs/hatcher-algebraic-topology/AT.txt:15531-15534 VERBATIM: \"The proof will not be difficult once we establish a technical result stated in the\nnext lemma, concerning the commutativity of a certain diagram. Commutativity statements of this sort are usually routine to prove, but this one seems to be an exception.\nThe reader who consults other books for alternative expositions will find somewhat\nuneven treatments of this technical point, and the proof we give is also not as simple\"",
+  "content_hash": "9f334f7e32d6e6c83497b9ea970af9f1488970282dc15c9e5152562e8a0f5c4d",
+  "created": "2026-07-26T11:31:49.172866777Z",
+  "notes": ""
+}

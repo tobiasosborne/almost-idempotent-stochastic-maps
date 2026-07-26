@@ -5,7 +5,7 @@ contract: Lefschetz-Hopf formula (maximal-simplex form): if f:X->X is a map of a
 defs: def-lefschetz-fixed-point-data
 deps:
 status: stated
-af: none
+af: seeded
 provenance: arkowitz-brown-2004 arkowitz-brown-lefschetz-hopf-2004.txt:124-126 (Theorem 1.2, Lefschetz-Hopf — contract pinned to the EXACT source statement 2026-07-26; the v4.1 register's broader isolated-fixed-point wording was a hypothesis MISMATCH and is NOT claimed); DESIGN-FUDW-DECOMP-v4.1.md §2.3
 owner: A
 workspace: proofs/lem-topology-lefschetz-hopf

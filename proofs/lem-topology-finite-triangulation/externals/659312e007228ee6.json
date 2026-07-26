@@ -1,0 +1,8 @@
+{
+  "id": "659312e007228ee6",
+  "name": "GT-cairns-1935-theorem-p549",
+  "source": "refs/cairns-1935/cairns-triangulation-1935.txt:47-50 VERBATIM: \"T H E O R E M . If an r-manifold, Mri of class one is covered by the\ndomains of a finite set of allowable coordinate systems, it can be\ntriangulated into the cells of a finite complex. Otherwise it can be\ntriangulated into the cells of an infinite complex.\"",
+  "content_hash": "bf420044ab11b1479bc451b6d07cd4fac0a40e2a036e4bf4ccd6b8001e9a64d0",
+  "created": "2026-07-26T11:31:49.060403961Z",
+  "notes": ""
+}

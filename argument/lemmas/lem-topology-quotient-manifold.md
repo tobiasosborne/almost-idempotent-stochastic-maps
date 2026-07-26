@@ -5,7 +5,7 @@ contract: Quotient manifold theorem: if a Lie group G acts smoothly, freely, and
 defs:
 deps:
 status: stated
-af: none
+af: seeded
 provenance: lee-smooth-manifolds lee-smooth-manifolds-2ed.txt:25748-25754 (Theorem 21.10, Quotient Manifold Theorem — hypothesis MATCH, loci pinned 2026-07-26); DESIGN-FUDW-DECOMP-v4.1.md §2.3
 owner: A
 workspace: proofs/lem-topology-quotient-manifold

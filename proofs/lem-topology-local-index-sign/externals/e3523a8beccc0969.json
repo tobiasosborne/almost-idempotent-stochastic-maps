@@ -1,0 +1,8 @@
+{
+  "id": "e3523a8beccc0969",
+  "name": "GT-granas-dugundji-thm-8.4-brouwer-degree",
+  "source": "refs/granas-dugundji/granas-dugundji-fixed-point-theory.txt:12089-12094 VERBATIM: \"formal deduction from (4.3), to emphasize this dependence, even when there\nare more direct proofs (even trivial) from the way we have defined d(f, U).\n     By taking U = U1 = U2 = 0, the additivity property implies formally\nfirst that d(f, 0) = 0 and then the very useful\n(5.1)   THEOREM (Excision). If V cUe Rn are polyhedral domains and\n        f E Co(U, Rn) has all its zeros in V, then d(f, U) = d(f, V) .\"",
+  "content_hash": "60fe010cb330031a598ebbf3da565f3402be63b6ba939417f090da56fdae9670",
+  "created": "2026-07-26T11:31:49.115895774Z",
+  "notes": ""
+}

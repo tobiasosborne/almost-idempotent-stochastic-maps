@@ -5,7 +5,7 @@ contract: Hopf structure theorem in the form consumed by Stage 1: a finite-dimen
 defs: def-h-space-left-inversion
 deps:
 status: stated
-af: none
+af: seeded
 provenance: hatcher-algebraic-topology AT.txt:17798-17800 (Theorem 3C.4 — the consumed row is a finite-dimensional COROLLARY of the printed exterior-tensor-polynomial statement, not its verbatim form; Hopf-algebra definition/connectedness at txt:17654-17677; loci pinned 2026-07-26); DESIGN-FUDW-DECOMP-v4.1.md §2.3
 owner: A
 workspace: proofs/lem-topology-hopf-structure

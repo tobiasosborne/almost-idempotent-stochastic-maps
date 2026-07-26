@@ -5,7 +5,7 @@ contract: Nondegenerate local fixed-point index: if x is an isolated fixed point
 defs: def-lefschetz-fixed-point-data
 deps:
 status: stated
-af: none
+af: seeded
 provenance: granas-dugundji granas-dugundji-fixed-point-theory.txt:14700-14708 (Thm (8.5), Leray-Schauder formula, Ch. IV §12.8, pp.328-329) + granas-dugundji-fixed-point-theory.txt:12089-12094 (Thm (8.4), Brouwer degree sgn det, Ch. IV §10.8, p.267) — two-theorem composition, loci pinned 2026-07-26; DESIGN-FUDW-DECOMP-v4.1.md §2.3
 owner: A
 workspace: proofs/lem-topology-local-index-sign

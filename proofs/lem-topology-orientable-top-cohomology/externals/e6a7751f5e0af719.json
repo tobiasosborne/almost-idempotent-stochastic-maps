@@ -1,0 +1,8 @@
+{
+  "id": "e6a7751f5e0af719",
+  "name": "GT-hatcher-AT-field-UCT",
+  "source": "refs/hatcher-algebraic-topology/AT.txt:12385-12394 VERBATIM: \"be the identity but with two different free resolutions F and F ′ , we get a canonical\nisomorphism 11∗ : H n (F ′ ; G)→H n (F ; G) .\n\n⊓\n⊔\n\nEvery abelian group H has a free resolution of the form 0→F1 →F0 →H →0 , with\nFi = 0 for i \u003e 1 , obtainable in the following way. Choose a set of generators for H\nand let F0 be a free abelian group with basis in one-to-one correspondence with these\ngenerators. Then we have a surjective homomorphism f0 : F0 →H sending the basis\"",
+  "content_hash": "77ccd201f3b00c5a092d265f1c6d4555f1de0189cce301cbad51c6aaa077182d",
+  "created": "2026-07-26T11:31:49.161708223Z",
+  "notes": ""
+}
