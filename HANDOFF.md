@@ -13,27 +13,31 @@ TRIGGER: session close, or a material change in the current frontier / next task
 2. Read the sketch named in **`docs/plans/CURRENT.md`** (now **v34**, 2026-07-26 — reconciled
    with sessions 27 AND 28; the v33 reconciliation debt is CLEARED). Stewardship mandate
    binding (Rule 9).
-3. **Rigorous (af-validated, T0): 82.** Registry: 264. Session 28 (2026-07-26, this device)
-   banked SIX elevations:
+3. **Rigorous (af-validated, T0): 83.** Registry: 265. Session 28 (2026-07-26, this device)
+   banked SEVEN elevations:
    `lem-topology-lefschetz-hopf` (77th, 2 nodes), `lem-topology-kunneth-cross-product`
    (78th, 7), `lem-topology-orientable-top-cohomology` (79th, 14),
    `lem-topology-quotient-manifold` (80th, 4), `lem-topology-hopf-structure` (81st, 13),
+   `lem-topology-local-index-sign` (83rd, 23 — under the user-ratified narrowed contract),
    and **`lem-extcb-exact-target-correction` (82nd, 6 nodes, first-pass, zero challenges) —
    GAP-EA, the first of the four v4.1 GAP families, is DISCHARGED at L0** (aism-fbh8 closed;
    design cycle: codex design job → `docs/plans/2026-07-26-GAP-EA-design/DESIGN-GAP-EA.md`
    option (a) → verbatim landing → 6-node elevation exactly on budget).
-4. **USER DECISIONS PENDING (two new, filed as P1 beads):**
-   (a) **IMPROVE-CB contract narrowing** (DESIGN-GAP-EA §2.3/§4.8): add the pinned source's
-   finite-dim-source + ε ≤ ε_max^cb hypotheses before `lem-maincb-error-improvement` seeds;
-   also its dep switches to the general correction row. Register MODIFICATION — outside the
-   verbatim delegation. Do NOT seed IMPROVE-CB unnarrowed.
-   (b) **`lem-topology-local-index-sign` scope gap** (21/23 validated, parked): the contract's
-   unqualified C¹ self-map exceeds `def-lefschetz-fixed-point-data`'s compact-orientable
-   scope. Narrow the contract (checking the `lem-stage1-extra-fixed-class` consumer) vs
-   re-scope the def (L2 ripple).
-5. **Two parked topology trees** (ledgers preserved, both ~90% validated):
-   `finite-triangulation` (19/23; node-1.5 modus_ponens bookkeeping thrash — process repair
-   bead filed) and `local-index-sign` (see 4b). The other five topology rows are T0.
+4. **BOTH session-28 user decisions were RATIFIED IN-CHAT and EXECUTED:**
+   (a) IMPROVE-CB narrowing applied — `lem-maincb-error-improvement` landed with the
+   DESIGN-GAP-EA §2.3 contract (finite-dim source + ε ≤ ε_max^cb), dep = the general
+   correction row, UNWIRED-whitelisted; safe to seed when the MAIN work starts (its proof
+   plan still needs independent design first, §3.3).
+   (b) `lem-topology-local-index-sign` contract narrowed to the def's scope and BANKED
+   (83rd, consumer obligation flagged on `lem-stage1-extra-fixed-class`).
+5. **One parked topology tree:** `finite-triangulation` — user-directed RE-SOURCE executed
+   (Cairns retired: delegates class-one defs to Veblen–Whitehead 1932, not in refs/; the
+   user-supplied Munkres *Elementary Differential Topology* is promoted to refs/ with
+   manifest rows, Thm 10.6 byte-matched + visually confirmed, contract re-pinned to the
+   compact-smooth form, root amended). The Munkres re-run BALLOONED (prover re-derives the
+   triangulation-definition unpacking): bead `aism-j5t9` has the exact fix — provision
+   Munkres's C^r-triangulation DEFINITION as a second external, then re-run. The other six
+   topology rows are T0.
 6. **ORCHESTRATION LAWS (session 28, banked to bd memory — READ BEFORE RUNNING af):**
    (i) af orchestrations are strictly SEQUENTIAL per checkout (parallel runs mutually abort
    via the porcelain-snapshot overreach guard); (ii) pre-create any new repo dir a codex job
@@ -41,7 +45,7 @@ TRIGGER: session close, or a material change in the current frontier / next task
    fr logging appends to `.frontier/log.jsonl` and kills a live run whose baseline was
    committed-clean. All seven session-28 aborts were process-level; zero mathematical
    refutations (campaign total stays 2,386+ adversarial jobs, zero route-level refutations).
-7. **fr circuit-breaker is ARMED: FH "stalled ×2"** (elevations bank T0 but don't move the
+7. **fr circuit-breaker is ARMED: FH "stalled ×4"** (elevations bank T0 but don't move the
    OPEN line). The logged decision is **EXPLORE XE next cycle** (Route X deciders:
    aggregate-peak, QCMP ratio, quotient-refinement/cross-financing) before further FH
    exploitation. Do not relax the breaker (Rule 5 / §9).
@@ -56,32 +60,33 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 Session 28 = the af-elevation campaign orchestrated end-to-end under the user mandate "work
 through the af elevations, look for blockers/strange behaviour": 7 workspaces seeded with 11
-byte-matched refs externals (+1 more at GAP-EA seeding, check-refs all green), 6 elevations
-banked (5 topology + GAP-EA correction), 2 precise diagnoses on the parked trees, 3
-orchestration-infrastructure laws discovered and codified, the GAP-EA design→land→seed→elevate
-cycle completed in-session, and the v34 sketch delta clearing the Rule-9 reconciliation debt
-(sessions 27+28). All work oracle-verified (`fr verify` PASS ×6) and committed.
+byte-matched refs externals (+2 more at GAP-EA/Munkres provisioning, check-refs all green),
+7 elevations banked (6 topology + the GAP-EA correction), both user decisions ratified
+in-chat and executed, the Cairns→Munkres re-source completed (source promoted with manifest
+rows), 3 orchestration-infrastructure laws discovered and codified, the GAP-EA
+design→land→seed→elevate cycle completed in-session, and the v34 sketch delta clearing the
+Rule-9 reconciliation debt (sessions 27+28). All banked work oracle-verified (`fr verify`
+PASS ×7) and committed.
 
 ## Next steps (ranked)
 
 1. **Honor the breaker: XE decider wave** (aism-ea2f) — aggregate-peak / QCMP ratio /
    quotient-refinement deciders; then return to FH exploitation.
-2. **User decisions 4a/4b** unblock: IMPROVE-CB seeding (after narrowing) and the
-   local-index-sign finish.
-3. **Bridge row elevation** (`lem-extcb-exact-target-approximation`, 2–3 nodes, bead filed) —
+2. **Bridge row elevation** (`lem-extcb-exact-target-approximation`, 2–3 nodes, bead filed) —
    cheap, unblocked now.
-4. **GAP-LEDGER-DOMAINS** (the largest remaining family): 14 per-row codex derivations of
+3. **GAP-LEDGER-DOMAINS** (the largest remaining family): 14 per-row codex derivations of
    dependency-produced local radii per v4.1 §D ordering; `lem-routef-k-finiteness` last.
-5. **GAP-S1-POLAR-CONTRACT + GAP-MAIN-STRUCTURE**: polar contracts, then the eight MAIN
-   `stated` targets (gated on 4a).
-6. **finite-triangulation repair** (bead filed): re-type node 1.5's inference or archive+
-   restate; then a short finishing run.
-7. Housekeeping (carried): `report/sections/*.aux` tracking policy; repo-root-relative oracle
+4. **GAP-S1-POLAR-CONTRACT + GAP-MAIN-STRUCTURE**: polar contracts, then the eight MAIN
+   `stated` targets (IMPROVE-CB contract now ratified-narrowed; its proof plan still needs
+   an independent design job before seeding).
+5. **finite-triangulation finish** (`aism-j5t9`): provision Munkres's C^r-triangulation
+   DEFINITION external, then re-run (cap 26 stays).
+6. Housekeeping (carried): `report/sections/*.aux` tracking policy; repo-root-relative oracle
    paths; the 12 dormant signed-trunk draft defs.
 
 ## What is intentionally NOT here
 
-- Any claim `op-classical` is proved. It is OPEN. T0 = 82; the GAP families
+- Any claim `op-classical` is proved. It is OPEN. T0 = 83; the GAP families
   (LEDGER-DOMAINS, S1-POLAR, MAIN-STRUCTURE), the assemblies
   (`lem-thmainext-conditional`, `lem-routef-k-ledger`, F0/F2/F3), and phase 5 remain
   design-only or `proved-mod-audit`/`stated`. The LEARNINGS 2026-07-26 partial retraction

@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-topology-local-index-sign/export.md",
+  "oracle": "af-lem-topology-local-index-sign",
+  "result": "pass",
+  "claim_hash": "25d713335f0ca35684c1be7caaee2c63e999c4e0ff71d69d12ccfde97b6865fa",
+  "oracle_digest": "4d0b4209d3f42bd844aa6be586b0b32bfb8c386a622dca3884ce86ec2aa3ed49",
+  "inputs_hash": "fcf39d0e1f5f8b94684ebac003a496ba0808bf91b484989c74e12ccc83bed3e2",
+  "ts": "2026-07-26T17:19:50.133Z"
+}

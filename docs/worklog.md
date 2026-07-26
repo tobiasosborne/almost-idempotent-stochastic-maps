@@ -1489,3 +1489,18 @@ self-correcting a truncated seeded external (check-refs stayed green).
 **Docs:** sketch v34 (sessions 27+28 delta; CURRENT.md repointed — the v33 reconciliation
 debt from session 27 is CLEARED); HANDOFF rewritten; 2 GAP-EA rows UNWIRED-whitelisted
 pending report anchoring. Breaker: FH stalled ×2 → next cycle EXPLORE XE (logged).
+
+### Session 28 addendum (post-ratification, same day)
+
+Both escalations were RATIFIED IN-CHAT and executed: (a) IMPROVE-CB landed with the §2.3
+narrowed contract (dep = the general correction row); (b) local-index-sign narrowed to the
+def's scope, root amended in-place (21 validated nodes retained), re-run → **af-VALIDATED
+(83rd, 23/23 clean), T0 83**. finite-triangulation went deeper: the root challenge was an L1
+ground-truth stop (Cairns delegates class-one/allowable defs to Veblen–Whitehead 1932, not in
+refs/); the user supplied Munkres *Elementary Differential Topology* (scanned; per-page
+tesseract OCR after ocrmypdf scrambled the two-column layout; Thm 10.6 visually confirmed
+against the p.108 page image), promoted to refs/ with manifest rows (23/23 sha256 verify),
+contract re-pinned to the compact-smooth form, root amended, external byte-matched. The
+Munkres re-run ballooned (prover re-derives the triangulation-definition unpacking) — parked
+on `aism-j5t9` with the exact fix: provision the C^r-triangulation DEFINITION external.
+Final: T0 = 83, 6/7 topology + GAP-EA discharged; registry 265 (IMPROVE-CB row added).

@@ -541,6 +541,18 @@
      "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-extcb-exact-target-correction/ledger",
      "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-extcb-exact-target-correction.md"
     ]
+   },
+   {
+    "name": "af-lem-topology-local-index-sign",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-topology-local-index-sign"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-local-index-sign/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-local-index-sign.md"
+    ]
    }
   ]
  },
