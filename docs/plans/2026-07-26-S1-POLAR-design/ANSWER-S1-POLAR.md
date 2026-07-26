@@ -1,0 +1,3 @@
+Completed [DESIGN-S1-POLAR.md](/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/docs/plans/2026-07-26-S1-POLAR-design/DESIGN-S1-POLAR.md).
+
+Verdict: closable only through an eight-row sub-DAG. The design identifies missing controlled \(C^*\)-rectification and straight-path admissibility contracts, plus a printed derivative erratum. Literal numerical polar constants are not supported by local refs. Document whitespace and row-count checks pass.
