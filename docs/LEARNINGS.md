@@ -60,3 +60,32 @@ _(The inherited REFUTED routes from the classical-portfolio are recorded as dead
   held by the false reading. Consumers audited: lem-hx-forced-exterior-coupling
   instantiates A*l = 1/2; route-fork scaffolds use A >= 4 — none touch A <= 0.
   Correction note in-shard; af elevation resumed on the aligned contract.
+
+## 2026-07-26 — "Route F proved-mod-audit COMPLETE": PARTIALLY RETRACTED (15 rows demoted to GAP)
+
+- **Claimed:** session 23 (2026-07-24) closed with the headline "ROUTE F IS proved-mod-audit
+  COMPLETE" (`docs/worklog.md:1233`, echoed in the fr frontier trail and session summaries):
+  every link of the Route-F chain carried a worker paper-proof with a hostile wave-level VALID,
+  so the remaining work was presented as *elevation/verification only — no new mathematics*.
+- **Why wrong (in part):** the af-decomposition of the large chain (the `aism-fudw` design,
+  verdicts v1–v3 in `docs/plans/2026-07-24-fudw-decomposition-artifacts/`) forced every step
+  into a one-line contract with explicit domains, and under that stricter bar a subset of the
+  proved-mod-audit record FAILED hostile review: fourteen K-ledger rows assert their
+  inequalities on domains "stronger than the verified ledger" (η_A is only the
+  source-linearization radius — each row needs its own dependency-produced local radius,
+  e.g. `(C_T+C_Δ′)η ≤ ½`); the MAIN-CB assembly rows carried relocation-not-factoring residue;
+  the Stage-1 polar estimates existed only as prose (no formula-level contract); and one
+  EXT-chain approximation step had no supporting lemma (EA). As stated, those proofs are not
+  theorems. VERDICT-FUDW-DECOMP-V3.md §2.1 (BLOCKER) prescribed stripping all fifteen ids to
+  uncontracted GAP reservations (Registry impact C) — i.e. their proved-mod-audit status was
+  WITHDRAWN, not merely refined.
+- **Caught by:** the fresh-codex hostile design verdicts v1–v3 (2026-07-24), reviewer ≠ author.
+- **Resolution:** the fifteen ids are held as GAP reservations (DESIGN-FUDW-DECOMP-v4.1.md §2.6,
+  the four families GAP-EA / GAP-S1-POLAR-CONTRACT / GAP-MAIN-STRUCTURE / GAP-LEDGER-DOMAINS);
+  bead `aism-0163`; phase-4 work re-proves them with derived local domains. The headline was
+  never formally retracted here until today (user escalation 2026-07-26) — later agents kept
+  repeating both "complete mod-audit" and "genuine open mathematics remains" without
+  reconciling them. THE LESSON: a status-bearing HEADLINE demoted by a later verdict must get
+  a LEARNINGS entry in the same commit as the demotion (Rule 9 applies to claims, not just
+  files). What remains true: Route F requires no conjecture and no new idea; what was false:
+  that only verification labour remained.
