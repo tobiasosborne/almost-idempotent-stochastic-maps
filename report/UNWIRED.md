@@ -238,4 +238,13 @@ obs-thin-zero-face-blocker-graft
 obs-zero-face-perturbation-collapse
 op-hlc
 prop-f2-t1-equivalence
+# Stage-1 topology leaves (landed 2026-07-26, phase-4 prerequisites; to be wired
+# into the report with the Stage-1 narrative when phase 4 reaches the paper track)
+lem-topology-quotient-manifold
+lem-topology-finite-triangulation
+lem-topology-lefschetz-hopf
+lem-topology-local-index-sign
+lem-topology-orientable-top-cohomology
+lem-topology-kunneth-cross-product
+lem-topology-hopf-structure
 ```
