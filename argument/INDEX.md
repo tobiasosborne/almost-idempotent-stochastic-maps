@@ -220,7 +220,7 @@
 | `lem-sl1a-score-selector` | lemma | proved | none | B | For every exact signed idempotent P with delta(P) > 0, nonempty visible set W, a… |
 | `lem-sl1a-three-cell-reduction` | lemma | proved | none | B | SL1a three-cell reduction: if conj-sl1a-off-diagonal-cell (constant delta_X), co… |
 | `lem-stage1-approximate-group-laws` | lemma | proved | validated | A | Quantitative approximate group laws: there exist universal C_grp, C_pol >= 1, ka… |
-| `lem-stage1-approximate-group-laws-transport` | lemma | stated | none | A | Parameterized approximate-group transport: there exist C_grp^0, C_pol^0 >= 1 and… |
+| `lem-stage1-approximate-group-laws-transport` | lemma | stated | seeded | A | Parameterized approximate-group transport: there exist C_grp^0, C_pol^0 >= 1 and… |
 | `lem-stage1-exact-unit-rectification` | lemma | proved | validated | A | Dimension-free exact-unit rectification: there are universal C_unit < infinity a… |
 | `lem-stage1-group-closeness` | lemma | proved | validated | A | Group-input polar closeness: there exist universal C_grp, C_pol >= 1, kappa_pol … |
 | `lem-stage1-group-domain-membership` | lemma | proved | validated | A | Group-input polar-domain membership: there exist universal C_grp, C_pol >= 1, ka… |
