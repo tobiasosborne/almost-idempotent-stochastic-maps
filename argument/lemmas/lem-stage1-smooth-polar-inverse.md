@@ -5,7 +5,8 @@ contract: Smooth polar-inverse upgrade: for every finite-dimensional exact-unit 
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-polar-retraction; lem-stage1-smooth-unitary-atlas
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-smooth-polar-inverse
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 10, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). Source loci TeX 809-855; Lee C.34 at lee-smooth-manifolds-2ed.txt:31134-31137 and C.36 at 31286-31298, applied chartwise after the smooth-atlas row.
 owner: A
 ---

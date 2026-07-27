@@ -1,0 +1,8 @@
+{
+  "id": "01cb1e6f95ae018c",
+  "name": "GT-lee-2ed-cor-C.36",
+  "source": "refs/lee-smooth-manifolds/lee-smooth-manifolds-2ed.txt:31286-31298 VERBATIM: \"Corollary C.36. Suppose U \u0004 Rn is an open subset, and F W U ! Rn is a smooth\nfunction whose Jacobian determinant is nonzero at every point in U .\n(a) F is an open map.\n(b) If F is injective, then F W U ! F .U / is a diffeomorphism.\nProof. For each a 2 U , the fact that the Jacobian determinant of F is nonzero im-\nplies that DF .a/ is invertible, so the inverse function theorem implies that there\nexist open subsets Ua \u0004 U containing a and Va \u0004 F .U / containing F .a/ such that\nF restricts to a diffeomorphism F jUa W Ua ! Va . In particular, this means that each\npoint of F .U / has a neighborhood contained in F .U /, so F .U / is open. If U0 \u0004 U\nis an arbitrary open subset, the same argument with U replaced by U0 shows that\nF .U0 / is also open; this proves (a). If in addition F is injective, then the inverse\nmap F \u00021 W F .U / ! U exists for set-theoretic reasons; on a neighborhood of each\npoint F .a/ 2 F .U / it is equal to the inverse of F jUa , so it is smooth.         \u0002\"",
+  "content_hash": "acacf2a5f0b40a681b62a120ff057e8b97e005b8b53db49310914c67f8581029",
+  "created": "2026-07-27T16:43:58.654287848Z",
+  "notes": ""
+}

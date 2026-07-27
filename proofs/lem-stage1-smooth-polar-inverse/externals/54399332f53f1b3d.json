@@ -1,0 +1,8 @@
+{
+  "id": "54399332f53f1b3d",
+  "name": "GT-lee-2ed-thm-C.34",
+  "source": "refs/lee-smooth-manifolds/lee-smooth-manifolds-2ed.txt:31134-31137 VERBATIM: \"Theorem C.34 (Inverse Function Theorem). Suppose U and V are open subsets\nof Rn , and F W U ! V is a smooth function. If DF .a/ is invertible at some point\na 2 U , then there exist connected neighborhoods U0 \u0004 U of a and V0 \u0004 V of F .a/\nsuch that F jU0 W U0 ! V0 is a diffeomorphism.\"",
+  "content_hash": "2c7991ed4b57e24ccfb6b65b801e4666ae9bbf3cad45b3551ca500a0ea213cab",
+  "created": "2026-07-27T16:43:58.648096043Z",
+  "notes": ""
+}
