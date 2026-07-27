@@ -1,7 +1,7 @@
 ---
 id: lem-routef-f0-defect-identity
 kind: lemma
-contract: Route F F0 defect identity: let n >= 1, let D: M_n -> l_inf^n be diagonal extraction and J: l_inf^n -> M_n diagonal inclusion, let Q: l_inf^n -> l_inf^n be row-stochastic with canonical complex-linear extension Q_C: C^n -> C^n, and put Phi := J Q_C D; then ||Phi^2 - Phi||_cb = ||Q^2 - Q||_{infinity->infinity}.
+contract: Route F F0 defect identity: let n >= 1, let D: M_n -> C^n be diagonal extraction onto the complex diagonal algebra C^n = l_inf^n(C) and J: C^n -> M_n the diagonal inclusion, let Q: l_inf^n -> l_inf^n be row-stochastic with canonical complex-linear extension Q_C: C^n -> C^n, and put Phi := J Q_C D; then ||Phi^2 - Phi||_cb = ||Q^2 - Q||_{infinity->infinity}.
 defs: def-stochastic; def-almost-idempotent; def-ucp-map
 deps:
 status: proved-mod-audit

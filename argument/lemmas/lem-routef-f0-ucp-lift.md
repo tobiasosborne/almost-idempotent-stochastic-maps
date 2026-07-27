@@ -1,7 +1,7 @@
 ---
 id: lem-routef-f0-ucp-lift
 kind: lemma
-contract: Route F F0 UCP lift: let n >= 1, let D: M_n -> l_inf^n be diagonal extraction and J: l_inf^n -> M_n diagonal inclusion, let Q: l_inf^n -> l_inf^n be row-stochastic, and let Q_C: C^n -> C^n be the canonical complex-linear extension of Q; then Phi := J Q_C D: M_n -> M_n is a unital completely positive map.
+contract: Route F F0 UCP lift: let n >= 1, let D: M_n -> C^n be diagonal extraction onto the complex diagonal algebra C^n = l_inf^n(C) and J: C^n -> M_n the diagonal inclusion, let Q: l_inf^n -> l_inf^n be row-stochastic, and let Q_C: C^n -> C^n be the canonical complex-linear extension of Q; then Phi := J Q_C D: M_n -> M_n is a unital completely positive map.
 defs: def-stochastic; def-ucp-map
 deps:
 status: proved-mod-audit
