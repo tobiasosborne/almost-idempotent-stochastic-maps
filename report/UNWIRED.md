@@ -275,4 +275,9 @@ lem-stage1-polar-path-transport
 lem-stage1-inversion-derivative-transport
 lem-stage1-polar-constant-ledger
 lem-finite-polyhedron-maximal-simplex-placement
+lem-stage1-uniform-inversion-isolation
+lem-stage1-quotient-manifold-package
+lem-stage1-quotient-finite-cw
+lem-stage1-quotient-left-inversion
+lem-stage1-quotient-inversion-index-data
 ```

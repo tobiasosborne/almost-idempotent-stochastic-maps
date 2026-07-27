@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-07-27T11:14:24Z",
+ "extracted_at": "2026-07-27T11:16:07Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-07-27T11:14:24Z",
+  "mined_at": "2026-07-27T11:16:07Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -2422,9 +2422,9 @@
   "git": {
    "active_days": 18,
    "authors": {
-    "tobiasosborne": 776
+    "tobiasosborne": 777
    },
-   "commits": 776,
+   "commits": 777,
    "first_day": "2026-07-02",
    "last_day": "2026-07-27",
    "per_day": {
@@ -2445,7 +2445,7 @@
     "2026-07-24": 111,
     "2026-07-25": 165,
     "2026-07-26": 85,
-    "2026-07-27": 21
+    "2026-07-27": 22
    },
    "subject_prefixes": {
     "W61": 13,
@@ -2540,19 +2540,19 @@
   },
   "registry": {
    "af": {
-    "none": 190,
+    "none": 195,
     "seeded": 11,
     "validated": 87
    },
    "kind": {
     "corollary": 2,
-    "lemma": 259,
+    "lemma": 264,
     "obstruction": 13,
     "open-problem": 6,
     "proposition": 2,
     "theorem": 6
    },
-   "results": 288,
+   "results": 293,
    "status": {
     "conjecture": 31,
     "disproved": 2,
@@ -2562,7 +2562,7 @@
     "open": 3,
     "proved": 200,
     "proved-mod-audit": 23,
-    "stated": 24
+    "stated": 29
    }
   },
   "runs": {
