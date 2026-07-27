@@ -224,7 +224,7 @@
 | `lem-stage1-exact-unit-rectification` | lemma | proved | validated | A | Dimension-free exact-unit rectification: there are universal C_unit < infinity a… |
 | `lem-stage1-group-closeness` | lemma | proved | validated | A | Group-input polar closeness: there exist universal C_grp, C_pol >= 1, kappa_pol … |
 | `lem-stage1-group-domain-membership` | lemma | proved | validated | A | Group-input polar-domain membership: there exist universal C_grp, C_pol >= 1, ka… |
-| `lem-stage1-inversion-derivative-control` | lemma | stated | seeded | A | Typed inversion derivative with chart retention: there exist universal C_der, C_… |
+| `lem-stage1-inversion-derivative-control` | lemma | proved | validated | A | Typed inversion derivative with chart retention: there exist universal C_der, C_… |
 | `lem-stage1-inversion-derivative-transport` | lemma | stated | none | A | Parameterized inversion-derivative transport: there exist C_der^0, C_ch^0, C_pol… |
 | `lem-stage1-maurer-cartan-transport` | lemma | stated | none | A | Parameterized Maurer-Cartan transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |
 | `lem-stage1-maurer-cartan-trivialization` | lemma | proved | validated | A | Uniform global tangent/Maurer-Cartan control: there are universal C_ch >= 1, kap… |
