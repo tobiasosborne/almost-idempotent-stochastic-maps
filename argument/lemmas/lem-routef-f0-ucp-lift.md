@@ -4,17 +4,20 @@ kind: lemma
 contract: Route F F0 UCP lift: let n >= 1, let D: M_n -> C^n be diagonal extraction onto the complex diagonal algebra C^n = l_inf^n(C) and J: C^n -> M_n the diagonal inclusion, let Q: l_inf^n -> l_inf^n be row-stochastic, and let Q_C: C^n -> C^n be the canonical complex-linear extension of Q; then Phi := J Q_C D: M_n -> M_n is a unital completely positive map.
 defs: def-stochastic; def-ucp-map
 deps:
-status: proved-mod-audit
-af: seeded
+status: proved
+af: validated
 provenance: docs/plans/2026-07-22-W73-artifacts/AUDIT-W73B-ROUTE-F.md Q4 (fresh hostile audit, verdict VALID); design + fresh hostile audit docs/plans/2026-07-27-F0-ASSEMBLY-design/DESIGN-F0-ASSEMBLY.md sect 1.1 + AUDIT-F0-ASSEMBLY.md sect 1.1 (VALID-WITH-CORRECTIONS; the Q_C typing and def-ucp-map import corrections are applied here); user-ratified landing 2026-07-27 (W79/W80, docs/plans/2026-07-27-W78-ratification-package.md sect 5 step 1)
 owner: A
 workspace: proofs/lem-routef-f0-ucp-lift
 ---
 
-**Status.** Local paper proof, hostile-audited twice (W73B Q4; F0-assembly
-audit §1.1) — `proved-mod-audit`, NOT rigorous. Elevation-ready: projected
-af budget 3 nodes / depth 2 (positivity/complete positivity, unitality,
-root).
+**Status.** af-VALIDATED in-repo 2026-07-27 (84th rigorous result): fresh
+codex prover build, separate fresh codex verifiers, root + 9/9 nodes
+validated, taint clean; one genuine mid-run typing challenge
+(ch-7651a4a59d0519c0: real vs complex diagonal) repaired by the recorded
+contract amendment, then verifier-accepted. Export:
+`proofs/lem-routef-f0-ucp-lift/export.{md,tex}`; oracle
+`af-lem-routef-f0-ucp-lift` fr-verified PASS.
 
 **Proof sketch (per the audited design).** A row-stochastic $Q$ is positive
 and unital on $\ell_\infty^n$ ([[def-stochastic]]); its complexification

@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-f0-ucp-lift/export.md",
+  "oracle": "af-lem-routef-f0-ucp-lift",
+  "result": "pass",
+  "claim_hash": "8f1875d87e1ff8c61ee0481aef05c2a2362a306d8a642afc93b2ead2cb9f7ec1",
+  "oracle_digest": "e3fc6374c706f7b12ab40f4177ee9be6d0495ad09ca9040446f6bcbe93d92914",
+  "inputs_hash": "a631d7a98b301f5bda90b8f673f406c34061f2bd1144d6f3ab2fb7da0edbbc63",
+  "ts": "2026-07-27T09:02:18.620Z"
+}

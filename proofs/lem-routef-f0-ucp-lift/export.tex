@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Route F F0 UCP lift: let n >= 1, let D: M\_n -> C\textasciicircum{}n be dia...}
+\step{1} Route F F0 UCP lift: let n >= 1, let D: M\_n -> C\textasciicircum{}n be diagonal extraction onto the complex diagonal algebra C\textasciicircum{}n = l\_inf\textasciicircum{}n(C) and J: C\textasciicircum{}n -> M\_n the diagonal inclusion, let Q: l\_inf\textasciicircum{}n -> l\_inf\textasciicircum{}n be row-stochastic, and let Q\_C: C\textasciicircum{}n -> C\textasciicircum{}n be the canonical complex-linear extension of Q; then Phi := J Q\_C D: M\_n -> M\_n is a unital completely positive map. \steptag{validated} \\[6pt]
+\step{1.1} The canonical complex-linear extension Q\_C:C\textasciicircum{}n->C\textasciicircum{}n of the row-stochastic Q is UCP. \steptag{validated} \\[6pt]
+\step{1.1.1} By def-stochastic, row-stochasticity means Q has nonnegative matrix entries and Q 1=1; hence Q\_C is unital and positive on the commutative C*-algebra C\textasciicircum{}n. \steptag{validated} \\[6pt]
+\step{1.1.1.1} If x=(x\_j) is positive in C\textasciicircum{}n, then every x\_j is a nonnegative real number, so (Q\_C x)\_i=sum\_j q\_ij x\_j>=0 because q\_ij>=0; also Q\_C(1)=Q(1)=1. Thus Q\_C is positive and unital. \steptag{validated} \\[4pt]
+\step{1.1.2} By def-ucp-map, a positive map out of a commutative C*-algebra is automatically completely positive; combined with unitality, Q\_C is UCP. \steptag{validated} \\[4pt]
+\step{1.2} The diagonal extraction D:M\_n->C\textasciicircum{}n and diagonal inclusion J:C\textasciicircum{}n->M\_n are UCP. \steptag{validated} \\[6pt]
+\step{1.2.1} D is unital, and for every r>=1 and every positive block matrix X=[X\_ab] in M\_r(M\_n), (id\_\{M\_r\} tensor D)(X) is the n-tuple of principal compressions [(X\_ab)\_\{ii\}]\_\{a,b=1\}\textasciicircum{}r (i=1,...,n), each positive in M\_r; hence D is CP and therefore UCP by def-ucp-map. \steptag{validated} \\[4pt]
+\step{1.2.2} J is unital, and for every r>=1 a positive element (A\_1,...,A\_n) of M\_r(C\textasciicircum{}n)=direct-sum\_\{i=1\}\textasciicircum{}n M\_r is sent by id\_\{M\_r\} tensor J, up to the canonical permutation of tensor factors, to the positive block-diagonal matrix diag(A\_1,...,A\_n) in M\_\{rn\}; hence J is CP and therefore UCP by def-ucp-map. \steptag{validated} \\[4pt]
+\step{1.3} By the UCP composition fact in def-ucp-map, the composition Phi=J Q\_C D is UCP once the preceding two claims hold. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

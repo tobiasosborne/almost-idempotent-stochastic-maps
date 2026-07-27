@@ -1,0 +1,9 @@
+{
+  "claim": "lem-routef-f0-ucp-lift af-validated in-repo: root + 9/9 nodes validated, taint clean, root statement == registry contract",
+  "oracle": "af-lem-routef-f0-ucp-lift",
+  "result": "fail",
+  "claim_hash": "e305960252b9475ae9edd081c52d314b81ae29d401397618f83775c865b82d1d",
+  "oracle_digest": "e3fc6374c706f7b12ab40f4177ee9be6d0495ad09ca9040446f6bcbe93d92914",
+  "inputs_hash": "e6b3c71a96298463a245183ce1b9c525a6c7eb834333b6a37534837cf203ca7c",
+  "ts": "2026-07-27T09:00:25.575Z"
+}

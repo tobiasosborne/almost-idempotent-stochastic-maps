@@ -5,7 +5,7 @@ contract: Route F F0 defect identity: let n >= 1, let D: M_n -> C^n be diagonal 
 defs: def-stochastic; def-almost-idempotent; def-ucp-map
 deps:
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/plans/2026-07-22-W73-artifacts/AUDIT-W73B-ROUTE-F.md Q4 (fresh hostile audit incl. the lower-bound direction, verdict VALID); design + fresh hostile audit docs/plans/2026-07-27-F0-ASSEMBLY-design/DESIGN-F0-ASSEMBLY.md sect 1.2 + AUDIT-F0-ASSEMBLY.md sect 1.2 (VALID-WITH-CORRECTIONS; the Q_C typing correction is applied here; the audit re-verified BOTH directions of the equality); user-ratified landing 2026-07-27 (W79/W80, docs/plans/2026-07-27-W78-ratification-package.md sect 5 step 1)
 owner: A
 workspace: proofs/lem-routef-f0-defect-identity
