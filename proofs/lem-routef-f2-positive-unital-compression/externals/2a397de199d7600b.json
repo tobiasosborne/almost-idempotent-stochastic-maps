@@ -1,0 +1,8 @@
+{
+  "id": "2a397de199d7600b",
+  "name": "projection-basis-kitaev-1361",
+  "source": "refs/kitaev-2405.02434/approximate_algebras.tex:1361 VERBATIM: \"The second application of Lemma~\\ref{lem_merging} involves an auxiliary statement about $\\delta$-projections $P_1,\\dots,P_p,Q_1,\\dots,Q_q$ satisfying certain conditions, which will be formulated in terms of inclusions of finite-dimensional commutative $C^*$ algebras. Such an algebra $\\calB$ is described by a \\emph{projection basis} $\\{\\Pi_1,\\dots,\\Pi_n\\}\\subseteq\\calB$ such that $\\Pi_j^\\dag=\\Pi_j$,\\, $\\Pi_j\\Pi_k=\\delta_{jk}\\Pi_k$, and $\\sum_{j=1}^{n}\\Pi_j=I$.\"",
+  "content_hash": "d370ccca4c275953cc6337ed940f5f40bf3000c34af6549b66e47e889356993d",
+  "created": "2026-07-27T10:29:15.443230804Z",
+  "notes": ""
+}
