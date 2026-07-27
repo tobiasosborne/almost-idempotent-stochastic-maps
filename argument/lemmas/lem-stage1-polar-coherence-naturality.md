@@ -5,7 +5,8 @@ contract: Polar coherence and scalar naturality: for every exact-unit algebra an
 defs: def-approximate-unitary-space
 deps: lem-stage1-polar-retraction
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-polar-coherence-naturality
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 5, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). Source loci TeX 809-845, 945; uniqueness and bilinearity derivation.
 owner: A
 ---

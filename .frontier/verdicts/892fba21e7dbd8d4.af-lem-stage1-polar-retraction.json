@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-polar-retraction/export.md",
+  "oracle": "af-lem-stage1-polar-retraction",
+  "result": "pass",
+  "claim_hash": "c991832b0180a4c3c9b8e742c3560e570e83c5e6d1fb84c845fa5c2f43ef3ca8",
+  "oracle_digest": "8f81b833ac6a58796f2be070e4f4fd8ae50e25e09db9f492c95ac719b41c2b98",
+  "inputs_hash": "c2e200767421770d66be4a88720aee47fdc39662a22a3e3f9f99e70f4cdd3c75",
+  "ts": "2026-07-27T13:08:16.341Z"
+}
