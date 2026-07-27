@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-smooth-unitary-operations/export.md",
+  "oracle": "af-lem-stage1-smooth-unitary-operations",
+  "result": "pass",
+  "claim_hash": "053d918a3577736d76d8d7508ef604f70b0a3c0cb03e17b6df27e8db8a9e8d46",
+  "oracle_digest": "3a1796e6011e4b2156f976b2a2175f4a7bb79fbc674fb2e2396d3538b22c5617",
+  "inputs_hash": "706a843a83d952af8393e4a86058094b502ed7aba739e2ccb58d3293085a141f",
+  "ts": "2026-07-27T17:28:53.579Z"
+}

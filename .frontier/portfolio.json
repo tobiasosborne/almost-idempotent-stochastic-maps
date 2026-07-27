@@ -745,6 +745,18 @@
      "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-smooth-polar-inverse/ledger",
      "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-smooth-polar-inverse.md"
     ]
+   },
+   {
+    "name": "af-lem-stage1-smooth-unitary-operations",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-smooth-unitary-operations"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-smooth-unitary-operations/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-smooth-unitary-operations.md"
+    ]
    }
   ]
  },
