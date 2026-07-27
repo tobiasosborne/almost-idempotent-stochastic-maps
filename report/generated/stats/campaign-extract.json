@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-07-26T11:08:31Z",
+ "extracted_at": "2026-07-27T08:38:30Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-07-26T11:08:31Z",
+  "mined_at": "2026-07-27T08:38:30Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -458,30 +458,30 @@
  "schema": 1,
  "successor": {
   "af": {
-   "amendments_total": 180,
-   "challenges_total": 257,
+   "amendments_total": 206,
+   "challenges_total": 281,
    "entry_types": {
     "approach_tried": 1,
-    "challenge_raised": 257,
-    "challenge_resolved": 250,
-    "def_added": 470,
-    "node_amended": 180,
-    "node_archived": 37,
-    "node_created": 1418,
-    "node_validated": 1367,
-    "nodes_claimed": 2314,
-    "nodes_released": 2314,
-    "proof_initialized": 86
+    "challenge_raised": 281,
+    "challenge_resolved": 274,
+    "def_added": 477,
+    "node_amended": 206,
+    "node_archived": 39,
+    "node_created": 1526,
+    "node_validated": 1457,
+    "nodes_claimed": 2502,
+    "nodes_released": 2502,
+    "proof_initialized": 94
    },
-   "ledger_entries": 8694,
-   "nodes_total": 1418,
+   "ledger_entries": 9359,
+   "nodes_total": 1526,
    "owner_roles": {
-    "prover (fix round)": 294,
-    "prover (initial build)": 327,
-    "verifier": 1693
+    "prover (fix round)": 320,
+    "prover (initial build)": 374,
+    "verifier": 1808
    },
-   "root_validated": 76,
-   "seeded_not_validated": 10,
+   "root_validated": 83,
+   "seeded_not_validated": 11,
    "validation_days": {
     "2026-07-02": 7,
     "2026-07-03": 5,
@@ -492,9 +492,9 @@
     "2026-07-10": 6,
     "2026-07-24": 14,
     "2026-07-25": 22,
-    "2026-07-26": 6
+    "2026-07-26": 13
    },
-   "workspaces": 86,
+   "workspaces": 94,
    "workspaces_detail": [
     {
      "amendments": 0,
@@ -895,6 +895,22 @@
      "nodes": 39,
      "root_validated": "2026-07-25T13:15:26.149143012Z",
      "validated": 39
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 9,
+     "defs_imported": 4,
+     "first_ts": "2026-07-26T15:17:31.961523583Z",
+     "id": "lem-extcb-exact-target-correction",
+     "last_ts": "2026-07-26T16:43:14.570007836Z",
+     "ledger_entries": 35,
+     "max_round": 3,
+     "nodes": 6,
+     "root_validated": "2026-07-26T16:43:10.249321737Z",
+     "validated": 6
     },
     {
      "amendments": 9,
@@ -1777,6 +1793,118 @@
      "validated": 22
     },
     {
+     "amendments": 10,
+     "archived": 2,
+     "challenges": 9,
+     "challenges_resolved": 9,
+     "claims": 55,
+     "defs_imported": 0,
+     "first_ts": "2026-07-26T11:31:22.653022815Z",
+     "id": "lem-topology-finite-triangulation",
+     "last_ts": "2026-07-26T18:14:44.17082769Z",
+     "ledger_entries": 201,
+     "max_round": 7,
+     "nodes": 39,
+     "root_validated": null,
+     "validated": 21
+    },
+    {
+     "amendments": 2,
+     "archived": 0,
+     "challenges": 1,
+     "challenges_resolved": 1,
+     "claims": 20,
+     "defs_imported": 1,
+     "first_ts": "2026-07-26T11:31:22.718052485Z",
+     "id": "lem-topology-hopf-structure",
+     "last_ts": "2026-07-26T16:24:57.317903238Z",
+     "ledger_entries": 72,
+     "max_round": 5,
+     "nodes": 13,
+     "root_validated": "2026-07-26T16:24:57.232149085Z",
+     "validated": 13
+    },
+    {
+     "amendments": 1,
+     "archived": 0,
+     "challenges": 1,
+     "challenges_resolved": 1,
+     "claims": 11,
+     "defs_imported": 0,
+     "first_ts": "2026-07-26T11:31:22.782154348Z",
+     "id": "lem-topology-kunneth-cross-product",
+     "last_ts": "2026-07-26T12:26:07.532407628Z",
+     "ledger_entries": 40,
+     "max_round": 4,
+     "nodes": 7,
+     "root_validated": "2026-07-26T12:26:07.519903751Z",
+     "validated": 7
+    },
+    {
+     "amendments": 1,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 5,
+     "defs_imported": 1,
+     "first_ts": "2026-07-26T11:31:22.843259593Z",
+     "id": "lem-topology-lefschetz-hopf",
+     "last_ts": "2026-07-26T11:39:52.528015148Z",
+     "ledger_entries": 17,
+     "max_round": 1,
+     "nodes": 2,
+     "root_validated": "2026-07-26T11:39:52.517881631Z",
+     "validated": 2
+    },
+    {
+     "amendments": 10,
+     "archived": 0,
+     "challenges": 9,
+     "challenges_resolved": 9,
+     "claims": 55,
+     "defs_imported": 1,
+     "first_ts": "2026-07-26T11:31:22.906728203Z",
+     "id": "lem-topology-local-index-sign",
+     "last_ts": "2026-07-26T17:03:14.801427785Z",
+     "ledger_entries": 186,
+     "max_round": 7,
+     "nodes": 23,
+     "root_validated": "2026-07-26T17:03:09.395686376Z",
+     "validated": 23
+    },
+    {
+     "amendments": 2,
+     "archived": 0,
+     "challenges": 1,
+     "challenges_resolved": 1,
+     "claims": 20,
+     "defs_imported": 0,
+     "first_ts": "2026-07-26T11:31:22.968033875Z",
+     "id": "lem-topology-orientable-top-cohomology",
+     "last_ts": "2026-07-26T13:39:45.064044637Z",
+     "ledger_entries": 73,
+     "max_round": 5,
+     "nodes": 14,
+     "root_validated": "2026-07-26T13:39:45.047912373Z",
+     "validated": 14
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 3,
+     "challenges_resolved": 3,
+     "claims": 13,
+     "defs_imported": 0,
+     "first_ts": "2026-07-26T11:31:23.030946053Z",
+     "id": "lem-topology-quotient-manifold",
+     "last_ts": "2026-07-26T15:13:02.945941691Z",
+     "ledger_entries": 41,
+     "max_round": 5,
+     "nodes": 4,
+     "root_validated": "2026-07-26T15:13:02.934678659Z",
+     "validated": 4
+    },
+    {
      "amendments": 1,
      "archived": 0,
      "challenges": 1,
@@ -1888,7 +2016,9 @@
     "2026-07-16": 1,
     "2026-07-23": 6,
     "2026-07-24": 7,
-    "2026-07-25": 5
+    "2026-07-25": 5,
+    "2026-07-26": 3,
+    "2026-07-27": 5
    },
    "created_per_day": {
     "2026-07-02": 50,
@@ -1905,38 +2035,40 @@
     "2026-07-22": 3,
     "2026-07-23": 8,
     "2026-07-24": 8,
-    "2026-07-25": 4
+    "2026-07-25": 4,
+    "2026-07-26": 11,
+    "2026-07-27": 3
    },
-   "issues": 196,
-   "memories": 6,
+   "issues": 210,
+   "memories": 8,
    "priority": {
     "0": 25,
-    "1": 123,
-    "2": 45,
-    "3": 3
+    "1": 133,
+    "2": 48,
+    "3": 4
    },
    "status": {
-    "closed": 140,
-    "deferred": 1,
-    "in_progress": 4,
-    "open": 51
+    "closed": 148,
+    "deferred": 2,
+    "in_progress": 5,
+    "open": 55
    },
    "type": {
     "epic": 3,
     "feature": 1,
-    "task": 192
+    "task": 206
    }
   },
   "definitions": {
-   "definitions": 38,
+   "definitions": 45,
    "kind": {
-    "cited": 12,
-    "consensus": 4,
-    "original": 22
+    "cited": 13,
+    "consensus": 6,
+    "original": 26
    },
    "status": {
     "draft": 11,
-    "locked": 27
+    "locked": 34
    }
   },
   "docs": {
@@ -1944,7 +2076,7 @@
    "ingest": 7,
    "ingest_experiment_files": 60,
    "lit-review": 1,
-   "plans": 50,
+   "plans": 58,
    "recon": 1,
    "report_shard_lines": 4795,
    "report_shards": 43,
@@ -1964,7 +2096,7 @@
    "stop_markers": 16
   },
   "frontier": {
-   "active_days": 17,
+   "active_days": 18,
    "arm_outcomes": {
     "A": {
      "progress": 14
@@ -1985,10 +2117,15 @@
      "progress": 3
     },
     "FH": {
+     "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
      "banked": 5,
      "died": 1,
-     "dispatch": 3,
-     "progress": 99
+     "dispatch": 30,
+     "lem-topology-hopf-structure af-VALIDATED (81st rigorous result; 13 nodes 13/13 clean) + lem-extcb-exact-target-correction af-VALIDATED (82nd; 6 nodes 6/6 clean, first-pass, zero challenges — the designed transcription landed EXACTLY on budget) — GAP-EA, the first of the four v4.1 GAP families, is DISCHARGED at L0. T0 80 -> 82. Session 28 totals: +6 T0 (5 of 7 topology + the GAP-EA correction row), 2 trees parked with precise diagnoses (1 af-bookkeeping thrash, 1 genuine contract/def scope gap -> user escalation), 3 orchestration-infrastructure laws discovered+banked. Breaker honored: next cycle EXPLOREs off FH.": 1,
+     "lem-topology-lefschetz-hopf af-VALIDATED (77th rigorous result; 2 nodes taint clean, first-pass canary) + lem-topology-kunneth-cross-product af-VALIDATED (78th; 7 nodes taint clean) — first two of the seven Stage-1 topology elevations banked, oracles af-lem-topology-* registered, fr verify PASS on both exports, registry flips committed, T0 76 -> 78. Session findings: parallel orchestrations mutually abort (sequential law banked to bd memory); 4 balloon-aborts + 1 stuck (external named but not attached as node dep) queued for repair.": 1,
+     "lem-topology-local-index-sign af-VALIDATED (83rd rigorous result; 23 nodes 23/23 clean) under the user-ratified narrowed contract — the in-place root amendment retained all 21 previously validated nodes; oracle fr verify PASS. T0 82 -> 83; 6 of 7 topology rows T0. finite-triangulation root challenge classified: L1 ground-truth stop (Cairns delegates the class-one/allowable definitions to Veblen-Whitehead 1932, NOT in refs/) — user decision being asked in-chat (narrow to Cairns's literal statement vs acquire V-W).": 1,
+     "lem-topology-orientable-top-cohomology af-VALIDATED (79th rigorous result; 14 nodes taint clean — Thm 3.26 + field-UCT + Cor 3.39 composed) + lem-topology-quotient-manifold af-VALIDATED (80th; 4 nodes taint clean — the external-attachment verifier challenge resolved by the re-run prover) — 4 of 7 topology elevations banked, oracles registered, fr verify PASS both, T0 78 -> 80. GAP-EA rows LANDED per DESIGN-GAP-EA option (a): lem-extcb-exact-target-correction (validated node-1.2 contract verbatim, proved/af:none) + lem-extcb-exact-target-approximation (v4.1 bridge, stated), UNWIRED-whitelisted, gate green. Next: seed+orchestrate the correction row; finishing runs for finite-triangulation (14/17), local-index-sign (18/22), hopf re-run.": 1,
+     "progress": 117
     },
     "G": {
      "banked": 2,
@@ -1998,7 +2135,10 @@
      "banked": 31,
      "died": 1,
      "dispatch": 6,
-     "progress": 13
+     "progress": 14
+    },
+    "XE": {
+     "dispatch": 1
     }
    },
    "arm_span": {
@@ -2024,7 +2164,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-07-26T11:03:43.147Z"
+     "last": "2026-07-27T08:20:37.664Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -2032,7 +2172,11 @@
     },
     "R": {
      "first": "2026-07-02T07:04:29.532Z",
-     "last": "2026-07-26T10:53:39.607Z"
+     "last": "2026-07-26T11:15:52.046Z"
+    },
+    "XE": {
+     "first": "2026-07-26T18:30:00.168Z",
+     "last": "2026-07-26T18:30:00.168Z"
     }
    },
    "arms": {
@@ -2041,9 +2185,10 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 108,
+    "FH": 158,
     "G": 21,
-    "R": 51
+    "R": 52,
+    "XE": 1
    },
    "banked_per_day": {
     "2026-07-02": 7,
@@ -2057,19 +2202,20 @@
     "2026-07-26": 6
    },
    "decisions": {
-    "EXPLOIT": 297,
-    "EXPLORE": 11,
+    "EXPLOIT": 318,
+    "EXPLORE": 14,
     "PIVOT": 3
    },
    "evidence_classes": {
     "af": 86,
     "af-validated": 1,
     "analysis": 2,
-    "audit": 5,
+    "audit": 17,
     "census": 1,
+    "close": 1,
     "codification": 2,
     "decomposition": 1,
-    "design": 2,
+    "design": 7,
     "dispatch": 4,
     "doc": 2,
     "docs": 1,
@@ -2084,7 +2230,7 @@
     "proof": 5,
     "proof-draft": 1,
     "proof-raw": 4,
-    "prose": 11,
+    "prose": 12,
     "prover": 29,
     "reconciliation": 1,
     "refs": 1,
@@ -2094,26 +2240,31 @@
     "run": 3,
     "session": 2,
     "side": 4,
-    "stated": 15,
+    "stated": 20,
     "strategy": 15,
     "verdict": 5,
     "wave": 24
    },
    "evidence_tiers": {
-    "T0": 84,
-    "T1": 121,
-    "T2": 108
+    "T0": 89,
+    "T1": 131,
+    "T2": 117
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-07-26T11:03:43.147Z",
-   "max_cycle": 644,
+   "last_ts": "2026-07-27T08:20:37.664Z",
+   "max_cycle": 711,
    "outcomes": {
+    "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
     "banked": 39,
     "died": 6,
     "discovery": 3,
-    "dispatch": 9,
-    "orient": 321,
-    "progress": 265,
+    "dispatch": 37,
+    "lem-topology-hopf-structure af-VALIDATED (81st rigorous result; 13 nodes 13/13 clean) + lem-extcb-exact-target-correction af-VALIDATED (82nd; 6 nodes 6/6 clean, first-pass, zero challenges — the designed transcription landed EXACTLY on budget) — GAP-EA, the first of the four v4.1 GAP families, is DISCHARGED at L0. T0 80 -> 82. Session 28 totals: +6 T0 (5 of 7 topology + the GAP-EA correction row), 2 trees parked with precise diagnoses (1 af-bookkeeping thrash, 1 genuine contract/def scope gap -> user escalation), 3 orchestration-infrastructure laws discovered+banked. Breaker honored: next cycle EXPLOREs off FH.": 1,
+    "lem-topology-lefschetz-hopf af-VALIDATED (77th rigorous result; 2 nodes taint clean, first-pass canary) + lem-topology-kunneth-cross-product af-VALIDATED (78th; 7 nodes taint clean) — first two of the seven Stage-1 topology elevations banked, oracles af-lem-topology-* registered, fr verify PASS on both exports, registry flips committed, T0 76 -> 78. Session findings: parallel orchestrations mutually abort (sequential law banked to bd memory); 4 balloon-aborts + 1 stuck (external named but not attached as node dep) queued for repair.": 1,
+    "lem-topology-local-index-sign af-VALIDATED (83rd rigorous result; 23 nodes 23/23 clean) under the user-ratified narrowed contract — the in-place root amendment retained all 21 previously validated nodes; oracle fr verify PASS. T0 82 -> 83; 6 of 7 topology rows T0. finite-triangulation root challenge classified: L1 ground-truth stop (Cairns delegates the class-one/allowable definitions to Veblen-Whitehead 1932, NOT in refs/) — user decision being asked in-chat (narrow to Cairns's literal statement vs acquire V-W).": 1,
+    "lem-topology-orientable-top-cohomology af-VALIDATED (79th rigorous result; 14 nodes taint clean — Thm 3.26 + field-UCT + Cor 3.39 composed) + lem-topology-quotient-manifold af-VALIDATED (80th; 4 nodes taint clean — the external-attachment verifier challenge resolved by the re-run prover) — 4 of 7 topology elevations banked, oracles registered, fr verify PASS both, T0 78 -> 80. GAP-EA rows LANDED per DESIGN-GAP-EA option (a): lem-extcb-exact-target-correction (validated node-1.2 contract verbatim, proved/af:none) + lem-extcb-exact-target-approximation (v4.1 bridge, stated), UNWIRED-whitelisted, gate green. Next: seed+orchestrate the correction row; finishing runs for finite-triangulation (14/17), local-index-sign (18/22), hopf re-run.": 1,
+    "orient": 336,
+    "progress": 284,
     "refuted": 1
    },
    "per_day": {
@@ -2133,16 +2284,17 @@
     "2026-07-23": 11,
     "2026-07-24": 65,
     "2026-07-25": 95,
-    "2026-07-26": 33
+    "2026-07-26": 80,
+    "2026-07-27": 20
    },
-   "records": 644,
-   "worker_jobs": 395,
+   "records": 711,
+   "worker_jobs": 406,
    "worker_models": {
     "codex": 338,
     "codex-gpt-5.6-sol": 8,
     "fable": 10,
-    "gpt-5.6-sol": 15,
-    "opus": 19,
+    "gpt-5.6-sol": 25,
+    "opus": 20,
     "sonnet": 5
    },
    "worker_roles": {
@@ -2156,13 +2308,13 @@
     "decider": 1,
     "measurer": 1,
     "obstructor": 1,
-    "prover": 191,
+    "prover": 192,
     "refuter": 7,
     "researcher": 2,
     "strategist": 6,
     "summarizer": 1,
     "transcriber": 4,
-    "verifier": 147
+    "verifier": 157
    },
    "workers": {
     "codex / adversary": 2,
@@ -2187,10 +2339,10 @@
     "fable / prover": 2,
     "fable / strategist": 1,
     "gpt-5.6-sol / prover": 8,
-    "gpt-5.6-sol / verifier": 7,
+    "gpt-5.6-sol / verifier": 17,
     "opus / auditor": 1,
     "opus / author": 5,
-    "opus / prover": 10,
+    "opus / prover": 11,
     "opus / researcher": 1,
     "opus / strategist": 2,
     "sonnet / acquirer": 1,
@@ -2201,13 +2353,13 @@
    }
   },
   "git": {
-   "active_days": 17,
+   "active_days": 18,
    "authors": {
-    "tobiasosborne": 731
+    "tobiasosborne": 759
    },
-   "commits": 731,
+   "commits": 759,
    "first_day": "2026-07-02",
-   "last_day": "2026-07-26",
+   "last_day": "2026-07-27",
    "per_day": {
     "2026-07-02": 46,
     "2026-07-03": 53,
@@ -2225,23 +2377,24 @@
     "2026-07-23": 16,
     "2026-07-24": 111,
     "2026-07-25": 165,
-    "2026-07-26": 61
+    "2026-07-26": 85,
+    "2026-07-27": 4
    },
    "subject_prefixes": {
     "W61": 13,
     "W63": 4,
     "W65": 4,
-    "W67": 4,
     "W72": 5,
     "W74-F": 7,
     "W74F": 5,
-    "af": 94,
-    "fr": 16,
+    "af": 100,
+    "beads": 8,
+    "fr": 17,
     "fr dispatch": 9,
-    "fr log": 102,
+    "fr log": 106,
     "fr orient": 72,
     "fudw": 9,
-    "report": 6
+    "report": 8
    }
   },
   "path_name": "almost-idempotent-stochastic-maps",
@@ -2300,10 +2453,10 @@
    ],
    "frontier": "The Kernel/(EX) conjecture: every rank->=3 signed idempotent P with delta<=1/4 has a theta-1/2 actual-row chart U0 with max_s Phi_s(U0) <= C0*delta (C0=1 empirically); equivalently every hidden row vertex with invisible mass > sqrt(delta) has height <= B*sqrt(delta). This one input closes op-classical via HLC <= op-exposed-hull <= op-classical.",
    "goal": "Prove op-classical: universal eta0,C>0 (dimension-free) such that every row-stochastic Q with ||Q^2-Q||_{inf->inf} <= eta <= eta0 admits a stochastic idempotent E with ||Q-E||_{inf->inf} <= C*sqrt(eta) (sharp exponent 1/2).",
-   "verdict_files": 47
+   "verdict_files": 56
   },
   "refs": {
-   "locked_files": 21,
+   "locked_files": 23,
    "source_ids": [
     "baake-sumner-2007.11433",
     "hognas-mukherjea",
@@ -2313,25 +2466,26 @@
     "cairns-1935",
     "arkowitz-brown-2004",
     "lee-smooth-manifolds",
-    "granas-dugundji"
+    "granas-dugundji",
+    "munkres-elementary-differential-topology"
    ],
-   "sources": 9
+   "sources": 10
   },
   "registry": {
    "af": {
-    "none": 176,
-    "seeded": 10,
-    "validated": 76
+    "none": 173,
+    "seeded": 11,
+    "validated": 83
    },
    "kind": {
     "corollary": 2,
-    "lemma": 233,
+    "lemma": 238,
     "obstruction": 13,
     "open-problem": 6,
     "proposition": 2,
     "theorem": 6
    },
-   "results": 262,
+   "results": 267,
    "status": {
     "conjecture": 31,
     "disproved": 2,
@@ -2339,9 +2493,9 @@
     "numerical": 2,
     "obstruction": 1,
     "open": 3,
-    "proved": 189,
-    "proved-mod-audit": 25,
-    "stated": 7
+    "proved": 196,
+    "proved-mod-audit": 27,
+    "stated": 3
    }
   },
   "runs": {
@@ -2395,19 +2549,19 @@
    "gate_lines": 1893,
    "gate_scripts": 7,
    "script_files": 28,
-   "script_lines": 9050,
+   "script_lines": 9058,
    "test_files": 7,
    "test_lines": 1292
   },
   "worklog": {
-   "entries": 61,
-   "first_date": "2026-07-02",
-   "last_date": "2026-07-25",
-   "lines": 1408,
-   "max_session": 26,
-   "max_wave": 72,
-   "sessions_named": 24,
-   "wave_labels": 58
+   "entries": 65,
+   "first_date": "2026-06-11",
+   "last_date": "2026-07-27",
+   "lines": 1616,
+   "max_session": 30,
+   "max_wave": 80,
+   "sessions_named": 28,
+   "wave_labels": 65
   }
  }
 }

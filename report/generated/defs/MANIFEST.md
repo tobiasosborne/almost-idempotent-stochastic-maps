@@ -8,13 +8,19 @@ L2); this table and the `.tex` files beside it are a deterministic projection of
 ## Scope (directive: render only what the current proof strategy needs)
 
 - selection rule: **Route-F landing chain (scripts/gen-report-dag.py select_subgraph)**
-- registry results in the strategy subgraph: **113**; registry results anchored in `report/sections/`: **40**
-- definitions they import directly: **36**; after the statement-region
-  `[[def-…]]` closure: **37** rendered, **1** dropped
+- registry results in the strategy subgraph: **115**; registry results anchored in `report/sections/`: **40**
+- definitions they import directly: **37**; after the statement-region
+  `[[def-…]]` closure: **38** rendered, **7** dropped
 
 Dropped (outside the closure; canonical, just not reproduced here):
 
+- `def-approximate-unitary-space`
+- `def-maincb-partition-state`
+- `def-maincb-raw-call`
+- `def-maincb-reset-state`
+- `def-operator-space`
 - `def-pivot`
+- `def-stage1-polar-witness-data`
 
 ## The classical picture: the signed and stochastic vocabulary
 
@@ -22,8 +28,8 @@ Dropped (outside the closure; canonical, just not reproduced here):
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | `def-negative-mass` | `def:negative-mass` | original | locked | shard statement | — | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:esi, δ(P)); row polytope from ../almost-idempotent-positive-maps/definitions/def-stochastic.md` | `-` | 164 | 1 |
 | 2 | `def-signed-idempotent` | `def:signed-idempotent` | original | locked | shard statement | — | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (Definition, exact signed idempotent)` | `-` | 186 | 1 |
-| 3 | `def-stochastic` | `def:stochastic` | consensus | locked | shard statement | — | `internal` | `adopted from ../almost-idempotent-positive-maps/definitions/def-stochastic.md` | `-` | 17 | 3 |
-| 4 | `def-almost-idempotent` | `def:almost-idempotent` | consensus | locked | shard statement | — | `internal` | `adopted from ../almost-idempotent-positive-maps/definitions/def-almost-idempotent.md (stochastic specialization)` | `-` | 4 | 1 |
+| 3 | `def-stochastic` | `def:stochastic` | consensus | locked | shard statement | — | `internal` | `adopted from ../almost-idempotent-positive-maps/definitions/def-stochastic.md` | `-` | 19 | 3 |
+| 4 | `def-almost-idempotent` | `def:almost-idempotent` | consensus | locked | shard statement | — | `internal` | `adopted from ../almost-idempotent-positive-maps/definitions/def-almost-idempotent.md (stochastic specialization)` | `-` | 5 | 1 |
 | 5 | `def-exposed` | `def:exposed` | consensus | locked | shard statement | — | `internal` | `adapted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:vertex, def:exposed); ../almost-idempotent-positive-maps/definitions/def-exposed.md` | `-` | 129 | 0 |
 | 6 | `def-visible-set` | `def:visible-set` | original | locked | shard statement | — | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:scales, def:exposed)` | `-` | 137 | 0 |
 | 7 | `def-height` | `def:height` | original | locked | shard statement | — | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (Definition: Height)` | `-` | 112 | 0 |
@@ -67,6 +73,7 @@ Dropped (outside the closure; canonical, just not reproduced here):
 | 35 | `def-four-corner-merging-datum` | `def:four-corner-merging-datum` | original | locked | shard statement | — | `internal` | `project packaging of approximate_algebras.tex:1325-1345 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 2 | 2 |
 | 36 | `def-hcb-datum` | `def:hcb-datum` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package` | `-` | 15 | 15 |
 | 37 | `def-positive-approximate-retract` | `def:positive-approximate-retract` | original | locked | shard statement | — | `internal` | `project formulation transcribed from docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §§1,4` | `-` | 3 | 2 |
+| 38 | `def-ucp-map` | `def:ucp-map` | consensus | locked | shard statement | — | `internal` | `standard operator-algebra textbook notion (e.g. Paulsen, Completely Bounded Maps and Operator Algebras, ch. 2-3); adopted for the Route-F rows per AUDIT-F0-ASSEMBLY.md sect 1.1` | `-` | 2 | 0 |
 
 ## Macro-translation table v1
 

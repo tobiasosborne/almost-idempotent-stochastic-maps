@@ -211,3 +211,36 @@ map.
 \textbf{Provenance.} Project formulation extracted from the W74F-A PRH artifact.
 User-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).
 \end{defnote}
+
+%% ---- def-ucp-map -------------------------------------------------------
+\hypertarget{def:ucp-map}{}%
+\begin{definition}[unital completely positive map\normalfont{} (\texttt{def-\allowbreak{}ucp-\allowbreak{}map})]\label{def:ucp-map}
+Let $A$ and $B$ be unital $C^*$-algebras (in this repo's
+Route-F usage: finite-dimensional, typically $\ell_\infty^n$, $M_n$, or a
+finite-dimensional unital $C^*$-algebra $\mathcal B$). A linear map
+$\varphi:A\to B$ is \emph{positive} if $\varphi(a)\ge0$ whenever $a\ge0$;
+\emph{completely positive} (CP) if for every $r\ge1$ the amplification
+$\mathrm{id}_{M_r}\otimes\varphi: M_r(A)\to M_r(B)$ is positive; and
+\emph{unital} if $\varphi(1_A)=1_B$. A \emph{UCP map} is a unital completely positive
+map. Standard facts used silently at the BSc/MSc level: a UCP map is
+contractive; a positive map out of a commutative $C^*$-algebra is
+automatically CP; compositions of UCP maps are UCP.
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} consensus (project-internal, agreed; no single external source); \texttt{status: locked}.\quad\textbf{Aliases.} UCP map; UCP; completely positive unital map.
+\par
+\textbf{Provenance.} \texttt{source: internal}; locus \texttt{standard operator-\allowbreak{}algebra textbook notion (e.\allowbreak{}g.\allowbreak{} Paulsen,\allowbreak{} Completely Bounded Maps and Operator Algebras,\allowbreak{} ch.\allowbreak{} 2-\allowbreak{}3);\allowbreak{} adopted for the Route-\allowbreak{}F rows per AUDIT-\allowbreak{}F0-\allowbreak{}ASSEMBLY.\allowbreak{}md sect 1.\allowbreak{}1}; no source hash (not a literature transcription); record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}27 (W79 decision D3,\allowbreak{} docs/\allowbreak{}plans/\allowbreak{}2026-\allowbreak{}07-\allowbreak{}27-\allowbreak{}W78-\allowbreak{}ratification-\allowbreak{}package.\allowbreak{}md;\allowbreak{} def shard chosen over an L2 textbook exemption because the F0 lift row's contract concludes "Phi is UCP").
+\par
+\textbf{Used by} 2 registry results, none of them reproduced in this report (exploration track; see \texttt{argument/INDEX.md} and \texttt{report/UNWIRED.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}ucp-\allowbreak{}map.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
+\textbf{Notes / provenance.} Provisioned per the F0 assembly audit
+(\texttt{AUDIT-\allowbreak{}F0-\allowbreak{}ASSEMBLY.\allowbreak{}md} \S{}1.1: the acronym UCP appeared in proposed
+contracts with no canonical anchor in the definitions layer). Consensus
+adoption of the universal textbook notion --- no project-specific content.
+Consumers: the F0 lift rows (\texttt{lem-\allowbreak{}routef-\allowbreak{}f0-\allowbreak{}ucp-\allowbreak{}lift}), the K-ledger
+factorization rows (UCP $\Delta,\Upsilon$), F2. Related:
+\hyperref[def:stochastic]{\texttt{def-\allowbreak{}stochastic}} (row-stochastic = unital positive on $\ell_\infty^n$),
+\hyperref[def:fd-cstar-diagonal]{\texttt{def-\allowbreak{}fd-\allowbreak{}cstar-\allowbreak{}diagonal}}.
+\end{defnote}

@@ -19,6 +19,9 @@ are ignored by the parser (`load_unwired`). Two sections:
 ## Frontier (exploration-track, unanchored by design)
 
 ```
+# --- 2026-07-27 W80 step-1 F0 seam rows (ratified package): pre-elevation; anchor into report on af validation ---
+lem-routef-f0-ucp-lift
+lem-routef-f0-defect-identity
 # --- 2026-07-26 GAP-EA discharge rows (aism-fbh8): pre-elevation; anchor into report on af validation ---
 lem-extcb-exact-target-correction
 lem-extcb-exact-target-approximation
