@@ -5,7 +5,7 @@ contract: Route F F3 retract defect: let K >= 1 be a dimension-independent const
 defs: def-stochastic
 deps:
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/plans/2026-07-24-fudw-decomposition-artifacts/PROOF-F2F3-BRIDGE.md §2 (prover); hostile verdict VERDICT-F2F3-BRIDGE.md (VALID-WITH-CORRECTIONS, F3: VALID, "the advertised constant is supported exactly"; contract = verdict §7 exact text); closes gap-routef-f3-retract-defect-contract (DESIGN-FUDW-DECOMP-v3.md §2.6)
 owner: A
 workspace: proofs/lem-routef-f3-retract-defect

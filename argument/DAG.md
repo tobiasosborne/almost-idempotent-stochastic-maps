@@ -214,7 +214,7 @@ graph LR
   lem-routef-f0-defect-identity["lem-routef-f0-defect-identity<br/>proved/validated"]
   lem-routef-f0-ucp-lift["lem-routef-f0-ucp-lift<br/>proved/validated"]
   lem-routef-f2-positive-unital-compression["lem-routef-f2-positive-unital-compression<br/>proved/validated"]
-  lem-routef-f3-retract-defect["lem-routef-f3-retract-defect<br/>proved-mod-audit/none"]
+  lem-routef-f3-retract-defect["lem-routef-f3-retract-defect<br/>proved-mod-audit/seeded"]
   lem-routef-functional-calculus-closeness["lem-routef-functional-calculus-closeness<br/>proved/validated"]
   lem-routef-k-ledger["lem-routef-k-ledger<br/>proved-mod-audit/none"]
   lem-routef-prh-finish["lem-routef-prh-finish<br/>proved/validated"]
