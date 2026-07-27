@@ -244,7 +244,7 @@
 | `lem-stage1-rectified-cstar-transport` | lemma | stated | none | A | Parameterized rectification transport: there exist C_rect^0 >= 1 and e_rect^0 in… |
 | `lem-stage1-smooth-polar-inverse` | lemma | proved | validated | A | Smooth polar-inverse upgrade: for every finite-dimensional exact-unit epsilon_r-… |
 | `lem-stage1-smooth-unitary-atlas` | lemma | proved | validated | A | Smooth graph-atlas upgrade: for every finite-dimensional exact-unit epsilon_r-C*… |
-| `lem-stage1-smooth-unitary-operations` | lemma | stated | none | A | Smooth action/operations upgrade: under lem-stage1-approximate-group-laws, lem-s… |
+| `lem-stage1-smooth-unitary-operations` | lemma | stated | seeded | A | Smooth action/operations upgrade: under lem-stage1-approximate-group-laws, lem-s… |
 | `lem-stage1-uniform-inversion-isolation` | lemma | stated | none | A | There are universal e_iso^r > 0, r_iso > 0 such that, for every finite-dimension… |
 | `lem-stage1-unitary-graph-control` | lemma | proved | validated | A | Uniform unitary graph control: there are universal C_ch >= 1, kappa_ch in (0, 1/… |
 | `lem-stage1-unitary-graph-transport` | lemma | stated | none | A | Parameterized unitary-graph transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |

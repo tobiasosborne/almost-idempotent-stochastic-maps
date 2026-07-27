@@ -5,7 +5,8 @@ contract: Smooth action/operations upgrade: under lem-stage1-approximate-group-l
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-polar-coherence-naturality; lem-stage1-approximate-group-laws; lem-stage1-smooth-unitary-atlas; lem-stage1-smooth-polar-inverse
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-smooth-unitary-operations
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 11, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). TeX 857-868 for the domains; smoothness by restriction/corestriction of the ambient scalar, bilinear, and real-linear maps followed by the smooth polar inverse; scalar identities use polar coherence/naturality.
 owner: A
 ---
