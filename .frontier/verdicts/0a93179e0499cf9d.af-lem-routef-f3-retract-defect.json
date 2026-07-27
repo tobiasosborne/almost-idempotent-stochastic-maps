@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-f3-retract-defect/export.md",
+  "oracle": "af-lem-routef-f3-retract-defect",
+  "result": "pass",
+  "claim_hash": "2ead51b359cab958d0fc1f2f899b83e4bf94eb1cf94d7b8089429019e0041f27",
+  "oracle_digest": "59b326b430e7133150261fdd0ea840a3d5d3acbc3799edb6b3cbc0eab867f7ad",
+  "inputs_hash": "4294eab359362a91d675842c03cb811f290bf3c749f1793c877f13efe06413d4",
+  "ts": "2026-07-27T11:02:27.214Z"
+}

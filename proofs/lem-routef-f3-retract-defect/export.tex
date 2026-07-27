@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Route F F3 retract defect: let K >= 1 be a dimension-inde...}
+\step{1} Route F F3 retract defect: let K >= 1 be a dimension-independent constant, n,k >= 1, A: l\_inf\textasciicircum{}k -> l\_inf\textasciicircum{}n and M: l\_inf\textasciicircum{}n -> l\_inf\textasciicircum{}k positive unital maps, Q: l\_inf\textasciicircum{}n -> l\_inf\textasciicircum{}n row-stochastic, and eta >= 0 with 3K*eta < 1; if ||Q - AM|$|\_\{inf-\rangle$inf\} <= K*eta, ||QA - A|$|\_\{inf-\rangle$inf\} <= 2K*eta, and ||Ax||\_inf >= (1-3K*eta)*||x||\_inf for every x in l\_inf\textasciicircum{}k, then ||MA - I\_k|$|\_\{inf-\rangle$inf\} <= 3K*eta/(1-3K*eta). \steptag{validated} \\[6pt]
+\step{1.1} The positive unital map A is contractive for the l\_inf norm: for every x in l\_inf\textasciicircum{}k, ||Ax||\_inf <= ||x||\_inf. \steptag{validated} \\[6pt]
+\step{1.1.1} For arbitrary x in l\_inf\textasciicircum{}k and c=||x||\_inf, coordinatewise -c*1\_k <= x <= c*1\_k. \steptag{validated} \\[4pt]
+\step{1.1.2} A positive linear map is order preserving; therefore positivity of A and unitality A(1\_k)=1\_n send the inequalities in node 1.1.1 to -c*1\_n <= Ax <= c*1\_n. \steptag{validated} \\[4pt]
+\step{1.1.3} The coordinatewise inequalities in node 1.1.2 imply |(Ax)\_i|<=c for every coordinate i, hence ||Ax||\_inf<=c=||x||\_inf; since x was arbitrary, A is contractive. \steptag{validated} \\[4pt]
+\step{1.2} For every x in l\_inf\textasciicircum{}k, linearity and composition give the exact identity A((MA-I\_k)x) = (AM-Q)(Ax) + (QA-A)x. \steptag{validated} \\[4pt]
+\step{1.3} For every x in l\_inf\textasciicircum{}k, the operator-norm hypotheses, the identity in node 1.2, and contractivity from node 1.1 imply ||A((MA-I\_k)x)||\_inf <= 3K*eta*||x||\_inf. \steptag{validated} \\[6pt]
+\step{1.3.1} By node 1.2, the triangle inequality, and the definition of induced operator norm, ||A((MA-I\_k)x)||\_inf <= ||AM-Q|$|\_\{inf-\rangle$inf\}*||Ax||\_inf + ||QA-A|$|\_\{inf-\rangle$inf\}*||x||\_inf. \steptag{validated} \\[4pt]
+\step{1.3.2} Since AM-Q=-(Q-AM), ||AM-Q|$|\_\{inf-\rangle$inf\}=||Q-AM|$|\_\{inf-\rangle$inf\}; substituting both assumed operator-norm bounds into node 1.3.1 and then using node 1.1 gives ||A((MA-I\_k)x)||\_inf <= K*eta*||x||\_inf+2K*eta*||x||\_inf=3K*eta*||x||\_inf. \steptag{validated} \\[4pt]
+\step{1.4} Let alpha=1-3K*eta. Since 3K*eta<1, alpha>0; applying the assumed lower bound ||Ay||\_inf >= alpha*||y||\_inf to y=(MA-I\_k)x and combining with node 1.3 yields ||(MA-I\_k)x||\_inf <= [3K*eta/alpha]*||x||\_inf for every x in l\_inf\textasciicircum{}k. \steptag{validated} \\[4pt]
+\step{1.5} Taking the supremum over all x with ||x||\_inf<=1 in the pointwise estimate of node 1.4 gives ||MA-I\_k|$|\_\{inf-\rangle$inf\} <= 3K*eta/(1-3K*eta), which is the claimed conclusion. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
