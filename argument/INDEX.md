@@ -226,7 +226,7 @@
 | `lem-stage1-group-domain-membership` | lemma | proved | validated | A | Group-input polar-domain membership: there exist universal C_grp, C_pol >= 1, ka… |
 | `lem-stage1-inversion-derivative-control` | lemma | proved | validated | A | Typed inversion derivative with chart retention: there exist universal C_der, C_… |
 | `lem-stage1-inversion-derivative-transport` | lemma | stated | none | A | Parameterized inversion-derivative transport: there exist C_der^0, C_ch^0, C_pol… |
-| `lem-stage1-maurer-cartan-transport` | lemma | stated | none | A | Parameterized Maurer-Cartan transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |
+| `lem-stage1-maurer-cartan-transport` | lemma | stated | seeded | A | Parameterized Maurer-Cartan transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |
 | `lem-stage1-maurer-cartan-trivialization` | lemma | proved | validated | A | Uniform global tangent/Maurer-Cartan control: there are universal C_ch >= 1, kap… |
 | `lem-stage1-polar-coherence-naturality` | lemma | proved | validated | A | Polar coherence and scalar naturality: for every exact-unit algebra and every tw… |
 | `lem-stage1-polar-constant-ledger` | lemma | stated | none | A | Compatible Stage-1 polar witnesses and range: there exists one universal def-sta… |
