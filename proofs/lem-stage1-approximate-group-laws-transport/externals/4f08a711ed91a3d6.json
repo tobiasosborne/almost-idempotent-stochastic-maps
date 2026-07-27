@@ -1,0 +1,8 @@
+{
+  "id": "4f08a711ed91a3d6",
+  "name": "lem-stage1-polar-coherence-naturality",
+  "source": "imports validated registry lemma proofs/lem-stage1-polar-coherence-naturality — Polar coherence and scalar naturality: for every exact-unit algebra and every two polar data (delta_j, S_j, u_j, h_j), j = 1, 2, for which Pi_{delta_j}: calU x B^{calH}_{delta_j}(J) -\u003e S_j, (U, H) |-\u003e U bold-dot H, is bijective with inverse (u_j, h_j), one has (u_1, h_1) = (u_2, h_2) on S_1 intersect S_2; moreover, for c in U(1) and X, cX in S_j, u_j(cX) = c*u_j(X) and h_j(cX) = h_j(X).",
+  "content_hash": "cd502a0f3075af269f9c1705897c429d71e9105bd366cc23b70f391941eecb84",
+  "created": "2026-07-27T19:10:50.30634262Z",
+  "notes": ""
+}
