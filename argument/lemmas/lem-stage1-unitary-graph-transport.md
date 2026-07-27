@@ -5,7 +5,8 @@ contract: Parameterized unitary-graph transport: there exist C_ch^0 >= 1 and kap
 defs: def-stage1-polar-witness-data; def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-unitary-graph-control
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-unitary-graph-transport
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 13b, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). TeX 692-793; parameterized coefficient/margin monotonicity; AUDIT-S1-POLAR-v4.md sect-3.
 owner: A
 ---
