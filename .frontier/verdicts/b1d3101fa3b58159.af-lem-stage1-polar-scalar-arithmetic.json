@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-polar-scalar-arithmetic/export.md",
+  "oracle": "af-lem-stage1-polar-scalar-arithmetic",
+  "result": "pass",
+  "claim_hash": "a18321bd39dc0845cc5cc6b455a2e18b6f4a1e8d2a0e94a64ac3a8ddcd88c1ef",
+  "oracle_digest": "3a8312d3c511e8134290ce71d61d04b4a04b67a1af12de3c6009710781da264f",
+  "inputs_hash": "e3bbe9985aab41573a2c5734720fda674f61f0b3fd876b42a885528084534d9b",
+  "ts": "2026-07-27T17:43:09.790Z"
+}

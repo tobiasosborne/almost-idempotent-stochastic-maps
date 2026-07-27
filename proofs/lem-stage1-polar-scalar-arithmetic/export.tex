@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Universal Stage-1 polar arithmetic: for every C\_rect, C\_c...}
+\step{1} Universal Stage-1 polar arithmetic: for every C\_rect, C\_ch, C\_pol, C\_grp, C\_path, C\_der >= 1, e\_rect in (0, 1/C\_rect], and kappa\_ch, kappa\_pol, kappa\_der in (0, 1/2], setting delta\_* = min\{1/4, kappa\_ch/(4*C\_ch), kappa\_pol/(4*C\_pol)\}, epsilon\_*\textasciicircum{}r = min\{1/4, kappa\_ch/(4*C\_ch), kappa\_pol/(4*C\_pol), kappa\_der/(8*C\_der), 1/C\_grp, delta\_*/(12*C\_path*C\_grp)\}, e\_S1 = min\{e\_rect, epsilon\_*\textasciicircum{}r/C\_rect\}, r\_iso = min\{delta\_*/4, kappa\_der/(8*C\_der)\}, epsilon\_r = C\_rect*epsilon\_X, q = C\_grp*epsilon\_r, r\_- = delta\_* - C\_pol*(epsilon\_r*delta\_* + delta\_*\textasciicircum{}2), and eta = C\_path*(q + epsilon\_r*q + q\textasciicircum{}2), every 0 <= epsilon\_X <= e\_S1 satisfies C\_ch*(epsilon\_r + delta\_*) <= kappa\_ch, C\_pol*(epsilon\_r + delta\_*) <= kappa\_pol, q < r\_-, C\_path*q <= 1/4, eta < r\_-, C\_der*(epsilon\_r + r\_iso) <= kappa\_der, and (1 + epsilon\_r)*(1 + C\_ch*(epsilon\_r + delta\_*))*r\_iso + q < 2*delta\_*; moreover r\_- >= 3*delta\_*/4, eta <= delta\_*/4, and C\_der*(r\_iso + epsilon\_r) <= kappa\_der/4 < 1. \steptag{validated} \\[6pt]
+\step{1.1} From the minimum definitions and the stated ranges, the channel and polar bounds hold: C\_ch*(epsilon\_r + delta\_*) <= kappa\_ch, C\_pol*(epsilon\_r + delta\_*) <= kappa\_pol, and r\_- >= 3*delta\_*/4. \steptag{validated} \\[6pt]
+\step{1.1.1} Because e\_S1 <= epsilon\_*\textasciicircum{}r/C\_rect, 0 <= epsilon\_X <= e\_S1, and C\_rect >= 1, one has 0 <= epsilon\_r = C\_rect*epsilon\_X <= epsilon\_*\textasciicircum{}r. Since epsilon\_*\textasciicircum{}r <= kappa\_ch/(4*C\_ch) and delta\_* <= kappa\_ch/(4*C\_ch), C\_ch*(epsilon\_r + delta\_*) <= kappa\_ch/2 <= kappa\_ch. \steptag{validated} \\[4pt]
+\step{1.1.2} The same epsilon\_r <= epsilon\_*\textasciicircum{}r bound, together with epsilon\_*\textasciicircum{}r <= kappa\_pol/(4*C\_pol) and delta\_* <= kappa\_pol/(4*C\_pol), gives C\_pol*(epsilon\_r + delta\_*) <= kappa\_pol/2 <= kappa\_pol. \steptag{validated} \\[4pt]
+\step{1.1.3} Using r\_- = delta\_* - C\_pol*(epsilon\_r*delta\_* + delta\_*\textasciicircum{}2) = delta\_*[1 - C\_pol*(epsilon\_r + delta\_*)], the preceding minimum bounds give C\_pol*(epsilon\_r + delta\_*) <= kappa\_pol/2 <= 1/4; since delta\_* > 0, therefore r\_- >= (3/4)*delta\_*. \steptag{validated} \\[4pt]
+\step{1.2} From the same hypotheses, q < r\_-, C\_path*q <= 1/4, eta <= delta\_*/4, and eta < r\_-. \steptag{validated} \\[6pt]
+\step{1.2.1} From epsilon\_r <= epsilon\_*\textasciicircum{}r <= delta\_*/(12*C\_path*C\_grp), positivity of the coefficients, and q = C\_grp*epsilon\_r, one gets 0 <= q <= delta\_*/(12*C\_path) <= delta\_*/12. Thus C\_path*q <= delta\_*/12 <= 1/48 < 1/4, using delta\_* <= 1/4. \steptag{validated} \\[4pt]
+\step{1.2.2} The polar estimate follows directly from the defining minima: C\_pol*(epsilon\_r + delta\_*) <= kappa\_pol/2 <= 1/4, hence r\_- = delta\_*[1-C\_pol*(epsilon\_r+delta\_*)] >= 3*delta\_*/4. Since delta\_* > 0 and q <= delta\_*/12, q < 3*delta\_*/4 <= r\_-. \steptag{validated} \\[4pt]
+\step{1.2.3} Because 0 <= epsilon\_r <= epsilon\_*\textasciicircum{}r <= 1/4 and 0 <= q <= delta\_*/12 <= 1/48, one has 1+epsilon\_r+q <= 61/48 < 3. Together with C\_path*q <= delta\_*/12 and eta = C\_path*q*(1+epsilon\_r+q), this gives eta <= delta\_*/4; moreover delta\_*/4 < 3*delta\_*/4 <= r\_-, so eta < r\_-. \steptag{validated} \\[4pt]
+\step{1.3} The derivative-scale definition and epsilon bound give C\_der*(epsilon\_r + r\_iso) <= kappa\_der and C\_der*(r\_iso + epsilon\_r) <= kappa\_der/4 < 1. \steptag{validated} \\[6pt]
+\step{1.3.1} The minimum definitions give epsilon\_r <= epsilon\_*\textasciicircum{}r <= kappa\_der/(8*C\_der) and r\_iso <= kappa\_der/(8*C\_der). Hence C\_der*(epsilon\_r+r\_iso) = C\_der*(r\_iso+epsilon\_r) <= kappa\_der/4. \steptag{validated} \\[4pt]
+\step{1.3.2} Since 0 < kappa\_der <= 1/2, one has kappa\_der/4 <= kappa\_der and kappa\_der/4 <= 1/8 < 1. Combining these with the preceding common bound yields both derivative conclusions. \steptag{validated} \\[4pt]
+\step{1.4} The remaining product guard holds: (1 + epsilon\_r)*(1 + C\_ch*(epsilon\_r + delta\_*))*r\_iso + q < 2*delta\_*. \steptag{validated} \\[6pt]
+\step{1.4.1} The defining minima imply 0 <= epsilon\_r <= 1/4, C\_ch*(epsilon\_r+delta\_*) <= kappa\_ch/2 <= 1/4, 0 < r\_iso <= delta\_*/4, and 0 <= q <= delta\_*/12. \steptag{validated} \\[4pt]
+\step{1.4.2} Applying those four nonnegative bounds gives (1+epsilon\_r)*(1+C\_ch*(epsilon\_r+delta\_*))*r\_iso+q <= (5/4)*(5/4)*(delta\_*/4)+delta\_*/12 = (91/192)*delta\_*. Since delta\_* > 0 and 91/192 < 2, this is strictly less than 2*delta\_*. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
