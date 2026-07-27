@@ -5,7 +5,8 @@ contract: Controlled exact-unit C*-rectification: there are universal C_rect >= 
 defs: def-epsilon-cstar-algebra
 deps: lem-stage1-exact-unit-rectification; lem-stage1-quantitative-inverse-function
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-rectified-cstar-control
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 1, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). Source loci TeX 407-440, 672-687.
 owner: A
 ---
