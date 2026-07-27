@@ -113,17 +113,19 @@ hypothesis-carrying external. The registry contract was not amended.
 \noindent\textbf{What this closes, and what it does not.} This is the validated conditional PRH finish edge within Route F
 and it is now \texttt{af}-validated, but it is an \emph{implication}. Its antecedent --- a
 positive unital pair $(A,M)$ with $\opnorm{Q-AM}\le K\defect$ and
-$\opnorm{MA-I}\le3K\defect/(1-3K\defect)$ for a dimension-free $K$ --- is supplied by no
-result reproduced in this document. The registry rows that would supply it are
-\texttt{lem-routef-f2-positive-unital-compression} (the positive unital pair),
+$\opnorm{MA-I}\le3K\defect/(1-3K\defect)$ for a dimension-free $K$ --- is not established
+unconditionally anywhere in this document. Two of the registry rows that produce it,
+\texttt{lem-routef-f2-positive-unital-compression} (the positive unital pair) and
 \texttt{lem-routef-f3-retract-defect} (the retract-defect bound, whose conclusion is
-literally the second hypothesis here), \texttt{lem-routef-k-ledger} (the dimension-free
-$K$), together with \texttt{lem-routef-ai-defect-linearization} and
-\texttt{lem-routef-functional-calculus-closeness} upstream of those, and the assembly
-carrier \texttt{lem-thmainext-conditional}; every one of them is \texttt{proved-mod-audit}
-with \texttt{af: none} --- \textbf{open} at this document's rigour bar and \textbf{not}
-reproduced here (\S\ref{sec:status-outlook}). Consequently nothing here yields an
-unconditional $\sqrt{\defect}$ bound for a row-stochastic $Q$, and \texttt{op-classical} is
+literally the second hypothesis here), are now \texttt{proved} with \texttt{af: validated}
+and are reproduced in \S\ref{sec:routef-f2-f3}, as are the seam and ledger rows upstream of
+them (\S\ref{sec:routef-f0-seam}, \S\ref{sec:routef-ai-ledger}). But the F2 row is itself an
+implication, and the rows that would discharge \emph{its} antecedent --- the factorization
+row \texttt{lem-routef-k-ledger}, which also fixes the dimension-free $K$, and the assembly
+carrier \texttt{lem-thmainext-conditional} --- are \texttt{proved-mod-audit} with
+\texttt{af: none}: \textbf{open} at this document's rigour bar and \textbf{not} reproduced
+here (\S\ref{sec:status-outlook}). Consequently nothing here yields an unconditional
+$\sqrt{\defect}$ bound for a row-stochastic $Q$, and \texttt{op-classical} is
 \textbf{open}. The shape of \eqref{eq:rpf-target} is the shape the target asks for; the
 antecedent is the whole remaining problem on this route.
 
@@ -133,5 +135,6 @@ antecedent is the whole remaining problem on this route.
 \texttt{af: validated} and reproduced above --- the single mathematical import, and the
 only place the square-root rate is produced. The registry records no result depending on
 this one; \texttt{lem-routef-f2-positive-unital-compression} and
-\texttt{lem-routef-f3-retract-defect} name it in their shard bodies as the consumer they
-feed, which is the direction of the eventual chain, not a current dependency edge.
+\texttt{lem-routef-f3-retract-defect} (\S\ref{sec:routef-f2-f3}) name it in their shard
+bodies as the consumer they feed, which is the direction of the eventual chain, not a
+current dependency edge.

@@ -70,6 +70,14 @@ mid-check.
      finish edge), 37-38 the Stage-1 rectification pair, 39 the generated argument-DAG atlas;
      status/outlook renumbered 36 -> 40. -->
 
+<!-- ADDENDUM (2026-07-27): 42-44, the Route F upstream block, READ between 38 and the generated
+     layers (the include order below is the reading order; 39-41 stay the trailing meta shards, and
+     the shard numbers 42-44 were taken fresh rather than renumbering 39-41).
+     42 routef-f0-seam (lem-routef-f0-ucp-lift + lem-routef-f0-defect-identity),
+     43 routef-ai-ledger (lem-kitaev-almost-idemp-audit + lem-routef-functional-calculus-closeness
+        + lem-routef-ai-defect-linearization),
+     44 routef-f2-f3 (lem-routef-f2-positive-unital-compression + lem-routef-f3-retract-defect). -->
+
 | # | SHARD-ID | file |
 |---|----------|------|
 | 00 | `AISM-00-OVERVIEW` | `report/sections/00_overview.tex` |
@@ -112,6 +120,9 @@ mid-check.
 | 36 | `AISM-36-ROUTEF-PRH-FINISH` | `report/sections/36_routef_prh_finish.tex` |
 | 37 | `AISM-37-STAGE1-QUANTITATIVE-IFT` | `report/sections/37_stage1_quantitative_ift.tex` |
 | 38 | `AISM-38-STAGE1-EXACT-UNIT` | `report/sections/38_stage1_exact_unit.tex` |
+| 42 | `AISM-42-ROUTEF-F0-SEAM` | `report/sections/42_routef_f0_seam.tex` |
+| 43 | `AISM-43-ROUTEF-AI-LEDGER` | `report/sections/43_routef_ai_ledger.tex` |
+| 44 | `AISM-44-ROUTEF-F2-F3` | `report/sections/44_routef_f2_f3.tex` |
 | 39 | `AISM-39-ARGUMENT-DAG` | `report/sections/39_argument_dag.tex` |
 | 40 | `AISM-40-CAMPAIGN-STATISTICS` | `report/sections/40_campaign_statistics.tex` |
 | 41 | `AISM-41-STATUS-OUTLOOK` | `report/sections/41_status_outlook.tex` |

@@ -19,9 +19,7 @@ are ignored by the parser (`load_unwired`). Two sections:
 ## Frontier (exploration-track, unanchored by design)
 
 ```
-# --- 2026-07-27 W80 step-1 F0 seam rows (ratified package): pre-elevation; anchor into report on af validation ---
-lem-routef-f0-ucp-lift
-lem-routef-f0-defect-identity
+# --- 2026-07-27 W80 step-1 F0 seam rows: af-VALIDATED and now anchored in report/sections/42_routef_f0_seam.tex (delisted 2026-07-27) ---
 # --- 2026-07-26 GAP-EA discharge rows (aism-fbh8): pre-elevation; anchor into report on af validation ---
 lem-extcb-exact-target-correction
 lem-extcb-exact-target-approximation
@@ -59,7 +57,6 @@ lem-hx-robust-scalar-starvation
 lem-hx-signed-variation-ledger
 lem-hx-transverse-moment-identity
 lem-import-reduction
-lem-kitaev-almost-idemp-audit
 lem-kitaev-diagonal-repair
 lem-leakage
 lem-mass-split
@@ -230,10 +227,10 @@ lem-zero-face-exchange-identity
 lem-zero-face-localization
 lem-zero-face-one-sixteenth-capacity-kill
 lem-zero-face-vertex-support
-lem-routef-functional-calculus-closeness
-lem-routef-ai-defect-linearization
-lem-routef-f2-positive-unital-compression
-lem-routef-f3-retract-defect
+# (lem-routef-functional-calculus-closeness, lem-routef-ai-defect-linearization,
+#  lem-routef-f2-positive-unital-compression, lem-routef-f3-retract-defect delisted
+#  2026-07-27: af-VALIDATED and anchored in report/sections/43_routef_ai_ledger.tex
+#  and report/sections/44_routef_f2_f3.tex)
 obs-gamma-capacity-scale-blind
 obs-gamma-two-level-class-count-wall
 obs-rank3-t1-boundary

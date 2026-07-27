@@ -1,0 +1,259 @@
+% SHARD-ID: AISM-43-ROUTEF-AI-LEDGER
+% SHARD-TITLE: The approximate-algebra ledger for an almost-idempotent UCP map
+% SHARD-SUMMARY: Reproduces three af-validated rows: lem-kitaev-almost-idemp-audit, the corrected audit turning an almost-idempotent UCP map into an extended epsilon-C*-algebra; lem-routef-functional-calculus-closeness, the C_theta*eta bound on the functional-calculus projector; and lem-routef-ai-defect-linearization, which linearises the resulting defect.
+% SHARD-SUMMARY: Explains the spectral correction package built from the binomial series, the internally constructed iterated Stinespring stack that carries the two amplified associativity estimates, and the telescoping that converts them into the epsilon-C*-algebra axioms at every amplification.
+% SHARD-SUMMARY: Records the local source type and index corrections the audit had to apply, and the banking-time contract reconciliation of the linearization row, and states that the ledger is an implication whose consumer is not af-validated.
+% SHARD-KEYWORDS: lem-kitaev-almost-idemp-audit, lem-routef-functional-calculus-closeness, lem-routef-ai-defect-linearization, af validated, Route F, extended epsilon-C*-algebra, functional calculus, Stinespring stack, associativity defect, defect linearization
+\section{The approximate-algebra ledger for an almost-idempotent UCP map}\label{sec:routef-ai-ledger}
+
+The seam of \S\ref{sec:routef-f0-seam} delivers a unital completely positive map
+$\Phi$ on a matrix algebra whose square is close to itself. This section reproduces the
+three \texttt{af}-validated rows that turn that datum into an \emph{algebra}: an exact
+idempotent $\widetilde\Phi$ obtained by functional calculus, its image equipped with a
+corrected product, and the bookkeeping that shows the resulting structure is an extended
+$\ecs$-$C^{*}$-algebra whose defect is linear in $\defect$.
+
+\paragraph{Notation for this section.} $\mathcal H$ is a nonzero Hilbert space and
+$\Phi:B(\mathcal H)\to B(\mathcal H)$ is UCP (\texttt{def-ucp-map},
+Definition~\ref{def:ucp-map}). All norms written $\nrm{\cdot}_{\mathrm{cb}}$ are completely
+bounded norms; $I$ is the identity map, and products of maps are compositions, so that
+$CB(B(\mathcal H))$ is a unital Banach algebra. At amplification level $n$ we write
+$T=\ampl n\Phi$ and $D=T^{2}-T$. Finally
+\begin{equation}\label{eq:ai-rM}
+  r\;=\;\tfrac32\bigl((1-4\defect)^{-1/2}-1\bigr),
+  \qquad M\;=\;1+r .
+\end{equation}
+
+\begin{lemma}[\texttt{lem-kitaev-almost-idemp-audit}]\label{lem:kitaev-almost-idemp-audit}
+Let $\mathcal H\ne0$ and let $\Phi:B(\mathcal H)\to B(\mathcal H)$ be UCP with
+$\nrm{\Phi^{2}-\Phi}_{\mathrm{cb}}\le\defect<\tfrac14$. Put
+\begin{equation}\label{eq:ai-projector}
+  \widetilde\Phi\;=\;\tfrac12\Bigl(I+(2\Phi-I)\bigl(I-4(\Phi-\Phi^{2})\bigr)^{-1/2}\Bigr),
+  \qquad
+  \mathcal A=\Img(\widetilde\Phi),
+  \qquad
+  X\star Y=\widetilde\Phi(XY).
+\end{equation}
+Then $\widetilde\Phi^{2}=\widetilde\Phi$; both amplified associativity identities
+$\Phi_{\mathrm{assoc}1}$ and $\Phi_{\mathrm{assoc}2}$, namely
+\begin{align}\label{eq:ai-assoc}
+  \bigl\lVert T\bigl(T(T(X)T(Y))T(Z)\bigr)-T\bigl(T(X)T(Y)T(Z)\bigr)\bigr\rVert
+  &\;\le\;10\defect\nrm{X}\nrm{Y}\nrm{Z},\\
+  \bigl\lVert T\bigl(T(X)T(T(Y)T(Z))\bigr)-T\bigl(T(X)T(Y)T(Z)\bigr)\bigr\rVert
+  &\;\le\;10\defect\nrm{X}\nrm{Y}\nrm{Z},\notag
+\end{align}
+hold at every amplification after the local source type and index corrections recorded
+below; and for sufficiently small universal $\defect$ the inherited operator-space norms,
+involution and unit make $\mathcal A$ an extended $\ecs_{\mathrm{AI}}(\defect)$-$C^{*}$-algebra
+(\texttt{def-extended-epsilon-cstar-algebra}, Definition~\ref{def:extended-epsilon-cstar-algebra})
+with
+\begin{equation}\label{eq:ai-epsilon}
+  \ecs_{\mathrm{AI}}(\defect)\;=\;\max\bigl\{\,r,\;20\defect+2(M^{5}-1),\;3r-r^{2}\,\bigr\}
+  \;=\;O(\defect),
+\end{equation}
+$r,M$ as in \eqref{eq:ai-rM}, dimension-free at every amplification.
+\emph{Transcription note.} This row is an \emph{audit}: it registers the corrected
+statement of the pinned source's \texttt{th\_almost\_idemp}, together with the explicit
+interface \eqref{eq:ai-epsilon}. It claims nothing about the source's
+\texttt{th\_main\_ext}, and no optimality of the displayed constants is asserted. The
+threshold ``sufficiently small universal $\defect$'' is not made explicit by the contract
+and is not made explicit here.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Corrected th_almost_idemp audit: let H be nonzero and let Phi:B(H)->B(H) be UCP with ||Phi^2-Phi||_cb <= eta < 1/4; for tilde-Phi=(1/2)(I+(2Phi-I)(I-4(Phi-Phi^2))^(-1/2)), A=Im(tilde-Phi), and X star Y=tilde-Phi(XY), one has tilde-Phi^2=tilde-Phi, both amplified associativity identities Phi_assoc1 and Phi_assoc2 have error at most 10*eta*||X||||Y||||Z|| after the local source type/index corrections, and for sufficiently small universal eta the inherited operator-space norms, involution, and unit make A an extended epsilon_AI(eta)-C*-algebra with epsilon_AI=max{r,20eta+2(M^5-1),3r-r^2}=O(eta), r=(3/2)((1-4eta)^(-1/2)-1), M=1+r, dimension-free at every amplification.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree has four branches: a spectral package, the first associativity estimate, its
+adjoint twin, and the packaging into the axioms.
+
+\emph{The spectral package.} In $CB(B(\mathcal H))$ set $F=\Phi-\Phi^{2}$ and
+$A_{0}=2\Phi-I$. Both are polynomials in $\Phi$, so they commute, and $A_{0}^{2}=I-4F$
+while $\nrm{4F}_{\mathrm{cb}}\le4\defect<1$. The binomial series
+$\mathcal R=\sum_{k\ge0}\binom{2k}{k}F^{k}$ therefore converges in norm to $(I-4F)^{-1/2}$
+and commutes with $A_{0}$; hence $S=A_{0}\mathcal R$ satisfies $S^{2}=I$ and
+$\widetilde\Phi=(I+S)/2$ is idempotent, which is the first clause. Since
+$\widetilde\Phi-\Phi=\tfrac12A_{0}(\mathcal R-I)$,
+$\nrm{A_{0}}_{\mathrm{cb}}\le2\nrm{\Phi}_{\mathrm{cb}}+1\le3$
+and the series coefficients are nonnegative,
+$\nrm{\mathcal R-I}_{\mathrm{cb}}\le(1-4\defect)^{-1/2}-1$, so
+$\nrm{\widetilde\Phi-\Phi}_{\mathrm{cb}}\le r$. Unitality and $*$-preservation of $\Phi$
+pass through the real-coefficient series, so $\widetilde\Phi(I)=I$ and
+$\widetilde\Phi(X^{\dagger})=\widetilde\Phi(X)^{\dagger}$; a bounded idempotent has
+$\Img=\Ker(I-\widetilde\Phi)$, so $\mathcal A$ is closed, complete, self-adjoint and
+contains the unit, and every formula commutes with amplification.
+
+\emph{The associativity estimate.} This is the delicate branch, and the tree proves it
+without importing a Stinespring theorem. It first constructs, from complete positivity
+alone, an iterated GNS dilation: Hilbert spaces $K_{j}$, isometries $V_{j}:K_{j-1}\to K_{j}$
+and contractive unital $*$-homomorphisms $u_{j}:B(K_{j-1})\to B(K_{j})$ with
+$T(H)=V_{1}^{\dagger}u_{1}(H)V_{1}$ and the one-step compression identity
+$u_{j}(V_{j}^{\dagger}UV_{j})=V_{j+1}^{\dagger}u_{j+1}(U)V_{j+1}$ for $U\in B(K_{j})$.
+Writing $u_{b,a}=u_{b}\circ\dots\circ u_{a+1}$, $P_{1}=V_{1}V_{1}^{\dagger}$ and
+$E_{X}=(I_{1}-P_{1})u_{1}(T(X))$, the elementary defect ledger $\nrm{T}\le1$,
+$\nrm{D}\le\defect$ gives
+$\nrm{T^{2}(U)-T(U)}\le\defect\nrm{U}$ and
+$\nrm{T^{2}(U)T^{2}(V)-T(U)T(V)}\le2\defect\nrm{U}\nrm{V}$, whence
+$G_{X}=T^{2}(T(X^{\dagger})T(X))-T(T^{2}(X^{\dagger})T^{2}(X))$ obeys
+$\nrm{G_{X}}\le3\defect\nrm{X}^{2}$. The ``rectangles''
+$R_{k}(X)=u_{k+2,1}(E_{X})V_{k+2}V_{k+1}$ then satisfy the exact identity
+$R_{k}(X)^{\dagger}R_{k}(X)=u_{k,0}(G_{X})$, so $\nrm{R_{k}(X)}\le\sqrt{3\defect}\nrm{X}$.
+With $A=T(X)$, $B=T(Y)$, $C=T(Z)$ and $A_{1}=T^{2}(X)$, $B_{1}=T^{2}(Y)$, $C_{1}=T^{2}(Z)$,
+the operator $W=V_{1}^{\dagger}R_{1}(X^{\dagger})^{\dagger}u_{3,0}(B)V_{3}R_{0}(Z)$
+expands \emph{exactly} to $W=T(Q)$ with
+\begin{equation}\label{eq:ai-Q}
+  Q=T\bigl(T(AB)C\bigr)-T^{2}(AB)C_{1}-T(A_{1}B_{1}C)+T(A_{1}B_{1})C_{1},
+\end{equation}
+and $\nrm{W}\le3\defect\,p$ where $p=\nrm{X}\nrm{Y}\nrm{Z}$. Setting
+$F_{1}=T(T(AB)C)-T(ABC)$, cancellation in \eqref{eq:ai-Q} gives
+$Q-F_{1}=[T(ABC)-T(A_{1}B_{1}C)]+[T(A_{1}B_{1})-T^{2}(AB)]C_{1}$, and the perturbation
+bounds $\nrm{A_{1}B_{1}-AB}\le2\defect\nrm{X}\nrm{Y}$ and
+$\nrm{T(A_{1}B_{1})-T^{2}(AB)}\le3\defect\nrm{X}\nrm{Y}$ give $\nrm{Q-F_{1}}\le5\defect p$.
+Contractivity of $T$ transports this to $\nrm{T(Q)-T(F_{1})}\le5\defect p$, and since
+$F_{1}$ is a difference of two $T$-values the defect estimate applied to each gives
+$\nrm{T(F_{1})-F_{1}}\le2\defect p$. Hence $\nrm{W-F_{1}}\le7\defect p$ and, with
+$\nrm{W}\le3\defect p$, $\nrm{F_{1}}\le10\defect p$: the first line of \eqref{eq:ai-assoc}.
+The second follows by applying the first to $(Z^{\dagger},Y^{\dagger},X^{\dagger})$ and
+taking adjoints, $T$ being $*$-preserving.
+
+\emph{The axioms.} At each level write $P=\ampl n\widetilde\Phi$, so $\nrm{P-T}\le r$ and
+$\nrm{P}\le M$. Bilinearity, range-valuedness, the exact unit and
+$(X\star Y)^{\dagger}=Y^{\dagger}\star X^{\dagger}$ are immediate from idempotence,
+unitality and $*$-preservation of $P$; $\nrm{X\star Y}\le M\nrm{X}\nrm{Y}$ is the
+submultiplicativity error $r$. For $X\in\Img(P)$, $\nrm{T(X)}\ge(1-r)\nrm{X}$, the
+Kadison--Schwarz inequality gives $\nrm{T(X^{\dagger}X)}\ge\nrm{T(X)}^{2}$, and hence
+$\nrm{P(X^{\dagger}X)}\ge(1-3r+r^{2})\nrm{X}^{2}$: the $C^{*}$ lower-norm error
+$3r-r^{2}$. Finally, replacing the five occurrences of $P$ in
+$P(P(P(X)P(Y))P(Z))$ and in $P(P(X)P(P(Y)P(Z)))$ one at a time by $T$ and using
+$\nrm{T}\le1$, $\nrm{P}\le M$, $\nrm{P-T}\le r=M-1$ bounds each telescoping sum by
+$r(1+M+M^{2}+M^{3}+M^{4})p=(M^{5}-1)p$; combined with the two estimates
+\eqref{eq:ai-assoc} this gives $\nrm{(X\star Y)\star Z-X\star(Y\star Z)}\le(20\defect+2(M^{5}-1))p$
+for $X,Y,Z\in\Img(P)$. The maximum of the three errors is \eqref{eq:ai-epsilon}, every
+input estimate is amplification-uniform, and $M^{5}-1\le31r$ for $0\le r\le1$ with
+$r=O(\defect)$, so $\ecs_{\mathrm{AI}}\to0$ and a universal threshold makes it less than
+one.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-kitaev-almost-idemp-audit}; the registered definition import is
+\texttt{def-extended-epsilon-cstar-algebra}, and the dilation is built inside the tree
+rather than imported, which is why no Stinespring external appears.
+
+\noindent\textbf{Corrections of record (to the local source, carried by the contract).}
+The audit's corrections are type- and index-level and are named in the contract itself: the
+operator variables at the source loci belong to the operator algebras $B(K_{j})$ and not to
+the Hilbert spaces $K_{j}$, and the final isometry of the auxiliary compression identity is
+$V_{1+k}$, not $V_{1}$ --- with $V_{1}$ the identity is ill-typed for $k>0$, since $V_{1}$
+has domain $K_{0}$. The canonical Stinespring construction remains a source dependency of
+the original argument; here it is replaced by the in-tree recursive dilation.
+
+\begin{lemma}[\texttt{lem-routef-functional-calculus-closeness}]\label{lem:routef-functional-calculus-closeness}
+For $0\le\defect\le\tfrac18$ the exact functional-calculus projector satisfies
+\begin{equation}\label{eq:ai-closeness}
+  \nrm{\widetilde\Phi-\Phi}_{\mathrm{cb}}\;\le\;C_{\theta}\defect,
+  \qquad C_{\theta}=12(\sqrt2-1).
+\end{equation}
+\emph{Transcription note.} The contract is elliptic by design: ``the exact
+functional-calculus projector'' is $\widetilde\Phi$ of \eqref{eq:ai-projector}, and the
+ambient hypotheses --- $\Phi$ UCP on $B(\mathcal H)$ with
+$\nrm{\Phi^{2}-\Phi}_{\mathrm{cb}}\le\defect$ --- are those of the imported
+Lemma~\ref{lem:kitaev-almost-idemp-audit}, which is how the validated tree reads them. The
+statement is a \emph{linear} bound valid on the stated window only; it says nothing for
+$\defect>\tfrac18$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Functional-calculus closeness: for 0 <= eta <= 1/8, the exact functional-calculus projector satisfies ||tilde-Phi-Phi||_cb <= C_theta*eta, where C_theta=12*(sqrt(2)-1).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree proves the estimate $\nrm{\widetilde\Phi-\Phi}_{\mathrm{cb}}\le r$ of
+\eqref{eq:ai-rM} in its own right and then linearises $r$. For the first half it records
+that a UCP map is completely contractive --- the matrix Kadison--Schwarz inequality
+$\Phi_{m}(X)^{\dagger}\Phi_{m}(X)\le\Phi_{m}(X^{\dagger}X)$ obtained from positivity of
+$[X^{\dagger};I][X,I]$, combined with $X^{\dagger}X\le\nrm{X}^{2}I$ --- so
+$\nrm{2\Phi-I}_{\mathrm{cb}}\le3$; then the algebraic identity
+$\widetilde\Phi-\Phi=\tfrac12(2\Phi-I)\bigl((I-4\Delta)^{-1/2}-I\bigr)$ with
+$\Delta=\Phi-\Phi^{2}$; then, since $\nrm{4\Delta}_{\mathrm{cb}}\le4\defect\le\tfrac12<1$,
+the absolutely convergent binomial series with nonnegative coefficients gives
+$\nrm{(I-4\Delta)^{-1/2}-I}_{\mathrm{cb}}\le(1-4\defect)^{-1/2}-1$. For the second half,
+put $t=4\defect\in[0,\tfrac12]$ and $s=\sqrt{1-t}\ge1/\sqrt2$; rationalisation gives
+\[
+  \frac{(1-t)^{-1/2}-1}{t}=\frac1{s(1+s)}\;\le\;\frac{1}{\tfrac1{\sqrt2}(1+\tfrac1{\sqrt2})}
+  =2(\sqrt2-1),
+\]
+the case $t=0$ being an equality in the inequality $(1-t)^{-1/2}-1\le2(\sqrt2-1)t$ itself.
+Multiplying by $t$ and then by $\tfrac32$ turns
+$r\le\tfrac32\cdot2(\sqrt2-1)\cdot4\defect$ into \eqref{eq:ai-closeness}.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-routef-functional-calculus-closeness}; registry \texttt{defs}:
+\texttt{def-almost-idempotent}; registry \texttt{deps}:
+\texttt{lem-kitaev-almost-idemp-audit} (Lemma~\ref{lem:kitaev-almost-idemp-audit}), from
+which the projector formula and the ambient hypotheses are imported.
+
+\begin{lemma}[\texttt{lem-routef-ai-defect-linearization}]\label{lem:routef-ai-defect-linearization}
+Set $C_{\theta}=12(\sqrt2-1)$. There are universal constants $C_{A}<\infty$ and
+$\defect_{A}>0$, with $C_{A}=20+\tfrac{211}{8}C_{\theta}$, such that for every nonzero
+Hilbert space $\mathcal H$, every UCP map $\Phi:B(\mathcal H)\to B(\mathcal H)$ and every
+$\defect$ with $0\le\defect\le\defect_{A}$ and
+$\nrm{\Phi^{2}-\Phi}_{\mathrm{cb}}\le\defect$, the data
+$\widetilde\Phi,\mathcal A,\star$ of \eqref{eq:ai-projector} together with $r$ of
+\eqref{eq:ai-rM} and $\ecs_{\mathrm{AI}}(\defect)$ of \eqref{eq:ai-epsilon} make
+$\mathcal A$, with its inherited operator-space norms, involution and unit, an extended
+$\ecs_{\mathrm{AI}}(\defect)$-$C^{*}$-algebra with
+\begin{equation}\label{eq:ai-linear}
+  \ecs_{\mathrm{AI}}(\defect)\;\le\;C_{A}\defect .
+\end{equation}
+\emph{Transcription note.} What this row adds to
+Lemma~\ref{lem:kitaev-almost-idemp-audit} is the \emph{linearity} \eqref{eq:ai-linear} and
+an explicit universal constant; the threshold $\defect_{A}$ is asserted to exist and to be
+universal, and is not exhibited, because it inherits the unexhibited threshold of that
+lemma.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Approximate-algebra defect linearization: set C_theta=12*(sqrt(2)-1). There are universal C_A < infinity and eta_A > 0, with C_A=20+(211/8)*C_theta, such that for every nonzero Hilbert space H, every UCP map Phi:B(H)->B(H), and every eta satisfying 0 <= eta <= eta_A and ||Phi^2-Phi||_cb <= eta, if tilde-Phi=(1/2)*(I+(2*Phi-I)*(I-4*(Phi-Phi^2))^(-1/2)), A=Im(tilde-Phi), X star Y=tilde-Phi(XY), r=(3/2)*((1-4*eta)^(-1/2)-1), and epsilon_AI(eta)=max{r,20*eta+2*((1+r)^5-1),3*r-r^2}, then the inherited operator-space norms, involution, and unit together with star make A an extended epsilon_AI(eta)-C*-algebra and epsilon_AI(eta) <= C_A*eta.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Let $\defect_{*}>0$ be the universal threshold of Lemma~\ref{lem:kitaev-almost-idemp-audit},
+shrunk below $\tfrac14$, and put $\defect_{A}=\min\{\defect_{*},\tfrac7{64}\}$, which is
+universal and positive. For $0\le\defect\le\defect_{A}$ that lemma supplies the extended
+$\ecs_{\mathrm{AI}}(\defect)$-$C^{*}$-algebra structure and the formula
+\eqref{eq:ai-epsilon}, so only the three entries of the maximum have to be bounded. On
+$0\le\defect\le\tfrac7{64}$ one has, with $t=\sqrt{1-4\defect}\ge1/\sqrt2$, that
+$r/\defect=6/(t(1+t))\le C_{\theta}$, hence $0\le r\le C_{\theta}\defect$ --- the constant
+being exactly the one fixed by Lemma~\ref{lem:routef-functional-calculus-closeness}; also
+$1-4\defect\ge\tfrac9{16}$ gives $r\le\tfrac12$. For $0\le r\le\tfrac12$ the binomial
+identity $2((1+r)^{5}-1)=2r(5+10r+10r^{2}+5r^{3}+r^{4})$ and monotonicity of the
+parenthesis give $2((1+r)^{5}-1)\le\tfrac{211}{8}r$. Therefore
+\[
+  20\defect+2\bigl((1+r)^{5}-1\bigr)\;\le\;20\defect+\tfrac{211}{8}C_{\theta}\defect
+  \;=\;C_{A}\defect,
+\]
+while $C_{A}-C_{\theta}=20+\tfrac{203}{8}C_{\theta}>0$ and
+$C_{A}-3C_{\theta}=20+\tfrac{187}{8}C_{\theta}>0$ give $r\le C_{A}\defect$ and
+$3r-r^{2}\le3r\le C_{A}\defect$. Every entry of the maximum is at most $C_{A}\defect$,
+which is \eqref{eq:ai-linear}.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-routef-ai-defect-linearization}: a $13$-node tree, taint clean.
+
+\noindent\textbf{Correction of record (contract-level, banking-time).} The prover expanded
+the seeded one-line contract into the self-contained root statement reproduced above,
+inlining the value of $C_{\theta}$ and the formula \eqref{eq:ai-projector} from its imported
+dependencies; the fresh verifiers validated \emph{that} statement, so the registry contract
+was mechanically replaced by the validated root verbatim at banking. No equivalence
+judgement was exercised by the orchestrator; the linker's contract-match refusal is what
+forced the reconciliation.
+
+\noindent\textbf{Role in the chain.} Registry \texttt{defs}:
+\texttt{def-almost-idempotent}, \texttt{def-extended-epsilon-cstar-algebra}. Registry
+\texttt{deps}: \texttt{lem-kitaev-almost-idemp-audit} and
+\texttt{lem-routef-functional-calculus-closeness}, both reproduced above and both
+\texttt{af}-validated. The consumer of this ledger is the factorization row
+\texttt{lem-routef-k-ledger}, which is \texttt{proved-mod-audit} with \texttt{af: none} ---
+\textbf{open} at this document's rigour bar and \textbf{not} reproduced here. Nothing in
+this section therefore produces a bound on a stochastic matrix, and
+\texttt{op-classical} is \textbf{open}.

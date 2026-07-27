@@ -1,0 +1,146 @@
+% SHARD-ID: AISM-42-ROUTEF-F0-SEAM
+% SHARD-TITLE: The F0 seam: a stochastic matrix as a unital completely positive map
+% SHARD-SUMMARY: Reproduces the two af-validated F0 seam rows lem-routef-f0-ucp-lift and lem-routef-f0-defect-identity, which carry a row-stochastic Q into the matrix algebra M_n as the UCP map Phi = J Q_C D.
+% SHARD-SUMMARY: Explains the real-versus-complex typing the seam turns on, the diagonal-compression argument that makes extraction and inclusion completely positive, and the two-sided matrix-level computation giving the defect identity with constant exactly one.
+% SHARD-SUMMARY: Records that the seam consumes no smallness hypothesis and performs no conversion of the defect, and that neither row on its own bears on op-classical, which is open.
+% SHARD-KEYWORDS: lem-routef-f0-ucp-lift, lem-routef-f0-defect-identity, af validated, Route F, F0 seam, diagonal inclusion, diagonal extraction, complete positivity, cb norm, defect identity
+\section{The F0 seam: a stochastic matrix as a unital completely positive map}\label{sec:routef-f0-seam}
+
+Route F attacks \texttt{op-classical} with the approximate-$C^{*}$ machinery of the pinned
+source, and that machinery speaks about unital completely positive maps of a matrix algebra,
+not about stochastic matrices. The two lemmas of this section are the seam between the two
+languages: the first says that the classical datum lifts to an admissible input for the
+machinery, the second says that the lift costs nothing in the one quantity the machinery
+consumes.
+
+\paragraph{Notation for this section.} Fix $n\ge1$. Write $\Mat n$ for the complex
+$n\times n$ matrices, $\mathbb C^{n}=\ell^{\infty}_{n}(\mathbb C)$ for the commutative
+$C^{*}$-algebra of diagonals of $\Mat n$, $J:\mathbb C^{n}\to\Mat n$ for the diagonal
+inclusion and $D:\Mat n\to\mathbb C^{n}$, $D([a_{ij}])=(a_{11},\dots,a_{nn})$, for diagonal
+extraction. The real self-adjoint part of $\mathbb C^{n}$ is written $\linfd n$; a
+row-stochastic $Q$ (\texttt{def-stochastic}, Definition~\ref{def:stochastic}) acts there,
+and $Q_{\mathbb C}$ denotes its canonical complex-linear extension to $\mathbb C^{n}$.
+``UCP'' is \texttt{def-ucp-map} (Definition~\ref{def:ucp-map}) throughout, and
+$\nrm{\cdot}_{\mathrm{cb}}$ is the completely bounded norm, the supremum over matrix levels
+$r\ge1$ of the norms of the amplifications $T_{r}=\mathrm{id}_{\Mat r}\otimes T$.
+
+\begin{lemma}[\texttt{lem-routef-f0-ucp-lift}]\label{lem:routef-f0-ucp-lift}
+With the notation above, let $Q$ be row-stochastic. Then
+\begin{equation}\label{eq:f0-phi}
+  \Phi\;:=\;J\,Q_{\mathbb C}\,D\;:\;\Mat n\longrightarrow\Mat n
+\end{equation}
+is a unital completely positive map.
+\emph{Transcription note.} The typing is the content: $D$ lands in the \emph{complex}
+diagonal algebra $\mathbb C^{n}$, and it is $Q_{\mathbb C}$, not $Q$, that acts there. No
+smallness hypothesis on $Q$ is assumed, and nothing is claimed about $\Phi$ beyond
+unitality and complete positivity.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Route F F0 UCP lift: let n >= 1, let D: M_n -> C^n be diagonal extraction onto the complex diagonal algebra C^n = l_inf^n(C) and J: C^n -> M_n the diagonal inclusion, let Q: l_inf^n -> l_inf^n be row-stochastic, and let Q_C: C^n -> C^n be the canonical complex-linear extension of Q; then Phi := J Q_C D: M_n -> M_n is a unital completely positive map.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree factors the claim through the three composed maps and then closes by composition.
+
+\emph{The middle map.} By \texttt{def-stochastic} the matrix $Q$ has nonnegative entries
+$q_{ij}$ and satisfies $Q\mathbf 1=\mathbf 1$. If $x=(x_{j})$ is positive in
+$\mathbb C^{n}$ then every $x_{j}$ is a nonnegative real, so
+$(Q_{\mathbb C}x)_{i}=\sum_{j}q_{ij}x_{j}\ge0$; and $Q_{\mathbb C}(\mathbf 1)=\mathbf 1$.
+Thus $Q_{\mathbb C}$ is positive and unital, and since its domain $\mathbb C^{n}$ is a
+commutative $C^{*}$-algebra it is automatically completely positive
+(\texttt{def-ucp-map}); hence UCP.
+
+\emph{The two diagonal maps.} $D$ is unital, and for $r\ge1$ and a positive block matrix
+$X=[X_{ab}]\in\Mat r(\Mat n)$ the amplification $D_{r}$ returns the $n$-tuple of principal
+compressions $\bigl[(X_{ab})_{ii}\bigr]_{a,b=1}^{r}$, $i=1,\dots,n$, each of which is
+positive in $\Mat r$; so $D$ is CP, hence UCP. Dually $J$ is unital, and for $r\ge1$ a
+positive element $(A_{1},\dots,A_{n})$ of $\Mat r(\mathbb C^{n})=\bigoplus_{i=1}^{n}\Mat r$
+is sent by $J_{r}$, after the canonical permutation of tensor factors, to the positive
+block-diagonal matrix $\mathrm{diag}(A_{1},\dots,A_{n})\in\Mat{rn}$; so $J$ is CP, hence
+UCP.
+
+\emph{Composition.} Compositions of UCP maps are UCP (\texttt{def-ucp-map}), and
+\eqref{eq:f0-phi} is such a composition.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-routef-f0-ucp-lift}: root and $9/9$ nodes \texttt{validated}, taint
+clean, one challenge raised and resolved. Two definition imports are registered,
+\texttt{def-stochastic} and \texttt{def-ucp-map}; there are no external imports.
+
+\noindent\textbf{Correction of record (contract-level).} The single mid-run challenge was a
+typing defect: the contract as first seeded routed $D$ into the \emph{real} space
+$\linfd n$, while the diagonal of a complex matrix algebra lies in $\mathbb C^{n}$. The
+repair was an amendment of the contract to the text quoted above --- the diagonal algebra
+made complex and $Q$ replaced by $Q_{\mathbb C}$ --- after which the tree was
+verifier-accepted. The same defect family is repaired in
+Lemma~\ref{lem:routef-f2-positive-unital-compression} below, where it was the cause of a
+first, abandoned elevation run.
+
+\begin{lemma}[\texttt{lem-routef-f0-defect-identity}]\label{lem:routef-f0-defect-identity}
+With the notation above and $\Phi=J\,Q_{\mathbb C}\,D$ as in \eqref{eq:f0-phi},
+\begin{equation}\label{eq:f0-defect}
+  \nrm{\Phi^{2}-\Phi}_{\mathrm{cb}}\;=\;\opnorm{Q^{2}-Q}.
+\end{equation}
+\emph{Transcription note.} This is an \emph{equality}, not a two-sided estimate with
+constants: the seam neither loses nor gains defect, and no $\defect\mapsto\ecs$ conversion
+happens here. The left side is a completely bounded norm on $\Mat n$, the right side the
+$\ell^{\infty}$ map norm of \texttt{def-almost-idempotent}
+(Definition~\ref{def:almost-idempotent}); the identity is what licenses reading one as the
+other.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Route F F0 defect identity: let n >= 1, let D: M_n -> C^n be diagonal extraction onto the complex diagonal algebra C^n = l_inf^n(C) and J: C^n -> M_n the diagonal inclusion, let Q: l_inf^n -> l_inf^n be row-stochastic with canonical complex-linear extension Q_C: C^n -> C^n, and put Phi := J Q_C D; then ||Phi^2 - Phi||_cb = ||Q^2 - Q||_{infinity->infinity}.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Put $L:=Q_{\mathbb C}^{2}-Q_{\mathbb C}$. The proof is an algebraic reduction, then two
+matched inequalities at every matrix level, then a single scalar computation.
+
+\emph{Reduction.} For $x\in\mathbb C^{n}$ the matrix $J(x)$ is diagonal with diagonal $x$,
+and $D$ extracts that diagonal, so $DJ=I_{\mathbb C^{n}}$. Hence
+\begin{equation}\label{eq:f0-JLD}
+  \Phi^{2}-\Phi\;=\;J\,Q_{\mathbb C}(DJ)Q_{\mathbb C}\,D-J\,Q_{\mathbb C}\,D
+  \;=\;J\bigl(Q_{\mathbb C}^{2}-Q_{\mathbb C}\bigr)D\;=\;JLD .
+\end{equation}
+
+\emph{The matrix levels.} Fix $r\ge1$ and identify
+$\Mat r(\mathbb C^{n})=\bigoplus_{j=1}^{n}\Mat r$ with the norm $\max_{j}\nrm{X_{j}}$.
+After the canonical permutation of tensor factors $J_{r}(X)=\mathrm{diag}(X_{1},\dots,X_{n})$,
+so $\nrm{J_{r}X}=\max_{j}\nrm{X_{j}}$ and $J_{r}$ is isometric; $D_{r}$ returns the tuple
+of diagonal $n\times n$ blocks, each a compression, so $D_{r}$ is contractive; and
+$D_{r}J_{r}=I$. Submultiplicativity therefore gives
+$\nrm{J_{r}L_{r}D_{r}}\le\nrm{L_{r}}$, while testing on inputs of the form $J_{r}X$ gives
+$\nrm{J_{r}L_{r}D_{r}(J_{r}X)}=\nrm{J_{r}L_{r}X}=\nrm{L_{r}X}$ and hence
+$\nrm{J_{r}L_{r}D_{r}}\ge\nrm{L_{r}}$. So $\nrm{(\Phi^{2}-\Phi)_{r}}=\nrm{L_{r}}$ for
+every $r$, by \eqref{eq:f0-JLD}.
+
+\emph{The scalar computation.} Let $(l_{ij})$ be the coefficient matrix of $L$, which is
+the real matrix of $Q^{2}-Q$. For $X=(X_{j})\in\Mat r(\mathbb C^{n})$ one has
+$(L_{r}X)_{i}=\sum_{j}l_{ij}X_{j}$, so
+$\nrm{L_{r}X}\le\bigl(\max_{i}\sum_{j}\lvert l_{ij}\rvert\bigr)\max_{j}\nrm{X_{j}}$.
+Conversely pick $i_{0}$ attaining the maximal row sum and take
+$X_{j}=\sgn(l_{i_{0}j})I_{r}$ (with $\sgn 0=0$): then $\max_{j}\nrm{X_{j}}\le1$ and the
+$i_{0}$-component of $L_{r}X$ is $\bigl(\sum_{j}\lvert l_{i_{0}j}\rvert\bigr)I_{r}$. Hence
+$\nrm{L_{r}}=\max_{i}\sum_{j}\lvert l_{ij}\rvert$ for \emph{every} $r$, and that row
+maximum is $\opnorm{Q^{2}-Q}$. Taking the supremum over $r$, which is the definition of the
+cb norm, gives \eqref{eq:f0-defect}.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-routef-f0-defect-identity}: root and $12/12$ nodes \texttt{validated},
+taint clean, \emph{zero} challenges --- the fresh verifiers confirmed both directions
+independently, including the zero-row edge case and the matrix-level supremum identity.
+Three definition imports are registered, \texttt{def-stochastic},
+\texttt{def-almost-idempotent} and \texttt{def-ucp-map}; there are no external imports, and
+in particular this proof does not use Lemma~\ref{lem:routef-f0-ucp-lift}.
+
+\noindent\textbf{Role in the chain.} Neither row has registry \texttt{deps}: both are
+leaves. Together they are the entry point of Route F --- a row-stochastic $Q$ with defect
+$\defect$ in the sense of \texttt{def-almost-idempotent} becomes a UCP $\Phi$ with
+$\nrm{\Phi^{2}-\Phi}_{\mathrm{cb}}\le\defect$, which is exactly the input the ledger of
+\S\ref{sec:routef-ai-ledger} consumes. The registry records their intended consumer as the
+strengthened \texttt{lem-routef-k-ledger}, which is \texttt{proved-mod-audit} with
+\texttt{af: none} --- \textbf{open} at this document's rigour bar and \textbf{not}
+reproduced here --- so no chain is closed by this section, and \texttt{op-classical} is
+\textbf{open}.
