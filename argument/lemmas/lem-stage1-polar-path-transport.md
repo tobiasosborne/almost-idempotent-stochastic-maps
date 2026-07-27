@@ -5,7 +5,8 @@ contract: Parameterized polar-path transport: there exist C_path^0, C_pol^0 >= 1
 defs: def-stage1-polar-witness-data; def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-polar-path-admissibility
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-polar-path-transport
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 13f, landed verbatim (LaTeX flattened to registry ASCII; incl. the v6 finite-dimensional domain restriction, audit-v5 sect-6 option 1); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). TeX 895-912; parameterized path/loss/guard monotonicity; AUDIT-S1-POLAR-v4.md sect-1.6, sect-3.
 owner: A
 ---
