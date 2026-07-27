@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-rectified-cstar-transport/export.md",
+  "oracle": "af-lem-stage1-rectified-cstar-transport",
+  "result": "pass",
+  "claim_hash": "d98e40124aad0e0b412df4d15617483e930817c35c15df628a1ee85f18913db3",
+  "oracle_digest": "eb95ebff8ac2e91abcba46c0207e08a7da529b6dc673b567c7fa06e8329bb92d",
+  "inputs_hash": "13530b58e7a904797ac80f4d2cd851af05e09cf107f7036c560b322857531410",
+  "ts": "2026-07-27T17:51:36.311Z"
+}

@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Parameterized rectification transport: there exist C\_rect...}
+\step{1} Parameterized rectification transport: there exist C\_rect\textasciicircum{}0 >= 1 and e\_rect\textasciicircum{}0 in (0, 1/C\_rect\textasciicircum{}0] such that, for every def-stage1-polar-witness-data tuple W with C\_rect >= C\_rect\textasciicircum{}0 and 0 < e\_rect <= min\{e\_rect\textasciicircum{}0, 1/C\_rect\}, for every finite-dimensional epsilon\_X-C*-algebra (calX, I\_X, ., dagger) with 0 <= epsilon\_X <= e\_rect, there are on the same involutive normed space a bilinear product bold-dot and an element J = J\textasciicircum{}dagger for which (calX, J, bold-dot, dagger) satisfies every exact-unit epsilon\_r-C*-algebra axiom of def-epsilon-cstar-algebra, including ||J|| = 1, where epsilon\_r = C\_rect*epsilon\_X, and for every x, y in calX, ||J - I\_X|| <= C\_rect*epsilon\_X and ||x bold-dot y - xy|| <= C\_rect*epsilon\_X*||x||*||y||. \steptag{validated} \\[6pt]
+\step{1.1} Invoke the external lem-stage1-rectified-cstar-control and existentially instantiate its universal witnesses as constants c >= 1 and e in (0, 1/c]. Thus every finite-dimensional epsilon\_X-C*-algebra with 0 <= epsilon\_X <= e admits, on the same involutive normed space, a bilinear product bold-dot and J = J\textasciicircum{}dagger satisfying every exact-unit alpha-C*-algebra axiom of def-epsilon-cstar-algebra, including ||J|| = 1, for alpha = c*epsilon\_X, together with ||J-I\_X|| <= c*epsilon\_X and ||x bold-dot y-xy|| <= c*epsilon\_X*||x||*||y|| for all x,y. \steptag{validated} \\[4pt]
+\step{1.2} Parameter monotonicity for the registered def-epsilon-cstar-algebra: if 0 <= alpha <= beta and (calX,J,bold-dot,dagger) satisfies every exact-unit alpha-C*-algebra axiom, then it satisfies every exact-unit beta-C*-algebra axiom. Indeed, ||x bold-dot y|| <= (1+alpha)||x||||y|| <= (1+beta)||x||||y||; the associator bound alpha||x||||y||||z|| is at most beta||x||||y||||z||; and ||x\textasciicircum{}dagger bold-dot x|| >= (1-alpha)||x||\textasciicircum{}2 >= (1-beta)||x||\textasciicircum{}2. The underlying complex Banach-space structure, bilinearity, conjugate-linearity, involutivity, isometry, anti-multiplicativity, both exact unit identities, J\textasciicircum{}dagger=J, and ||J||=1 are parameter-free requirements and remain unchanged. \steptag{validated} \\[4pt]
+\step{1.3} Fix an arbitrary def-stage1-polar-witness-data tuple W satisfying C\_rect >= c and 0 < e\_rect <= min\{e,1/C\_rect\}, and an arbitrary finite-dimensional epsilon\_X-C*-algebra with 0 <= epsilon\_X <= e\_rect. Then epsilon\_X <= e\_rect <= e, so the external producer applies. Moreover epsilon\_X >= 0 and C\_rect >= c imply 0 <= alpha:=c*epsilon\_X <= beta:=C\_rect*epsilon\_X. \steptag{validated} \\[4pt]
+\step{1.4} Apply lem-stage1-rectified-cstar-control to the algebra fixed in the preceding step. It supplies on the same involutive normed space a bilinear product bold-dot and J=J\textasciicircum{}dagger satisfying every exact-unit alpha-C*-algebra axiom, including ||J||=1, with alpha=c*epsilon\_X, and satisfying ||J-I\_X|| <= c*epsilon\_X and ||x bold-dot y-xy|| <= c*epsilon\_X*||x||*||y|| for every x,y. \steptag{validated} \\[4pt]
+\step{1.5} For the witnesses from the preceding step, apply parameter monotonicity to alpha <= beta, where beta=C\_rect*epsilon\_X. They therefore satisfy every exact-unit beta-C*-algebra axiom, including ||J||=1. Since c <= C\_rect, epsilon\_X >= 0, and ||x||||y|| >= 0, the producer estimates imply ||J-I\_X|| <= C\_rect*epsilon\_X and ||x bold-dot y-xy|| <= C\_rect*epsilon\_X*||x||*||y|| for all x,y. With epsilon\_r:=beta, this is exactly the required conclusion for the fixed W and input algebra. \steptag{validated} \\[4pt]
+\step{1.6} Set C\_rect\textasciicircum{}0:=c and e\_rect\textasciicircum{}0:=e. The first step gives C\_rect\textasciicircum{}0 >= 1 and 0 < e\_rect\textasciicircum{}0 <= 1/C\_rect\textasciicircum{}0. Because W and the input algebra in the preceding steps were arbitrary under the contract hypotheses, universal generalization followed by existential generalization proves the root statement. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
