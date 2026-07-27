@@ -1745,3 +1745,49 @@ is a tractable weeks-scale Lean project and Lean would eliminate for free exactl
 class our verifiers keep catching (real-vs-complex typing, quantifier scoping). Confirms the
 standing rung policy: af now; Lean later for the stable analytic seam. (One stale line in the
 agent report — "F2 mid-repair" — predates the same-day F2 validation, 86th.)
+
+## 2026-07-27 — session 32 (waves W83–W95): the polar sprint — T0 95 → 106; report caught up; 13e paused on an interface defect
+
+**Context.** The user reset the codex usage limit early (the recorded window was 2026-08-01),
+unblocking the serial polar §9 elevation queue at row 7 (bead `aism-686b`, closed this session).
+
+**Elevations (11 new T0, results 96–106; all tier routine, banked per the standard sequence).**
+Row 7 `polar-path-admissibility` (96th; 12/12 first-pass) → row 8 `inversion-derivative-control`
+(97th; 10/10) → row 9 `smooth-unitary-atlas` (98th; 14/14; one pending-sibling C^∞ challenge
+repaired in-run; Lee C.40 byte-matched at seeding as `GT-lee-2ed-thm-C.40`) → row 10
+`smooth-polar-inverse` (99th; 21/21; Lee C.34/C.36 externals) → row 11
+`smooth-unitary-operations` (100th; 15/15; run 2 — run 1 aborted on a FALSE-POSITIVE
+prover-overreach: the fr Stop hook forced orchestrator writes to `.frontier/log.jsonl` during
+the live run; the guard now exempts `.frontier/`) → row 12 `polar-scalar-arithmetic` (101st;
+15/15; ALL analytic rows 1–12 now T0) → transports 13a (102nd; 7/7), 13b (103rd; 9/9), 13c
+(104th; 13/13; two conditional-uniqueness challenges on the gbar identification repaired
+in-run), 13d (105th; 5/5), 13f (106th; 9/9). 13g seeded + W95 dispatched, launch deferred to
+next session (user stop).
+
+**13e `approximate-group-laws-transport`: PAUSED, user-decision bead `aism-b5hz`.** Three STUCK
+runs (the last with prover xhigh) converged on a ratified-contract interface defect: the
+group-laws family binds u_delta by the elliptical "the inverse u_delta of the polar map" while
+the 13e transport binds it explicitly as the unique Pi_delta inverse; the identification needs
+a typed polar datum the parent contract never exposes. Two dep widenings (polar-retraction,
+coherence-naturality; contracts BYTE-UNCHANGED) were landed and keep. 13f's clean first-pass
+(bare-u_delta anaphor resolving against the explicit import) proves the defect is 13e-specific.
+
+**Report catch-up (user mandate, mid-session).** Two Opus agents in isolated git worktrees
+(so the live af run's porcelain guard could not fire) wrote shards 42–44 (Route-F: F0 seam,
+Kitaev audit + functional calculus + defect linearization, F2+F3) and 45–48 (Stage-1 polar
+rows 1–9 incl. the group-law triple). Merged into master with genuine full gates in the main
+checkout (the Route-F agent had used --no-verify on a worktree-only test failure; the Stage-1
+agent correctly refused and escalated — its staged work was landed via git apply -3 with the
+four shared-file conflicts resolved keeping both blocks). UNWIRED.md shrunk by 18; 36
+PROVENANCE source rows + 18 claim rows. Results 99–106 still need a follow-up report wave.
+
+**Tooling.** (1) overreach guard `.frontier/` exemption; (2) `test_register_oracle.py` now
+skips its real-portfolio case on a foreign-root portfolio, making worktree commits pass the
+pre-commit gate (red→green in main: 17 passed); (3) two stale shard bodies
+(`lem-kitaev-almost-idemp-audit`, `lem-routef-functional-calculus-closeness`) reconciled with
+their af-validated frontmatter; (4) both agent worktrees/branches cleaned up.
+
+**Protocol notes.** The fresh-verifier discipline caught real content this session: a
+pending-sibling smoothness reliance (row 9), conditional-uniqueness gaps (13c), cross-sibling
+scalar-preservation reliance (row 11), and the 13e interface defect — plus one spurious abort
+(the guard false-positive) that was diagnosed, fixed, and did not cost a validated node.
