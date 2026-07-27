@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-maurer-cartan-trivialization/export.md",
+  "oracle": "af-lem-stage1-maurer-cartan-trivialization",
+  "result": "pass",
+  "claim_hash": "30a7ad38e7f52b0628c8adfd4dc4a95697f34a0d9f52fcccf8ef512cd1a82b5c",
+  "oracle_digest": "6cfc349aa27c9e80f9c84096c4f4cac0591683dfe03baa76d846b5c4f2d03980",
+  "inputs_hash": "3befa8b0c5fbc7537fb5673d1d65cbdc11c9496389925cd71d8292523c54a1a5",
+  "ts": "2026-07-27T12:39:35.216Z"
+}

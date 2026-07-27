@@ -5,7 +5,8 @@ contract: Closed C^1 polar retraction: there are universal C_pol >= 1, kappa_pol
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-unitary-graph-control
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-polar-retraction
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 4, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). Source loci TeX 809-855; the two radii are inlined and only the supported shrunken inner domain is used.
 owner: A
 ---
