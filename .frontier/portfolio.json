@@ -793,6 +793,18 @@
      "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-unitary-graph-transport/ledger",
      "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-unitary-graph-transport.md"
     ]
+   },
+   {
+    "name": "af-lem-stage1-maurer-cartan-transport",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-maurer-cartan-transport"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-maurer-cartan-transport/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-maurer-cartan-transport.md"
+    ]
    }
   ]
  },
