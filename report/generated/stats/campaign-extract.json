@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-07-27T11:02:44Z",
+ "extracted_at": "2026-07-27T11:09:20Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-07-27T11:02:44Z",
+  "mined_at": "2026-07-27T11:09:20Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -2183,7 +2183,7 @@
     },
     "FH": {
      "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
-     "banked": 8,
+     "banked": 9,
      "died": 1,
      "dispatch": 35,
      "lem-topology-hopf-structure af-VALIDATED (81st rigorous result; 13 nodes 13/13 clean) + lem-extcb-exact-target-correction af-VALIDATED (82nd; 6 nodes 6/6 clean, first-pass, zero challenges — the designed transcription landed EXACTLY on budget) — GAP-EA, the first of the four v4.1 GAP families, is DISCHARGED at L0. T0 80 -> 82. Session 28 totals: +6 T0 (5 of 7 topology + the GAP-EA correction row), 2 trees parked with precise diagnoses (1 af-bookkeeping thrash, 1 genuine contract/def scope gap -> user escalation), 3 orchestration-infrastructure laws discovered+banked. Breaker honored: next cycle EXPLOREs off FH.": 1,
@@ -2229,7 +2229,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-07-27T10:56:13.575Z"
+     "last": "2026-07-27T11:03:23.195Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -2250,7 +2250,7 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 173,
+    "FH": 174,
     "G": 21,
     "R": 52,
     "XE": 1
@@ -2265,15 +2265,15 @@
     "2026-07-10": 1,
     "2026-07-25": 2,
     "2026-07-26": 6,
-    "2026-07-27": 3
+    "2026-07-27": 4
    },
    "decisions": {
-    "EXPLOIT": 328,
+    "EXPLOIT": 329,
     "EXPLORE": 14,
     "PIVOT": 3
    },
    "evidence_classes": {
-    "af": 87,
+    "af": 88,
     "af-validated": 3,
     "analysis": 2,
     "audit": 18,
@@ -2313,16 +2313,16 @@
     "wave": 24
    },
    "evidence_tiers": {
-    "T0": 92,
+    "T0": 93,
     "T1": 133,
     "T2": 122
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-07-27T10:56:13.575Z",
-   "max_cycle": 727,
+   "last_ts": "2026-07-27T11:03:23.195Z",
+   "max_cycle": 728,
    "outcomes": {
     "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
-    "banked": 42,
+    "banked": 43,
     "died": 6,
     "discovery": 3,
     "dispatch": 42,
@@ -2352,9 +2352,9 @@
     "2026-07-24": 65,
     "2026-07-25": 95,
     "2026-07-26": 80,
-    "2026-07-27": 36
+    "2026-07-27": 37
    },
-   "records": 727,
+   "records": 728,
    "worker_jobs": 410,
    "worker_models": {
     "codex": 338,
@@ -2422,9 +2422,9 @@
   "git": {
    "active_days": 18,
    "authors": {
-    "tobiasosborne": 774
+    "tobiasosborne": 775
    },
-   "commits": 774,
+   "commits": 775,
    "first_day": "2026-07-02",
    "last_day": "2026-07-27",
    "per_day": {
@@ -2445,7 +2445,7 @@
     "2026-07-24": 111,
     "2026-07-25": 165,
     "2026-07-26": 85,
-    "2026-07-27": 19
+    "2026-07-27": 20
    },
    "subject_prefixes": {
     "W61": 13,
@@ -2540,19 +2540,19 @@
   },
   "registry": {
    "af": {
-    "none": 169,
+    "none": 181,
     "seeded": 11,
     "validated": 87
    },
    "kind": {
     "corollary": 2,
-    "lemma": 238,
+    "lemma": 250,
     "obstruction": 13,
     "open-problem": 6,
     "proposition": 2,
     "theorem": 6
    },
-   "results": 267,
+   "results": 279,
    "status": {
     "conjecture": 31,
     "disproved": 2,
@@ -2562,7 +2562,7 @@
     "open": 3,
     "proved": 200,
     "proved-mod-audit": 23,
-    "stated": 3
+    "stated": 15
    }
   },
   "runs": {

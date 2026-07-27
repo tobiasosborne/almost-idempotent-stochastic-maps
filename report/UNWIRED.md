@@ -251,4 +251,19 @@ lem-topology-local-index-sign
 lem-topology-orientable-top-cohomology
 lem-topology-kunneth-cross-product
 lem-topology-hopf-structure
+# Stage-1 polar campaign rows (landed 2026-07-27 per DESIGN-S1-POLAR-v6 sect-9,
+# AUDIT-S1-POLAR-v6 LAND, ratified W78 sect-5 step 2; to be wired into the report
+# with the Stage-1 narrative when phase 4 reaches the paper track)
+lem-stage1-rectified-cstar-control
+lem-stage1-unitary-graph-control
+lem-stage1-maurer-cartan-trivialization
+lem-stage1-polar-retraction
+lem-stage1-polar-coherence-naturality
+lem-stage1-approximate-group-laws
+lem-stage1-polar-path-admissibility
+lem-stage1-inversion-derivative-control
+lem-stage1-smooth-unitary-atlas
+lem-stage1-smooth-polar-inverse
+lem-stage1-smooth-unitary-operations
+lem-stage1-polar-scalar-arithmetic
 ```

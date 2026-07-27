@@ -6,6 +6,51 @@
 % Layer file: Project-internal packaging: hypothesis data and derived notation
 \subsection*{Project-internal packaging: hypothesis data and derived notation}
 
+%% ---- def-approximate-unitary-space -------------------------------------
+\hypertarget{def:approximate-unitary-space}{}%
+\begin{definition}[approximate unitary space\normalfont{} (\texttt{def-\allowbreak{}approximate-\allowbreak{}unitary-\allowbreak{}space})]\label{def:approximate-unitary-space}
+Let
+$(\mathcal X,J,\boldsymbol\cdot,\dagger)$ be an exact-unit
+$\varepsilon$-$C^*$-algebra (\hyperref[def:epsilon-cstar-algebra]{\texttt{def-\allowbreak{}epsilon-\allowbreak{}cstar-\allowbreak{}algebra}}). Define:
+
+\begin{itemize}
+\item $\mathcal H=\{X\in\mathcal X: X^\dagger=X\}$ (Hermitian) and
+$i\mathcal H=\{X\in\mathcal X: X^\dagger=-X\}$ (anti-Hermitian);
+\item $\overline{\mathcal U}_\delta=\{X\in\mathcal X:\ \lVert X^\dagger\boldsymbol\cdot X-J\rVert\le 2\delta$
+and $X$ has a right inverse$\}$, and $\mathcal U_\delta$ the analogous set
+with the strict inequality $\lVert X^\dagger\boldsymbol\cdot X-J\rVert<2\delta$;
+\item the \emph{unitaries} $\mathcal U=\overline{\mathcal U}_0$;
+\item $\mathcal U_e$ = the connected component of $\mathcal U$ containing $J$,
+and the scalar action $U\equiv cU$ for $c\in U(1)$ on it.
+\end{itemize}
+
+For a point $V$ for which the left-multiplier $L_V$ is invertible, reserve
+the \emph{coordinate notation} $\phi_V(X)=L_V^{-1}\boldsymbol\cdot(X-V)$ and its
+components $\phi_V^{\parallel}$ (anti-Hermitian part) and $\phi_V^{\perp}$
+(Hermitian part). Reserve the symbols $u,h$ (polar inverse components) and
+$\mu,\sigma$ (group operations) ONLY as partial notation on domains supplied
+by result rows.
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} consensus (project-internal, agreed; no single external source); \texttt{status: locked}.\quad\textbf{Aliases.} approximate unitaries; unitary set of an epsilon-$C^{*}$-algebra.
+\par
+\textbf{Provenance.} \texttt{source: internal}; locus \texttt{adopted from refs/\allowbreak{}kitaev-\allowbreak{}2405.\allowbreak{}02434 approximate\_algebras.\allowbreak{}tex:\allowbreak{}692-\allowbreak{}706 (sets),\allowbreak{} 845-\allowbreak{}859 (u,\allowbreak{}h and group maps),\allowbreak{} 945 (U\_e and the scalar quotient)}; no source hash (not a literature transcription); record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}27 (W79 decision D2,\allowbreak{} docs/\allowbreak{}plans/\allowbreak{}2026-\allowbreak{}07-\allowbreak{}27-\allowbreak{}W78-\allowbreak{}ratification-\allowbreak{}package.\allowbreak{}md;\allowbreak{} content per DESIGN-\allowbreak{}S1-\allowbreak{}POLAR-\allowbreak{}v6.\allowbreak{}md sect 8,\allowbreak{} audited AUDIT-\allowbreak{}S1-\allowbreak{}POLAR-\allowbreak{}v4/\allowbreak{}v5/\allowbreak{}v6).
+\par
+\textbf{Used by} 10 registry results, none of them reproduced in this report (exploration track; see \texttt{argument/INDEX.md} and \texttt{report/UNWIRED.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}approximate-\allowbreak{}unitary-\allowbreak{}space.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
+\textbf{Notes / provenance.} Vocabulary/typing only --- this shard asserts NO
+chart, inverse, estimate, smoothness, compactness, orientation, or isolation
+theorem (all of those are the contracts of the Stage-1 polar result rows,
+\texttt{DESIGN-\allowbreak{}S1-\allowbreak{}POLAR-\allowbreak{}v6.\allowbreak{}md} \S{}3). Adopted from the local source's approximate-
+unitary discussion with harmonised notation; the source loci are recorded
+above for orientation, but this is a \texttt{consensus} adoption, not a byte-cited
+definition. Related: \hyperref[def:epsilon-cstar-algebra]{\texttt{def-\allowbreak{}epsilon-\allowbreak{}cstar-\allowbreak{}algebra}},
+\hyperref[def:stage1-polar-witness-data]{\texttt{def-\allowbreak{}stage1-\allowbreak{}polar-\allowbreak{}witness-\allowbreak{}data}}, \hyperref[def:h-space-left-inversion]{\texttt{def-\allowbreak{}h-\allowbreak{}space-\allowbreak{}left-\allowbreak{}inversion}},
+\hyperref[def:lefschetz-fixed-point-data]{\texttt{def-\allowbreak{}lefschetz-\allowbreak{}fixed-\allowbreak{}point-\allowbreak{}data}}.
+\end{defnote}
+
 %% ---- def-canonical-corner-identifications ------------------------------
 \hypertarget{def:canonical-corner-identifications}{}%
 \begin{definition}[canonical corner identifications\normalfont{} (\texttt{def-\allowbreak{}canonical-\allowbreak{}corner-\allowbreak{}identifications})]\label{def:canonical-corner-identifications}
@@ -210,6 +255,46 @@ map.
 
 \textbf{Provenance.} Project formulation extracted from the W74F-A PRH artifact.
 User-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).
+\end{defnote}
+
+%% ---- def-stage1-polar-witness-data -------------------------------------
+\hypertarget{def:stage1-polar-witness-data}{}%
+\begin{definition}[Stage-1 polar witness data\normalfont{} (\texttt{def-\allowbreak{}stage1-\allowbreak{}polar-\allowbreak{}witness-\allowbreak{}data})]\label{def:stage1-polar-witness-data}
+\begin{defflag}
+This paragraph could not be typeset: math uses \textbackslash{}rm, which report/main.tex does not define and the translation table does not cover. Its bytes follow, unaltered.
+\end{defflag}
+
+\begin{defsourcequote}
+\defsourceline{A *Stage-1 polar witness datum* is a}
+\defsourceline{tuple $W$ of fourteen named scalar fields:}
+\defsourceline{$$W=(C_{\rm rect},\,C_{\rm ch},\,C_{\rm pol},\,C_{\rm grp},\,C_{\rm path},\,C_{\rm der},\,}
+\defsourceline{e_{\rm rect},\,\kappa_{\rm ch},\,\kappa_{\rm pol},\,\kappa_{\rm der},\,}
+\defsourceline{\delta_*,\,\varepsilon_*^r,\,e_{\rm S1},\,r_{\rm iso}).$$}
+\defsourceline{The first six are called coefficients, the next four margins, the last four}
+\defsourceline{derived scales.}
+\end{defsourcequote}
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} original (introduced by this project); \texttt{status: locked}.\quad\textbf{Aliases.} polar witness tuple; Stage-1 polar constants tuple.
+\par
+\textbf{Provenance.} \texttt{source: internal}; locus \texttt{DESIGN-\allowbreak{}S1-\allowbreak{}POLAR-\allowbreak{}v6.\allowbreak{}md sect 8 (unchanged from v2 sect 8;\allowbreak{} audited AUDIT-\allowbreak{}S1-\allowbreak{}POLAR-\allowbreak{}v3/\allowbreak{}v4/\allowbreak{}v5/\allowbreak{}v6)}; no source hash (not a literature transcription); record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}27 (W79 decision D2,\allowbreak{} docs/\allowbreak{}plans/\allowbreak{}2026-\allowbreak{}07-\allowbreak{}27-\allowbreak{}W78-\allowbreak{}ratification-\allowbreak{}package.\allowbreak{}md;\allowbreak{} verbatim from the audited polar design).
+\par
+\textbf{Used by} 1 registry result, none of them reproduced in this report (exploration track; see \texttt{argument/INDEX.md} and \texttt{report/UNWIRED.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}stage1-\allowbreak{}polar-\allowbreak{}witness-\allowbreak{}data.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
+\textbf{Notes / provenance.} Pure data: this shard contains NO positivity,
+inequality, existence, uniqueness, estimate, map, regularity, admissibility,
+or topological assertion (R35; \texttt{AUDIT-\allowbreak{}S1-\allowbreak{}POLAR-\allowbreak{}v4.\allowbreak{}md} \S{}7: ``VALID AS DATA'').
+The analytic-witness relation --- that one such tuple simultaneously witnesses
+the seven Stage-1 polar producer rows and satisfies the scalar arithmetic ---
+is exported ONLY by the result rows
+\texttt{lem-\allowbreak{}stage1-\allowbreak{}polar-\allowbreak{}scalar-\allowbreak{}arithmetic} and \texttt{lem-\allowbreak{}stage1-\allowbreak{}polar-\allowbreak{}constant-\allowbreak{}ledger}
+and their seven parameterized transport helpers
+(\texttt{DESIGN-\allowbreak{}S1-\allowbreak{}POLAR-\allowbreak{}v6.\allowbreak{}md} \S{}\S{}2--3), never by this definition. Related:
+\hyperref[def:approximate-unitary-space]{\texttt{def-\allowbreak{}approximate-\allowbreak{}unitary-\allowbreak{}space}}, \hyperref[def:epsilon-cstar-algebra]{\texttt{def-\allowbreak{}epsilon-\allowbreak{}cstar-\allowbreak{}algebra}}.
+\par
+\textbf{Rendering note.} 1 block(s) of this shard are flagged above; see \texttt{report/generated/defs/MANIFEST.md}.
 \end{defnote}
 
 %% ---- def-ucp-map -------------------------------------------------------
