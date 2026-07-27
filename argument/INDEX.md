@@ -242,7 +242,7 @@
 | `lem-stage1-quotient-manifold-package` | lemma | stated | none | A | There is a universal e_quot^r > 0 such that, for every finite-dimensional exact-… |
 | `lem-stage1-rectified-cstar-control` | lemma | proved | validated | A | Controlled exact-unit C*-rectification: there are universal C_rect >= 1 and e_re… |
 | `lem-stage1-rectified-cstar-transport` | lemma | stated | none | A | Parameterized rectification transport: there exist C_rect^0 >= 1 and e_rect^0 in… |
-| `lem-stage1-smooth-polar-inverse` | lemma | stated | seeded | A | Smooth polar-inverse upgrade: for every finite-dimensional exact-unit epsilon_r-… |
+| `lem-stage1-smooth-polar-inverse` | lemma | proved | validated | A | Smooth polar-inverse upgrade: for every finite-dimensional exact-unit epsilon_r-… |
 | `lem-stage1-smooth-unitary-atlas` | lemma | proved | validated | A | Smooth graph-atlas upgrade: for every finite-dimensional exact-unit epsilon_r-C*… |
 | `lem-stage1-smooth-unitary-operations` | lemma | stated | none | A | Smooth action/operations upgrade: under lem-stage1-approximate-group-laws, lem-s… |
 | `lem-stage1-uniform-inversion-isolation` | lemma | stated | none | A | There are universal e_iso^r > 0, r_iso > 0 such that, for every finite-dimension… |

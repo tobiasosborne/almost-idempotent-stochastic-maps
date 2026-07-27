@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-smooth-polar-inverse/export.md",
+  "oracle": "af-lem-stage1-smooth-polar-inverse",
+  "result": "pass",
+  "claim_hash": "27598752ecf3a5bc472c52b9294de32aca5e5ce9b9807adc1ce91ae8205937a0",
+  "oracle_digest": "ea6a97afc384932239e50cb216fee5fde7f33155c052d523de8bb97c534d6d2a",
+  "inputs_hash": "74f3c5c6881af070ac25ded9130e16ee769ce0f2d63de16509577cbb51d1643e",
+  "ts": "2026-07-27T16:54:34.306Z"
+}

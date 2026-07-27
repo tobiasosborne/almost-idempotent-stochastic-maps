@@ -1,0 +1,8 @@
+{
+  "id": "e6baacba3c93e0b1",
+  "name": "lem-stage1-smooth-unitary-atlas",
+  "source": "imports validated registry lemma proofs/lem-stage1-smooth-unitary-atlas — Smooth graph-atlas upgrade: for every finite-dimensional exact-unit epsilon_r-C*-algebra, if calU is covered by the unique C^1 graph functions g_V of lem-stage1-unitary-graph-control and D_{A^perp} f_V is invertible at every graph point, then those same g_V are C^infinity, and the same graph charts make calU a smooth embedded manifold; no point or first derivative of a graph or chart is changed.",
+  "content_hash": "6ebc1a63c5de8eec9bcec99863a36d5d43ed7b6f010e7611e15a90e5e1fca1fc",
+  "created": "2026-07-27T16:45:25.287533372Z",
+  "notes": ""
+}
