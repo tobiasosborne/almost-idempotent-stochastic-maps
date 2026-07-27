@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-f2-positive-unital-compression/export.md",
+  "oracle": "af-lem-routef-f2-positive-unital-compression",
+  "result": "pass",
+  "claim_hash": "092a02fb47d95cfcce6403dc9a4c958f281784638c94e3c4772adde530c4ecb4",
+  "oracle_digest": "23335f87a4348bd1f3a24ac0d29d96fed99fa373bd9a95960089c93a581bcf3c",
+  "inputs_hash": "7a4a353b2be9738935c4eb6590c546dda7f8348c4bc900f45e55d3fe9cd7b17f",
+  "ts": "2026-07-27T10:52:41.935Z"
+}

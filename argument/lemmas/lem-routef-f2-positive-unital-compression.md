@@ -4,18 +4,24 @@ kind: lemma
 contract: Route F F2 positive-unital compression: let K >= 1 be a dimension-independent constant, n >= 1, Q: l_inf^n -> l_inf^n row-stochastic, D: M_n -> C^n diagonal extraction onto the complex diagonal algebra C^n = l_inf^n(C), J: C^n -> M_n diagonal inclusion, Q_C: C^n -> C^n the canonical complex-linear extension of Q, and Phi = J Q_C D, B a finite-dimensional unital C*-algebra, and Delta: B -> M_n, Upsilon: M_n -> B UCP maps; if 0 <= eta <= min{(24K)^{-1},1}, ||Delta Upsilon - Phi||_cb <= K*eta, ||Upsilon Delta - I_B||_cb <= K*eta, and ||Upsilon(Delta x Delta y) - xy|| <= K*eta*||x||*||y|| for all x,y in B, then B is commutative and there are k >= 1 and a unital *-isomorphism iota_C: C^k = l_inf^k(C) -> B such that D Delta iota_C maps R^k into R^n, iota_C^{-1} Upsilon J maps R^n into R^k, and the resulting restrictions and corestrictions A := (D Delta iota_C)|_{R^k}: l_inf^k -> l_inf^n and M := (iota_C^{-1} Upsilon J)|_{R^n}: l_inf^n -> l_inf^k are positive unital maps satisfying ||Q - AM||_{inf->inf} <= K*eta, ||QA - A||_{inf->inf} <= 2K*eta, and ||Ax||_inf >= (1-3K*eta)*||x||_inf for every x in l_inf^k.
 defs: def-stochastic; def-ucp-map; def-projection-basis
 deps:
-status: proved-mod-audit
-af: seeded
+status: proved
+af: validated
 provenance: docs/plans/2026-07-24-fudw-decomposition-artifacts/PROOF-F2F3-BRIDGE.md §1 (prover); hostile verdict VERDICT-F2F3-BRIDGE.md (VALID-WITH-CORRECTIONS, F2: VALID); typing correction 2026-07-27 = docs/plans/2026-07-27-F2-TYPING-design/DESIGN-F2-TYPING.md §1.1 exact text, hostile-endorsed LAND by AUDIT-F2-TYPING.md (a)-(g); closes gap-routef-f2-positive-unital-compression-contract (DESIGN-FUDW-DECOMP-v3.md §2.6)
 owner: A
 workspace: proofs/lem-routef-f2-positive-unital-compression
 ---
 
-**Status.** Fresh-codex paper proof, separately hostile-verified
-(VALID-WITH-CORRECTIONS; F2 clause VALID), hence `proved-mod-audit` — not
-af-validated and not L0-rigorous. Registered on the standing
-verdict-driven-registration precedent; contract text was the verdict's §7
-"F2 exact contract text" verbatim (LaTeX flattened to registry ASCII only).
+**Status.** af-VALIDATED 2026-07-27 (86th rigorous result): run 2 on the
+typing-corrected contract, root validated with 22/22 nodes
+epistemic=validated, taint clean; fresh codex provers, separate fresh codex
+verifiers (routine tier), one genuine mid-run challenge (the `eta = 0`
+endpoint vs node 1.6's strict `0 < eta`, ch-a5432952230b16be) repaired by an
+endpoint-bridge node and re-verified. Export: `export.md`/`export.tex` in the
+workspace; oracle `af-lem-routef-f2-positive-unital-compression` + `fr verify`
+PASS. Originally registered `proved-mod-audit` on the fresh-codex paper proof
++ separate hostile verdict (VALID-WITH-CORRECTIONS; F2 clause VALID); contract
+text was the verdict's §7 exact text until the 2026-07-27 typing correction
+below.
 
 **Typing correction (2026-07-27).** The §7 text carried a real-vs-complex
 typing defect (D typed into l_inf^n = R^n while the diagonal of M_n lies in
