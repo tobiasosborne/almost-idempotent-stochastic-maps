@@ -1,0 +1,204 @@
+% SHARD-ID: AISM-44-ROUTEF-F2-F3
+% SHARD-TITLE: The F2/F3 block: manufacturing the positive unital retract pair
+% SHARD-SUMMARY: Reproduces the two af-validated rows lem-routef-f2-positive-unital-compression and lem-routef-f3-retract-defect, which convert an approximate UCP factorization of the F0 lift through a finite-dimensional C*-algebra into a positive unital pair A, M with the three estimates the Route F finish edge consumes.
+% SHARD-SUMMARY: Explains the commutator argument that forces commutativity of the intermediate algebra, the in-tree norm-two Pauli witness that replaces the unavailable finite-dimensional classification, the coordinate isomorphism built from the byte-matched projection basis, and the exact identity behind the retract-defect bound.
+% SHARD-SUMMARY: States that the factorization hypotheses are supplied by a registry row that is not af-validated, so the Route F chain is not closed here and op-classical stays open.
+% SHARD-KEYWORDS: lem-routef-f2-positive-unital-compression, lem-routef-f3-retract-defect, af validated, Route F, positive unital compression, commutativity forcing, projection basis, retract defect, lower modulus
+\section{The F2/F3 block: manufacturing the positive unital retract pair}\label{sec:routef-f2-f3}
+
+The finish edge of \S\ref{sec:routef-prh-finish} consumes a pair of positive unital maps
+$A,M$ between real $\ell^{\infty}$ spaces, subject to two estimates. This section
+reproduces the two \texttt{af}-validated rows that manufacture that pair, and the estimates,
+out of an approximate factorization of the F0 lift $\Phi$ of \S\ref{sec:routef-f0-seam}
+through a finite-dimensional unital $C^{*}$-algebra.
+
+\paragraph{Notation for this section.} The notation of \S\ref{sec:routef-f0-seam} is in
+force: $\Mat n$, the complex diagonal algebra $\mathbb C^{n}$, its real self-adjoint part
+$\linfd n$, the maps $J,D,Q_{\mathbb C}$ and $\Phi=JQ_{\mathbb C}D$. The intermediate
+algebra of the contract is written $\mathcal B$, and $M$ denotes a map, not a matrix
+algebra. All completely bounded norms are written $\nrm{\cdot}_{\mathrm{cb}}$, and $K\ge1$
+is a dimension-independent constant supplied with the hypotheses, not fixed here.
+
+\begin{lemma}[\texttt{lem-routef-f2-positive-unital-compression}]\label{lem:routef-f2-positive-unital-compression}
+Let $K\ge1$ be dimension-independent, $n\ge1$, $Q:\linfd n\to\linfd n$ row-stochastic,
+$\Phi=JQ_{\mathbb C}D$, let $\mathcal B$ be a finite-dimensional unital $C^{*}$-algebra and
+let $\Delta:\mathcal B\to\Mat n$ and $\Upsilon:\Mat n\to\mathcal B$ be UCP. If
+\begin{equation}\label{eq:f2-window}
+  0\;\le\;\defect\;\le\;\min\bigl\{(24K)^{-1},\,1\bigr\}
+\end{equation}
+and
+\begin{equation}\label{eq:f2-hyp}
+  \nrm{\Delta\Upsilon-\Phi}_{\mathrm{cb}}\le K\defect,
+  \quad
+  \nrm{\Upsilon\Delta-I_{\mathcal B}}_{\mathrm{cb}}\le K\defect,
+  \quad
+  \nrm{\Upsilon(\Delta x\,\Delta y)-xy}\le K\defect\nrm{x}\nrm{y}
+  \;\;(x,y\in\mathcal B),
+\end{equation}
+then $\mathcal B$ is commutative, and there are $k\ge1$ and a unital $*$-isomorphism
+$\iota_{\mathbb C}:\mathbb C^{k}\to\mathcal B$ such that $D\Delta\iota_{\mathbb C}$ maps
+$\mathbb R^{k}$ into $\mathbb R^{n}$, $\iota_{\mathbb C}^{-1}\Upsilon J$ maps $\mathbb R^{n}$
+into $\mathbb R^{k}$, and the resulting restrictions and corestrictions
+\begin{equation}\label{eq:f2-AM}
+  A:=(D\Delta\iota_{\mathbb C})|_{\mathbb R^{k}}:\linfd k\to\linfd n,
+  \qquad
+  M:=(\iota_{\mathbb C}^{-1}\Upsilon J)|_{\mathbb R^{n}}:\linfd n\to\linfd k
+\end{equation}
+are positive unital maps satisfying
+\begin{equation}\label{eq:f2-out}
+  \opnorm{Q-AM}\le K\defect,
+  \qquad
+  \opnorm{QA-A}\le 2K\defect,
+  \qquad
+  \linf{Ax}\ge(1-3K\defect)\linf{x}\;\;(x\in\linfd k).
+\end{equation}
+\emph{Transcription note.} The three displays of \eqref{eq:f2-hyp} are \emph{hypotheses}:
+the factorization datum $(\mathcal B,\Delta,\Upsilon)$ is given, and nothing here, or
+anywhere in this document, manufactures it from $Q$. Commutativity of $\mathcal B$ is
+\emph{derived}, not assumed. The real/complex typing is load-bearing: $\Delta,\Upsilon$ and
+$\iota_{\mathbb C}$ live over $\mathbb C$, and $A,M$ are their restrictions and
+corestrictions to the real self-adjoint parts.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Route F F2 positive-unital compression: let K >= 1 be a dimension-independent constant, n >= 1, Q: l_inf^n -> l_inf^n row-stochastic, D: M_n -> C^n diagonal extraction onto the complex diagonal algebra C^n = l_inf^n(C), J: C^n -> M_n diagonal inclusion, Q_C: C^n -> C^n the canonical complex-linear extension of Q, and Phi = J Q_C D, B a finite-dimensional unital C*-algebra, and Delta: B -> M_n, Upsilon: M_n -> B UCP maps; if 0 <= eta <= min{(24K)^{-1},1}, ||Delta Upsilon - Phi||_cb <= K*eta, ||Upsilon Delta - I_B||_cb <= K*eta, and ||Upsilon(Delta x Delta y) - xy|| <= K*eta*||x||*||y|| for all x,y in B, then B is commutative and there are k >= 1 and a unital *-isomorphism iota_C: C^k = l_inf^k(C) -> B such that D Delta iota_C maps R^k into R^n, iota_C^{-1} Upsilon J maps R^n into R^k, and the resulting restrictions and corestrictions A := (D Delta iota_C)|_{R^k}: l_inf^k -> l_inf^n and M := (iota_C^{-1} Upsilon J)|_{R^n}: l_inf^n -> l_inf^k are positive unital maps satisfying ||Q - AM||_{inf->inf} <= K*eta, ||QA - A||_{inf->inf} <= 2K*eta, and ||Ax||_inf >= (1-3K*eta)*||x||_inf for every x in l_inf^k.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree runs in three movements: force commutativity, coordinatise, estimate.
+
+\emph{Preliminaries.} One shared node derives complete contractivity of a UCP map from
+$2$-positivity: for $S=\mathrm{id}_{\Mat r}\otimes T$ the block matrix
+$[a,1]^{\dagger}[a,1]$ is positive, so $S(a)^{\dagger}S(a)\le S(a^{\dagger}a)\le\nrm{a}^{2}$,
+whence $\nrm{T}_{\mathrm{cb}}\le1$; in particular
+$\nrm{\Delta}_{\mathrm{cb}},\nrm{\Upsilon}_{\mathrm{cb}}\le1$. A second node records the
+typing facts of the seam: $\Phi$ is UCP hence contractive, its range lies in
+$J(\mathbb C^{n})$ so any two of its values commute, $DJ=I$, $J$ is isometric, and every
+positive map is $*$-preserving.
+
+\emph{Approximate invariance and approximate commutativity.} For $b\in\mathcal B$,
+\[
+  \Delta b-\Phi\Delta b=\Delta\bigl(b-\Upsilon\Delta b\bigr)+(\Delta\Upsilon-\Phi)(\Delta b),
+  \qquad\text{so}\qquad
+  \nrm{\Delta b-\Phi(\Delta b)}\le2K\defect\nrm{b}.
+\]
+Put $a=\Delta x$, $b=\Delta y$ and $a_{0}=\Phi a$, $b_{0}=\Phi b$. Then
+$\nrm{a-a_{0}}\le2K\defect\nrm{x}$, $\nrm{b-b_{0}}\le2K\defect\nrm{y}$,
+$\nrm{a},\nrm{a_{0}}\le\nrm{x}$, $\nrm{b},\nrm{b_{0}}\le\nrm{y}$ and $[a_{0},b_{0}]=0$,
+so $\nrm{[a,b]}\le8K\defect\nrm{x}\nrm{y}$. Feeding this through the third hypothesis of
+\eqref{eq:f2-hyp} for $(x,y)$ and for $(y,x)$, and using contractivity of $\Upsilon$,
+\begin{equation}\label{eq:f2-comm}
+  \nrm{xy-yx}\;\le\;10K\defect\nrm{x}\nrm{y}\qquad(x,y\in\mathcal B).
+\end{equation}
+
+\emph{The norm-two witness, and commutativity.} The tree does \emph{not} cite the
+finite-dimensional $C^{*}$-classification --- it is not in the local sources --- and proves
+instead: a noncommutative finite-dimensional unital $C^{*}$-algebra carries contractions
+$x,y$ with $\nrm{xy-yx}=2$. Decompose $1$ into mutually orthogonal minimal projections
+$p_{1},\dots,p_{m}$ (a minimal projection $p$ has $p\mathcal Bp=\mathbb Cp$, else a proper
+spectral projection of a non-scalar self-adjoint element of $p\mathcal Bp$ would sit below
+$p$). If every off-diagonal corner $p_{i}\mathcal Bp_{j}$ vanished, then
+$b=\sum_{i,j}p_{i}bp_{j}=\sum_{i}\lambda_{i}(b)p_{i}$ and $\mathcal B$ would be commutative;
+so pick $0\ne z\in p\mathcal Bq$ with $p\ne q$ minimal. Then $z^{\dagger}z\in q\mathcal Bq$
+and $zz^{\dagger}\in p\mathcal Bp$, so the $C^{*}$-identity gives
+$z^{\dagger}z=\nrm{z}^{2}q$ and $zz^{\dagger}=\nrm{z}^{2}p$; with $v=z/\nrm{z}$ one has
+$v^{\dagger}v=q$, $vv^{\dagger}=p$ and $v^{2}=(v^{\dagger})^{2}=0$. The Pauli pair
+$x=p-q$, $y=v+v^{\dagger}$ consists of self-adjoint contractions with
+$xy-yx=2(v-v^{\dagger})$ of norm $2$. Under \eqref{eq:f2-window} this contradicts
+\eqref{eq:f2-comm}, since $2\le10K\defect\le\tfrac{10}{24}=\tfrac5{12}<2$; hence
+$\mathcal B$ is commutative.
+
+\emph{Coordinates.} A commutative finite-dimensional unital $C^{*}$-algebra carries a
+projection basis $\{\Pi_{1},\dots,\Pi_{k}\}$ --- this, byte-matched to its pinned source, is
+the \emph{only} external the tree is permitted (\texttt{def-projection-basis},
+Definition~\ref{def:projection-basis}). Then $k\ge1$, the $\Pi_{j}$ are nonzero and span,
+and $\iota_{\mathbb C}(z)=\sum_{j}z_{j}\Pi_{j}$ is a unital $*$-isomorphism
+$\mathbb C^{k}\to\mathcal B$. The compositions $D\Delta\iota_{\mathbb C}$ and
+$\iota_{\mathbb C}^{-1}\Upsilon J$ are UCP, hence positive, unital and $*$-preserving, so
+they carry self-adjoint parts to self-adjoint parts and \eqref{eq:f2-AM} defines positive
+unital maps.
+
+\emph{The three estimates.} For $z\in\mathbb R^{n}$, $DJ=I$ and $\Phi=JQ_{\mathbb C}D$ give
+$Qz=D\Phi Jz$ while $AMz=D\Delta\Upsilon Jz$; contractivity of $D$ and $J$ then turns the
+first hypothesis of \eqref{eq:f2-hyp} into $\opnorm{Q-AM}\le K\defect$. For
+$x\in\mathbb R^{k}$, $D\Phi=Q_{\mathbb C}D$ and the restriction of $Q_{\mathbb C}$ to
+$\mathbb R^{n}$ give $QAx-Ax=D(\Phi\Delta\iota_{\mathbb C}x-\Delta\iota_{\mathbb C}x)$, so
+approximate invariance yields $\opnorm{QA-A}\le2K\defect$. Finally
+$\nrm{\Delta\iota_{\mathbb C}x}\ge\nrm{\Upsilon\Delta\iota_{\mathbb C}x}\ge(1-K\defect)\linf{x}$
+by the second hypothesis, approximate invariance costs a further $2K\defect\linf{x}$, and
+$\nrm{\Phi\Delta\iota_{\mathbb C}x}=\nrm{JQ_{\mathbb C}Ax}\le\linf{Ax}$; combining gives the
+lower modulus in \eqref{eq:f2-out}.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-routef-f2-positive-unital-compression}: root and $22/22$ nodes
+\texttt{validated}, taint clean; one genuine mid-run challenge, resolved. Registered
+imports: the definitions \texttt{def-stochastic}, \texttt{def-ucp-map},
+\texttt{def-projection-basis}, and the single byte-verbatim projection-basis external.
+
+\noindent\textbf{Corrections of record.} Two, at different levels. (i)~\emph{Contract-level}:
+the earlier text typed $D$ into the real space $\linfd n$ while the diagonal of $\Mat n$ is
+complex --- the same defect repaired on both F0 seam rows, and the cause of a first
+elevation run that was abandoned rather than resumed. The contract quoted above is the
+corrected text; every hypothesis, constant, threshold and estimate is unchanged by the
+correction. (ii)~\emph{Proof-level}: the challenge was the endpoint $\defect=0$, where a
+strict inequality chain used in the commutativity node failed. The repair is the endpoint
+bridge reproduced implicitly above: at $\defect=0$, \eqref{eq:f2-comm} reads
+$\nrm{xy-yx}=0$ and commutativity is immediate, so the conclusion holds on the whole closed
+window \eqref{eq:f2-window}.
+
+\begin{lemma}[\texttt{lem-routef-f3-retract-defect}]\label{lem:routef-f3-retract-defect}
+Let $K\ge1$ be dimension-independent, $n,k\ge1$, let $A:\linfd k\to\linfd n$ and
+$M:\linfd n\to\linfd k$ be positive unital maps, let $Q:\linfd n\to\linfd n$ be
+row-stochastic, and let $\defect\ge0$ satisfy $3K\defect<1$. If the three estimates
+\eqref{eq:f2-out} hold, then
+\begin{equation}\label{eq:f3-out}
+  \opnorm{MA-I_{k}}\;\le\;\frac{3K\defect}{1-3K\defect}.
+\end{equation}
+\emph{Transcription note.} This row is stated entirely in the real picture; its hypotheses
+are exactly the three conclusions of
+Lemma~\ref{lem:routef-f2-positive-unital-compression}, but they are \emph{hypotheses} here,
+and the row does not import that lemma. The denominator is positive precisely because
+$3K\defect<1$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Route F F3 retract defect: let K >= 1 be a dimension-independent constant, n,k >= 1, A: l_inf^k -> l_inf^n and M: l_inf^n -> l_inf^k positive unital maps, Q: l_inf^n -> l_inf^n row-stochastic, and eta >= 0 with 3K*eta < 1; if ||Q - AM||_{inf->inf} <= K*eta, ||QA - A||_{inf->inf} <= 2K*eta, and ||Ax||_inf >= (1-3K*eta)*||x||_inf for every x in l_inf^k, then ||MA - I_k||_{inf->inf} <= 3K*eta/(1-3K*eta).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+First, $A$ is contractive: for $x\in\linfd k$ and $c=\linf{x}$ one has
+$-c\mathbf 1_{k}\le x\le c\mathbf 1_{k}$ coordinatewise, positivity of $A$ preserves the
+order and unitality sends $\mathbf 1_{k}$ to $\mathbf 1_{n}$, so
+$-c\mathbf 1_{n}\le Ax\le c\mathbf 1_{n}$ and $\linf{Ax}\le\linf{x}$. Next, linearity gives
+the exact identity
+\begin{equation}\label{eq:f3-identity}
+  A\bigl((MA-I_{k})x\bigr)=(AM-Q)(Ax)+(QA-A)x .
+\end{equation}
+Since $\opnorm{AM-Q}=\opnorm{Q-AM}$, the two operator-norm hypotheses and contractivity of
+$A$ bound the right-hand side of \eqref{eq:f3-identity} by
+$K\defect\linf{x}+2K\defect\linf{x}=3K\defect\linf{x}$. Put $\alpha=1-3K\defect>0$ and apply
+the lower-modulus hypothesis to $y=(MA-I_{k})x$: then
+$\alpha\linf{y}\le\linf{Ay}\le3K\defect\linf{x}$, i.e.
+$\linf{(MA-I_{k})x}\le(3K\defect/\alpha)\linf{x}$ for every $x$. Taking the supremum over
+$\linf{x}\le1$ gives \eqref{eq:f3-out}.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0). Workspace
+\texttt{proofs/lem-routef-f3-retract-defect}: a first-pass elevation, root and $11/11$ nodes
+\texttt{validated}, taint clean, \emph{zero} challenges. The registered definition import is
+\texttt{def-stochastic}; there are no external imports, and no dimension or norm loss occurs
+anywhere in the tree.
+
+\noindent\textbf{Role in the chain, and what is still missing.} Neither row has registry
+\texttt{deps}. Their conclusions are, literally, the hypothesis list of the finish edge
+\texttt{lem-routef-prh-finish} (\S\ref{sec:routef-prh-finish}): \eqref{eq:f2-out} supplies
+$\opnorm{Q-AM}\le K\defect$ and the input of \eqref{eq:f3-out}, and \eqref{eq:f3-out} is
+verbatim that lemma's second hypothesis, at the same threshold
+$\defect\le(24K)^{-1}$. What is \emph{not} supplied anywhere in this document is the
+antecedent of Lemma~\ref{lem:routef-f2-positive-unital-compression} itself: the
+factorization datum $(\mathcal B,\Delta,\Upsilon)$ with the three estimates
+\eqref{eq:f2-hyp} and a dimension-free $K$. The registry row that would supply it,
+\texttt{lem-routef-k-ledger}, is \texttt{proved-mod-audit} with \texttt{af: none} ---
+\textbf{open} at this document's rigour bar and \textbf{not} reproduced here --- as is the
+assembly carrier \texttt{lem-thmainext-conditional}. The Route F chain is therefore
+\emph{not} closed, no unconditional $\sqrt{\defect}$ bound follows, and
+\texttt{op-classical} is \textbf{open}.
