@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Parameterized polar-path transport: there exist C\_path\textasciicircum{}0,...}
+\step{1} Parameterized polar-path transport: there exist C\_path\textasciicircum{}0, C\_pol\textasciicircum{}0 >= 1 and kappa\_pol\textasciicircum{}0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C\_path >= C\_path\textasciicircum{}0, C\_pol >= C\_pol\textasciicircum{}0, and 0 < kappa\_pol <= kappa\_pol\textasciicircum{}0, for every finite-dimensional exact-unit epsilon\_r-C*-algebra, every delta > 0 with C\_pol*(epsilon\_r + delta) <= kappa\_pol, every U\_0, U\_1 in calU, and every q in [0, 1] satisfying ||U\_1 - U\_0|| <= q, C\_path*q <= 1/4, and C\_path*(q + epsilon\_r*q + q\textasciicircum{}2) < delta - C\_pol*(epsilon\_r*delta + delta\textasciicircum{}2), every L\_\{Z\_t\} is invertible and every Z\_t = (1-t)*U\_0 + t*U\_1 lies in calUbar\_\{C\_path*(q + epsilon\_r*q + q\textasciicircum{}2)\} for t in [0, 1], and, writing u\_delta for the unique first component of the inverse of Pi\_delta: calU x B\textasciicircum{}\{calH\}\_delta(J) -> S\_delta := Pi\_delta(calU x B\textasciicircum{}\{calH\}\_delta(J)), Pi\_delta(U, H) = U bold-dot H, the map H(t, U\_0, U\_1) = u\_delta(Z\_t) is jointly continuous in (t, U\_0, U\_1), joins U\_0 to U\_1, and satisfies H(t, cU\_0, cU\_1) = c*H(t, U\_0, U\_1) for every c in U(1). \steptag{validated} \\[6pt]
+\step{1.1} By lem-stage1-polar-path-admissibility choose universal witnesses a = C\_path\_hat >= 1, b = C\_pol\_hat >= 1, and k = kappa\_pol\_hat in (0,1/2], and define the threshold constants C\_path\textasciicircum{}0 := a, C\_pol\textasciicircum{}0 := b, and kappa\_pol\textasciicircum{}0 := k. \steptag{validated} \\[4pt]
+\step{1.2} Fix any Stage-1 polar witness tuple and algebraic/path data satisfying the hypotheses of node 1 for these thresholds. Then the hypotheses of lem-stage1-polar-path-admissibility hold with its witness constants a,b,k. \steptag{validated} \\[6pt]
+\step{1.2.1} In every exact-unit epsilon\_r-C*-algebra one has epsilon\_r >= 0: applying the product-norm axiom to J bold-dot J = J and ||J|| = 1 yields 1 <= 1+epsilon\_r. Hence A := q+epsilon\_r*q+q\textasciicircum{}2 and B := epsilon\_r*delta+delta\textasciicircum{}2 are nonnegative because q in [0,1] and delta > 0. \steptag{validated} \\[4pt]
+\step{1.2.2} Because a <= C\_path, b <= C\_pol, and kappa\_pol <= k, the target smallness and short-path assumptions imply b*(epsilon\_r+delta) <= C\_pol*(epsilon\_r+delta) <= kappa\_pol <= k and a*q <= C\_path*q <= 1/4. \steptag{validated} \\[4pt]
+\step{1.2.3} Using A,B >= 0, a <= C\_path, and b <= C\_pol, the target strict loss inequality implies a*A <= C\_path*A < delta-C\_pol*B <= delta-b*B. Together with q in [0,1] and ||U\_1-U\_0|| <= q, these are exactly all hypotheses of lem-stage1-polar-path-admissibility at a,b,k. \steptag{validated} \\[4pt]
+\step{1.3} Applying lem-stage1-polar-path-admissibility with a,b,k gives all asserted invertibility, polar-path, continuity, endpoint, and scalar-equivariance conclusions, initially with Z\_t in calUbar\_\{a*(q+epsilon\_r*q+q\textasciicircum{}2)\}; monotonicity of the defining calUbar radius upgrades this to calUbar\_\{C\_path*(q+epsilon\_r*q+q\textasciicircum{}2)\}, so the full conclusion of node 1 follows. \steptag{validated} \\[6pt]
+\step{1.3.1} Invoke lem-stage1-polar-path-admissibility using the hypotheses established in node 1.2. For every t in [0,1] it yields invertibility of L\_\{Z\_t\}, membership Z\_t in calUbar\_\{a*A\}, and the map H(t,U\_0,U\_1)=u\_delta(Z\_t), with the same polar-inverse notation u\_delta used in node 1, jointly continuous in (t,U\_0,U\_1), joining U\_0 to U\_1, and satisfying H(t,cU\_0,cU\_1)=c*H(t,U\_0,U\_1). \steptag{validated} \\[4pt]
+\step{1.3.2} Since a <= C\_path and A >= 0, a*A <= C\_path*A. By def-approximate-unitary-space, X in calUbar\_r means that X has a right inverse and ||X\textasciicircum{}dagger bold-dot X-J|| <= 2r; therefore calUbar\_\{a*A\} is contained in calUbar\_\{C\_path*A\}. Applying this to each Z\_t supplies exactly the larger-radius membership required in node 1, while every other conclusion already matches verbatim. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

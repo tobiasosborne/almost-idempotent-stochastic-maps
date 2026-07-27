@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-polar-path-transport/export.md",
+  "oracle": "af-lem-stage1-polar-path-transport",
+  "result": "pass",
+  "claim_hash": "b06ec3f05f1e1324839222839a9001593bfaa94147a78b6bde75ef8ef4b6144c",
+  "oracle_digest": "f9ecbaa8c2f470c29276e4050d1fb04b42c3cadec0867ac113af54d19fc92e79",
+  "inputs_hash": "b95ba90e6bc66d418fe34e7fc90652f80b61821dd9683688cd9fc34d89cf8532",
+  "ts": "2026-07-27T19:34:30.120Z"
+}
