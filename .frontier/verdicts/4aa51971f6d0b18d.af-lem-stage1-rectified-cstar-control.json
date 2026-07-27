@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-rectified-cstar-control/export.md",
+  "oracle": "af-lem-stage1-rectified-cstar-control",
+  "result": "pass",
+  "claim_hash": "abae8581237aebd5b82f822f8b05a21371f0ce5c8f3937322cd53135e75af0c3",
+  "oracle_digest": "6d97f55e948bfc135151b79f77b10c1ae59a6cdee43064250627f775ff8583d1",
+  "inputs_hash": "070bd7a7824867bf1b8be1fd3bed8b4a0bf2a5b5e65b4e2eb450652d6b68d20f",
+  "ts": "2026-07-27T11:49:12.693Z"
+}

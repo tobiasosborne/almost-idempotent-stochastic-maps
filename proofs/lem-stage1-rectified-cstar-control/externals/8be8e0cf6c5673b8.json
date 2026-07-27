@@ -1,0 +1,8 @@
+{
+  "id": "8be8e0cf6c5673b8",
+  "name": "lem-stage1-exact-unit-rectification",
+  "source": "imports validated registry lemma proofs/lem-stage1-exact-unit-rectification — Dimension-free exact-unit rectification: there are universal C_unit \u003c infinity and e_unit \u003e 0 such that every finite-dimensional epsilon_X-C*-algebra with epsilon_X \u003c= e_unit admits on the same involutive normed space an exact unit J and product bold-dot with ||J-I_X|| \u003c= C_unit*epsilon_X and ||x bold-dot y-xy|| \u003c= C_unit*epsilon_X*||x||||y||.",
+  "content_hash": "93ef8507d138121010c62a4afd7d93c3cd76daad26c394d5af3e4a3da53fdd4b",
+  "created": "2026-07-27T11:23:27.346506675Z",
+  "notes": ""
+}

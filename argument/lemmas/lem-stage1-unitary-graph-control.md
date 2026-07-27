@@ -5,7 +5,8 @@ contract: Uniform unitary graph control: there are universal C_ch >= 1, kappa_ch
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-quantitative-inverse-function; lem-stage1-rectified-cstar-control
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-unitary-graph-control
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 2, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). Source loci TeX 692-793, especially 728-793.
 owner: A
 ---
