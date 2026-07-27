@@ -121,7 +121,20 @@ with tempfile.TemporaryDirectory() as td:
 # ---------- REAL portfolio.json: duplicate detection is a read-only no-op ----------
 ro_real = load_ro()   # fresh module, real ROOT/PORTFOLIO
 real = ro_real.PORTFOLIO
-if real.exists() and (ro_real.ROOT / "proofs" / "lem-classical-equiv" / "ledger").is_dir():
+def _portfolio_root_matches(path, root):
+    """The oracle rows in portfolio.json record cmd/inputs ABSOLUTE to the checkout
+    that registered them. In a git worktree those paths point at the MAIN checkout,
+    so the duplicate-shape comparison can never match — skip there (the synthetic
+    fixtures above fully cover the duplicate-detection logic)."""
+    try:
+        entries = json.loads(path.read_text(encoding="utf-8"))["config"]["oracles"]
+        row = next(e for e in entries if e.get("name") == "af-lem-classical-equiv")
+        return all(str(p).startswith(str(root)) for p in row.get("inputs", []))
+    except (KeyError, StopIteration, json.JSONDecodeError, OSError):
+        return False
+
+if (real.exists() and (ro_real.ROOT / "proofs" / "lem-classical-equiv" / "ledger").is_dir()
+        and _portfolio_root_matches(real, ro_real.ROOT)):
     before = real.read_bytes()
     rc, out, err = run(ro_real, ["lem-classical-equiv"])   # registered long ago (worklog s1)
     check("real portfolio: existing oracle detected as duplicate (exit 0)",
@@ -129,7 +142,7 @@ if real.exists() and (ro_real.ROOT / "proofs" / "lem-classical-equiv" / "ledger"
     check("real portfolio: byte-identical after the dry run", real.read_bytes() == before)
     check("real portfolio: still valid JSON", bool(json.loads(real.read_text(encoding="utf-8"))))
 else:
-    print("SKIP  real-portfolio duplicate check (fixture absent)")
+    print("SKIP  real-portfolio duplicate check (fixture absent or foreign-root portfolio, e.g. a git worktree)")
 
 print(f"\n{passed} passed, {failed} failed")
 raise SystemExit(1 if failed else 0)
