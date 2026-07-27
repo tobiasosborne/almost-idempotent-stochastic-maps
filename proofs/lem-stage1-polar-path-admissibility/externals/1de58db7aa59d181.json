@@ -1,0 +1,8 @@
+{
+  "id": "1de58db7aa59d181",
+  "name": "lem-stage1-polar-retraction",
+  "source": "imports validated registry lemma proofs/lem-stage1-polar-retraction — Closed C^1 polar retraction: there are universal C_pol \u003e= 1, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra and delta \u003e 0 with C_pol*(epsilon_r + delta) \u003c= kappa_pol, Pi_delta(U, H) = U bold-dot H is a C^1 diffeomorphism from calU x B^{calH}_delta(J) onto an open S_delta, its inverse (u_delta, h_delta) obeys X = u_delta(X) bold-dot h_delta(X), u_delta(U) = U, h_delta(U) = J, and calU_{delta - C_pol*(epsilon_r*delta + delta^2)} subseteq S_delta subseteq calU_{delta + C_pol*(epsilon_r*delta + delta^2)}.",
+  "content_hash": "aaf5b1caf16ca66e58188e2e57b1af6ae519e5b37f52eda3ae714a0a343dde47",
+  "created": "2026-07-27T16:01:44.283793879Z",
+  "notes": ""
+}

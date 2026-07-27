@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-polar-path-admissibility/export.md",
+  "oracle": "af-lem-stage1-polar-path-admissibility",
+  "result": "pass",
+  "claim_hash": "14ae329ca484cc82fb2943d8e364b660b3c67d83706cd3cc6a1aa81d2b87eb67",
+  "oracle_digest": "7711e64c421dc4c6ae0312794fed313356f315f63c84b11cb08891ef7f613070",
+  "inputs_hash": "1878583425d585e312daf60fa7e3a5df619e0e337be471264cf4ac241ab49dc0",
+  "ts": "2026-07-27T16:08:12.316Z"
+}

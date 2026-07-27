@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Joint projected-straight-path admissibility: there exist ...}
+\step{1} Joint projected-straight-path admissibility: there exist universal C\_path, C\_pol >= 1, kappa\_pol in (0, 1/2] such that, for every finite-dimensional exact-unit epsilon\_r-C*-algebra, every delta > 0 with C\_pol*(epsilon\_r + delta) <= kappa\_pol, and U\_0, U\_1 in calU, if 0 <= q <= 1, ||U\_1 - U\_0|| <= q, C\_path*q <= 1/4, and C\_path*(q + epsilon\_r*q + q\textasciicircum{}2) < delta - C\_pol*(epsilon\_r*delta + delta\textasciicircum{}2), then for Z\_t = (1-t)*U\_0 + t*U\_1 every L\_\{Z\_t\} is invertible, every Z\_t in calUbar\_\{C\_path*(q + epsilon\_r*q + q\textasciicircum{}2)\}, and H(t, U\_0, U\_1) = u\_delta(Z\_t) is jointly continuous in all displayed variables, joins U\_0 to U\_1, and obeys H(t, cU\_0, cU\_1) = c*H(t, U\_0, U\_1) for c in U(1). \steptag{validated} \\[6pt]
+\step{1.1} Quantitative path bounds: after choosing universal constants from lem-stage1-polar-retraction with C\_path=1 and a harmlessly smaller kappa\_pol, every admissible straight-path point Z\_t has invertible L\_\{Z\_t\} and lies in calUbar\_\{q+epsilon\_r*q+q\textasciicircum{}2\}. \steptag{validated} \\[6pt]
+\step{1.1.1} Choose C\_pol=C\_pol\textasciicircum{}0 from lem-stage1-polar-retraction, kappa\_pol=min(kappa\_pol\textasciicircum{}0,C\_pol\textasciicircum{}0/8), and C\_path=1. Then C\_pol*(epsilon\_r+delta)<=kappa\_pol implies epsilon\_r<=1/8. For every U in calU, U\textasciicircum{}dagger bold-dot U=J and the epsilon-C*-lower bound give ||U||<=1/sqrt(1-epsilon\_r)<=sqrt(8/7). Approximate associativity gives ||L\_\{U\textasciicircum{}dagger\}L\_U-I||<=epsilon\_r||U||\textasciicircum{}2<=1/7; hence Neumann inversion and finite dimensionality give L\_U invertible with ||L\_U\textasciicircum{}\{-1\}||<=(7/6)(1+epsilon\_r)||U||<=3/2. \steptag{validated} \\[4pt]
+\step{1.1.2} Put D=U\_1-U\_0. Bilinearity, involution reversal, and U\_i\textasciicircum{}dagger bold-dot U\_i=J give the exact identity Z\_t\textasciicircum{}dagger bold-dot Z\_t-J=t*(t-1)*(D\textasciicircum{}dagger bold-dot D). Consequently ||Z\_t\textasciicircum{}dagger bold-dot Z\_t-J||<=t*(1-t)*(1+epsilon\_r)||D||\textasciicircum{}2<=(1+epsilon\_r)q\textasciicircum{}2/4. \steptag{validated} \\[4pt]
+\step{1.1.3} Since L\_\{Z\_t\}=L\_\{U\_0\}+tL\_D and ||L\_D||<=(1+epsilon\_r)||D||, the preceding inverse bound and q<=1/4 give ||tL\_\{U\_0\}\textasciicircum{}\{-1\}L\_D||<=(3/2)(9/8)(1/4)=27/64<1. Neumann inversion makes every L\_\{Z\_t\} invertible, so solving Z\_t bold-dot R=J supplies a right inverse. Together with the defect estimate and (1+epsilon\_r)q\textasciicircum{}2/4<=2*(q+epsilon\_r*q+q\textasciicircum{}2), this is exactly Z\_t in calUbar\_\{q+epsilon\_r*q+q\textasciicircum{}2\} by def-approximate-unitary-space. \steptag{validated} \\[4pt]
+\step{1.2} Common polar-domain admissibility: writing rho=delta-C\_pol*(epsilon\_r*delta+delta\textasciicircum{}2), the strict hypothesis q+epsilon\_r*q+q\textasciicircum{}2<rho and the quantitative path bounds imply Z\_t lies in S\_delta for every t in [0,1], by lem-stage1-polar-retraction. \steptag{validated} \\[6pt]
+\step{1.2.1} Let gamma=q+epsilon\_r*q+q\textasciicircum{}2 and rho=delta-C\_pol*(epsilon\_r*delta+delta\textasciicircum{}2). The strict hypothesis gamma<rho and Z\_t in calUbar\_gamma imply ||Z\_t\textasciicircum{}dagger bold-dot Z\_t-J||<=2gamma<2rho, while Z\_t has a right inverse; hence Z\_t belongs to the strict set calU\_rho. \steptag{validated} \\[4pt]
+\step{1.2.2} By the inner inclusion calU\_\{delta-C\_pol*(epsilon\_r*delta+delta\textasciicircum{}2)\} subseteq S\_delta in lem-stage1-polar-retraction, the preceding membership Z\_t in calU\_rho implies Z\_t in S\_delta for every t. \steptag{validated} \\[4pt]
+\step{1.3} Projected-path properties: because the whole straight path lies in the single open polar domain S\_delta, H(t,U\_0,U\_1)=u\_delta(Z\_t) is jointly continuous, has endpoints U\_0,U\_1, and is U(1)-equivariant by lem-stage1-polar-retraction and lem-stage1-polar-coherence-naturality. \steptag{validated} \\[6pt]
+\step{1.3.1} The affine evaluation map (t,U\_0,U\_1) maps continuously to Z\_t by the Banach-space operations, and u\_delta is C\textasciicircum{}1, hence continuous, on the open set S\_delta by lem-stage1-polar-retraction. Therefore their composition H is jointly continuous on the displayed admissible parameter domain. Also Z\_0=U\_0 and Z\_1=U\_1, and lem-stage1-polar-retraction gives u\_delta(U\_i)=U\_i, so H joins U\_0 to U\_1. \steptag{validated} \\[4pt]
+\step{1.3.2} For c in U(1), conjugate linearity of dagger, bilinearity, and |c|=1 show (cU\_i)\textasciicircum{}dagger bold-dot(cU\_i)=J; scaling a right inverse of U\_i by conjugate(c) supplies a right inverse of cU\_i. Thus cU\_i lies in calU, ||cU\_1-cU\_0||=||U\_1-U\_0||, and the rotated pair satisfies the same hypotheses. Its affine path is Z\_t(cU\_0,cU\_1)=cZ\_t, so both Z\_t and cZ\_t lie in S\_delta. \steptag{validated} \\[4pt]
+\step{1.3.3} Apply the scalar naturality clause of lem-stage1-polar-coherence-naturality to the polar data (delta,S\_delta,u\_delta,h\_delta) and to X=Z\_t: since X and cX lie in S\_delta, u\_delta(cZ\_t)=c*u\_delta(Z\_t). With the scaled-path identity, this is H(t,cU\_0,cU\_1)=c*H(t,U\_0,U\_1). \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

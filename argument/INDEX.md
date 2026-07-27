@@ -224,13 +224,13 @@
 | `lem-stage1-exact-unit-rectification` | lemma | proved | validated | A | Dimension-free exact-unit rectification: there are universal C_unit < infinity a… |
 | `lem-stage1-group-closeness` | lemma | proved | validated | A | Group-input polar closeness: there exist universal C_grp, C_pol >= 1, kappa_pol … |
 | `lem-stage1-group-domain-membership` | lemma | proved | validated | A | Group-input polar-domain membership: there exist universal C_grp, C_pol >= 1, ka… |
-| `lem-stage1-inversion-derivative-control` | lemma | stated | none | A | Typed inversion derivative with chart retention: there exist universal C_der, C_… |
+| `lem-stage1-inversion-derivative-control` | lemma | stated | seeded | A | Typed inversion derivative with chart retention: there exist universal C_der, C_… |
 | `lem-stage1-inversion-derivative-transport` | lemma | stated | none | A | Parameterized inversion-derivative transport: there exist C_der^0, C_ch^0, C_pol… |
 | `lem-stage1-maurer-cartan-transport` | lemma | stated | none | A | Parameterized Maurer-Cartan transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |
 | `lem-stage1-maurer-cartan-trivialization` | lemma | proved | validated | A | Uniform global tangent/Maurer-Cartan control: there are universal C_ch >= 1, kap… |
 | `lem-stage1-polar-coherence-naturality` | lemma | proved | validated | A | Polar coherence and scalar naturality: for every exact-unit algebra and every tw… |
 | `lem-stage1-polar-constant-ledger` | lemma | stated | none | A | Compatible Stage-1 polar witnesses and range: there exists one universal def-sta… |
-| `lem-stage1-polar-path-admissibility` | lemma | stated | seeded | A | Joint projected-straight-path admissibility: there exist universal C_path, C_pol… |
+| `lem-stage1-polar-path-admissibility` | lemma | proved | validated | A | Joint projected-straight-path admissibility: there exist universal C_path, C_pol… |
 | `lem-stage1-polar-path-transport` | lemma | stated | none | A | Parameterized polar-path transport: there exist C_path^0, C_pol^0 >= 1 and kappa… |
 | `lem-stage1-polar-retraction` | lemma | proved | validated | A | Closed C^1 polar retraction: there are universal C_pol >= 1, kappa_pol in (0, 1/… |
 | `lem-stage1-polar-retraction-transport` | lemma | stated | none | A | Parameterized polar-retraction transport: there exist C_pol^0 >= 1 and kappa_pol… |

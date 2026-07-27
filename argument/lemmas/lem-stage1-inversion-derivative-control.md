@@ -5,7 +5,8 @@ contract: Typed inversion derivative with chart retention: there exist universal
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-unitary-graph-control; lem-stage1-polar-retraction; lem-stage1-polar-coherence-naturality; lem-stage1-approximate-group-laws
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-inversion-derivative-control
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 8, landed verbatim (LaTeX flattened to registry ASCII; incl. the v6 finite-dimensional domain restriction, audit-v5 sect-6 option 1); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). Source loci TeX 728-762, 857-892, 943; the group/adjoint-domain edge and chart-retention guard are explicit.
 owner: A
 ---
