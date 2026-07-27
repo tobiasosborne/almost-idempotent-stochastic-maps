@@ -147,8 +147,14 @@ def overreach_paths(ws=None):
     repo, so /tmp scratch can't trip this). Any OTHER dirty path — ground truth (definitions/),
     the registry (argument/), another result's proofs/ workspace, scripts, report, anything —
     means the prover overreached: that is Claude's job (provision-first), so flag it. Returns
-    the set of porcelain lines (status + path) for offending paths."""
-    allow = (ws.rstrip("/") + "/",) if ws else ()
+    the set of porcelain lines (status + path) for offending paths.
+
+    `.frontier/` is exempt: the fr Stop hook forces the ORCHESTRATOR to append a
+    log/orient line every turn, so a notification turn arriving while a run is live
+    legitimately dirties .frontier/log.jsonl (2026-07-27: this false-positived the
+    lem-stage1-smooth-unitary-operations run). A codex prover has no reason to touch
+    fr state; if one ever does, the damage is caught by fr's own append-only log review."""
+    allow = ((ws.rstrip("/") + "/",) if ws else ()) + (".frontier/",)
     bad = set()
     for ln in _git_porcelain().splitlines():
         if len(ln) < 4:
