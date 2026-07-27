@@ -1,0 +1,8 @@
+{
+  "id": "61a947f737af9ffe",
+  "name": "lem-stage1-group-domain-membership",
+  "source": "imports validated registry lemma proofs/lem-stage1-group-domain-membership — Group-input polar-domain membership: there exist universal C_grp, C_pol \u003e= 1, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra and delta \u003e 0 satisfying C_pol*(epsilon_r + delta) \u003c= kappa_pol and C_grp*epsilon_r \u003c delta - C_pol*(epsilon_r*delta + delta^2), the inverse u_delta:S_delta -\u003e calU of the polar map is defined at U bold-dot V and U^dagger for every U, V in calU; moreover, U bold-dot V and U^dagger each have a right inverse.",
+  "content_hash": "5c346eb5d68a2ddbc9b1cbc43b17ab1a8844a7938d250df536ca434ec823a59d",
+  "created": "2026-07-27T14:53:08.221929154Z",
+  "notes": ""
+}

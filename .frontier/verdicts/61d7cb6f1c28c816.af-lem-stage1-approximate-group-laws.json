@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-approximate-group-laws/export.md",
+  "oracle": "af-lem-stage1-approximate-group-laws",
+  "result": "pass",
+  "claim_hash": "b88bd69a0574ad134b603295110a30a2532cb809af6efb45929365824c115dbd",
+  "oracle_digest": "7cf70b14b59224b9eaebd5d9649d35b5d113c32482e5c8b4be2f95bf1a63b1ba",
+  "inputs_hash": "baa670af88b3629b48342ea38b56ead855fd8a8dbec1a09deb8a1475f12d1297",
+  "ts": "2026-07-27T15:09:58.854Z"
+}

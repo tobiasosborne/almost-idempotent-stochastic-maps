@@ -5,7 +5,8 @@ contract: Joint projected-straight-path admissibility: there exist universal C_p
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-polar-retraction; lem-stage1-polar-coherence-naturality
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-polar-path-admissibility
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 7, landed verbatim (LaTeX flattened to registry ASCII; incl. the v6 finite-dimensional domain restriction, audit-v5 sect-6 option 1); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). Source loci TeX 895-912 plus derivation from 655-661, 699-725; exact identity Z_t^dagger bold-dot Z_t - J = t*(t-1)*(U_1 - U_0)^dagger bold-dot (U_1 - U_0).
 owner: A
 ---

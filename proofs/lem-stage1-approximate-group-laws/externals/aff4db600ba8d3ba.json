@@ -1,0 +1,8 @@
+{
+  "id": "aff4db600ba8d3ba",
+  "name": "lem-stage1-group-closeness",
+  "source": "imports validated registry lemma proofs/lem-stage1-group-closeness — Group-input polar closeness: there exist universal C_grp, C_pol \u003e= 1, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra and delta \u003e 0 satisfying C_pol*(epsilon_r + delta) \u003c= kappa_pol and C_grp*epsilon_r \u003c delta - C_pol*(epsilon_r*delta + delta^2), the inverse u_delta:S_delta -\u003e calU of the polar map satisfies ||u_delta(U bold-dot V) - U bold-dot V|| \u003c= C_grp*epsilon_r and ||u_delta(U^dagger) - U^dagger|| \u003c= C_grp*epsilon_r for every U, V in calU.",
+  "content_hash": "78dc54245a4419e7e3176413553a65c9080f53efcc3af42ed5c0ce3b217d1d8c",
+  "created": "2026-07-27T14:53:08.227487328Z",
+  "notes": ""
+}
