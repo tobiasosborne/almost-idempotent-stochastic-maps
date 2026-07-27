@@ -11,8 +11,12 @@ owner: A
 workspace: proofs/lem-routef-functional-calculus-closeness
 ---
 
-**Status.** Hostile-reviewed ledger-leaf transcription at
-`proved-mod-audit`; not `af`-validated and not L0-rigorous.
+**Status.** af-VALIDATED (75th rigorous result; see the workspace ledger
+and export). Originally landed as a hostile-reviewed ledger-leaf
+transcription at `proved-mod-audit`; elevated to `proved` /
+`af: validated` in a later session — this body paragraph had gone stale
+against the frontmatter and was mechanically reconciled 2026-07-27
+(flagged by the report-writing review).
 
 **Provenance.** `LEDGER-W74F-G-K.md` §1.1 and
 `VERDICT-W74F-G-KLEDGER.md` symbol-table audit; detached-leaf authorization

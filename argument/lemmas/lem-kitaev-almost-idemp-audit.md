@@ -11,8 +11,12 @@ owner: B
 workspace: proofs/lem-kitaev-almost-idemp-audit
 ---
 
-**Status.** Hostile-verified corrected audit, hence `proved-mod-audit`;
-not `cited`, not `af`-validated, and not L0-rigorous.
+**Status.** af-VALIDATED (74th rigorous result; see the workspace ledger
+and export). Originally landed as a hostile-verified corrected audit at
+`proved-mod-audit`; elevated to `proved` / `af: validated` in a later
+session — this body paragraph had gone stale against the frontmatter and
+was mechanically reconciled 2026-07-27 (flagged by the report-writing
+review).
 
 **Transcribed core.** At every amplification, write \(T=\Phi\) and
 \(D=T^2-T\), so \(\lVert T\rVert\le1\) and
