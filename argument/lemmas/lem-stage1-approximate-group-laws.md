@@ -5,7 +5,8 @@ contract: Quantitative approximate group laws: there exist universal C_grp, C_po
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-group-domain-membership; lem-stage1-group-closeness; lem-stage1-polar-retraction; lem-stage1-polar-coherence-naturality
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-approximate-group-laws
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 6, landed verbatim (LaTeX flattened to registry ASCII; incl. the v6 finite-dimensional domain restriction, audit-v5 sect-6 option 1); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). CORRECTED provenance (design sect-3): the two closeness estimates derive from TeX 845-868 plus lem-stage1-polar-retraction; only the three group defects are literal at TeX 872-874; basepoint identities at 876-878.
 owner: A
 ---

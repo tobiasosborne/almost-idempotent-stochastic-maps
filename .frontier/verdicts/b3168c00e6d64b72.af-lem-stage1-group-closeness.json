@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-group-closeness/export.md",
+  "oracle": "af-lem-stage1-group-closeness",
+  "result": "pass",
+  "claim_hash": "d7da0982096ffdb468267ca2e0ee12a9fb17fde7bd3021c18bf45a3d89cb9dd0",
+  "oracle_digest": "3032b2486a418a89b13a48f9f8d21ecd9a87c883889e98ae61de6121ece09e9a",
+  "inputs_hash": "1050258834ad5ddf65ddd970e50d9f51c06eb6148959ae9c2afca665f5557c37",
+  "ts": "2026-07-27T14:51:06.808Z"
+}
