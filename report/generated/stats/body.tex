@@ -21,11 +21,11 @@ Quantity & Progenitor & This repository \\
 \midrule
 First commit & 2026-06-02 & 2026-07-02 \\
 Last commit in snapshot & 2026-06-13 & 2026-07-27 \\
-Commits & 174 & 775 \\
+Commits & 174 & 776 \\
 Days with a commit & 11 & 18 \\
 Work-log entries & 22 & 65 \\
 \texttt{fr} controller cycles & --- (no controller) & 728 \\
-Registry results & 59 & 279 \\
+Registry results & 59 & 288 \\
 Definition shards & 25 & 45 \\
 \texttt{af} workspaces & 16 & 98 \\
 \texttt{af}-validated roots (T0) & 16 & 87 \\
@@ -55,7 +55,7 @@ Numerical run bundles & -- & 38 \\
 
 \subsection{The campaign calendar}\label{sec:stats-calendar}
 
-The two campaigns ran as short, dense bursts rather than as steady background work. This repository put 775 commits into 18 calendar days with a commit (out of 26 days elapsed), and the progenitor put 174 into 11.
+The two campaigns ran as short, dense bursts rather than as steady background work. This repository put 776 commits into 18 calendar days with a commit (out of 26 days elapsed), and the progenitor put 174 into 11.
 
 \begin{figure}[H]\centering
 \begin{tikzpicture}
@@ -69,7 +69,7 @@ The two campaigns ran as short, dense bursts rather than as steady background wo
 ]
 \addplot[draw=oiBlue, fill=oiBlue] coordinates {(0,2) (1,1) (2,1) (3,16) (4,19) (5,15) (7,5) (8,44) (9,44) (10,16) (11,11)};
 \addlegendentry{progenitor commits}
-\addplot[draw=oiVermillion, fill=oiVermillion] coordinates {(30,46) (31,53) (32,29) (33,21) (34,31) (35,70) (37,16) (38,72) (39,6) (41,6) (42,17) (44,9) (50,2) (51,16) (52,111) (53,165) (54,85) (55,20)};
+\addplot[draw=oiVermillion, fill=oiVermillion] coordinates {(30,46) (31,53) (32,29) (33,21) (34,31) (35,70) (37,16) (38,72) (39,6) (41,6) (42,17) (44,9) (50,2) (51,16) (52,111) (53,165) (54,85) (55,21)};
 \addlegendentry{this repository, commits}
 \addplot[sharp plot, draw=oiGreen, mark=none, line width=0.9pt] coordinates {(30,48) (31,35) (32,46) (33,35) (34,61) (35,66) (37,35) (38,67) (39,3) (41,7) (42,19) (44,11) (50,7) (51,11) (52,65) (53,95) (54,80) (55,37)};
 \addlegendentry{\texttt{fr} controller cycles}
@@ -98,7 +98,7 @@ Day & Commits & \texttt{fr} cycles & banked & \texttt{af} roots validated \\
 
 \subsection{The rigour ladder}\label{sec:stats-ladder}
 
-The project's whole point is that a claim's \emph{status} is tracked honestly and separately from its plausibility. The registry therefore carries a status census, and the only rung that counts as rigorous in-repo is an \texttt{af}-validated tree (or a byte-matched citation). Of 279 registry results, 87 carry \texttt{af: validated} --- 31.2\% of the registry. The remainder are flagged non-rigorous in the open.
+The project's whole point is that a claim's \emph{status} is tracked honestly and separately from its plausibility. The registry therefore carries a status census, and the only rung that counts as rigorous in-repo is an \texttt{af}-validated tree (or a byte-matched citation). Of 288 registry results, 87 carry \texttt{af: validated} --- 30.2\% of the registry. The remainder are flagged non-rigorous in the open.
 
 \begin{figure}[H]\centering
 \begin{tikzpicture}
@@ -126,15 +126,15 @@ The project's whole point is that a claim's \emph{status} is tracked honestly an
 \toprule
 Registry \texttt{status:} & Results & Share \\
 \midrule
-\texttt{proved} & 200 & 71.7\% \\
-\texttt{conjecture} & 31 & 11.1\% \\
-\texttt{proved-mod-audit} & 23 & 8.2\% \\
-\texttt{stated} & 15 & 5.4\% \\
-\texttt{open} & 3 & 1.1\% \\
+\texttt{proved} & 200 & 69.4\% \\
+\texttt{conjecture} & 31 & 10.8\% \\
+\texttt{stated} & 24 & 8.3\% \\
+\texttt{proved-mod-audit} & 23 & 8.0\% \\
+\texttt{open} & 3 & 1.0\% \\
 \texttt{disproved} & 2 & 0.7\% \\
 \texttt{heuristic} & 2 & 0.7\% \\
 \texttt{numerical} & 2 & 0.7\% \\
-\texttt{obstruction} & 1 & 0.4\% \\
+\texttt{obstruction} & 1 & 0.3\% \\
 \bottomrule
 \end{tabular}
 \par\vspace{0.6ex}{\footnotesize \texttt{proved} here means ``the shard's proof has been carried out and reviewed''; it becomes \emph{rigorous} only in combination with \texttt{af: validated} (next table). \texttt{proved-mod-audit} is the inherited-campaign tag: a paper proof that has not cleared an independent pass in this repository.}
@@ -146,9 +146,9 @@ Registry \texttt{status:} & Results & Share \\
 \toprule
 \texttt{af:} field & Results & Share \\
 \midrule
-\texttt{none} & 181 & 64.9\% \\
-\texttt{validated} & 87 & 31.2\% \\
-\texttt{seeded} & 11 & 3.9\% \\
+\texttt{none} & 190 & 66.0\% \\
+\texttt{validated} & 87 & 30.2\% \\
+\texttt{seeded} & 11 & 3.8\% \\
 \bottomrule
 \end{tabular}
 \par\vspace{0.6ex}{\footnotesize \texttt{seeded} means a workspace exists with the registry contract as its root conjecture but the tree is not (yet) closed.}
@@ -509,12 +509,12 @@ The classical portfolio was not born here. It began as a side-quest inside \text
 
 \textbf{What carried over.} Three things, and each was re-tagged \emph{down} on arrival:
 \begin{itemize}\setlength{\itemsep}{0.15ex}
-\item \textbf{The reduction chain.} The progenitor reduced the classical stability statement, through audited and audit-pending steps, to a single open kernel (the ``(EX)'' conjecture). The chain re-entered this repository as \texttt{stated} or \texttt{proved-mod-audit} --- objects of study, not oracles --- and 23 of the 279 registry results here still carry that inherited tag.
+\item \textbf{The reduction chain.} The progenitor reduced the classical stability statement, through audited and audit-pending steps, to a single open kernel (the ``(EX)'' conjecture). The chain re-entered this repository as \texttt{stated} or \texttt{proved-mod-audit} --- objects of study, not oracles --- and 23 of the 288 registry results here still carry that inherited tag.
 \item \textbf{The numerical record.} The 67{,}000-instance exact enumeration and the seed experiments were copied wholesale into \texttt{docs/ingest/} (60 files) and re-homed as run bundles. Their status did not change: \texttt{numerical}, L3, never rigorous.
 \item \textbf{One validated result.} Exactly one classical result had cleared an \texttt{af} validation upstream --- \texttt{lem-classical-equiv}, the signed$\leftrightarrow$stochastic bridge. It was nevertheless re-validated here from scratch (29 nodes, 6 challenges) and that in-repo run, not the upstream one, is what this repository's ladder rests on.
 \end{itemize}
 
-In throughput terms the successor is roughly 4.5 times the progenitor in commits, 4.7 times in registry size, and 5.4 times in \texttt{af}-validated results, over 2.2 times the elapsed span.
+In throughput terms the successor is roughly 4.5 times the progenitor in commits, 4.9 times in registry size, and 5.4 times in \texttt{af}-validated results, over 2.2 times the elapsed span.
 
 
 \subsection{Colophon: how this section stays true}\label{sec:stats-colophon}
@@ -532,11 +532,11 @@ Everything in \Cref{sec:campaign-statistics} is generated by \texttt{scripts/gen
 \hspace*{1.5em}the gate: re-renders, byte-compares, and prints a non-fatal drift advisory.
 \end{quote}
 
-\textbf{Staleness semantics.} Only the render step is gated, so the check is stable across ordinary commits and fails exactly when it should: a hand-edited generated file, or a renderer change without a re-render. The \emph{numbers}, by contrast, are as of \textbf{2026-07-27T11:09:20Z} and go stale silently by design --- refreshing them is a deliberate act. \texttt{--check} therefore also compares a few cheap live counts against the snapshot and prints how far behind it is, without blocking a commit.
+\textbf{Staleness semantics.} Only the render step is gated, so the check is stable across ordinary commits and fails exactly when it should: a hand-edited generated file, or a renderer change without a re-render. The \emph{numbers}, by contrast, are as of \textbf{2026-07-27T11:14:24Z} and go stale silently by design --- refreshing them is a deliberate act. \texttt{--check} therefore also compares a few cheap live counts against the snapshot and prints how far behind it is, without blocking a commit.
 
 \textbf{Progenitor data.} The \texttt{almost-\discretionary{}{}{}idempotent-\discretionary{}{}{}positive-\discretionary{}{}{}maps} block is mined live when that repository sits beside this one and is otherwise carried forward from the committed snapshot, so the gate is green on machines that do not have the sibling. The current block was mined live at the last extraction.
 
-\textbf{Provenance of the figures.} 728 controller records, 9\,652 \texttt{af} ledger entries, 279 registry shards, 45 definition shards, 38 run bundles, 65 work-log entries, 210 issue records, and 949 commits were read to produce this section.
+\textbf{Provenance of the figures.} 728 controller records, 9\,652 \texttt{af} ledger entries, 288 registry shards, 45 definition shards, 38 run bundles, 65 work-log entries, 210 issue records, and 950 commits were read to produce this section.
 
 
 \emergencystretch=0pt\relax

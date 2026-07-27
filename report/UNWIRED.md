@@ -266,4 +266,13 @@ lem-stage1-smooth-unitary-atlas
 lem-stage1-smooth-polar-inverse
 lem-stage1-smooth-unitary-operations
 lem-stage1-polar-scalar-arithmetic
+lem-stage1-rectified-cstar-transport
+lem-stage1-unitary-graph-transport
+lem-stage1-maurer-cartan-transport
+lem-stage1-polar-retraction-transport
+lem-stage1-approximate-group-laws-transport
+lem-stage1-polar-path-transport
+lem-stage1-inversion-derivative-transport
+lem-stage1-polar-constant-ledger
+lem-finite-polyhedron-maximal-simplex-placement
 ```
