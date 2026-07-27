@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-unitary-graph-transport/export.md",
+  "oracle": "af-lem-stage1-unitary-graph-transport",
+  "result": "pass",
+  "claim_hash": "cb335f0ff46105378fdf22cfac069da5295cde466d48b448872d743e866cb628",
+  "oracle_digest": "845128c97384195cea75b08503fd2ed6ae4d5d2ccd71768e97fa995486ecd6cd",
+  "inputs_hash": "41596c27a8287c5058a7cc6365a19e2eddaa404128db8ba5c8e70bb90a8685c8",
+  "ts": "2026-07-27T18:01:39.979Z"
+}

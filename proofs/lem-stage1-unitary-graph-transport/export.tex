@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Parameterized unitary-graph transport: there exist C\_ch\textasciicircum{}0...}
+\step{1} Parameterized unitary-graph transport: there exist C\_ch\textasciicircum{}0 >= 1 and kappa\_ch\textasciicircum{}0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C\_ch >= C\_ch\textasciicircum{}0 and 0 < kappa\_ch <= kappa\_ch\textasciicircum{}0, for every finite-dimensional exact-unit epsilon\_r-C*-algebra (calX, J, bold-dot, dagger), every delta > 0 with C\_ch*(epsilon\_r + delta) <= kappa\_ch, every V in calUbar\_delta, and every A\textasciicircum{}par in B\textasciicircum{}\{icalH\}\_\{2delta\}(0), there is a unique g\_V(A\textasciicircum{}par) in B\textasciicircum{}\{calH\}\_\{2delta\}(0) such that f\_V(A\textasciicircum{}par + g\_V(A\textasciicircum{}par)) = 0, where f\_V(A) = (1/2)*(((J + A\textasciicircum{}dagger) bold-dot V\textasciicircum{}dagger) bold-dot (V bold-dot (J + A)) - J), the element V bold-dot (J + A\textasciicircum{}par + g\_V(A\textasciicircum{}par)) lies in calU, ||g\_V(A\textasciicircum{}par) + (1/2)*(V\textasciicircum{}dagger bold-dot V - J)|| <= C\_ch*(epsilon\_r*delta + delta\textasciicircum{}2), ||Dg\_V(A\textasciicircum{}par)|| <= C\_ch*(epsilon\_r + delta), and ||D\_\{A\textasciicircum{}perp\} f\_V(A\textasciicircum{}par + g\_V(A\textasciicircum{}par)) - I\_\{calH\}|| <= C\_ch*(epsilon\_r + delta) < 1, and these C\textasciicircum{}1 graph charts cover calU. \steptag{validated} \\[6pt]
+\step{1.1} Choose C\_ch\textasciicircum{}0 = C\_hat and kappa\_ch\textasciicircum{}0 = kappa\_hat from lem-stage1-unitary-graph-control. For arbitrary W and algebraic inputs satisfying the root hypotheses, the following atomic steps verify the upstream smallness condition, apply that external theorem, and monotonically transfer every estimate to the coefficient C\_ch carried by W; hence the root contract follows. \steptag{validated} \\[6pt]
+\step{1.1.1} The validated external lem-stage1-unitary-graph-control supplies universal constants C\_hat >= 1 and kappa\_hat in (0,1/2]. Therefore C\_ch\textasciicircum{}0 := C\_hat and kappa\_ch\textasciicircum{}0 := kappa\_hat satisfy the two range requirements in the root existential quantifier. \steptag{validated} \\[4pt]
+\step{1.1.2} For every exact-unit epsilon\_r-C*-algebra in the root, epsilon\_r >= 0: by def-epsilon-cstar-algebra, J bold-dot J = J and ||J|| = 1, while the product-norm axiom at X=Y=J gives ||J bold-dot J|| <= (1+epsilon\_r)||J||\textasciicircum{}2, hence 1 <= 1+epsilon\_r. \steptag{validated} \\[4pt]
+\step{1.1.3} For delta > 0 set s := epsilon\_r + delta and q := epsilon\_r*delta + delta\textasciicircum{}2. By 1.1.2, s > 0 and q = delta*s > 0. \steptag{validated} \\[4pt]
+\step{1.1.4} Fix any def-stage1-polar-witness-data tuple W satisfying C\_ch >= C\_ch\textasciicircum{}0 and 0 < kappa\_ch <= kappa\_ch\textasciicircum{}0, and any root inputs satisfying C\_ch*(epsilon\_r+delta) <= kappa\_ch. With the choices in 1.1.1 and s from 1.1.3, C\_hat*s <= C\_ch*s <= kappa\_ch <= kappa\_hat. Thus C\_hat*(epsilon\_r+delta) <= kappa\_hat, exactly the smallness hypothesis of lem-stage1-unitary-graph-control. \steptag{validated} \\[4pt]
+\step{1.1.5} Under the same hypotheses, q >= 0 and s >= 0 imply C\_hat*q <= C\_ch*q and C\_hat*s <= C\_ch*s. Moreover C\_ch*s <= kappa\_ch <= kappa\_hat <= 1/2 < 1, so C\_ch*(epsilon\_r+delta) < 1. \steptag{validated} \\[4pt]
+\step{1.1.6} Apply lem-stage1-unitary-graph-control with its constants C\_hat,kappa\_hat to the given algebra, delta, V in calUbar\_delta, and A\textasciicircum{}par in B\textasciicircum{}\{icalH\}\_\{2delta\}(0), using 1.1.4. It gives a unique g\_V(A\textasciicircum{}par) in B\textasciicircum{}\{calH\}\_\{2delta\}(0) satisfying the root-displayed formula f\_V(A\textasciicircum{}par+g\_V(A\textasciicircum{}par))=0; it puts V bold-dot (J+A\textasciicircum{}par+g\_V(A\textasciicircum{}par)) in calU; it gives the three bounds with right sides C\_hat*q, C\_hat*s, and C\_hat*s respectively; and its resulting C\textasciicircum{}1 graph charts cover calU. \steptag{validated} \\[4pt]
+\step{1.1.7} Use 1.1.5 to weaken the three C\_hat-bounds from 1.1.6 to C\_ch*q, C\_ch*s, and C\_ch*s, and append the strict inequality C\_ch*s < 1. Existence, uniqueness, the displayed definition of f\_V, membership in calU, and C\textasciicircum{}1 chart coverage are unchanged. Since W and all algebraic inputs were arbitrary, universal generalization together with the constants chosen in 1.1.1 proves the full root contract. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
