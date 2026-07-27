@@ -1560,3 +1560,57 @@ writes (files intact; ANSWER summaries expendable). Next-session plan = bead **W
 re-audits → consolidated user-ratification package → F0 design → landing per the ratified order).
 Gate green at close. fr: FH un-stalled via genuine frontier reductions; user breaker-override on
 record; NO-WAVE and dispatch/harvest discipline maintained throughout (cycles 671–686).
+
+## 2026-07-27 — Session 30: de-risk campaign COMPLETE (W78; all four fronts designed + hostile-audited to landable; Fable 5)
+
+**Mandate execution.** Continuation of the 2026-07-26 "de-risk the critical path, riskiest first"
+mandate via the W78 plan (aism-l70c). Outcome: **ALL FOUR risk-register fronts closed at design
+level.** 19 codex jobs (gpt-5.6-sol; 11 hostile audits at xhigh, 7 prescribed repairs at high,
+1 design at xhigh), 3-wide parallel where independent. **ZERO route-level findings across the
+campaign** — no dimension leak, no Kitaev-theorem error, no unclosable gap; every defect was in our
+contract factoring, every one repaired under a binding audit.
+
+**Front outcomes (landable design → final audit):**
+- **LEDGER (W77):** re-audit of `DESIGN-LEDGER-DOMAINS-v2.md` = **LAND-14** + 2 exact corrections
+  (rho_id^corr adds rho_theta exposing the Kitaev eta<1/4 domain; 'unital' wording). Black-box
+  thmainext consumption survived attack (no reset hypothesis; K produced row 13, consumed row 14 —
+  non-circular). Upsilon' (2C_R)^-1 recomputed exactly; ten-entry finite minimum + dimension-freeness VALID.
+- **MAIN (W76):** v2 audit REFUTED (M19 non-closed; def gate dropped) → v3 (P0 + M19-S1/S2/S3 +
+  M19-R + C_s2 absorbed) audit REFUTED (4 closure defects incl. an auditor-built M4 counterexample
+  killing the non-unital Stage-1 hypothesis) → v4 audit REFUTED (2 sentence-level: the v4-introduced
+  identity-tie regression in S2/S3; M13's missing corner-algebra producer) → v5 audit =
+  **REPAIR-CONFIRMED** (`DESIGN-MAIN-STRUCTURE-v5.md`; recurrence hunt clean; diff exact). Six
+  hostile stages, defect set strictly shrinking every round.
+- **POLAR (W75):** v2 audit REDESIGN (unthreaded witnesses; compound rows 2/8; missing quotient
+  phase-lift; 2 provenance fixes) → v3 (13 factored rows; witness-unification option (a)) audit
+  REDESIGN (row 13 meta-level: quantified over contract TEXT) → v4 (object-level rewrite) audit
+  REDESIGN (binder defects in 4 clauses; silent finite-dimensional insertions) → v5 (7 parameterized
+  transport helpers 13a–g; affirmative bindings) audit REDESIGN on ONE family: the planted domain
+  question was decisive — **base producers 6–8 quantified over every exact-unit algebra while the
+  graph/polar producers are finite-dimensional; a pre-existing defect four earlier audits accepted,
+  surfaced only when the helper layer exposed the quantifier structure** → v6 (coherent
+  finite-dimensional closure, audit-v5 §6 option 1) audit = **LAND** (documentary correction only).
+  `DESIGN-S1-POLAR-v6.md` = landable. Seven hostile stages.
+- **F0 (new, front 4, aism-zqs8):** `DESIGN-F0-ASSEMBLY.md` (two lift rows; strengthened k-ledger
+  contract; 2-node assembly row; OR-route root wiring) → audit = **LAND** + 4 corrections. Every
+  seam K-ledger→F2→F3→PRH→op-classical recomputed EXACT (single K; eta_K=min{rho_fac,(24K)^-1,1};
+  C=K+4sqrt(2K); dimension-free; the defect-identity equality verified both directions). Honest
+  catches: the corrected k-ledger is a STRENGTHENED REPLACEMENT (new parent proof obligation);
+  op-classical's sharpness parenthetical forces root decision D1; F2/F3 elevation gate flagged.
+
+**Deliverables:** `docs/plans/2026-07-27-W78-ratification-package.md` (pointer-based, anti-drift;
+decisions D1–D4; §2 corrections verbatim; §5 merged serial landing/elevation order). Risk register
+updated with the dated session-30 close block. The one remaining critical-path design gap: the
+three Stage-1 split producers (G-S1), sequenced behind the polar landing (package §5 step 3).
+
+**Beads:** W75/W76/W77/W78/F0 closed; **W79 = aism-gzp9** (USER DECISIONS D1–D4) filed;
+**W80 = aism-kqeb** (landing/elevation campaign) filed, blocked on W79.
+
+**Status discipline:** T0 = 83 and registry = 265 UNCHANGED; nothing landed/seeded/rewired/promoted;
+op-classical OPEN. All artifacts non-rigorous by their own headers.
+
+**Process notes:** prescribed narrow repairs at effort `high` executed exactly 4/4; the
+audit-chain pattern (binding audit → prescribed repair → fresh narrow verification) converged on
+both hard fronts; the v5-polar catch demonstrates the pipeline finding defects that survive
+multiple rounds until a factoring makes them checkable. fr: all dispatches/harvests logged on FH
+(cycles 688–702); no breaker events.

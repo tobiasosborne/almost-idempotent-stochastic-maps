@@ -10,110 +10,107 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. Read **`docs/plans/2026-07-26-critical-path-risk-register.md`** — the ranked
-   de-risk ledger that now GOVERNS all work (user mandate 2026-07-26, session
-   29: "only one priority: de-risk the critical path, riskiest first"; the
-   XE/Route-X decider wave W74 was VOIDED by the user — Route X is fallback
-   ONLY, touched only if a critical-path front returns a route-killing gap).
-   The proof sketch remains `docs/plans/CURRENT.md` → v34 (unchanged this
-   session; session 29 produced design artifacts, no registry/sketch change).
-3. **Rigorous (af-validated, T0): 83.** Registry: 265. UNCHANGED this session
-   — session 29 was a pure design/audit de-risk campaign; NOTHING was landed,
-   seeded, or promoted. All artifacts live in three new dirs under
-   `docs/plans/2026-07-26-{S1-POLAR,MAIN-STRUCTURE,LEDGER-DOMAINS}-design/`.
-4. **Session-29 headline: one full design→hostile-audit→repair cycle on the
-   three riskiest fronts; 8 fresh hostile codex jobs; ZERO route-level
-   findings.** No dimension-dependent constant, no error in Kitaev's
-   theorems, no unclosable gap. Every defect found was in OUR factoring or in
-   Kitaev's unwritten prose steps, and each now has a designed repair:
-   - **Front 1 — S1-POLAR** (`aism-cxza`): `DESIGN-S1-POLAR-v2.md` =
-     DESIGNED-CLOSABLE. 9 analytic rows + 6 downstream contract repairs. The
-     audit's C¹→smooth blocker closes WITHOUT approximation machinery — the
-     chart/polar/inversion maps are smooth outright (smooth IFT); no
-     fixed-point/index datum changes. Munkres EDT SHA-pinned but not needed.
-   - **Front 2 — MAIN-STRUCTURE** (`aism-qum7`): v4.1's eight MAIN rows are
-     DEFINITIVELY DEAD AS WRITTEN (five defects confirmed by two independent
-     hostile agents — four-corner bijectivity misuse, non-iterable binary
-     merge, missing zero-corner transport, threshold omissions, missing
-     assembly producers). `DESIGN-MAIN-STRUCTURE-v2.md` = acyclic repair
-     (nested-corner comparison, outer-compression transfer, conditional
-     equivalence/cross-union, recombination on the complete one-class
-     family), with ONE escalated sequencing gate **G-S1**: three Stage-1
-     split producers land only after the polar round.
-   - **Front 3 — LEDGER-DOMAINS** (`aism-2ehu`): `DESIGN-LEDGER-DOMAINS-v2.md`
-     = all 14 withdrawn K-ledger rows close with derived local radii. The
-     front is DECOUPLED from the MAIN reset repair: terminal
-     η_K = min{ρ_fac, (24K)⁻¹, 1} via the landed `lem-thmainext-conditional`
-     contract as black box (audit finding: the originally-claimed terminal
-     GAP was overstated).
-5. **Three genuine Kitaev prose gaps found, all repaired-by-design** (support
-   the L0 re-establishment decision): TeX 906 (straight-path projection lacks
-   the right-inverse argument → new path-admissibility row), TeX 883–888
-   (printed derivative erratum; corrected form NOT byte-present; unconsumed
-   by our rows), TeX 795–807 vs 947–954 (the C¹→smooth jump). Also: the
-   audits confirmed Kitaev prints dimension-freeness in his theorem
-   statements (TeX 458, th_main/th_main_ext) — our audits verify it survives
-   full quantification (so far: everywhere yes).
-6. **Strategy truths banked in-chat this session (cite these, do not re-derive):**
-   (a) The honest uncharitable framing: op-classical = a corollary of a
-   fully-quantified Kitaev + a compact stochastic bridge; ~60-70% of the
-   campaign is closing his O(·)s, ~25-35% is proving steps he asserted but
-   never wrote, ~10% is genuinely ours and mostly already T0 (PRH, F2/F3,
-   equivalence, sharpness). (b) Kitaev NEVER claims almost-implies-near for
-   his idempotents — only encoding+decoding (th_almost_idemp gives an
-   approximate ALGEBRA; the functional-calculus Φ̃ is exactly idempotent but
-   NOT positive; th_main/th_main_ext give an O(ε)-isomorphism). The passage
-   to a stochastic almost⇒near is OUR mathematics (F2→F3→PRH), provably not
-   a free corollary: ex-hume forces the exponent drop η → √η in the
-   stochastic category. (c) vs Salzmann–Bergh–Datta (local ref): no
-   implication either way; on the almost-idempotent subclass ours is strictly
-   stronger (one E repairs ALL approximate fixed points, evading their
-   two-point no-go); their optimality remark is our external √-sharpness
-   anchor.
-7. **fr breaker state:** FH un-stalled via genuine frontier reductions (the
-   design harvests). The frontier now reads the de-risk state. The user
-   OVERRIDE stands: critical-path work only.
-8. Standing user mandates (unchanged): codex = `gpt-5.6-sol`, effort capped
-   `xhigh` (use `high` for routine/prescribed repairs); batched verification
-   default; banking precedent; ratification-queue delegation (verbatim only,
-   modifications escalate); signed trunk PAUSED.
-9. Session-28 orchestration laws still binding (sequential af runs; pre-create
-   dirs; commits only in zero-live-run windows). Session-29 addendum: codex
-   DESIGN jobs (non-af) ran 3-wide in parallel without incident in
-   pre-created dirs; TaskStop after the deliverable write is safe (ANSWER
-   summary files are expendable).
-10. Gate: `sh scripts/check-all.sh` → `[check-all] OK` (verified at close).
+2. Read **`docs/plans/2026-07-27-W78-ratification-package.md`** — the
+   consolidated USER RATIFICATION package that now gates ALL further
+   critical-path work (bead `aism-gzp9`, W79). The risk register
+   (`docs/plans/2026-07-26-critical-path-risk-register.md`) carries the
+   dated session-30 close state. The proof sketch remains
+   `docs/plans/CURRENT.md` → v34 (sessions 29–30 produced design/audit
+   artifacts only; no registry or sketch change — reconciliation debt: none).
+3. **Rigorous (af-validated, T0): 83.** Registry: 265. UNCHANGED across
+   sessions 29–30. NOTHING was landed, seeded, rewired, or promoted.
+   `op-classical` is OPEN.
+4. **Session-30 headline: the de-risk campaign is COMPLETE — all four
+   risk-register fronts are designed and fresh-hostile-audited to a
+   landable state.** 19 codex jobs this session (11 hostile audits, 7
+   prescribed repairs, 1 design; gpt-5.6-sol, xhigh for audits/designs,
+   high for prescribed repairs), on top of session 29's 8. **ZERO
+   route-level findings across the entire campaign** — no
+   dimension-dependent constant, no error in Kitaev's theorems, no
+   unclosable gap. Every defect found was in OUR contract factoring and
+   every one has an audited repair. The landable designs:
+   - **Front 1 — S1-POLAR:** `DESIGN-S1-POLAR-v6.md` (13 core rows + 7
+     parameterized transport helpers 13a–g + 6 downstream repairs + 2
+     datum-only defs). `AUDIT-S1-POLAR-v6.md` = **LAND** (one documentary
+     correction). Seven hostile stages; notable: the v5 audit caught a
+     PRE-EXISTING producer-domain quantifier defect (rows 6–8 quantified
+     over every exact-unit algebra while their graph/polar producers are
+     finite-dimensional) that four earlier audits had accepted — repaired
+     by coherent finite-dimensional closure (audit-v5 §6 option 1; all
+     Route-F consumers live on ℂⁿ).
+   - **Front 2 — MAIN-STRUCTURE:** `DESIGN-MAIN-STRUCTURE-v5.md` (P0
+     definition gate with 4 schema-complete datum shards; M01–M18; G-S1;
+     call envelopes M19-S1/S2/S3 + invariant row M19-R; M20–M28).
+     `AUDIT-MAIN-STRUCTURE-v5.md` = **REPAIR-CONFIRMED**. Six hostile
+     stages; includes an auditor-constructed M₄ counterexample that
+     killed the non-unital Stage-1 hypothesis (now excluded by the
+     restored unit clause — verified).
+   - **Front 3 — LEDGER-DOMAINS:** `DESIGN-LEDGER-DOMAINS-v2.md`
+     unchanged; fresh re-audit `AUDIT-LEDGER-DOMAINS-v2.md` = **LAND-14**
+     with two exact corrections (ρ_id^corr adds the ρ_θ entry; one
+     wording fix). Black-box `lem-thmainext-conditional` consumption
+     survived independent attack (no reset-package hypothesis; K
+     non-circular).
+   - **Front 4 — F0 assembly:** `DESIGN-F0-ASSEMBLY.md` +
+     `AUDIT-F0-ASSEMBLY.md` = **LAND** with four corrections. Every seam
+     K-ledger → F2 → F3 → PRH → op-classical recomputed as EXACT MATCH
+     (single K; single η_K = min{ρ_fac,(24K)⁻¹,1}; C = K+4√(2K);
+     dimension-free; both directions of ‖Φ²−Φ‖_cb = ‖Q²−Q‖_∞→∞ verified).
+     Key honest catches: the corrected `lem-routef-k-ledger` is a
+     STRENGTHENED REPLACEMENT (new parent proof obligation, not a binder
+     edit); the `op-classical` sharpness parenthetical forces a root
+     decision (D1); F2/F3 are proved-mod-audit (af: none), an elevation
+     gate; OR-route root wiring confirmed representable in the schema.
+5. **The ONE remaining design gap on the critical path:** the three
+   Stage-1 split producers (G-S1 contents:
+   `lem-stage1-rectified-nontrivial-projection`,
+   `lem-stage1-original-complementary-pair`,
+   `lem-stage1-fresh-two-point-inclusion`) — deliberately sequenced
+   behind the polar landing (package §5 step 3); their polar
+   prerequisites now exist in v6.
+6. **fr state:** FH heavily exploited this session (all harvests logged,
+   T1 audit artifacts); breaker healthy — every wave produced a genuine
+   frontier reduction. User override stands: critical-path work only;
+   Route X/XE fallback untouched; signed trunk PAUSED.
+7. Standing mandates (unchanged): codex = `gpt-5.6-sol`, effort capped
+   `xhigh` (high for routine/prescribed repairs); batched verification
+   default; ratification-queue delegation verbatim-only; NOTHING lands
+   without the user.
+8. Orchestration laws (unchanged + session-30 confirmations): af runs
+   strictly sequential per checkout; pre-create dirs for codex writers;
+   commits only in zero-live-run windows; parallel NON-af codex jobs 3-wide
+   is safe; prescribed narrow repairs at effort `high` are fast and
+   reliable (4 of 4 executed exactly this session).
+9. Gate: `sh scripts/check-all.sh` → `[check-all] OK` (verified at close).
 
-## Next steps (ranked — the W78 plan, bead filed)
+## Next steps (ranked)
 
-1. **Three fresh hostile re-audits** of the v2 designs (GAP-EA two-stage
-   pattern; briefs/patterns in the three design dirs — reuse the
-   BRIEF-*-AUDIT.md shape against the v2 files). Attack surfaces named in
-   `aism-` bead notes: polar = the direct-smoothness claim + self-containment
-   fixes; MAIN = nested-corner comparison + outer-compression rows; ledger =
-   corrected Υ′ radius composition + the black-box thmainext consumption.
-2. **Consolidated USER RATIFICATION package** after audits pass: all new
-   rows, the 6 polar downstream contract repairs, MAIN contract corrections
-   (v2 explicitly escalates them), def shards (incl.
-   `def-approximate-unitary-space`, `def-maincb-reset-state`,
-   `def-maincb-raw-call`, `def-operator-space`), and the serial landing
-   order. NOTHING lands without the user.
-3. **F0 assembly design job** (front #4, the last undesigned risk): the
-   op-classical root composition from F2/F3 + K-ledger + PRH; consumes the
-   ledger v2 parent wiring proposal; keep `lem-routef-k-ledger`
-   DO-NOT-REWIRE guard until ratified.
-4. **Landing/elevation campaign** per the ratified order (ledger front is
-   decoupled and can run first; MAIN gates on polar via G-S1).
-5. Carried housekeeping: `aism-j5t9` (Munkres C^r-triangulation definition
+1. **W79 (`aism-gzp9`) — USER DECISIONS D1–D4** from the ratification
+   package §3: D1 the `op-classical` sharpness split (option A
+   upper-bound-only + OR-routes, audit-recommended, vs option B compound +
+   `ex-hume` unconditional dep + its elevation); D2 ratify the six
+   datum-only def shards; D3 UCP definition vs L2 textbook exemption;
+   D4 authorize the strengthened `lem-routef-k-ledger` replacement and
+   its guard-release point. NOTHING proceeds without these.
+2. **W80 (`aism-kqeb`, blocked on W79) — the landing/elevation campaign**
+   per package §5: corrections folded verbatim → quick wins (two F0 lift
+   rows + F2/F3 elevations) → polar front → the Stage-1 split-producer
+   design round → MAIN front → ledger front (decoupled, parallelizable) →
+   strengthened k-ledger (fresh prover + verifier) → f0-assembly →
+   root rewire LAST.
+3. Carried housekeeping: `aism-j5t9` (Munkres C^r-triangulation definition
    external, then finite-triangulation re-run); report/*.aux policy;
-   repo-root-relative oracle paths; 12 dormant signed-trunk draft defs.
+   repo-root-relative oracle paths; 12 dormant signed-trunk draft defs;
+   `aism-ur9` (W60 route fork, dormant while Route F leads).
 
 ## What is intentionally NOT here
 
-- Any claim `op-classical` is proved — it is OPEN; T0 = 83; nothing moved
-  this session (design artifacts only, all NON-RIGOROUS by their own
-  headers).
-- Any promise the v2 designs survive re-audit — the polar v1 design looked
-  CLOSABLE and the audit still returned REDESIGN; expect corrections.
-- Route X / XE decider work (VOIDED by user, `aism-ea2f` deferred; fallback
-  only). Signed trunk stays PAUSED.
+- Any claim `op-classical` is proved — OPEN; T0 = 83; nothing moved in
+  sessions 29–30 (design/audit artifacts only, all NON-RIGOROUS by their
+  own headers).
+- Any promise the landing/elevation campaign is mechanical — the
+  strengthened k-ledger is a genuine new proof obligation; the Stage-1
+  split producers still need their design round; af elevation can balloon
+  (see the parked finite-triangulation run).
+- Route X / XE decider work (user-voided; fallback only). Signed trunk
+  stays PAUSED.
