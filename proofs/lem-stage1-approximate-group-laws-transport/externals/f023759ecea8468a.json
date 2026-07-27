@@ -1,0 +1,8 @@
+{
+  "id": "f023759ecea8468a",
+  "name": "lem-stage1-approximate-group-laws",
+  "source": "imports validated registry lemma proofs/lem-stage1-approximate-group-laws — Quantitative approximate group laws: there exist universal C_grp, C_pol \u003e= 1, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra and delta \u003e 0 satisfying C_pol*(epsilon_r + delta) \u003c= kappa_pol and C_grp*epsilon_r \u003c delta - C_pol*(epsilon_r*delta + delta^2), the inverse u_delta of the polar map defines C^1 maps mu(U, V) = u_delta(U bold-dot V), sigma(U) = u_delta(U^dagger) on all of calU, with mu(J, U) = mu(U, J) = U, sigma(J) = J, ||mu(U, V) - U bold-dot V|| \u003c= C_grp*epsilon_r, ||sigma(U) - U^dagger|| \u003c= C_grp*epsilon_r, ||mu(mu(U, V), W) - mu(U, mu(V, W))|| \u003c= C_grp*epsilon_r, ||mu(sigma(U), U) - J|| \u003c= C_grp*epsilon_r, and ||mu(U, sigma(U)) - J|| \u003c= C_grp*epsilon_r.",
+  "content_hash": "d510c2188a3c30ee73450f3740c80e8bd4c0687b94a1c45be48db698663f6d53",
+  "created": "2026-07-27T18:32:28.580583808Z",
+  "notes": ""
+}
