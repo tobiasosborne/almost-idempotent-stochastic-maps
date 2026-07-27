@@ -1614,3 +1614,50 @@ audit-chain pattern (binding audit → prescribed repair → fresh narrow verifi
 both hard fronts; the v5-polar catch demonstrates the pipeline finding defects that survive
 multiple rounds until a factoring makes them checkable. fr: all dispatches/harvests logged on FH
 (cycles 688–702); no breaker events.
+
+### Session 30 addendum (same day): ratification + the elevation campaign's first leg (T0 83 -> 85)
+
+**Ratification.** The user ratified ALL FOUR package decisions in-chat ("proceed as you recommend
+on all decisions D1-4"): D1 = option A (op-classical contract split to upper-bound-only; sharpness
+via ex-hume; OR-route wiring recorded, applied last); D2 = the six datum-only def shards; D3 =
+def-ucp-map provisioned (over an L2 exemption); D4 = the strengthened k-ledger authorized as a NEW
+proof obligation, guard released only at its designated step. W79 closed; W80 (aism-kqeb) claimed.
+
+**Landings (all gated + committed):** op-classical contract split applied (body records the
+rationale + future wiring); SEVEN definitions landed (def-operator-space CITED, byte-verified
+against TeX 1453-1464 at landing; the three MAIN-CB datum packages; def-approximate-unitary-space;
+def-stage1-polar-witness-data; def-ucp-map) — definitions layer now 45 terms; both F0 seam rows
+landed proved-mod-audit with the audit corrections (Q_C typing; def imports); UNWIRED whitelisted.
+
+**Elevations (fresh codex prover, separate fresh codex verifiers, routine tier):**
+- `lem-routef-f0-ucp-lift` af-VALIDATED (84th rigorous result; 9/9, taint clean). Mid-run the
+  fresh verifier raised a GENUINE major typing challenge (ch-7651a4a59d0519c0): the contract typed
+  D: M_n -> l_inf^n with def-stochastic fixing l_inf^n = R^n while the (validated) children route
+  through the complex diagonal C^n — a defect that had survived TWO hostile audits of the F0
+  design. Repaired by recorded contract amendment on BOTH seam rows (af root amended in-place,
+  session-28 precedent; 8 validated nodes retained); prover-fix accepted; root validated.
+- `lem-routef-f0-defect-identity` af-VALIDATED (85th; 12/12 first-pass, ZERO challenges, both
+  directions incl. the zero-row edge case). **The stochastic<->Kitaev interface of Route F is now
+  rigorous in-repo.** Both: exports written, per-id oracles registered, fr-verified PASS, banked T0.
+
+**F2 stuck-abort (the live workfront).** `lem-routef-f2-positive-unital-compression` elevation
+ABORTED [STUCK] at 11/30 with a clean tripwire classification: (i) the same real-vs-complex typing
+defect family in F2's LANDED hostile-endorsed contract; (ii) missing provisionable facts
+(fd-commutative classification — anchor TeX 1361-1363 / locked def-projection-basis; UCP complete
+contractivity); (iii) two cross-sibling DAG defects + an eps-scoping leak. A surgical typing-design
+brief was written and committed (docs/plans/2026-07-27-F2-TYPING-design/BRIEF-F2-TYPING.md); its
+codex job was dispatched then STOPPED for the wind-up (no deliverable) — NEXT AGENT RE-DISPATCHES
+IT VERBATIM, hostile-checks, lands verbatim, re-seeds, re-elevates.
+
+**Process incidents (both recorded, both instructive):**
+1. Run-1 abort was a PROVER-OVERREACH FALSE POSITIVE self-inflicted by appending an fr log entry
+   after the af launch (dirty snapshot baseline). New binding law banked to bd memory + HANDOFF:
+   fr/bd writes FIRST, commit, af launch as the turn's LAST action.
+2. During the F2 repair I began hand-editing the landed contract, self-caught mid-edit that
+   inventing the real/complex interface is an author-role violation on a hostile-endorsed
+   contract, REVERTED (git shows no contract change), and delegated to a fresh design job. The
+   design->hostile-check->verbatim-landing path is mandatory for contract corrections.
+
+**Close state:** T0 = 85; registry 267; defs 45; gate [check-all] OK; all work committed and
+pushed; HANDOFF rewritten (F2 re-dispatch is the entry point; sketch-v35 reconciliation filed as
+Rule-9 debt). Beads: W79 closed (ratified), W80 in_progress with the full campaign trail.
