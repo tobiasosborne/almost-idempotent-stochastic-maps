@@ -280,4 +280,6 @@ lem-stage1-quotient-manifold-package
 lem-stage1-quotient-finite-cw
 lem-stage1-quotient-left-inversion
 lem-stage1-quotient-inversion-index-data
+lem-stage1-group-domain-membership
+lem-stage1-group-closeness
 ```

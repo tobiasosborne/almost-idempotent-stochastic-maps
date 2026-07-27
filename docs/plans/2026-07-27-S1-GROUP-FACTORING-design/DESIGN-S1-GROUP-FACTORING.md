@@ -168,11 +168,13 @@ trees must use `<=`. In particular:
 - every propagated correction and every defect telescope uses `<=`.
 
 There is one legitimate strict step: to invoke the definition of the open
-`calU_t`, combine a non-strict raw defect
-`||X^dagger bold-dot X-J|| <= K*epsilon_r` with the inherited strict margin
-to obtain `||X^dagger bold-dot X-J|| < 2*t`. At
-`epsilon_r = 0`, its left side is `0` and `t > 0`, so this is `0 < 2*t`,
-not the false `0 < 0` pattern found in the retained challenges.
+`calU_t`, let `K` dominate the raw-defect coefficients for both inputs and,
+when choosing the child lemma's proof-body witnesses, require
+`C_grp >= K`. Then
+`||X^dagger bold-dot X-J|| <= K*epsilon_r <= C_grp*epsilon_r < t < 2*t`.
+At `epsilon_r = 0`, this reads `0 < t < 2*t`, because the inherited
+margin gives `t > 0`; it is not the false `0 < 0` pattern found in the
+retained challenges.
 
 No proof node may obtain strictness merely by multiplying a strict norm
 bound by `epsilon_r`: that operation loses strictness at

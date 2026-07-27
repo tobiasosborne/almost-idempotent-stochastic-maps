@@ -21,16 +21,16 @@ Quantity & Progenitor & This repository \\
 \midrule
 First commit & 2026-06-02 & 2026-07-02 \\
 Last commit in snapshot & 2026-06-13 & 2026-07-27 \\
-Commits & 174 & 783 \\
+Commits & 174 & 786 \\
 Days with a commit & 11 & 18 \\
 Work-log entries & 22 & 65 \\
-\texttt{fr} controller cycles & --- (no controller) & 740 \\
-Registry results & 59 & 293 \\
+\texttt{fr} controller cycles & --- (no controller) & 746 \\
+Registry results & 59 & 295 \\
 Definition shards & 25 & 45 \\
-\texttt{af} workspaces & 16 & 104 \\
+\texttt{af} workspaces & 16 & 103 \\
 \texttt{af}-validated roots (T0) & 16 & 92 \\
-Adversarial proof nodes built & 132 & 1\,670 \\
-Ledger entries (append-only) & 822 & 10\,189 \\
+Adversarial proof nodes built & 132 & 1\,669 \\
+Ledger entries (append-only) & 822 & 10\,185 \\
 Numerical run bundles & -- & 38 \\
 \bottomrule
 \end{tabular}
@@ -45,9 +45,9 @@ Numerical run bundles & -- & 38 \\
 
 \textbf{Other honest gaps.}
 \begin{itemize}\setlength{\itemsep}{0.15ex}
-\item The progenitor repository predates the \texttt{fr} controller, so it has no cycle/arm/outcome record at all. Its exploration history is reconstructible only from 22 work-log entries and 174 commits, at coarser granularity than this repository's 740 controller cycles.
+\item The progenitor repository predates the \texttt{fr} controller, so it has no cycle/arm/outcome record at all. Its exploration history is reconstructible only from 22 work-log entries and 174 commits, at coarser granularity than this repository's 746 controller cycles.
 \item The progenitor repository's issue tracker is stored in an embedded Dolt database rather than an exported \texttt{issues.jsonl}, so its issue counts are not in this snapshot.
-\item \texttt{fr} evidence records carry a self-reported \texttt{verdict} field whose value is \texttt{claimed} on every one of the 353 records that has one. It is a protocol marker, not an adjudication, and is therefore not tabulated as an outcome.
+\item \texttt{fr} evidence records carry a self-reported \texttt{verdict} field whose value is \texttt{claimed} on every one of the 356 records that has one. It is a protocol marker, not an adjudication, and is therefore not tabulated as an outcome.
 \item Wave numbering (\texttt{W1}--\texttt{W80}) is a human convention in the work log and wave documents; it is not a controller-enforced counter, and a few numbers were skipped or reused. Counts of wave \emph{documents} are exact; the wave \emph{index} is indicative.
 \item Cross-repository carry-over (what this campaign inherited from the progenitor) is described qualitatively in \Cref{sec:stats-progenitor}; it is a judgement about content, not a count.
 \end{itemize}
@@ -55,7 +55,7 @@ Numerical run bundles & -- & 38 \\
 
 \subsection{The campaign calendar}\label{sec:stats-calendar}
 
-The two campaigns ran as short, dense bursts rather than as steady background work. This repository put 783 commits into 18 calendar days with a commit (out of 26 days elapsed), and the progenitor put 174 into 11.
+The two campaigns ran as short, dense bursts rather than as steady background work. This repository put 786 commits into 18 calendar days with a commit (out of 26 days elapsed), and the progenitor put 174 into 11.
 
 \begin{figure}[H]\centering
 \begin{tikzpicture}
@@ -69,9 +69,9 @@ The two campaigns ran as short, dense bursts rather than as steady background wo
 ]
 \addplot[draw=oiBlue, fill=oiBlue] coordinates {(0,2) (1,1) (2,1) (3,16) (4,19) (5,15) (7,5) (8,44) (9,44) (10,16) (11,11)};
 \addlegendentry{progenitor commits}
-\addplot[draw=oiVermillion, fill=oiVermillion] coordinates {(30,46) (31,53) (32,29) (33,21) (34,31) (35,70) (37,16) (38,72) (39,6) (41,6) (42,17) (44,9) (50,2) (51,16) (52,111) (53,165) (54,85) (55,28)};
+\addplot[draw=oiVermillion, fill=oiVermillion] coordinates {(30,46) (31,53) (32,29) (33,21) (34,31) (35,70) (37,16) (38,72) (39,6) (41,6) (42,17) (44,9) (50,2) (51,16) (52,111) (53,165) (54,85) (55,31)};
 \addlegendentry{this repository, commits}
-\addplot[sharp plot, draw=oiGreen, mark=none, line width=0.9pt] coordinates {(30,48) (31,35) (32,46) (33,35) (34,61) (35,66) (37,35) (38,67) (39,3) (41,7) (42,19) (44,11) (50,7) (51,11) (52,65) (53,95) (54,80) (55,49)};
+\addplot[sharp plot, draw=oiGreen, mark=none, line width=0.9pt] coordinates {(30,48) (31,35) (32,46) (33,35) (34,61) (35,66) (37,35) (38,67) (39,3) (41,7) (42,19) (44,11) (50,7) (51,11) (52,65) (53,95) (54,80) (55,55)};
 \addlegendentry{\texttt{fr} controller cycles}
 \end{axis}
 \end{tikzpicture}
@@ -98,7 +98,7 @@ Day & Commits & \texttt{fr} cycles & banked & \texttt{af} roots validated \\
 
 \subsection{The rigour ladder}\label{sec:stats-ladder}
 
-The project's whole point is that a claim's \emph{status} is tracked honestly and separately from its plausibility. The registry therefore carries a status census, and the only rung that counts as rigorous in-repo is an \texttt{af}-validated tree (or a byte-matched citation). Of 293 registry results, 92 carry \texttt{af: validated} --- 31.4\% of the registry. The remainder are flagged non-rigorous in the open.
+The project's whole point is that a claim's \emph{status} is tracked honestly and separately from its plausibility. The registry therefore carries a status census, and the only rung that counts as rigorous in-repo is an \texttt{af}-validated tree (or a byte-matched citation). Of 295 registry results, 92 carry \texttt{af: validated} --- 31.2\% of the registry. The remainder are flagged non-rigorous in the open.
 
 \begin{figure}[H]\centering
 \begin{tikzpicture}
@@ -126,9 +126,9 @@ The project's whole point is that a claim's \emph{status} is tracked honestly an
 \toprule
 Registry \texttt{status:} & Results & Share \\
 \midrule
-\texttt{proved} & 205 & 70.0\% \\
-\texttt{conjecture} & 31 & 10.6\% \\
-\texttt{stated} & 24 & 8.2\% \\
+\texttt{proved} & 205 & 69.5\% \\
+\texttt{conjecture} & 31 & 10.5\% \\
+\texttt{stated} & 26 & 8.8\% \\
 \texttt{proved-mod-audit} & 23 & 7.8\% \\
 \texttt{open} & 3 & 1.0\% \\
 \texttt{disproved} & 2 & 0.7\% \\
@@ -146,9 +146,9 @@ Registry \texttt{status:} & Results & Share \\
 \toprule
 \texttt{af:} field & Results & Share \\
 \midrule
-\texttt{none} & 189 & 64.5\% \\
-\texttt{validated} & 92 & 31.4\% \\
-\texttt{seeded} & 12 & 4.1\% \\
+\texttt{none} & 192 & 65.1\% \\
+\texttt{validated} & 92 & 31.2\% \\
+\texttt{seeded} & 11 & 3.7\% \\
 \bottomrule
 \end{tabular}
 \par\vspace{0.6ex}{\footnotesize \texttt{seeded} means a workspace exists with the registry contract as its root conjecture but the tree is not (yet) closed.}
@@ -173,7 +173,7 @@ Definition shards & Count \\
 
 \subsection{The exploration controller: arms and outcomes}\label{sec:stats-arms}
 
-Research directions are registered as \texttt{fr} \emph{arms}; every harvested result is logged as one pull with an outcome, and a Stop-hook circuit-breaker forces a stalled arm to yield. Across 740 cycles, 400 carried an arm label and 340 were orientation or bookkeeping records. The controller recorded 351 explicit allocation decisions: \texttt{EXPLOIT} $\times$ 334, \texttt{EXPLORE} $\times$ 14, \texttt{PIVOT} $\times$ 3.
+Research directions are registered as \texttt{fr} \emph{arms}; every harvested result is logged as one pull with an outcome, and a Stop-hook circuit-breaker forces a stalled arm to yield. Across 746 cycles, 406 carried an arm label and 340 were orientation or bookkeeping records. The controller recorded 354 explicit allocation decisions: \texttt{EXPLOIT} $\times$ 337, \texttt{EXPLORE} $\times$ 14, \texttt{PIVOT} $\times$ 3.
 
 \begin{figure}[H]\centering
 \begin{tikzpicture}
@@ -183,12 +183,12 @@ Research directions are registered as \texttt{fr} \emph{arms}; every harvested r
   bar width=8pt, legend style={at={(0.5,-0.28)}, anchor=north, legend columns=3},
   y dir=reverse,
 ]
-\addplot[draw=oiGreen, fill=oiGreen] coordinates {(13,FH) (1,B) (31,R) (2,G) (0,A) (0,D) (0,F) (0,E) (0,XE)}; \addlegendentry{\texttt{banked}}
-\addplot[draw=oiBlue, fill=oiBlue] coordinates {(125,FH) (108,B) (14,R) (19,G) (14,A) (8,D) (3,F) (1,E) (0,XE)}; \addlegendentry{\texttt{progress}}
+\addplot[draw=oiGreen, fill=oiGreen] coordinates {(14,FH) (1,B) (31,R) (2,G) (0,A) (0,D) (0,F) (0,E) (0,XE)}; \addlegendentry{\texttt{banked}}
+\addplot[draw=oiBlue, fill=oiBlue] coordinates {(127,FH) (108,B) (14,R) (19,G) (14,A) (8,D) (3,F) (1,E) (0,XE)}; \addlegendentry{\texttt{progress}}
 \addplot[draw=oiVermillion, fill=oiVermillion] coordinates {(1,FH) (4,B) (1,R) (0,G) (0,A) (0,D) (0,F) (0,E) (0,XE)}; \addlegendentry{\texttt{died}}
 \addplot[draw=oiOrange, fill=oiOrange] coordinates {(0,FH) (0,B) (0,R) (0,G) (0,A) (0,D) (0,F) (1,E) (0,XE)}; \addlegendentry{\texttt{refuted}}
 \addplot[draw=oiPurple, fill=oiPurple] coordinates {(1,FH) (0,B) (0,R) (0,G) (0,A) (0,D) (0,F) (0,E) (0,XE)}; \addlegendentry{\texttt{SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C\textasciicircum{}r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.}}
-\addplot[draw=oiSky, fill=oiSky] coordinates {(42,FH) (0,B) (6,R) (0,G) (0,A) (0,D) (0,F) (0,E) (1,XE)}; \addlegendentry{\texttt{dispatch}}
+\addplot[draw=oiSky, fill=oiSky] coordinates {(45,FH) (0,B) (6,R) (0,G) (0,A) (0,D) (0,F) (0,E) (1,XE)}; \addlegendentry{\texttt{dispatch}}
 \addplot[draw=oiGreen, fill=oiGreen] coordinates {(1,FH) (0,B) (0,R) (0,G) (0,A) (0,D) (0,F) (0,E) (0,XE)}; \addlegendentry{\texttt{lem-topology-hopf-structure af-VALIDATED (81st rigorous result; 13 nodes 13/13 clean) + lem-extcb-exact-target-correction af-VALIDATED (82nd; 6 nodes 6/6 clean, first-pass, zero challenges — the designed transcription landed EXACTLY on budget) — GAP-EA, the first of the four v4.1 GAP families, is DISCHARGED at L0. T0 80 -> 82. Session 28 totals: +6 T0 (5 of 7 topology + the GAP-EA correction row), 2 trees parked with precise diagnoses (1 af-bookkeeping thrash, 1 genuine contract/def scope gap -> user escalation), 3 orchestration-infrastructure laws discovered+banked. Breaker honored: next cycle EXPLOREs off FH.}}
 \addplot[draw=oiBlue, fill=oiBlue] coordinates {(1,FH) (0,B) (0,R) (0,G) (0,A) (0,D) (0,F) (0,E) (0,XE)}; \addlegendentry{\texttt{lem-topology-lefschetz-hopf af-VALIDATED (77th rigorous result; 2 nodes taint clean, first-pass canary) + lem-topology-kunneth-cross-product af-VALIDATED (78th; 7 nodes taint clean) — first two of the seven Stage-1 topology elevations banked, oracles af-lem-topology-* registered, fr verify PASS on both exports, registry flips committed, T0 76 -> 78. Session findings: parallel orchestrations mutually abort (sequential law banked to bd memory); 4 balloon-aborts + 1 stuck (external named but not attached as node dep) queued for repair.}}
 \addplot[draw=oiVermillion, fill=oiVermillion] coordinates {(1,FH) (0,B) (0,R) (0,G) (0,A) (0,D) (0,F) (0,E) (0,XE)}; \addlegendentry{\texttt{lem-topology-local-index-sign af-VALIDATED (83rd rigorous result; 23 nodes 23/23 clean) under the user-ratified narrowed contract — the in-place root amendment retained all 21 previously validated nodes; oracle fr verify PASS. T0 82 -> 83; 6 of 7 topology rows T0. finite-triangulation root challenge classified: L1 ground-truth stop (Cairns delegates the class-one/allowable definitions to Veblen-Whitehead 1932, NOT in refs/) — user decision being asked in-chat (narrow to Cairns's literal statement vs acquire V-W).}}
@@ -216,7 +216,7 @@ Arm & Pulls & \texttt{banked} & \texttt{progress} & \texttt{died} & \texttt{refu
 \endfoot
 \bottomrule
 \endlastfoot
-\texttt{FH} & 186 & 13 & 125 & 1 & 0 & 1 & 42 & 1 & 1 & 1 & 1 & 2026-07-22 & 2026-07-27 & primary \\
+\texttt{FH} & 192 & 14 & 127 & 1 & 0 & 1 & 45 & 1 & 1 & 1 & 1 & 2026-07-22 & 2026-07-27 & primary \\
 \texttt{B} & 113 & 1 & 108 & 4 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 2026-07-02 & 2026-07-16 & primary \\
 \texttt{R} & 52 & 31 & 14 & 1 & 0 & 0 & 6 & 0 & 0 & 0 & 0 & 2026-07-02 & 2026-07-26 & parked-tier1-override \\
 \texttt{G} & 21 & 2 & 19 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 2026-07-03 & 2026-07-05 & parked-tier1-override \\
@@ -229,12 +229,12 @@ Arm & Pulls & \texttt{banked} & \texttt{progress} & \texttt{died} & \texttt{refu
 \noindent{\footnotesize Outcome vocabulary: \texttt{banked} = a result harvested and recorded; \texttt{progress} = movement without a bankable result; \texttt{died} / \texttt{refuted} = the direction was killed, with a certificate; \texttt{discovery} = an off-goal find routed to the portfolio.\par}
 \endgroup
 
-Aggregated over all cycles the outcome mix is 337~\texttt{orient}, 292~\texttt{progress}, 49~\texttt{dispatch}, 47~\texttt{banked}, 6~\texttt{died}, 3~\texttt{discovery}, 1~\texttt{SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C\textasciicircum{}r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.}, 1~\texttt{lem-topology-hopf-structure af-VALIDATED (81st rigorous result; 13 nodes 13/13 clean) + lem-extcb-exact-target-correction af-VALIDATED (82nd; 6 nodes 6/6 clean, first-pass, zero challenges — the designed transcription landed EXACTLY on budget) — GAP-EA, the first of the four v4.1 GAP families, is DISCHARGED at L0. T0 80 -> 82. Session 28 totals: +6 T0 (5 of 7 topology + the GAP-EA correction row), 2 trees parked with precise diagnoses (1 af-bookkeeping thrash, 1 genuine contract/def scope gap -> user escalation), 3 orchestration-infrastructure laws discovered+banked. Breaker honored: next cycle EXPLOREs off FH.}, 1~\texttt{lem-topology-lefschetz-hopf af-VALIDATED (77th rigorous result; 2 nodes taint clean, first-pass canary) + lem-topology-kunneth-cross-product af-VALIDATED (78th; 7 nodes taint clean) — first two of the seven Stage-1 topology elevations banked, oracles af-lem-topology-* registered, fr verify PASS on both exports, registry flips committed, T0 76 -> 78. Session findings: parallel orchestrations mutually abort (sequential law banked to bd memory); 4 balloon-aborts + 1 stuck (external named but not attached as node dep) queued for repair.}, 1~\texttt{lem-topology-local-index-sign af-VALIDATED (83rd rigorous result; 23 nodes 23/23 clean) under the user-ratified narrowed contract — the in-place root amendment retained all 21 previously validated nodes; oracle fr verify PASS. T0 82 -> 83; 6 of 7 topology rows T0. finite-triangulation root challenge classified: L1 ground-truth stop (Cairns delegates the class-one/allowable definitions to Veblen-Whitehead 1932, NOT in refs/) — user decision being asked in-chat (narrow to Cairns's literal statement vs acquire V-W).}, 1~\texttt{lem-topology-orientable-top-cohomology af-VALIDATED (79th rigorous result; 14 nodes taint clean — Thm 3.26 + field-UCT + Cor 3.39 composed) + lem-topology-quotient-manifold af-VALIDATED (80th; 4 nodes taint clean — the external-attachment verifier challenge resolved by the re-run prover) — 4 of 7 topology elevations banked, oracles registered, fr verify PASS both, T0 78 -> 80. GAP-EA rows LANDED per DESIGN-GAP-EA option (a): lem-extcb-exact-target-correction (validated node-1.2 contract verbatim, proved/af:none) + lem-extcb-exact-target-approximation (v4.1 bridge, stated), UNWIRED-whitelisted, gate green. Next: seed+orchestrate the correction row; finishing runs for finite-triangulation (14/17), local-index-sign (18/22), hopf re-run.}, 1~\texttt{refuted}. Evidence records are tiered 133~\texttt{T1}, 123~\texttt{T2}, 97~\texttt{T0}.
+Aggregated over all cycles the outcome mix is 337~\texttt{orient}, 294~\texttt{progress}, 52~\texttt{dispatch}, 48~\texttt{banked}, 6~\texttt{died}, 3~\texttt{discovery}, 1~\texttt{SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C\textasciicircum{}r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.}, 1~\texttt{lem-topology-hopf-structure af-VALIDATED (81st rigorous result; 13 nodes 13/13 clean) + lem-extcb-exact-target-correction af-VALIDATED (82nd; 6 nodes 6/6 clean, first-pass, zero challenges — the designed transcription landed EXACTLY on budget) — GAP-EA, the first of the four v4.1 GAP families, is DISCHARGED at L0. T0 80 -> 82. Session 28 totals: +6 T0 (5 of 7 topology + the GAP-EA correction row), 2 trees parked with precise diagnoses (1 af-bookkeeping thrash, 1 genuine contract/def scope gap -> user escalation), 3 orchestration-infrastructure laws discovered+banked. Breaker honored: next cycle EXPLOREs off FH.}, 1~\texttt{lem-topology-lefschetz-hopf af-VALIDATED (77th rigorous result; 2 nodes taint clean, first-pass canary) + lem-topology-kunneth-cross-product af-VALIDATED (78th; 7 nodes taint clean) — first two of the seven Stage-1 topology elevations banked, oracles af-lem-topology-* registered, fr verify PASS on both exports, registry flips committed, T0 76 -> 78. Session findings: parallel orchestrations mutually abort (sequential law banked to bd memory); 4 balloon-aborts + 1 stuck (external named but not attached as node dep) queued for repair.}, 1~\texttt{lem-topology-local-index-sign af-VALIDATED (83rd rigorous result; 23 nodes 23/23 clean) under the user-ratified narrowed contract — the in-place root amendment retained all 21 previously validated nodes; oracle fr verify PASS. T0 82 -> 83; 6 of 7 topology rows T0. finite-triangulation root challenge classified: L1 ground-truth stop (Cairns delegates the class-one/allowable definitions to Veblen-Whitehead 1932, NOT in refs/) — user decision being asked in-chat (narrow to Cairns's literal statement vs acquire V-W).}, 1~\texttt{lem-topology-orientable-top-cohomology af-VALIDATED (79th rigorous result; 14 nodes taint clean — Thm 3.26 + field-UCT + Cor 3.39 composed) + lem-topology-quotient-manifold af-VALIDATED (80th; 4 nodes taint clean — the external-attachment verifier challenge resolved by the re-run prover) — 4 of 7 topology elevations banked, oracles registered, fr verify PASS both, T0 78 -> 80. GAP-EA rows LANDED per DESIGN-GAP-EA option (a): lem-extcb-exact-target-correction (validated node-1.2 contract verbatim, proved/af:none) + lem-extcb-exact-target-approximation (v4.1 bridge, stated), UNWIRED-whitelisted, gate green. Next: seed+orchestrate the correction row; finishing runs for finite-triangulation (14/17), local-index-sign (18/22), hopf re-run.}, 1~\texttt{refuted}. Evidence records are tiered 133~\texttt{T1}, 125~\texttt{T2}, 98~\texttt{T0}.
 
 
 \subsection{Adversarial elevations}\label{sec:stats-elevations}
 
-A result reaches the top in-repo rung only through an \texttt{af} workspace: the registry contract becomes the root conjecture, a fresh prover agent builds a proof tree, and every node is validated by a \emph{separate} fresh verifier told that finding a gap is a success. The orchestrator never judges a step. 104 workspaces were opened; 92 reached a validated root and 12 remain seeded or open. Between them the workers built 1\,670 proof nodes, raised 300 challenges (of which 293 were resolved), and forced 218 node amendments.
+A result reaches the top in-repo rung only through an \texttt{af} workspace: the registry contract becomes the root conjecture, a fresh prover agent builds a proof tree, and every node is validated by a \emph{separate} fresh verifier told that finding a gap is a success. The orchestrator never judges a step. 103 workspaces were opened; 92 reached a validated root and 11 remain seeded or open. Between them the workers built 1\,669 proof nodes, raised 300 challenges (of which 293 were resolved), and forced 218 node amendments.
 
 \begin{figure}[H]\centering
 \begin{tikzpicture}
@@ -243,10 +243,10 @@ A result reaches the top in-repo rung only through an \texttt{af} workspace: the
   xlabel={nodes in the proof tree}, ylabel={workspaces}, ymin=0,
   nodes near coords, every node near coord/.append style={font=\scriptsize},
 ]
-\addplot[draw=oiBlue, fill=oiBlue!70] coordinates {(1--5,14) (6--10,16) (11--15,29) (16--20,20) (21--30,15) (31--40,7) (41--60,3)};
+\addplot[draw=oiBlue, fill=oiBlue!70] coordinates {(1--5,13) (6--10,16) (11--15,29) (16--20,20) (21--30,15) (31--40,7) (41--60,3)};
 \end{axis}
 \end{tikzpicture}
-\caption{Size distribution of the 104 adversarial proof trees. The median tree has 14 nodes; the largest, \texttt{lem-residual-upper}, has 52.}\label{fig:stats-treesize}
+\caption{Size distribution of the 103 adversarial proof trees. The median tree has 14 nodes; the largest, \texttt{lem-residual-upper}, has 52.}\label{fig:stats-treesize}
 \end{figure}
 
 The most-contested tree was \texttt{conj-extcb} (24 challenges raised); the longest-running was \texttt{conj-extcb}, which needed 20 prover/verifier rounds before its root closed.
@@ -260,13 +260,13 @@ Ledger entry type & Count \\
 \midrule
 \texttt{nodes\_claimed} & 2\,734 \\
 \texttt{nodes\_released} & 2\,734 \\
-\texttt{node\_created} & 1\,670 \\
+\texttt{node\_created} & 1\,669 \\
 \texttt{node\_validated} & 1\,597 \\
-\texttt{def\_added} & 496 \\
+\texttt{def\_added} & 494 \\
 \texttt{challenge\_raised} & 300 \\
 \texttt{challenge\_resolved} & 293 \\
 \texttt{node\_amended} & 218 \\
-\texttt{proof\_initialized} & 104 \\
+\texttt{proof\_initialized} & 103 \\
 \texttt{node\_archived} & 42 \\
 \texttt{approach\_tried} & 1 \\
 \bottomrule
@@ -388,7 +388,7 @@ Ledger entry type & Count \\
 \noindent{\footnotesize ``Val.'' counts validated nodes; ``Chal.'' counts challenges raised by verifiers against nodes of that tree; ``Amd.'' counts node statements the prover had to change in response; ``Defs'' counts definitions imported into the workspace as byte-matched externals; ``Rnds'' is the highest prover/verifier round index reached; ``Jobs'' is the number of node-claim events, i.e.\ worker invocations against that tree; ``Closed'' is the day the root node was validated. Fewer validated nodes than created nodes means nodes were archived or superseded during the run.\par}
 \endgroup
 
-The 12 workspaces that were seeded but never closed a root are \texttt{conj-degenerate-transport}, \texttt{conj-nsc}, \texttt{conj-rh}, \texttt{conj-sc}, \texttt{ex-hume}, \texttt{lem-hiddenness-alpha-slab-leakage}, \texttt{lem-negative-pivot-import}, \texttt{lem-stage1-approximate-group-laws}, \texttt{lem-topology-finite-triangulation}, \texttt{prop-approx-simplex}, \texttt{thm-classical-factorization}, \texttt{thm-cluster}. A seeded-and-open workspace is a recorded state, not a failure: it means a contract exists and the tree is still being built or was superseded.
+The 11 workspaces that were seeded but never closed a root are \texttt{conj-degenerate-transport}, \texttt{conj-nsc}, \texttt{conj-rh}, \texttt{conj-sc}, \texttt{ex-hume}, \texttt{lem-hiddenness-alpha-slab-leakage}, \texttt{lem-negative-pivot-import}, \texttt{lem-topology-finite-triangulation}, \texttt{prop-approx-simplex}, \texttt{thm-classical-factorization}, \texttt{thm-cluster}. A seeded-and-open workspace is a recorded state, not a failure: it means a contract exists and the tree is still being built or was superseded.
 
 
 \subsection{Worker and job census}\label{sec:stats-workers}
@@ -456,7 +456,7 @@ Numerical work is quarantined by construction: every experiment is a run bundle 
 Artifact class & Count \\
 \midrule
 \texttt{docs/waves/} --- wave records & 107 \\
-\texttt{docs/plans/} --- strategy and proof-sketch versions & 60 \\
+\texttt{docs/plans/} --- strategy and proof-sketch versions & 61 \\
 \texttt{docs/audits/}, \texttt{lit-review/}, \texttt{recon/}, \texttt{tooling-feedback/} & 5 \\
 \texttt{docs/ingest/} --- the inherited classical portfolio & 7 \\
 \quad of which experiment files & 60 \\
@@ -514,7 +514,7 @@ The classical portfolio was not born here. It began as a side-quest inside \text
 
 \textbf{What carried over.} Three things, and each was re-tagged \emph{down} on arrival:
 \begin{itemize}\setlength{\itemsep}{0.15ex}
-\item \textbf{The reduction chain.} The progenitor reduced the classical stability statement, through audited and audit-pending steps, to a single open kernel (the ``(EX)'' conjecture). The chain re-entered this repository as \texttt{stated} or \texttt{proved-mod-audit} --- objects of study, not oracles --- and 23 of the 293 registry results here still carry that inherited tag.
+\item \textbf{The reduction chain.} The progenitor reduced the classical stability statement, through audited and audit-pending steps, to a single open kernel (the ``(EX)'' conjecture). The chain re-entered this repository as \texttt{stated} or \texttt{proved-mod-audit} --- objects of study, not oracles --- and 23 of the 295 registry results here still carry that inherited tag.
 \item \textbf{The numerical record.} The 67{,}000-instance exact enumeration and the seed experiments were copied wholesale into \texttt{docs/ingest/} (60 files) and re-homed as run bundles. Their status did not change: \texttt{numerical}, L3, never rigorous.
 \item \textbf{One validated result.} Exactly one classical result had cleared an \texttt{af} validation upstream --- \texttt{lem-classical-equiv}, the signed$\leftrightarrow$stochastic bridge. It was nevertheless re-validated here from scratch (29 nodes, 6 challenges) and that in-repo run, not the upstream one, is what this repository's ladder rests on.
 \end{itemize}
@@ -537,11 +537,11 @@ Everything in \Cref{sec:campaign-statistics} is generated by \texttt{scripts/gen
 \hspace*{1.5em}the gate: re-renders, byte-compares, and prints a non-fatal drift advisory.
 \end{quote}
 
-\textbf{Staleness semantics.} Only the render step is gated, so the check is stable across ordinary commits and fails exactly when it should: a hand-edited generated file, or a renderer change without a re-render. The \emph{numbers}, by contrast, are as of \textbf{2026-07-27T13:18:40Z} and go stale silently by design --- refreshing them is a deliberate act. \texttt{--check} therefore also compares a few cheap live counts against the snapshot and prints how far behind it is, without blocking a commit.
+\textbf{Staleness semantics.} Only the render step is gated, so the check is stable across ordinary commits and fails exactly when it should: a hand-edited generated file, or a renderer change without a re-render. The \emph{numbers}, by contrast, are as of \textbf{2026-07-27T13:57:55Z} and go stale silently by design --- refreshing them is a deliberate act. \texttt{--check} therefore also compares a few cheap live counts against the snapshot and prints how far behind it is, without blocking a commit.
 
 \textbf{Progenitor data.} The \texttt{almost-\discretionary{}{}{}idempotent-\discretionary{}{}{}positive-\discretionary{}{}{}maps} block is mined live when that repository sits beside this one and is otherwise carried forward from the committed snapshot, so the gate is green on machines that do not have the sibling. The current block was mined live at the last extraction.
 
-\textbf{Provenance of the figures.} 740 controller records, 10\,189 \texttt{af} ledger entries, 293 registry shards, 45 definition shards, 38 run bundles, 65 work-log entries, 210 issue records, and 957 commits were read to produce this section.
+\textbf{Provenance of the figures.} 746 controller records, 10\,185 \texttt{af} ledger entries, 295 registry shards, 45 definition shards, 38 run bundles, 65 work-log entries, 210 issue records, and 960 commits were read to produce this section.
 
 
 \emergencystretch=0pt\relax
