@@ -133,6 +133,12 @@ transcribed in the locked cited `def-projection-basis`.  The external must
 contain the byte-verbatim source sentence, not a strengthened paraphrase
 such as a general classification theorem.
 
+**Repository-hygiene guard.** The frontmatter of
+`def-projection-basis` says `status: locked`, but its body still says
+“Draft transcription; ratification is required before locking.” Resolve
+that pre-existing metadata/body drift before provisioning the af
+external. It does not alter the byte-verbatim source anchor.
+
 Once commutativity has been proved, take a projection basis
 \(\{\Pi_1,\ldots,\Pi_k\}\) and define
 \[
@@ -188,10 +194,18 @@ The clean re-seed should obey the following proof-DAG rules.
 - Make the approximate-invariance node depend explicitly on the shared
   UCP-complete-contractivity node.
 - Make the \(10K\eta\) commutator node depend explicitly on approximate
-  invariance and on the typed diagonal-range node.  It must not mention
+  invariance and on the typed diagonal-range node. It must not mention
   unvalidated siblings.
+- Make the commutativity-forcing node bind \(K,\eta\) and
+  \(0\le\eta\le(24K)^{-1}\) in its own statement and rederive
+  \(10K\eta\le5/12<2\) locally. It must not use an undeclared threshold
+  sibling.
+- Make the coordinate-isomorphism node depend explicitly on both the
+  validated commutativity node and the byte-verbatim projection-basis
+  external.
 - Make the \(QA-A\) node depend explicitly on approximate invariance (or
-  rederive the two-line telescope locally); do not rely on a pending sibling.
+  rederive the two-line telescope locally); do not rely on a pending
+  sibling.
 - Let the lower-modulus combination node prove only the lower-modulus
   inference.  The root assembly, not that child, depends on the
   commutativity, \(A/M\), factor-error, \(QA-A\), and lower-modulus branches.
@@ -215,11 +229,16 @@ An honest clean-tree estimate is **24–25 nodes**:
 | lower modulus | 3 |
 | **total** | **25** |
 
-This is at the requested envelope, so the first recommendation is the
-byte-matched external plus a carefully dependency-declared re-seed, with a
-hard stop at 25 live nodes.  Do not raise the cap if the prover expands.
-If the projected or live tree exceeds 25, factor these atomic registry
-sub-lemmas instead:
+This is at the requested envelope and below the executable af soft cap
+`NODE_SOFT_CAP = 26`. The repository's prose still says that \(>12\)
+nodes is the brittleness threshold, while `scripts/af_constants.py`
+records that value as historical drift and declares 26 the shared
+linker/orchestrator source of truth. That process-documentation drift
+must be reconciled separately. For this design, retain the stricter hard
+stop at 25 live nodes: first try the byte-matched external plus a
+carefully dependency-declared re-seed, do not raise the cap, and factor
+the atomic registry sublemmas below if the projected or live tree exceeds
+25.
 
 1. **`lem-fd-cstar-norm-two-commutator`:** every finite-dimensional
    noncommutative unital complex \(C^*\)-algebra contains self-adjoint

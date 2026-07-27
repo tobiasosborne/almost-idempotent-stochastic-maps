@@ -59,7 +59,7 @@ Dropped (outside the closure; canonical, just not reproduced here):
 | 26 | `def-ha-map` | `def:ha-map` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1146-1149` | `e7eb512a2ec2438d` | 13 | 13 |
 | 27 | `def-lefschetz-fixed-point-data` | `def:lefschetz-fixed-point-data` | cited | locked | shard statement | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:961-967` | `e7eb512a2ec2438d` | 2 | 0 |
 | 28 | `def-one-dimensional-delta-projection` | `def:one-dimensional-delta-projection` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1066,1187` | `e7eb512a2ec2438d` | 3 | 3 |
-| 29 | `def-projection-basis` | `def:projection-basis` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1361` | `e7eb512a2ec2438d` | 2 | 2 |
+| 29 | `def-projection-basis` | `def:projection-basis` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1361` | `e7eb512a2ec2438d` | 3 | 2 |
 | 30 | `def-theta-idempotent-approximation` | `def:theta-idempotent-approximation` | cited | draft | translated (table v1) | 3 | `kitaev-2405.02434` | `approximate_algebras.tex:505-528 (displays Taylor_simple, Taylor_simple_bound, abs_sgn, and the theta display inside Proposition prop_P — ONLY the definitional displays are cited; the Proposition's claims are NOT citable and must be re-proved)` | `e7eb512a2ec2438d` | 2 | 2 |
 
 ## Project-internal packaging: hypothesis data and derived notation
@@ -73,7 +73,7 @@ Dropped (outside the closure; canonical, just not reproduced here):
 | 35 | `def-four-corner-merging-datum` | `def:four-corner-merging-datum` | original | locked | shard statement | — | `internal` | `project packaging of approximate_algebras.tex:1325-1345 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 2 | 2 |
 | 36 | `def-hcb-datum` | `def:hcb-datum` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package` | `-` | 15 | 15 |
 | 37 | `def-positive-approximate-retract` | `def:positive-approximate-retract` | original | locked | shard statement | — | `internal` | `project formulation transcribed from docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §§1,4` | `-` | 3 | 2 |
-| 38 | `def-ucp-map` | `def:ucp-map` | consensus | locked | shard statement | — | `internal` | `standard operator-algebra textbook notion (e.g. Paulsen, Completely Bounded Maps and Operator Algebras, ch. 2-3); adopted for the Route-F rows per AUDIT-F0-ASSEMBLY.md sect 1.1` | `-` | 2 | 0 |
+| 38 | `def-ucp-map` | `def:ucp-map` | consensus | locked | shard statement | — | `internal` | `standard operator-algebra textbook notion (e.g. Paulsen, Completely Bounded Maps and Operator Algebras, ch. 2-3); adopted for the Route-F rows per AUDIT-F0-ASSEMBLY.md sect 1.1` | `-` | 3 | 0 |
 
 ## Macro-translation table v1
 
