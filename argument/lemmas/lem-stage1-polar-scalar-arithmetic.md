@@ -5,7 +5,8 @@ contract: Universal Stage-1 polar arithmetic: for every C_rect, C_ch, C_pol, C_g
 defs: def-stage1-polar-witness-data
 deps:
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-polar-scalar-arithmetic
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 12, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). AUDIT-S1-POLAR-v2.md sect-3 recomputes all eight guards exactly; pure scalar derivation.
 owner: A
 ---
