@@ -5,7 +5,8 @@ contract: Parameterized rectification transport: there exist C_rect^0 >= 1 and e
 defs: def-stage1-polar-witness-data; def-epsilon-cstar-algebra
 deps: lem-stage1-rectified-cstar-control
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-rectified-cstar-transport
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 13a, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). TeX 407-440, 672-687; parameterized coefficient/radius monotonicity; AUDIT-S1-POLAR-v4.md sect-3.
 owner: A
 ---
