@@ -649,6 +649,18 @@
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-retraction/ledger",
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-retraction.md"
         ]
+      },
+      {
+        "name": "af-lem-stage1-polar-coherence-naturality",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-stage1-polar-coherence-naturality"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-coherence-naturality/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-coherence-naturality.md"
+        ]
       }
     ]
   },

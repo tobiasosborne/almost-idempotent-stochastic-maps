@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Polar coherence and scalar naturality: for every exact-un...}
+\step{1} Polar coherence and scalar naturality: for every exact-unit algebra and every two polar data (delta\_j, S\_j, u\_j, h\_j), j = 1, 2, for which Pi\_\{delta\_j\}: calU x B\textasciicircum{}\{calH\}\_\{delta\_j\}(J) -> S\_j, (U, H) $|-\rangle$ U bold-dot H, is bijective with inverse (u\_j, h\_j), one has (u\_1, h\_1) = (u\_2, h\_2) on S\_1 intersect S\_2; moreover, for c in U(1) and X, cX in S\_j, u\_j(cX) = c*u\_j(X) and h\_j(cX) = h\_j(X). \steptag{validated} \\[6pt]
+\step{1.1} Coherence on overlaps: for arbitrary permitted polar data and every X in S\_1 intersect S\_2, (u\_1(X),h\_1(X))=(u\_2(X),h\_2(X)). \steptag{validated} \\[6pt]
+\step{1.1.1} Fix X in S\_1 intersect S\_2. Because (u\_j,h\_j) is the inverse of Pi\_\{delta\_j\}, for each j=1,2 the pair p\_j=(u\_j(X),h\_j(X)) belongs to calU x B\textasciicircum{}\{calH\}\_\{delta\_j\}(J) and Pi\_\{delta\_j\}(p\_j)=u\_j(X) bold-dot h\_j(X)=X. \steptag{validated} \\[4pt]
+\step{1.1.2} Choose k in \{1,2\} with delta\_k=max(delta\_1,delta\_2). Both p\_1 and p\_2 lie in calU x B\textasciicircum{}\{calH\}\_\{delta\_k\}(J): p\_k does by its inverse-domain membership, and for l different from k the inclusion B\textasciicircum{}\{calH\}\_\{delta\_l\}(J) subseteq B\textasciicircum{}\{calH\}\_\{delta\_k\}(J) follows from delta\_l<=delta\_k. Since every Pi\_delta has the same formula (U,H)$|-\rangle$U bold-dot H, both pairs have Pi\_\{delta\_k\}-image X. \steptag{validated} \\[4pt]
+\step{1.1.3} The assumed bijectivity of Pi\_\{delta\_k\} makes it injective on calU x B\textasciicircum{}\{calH\}\_\{delta\_k\}(J). Applying injectivity to the two domain points from the preceding step gives p\_1=p\_2, hence u\_1(X)=u\_2(X) and h\_1(X)=h\_2(X). Since X was arbitrary in S\_1 intersect S\_2, coherence holds there. \steptag{validated} \\[4pt]
+\step{1.2} Scalar naturality in each chart: for j in \{1,2\}, c in U(1), and X,cX in S\_j, one has u\_j(cX)=c*u\_j(X) and h\_j(cX)=h\_j(X). \steptag{validated} \\[6pt]
+\step{1.2.1} Fix j, c in U(1), and X,cX in S\_j. The inverse property gives p=(u\_j(X),h\_j(X)) in calU x B\textasciicircum{}\{calH\}\_\{delta\_j\}(J) with u\_j(X) bold-dot h\_j(X)=X; applied to cX it also gives q=(u\_j(cX),h\_j(cX)) in the same domain with Pi\_\{delta\_j\}(q)=cX. \steptag{validated} \\[4pt]
+\step{1.2.2} Scalar closure of calU: if U is in calU and c is in U(1), then cU is in calU. Indeed, by def-approximate-unitary-space, U\textasciicircum{}dagger bold-dot U=J and U has a right inverse V. Conjugate-linearity of dagger, bilinearity of the algebra product, and bar(c)c=1 give (cU)\textasciicircum{}dagger bold-dot(cU)=J; and (cU) bold-dot(c\textasciicircum{}\{-1\}V)=J, so cU has a right inverse. No associativity or positivity is used. \steptag{validated} \\[4pt]
+\step{1.2.3} By scalar closure and the domain membership of p, the pair p\_c=(c*u\_j(X),h\_j(X)) lies in calU x B\textasciicircum{}\{calH\}\_\{delta\_j\}(J). Bilinearity in the first variable yields Pi\_\{delta\_j\}(p\_c)=(c*u\_j(X)) bold-dot h\_j(X)=c*(u\_j(X) bold-dot h\_j(X))=cX. \steptag{validated} \\[4pt]
+\step{1.2.4} Both q and p\_c are in the domain of Pi\_\{delta\_j\} and have image cX. Injectivity of the assumed bijection Pi\_\{delta\_j\} gives q=p\_c. Equality of components is exactly u\_j(cX)=c*u\_j(X) and h\_j(cX)=h\_j(X), proving scalar naturality. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

@@ -219,14 +219,14 @@
 | `lem-sl1a-corner-ledger` | lemma | proved | none | B | For every exact signed idempotent P with 0 < delta(P) <= 2^(-16) and nonempty vi… |
 | `lem-sl1a-score-selector` | lemma | proved | none | B | For every exact signed idempotent P with delta(P) > 0, nonempty visible set W, a… |
 | `lem-sl1a-three-cell-reduction` | lemma | proved | none | B | SL1a three-cell reduction: if conj-sl1a-off-diagonal-cell (constant delta_X), co… |
-| `lem-stage1-approximate-group-laws` | lemma | stated | none | A | Quantitative approximate group laws: there exist universal C_grp, C_pol >= 1, ka… |
+| `lem-stage1-approximate-group-laws` | lemma | stated | seeded | A | Quantitative approximate group laws: there exist universal C_grp, C_pol >= 1, ka… |
 | `lem-stage1-approximate-group-laws-transport` | lemma | stated | none | A | Parameterized approximate-group transport: there exist C_grp^0, C_pol^0 >= 1 and… |
 | `lem-stage1-exact-unit-rectification` | lemma | proved | validated | A | Dimension-free exact-unit rectification: there are universal C_unit < infinity a… |
 | `lem-stage1-inversion-derivative-control` | lemma | stated | none | A | Typed inversion derivative with chart retention: there exist universal C_der, C_… |
 | `lem-stage1-inversion-derivative-transport` | lemma | stated | none | A | Parameterized inversion-derivative transport: there exist C_der^0, C_ch^0, C_pol… |
 | `lem-stage1-maurer-cartan-transport` | lemma | stated | none | A | Parameterized Maurer-Cartan transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |
 | `lem-stage1-maurer-cartan-trivialization` | lemma | proved | validated | A | Uniform global tangent/Maurer-Cartan control: there are universal C_ch >= 1, kap… |
-| `lem-stage1-polar-coherence-naturality` | lemma | stated | seeded | A | Polar coherence and scalar naturality: for every exact-unit algebra and every tw… |
+| `lem-stage1-polar-coherence-naturality` | lemma | proved | validated | A | Polar coherence and scalar naturality: for every exact-unit algebra and every tw… |
 | `lem-stage1-polar-constant-ledger` | lemma | stated | none | A | Compatible Stage-1 polar witnesses and range: there exists one universal def-sta… |
 | `lem-stage1-polar-path-admissibility` | lemma | stated | none | A | Joint projected-straight-path admissibility: there exist universal C_path, C_pol… |
 | `lem-stage1-polar-path-transport` | lemma | stated | none | A | Parameterized polar-path transport: there exist C_path^0, C_pol^0 >= 1 and kappa… |

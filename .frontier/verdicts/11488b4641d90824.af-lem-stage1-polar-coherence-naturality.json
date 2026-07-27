@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-polar-coherence-naturality/export.md",
+  "oracle": "af-lem-stage1-polar-coherence-naturality",
+  "result": "pass",
+  "claim_hash": "e164f6b9257055a66c8bb269704b8a25df3ca9aa4416e12a41a4d4317c75e07a",
+  "oracle_digest": "08c74146c3ab9ec5995c92cb9d5f7cfae462434db3691795023b09dd1240698f",
+  "inputs_hash": "e8f208fc2e67d9595f630b403d44899445c40705ddfaf5e91b5c483f39cd4ea3",
+  "ts": "2026-07-27T13:18:35.768Z"
+}
