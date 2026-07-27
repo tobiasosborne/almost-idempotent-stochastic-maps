@@ -5,7 +5,8 @@ contract: Group-input polar-domain membership: there exist universal C_grp, C_po
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-polar-retraction
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-group-domain-membership
 provenance: DESIGN-S1-GROUP-FACTORING.md sect-2.1, landed verbatim (row-6 balloon repair; AUDIT-S1-GROUP-FACTORING.md LAND-WITH-CORRECTIONS, contract clause PASS); derivation from lem-stage1-polar-retraction + the two registered definitions; orientation Kitaev TeX 845-868 (qualitative O(epsilon_r) only — NOT byte-citable for this quantitative contract).
 owner: A
 ---
