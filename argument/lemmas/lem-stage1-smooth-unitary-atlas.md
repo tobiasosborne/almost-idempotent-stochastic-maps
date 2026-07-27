@@ -5,7 +5,8 @@ contract: Smooth graph-atlas upgrade: for every finite-dimensional exact-unit ep
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-rectified-cstar-control; lem-stage1-unitary-graph-control
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-smooth-unitary-atlas
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 9, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). Polynomiality from TeX 420-429, 692-793; Lee C.40 at lee-smooth-manifolds-2ed.txt:31330-31344, 31374-31385; overlap gluing is by graph uniqueness.
 owner: A
 ---

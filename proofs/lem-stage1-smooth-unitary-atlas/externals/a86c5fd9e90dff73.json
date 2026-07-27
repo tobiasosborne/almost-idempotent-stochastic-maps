@@ -1,0 +1,8 @@
+{
+  "id": "a86c5fd9e90dff73",
+  "name": "GT-lee-2ed-thm-C.40",
+  "source": "refs/lee-smooth-manifolds/lee-smooth-manifolds-2ed.txt:31330-31344 VERBATIM: \"Theorem C.40 (Implicit\n                     \u0002 1 Function  n\n                                       Theorem).\n                                       1           k\n                                                     \u0003 Let U \u0004 R \u0002 R be an open sub-\nset, and let .x; y/ D x ; : : : ; x ; y ; : : : ; y denote the standard coordinates on\nU . Suppose ˚ W U ! Rk is a smooth function, .a; b/ 2 U , and c D ˚.a; b/. If the\nk \u0002 k matrix\n                                      \u0007 i             \b\n                                        @˚\n                                                .a; b/\n                                        @y j\nis nonsingular, then there exist neighborhoods V0 \u0004 Rn of a and W0 \u0004 Rk of b and\na smooth function F W V0 ! W0 such that ˚ \u00021 .c/ \\ .V0 \u0002 W0 / is the graph of F ,\nthat is, ˚.x; y/ D c for .x; y/ 2 V0 \u0002 W0 if and only if y D F .x/.\"",
+  "content_hash": "8a4a515cb0dbf9ebf54a7733fbd33f79b9991fd3825236955f72b3ef89d7b7c4",
+  "created": "2026-07-27T16:25:29.098461138Z",
+  "notes": ""
+}
