@@ -1661,3 +1661,62 @@ IT VERBATIM, hostile-checks, lands verbatim, re-seeds, re-elevates.
 **Close state:** T0 = 85; registry 267; defs 45; gate [check-all] OK; all work committed and
 pushed; HANDOFF rewritten (F2 re-dispatch is the entry point; sketch-v35 reconciliation filed as
 Rule-9 debt). Beads: W79 closed (ratified), W80 in_progress with the full campaign trail.
+
+## 2026-07-27 — Session 31: F2/F3 banked, the polar landing + elevation campaign (T0 85 -> 95; Fable 5)
+
+**Arc.** Continuation of W80 (the ratified W78 package §5 serial order). Three legs, all completed
+through the mandatory design→fresh-hostile-audit→verbatim-landing pipeline where contracts moved.
+
+**Leg 1 — package §5 step 1 CLOSED (T0 85 → 87).** The session-30 F2 typing brief was re-dispatched
+verbatim; `DESIGN-F2-TYPING.md` delivered the corrected contract (Phi = J Q_C D through C^n exactly
+on the T0 F0 seam; A/M as real restrictions; estimates unchanged) + a provisioning plan
+(projection-basis byte external TeX:1361; in-tree UCP cb-contractivity; 25-node cap with a named
+3-way factoring fallback). Fresh hostile audit: LAND-WITH-CORRECTIONS (3 exact corrections, all
+applied — incl. the def-projection-basis stale-body fix; its lock is genuine, b9270ef4). Landed
+verbatim (diff-verified byte-identical), ill-typed workspace discarded, re-seeded + provisioned.
+`lem-routef-f2-positive-unital-compression` af-VALIDATED (86th; 22/22 taint clean; one genuine
+eta=0 endpoint challenge repaired in-run — the designed provisioning held: no balloon, 22 vs the
+25 envelope). `lem-routef-f3-retract-defect` seeded and af-VALIDATED (87th; 11/11 first-pass,
+zero challenges). The Route-F row chain F0→F2→F3→PRH is now af-validated end-to-end at row level.
+
+**Leg 2 — sketch v35** (sessions 28-addendum–30 reconciliation; CURRENT.md regenerated); Rule-9
+debt from session 30 discharged.
+
+**Leg 3 — package §5 step 2: the polar campaign.** All 26 rows of `DESIGN-S1-POLAR-v6.md` §9
+steps 2–27 landed verbatim in three gated tranches (registry 267 → 293): 12 analytic rows, 7
+transports 13a–g, the row-13 constant ledger (the full (A_1)-(A_7)+(R) conjunction expanded
+object-level), maximal-simplex, 5 downstream rows (incl. the audit-mandated phase-lift clause on
+quotient-inversion-index-data). A fresh hostile flattening-equivalence check returned CLEAN 26/26
+(gate condition for elevation). Elevations, strictly serial per the dep order, routine tier:
+rows 1–5 = 88th–92nd (rectified-cstar-control 17/17 on a max-rounds resume; unitary-graph-control
+15/15; maurer-cartan 15/15; polar-retraction 29/29 — the central row, REFACTOR warning carried;
+coherence-naturality 10/10). Then the TWO abort-repair cycles, both textbook:
+
+1. **Row 6 BALLOON** (60 nodes > 52; membership/closeness/telescopes forced into one tree + the
+   eta=0 endpoint family): factoring brief → `DESIGN-S1-GROUP-FACTORING.md` (two
+   sibling-independent children; parent contract BYTE-UNCHANGED; endpoint discipline; witness
+   sync by proof-body maxima/minima) → hostile audit LAND-WITH-CORRECTIONS (one proof-body
+   correction: K <= C_grp domination in the sole strict step; the auditor also independently
+   verified parent byte-identity by SHA256 and derived epsilon_r < 1/6 from the guards) →
+   children landed (registry 295) → elevated.
+2. **Membership child STUCK** (prover-discipline thrash: magic 1/8 / 1/512 thresholds without
+   in-scope derivation; the guards give only epsilon_r < 1/6, so 1-4e > 1/3 NOT >= 1/2): the
+   audited smallness derivation relayed into the shard body as binding provisioning; fresh
+   re-seed; prover escalated to xhigh → 10/10 clean (93rd).
+
+`lem-stage1-group-closeness` 12/12 first-pass (94th); parent re-elevated on the factored deps
+14/14 (95th) — the balloon repair closed with 10+12+14 validated nodes replacing the 60-node
+failure. Row 7 (`lem-stage1-polar-path-admissibility`) seeded; its launch hit the **codex usage
+limit** (reset 2026-08-01 21:18; nothing consumed) — the external resource wall ends the session.
+
+**Process notes.** The banking sequence ran 10× without variation (export → per-id oracle →
+fr verify → mechanical flip → regenerate → gate → fr log T0 → commit). Fresh verifiers caught
+real content every time they challenged: the eta=0 endpoint family (3 separate rows), cross-node
+symbol leaks, and undischargeable constant chains — zero rubber stamps observed. Both tripwire
+playbooks (BALLOON → factor via design+audit; STUCK → provision + escalate) were exercised and
+now have worked examples in the ledger history.
+
+**Close state:** T0 = 95; registry 295; defs 45; gate `[check-all] OK`; all work committed and
+pushed; HANDOFF rewritten (resume bead `aism-686b`: polar row 7 after the codex reset); W80
+updated with the session tally. fr: all dispatches/harvests logged on FH (W81a–W81r), including
+the two aborts and the wall; no breaker events.

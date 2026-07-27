@@ -11,109 +11,119 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
 2. The governing plan is the RATIFIED
-   **`docs/plans/2026-07-27-W78-ratification-package.md`** — the user
-   ratified ALL FOUR decisions D1–D4 in-chat 2026-07-27 ("proceed as you
-   recommend on all decisions D1-4"), recorded on closed bead `aism-gzp9`.
-   The live campaign bead is **`aism-kqeb` (W80)** — the landing/elevation
-   campaign per the package's §5 serial order. The proof sketch is
-   `docs/plans/CURRENT.md` → v34; NOTE: the W80 landings (7 defs, 2 new T0
-   rows, the op-classical contract split) are not yet reconciled into a
-   v35 — that is OPEN Rule-9 debt for the next session (small: the map
-   changed by exactly the §D-seam items below).
-3. **Rigorous (af-validated, T0): 85.** Registry: 267 (two new F0 seam
-   rows). Definitions: 45 (seven landed this session). `op-classical` OPEN.
-4. **Session-30 arc (one session, three phases):**
-   (a) **De-risk campaign COMPLETE** — all four risk-register fronts
-   designed + fresh-hostile-audited to landable: polar
-   `DESIGN-S1-POLAR-v6.md` (LAND), MAIN `DESIGN-MAIN-STRUCTURE-v5.md`
-   (REPAIR-CONFIRMED), ledger `DESIGN-LEDGER-DOMAINS-v2.md` (LAND-14 + 2
-   corrections), F0 `DESIGN-F0-ASSEMBLY.md` (LAND + 4 corrections). Zero
-   route-level findings in ~13 hostile audits.
-   (b) **D1–D4 executed:** op-classical contract split to upper-bound-only
-   (option A; sharpness via ex-hume; future OR-route wiring recorded in the
-   shard body, applied only at the campaign's LAST step); 7 def shards
-   landed (def-operator-space CITED byte-verified; def-maincb-{reset-state,
-   raw-call,partition-state}; def-approximate-unitary-space;
-   def-stage1-polar-witness-data; def-ucp-map); both F0 seam rows landed
-   with audit corrections.
-   (c) **Elevation campaign started: 2 banked, 1 in design-repair.**
-   `lem-routef-f0-ucp-lift` af-VALIDATED (84th; 9/9; incl. a GENUINE
-   real-vs-complex typing challenge caught by the af verifier — survived
-   two hostile audits of the design — repaired by recorded contract
-   amendment on both seam rows). `lem-routef-f0-defect-identity`
-   af-VALIDATED (85th; 12/12 first-pass, zero challenges). Both
-   oracle-registered + fr-verified + banked. **The stochastic↔Kitaev
-   interface of Route F is rigorous in-repo.**
-5. **F2 = the live workfront (NEXT SESSION STARTS HERE).**
-   `lem-routef-f2-positive-unital-compression` elevation ABORTED [STUCK]
-   with a clean tripwire classification (read the abort block in the last
-   run log via `proofs/lem-routef-f2-positive-unital-compression/ledger/`
-   challenges): (i) the SAME real-vs-complex typing defect family as F0,
-   in F2's LANDED hostile-endorsed contract (ch-2163ee19860aa3d7); (ii)
-   MISSING provisionable facts — fd-commutative-C*-classification
-   (byte-matchable anchor: projection basis,
-   `approximate_algebras.tex:1361-1363`; `def-projection-basis` locked) and
-   UCP complete contractivity; (iii) two cross-sibling DAG defects + an
-   ε-scoping leak. 11/30 nodes validated; workspace retained. A fresh
-   design job per **`docs/plans/2026-07-27-F2-TYPING-design/BRIEF-F2-TYPING.md`**
-   was dispatched and then STOPPED for the session wind-up (no deliverable
-   yet). **Next agent: re-dispatch that brief verbatim** (one codex exec at
-   effort high, deliverable DESIGN-F2-TYPING.md), then a fresh hostile
-   check, then land the corrected contract verbatim, re-seed, re-elevate.
-   PROCESS GUARD (recorded in the fr log and a commit): do NOT hand-edit
-   the F2 contract — an attempt was self-caught as an author-role
-   violation and reverted; the design→audit→verbatim-landing path is
-   mandatory.
-6. **After F2:** F3 elevation (contract is real-space only, no typing
-   issue expected), then the polar front per `DESIGN-S1-POLAR-v6.md` §9
-   (defs are already landed; rows 1–12 → helpers 13a–g → ledger row 13 →
-   6 downstream), then the Stage-1 split-producer design round (the ONE
-   remaining critical-path design gap), then MAIN per
-   `DESIGN-MAIN-STRUCTURE-v5.md` §10, then the ledger 14-row campaign
-   (decoupled), then the strengthened k-ledger (D4: a NEW proof
-   obligation, fresh prover + fresh hostile verifier; DO-NOT-REWIRE guard
-   released ONLY at package §5 step 6), then f0-assembly, then the root
-   rewire LAST.
-7. **Orchestration laws (BINDING; session-30 additions in bold):**
-   af runs strictly sequential; pre-create dirs; commits only in
-   zero-live-run windows; **no fr/bd writes in a turn AFTER an af launch —
-   log + commit FIRST, launch as the turn's LAST action** (a mid-run
-   fr-log append aborts the run as PROVER-OVERREACH false positive; banked
-   to bd memory); **the banking sequence that works: af export (md+tex) →
-   register per-id oracle in .frontier/portfolio.json → fr verify with the
-   export PATH as the claim → flip shard (mechanical) → regenerate
-   (argument.py --generate + gen-report-dag + gen-report-stats --extract)
-   → check-all → fr log banked --artifact <export path> --tier T0 →
-   commit.** Routine tier sufficed for both F0 rows.
-8. Standing mandates: codex = `gpt-5.6-sol`, xhigh cap (high for
-   routine/prescribed); batched verification default; NOTHING lands
-   without ratification (D1–D4 are the ratified envelope; anything beyond
-   escalates); Route X/XE fallback only; signed trunk PAUSED.
-9. Gate: `sh scripts/check-all.sh` → `[check-all] OK` (verified at close).
+   **`docs/plans/2026-07-27-W78-ratification-package.md`** (D1–D4 ratified
+   in-chat 2026-07-27, recorded on closed bead `aism-gzp9`). The live
+   campaign bead is **`aism-kqeb` (W80)**; the immediate resume bead is
+   **`aism-686b`**. The proof sketch is `docs/plans/CURRENT.md` → v35
+   (session-31 T0 gains not yet folded into a v36 — SMALL Rule-9 debt: the
+   map shape is unchanged, only the T0 counts moved; fold when the polar
+   queue finishes).
+3. **Rigorous (af-validated, T0): 95.** Registry: 295. Definitions: 45.
+   `op-classical` OPEN.
+4. **HARD BLOCK: the codex usage limit is exhausted (reset 2026-08-01
+   21:18).** ALL codex work — af elevations, design jobs, hostile checks —
+   is blocked until then. Nothing was half-consumed; every workspace is in
+   a clean state.
+5. **Session-31 arc (T0 85 → 95, registry 267 → 295):**
+   (a) **Package §5 step 1 COMPLETE:** F2 typing cycle ran end-to-end
+   (design `DESIGN-F2-TYPING.md` → hostile `AUDIT-F2-TYPING.md`
+   LAND-WITH-CORRECTIONS → verbatim landing → re-seed with the
+   projection-basis byte external → elevation).
+   `lem-routef-f2-positive-unital-compression` af-VALIDATED (86th; 22/22;
+   one genuine η=0 endpoint challenge repaired in-run);
+   `lem-routef-f3-retract-defect` af-VALIDATED (87th; 11/11 first-pass,
+   zero challenges). **The Route-F row chain F0 seam → F2 → F3 → PRH is
+   af-validated end-to-end at row level.**
+   (b) **Package §5 step 2 (polar front): LANDING COMPLETE, ELEVATION 6/21
+   + 2 bonus rows.** All 26 rows of `DESIGN-S1-POLAR-v6.md` §9 steps 2–27
+   landed verbatim (12 analytic + 7 transports 13a–g + row-13 constant
+   ledger + maximal-simplex + 5 downstream); a fresh hostile
+   flattening-equivalence check (`CHECK-POLAR-FLATTENING.md`) returned
+   CLEAN 26/26. Elevated T0: rows 1–5 (88th–92nd: rectified-cstar-control
+   17/17 after a max-rounds resume; unitary-graph-control 15/15;
+   maurer-cartan-trivialization 15/15; polar-retraction 29/29 — the
+   central row, over the 26 soft cap so it carries a linker REFACTOR
+   warning; coherence-naturality 10/10), then **the row-6 balloon cycle**:
+   `lem-stage1-approximate-group-laws` ballooned (60 nodes) → factoring
+   design `DESIGN-S1-GROUP-FACTORING.md` → hostile audit
+   LAND-WITH-CORRECTIONS (one proof-body correction, applied) → two
+   children landed verbatim + parent deps rewired (contract
+   BYTE-UNCHANGED) → `lem-stage1-group-domain-membership` af-VALIDATED
+   (93rd; run 2 after a STUCK on prover discipline, repaired by relaying
+   the AUDIT's guard-derived smallness fact epsilon_r < 1/6 into the shard
+   body) → `lem-stage1-group-closeness` af-VALIDATED (94th; 12/12
+   first-pass) → parent af-VALIDATED (95th; 14/14).
+   (c) Sketch v35 written (sessions 28-addendum–30 reconciliation);
+   def-projection-basis stale-body drift fixed (lock is genuine,
+   ratified 2026-07-24, commit b9270ef4).
+6. **NEXT SESSION STARTS HERE (after the codex reset): resume the serial
+   polar elevation queue at row 7.** `lem-stage1-polar-path-admissibility`
+   is SEEDED (round-trip verified, defs registered). Launch:
+   `python3 scripts/af-orchestrate.py lem-stage1-polar-path-admissibility
+   --tier routine --max-rounds 15` (fr dispatch FIRST, launch as the
+   turn's LAST action). Then serially: row 8
+   (inversion-derivative-control), rows 9–11 (smooth upgrades), row 12
+   (scalar arithmetic), transports 13a–g, row 13 (constant ledger),
+   maximal-simplex, the 5 downstream rows. Per-row design budgets are in
+   each shard body. Escalate prover to xhigh ONLY after a STUCK; factor
+   per a fresh design cycle ONLY after a BALLOON classification (both
+   playbooks were exercised this session and work).
+7. **Banking sequence (unchanged, verified 10× this session):** af export
+   (md+tex) → append per-id oracle to `.frontier/portfolio.json`
+   (`af-<rid>` / `scripts/oracles/af-validated.py <rid>` / ledger+shard
+   inputs, absolute paths) → `fr verify proofs/<rid>/export.md --oracle
+   af-<rid>` → flip shard mechanically (status: proved / af: validated +
+   body Status update) → regenerate (`argument.py --generate`,
+   `gen-report-dag.py`, `gen-report-stats.py --extract`; also
+   `gen-report-defs.py --dag-anchors` if a def body changed) → check-all →
+   `fr log FH banked --artifact <export> --tier T0` → commit → seed the
+   next row in the same commit window.
+8. **Orchestration laws (BINDING):** af runs strictly sequential; no
+   design/audit codex job while an af run is live (any repo write aborts
+   it as PROVER-OVERREACH); fr/bd writes FIRST, commit, af launch as the
+   turn's LAST action; commits only in zero-live-run windows; `git push`
+   only (no pull --rebase) while a run is live.
+9. **After the polar queue:** package §5 step 3 = the Stage-1
+   split-producer design round (G-S1: rectified-nontrivial-projection,
+   original-complementary-pair, fresh-two-point-inclusion — the ONE
+   remaining critical-path design gap; small; polar prerequisites now T0),
+   then MAIN per `DESIGN-MAIN-STRUCTURE-v5.md` §10, then the ledger
+   14-row campaign (decoupled), then the strengthened k-ledger (D4 guard
+   releases at §5 step 6), then f0-assembly, then the root rewire LAST.
+10. Standing mandates: codex = `gpt-5.6-sol`, xhigh cap; batched
+    verification default; NOTHING lands without ratification (D1–D4 is
+    the envelope); Route X/XE fallback only; signed trunk PAUSED.
+11. Gate: `sh scripts/check-all.sh` → `[check-all] OK` (verified at
+    close). All work committed AND pushed.
 
 ## Next steps (ranked)
 
-1. **Re-dispatch the F2 typing design job** (brief committed at
-   `docs/plans/2026-07-27-F2-TYPING-design/BRIEF-F2-TYPING.md`) → fresh
-   hostile check → land corrected contract verbatim → re-seed → re-elevate
-   (provision the projection-basis byte-matched external per the design's
-   §2 verdict; consider the registry-factoring split if the design
-   recommends it).
-2. **F3 elevation** (seed + routine tier), completing package §5 step 1.
-3. **Sketch v35** (Rule-9 debt: reconcile the D1 contract split, 7 defs,
-   2 new T0 rows into the top-down sketch; small delta).
-4. **Polar front landing/elevation** per `DESIGN-S1-POLAR-v6.md` §9.
+1. **`aism-686b`: resume the polar queue at row 7** (blocked until the
+   codex reset 2026-08-01 21:18; see item 6 for the exact command and
+   discipline).
+2. Sketch v36 fold-in of the session-31 T0 gains (small Rule-9 debt; can
+   ride with the next landing commit).
+3. Polar §9 steps 28–29 (the three separately-designed trace rows +
+   corrected `lem-stage1-extra-fixed-class`) — blocked on their own
+   audited campaign designs; check `docs/plans/` for the Stage-1
+   left-inversion-trace design set before starting.
+4. Package §5 step 3 (G-S1 split producers) once rows 1–12 are T0.
 5. Carried housekeeping: `aism-j5t9` (Munkres C^r-triangulation def
-   external); report/*.aux policy; repo-root-relative oracle paths; 12
-   dormant signed-trunk draft defs; `aism-ur9` (dormant).
+   external; unblocks lem-topology-finite-triangulation and hence
+   lem-stage1-quotient-finite-cw's cap); the 12-node vs NODE_SOFT_CAP=26
+   brittleness-prose drift (AUDIT-F2-TYPING correction 2 flagged it for
+   separate reconciliation: AGENTS.md:90-91, argument/README.md:80-81);
+   polar-retraction 29-node REFACTOR warning (cosmetic; tree is clean);
+   report/*.aux policy; repo-root-relative oracle paths; 12 dormant
+   signed-trunk draft defs; `aism-ur9` (dormant).
 
 ## What is intentionally NOT here
 
-- Any claim `op-classical` is proved — OPEN. T0 = 85 covers the F0 seam
-  only; F2/F3, the polar/MAIN/ledger fronts, the strengthened k-ledger,
-  and the root assembly all remain non-rigorous.
-- Any promise F2's typing correction is trivial — the real/complex
-  interface at the A, M output end must keep F3/PRH consumption verbatim;
-  that is exactly what the design job must get right and the hostile check
-  must verify.
+- Any claim `op-classical` is proved — OPEN. T0 = 95 covers the Route-F
+  row chain and polar rows 1–6; polar rows 7–27, G-S1, MAIN, the 14-row
+  ledger, the strengthened k-ledger, f0-assembly, and the root rewire all
+  remain non-rigorous.
+- Any promise the remaining polar rows elevate as smoothly — rows 9/10
+  consume Lee externals (byte-match them at seeding, pattern
+  GT-lee-2ed-*), and row 13 is an 8-way conjunction assembly.
 - Route X / XE decider work (fallback only). Signed trunk PAUSED.
