@@ -233,7 +233,7 @@
 | `lem-stage1-polar-path-admissibility` | lemma | proved | validated | A | Joint projected-straight-path admissibility: there exist universal C_path, C_pol… |
 | `lem-stage1-polar-path-transport` | lemma | stated | none | A | Parameterized polar-path transport: there exist C_path^0, C_pol^0 >= 1 and kappa… |
 | `lem-stage1-polar-retraction` | lemma | proved | validated | A | Closed C^1 polar retraction: there are universal C_pol >= 1, kappa_pol in (0, 1/… |
-| `lem-stage1-polar-retraction-transport` | lemma | stated | none | A | Parameterized polar-retraction transport: there exist C_pol^0 >= 1 and kappa_pol… |
+| `lem-stage1-polar-retraction-transport` | lemma | stated | seeded | A | Parameterized polar-retraction transport: there exist C_pol^0 >= 1 and kappa_pol… |
 | `lem-stage1-polar-scalar-arithmetic` | lemma | proved | validated | A | Universal Stage-1 polar arithmetic: for every C_rect, C_ch, C_pol, C_grp, C_path… |
 | `lem-stage1-quantitative-inverse-function` | lemma | proved | validated | A | Quantitative inverse-function control: if V:X->Y is a Banach-space isomorphism a… |
 | `lem-stage1-quotient-finite-cw` | lemma | stated | none | A | For every finite-dimensional exact-unit epsilon_r-C*-algebra, if breve-calU = ca… |

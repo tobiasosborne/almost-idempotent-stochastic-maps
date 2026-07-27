@@ -5,7 +5,8 @@ contract: Parameterized polar-retraction transport: there exist C_pol^0 >= 1 and
 defs: def-stage1-polar-witness-data; def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-polar-retraction
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-polar-retraction-transport
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 13d, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). TeX 809-855; parameterized loss/guard monotonicity; AUDIT-S1-POLAR-v4.md sect-3.
 owner: A
 ---
