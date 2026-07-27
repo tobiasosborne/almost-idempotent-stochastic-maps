@@ -5,7 +5,8 @@ contract: Group-input polar closeness: there exist universal C_grp, C_pol >= 1, 
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-polar-retraction
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-group-closeness
 provenance: DESIGN-S1-GROUP-FACTORING.md sect-2.2, landed verbatim (row-6 balloon repair; AUDIT-S1-GROUP-FACTORING.md LAND-WITH-CORRECTIONS, contract clause PASS); derivation from lem-stage1-polar-retraction + the two registered definitions; orientation Kitaev TeX 845-868 (qualitative — NOT byte-citable for this quantitative contract).
 owner: A
 ---

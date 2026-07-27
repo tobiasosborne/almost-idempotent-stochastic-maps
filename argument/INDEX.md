@@ -222,8 +222,8 @@
 | `lem-stage1-approximate-group-laws` | lemma | stated | none | A | Quantitative approximate group laws: there exist universal C_grp, C_pol >= 1, ka… |
 | `lem-stage1-approximate-group-laws-transport` | lemma | stated | none | A | Parameterized approximate-group transport: there exist C_grp^0, C_pol^0 >= 1 and… |
 | `lem-stage1-exact-unit-rectification` | lemma | proved | validated | A | Dimension-free exact-unit rectification: there are universal C_unit < infinity a… |
-| `lem-stage1-group-closeness` | lemma | stated | none | A | Group-input polar closeness: there exist universal C_grp, C_pol >= 1, kappa_pol … |
-| `lem-stage1-group-domain-membership` | lemma | stated | seeded | A | Group-input polar-domain membership: there exist universal C_grp, C_pol >= 1, ka… |
+| `lem-stage1-group-closeness` | lemma | stated | seeded | A | Group-input polar closeness: there exist universal C_grp, C_pol >= 1, kappa_pol … |
+| `lem-stage1-group-domain-membership` | lemma | proved | validated | A | Group-input polar-domain membership: there exist universal C_grp, C_pol >= 1, ka… |
 | `lem-stage1-inversion-derivative-control` | lemma | stated | none | A | Typed inversion derivative with chart retention: there exist universal C_der, C_… |
 | `lem-stage1-inversion-derivative-transport` | lemma | stated | none | A | Parameterized inversion-derivative transport: there exist C_der^0, C_ch^0, C_pol… |
 | `lem-stage1-maurer-cartan-transport` | lemma | stated | none | A | Parameterized Maurer-Cartan transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |

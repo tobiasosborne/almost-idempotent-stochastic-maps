@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-group-domain-membership/export.md",
+  "oracle": "af-lem-stage1-group-domain-membership",
+  "result": "pass",
+  "claim_hash": "bbf214797e9787035dc1d0a2774dfe029267022cabcdea663d783177a7af6363",
+  "oracle_digest": "ed6db720add86359627ea5239078bc995d6172d3cd54f476c52710408eb84952",
+  "inputs_hash": "89df25c8a8d7ca8744065fbdc9bff99bfa820f1848723b312c1fe7d4dbe458cf",
+  "ts": "2026-07-27T14:38:42.604Z"
+}
