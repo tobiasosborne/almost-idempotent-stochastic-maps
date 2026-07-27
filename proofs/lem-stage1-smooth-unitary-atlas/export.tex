@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Smooth graph-atlas upgrade: for every finite-dimensional ...}
+\step{1} Smooth graph-atlas upgrade: for every finite-dimensional exact-unit epsilon\_r-C*-algebra, if calU is covered by the unique C\textasciicircum{}1 graph functions g\_V of lem-stage1-unitary-graph-control and D\_\{A\textasciicircum{}perp\} f\_V is invertible at every graph point, then those same g\_V are C\textasciicircum{}infinity, and the same graph charts make calU a smooth embedded manifold; no point or first derivative of a graph or chart is changed. \steptag{validated} \\[6pt]
+\step{1.1} For each graph-chart center V, the defining map Phi\_V:iH x H -> H, Phi\_V(P,Q)=f\_V(P+Q), is C\textasciicircum{}infinity: with the displayed parenthesization it is a real polynomial of degree at most two. \steptag{validated} \\[6pt]
+\step{1.1.1} By def-epsilon-cstar-algebra, bold-dot is complex-bilinear and dagger is conjugate-linear, hence bold-dot is real-bilinear and dagger is real-linear; therefore A=P+Q maps through the fixed-parenthesized expression defining f\_V by sums and compositions of real-linear and real-bilinear maps, so Phi\_V is a real polynomial of degree at most two and is C\textasciicircum{}infinity in finite dimension. \steptag{validated} \\[4pt]
+\step{1.1.2} Writing B=V bold-dot (J+P+Q), the exact involution axioms of def-epsilon-cstar-algebra give B\textasciicircum{}dagger=(J+(P+Q)\textasciicircum{}dagger) bold-dot V\textasciicircum{}dagger and (B\textasciicircum{}dagger bold-dot B)\textasciicircum{}dagger=B\textasciicircum{}dagger bold-dot B without any reassociation; since J\textasciicircum{}dagger=J, Phi\_V(P,Q)=(B\textasciicircum{}dagger bold-dot B-J)/2 belongs to H. \steptag{validated} \\[4pt]
+\step{1.2} At every graph point (P,g\_V(P)), the invertibility hypothesis and GT-lee-2ed-thm-C.40 produce a neighborhood on which the zero set Phi\_V\textasciicircum{}\{-1\}(0) is the graph of a C\textasciicircum{}infinity function F. \steptag{validated} \\[6pt]
+\step{1.2.1} The finite-dimensional real spaces iH and H can be linearly identified with R\textasciicircum{}n and R\textasciicircum{}k; the bilinear-product and real-linear-involution calculation from def-epsilon-cstar-algebra makes Phi\_V smooth on the open ambient product, and lem-stage1-unitary-graph-control gives Phi\_V(P,g\_V(P))=0. \steptag{validated} \\[4pt]
+\step{1.2.2} At (P,g\_V(P)), the derivative of Q mapsto Phi\_V(P,Q) is exactly D\_\{A\textasciicircum{}perp\}f\_V(P+g\_V(P)), which is invertible by the hypothesis of node 1; applying GT-lee-2ed-thm-C.40 with c=0 yields neighborhoods O\_P,O\_Q and a C\textasciicircum{}infinity F:O\_P->O\_Q such that Phi\_V(P',Q')=0 in O\_P x O\_Q if and only if Q'=F(P'). \steptag{validated} \\[4pt]
+\step{1.3} The local implicit function F equals the already-given g\_V after shrinking its neighborhood; consequently each unchanged g\_V is C\textasciicircum{}infinity on its full graph domain, and its points and first derivative are unchanged. \steptag{validated} \\[6pt]
+\step{1.3.1} By lem-stage1-unitary-graph-control, g\_V is C\textasciicircum{}1 (hence continuous), takes values in the permitted H-ball, satisfies Phi\_V(P',g\_V(P'))=0, and is the unique such graph branch there; shrink O\_P and O\_Q around (P,g\_V(P)) so continuity keeps g\_V(O\_P) inside O\_Q, then the implicit zero-set equivalence forces g\_V=F on O\_P. Doing this at every P proves g\_V is C\textasciicircum{}infinity everywhere on its original domain; equality with the original C\textasciicircum{}1 function is pointwise, so uniqueness of derivatives leaves its existing first derivative unchanged. \steptag{validated} \\[4pt]
+\step{1.4} The unchanged graph parametrizations and their unchanged coordinate inverses are smooth and compatible; because they cover calU and realize it locally as graphs of smooth maps, they make calU a smooth embedded manifold without changing any graph or chart. \steptag{validated} \\[6pt]
+\step{1.4.1} In each graph coordinate supplied by lem-stage1-unitary-graph-control, the parametrization P mapsto (P,g\_V(P)) is smooth and its inverse on the graph is the real-linear projection to iH; after the already-supplied affine-linear chart-coordinate transport (notation phi\_V from def-approximate-unitary-space), the parametrization and inverse remain smooth, so each chart realizes calU locally as an embedded smooth graph. \steptag{validated} \\[4pt]
+\step{1.4.2} On an overlap, the transition map is the unchanged target-chart coordinate projection composed with the unchanged source graph parametrization; the coordinate transports and projections are affine-linear and the graph parametrizations are smooth, hence transitions are smooth. The cover is the same cover asserted by lem-stage1-unitary-graph-control, and every set, function, and coordinate map used is literally the old one, so the resulting embedded smooth atlas changes neither points nor charts (and node 1.3 preserves their first derivatives). \steptag{validated} \\[6pt]
+\step{1.4.2.1} Self-contained smoothness bridge (independent of node 1.3): fix V and P in the original graph domain and put Phi\_V(P\_prime,Q\_prime)=f\_V(P\_prime+Q\_prime). By def-epsilon-cstar-algebra, bold-dot is real-bilinear and dagger is real-linear, so the fixed-parenthesized Phi\_V is a smooth real polynomial. At (P,g\_V(P)) it vanishes by lem-stage1-unitary-graph-control, and its Q-derivative is D\_\{A\textasciicircum{}perp\}f\_V(P+g\_V(P)), invertible by the hypothesis of node 1. GT-lee-2ed-thm-C.40 therefore gives product neighborhoods O\_P x O\_Q and a smooth F:O\_P->O\_Q whose graph is exactly the local zero set. The original g\_V is C\textasciicircum{}1, hence continuous, so after shrinking O\_P it has g\_V(O\_P) subset O\_Q; it satisfies Phi\_V(P\_prime,g\_V(P\_prime))=0, hence the zero-set equivalence gives g\_V=F on O\_P. Repeating at every P proves that the same original g\_V is smooth on its full original domain. Because this is equality with the pre-existing C\textasciicircum{}1 function, its points and its first derivative are literally unchanged. \steptag{validated} \\[4pt]
+\step{1.4.2.2} For overlapping original charts centered at V and W, write Psi\_V for the unchanged source graph parametrization after its affine-linear coordinate transport and write pi\_W for the unchanged target anti-Hermitian coordinate projection after the inverse affine-linear transport. On the original overlap the transition is pi\_W composed with Psi\_V. Its domain is open because the already-supplied C\textasciicircum{}1 graph charts are charts, and it is smooth because Psi\_V uses the now-proved-smooth unchanged g\_V while all transports and projections are affine-linear; interchanging V and W gives the smooth inverse. Thus the original cover and the original chart maps form a smooth compatible atlas. No underlying point, graph function, chart map, or first derivative has been replaced: the preceding child identifies each smooth graph function with the original C\textasciicircum{}1 function, and the remaining maps are exactly the old affine-linear ones. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

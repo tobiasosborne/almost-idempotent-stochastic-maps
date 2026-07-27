@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-smooth-unitary-atlas/export.md",
+  "oracle": "af-lem-stage1-smooth-unitary-atlas",
+  "result": "pass",
+  "claim_hash": "0fe3769bde87ab4486512d002d7d7cae07a4f6ba62f235dc06a4b58c01bc9a21",
+  "oracle_digest": "83c619153a9c52c0409062f1f861cd2a0600f86a8892e61dd534e9077caf881a",
+  "inputs_hash": "7e032ce1d6fe2d372ece15b19f32154604baad91ba79731f6904214e5001262e",
+  "ts": "2026-07-27T16:41:47.979Z"
+}
