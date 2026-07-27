@@ -93,6 +93,21 @@ TRIGGER: session close, or a material change in the current frontier / next task
 10. Standing mandates: codex = `gpt-5.6-sol`, xhigh cap; batched
     verification default; NOTHING lands without ratification (D1–D4 is
     the envelope); Route X/XE fallback only; signed trunk PAUSED.
+10b. **Mathlib/Lean advisory (post-close, user-requested, 2026-07-27;
+    Opus subagent, checked vs loogle + mathlib4 docs).** Verdict MAYBE:
+    a Lean formalisation is realistic today ONLY for the analytic lower
+    half (the T0 F0 seam + rectification / defect-linearization /
+    functional-calculus rows — weeks-scale on existing mathlib:
+    Matrix.rowStochastic, linfty_opNorm, ApproximatesLinearOn, CFC,
+    gcongr/positivity). NOT realistic for the whole campaign: mathlib has
+    NO cb-norm/UCP theory (CompletelyBounded = 0 hits), no submanifold /
+    quotient-manifold / oriented-manifold API, and the Stage-1 topology
+    cluster is entirely absent (no Lefschetz–Hopf, no cup product, no
+    triangulability — not even Brouwer). Split ~15–25% reuse / 75–85% new
+    library. CONFIRMS the standing policy: af is the rigour rung for this
+    campaign; Lean reserved for the stable analytic seam or after mathlib
+    grows the missing stacks. Full table in the worklog session-31
+    addendum; fr log cycle W82.
 11. Gate: `sh scripts/check-all.sh` → `[check-all] OK` (verified at
     close). All work committed AND pushed.
 

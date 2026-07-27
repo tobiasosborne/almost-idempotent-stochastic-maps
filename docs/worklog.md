@@ -1720,3 +1720,28 @@ now have worked examples in the ledger history.
 pushed; HANDOFF rewritten (resume bead `aism-686b`: polar row 7 after the codex reset); W80
 updated with the session tally. fr: all dispatches/harvests logged on FH (W81a–W81r), including
 the two aborts and the wall; no breaker events.
+
+### Session 31 addendum (same day): campaign-progress + mathlib-coverage advisories (no registry change)
+
+**Campaign progress assessment (user-requested, in-chat).** Roughly 35 of ~105 critical-path rows
+T0 (~1/3 by row count, but the hardest fronts — the Kitaev gateway, PRH, the typing seam, the
+central polar diffeomorphism, and the whole risk-retirement phase — are behind). Remaining:
+~50 elevations of already-audited contracts (polar 20, ledger 14, MAIN ~29 incl. landing), two
+small design cycles (G-S1; the Stage-1 trace rows for §9 steps 28–29), and ONE genuinely new
+proof obligation (the strengthened k-ledger, ratified D4) — the largest residual mathematical
+risk. Binding constraint: codex quota, not mathematics.
+
+**Mathlib coverage advisory (user-requested; Opus subagent vs loogle + mathlib4 docs; fr cycle
+W82).** Overall MAYBE — realistic today only for the analytic lower half. Per-ingredient:
+YES = stochastic matrices/linfty opnorm/idempotents; explicit-constant bookkeeping (gcongr etc.).
+MAYBE = fd-C*/Gelfand (projection-basis form not stated); quantitative IFT
+(ApproximatesLinearOn is genuinely quantitative); CFC (no Riesz idempotents).
+NO = cb norms/UCP theory (CompletelyBounded: zero hits; the CP file is ~3 declarations),
+epsilon-C*-algebras (custom, cheap), submanifold/regular-value + quotient-manifold + oriented-
+manifold layer, and the ENTIRE Stage-1 topology cluster (no Lefschetz–Hopf, no cup product, no
+cellular homology, no triangulation theory, not even Brouwer — the largest hole, plausibly
+person-years upstream). Split ~15–25% mathlib reuse / 75–85% new library; the T0 F0 seam alone
+is a tractable weeks-scale Lean project and Lean would eliminate for free exactly the defect
+class our verifiers keep catching (real-vs-complex typing, quantifier scoping). Confirms the
+standing rung policy: af now; Lean later for the stable analytic seam. (One stale line in the
+agent report — "F2 mid-repair" — predates the same-day F2 validation, 86th.)
