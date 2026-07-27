@@ -5,7 +5,8 @@ contract: Uniform global tangent/Maurer-Cartan control: there are universal C_ch
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-unitary-graph-control
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-maurer-cartan-trivialization
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 3, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). Source loci TeX 795-807; the two equivariance identities are direct from the displayed formula and scalar bilinearity.
 owner: A
 ---

@@ -1,0 +1,8 @@
+{
+  "id": "049cea9530680e9d",
+  "name": "lem-stage1-rectified-cstar-control",
+  "source": "imports validated registry lemma proofs/lem-stage1-rectified-cstar-control — Controlled exact-unit C*-rectification: there are universal C_rect \u003e= 1 and e_rect in (0, 1/C_rect] such that every finite-dimensional epsilon_X-C*-algebra with 0 \u003c= epsilon_X \u003c= e_rect admits, on the same involutive normed space, a bilinear product bold-dot and J = J^dagger for which (calX, J, bold-dot, dagger) satisfies EVERY exact-unit epsilon_r-C*-algebra axiom of def-epsilon-cstar-algebra, including ||J|| = 1, where epsilon_r = C_rect*epsilon_X, and ||J - I_X|| \u003c= C_rect*epsilon_X, ||x bold-dot y - xy|| \u003c= C_rect*epsilon_X*||x||*||y||.",
+  "content_hash": "e7927f2254c5f8da008e759ecdae6b228718f30965d187fddb9a7bb9e2ece09d",
+  "created": "2026-07-27T11:51:11.896257356Z",
+  "notes": ""
+}

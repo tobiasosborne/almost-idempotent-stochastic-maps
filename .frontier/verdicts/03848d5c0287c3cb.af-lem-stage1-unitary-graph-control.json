@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-unitary-graph-control/export.md",
+  "oracle": "af-lem-stage1-unitary-graph-control",
+  "result": "pass",
+  "claim_hash": "64a3945d1b07a8465a93049c22d4adb13f27039af7b18f76aa6949378c854b02",
+  "oracle_digest": "c3776c6286d0aaa3d8fa641287ac7273276019e83747328b6523c6cce3d960f2",
+  "inputs_hash": "a05af7bd0e9bcec61a64b0cd9ccc5b26f7f01a8aae1c659c84514c6d29a19fa2",
+  "ts": "2026-07-27T12:15:34.971Z"
+}

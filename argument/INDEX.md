@@ -225,7 +225,7 @@
 | `lem-stage1-inversion-derivative-control` | lemma | stated | none | A | Typed inversion derivative with chart retention: there exist universal C_der, C_… |
 | `lem-stage1-inversion-derivative-transport` | lemma | stated | none | A | Parameterized inversion-derivative transport: there exist C_der^0, C_ch^0, C_pol… |
 | `lem-stage1-maurer-cartan-transport` | lemma | stated | none | A | Parameterized Maurer-Cartan transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |
-| `lem-stage1-maurer-cartan-trivialization` | lemma | stated | none | A | Uniform global tangent/Maurer-Cartan control: there are universal C_ch >= 1, kap… |
+| `lem-stage1-maurer-cartan-trivialization` | lemma | stated | seeded | A | Uniform global tangent/Maurer-Cartan control: there are universal C_ch >= 1, kap… |
 | `lem-stage1-polar-coherence-naturality` | lemma | stated | none | A | Polar coherence and scalar naturality: for every exact-unit algebra and every tw… |
 | `lem-stage1-polar-constant-ledger` | lemma | stated | none | A | Compatible Stage-1 polar witnesses and range: there exists one universal def-sta… |
 | `lem-stage1-polar-path-admissibility` | lemma | stated | none | A | Joint projected-straight-path admissibility: there exist universal C_path, C_pol… |
@@ -244,7 +244,7 @@
 | `lem-stage1-smooth-unitary-atlas` | lemma | stated | none | A | Smooth graph-atlas upgrade: for every finite-dimensional exact-unit epsilon_r-C*… |
 | `lem-stage1-smooth-unitary-operations` | lemma | stated | none | A | Smooth action/operations upgrade: under lem-stage1-approximate-group-laws, lem-s… |
 | `lem-stage1-uniform-inversion-isolation` | lemma | stated | none | A | There are universal e_iso^r > 0, r_iso > 0 such that, for every finite-dimension… |
-| `lem-stage1-unitary-graph-control` | lemma | stated | seeded | A | Uniform unitary graph control: there are universal C_ch >= 1, kappa_ch in (0, 1/… |
+| `lem-stage1-unitary-graph-control` | lemma | proved | validated | A | Uniform unitary graph control: there are universal C_ch >= 1, kappa_ch in (0, 1/… |
 | `lem-stage1-unitary-graph-transport` | lemma | stated | none | A | Parameterized unitary-graph transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |
 | `lem-starvation-completion-obstruction` | lemma | proved | validated | B | Bounded-slab starvation completion obstruction (K-free): for every finite I, eve… |
 | `lem-thmainext-conditional` | lemma | proved-mod-audit | none | A | Extended th_main_ext assembly: there are universal C_E < infinity and epsilon_E … |
