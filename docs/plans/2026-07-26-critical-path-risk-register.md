@@ -14,6 +14,26 @@ UPDATE POLICY: strike items only when the de-risk evidence is banked (a
 
 # Critical-path risk register — Route F (2026-07-26)
 
+**SESSION-30 CLOSE STATE (2026-07-27): ALL FOUR FRONTS DE-RISKED — designed
+and fresh-hostile-audited to a landable state; 19 further codex jobs (11
+hostile audits, 7 prescribed repairs, 1 design); ZERO route-level findings
+across the whole campaign.** Front 1 (polar): `DESIGN-S1-POLAR-v6.md`, audit
+v6 = LAND (7 hostile stages; the v5 stage caught a pre-existing
+producer-domain quantifier defect that four earlier audits had accepted —
+repaired by coherent finite-dimensional closure, audit §6 option 1).
+Front 2 (MAIN): `DESIGN-MAIN-STRUCTURE-v5.md`, audit v5 = REPAIR-CONFIRMED
+(6 stages; gated on P0 + G-S1). Front 3 (ledger): unchanged from session 29,
+re-audit = LAND-14 with two exact corrections. Front 4 (F0):
+`DESIGN-F0-ASSEMBLY.md`, audit = LAND with four corrections (every seam an
+exact match; the corrected `lem-routef-k-ledger` honestly reclassified as a
+strengthened replacement = new parent proof obligation). Consolidated user
+ratification package: `docs/plans/2026-07-27-W78-ratification-package.md`
+(4 user decisions D1–D4; merged serial landing/elevation order). The ONE
+remaining design gap on the critical path is the three Stage-1 split
+producers (G-S1 contents), deliberately sequenced behind the polar landing
+(package §5 step 3). NOTHING landed or promoted; T0 = 83 unchanged;
+op-classical OPEN.
+
 **SESSION-29 CLOSE STATE (2026-07-26, one full design→audit→repair cycle run
 on fronts 1–3; 8 hostile codex jobs; ZERO route-level findings — no dimension
 leak, no Kitaev-theorem error, no unclosable gap anywhere).**

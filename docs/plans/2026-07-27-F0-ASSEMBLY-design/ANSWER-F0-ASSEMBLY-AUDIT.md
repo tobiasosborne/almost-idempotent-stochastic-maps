@@ -1,0 +1,1 @@
+[AUDIT-F0-ASSEMBLY.md](/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/docs/plans/2026-07-27-F0-ASSEMBLY-design/AUDIT-F0-ASSEMBLY.md)

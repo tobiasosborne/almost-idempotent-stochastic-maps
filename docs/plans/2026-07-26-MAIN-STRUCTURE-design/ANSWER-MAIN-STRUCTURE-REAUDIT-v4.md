@@ -1,0 +1,1 @@
+[Audit complete: AUDIT-MAIN-STRUCTURE-v4.md](/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/docs/plans/2026-07-26-MAIN-STRUCTURE-design/AUDIT-MAIN-STRUCTURE-v4.md)
