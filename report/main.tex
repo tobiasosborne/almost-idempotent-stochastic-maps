@@ -129,6 +129,17 @@
 % --- the Stage-1 rectified product (lem-stage1-exact-unit-rectification) ---
 \newcommand{\bdot}{\mathbin{\bm{\cdot}}}        % the rectified product x . y ("bold-dot")
 
+% --- the Stage-1 polar layer (def-approximate-unitary-space) -----------------
+% NOTATION ONLY: every term rendered here is defined exactly once in
+% definitions/def-approximate-unitary-space.md and is referenced by id (L2).
+\newcommand{\calX}{\mathcal X}                  % the ambient involutive normed space
+\newcommand{\Herm}{\mathcal H}                  % Hermitian part   {X : X^dagger = X}
+\newcommand{\aHerm}{i\mathcal H}                % anti-Hermitian part {X : X^dagger = -X}
+\newcommand{\Unit}{\mathcal U}                  % the unitaries  U = closed-U_0
+\newcommand{\Unitc}[1]{\overline{\mathcal U}_{#1}}  % closed defect set  closed-U_delta
+\newcommand{\Unito}[1]{\mathcal U_{#1}}         % strict defect set  U_delta
+\newcommand{\Lmul}[1]{L_{#1}}                   % the left multiplier L_V
+
 % --- argument-DAG atlas (GENERATED; see scripts/gen-report-dag.py) ---
 % Loads pdflscape/adjustbox/xcolor/tikz, the Okabe-Ito status palette, the node styles, and the
 % crosslink macros \dagref{<registry-id>} / \dagdef{<def-id>} / \dagphase{<key>}{<text>}.
@@ -194,6 +205,10 @@
 \include{sections/42_routef_f0_seam}
 \include{sections/43_routef_ai_ledger}
 \include{sections/44_routef_f2_f3}
+\include{sections/45_stage1_polar_charts}
+\include{sections/46_stage1_polar_retraction}
+\include{sections/47_stage1_group_laws}
+\include{sections/48_stage1_smooth_polar}
 \include{sections/39_argument_dag}
 \include{sections/40_campaign_statistics}
 \include{sections/41_status_outlook}

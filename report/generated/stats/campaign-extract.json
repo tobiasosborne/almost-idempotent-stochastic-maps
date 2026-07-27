@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-07-27T17:30:47Z",
+ "extracted_at": "2026-07-27T17:33:49Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-07-27T17:30:47Z",
+  "mined_at": "2026-07-27T17:33:49Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -467,21 +467,21 @@
     "def_added": 512,
     "node_amended": 230,
     "node_archived": 42,
-    "node_created": 1777,
+    "node_created": 1778,
     "node_validated": 1705,
     "nodes_claimed": 2886,
     "nodes_released": 2886,
-    "proof_initialized": 111
+    "proof_initialized": 112
    },
-   "ledger_entries": 10757,
-   "nodes_total": 1777,
+   "ledger_entries": 10759,
+   "nodes_total": 1778,
    "owner_roles": {
     "prover (fix round)": 349,
     "prover (initial build)": 445,
     "verifier": 2092
    },
    "root_validated": 100,
-   "seeded_not_validated": 11,
+   "seeded_not_validated": 12,
    "validation_days": {
     "2026-07-02": 7,
     "2026-07-03": 5,
@@ -495,7 +495,7 @@
     "2026-07-26": 13,
     "2026-07-27": 17
    },
-   "workspaces": 111,
+   "workspaces": 112,
    "workspaces_detail": [
     {
      "amendments": 0,
@@ -1922,6 +1922,22 @@
      "validated": 29
     },
     {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 0,
+     "first_ts": "2026-07-27T17:32:06.353004545Z",
+     "id": "lem-stage1-polar-scalar-arithmetic",
+     "last_ts": "2026-07-27T17:32:06.356634728Z",
+     "ledger_entries": 2,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
+    },
+    {
      "amendments": 2,
      "archived": 0,
      "challenges": 3,
@@ -2351,8 +2367,8 @@
    "lit-review": 1,
    "plans": 61,
    "recon": 1,
-   "report_shard_lines": 5418,
-   "report_shards": 46,
+   "report_shard_lines": 6251,
+   "report_shards": 50,
    "tooling-feedback": 2,
    "waves": 107
   },
@@ -2633,9 +2649,9 @@
   "git": {
    "active_days": 18,
    "authors": {
-    "tobiasosborne": 806
+    "tobiasosborne": 808
    },
-   "commits": 806,
+   "commits": 808,
    "first_day": "2026-07-02",
    "last_day": "2026-07-27",
    "per_day": {
@@ -2656,7 +2672,7 @@
     "2026-07-24": 111,
     "2026-07-25": 165,
     "2026-07-26": 85,
-    "2026-07-27": 51
+    "2026-07-27": 53
    },
    "subject_prefixes": {
     "W61": 13,
@@ -2672,7 +2688,7 @@
     "fr log": 106,
     "fr orient": 72,
     "fudw": 9,
-    "report": 8
+    "report": 9
    }
   },
   "path_name": "almost-idempotent-stochastic-maps",
@@ -2751,8 +2767,8 @@
   },
   "registry": {
    "af": {
-    "none": 184,
-    "seeded": 11,
+    "none": 183,
+    "seeded": 12,
     "validated": 100
    },
    "kind": {

@@ -1,0 +1,209 @@
+% SHARD-ID: AISM-47-STAGE1-GROUP-LAWS
+% SHARD-TITLE: Quantitative approximate group laws on the unitaries
+% SHARD-SUMMARY: Reproduces lem-stage1-group-domain-membership and lem-stage1-group-closeness, the two af-validated sub-lemmas showing that a product U bold-dot V and an adjoint U^dagger of unitaries lie in the polar domain with right inverses, and that the polar projection moves them by at most C_grp*epsilon_r.
+% SHARD-SUMMARY: Reproduces lem-stage1-approximate-group-laws, the af-validated parent: the polar projection of the product and of the adjoint are globally defined C1 maps mu and sigma with exact basepoint identities and five defect estimates of size C_grp*epsilon_r.
+% SHARD-SUMMARY: Records the balloon abort that forced the parent proof to be factored into these two deliberately sibling-independent children, the binding in-scope smallness discipline, and the endpoint discipline that keeps every estimate meaningful at epsilon_r = 0.
+% SHARD-KEYWORDS: lem-stage1-group-domain-membership, lem-stage1-group-closeness, lem-stage1-approximate-group-laws, af validated, approximate group, associator defect, balloon repair, endpoint discipline, Stage 1
+\section{Quantitative approximate group laws on the unitaries}\label{sec:stage1-group-laws}
+
+The unitary set $\Unit$ of Definition~\ref{def:approximate-unitary-space} is not a group:
+$\bdot$ is only approximately associative and $U\dg$ is only approximately an inverse.
+The three results below turn it into an approximate group by \emph{projecting} the naive
+product and adjoint back to $\Unit$ through the polar inverse $u_\delta$ of
+Lemma~\ref{lem:stage1-polar-retraction}. Throughout, all three carry the same pair of guards
+\begin{equation}\label{eq:s1gl-guards}
+  C_{\mathrm{pol}}(\ecs_r+\delta)\le\kappa_{\mathrm{pol}},
+  \qquad
+  C_{\mathrm{grp}}\ecs_r<\delta-C_{\mathrm{pol}}(\ecs_r\delta+\delta^{2}),
+\end{equation}
+with universal $C_{\mathrm{grp}},C_{\mathrm{pol}}\ge1$ and
+$\kappa_{\mathrm{pol}}\in(0,\tfrac12]$.
+
+\begin{lemma}[\texttt{lem-stage1-group-domain-membership}]\label{lem:stage1-group-domain-membership}
+There exist universal $C_{\mathrm{grp}},C_{\mathrm{pol}}\ge1$ and
+$\kappa_{\mathrm{pol}}\in(0,\tfrac12]$ such that for every finite-dimensional exact-unit
+$\ecs_r$-$C^*$-algebra and every $\delta>0$ satisfying \eqref{eq:s1gl-guards}, the inverse
+$u_\delta:S_\delta\to\Unit$ of the polar map is defined at $U\bdot V$ and at $U\dg$ for every
+$U,V\in\Unit$; moreover $U\bdot V$ and $U\dg$ each have a right inverse.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Group-input polar-domain membership: there exist universal C_grp, C_pol >= 1, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra and delta > 0 satisfying C_pol*(epsilon_r + delta) <= kappa_pol and C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), the inverse u_delta:S_delta -> calU of the polar map is defined at U bold-dot V and U^dagger for every U, V in calU; moreover, U bold-dot V and U^dagger each have a right inverse.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Take $C_{\mathrm{pol}},\kappa_{\mathrm{pol}}$ from Lemma~\ref{lem:stage1-polar-retraction}
+and $C_{\mathrm{grp}}=4$; abbreviate $e=\ecs_r$ and
+$t=\delta-C_{\mathrm{pol}}(e\delta+\delta^{2})$. By the inner inclusion
+\eqref{eq:s1pr-sandwich} it suffices to place $U\bdot V$ and $U\dg$ in $\Unito{t}$,
+right-inverse clause included.
+
+\emph{In-scope smallness.} Everything below cites one arithmetic node, derived from
+\eqref{eq:s1gl-guards} alone: $C_{\mathrm{pol}}\ge1$ and $\kappa_{\mathrm{pol}}\le\tfrac12$
+give $s:=e+\delta\le\tfrac12$ and $\delta\le\tfrac12$, while the second guard with
+$C_{\mathrm{grp}}=4$ gives $4e<t$, hence $t>0$ and $e<t\le\delta(1-s)$. Since
+$(s-e)(1-s)$ is increasing in $s$ on $[e,\tfrac12]$, this forces
+\begin{equation}\label{eq:s1gl-small}
+  e<\tfrac16 .
+\end{equation}
+No threshold beyond \eqref{eq:s1gl-small} is available, and none is used.
+
+\emph{Multiplier control.} For $W\in\Unit$, $W\dg\bdot W=J$ and the $C^*$-lower bound give
+$(1-e)\nrm{W}^{2}\le1$, while the associator axiom gives
+$\nrm{\Lmul{W\dg}\Lmul{W}-I}\le e\nrm{W}^{2}\le e/(1-e)<\tfrac15$ by \eqref{eq:s1gl-small}.
+Hence $\Lmul{W}$ is injective, therefore bijective in finite dimension, with
+$\nrm{\Lmul{W\dg}}\le\tfrac75$ and $\nrm{\Lmul{W}^{-1}}\le\tfrac74$.
+
+\emph{The product.} Put $X=U\bdot V$, so $X\dg=V\dg\bdot U\dg$ by the star rule. Inserting
+$((V\dg\bdot U\dg)\bdot U)\bdot V$ and $(V\dg\bdot(U\dg\bdot U))\bdot V$ between
+$X\dg\bdot X$ and $J$ costs two associators and lands on
+$(V\dg\bdot J)\bdot V=V\dg\bdot V=J$, so
+\begin{equation}\label{eq:s1gl-proddefect}
+  \nrm{X\dg\bdot X-J}\;\le\;\frac{2e(1+e)}{(1-e)^{2}}\;\le\;4e\;<\;t\;<\;2t .
+\end{equation}
+Approximate associativity gives $\nrm{\Lmul{X}-\Lmul{U}\Lmul{V}}\le e\nrm{U}\nrm{V}<\tfrac15$,
+while $\nrm{(\Lmul{U}\Lmul{V})^{-1}}\le\tfrac{49}{16}$; the Neumann perturbation is
+$<\tfrac{49}{80}<1$, so $\Lmul{X}$ is invertible and $\Lmul{X}^{-1}J$ is a right inverse
+of $X$.
+
+\emph{The adjoint.} $U\dg\bdot U=J$ says $U$ is a right inverse of $U\dg$. If $R$ is the
+right inverse of $U$ supplied by Definition~\ref{def:approximate-unitary-space} then
+$R=\Lmul{U}^{-1}J$ and $\nrm{R}\le\tfrac74$; one associator gives
+$\nrm{U\dg-R}\le e\nrm{U}^{2}\nrm{R}$ and hence
+$\nrm{U\bdot U\dg-J}\le(1+e)e\nrm{U}^{3}\nrm{R}\le\tfrac{441}{125}e<4e<t<2t$. So both inputs
+lie in $\Unito{t}\subseteq S_\delta$.
+
+\emph{Endpoint discipline.} Every estimate above is non-strict and remains meaningful at
+$e=0$; the single strict passage is $C_{\mathrm{grp}}e<t$, followed by $t<2t$ because
+$t>0$. That is exactly what membership in the strict set $\Unito{t}$ needs.
+
+\begin{lemma}[\texttt{lem-stage1-group-closeness}]\label{lem:stage1-group-closeness}
+There exist universal $C_{\mathrm{grp}},C_{\mathrm{pol}}\ge1$ and
+$\kappa_{\mathrm{pol}}\in(0,\tfrac12]$ such that for every finite-dimensional exact-unit
+$\ecs_r$-$C^*$-algebra and every $\delta>0$ satisfying \eqref{eq:s1gl-guards}, the inverse
+$u_\delta:S_\delta\to\Unit$ of the polar map satisfies
+\begin{equation}\label{eq:s1gl-close}
+  \nrm{u_\delta(U\bdot V)-U\bdot V}\le C_{\mathrm{grp}}\ecs_r,
+  \qquad
+  \nrm{u_\delta(U\dg)-U\dg}\le C_{\mathrm{grp}}\ecs_r
+  \qquad(U,V\in\Unit).
+\end{equation}
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Group-input polar closeness: there exist universal C_grp, C_pol >= 1, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra and delta > 0 satisfying C_pol*(epsilon_r + delta) <= kappa_pol and C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), the inverse u_delta:S_delta -> calU of the polar map satisfies ||u_delta(U bold-dot V) - U bold-dot V|| <= C_grp*epsilon_r and ||u_delta(U^dagger) - U^dagger|| <= C_grp*epsilon_r for every U, V in calU.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Take $\kappa_{\mathrm{pol}}\le\tfrac1{16}$ and $C_{\mathrm{grp}}=5$, and write
+$\rho=\delta-C_{\mathrm{pol}}(\ecs_r\delta+\delta^{2})$, so $\ecs_r+\delta\le\tfrac1{16}$ and
+$\rho>5\ecs_r\ge0$. This row deliberately does \emph{not} import
+Lemma~\ref{lem:stage1-group-domain-membership}: the displayed expressions assert that both
+inputs lie in the domain of $u_\delta$, and the tree re-derives that typing internally ---
+$\nrm{(U\bdot V)\dg\bdot(U\bdot V)-J}\le3\ecs_r$ with a right inverse obtained from
+injectivity of $\Lmul{U\bdot V}$ in finite dimension, and
+$\nrm{U\bdot U\dg-J}\le2\ecs_r$ with the exact right inverse $U$ --- so that
+$U\bdot V,U\dg\in\Unito{\rho}\subseteq S_\delta$. The duplication is the price of removing
+every edge between the two children.
+
+The estimate itself is one calculation, stated for any $X\in S_\delta$ with
+$\nrm{X\dg\bdot X-J}\le3\ecs_r$. Write $u=u_\delta(X)$, $h=h_\delta(X)$ and $a=h-J$, so
+$X=u\bdot h$, $u\in\Unit$, $h\in\Herm$ and $\nrm{a}<\delta$ by
+Lemma~\ref{lem:stage1-polar-retraction}. Two associator comparisons of
+$(h\bdot u\dg)\bdot(u\bdot h)$ against $h\bdot h$ give
+\begin{equation}\label{eq:s1gl-square}
+  \nrm{X\dg\bdot X-h\bdot h}\;\le\;2\ecs_r(1+\ecs_r)\nrm{h}^{2}\nrm{u}^{2}\;\le\;3\ecs_r .
+\end{equation}
+Exact unitality and bilinearity give $h\bdot h-J=2a+a\bdot a$, so
+$2\nrm{a}\le6\ecs_r+(1+\ecs_r)\nrm{a}^{2}$; since $\nrm{a}<\delta\le\tfrac1{16}$ the
+quadratic term is at most $\tfrac{17}{256}\nrm{a}$ and absorbs, leaving
+$\nrm{a}\le\tfrac{1536}{495}\ecs_r\le4\ecs_r$. Finally exact right unitality gives
+$\nrm{u_\delta(X)-X}=\nrm{u\bdot(J-h)}\le(1+\ecs_r)\nrm{u}\nrm{a}\le5\ecs_r$, which is
+\eqref{eq:s1gl-close}.
+
+\begin{lemma}[\texttt{lem-stage1-approximate-group-laws}]\label{lem:stage1-approximate-group-laws}
+There exist universal $C_{\mathrm{grp}},C_{\mathrm{pol}}\ge1$ and
+$\kappa_{\mathrm{pol}}\in(0,\tfrac12]$ such that for every finite-dimensional exact-unit
+$\ecs_r$-$C^*$-algebra and every $\delta>0$ satisfying \eqref{eq:s1gl-guards}, the inverse
+$u_\delta$ of the polar map defines $C^{1}$ maps
+\begin{equation}\label{eq:s1gl-musigma}
+  \mu(U,V)=u_\delta(U\bdot V),\qquad \sigma(U)=u_\delta(U\dg)
+\end{equation}
+on all of $\Unit$, with $\mu(J,U)=\mu(U,J)=U$, $\sigma(J)=J$, and
+\begin{gather}
+  \nrm{\mu(U,V)-U\bdot V}\le C_{\mathrm{grp}}\ecs_r,
+  \qquad
+  \nrm{\sigma(U)-U\dg}\le C_{\mathrm{grp}}\ecs_r,
+  \label{eq:s1gl-parent-close}\\
+  \nrm{\mu(\mu(U,V),W)-\mu(U,\mu(V,W))}\le C_{\mathrm{grp}}\ecs_r,
+  \label{eq:s1gl-assoc}\\
+  \nrm{\mu(\sigma(U),U)-J}\le C_{\mathrm{grp}}\ecs_r,
+  \qquad
+  \nrm{\mu(U,\sigma(U))-J}\le C_{\mathrm{grp}}\ecs_r .
+  \label{eq:s1gl-inverse}
+\end{gather}
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Quantitative approximate group laws: there exist universal C_grp, C_pol >= 1, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra and delta > 0 satisfying C_pol*(epsilon_r + delta) <= kappa_pol and C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), the inverse u_delta of the polar map defines C^1 maps mu(U, V) = u_delta(U bold-dot V), sigma(U) = u_delta(U^dagger) on all of calU, with mu(J, U) = mu(U, J) = U, sigma(J) = J, ||mu(U, V) - U bold-dot V|| <= C_grp*epsilon_r, ||sigma(U) - U^dagger|| <= C_grp*epsilon_r, ||mu(mu(U, V), W) - mu(U, mu(V, W))|| <= C_grp*epsilon_r, ||mu(sigma(U), U) - J|| <= C_grp*epsilon_r, and ||mu(U, sigma(U)) - J|| <= C_grp*epsilon_r.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{Witness synchronisation.} If $(G_d,P_d,k_d)$, $(G_c,P_c,k_c)$ and $(P_r,k_r)$ are
+witnesses for the two lemmas above and for
+Lemma~\ref{lem:stage1-polar-retraction}, put $C_{\mathrm{pol}}=\max(P_d,P_c,P_r)$,
+$\kappa_{\mathrm{pol}}=\min(k_d,k_c,k_r,\tfrac1{16})$ and
+$C_{\mathrm{grp}}=\max(G_d,8G_c,8)$. Both guards are monotone in these witnesses, so
+\eqref{eq:s1gl-guards} implies each upstream guard, and $\ecs_r\le\tfrac1{16}$. Every polar
+datum in play uses the \emph{same} map $\Pi_\delta$ on the \emph{same} domain, so the sets
+$S_\delta$ coincide and Lemma~\ref{lem:stage1-polar-coherence-naturality} identifies the
+inverse components: there is one common $u_\delta$ carrying all three upstream conclusions.
+
+\emph{Regularity and basepoints.} $U\bdot V$ and $U\dg$ lie in the open set $S_\delta$ by
+Lemma~\ref{lem:stage1-group-domain-membership}, and $u_\delta$ is $C^{1}$ there; the product
+is bilinear and $\dagger$ is real-linear, hence both are $C^{1}$ in finite dimension, so
+\eqref{eq:s1gl-musigma} defines $C^{1}$ maps on all of $\Unit$. Since $J\in\Unit$,
+$J\bdot U=U\bdot J=U$, $J\dg=J$ and $u_\delta$ fixes $\Unit$ pointwise
+(\eqref{eq:s1pr-inverse}), the three basepoint identities are exact. Estimate
+\eqref{eq:s1gl-parent-close} is Lemma~\ref{lem:stage1-group-closeness} together with
+$C_{\mathrm{grp}}\ge8G_c$.
+
+\emph{The three defects.} All of $\Unit$ obeys $\nrm{T}\le\sqrt{16/15}<\tfrac43$, by the
+$C^*$-lower bound applied to $T\dg\bdot T=J$. For \eqref{eq:s1gl-assoc}, insert
+$A\bdot W$, $(U\bdot V)\bdot W$, $U\bdot(V\bdot W)$ and $U\bdot B$ between the two iterated
+products, where $A=\mu(U,V)$ and $B=\mu(V,W)$: the two outer differences are each
+$\le G_c\ecs_r$, each replacement difference is $\le\tfrac{17}{12}G_c\ecs_r$ by the
+product-norm axiom, and the sole reassociation costs $\le\tfrac{64}{27}\ecs_r$; the total is
+$\le\tfrac{389}{54}G_c\ecs_r\le8G_c\ecs_r$. For the first bound of
+\eqref{eq:s1gl-inverse}, closeness at $(\sigma(U),U)$ plus
+$\nrm{\sigma(U)\bdot U-U\dg\bdot U}\le\tfrac{17}{12}G_c\ecs_r$ and $U\dg\bdot U=J$ give
+$\le3G_c\ecs_r$. For the second, the same two steps land on $U\bdot U\dg$, and a local
+estimate --- $R=\Lmul{U}^{-1}J$ with $\nrm{R}\le\tfrac32$, one associator for
+$\nrm{R-U\dg}$, then $U\bdot U\dg-J=U\bdot(U\dg-R)$ --- gives
+$\nrm{U\bdot U\dg-J}\le\tfrac{34}{9}\ecs_r\le4\ecs_r$, for a total
+$\le\tfrac{77}{12}G_c\ecs_r\le8G_c\ecs_r$. All bounds are non-strict and hold at
+$\ecs_r=0$.
+
+\medskip
+\noindent\textbf{Status.} All three are \texttt{proved} with \texttt{af: validated} (T0).
+Workspaces \texttt{proofs/lem-stage1-group-domain-membership} (10 nodes, 10
+\texttt{validated}, taint clean), \texttt{proofs/lem-stage1-group-closeness} (12 nodes, 12
+\texttt{validated}, taint clean) and
+\texttt{proofs/lem-stage1-approximate-group-laws} (14 nodes, 14 \texttt{validated}, taint
+clean).
+
+\noindent\textbf{Correction of record (proof-level, not contract-level).} The parent's first
+elevation \textbf{aborted on the balloon tripwire} at 60 live nodes. Per that protocol the
+\emph{proof} was factored --- the contract above is byte-unchanged --- into the two children
+reproduced here, chosen so that neither imports the other; the parent then re-elevated on the
+factored dependencies. Separately, the membership tree's first run aborted \textsc{stuck} on
+prover indiscipline about smallness: unjustified thresholds such as $\ecs_r\le\tfrac18$ were
+being assumed. The second run carries the binding rule recorded above --- derive
+\eqref{eq:s1gl-small} once from the guards, cite that node for every later smallness
+inference, and absorb the worse constants into the proof body rather than sharpening the
+threshold. No contract was amended.
+
+\noindent\textbf{Role in the chain.} Registry \texttt{defs}:
+\texttt{def-approximate-unitary-space}, \texttt{def-epsilon-cstar-algebra}. Registry
+\texttt{deps}: \texttt{lem-stage1-polar-retraction} (\S\ref{sec:stage1-polar-retraction}) for
+both children; that lemma together with \texttt{lem-stage1-polar-coherence-naturality} and
+the two children for the parent. Downstream the parent supplies the all-$\Unit$ adjoint
+domain used in \S\ref{sec:stage1-smooth-polar}. Nothing here bears on
+\texttt{op-classical}, which is \textbf{open}.

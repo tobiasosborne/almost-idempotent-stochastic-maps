@@ -1,0 +1,242 @@
+% SHARD-ID: AISM-45-STAGE1-POLAR-CHARTS
+% SHARD-TITLE: Rectified algebras and graph charts on the approximate unitaries
+% SHARD-SUMMARY: Reproduces lem-stage1-rectified-cstar-control, lem-stage1-unitary-graph-control and lem-stage1-maurer-cartan-trivialization, the three af-validated results that turn an epsilon-C*-algebra into an exactly unital one satisfying every axiom and then coordinatise its unitary set by C1 graph charts.
+% SHARD-SUMMARY: Explains the rescaled unit and rank-one product correction that transfer every axiom at epsilon_r = 100*epsilon_X, the normal-derivative Neumann step that solves the graph equation by the quantitative inverse-function lemma, and the differentiated defining equation that makes the Maurer-Cartan trivialization C1.
+% SHARD-SUMMARY: Records the explicit universal witnesses, the archived nodes of the graph tree, and the challenge that forced the trivialization inverse to be derived from an implicit-function formula rather than from mere chart regularity.
+% SHARD-KEYWORDS: lem-stage1-rectified-cstar-control, lem-stage1-unitary-graph-control, lem-stage1-maurer-cartan-trivialization, af validated, epsilon-C*-algebra, graph chart, Maurer-Cartan trivialization, Stage 1
+\section{Rectified algebras and graph charts on the approximate unitaries}\label{sec:stage1-polar-charts}
+
+This section and the three that follow (\S\ref{sec:stage1-polar-retraction},
+\S\ref{sec:stage1-group-laws}, \S\ref{sec:stage1-smooth-polar}) reproduce eleven
+\texttt{af}-validated Stage-1 results about the unitary set of an approximate
+$C^*$-algebra. Throughout, the ambient object is an \emph{exact-unit}
+$\ecs_r$-$C^*$-algebra $(\calX,J,\bdot,\dagger)$ in the sense of
+Definition~\ref{def:epsilon-cstar-algebra}, and every set and symbol
+--- $\Herm$, $\aHerm$, $\Unitc{\delta}$, $\Unito{\delta}$, $\Unit$, $\Lmul{V}$, $\phi_V$
+with its components $\phi_V^{\parallel},\phi_V^{\perp}$, and the reserved letters
+$u,h,\mu,\sigma$ --- is the vocabulary of
+Definition~\ref{def:approximate-unitary-space}, used here and never restated. None of
+these results bears on \texttt{op-classical}, which is \textbf{open}.
+
+\begin{lemma}[\texttt{lem-stage1-rectified-cstar-control}]\label{lem:stage1-rectified-cstar-control}
+There are universal $C_{\mathrm{rect}}\ge1$ and $e_{\mathrm{rect}}\in(0,1/C_{\mathrm{rect}}]$
+such that every finite-dimensional $\ecs_X$-$C^*$-algebra with $0\le\ecs_X\le e_{\mathrm{rect}}$
+admits, on the same involutive normed space, a bilinear product $\bdot$ and an element
+$J=J\dg$ for which $(\calX,J,\bdot,\dagger)$ satisfies \emph{every} exact-unit
+$\ecs_r$-$C^*$-algebra axiom of Definition~\ref{def:epsilon-cstar-algebra}, including
+$\nrm{J}=1$, where
+\begin{equation}\label{eq:s1rc-main}
+  \ecs_r=C_{\mathrm{rect}}\ecs_X,
+  \qquad
+  \nrm{J-I_X}\le C_{\mathrm{rect}}\ecs_X,
+  \qquad
+  \nrm{x\bdot y-xy}\le C_{\mathrm{rect}}\ecs_X\nrm{x}\nrm{y}.
+\end{equation}
+\emph{Transcription note.} This is strictly stronger than
+Lemma~\ref{lem:stage1-exact-unit-rectification} (\S\ref{sec:stage1-exact-unit}), which
+produces an exact unit and a close product but estimates neither the associativity defect
+nor the product-norm constant of $\bdot$. Here the whole axiom list is transferred, at the
+inflated parameter $\ecs_r=C_{\mathrm{rect}}\ecs_X$; that inflation is the price, and it is
+what makes the rectified algebra a legitimate input to everything below.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Controlled exact-unit C*-rectification: there are universal C_rect >= 1 and e_rect in (0, 1/C_rect] such that every finite-dimensional epsilon_X-C*-algebra with 0 <= epsilon_X <= e_rect admits, on the same involutive normed space, a bilinear product bold-dot and J = J^dagger for which (calX, J, bold-dot, dagger) satisfies EVERY exact-unit epsilon_r-C*-algebra axiom of def-epsilon-cstar-algebra, including ||J|| = 1, where epsilon_r = C_rect*epsilon_X, and ||J - I_X|| <= C_rect*epsilon_X, ||x bold-dot y - xy|| <= C_rect*epsilon_X*||x||*||y||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The witnesses are exhibited: the tree closes with
+\begin{equation}\label{eq:s1rc-constants}
+  C_{\mathrm{rect}}=100,\qquad e_{\mathrm{rect}}=\tfrac1{100}.
+\end{equation}
+
+\emph{A Hermitian norming functional.} Write $I=I_X$ and $a=\nrm{I}$, so $\lvert a-1\rvert\le\ecs_X$
+and $a>0$. A finite-dimensional Hahn--Banach extension produces a complex-linear $f$ with
+$\nrm{f}=1$ and $f(I)=a$; since $\dagger$ is a conjugate-linear isometric involution and
+$I\dg=I$, the reflection $f^{\sharp}(x)=\overline{f(x\dg)}$ has the same norm and the same
+value at $I$, so $\varphi=(f+f^{\sharp})/(2a)$ satisfies
+\begin{equation}\label{eq:s1rc-phi}
+  \varphi(I)=1,\qquad \nrm{\varphi}\le 1/a,\qquad \varphi(x\dg)=\overline{\varphi(x)} .
+\end{equation}
+
+\emph{The corrected product.} With $d_L(y)=y-Iy$, $d_R(x)=x-xI$ and $h=II-I$, put
+\begin{equation}\label{eq:s1rc-product}
+  m_0(x,y)=xy+\varphi(x)d_L(y)+\varphi(y)d_R(x)+\varphi(x)\varphi(y)h,
+  \qquad J=I/a,\qquad x\bdot y=a\,m_0(x,y).
+\end{equation}
+Because $\varphi(I)=1$ and $d_L(I)=d_R(I)=-h$, substitution gives $m_0(I,y)=y$ and
+$m_0(x,I)=x$, so $J$ is an exact two-sided unit for $\bdot$ with $J\dg=J$ and $\nrm{J}=1$.
+Term by term, $d_L(y)\dg=d_R(y\dg)$, $d_R(x)\dg=d_L(x\dg)$, $h\dg=h$ and the last identity
+of \eqref{eq:s1rc-phi} give $(x\bdot y)\dg=y\dg\bdot x\dg$ \emph{exactly}, using only that
+$a$ is a positive real.
+
+\emph{The estimates and the axiom transfer.} The approximate-unit axioms give
+$\nrm{d_L(y)}\le\ecs_X\nrm{y}$, $\nrm{d_R(x)}\le\ecs_X\nrm{x}$ and $\nrm{h}\le a\ecs_X$;
+with $\nrm{\varphi}\le1/a$ this bounds $\nrm{m_0(x,y)-xy}$ by $3\ecs_X\nrm{x}\nrm{y}/a$, and
+after rescaling
+\begin{equation}\label{eq:s1rc-delta}
+  \Delta(x,y):=x\bdot y-xy,\qquad
+  \nrm{\Delta(x,y)}\le 5\,\ecs_X\nrm{x}\nrm{y}\qquad(\ecs_X\le\tfrac1{100}).
+\end{equation}
+Every non-associative axiom now transfers by one triangle inequality:
+$\nrm{x\bdot y}\le(1+6\ecs_X)\nrm{x}\nrm{y}$ and
+$\nrm{x\dg\bdot x}\ge(1-6\ecs_X)\nrm{x}^2$, both comfortably inside the tolerance
+$100\ecs_X$. For the associator, writing $m$ for the original product and $m'=m+\Delta$,
+the four-term expansion of $m'(m'(x,y),z)-m'(x,m'(y,z))$ is bounded by
+$[\ecs_X+2(1+\ecs_X)\rho+2(1+6\ecs_X)\rho]\nrm{x}\nrm{y}\nrm{z}$ with $\rho=5\ecs_X$, i.e.\ by
+$(21\ecs_X+70\ecs_X^{2})\nrm{x}\nrm{y}\nrm{z}\le100\ecs_X\nrm{x}\nrm{y}\nrm{z}$. Finally
+$\nrm{J-I}=\lvert1-a\rvert\le\ecs_X$, so \eqref{eq:s1rc-constants} closes the root.
+
+\begin{lemma}[\texttt{lem-stage1-unitary-graph-control}]\label{lem:stage1-unitary-graph-control}
+There are universal $C_{\mathrm{ch}}\ge1$ and $\kappa_{\mathrm{ch}}\in(0,\tfrac12]$ such that
+for every finite-dimensional exact-unit $\ecs_r$-$C^*$-algebra, every $\delta>0$ with
+$C_{\mathrm{ch}}(\ecs_r+\delta)\le\kappa_{\mathrm{ch}}$, every $V\in\Unitc{\delta}$ and every
+$A^{\parallel}\in B^{\aHerm}_{2\delta}(0)$, there is a unique
+$g_V(A^{\parallel})\in B^{\Herm}_{2\delta}(0)$ with
+$f_V\bigl(A^{\parallel}+g_V(A^{\parallel})\bigr)=0$, and the corresponding
+$V\bdot\bigl(J+A^{\parallel}+g_V(A^{\parallel})\bigr)$ lies in $\Unit$, where
+\begin{equation}\label{eq:s1gc-f}
+  f_V(A)=\tfrac12\Bigl(\bigl((J+A\dg)\bdot V\dg\bigr)\bdot\bigl(V\bdot(J+A)\bigr)-J\Bigr);
+\end{equation}
+moreover
+\begin{equation}\label{eq:s1gc-bounds}
+  \nrm{g_V(A^{\parallel})+\tfrac12(V\dg\bdot V-J)}\le C_{\mathrm{ch}}(\ecs_r\delta+\delta^{2}),
+  \quad
+  \nrm{Dg_V(A^{\parallel})}\le C_{\mathrm{ch}}(\ecs_r+\delta),
+\end{equation}
+\begin{equation}\label{eq:s1gc-normal}
+  \nrm{D_{A^{\perp}}f_V\bigl(A^{\parallel}+g_V(A^{\parallel})\bigr)-I_{\Herm}}
+  \le C_{\mathrm{ch}}(\ecs_r+\delta)<1,
+\end{equation}
+and the resulting $C^{1}$ graph charts cover $\Unit$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Uniform unitary graph control: there are universal C_ch >= 1, kappa_ch in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra, every delta > 0 with C_ch*(epsilon_r + delta) <= kappa_ch, every V in calUbar_delta, and every A^par in B^{icalH}_{2delta}(0), there is a unique g_V(A^par) in B^{calH}_{2delta}(0) with f_V(A^par + g_V(A^par)) = 0, and the corresponding V bold-dot (J + A^par + g_V(A^par)) lies in calU, where f_V(A) = (1/2)*(((J + A^dagger) bold-dot V^dagger) bold-dot (V bold-dot (J + A)) - J); moreover ||g_V(A^par) + (1/2)*(V^dagger bold-dot V - J)|| <= C_ch*(epsilon_r*delta + delta^2), ||Dg_V(A^par)|| <= C_ch*(epsilon_r + delta), and ||D_{A^perp} f_V(A^par + g_V(A^par)) - I_{calH}|| <= C_ch*(epsilon_r + delta) < 1; the resulting C^1 graph charts cover calU.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The closing witnesses are $C_{\mathrm{ch}}=1024$ and $\kappa_{\mathrm{ch}}=\tfrac14$; write
+$e=\ecs_r$ and $s=e+\delta$, so the guard gives $s\le1/4096$.
+
+\emph{Uniform multiplier control.} For $V\in\Unitc{\delta}$ with $q=V\dg\bdot V-J$ one has
+$\nrm{q}\le2\delta$, and the $C^*$-lower bound gives $\nrm{V}\le1+2s$. If $Y$ is a right
+inverse of $V$ then approximate associativity and exact unitality give
+$\nrm{V\dg-Y}\le4s\nrm{Y}$, hence $\nrm{Y}\le2$; the two Neumann estimates
+$\nrm{\Lmul{V}\Lmul{Y}-I}<1$ and $\nrm{\Lmul{V\dg}\Lmul{V}-I}\le4s<1$ exhibit a right and a
+left inverse of $\Lmul{V}$, which therefore coincide, with $\nrm{\Lmul{V}^{-1}}\le2$ and
+$\nrm{\Lmul{V}^{-1}-\Lmul{V\dg}}\le8s$. For $\nrm{A}\le4\delta$ and $X=V\bdot(J+A)$ the
+product-norm axiom gives $\nrm{\Lmul{V}^{-1}(\Lmul{X}-\Lmul{V})}\le16s<1$, so $\Lmul{X}$ is
+invertible and $X$ has the right inverse $\Lmul{X}^{-1}J$.
+
+\emph{The graph equation.} Put $F(P,H)=f_V(P+H)$ for $P\in\aHerm$, $H\in\Herm$ of norm
+$<2\delta$; exact product reversal identifies $2F=X\dg\bdot X-J$, a degree-two real
+polynomial with values in $\Herm$, hence $C^{1}$. Expanding $2F$ with $V\dg\bdot V=J+q$ and
+reassociating \emph{only} the two linear terms yields $2F=q+2H+R$ with
+$\nrm{R}\le128(e\delta+\delta^{2})$, i.e.
+\begin{equation}\label{eq:s1gc-zero}
+  \nrm{F(P,H)-\bigl(\tfrac{q}{2}+H\bigr)}\le 64\,(e\delta+\delta^{2}),
+\end{equation}
+and the same expansion differentiated gives $\nrm{D_HF-I_{\Herm}}\le64s$ and
+$\nrm{D_PF}\le64s$.
+
+\emph{Solving it.} With $c=64s\le\tfrac18$, apply
+Lemma~\ref{lem:stage1-quantitative-inverse-function} (\S\ref{sec:stage1-quantitative-ift})
+to $H\mapsto F(P,H)$ on $B^{\Herm}_{2\delta}(0)$ with comparison isomorphism $I_{\Herm}$:
+it is injective and its image contains $F(P,0)+B^{\Herm}_{2\delta(1-c)}(0)$, while
+\eqref{eq:s1gc-zero} and $\nrm{q}\le2\delta$ give $\nrm{F(P,0)}\le\delta(1+c)<2\delta(1-c)$.
+So $0$ lies in the image and determines the unique $g_V(P)$. Substituting $H=g_V(P)$ in
+\eqref{eq:s1gc-zero} gives the first bound of \eqref{eq:s1gc-bounds}; the lower Lipschitz
+inequality of the same lemma together with $\nrm{D_PF}\le c$ makes $g_V$ locally Lipschitz,
+after which $Dg_V(P)=-(D_HF)^{-1}D_PF$ gives $\nrm{Dg_V(P)}\le c/(1-c)\le2c=128s$ and the
+continuity of $DF$ and of operator inversion makes $g_V$ a $C^{1}$ map.
+
+\emph{Unitarity and the cover.} For $A=P+g_V(P)$, exact product reversal gives
+$X_V(P)\dg\bdot X_V(P)-J=2F(P,g_V(P))=0$, and the multiplier step supplies the right
+inverse, so $X_V(P)\in\Unit$. Injectivity of $\Lmul{V}$ makes $P\mapsto X_V(P)$ injective
+with inverse $\phi_V^{\parallel}$, and conversely any unitary in the coordinate box solves
+$f_V=0$ and is caught by uniqueness. Every $U\in\Unit$ lies in $\Unitc{\delta}$ and has
+$f_U(0)=0$, so $g_U(0)=0$ and $U=X_U(0)$: the self-centred charts cover $\Unit$. Finally
+$64\le C_{\mathrm{ch}}$, $128\le C_{\mathrm{ch}}$ and $64s\le\tfrac14<1$ deliver
+\eqref{eq:s1gc-bounds}--\eqref{eq:s1gc-normal}.
+
+\begin{lemma}[\texttt{lem-stage1-maurer-cartan-trivialization}]\label{lem:stage1-maurer-cartan-trivialization}
+There are universal $C_{\mathrm{ch}}\ge1$ and $\kappa_{\mathrm{ch}}\in(0,\tfrac12]$ such that
+for every finite-dimensional exact-unit $\ecs_r$-$C^*$-algebra and every $\delta>0$ with
+$C_{\mathrm{ch}}(\ecs_r+\delta)\le\kappa_{\mathrm{ch}}$, the graph maps supplied by
+Lemma~\ref{lem:stage1-unitary-graph-control} satisfy: every tangent space $T_U\Unit$ is the
+image of $\Lmul{U}(I+Dg_U(0)):\aHerm\to\calX$, and
+\begin{equation}\label{eq:s1mc-omega}
+  \omega_U(Z)=\bigl(\Lmul{U}^{-1}Z\bigr)^{\parallel}\;:\;T_U\Unit\longrightarrow\aHerm
+\end{equation}
+is a global $C^{1}$ bundle trivialization with distortion at most $1+C_{\mathrm{ch}}\ecs_r$,
+satisfying $\omega_{cU}(cZ)=\omega_U(Z)$ and $\omega_U(iU)=iJ$ for every $c\in U(1)$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Uniform global tangent/Maurer-Cartan control: there are universal C_ch >= 1, kappa_ch in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra and every delta > 0 with C_ch*(epsilon_r + delta) <= kappa_ch, the graph maps supplied by lem-stage1-unitary-graph-control satisfy: every tangent space T_U calU is the image of L_U(I + Dg_U(0)): icalH -> calX, and omega_U(Z) = (L_U^{-1} Z)^par : T_U calU -> icalH is a global C^1 bundle trivialization with distortion at most 1 + C_ch*epsilon_r, satisfying omega_{cU}(cZ) = omega_U(Z) and omega_U(iU) = iJ for every c in U(1).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+No graph-existence work is repeated: the tree fixes the witnesses of
+Lemma~\ref{lem:stage1-unitary-graph-control} and enlarges them.
+
+\emph{Multiplier bounds at a unitary.} For $U\in\Unit$ one has $U\dg\bdot U=J$ and
+$\nrm{J}=1$, so the lower $C^*$-inequality gives $\nrm{U}\le(1-\ecs_r)^{-1/2}$ and the
+associator axiom gives $\nrm{\Lmul{U\dg}\Lmul{U}-I}\le\ecs_r\nrm{U}^2\le\ecs_r/(1-\ecs_r)<1$
+once $\ecs_r\le\tfrac14$. Neumann inversion in finite dimension makes $\Lmul{U}$ invertible
+with $\nrm{\Lmul{U}},\nrm{\Lmul{U}^{-1}}\le1+K\ecs_r$ for a universal $K$; $C_{\mathrm{ch}}$
+is then chosen at least $\max(C_0,K,4)$, with $C_0,\kappa_0$ the graph witnesses, and
+$\kappa_{\mathrm{ch}}=\min(\kappa_0,\tfrac14)$.
+
+\emph{The centred graph.} Exact unitality and $U\dg\bdot U=J$ give $f_U(0)=0$, so
+$g_U(0)=0$. Comparing the graph germs at two admissible radii --- they agree near $0$ by
+pointwise uniqueness --- and letting the radius tend to $0$ sharpens the derivative bound of
+\eqref{eq:s1gc-bounds} to $\nrm{Dg_U(0)}\le C_0\ecs_r$. Differentiating the centred chart
+$\Psi_U(A)=U\bdot(J+A+g_U(A))$ at $0$ gives $D\Psi_U(0)=\Lmul{U}(I+Dg_U(0))$, whose image is
+exactly $T_U\Unit$ because these charts cover $\Unit$.
+
+\emph{The trivialization.} Let $P^{\parallel}(X)=(X-X\dg)/2$, of norm at most $1$ by
+isometry of the involution. Since $Dg_U(0)$ maps $\aHerm$ into $\Herm$, one has
+$P^{\parallel}(A+Dg_U(0)A)=A$, so $\omega_U$ of \eqref{eq:s1mc-omega} inverts
+$A\mapsto \Lmul{U}(I+Dg_U(0))A$ fibrewise; its two norms are at most
+$\nrm{\Lmul{U}^{-1}}$ and $\nrm{\Lmul{U}}(1+\nrm{Dg_U(0)})$, both absorbed into
+$1+C_{\mathrm{ch}}\ecs_r$.
+
+\emph{Regularity.} $U\mapsto\Lmul{U}$ is linear and inversion is $C^{1}$ on the invertibles,
+so $\omega$ is $C^{1}$. For the \emph{inverse} the tree does not argue from chart regularity
+(see the correction below) but from the defining equation: with
+$B_U=D_{A^{\perp}}f_U(0)|_{\Herm}$ and $C_U=D_{A^{\parallel}}f_U(0)|_{\aHerm}$, both
+polynomial in $U$, \eqref{eq:s1gc-normal} gives $\nrm{B_U-I_{\Herm}}<1$, and differentiating
+$f_U(A+g_U(A))=0$ at $A=0$ yields
+\begin{equation}\label{eq:s1mc-implicit}
+  Dg_U(0)=-B_U^{-1}C_U ,
+\end{equation}
+a $C^{1}$ function of $U$. Hence $(U,A)\mapsto(U,\Lmul{U}(A+Dg_U(0)A))$ is a $C^{1}$ inverse.
+
+\emph{Equivariance.} $U\mapsto cU$ preserves $\Unit$ with derivative $Z\mapsto cZ$, and
+$\Lmul{cU}=c\Lmul{U}$, so $\omega_{cU}(cZ)=\omega_U(Z)$. The curve $t\mapsto e^{it}U$ lies in
+$\Unit$ with velocity $iU$, and complex bilinearity with $U\bdot J=U$ gives
+$\Lmul{U}(iJ)=iU$; as $J\dg=J$ the element $iJ$ is anti-Hermitian, so $\omega_U(iU)=iJ$.
+
+\medskip
+\noindent\textbf{Status.} All three are \texttt{proved} with \texttt{af: validated} (T0).
+Workspaces \texttt{proofs/lem-stage1-rectified-cstar-control} (17 nodes created, 17
+\texttt{validated}, taint clean, root \texttt{validated}),
+\texttt{proofs/lem-stage1-unitary-graph-control} (15 live nodes all \texttt{validated} plus
+3 \texttt{archived}, taint clean on all 18), and
+\texttt{proofs/lem-stage1-maurer-cartan-trivialization} (15 nodes, 15 \texttt{validated},
+taint clean).
+
+\noindent\textbf{Correction of record (proof-level, not contract-level).} The
+trivialization tree drew a challenge at the regularity node: as first written it inferred
+$C^{1}$ regularity of the fibrewise \emph{inverse} from the merely $C^{1}$ graph frame,
+which is not valid in general. The repair is \eqref{eq:s1mc-implicit} --- an explicit
+implicit-function formula with invertible normal derivative --- and the challenge's
+counterexample is inapplicable precisely because it has no such formula. No contract was
+amended.
+
+\noindent\textbf{Role in the chain.} Registry \texttt{defs}:
+\texttt{def-epsilon-cstar-algebra}, \texttt{def-approximate-unitary-space}. Registry
+\texttt{deps}: \texttt{lem-stage1-exact-unit-rectification} (\S\ref{sec:stage1-exact-unit})
+and \texttt{lem-stage1-quantitative-inverse-function} (\S\ref{sec:stage1-quantitative-ift})
+for the rectification; the rectification and the same inverse-function lemma for the graph
+control; the graph control alone for the trivialization. Downstream they carry
+\S\ref{sec:stage1-polar-retraction}--\S\ref{sec:stage1-smooth-polar}.

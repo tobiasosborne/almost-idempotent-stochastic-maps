@@ -77,6 +77,12 @@ mid-check.
      43 routef-ai-ledger (lem-kitaev-almost-idemp-audit + lem-routef-functional-calculus-closeness
         + lem-routef-ai-defect-linearization),
      44 routef-f2-f3 (lem-routef-f2-positive-unital-compression + lem-routef-f3-retract-defect). -->
+<!-- ADDENDUM (2026-07-27): 45-48 the Stage-1 POLAR block (11 af-validated rows: rectified
+     C*-control + graph charts + Maurer-Cartan; the closed polar retraction + coherence;
+     the approximate group laws; paths + inversion derivative + the smooth atlas). They are
+     CONTENT sections and therefore \include'd after 38 and BEFORE the generated/meta
+     sections 39-41, even though their file numbers are higher; the table below is in
+     INCLUDE order, which is the reading order. Nothing was renumbered. -->
 
 | # | SHARD-ID | file |
 |---|----------|------|
@@ -123,6 +129,10 @@ mid-check.
 | 42 | `AISM-42-ROUTEF-F0-SEAM` | `report/sections/42_routef_f0_seam.tex` |
 | 43 | `AISM-43-ROUTEF-AI-LEDGER` | `report/sections/43_routef_ai_ledger.tex` |
 | 44 | `AISM-44-ROUTEF-F2-F3` | `report/sections/44_routef_f2_f3.tex` |
+| 45 | `AISM-45-STAGE1-POLAR-CHARTS` | `report/sections/45_stage1_polar_charts.tex` |
+| 46 | `AISM-46-STAGE1-POLAR-RETRACTION` | `report/sections/46_stage1_polar_retraction.tex` |
+| 47 | `AISM-47-STAGE1-GROUP-LAWS` | `report/sections/47_stage1_group_laws.tex` |
+| 48 | `AISM-48-STAGE1-SMOOTH-POLAR` | `report/sections/48_stage1_smooth_polar.tex` |
 | 39 | `AISM-39-ARGUMENT-DAG` | `report/sections/39_argument_dag.tex` |
 | 40 | `AISM-40-CAMPAIGN-STATISTICS` | `report/sections/40_campaign_statistics.tex` |
 | 41 | `AISM-41-STATUS-OUTLOOK` | `report/sections/41_status_outlook.tex` |

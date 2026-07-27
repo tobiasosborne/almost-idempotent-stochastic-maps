@@ -1,0 +1,223 @@
+% SHARD-ID: AISM-48-STAGE1-SMOOTH-POLAR
+% SHARD-TITLE: Paths, the inversion derivative, and the smooth atlas
+% SHARD-SUMMARY: Reproduces lem-stage1-polar-path-admissibility, the af-validated statement that the straight segment between two nearby unitaries stays in the polar domain and projects to a jointly continuous, circle-equivariant path joining them.
+% SHARD-SUMMARY: Reproduces lem-stage1-inversion-derivative-control, the af-validated statement that the polar inversion sigma retains the sJ graph chart on a small ball and that its coordinate representative has derivative within C_der*(epsilon_r+r) of minus the identity.
+% SHARD-SUMMARY: Reproduces lem-stage1-smooth-unitary-atlas, the af-validated conditional upgrade of the C1 graph functions to C-infinity by Lee's implicit function theorem, leaving every point, chart and first derivative unchanged.
+% SHARD-KEYWORDS: lem-stage1-polar-path-admissibility, lem-stage1-inversion-derivative-control, lem-stage1-smooth-unitary-atlas, af validated, projected straight path, chart retention, implicit function theorem, smooth embedded manifold, Stage 1
+\section{Paths, the inversion derivative, and the smooth atlas}\label{sec:stage1-smooth-polar}
+
+\begin{lemma}[\texttt{lem-stage1-polar-path-admissibility}]\label{lem:stage1-polar-path-admissibility}
+There exist universal $C_{\mathrm{path}},C_{\mathrm{pol}}\ge1$ and
+$\kappa_{\mathrm{pol}}\in(0,\tfrac12]$ such that, for every finite-dimensional exact-unit
+$\ecs_r$-$C^*$-algebra, every $\delta>0$ with
+$C_{\mathrm{pol}}(\ecs_r+\delta)\le\kappa_{\mathrm{pol}}$, and $U_0,U_1\in\Unit$: if
+$0\le q\le1$, $\nrm{U_1-U_0}\le q$, $C_{\mathrm{path}}q\le\tfrac14$ and
+\begin{equation}\label{eq:s1pa-guard}
+  C_{\mathrm{path}}(q+\ecs_rq+q^{2})\;<\;\delta-C_{\mathrm{pol}}(\ecs_r\delta+\delta^{2}),
+\end{equation}
+then, for $Z_t=(1-t)U_0+tU_1$, every $\Lmul{Z_t}$ is invertible, every
+$Z_t\in\Unitc{C_{\mathrm{path}}(q+\ecs_rq+q^{2})}$, and
+\begin{equation}\label{eq:s1pa-H}
+  H(t,U_0,U_1)=u_\delta(Z_t)
+\end{equation}
+is jointly continuous in all displayed variables, joins $U_0$ to $U_1$, and obeys
+$H(t,cU_0,cU_1)=c\,H(t,U_0,U_1)$ for $c\in U(1)$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Joint projected-straight-path admissibility: there exist universal C_path, C_pol >= 1, kappa_pol in (0, 1/2] such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra, every delta > 0 with C_pol*(epsilon_r + delta) <= kappa_pol, and U_0, U_1 in calU, if 0 <= q <= 1, ||U_1 - U_0|| <= q, C_path*q <= 1/4, and C_path*(q + epsilon_r*q + q^2) < delta - C_pol*(epsilon_r*delta + delta^2), then for Z_t = (1-t)*U_0 + t*U_1 every L_{Z_t} is invertible, every Z_t in calUbar_{C_path*(q + epsilon_r*q + q^2)}, and H(t, U_0, U_1) = u_delta(Z_t) is jointly continuous in all displayed variables, joins U_0 to U_1, and obeys H(t, cU_0, cU_1) = c*H(t, U_0, U_1) for c in U(1).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Take $C_{\mathrm{pol}}$ from Lemma~\ref{lem:stage1-polar-retraction},
+$\kappa_{\mathrm{pol}}=\min(\kappa_{\mathrm{pol}}^{0},C_{\mathrm{pol}}^{0}/8)$ and
+$C_{\mathrm{path}}=1$; the guard then gives $\ecs_r\le\tfrac18$, and for $U\in\Unit$ the
+usual chain $\nrm{U}\le\sqrt{8/7}$, $\nrm{\Lmul{U\dg}\Lmul{U}-I}\le\tfrac17$ makes
+$\Lmul{U}$ invertible with $\nrm{\Lmul{U}^{-1}}\le\tfrac32$.
+
+\emph{An exact quadratic identity.} With $D=U_1-U_0$, bilinearity, the star rule and
+$U_i\dg\bdot U_i=J$ give, with no error term,
+\begin{equation}\label{eq:s1pa-exact}
+  Z_t\dg\bdot Z_t-J\;=\;t(t-1)\,\bigl(D\dg\bdot D\bigr),
+\end{equation}
+whence $\nrm{Z_t\dg\bdot Z_t-J}\le t(1-t)(1+\ecs_r)\nrm{D}^{2}\le(1+\ecs_r)q^{2}/4$.
+Since $\Lmul{Z_t}=\Lmul{U_0}+t\Lmul{D}$ and $\nrm{\Lmul{D}}\le(1+\ecs_r)\nrm{D}$, the
+bound $q\le\tfrac14$ gives $\nrm{t\Lmul{U_0}^{-1}\Lmul{D}}\le\tfrac{27}{64}<1$, so every
+$\Lmul{Z_t}$ is invertible by Neumann and $\Lmul{Z_t}^{-1}J$ is a right inverse of $Z_t$.
+As $(1+\ecs_r)q^{2}/4\le2(q+\ecs_rq+q^{2})$, this is exactly
+$Z_t\in\Unitc{q+\ecs_rq+q^{2}}$ in the sense of
+Definition~\ref{def:approximate-unitary-space}.
+
+\emph{Into the polar domain.} With $\gamma=q+\ecs_rq+q^{2}$ and
+$\rho=\delta-C_{\mathrm{pol}}(\ecs_r\delta+\delta^{2})$, hypothesis \eqref{eq:s1pa-guard}
+reads $\gamma<\rho$, so $\nrm{Z_t\dg\bdot Z_t-J}\le2\gamma<2\rho$ and $Z_t\in\Unito{\rho}$;
+the inner inclusion of \eqref{eq:s1pr-sandwich} puts $Z_t\in S_\delta$ for every $t$.
+
+\emph{The projected path.} $(t,U_0,U_1)\mapsto Z_t$ is continuous and $u_\delta$ is $C^{1}$,
+hence continuous, on the open set $S_\delta$, so $H$ of \eqref{eq:s1pa-H} is jointly
+continuous; $Z_0=U_0$, $Z_1=U_1$ and $u_\delta(U_i)=U_i$ give the endpoints. For $c\in U(1)$
+the rotated pair again lies in $\Unit$ with the same separation, its segment is $cZ_t$, and
+both $Z_t$ and $cZ_t$ lie in $S_\delta$; the scalar-naturality clause
+\eqref{eq:s1cn-natural} of Lemma~\ref{lem:stage1-polar-coherence-naturality}, applied to the
+polar datum $(\delta,S_\delta,u_\delta,h_\delta)$, gives $u_\delta(cZ_t)=c\,u_\delta(Z_t)$.
+
+\begin{lemma}[\texttt{lem-stage1-inversion-derivative-control}]\label{lem:stage1-inversion-derivative-control}
+There exist universal
+$C_{\mathrm{der}},C_{\mathrm{ch}},C_{\mathrm{pol}},C_{\mathrm{grp}}\ge1$ and
+$\kappa_{\mathrm{der}},\kappa_{\mathrm{ch}},\kappa_{\mathrm{pol}}\in(0,\tfrac12]$ such that
+for every finite-dimensional exact-unit $\ecs_r$-$C^*$-algebra, every
+$\varsigma\in\{+1,-1\}$ and every $0<r\le\delta$ satisfying
+\begin{gather}
+  C_{\mathrm{ch}}(\ecs_r+\delta)\le\kappa_{\mathrm{ch}},\qquad
+  C_{\mathrm{pol}}(\ecs_r+\delta)\le\kappa_{\mathrm{pol}},\qquad
+  C_{\mathrm{grp}}\ecs_r<\delta-C_{\mathrm{pol}}(\ecs_r\delta+\delta^{2}),
+  \label{eq:s1id-guards}\\
+  C_{\mathrm{der}}(\ecs_r+r)\le\kappa_{\mathrm{der}},\qquad
+  (1+\ecs_r)\bigl(1+C_{\mathrm{ch}}(\ecs_r+\delta)\bigr)r+C_{\mathrm{grp}}\ecs_r<2\delta,
+  \label{eq:s1id-retention}
+\end{gather}
+the globally defined $\sigma(U)=u_\delta(U\dg)$ maps
+$\chi_{\varsigma}\bigl(B^{\aHerm}_{r}(0)\bigr)$ into the same $\varsigma J$-graph chart,
+where $\chi_{\varsigma}(A)=\varsigma J\bdot\bigl(J+A+g_{\varsigma J}(A)\bigr)$, and
+$F_{\varsigma}(A)=\phi^{\parallel}_{\varsigma J}\bigl(\sigma(\chi_{\varsigma}(A))\bigr)$
+satisfies
+\begin{equation}\label{eq:s1id-derivative}
+  \nrm{D(F_{\varsigma}-\mathrm{id})(A)+2I_{\aHerm}}\;\le\;C_{\mathrm{der}}(\ecs_r+r)
+  \qquad\text{for all }A\in B^{\aHerm}_{r}(0).
+\end{equation}
+\emph{Transcription note.} The registry writes the sign as $s$; it is renamed $\varsigma$
+here only to keep it apart from the scale variables. The second display of
+\eqref{eq:s1id-retention} is the \emph{chart-retention guard}: it is what makes the
+coordinate identity $F_{\varsigma}(A)=B$ below legitimate, rather than a comparison of
+coordinates in two different charts.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Typed inversion derivative with chart retention: there exist universal C_der, C_ch, C_pol, C_grp >= 1 and kappa_der, kappa_ch, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra, s in {+1, -1}, and 0 < r <= delta satisfying C_ch*(epsilon_r + delta) <= kappa_ch, C_pol*(epsilon_r + delta) <= kappa_pol, C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), C_der*(epsilon_r + r) <= kappa_der, and (1 + epsilon_r)*(1 + C_ch*(epsilon_r + delta))*r + C_grp*epsilon_r < 2*delta, the globally defined sigma(U) = u_delta(U^dagger) maps chi_s(B_r^{icalH}(0)) into the same sJ-graph chart, where chi_s(A) = sJ bold-dot (J + A + g_{sJ}(A)), and F_s(A) = phi_{sJ}^par(sigma(chi_s(A))) satisfies ||D(F_s - id)(A) + 2*I_{icalH}|| <= C_der*(epsilon_r + r) for all A in B_r^{icalH}(0).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Constants are aligned first: $C_{\mathrm{ch}},\kappa_{\mathrm{ch}}$ from
+Lemma~\ref{lem:stage1-unitary-graph-control}, $C_{\mathrm{pol}}$ the larger and
+$\kappa_{\mathrm{pol}}$ the smaller of the polar and group-law witnesses, $C_{\mathrm{grp}}$
+from Lemma~\ref{lem:stage1-approximate-group-laws}; $C_{\mathrm{der}},\kappa_{\mathrm{der}}$
+are chosen last.
+
+\emph{The scalar chart.} Write $V=\varsigma J$, $G=g_V$ and $Z_T=T+G(T)$. Exact unitality,
+bilinearity, the involution laws and $\varsigma^{2}=1$ collapse \eqref{eq:s1gc-f} to
+$f_V(Z_T)=G(T)+\tfrac12Z_T\dg\bdot Z_T$, so $G(0)=0$ by uniqueness and
+$G(T)=-\tfrac12Z_T\dg\bdot Z_T$; differentiating and absorbing the resulting $DG$ term
+gives $\nrm{DG(T)}\le K_gr$ for $\nrm{T}\le2r$.
+
+\emph{Polar factorisation and the normal term.} For $A\in B^{\aHerm}_{r}(0)$,
+$U=\chi_{\varsigma}(A)$ lies in $\Unit$; the all-$\Unit$ adjoint domain of
+Lemma~\ref{lem:stage1-approximate-group-laws}, with the common $u_\delta$ identified by
+Lemma~\ref{lem:stage1-polar-coherence-naturality}, gives $C^{1}$ maps
+$W=\sigma(U)$ and $Q=h_\delta(U\dg)-J\in\Herm$ with $\nrm{Q}<\delta$,
+$U\dg=W\bdot(J+Q)$ and $\nrm{W-U\dg}\le C_{\mathrm{grp}}\ecs_r$. Since $W\dg\bdot W=J$,
+one associator and the $C^*$-lower bound absorb into
+\begin{equation}\label{eq:s1id-Q}
+  \nrm{Q}\;\le\;K_qC_{\mathrm{grp}}\ecs_r .
+\end{equation}
+
+\emph{Chart retention.} The involution law and the product estimate give
+$\nrm{U\dg-\varsigma J}\le(1+\ecs_r)(1+C_{\mathrm{ch}}(\ecs_r+\delta))\nrm{A}$, so the second
+guard of \eqref{eq:s1id-retention} gives $\nrm{W-\varsigma J}<2\delta$. As
+$\Lmul{\varsigma J}=\varsigma I$ exactly, $C=\phi_{\varsigma J}(W)$ has norm below $2\delta$
+and contractive components; unitarity of $W$ makes $f_{\varsigma J}(C)=0$, so uniqueness in
+Lemma~\ref{lem:stage1-unitary-graph-control} forces $C^{\perp}=G(C^{\parallel})$. Thus
+$W=\chi_{\varsigma}(B)$ with $B=C^{\parallel}=F_{\varsigma}(A)$ in the \emph{same} chart.
+
+\emph{The coordinate identity and its derivative.} Substituting the three factorisations and
+cancelling $\varsigma$ gives the exact identity
+$J-A+G(A)=(J+B+G(B))\bdot(J+Q)$, whose anti-Hermitian part reads
+\begin{equation}\label{eq:s1id-coord}
+  -A\;=\;B+P^{\parallel}\bigl((B+G(B))\bdot Q\bigr),
+\end{equation}
+so $\nrm{B}\le2r$ once \eqref{eq:s1id-Q} is small. Differentiating \eqref{eq:s1id-coord} in
+a unit direction $\xi$, with $P=DF_{\varsigma}(A)\xi$ and $R=DQ(A)\xi$, gives
+$-\xi+DG(A)\xi=P+DG(B)P+R+E$ with
+$E=(P+DG(B)P)\bdot Q+(B+G(B))\bdot R$; typing by Hermitian and anti-Hermitian parts yields
+$P+\xi=-P^{\parallel}(E)$. The product bound with \eqref{eq:s1id-Q}, $\nrm{B}\le2r$ and
+$\nrm{DG}\le K_gr$ gives $\nrm{E}\le\alpha\nrm{P}+\beta\nrm{R}$ with $\alpha\le K_1\ecs_r$
+and $\beta\le K_2r$; elementary absorption then bounds $\nrm{P}\le2$,
+$\nrm{R}\le K_3(\ecs_r+r)$ and finally $\nrm{P+\xi}\le K_4(\ecs_r+r)$. Choosing
+$\kappa_{\mathrm{der}}$ small and $C_{\mathrm{der}}\ge K_4$ enforces every absorption
+condition, and since $D(F_{\varsigma}-\mathrm{id})+2I_{\aHerm}=DF_{\varsigma}+I_{\aHerm}$,
+this is \eqref{eq:s1id-derivative}.
+
+\begin{lemma}[\texttt{lem-stage1-smooth-unitary-atlas}]\label{lem:stage1-smooth-unitary-atlas}
+For every finite-dimensional exact-unit $\ecs_r$-$C^*$-algebra, if $\Unit$ is covered by the
+unique $C^{1}$ graph functions $g_V$ of Lemma~\ref{lem:stage1-unitary-graph-control} and
+$D_{A^{\perp}}f_V$ is invertible at every graph point, then those same $g_V$ are
+$C^{\infty}$, and the same graph charts make $\Unit$ a smooth embedded manifold; no point or
+first derivative of a graph or chart is changed.
+\emph{Transcription note.} The statement is qualitative and conditional: it introduces no
+smoothness threshold and no new coefficient, and it asserts nothing about \emph{which}
+$\delta$ makes the hypothesis hold --- that is \eqref{eq:s1gc-normal}.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Smooth graph-atlas upgrade: for every finite-dimensional exact-unit epsilon_r-C*-algebra, if calU is covered by the unique C^1 graph functions g_V of lem-stage1-unitary-graph-control and D_{A^perp} f_V is invertible at every graph point, then those same g_V are C^infinity, and the same graph charts make calU a smooth embedded manifold; no point or first derivative of a graph or chart is changed.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{The defining map is polynomial.} By Definition~\ref{def:epsilon-cstar-algebra},
+$\bdot$ is complex-bilinear and $\dagger$ conjugate-linear, hence real-bilinear and
+real-linear respectively; with the parenthesisation fixed as in \eqref{eq:s1gc-f}, the map
+$\Phi_V(P,Q)=f_V(P+Q)$ is a real polynomial of degree at most two on
+$\aHerm\times\Herm$, so it is $C^{\infty}$ in finite dimension. The exact involution axioms
+give $\Phi_V(P,Q)=\tfrac12(B\dg\bdot B-J)$ with $B=V\bdot(J+P+Q)$, without reassociation,
+so $\Phi_V$ indeed takes values in $\Herm$.
+
+\emph{Lee's implicit function theorem.} Identify $\aHerm$ and $\Herm$ linearly with
+$\mathbb R^{n}$ and $\mathbb R^{k}$. At a graph point $(P,g_V(P))$ one has $\Phi_V=0$, and
+the derivative of $Q\mapsto\Phi_V(P,Q)$ is exactly $D_{A^{\perp}}f_V(P+g_V(P))$, invertible
+by hypothesis. Applying, with $c=0$, Theorem~C.40 (Implicit Function Theorem) of J.\,M.
+Lee, \emph{Introduction to Smooth Manifolds}, 2nd ed., Springer GTM 218, 2012 ---
+registered in the workspace as the byte-matched external
+\texttt{GT-lee-2ed-thm-C.40} against the pinned local source at the recorded locus ---
+produces neighbourhoods $O_P,O_Q$ and a $C^{\infty}$ map $F:O_P\to O_Q$ whose graph is
+exactly $\Phi_V^{-1}(0)\cap(O_P\times O_Q)$.
+
+\emph{Identification with the given graph.} $g_V$ is $C^{1}$, hence continuous, takes values
+in the permitted $\Herm$-ball, solves $\Phi_V(P',g_V(P'))=0$ and is the unique such branch;
+shrinking $O_P$ so that $g_V(O_P)\subseteq O_Q$, the zero-set equivalence forces $g_V=F$ on
+$O_P$. Doing this at every $P$ shows the \emph{same} $g_V$ is $C^{\infty}$ on its original
+domain; because this is an equality with the pre-existing $C^{1}$ function, its values and
+its first derivative are literally unchanged.
+
+\emph{The atlas.} In each graph coordinate the parametrisation $P\mapsto(P,g_V(P))$ is now
+smooth and its inverse on the graph is the real-linear projection to $\aHerm$; the chart
+transports $\phi_V$ of Definition~\ref{def:approximate-unitary-space} are affine-linear. On
+an overlap the transition is a target projection composed with a source parametrisation,
+hence smooth, and symmetrically for its inverse. The cover is the cover already asserted by
+Lemma~\ref{lem:stage1-unitary-graph-control}, and every set, function and coordinate map
+used is the old one, so $\Unit$ is a smooth embedded manifold with nothing replaced.
+
+\medskip
+\noindent\textbf{Status.} All three are \texttt{proved} with \texttt{af: validated} (T0).
+Workspaces \texttt{proofs/lem-stage1-polar-path-admissibility} (12 nodes, 12
+\texttt{validated}, taint clean, no challenges),
+\texttt{proofs/lem-stage1-inversion-derivative-control} (10 nodes, 10 \texttt{validated},
+taint clean, no challenges) and \texttt{proofs/lem-stage1-smooth-unitary-atlas} (14 nodes,
+14 \texttt{validated}, taint clean). The last registers three imports: the validated
+contracts of \texttt{lem-stage1-rectified-cstar-control} and
+\texttt{lem-stage1-unitary-graph-control}, and the byte-matched external
+\texttt{GT-lee-2ed-thm-C.40}.
+
+\noindent\textbf{Correction of record (proof-level, not contract-level).} The atlas tree
+drew one genuine challenge: the transition-map node leaned on a \emph{pending} sibling for
+the $C^{\infty}$ smoothness of $g_V$, which the protocol forbids. It was repaired in run by a
+self-contained smoothness bridge that re-derives the Lee argument and the identification
+$g_V=F$ inside the node itself. No contract was amended.
+
+\noindent\textbf{Role in the chain.} Registry \texttt{defs}:
+\texttt{def-approximate-unitary-space}, \texttt{def-epsilon-cstar-algebra}. Registry
+\texttt{deps}: \texttt{lem-stage1-polar-retraction} and
+\texttt{lem-stage1-polar-coherence-naturality} (\S\ref{sec:stage1-polar-retraction}) for the
+path row; those two together with \texttt{lem-stage1-unitary-graph-control}
+(\S\ref{sec:stage1-polar-charts}) and \texttt{lem-stage1-approximate-group-laws}
+(\S\ref{sec:stage1-group-laws}) for the inversion row;
+\texttt{lem-stage1-rectified-cstar-control} and \texttt{lem-stage1-unitary-graph-control}
+for the atlas. The Stage-1 polar rows beyond these --- the smooth polar inverse, the
+transport helpers and the constant ledger --- are \textbf{not} \texttt{af}-validated and are
+\textbf{not} reproduced here; nothing in this document assembles the Stage-1 front into a
+statement about almost-idempotent maps, and \texttt{op-classical} is \textbf{open}.

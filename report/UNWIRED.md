@@ -250,16 +250,10 @@ lem-topology-kunneth-cross-product
 lem-topology-hopf-structure
 # Stage-1 polar campaign rows (landed 2026-07-27 per DESIGN-S1-POLAR-v6 sect-9,
 # AUDIT-S1-POLAR-v6 LAND, ratified W78 sect-5 step 2; to be wired into the report
-# with the Stage-1 narrative when phase 4 reaches the paper track)
-lem-stage1-rectified-cstar-control
-lem-stage1-unitary-graph-control
-lem-stage1-maurer-cartan-trivialization
-lem-stage1-polar-retraction
-lem-stage1-polar-coherence-naturality
-lem-stage1-approximate-group-laws
-lem-stage1-polar-path-admissibility
-lem-stage1-inversion-derivative-control
-lem-stage1-smooth-unitary-atlas
+# with the Stage-1 narrative when phase 4 reaches the paper track).
+# 2026-07-27: the eleven af-VALIDATED polar rows (rows 1-9 plus the two group-law
+# children) are now WIRED into report/sections/45-48 and their lines deleted here.
+# The rows still listed are unproved or not yet on the paper track.
 lem-stage1-smooth-polar-inverse
 lem-stage1-smooth-unitary-operations
 lem-stage1-polar-scalar-arithmetic
@@ -277,6 +271,4 @@ lem-stage1-quotient-manifold-package
 lem-stage1-quotient-finite-cw
 lem-stage1-quotient-left-inversion
 lem-stage1-quotient-inversion-index-data
-lem-stage1-group-domain-membership
-lem-stage1-group-closeness
 ```

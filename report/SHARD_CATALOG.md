@@ -331,6 +331,37 @@ verbatim), and keywords.
 - **Summary:** Explains the commutator argument that forces commutativity of the intermediate algebra, the in-tree norm-two Pauli witness that replaces the unavailable finite-dimensional classification, the coordinate isomorphism built from the byte-matched projection basis, and the exact identity behind the retract-defect bound.
 - **Summary:** States that the factorization hypotheses are supplied by a registry row that is not af-validated, so the Route F chain is not closed here and op-classical stays open.
 - **Keywords:** lem-routef-f2-positive-unital-compression, lem-routef-f3-retract-defect, af validated, Route F, positive unital compression, commutativity forcing, projection basis, retract defect, lower modulus
+## `AISM-45-STAGE1-POLAR-CHARTS`
+- **File:** `report/sections/45_stage1_polar_charts.tex`
+- **Title:** Rectified algebras and graph charts on the approximate unitaries
+- **Summary:** Reproduces lem-stage1-rectified-cstar-control, lem-stage1-unitary-graph-control and lem-stage1-maurer-cartan-trivialization, the three af-validated results that turn an epsilon-C*-algebra into an exactly unital one satisfying every axiom and then coordinatise its unitary set by C1 graph charts.
+- **Summary:** Explains the rescaled unit and rank-one product correction that transfer every axiom at epsilon_r = 100*epsilon_X, the normal-derivative Neumann step that solves the graph equation by the quantitative inverse-function lemma, and the differentiated defining equation that makes the Maurer-Cartan trivialization C1.
+- **Summary:** Records the explicit universal witnesses, the archived nodes of the graph tree, and the challenge that forced the trivialization inverse to be derived from an implicit-function formula rather than from mere chart regularity.
+- **Keywords:** lem-stage1-rectified-cstar-control, lem-stage1-unitary-graph-control, lem-stage1-maurer-cartan-trivialization, af validated, epsilon-C*-algebra, graph chart, Maurer-Cartan trivialization, Stage 1
+
+## `AISM-46-STAGE1-POLAR-RETRACTION`
+- **File:** `report/sections/46_stage1_polar_retraction.tex`
+- **Title:** The closed polar retraction and its coherence
+- **Summary:** Reproduces lem-stage1-polar-retraction, the af-validated statement that (U,H) maps to U bold-dot H is a C1 diffeomorphism from calU times a delta-ball of Hermitians onto an open set sandwiched between two defect sublevel sets, with a normalised inverse (u_delta, h_delta).
+- **Summary:** Reproduces lem-stage1-polar-coherence-naturality, the af-validated conditional statement that any two polar data agree on the overlap of their images and that both components are natural for the circle action.
+- **Summary:** Explains the coordinate map p_V and its near-identity derivative, the contraction that produces the polar zero, the global injectivity argument in a chart centred at the point itself, and the two-sided radius sandwich; records that the coherence row asserts no existence.
+- **Keywords:** lem-stage1-polar-retraction, lem-stage1-polar-coherence-naturality, af validated, polar decomposition, C1 diffeomorphism, radius sandwich, scalar naturality, Stage 1
+
+## `AISM-47-STAGE1-GROUP-LAWS`
+- **File:** `report/sections/47_stage1_group_laws.tex`
+- **Title:** Quantitative approximate group laws on the unitaries
+- **Summary:** Reproduces lem-stage1-group-domain-membership and lem-stage1-group-closeness, the two af-validated sub-lemmas showing that a product U bold-dot V and an adjoint U^dagger of unitaries lie in the polar domain with right inverses, and that the polar projection moves them by at most C_grp*epsilon_r.
+- **Summary:** Reproduces lem-stage1-approximate-group-laws, the af-validated parent: the polar projection of the product and of the adjoint are globally defined C1 maps mu and sigma with exact basepoint identities and five defect estimates of size C_grp*epsilon_r.
+- **Summary:** Records the balloon abort that forced the parent proof to be factored into these two deliberately sibling-independent children, the binding in-scope smallness discipline, and the endpoint discipline that keeps every estimate meaningful at epsilon_r = 0.
+- **Keywords:** lem-stage1-group-domain-membership, lem-stage1-group-closeness, lem-stage1-approximate-group-laws, af validated, approximate group, associator defect, balloon repair, endpoint discipline, Stage 1
+
+## `AISM-48-STAGE1-SMOOTH-POLAR`
+- **File:** `report/sections/48_stage1_smooth_polar.tex`
+- **Title:** Paths, the inversion derivative, and the smooth atlas
+- **Summary:** Reproduces lem-stage1-polar-path-admissibility, the af-validated statement that the straight segment between two nearby unitaries stays in the polar domain and projects to a jointly continuous, circle-equivariant path joining them.
+- **Summary:** Reproduces lem-stage1-inversion-derivative-control, the af-validated statement that the polar inversion sigma retains the sJ graph chart on a small ball and that its coordinate representative has derivative within C_der*(epsilon_r+r) of minus the identity.
+- **Summary:** Reproduces lem-stage1-smooth-unitary-atlas, the af-validated conditional upgrade of the C1 graph functions to C-infinity by Lee's implicit function theorem, leaving every point, chart and first derivative unchanged.
+- **Keywords:** lem-stage1-polar-path-admissibility, lem-stage1-inversion-derivative-control, lem-stage1-smooth-unitary-atlas, af validated, projected straight path, chart retention, implicit function theorem, smooth embedded manifold, Stage 1
 
 ## `AISM-39-ARGUMENT-DAG`
 - **File:** `report/sections/39_argument_dag.tex`
