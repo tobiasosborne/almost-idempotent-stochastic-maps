@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Route F F0 defect identity: let n >= 1, let D: M\_n -> C\textasciicircum{}n...}
+\step{1} Route F F0 defect identity: let n >= 1, let D: M\_n -> C\textasciicircum{}n be diagonal extraction onto the complex diagonal algebra C\textasciicircum{}n = l\_inf\textasciicircum{}n(C) and J: C\textasciicircum{}n -> M\_n the diagonal inclusion, let Q: l\_inf\textasciicircum{}n -> l\_inf\textasciicircum{}n be row-stochastic with canonical complex-linear extension Q\_C: C\textasciicircum{}n -> C\textasciicircum{}n, and put Phi := J Q\_C D; then ||Phi\textasciicircum{}2 - Phi||\_cb = ||Q\textasciicircum{}2 - Q|$|\_\{infinity-\rangle$infinity\}. \steptag{validated} \\[6pt]
+\step{1.1} Put L := Q\_C\textasciicircum{}2 - Q\_C. Then Phi\textasciicircum{}2 - Phi = J L D. \steptag{validated} \\[6pt]
+\step{1.1.1} For every x in C\textasciicircum{}n, D(J(x)) = x, because J(x) is the diagonal matrix with diagonal x and D extracts that diagonal; hence D J = I\_\{C\textasciicircum{}n\}. \steptag{validated} \\[4pt]
+\step{1.1.2} Using Phi = J Q\_C D and D J = I\_\{C\textasciicircum{}n\}, composition gives Phi\textasciicircum{}2 - Phi = J Q\_C (D J) Q\_C D - J Q\_C D = J (Q\_C\textasciicircum{}2-Q\_C) D = J L D. \steptag{validated} \\[4pt]
+\step{1.2} For every r >= 1, under M\_r(C\textasciicircum{}n) = direct-sum\_\{j=1\}\textasciicircum{}n M\_r with norm max\_j ||X\_j||, the amplification J\_r is an isometry, D\_r is a contraction, and D\_r J\_r = I. \steptag{validated} \\[6pt]
+\step{1.2.1} An element X of M\_r(C\textasciicircum{}n) is a tuple (X\_1,...,X\_n) with norm max\_j ||X\_j||. After the canonical tensor-factor permutation, J\_r(X) is block diagonal diag(X\_1,...,X\_n), so ||J\_r X|| = max\_j ||X\_j||. For A in M\_r(M\_n), D\_r(A) is the tuple of diagonal n-by-n blocks (A\_\{11\},...,A\_\{nn\}); each A\_\{jj\} is a compression of A and has norm at most ||A||. Thus J\_r is isometric, D\_r is contractive, and direct extraction after inclusion gives D\_r J\_r=I. \steptag{validated} \\[4pt]
+\step{1.3} For every r >= 1, ||J\_r L\_r D\_r|| <= ||L\_r||. \steptag{validated} \\[6pt]
+\step{1.3.1} By the matrix-level isometry and contraction in node 1.2, submultiplicativity gives ||J\_r L\_r D\_r|| <= ||J\_r|| ||L\_r|| ||D\_r|| <= ||L\_r|| for every r >= 1. \steptag{validated} \\[4pt]
+\step{1.4} For every r >= 1, ||J\_r L\_r D\_r|| >= ||L\_r||. \steptag{validated} \\[6pt]
+\step{1.4.1} Fix r. For every X in M\_r(C\textasciicircum{}n), node 1.2 gives ||J\_r X||=||X|| and D\_r J\_r X=X, whence ||J\_r L\_r D\_r(J\_r X)||=||J\_r L\_r X||=||L\_r X||. Taking the supremum over nonzero X (equivalently over ||X||<=1) shows ||J\_r L\_r D\_r|| >= ||L\_r||. \steptag{validated} \\[4pt]
+\step{1.5} For every r >= 1, ||L\_r|| = max\_i sum\_j |l\_ij| = ||Q\textasciicircum{}2-Q|$|\_\{infinity-\rangle$infinity\}, where (l\_ij) is the real matrix of Q\textasciicircum{}2-Q; consequently taking the supremum over r gives ||Phi\textasciicircum{}2-Phi||\_cb = ||Q\textasciicircum{}2-Q|$|\_\{infinity-\rangle$infinity\}. \steptag{validated} \\[6pt]
+\step{1.5.1} Write L=(l\_ij), the same real coefficient matrix as Q\textasciicircum{}2-Q. For X=(X\_j) in M\_r(C\textasciicircum{}n), (L\_r X)\_i=sum\_j l\_ij X\_j, so ||L\_r X||=max\_i ||sum\_j l\_ij X\_j|| <= (max\_i sum\_j |l\_ij|)(max\_j ||X\_j||). Conversely choose i\_0 attaining the maximum row sum and take X\_j=sgn(l\_\{i\_0j\}) I\_r (with sgn(0)=0); then max\_j ||X\_j||<=1 and the i\_0 component of L\_r X equals (sum\_j |l\_\{i\_0j\}|)I\_r. Hence ||L\_r||=max\_i sum\_j |l\_ij| for every r. By def-almost-idempotent this row maximum is exactly ||Q\textasciicircum{}2-Q|$|\_\{infinity-\rangle$infinity\}. By node 1.1, (Phi\textasciicircum{}2-Phi)\_r=J\_r L\_r D\_r, and nodes 1.3 and 1.4 give ||(Phi\textasciicircum{}2-Phi)\_r||=||L\_r|| at every r; taking sup\_\{r>=1\}, which is the cb norm by definition, proves the asserted identity. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

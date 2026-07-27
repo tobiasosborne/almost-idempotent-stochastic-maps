@@ -4,16 +4,20 @@ kind: lemma
 contract: Route F F0 defect identity: let n >= 1, let D: M_n -> C^n be diagonal extraction onto the complex diagonal algebra C^n = l_inf^n(C) and J: C^n -> M_n the diagonal inclusion, let Q: l_inf^n -> l_inf^n be row-stochastic with canonical complex-linear extension Q_C: C^n -> C^n, and put Phi := J Q_C D; then ||Phi^2 - Phi||_cb = ||Q^2 - Q||_{infinity->infinity}.
 defs: def-stochastic; def-almost-idempotent; def-ucp-map
 deps:
-status: proved-mod-audit
-af: seeded
+status: proved
+af: validated
 provenance: docs/plans/2026-07-22-W73-artifacts/AUDIT-W73B-ROUTE-F.md Q4 (fresh hostile audit incl. the lower-bound direction, verdict VALID); design + fresh hostile audit docs/plans/2026-07-27-F0-ASSEMBLY-design/DESIGN-F0-ASSEMBLY.md sect 1.2 + AUDIT-F0-ASSEMBLY.md sect 1.2 (VALID-WITH-CORRECTIONS; the Q_C typing correction is applied here; the audit re-verified BOTH directions of the equality); user-ratified landing 2026-07-27 (W79/W80, docs/plans/2026-07-27-W78-ratification-package.md sect 5 step 1)
 owner: A
 workspace: proofs/lem-routef-f0-defect-identity
 ---
 
-**Status.** Local paper proof, hostile-audited twice — `proved-mod-audit`,
-NOT rigorous. Elevation-ready: projected af budget 5 nodes / depth 3
-($DJ=I$, squaring, cb upper bound, cb lower bound, root).
+**Status.** af-VALIDATED in-repo 2026-07-27 (85th rigorous result): fresh
+codex prover build, separate fresh codex verifiers, root + 12/12 nodes
+validated, taint clean, ZERO challenges (the verifiers independently
+confirmed both directions incl. the zero-row edge case and the
+matrix-level sup identity). Export:
+`proofs/lem-routef-f0-defect-identity/export.{md,tex}`; oracle
+`af-lem-routef-f0-defect-identity` fr-verified PASS.
 
 **Proof sketch (per the audited design; both directions).** Put
 $L=Q_{\mathbb C}^2-Q_{\mathbb C}$. Since $DJ=I$, $\Phi^2-\Phi=JLD$. Upper:

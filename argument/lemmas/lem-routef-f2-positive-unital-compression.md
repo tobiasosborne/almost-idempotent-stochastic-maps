@@ -5,7 +5,7 @@ contract: Route F F2 positive-unital compression: let K >= 1 be a dimension-inde
 defs: def-stochastic
 deps:
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/plans/2026-07-24-fudw-decomposition-artifacts/PROOF-F2F3-BRIDGE.md §1 (prover); hostile verdict VERDICT-F2F3-BRIDGE.md (VALID-WITH-CORRECTIONS, F2: VALID; contract = verdict §7 exact text); closes gap-routef-f2-positive-unital-compression-contract (DESIGN-FUDW-DECOMP-v3.md §2.6)
 owner: A
 workspace: proofs/lem-routef-f2-positive-unital-compression

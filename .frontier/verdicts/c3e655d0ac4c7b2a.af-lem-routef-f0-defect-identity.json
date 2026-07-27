@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-f0-defect-identity/export.md",
+  "oracle": "af-lem-routef-f0-defect-identity",
+  "result": "pass",
+  "claim_hash": "fd0b65569cb7dfd112837ee81983607f29bda996ec7636655e914a3e8a1b8654",
+  "oracle_digest": "6eab297e8de499b4d09e29d731ca6eae0880723820164784722fdf4e33ace145",
+  "inputs_hash": "d2cec3e99e23e693f245fb79220b64ae35a8c52e090b82747ce448891cea51c2",
+  "ts": "2026-07-27T09:18:50.247Z"
+}
