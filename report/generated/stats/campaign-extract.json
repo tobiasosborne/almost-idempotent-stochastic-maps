@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-07-28T16:30:14Z",
+ "extracted_at": "2026-07-28T16:31:51Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-07-28T16:30:14Z",
+  "mined_at": "2026-07-28T16:31:51Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -2767,9 +2767,9 @@
   "git": {
    "active_days": 19,
    "authors": {
-    "tobiasosborne": 854
+    "tobiasosborne": 855
    },
-   "commits": 854,
+   "commits": 855,
    "first_day": "2026-07-02",
    "last_day": "2026-07-28",
    "per_day": {
@@ -2791,7 +2791,7 @@
     "2026-07-25": 165,
     "2026-07-26": 85,
     "2026-07-27": 74,
-    "2026-07-28": 25
+    "2026-07-28": 26
    },
    "subject_prefixes": {
     "W61": 13,
