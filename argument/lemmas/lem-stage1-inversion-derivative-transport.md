@@ -3,7 +3,7 @@ id: lem-stage1-inversion-derivative-transport
 kind: lemma
 contract: Parameterized inversion-derivative transport: there exist C_der^0, C_ch^0, C_pol^0, C_grp^0 >= 1 and kappa_der^0, kappa_ch^0, kappa_pol^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_der >= C_der^0, C_ch >= C_ch^0, C_pol >= C_pol^0, C_grp >= C_grp^0, 0 < kappa_der <= kappa_der^0, 0 < kappa_ch <= kappa_ch^0, and 0 < kappa_pol <= kappa_pol^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra, every delta > 0, every s in {+1, -1}, and every 0 < r <= delta satisfying C_ch*(epsilon_r + delta) <= kappa_ch, C_pol*(epsilon_r + delta) <= kappa_pol, C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), C_der*(epsilon_r + r) <= kappa_der, and (1 + epsilon_r)*(1 + C_ch*(epsilon_r + delta))*r + C_grp*epsilon_r < 2*delta, writing u_delta for the unique first component of the inverse of Pi_delta: calU x B^{calH}_delta(J) -> S_delta := Pi_delta(calU x B^{calH}_delta(J)), Pi_delta(U, H) = U bold-dot H, and g_{sJ}: B_{2delta}^{icalH}(0) -> B_{2delta}^{calH}(0) for the unique C^1 map such that, for every A in B_{2delta}^{icalH}(0), f_{sJ}(A + g_{sJ}(A)) = 0, where f_{sJ}(B) = (1/2)*(((J + B^dagger) bold-dot (sJ)^dagger) bold-dot (sJ bold-dot (J + B)) - J), define chi_s(A) = sJ bold-dot (J + A + g_{sJ}(A)) and the global C^1 map sigma(U) = u_delta(U^dagger); then sigma maps chi_s(B_r^{icalH}(0)) into the same sJ-graph chart and, with F_s(A) = phi_{sJ}^par(sigma(chi_s(A))), one has ||D(F_s - id)(A) + 2*I_{icalH}|| <= C_der*(epsilon_r + r) for every A in B_r^{icalH}(0).
 defs: def-stage1-polar-witness-data; def-approximate-unitary-space; def-epsilon-cstar-algebra
-deps: lem-stage1-inversion-derivative-control; lem-stage1-polar-retraction; lem-stage1-unitary-graph-control; lem-stage1-smooth-unitary-operations; lem-stage1-approximate-group-laws; lem-stage1-smooth-unitary-atlas; lem-stage1-smooth-polar-inverse
+deps: lem-stage1-explicit-group-domain-membership; lem-stage1-explicit-group-closeness; lem-stage1-polar-retraction; lem-stage1-unitary-graph-control
 status: stated
 af: seeded
 workspace: proofs/lem-stage1-inversion-derivative-transport
@@ -58,3 +58,19 @@ antecedents `lem-stage1-approximate-group-laws`,
 its conditional conclusion is dischargeable from allowed inputs. The
 workspace was re-seeded for run 2 (run-1 classification preserved here and
 in the fr log, cycle 796).
+
+**W97 amendment (2026-07-28, deps-only).** Deps replaced per the endorsed
+rebuild design (`DESIGN-13E-BINDER-v3.md` §1.10; audit chain v3/v3.2,
+final VERDICT LAND): the retracted control parent, the retired
+smooth-operations parent, the retired group-laws parent, atlas, and smooth
+polar inverse are all dropped; the two explicit bridges + polar retraction
++ unitary graph control are the typed providers (audit-v3 confirms they
+suffice for the global C^1 sigma — dagger is real-linear, so neither
+smooth upgrade is needed). Contract and defs BYTE-UNCHANGED (13g remains
+row-13 clause (A_7) verbatim). Elevation queue row 8 (target/hard cap
+22/25), audit-v2's fixed explicit-closeness-witness repair: fix
+(G_d,P_d,k_d), (G_c,P_c,k_c), (P_r,k_r), (C_g,k_g) FIRST; universal
+D_0,k_D,C_der^0,kappa_der^0 are built before the receiving tuple enters;
+no step absorbs the unbounded receiving C_grp. Neither the defective
+run-2 tree nor the archived run-1 branch is a proof base — cleanly
+RE-SEED at elevation (superseding the "re-elevation base" phrasing above).

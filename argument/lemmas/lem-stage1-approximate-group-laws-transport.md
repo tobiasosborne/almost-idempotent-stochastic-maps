@@ -3,7 +3,7 @@ id: lem-stage1-approximate-group-laws-transport
 kind: lemma
 contract: Parameterized approximate-group transport: there exist C_grp^0, C_pol^0 >= 1 and kappa_pol^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_grp >= C_grp^0, C_pol >= C_pol^0, and 0 < kappa_pol <= kappa_pol^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra and every delta > 0 satisfying C_pol*(epsilon_r + delta) <= kappa_pol and C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), writing (u_delta, h_delta) for the unique inverse of Pi_delta: calU x B^{calH}_delta(J) -> S_delta := Pi_delta(calU x B^{calH}_delta(J)), Pi_delta(U, H) = U bold-dot H, the formulas mu(U, V) = u_delta(U bold-dot V) and sigma(U) = u_delta(U^dagger) define C^1 maps on all of calU x calU and calU, respectively, and for every U, V, Z in calU, mu(J, U) = mu(U, J) = U, sigma(J) = J, ||mu(U, V) - U bold-dot V|| <= C_grp*epsilon_r, ||sigma(U) - U^dagger|| <= C_grp*epsilon_r, ||mu(mu(U, V), Z) - mu(U, mu(V, Z))|| <= C_grp*epsilon_r, ||mu(sigma(U), U) - J|| <= C_grp*epsilon_r, and ||mu(U, sigma(U)) - J|| <= C_grp*epsilon_r.
 defs: def-stage1-polar-witness-data; def-approximate-unitary-space; def-epsilon-cstar-algebra
-deps: lem-stage1-approximate-group-laws; lem-stage1-polar-retraction; lem-stage1-polar-coherence-naturality
+deps: lem-stage1-explicit-group-domain-membership; lem-stage1-explicit-group-closeness; lem-stage1-polar-retraction
 status: stated
 af: seeded
 workspace: proofs/lem-stage1-approximate-group-laws-transport
@@ -35,3 +35,15 @@ is the af-validated `lem-stage1-polar-coherence-naturality` (any two polar
 data agree on the overlap; scalar naturality); added as a third dep and
 byte-matched workspace external. Contract BYTE-UNCHANGED. Prover escalated
 to xhigh per the post-STUCK playbook.
+
+**W97 amendment (2026-07-28, deps-only).** Deps replaced per the endorsed
+rebuild design (`DESIGN-13E-BINDER-v3.md` §1.7; audit chain v3/v3.2, final
+VERDICT LAND): the retired anaphoric parent and coherence-naturality are
+dropped; the two explicit binder-closed bridges + the polar retraction are
+the typed providers. Contract and defs BYTE-UNCHANGED (13e remains row-13
+clause (A_5) verbatim). Elevation queue row 5 (target/hard cap 16/22): fix
+witnesses (G_d,P_d,k_d), (G_c,P_c,k_c), (P_r,k_r) BEFORE quantifying over
+the receiving tuple; C_grp^0 = max{G_d,8*G_c,8}. All providers display the
+identical Pi_delta, so ordinary inverse uniqueness synchronizes them —
+coherence-naturality is neither needed nor listed. The old 37-node paused
+tree is NOT a repair base — cleanly RE-SEED at elevation.

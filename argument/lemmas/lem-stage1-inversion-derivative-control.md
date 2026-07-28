@@ -3,7 +3,7 @@ id: lem-stage1-inversion-derivative-control
 kind: lemma
 contract: Typed inversion derivative with chart retention: there exist universal C_der, C_ch, C_pol, C_grp >= 1 and kappa_der, kappa_ch, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra, s in {+1, -1}, and 0 < r <= delta satisfying C_ch*(epsilon_r + delta) <= kappa_ch, C_pol*(epsilon_r + delta) <= kappa_pol, C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), C_der*(epsilon_r + r) <= kappa_der, and (1 + epsilon_r)*(1 + C_ch*(epsilon_r + delta))*r + C_grp*epsilon_r < 2*delta, the globally defined sigma(U) = u_delta(U^dagger) maps chi_s(B_r^{icalH}(0)) into the same sJ-graph chart, where chi_s(A) = sJ bold-dot (J + A + g_{sJ}(A)), and F_s(A) = phi_{sJ}^par(sigma(chi_s(A))) satisfies ||D(F_s - id)(A) + 2*I_{icalH}|| <= C_der*(epsilon_r + r) for all A in B_r^{icalH}(0).
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
-deps: lem-stage1-unitary-graph-control; lem-stage1-polar-retraction; lem-stage1-polar-coherence-naturality; lem-stage1-approximate-group-laws
+deps: lem-stage1-unitary-graph-control; lem-stage1-polar-retraction; lem-stage1-explicit-group-closeness
 status: stated
 af: seeded
 workspace: proofs/lem-stage1-inversion-derivative-control
@@ -37,3 +37,15 @@ proof.
 supplies the all-calU adjoint domain. The explicit retention guard keeps
 sigma(chi_s(A)) in the same chart, so coordinate equality is legitimate.
 The bad second-variable display at TeX 883–888 is unused.
+
+**W97 amendment (2026-07-28, deps-only).** Deps replaced per the endorsed
+rebuild design (`DESIGN-13E-BINDER-v3.md` §1.6; audit chain v3/v3.2, final
+VERDICT LAND): the anaphoric `lem-stage1-approximate-group-laws` and
+`lem-stage1-polar-coherence-naturality` are dropped;
+`lem-stage1-explicit-group-closeness` is the typed provider. Contract and
+defs BYTE-UNCHANGED. Elevation queue row 4 (target/hard cap 10/14): fix
+provider witnesses (C_g,k_g), (P_r,k_r), (G_c,P_c,k_c) FIRST, then replay
+the chart-retention/differentiated-factorization calculation for the typed
+inverse; the old node-1.3 substitution is absent. The defective old tree is
+NOT a repair base — the workspace is to be cleanly RE-SEEDED at elevation
+(superseding the earlier "re-elevation base" phrasing above).
