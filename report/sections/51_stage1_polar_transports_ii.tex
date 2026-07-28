@@ -1,6 +1,6 @@
 % SHARD-ID: AISM-51-STAGE1-POLAR-TRANSPORTS-II
 % SHARD-TITLE: Parameterized transports of the Stage-1 polar layer, II: paths and the inversion derivative
-% SHARD-SUMMARY: Reproduces the two remaining af-validated Stage-1 polar transport rows, lem-stage1-polar-path-transport and lem-stage1-inversion-derivative-transport, which carry the projected-path and typed inversion-derivative lemmas to the parameterized witness-data form with explicit definite descriptions for the polar and graph binders.
+% SHARD-SUMMARY: Reproduces the af-validated transport lem-stage1-polar-path-transport and states lem-stage1-inversion-derivative-transport (af validation RETRACTED 2026-07-28, now a stated candidate); both carry projected-path / inversion-derivative content to the parameterized witness-data form with explicit definite descriptions for the polar and graph binders.
 % SHARD-SUMMARY: Explains the joint-threshold construction that transports five scalar guards to four fixed-constant parents simultaneously, and the three binder identifications that discharge the explicit u_delta, g_sJ and sigma descriptions from af-validated imports.
 % SHARD-SUMMARY: Records the inversion-derivative run-1 STUCK abort on bare-anaphor binders in the sole allowed external, repaired by widening the deps line with six T0 imports while leaving the contract byte-unchanged.
 % SHARD-KEYWORDS: lem-stage1-polar-path-transport, lem-stage1-inversion-derivative-transport, af validated, witness data, transport, definite description, deps widening, Stage 1
@@ -44,7 +44,7 @@ radius monotonicity, and every other conclusion --- invertibility, joint continu
 endpoints, circle equivariance --- already matches verbatim, the bare-$u_\delta$ anaphor of
 the parent resolving against the explicit polar binder.
 
-\begin{lemma}[\texttt{lem-stage1-inversion-derivative-transport}]\label{lem:stage1-inversion-derivative-transport}
+\begin{conjecture}[\texttt{lem-stage1-inversion-derivative-transport} --- proof retracted 2026-07-28]\label{lem:stage1-inversion-derivative-transport}
 There exist $C^{0}_{\mathrm{der}},C^{0}_{\mathrm{ch}},C^{0}_{\mathrm{pol}},C^{0}_{\mathrm{grp}}\ge1$
 and $\kappa^{0}_{\mathrm{der}},\kappa^{0}_{\mathrm{ch}},\kappa^{0}_{\mathrm{pol}}\in(0,\tfrac12]$
 such that for every witness datum $W$ with $C_{\mathrm{der}}\ge C^{0}_{\mathrm{der}}$,
@@ -69,13 +69,22 @@ $A\in B^{\aHerm}_{r}(0)$.
 here exactly as in Lemma~\ref{lem:stage1-inversion-derivative-control}. Where that parent
 binds $u_\delta$, $g_{\varsigma J}$ and $\sigma$ as bare anaphors, this row carries
 \emph{explicit definite descriptions} for all three --- the point of the transport.
-\end{lemma}
+\emph{Retraction note (2026-07-28).} The W95 run-2 \texttt{af} validation of this row was
+RETRACTED the same day: an independent adjudication found that, while its polar and graph
+binder identifications are sound, the substitution of the parent's derivative estimate
+(stated for an anaphorically bound $\sigma$) into the explicitly bound $F_{\varsigma}$ has
+no typed preimage witness among the registered externals, and the parent's own validation
+was retracted for the same defect class (see \texttt{docs/LEARNINGS.md}, entry 2026-07-28).
+The statement stands as a \emph{stated} candidate (the contract is not in dispute);
+re-derivation on an explicit-binder dependency spine is part of the 13e repair campaign.
+\end{conjecture}
 
 \noindent\textbf{Registry contract (verbatim).}
 \contractquote{Parameterized inversion-derivative transport: there exist C_der^0, C_ch^0, C_pol^0, C_grp^0 >= 1 and kappa_der^0, kappa_ch^0, kappa_pol^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_der >= C_der^0, C_ch >= C_ch^0, C_pol >= C_pol^0, C_grp >= C_grp^0, 0 < kappa_der <= kappa_der^0, 0 < kappa_ch <= kappa_ch^0, and 0 < kappa_pol <= kappa_pol^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra, every delta > 0, every s in {+1, -1}, and every 0 < r <= delta satisfying C_ch*(epsilon_r + delta) <= kappa_ch, C_pol*(epsilon_r + delta) <= kappa_pol, C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), C_der*(epsilon_r + r) <= kappa_der, and (1 + epsilon_r)*(1 + C_ch*(epsilon_r + delta))*r + C_grp*epsilon_r < 2*delta, writing u_delta for the unique first component of the inverse of Pi_delta: calU x B^{calH}_delta(J) -> S_delta := Pi_delta(calU x B^{calH}_delta(J)), Pi_delta(U, H) = U bold-dot H, and g_{sJ}: B_{2delta}^{icalH}(0) -> B_{2delta}^{calH}(0) for the unique C^1 map such that, for every A in B_{2delta}^{icalH}(0), f_{sJ}(A + g_{sJ}(A)) = 0, where f_{sJ}(B) = (1/2)*(((J + B^dagger) bold-dot (sJ)^dagger) bold-dot (sJ bold-dot (J + B)) - J), define chi_s(A) = sJ bold-dot (J + A + g_{sJ}(A)) and the global C^1 map sigma(U) = u_delta(U^dagger); then sigma maps chi_s(B_r^{icalH}(0)) into the same sJ-graph chart and, with F_s(A) = phi_{sJ}^par(sigma(chi_s(A))), one has ||D(F_s - id)(A) + 2*I_{icalH}|| <= C_der*(epsilon_r + r) for every A in B_r^{icalH}(0).}
 
-\paragraph{Proof (prose account of the af-validated tree).}
-The skeleton with \emph{joint} thresholds: each coefficient floor is the maximum, and each
+\paragraph{Retracted proof sketch (the defective af tree, kept for the record).}
+The retracted run-2 validation ran the skeleton with \emph{joint} thresholds: each
+coefficient floor is the maximum, and each
 margin cap the minimum, of the corresponding witnesses of the four parents
 (Lemmas~\ref{lem:stage1-inversion-derivative-control}, \ref{lem:stage1-polar-retraction},
 \ref{lem:stage1-unitary-graph-control} and \ref{lem:stage1-approximate-group-laws}), so
@@ -105,14 +114,22 @@ derivative changed. Finally Lemma~\ref{lem:stage1-inversion-derivative-control} 
 with its own witnesses; after the identifications its $\chi_{\varsigma}$, $\sigma$,
 $F_{\varsigma}$ and chart are precisely those above, and step (v) enlarges only the
 displayed bound, $C^{I}_{\mathrm{der}}(\ecs_r+r)\le C_{\mathrm{der}}(\ecs_r+r)$.
+\emph{Where it fails (adjudicated 2026-07-28):} the \emph{polar} and \emph{graph}
+identifications above are sound, but the \emph{inversion} step is not --- neither the
+group-laws row nor smooth-unitary-operations attaches \emph{their} anaphorically bound
+$u_\delta$ to the explicit $\Pi_\delta$ inverse by a typed preimage witness, and the final
+application of the parent substitutes an estimate stated for the parent's own anaphoric
+$\sigma$ into the explicitly bound $F_{\varsigma}$ without that synchronization.
 
 \medskip
-\noindent\textbf{Status.} Both are \texttt{proved} with \texttt{af: validated} (T0).
-Workspaces \texttt{proofs/lem-stage1-polar-path-transport} (9 nodes, 9 \texttt{validated},
-first-pass, zero challenges) and \texttt{proofs/lem-stage1-inversion-derivative-transport}
-(run 2, 2026-07-28: 13 live nodes all \texttt{validated} out of 22 created, 9 archived in
-an in-run repair of an $e$-binding challenge). Both taint clean; both runs tier
-\emph{routine}.
+\noindent\textbf{Status.} \texttt{lem-stage1-polar-path-transport} is \texttt{proved} with
+\texttt{af: validated} (T0); workspace \texttt{proofs/lem-stage1-polar-path-transport}
+(9 nodes, 9 \texttt{validated}, first-pass, zero challenges, tier \emph{routine}).
+\texttt{lem-stage1-inversion-derivative-transport} is \texttt{stated} /
+\texttt{af: seeded}: its run-2 validation (2026-07-28: 13 live nodes validated of 22
+created, 9 archived) was RETRACTED the same day on the adjudicated synchronization defect
+above (\texttt{docs/LEARNINGS.md}); the workspace and both run ledgers are retained as the
+re-elevation base.
 
 \noindent\textbf{Correction of record (deps-level, not contract-level).} The
 inversion-derivative row's first orchestration (2026-07-28, W95 run 1) aborted

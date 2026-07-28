@@ -1,7 +1,7 @@
 % SHARD-ID: AISM-48-STAGE1-SMOOTH-POLAR
 % SHARD-TITLE: Paths, the inversion derivative, and the smooth atlas
 % SHARD-SUMMARY: Reproduces lem-stage1-polar-path-admissibility, the af-validated statement that the straight segment between two nearby unitaries stays in the polar domain and projects to a jointly continuous, circle-equivariant path joining them.
-% SHARD-SUMMARY: Reproduces lem-stage1-inversion-derivative-control, the af-validated statement that the polar inversion sigma retains the sJ graph chart on a small ball and that its coordinate representative has derivative within C_der*(epsilon_r+r) of minus the identity.
+% SHARD-SUMMARY: States lem-stage1-inversion-derivative-control (af validation RETRACTED 2026-07-28, now a stated candidate): the polar inversion sigma retains the sJ graph chart on a small ball and its coordinate representative has derivative within C_der*(epsilon_r+r) of minus the identity.
 % SHARD-SUMMARY: Reproduces lem-stage1-smooth-unitary-atlas, the af-validated conditional upgrade of the C1 graph functions to C-infinity by Lee's implicit function theorem, leaving every point, chart and first derivative unchanged.
 % SHARD-KEYWORDS: lem-stage1-polar-path-admissibility, lem-stage1-inversion-derivative-control, lem-stage1-smooth-unitary-atlas, af validated, projected straight path, chart retention, implicit function theorem, smooth embedded manifold, Stage 1
 \section{Paths, the inversion derivative, and the smooth atlas}\label{sec:stage1-smooth-polar}
@@ -60,7 +60,7 @@ both $Z_t$ and $cZ_t$ lie in $S_\delta$; the scalar-naturality clause
 \eqref{eq:s1cn-natural} of Lemma~\ref{lem:stage1-polar-coherence-naturality}, applied to the
 polar datum $(\delta,S_\delta,u_\delta,h_\delta)$, gives $u_\delta(cZ_t)=c\,u_\delta(Z_t)$.
 
-\begin{lemma}[\texttt{lem-stage1-inversion-derivative-control}]\label{lem:stage1-inversion-derivative-control}
+\begin{conjecture}[\texttt{lem-stage1-inversion-derivative-control} --- proof retracted 2026-07-28]\label{lem:stage1-inversion-derivative-control}
 There exist universal
 $C_{\mathrm{der}},C_{\mathrm{ch}},C_{\mathrm{pol}},C_{\mathrm{grp}}\ge1$ and
 $\kappa_{\mathrm{der}},\kappa_{\mathrm{ch}},\kappa_{\mathrm{pol}}\in(0,\tfrac12]$ such that
@@ -89,17 +89,26 @@ here only to keep it apart from the scale variables. The second display of
 \eqref{eq:s1id-retention} is the \emph{chart-retention guard}: it is what makes the
 coordinate identity $F_{\varsigma}(A)=B$ below legitimate, rather than a comparison of
 coordinates in two different charts.
-\end{lemma}
+\emph{Retraction note (2026-07-28).} The 2026-07-27 \texttt{af} validation of this row was
+RETRACTED: an independent adjudication found its export node~1.3 identifies the
+anaphorically bound group-law polar factor with the typed retraction inverse without a
+typed preimage witness (see \texttt{docs/LEARNINGS.md}, entry 2026-07-28). The statement
+stands as a \emph{stated} candidate (the contract is not in dispute); re-derivation on an
+explicit-binder dependency spine is part of the 13e repair campaign.
+\end{conjecture}
 
 \noindent\textbf{Registry contract (verbatim).}
 \contractquote{Typed inversion derivative with chart retention: there exist universal C_der, C_ch, C_pol, C_grp >= 1 and kappa_der, kappa_ch, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra, s in {+1, -1}, and 0 < r <= delta satisfying C_ch*(epsilon_r + delta) <= kappa_ch, C_pol*(epsilon_r + delta) <= kappa_pol, C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), C_der*(epsilon_r + r) <= kappa_der, and (1 + epsilon_r)*(1 + C_ch*(epsilon_r + delta))*r + C_grp*epsilon_r < 2*delta, the globally defined sigma(U) = u_delta(U^dagger) maps chi_s(B_r^{icalH}(0)) into the same sJ-graph chart, where chi_s(A) = sJ bold-dot (J + A + g_{sJ}(A)), and F_s(A) = phi_{sJ}^par(sigma(chi_s(A))) satisfies ||D(F_s - id)(A) + 2*I_{icalH}|| <= C_der*(epsilon_r + r) for all A in B_r^{icalH}(0).}
 
-\paragraph{Proof (prose account of the af-validated tree).}
-Constants are aligned first: $C_{\mathrm{ch}},\kappa_{\mathrm{ch}}$ from
+\paragraph{Retracted proof sketch (the defective af tree, kept for the record).}
+The retracted validation aligned constants first:
+$C_{\mathrm{ch}},\kappa_{\mathrm{ch}}$ from
 Lemma~\ref{lem:stage1-unitary-graph-control}, $C_{\mathrm{pol}}$ the larger and
 $\kappa_{\mathrm{pol}}$ the smaller of the polar and group-law witnesses, $C_{\mathrm{grp}}$
 from Lemma~\ref{lem:stage1-approximate-group-laws}; $C_{\mathrm{der}},\kappa_{\mathrm{der}}$
-are chosen last.
+chosen last. \emph{The defect sits in the polar-factorization step below (the identification
+of the group-law polar factor with the typed retraction inverse); the remaining scalar and
+chart steps are unchallenged but the tree does not stand without it.}
 
 \emph{The scalar chart.} Write $V=\varsigma J$, $G=g_V$ and $Z_T=T+G(T)$. Exact unitality,
 bilinearity, the involution laws and $\varsigma^{2}=1$ collapse \eqref{eq:s1gc-f} to
@@ -193,12 +202,15 @@ Lemma~\ref{lem:stage1-unitary-graph-control}, and every set, function and coordi
 used is the old one, so $\Unit$ is a smooth embedded manifold with nothing replaced.
 
 \medskip
-\noindent\textbf{Status.} All three are \texttt{proved} with \texttt{af: validated} (T0).
-Workspaces \texttt{proofs/lem-stage1-polar-path-admissibility} (12 nodes, 12
-\texttt{validated}, taint clean, no challenges),
-\texttt{proofs/lem-stage1-inversion-derivative-control} (10 nodes, 10 \texttt{validated},
-taint clean, no challenges) and \texttt{proofs/lem-stage1-smooth-unitary-atlas} (14 nodes,
-14 \texttt{validated}, taint clean). The last registers three imports: the validated
+\noindent\textbf{Status.} \texttt{lem-stage1-polar-path-admissibility} and
+\texttt{lem-stage1-smooth-unitary-atlas} are \texttt{proved} with \texttt{af: validated}
+(T0); workspaces \texttt{proofs/lem-stage1-polar-path-admissibility} (12 nodes, 12
+\texttt{validated}, taint clean, no challenges) and
+\texttt{proofs/lem-stage1-smooth-unitary-atlas} (14 nodes, 14 \texttt{validated}, taint
+clean). \texttt{lem-stage1-inversion-derivative-control} is \texttt{stated} /
+\texttt{af: seeded}: its 2026-07-27 validation (10 nodes, no challenges) was RETRACTED
+2026-07-28 on the adjudicated synchronization defect above
+(\texttt{docs/LEARNINGS.md}). The last registers three imports: the validated
 contracts of \texttt{lem-stage1-rectified-cstar-control} and
 \texttt{lem-stage1-unitary-graph-control}, and the byte-matched external
 \texttt{GT-lee-2ed-thm-C.40}.

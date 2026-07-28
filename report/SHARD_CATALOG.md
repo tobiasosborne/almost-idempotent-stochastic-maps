@@ -359,7 +359,7 @@ verbatim), and keywords.
 - **File:** `report/sections/48_stage1_smooth_polar.tex`
 - **Title:** Paths, the inversion derivative, and the smooth atlas
 - **Summary:** Reproduces lem-stage1-polar-path-admissibility, the af-validated statement that the straight segment between two nearby unitaries stays in the polar domain and projects to a jointly continuous, circle-equivariant path joining them.
-- **Summary:** Reproduces lem-stage1-inversion-derivative-control, the af-validated statement that the polar inversion sigma retains the sJ graph chart on a small ball and that its coordinate representative has derivative within C_der*(epsilon_r+r) of minus the identity.
+- **Summary:** States lem-stage1-inversion-derivative-control (af validation RETRACTED 2026-07-28, now a stated candidate): the polar inversion sigma retains the sJ graph chart on a small ball and its coordinate representative has derivative within C_der*(epsilon_r+r) of minus the identity.
 - **Summary:** Reproduces lem-stage1-smooth-unitary-atlas, the af-validated conditional upgrade of the C1 graph functions to C-infinity by Lee's implicit function theorem, leaving every point, chart and first derivative unchanged.
 - **Keywords:** lem-stage1-polar-path-admissibility, lem-stage1-inversion-derivative-control, lem-stage1-smooth-unitary-atlas, af validated, projected straight path, chart retention, implicit function theorem, smooth embedded manifold, Stage 1
 
@@ -381,7 +381,7 @@ verbatim), and keywords.
 ## `AISM-51-STAGE1-POLAR-TRANSPORTS-II`
 - **File:** `report/sections/51_stage1_polar_transports_ii.tex`
 - **Title:** Parameterized transports of the Stage-1 polar layer, II: paths and the inversion derivative
-- **Summary:** Reproduces the two remaining af-validated Stage-1 polar transport rows, lem-stage1-polar-path-transport and lem-stage1-inversion-derivative-transport, which carry the projected-path and typed inversion-derivative lemmas to the parameterized witness-data form with explicit definite descriptions for the polar and graph binders.
+- **Summary:** Reproduces the af-validated transport lem-stage1-polar-path-transport and states lem-stage1-inversion-derivative-transport (af validation RETRACTED 2026-07-28, now a stated candidate); both carry projected-path / inversion-derivative content to the parameterized witness-data form with explicit definite descriptions for the polar and graph binders.
 - **Summary:** Explains the joint-threshold construction that transports five scalar guards to four fixed-constant parents simultaneously, and the three binder identifications that discharge the explicit u_delta, g_sJ and sigma descriptions from af-validated imports.
 - **Summary:** Records the inversion-derivative run-1 STUCK abort on bare-anaphor binders in the sole allowed external, repaired by widening the deps line with six T0 imports while leaving the contract byte-unchanged.
 - **Keywords:** lem-stage1-polar-path-transport, lem-stage1-inversion-derivative-transport, af validated, witness data, transport, definite description, deps widening, Stage 1

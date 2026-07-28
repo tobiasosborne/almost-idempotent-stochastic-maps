@@ -89,3 +89,37 @@ _(The inherited REFUTED routes from the classical-portfolio are recorded as dead
   a LEARNINGS entry in the same commit as the demotion (Rule 9 applies to claims, not just
   files). What remains true: Route F requires no conjecture and no new idea; what was false:
   that only verification labour remained.
+
+## 2026-07-28 — `lem-stage1-inversion-derivative-control` (97th) + `lem-stage1-inversion-derivative-transport` (107th): af validations RETRACTED (defective polar-inverse synchronization; T0 107 → 105)
+
+- **Claimed:** both results were af-VALIDATED (2026-07-27 first-pass 10/10 zero challenges; 2026-07-28
+  run-2 13/13 taint clean respectively) and banked as the 97th and 107th rigorous results with passing
+  oracle + `fr verify` certificates. The CONTRACTS are not in dispute — only the validated proofs.
+- **Why wrong:** both proof bodies identify the anaphorically-bound polar inverse of an imported
+  contract (`lem-stage1-approximate-group-laws` u_grp; the parent control lemma's u_I) with the
+  explicitly typed `lem-stage1-polar-retraction` inverse u_pol without a typed preimage witness
+  h_X satisfying X = u_grp(X)·h_X (resp. u_I): the available exact identity X = u_pol(X)·h_pol(X)
+  is paired with u_pol, and taking h_X = h_pol(X) assumes the equality being proved;
+  `lem-stage1-polar-coherence-naturality` is conditional on TWO typed polar data and only one is
+  available. Loci: control export node 1.3 ("the common polar inverse … identified across admissible
+  polar data"); transport export nodes 1.3 (second half), 1.5.5, and 1.6. This is exactly the
+  missing-h_X obstruction that three W93 verifier cohorts had established for transport 13e — the
+  earlier cohorts that validated these two trees accepted the same inference the W93 cohorts
+  (correctly) rejected.
+- **Caught by:** the W97 design-audit chain, NOT the runs' own verifier cohorts: the hostile audit of
+  `DESIGN-13E-BINDER.md` raised the allegation (AUDIT-13E-BINDER.md finding 2, MAJOR), and an
+  independent fresh-codex adjudication primed to refute it instead CONFIRMED it per-locus
+  (`docs/plans/2026-07-28-13E-BINDER-design/ADJUDICATION-T0-ALLEGATION.md`: T1 DEFECTIVE, T2
+  DEFECTIVE, CASCADE exactly these two). The adjudicator also partially REFUTED the allegation's
+  W93-equivalence claim (for X = U† the S_delta-membership subproblem IS discharged by the retraction
+  contract's inner inclusion) — the defect is the preimage/synchronization step alone.
+- **Resolution:** statuses mechanically demoted proved→stated / af validated→seeded same day
+  (linker-verified: T2 was T1's only validated dependent, so the demotion is closed under the pair);
+  report shards 48/51 + PROVENANCE claim rows corrected; stats regenerated (T0 = 105); workspaces and
+  ledgers retained as re-elevation bases; re-derivation on an explicit-binder dependency spine folded
+  into the 13e repair campaign (design round v2; bead `aism-e1qs`). Sketch superseded (v37).
+- **Process lesson (recorded):** a verifier cohort can accept an inference that a differently-framed
+  cohort rejects — cross-workspace CONSISTENCY of what "the same map" means is not enforced by
+  per-node verification. The 13e repair design v2 must carry an explicit-binder discipline for every
+  map a root binds by definite description (the 13g external-provider lesson, now strengthened: the
+  provider must supply the TYPED WITNESS, not merely a same-named conclusion).
