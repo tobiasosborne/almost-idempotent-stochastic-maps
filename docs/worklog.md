@@ -1826,3 +1826,34 @@ bead `aism-kqeb` notes updated. HANDOFF rewritten.
 **Open at close.** The single non-resource critical-path blocker is the 13e USER DECISION
 `aism-b5hz` (row 13 consumes all seven transports). No other unblocked elevation work; codex
 usage wall unchanged.
+
+## 2026-07-28 — session 33 addendum (wave W97): the 13e repair campaign triggers the repo's FIRST RETRACTION (T0 107 → 105)
+
+**W97 design round (user delegated `aism-b5hz`: "proceed as you recommend").** Orchestrator chose
+option C constrained by two post-bead findings: row 13 (A_5)–(A_7) consume the EXPLICIT u_delta
+binder (so anaphoric-13e just relocates the gap), and an option-B group-laws amendment cascades
+through byte-matched externals in four workspaces. Fresh codex design (BRIEF/DESIGN-13E-BINDER.md)
+recommended R1: 13e contract byte-unchanged + two new explicit-binder bridge rows. The fresh
+hostile audit REJECTED it (2 MAJOR / 2 MINOR) — and finding 2 alleged the same defective
+synchronization inside two VALIDATED trees.
+
+**Adjudication + retraction.** An independent fresh adjudication (primed that refuting the
+allegation = equal success) CONFIRMED per-locus: `lem-stage1-inversion-derivative-control` export
+node 1.3 and `lem-stage1-inversion-derivative-transport` nodes 1.3/1.5.5/1.6 identify an
+anaphorically-bound polar inverse with the typed retraction inverse without a typed preimage
+witness h_X — the same obstruction the W93 cohorts correctly established against 13e; cascade
+bounded to exactly the pair (T2 was T1's only validated dependent; linker-verified). Executed the
+first retraction per L0: both demoted proved/validated → stated/seeded with full retraction
+bodies; docs/LEARNINGS.md entry; report shards 48/51 demoted the statements to conjecture
+environments with retraction notes (Status blocks, SHARD-SUMMARY/CATALOG mirrors, PROVENANCE
+claim rows + hashes corrected); generated layers + stats (T0=105) + pdf rebuilt; sketch v37;
+beads aism-e1qs (adjudicated → re-elevation tracker) and aism-b5hz updated. Contracts are NOT in
+dispute; workspaces/ledgers retained as re-elevation bases.
+
+**Assessment (honest).** The rigour machinery worked one layer late: the elevating cohorts
+accepted an inference three W93 cohorts had rejected; the design-audit chain caught it within
+hours of the 107th banking. Recorded process law: per-node verification does not enforce
+cross-workspace consistency of "the same map" — every definite description a root binds must have
+a provider external supplying the TYPED WITNESS. Next: design round v2 (widened scope: 2 bridge
+rows + explicit smooth-operations bridge + re-derivation of the pair + 13e sans
+coherence-naturality) → hostile audit → land → serial elevations.

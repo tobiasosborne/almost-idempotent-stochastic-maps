@@ -15,9 +15,27 @@ TRIGGER: session close, or a material change in the current frontier / next task
    campaign bead is **`aism-kqeb` (W80)**. The proof sketch is
    `docs/plans/CURRENT.md` → **v36** (2026-07-28; folds the sessions 31–33
    T0 gains — Rule-9 debt is CLEAR).
-3. **Rigorous (af-validated, T0): 107.** Registry: 295. Definitions: 45.
-   `op-classical` OPEN.
-4. **Session-33 arc (T0 106 → 107):**
+3. **Rigorous (af-validated, T0): 105.** Registry: 295. Definitions: 45.
+   `op-classical` OPEN. **SESSION-33 HEADLINE: the repo's FIRST RETRACTION
+   — `lem-stage1-inversion-derivative-control` (was 97th) and
+   `lem-stage1-inversion-derivative-transport` (was 107th) were demoted to
+   stated/seeded the same day 13g was banked (T0 peaked at 107, closed at
+   105).** The W97 design-audit chain caught a synchronization defect the
+   elevating verifier cohorts had accepted: both proofs identify an
+   anaphorically-bound polar inverse with the typed
+   `lem-stage1-polar-retraction` inverse without a typed preimage witness
+   h_X — the same missing-h_X obstruction three W93 cohorts had correctly
+   rejected for 13e. Chain of custody: hostile audit of the 13e repair
+   design raised it (AUDIT-13E-BINDER.md finding 2) → an independent
+   fresh adjudication primed to REFUTE it instead CONFIRMED it per-locus
+   and bounded the cascade to exactly the pair
+   (ADJUDICATION-T0-ALLEGATION.md; linker-verified). Contracts NOT in
+   dispute; workspaces retained; LEARNINGS 2026-07-28 entry; report
+   shards 48/51 demoted to conjecture envs; sketch v37; bead `aism-e1qs`
+   tracks the re-elevation. **Process law: a provider external must
+   supply the TYPED WITNESS for every definite description a root binds,
+   not merely a same-named conclusion.**
+4. **Session-33 arc (T0 106 → 107 → 105):**
    - **Transport 13g `lem-stage1-inversion-derivative-transport`
      af-VALIDATED (107th)** — but it took TWO runs. Run 1 (tier routine)
      ABORTED [STUCK] at 15/16 validated: the workspace had been seeded
@@ -106,11 +124,18 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 ## Next steps (ranked)
 
-1. **`aism-b5hz`: USER DECISION on the 13e interface defect** — the only
-   non-resource blocker on the Route-F critical path (see item 5).
-2. After 13e: seed + elevate **row 13 `lem-stage1-polar-constant-ledger`**
-   (consumes all seven transports), then maximal-simplex + the 5
-   downstream rows.
+1. **W97 design round v2** (user delegated `aism-b5hz` 2026-07-28;
+   option C chosen). Scope after the audit REJECT + the retraction: on an
+   explicit-binder spine — the two bridge rows (membership, closeness),
+   an explicit-binder smooth-operations bridge (audit finding 1),
+   re-derivations of `lem-stage1-inversion-derivative-control` and its
+   transport (the retracted pair), 13e with coherence-naturality dropped
+   from deps (finding 4), bypass wording per finding 3. Then fresh
+   hostile audit → land → serial elevations: bridges → smooth-ops bridge
+   → control → 13e → 13g.
+2. After the repair campaign: seed + elevate **row 13
+   `lem-stage1-polar-constant-ledger`** (consumes all seven transports),
+   then maximal-simplex + the 5 downstream rows.
 3. Polar §9 steps 28–29 (three separately-designed trace rows + corrected
    `lem-stage1-extra-fixed-class`) — blocked on their own audited
    campaign designs.
@@ -126,11 +151,12 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 ## What is intentionally NOT here
 
-- Any claim `op-classical` is proved — OPEN. T0 = 107 covers the Route-F
-  row chain, polar analytic rows 1–12, and transports 13a–d, f, g.
-  Transport 13e (paused), row 13, maximal-simplex, the 5 downstream rows,
-  G-S1, MAIN, the 14-row ledger, the strengthened k-ledger, f0-assembly,
-  and the root rewire all remain non-rigorous.
+- Any claim `op-classical` is proved — OPEN. T0 = 105 covers the Route-F
+  row chain, polar analytic rows 1–7 and 9–12, and transports 13a–d, f.
+  The inversion-derivative pair (RETRACTED), transport 13e (paused), 13g,
+  row 13, maximal-simplex, the 5 downstream rows, G-S1, MAIN, the 14-row
+  ledger, the strengthened k-ledger, f0-assembly, and the root rewire all
+  remain non-rigorous.
 - Any promise 13e resolves without a ratified contract change — three
   independent verifier cohorts established the underivability; the 13g
   deps-widening fix does NOT transfer (no T0 provider exists for the
