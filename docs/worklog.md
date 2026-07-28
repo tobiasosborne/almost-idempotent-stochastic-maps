@@ -1791,3 +1791,38 @@ their af-validated frontmatter; (4) both agent worktrees/branches cleaned up.
 pending-sibling smoothness reliance (row 9), conditional-uniqueness gaps (13c), cross-sibling
 scalar-preservation reliance (row 11), and the 13e interface defect — plus one spurious abort
 (the guard false-positive) that was diagnosed, fixed, and did not cost a validated node.
+
+## 2026-07-28 — session 33 (waves W95–W96): 13g banked on run 2 (T0 106 → 107); the report fully caught up; sketch v36
+
+**W95 / transport 13g (`lem-stage1-inversion-derivative-transport`, 107th rigorous result).**
+Run 1 (tier routine, launched per the session-32 deferred dispatch) ABORTED [STUCK] after 11
+rounds at 15/16 validated: the workspace had been seeded with only the parent control external,
+whose contract binds u_delta/g_{sJ} as bare anaphors, leaving three root premises formally
+underivable from the exact allowed inputs — (E1) u_delta = the Pi_delta-inverse first component,
+(E2) g_{sJ}'s f_{sJ}/C^1 characterization, (E3) sigma globally C^1 — all recorded by
+fresh-verifier-VALIDATED audit nodes (1.3.1–1.3.3, 1.4.1, 1.5) in the run-1 ledger. Unlike the
+13e defect, every missing premise is carried verbatim by an existing T0 result, so the repair was
+the 13e-precedent DEPS-ONLY widening (contract byte-unchanged): + polar-retraction (E1),
+unitary-graph-control (E2), smooth-unitary-operations (E3) plus its three antecedent lemmas; the
+workspace was wiped, re-seeded (round-trip verified) with all 7 deps as byte-matched externals.
+Run 2 validated first-pass in 6 rounds (13/13 live nodes, taint clean; one e-binding challenge
+repaired in-run). Banked per the standard sequence (oracle + fr verify PASS; mechanical flip;
+gates green). Transport-seeding lesson recorded in the shard body and sketch v36.
+
+**W96 / report catch-up (results 99–107).** Two worktree agents wrote shard 49 (AISM-49:
+smooth-polar upgrades 99–101, Lee C.34/C.36 loci) and shards 50/51 (AISM-50/51: the six
+transports 102–107, incl. the 13g STUCK/widening record and the Maurer–Cartan
+conditional-identification correction). Merged sequentially in the main checkout: agent A clean;
+agent B 3-way merged across the five shared files (keep-both resolutions; the stale "not
+reproduced in this document" remark in 51 re-pointed at 49's labels — refs resolve in the pdf).
+UNWIRED −9, PROVENANCE +18 source +9 claim rows, generated layers regenerated, check-all OK.
+**All 107 T0 results are now anchored on the paper track or deliberately whitelisted.**
+
+**Also this session.** Sketch v36 written + CURRENT.md re-pointed (Rule-9 debt cleared: sessions
+31–33 folded, T0 85 → 107 narrative). NODE_SOFT_CAP brittleness-prose drift fixed in
+CLAUDE.md/AGENTS.md/argument-README (now names `af_constants.py NODE_SOFT_CAP = 26`). Campaign
+bead `aism-kqeb` notes updated. HANDOFF rewritten.
+
+**Open at close.** The single non-resource critical-path blocker is the 13e USER DECISION
+`aism-b5hz` (row 13 consumes all seven transports). No other unblocked elevation work; codex
+usage wall unchanged.
