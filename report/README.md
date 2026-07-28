@@ -77,20 +77,25 @@ mid-check.
      43 routef-ai-ledger (lem-kitaev-almost-idemp-audit + lem-routef-functional-calculus-closeness
         + lem-routef-ai-defect-linearization),
      44 routef-f2-f3 (lem-routef-f2-positive-unital-compression + lem-routef-f3-retract-defect). -->
-<!-- ADDENDUM (2026-07-27): 45-48 the Stage-1 POLAR block (11 af-validated rows: rectified
-     C*-control + graph charts + Maurer-Cartan; the closed polar retraction + coherence;
-     the approximate group laws; paths + inversion derivative + the smooth atlas). They are
-     CONTENT sections and therefore \include'd after 38 and BEFORE the generated/meta
-     sections 39-41, even though their file numbers are higher; the table below is in
-     INCLUDE order, which is the reading order. Nothing was renumbered. -->
+<!-- ADDENDUM (2026-07-27): 45-48 the Stage-1 POLAR block (rectified C*-control + graph
+     charts + Maurer-Cartan; the closed polar retraction + coherence; the group-law rows;
+     paths + inversion derivative + the smooth atlas). They are CONTENT sections and
+     therefore \include'd after 38 and BEFORE the generated/meta sections 39-41, even
+     though their file numbers are higher; the table below is in INCLUDE order, which is
+     the reading order. Nothing was renumbered. -->
 <!-- ADDENDUM (2026-07-28): 49 stage1-smooth-upgrades (lem-stage1-smooth-polar-inverse +
-     lem-stage1-smooth-unitary-operations + lem-stage1-polar-scalar-arithmetic), the three
-     af-validated rows closing the Stage-1 polar block; a CONTENT section, \include'd after
-     48 and before the generated/meta sections 39-41, same convention as 45-48. -->
-<!-- ADDENDUM (2026-07-28): 50-51 the Stage-1 polar TRANSPORT block (6 af-validated rows
+     lem-stage1-smooth-unitary-operations + lem-stage1-polar-scalar-arithmetic); a CONTENT
+     section, \include'd after 48 and before the generated/meta sections 39-41, same
+     convention as 45-48. -->
+<!-- ADDENDUM (2026-07-28): 50-51 the Stage-1 polar TRANSPORT block (rows 13a-d, 13f, 13g
      carrying the fixed-constant polar lemmas to the def-stage1-polar-witness-data form).
      CONTENT sections, \include'd after 49 and BEFORE the generated/meta sections 39-41,
      same convention as 42-48. Nothing was renumbered. -->
+<!-- STATUS NOTE (2026-07-28, binder sweep): per-result status lives in each shard's
+     Status block and report/PROVENANCE.md, NOT here. Six Stage-1 af validations were
+     RETRACTED 2026-07-28 (approximate-group-laws, smooth-unitary-operations,
+     inversion-derivative-control, and transports 13c/13f/13g — docs/LEARNINGS.md); their
+     statements remain anchored in shards 47-51 as conjectures with retraction notes. -->
 
 | # | SHARD-ID | file |
 |---|----------|------|

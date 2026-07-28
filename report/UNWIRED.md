@@ -255,11 +255,17 @@ lem-topology-hopf-structure
 # children) are now WIRED into report/sections/45-48 and their lines deleted here.
 # The rows still listed are unproved or not yet on the paper track.
 # 2026-07-28: lem-stage1-smooth-polar-inverse, lem-stage1-smooth-unitary-operations and
-# lem-stage1-polar-scalar-arithmetic af-VALIDATED and WIRED into report/sections/
-# 49_stage1_smooth_upgrades.tex; their lines deleted here.
-# 2026-07-28: the six af-VALIDATED transport rows (13a-d, 13f, 13g) are WIRED into
+# lem-stage1-polar-scalar-arithmetic WIRED into report/sections/49_stage1_smooth_upgrades.tex;
+# their lines deleted here.
+# 2026-07-28: the six transport rows (13a-d, 13f, 13g) WIRED into
 # report/sections/50_stage1_polar_transports.tex + 51_stage1_polar_transports_ii.tex;
 # their lines deleted here.
+# 2026-07-28 (binder sweep): wiring is independent of status — six of the rows above were
+# later RETRACTED the same day (smooth-unitary-operations, maurer-cartan-transport,
+# polar-path-transport, inversion-derivative-transport, plus approximate-group-laws and
+# inversion-derivative-control in shards 47-48); they stay ANCHORED as conjectures with
+# retraction notes, hence correctly absent from this whitelist. Status of record:
+# each shard's Status block + report/PROVENANCE.md + docs/LEARNINGS.md.
 lem-stage1-approximate-group-laws-transport
 lem-stage1-polar-constant-ledger
 lem-finite-polyhedron-maximal-simplex-placement
