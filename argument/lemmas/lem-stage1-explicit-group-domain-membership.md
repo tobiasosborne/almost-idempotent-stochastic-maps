@@ -5,7 +5,8 @@ contract: Explicit group-input polar-domain membership: there exist universal C_
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-polar-retraction
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-explicit-group-domain-membership
 provenance: DESIGN-13E-BINDER-v3.md sect-1.1, landed verbatim (W97 explicit-binder rebuild); AUDIT-13E-BINDER-v3.md (math endorsed; REJECT on process grounds repaired by v3.1/v3.2); AUDIT-13E-BINDER-v3.2.md VERDICT LAND; landing per audit-v3 finding 3.
 owner: A
 ---
