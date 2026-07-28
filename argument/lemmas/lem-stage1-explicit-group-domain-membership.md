@@ -4,8 +4,8 @@ kind: lemma
 contract: Explicit group-input polar-domain membership: there exist universal C_grp, C_pol >= 1, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra and delta > 0 satisfying C_pol*(epsilon_r + delta) <= kappa_pol and C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), writing (u_delta, h_delta) for the unique inverse of Pi_delta: calU x B^{calH}_delta(J) -> S_delta := Pi_delta(calU x B^{calH}_delta(J)), Pi_delta(U, H) = U bold-dot H, the first inverse component u_delta:S_delta -> calU is defined at U bold-dot V and U^dagger for every U, V in calU; moreover, U bold-dot V and U^dagger each have a right inverse.
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-polar-retraction
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-stage1-explicit-group-domain-membership
 provenance: DESIGN-13E-BINDER-v3.md sect-1.1, landed verbatim (W97 explicit-binder rebuild); AUDIT-13E-BINDER-v3.md (math endorsed; REJECT on process grounds repaired by v3.1/v3.2); AUDIT-13E-BINDER-v3.2.md VERDICT LAND; landing per audit-v3 finding 3.
 owner: A
@@ -41,3 +41,12 @@ smallness inference cites the guard node explicitly. Run-1 balloon cause
 (for the record): sub-splitting of routine norm estimates (a 3-node split
 of one triangle inequality); the run-1 ledger was discarded at clean
 re-seed, classification preserved here and in the fr log.
+
+**af-VALIDATED 2026-07-28 (W98, elevation queue row 1).** Run 2 (clean
+re-seed under the binding build-granularity discipline above; tier
+routine, fresh codex verifier per node): root validated, 12/12 live
+nodes + 1 archived, taint clean, 5 rounds, two in-run challenges
+repaired (ch-87eea0db, ch-edf826a7). Run 1 ABORTED [BALLOON] at 20
+nodes (recorded above). Export in the workspace; oracle
+`af-lem-stage1-explicit-group-domain-membership` + `fr verify` PASS.
+This status flip is a mechanical reflection of the codex ledger.
