@@ -83,6 +83,10 @@ mid-check.
      CONTENT sections and therefore \include'd after 38 and BEFORE the generated/meta
      sections 39-41, even though their file numbers are higher; the table below is in
      INCLUDE order, which is the reading order. Nothing was renumbered. -->
+<!-- ADDENDUM (2026-07-28): 49 stage1-smooth-upgrades (lem-stage1-smooth-polar-inverse +
+     lem-stage1-smooth-unitary-operations + lem-stage1-polar-scalar-arithmetic), the three
+     af-validated rows closing the Stage-1 polar block; a CONTENT section, \include'd after
+     48 and before the generated/meta sections 39-41, same convention as 45-48. -->
 
 | # | SHARD-ID | file |
 |---|----------|------|
@@ -133,6 +137,7 @@ mid-check.
 | 46 | `AISM-46-STAGE1-POLAR-RETRACTION` | `report/sections/46_stage1_polar_retraction.tex` |
 | 47 | `AISM-47-STAGE1-GROUP-LAWS` | `report/sections/47_stage1_group_laws.tex` |
 | 48 | `AISM-48-STAGE1-SMOOTH-POLAR` | `report/sections/48_stage1_smooth_polar.tex` |
+| 49 | `AISM-49-STAGE1-SMOOTH-UPGRADES` | `report/sections/49_stage1_smooth_upgrades.tex` |
 | 39 | `AISM-39-ARGUMENT-DAG` | `report/sections/39_argument_dag.tex` |
 | 40 | `AISM-40-CAMPAIGN-STATISTICS` | `report/sections/40_campaign_statistics.tex` |
 | 41 | `AISM-41-STATUS-OUTLOOK` | `report/sections/41_status_outlook.tex` |

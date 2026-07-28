@@ -8,7 +8,7 @@ L2); this table and the `.tex` files beside it are a deterministic projection of
 ## Scope (directive: render only what the current proof strategy needs)
 
 - selection rule: **Route-F landing chain (scripts/gen-report-dag.py select_subgraph)**
-- registry results in the strategy subgraph: **142**; registry results anchored in `report/sections/`: **58**
+- registry results in the strategy subgraph: **142**; registry results anchored in `report/sections/`: **61**
 - definitions they import directly: **39**; after the statement-region
   `[[def-…]]` closure: **40** rendered, **5** dropped
 
@@ -50,7 +50,7 @@ Dropped (outside the closure; canonical, just not reproduced here):
 | 19 | `def-column-hilbert-corner` | `def:column-hilbert-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1123-1128,1546-1550` | `e7eb512a2ec2438d` | 2 | 2 |
 | 20 | `def-compressed-corner` | `def:compressed-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1054-1066,1077-1082` | `e7eb512a2ec2438d` | 17 | 17 |
 | 21 | `def-delta-projection` | `def:delta-projection` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:917-920,926-929` | `e7eb512a2ec2438d` | 15 | 15 |
-| 22 | `def-epsilon-cstar-algebra` | `def:epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:407-440` | `e7eb512a2ec2438d` | 29 | 14 |
+| 22 | `def-epsilon-cstar-algebra` | `def:epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:407-440` | `e7eb512a2ec2438d` | 29 | 16 |
 | 23 | `def-extended-epsilon-cstar-algebra` | `def:extended-epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1477-1479` | `e7eb512a2ec2438d` | 23 | 18 |
 | 24 | `def-fd-cstar-diagonal` | `def:fd-cstar-diagonal` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1233-1242` | `e7eb512a2ec2438d` | 4 | 0 |
 | 25 | `def-h-space-left-inversion` | `def:h-space-left-inversion` | cited | locked | shard statement | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:895-912` | `e7eb512a2ec2438d` | 2 | 0 |
@@ -64,7 +64,7 @@ Dropped (outside the closure; canonical, just not reproduced here):
 
 | # | id | label | kind | status | statement | source check | source | locus | sha256 | registry uses | in report |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 31 | `def-approximate-unitary-space` | `def:approximate-unitary-space` | consensus | locked | shard statement | — | `internal` | `adopted from refs/kitaev-2405.02434 approximate_algebras.tex:692-706 (sets), 845-859 (u,h and group maps), 945 (U_e and the scalar quotient)` | `-` | 24 | 10 |
+| 31 | `def-approximate-unitary-space` | `def:approximate-unitary-space` | consensus | locked | shard statement | — | `internal` | `adopted from refs/kitaev-2405.02434 approximate_algebras.tex:692-706 (sets), 845-859 (u,h and group maps), 945 (U_e and the scalar quotient)` | `-` | 24 | 12 |
 | 32 | `def-canonical-corner-identifications` | `def:canonical-corner-identifications` | original | locked | shard statement | — | `internal` | `PROOF-W74F-E-HCB.md §8.1; DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 4 | 4 |
 | 33 | `def-compressed-associator` | `def:compressed-associator` | original | locked | shard statement | — | `internal` | `PROOF-W74F-E-HCB.md §3; DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 2 | 2 |
 | 34 | `def-extcb-datum` | `def:extcb-datum` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package` | `-` | 3 | 3 |
@@ -72,7 +72,7 @@ Dropped (outside the closure; canonical, just not reproduced here):
 | 36 | `def-four-corner-merging-datum` | `def:four-corner-merging-datum` | original | locked | shard statement | — | `internal` | `project packaging of approximate_algebras.tex:1325-1345 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 2 | 2 |
 | 37 | `def-hcb-datum` | `def:hcb-datum` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package` | `-` | 15 | 15 |
 | 38 | `def-positive-approximate-retract` | `def:positive-approximate-retract` | original | locked | shard statement | — | `internal` | `project formulation transcribed from docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §§1,4` | `-` | 3 | 2 |
-| 39 | `def-stage1-polar-witness-data` | `def:stage1-polar-witness-data` | original | locked | shard statement | — | `internal` | `DESIGN-S1-POLAR-v6.md sect 8 (unchanged from v2 sect 8; audited AUDIT-S1-POLAR-v3/v4/v5/v6)` | `-` | 9 | 0 |
+| 39 | `def-stage1-polar-witness-data` | `def:stage1-polar-witness-data` | original | locked | shard statement | — | `internal` | `DESIGN-S1-POLAR-v6.md sect 8 (unchanged from v2 sect 8; audited AUDIT-S1-POLAR-v3/v4/v5/v6)` | `-` | 9 | 1 |
 | 40 | `def-ucp-map` | `def:ucp-map` | consensus | locked | shard statement | — | `internal` | `standard operator-algebra textbook notion (e.g. Paulsen, Completely Bounded Maps and Operator Algebras, ch. 2-3); adopted for the Route-F rows per AUDIT-F0-ASSEMBLY.md sect 1.1` | `-` | 3 | 3 |
 
 ## Macro-translation table v1

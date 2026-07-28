@@ -254,9 +254,9 @@ lem-topology-hopf-structure
 # 2026-07-27: the eleven af-VALIDATED polar rows (rows 1-9 plus the two group-law
 # children) are now WIRED into report/sections/45-48 and their lines deleted here.
 # The rows still listed are unproved or not yet on the paper track.
-lem-stage1-smooth-polar-inverse
-lem-stage1-smooth-unitary-operations
-lem-stage1-polar-scalar-arithmetic
+# 2026-07-28: lem-stage1-smooth-polar-inverse, lem-stage1-smooth-unitary-operations and
+# lem-stage1-polar-scalar-arithmetic af-VALIDATED and WIRED into report/sections/
+# 49_stage1_smooth_upgrades.tex; their lines deleted here.
 lem-stage1-rectified-cstar-transport
 lem-stage1-unitary-graph-transport
 lem-stage1-maurer-cartan-transport

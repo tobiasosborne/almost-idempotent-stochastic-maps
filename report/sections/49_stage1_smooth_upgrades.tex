@@ -1,0 +1,249 @@
+% SHARD-ID: AISM-49-STAGE1-SMOOTH-UPGRADES
+% SHARD-TITLE: The smooth polar inverse, smooth operations, and the polar arithmetic
+% SHARD-SUMMARY: Reproduces lem-stage1-smooth-polar-inverse, the af-validated conditional upgrade of the bijective C1 polar map Pi_delta to a smooth diffeomorphism whose same set-theoretic inverse (u_delta, h_delta) is smooth, obtained chartwise from Lee's inverse function theorem with no point or first derivative changed.
+% SHARD-SUMMARY: Reproduces lem-stage1-smooth-unitary-operations, the af-validated statement that the circle action and the polar-projected product and inversion mu and sigma are smooth maps into the embedded manifold calU and obey the exact covariance identities mu(cU,dV) = cd mu(U,V) and sigma(cU) = conj(c) sigma(U).
+% SHARD-SUMMARY: Reproduces lem-stage1-polar-scalar-arithmetic, the af-validated universal scalar row: the derived scales delta_*, epsilon_*^r, e_S1, r_iso built from any admissible coefficients and margins make every epsilon_X below e_S1 satisfy all seven Stage-1 polar guards, with the quantitative slack r_- >= 3 delta_*/4 and eta <= delta_*/4.
+% SHARD-KEYWORDS: lem-stage1-smooth-polar-inverse, lem-stage1-smooth-unitary-operations, lem-stage1-polar-scalar-arithmetic, af validated, smooth diffeomorphism, inverse function theorem, circle equivariance, guard arithmetic, witness tuple, Stage 1
+\section{The smooth polar inverse, smooth operations, and the polar arithmetic}\label{sec:stage1-smooth-upgrades}
+
+The three rows of this section close the \texttt{af}-validated part of the Stage-1 polar
+block begun in \S\ref{sec:stage1-polar-charts}. The first two are smoothness upgrades in
+the style of Lemma~\ref{lem:stage1-smooth-unitary-atlas}: they replace no map, no point and
+no first derivative, but promote the $C^{1}$ regularity of the polar inverse and of the
+approximate-group operations to $C^{\infty}$ for the embedded smooth structure. The third
+is pure scalar arithmetic: it packages, once and for all, the guard inequalities that every
+analytic row of the block demands, so that downstream consumers can instantiate the whole
+front from a single smallness assumption on $\ecs_X$.
+
+\begin{lemma}[\texttt{lem-stage1-smooth-polar-inverse}]\label{lem:stage1-smooth-polar-inverse}
+For every finite-dimensional exact-unit $\ecs_r$-$C^*$-algebra and every $\delta>0$: if
+Lemma~\ref{lem:stage1-smooth-unitary-atlas} gives the smooth embedded atlas and
+$\Pi_\delta:\Unit\times B^{\Herm}_{\delta}(J)\to S_\delta$ is the bijective $C^{1}$ local
+diffeomorphism of Lemma~\ref{lem:stage1-polar-retraction} onto an open set, then the same
+ambient-bilinear $\Pi_\delta$ is a smooth diffeomorphism and its same set-theoretic inverse
+$(u_\delta,h_\delta)$ is smooth; no point or first derivative is changed.
+\emph{Transcription note.} Like the atlas row, this is qualitative and conditional: both
+hypotheses are supplied by the two named lemmas, no new threshold is introduced, and the
+conclusion re-asserts nothing about \emph{which} $\delta$ realises them.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Smooth polar-inverse upgrade: for every finite-dimensional exact-unit epsilon_r-C*-algebra and every delta > 0, if lem-stage1-smooth-unitary-atlas gives the smooth embedded atlas and Pi_delta: calU x B^{calH}_delta(J) -> S_delta is the bijective C^1 local diffeomorphism of lem-stage1-polar-retraction onto an open set, then the same ambient-bilinear Pi_delta is a smooth diffeomorphism and its same set-theoretic inverse (u_delta, h_delta) is smooth; no point or first derivative is changed.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{The two sides are smooth manifolds.} Lemma~\ref{lem:stage1-smooth-unitary-atlas}
+equips $\Unit$ with the smooth embedded graph atlas whose charts and first derivatives are
+those of the $C^{1}$ atlas; $\Herm$ is a real linear subspace of the finite-dimensional
+ambient space (Definition~\ref{def:approximate-unitary-space}), so $B^{\Herm}_{\delta}(J)$
+is an open subset of a finite-dimensional real vector space, and
+$\Unit\times B^{\Herm}_{\delta}(J)$ carries the product smooth structure; $S_\delta$ is
+open in the ambient space by Lemma~\ref{lem:stage1-polar-retraction} and carries its
+open-subset structure.
+
+\emph{$\Pi_\delta$ is smooth.} By Definition~\ref{def:epsilon-cstar-algebra} the product
+$\bdot$ is bilinear, so in real coordinates each component of $(X,H)\mapsto X\bdot H$ is a
+quadratic polynomial, hence $C^{\infty}$. In a product chart built from a graph chart of
+the atlas and the identity chart on the ball, the coordinate representative of
+$\Pi_\delta$ is this polynomial map composed with the smooth ambient parametrisation of
+the embedded chart, hence smooth; such charts cover the domain and the values lie in
+$S_\delta$, so $\Pi_\delta$ is smooth.
+
+\emph{Everywhere-invertible derivative.} At any point $p$ the $C^{1}$
+local-diffeomorphism assertion of Lemma~\ref{lem:stage1-polar-retraction} provides a local
+$C^{1}$ inverse $G$; the chain rule applied to $G\circ\Pi_\delta=\mathrm{id}$ and
+$\Pi_\delta\circ G=\mathrm{id}$ shows $D\Pi_\delta(p)$ is a linear isomorphism.
+
+\emph{Smooth local inverses, glued.} Fix $p$, put $q=\Pi_\delta(p)$, and choose smooth
+charts $\alpha$ about $p$ and $\beta$ about $q$. The coordinate map
+$F=\beta\circ\Pi_\delta\circ\alpha^{-1}$ is smooth with invertible derivative at
+$\alpha(p)$; Theorem~C.34 (Inverse Function Theorem) of J.\,M. Lee, \emph{Introduction to
+Smooth Manifolds}, 2nd ed., Springer GTM 218, 2012 --- registered in the workspace as the
+byte-matched external \texttt{GT-lee-2ed-thm-C.34} against the pinned local source at the
+recorded locus --- makes $F$ a smooth diffeomorphism between neighbourhoods, so
+$\Pi_\delta$ has a smooth local inverse near $q$. By the bijectivity assertion of
+Lemma~\ref{lem:stage1-polar-retraction} the global set-theoretic inverse exists; on each
+such target neighbourhood it coincides with the unique smooth local inverse there, and
+these neighbourhoods cover $S_\delta$, so the global inverse is smooth because smoothness
+is local --- exactly the gluing recorded in Corollary~C.36(b) of the same source, the
+byte-matched external \texttt{GT-lee-2ed-cor-C.36}. A bijection has only one set-theoretic
+inverse, so this smooth inverse \emph{is} the pair $(u_\delta,h_\delta)$ already supplied.
+
+\emph{Nothing is changed.} The atlas upgrade is identity-on-data through first order, the
+map is literally the same $\Pi_\delta(U,H)=U\bdot H$ on the same domain and codomain, and
+the inverse is the same set map; the derivative of a $C^{1}$ function in unchanged
+first-order charts is unique, so proving these same functions $C^{\infty}$ changes no
+point value and no first derivative.
+
+\begin{lemma}[\texttt{lem-stage1-smooth-unitary-operations}]\label{lem:stage1-smooth-unitary-operations}
+Under Lemmas~\ref{lem:stage1-approximate-group-laws},
+\ref{lem:stage1-smooth-unitary-atlas} and \ref{lem:stage1-smooth-polar-inverse}, the scalar
+action $U(1)\times\Unit\to\Unit$, $(c,U)\mapsto cU$, and the same maps
+$\mu:\Unit\times\Unit\to\Unit$, $\mu(U,V)=u_\delta(U\bdot V)$, and $\sigma:\Unit\to\Unit$,
+$\sigma(U)=u_\delta(U\dg)$, are smooth as maps into the embedded manifold $\Unit$; they
+obey
+\begin{equation}\label{eq:s1so-covariance}
+  \mu(cU,dV)=cd\,\mu(U,V),\qquad \sigma(cU)=\bar c\,\sigma(U)
+  \qquad(c,d\in U(1)),
+\end{equation}
+and no point or first derivative is changed.
+\emph{Transcription note.} The registry \texttt{deps} also list
+Lemma~\ref{lem:stage1-polar-coherence-naturality}, which the contract exercises through
+its scalar-naturality clause rather than naming it in the antecedent.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Smooth action/operations upgrade: under lem-stage1-approximate-group-laws, lem-stage1-smooth-unitary-atlas, and lem-stage1-smooth-polar-inverse, the scalar action U(1) x calU -> calU, (c, U) |-> cU, and the same maps mu: calU x calU -> calU, mu(U, V) = u_delta(U bold-dot V), and sigma: calU -> calU, sigma(U) = u_delta(U^dagger), are smooth as maps into the embedded manifold calU; they obey mu(cU, dV) = c*d*mu(U, V) and sigma(cU) = conj(c)*sigma(U), and no point or first derivative is changed.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{The circle preserves $\Unit$.} If $U\dg\bdot U=J$ and $U\bdot R=J$, then for
+$c\in U(1)$ conjugate-linearity of $\dagger$ and bilinearity give
+$(cU)\dg\bdot(cU)=\bar cc\,J=J$ and $(cU)\bdot(\bar cR)=J$, so $cU\in\Unit$ with the
+explicit right inverse $\bar cR$. This local derivation is repeated wherever membership is
+needed below, deliberately never citing a sibling node.
+
+\emph{The scalar action is smooth.} Since $J\in B^{\Herm}_{\delta}(J)$ and
+$\Pi_\delta(U,J)=U\bdot J=U$ by exact unitality, both $U$ and $cU$ lie in the open set
+$S_\delta$; the ambient map $(c,U)\mapsto cU$, the restriction of complex scalar
+multiplication, is smooth into $S_\delta$, and composing with the smooth
+$u_\delta:S_\delta\to\Unit$ of Lemma~\ref{lem:stage1-smooth-polar-inverse} gives a smooth
+$\Unit$-valued map. The scalar-naturality clause \eqref{eq:s1cn-natural} of
+Lemma~\ref{lem:stage1-polar-coherence-naturality} gives $u_\delta(cU)=c\,u_\delta(U)=cU$,
+so this smooth composite \emph{is} the action itself.
+
+\emph{$\mu$ and $\sigma$ are smooth.} By Lemma~\ref{lem:stage1-approximate-group-laws} the
+inputs $U\bdot V$ and $U\dg$ lie in $S_\delta$ for all $U,V\in\Unit$ and the displayed
+formulas are the same globally defined $C^{1}$ maps. The ambient product is bilinear and
+$\dagger$ is conjugate-linear, hence both restrict to smooth $S_\delta$-valued maps on the
+embedded domain; composing with the smooth $u_\delta$ makes $\mu$ and $\sigma$ smooth into
+$\Unit$.
+
+\emph{Covariance.} By the local membership derivation, $cU,dV\in\Unit$, so
+Lemma~\ref{lem:stage1-approximate-group-laws} puts $X=U\bdot V$ and
+$Y=(cU)\bdot(dV)$ in $S_\delta$; bilinearity gives $Y=(cd)X$ with $cd\in U(1)$, and
+\eqref{eq:s1cn-natural} gives $u_\delta(Y)=cd\,u_\delta(X)$, the first identity of
+\eqref{eq:s1so-covariance}. Likewise $(cU)\dg=\bar cU\dg$ with $\bar c\in U(1)$, both
+$U\dg$ and $(cU)\dg$ lie in $S_\delta$, and \eqref{eq:s1cn-natural} with scalar $\bar c$
+gives $\sigma(cU)=\bar c\,\sigma(U)$.
+
+\emph{Nothing is changed.} The atlas and the polar inverse retain their point values and
+first derivatives by Lemmas~\ref{lem:stage1-smooth-unitary-atlas} and
+\ref{lem:stage1-smooth-polar-inverse}; the ambient scalar, product and adjoint maps are
+untouched; and $\mu,\sigma$ keep the identical formulas of
+Lemma~\ref{lem:stage1-approximate-group-laws}. Uniqueness of derivatives through the
+unchanged component derivatives leaves every first derivative the pre-existing one.
+
+\begin{lemma}[\texttt{lem-stage1-polar-scalar-arithmetic}]\label{lem:stage1-polar-scalar-arithmetic}
+For every $C_{\mathrm{rect}},C_{\mathrm{ch}},C_{\mathrm{pol}},C_{\mathrm{grp}},
+C_{\mathrm{path}},C_{\mathrm{der}}\ge1$, every
+$e_{\mathrm{rect}}\in(0,1/C_{\mathrm{rect}}]$ and every
+$\kappa_{\mathrm{ch}},\kappa_{\mathrm{pol}},\kappa_{\mathrm{der}}\in(0,\tfrac12]$, set
+\begin{align}
+  \delta_*&=\min\Bigl\{\tfrac14,\;\tfrac{\kappa_{\mathrm{ch}}}{4C_{\mathrm{ch}}},\;
+    \tfrac{\kappa_{\mathrm{pol}}}{4C_{\mathrm{pol}}}\Bigr\},
+  &
+  \varepsilon_*^{r}&=\min\Bigl\{\tfrac14,\;\tfrac{\kappa_{\mathrm{ch}}}{4C_{\mathrm{ch}}},\;
+    \tfrac{\kappa_{\mathrm{pol}}}{4C_{\mathrm{pol}}},\;
+    \tfrac{\kappa_{\mathrm{der}}}{8C_{\mathrm{der}}},\;
+    \tfrac1{C_{\mathrm{grp}}},\;
+    \tfrac{\delta_*}{12C_{\mathrm{path}}C_{\mathrm{grp}}}\Bigr\},
+  \label{eq:s1sa-scales}\\
+  e_{S1}&=\min\Bigl\{e_{\mathrm{rect}},\;\tfrac{\varepsilon_*^{r}}{C_{\mathrm{rect}}}\Bigr\},
+  &
+  r_{\mathrm{iso}}&=\min\Bigl\{\tfrac{\delta_*}4,\;\tfrac{\kappa_{\mathrm{der}}}{8C_{\mathrm{der}}}\Bigr\},
+  \nonumber
+\end{align}
+and, given $0\le\ecs_X\le e_{S1}$, put $\ecs_r=C_{\mathrm{rect}}\ecs_X$,
+$q=C_{\mathrm{grp}}\ecs_r$,
+$r_-=\delta_*-C_{\mathrm{pol}}(\ecs_r\delta_*+\delta_*^{2})$ and
+$\eta=C_{\mathrm{path}}(q+\ecs_rq+q^{2})$. Then every such $\ecs_X$ satisfies
+\begin{gather}
+  C_{\mathrm{ch}}(\ecs_r+\delta_*)\le\kappa_{\mathrm{ch}},\qquad
+  C_{\mathrm{pol}}(\ecs_r+\delta_*)\le\kappa_{\mathrm{pol}},\qquad
+  q<r_-,\qquad
+  C_{\mathrm{path}}q\le\tfrac14,
+  \label{eq:s1sa-guards1}\\
+  \eta<r_-,\qquad
+  C_{\mathrm{der}}(\ecs_r+r_{\mathrm{iso}})\le\kappa_{\mathrm{der}},\qquad
+  (1+\ecs_r)\bigl(1+C_{\mathrm{ch}}(\ecs_r+\delta_*)\bigr)r_{\mathrm{iso}}+q<2\delta_*;
+  \label{eq:s1sa-guards2}
+\end{gather}
+moreover $r_-\ge3\delta_*/4$, $\eta\le\delta_*/4$ and
+$C_{\mathrm{der}}(r_{\mathrm{iso}}+\ecs_r)\le\kappa_{\mathrm{der}}/4<1$.
+\emph{Transcription note.} The row is universal over every already-selected coefficient
+and margin tuple and carries \emph{no} analytic content: its ten inputs and four derived
+scales are exactly the fields of the witness tuple of
+Definition~\ref{def:stage1-polar-witness-data}, and the seven displayed guards are the
+hypotheses of the analytic rows of
+\S\S\ref{sec:stage1-polar-charts}--\ref{sec:stage1-smooth-polar} at the scales
+$\delta=\delta_*$ and $r=r_{\mathrm{iso}}$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Universal Stage-1 polar arithmetic: for every C_rect, C_ch, C_pol, C_grp, C_path, C_der >= 1, e_rect in (0, 1/C_rect], and kappa_ch, kappa_pol, kappa_der in (0, 1/2], setting delta_* = min{1/4, kappa_ch/(4*C_ch), kappa_pol/(4*C_pol)}, epsilon_*^r = min{1/4, kappa_ch/(4*C_ch), kappa_pol/(4*C_pol), kappa_der/(8*C_der), 1/C_grp, delta_*/(12*C_path*C_grp)}, e_S1 = min{e_rect, epsilon_*^r/C_rect}, r_iso = min{delta_*/4, kappa_der/(8*C_der)}, epsilon_r = C_rect*epsilon_X, q = C_grp*epsilon_r, r_- = delta_* - C_pol*(epsilon_r*delta_* + delta_*^2), and eta = C_path*(q + epsilon_r*q + q^2), every 0 <= epsilon_X <= e_S1 satisfies C_ch*(epsilon_r + delta_*) <= kappa_ch, C_pol*(epsilon_r + delta_*) <= kappa_pol, q < r_-, C_path*q <= 1/4, eta < r_-, C_der*(epsilon_r + r_iso) <= kappa_der, and (1 + epsilon_r)*(1 + C_ch*(epsilon_r + delta_*))*r_iso + q < 2*delta_*; moreover r_- >= 3*delta_*/4, eta <= delta_*/4, and C_der*(r_iso + epsilon_r) <= kappa_der/4 < 1.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{Channel and polar guards.} From $e_{S1}\le\varepsilon_*^{r}/C_{\mathrm{rect}}$ and
+$C_{\mathrm{rect}}\ge1$, $0\le\ecs_r\le\varepsilon_*^{r}$. Since both
+$\varepsilon_*^{r}$ and $\delta_*$ are at most $\kappa_{\mathrm{ch}}/(4C_{\mathrm{ch}})$
+and $\kappa_{\mathrm{pol}}/(4C_{\mathrm{pol}})$, the first two guards hold with value at
+most $\kappa/2$; and since
+$r_-=\delta_*\bigl[1-C_{\mathrm{pol}}(\ecs_r+\delta_*)\bigr]$ with
+$C_{\mathrm{pol}}(\ecs_r+\delta_*)\le\kappa_{\mathrm{pol}}/2\le\tfrac14$, one gets
+$r_-\ge3\delta_*/4$.
+
+\emph{Path guards.} $\ecs_r\le\delta_*/(12C_{\mathrm{path}}C_{\mathrm{grp}})$ gives
+$0\le q\le\delta_*/(12C_{\mathrm{path}})\le\delta_*/12$, hence
+$C_{\mathrm{path}}q\le\delta_*/12\le\tfrac1{48}<\tfrac14$ (using $\delta_*\le\tfrac14$)
+and $q<3\delta_*/4\le r_-$. From $\ecs_r\le\tfrac14$ and $q\le\tfrac1{48}$,
+$1+\ecs_r+q\le\tfrac{61}{48}<3$, so
+$\eta=C_{\mathrm{path}}q\,(1+\ecs_r+q)\le\delta_*/4<3\delta_*/4\le r_-$.
+
+\emph{Derivative guards.} $\ecs_r\le\kappa_{\mathrm{der}}/(8C_{\mathrm{der}})$ and
+$r_{\mathrm{iso}}\le\kappa_{\mathrm{der}}/(8C_{\mathrm{der}})$ give
+$C_{\mathrm{der}}(\ecs_r+r_{\mathrm{iso}})\le\kappa_{\mathrm{der}}/4$; and
+$0<\kappa_{\mathrm{der}}\le\tfrac12$ makes
+$\kappa_{\mathrm{der}}/4\le\kappa_{\mathrm{der}}$ and
+$\kappa_{\mathrm{der}}/4\le\tfrac18<1$.
+
+\emph{The product guard.} The minima give $\ecs_r\le\tfrac14$,
+$C_{\mathrm{ch}}(\ecs_r+\delta_*)\le\tfrac14$, $r_{\mathrm{iso}}\le\delta_*/4$ and
+$q\le\delta_*/12$, so
+\begin{equation}\label{eq:s1sa-product}
+  (1+\ecs_r)\bigl(1+C_{\mathrm{ch}}(\ecs_r+\delta_*)\bigr)r_{\mathrm{iso}}+q
+  \;\le\;\tfrac54\cdot\tfrac54\cdot\tfrac{\delta_*}4+\tfrac{\delta_*}{12}
+  \;=\;\tfrac{91}{192}\,\delta_*\;<\;2\delta_* ,
+\end{equation}
+strictly, because $\delta_*>0$.
+
+\medskip
+\noindent\textbf{Status.} All three are \texttt{proved} with \texttt{af: validated} (T0).
+Workspaces \texttt{proofs/lem-stage1-smooth-polar-inverse} (21 nodes, 21
+\texttt{validated}, taint clean, no challenges; registers the byte-matched externals
+\texttt{GT-lee-2ed-thm-C.34} and \texttt{GT-lee-2ed-cor-C.36} together with the validated
+contracts of its two registry deps), \texttt{proofs/lem-stage1-smooth-unitary-operations}
+(15 nodes, 15 \texttt{validated}, taint clean) and
+\texttt{proofs/lem-stage1-polar-scalar-arithmetic} (15 nodes, 15 \texttt{validated}, taint
+clean, no challenges; a leaf with no registry deps).
+
+\noindent\textbf{Corrections of record (proof-level, not contract-level).} The operations
+tree drew two genuine cross-sibling challenges: as first written, the covariance nodes
+leaned on the \emph{pending} sibling that made the scalar action $\Unit$-valued, which the
+protocol forbids. Both were repaired in run by the self-contained local membership
+derivation reproduced above, so no covariance node cites the action node. Its first run
+also aborted on a \emph{spurious} prover-overreach trip --- the orchestrator's own
+controller bookkeeping, not the prover, had dirtied \texttt{.frontier/}; the guard was
+exempted for that path and the run repeated. No contract was amended.
+
+\noindent\textbf{Role in the chain.} Registry \texttt{defs}:
+\texttt{def-approximate-unitary-space} and \texttt{def-epsilon-cstar-algebra} for the two
+upgrades; \texttt{def-stage1-polar-witness-data} for the arithmetic row. Registry
+\texttt{deps}: \texttt{lem-stage1-polar-retraction}
+(\S\ref{sec:stage1-polar-retraction}) and \texttt{lem-stage1-smooth-unitary-atlas}
+(\S\ref{sec:stage1-smooth-polar}) for the smooth polar inverse; those two conclusions
+together with \texttt{lem-stage1-polar-coherence-naturality} and
+\texttt{lem-stage1-approximate-group-laws} (\S\ref{sec:stage1-group-laws}) for the
+operations; the arithmetic row has none. The remaining Stage-1 polar rows --- the seven
+parameterized transport helpers and the constant ledger --- are \textbf{not}
+\texttt{af}-validated and are \textbf{not} reproduced here; nothing in this document
+assembles the Stage-1 front into a statement about almost-idempotent maps, and
+\texttt{op-classical} is \textbf{open}.

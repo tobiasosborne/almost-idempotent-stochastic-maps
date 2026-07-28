@@ -363,6 +363,14 @@ verbatim), and keywords.
 - **Summary:** Reproduces lem-stage1-smooth-unitary-atlas, the af-validated conditional upgrade of the C1 graph functions to C-infinity by Lee's implicit function theorem, leaving every point, chart and first derivative unchanged.
 - **Keywords:** lem-stage1-polar-path-admissibility, lem-stage1-inversion-derivative-control, lem-stage1-smooth-unitary-atlas, af validated, projected straight path, chart retention, implicit function theorem, smooth embedded manifold, Stage 1
 
+## `AISM-49-STAGE1-SMOOTH-UPGRADES`
+- **File:** `report/sections/49_stage1_smooth_upgrades.tex`
+- **Title:** The smooth polar inverse, smooth operations, and the polar arithmetic
+- **Summary:** Reproduces lem-stage1-smooth-polar-inverse, the af-validated conditional upgrade of the bijective C1 polar map Pi_delta to a smooth diffeomorphism whose same set-theoretic inverse (u_delta, h_delta) is smooth, obtained chartwise from Lee's inverse function theorem with no point or first derivative changed.
+- **Summary:** Reproduces lem-stage1-smooth-unitary-operations, the af-validated statement that the circle action and the polar-projected product and inversion mu and sigma are smooth maps into the embedded manifold calU and obey the exact covariance identities mu(cU,dV) = cd mu(U,V) and sigma(cU) = conj(c) sigma(U).
+- **Summary:** Reproduces lem-stage1-polar-scalar-arithmetic, the af-validated universal scalar row: the derived scales delta_*, epsilon_*^r, e_S1, r_iso built from any admissible coefficients and margins make every epsilon_X below e_S1 satisfy all seven Stage-1 polar guards, with the quantitative slack r_- >= 3 delta_*/4 and eta <= delta_*/4.
+- **Keywords:** lem-stage1-smooth-polar-inverse, lem-stage1-smooth-unitary-operations, lem-stage1-polar-scalar-arithmetic, af validated, smooth diffeomorphism, inverse function theorem, circle equivariance, guard arithmetic, witness tuple, Stage 1
+
 ## `AISM-39-ARGUMENT-DAG`
 - **File:** `report/sections/39_argument_dag.tex`
 - **Title:** Argument-DAG atlas: the Route-F proof chain for op-classical
