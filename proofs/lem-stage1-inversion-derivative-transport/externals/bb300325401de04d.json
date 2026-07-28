@@ -1,0 +1,8 @@
+{
+  "id": "bb300325401de04d",
+  "name": "lem-stage1-smooth-unitary-operations",
+  "source": "imports validated registry lemma proofs/lem-stage1-smooth-unitary-operations — Smooth action/operations upgrade: under lem-stage1-approximate-group-laws, lem-stage1-smooth-unitary-atlas, and lem-stage1-smooth-polar-inverse, the scalar action U(1) x calU -\u003e calU, (c, U) |-\u003e cU, and the same maps mu: calU x calU -\u003e calU, mu(U, V) = u_delta(U bold-dot V), and sigma: calU -\u003e calU, sigma(U) = u_delta(U^dagger), are smooth as maps into the embedded manifold calU; they obey mu(cU, dV) = c*d*mu(U, V) and sigma(cU) = conj(c)*sigma(U), and no point or first derivative is changed.",
+  "content_hash": "81f77027a22f4515345aa9d0468ba640b4636b6557be5391bd39973106836056",
+  "created": "2026-07-28T06:24:29.548905378Z",
+  "notes": ""
+}

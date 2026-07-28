@@ -1,0 +1,8 @@
+{
+  "id": "251f701f67623c41",
+  "name": "lem-stage1-unitary-graph-control",
+  "source": "imports validated registry lemma proofs/lem-stage1-unitary-graph-control — Uniform unitary graph control: there are universal C_ch \u003e= 1, kappa_ch in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra, every delta \u003e 0 with C_ch*(epsilon_r + delta) \u003c= kappa_ch, every V in calUbar_delta, and every A^par in B^{icalH}_{2delta}(0), there is a unique g_V(A^par) in B^{calH}_{2delta}(0) with f_V(A^par + g_V(A^par)) = 0, and the corresponding V bold-dot (J + A^par + g_V(A^par)) lies in calU, where f_V(A) = (1/2)*(((J + A^dagger) bold-dot V^dagger) bold-dot (V bold-dot (J + A)) - J); moreover ||g_V(A^par) + (1/2)*(V^dagger bold-dot V - J)|| \u003c= C_ch*(epsilon_r*delta + delta^2), ||Dg_V(A^par)|| \u003c= C_ch*(epsilon_r + delta), and ||D_{A^perp} f_V(A^par + g_V(A^par)) - I_{calH}|| \u003c= C_ch*(epsilon_r + delta) \u003c 1; the resulting C^1 graph charts cover calU.",
+  "content_hash": "34841ccef6e8762af1b5334becf9c6acd3dadbaa45491b3d78face9e728fee34",
+  "created": "2026-07-28T06:24:29.544860953Z",
+  "notes": ""
+}
