@@ -53,18 +53,15 @@ TRIGGER: session close, or a material change in the current frontier / next task
    receiving fields by monotonicity — never treat an unbounded receiving
    coefficient as a universal constant.
 6. **NEXT SESSION STARTS HERE — execute the endorsed rebuild:**
-   1. **Land the registry package** (design §1 as amended): 3 NEW shards
-      (`lem-stage1-explicit-group-domain-membership`,
-      `lem-stage1-explicit-group-closeness`,
-      `lem-stage1-explicit-smooth-unitary-operations` — contract text
-      from **v3.2**, NOT v3/v3.1) + deps-only amendments (control, 13e,
-      13g per v3 §§1.4–1.6; rows-14+ per §1.7; 13c/13f byte-unchanged
-      contracts with their prescribed treatment). Per audit-v3 finding 3:
-      full front matter (`id`/`kind`/`contract`/`defs`/`deps`/`status:
-      stated`/`af: none`/`provenance` citing the design+audit chain/
-      `owner`), the 3 NEW ids into `report/UNWIRED.md` until anchored,
-      regenerate + `check-all` after EACH atomic landing stage.
-   2. **Serial elevation queue** (design §2 order; caps < 26; per-target
+   1. ~~Land the registry package~~ **DONE 2026-07-28 (session 34,
+      wave W98):** the 11-shard package landed in 3 atomic gated
+      commits (`e6648a55` 3 NEW bridges + UNWIRED whitelist;
+      `58f38c8c` control/13e/13f/13g deps-only; `feb0efd9` rows-14+
+      deps-only). Contracts/defs byte-diff-verified against the design
+      at landing (v3.2 text for the smooth bridge); PROVENANCE hashes
+      refreshed; `check-all` OK after each stage. All touched shards
+      remain `stated` — no rigour claim.
+   2. **Serial elevation queue — START HERE** (design §2 order; caps < 26; per-target
       external lists as tabulated; the two retired parents do NOT
       re-elevate): bridges → smooth bridge → control → 13e → **13c
       in-ledger repair** (verifier revokes 1.3.3 + the closure chain,
