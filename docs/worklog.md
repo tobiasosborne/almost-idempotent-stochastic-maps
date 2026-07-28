@@ -1874,3 +1874,32 @@ SHARD-SUMMARY/CATALOG mirrors + PROVENANCE rows/hashes); stats T0=101; sketch v3
 green; pushed. Session-33 net: banked 1 (13g, later retracted), retracted 6, re-certified 14,
 T0 106 → 101 — the record is strictly more trustworthy. W97 design v3 (the single explicit-binder
 rebuild of the defective set, brief carrying the sweep + both audits) is the next dispatch.
+
+## 2026-07-28 — session 33 close (W97 design phase COMPLETE): audit v3.2 VERDICT LAND; graceful stop
+
+The four-round design/audit chain converged: v3 (audit: ZERO mathematical findings across the
+whole rebuild — bridges, control, 13e, 13f, 13g endorsed; 298-node linker simulation green; af
+role-order empirically verified; REJECT only on the smooth-bridge binder + process items), v3.1
+(binder redraft; audit constructed an explicit satisfiability model at eps_r=0 and REJECTed on
+one implicit-universal-closure item with the repair wording prescribed verbatim), v3.2 (the
+orchestrator's mechanical transcription of that prescription — provenance block + exhaustive
+diff — audited by a fresh binder auditor with a token-level diff and byte-hash check: VERDICT
+LAND, no findings). The endorsed package: 3 NEW explicit-binder rows (two quantitative bridges +
+the binder-closed smooth-operations bridge), deps-only amendments for control/13e/13g + three
+stated rows-14+ consumers, the 13c in-ledger repair (archive node 1.3.3, fresh bottom-up
+re-verification of the in-tree bypass), 13f re-derived on the certified 13d typed import, the
+two anaphoric parents RETIRED in place. Landing/elevation corrections from audit v3 findings 3-4
+(gate-complete front matter + UNWIRED entries + per-stage check-all; fresh-codex-per-node with
+the honest ~107-job budget) are recorded in HANDOFF item 6 and bead aism-e1qs.
+
+Also this close: aism-b5hz CLOSED (the user-delegated 13e decision, fully executed via option C);
+audit-v3 finding-2 documentation debt repaired earlier in the session (retracted proof accounts
+relabeled as historical records with defects marked in-text; provenance claim rows, README/
+UNWIRED comments, retired-parent shard bodies corrected). The user requested a graceful stop:
+the final audit was harvested, NOTHING left in flight, HANDOFF rewritten, all committed + pushed.
+
+**Session-33 ledger (honest):** banked 1 (13g, retracted same day), retracted 6, re-certified 14,
+closed the 13e decision, produced a fully hostile-endorsed rebuild design, recorded two binding
+process laws. T0 106 → 101. Codex spend this session: ~30 jobs (2 af runs, 4 design rounds,
+5 audits, 2 adjudications + the sweep). The record ends the day strictly more trustworthy than
+it began, with the recovery path endorsed and priced.

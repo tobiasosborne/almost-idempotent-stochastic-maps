@@ -11,166 +11,121 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
 2. The governing plan is the RATIFIED
-   **`docs/plans/2026-07-27-W78-ratification-package.md`** (D1–D4). The live
-   campaign bead is **`aism-kqeb` (W80)**. The proof sketch is
-   `docs/plans/CURRENT.md` → **v36** (2026-07-28; folds the sessions 31–33
-   T0 gains — Rule-9 debt is CLEAR).
+   **`docs/plans/2026-07-27-W78-ratification-package.md`** (D1–D4). The
+   live campaign bead is **`aism-kqeb` (W80)**; the Stage-1 rebuild
+   tracker is **`aism-e1qs`**. The proof sketch is
+   `docs/plans/CURRENT.md` → **v38**.
 3. **Rigorous (af-validated, T0): 101.** Registry: 295. Definitions: 45.
-   `op-classical` OPEN. **SESSION-33 HEADLINE: SIX RETRACTIONS (the
-   repo's first), all one defect class, all contracts undisputed — T0
-   peaked at 107 and closed at 101.** The W97 design-audit chain caught a
-   synchronization defect the elevating cohorts had systematically
-   accepted: attaching an anaphorically-bound map from an opaque contract
-   to the typed `lem-stage1-polar-retraction` inverse without a typed
-   preimage witness h_X (the obstruction three W93 cohorts had correctly
-   rejected for 13e). Chain of custody: hostile audit of the 13e repair
-   design (AUDIT-13E-BINDER.md finding 2) → per-locus adjudication
-   (ADJUDICATION-T0-ALLEGATION.md: control 97th + 13g 107th DEFECTIVE) →
-   second allegation wave (AUDIT-13E-BINDER-v2.md finding 1) → a
-   COMPREHENSIVE SWEEP over all 18 remaining Stage-1 polar T0 exports
-   (SWEEP-ADJUDICATION-STAGE1.md): 4 more DEFECTIVE
-   (approximate-group-laws 95th; smooth-unitary-operations 100th;
-   maurer-cartan-transport 104th — sound in-tree bypass, prune 1.3.3 +
-   revalidate suffices; polar-path-transport 106th), **FOURTEEN CERTIFIED
-   SOUND (the entire typed backbone survives)**, cascade CLOSED
-   (linker-verified). Both LEARNINGS entries of 2026-07-28 carry the full
-   record incl. the root cause; report shards 47/48/49/50/51 demote the
-   six statements to conjecture envs; workspaces/ledgers retained as
-   re-elevation bases; sketch v38. **Process law (BINDING for all future
-   elevations): a provider external must supply the TYPED WITNESS for
-   every definite description a root binds, not merely a same-named
-   conclusion. Also: never cite an unbounded receiving coefficient
-   through an opaque contract (audit-v2 finding 2 — apply parents at a
-   fixed base witness tuple W_0 and transport by monotonicity).**
-4. **Session-33 arc (T0 106 → 107 → 105):**
-   - **Transport 13g `lem-stage1-inversion-derivative-transport`
-     af-VALIDATED (107th)** — but it took TWO runs. Run 1 (tier routine)
-     ABORTED [STUCK] at 15/16 validated: the workspace had been seeded
-     with ONLY the parent control external, whose contract binds
-     u_delta/g_{sJ} as bare anaphors, so three root premises were
-     underivable from the exact allowed inputs (E1 u_delta =
-     Pi_delta-inverse first component; E2 g_{sJ}'s f_{sJ}/C^1
-     characterization; E3 sigma globally C^1). Unlike 13e, all three are
-     carried VERBATIM by existing T0 results, so the fix was a
-     13e-precedent DEPS-ONLY widening (contract byte-unchanged):
-     + polar-retraction (E1), unitary-graph-control (E2),
-     smooth-unitary-operations (E3) + its three antecedents
-     (approximate-group-laws, smooth-unitary-atlas, smooth-polar-inverse);
-     workspace wiped + re-seeded (round-trip OK), all 7 deps registered as
-     byte-matched af externals. Run 2 validated 13/13 clean in 6 rounds.
-     **LESSON (transport seeding): a transport workspace must import the
-     providers of every definite description its root binds explicitly,
-     not only its direct parent.**
-   - **W96: THE REPORT IS FULLY CAUGHT UP.** Two worktree agents wrote
-     shards 49 (AISM-49: smooth-polar-inverse 99th,
-     smooth-unitary-operations 100th, polar-scalar-arithmetic 101st) and
-     50/51 (AISM-50/51: the six transports 102nd–107th, incl. the 13g
-     STUCK/widening record); merged in the main checkout with genuine
-     full gates (3-way merge of the five shared files; one stale
-     cross-remark in 51 re-pointed at 49's labels). UNWIRED −9;
-     PROVENANCE +18 source +9 claim rows. ALL 107 T0 results are now
-     anchored on the paper track or deliberately whitelisted; zero
-     unanchored ids.
-   - **Sketch v36** written and pointed
-     (`docs/plans/2026-07-28-top-down-proof-sketch-v36.md`).
-   - Housekeeping: NODE_SOFT_CAP brittleness-prose drift fixed
-     (CLAUDE.md/AGENTS.md L4 + §6, argument/README.md gate 5 now name
-     `scripts/af_constants.py NODE_SOFT_CAP = 26`).
-5. **13e `lem-stage1-approximate-group-laws-transport` is PAUSED — USER
-   DECISION `aism-b5hz` — and it now BLOCKS THE CRITICAL PATH.** Three
-   STUCK runs (last with prover xhigh) converged on a genuine
-   ratified-contract interface defect: the group-laws family binds
-   u_delta by the ELLIPTICAL description "the inverse u_delta of the
-   polar map", while the ratified 13e transport contract binds
-   (u_delta, h_delta) EXPLICITLY as the unique inverse of Pi_delta. The
-   identification u_grp = u_pol needs a typed polar datum the parent
-   contract never exposes — formally underivable from ANY validated
-   externals (three independent verifier cohorts; 13g's success shows the
-   widening fix does NOT apply here — no T0 result supplies the missing
-   datum). Workspace intact, 28/37 validated. Options in the bead:
-   (A) mini design/audit cycle restating 13e's binder anaphorically
-   (deviates from ratified text — needs ratification; check what row 13
-   needs first); (B) explicit-binder amendment of the group-laws family +
-   re-elevation (3 af-validated contracts touched); (C) fresh codex
-   design round. Do NOT re-run 13e unchanged (it will STUCK again).
-6. **NEXT SESSION: resolve `aism-b5hz` first.** Row 13
-   (`lem-stage1-polar-constant-ledger`, the 8-way conjunction) consumes
-   ALL SEVEN transports and is blocked until 13e closes; behind it queue
-   maximal-simplex + the 5 downstream rows, then polar §9 steps 28–29
-   (blocked on their own audited designs), package §5 step 3 (G-S1 split
-   producers), MAIN (`DESIGN-MAIN-STRUCTURE-v5.md` §10), the 14-row
-   ledger, the strengthened k-ledger, f0-assembly, root rewire LAST.
-   There is NO other unblocked critical-path elevation work.
-7. **Banking sequence (verified ~18× total):** af export (md+tex) →
-   append per-id oracle to `.frontier/portfolio.json` (`af-<rid>` /
-   `scripts/oracles/af-validated.py <rid>` / ledger+shard inputs,
-   absolute paths; NOTE the oracle reads the claim on STDIN — a bare
-   invocation without stdin hangs) → `fr verify proofs/<rid>/export.md
-   --oracle af-<rid>` → flip shard mechanically (status: proved /
-   af: validated + body Status update) → regenerate
+   `op-classical` OPEN.
+4. **SESSION-33 HEADLINE — the binder-defect arc, start to finish:**
+   - Banked 13g (107th) in the morning; by evening SIX Stage-1 af
+     validations were RETRACTED (the repo's first retractions): the
+     group-laws parent (95th), smooth-unitary-operations (100th),
+     inversion-derivative-control (97th), and transports 13c (104th),
+     13f (106th), 13g (107th). One defect class throughout: attaching an
+     anaphorically-bound map from an opaque contract to a typed datum
+     without a typed preimage witness. ALL SIX CONTRACTS UNDISPUTED.
+   - Chain of custody: 13e repair design (user delegated `aism-b5hz`,
+     option C) → hostile audit raised the first allegation → per-locus
+     adjudication confirmed (control + 13g) → second allegation wave →
+     **comprehensive sweep over all 18 remaining Stage-1 T0 exports**
+     (`SWEEP-ADJUDICATION-STAGE1.md`): 4 more DEFECTIVE, **FOURTEEN
+     CERTIFIED SOUND (the entire typed backbone survives)**, cascade
+     CLOSED (linker-verified). Both LEARNINGS entries of 2026-07-28 carry
+     the loci and root cause; report shards 47–51 demote the six
+     statements to conjecture envs with the defects marked in-text;
+     workspaces/ledgers retained.
+   - **The W97 rebuild design is COMPLETE and hostile-endorsed
+     (final audit VERDICT: LAND).** Package =
+     `DESIGN-13E-BINDER-v3.md` as amended by `DESIGN-13E-BINDER-v3.1.md`
+     §2 (MINOR-5 row) and `DESIGN-13E-BINDER-v3.2.md` (the binder-closed
+     smooth-bridge contract, token-diff-verified). Audits: v3 (ZERO
+     mathematical findings — bridges, control, 13e, 13f, 13g all
+     endorsed; 298-node linker simulation green), v3.1 (satisfiability
+     model at eps_r=0; one quantifier-closure finding), v3.2 (LAND, no
+     findings). All in `docs/plans/2026-07-28-13E-BINDER-design/`.
+5. **Two BINDING process laws (LEARNINGS 2026-07-28, apply to ALL future
+   elevations incl. MAIN/ledger/f0-assembly):** (i) every definite
+   description a proof root binds must have a provider external that
+   supplies the TYPED WITNESS (displayed source/formula/target +
+   inverse/preimage identity), never a same-named conclusion; (ii) a
+   parameterized proof fixes provider witnesses FIRST and transports
+   receiving fields by monotonicity — never treat an unbounded receiving
+   coefficient as a universal constant.
+6. **NEXT SESSION STARTS HERE — execute the endorsed rebuild:**
+   1. **Land the registry package** (design §1 as amended): 3 NEW shards
+      (`lem-stage1-explicit-group-domain-membership`,
+      `lem-stage1-explicit-group-closeness`,
+      `lem-stage1-explicit-smooth-unitary-operations` — contract text
+      from **v3.2**, NOT v3/v3.1) + deps-only amendments (control, 13e,
+      13g per v3 §§1.4–1.6; rows-14+ per §1.7; 13c/13f byte-unchanged
+      contracts with their prescribed treatment). Per audit-v3 finding 3:
+      full front matter (`id`/`kind`/`contract`/`defs`/`deps`/`status:
+      stated`/`af: none`/`provenance` citing the design+audit chain/
+      `owner`), the 3 NEW ids into `report/UNWIRED.md` until anchored,
+      regenerate + `check-all` after EACH atomic landing stage.
+   2. **Serial elevation queue** (design §2 order; caps < 26; per-target
+      external lists as tabulated; the two retired parents do NOT
+      re-elevate): bridges → smooth bridge → control → 13e → **13c
+      in-ledger repair** (verifier revokes 1.3.3 + the closure chain,
+      orchestrator archives 1.3.3 only after revocation, DISTINCT fresh
+      codex per re-accepted node per audit-v3 finding 4) → 13f → 13g.
+      Honest budget ~107 codex jobs (fresh-per-node); tier routine;
+      bank each per the verified sequence (item 7).
+   3. Then **row 13** (`lem-stage1-polar-constant-ledger`, consumes all
+      seven transports), maximal-simplex, the 5 downstream rows, G-S1,
+      MAIN, the 14-row ledger, k-ledger, f0-assembly, root rewire LAST.
+7. **Banking sequence (verified ~18×):** af export (md+tex) → per-id
+   oracle appended to `.frontier/portfolio.json` (absolute paths; the
+   oracle reads the claim on STDIN) → `fr verify proofs/<rid>/export.md
+   --oracle af-<rid>` → mechanical shard flip → regenerate
    (`argument.py --generate`, `gen-report-dag.py`,
    `gen-report-stats.py --extract`) → check-all → `fr log FH banked
-   --artifact <export> --tier T0 --decide EXPLOIT FH` (the bank gate
-   accepts `banked` ONLY for oracle-verified artifacts; documentation
-   waves log `progress`) → commit → seed the next row in the same commit
-   window.
+   --artifact <export> --tier T0` (bank gate accepts `banked` ONLY for
+   oracle-verified artifacts) → commit → next seed in the same window.
 8. **Orchestration laws (BINDING):** af runs strictly sequential; no
-   design/audit codex job while an af run is live; any non-`.frontier/`
-   repo write aborts a live run as PROVER-OVERREACH (`.frontier/` is
-   exempt — fr logging mid-run is safe); fr/bd writes FIRST, commit, af
-   launch as the turn's LAST action; commits only in zero-live-run
-   windows; `git push` allowed while a run is live.
-9. Standing mandates: codex = `gpt-5.6-sol`, xhigh cap (escalate prover
-   to xhigh ONLY after a STUCK; factor per a fresh design cycle ONLY
-   after a BALLOON); batched verification default; NOTHING lands without
-   ratification (D1–D4 envelope) — deps-only widenings with the contract
-   byte-unchanged are the recorded harmless exception (13e/13g
-   precedent); Route X/XE fallback only; signed trunk PAUSED.
-10. Gate: `sh scripts/check-all.sh` → `[check-all] OK` (verified at
-    close). All work committed AND pushed.
+   design/audit codex job while an af run is live; non-`.frontier/` repo
+   writes abort live runs as PROVER-OVERREACH (`.frontier/` exempt);
+   fr/bd writes FIRST, commit, launch LAST; commits only in
+   zero-live-run windows; `git push` allowed while a run is live.
+   Codex = `gpt-5.6-sol`, xhigh cap (prover xhigh ONLY after a STUCK).
+9. Gate: `sh scripts/check-all.sh` → `[check-all] OK` (verified at
+   close). All work committed AND pushed. NOTHING is in flight (the user
+   requested a graceful stop; the final audit was harvested before
+   close).
 
 ## Next steps (ranked)
 
-1. **W97 design round v3** (user delegated `aism-b5hz` 2026-07-28;
-   design v1 and v2 both REJECTED by hostile audit — correctly, each
-   audit surfaced real upstream defects). v3 scope = the single
-   explicit-binder rebuild of the whole defective set (sketch v38 map
-   change 2): 2 quantitative bridges (unchallenged through two audits) +
-   explicit smooth-operations bridge + direct re-derivations
-   (group-laws parent, control, 13e sans coherence-naturality, 13g with
-   the fixed-W_0 repair) + 2 cheap repairs (maurer-cartan-transport
-   prune-1.3.3/revalidate; polar-path-transport typed re-derivation) +
-   the rows-14+ deps cleanups + the quotient-manifold-package decision.
-   Then fresh hostile audit → land → the serial elevation queue (~8
-   workspaces) → bank each per item 7's sequence.
-2. After the repair campaign: seed + elevate **row 13
-   `lem-stage1-polar-constant-ledger`** (consumes all seven transports),
-   then maximal-simplex + the 5 downstream rows.
-3. Polar §9 steps 28–29 (three separately-designed trace rows + corrected
-   `lem-stage1-extra-fixed-class`) — blocked on their own audited
-   campaign designs.
-4. Package §5 step 3 (G-S1 split producers) once rows 1–13 are T0.
-5. Carried housekeeping: `aism-j5t9` (Munkres C^r-triangulation def
-   external); polar-retraction 29-node REFACTOR warning (cosmetic);
-   `def-stage1-polar-witness-data` body uses `\rm` (gen-report-defs
-   warning-level flag each run); report/*.aux tracking policy;
-   repo-root-relative oracle paths (would also let the worktree test-skip
-   retire); 12 dormant signed-trunk draft defs; `aism-ur9` (dormant);
-   two stale pre-session-33 agent worktrees under `.claude/worktrees/`
-   (agent-a745…, agent-ad79… — verify merged/stale before removing).
+1. Execute the endorsed rebuild per item 6 (landing, then the 8-step
+   elevation queue) — everything needed is in
+   `docs/plans/2026-07-28-13E-BINDER-design/` and bead `aism-e1qs`.
+2. After the queue: row 13 and the v36-sketch serial order.
+3. Report follow-ups tied to the queue: on each re-validation, restore
+   the demoted conjecture envs in shards 47–51 to lemma envs (mechanical
+   reversal of the retraction edits) and re-anchor the 3 NEW bridge rows
+   (delete their UNWIRED lines).
+4. Sketch v39 fold-in after the queue lands (v38 already carries the
+   full retraction map; the design-LAND is recorded in fr/worklog).
+5. Carried housekeeping: `aism-j5t9` (Munkres def external);
+   polar-retraction 29-node REFACTOR warning (cosmetic);
+   `def-stage1-polar-witness-data` `\rm` typeset flag; report/*.aux
+   policy; repo-root-relative oracle paths; 12 dormant signed-trunk
+   draft defs; `aism-ur9` (dormant); two stale pre-session-33 agent
+   worktrees under `.claude/worktrees/` (agent-a745…, agent-ad79… —
+   verify merged/stale before removing).
 
 ## What is intentionally NOT here
 
 - Any claim `op-classical` is proved — OPEN. T0 = 101 covers the Route-F
-  row chain, the fourteen sweep-certified Stage-1 trees (incl. transports
-  13a, 13b, 13d), and everything outside Stage-1. The six retracted
-  results (group-laws parent, smooth-unitary-operations, control, and
-  transports 13c/13f/13g), transport 13e (paused), row 13,
-  maximal-simplex, the 5 downstream rows, G-S1, MAIN, the 14-row ledger,
-  the strengthened k-ledger, f0-assembly, and the root rewire all remain
-  non-rigorous.
-- Any promise 13e resolves without a ratified contract change — three
-  independent verifier cohorts established the underivability; the 13g
-  deps-widening fix does NOT transfer (no T0 provider exists for the
-  group-laws binder).
+  row chain, the fourteen sweep-certified Stage-1 trees (incl.
+  transports 13a/13b/13d), and everything outside Stage-1. The six
+  retracted results, 13e, row 13 and everything downstream remain
+  non-rigorous until the endorsed queue validates them.
+- Any claim the rebuild WILL validate — the design is hostile-endorsed,
+  but "the derivations replay against the typed binder" is tested only
+  by the elevation queue itself.
+- The two retired parents (`lem-stage1-approximate-group-laws`,
+  `lem-stage1-smooth-unitary-operations`) re-elevating — the endorsed
+  design leaves them as honest stated conjectures; their live content
+  re-enters via 13e and the explicit smooth bridge.
 - Route X / XE decider work (fallback only). Signed trunk PAUSED.
