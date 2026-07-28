@@ -87,8 +87,8 @@ blocked on the pre-read, and stop — do not improvise.
   proof of nothing.)*
 - **L4 — Atomic / validated / accretive; the argument is an enforced DAG.** Every result gets its own tiny
   registry shard with a one-line `contract` and honest `status`; **all knowledge is codified as an acyclic
-  DAG of implications** (`argument/`, the linker enforces acyclicity). A proof tree that balloons (`>12`
-  nodes / depth `>3`) is a **brittleness FAILURE** → factor into sub-lemmas. One atomic step per commit.
+  DAG of implications** (`argument/`, the linker enforces acyclicity). A proof tree that balloons past the
+  shared soft cap (`>26` nodes, `scripts/af_constants.py NODE_SOFT_CAP`) is a **brittleness FAILURE** → factor into sub-lemmas. One atomic step per commit.
 - **L5 — Reviewer ≠ author; internal convergence ≠ correctness.** A result is "rigorous" only when an agent
   who is **not** its author independently checks the statement AND the proof/provenance and signs off
   (verdict in the commit under a `Review:` line). For `af`, the *verifier* is a **fresh** agent, never the
@@ -303,7 +303,7 @@ is **not** stood up on every result — only for a conjecture the user or the po
 
 The linker (`argument.py`) enforces: acyclic deps · imports resolve · **contract-match** · status
 propagation (an `af: validated` result can never rest on a non-rigorous dep — a dep is available iff it is
-itself `af: validated` or a `cited` leaf) · brittleness (`>12`/depth `>3` ⇒ REFACTOR) · orphans (registry ↔
+itself `af: validated` or a `cited` leaf) · brittleness (`>26` nodes ⇒ REFACTOR; `af_constants.py NODE_SOFT_CAP`) · orphans (registry ↔
 `proofs/`).
 
 ---

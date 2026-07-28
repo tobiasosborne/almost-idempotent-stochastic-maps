@@ -77,8 +77,10 @@ workspace: proofs/lem-square-hole-almost-positive
 4. **Status propagation** — `af: validated` requires all unconditional deps validated **and** (no `routes`,
    or one route *fully* validated/cited) (ERROR otherwise); computes the **ready frontier** (status
    `proved`/`consensus`, `af != validated`, imports met per the OR-route satisfaction rule) and the **blocked** set.
-5. **Brittleness** — for a workspace with node-count or depth over threshold (default >12 / depth >3),
-   WARN **REFACTOR: factor into sub-lemmas** (principle 2's failure signal, made mechanical).
+5. **Brittleness** — for a workspace whose af-tree node count exceeds the shared soft cap
+   (`scripts/af_constants.py NODE_SOFT_CAP = 26`; also the source of the orchestrator's balloon
+   `--node-cap` default `2*NODE_SOFT_CAP`), WARN **REFACTOR: factor into sub-lemmas**
+   (principle 2's failure signal, made mechanical).
 6. **Orphans** — registry lemma with `af != none` but missing `proofs/<id>/` ⇒ ERROR; a `proofs/*` workspace
    with no registry entry ⇒ ERROR.
 
