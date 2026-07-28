@@ -8,7 +8,7 @@ L2); this table and the `.tex` files beside it are a deterministic projection of
 ## Scope (directive: render only what the current proof strategy needs)
 
 - selection rule: **Route-F landing chain (scripts/gen-report-dag.py select_subgraph)**
-- registry results in the strategy subgraph: **142**; registry results anchored in `report/sections/`: **67**
+- registry results in the strategy subgraph: **145**; registry results anchored in `report/sections/`: **67**
 - definitions they import directly: **39**; after the statement-region
   `[[def-…]]` closure: **40** rendered, **5** dropped
 
@@ -50,7 +50,7 @@ Dropped (outside the closure; canonical, just not reproduced here):
 | 19 | `def-column-hilbert-corner` | `def:column-hilbert-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1123-1128,1546-1550` | `e7eb512a2ec2438d` | 2 | 2 |
 | 20 | `def-compressed-corner` | `def:compressed-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1054-1066,1077-1082` | `e7eb512a2ec2438d` | 17 | 17 |
 | 21 | `def-delta-projection` | `def:delta-projection` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:917-920,926-929` | `e7eb512a2ec2438d` | 15 | 15 |
-| 22 | `def-epsilon-cstar-algebra` | `def:epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:407-440` | `e7eb512a2ec2438d` | 29 | 22 |
+| 22 | `def-epsilon-cstar-algebra` | `def:epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:407-440` | `e7eb512a2ec2438d` | 32 | 22 |
 | 23 | `def-extended-epsilon-cstar-algebra` | `def:extended-epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1477-1479` | `e7eb512a2ec2438d` | 23 | 18 |
 | 24 | `def-fd-cstar-diagonal` | `def:fd-cstar-diagonal` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1233-1242` | `e7eb512a2ec2438d` | 4 | 0 |
 | 25 | `def-h-space-left-inversion` | `def:h-space-left-inversion` | cited | locked | shard statement | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:895-912` | `e7eb512a2ec2438d` | 2 | 0 |
@@ -64,7 +64,7 @@ Dropped (outside the closure; canonical, just not reproduced here):
 
 | # | id | label | kind | status | statement | source check | source | locus | sha256 | registry uses | in report |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 31 | `def-approximate-unitary-space` | `def:approximate-unitary-space` | consensus | locked | shard statement | — | `internal` | `adopted from refs/kitaev-2405.02434 approximate_algebras.tex:692-706 (sets), 845-859 (u,h and group maps), 945 (U_e and the scalar quotient)` | `-` | 24 | 17 |
+| 31 | `def-approximate-unitary-space` | `def:approximate-unitary-space` | consensus | locked | shard statement | — | `internal` | `adopted from refs/kitaev-2405.02434 approximate_algebras.tex:692-706 (sets), 845-859 (u,h and group maps), 945 (U_e and the scalar quotient)` | `-` | 27 | 17 |
 | 32 | `def-canonical-corner-identifications` | `def:canonical-corner-identifications` | original | locked | shard statement | — | `internal` | `PROOF-W74F-E-HCB.md §8.1; DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 4 | 4 |
 | 33 | `def-compressed-associator` | `def:compressed-associator` | original | locked | shard statement | — | `internal` | `PROOF-W74F-E-HCB.md §3; DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 2 | 2 |
 | 34 | `def-extcb-datum` | `def:extcb-datum` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package` | `-` | 3 | 3 |

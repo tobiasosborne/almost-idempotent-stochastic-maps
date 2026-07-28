@@ -266,6 +266,13 @@ lem-topology-hopf-structure
 # inversion-derivative-control in shards 47-48); they stay ANCHORED as conjectures with
 # retraction notes, hence correctly absent from this whitelist. Status of record:
 # each shard's Status block + report/PROVENANCE.md + docs/LEARNINGS.md.
+# 2026-07-28 (W97 landing): the three NEW explicit-binder bridge shards of the endorsed
+# rebuild (DESIGN-13E-BINDER-v3.md as amended by v3.1/v3.2; AUDIT-13E-BINDER-v3.2.md LAND);
+# unanchored at initial landing per AUDIT-13E-BINDER-v3.md finding 3 — anchor into the
+# report (and delete these lines) when the elevation queue validates them.
+lem-stage1-explicit-group-domain-membership
+lem-stage1-explicit-group-closeness
+lem-stage1-explicit-smooth-unitary-operations
 lem-stage1-approximate-group-laws-transport
 lem-stage1-polar-constant-ledger
 lem-finite-polyhedron-maximal-simplex-placement
