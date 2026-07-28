@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-07-28T08:11:00Z",
+ "extracted_at": "2026-07-28T09:01:12Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-07-28T08:11:00Z",
+  "mined_at": "2026-07-28T09:01:12Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -2478,9 +2478,9 @@
    "ingest": 7,
    "ingest_experiment_files": 60,
    "lit-review": 1,
-   "plans": 63,
+   "plans": 64,
    "recon": 1,
-   "report_shard_lines": 6861,
+   "report_shard_lines": 6895,
    "report_shards": 53,
    "tooling-feedback": 2,
    "waves": 107
@@ -2494,7 +2494,7 @@
     "RETIRED-ROUTE": 1,
     "WALL": 10
    },
-   "retractions": 4,
+   "retractions": 5,
    "stop_markers": 16
   },
   "frontier": {
@@ -2522,14 +2522,14 @@
      "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
      "banked": 29,
      "died": 1,
-     "dispatch": 69,
+     "dispatch": 70,
      "lem-topology-hopf-structure af-VALIDATED (81st rigorous result; 13 nodes 13/13 clean) + lem-extcb-exact-target-correction af-VALIDATED (82nd; 6 nodes 6/6 clean, first-pass, zero challenges — the designed transcription landed EXACTLY on budget) — GAP-EA, the first of the four v4.1 GAP families, is DISCHARGED at L0. T0 80 -> 82. Session 28 totals: +6 T0 (5 of 7 topology + the GAP-EA correction row), 2 trees parked with precise diagnoses (1 af-bookkeeping thrash, 1 genuine contract/def scope gap -> user escalation), 3 orchestration-infrastructure laws discovered+banked. Breaker honored: next cycle EXPLOREs off FH.": 1,
      "lem-topology-lefschetz-hopf af-VALIDATED (77th rigorous result; 2 nodes taint clean, first-pass canary) + lem-topology-kunneth-cross-product af-VALIDATED (78th; 7 nodes taint clean) — first two of the seven Stage-1 topology elevations banked, oracles af-lem-topology-* registered, fr verify PASS on both exports, registry flips committed, T0 76 -> 78. Session findings: parallel orchestrations mutually abort (sequential law banked to bd memory); 4 balloon-aborts + 1 stuck (external named but not attached as node dep) queued for repair.": 1,
      "lem-topology-local-index-sign af-VALIDATED (83rd rigorous result; 23 nodes 23/23 clean) under the user-ratified narrowed contract — the in-place root amendment retained all 21 previously validated nodes; oracle fr verify PASS. T0 82 -> 83; 6 of 7 topology rows T0. finite-triangulation root challenge classified: L1 ground-truth stop (Cairns delegates the class-one/allowable definitions to Veblen-Whitehead 1932, NOT in refs/) — user decision being asked in-chat (narrow to Cairns's literal statement vs acquire V-W).": 1,
      "lem-topology-orientable-top-cohomology af-VALIDATED (79th rigorous result; 14 nodes taint clean — Thm 3.26 + field-UCT + Cor 3.39 composed) + lem-topology-quotient-manifold af-VALIDATED (80th; 4 nodes taint clean — the external-attachment verifier challenge resolved by the re-run prover) — 4 of 7 topology elevations banked, oracles registered, fr verify PASS both, T0 78 -> 80. GAP-EA rows LANDED per DESIGN-GAP-EA option (a): lem-extcb-exact-target-correction (validated node-1.2 contract verbatim, proved/af:none) + lem-extcb-exact-target-approximation (v4.1 bridge, stated), UNWIRED-whitelisted, gate green. Next: seed+orchestrate the correction row; finishing runs for finite-triangulation (14/17), local-index-sign (18/22), hopf re-run.": 1,
      "null": 1,
      "obstruction": 1,
-     "progress": 137
+     "progress": 140
     },
     "G": {
      "banked": 2,
@@ -2568,7 +2568,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-07-28T07:57:33.072Z"
+     "last": "2026-07-28T08:48:43.655Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -2589,7 +2589,7 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 243,
+    "FH": 247,
     "G": 21,
     "R": 52,
     "XE": 1
@@ -2608,7 +2608,7 @@
     "2026-07-28": 1
    },
    "decisions": {
-    "EXPLOIT": 364,
+    "EXPLOIT": 367,
     "EXPLORE": 14,
     "PIVOT": 3
    },
@@ -2617,12 +2617,12 @@
     "af": 100,
     "af-validated": 3,
     "analysis": 2,
-    "audit": 21,
+    "audit": 23,
     "census": 1,
     "close": 1,
     "codification": 2,
     "decomposition": 1,
-    "design": 11,
+    "design": 12,
     "dispatch": 4,
     "doc": 2,
     "docs": 1,
@@ -2656,18 +2656,18 @@
    },
    "evidence_tiers": {
     "T0": 114,
-    "T1": 137,
+    "T1": 140,
     "T2": 131
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-07-28T07:57:33.072Z",
-   "max_cycle": 804,
+   "last_ts": "2026-07-28T08:48:43.655Z",
+   "max_cycle": 808,
    "outcomes": {
     "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
     "banked": 63,
     "died": 6,
     "discovery": 3,
-    "dispatch": 76,
+    "dispatch": 77,
     "lem-topology-hopf-structure af-VALIDATED (81st rigorous result; 13 nodes 13/13 clean) + lem-extcb-exact-target-correction af-VALIDATED (82nd; 6 nodes 6/6 clean, first-pass, zero challenges — the designed transcription landed EXACTLY on budget) — GAP-EA, the first of the four v4.1 GAP families, is DISCHARGED at L0. T0 80 -> 82. Session 28 totals: +6 T0 (5 of 7 topology + the GAP-EA correction row), 2 trees parked with precise diagnoses (1 af-bookkeeping thrash, 1 genuine contract/def scope gap -> user escalation), 3 orchestration-infrastructure laws discovered+banked. Breaker honored: next cycle EXPLOREs off FH.": 1,
     "lem-topology-lefschetz-hopf af-VALIDATED (77th rigorous result; 2 nodes taint clean, first-pass canary) + lem-topology-kunneth-cross-product af-VALIDATED (78th; 7 nodes taint clean) — first two of the seven Stage-1 topology elevations banked, oracles af-lem-topology-* registered, fr verify PASS on both exports, registry flips committed, T0 76 -> 78. Session findings: parallel orchestrations mutually abort (sequential law banked to bd memory); 4 balloon-aborts + 1 stuck (external named but not attached as node dep) queued for repair.": 1,
     "lem-topology-local-index-sign af-VALIDATED (83rd rigorous result; 23 nodes 23/23 clean) under the user-ratified narrowed contract — the in-place root amendment retained all 21 previously validated nodes; oracle fr verify PASS. T0 82 -> 83; 6 of 7 topology rows T0. finite-triangulation root challenge classified: L1 ground-truth stop (Cairns delegates the class-one/allowable definitions to Veblen-Whitehead 1932, NOT in refs/) — user decision being asked in-chat (narrow to Cairns's literal statement vs acquire V-W).": 1,
@@ -2675,7 +2675,7 @@
     "null": 1,
     "obstruction": 1,
     "orient": 344,
-    "progress": 304,
+    "progress": 307,
     "refuted": 1
    },
    "per_day": {
@@ -2697,9 +2697,9 @@
     "2026-07-25": 95,
     "2026-07-26": 80,
     "2026-07-27": 102,
-    "2026-07-28": 11
+    "2026-07-28": 15
    },
-   "records": 804,
+   "records": 808,
    "worker_jobs": 410,
    "worker_models": {
     "codex": 338,
@@ -2767,9 +2767,9 @@
   "git": {
    "active_days": 19,
    "authors": {
-    "tobiasosborne": 841
+    "tobiasosborne": 846
    },
-   "commits": 841,
+   "commits": 846,
    "first_day": "2026-07-02",
    "last_day": "2026-07-28",
    "per_day": {
@@ -2791,15 +2791,15 @@
     "2026-07-25": 165,
     "2026-07-26": 85,
     "2026-07-27": 74,
-    "2026-07-28": 12
+    "2026-07-28": 17
    },
    "subject_prefixes": {
     "W61": 13,
     "W63": 4,
-    "W65": 4,
     "W72": 5,
     "W74-F": 7,
     "W74F": 5,
+    "W97": 5,
     "af": 100,
     "beads": 8,
     "fr": 18,
@@ -2887,8 +2887,8 @@
   "registry": {
    "af": {
     "none": 176,
-    "seeded": 14,
-    "validated": 105
+    "seeded": 18,
+    "validated": 101
    },
    "kind": {
     "corollary": 2,
@@ -2906,9 +2906,9 @@
     "numerical": 2,
     "obstruction": 1,
     "open": 3,
-    "proved": 218,
+    "proved": 214,
     "proved-mod-audit": 23,
-    "stated": 13
+    "stated": 17
    }
   },
   "runs": {
@@ -2967,14 +2967,14 @@
    "test_lines": 1305
   },
   "worklog": {
-   "entries": 68,
+   "entries": 69,
    "first_date": "2026-06-11",
    "last_date": "2026-08-01",
-   "lines": 1828,
+   "lines": 1859,
    "max_session": 33,
-   "max_wave": 96,
+   "max_wave": 97,
    "sessions_named": 31,
-   "wave_labels": 69
+   "wave_labels": 71
   }
  }
 }

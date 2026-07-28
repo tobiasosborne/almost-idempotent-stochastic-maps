@@ -15,26 +15,33 @@ TRIGGER: session close, or a material change in the current frontier / next task
    campaign bead is **`aism-kqeb` (W80)**. The proof sketch is
    `docs/plans/CURRENT.md` → **v36** (2026-07-28; folds the sessions 31–33
    T0 gains — Rule-9 debt is CLEAR).
-3. **Rigorous (af-validated, T0): 105.** Registry: 295. Definitions: 45.
-   `op-classical` OPEN. **SESSION-33 HEADLINE: the repo's FIRST RETRACTION
-   — `lem-stage1-inversion-derivative-control` (was 97th) and
-   `lem-stage1-inversion-derivative-transport` (was 107th) were demoted to
-   stated/seeded the same day 13g was banked (T0 peaked at 107, closed at
-   105).** The W97 design-audit chain caught a synchronization defect the
-   elevating verifier cohorts had accepted: both proofs identify an
-   anaphorically-bound polar inverse with the typed
-   `lem-stage1-polar-retraction` inverse without a typed preimage witness
-   h_X — the same missing-h_X obstruction three W93 cohorts had correctly
-   rejected for 13e. Chain of custody: hostile audit of the 13e repair
-   design raised it (AUDIT-13E-BINDER.md finding 2) → an independent
-   fresh adjudication primed to REFUTE it instead CONFIRMED it per-locus
-   and bounded the cascade to exactly the pair
-   (ADJUDICATION-T0-ALLEGATION.md; linker-verified). Contracts NOT in
-   dispute; workspaces retained; LEARNINGS 2026-07-28 entry; report
-   shards 48/51 demoted to conjecture envs; sketch v37; bead `aism-e1qs`
-   tracks the re-elevation. **Process law: a provider external must
-   supply the TYPED WITNESS for every definite description a root binds,
-   not merely a same-named conclusion.**
+3. **Rigorous (af-validated, T0): 101.** Registry: 295. Definitions: 45.
+   `op-classical` OPEN. **SESSION-33 HEADLINE: SIX RETRACTIONS (the
+   repo's first), all one defect class, all contracts undisputed — T0
+   peaked at 107 and closed at 101.** The W97 design-audit chain caught a
+   synchronization defect the elevating cohorts had systematically
+   accepted: attaching an anaphorically-bound map from an opaque contract
+   to the typed `lem-stage1-polar-retraction` inverse without a typed
+   preimage witness h_X (the obstruction three W93 cohorts had correctly
+   rejected for 13e). Chain of custody: hostile audit of the 13e repair
+   design (AUDIT-13E-BINDER.md finding 2) → per-locus adjudication
+   (ADJUDICATION-T0-ALLEGATION.md: control 97th + 13g 107th DEFECTIVE) →
+   second allegation wave (AUDIT-13E-BINDER-v2.md finding 1) → a
+   COMPREHENSIVE SWEEP over all 18 remaining Stage-1 polar T0 exports
+   (SWEEP-ADJUDICATION-STAGE1.md): 4 more DEFECTIVE
+   (approximate-group-laws 95th; smooth-unitary-operations 100th;
+   maurer-cartan-transport 104th — sound in-tree bypass, prune 1.3.3 +
+   revalidate suffices; polar-path-transport 106th), **FOURTEEN CERTIFIED
+   SOUND (the entire typed backbone survives)**, cascade CLOSED
+   (linker-verified). Both LEARNINGS entries of 2026-07-28 carry the full
+   record incl. the root cause; report shards 47/48/49/50/51 demote the
+   six statements to conjecture envs; workspaces/ledgers retained as
+   re-elevation bases; sketch v38. **Process law (BINDING for all future
+   elevations): a provider external must supply the TYPED WITNESS for
+   every definite description a root binds, not merely a same-named
+   conclusion. Also: never cite an unbounded receiving coefficient
+   through an opaque contract (audit-v2 finding 2 — apply parents at a
+   fixed base witness tuple W_0 and transport by monotonicity).**
 4. **Session-33 arc (T0 106 → 107 → 105):**
    - **Transport 13g `lem-stage1-inversion-derivative-transport`
      af-VALIDATED (107th)** — but it took TWO runs. Run 1 (tier routine)
@@ -124,15 +131,18 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 ## Next steps (ranked)
 
-1. **W97 design round v2** (user delegated `aism-b5hz` 2026-07-28;
-   option C chosen). Scope after the audit REJECT + the retraction: on an
-   explicit-binder spine — the two bridge rows (membership, closeness),
-   an explicit-binder smooth-operations bridge (audit finding 1),
-   re-derivations of `lem-stage1-inversion-derivative-control` and its
-   transport (the retracted pair), 13e with coherence-naturality dropped
-   from deps (finding 4), bypass wording per finding 3. Then fresh
-   hostile audit → land → serial elevations: bridges → smooth-ops bridge
-   → control → 13e → 13g.
+1. **W97 design round v3** (user delegated `aism-b5hz` 2026-07-28;
+   design v1 and v2 both REJECTED by hostile audit — correctly, each
+   audit surfaced real upstream defects). v3 scope = the single
+   explicit-binder rebuild of the whole defective set (sketch v38 map
+   change 2): 2 quantitative bridges (unchallenged through two audits) +
+   explicit smooth-operations bridge + direct re-derivations
+   (group-laws parent, control, 13e sans coherence-naturality, 13g with
+   the fixed-W_0 repair) + 2 cheap repairs (maurer-cartan-transport
+   prune-1.3.3/revalidate; polar-path-transport typed re-derivation) +
+   the rows-14+ deps cleanups + the quotient-manifold-package decision.
+   Then fresh hostile audit → land → the serial elevation queue (~8
+   workspaces) → bank each per item 7's sequence.
 2. After the repair campaign: seed + elevate **row 13
    `lem-stage1-polar-constant-ledger`** (consumes all seven transports),
    then maximal-simplex + the 5 downstream rows.
@@ -151,12 +161,14 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 ## What is intentionally NOT here
 
-- Any claim `op-classical` is proved — OPEN. T0 = 105 covers the Route-F
-  row chain, polar analytic rows 1–7 and 9–12, and transports 13a–d, f.
-  The inversion-derivative pair (RETRACTED), transport 13e (paused), 13g,
-  row 13, maximal-simplex, the 5 downstream rows, G-S1, MAIN, the 14-row
-  ledger, the strengthened k-ledger, f0-assembly, and the root rewire all
-  remain non-rigorous.
+- Any claim `op-classical` is proved — OPEN. T0 = 101 covers the Route-F
+  row chain, the fourteen sweep-certified Stage-1 trees (incl. transports
+  13a, 13b, 13d), and everything outside Stage-1. The six retracted
+  results (group-laws parent, smooth-unitary-operations, control, and
+  transports 13c/13f/13g), transport 13e (paused), row 13,
+  maximal-simplex, the 5 downstream rows, G-S1, MAIN, the 14-row ledger,
+  the strengthened k-ledger, f0-assembly, and the root rewire all remain
+  non-rigorous.
 - Any promise 13e resolves without a ratified contract change — three
   independent verifier cohorts established the underivability; the 13g
   deps-widening fix does NOT transfer (no T0 provider exists for the

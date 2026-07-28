@@ -1,7 +1,7 @@
 % SHARD-ID: AISM-49-STAGE1-SMOOTH-UPGRADES
 % SHARD-TITLE: The smooth polar inverse, smooth operations, and the polar arithmetic
 % SHARD-SUMMARY: Reproduces lem-stage1-smooth-polar-inverse, the af-validated conditional upgrade of the bijective C1 polar map Pi_delta to a smooth diffeomorphism whose same set-theoretic inverse (u_delta, h_delta) is smooth, obtained chartwise from Lee's inverse function theorem with no point or first derivative changed.
-% SHARD-SUMMARY: Reproduces lem-stage1-smooth-unitary-operations, the af-validated statement that the circle action and the polar-projected product and inversion mu and sigma are smooth maps into the embedded manifold calU and obey the exact covariance identities mu(cU,dV) = cd mu(U,V) and sigma(cU) = conj(c) sigma(U).
+% SHARD-SUMMARY: States lem-stage1-smooth-unitary-operations (af validation RETRACTED 2026-07-28 by the binder sweep, now a stated candidate): the circle action and the polar-projected product and inversion mu and sigma are smooth maps into the embedded manifold calU and obey the exact covariance identities mu(cU,dV) = cd mu(U,V) and sigma(cU) = conj(c) sigma(U).
 % SHARD-SUMMARY: Reproduces lem-stage1-polar-scalar-arithmetic, the af-validated universal scalar row: the derived scales delta_*, epsilon_*^r, e_S1, r_iso built from any admissible coefficients and margins make every epsilon_X below e_S1 satisfy all seven Stage-1 polar guards, with the quantitative slack r_- >= 3 delta_*/4 and eta <= delta_*/4.
 % SHARD-KEYWORDS: lem-stage1-smooth-polar-inverse, lem-stage1-smooth-unitary-operations, lem-stage1-polar-scalar-arithmetic, af validated, smooth diffeomorphism, inverse function theorem, circle equivariance, guard arithmetic, witness tuple, Stage 1
 \section{The smooth polar inverse, smooth operations, and the polar arithmetic}\label{sec:stage1-smooth-upgrades}
@@ -74,7 +74,7 @@ the inverse is the same set map; the derivative of a $C^{1}$ function in unchang
 first-order charts is unique, so proving these same functions $C^{\infty}$ changes no
 point value and no first derivative.
 
-\begin{lemma}[\texttt{lem-stage1-smooth-unitary-operations}]\label{lem:stage1-smooth-unitary-operations}
+\begin{conjecture}[\texttt{lem-stage1-smooth-unitary-operations} --- proof retracted 2026-07-28]\label{lem:stage1-smooth-unitary-operations}
 Under Lemmas~\ref{lem:stage1-approximate-group-laws},
 \ref{lem:stage1-smooth-unitary-atlas} and \ref{lem:stage1-smooth-polar-inverse}, the scalar
 action $U(1)\times\Unit\to\Unit$, $(c,U)\mapsto cU$, and the same maps
@@ -89,7 +89,14 @@ and no point or first derivative is changed.
 \emph{Transcription note.} The registry \texttt{deps} also list
 Lemma~\ref{lem:stage1-polar-coherence-naturality}, which the contract exercises through
 its scalar-naturality clause rather than naming it in the antecedent.
-\end{lemma}
+\emph{Retraction note (2026-07-28).} The \texttt{af} validation was RETRACTED by the
+Stage-1 binder sweep: export nodes 1.2.1--1.2.2, 1.3.1.2 and 1.3.2 attach the typed
+smooth polar inverse to the anaphorically bound group-laws maps without a typed witness
+(the scalar-action subargument alone is sound but does not certify the compound root; see
+\texttt{docs/LEARNINGS.md}, second entry of 2026-07-28). The statement stands as a
+\emph{stated} candidate; an explicit-binder smooth-operations bridge is part of the W97
+campaign.
+\end{conjecture}
 
 \noindent\textbf{Registry contract (verbatim).}
 \contractquote{Smooth action/operations upgrade: under lem-stage1-approximate-group-laws, lem-stage1-smooth-unitary-atlas, and lem-stage1-smooth-polar-inverse, the scalar action U(1) x calU -> calU, (c, U) |-> cU, and the same maps mu: calU x calU -> calU, mu(U, V) = u_delta(U bold-dot V), and sigma: calU -> calU, sigma(U) = u_delta(U^dagger), are smooth as maps into the embedded manifold calU; they obey mu(cU, dV) = c*d*mu(U, V) and sigma(cU) = conj(c)*sigma(U), and no point or first derivative is changed.}
@@ -216,14 +223,17 @@ $q\le\delta_*/12$, so
 strictly, because $\delta_*>0$.
 
 \medskip
-\noindent\textbf{Status.} All three are \texttt{proved} with \texttt{af: validated} (T0).
-Workspaces \texttt{proofs/lem-stage1-smooth-polar-inverse} (21 nodes, 21
-\texttt{validated}, taint clean, no challenges; registers the byte-matched externals
-\texttt{GT-lee-2ed-thm-C.34} and \texttt{GT-lee-2ed-cor-C.36} together with the validated
-contracts of its two registry deps), \texttt{proofs/lem-stage1-smooth-unitary-operations}
-(15 nodes, 15 \texttt{validated}, taint clean) and
-\texttt{proofs/lem-stage1-polar-scalar-arithmetic} (15 nodes, 15 \texttt{validated}, taint
-clean, no challenges; a leaf with no registry deps).
+\noindent\textbf{Status.} \texttt{lem-stage1-smooth-polar-inverse} and
+\texttt{lem-stage1-polar-scalar-arithmetic} are \texttt{proved} with \texttt{af: validated}
+(T0, re-certified by the 2026-07-28 sweep): workspaces
+\texttt{proofs/lem-stage1-smooth-polar-inverse} (21 nodes, 21 \texttt{validated}, taint
+clean, no challenges; registers the byte-matched externals \texttt{GT-lee-2ed-thm-C.34}
+and \texttt{GT-lee-2ed-cor-C.36} together with the validated contracts of its two registry
+deps) and \texttt{proofs/lem-stage1-polar-scalar-arithmetic} (15 nodes, 15
+\texttt{validated}, taint clean, no challenges; a leaf with no registry deps).
+\texttt{lem-stage1-smooth-unitary-operations} is \texttt{stated} / \texttt{af: seeded}: its
+validation (15 nodes) was RETRACTED 2026-07-28 on the sweep-adjudicated attachment defect
+above (\texttt{docs/LEARNINGS.md}).
 
 \noindent\textbf{Corrections of record (proof-level, not contract-level).} The operations
 tree drew two genuine cross-sibling challenges: as first written, the covariance nodes

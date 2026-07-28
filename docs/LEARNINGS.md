@@ -123,3 +123,33 @@ _(The inherited REFUTED routes from the classical-portfolio are recorded as dead
   per-node verification. The 13e repair design v2 must carry an explicit-binder discipline for every
   map a root binds by definite description (the 13g external-provider lesson, now strengthened: the
   provider must supply the TYPED WITNESS, not merely a same-named conclusion).
+
+## 2026-07-28 (second entry) — the Stage-1 binder sweep: four more af validations RETRACTED (T0 105 → 101); fourteen certified sound
+
+- **Claimed:** `lem-stage1-approximate-group-laws` (95th), `lem-stage1-smooth-unitary-operations`
+  (100th), `lem-stage1-maurer-cartan-transport` (104th), and `lem-stage1-polar-path-transport`
+  (106th) were af-VALIDATED and banked. Contracts are NOT in dispute — only the validated proofs.
+- **Why wrong:** the same untyped-map inference class as the first 2026-07-28 retraction, found by a
+  comprehensive fresh sweep over all 18 remaining Stage-1 polar T0 exports
+  (`docs/plans/2026-07-28-13E-BINDER-design/SWEEP-ADJUDICATION-STAGE1.md`): group-laws node 1.1.2
+  invokes coherence on children exporting only anaphoric components; smooth-operations nodes
+  1.2.1–1.2.2/1.3.1.2/1.3.2 attach the typed smooth inverse to the anaphoric group inverse;
+  maurer-cartan-transport node 1.3.3 asserts a derivative equality whose pointwise-equality premise
+  its own sibling records as absent (a sound bypass exists in nodes 1.3.4–1.3.7 — pruning +
+  revalidation suffices); polar-path-transport node 1.3.1 attaches the parent's anaphoric path
+  formula to the root's explicit binder by sameness of notation.
+- **Caught by:** the second allegation wave of the W97 audit chain (AUDIT-13E-BINDER-v2.md finding
+  1) routed into a comprehensive per-target sweep adjudication rather than piecemeal checks. The
+  sweep also CERTIFIED FOURTEEN trees sound — including the entire typed backbone
+  (polar-retraction, coherence-naturality, graph rows, smooth atlas/polar-inverse, group
+  membership/closeness, path-admissibility, scalar arithmetic, and transports 13a/13b/13d) — so
+  the defect class is now settled for the whole Stage-1 layer in one pass, cascade CLOSED (no
+  other validated result descends from the demoted four).
+- **Resolution:** four statuses mechanically demoted proved→stated / af validated→seeded; report
+  shards 47/49/50/51 + PROVENANCE corrected; stats regenerated (T0 = 101); workspaces/ledgers
+  retained; repairs folded into the W97 explicit-binder campaign design v3 (bead `aism-e1qs`).
+- **Root cause (sweep's finding, recorded verbatim in substance):** the elevating cohorts
+  systematically treated repeated notation and definite descriptions as binder unification across
+  opaque theorem boundaries — same-named anaphora elevated into missing equality premises.
+  Ordinary uniqueness remains valid in single-construction chains, which is exactly why fourteen
+  trees survive.

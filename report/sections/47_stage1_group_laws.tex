@@ -1,7 +1,7 @@
 % SHARD-ID: AISM-47-STAGE1-GROUP-LAWS
 % SHARD-TITLE: Quantitative approximate group laws on the unitaries
 % SHARD-SUMMARY: Reproduces lem-stage1-group-domain-membership and lem-stage1-group-closeness, the two af-validated sub-lemmas showing that a product U bold-dot V and an adjoint U^dagger of unitaries lie in the polar domain with right inverses, and that the polar projection moves them by at most C_grp*epsilon_r.
-% SHARD-SUMMARY: Reproduces lem-stage1-approximate-group-laws, the af-validated parent: the polar projection of the product and of the adjoint are globally defined C1 maps mu and sigma with exact basepoint identities and five defect estimates of size C_grp*epsilon_r.
+% SHARD-SUMMARY: States lem-stage1-approximate-group-laws (af validation RETRACTED 2026-07-28 by the binder sweep, now a stated candidate): the polar projection of the product and of the adjoint are globally defined C1 maps mu and sigma with exact basepoint identities and five defect estimates of size C_grp*epsilon_r.
 % SHARD-SUMMARY: Records the balloon abort that forced the parent proof to be factored into these two deliberately sibling-independent children, the binding in-scope smallness discipline, and the endpoint discipline that keeps every estimate meaningful at epsilon_r = 0.
 % SHARD-KEYWORDS: lem-stage1-group-domain-membership, lem-stage1-group-closeness, lem-stage1-approximate-group-laws, af validated, approximate group, associator defect, balloon repair, endpoint discipline, Stage 1
 \section{Quantitative approximate group laws on the unitaries}\label{sec:stage1-group-laws}
@@ -119,7 +119,7 @@ $\nrm{a}\le\tfrac{1536}{495}\ecs_r\le4\ecs_r$. Finally exact right unitality giv
 $\nrm{u_\delta(X)-X}=\nrm{u\bdot(J-h)}\le(1+\ecs_r)\nrm{u}\nrm{a}\le5\ecs_r$, which is
 \eqref{eq:s1gl-close}.
 
-\begin{lemma}[\texttt{lem-stage1-approximate-group-laws}]\label{lem:stage1-approximate-group-laws}
+\begin{conjecture}[\texttt{lem-stage1-approximate-group-laws} --- proof retracted 2026-07-28]\label{lem:stage1-approximate-group-laws}
 There exist universal $C_{\mathrm{grp}},C_{\mathrm{pol}}\ge1$ and
 $\kappa_{\mathrm{pol}}\in(0,\tfrac12]$ such that for every finite-dimensional exact-unit
 $\ecs_r$-$C^*$-algebra and every $\delta>0$ satisfying \eqref{eq:s1gl-guards}, the inverse
@@ -140,7 +140,15 @@ on all of $\Unit$, with $\mu(J,U)=\mu(U,J)=U$, $\sigma(J)=J$, and
   \nrm{\mu(U,\sigma(U))-J}\le C_{\mathrm{grp}}\ecs_r .
   \label{eq:s1gl-inverse}
 \end{gather}
-\end{lemma}
+\emph{Retraction note (2026-07-28).} The parent's \texttt{af} validation was RETRACTED by
+the Stage-1 binder sweep: its export node~1.1.2 invokes coherence-naturality on the two
+children's conclusions, whose opaque contracts export only an anaphorically bound
+$u_\delta$ (no typed companion, no displayed source map, no preimage identity), so the
+two-typed-data antecedent is unavailable (see \texttt{docs/LEARNINGS.md}, second entry of
+2026-07-28). The two \emph{children} above are certified SOUND by the same sweep and remain
+T0. The parent statement stands as a \emph{stated} candidate; its repair (a direct
+explicit-binder derivation) is part of the W97 campaign.
+\end{conjecture}
 
 \noindent\textbf{Registry contract (verbatim).}
 \contractquote{Quantitative approximate group laws: there exist universal C_grp, C_pol >= 1, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra and delta > 0 satisfying C_pol*(epsilon_r + delta) <= kappa_pol and C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), the inverse u_delta of the polar map defines C^1 maps mu(U, V) = u_delta(U bold-dot V), sigma(U) = u_delta(U^dagger) on all of calU, with mu(J, U) = mu(U, J) = U, sigma(J) = J, ||mu(U, V) - U bold-dot V|| <= C_grp*epsilon_r, ||sigma(U) - U^dagger|| <= C_grp*epsilon_r, ||mu(mu(U, V), W) - mu(U, mu(V, W))|| <= C_grp*epsilon_r, ||mu(sigma(U), U) - J|| <= C_grp*epsilon_r, and ||mu(U, sigma(U)) - J|| <= C_grp*epsilon_r.}
@@ -182,12 +190,13 @@ $\le\tfrac{77}{12}G_c\ecs_r\le8G_c\ecs_r$. All bounds are non-strict and hold at
 $\ecs_r=0$.
 
 \medskip
-\noindent\textbf{Status.} All three are \texttt{proved} with \texttt{af: validated} (T0).
-Workspaces \texttt{proofs/lem-stage1-group-domain-membership} (10 nodes, 10
-\texttt{validated}, taint clean), \texttt{proofs/lem-stage1-group-closeness} (12 nodes, 12
-\texttt{validated}, taint clean) and
-\texttt{proofs/lem-stage1-approximate-group-laws} (14 nodes, 14 \texttt{validated}, taint
-clean).
+\noindent\textbf{Status.} The two children are \texttt{proved} with \texttt{af: validated}
+(T0, re-certified by the 2026-07-28 sweep): workspaces
+\texttt{proofs/lem-stage1-group-domain-membership} (10 nodes, 10 \texttt{validated}, taint
+clean) and \texttt{proofs/lem-stage1-group-closeness} (12 nodes, 12 \texttt{validated},
+taint clean). The parent \texttt{lem-stage1-approximate-group-laws} is \texttt{stated} /
+\texttt{af: seeded}: its validation (14 nodes) was RETRACTED 2026-07-28 on the sweep-
+adjudicated node-1.1.2 defect above (\texttt{docs/LEARNINGS.md}).
 
 \noindent\textbf{Correction of record (proof-level, not contract-level).} The parent's first
 elevation \textbf{aborted on the balloon tripwire} at 60 live nodes. Per that protocol the

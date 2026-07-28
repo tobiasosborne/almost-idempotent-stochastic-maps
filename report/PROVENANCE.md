@@ -144,7 +144,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-STAGE1-GROUP-DOMAIN-MEMBERSHIP` | `proofs/lem-stage1-group-domain-membership/export.md` | `bbf214797e978703` | `af` proof export for `lem-stage1-group-domain-membership` |
 | `ARG-LEM-STAGE1-GROUP-CLOSENESS` | `argument/lemmas/lem-stage1-group-closeness.md` | `e6519031fb835890` | Registry shard for `lem-stage1-group-closeness` |
 | `AF-LEM-STAGE1-GROUP-CLOSENESS` | `proofs/lem-stage1-group-closeness/export.md` | `d7da0982096ffdb4` | `af` proof export for `lem-stage1-group-closeness` |
-| `ARG-LEM-STAGE1-APPROXIMATE-GROUP-LAWS` | `argument/lemmas/lem-stage1-approximate-group-laws.md` | `60cd0445394f6427` | Registry shard for `lem-stage1-approximate-group-laws` |
+| `ARG-LEM-STAGE1-APPROXIMATE-GROUP-LAWS` | `argument/lemmas/lem-stage1-approximate-group-laws.md` | `7d7d849eb2c0b462` | Registry shard for `lem-stage1-approximate-group-laws` |
 | `AF-LEM-STAGE1-APPROXIMATE-GROUP-LAWS` | `proofs/lem-stage1-approximate-group-laws/export.md` | `b88bd69a0574ad13` | `af` proof export for `lem-stage1-approximate-group-laws` |
 | `ARG-LEM-STAGE1-POLAR-PATH-ADMISSIBILITY` | `argument/lemmas/lem-stage1-polar-path-admissibility.md` | `076601753d8ec666` | Registry shard for `lem-stage1-polar-path-admissibility` |
 | `AF-LEM-STAGE1-POLAR-PATH-ADMISSIBILITY` | `proofs/lem-stage1-polar-path-admissibility/export.md` | `14ae329ca484cc82` | `af` proof export for `lem-stage1-polar-path-admissibility` |
@@ -154,7 +154,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-STAGE1-SMOOTH-UNITARY-ATLAS` | `proofs/lem-stage1-smooth-unitary-atlas/export.md` | `0fe3769bde87ab44` | `af` proof export for `lem-stage1-smooth-unitary-atlas` |
 | `ARG-LEM-STAGE1-SMOOTH-POLAR-INVERSE` | `argument/lemmas/lem-stage1-smooth-polar-inverse.md` | `3031f6952685f6b8` | Registry shard for `lem-stage1-smooth-polar-inverse` |
 | `AF-LEM-STAGE1-SMOOTH-POLAR-INVERSE` | `proofs/lem-stage1-smooth-polar-inverse/export.md` | `27598752ecf3a5bc` | `af` proof export for `lem-stage1-smooth-polar-inverse` |
-| `ARG-LEM-STAGE1-SMOOTH-UNITARY-OPERATIONS` | `argument/lemmas/lem-stage1-smooth-unitary-operations.md` | `23644f7bd8979c1a` | Registry shard for `lem-stage1-smooth-unitary-operations` |
+| `ARG-LEM-STAGE1-SMOOTH-UNITARY-OPERATIONS` | `argument/lemmas/lem-stage1-smooth-unitary-operations.md` | `ab469a1d6a6a268e` | Registry shard for `lem-stage1-smooth-unitary-operations` |
 | `AF-LEM-STAGE1-SMOOTH-UNITARY-OPERATIONS` | `proofs/lem-stage1-smooth-unitary-operations/export.md` | `053d918a3577736d` | `af` proof export for `lem-stage1-smooth-unitary-operations` |
 | `ARG-LEM-STAGE1-POLAR-SCALAR-ARITHMETIC` | `argument/lemmas/lem-stage1-polar-scalar-arithmetic.md` | `4143e5ed57e30fd2` | Registry shard for `lem-stage1-polar-scalar-arithmetic` |
 | `AF-LEM-STAGE1-POLAR-SCALAR-ARITHMETIC` | `proofs/lem-stage1-polar-scalar-arithmetic/export.md` | `a18321bd39dc0845` | `af` proof export for `lem-stage1-polar-scalar-arithmetic` |
@@ -162,11 +162,11 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-STAGE1-RECTIFIED-CSTAR-TRANSPORT` | `proofs/lem-stage1-rectified-cstar-transport/export.md` | `d98e40124aad0e0b` | `af` proof export for `lem-stage1-rectified-cstar-transport` |
 | `ARG-LEM-STAGE1-UNITARY-GRAPH-TRANSPORT` | `argument/lemmas/lem-stage1-unitary-graph-transport.md` | `50cc80b914ae2182` | Registry shard for `lem-stage1-unitary-graph-transport` |
 | `AF-LEM-STAGE1-UNITARY-GRAPH-TRANSPORT` | `proofs/lem-stage1-unitary-graph-transport/export.md` | `cb335f0ff4610537` | `af` proof export for `lem-stage1-unitary-graph-transport` |
-| `ARG-LEM-STAGE1-MAURER-CARTAN-TRANSPORT` | `argument/lemmas/lem-stage1-maurer-cartan-transport.md` | `cf9bf22ca3e83ac0` | Registry shard for `lem-stage1-maurer-cartan-transport` |
+| `ARG-LEM-STAGE1-MAURER-CARTAN-TRANSPORT` | `argument/lemmas/lem-stage1-maurer-cartan-transport.md` | `98510b22bb3d6afe` | Registry shard for `lem-stage1-maurer-cartan-transport` |
 | `AF-LEM-STAGE1-MAURER-CARTAN-TRANSPORT` | `proofs/lem-stage1-maurer-cartan-transport/export.md` | `f367287c4a251e41` | `af` proof export for `lem-stage1-maurer-cartan-transport` |
 | `ARG-LEM-STAGE1-POLAR-RETRACTION-TRANSPORT` | `argument/lemmas/lem-stage1-polar-retraction-transport.md` | `5e700e4db5662bb3` | Registry shard for `lem-stage1-polar-retraction-transport` |
 | `AF-LEM-STAGE1-POLAR-RETRACTION-TRANSPORT` | `proofs/lem-stage1-polar-retraction-transport/export.md` | `a3e87360fa5022a6` | `af` proof export for `lem-stage1-polar-retraction-transport` |
-| `ARG-LEM-STAGE1-POLAR-PATH-TRANSPORT` | `argument/lemmas/lem-stage1-polar-path-transport.md` | `b95ba90e6bc66d41` | Registry shard for `lem-stage1-polar-path-transport` |
+| `ARG-LEM-STAGE1-POLAR-PATH-TRANSPORT` | `argument/lemmas/lem-stage1-polar-path-transport.md` | `eb7447b749857ad9` | Registry shard for `lem-stage1-polar-path-transport` |
 | `AF-LEM-STAGE1-POLAR-PATH-TRANSPORT` | `proofs/lem-stage1-polar-path-transport/export.md` | `b06ec3f05f1e1324` | `af` proof export for `lem-stage1-polar-path-transport` |
 | `ARG-LEM-STAGE1-INVERSION-DERIVATIVE-TRANSPORT` | `argument/lemmas/lem-stage1-inversion-derivative-transport.md` | `b5c76d75d9482800` | Registry shard for `lem-stage1-inversion-derivative-transport` |
 | `AF-LEM-STAGE1-INVERSION-DERIVATIVE-TRANSPORT` | `proofs/lem-stage1-inversion-derivative-transport/export.md` | `c2b7a95190d4ead6` | `af` proof export for `lem-stage1-inversion-derivative-transport` |

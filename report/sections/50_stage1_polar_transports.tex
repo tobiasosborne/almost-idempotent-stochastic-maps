@@ -1,6 +1,6 @@
 % SHARD-ID: AISM-50-STAGE1-POLAR-TRANSPORTS
 % SHARD-TITLE: Parameterized transports of the Stage-1 polar layer
-% SHARD-SUMMARY: Reproduces four af-validated Stage-1 polar transport rows, lem-stage1-rectified-cstar-transport, lem-stage1-unitary-graph-transport, lem-stage1-maurer-cartan-transport and lem-stage1-polar-retraction-transport, which re-state four fixed-constant polar lemmas at the named fields of an arbitrary Stage-1 polar witness datum.
+% SHARD-SUMMARY: Reproduces three af-validated Stage-1 polar transport rows (lem-stage1-rectified-cstar-transport, lem-stage1-unitary-graph-transport, lem-stage1-polar-retraction-transport) and states lem-stage1-maurer-cartan-transport (af validation RETRACTED 2026-07-28 by the binder sweep); all four re-state fixed-constant polar lemmas at the named fields of an arbitrary Stage-1 polar witness datum.
 % SHARD-SUMMARY: States the common transport skeleton once: instantiate the parent's universal witnesses as thresholds, derive epsilon_r >= 0 from the product-norm axiom at the unit, transport every scalar guard by coefficient/margin monotonicity, apply the parent, and weaken the conclusion coefficients back to the fields of the tuple.
 % SHARD-SUMMARY: Records the Maurer-Cartan challenges that forced an arbitrary-family tangent argument independent of the distinguished graph family, with the conditional uniqueness bridge kept explicitly conditional.
 % SHARD-KEYWORDS: lem-stage1-rectified-cstar-transport, lem-stage1-unitary-graph-transport, lem-stage1-maurer-cartan-transport, lem-stage1-polar-retraction-transport, af validated, witness data, transport, guard monotonicity, Stage 1
@@ -94,7 +94,7 @@ weakens them to $C_{\mathrm{ch}}q$, $C_{\mathrm{ch}}s$, $C_{\mathrm{ch}}s$, and 
 clause is
 $C_{\mathrm{ch}}s\le\kappa_{\mathrm{ch}}\le\kappa^{0}_{\mathrm{ch}}\le\tfrac12<1$.
 
-\begin{lemma}[\texttt{lem-stage1-maurer-cartan-transport}]\label{lem:stage1-maurer-cartan-transport}
+\begin{conjecture}[\texttt{lem-stage1-maurer-cartan-transport} --- proof retracted 2026-07-28]\label{lem:stage1-maurer-cartan-transport}
 There exist $C^{0}_{\mathrm{ch}}\ge1$ and $\kappa^{0}_{\mathrm{ch}}\in(0,\tfrac12]$ such
 that for every witness datum $W$ with $C_{\mathrm{ch}}\ge C^{0}_{\mathrm{ch}}$ and
 $0<\kappa_{\mathrm{ch}}\le\kappa^{0}_{\mathrm{ch}}$, for every finite-dimensional
@@ -111,7 +111,14 @@ $\omega_U(iU)=iJ$ for every $c\in U(1)$.
 whose graph maps are the distinguished family supplied by
 Lemma~\ref{lem:stage1-unitary-graph-control}, this row quantifies over \emph{any} family
 with the displayed uniqueness property.
-\end{lemma}
+\emph{Retraction note (2026-07-28).} The \texttt{af} validation was RETRACTED by the
+Stage-1 binder sweep: the certified export retains node~1.3.3, which asserts
+$Dg_U(0)=D\bar g_U(0)$ from a pointwise-equality premise its own sibling node~1.3.2
+records as absent from the registered external. The sweep notes the tree \emph{also}
+contains a sound bypass (nodes 1.3.4--1.3.7), so pruning the defective branch and
+revalidating suffices (see \texttt{docs/LEARNINGS.md}, second entry of 2026-07-28). The
+statement stands as a \emph{stated} candidate.
+\end{conjecture}
 
 \noindent\textbf{Registry contract (verbatim).}
 \contractquote{Parameterized Maurer-Cartan transport: there exist C_ch^0 >= 1 and kappa_ch^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_ch >= C_ch^0 and 0 < kappa_ch <= kappa_ch^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra, every delta > 0 with C_ch*(epsilon_r + delta) <= kappa_ch, and every family g = (g_U)_{U in calU} of C^1 maps g_U: B^{icalH}_{2delta}(0) -> B^{calH}_{2delta}(0) such that, for every U in calU and A^par in B^{icalH}_{2delta}(0), g_U(A^par) is the unique element of B^{calH}_{2delta}(0) satisfying f_U(A^par + g_U(A^par)) = 0, where f_U(A) = (1/2)*(((J + A^dagger) bold-dot U^dagger) bold-dot (U bold-dot (J + A)) - J), every tangent space T_U calU is the image of L_U(I + Dg_U(0)): icalH -> calX, and omega_U(Z) = (L_U^{-1} Z)^par : T_U calU -> icalH is a global C^1 bundle trivialization with distortion at most 1 + C_ch*epsilon_r, satisfying omega_{cU}(cZ) = omega_U(Z) and omega_U(iU) = iJ for every U in calU, Z in T_U calU, and c in U(1).}
@@ -162,14 +169,16 @@ $\Unito{\delta-C_{\mathrm{pol}}A}\subseteq\Unito{\delta-C_*A}\subseteq S_\delta
 \subseteq\Unito{\delta+C_*A}\subseteq\Unito{\delta+C_{\mathrm{pol}}A}$.
 
 \medskip
-\noindent\textbf{Status.} All four are \texttt{proved} with \texttt{af: validated} (T0).
-Workspaces \texttt{proofs/lem-stage1-rectified-cstar-transport} (7 nodes, 7
-\texttt{validated}, first-pass, zero challenges),
-\texttt{proofs/lem-stage1-unitary-graph-transport} (9 nodes, 9 \texttt{validated},
-first-pass, zero challenges), \texttt{proofs/lem-stage1-maurer-cartan-transport} (13
-nodes, 13 \texttt{validated}, two genuine challenges repaired in-run) and
+\noindent\textbf{Status.} Three of the four are \texttt{proved} with \texttt{af: validated}
+(T0, re-certified by the 2026-07-28 sweep): workspaces
+\texttt{proofs/lem-stage1-rectified-cstar-transport} (7 nodes, 7 \texttt{validated},
+first-pass, zero challenges), \texttt{proofs/lem-stage1-unitary-graph-transport} (9 nodes,
+9 \texttt{validated}, first-pass, zero challenges) and
 \texttt{proofs/lem-stage1-polar-retraction-transport} (5 nodes, 5 \texttt{validated},
-first-pass, zero challenges). All taint clean; all runs tier \emph{routine}.
+first-pass, zero challenges), all taint clean, tier \emph{routine}.
+\texttt{lem-stage1-maurer-cartan-transport} is \texttt{stated} / \texttt{af: seeded}: its
+validation (13 nodes) was RETRACTED 2026-07-28 on the sweep-adjudicated node-1.3.3 defect
+above (\texttt{docs/LEARNINGS.md}).
 
 \noindent\textbf{Correction of record (proof-level, not contract-level).} The
 Maurer--Cartan tree drew two genuine challenges: the arbitrary family $g$ had been

@@ -1857,3 +1857,20 @@ cross-workspace consistency of "the same map" — every definite description a r
 a provider external supplying the TYPED WITNESS. Next: design round v2 (widened scope: 2 bridge
 rows + explicit smooth-operations bridge + re-derivation of the pair + 13e sans
 coherence-naturality) → hostile audit → land → serial elevations.
+
+## 2026-07-28 — session 33 addendum 2: the Stage-1 binder sweep (T0 105 → 101; fourteen trees re-certified; cascade closed)
+
+The audit-v2 second allegation wave was routed into a comprehensive fresh sweep over all 18
+remaining Stage-1 polar T0 exports (SWEEP-ADJUDICATION-STAGE1.md). Verdicts: FOUR more DEFECTIVE
+and retracted (approximate-group-laws 95th node 1.1.2; smooth-unitary-operations 100th nodes
+1.2.1-1.2.2/1.3.1.2/1.3.2; maurer-cartan-transport 104th node 1.3.3 — sound in-tree bypass, prune +
+revalidate suffices; polar-path-transport 106th node 1.3.1); FOURTEEN certified SOUND including the
+entire typed backbone; both prior retractions independently re-confirmed; cascade CLOSED (no
+further validated descendants — linker-verified, no status-propagation errors after demotion).
+Executed: 4 shard demotions with retraction bodies; LEARNINGS second entry (root cause recorded:
+same-named anaphora elevated into missing equality premises across opaque theorem boundaries);
+report shards 47/49/50/51 corrected (conjecture envs + retraction notes + Status blocks +
+SHARD-SUMMARY/CATALOG mirrors + PROVENANCE rows/hashes); stats T0=101; sketch v38; all gates
+green; pushed. Session-33 net: banked 1 (13g, later retracted), retracted 6, re-certified 14,
+T0 106 → 101 — the record is strictly more trustworthy. W97 design v3 (the single explicit-binder
+rebuild of the defective set, brief carrying the sweep + both audits) is the next dispatch.

@@ -219,19 +219,19 @@
 | `lem-sl1a-corner-ledger` | lemma | proved | none | B | For every exact signed idempotent P with 0 < delta(P) <= 2^(-16) and nonempty vi… |
 | `lem-sl1a-score-selector` | lemma | proved | none | B | For every exact signed idempotent P with delta(P) > 0, nonempty visible set W, a… |
 | `lem-sl1a-three-cell-reduction` | lemma | proved | none | B | SL1a three-cell reduction: if conj-sl1a-off-diagonal-cell (constant delta_X), co… |
-| `lem-stage1-approximate-group-laws` | lemma | proved | validated | A | Quantitative approximate group laws: there exist universal C_grp, C_pol >= 1, ka… |
+| `lem-stage1-approximate-group-laws` | lemma | stated | seeded | A | Quantitative approximate group laws: there exist universal C_grp, C_pol >= 1, ka… |
 | `lem-stage1-approximate-group-laws-transport` | lemma | stated | seeded | A | Parameterized approximate-group transport: there exist C_grp^0, C_pol^0 >= 1 and… |
 | `lem-stage1-exact-unit-rectification` | lemma | proved | validated | A | Dimension-free exact-unit rectification: there are universal C_unit < infinity a… |
 | `lem-stage1-group-closeness` | lemma | proved | validated | A | Group-input polar closeness: there exist universal C_grp, C_pol >= 1, kappa_pol … |
 | `lem-stage1-group-domain-membership` | lemma | proved | validated | A | Group-input polar-domain membership: there exist universal C_grp, C_pol >= 1, ka… |
 | `lem-stage1-inversion-derivative-control` | lemma | stated | seeded | A | Typed inversion derivative with chart retention: there exist universal C_der, C_… |
 | `lem-stage1-inversion-derivative-transport` | lemma | stated | seeded | A | Parameterized inversion-derivative transport: there exist C_der^0, C_ch^0, C_pol… |
-| `lem-stage1-maurer-cartan-transport` | lemma | proved | validated | A | Parameterized Maurer-Cartan transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |
+| `lem-stage1-maurer-cartan-transport` | lemma | stated | seeded | A | Parameterized Maurer-Cartan transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |
 | `lem-stage1-maurer-cartan-trivialization` | lemma | proved | validated | A | Uniform global tangent/Maurer-Cartan control: there are universal C_ch >= 1, kap… |
 | `lem-stage1-polar-coherence-naturality` | lemma | proved | validated | A | Polar coherence and scalar naturality: for every exact-unit algebra and every tw… |
 | `lem-stage1-polar-constant-ledger` | lemma | stated | none | A | Compatible Stage-1 polar witnesses and range: there exists one universal def-sta… |
 | `lem-stage1-polar-path-admissibility` | lemma | proved | validated | A | Joint projected-straight-path admissibility: there exist universal C_path, C_pol… |
-| `lem-stage1-polar-path-transport` | lemma | proved | validated | A | Parameterized polar-path transport: there exist C_path^0, C_pol^0 >= 1 and kappa… |
+| `lem-stage1-polar-path-transport` | lemma | stated | seeded | A | Parameterized polar-path transport: there exist C_path^0, C_pol^0 >= 1 and kappa… |
 | `lem-stage1-polar-retraction` | lemma | proved | validated | A | Closed C^1 polar retraction: there are universal C_pol >= 1, kappa_pol in (0, 1/… |
 | `lem-stage1-polar-retraction-transport` | lemma | proved | validated | A | Parameterized polar-retraction transport: there exist C_pol^0 >= 1 and kappa_pol… |
 | `lem-stage1-polar-scalar-arithmetic` | lemma | proved | validated | A | Universal Stage-1 polar arithmetic: for every C_rect, C_ch, C_pol, C_grp, C_path… |
@@ -244,7 +244,7 @@
 | `lem-stage1-rectified-cstar-transport` | lemma | proved | validated | A | Parameterized rectification transport: there exist C_rect^0 >= 1 and e_rect^0 in… |
 | `lem-stage1-smooth-polar-inverse` | lemma | proved | validated | A | Smooth polar-inverse upgrade: for every finite-dimensional exact-unit epsilon_r-… |
 | `lem-stage1-smooth-unitary-atlas` | lemma | proved | validated | A | Smooth graph-atlas upgrade: for every finite-dimensional exact-unit epsilon_r-C*… |
-| `lem-stage1-smooth-unitary-operations` | lemma | proved | validated | A | Smooth action/operations upgrade: under lem-stage1-approximate-group-laws, lem-s… |
+| `lem-stage1-smooth-unitary-operations` | lemma | stated | seeded | A | Smooth action/operations upgrade: under lem-stage1-approximate-group-laws, lem-s… |
 | `lem-stage1-uniform-inversion-isolation` | lemma | stated | none | A | There are universal e_iso^r > 0, r_iso > 0 such that, for every finite-dimension… |
 | `lem-stage1-unitary-graph-control` | lemma | proved | validated | A | Uniform unitary graph control: there are universal C_ch >= 1, kappa_ch in (0, 1/… |
 | `lem-stage1-unitary-graph-transport` | lemma | proved | validated | A | Parameterized unitary-graph transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |
