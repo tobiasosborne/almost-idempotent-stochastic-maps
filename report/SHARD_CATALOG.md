@@ -370,6 +370,21 @@ verbatim), and keywords.
 - **Summary:** Reproduces lem-stage1-smooth-unitary-operations, the af-validated statement that the circle action and the polar-projected product and inversion mu and sigma are smooth maps into the embedded manifold calU and obey the exact covariance identities mu(cU,dV) = cd mu(U,V) and sigma(cU) = conj(c) sigma(U).
 - **Summary:** Reproduces lem-stage1-polar-scalar-arithmetic, the af-validated universal scalar row: the derived scales delta_*, epsilon_*^r, e_S1, r_iso built from any admissible coefficients and margins make every epsilon_X below e_S1 satisfy all seven Stage-1 polar guards, with the quantitative slack r_- >= 3 delta_*/4 and eta <= delta_*/4.
 - **Keywords:** lem-stage1-smooth-polar-inverse, lem-stage1-smooth-unitary-operations, lem-stage1-polar-scalar-arithmetic, af validated, smooth diffeomorphism, inverse function theorem, circle equivariance, guard arithmetic, witness tuple, Stage 1
+## `AISM-50-STAGE1-POLAR-TRANSPORTS`
+- **File:** `report/sections/50_stage1_polar_transports.tex`
+- **Title:** Parameterized transports of the Stage-1 polar layer
+- **Summary:** Reproduces four af-validated Stage-1 polar transport rows, lem-stage1-rectified-cstar-transport, lem-stage1-unitary-graph-transport, lem-stage1-maurer-cartan-transport and lem-stage1-polar-retraction-transport, which re-state four fixed-constant polar lemmas at the named fields of an arbitrary Stage-1 polar witness datum.
+- **Summary:** States the common transport skeleton once: instantiate the parent's universal witnesses as thresholds, derive epsilon_r >= 0 from the product-norm axiom at the unit, transport every scalar guard by coefficient/margin monotonicity, apply the parent, and weaken the conclusion coefficients back to the fields of the tuple.
+- **Summary:** Records the Maurer-Cartan challenges that forced an arbitrary-family tangent argument independent of the distinguished graph family, with the conditional uniqueness bridge kept explicitly conditional.
+- **Keywords:** lem-stage1-rectified-cstar-transport, lem-stage1-unitary-graph-transport, lem-stage1-maurer-cartan-transport, lem-stage1-polar-retraction-transport, af validated, witness data, transport, guard monotonicity, Stage 1
+
+## `AISM-51-STAGE1-POLAR-TRANSPORTS-II`
+- **File:** `report/sections/51_stage1_polar_transports_ii.tex`
+- **Title:** Parameterized transports of the Stage-1 polar layer, II: paths and the inversion derivative
+- **Summary:** Reproduces the two remaining af-validated Stage-1 polar transport rows, lem-stage1-polar-path-transport and lem-stage1-inversion-derivative-transport, which carry the projected-path and typed inversion-derivative lemmas to the parameterized witness-data form with explicit definite descriptions for the polar and graph binders.
+- **Summary:** Explains the joint-threshold construction that transports five scalar guards to four fixed-constant parents simultaneously, and the three binder identifications that discharge the explicit u_delta, g_sJ and sigma descriptions from af-validated imports.
+- **Summary:** Records the inversion-derivative run-1 STUCK abort on bare-anaphor binders in the sole allowed external, repaired by widening the deps line with six T0 imports while leaving the contract byte-unchanged.
+- **Keywords:** lem-stage1-polar-path-transport, lem-stage1-inversion-derivative-transport, af validated, witness data, transport, definite description, deps widening, Stage 1
 
 ## `AISM-39-ARGUMENT-DAG`
 - **File:** `report/sections/39_argument_dag.tex`

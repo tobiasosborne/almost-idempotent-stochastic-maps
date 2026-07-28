@@ -87,6 +87,10 @@ mid-check.
      lem-stage1-smooth-unitary-operations + lem-stage1-polar-scalar-arithmetic), the three
      af-validated rows closing the Stage-1 polar block; a CONTENT section, \include'd after
      48 and before the generated/meta sections 39-41, same convention as 45-48. -->
+<!-- ADDENDUM (2026-07-28): 50-51 the Stage-1 polar TRANSPORT block (6 af-validated rows
+     carrying the fixed-constant polar lemmas to the def-stage1-polar-witness-data form).
+     CONTENT sections, \include'd after 49 and BEFORE the generated/meta sections 39-41,
+     same convention as 42-48. Nothing was renumbered. -->
 
 | # | SHARD-ID | file |
 |---|----------|------|
@@ -138,6 +142,8 @@ mid-check.
 | 47 | `AISM-47-STAGE1-GROUP-LAWS` | `report/sections/47_stage1_group_laws.tex` |
 | 48 | `AISM-48-STAGE1-SMOOTH-POLAR` | `report/sections/48_stage1_smooth_polar.tex` |
 | 49 | `AISM-49-STAGE1-SMOOTH-UPGRADES` | `report/sections/49_stage1_smooth_upgrades.tex` |
+| 50 | `AISM-50-STAGE1-POLAR-TRANSPORTS` | `report/sections/50_stage1_polar_transports.tex` |
+| 51 | `AISM-51-STAGE1-POLAR-TRANSPORTS-II` | `report/sections/51_stage1_polar_transports_ii.tex` |
 | 39 | `AISM-39-ARGUMENT-DAG` | `report/sections/39_argument_dag.tex` |
 | 40 | `AISM-40-CAMPAIGN-STATISTICS` | `report/sections/40_campaign_statistics.tex` |
 | 41 | `AISM-41-STATUS-OUTLOOK` | `report/sections/41_status_outlook.tex` |

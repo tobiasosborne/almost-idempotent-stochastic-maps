@@ -257,13 +257,10 @@ lem-topology-hopf-structure
 # 2026-07-28: lem-stage1-smooth-polar-inverse, lem-stage1-smooth-unitary-operations and
 # lem-stage1-polar-scalar-arithmetic af-VALIDATED and WIRED into report/sections/
 # 49_stage1_smooth_upgrades.tex; their lines deleted here.
-lem-stage1-rectified-cstar-transport
-lem-stage1-unitary-graph-transport
-lem-stage1-maurer-cartan-transport
-lem-stage1-polar-retraction-transport
+# 2026-07-28: the six af-VALIDATED transport rows (13a-d, 13f, 13g) are WIRED into
+# report/sections/50_stage1_polar_transports.tex + 51_stage1_polar_transports_ii.tex;
+# their lines deleted here.
 lem-stage1-approximate-group-laws-transport
-lem-stage1-polar-path-transport
-lem-stage1-inversion-derivative-transport
 lem-stage1-polar-constant-ledger
 lem-finite-polyhedron-maximal-simplex-placement
 lem-stage1-uniform-inversion-isolation

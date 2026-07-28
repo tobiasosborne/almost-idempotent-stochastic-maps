@@ -1,0 +1,191 @@
+% SHARD-ID: AISM-50-STAGE1-POLAR-TRANSPORTS
+% SHARD-TITLE: Parameterized transports of the Stage-1 polar layer
+% SHARD-SUMMARY: Reproduces four af-validated Stage-1 polar transport rows, lem-stage1-rectified-cstar-transport, lem-stage1-unitary-graph-transport, lem-stage1-maurer-cartan-transport and lem-stage1-polar-retraction-transport, which re-state four fixed-constant polar lemmas at the named fields of an arbitrary Stage-1 polar witness datum.
+% SHARD-SUMMARY: States the common transport skeleton once: instantiate the parent's universal witnesses as thresholds, derive epsilon_r >= 0 from the product-norm axiom at the unit, transport every scalar guard by coefficient/margin monotonicity, apply the parent, and weaken the conclusion coefficients back to the fields of the tuple.
+% SHARD-SUMMARY: Records the Maurer-Cartan challenges that forced an arbitrary-family tangent argument independent of the distinguished graph family, with the conditional uniqueness bridge kept explicitly conditional.
+% SHARD-KEYWORDS: lem-stage1-rectified-cstar-transport, lem-stage1-unitary-graph-transport, lem-stage1-maurer-cartan-transport, lem-stage1-polar-retraction-transport, af validated, witness data, transport, guard monotonicity, Stage 1
+\section{Parameterized transports of the Stage-1 polar layer}\label{sec:stage1-polar-transports}
+
+This section and the next (\S\ref{sec:stage1-polar-transports-ii}) reproduce six
+\texttt{af}-validated \emph{transport} rows, which carry six fixed-constant Stage-1 polar
+lemmas of \S\ref{sec:stage1-polar-charts}--\S\ref{sec:stage1-smooth-polar} to the
+\emph{parameterized} form of Definition~\ref{def:stage1-polar-witness-data}: throughout, $W$
+is a Stage-1 polar witness datum with coefficient fields
+$C_{\mathrm{rect}},C_{\mathrm{ch}},C_{\mathrm{pol}},C_{\mathrm{grp}},C_{\mathrm{path}},C_{\mathrm{der}}$
+and margin fields $e_{\mathrm{rect}},\kappa_{\mathrm{ch}},\kappa_{\mathrm{pol}},\kappa_{\mathrm{der}}$
+(the four derived scales of $W$ play no role in these six rows). Each row asserts universal
+\emph{thresholds} --- coefficient floors $C^{0}_{\ast}$ and margin caps $\kappa^{0}_{\ast}$
+--- such that \emph{every} tuple $W$ whose coefficients dominate the floors and whose
+margins are dominated by the caps witnesses the parent conclusion at its own fields. All
+ambient vocabulary ($\Herm$, $\aHerm$, $\Unit$, $\Unitc{\cdot}$, $\Unito{\cdot}$,
+$\Lmul{V}$, $\phi_V$) is that of Definition~\ref{def:approximate-unitary-space}, never
+restated.
+
+\paragraph{The common transport skeleton.} Every tree in the family shares one skeleton,
+stated once. (i) Instantiate the universal witnesses of the fixed-constant parent lemma as
+the thresholds. (ii) Derive $\ecs_r\ge0$ from the product-norm axiom of
+Definition~\ref{def:epsilon-cstar-algebra} at $x=y=J$: exact unitality and $\nrm{J}=1$ give
+$1=\nrm{J\bdot J}\le(1+\ecs_r)$. Hence every guard combination in play
+($\ecs_r+\delta$, $\ecs_r\delta+\delta^{2}$, $q+\ecs_rq+q^{2}$, $\ecs_r+r$) is nonnegative.
+(iii) Transport each scalar guard by monotonicity: a coefficient only \emph{shrinks} from
+the field of $W$ down to the threshold and a margin only \emph{grows}, so, the multiplied
+quantities being nonnegative, the assumed field guard implies the parent's witness guard
+(e.g.\ $\hat C(\ecs_r+\delta)\le C_{\mathrm{ch}}(\ecs_r+\delta)\le\kappa_{\mathrm{ch}}\le\hat\kappa$).
+(iv) Apply the parent lemma. (v) Weaken every conclusion coefficient from the witness back
+up to the field, again by nonnegativity, using also that the defect sets are monotone in the
+radius: for $r\le s$, $\Unitc{r}\subseteq\Unitc{s}$ and $\Unito{r}\subseteq\Unito{s}$ (the
+right-inverse clause is unchanged and the defect bound only relaxes). Existence,
+uniqueness, regularity, coverage and equivariance clauses carry over verbatim.
+
+\begin{lemma}[\texttt{lem-stage1-rectified-cstar-transport}]\label{lem:stage1-rectified-cstar-transport}
+There exist $C^{0}_{\mathrm{rect}}\ge1$ and $e^{0}_{\mathrm{rect}}\in(0,1/C^{0}_{\mathrm{rect}}]$
+such that for every witness datum $W$ with $C_{\mathrm{rect}}\ge C^{0}_{\mathrm{rect}}$ and
+$0<e_{\mathrm{rect}}\le\min\{e^{0}_{\mathrm{rect}},1/C_{\mathrm{rect}}\}$, every
+finite-dimensional $\ecs_X$-$C^*$-algebra with $0\le\ecs_X\le e_{\mathrm{rect}}$ admits, on
+the same involutive normed space, a bilinear product $\bdot$ and an element $J=J\dg$ for
+which $(\calX,J,\bdot,\dagger)$ satisfies every exact-unit $\ecs_r$-$C^*$-algebra axiom of
+Definition~\ref{def:epsilon-cstar-algebra}, including $\nrm{J}=1$, where
+$\ecs_r=C_{\mathrm{rect}}\ecs_X$, and for every $x,y\in\calX$,
+$\nrm{J-I_X}\le C_{\mathrm{rect}}\ecs_X$ and
+$\nrm{x\bdot y-xy}\le C_{\mathrm{rect}}\ecs_X\nrm{x}\nrm{y}$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Parameterized rectification transport: there exist C_rect^0 >= 1 and e_rect^0 in (0, 1/C_rect^0] such that, for every def-stage1-polar-witness-data tuple W with C_rect >= C_rect^0 and 0 < e_rect <= min{e_rect^0, 1/C_rect}, for every finite-dimensional epsilon_X-C*-algebra (calX, I_X, ., dagger) with 0 <= epsilon_X <= e_rect, there are on the same involutive normed space a bilinear product bold-dot and an element J = J^dagger for which (calX, J, bold-dot, dagger) satisfies every exact-unit epsilon_r-C*-algebra axiom of def-epsilon-cstar-algebra, including ||J|| = 1, where epsilon_r = C_rect*epsilon_X, and for every x, y in calX, ||J - I_X|| <= C_rect*epsilon_X and ||x bold-dot y - xy|| <= C_rect*epsilon_X*||x||*||y||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The skeleton, seeded by Lemma~\ref{lem:stage1-rectified-cstar-control} with witnesses
+$(c,e)$ and thresholds $C^{0}_{\mathrm{rect}}=c$, $e^{0}_{\mathrm{rect}}=e$, plus one extra
+node: \emph{parameter monotonicity of the axiom list itself}. If $0\le\alpha\le\beta$ and
+$(\calX,J,\bdot,\dagger)$ satisfies every exact-unit $\alpha$-$C^*$-algebra axiom, then it
+satisfies every $\beta$-axiom: $\nrm{x\bdot y}\le(1+\alpha)\nrm{x}\nrm{y}\le(1+\beta)\nrm{x}\nrm{y}$,
+the associator bound $\alpha\nrm{x}\nrm{y}\nrm{z}$ is at most $\beta\nrm{x}\nrm{y}\nrm{z}$,
+and $\nrm{x\dg\bdot x}\ge(1-\alpha)\nrm{x}^{2}\ge(1-\beta)\nrm{x}^{2}$; every remaining
+axiom is parameter-free. Since $\ecs_X\le e_{\mathrm{rect}}\le e$, the parent applies and
+produces the axioms at $\alpha=c\,\ecs_X$; monotonicity passes to
+$\beta=C_{\mathrm{rect}}\ecs_X\ge\alpha$, and $c\le C_{\mathrm{rect}}$ weakens the two
+closeness estimates.
+
+\begin{lemma}[\texttt{lem-stage1-unitary-graph-transport}]\label{lem:stage1-unitary-graph-transport}
+There exist $C^{0}_{\mathrm{ch}}\ge1$ and $\kappa^{0}_{\mathrm{ch}}\in(0,\tfrac12]$ such
+that for every witness datum $W$ with $C_{\mathrm{ch}}\ge C^{0}_{\mathrm{ch}}$ and
+$0<\kappa_{\mathrm{ch}}\le\kappa^{0}_{\mathrm{ch}}$, for every finite-dimensional
+exact-unit $\ecs_r$-$C^*$-algebra, every $\delta>0$ with
+$C_{\mathrm{ch}}(\ecs_r+\delta)\le\kappa_{\mathrm{ch}}$, every $V\in\Unitc{\delta}$ and
+every $A^{\parallel}\in B^{\aHerm}_{2\delta}(0)$, there is a unique
+$g_V(A^{\parallel})\in B^{\Herm}_{2\delta}(0)$ with
+$f_V(A^{\parallel}+g_V(A^{\parallel}))=0$ --- $f_V$ exactly as in \eqref{eq:s1gc-f} ---
+the element $V\bdot(J+A^{\parallel}+g_V(A^{\parallel}))$ lies in $\Unit$, the two graph
+estimates \eqref{eq:s1gc-bounds} and the strict normal-derivative bound
+\eqref{eq:s1gc-normal} hold with the field $C_{\mathrm{ch}}$ of $W$ in place of the
+universal constant, and the resulting $C^{1}$ graph charts cover $\Unit$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Parameterized unitary-graph transport: there exist C_ch^0 >= 1 and kappa_ch^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_ch >= C_ch^0 and 0 < kappa_ch <= kappa_ch^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra (calX, J, bold-dot, dagger), every delta > 0 with C_ch*(epsilon_r + delta) <= kappa_ch, every V in calUbar_delta, and every A^par in B^{icalH}_{2delta}(0), there is a unique g_V(A^par) in B^{calH}_{2delta}(0) such that f_V(A^par + g_V(A^par)) = 0, where f_V(A) = (1/2)*(((J + A^dagger) bold-dot V^dagger) bold-dot (V bold-dot (J + A)) - J), the element V bold-dot (J + A^par + g_V(A^par)) lies in calU, ||g_V(A^par) + (1/2)*(V^dagger bold-dot V - J)|| <= C_ch*(epsilon_r*delta + delta^2), ||Dg_V(A^par)|| <= C_ch*(epsilon_r + delta), and ||D_{A^perp} f_V(A^par + g_V(A^par)) - I_{calH}|| <= C_ch*(epsilon_r + delta) < 1, and these C^1 graph charts cover calU.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The skeleton verbatim, seeded by Lemma~\ref{lem:stage1-unitary-graph-control} with
+witnesses $(\hat C,\hat\kappa)$. With $s=\ecs_r+\delta$ and $q=\ecs_r\delta+\delta^{2}=\delta s$,
+step (ii) gives $s,q>0$; step (iii) is
+$\hat Cs\le C_{\mathrm{ch}}s\le\kappa_{\mathrm{ch}}\le\hat\kappa$; the parent supplies the
+unique $g_V$, membership in $\Unit$, cover, and the three bounds at $\hat C$; step (v)
+weakens them to $C_{\mathrm{ch}}q$, $C_{\mathrm{ch}}s$, $C_{\mathrm{ch}}s$, and the strict
+clause is
+$C_{\mathrm{ch}}s\le\kappa_{\mathrm{ch}}\le\kappa^{0}_{\mathrm{ch}}\le\tfrac12<1$.
+
+\begin{lemma}[\texttt{lem-stage1-maurer-cartan-transport}]\label{lem:stage1-maurer-cartan-transport}
+There exist $C^{0}_{\mathrm{ch}}\ge1$ and $\kappa^{0}_{\mathrm{ch}}\in(0,\tfrac12]$ such
+that for every witness datum $W$ with $C_{\mathrm{ch}}\ge C^{0}_{\mathrm{ch}}$ and
+$0<\kappa_{\mathrm{ch}}\le\kappa^{0}_{\mathrm{ch}}$, for every finite-dimensional
+exact-unit $\ecs_r$-$C^*$-algebra, every $\delta>0$ with
+$C_{\mathrm{ch}}(\ecs_r+\delta)\le\kappa_{\mathrm{ch}}$, and every family
+$g=(g_U)_{U\in\Unit}$ of $C^{1}$ maps $g_U:B^{\aHerm}_{2\delta}(0)\to B^{\Herm}_{2\delta}(0)$
+such that, for every $U$ and $A^{\parallel}$, $g_U(A^{\parallel})$ is the \emph{unique}
+element of $B^{\Herm}_{2\delta}(0)$ with $f_U(A^{\parallel}+g_U(A^{\parallel}))=0$: every
+tangent space $T_U\Unit$ is the image of $\Lmul{U}(I+Dg_U(0)):\aHerm\to\calX$, and
+$\omega_U(Z)=(\Lmul{U}^{-1}Z)^{\parallel}$ is a global $C^{1}$ bundle trivialization with
+distortion at most $1+C_{\mathrm{ch}}\ecs_r$, satisfying $\omega_{cU}(cZ)=\omega_U(Z)$ and
+$\omega_U(iU)=iJ$ for every $c\in U(1)$.
+\emph{Transcription note.} Unlike Lemma~\ref{lem:stage1-maurer-cartan-trivialization},
+whose graph maps are the distinguished family supplied by
+Lemma~\ref{lem:stage1-unitary-graph-control}, this row quantifies over \emph{any} family
+with the displayed uniqueness property.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Parameterized Maurer-Cartan transport: there exist C_ch^0 >= 1 and kappa_ch^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_ch >= C_ch^0 and 0 < kappa_ch <= kappa_ch^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra, every delta > 0 with C_ch*(epsilon_r + delta) <= kappa_ch, and every family g = (g_U)_{U in calU} of C^1 maps g_U: B^{icalH}_{2delta}(0) -> B^{calH}_{2delta}(0) such that, for every U in calU and A^par in B^{icalH}_{2delta}(0), g_U(A^par) is the unique element of B^{calH}_{2delta}(0) satisfying f_U(A^par + g_U(A^par)) = 0, where f_U(A) = (1/2)*(((J + A^dagger) bold-dot U^dagger) bold-dot (U bold-dot (J + A)) - J), every tangent space T_U calU is the image of L_U(I + Dg_U(0)): icalH -> calX, and omega_U(Z) = (L_U^{-1} Z)^par : T_U calU -> icalH is a global C^1 bundle trivialization with distortion at most 1 + C_ch*epsilon_r, satisfying omega_{cU}(cZ) = omega_U(Z) and omega_U(iU) = iJ for every U in calU, Z in T_U calU, and c in U(1).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The skeleton seeded by Lemma~\ref{lem:stage1-maurer-cartan-trivialization} with witnesses
+$(\bar C,\bar\kappa)$, plus a genuine extra obligation: the arbitrary family $g$ cannot
+simply be \emph{identified} with the parent's distinguished family, because the registered
+external does not export that family's domain/codomain typing (the tree records this as a
+conditional bridge only). Instead, the tangent formula is re-derived for $g$ itself. From
+the guard, $\ecs_r<\tfrac12$; if $X\dg\bdot X=J$ then the $C^*$-lower bound, approximate
+associativity and exact unitality give
+$\nrm{\Lmul{X\dg}\Lmul{X}Y-Y}\le\tfrac{\ecs_r}{1-\ecs_r}\nrm{Y}$ with coefficient $<1$, so
+$\Lmul{X}$ is injective, hence bijective in finite dimension, and $X$ has a right inverse:
+\emph{every exact zero of the displayed $f_U$-equation lies in $\Unit$}. Consequently, for
+$B\in\aHerm$ the curve $t\mapsto U\bdot(J+tB+g_U(tB))$ stays in $\Unit$ (using $g_U(0)=0$,
+forced by uniqueness at $f_U(0)=0$) and differentiates at $0$ to $\Lmul{U}(B+Dg_U(0)B)$,
+so $\operatorname{im}\Lmul{U}(I+Dg_U(0))\subseteq T_U\Unit$. The parent's fibrewise
+isomorphism $\omega_U$ gives $\dim T_U\Unit=\dim\aHerm$ and
+$\omega_U(\Lmul{U}(B+Dg_U(0)B))=B$ (the Hermitian part projects away), so the inclusion is
+an equality of finite-dimensional spaces. The $\omega$, distortion and equivariance
+conclusions of the parent mention no graph family and transfer unchanged; step (v) weakens
+the distortion from $1+\bar C\ecs_r$ to $1+C_{\mathrm{ch}}\ecs_r$.
+
+\begin{lemma}[\texttt{lem-stage1-polar-retraction-transport}]\label{lem:stage1-polar-retraction-transport}
+There exist $C^{0}_{\mathrm{pol}}\ge1$ and $\kappa^{0}_{\mathrm{pol}}\in(0,\tfrac12]$ such
+that for every witness datum $W$ with $C_{\mathrm{pol}}\ge C^{0}_{\mathrm{pol}}$ and
+$0<\kappa_{\mathrm{pol}}\le\kappa^{0}_{\mathrm{pol}}$, for every finite-dimensional
+exact-unit $\ecs_r$-$C^*$-algebra and every $\delta>0$ with
+$C_{\mathrm{pol}}(\ecs_r+\delta)\le\kappa_{\mathrm{pol}}$, the map
+$\Pi_\delta(U,H)=U\bdot H$ is a $C^{1}$ diffeomorphism from $\Unit\times B^{\Herm}_{\delta}(J)$
+onto the open set $S_\delta:=\Pi_\delta(\Unit\times B^{\Herm}_{\delta}(J))$, its inverse
+$(u_\delta,h_\delta)$ obeys the normalisation \eqref{eq:s1pr-inverse}, and the sandwich
+\eqref{eq:s1pr-sandwich} holds with the field $C_{\mathrm{pol}}$ of $W$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Parameterized polar-retraction transport: there exist C_pol^0 >= 1 and kappa_pol^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_pol >= C_pol^0 and 0 < kappa_pol <= kappa_pol^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra and every delta > 0 with C_pol*(epsilon_r + delta) <= kappa_pol, the map Pi_delta: calU x B^{calH}_delta(J) -> calX, Pi_delta(U, H) = U bold-dot H, is a C^1 diffeomorphism onto the open set S_delta := Pi_delta(calU x B^{calH}_delta(J)), its inverse (u_delta, h_delta): S_delta -> calU x B^{calH}_delta(J) satisfies X = u_delta(X) bold-dot h_delta(X), u_delta(U) = U, and h_delta(U) = J for every X in S_delta and U in calU, and calU_{delta - C_pol*(epsilon_r*delta + delta^2)} subseteq S_delta subseteq calU_{delta + C_pol*(epsilon_r*delta + delta^2)}.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The skeleton verbatim (the shortest tree of the family), seeded by
+Lemma~\ref{lem:stage1-polar-retraction} with witnesses $(C_*,\kappa_*)$. The
+diffeomorphism, openness and normalisation clauses are coefficient-free and transfer
+unchanged; only the sandwich is weakened: with $A=\ecs_r\delta+\delta^{2}\ge0$ and
+$C_*\le C_{\mathrm{pol}}$, one has $\delta-C_{\mathrm{pol}}A\le\delta-C_*A$ and
+$\delta+C_*A\le\delta+C_{\mathrm{pol}}A$, so radius monotonicity of $\Unito{\cdot}$ gives
+$\Unito{\delta-C_{\mathrm{pol}}A}\subseteq\Unito{\delta-C_*A}\subseteq S_\delta
+\subseteq\Unito{\delta+C_*A}\subseteq\Unito{\delta+C_{\mathrm{pol}}A}$.
+
+\medskip
+\noindent\textbf{Status.} All four are \texttt{proved} with \texttt{af: validated} (T0).
+Workspaces \texttt{proofs/lem-stage1-rectified-cstar-transport} (7 nodes, 7
+\texttt{validated}, first-pass, zero challenges),
+\texttt{proofs/lem-stage1-unitary-graph-transport} (9 nodes, 9 \texttt{validated},
+first-pass, zero challenges), \texttt{proofs/lem-stage1-maurer-cartan-transport} (13
+nodes, 13 \texttt{validated}, two genuine challenges repaired in-run) and
+\texttt{proofs/lem-stage1-polar-retraction-transport} (5 nodes, 5 \texttt{validated},
+first-pass, zero challenges). All taint clean; all runs tier \emph{routine}.
+
+\noindent\textbf{Correction of record (proof-level, not contract-level).} The
+Maurer--Cartan tree drew two genuine challenges: the arbitrary family $g$ had been
+identified with the parent's distinguished graph family through a uniqueness step whose
+antecedent the registered external does not supply. The repair keeps that identification
+as an explicitly \emph{conditional} bridge and derives the tangent formula for $g$
+directly --- the every-exact-zero-is-unitary node reproduced above. No contract was
+amended.
+
+\noindent\textbf{Role in the chain.} Registry \texttt{defs}:
+\texttt{def-stage1-polar-witness-data} and \texttt{def-epsilon-cstar-algebra} (all four)
+and \texttt{def-approximate-unitary-space} (all but the rectification row). Registry
+\texttt{deps}: each transport imports exactly its fixed-constant parent ---
+Lemma~\ref{lem:stage1-rectified-cstar-control},
+Lemma~\ref{lem:stage1-unitary-graph-control} and
+Lemma~\ref{lem:stage1-maurer-cartan-trivialization} (\S\ref{sec:stage1-polar-charts}), and
+Lemma~\ref{lem:stage1-polar-retraction} (\S\ref{sec:stage1-polar-retraction})
+respectively. The path and inversion-derivative transports follow in
+\S\ref{sec:stage1-polar-transports-ii}; \texttt{op-classical} remains \textbf{open}.

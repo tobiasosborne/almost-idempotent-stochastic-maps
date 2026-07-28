@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-07-28T06:58:21Z",
+ "extracted_at": "2026-07-28T07:06:04Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-07-28T06:58:21Z",
+  "mined_at": "2026-07-28T07:06:04Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -2480,8 +2480,8 @@
    "lit-review": 1,
    "plans": 62,
    "recon": 1,
-   "report_shard_lines": 6500,
-   "report_shards": 51,
+   "report_shard_lines": 6832,
+   "report_shards": 53,
    "tooling-feedback": 2,
    "waves": 107
   },
@@ -2529,7 +2529,7 @@
      "lem-topology-orientable-top-cohomology af-VALIDATED (79th rigorous result; 14 nodes taint clean — Thm 3.26 + field-UCT + Cor 3.39 composed) + lem-topology-quotient-manifold af-VALIDATED (80th; 4 nodes taint clean — the external-attachment verifier challenge resolved by the re-run prover) — 4 of 7 topology elevations banked, oracles registered, fr verify PASS both, T0 78 -> 80. GAP-EA rows LANDED per DESIGN-GAP-EA option (a): lem-extcb-exact-target-correction (validated node-1.2 contract verbatim, proved/af:none) + lem-extcb-exact-target-approximation (v4.1 bridge, stated), UNWIRED-whitelisted, gate green. Next: seed+orchestrate the correction row; finishing runs for finite-triangulation (14/17), local-index-sign (18/22), hopf re-run.": 1,
      "null": 1,
      "obstruction": 1,
-     "progress": 133
+     "progress": 134
     },
     "G": {
      "banked": 2,
@@ -2568,7 +2568,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-07-28T06:48:35.624Z"
+     "last": "2026-07-28T07:00:15.543Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -2589,7 +2589,7 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 238,
+    "FH": 239,
     "G": 21,
     "R": 52,
     "XE": 1
@@ -2608,7 +2608,7 @@
     "2026-07-28": 1
    },
    "decisions": {
-    "EXPLOIT": 360,
+    "EXPLOIT": 361,
     "EXPLORE": 14,
     "PIVOT": 3
    },
@@ -2644,6 +2644,7 @@
     "refs": 1,
     "refuter": 2,
     "registry": 1,
+    "report": 1,
     "review": 2,
     "run": 3,
     "session": 2,
@@ -2654,13 +2655,13 @@
     "wave": 24
    },
    "evidence_tiers": {
-    "T0": 113,
+    "T0": 114,
     "T1": 134,
     "T2": 131
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-07-28T06:48:35.624Z",
-   "max_cycle": 799,
+   "last_ts": "2026-07-28T07:00:15.543Z",
+   "max_cycle": 800,
    "outcomes": {
     "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
     "banked": 63,
@@ -2674,7 +2675,7 @@
     "null": 1,
     "obstruction": 1,
     "orient": 344,
-    "progress": 300,
+    "progress": 301,
     "refuted": 1
    },
    "per_day": {
@@ -2696,9 +2697,9 @@
     "2026-07-25": 95,
     "2026-07-26": 80,
     "2026-07-27": 102,
-    "2026-07-28": 6
+    "2026-07-28": 7
    },
-   "records": 799,
+   "records": 800,
    "worker_jobs": 410,
    "worker_models": {
     "codex": 338,
@@ -2766,9 +2767,9 @@
   "git": {
    "active_days": 19,
    "authors": {
-    "tobiasosborne": 835
+    "tobiasosborne": 836
    },
-   "commits": 835,
+   "commits": 836,
    "first_day": "2026-07-02",
    "last_day": "2026-07-28",
    "per_day": {
@@ -2790,7 +2791,7 @@
     "2026-07-25": 165,
     "2026-07-26": 85,
     "2026-07-27": 74,
-    "2026-07-28": 6
+    "2026-07-28": 7
    },
    "subject_prefixes": {
     "W61": 13,
@@ -2806,7 +2807,7 @@
     "fr log": 107,
     "fr orient": 73,
     "fudw": 9,
-    "report": 9
+    "report": 10
    }
   },
   "path_name": "almost-idempotent-stochastic-maps",
