@@ -10,106 +10,100 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. The governing plan is the RATIFIED W78 package as executed through the
-   endorsed W97 rebuild and the S1-POLAR-v6 serial order — **which is now
-   COMPLETE through the downstream quotient block**. The proof sketch is
-   `docs/plans/CURRENT.md` → **v39** (fresh, reconciled with this
-   session's banks).
+2. The proof sketch is `docs/plans/CURRENT.md` → **v39**. The Stage-1
+   polar substrate is COMPLETE (every designed-and-landed Stage-1
+   elevation target af-validated). The live campaign is the **S1-ENDGAME
+   design cycle** (bead `aism-tpai`, claimed): the chain from the T0
+   substrate to the three G-S1 producers.
 3. **Rigorous (af-validated, T0): 117.** Registry: 298. `op-classical`
    OPEN.
-4. **SESSION-36 HEADLINE (2026-07-29): FOUR elevations banked
-   (120th→123rd, T0 113→117); the designed Stage-1 elevation surface is
-   EXHAUSTED; every remaining front needs a design cycle or a user
-   decision.**
-   - `lem-stage1-quotient-left-inversion` (120th; 10 nodes; one
-     challenge repaired in-ledger with two verified bridging substeps).
-   - `lem-stage1-quotient-inversion-index-data` (121st; 12 nodes; two
-     derivative-branch challenges repaired incl. explicit local slice
-     charts; the audit-mandated square-root phase-lift validated).
-   - `lem-topology-finite-triangulation` (122nd; first-pass ZERO
-     challenges on the SECOND clean re-seed; bead `aism-j5t9` CLOSED).
-   - `lem-stage1-quotient-finite-cw` (123rd; first-pass ZERO
-     challenges; the quotient is a finite polyhedron / finite CW).
-   - The Stage-1 topological substrate for Lefschetz–Hopf (connected
-     finite-CW H-space with left inversion; isolated index-+1 fixed
-     point) is now fully T0.
-5. **PROCESS FINDING (FINDINGS.md 2026-07-29, read before ANY external
-   registration): the scan-OCR locus trap.** `splitlines()` counts
-   form-feed page separators as line breaks; sed/grep -n do not; a
-   wrong-passage quote still PASSES `check-refs` (it checks
-   quote-exists-somewhere, not quote-at-locus). One STUCK run validated
-   5 nodes against corrupted externals (discarded; verification
-   near-miss recorded — a verifier does not audit external content
-   against refs/). Registration rule now: extract in `\n`-only space,
-   verify quote-at-claimed-locus programmatically, eyeball the page
-   image.
-6. **NEXT SESSION — all fronts are decision-gated (beads filed):**
-   1. **`aism-tpai` (P1): G-S1 design cycle** — the three Stage-1 split
-      producers are ABSENT from the registry (the one remaining
-      critical-path design gap; blocks M19-S1..M28). Fresh codex design
-      + hostile audit in a zero-live-run window; landing the three
-      contracts needs USER ratification (W78/W97 precedent).
-   2. **`aism-dm8n` (P1): MAIN P0 definition gate (USER)** — 4
-      datum-only defs (hard stop before M01); then land M01/M02 (+ the
-      other pre-gate rows) and REWIRE M03's deps per
-      `DESIGN-MAIN-STRUCTURE-v5` (do NOT elevate M03 against its
-      current registry deps).
-   3. **`aism-9kmt` (P2): report paper-track sync** for banks 120–123
-      (session-35 worktree-subagent pattern) + carried shard-51
-      `\ref` upgrades + retired-parent wording refresh.
-   4. **`aism-65j4` (P2): commission the trace-row designs** (§9 steps
-      28–29 + corrected `lem-stage1-extra-fixed-class`).
-   5. Decoupled: the 14-row ledger campaign, then k-ledger (D4
-      releases), f0-assembly, root rewire LAST (v39 open surface).
+4. **SESSION-36 RECORD (2026-07-29), two phases:**
+   - **Phase 1 — four elevations banked (120th→123rd, T0 113→117):**
+     `lem-stage1-quotient-left-inversion` (10 nodes, 1 challenge
+     repaired), `lem-stage1-quotient-inversion-index-data` (12 nodes, 2
+     challenges repaired, square-root phase-lift validated),
+     `lem-topology-finite-triangulation` (first-pass 0-challenge on the
+     second clean re-seed; `aism-j5t9` CLOSED),
+     `lem-stage1-quotient-finite-cw` (first-pass 0-challenge). The
+     Lefschetz–Hopf substrate (connected finite-CW H-space with left
+     inversion; isolated index-+1 fixed point) is fully T0.
+   - **Phase 2 — the S1-ENDGAME design cycle (user green-lit), 1.5
+     rounds run:** BRIEF → DESIGN v1 → hostile AUDIT v1 = **REDESIGN**
+     (findings: A1 bialgebra antecedent invalid for a non-associative
+     H-space; B1/C1 untyped same-`breve-sigma`/same-inversion witnesses
+     — the 13e defect family; C1 budget implausible; G-S1 alone does
+     not unblock M19) → BRIEF v2 → **DESIGN v2 LANDED, UNAUDITED**
+     (`docs/plans/2026-07-29-S1-ENDGAME-design/DESIGN-S1-ENDGAME-v2.md`,
+     428 lines: weak-coproduct conditions replace the bialgebra
+     antecedent — cites Hatcher, ground-truth availability UNVERIFIED;
+     two typed synchronization helper rows; a fixed-unitary projection
+     bridge row; 3 new helper rows total, zero new defs, budgets ≤15).
+     The graceful stop landed here — **audit v2 was deliberately NOT
+     dispatched.**
+5. **PROCESS FINDING (FINDINGS.md 2026-07-29):** the scan-OCR locus trap
+   — `splitlines()` counts form feeds as lines; `check-refs` passes any
+   verbatim quote regardless of claimed locus; a verifier does NOT audit
+   external content against refs/. Registration rule: `\n`-only
+   extraction + programmatic quote-at-locus check + page-image eyeball.
+6. **NEXT SESSION STARTS HERE:**
+   1. **Dispatch the fresh hostile AUDIT v2** over
+      `DESIGN-S1-ENDGAME-v2.md` (fresh codex xhigh, verdict to
+      `AUDIT-S1-ENDGAME-v2.md`; reuse the v1 audit prompt shape — see
+      the audit-v1 commit `bf7dc57a` / the eight attack fronts; ADD:
+      verify the Hatcher weak-coproduct claim against LOCAL ground
+      truth — if Hatcher is not in `refs/`, that is an L1 stop the
+      designer must re-route or we acquire the source).
+   2. On LAND / LAND-WITH-CORRECTIONS: assemble the **user ratification
+      package** (7+3 = ten row contracts, zero new defs, one new
+      external `prop_delta_hominc` tex:1194-1196) — NOTHING lands
+      without user sign-off. On REDESIGN: BRIEF v3 with the findings,
+      one more round.
+   3. After ratification: land shards → seed per the verified pattern
+      (HANDOFF §8 of session 36 phase 1, incl. the locus-trap rule) →
+      elevate serially per the design's order → G-S1 gate discharged →
+      then the MAIN campaign still needs `aism-dm8n` (P0 defs, USER) +
+      M01–M18.
+   4. Parallel P2 items: `aism-9kmt` (report sync for banks 120–123),
+      `aism-65j4` (now largely subsumed by the S1-ENDGAME design —
+      close or re-scope it when the design lands).
 7. **Banking sequence (verified ~33×):** af export (md+tex) → per-id
-   oracle appended to `.frontier/portfolio.json` (absolute paths) →
-   `fr verify proofs/<rid>/export.md --oracle af-<rid>` → mechanical
-   shard flip → regenerate (`argument.py --generate`,
-   `gen-report-dag.py`, `gen-report-stats.py --extract`) → check-all →
+   oracle appended to `.frontier/portfolio.json` → `fr verify` →
+   mechanical shard flip → regenerate (argument.py --generate,
+   gen-report-dag.py, gen-report-stats.py --extract) → check-all →
    `fr log FH banked --artifact <export> --tier T0` → commit → push.
 8. **Orchestration laws (BINDING):** af runs strictly sequential; no
-   design/audit codex job while an af run is live; non-`.frontier/` repo
-   writes abort live runs as PROVER-OVERREACH (subagents during a live
-   run → ISOLATED WORKTREES); fr/bd writes FIRST, commit, launch LAST;
-   commits only in zero-live-run windows. Codex = `gpt-5.6-sol`, xhigh
-   cap (prover xhigh ONLY after a STUCK). A hard-cap hit is a factoring
-   stop. Seeding pattern per shard: seed-af-workspaces.py (round-trip)
-   + def-add per def (full shard file) + add-external per T0 dep
-   (registry contract verbatim, literal `proofs/<dep>` path) + BINDING
-   build-granularity note (one node per design-skeleton step) — 3 of 4
-   runs this session landed first-pass or with ≤2 repaired challenges
-   under it.
+   design/audit codex job while an af run is live; fr/bd writes FIRST,
+   commit, launch LAST; commits only in zero-live-run windows. Codex =
+   `gpt-5.6-sol`, xhigh cap. A hard-cap hit is a factoring stop; a
+   verifier finding needing a CONTRACT change returns to design/user.
+   Design-cycle pattern (validated this session): BRIEF → fresh-codex
+   design → SEPARATE fresh-codex hostile audit → repair rounds → user
+   ratification → land → elevate.
 9. Gate: `sh scripts/check-all.sh` → `[check-all] OK` (verified at
-   close). All work committed AND pushed. NOTHING is in flight.
+   close). All work committed AND pushed. **NOTHING is in flight.**
 
 ## Next steps (ranked)
 
-1. Item 6.1/6.2: the two P1 decision beads (G-S1 design; MAIN P0 defs)
-   — both need the user; the G-S1 design JOB itself can be dispatched
-   in a zero-live-run window once the user green-lights the cycle.
-2. Item 6.3: report sync for the four new banks (P2, mechanical
-   pattern, safe to do next session without decisions).
-3. Literature follow-up carried from session 35: Gonzalez–Hartfiel 1991
-   (LAA 145, on the stochastic idempotent matrix space) not in the lit
-   DB; decide whether to queue in RESEARCH_NOTES.md (needs
-   institutional access). Flor 1969 acquired + hash-verified, never
-   promoted (uncited).
-4. Carried housekeeping: polar-retraction 29-node REFACTOR warning
+1. Item 6.1: dispatch hostile audit v2 (the one queued action).
+2. Items 6.2–6.3: the ratification → land → elevate pipeline.
+3. `aism-dm8n` (MAIN P0 defs, USER decision) — independent of the
+   S1-ENDGAME outcome; can be ratified any time.
+4. `aism-9kmt` report sync (P2, mechanical).
+5. Literature follow-up carried: Gonzalez–Hartfiel 1991 (LAA 145) not
+   in the lit DB; Flor 1969 acquired + hash-verified, never promoted.
+6. Carried housekeeping: polar-retraction 29-node REFACTOR warning
    (cosmetic); `def-stage1-polar-witness-data` `\rm` typeset flag;
    report/*.aux policy; repo-root-relative oracle paths (`aism-2kyc`);
    12 dormant signed-trunk draft defs; `aism-ur9` (dormant); two stale
-   pre-session-33 agent worktrees under `.claude/worktrees/` (verify
-   merged/stale before removing).
+   pre-session-33 agent worktrees under `.claude/worktrees/`.
 
 ## What is intentionally NOT here
 
-- Any claim `op-classical` is proved — OPEN. T0 = 117 covers the
-  Route-F row chain and the ENTIRE Stage-1 polar block through
-  quotient-finite-cw; everything beyond (G-S1 producers, MAIN rows,
-  trace rows, ledger campaigns) remains non-rigorous/absent until
-  designed, landed, and validated.
-- Any claim the G-S1/MAIN/trace designs WILL land or validate — each is
-  tested only by its own audit and elevation.
-- The two retired parents re-elevating — retired in place per the
-  endorsed design.
-- Route X / XE decider work (fallback only). Signed trunk PAUSED.
+- Any claim `op-classical` is proved — OPEN. T0 = 117.
+- Any claim DESIGN-S1-ENDGAME-v2 is sound — it is UNAUDITED; audit v1
+  of its predecessor returned REDESIGN, and v2's Hatcher ground-truth
+  claim is unverified (L1 flag for the auditor).
+- Any registry/def change from the design cycle — NOTHING landed; the
+  registry is byte-identical to the post-bank state (T0 117).
+- The two retired parents re-elevating; Route X / XE decider work
+  (fallback only); signed trunk PAUSED.

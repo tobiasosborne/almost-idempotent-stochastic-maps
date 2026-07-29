@@ -1976,3 +1976,27 @@ Stage-1 elevation target is now T0; the remaining fronts are decision-gated: G-S
 cycle (`aism-tpai`, P1), MAIN P0 def gate + M01/M02 + M03 dep-rewire (`aism-dm8n`, P1),
 report sync for banks 120–123 (`aism-9kmt`, P2), trace-row designs (`aism-65j4`, P2).
 Session closed clean: check-all OK, nothing in flight, all pushed.
+
+## 2026-07-29 — session 36 addendum: the S1-ENDGAME design cycle (user green-lit), stopped gracefully at design v2 (UNAUDITED)
+
+After the four banks (T0 117) and the v39 fold-in, the user green-lit the G-S1 design
+cycle (bead `aism-tpai` claimed). One and a half rounds run, all fresh codex xhigh:
+- **BRIEF-S1-ENDGAME.md**: 7 contracts in 3 blocks (trace rows carrying Kitaev
+  prop_H-group; corrected extra-fixed-class on the audited v6 §6 ten-dep list, 9/10 T0;
+  the three G-S1 producers matching M19-S1), binding process laws + L1 discipline.
+- **DESIGN v1** → hostile **AUDIT v1 = REDESIGN** (Blocks A/B/C1): the T0 hopf-structure
+  contract needs a bialgebra antecedent a non-associative H-space cannot supply; B1/C1
+  bind untyped same-breve-sigma / same-inversion definite descriptions (the 13e defect
+  family); C1 budget implausible; plus the honest catch that G-S1 alone does not unblock
+  M19 (MAIN still needs P0+M01–M18). Audit also VERIFIED: all Kitaev loci byte-match
+  (incl. the proposed new external prop_delta_hominc tex:1194-1196), deps all T0,
+  producer shapes match M19-S1 clause-by-clause, zero new defs.
+- **BRIEF v2** (mandatory repairs, steering B1/C1 to the validated row-13 explicit-binder
+  pattern) → **DESIGN-S1-ENDGAME-v2.md landed (428 lines, UNAUDITED)**: weak-coproduct
+  conditions replace the bialgebra antecedent (cites Hatcher — ground-truth availability
+  UNVERIFIED, flagged as the auditor's first job), two typed synchronization helpers, a
+  fixed-unitary projection bridge, 3 new helper rows, zero new defs, budgets ≤15.
+
+Graceful stop per user request: audit v2 deliberately NOT dispatched; nothing landed in
+the registry (byte-identical to the post-bank state); resume point = dispatch audit v2
+(HANDOFF 6.1). check-all OK; all pushed; nothing in flight.
