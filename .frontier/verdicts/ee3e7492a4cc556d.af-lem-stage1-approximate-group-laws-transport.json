@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-approximate-group-laws-transport/export.md",
+  "oracle": "af-lem-stage1-approximate-group-laws-transport",
+  "result": "pass",
+  "claim_hash": "116672aab98aace8ae50e9f3da4c421c622a05f25382ebd40da933c328cfa56c",
+  "oracle_digest": "262319ff74cf31c80834b93a1c1515fdbc220da5ecd638543e3b88a184f3aa73",
+  "inputs_hash": "5ba2a9c744234afda39121ba53746fa59ed539e8e07319fc2a656d38d3a72f8f",
+  "ts": "2026-07-29T08:58:24.196Z"
+}

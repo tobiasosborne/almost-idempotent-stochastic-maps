@@ -4,8 +4,8 @@ kind: lemma
 contract: Parameterized approximate-group transport: there exist C_grp^0, C_pol^0 >= 1 and kappa_pol^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_grp >= C_grp^0, C_pol >= C_pol^0, and 0 < kappa_pol <= kappa_pol^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra and every delta > 0 satisfying C_pol*(epsilon_r + delta) <= kappa_pol and C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), writing (u_delta, h_delta) for the unique inverse of Pi_delta: calU x B^{calH}_delta(J) -> S_delta := Pi_delta(calU x B^{calH}_delta(J)), Pi_delta(U, H) = U bold-dot H, the formulas mu(U, V) = u_delta(U bold-dot V) and sigma(U) = u_delta(U^dagger) define C^1 maps on all of calU x calU and calU, respectively, and for every U, V, Z in calU, mu(J, U) = mu(U, J) = U, sigma(J) = J, ||mu(U, V) - U bold-dot V|| <= C_grp*epsilon_r, ||sigma(U) - U^dagger|| <= C_grp*epsilon_r, ||mu(mu(U, V), Z) - mu(U, mu(V, Z))|| <= C_grp*epsilon_r, ||mu(sigma(U), U) - J|| <= C_grp*epsilon_r, and ||mu(U, sigma(U)) - J|| <= C_grp*epsilon_r.
 defs: def-stage1-polar-witness-data; def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-explicit-group-domain-membership; lem-stage1-explicit-group-closeness; lem-stage1-polar-retraction
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-stage1-approximate-group-laws-transport
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 13e, landed verbatim (LaTeX flattened to registry ASCII; incl. the v6 finite-dimensional domain restriction, audit-v5 sect-6 option 1); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). TeX 845-878; parameterized estimate/guard monotonicity; AUDIT-S1-POLAR-v4.md sect-1.5, sect-3.
 owner: A
@@ -65,3 +65,16 @@ law (two units, two closeness bounds, associativity, two inverse laws) —
 do NOT sub-split routine submultiplicativity/triangle estimates within a
 law. Constants live in the proof body, never the contract; every
 smallness inference cites its guard node explicitly.
+
+**af-VALIDATED 2026-07-29 (W98, elevation queue row 5 — the FIRST 13e
+validation; W93 runs 1-2 had stuck on the u_grp/u_pol synchronization
+gap that the typed spine removes by construction).** Clean re-seed on
+the three-provider spine. First-pass run under the binding
+build-granularity discipline above (tier routine, fresh codex verifier
+per node): root validated, 16/16 live nodes (EXACTLY the design target;
+hard cap 22), taint clean, 6 rounds, three in-run challenges repaired
+(all the epsilon_r=0 strict-inequality endpoint — bounds made
+non-strict; ch-723fdaab and the 1.13/1.14 siblings) and re-verified
+fresh. Export in the workspace; oracle
+`af-lem-stage1-approximate-group-laws-transport` + `fr verify` PASS.
+This status flip is a mechanical reflection of the codex ledger.
