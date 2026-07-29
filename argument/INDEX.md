@@ -239,7 +239,7 @@
 | `lem-stage1-polar-retraction-transport` | lemma | proved | validated | A | Parameterized polar-retraction transport: there exist C_pol^0 >= 1 and kappa_pol… |
 | `lem-stage1-polar-scalar-arithmetic` | lemma | proved | validated | A | Universal Stage-1 polar arithmetic: for every C_rect, C_ch, C_pol, C_grp, C_path… |
 | `lem-stage1-quantitative-inverse-function` | lemma | proved | validated | A | Quantitative inverse-function control: if V:X->Y is a Banach-space isomorphism a… |
-| `lem-stage1-quotient-finite-cw` | lemma | stated | none | A | For every finite-dimensional exact-unit epsilon_r-C*-algebra, if breve-calU = ca… |
+| `lem-stage1-quotient-finite-cw` | lemma | stated | seeded | A | For every finite-dimensional exact-unit epsilon_r-C*-algebra, if breve-calU = ca… |
 | `lem-stage1-quotient-inversion-index-data` | lemma | proved | validated | A | There is a universal e_idx^r > 0 such that, for every finite-dimensional exact-u… |
 | `lem-stage1-quotient-left-inversion` | lemma | proved | validated | A | There is a universal e_H^r > 0 such that, for every finite-dimensional exact-uni… |
 | `lem-stage1-quotient-manifold-package` | lemma | proved | validated | A | There is a universal e_quot^r > 0 such that, for every finite-dimensional exact-… |
