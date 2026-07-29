@@ -4,8 +4,8 @@ kind: lemma
 contract: Every point of a finite polyhedron lies in a maximal simplex of its defining finite simplicial complex; therefore every point of every finite fixed set does.
 defs:
 deps:
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-finite-polyhedron-maximal-simplex-placement
 provenance: DESIGN-S1-POLAR-v6.md sect-5 (downstream row 6), landed verbatim; AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). Algebra-independent finite-poset derivation; consumes none of the analytic rows.
 owner: A
@@ -53,3 +53,10 @@ aism-iw4w).** Second clause disambiguated to the pointwise reading:
 design prose and the consumer `lem-stage1-extra-fixed-class` (required
 input 10) intend; clause 1 is unchanged. Workspace cleanly re-seeded
 against the amended contract for run 2.
+
+**af-VALIDATED 2026-07-29 (run 2, on the ratified pointwise contract).**
+First-pass: root validated, 3/3 live nodes, taint clean, 2 rounds, ZERO
+challenges (tier routine, fresh codex verifier per node). Export in the
+workspace; oracle `af-lem-finite-polyhedron-maximal-simplex-placement`
++ `fr verify` PASS. This status flip is a mechanical reflection of the
+codex ledger.

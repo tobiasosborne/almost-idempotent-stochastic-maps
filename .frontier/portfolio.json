@@ -901,6 +901,18 @@
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-constant-ledger/ledger",
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-constant-ledger.md"
         ]
+      },
+      {
+        "name": "af-lem-finite-polyhedron-maximal-simplex-placement",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-finite-polyhedron-maximal-simplex-placement"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-finite-polyhedron-maximal-simplex-placement/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-finite-polyhedron-maximal-simplex-placement.md"
+        ]
       }
     ]
   },

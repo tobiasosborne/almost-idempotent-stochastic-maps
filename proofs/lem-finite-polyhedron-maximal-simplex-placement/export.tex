@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Every point of a finite polyhedron lies in a maximal simp...}
+\step{1} Every point of a finite polyhedron lies in a maximal simplex of its defining finite simplicial complex; therefore every point of every finite fixed set does. \steptag{validated} \\[6pt]
+\step{1.1} Let K be the defining finite simplicial complex and let x lie in its polyhedron |K|. By the definition of geometric realization, x lies in some simplex sigma of K. The set of simplices of K containing sigma is a nonempty finite partially ordered set under inclusion, so it has a maximal element tau. If tau were properly contained in a simplex of K, that simplex would also contain sigma, contradicting maximality in this set; hence tau is a maximal simplex of K, and x lies in tau. \steptag{validated} \\[4pt]
+\step{1.2} Let F be any finite fixed set contained in that finite polyhedron. Apply the preceding pointwise conclusion separately to each x in F: for every x in F there exists a maximal simplex tau\_x of the defining complex with x in tau\_x. The simplex may depend on x, which is exactly the assertion that every point of every finite fixed set lies in a maximal simplex. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

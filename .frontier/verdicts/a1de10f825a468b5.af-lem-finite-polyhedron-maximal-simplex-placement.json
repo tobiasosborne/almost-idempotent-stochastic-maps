@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-finite-polyhedron-maximal-simplex-placement/export.md",
+  "oracle": "af-lem-finite-polyhedron-maximal-simplex-placement",
+  "result": "pass",
+  "claim_hash": "7b17594f2992d1729a50bc6dec9abb00e3705d83fc6c061d0963d38e63bc32a7",
+  "oracle_digest": "3d7f72d12e5be5f4f062b0ae936dca979300c0ce14d6a248e48a35beffe38a85",
+  "inputs_hash": "8c1a006c381b937c9bb750ac1ff9147101709d2dac38a5e709f45402756e0509",
+  "ts": "2026-07-29T10:47:18.813Z"
+}
