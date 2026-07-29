@@ -47,3 +47,21 @@ the receiving tuple; C_grp^0 = max{G_d,8*G_c,8}. All providers display the
 identical Pi_delta, so ordinary inverse uniqueness synchronizes them —
 coherence-naturality is neither needed nor listed. The old 37-node paused
 tree is NOT a repair base — cleanly RE-SEED at elevation.
+
+**Build-granularity discipline (BINDING on the af tree; extends the
+user-ratified row-1 discipline of 2026-07-28 — run-1 there ABORTED
+[BALLOON] from sub-splitting routine norm estimates).** The target is the
+design's 16-node skeleton (hard cap 22). Tree discipline per design v3
+sect-1.7: (i) ONE early node fixing the provider witnesses (G_d,P_d,k_d),
+(G_c,P_c,k_c), (P_r,k_r) from the three displayed externals and setting
+C_grp^0 = max{G_d,8*G_c,8}, C_pol^0 = max{P_d,P_c,P_r}, kappa_pol^0 =
+min{k_d,k_c,k_r,1/16} — BEFORE quantifying over the receiving tuple W
+(the second BINDING process law: receiving fields transport by
+monotonicity, never treated as universal constants); (ii) ONE node
+showing the receiving guards imply all three fixed provider guards by
+monotonicity; (iii) ONE node synchronizing the providers via ordinary
+inverse uniqueness of the ONE displayed Pi_delta; (iv) ONE node per group
+law (two units, two closeness bounds, associativity, two inverse laws) —
+do NOT sub-split routine submultiplicativity/triangle estimates within a
+law. Constants live in the proof body, never the contract; every
+smallness inference cites its guard node explicitly.
