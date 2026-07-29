@@ -1,8 +1,8 @@
 {
-  "id": "cacfe72ac422fab5",
+  "id": "e209377db4f9b3c7",
   "name": "GT-munkres-edt-thm-10.6",
   "source": "refs/munkres-elementary-differential-topology/munkres-elementary-differential-topology.txt:4356-4358 VERBATIM: \"10.6 Theorem. If M is a non-bounded c™ manifold, M has a cr\ntriangulation. If M is a manifold having a boundary, any om trianguiation\nof the boundary may be extended to a C*™ triangulation of M. (If\"",
   "content_hash": "4e82354bd3bb343dec5ae0903753bc8f6dc6330e67a3fad7005cf60a8e627aa7",
-  "created": "2026-07-26T18:09:19.403392926Z",
-  "notes": "Corrected stale mismatched excerpt; OCR superscripts visually reconciled as C^r per registry shard."
+  "created": "2026-07-29T16:05:29.229361864Z",
+  "notes": ""
 }
