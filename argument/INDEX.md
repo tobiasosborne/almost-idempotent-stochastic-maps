@@ -222,7 +222,7 @@
 | `lem-stage1-approximate-group-laws` | lemma | stated | seeded | A | Quantitative approximate group laws: there exist universal C_grp, C_pol >= 1, ka… |
 | `lem-stage1-approximate-group-laws-transport` | lemma | stated | seeded | A | Parameterized approximate-group transport: there exist C_grp^0, C_pol^0 >= 1 and… |
 | `lem-stage1-exact-unit-rectification` | lemma | proved | validated | A | Dimension-free exact-unit rectification: there are universal C_unit < infinity a… |
-| `lem-stage1-explicit-group-closeness` | lemma | stated | none | A | Explicit group-input polar closeness: there exist universal C_grp, C_pol >= 1, k… |
+| `lem-stage1-explicit-group-closeness` | lemma | stated | seeded | A | Explicit group-input polar closeness: there exist universal C_grp, C_pol >= 1, k… |
 | `lem-stage1-explicit-group-domain-membership` | lemma | proved | validated | A | Explicit group-input polar-domain membership: there exist universal C_grp, C_pol… |
 | `lem-stage1-explicit-smooth-unitary-operations` | lemma | stated | none | A | Explicit smooth action/operations bridge: for every finite-dimensional exact-uni… |
 | `lem-stage1-group-closeness` | lemma | proved | validated | A | Group-input polar closeness: there exist universal C_grp, C_pol >= 1, kappa_pol … |

@@ -5,7 +5,8 @@ contract: Explicit group-input polar closeness: there exist universal C_grp, C_p
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-polar-retraction
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-explicit-group-closeness
 provenance: DESIGN-13E-BINDER-v3.md sect-1.2, landed verbatim (W97 explicit-binder rebuild); AUDIT-13E-BINDER-v3.md (math endorsed; REJECT on process grounds repaired by v3.1/v3.2); AUDIT-13E-BINDER-v3.2.md VERDICT LAND; landing per audit-v3 finding 3.
 owner: A
 ---
@@ -18,3 +19,19 @@ X = u_delta(X) bold-dot h_delta(X) supplied by the same displayed polar
 inverse, controls h_delta(X) - J, and returns to the first factor — it
 never identifies two opaque first components by name. The sound anaphoric
 child `lem-stage1-group-closeness` is evidence, not an external.
+
+**Build-granularity discipline (BINDING on the af tree; extends the
+user-ratified row-1 discipline of 2026-07-28 — run-1 there ABORTED
+[BALLOON] from sub-splitting routine norm estimates).** The target is the
+design's 12-node skeleton (hard cap 16). Precedent: the sound anaphoric
+sibling `lem-stage1-group-closeness` validated in EXACTLY 12 nodes with
+the same external list. Tree discipline: (i) obtain the typed pair
+(u_delta, h_delta) from the displayed polar-retraction external in ONE
+early node, before either group input is treated; (ii) ONE node for the
+contract-guard smallness derivation; (iii) for each displayed input
+(U bold-dot V and U^dagger) use the typed factorization
+X = u_delta(X) bold-dot h_delta(X), control h_delta(X) - J, and return to
+the first factor — one node per design-skeleton step, do NOT sub-split
+routine submultiplicativity/triangle estimates. Constants live in the
+proof body, never the contract; every smallness inference cites the guard
+node explicitly.
