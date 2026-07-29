@@ -1903,3 +1903,45 @@ closed the 13e decision, produced a fully hostile-endorsed rebuild design, recor
 process laws. T0 106 → 101. Codex spend this session: ~30 jobs (2 af runs, 4 design rounds,
 5 audits, 2 adjudications + the sweep). The record ends the day strictly more trustworthy than
 it began, with the recovery path endorsed and priced.
+
+## 2026-07-29 — session 35 (W98 execution): the elevation queue COMPLETED, row 13 + 3 downstream rows banked, report paper-track synced
+
+**ELEVEN elevations banked in one session (T0 102 → 113; rigorous results 108th → 119th):**
+queue rows 2–8 — explicit-group-closeness (109th, 16/16), explicit-smooth-unitary-operations
+(110th, 12/12 zero-challenge, v3.2 contract), inversion-derivative-control RE-VALIDATED (111th,
+10/10, the first retraction remedied), 13e approximate-group-laws-transport FIRST-EVER validation
+(112th, 16/16; the W93 synchronization gap absent by construction), 13c maurer-cartan-transport
+via the repo's FIRST IN-LEDGER REPAIR (113th: fresh verifier confirmed + revoked 1.3.3 + closure
+chain, orchestrator archived 1.3.3 post-revocation, distinct fresh verifiers re-accepted the
+typed bypass bottom-up, zero challenges), 13f polar-path-transport (114th, 11/11), 13g
+inversion-derivative-transport (115th, 25/25) — **the endorsed W97 rebuild queue closed 8/8 and
+ALL SIX 2026-07-28 retractions are remedied.** Then the serial order: ROW 13
+polar-constant-ledger, the Stage-1 KEYSTONE (116th, 11/11 zero-challenge first-pass; consumer
+re-check byte-verified (A_5)/(A_6)/(A_7) against 13e/13f/13g pre-seeding),
+finite-polyhedron-maximal-simplex-placement (117th, 3/3 — run 1 ABORTED STUCK on a genuine
+CONTRACT AMBIGUITY the verifier caught: the collective reading of "every finite fixed set" is
+refuted by two isolated vertices; USER RATIFIED the pointwise disambiguation in-session, bead
+aism-iw4w closed), uniform-inversion-isolation (118th, 7/7), quotient-manifold-package (119th,
+9/9 zero-challenge). Every bank followed the verified sequence (export → oracle → fr verify →
+mechanical flip → regenerate → gate → fr log banked → commit → push).
+
+**Report paper-track sync (user-directed):** two Opus subagents in isolated worktrees (a live af
+run forbade main-tree writes), merged centrally: shards 47–51 restored/corrected (all four
+re-validated rows conjecture→lemma envs with FRESH prose accounts of the new trees; retired
+parents honest, pointing at the live replacement path) + TWO NEW shards (49b explicit bridges;
+51b ledger keystone incl. the eight-clause row-13 contract verbatim and the ratified
+maximal-simplex amendment). PROVENANCE: 12 new source rows, 6 new claim rows, 4 updated, stale
+banner refreshed (T0=112 at the time); UNWIRED: all six 2026-07-29 ids delisted. One trivial
+merge conflict; PDF clean; check-all green.
+
+**Process notes:** the build-granularity discipline (extended from the user-ratified row-1 note)
+held throughout — 7 of 11 runs landed first-pass, none ballooned; the bank gate correctly
+rejected logging the report sync as `banked` (re-logged `progress` T1). Literature answer for
+the user: Flor 1969 = staged refs-staging Item 5 (never promoted); Gonzalez–Hartfiel, LAA 145
+(1991) "On the structure of the stochastic idempotent matrix space" NOT in the lit DB — a real
+gap vs op-classical's target set (acquisition needs institutional access; not yet queued).
+
+**Close-out:** quotient-left-inversion (downstream row 3) fully seeded (3 defs + 5 T0 dep
+externals, discipline note, gate green) with LAUNCH DEFERRED per the user's graceful-stop
+request — nothing in flight. Codex spend this session: ~13 af runs' worth of prover/verifier
+jobs + 2 Opus report subagents. T0 ends at 113 of 299 registry results.
