@@ -4,8 +4,8 @@ kind: lemma
 contract: Explicit group-input polar closeness: there exist universal C_grp, C_pol >= 1, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra and delta > 0 satisfying C_pol*(epsilon_r + delta) <= kappa_pol and C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), writing (u_delta, h_delta) for the unique inverse of Pi_delta: calU x B^{calH}_delta(J) -> S_delta := Pi_delta(calU x B^{calH}_delta(J)), Pi_delta(U, H) = U bold-dot H, the first inverse component u_delta:S_delta -> calU satisfies ||u_delta(U bold-dot V) - U bold-dot V|| <= C_grp*epsilon_r and ||u_delta(U^dagger) - U^dagger|| <= C_grp*epsilon_r for every U, V in calU.
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-polar-retraction
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-stage1-explicit-group-closeness
 provenance: DESIGN-13E-BINDER-v3.md sect-1.2, landed verbatim (W97 explicit-binder rebuild); AUDIT-13E-BINDER-v3.md (math endorsed; REJECT on process grounds repaired by v3.1/v3.2); AUDIT-13E-BINDER-v3.2.md VERDICT LAND; landing per audit-v3 finding 3.
 owner: A
@@ -35,3 +35,14 @@ the first factor — one node per design-skeleton step, do NOT sub-split
 routine submultiplicativity/triangle estimates. Constants live in the
 proof body, never the contract; every smallness inference cites the guard
 node explicitly.
+
+**af-VALIDATED 2026-07-29 (W98, elevation queue row 2).** First-pass run
+under the binding build-granularity discipline above (tier routine, fresh
+codex verifier per node): root validated, 16/16 live nodes (hard cap 16,
+not exceeded), taint clean, 10 rounds, two in-run challenges repaired
+(ch-713c6503: the final numerical chain repaired to hold at epsilon_r=0;
+ch-a429248e: a dependency restructure deriving product defect /
+right-inverse / domain membership without pending siblings). Export in
+the workspace; oracle `af-lem-stage1-explicit-group-closeness` +
+`fr verify` PASS. This status flip is a mechanical reflection of the
+codex ledger.
