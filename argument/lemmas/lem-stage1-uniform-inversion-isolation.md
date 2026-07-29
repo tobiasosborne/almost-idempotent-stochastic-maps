@@ -5,7 +5,8 @@ contract: There are universal e_iso^r > 0, r_iso > 0 such that, for every finite
 defs: def-epsilon-cstar-algebra; def-approximate-unitary-space
 deps: lem-stage1-quantitative-inverse-function; lem-stage1-explicit-smooth-unitary-operations; lem-stage1-smooth-unitary-atlas; lem-stage1-smooth-polar-inverse; lem-stage1-polar-constant-ledger
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-uniform-inversion-isolation
 provenance: DESIGN-S1-POLAR-v6.md sect-5 downstream row 1, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80).
 owner: A
 ---
@@ -23,3 +24,19 @@ smoothness/regularity of the explicit sigma from
 `lem-stage1-explicit-smooth-unitary-operations` (+ atlas and smooth polar
 inverse, its antecedents); the retracted control lemma and the retired
 smooth-operations parent are dropped. Contract and defs BYTE-UNCHANGED.
+
+**Build-granularity discipline (BINDING on the af tree; extends the
+user-ratified W98 row-1 discipline of 2026-07-28).** The target is the
+design's 6-node skeleton (budget 6/3; hard cap 10). Tree discipline:
+(i) ONE early node fixing the row-13 witness tuple W and reading off
+the (A_7) derivative bound at s = +1/-1 with r = r_iso and the (R)
+guards (e_iso^r and r_iso are defined from the tuple's e_S1/r_iso
+fields); (ii) ONE node for the smooth/regularity inputs of the explicit
+sigma from the smooth-operations bridge (+ atlas/smooth-polar-inverse
+antecedents); (iii) ONE node applying the quantitative inverse function
+external to F_s - id (derivative within C_der*(epsilon_r + r_iso) of
+-2*I, hence invertible with a quantitative radius); (iv) ONE node per
+sign concluding the fixed-point isolation in the ambient r_iso-ball —
+do NOT sub-split routine norm estimates. Constants live in the proof
+body, never the contract; every smallness inference cites its guard
+node explicitly.
