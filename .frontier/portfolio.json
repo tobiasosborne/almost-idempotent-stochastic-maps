@@ -889,6 +889,18 @@
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-approximate-group-laws-transport/ledger",
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-approximate-group-laws-transport.md"
         ]
+      },
+      {
+        "name": "af-lem-stage1-polar-constant-ledger",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-stage1-polar-constant-ledger"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-constant-ledger/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-constant-ledger.md"
+        ]
       }
     ]
   },

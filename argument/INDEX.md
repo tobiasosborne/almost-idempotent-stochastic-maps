@@ -232,7 +232,7 @@
 | `lem-stage1-maurer-cartan-transport` | lemma | proved | validated | A | Parameterized Maurer-Cartan transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |
 | `lem-stage1-maurer-cartan-trivialization` | lemma | proved | validated | A | Uniform global tangent/Maurer-Cartan control: there are universal C_ch >= 1, kap… |
 | `lem-stage1-polar-coherence-naturality` | lemma | proved | validated | A | Polar coherence and scalar naturality: for every exact-unit algebra and every tw… |
-| `lem-stage1-polar-constant-ledger` | lemma | stated | seeded | A | Compatible Stage-1 polar witnesses and range: there exists one universal def-sta… |
+| `lem-stage1-polar-constant-ledger` | lemma | proved | validated | A | Compatible Stage-1 polar witnesses and range: there exists one universal def-sta… |
 | `lem-stage1-polar-path-admissibility` | lemma | proved | validated | A | Joint projected-straight-path admissibility: there exist universal C_path, C_pol… |
 | `lem-stage1-polar-path-transport` | lemma | proved | validated | A | Parameterized polar-path transport: there exist C_path^0, C_pol^0 >= 1 and kappa… |
 | `lem-stage1-polar-retraction` | lemma | proved | validated | A | Closed C^1 polar retraction: there are universal C_pol >= 1, kappa_pol in (0, 1/… |

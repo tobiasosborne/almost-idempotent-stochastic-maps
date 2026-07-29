@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-polar-constant-ledger/export.md",
+  "oracle": "af-lem-stage1-polar-constant-ledger",
+  "result": "pass",
+  "claim_hash": "f8b26e7b964ba15b82be095abe2a4bd524b883f3d9e3adbec6e0972b16d2d64e",
+  "oracle_digest": "bbd2e99926ddca1a29576a50bb2efa232e96174b7c1c3a97504c1d6c6e362276",
+  "inputs_hash": "4e20a5b566c0cf4284f58d9beba82c487c3ae887d9c7d6f28efea9529bcd9cb2",
+  "ts": "2026-07-29T10:18:21.827Z"
+}
