@@ -2,8 +2,8 @@
   "claim": "proofs/lem-stage1-maurer-cartan-transport/export.md",
   "oracle": "af-lem-stage1-maurer-cartan-transport",
   "result": "pass",
-  "claim_hash": "f367287c4a251e4106465d3f1c445a184cf7fb12df463c4a8123fccdfa959110",
+  "claim_hash": "71b2a5f0144811fa11f9421a9f1610af7a027a6b06fa5b1be5eda81fea1a24dd",
   "oracle_digest": "a4a12b9e5feb2bc00832ba858cec371ca85b9ee92df3ba0d5e4e8b5550ca1669",
-  "inputs_hash": "4873a000e578ddbe8d7dad155860dfb9e7519e3c195a3f1b0af75dac325b64f9",
-  "ts": "2026-07-27T18:23:05.644Z"
+  "inputs_hash": "98510b22bb3d6afe5fc582727de8b4448fcd42d248437d34fd60d0371d621e3f",
+  "ts": "2026-07-29T09:11:34.112Z"
 }
