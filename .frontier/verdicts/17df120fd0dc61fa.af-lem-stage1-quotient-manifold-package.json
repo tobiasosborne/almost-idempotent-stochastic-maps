@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-quotient-manifold-package/export.md",
+  "oracle": "af-lem-stage1-quotient-manifold-package",
+  "result": "pass",
+  "claim_hash": "7d9dceb5f529d0d49917963f8023f5078f52b22f7e88dd07f700630ffe1ef88c",
+  "oracle_digest": "113d54a74b058f8c84647f2a1e22da70566f6559931875a4e124a49caceabcb6",
+  "inputs_hash": "fe5f5a230b7841e0838fa6fd012f4c4322ab366adb01f520220fc33f5d4c4b8a",
+  "ts": "2026-07-29T11:30:28.502Z"
+}

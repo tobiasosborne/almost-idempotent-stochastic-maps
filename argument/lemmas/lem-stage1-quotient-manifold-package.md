@@ -4,8 +4,8 @@ kind: lemma
 contract: There is a universal e_quot^r > 0 such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0 <= epsilon_r <= e_quot^r and 1 < N = dim_C calX < infinity, breve-calU = calU_e/U(1) is a connected compact orientable smooth manifold without boundary of real dimension N - 1.
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-maurer-cartan-trivialization; lem-stage1-smooth-unitary-atlas; lem-stage1-polar-constant-ledger; lem-topology-quotient-manifold
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-stage1-quotient-manifold-package
 provenance: DESIGN-S1-POLAR-v6.md sect-5 downstream row 2, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80).
 owner: A
@@ -47,3 +47,13 @@ compactness/closedness, and orientation via the trivialization — one
 node per design-skeleton step, do NOT sub-split routine
 point-set/linear-algebra steps. Constants live in the proof body, never
 the contract.
+
+**af-VALIDATED 2026-07-29 (downstream row 2, post-row-13 serial
+order).** First-pass run under the binding build-granularity discipline
+above (tier routine, fresh codex verifier per node): root validated,
+9/9 live nodes (design budget 8; hard cap 12), taint clean, 2 rounds,
+ZERO challenges. The LOCAL binder-free scalar-action proof carried the
+U(1)-action step as designed (no smooth-bridge import). Export in the
+workspace; oracle `af-lem-stage1-quotient-manifold-package` +
+`fr verify` PASS. This status flip is a mechanical reflection of the
+codex ledger.

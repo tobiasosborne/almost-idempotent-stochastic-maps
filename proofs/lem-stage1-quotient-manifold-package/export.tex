@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{There is a universal e\_quot\textasciicircum{}r > 0 such that, for every fi...}
+\step{1} There is a universal e\_quot\textasciicircum{}r > 0 such that, for every finite-dimensional exact-unit epsilon\_r-C*-algebra with 0 <= epsilon\_r <= e\_quot\textasciicircum{}r and 1 < N = dim\_C calX < infinity, breve-calU = calU\_e/U(1) is a connected compact orientable smooth manifold without boundary of real dimension N - 1. \steptag{validated} \\[6pt]
+\step{1.1} Fix the universal witness tuple W from lem-stage1-polar-constant-ledger and set e\_quot\textasciicircum{}r = min\{epsilon\_*\textasciicircum{}r,1/4,kappa\_ch/(4*C\_ch)\} > 0. For every exact-unit epsilon\_r-C*-algebra with epsilon\_r <= e\_quot\textasciicircum{}r, take delta = kappa\_ch/(4*C\_ch). Then C\_ch*(epsilon\_r+delta) <= kappa\_ch/2 < kappa\_ch, so (A\_2) of lem-stage1-polar-constant-ledger supplies covering C\textasciicircum{}1 graph maps with D\_\{A\textasciicircum{}perp\}f invertible, lem-stage1-smooth-unitary-atlas upgrades these unchanged charts to a smooth embedded, boundaryless manifold calU, and lem-stage1-maurer-cartan-trivialization supplies its global bundle map omega. \steptag{validated} \\[4pt]
+\step{1.2} For the bound fixed above, scalar multiplication a(c,U)=cU defines a smooth action U(1) x calU\_e -> calU\_e: conjugate-linearity of dagger and bilinearity give (cU)\textasciicircum{}dagger bold-dot (cU)=bar(c)c(U\textasciicircum{}dagger bold-dot U)=J; if U bold-dot R=J then (cU) bold-dot (bar(c)R)=J; the path t mapsto exp(it theta)J joins J to cJ for c=exp(i theta), and the homeomorphism U mapsto cU therefore preserves the connected component calU\_e; finally ambient scalar multiplication is smooth and restricts/corestricts smoothly through the embedded atlas. \steptag{validated} \\[4pt]
+\step{1.3} The smooth scalar action on calU\_e is free and proper. Freeness follows because cU=U and a right inverse U bold-dot R=J imply cJ=(cU) bold-dot R=U bold-dot R=J, hence c=1 since ||J||=1. Properness follows from the standard compact-group argument: U(1) is compact, and for compact K in calU\_e x calU\_e the inverse image under (c,U) mapsto (cU,U) is a closed subset of U(1) x pr\_2(K), hence compact. \steptag{validated} \\[4pt]
+\step{1.4} By lem-topology-quotient-manifold, the smooth free proper U(1)-action on the smooth boundaryless manifold calU\_e gives breve-calU=calU\_e/U(1) its unique smooth manifold structure for which the quotient map is a smooth submersion; its local quotient charts are Euclidean open sets, so the quotient has no boundary. \steptag{validated} \\[4pt]
+\step{1.5} The real dimension of breve-calU is N-1. Indeed lem-stage1-maurer-cartan-trivialization identifies every T\_U calU with icalH. The involution decomposition calX=calH direct-sum icalH over R and multiplication by i identify calH and icalH as real forms of the N-dimensional complex space calX, so dim\_R(icalH)=N and dim\_R(calU\_e)=N. Since dim\_R U(1)=1, the dimension formula in lem-topology-quotient-manifold gives dim\_R breve-calU=N-1. \steptag{validated} \\[4pt]
+\step{1.6} The quotient breve-calU is connected: calU\_e is connected by its defining choice as the connected component of J, and the surjective quotient map calU\_e -> breve-calU is continuous, so its image is connected. \steptag{validated} \\[4pt]
+\step{1.7} The spaces calU\_e and breve-calU are compact. For epsilon\_r <= e\_quot\textasciicircum{}r <= 1/4, any U with U\textasciicircum{}dagger bold-dot U=J obeys (1-epsilon\_r)||U||\textasciicircum{}2 <= 1. Moreover L\_U is injective: if U bold-dot X=0, approximate associativity gives ||X|| <= epsilon\_r||U||\textasciicircum{}2||X||, whose coefficient is at most epsilon\_r/(1-epsilon\_r)<1; finite dimensionality makes L\_U surjective, so such U has a right inverse. Hence calU is exactly the closed zero locus of U mapsto U\textasciicircum{}dagger bold-dot U-J inside a bounded set, and is compact; its connected component calU\_e is closed and compact. The continuous quotient of calU\_e is compact. \steptag{validated} \\[4pt]
+\step{1.8} The quotient breve-calU is orientable. The U(1)-equivariant bundle trivialization of lem-stage1-maurer-cartan-trivialization satisfies omega\_\{cU\}(cZ)=omega\_U(Z) and sends the vertical orbit vector iU to iJ. Thus it descends through the quotient submersion to a continuous global vector-bundle isomorphism T breve-calU -> breve-calU x (icalH/R iJ), via [Z] mapsto [omega\_U(Z)]; well-definedness uses the stated equivariance, and its kernel is exactly the vertical line because omega is a fibre isomorphism. Orient the fixed line R iJ by iJ and the fixed quotient icalH/R iJ once and for all; the descended trivialization gives a global orientation of breve-calU. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
