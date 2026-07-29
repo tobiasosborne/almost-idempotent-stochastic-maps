@@ -110,7 +110,7 @@
 | `lem-factorization` | lemma | proved | validated | A | Factorization bound: let P be an exact signed idempotent (square real matrix wit… |
 | `lem-fan-payment` | lemma | proved | validated | A | Zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite family with ve… |
 | `lem-fan-payment-restricted` | lemma | proved | validated | A | D-restricted zero-sum fan payment: let (w_1, p_1), ..., (w_m, p_m) be a finite f… |
-| `lem-finite-polyhedron-maximal-simplex-placement` | lemma | stated | none | A | Every point of a finite polyhedron lies in a maximal simplex of its defining fin… |
+| `lem-finite-polyhedron-maximal-simplex-placement` | lemma | stated | seeded | A | Every point of a finite polyhedron lies in a maximal simplex of its defining fin… |
 | `lem-genuine-disintegration` | lemma | proved | validated | A | Genuine-mass disintegration: for an exact signed idempotent P with 0 < delta(P) … |
 | `lem-gmax-web-concentration` | lemma | proved | none | A | G-max web concentration: for an exact signed idempotent P with 0 < delta(P) <= 1… |
 | `lem-halo-collapse` | lemma | proved | validated | A | Halo-robust height collapse: for an exact signed idempotent P with 0 < delta(P) … |
