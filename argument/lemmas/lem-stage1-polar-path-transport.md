@@ -4,8 +4,8 @@ kind: lemma
 contract: Parameterized polar-path transport: there exist C_path^0, C_pol^0 >= 1 and kappa_pol^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_path >= C_path^0, C_pol >= C_pol^0, and 0 < kappa_pol <= kappa_pol^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra, every delta > 0 with C_pol*(epsilon_r + delta) <= kappa_pol, every U_0, U_1 in calU, and every q in [0, 1] satisfying ||U_1 - U_0|| <= q, C_path*q <= 1/4, and C_path*(q + epsilon_r*q + q^2) < delta - C_pol*(epsilon_r*delta + delta^2), every L_{Z_t} is invertible and every Z_t = (1-t)*U_0 + t*U_1 lies in calUbar_{C_path*(q + epsilon_r*q + q^2)} for t in [0, 1], and, writing u_delta for the unique first component of the inverse of Pi_delta: calU x B^{calH}_delta(J) -> S_delta := Pi_delta(calU x B^{calH}_delta(J)), Pi_delta(U, H) = U bold-dot H, the map H(t, U_0, U_1) = u_delta(Z_t) is jointly continuous in (t, U_0, U_1), joins U_0 to U_1, and satisfies H(t, cU_0, cU_1) = c*H(t, U_0, U_1) for every c in U(1).
 defs: def-stage1-polar-witness-data; def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-polar-path-admissibility; lem-stage1-polar-retraction-transport
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-stage1-polar-path-transport
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 13f, landed verbatim (LaTeX flattened to registry ASCII; incl. the v6 finite-dimensional domain restriction, audit-v5 sect-6 option 1); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). TeX 895-912; parameterized path/loss/guard monotonicity; AUDIT-S1-POLAR-v4.md sect-1.6, sect-3.
 owner: A
@@ -51,3 +51,16 @@ affine path), endpoints (u_delta(U)=U), and scalar equivariance
 NOT sub-split routine estimates; no coherence external. Constants live
 in the proof body, never the contract; every smallness inference cites
 its guard node explicitly.
+
+**af-RE-VALIDATED 2026-07-29 (W98, elevation queue row 7).** Clean
+re-seed on the widened typed spine (13d supplies the displayed inverse;
+the parent supplies only binder-free conclusions — the defective
+sameness-of-notation attachment is absent by construction). First-pass
+run under the binding build-granularity discipline above (tier routine,
+fresh codex verifier per node): root validated, 11/11 live nodes (design
+target 10; hard cap 14), taint clean, 10 rounds, two in-run challenges
+repaired (both strict-vs-non-strict guard transfers at permitted
+equality cases; ch-fdf880fb and the root-level sibling, resolved by the
+non-strict chains + node 1.10) and re-verified fresh. Export in the
+workspace; oracle `af-lem-stage1-polar-path-transport` + `fr verify`
+PASS. This status flip is a mechanical reflection of the codex ledger.
