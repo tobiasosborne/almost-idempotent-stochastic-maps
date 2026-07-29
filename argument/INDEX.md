@@ -224,7 +224,7 @@
 | `lem-stage1-exact-unit-rectification` | lemma | proved | validated | A | Dimension-free exact-unit rectification: there are universal C_unit < infinity a… |
 | `lem-stage1-explicit-group-closeness` | lemma | proved | validated | A | Explicit group-input polar closeness: there exist universal C_grp, C_pol >= 1, k… |
 | `lem-stage1-explicit-group-domain-membership` | lemma | proved | validated | A | Explicit group-input polar-domain membership: there exist universal C_grp, C_pol… |
-| `lem-stage1-explicit-smooth-unitary-operations` | lemma | stated | none | A | Explicit smooth action/operations bridge: for every finite-dimensional exact-uni… |
+| `lem-stage1-explicit-smooth-unitary-operations` | lemma | stated | seeded | A | Explicit smooth action/operations bridge: for every finite-dimensional exact-uni… |
 | `lem-stage1-group-closeness` | lemma | proved | validated | A | Group-input polar closeness: there exist universal C_grp, C_pol >= 1, kappa_pol … |
 | `lem-stage1-group-domain-membership` | lemma | proved | validated | A | Group-input polar-domain membership: there exist universal C_grp, C_pol >= 1, ka… |
 | `lem-stage1-inversion-derivative-control` | lemma | stated | seeded | A | Typed inversion derivative with chart retention: there exist universal C_der, C_… |

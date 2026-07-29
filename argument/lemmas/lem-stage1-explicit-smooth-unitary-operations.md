@@ -5,7 +5,8 @@ contract: Explicit smooth action/operations bridge: for every finite-dimensional
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-explicit-group-domain-membership; lem-stage1-unitary-graph-control; lem-stage1-polar-retraction; lem-stage1-smooth-unitary-atlas; lem-stage1-smooth-polar-inverse
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-explicit-smooth-unitary-operations
 provenance: DESIGN-13E-BINDER-v3.2.md (binder-closed contract, token-diff-verified transcription of the AUDIT-13E-BINDER-v3.1.md finding-1 prescribed repair), amending DESIGN-13E-BINDER-v3.1.md sect-1 / DESIGN-13E-BINDER-v3.md sect-1.3; AUDIT-13E-BINDER-v3.2.md VERDICT LAND; landing per audit-v3 finding 3.
 owner: A
 ---
@@ -22,3 +23,21 @@ with both typed inverse identities, the C^1 maps alpha_C1/mu_C1/sigma_C1
 displayed before the smooth alpha/mu/sigma are quantified). Covariance
 via bilinearity + ordinary injectivity of the one displayed Pi_delta; no
 coherence external and no retired parent is used.
+
+**Build-granularity discipline (BINDING on the af tree; extends the
+user-ratified row-1 discipline of 2026-07-28 — run-1 there ABORTED
+[BALLOON] from sub-splitting routine norm estimates).** The target is the
+design's 12-node skeleton (hard cap 18). Tree discipline: (i) fix the
+typed providers EARLY, one node — the graph family from the displayed
+unitary-graph-control external, the displayed polar inverse from the
+polar-retraction external, its atlas/smooth upgrades from the atlas and
+smooth-polar-inverse externals, input membership from the
+group-domain-membership external — before any operation map is treated;
+(ii) per design v3 sect-1.3: the scalar action is the restriction and
+corestriction of ambient scalar multiplication (ONE node), smoothness of
+mu and sigma by composition of the displayed smooth maps (ONE node each),
+covariance via bilinearity + ordinary injectivity of the ONE displayed
+Pi_delta (ONE node per formula) — one node per design-skeleton step, do
+NOT sub-split routine composition/restriction arguments. Constants live
+in the proof body, never the contract; every smallness inference cites
+its guard node explicitly.
