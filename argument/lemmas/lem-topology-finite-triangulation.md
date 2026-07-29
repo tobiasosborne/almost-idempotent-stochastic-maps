@@ -39,3 +39,29 @@ image was visually confirmed 2026-07-26. Same pattern as the Lee
 **Consumers.** Stage-1 quotient-finite-CW row / the Lefschetz–Hopf
 application (needs: the compact smooth Stage-1 manifold is a finite
 polyhedron), per `DESIGN-FUDW-DECOMP-v4.1.md` §2.3/§3.3.
+
+**Re-seed 2026-07-29 (bead aism-j5t9 executed).** The 2026-07-26 Munkres
+re-run BALLOONED (39 nodes, 37 live > cap 26) because the prover
+re-derived the "C^r triangulation => homeomorphic to a finite simplicial
+complex" unpacking from scratch. Per the bead's fix: Munkres's
+DEFINITIONS are now provisioned as byte-matched externals
+`GT-munkres-edt-def-8.1` (class C^r relative to K; non-degenerate;
+txt:3332-3336, printed p.79) and `GT-munkres-edt-def-8.3` (immersion;
+imbedding; "if it is also a homeomorphism onto, it is called a C^r
+triangulation of M"; txt:3384-3392, printed pp.80-81) — both visually
+reconciled against the page images (same scan-OCR pattern as Thm 10.6).
+The 16 ballooned pending nodes (the 1.6-1.10 subtree) were archived at
+re-seed (ledger preserved); the 21 validated nodes survive. Cap stays
+26 (R12: provision, don't bump).
+
+**Build-granularity discipline (BINDING on the re-run tree).** With the
+def externals provisioned the remaining route is ~5 steps: (i) ONE node
+for the hypothesis bridge (smooth = C^infinity => C^r; without boundary
+= non-bounded) and the Thm 10.6 application giving a C^r triangulation
+f: K -> M; (ii) ONE node reading off from GT-munkres-edt-def-8.1/8.3
+that a C^r triangulation is in particular a homeomorphism of |K| onto
+M; (iii) ONE node for compactness of |K| (homeomorphic transfer) and
+the finite-subcover step (the validated compactness nodes may be
+cited); (iv) ONE node for compact realization => finitely many
+vertices => finite complex; (v) ONE assembly node. Do NOT sub-split
+routine steps; do NOT re-derive what the def externals state.
