@@ -4,18 +4,24 @@ kind: lemma
 contract: There is a universal e_H^r > 0 such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0 <= epsilon_r <= e_H^r, the scalar-equivariant mu, sigma and the jointly continuous projected straight paths descend to breve-calU; the descended multiplication makes it a connected H-space, and the descended smooth map breve-sigma is a left inversion.
 defs: def-approximate-unitary-space; def-h-space-left-inversion; def-epsilon-cstar-algebra
 deps: lem-stage1-explicit-smooth-unitary-operations; lem-stage1-smooth-unitary-atlas; lem-stage1-smooth-polar-inverse; lem-stage1-polar-constant-ledger; lem-stage1-quotient-manifold-package
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-stage1-quotient-left-inversion
 provenance: DESIGN-S1-POLAR-v6.md sect-5 downstream row 4, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80).
 owner: A
 ---
 
-**Status.** `stated` candidate transcribed VERBATIM from the audited
-`DESIGN-S1-POLAR-v6.md` §5 (final verdict LAND). Not proved in-repo;
-af elevation per the design's projected budget 8/3. Discharges the
-"continuous H-space and left inversion; smooth breve-sigma" obligation
-(design §6) from rows 5-7 and 11.
+**Status.** af-VALIDATED in-repo (2026-07-29): 10-node tree, root
+`validated`, taint clean 10/10 (`proofs/lem-stage1-quotient-left-inversion/
+export.md`; oracle `af-lem-stage1-quotient-left-inversion` pass). Run:
+tier routine, 6/7 leaves first-pass; node 1.6 (smoothness of the
+descended inversion) drew one major challenge (quotient-submersion/
+local-section properties outside the allowed externals) and was repaired
+in-ledger with two bridging substeps, both freshly verified. Contract
+transcribed VERBATIM from the audited `DESIGN-S1-POLAR-v6.md` §5 (final
+verdict LAND; projected budget 8/3, actual 10 nodes ≤ cap 12).
+Discharges the "continuous H-space and left inversion; smooth
+breve-sigma" obligation (design §6) from rows 5-7 and 11.
 
 **W97 amendment (2026-07-28, deps-only).** Deps replaced per the endorsed
 rebuild design (`DESIGN-13E-BINDER-v3.md` §1.11; audit chain v3/v3.2,
