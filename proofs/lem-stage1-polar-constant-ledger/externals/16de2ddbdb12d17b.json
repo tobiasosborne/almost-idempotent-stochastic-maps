@@ -1,0 +1,8 @@
+{
+  "id": "16de2ddbdb12d17b",
+  "name": "lem-stage1-approximate-group-laws-transport",
+  "source": "imports validated registry lemma proofs/lem-stage1-approximate-group-laws-transport — Parameterized approximate-group transport: there exist C_grp^0, C_pol^0 \u003e= 1 and kappa_pol^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_grp \u003e= C_grp^0, C_pol \u003e= C_pol^0, and 0 \u003c kappa_pol \u003c= kappa_pol^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra and every delta \u003e 0 satisfying C_pol*(epsilon_r + delta) \u003c= kappa_pol and C_grp*epsilon_r \u003c delta - C_pol*(epsilon_r*delta + delta^2), writing (u_delta, h_delta) for the unique inverse of Pi_delta: calU x B^{calH}_delta(J) -\u003e S_delta := Pi_delta(calU x B^{calH}_delta(J)), Pi_delta(U, H) = U bold-dot H, the formulas mu(U, V) = u_delta(U bold-dot V) and sigma(U) = u_delta(U^dagger) define C^1 maps on all of calU x calU and calU, respectively, and for every U, V, Z in calU, mu(J, U) = mu(U, J) = U, sigma(J) = J, ||mu(U, V) - U bold-dot V|| \u003c= C_grp*epsilon_r, ||sigma(U) - U^dagger|| \u003c= C_grp*epsilon_r, ||mu(mu(U, V), Z) - mu(U, mu(V, Z))|| \u003c= C_grp*epsilon_r, ||mu(sigma(U), U) - J|| \u003c= C_grp*epsilon_r, and ||mu(U, sigma(U)) - J|| \u003c= C_grp*epsilon_r.",
+  "content_hash": "06eb1528210f4f738cd1c5ef2b81ddfef1ba34d74694f7bff9c8359598a90706",
+  "created": "2026-07-29T10:09:50.321506723Z",
+  "notes": ""
+}

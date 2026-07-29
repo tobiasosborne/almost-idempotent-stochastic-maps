@@ -1,0 +1,8 @@
+{
+  "id": "1a457c81a634ddc6",
+  "name": "lem-stage1-polar-scalar-arithmetic",
+  "source": "imports validated registry lemma proofs/lem-stage1-polar-scalar-arithmetic — Universal Stage-1 polar arithmetic: for every C_rect, C_ch, C_pol, C_grp, C_path, C_der \u003e= 1, e_rect in (0, 1/C_rect], and kappa_ch, kappa_pol, kappa_der in (0, 1/2], setting delta_* = min{1/4, kappa_ch/(4*C_ch), kappa_pol/(4*C_pol)}, epsilon_*^r = min{1/4, kappa_ch/(4*C_ch), kappa_pol/(4*C_pol), kappa_der/(8*C_der), 1/C_grp, delta_*/(12*C_path*C_grp)}, e_S1 = min{e_rect, epsilon_*^r/C_rect}, r_iso = min{delta_*/4, kappa_der/(8*C_der)}, epsilon_r = C_rect*epsilon_X, q = C_grp*epsilon_r, r_- = delta_* - C_pol*(epsilon_r*delta_* + delta_*^2), and eta = C_path*(q + epsilon_r*q + q^2), every 0 \u003c= epsilon_X \u003c= e_S1 satisfies C_ch*(epsilon_r + delta_*) \u003c= kappa_ch, C_pol*(epsilon_r + delta_*) \u003c= kappa_pol, q \u003c r_-, C_path*q \u003c= 1/4, eta \u003c r_-, C_der*(epsilon_r + r_iso) \u003c= kappa_der, and (1 + epsilon_r)*(1 + C_ch*(epsilon_r + delta_*))*r_iso + q \u003c 2*delta_*; moreover r_- \u003e= 3*delta_*/4, eta \u003c= delta_*/4, and C_der*(r_iso + epsilon_r) \u003c= kappa_der/4 \u003c 1.",
+  "content_hash": "473ed2c17d64df2d7f111204d8e2b90aaee73419381a28783ce36007f7c00987",
+  "created": "2026-07-29T10:09:50.392413043Z",
+  "notes": ""
+}

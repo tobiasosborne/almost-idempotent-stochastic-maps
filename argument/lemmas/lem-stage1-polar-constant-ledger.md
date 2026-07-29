@@ -5,7 +5,8 @@ contract: Compatible Stage-1 polar witnesses and range: there exists one univers
 defs: def-stage1-polar-witness-data; def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-rectified-cstar-transport; lem-stage1-unitary-graph-transport; lem-stage1-maurer-cartan-transport; lem-stage1-polar-retraction-transport; lem-stage1-approximate-group-laws-transport; lem-stage1-polar-path-transport; lem-stage1-inversion-derivative-transport; lem-stage1-polar-scalar-arithmetic
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-polar-constant-ledger
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 13, landed verbatim (LaTeX flattened to registry ASCII; incl. the v6 finite-dimensional insertions in (A_5)-(A_7), audit-v5 sect-6 option 1); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). TeX 458 plus finite maxima/minima of the seven helper base witnesses; object-level monotonicity discharged in the helper rows; AUDIT-S1-POLAR-v4.md sect-1.3, 1.5-1.7, 2.2, 3, 6.
 owner: A
 ---
@@ -29,3 +30,18 @@ packages, take finite maxima of their coefficients and finite minima of
 their margins, choose the one receiving tuple W, apply each parameterized
 helper and the universal scalar-arithmetic result, then assemble the eight
 clauses.
+
+**Build-granularity discipline (BINDING on the af tree; extends the
+user-ratified W98 row-1 discipline of 2026-07-28 — that run-1 ABORTED
+[BALLOON] from sub-splitting routine norm estimates).** The target is
+the design's 11-node skeleton (hard cap 12; the rejected unfactored
+projection was 18/4): root; ONE tuple-selection/range node (finite
+maxima of the seven helper base coefficients, finite minima of their
+margins, the one receiving tuple W, and the (R) scalar definitions);
+ONE node per helper application (seven: 13a-13g at W, each a
+monotonicity instantiation of the displayed parameterized external);
+ONE scalar-arithmetic application node; ONE final conjunction-assembly
+node. Do NOT sub-split routine max/min monotonicity steps or the (R)
+inequality chain (that chain is exactly the scalar-arithmetic
+external's conclusion at the chosen tuple). Constants live in the proof
+body, never the contract.

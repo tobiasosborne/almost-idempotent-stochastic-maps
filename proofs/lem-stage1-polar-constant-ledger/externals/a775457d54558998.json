@@ -1,0 +1,8 @@
+{
+  "id": "a775457d54558998",
+  "name": "lem-stage1-maurer-cartan-transport",
+  "source": "imports validated registry lemma proofs/lem-stage1-maurer-cartan-transport — Parameterized Maurer-Cartan transport: there exist C_ch^0 \u003e= 1 and kappa_ch^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_ch \u003e= C_ch^0 and 0 \u003c kappa_ch \u003c= kappa_ch^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra, every delta \u003e 0 with C_ch*(epsilon_r + delta) \u003c= kappa_ch, and every family g = (g_U)_{U in calU} of C^1 maps g_U: B^{icalH}_{2delta}(0) -\u003e B^{calH}_{2delta}(0) such that, for every U in calU and A^par in B^{icalH}_{2delta}(0), g_U(A^par) is the unique element of B^{calH}_{2delta}(0) satisfying f_U(A^par + g_U(A^par)) = 0, where f_U(A) = (1/2)*(((J + A^dagger) bold-dot U^dagger) bold-dot (U bold-dot (J + A)) - J), every tangent space T_U calU is the image of L_U(I + Dg_U(0)): icalH -\u003e calX, and omega_U(Z) = (L_U^{-1} Z)^par : T_U calU -\u003e icalH is a global C^1 bundle trivialization with distortion at most 1 + C_ch*epsilon_r, satisfying omega_{cU}(cZ) = omega_U(Z) and omega_U(iU) = iJ for every U in calU, Z in T_U calU, and c in U(1).",
+  "content_hash": "9e265a090e1a3b4fc0daf566668f04dcab1c6497529013e94ace29023ff96363",
+  "created": "2026-07-29T10:09:50.275216393Z",
+  "notes": ""
+}
