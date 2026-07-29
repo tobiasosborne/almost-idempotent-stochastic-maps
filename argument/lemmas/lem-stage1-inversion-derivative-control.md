@@ -49,3 +49,21 @@ the chart-retention/differentiated-factorization calculation for the typed
 inverse; the old node-1.3 substitution is absent. The defective old tree is
 NOT a repair base — the workspace is to be cleanly RE-SEEDED at elevation
 (superseding the earlier "re-elevation base" phrasing above).
+
+**Build-granularity discipline (BINDING on the af tree; extends the
+user-ratified row-1 discipline of 2026-07-28 — run-1 there ABORTED
+[BALLOON] from sub-splitting routine norm estimates).** The target is the
+design's 10-node skeleton (hard cap 14). Precedent: the retracted
+2026-07-27 validation built the SAME statement in exactly 10 nodes; only
+the node-1.3 provider substitution was defective. Tree discipline per
+design v3 sect-1.6: (i) ONE early node fixing the provider witnesses
+(C_g,k_g), (P_r,k_r), (G_c,P_c,k_c) from the three displayed externals
+and setting C_ch/kappa_ch/C_pol/kappa_pol/C_grp by the displayed max/min
+formulas — BEFORE any calculation; (ii) ONE node for the contract-guard
+smallness derivations; (iii) the chart-retention argument and the
+differentiated-factorization calculation for the typed inverse at one
+node per design-skeleton step — do NOT sub-split routine
+Neumann/smallness cutoffs or triangle estimates; C_der/kappa_der are
+taken as the displayed universal max/min over the finitely many
+coefficients. Constants live in the proof body, never the contract;
+every smallness inference cites the guard node explicitly.

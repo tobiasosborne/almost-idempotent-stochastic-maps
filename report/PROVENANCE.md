@@ -148,7 +148,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-STAGE1-APPROXIMATE-GROUP-LAWS` | `proofs/lem-stage1-approximate-group-laws/export.md` | `b88bd69a0574ad13` | `af` proof export for `lem-stage1-approximate-group-laws` |
 | `ARG-LEM-STAGE1-POLAR-PATH-ADMISSIBILITY` | `argument/lemmas/lem-stage1-polar-path-admissibility.md` | `076601753d8ec666` | Registry shard for `lem-stage1-polar-path-admissibility` |
 | `AF-LEM-STAGE1-POLAR-PATH-ADMISSIBILITY` | `proofs/lem-stage1-polar-path-admissibility/export.md` | `14ae329ca484cc82` | `af` proof export for `lem-stage1-polar-path-admissibility` |
-| `ARG-LEM-STAGE1-INVERSION-DERIVATIVE-CONTROL` | `argument/lemmas/lem-stage1-inversion-derivative-control.md` | `e6a241a2bd81648e` | Registry shard for `lem-stage1-inversion-derivative-control` |
+| `ARG-LEM-STAGE1-INVERSION-DERIVATIVE-CONTROL` | `argument/lemmas/lem-stage1-inversion-derivative-control.md` | `6114d1f9a5e8d072` | Registry shard for `lem-stage1-inversion-derivative-control` |
 | `AF-LEM-STAGE1-INVERSION-DERIVATIVE-CONTROL` | `proofs/lem-stage1-inversion-derivative-control/export.md` | `9dd0ce17b9689cf1` | `af` proof export for `lem-stage1-inversion-derivative-control` |
 | `ARG-LEM-STAGE1-SMOOTH-UNITARY-ATLAS` | `argument/lemmas/lem-stage1-smooth-unitary-atlas.md` | `dcd3b42efc24c726` | Registry shard for `lem-stage1-smooth-unitary-atlas` |
 | `AF-LEM-STAGE1-SMOOTH-UNITARY-ATLAS` | `proofs/lem-stage1-smooth-unitary-atlas/export.md` | `0fe3769bde87ab44` | `af` proof export for `lem-stage1-smooth-unitary-atlas` |
