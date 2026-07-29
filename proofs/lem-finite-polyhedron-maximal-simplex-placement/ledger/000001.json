@@ -1,1 +1,1 @@
-{"type":"proof_initialized","timestamp":"2026-07-29T10:20:22.58974895Z","conjecture":"Every point of a finite polyhedron lies in a maximal simplex of its defining finite simplicial complex; therefore every finite fixed set does.","author":"orchestrator"}
+{"type":"proof_initialized","timestamp":"2026-07-29T10:43:35.489163815Z","conjecture":"Every point of a finite polyhedron lies in a maximal simplex of its defining finite simplicial complex; therefore every point of every finite fixed set does.","author":"orchestrator"}

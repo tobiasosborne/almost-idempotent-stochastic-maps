@@ -1,7 +1,7 @@
 ---
 id: lem-finite-polyhedron-maximal-simplex-placement
 kind: lemma
-contract: Every point of a finite polyhedron lies in a maximal simplex of its defining finite simplicial complex; therefore every finite fixed set does.
+contract: Every point of a finite polyhedron lies in a maximal simplex of its defining finite simplicial complex; therefore every point of every finite fixed set does.
 defs:
 deps:
 status: stated
@@ -45,3 +45,11 @@ lem-stage1-extra-fixed-class intend the pointwise reading). Aborted-run
 ledger discarded at workspace restore (the established balloon/stuck
 precedent); classification preserved here and in the fr log. Status
 remains stated/seeded — no rigour claim.
+
+**Contract amendment RATIFIED 2026-07-29 (user, in-session; bead
+aism-iw4w).** Second clause disambiguated to the pointwise reading:
+"; therefore every point of every finite fixed set does." (was
+"; therefore every finite fixed set does."). This is the reading the
+design prose and the consumer `lem-stage1-extra-fixed-class` (required
+input 10) intend; clause 1 is unchanged. Workspace cleanly re-seeded
+against the amended contract for run 2.
