@@ -259,7 +259,7 @@
 | `lem-top-slab-companion` | lemma | proved | validated | A | Top-slab companion: for an exact signed idempotent P with 0 < delta(P) <= (17 - … |
 | `lem-top-support-dual-face` | lemma | proved | none | A | Top-support dual face: for an exact signed idempotent P with delta(P) > 0, nonem… |
 | `lem-top-witness-third-actor` | lemma | proved | none | A | Top-witness third actor: for an exact signed idempotent P with 0 < delta(P) <= 1… |
-| `lem-topology-finite-triangulation` | lemma | stated | seeded | A | Finite triangulation of compact smooth manifolds: every compact smooth manifold … |
+| `lem-topology-finite-triangulation` | lemma | proved | validated | A | Finite triangulation of compact smooth manifolds: every compact smooth manifold … |
 | `lem-topology-hopf-structure` | lemma | proved | validated | A | Hopf structure theorem in the form consumed by Stage 1: a finite-dimensional con… |
 | `lem-topology-kunneth-cross-product` | lemma | proved | validated | A | Cohomological Kunneth isomorphism over R: for CW complexes X and Y with each H^k… |
 | `lem-topology-lefschetz-hopf` | lemma | proved | validated | A | Lefschetz-Hopf formula (maximal-simplex form): if f:X->X is a map of a finite po… |

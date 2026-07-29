@@ -4,14 +4,18 @@ kind: lemma
 contract: Finite triangulation of compact smooth manifolds: every compact smooth manifold without boundary is homeomorphic to a finite simplicial complex.
 defs:
 deps:
-status: stated
-af: seeded
+status: proved
+af: validated
 provenance: munkres-elementary-differential-topology munkres-elementary-differential-topology.txt:4356-4358 (Theorem 10.6, p.103: every non-bounded C^r manifold has a C^r triangulation; scanned-typewriter OCR superscript garbling visually reconciled against the p.108 page image 2026-07-26); compactness => finite complex derived in-tree; DESIGN-FUDW-DECOMP-v4.1.md §2.3
 owner: A
 workspace: proofs/lem-topology-finite-triangulation
 ---
 
-**Status.** RE-SOURCED and RE-PINNED (user-directed in-session, 2026-07-26):
+**Status.** af-VALIDATED in-repo (2026-07-29, run 3 on the second clean
+re-seed): 6-node tree, root `validated`, taint clean 6/6, ZERO
+challenges (`proofs/lem-topology-finite-triangulation/export.md`;
+oracle `af-lem-topology-finite-triangulation` pass). History:
+RE-SOURCED and RE-PINNED (user-directed in-session, 2026-07-26):
 the Cairns 1935 route is RETIRED — Cairns states his theorem for "class one"
 manifolds with "allowable coordinate systems" but delegates both definitions
 to Veblen–Whitehead 1932 (not in `refs/`), so the modern-manifold bridge was

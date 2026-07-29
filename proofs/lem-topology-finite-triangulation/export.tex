@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Finite triangulation of compact smooth manifolds: every c...}
+\step{1} Finite triangulation of compact smooth manifolds: every compact smooth manifold without boundary is homeomorphic to a finite simplicial complex. \steptag{validated} \\[6pt]
+\step{1.1} Hypothesis bridge and triangulation existence: if M is a compact smooth manifold without boundary, then its C\textasciicircum{}∞ atlas is in particular C\textasciicircum{}1, and GT-munkres-edt-def-1.1-non-bounded identifies empty boundary with M being non-bounded. Thus M is a non-bounded C\textasciicircum{}1 manifold, so GT-munkres-edt-thm-10.6 supplies a simplicial complex K and a C\textasciicircum{}1 triangulation f:K→M. \steptag{validated} \\[4pt]
+\step{1.2} Meaning of triangulation: for any complex K and C\textasciicircum{}1 triangulation f:K→M supplied above, GT-munkres-edt-def-8.1 makes f a map |K|→M (class C\textasciicircum{}1 simplexwise), and GT-munkres-edt-def-8.3 says precisely that such a triangulation is a homeomorphism of |K| onto M. \steptag{validated} \\[4pt]
+\step{1.3} Compactness transfer: if M is compact and f:|K|→M is a homeomorphism, then |K| is compact, since the continuous inverse f\textasciicircum{}\{-1\}:M→|K| maps the compact space M onto |K|. \steptag{validated} \\[4pt]
+\step{1.4} Finite-complex step: if the realization |K| of a simplicial complex is compact, then K is finite. For each vertex v, let St°(v) be the union of the relative interiors of all simplices containing v. These sets are open in the realization topology, and they cover |K| because every point lies in the relative interior of a simplex. A vertex w lies in St°(v) exactly when w=v, since w lies in the relative interior of its zero-simplex alone. Compactness gives a finite subcover, so every vertex is one of its finitely many centers. Thus K has finitely many vertices, and its simplices, being finite subsets of that finite vertex set, are finite in number. \steptag{validated} \\[4pt]
+\step{1.5} Assembly: let M be any compact smooth manifold without boundary. Node 1.1 supplies a complex K and a C\textasciicircum{}1 triangulation f:K→M; node 1.2 identifies f as a homeomorphism |K|→M; node 1.3 gives compactness of |K|; and node 1.4 then makes K a finite simplicial complex. Hence M is homeomorphic to the finite simplicial complex K, which is the root conclusion. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

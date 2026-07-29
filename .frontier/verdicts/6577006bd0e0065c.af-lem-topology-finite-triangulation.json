@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-topology-finite-triangulation/export.md",
+  "oracle": "af-lem-topology-finite-triangulation",
+  "result": "pass",
+  "claim_hash": "a6ec721ddd8f98eb7d4916313a01bcbc928e85521de3bccdb37ca57461668799",
+  "oracle_digest": "a514cc926ee082d3856126dece575ee30ef46692012e7fc96b31a424f6d886f9",
+  "inputs_hash": "021aba902c3d75d6ceeb5e7caa9f6c7f362ffb55056bcf50939f2ca69753fc61",
+  "ts": "2026-07-29T16:29:15.702Z"
+}
