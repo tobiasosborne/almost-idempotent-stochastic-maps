@@ -1945,3 +1945,34 @@ gap vs op-classical's target set (acquisition needs institutional access; not ye
 externals, discipline note, gate green) with LAUNCH DEFERRED per the user's graceful-stop
 request — nothing in flight. Codex spend this session: ~13 af runs' worth of prover/verifier
 jobs + 2 Opus report subagents. T0 ends at 113 of 299 registry results.
+
+## 2026-07-29 — session 36: the downstream quotient block CLOSED (T0 113 → 117); the designed elevation surface EXHAUSTED; the scan-OCR locus trap
+
+**Four banks, strictly serial, all tier routine (fresh gpt-5.6-sol verifier per node):**
+1. `lem-stage1-quotient-left-inversion` (120th): 10 nodes; node-1.6 challenge
+   (quotient-submersion/local-section scope) repaired in-ledger, two bridging substeps
+   freshly verified.
+2. `lem-stage1-quotient-inversion-index-data` (121st): 12 nodes; two derivative-branch
+   challenges repaired (radius guard proved locally; tangent-quotient identification via
+   explicit local slice charts); square-root phase-lift validated.
+3. `lem-topology-finite-triangulation` (122nd; `aism-j5t9` CLOSED): first-pass ZERO
+   challenges (6 nodes) — but only on the SECOND clean re-seed, after (a) a round-0
+   balloon abort (the 21 retired-Cairns validated nodes count live; validated→archived is
+   an invalid transition → clean re-seed #1), and (b) the corrupted-externals episode
+   (below) → clean re-seed #2 with FOUR sed-space-verified Munkres externals
+   (Thm 10.6, Def 8.1, Def 8.3, Def 1.1 non-bounded).
+4. `lem-stage1-quotient-finite-cw` (123rd): first-pass ZERO challenges (4 nodes).
+
+**Process finding (FINDINGS.md 2026-07-29):** python `splitlines()` counts the OCR txt's
+form feeds as line breaks (117 of them in Munkres EDT), so a "line 3332" extraction
+grabbed text ~82 lines early; `check-refs` passed anyway (quote-exists-somewhere, not
+quote-at-locus); a STUCK run validated 5 nodes with the corrupted externals in scope and
+one verifier ACCEPTED the node citing them (near-miss recorded). All discarded; ledgers in
+git history; new registration rule (\n-space extraction + programmatic quote-at-locus
+check + page-image eyeball) recorded.
+
+**Map state:** sketch v39 written + CURRENT.md repointed. Every designed-and-landed
+Stage-1 elevation target is now T0; the remaining fronts are decision-gated: G-S1 design
+cycle (`aism-tpai`, P1), MAIN P0 def gate + M01/M02 + M03 dep-rewire (`aism-dm8n`, P1),
+report sync for banks 120–123 (`aism-9kmt`, P2), trace-row designs (`aism-65j4`, P2).
+Session closed clean: check-all OK, nothing in flight, all pushed.
