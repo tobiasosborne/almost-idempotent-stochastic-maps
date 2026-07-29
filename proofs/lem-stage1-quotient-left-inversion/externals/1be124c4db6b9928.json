@@ -1,0 +1,8 @@
+{
+  "id": "1be124c4db6b9928",
+  "name": "lem-stage1-smooth-polar-inverse",
+  "source": "imports validated registry lemma proofs/lem-stage1-smooth-polar-inverse — Smooth polar-inverse upgrade: for every finite-dimensional exact-unit epsilon_r-C*-algebra and every delta \u003e 0, if lem-stage1-smooth-unitary-atlas gives the smooth embedded atlas and Pi_delta: calU x B^{calH}_delta(J) -\u003e S_delta is the bijective C^1 local diffeomorphism of lem-stage1-polar-retraction onto an open set, then the same ambient-bilinear Pi_delta is a smooth diffeomorphism and its same set-theoretic inverse (u_delta, h_delta) is smooth; no point or first derivative is changed.",
+  "content_hash": "a28e688168e5061b2acf7b20cb0e3443f676681540a3cb31690729d6a5cef313",
+  "created": "2026-07-29T11:32:16.438366766Z",
+  "notes": ""
+}
