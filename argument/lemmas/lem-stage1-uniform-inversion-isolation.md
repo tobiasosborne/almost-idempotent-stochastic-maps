@@ -4,8 +4,8 @@ kind: lemma
 contract: There are universal e_iso^r > 0, r_iso > 0 such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0 <= epsilon_r <= e_iso^r, J and -J are the only fixed points of the smooth sigma in their respective ambient r_iso-balls.
 defs: def-epsilon-cstar-algebra; def-approximate-unitary-space
 deps: lem-stage1-quantitative-inverse-function; lem-stage1-explicit-smooth-unitary-operations; lem-stage1-smooth-unitary-atlas; lem-stage1-smooth-polar-inverse; lem-stage1-polar-constant-ledger
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-stage1-uniform-inversion-isolation
 provenance: DESIGN-S1-POLAR-v6.md sect-5 downstream row 1, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80).
 owner: A
@@ -40,3 +40,13 @@ sign concluding the fixed-point isolation in the ambient r_iso-ball —
 do NOT sub-split routine norm estimates. Constants live in the proof
 body, never the contract; every smallness inference cites its guard
 node explicitly.
+
+**af-VALIDATED 2026-07-29 (downstream row 1, post-row-13 serial
+order).** First-pass run under the binding build-granularity discipline
+above (tier routine, fresh codex verifier per node): root validated,
+7/7 live nodes (design budget 6; hard cap 10), taint clean, 5 rounds,
+one in-run challenge repaired (an undeclared dependency at node 1.5,
+fixed by a dependency-backed bridge node) and re-verified fresh. Export
+in the workspace; oracle `af-lem-stage1-uniform-inversion-isolation` +
+`fr verify` PASS. This status flip is a mechanical reflection of the
+codex ledger.

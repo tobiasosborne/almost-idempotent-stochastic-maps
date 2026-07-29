@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-uniform-inversion-isolation/export.md",
+  "oracle": "af-lem-stage1-uniform-inversion-isolation",
+  "result": "pass",
+  "claim_hash": "449494fda6797a2f905d90b27c9a2431845007393b8bb9832be4a10afca67059",
+  "oracle_digest": "e613103c6906b0f4c98ecd83902811082942ed8a74b3332f6bec525faa9e07f6",
+  "inputs_hash": "fac9a9cdbfe9956632056dfbb978880e7b45ce15d163338c94db8326a412e05e",
+  "ts": "2026-07-29T11:02:13.010Z"
+}

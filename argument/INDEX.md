@@ -248,7 +248,7 @@
 | `lem-stage1-smooth-polar-inverse` | lemma | proved | validated | A | Smooth polar-inverse upgrade: for every finite-dimensional exact-unit epsilon_r-… |
 | `lem-stage1-smooth-unitary-atlas` | lemma | proved | validated | A | Smooth graph-atlas upgrade: for every finite-dimensional exact-unit epsilon_r-C*… |
 | `lem-stage1-smooth-unitary-operations` | lemma | stated | seeded | A | Smooth action/operations upgrade: under lem-stage1-approximate-group-laws, lem-s… |
-| `lem-stage1-uniform-inversion-isolation` | lemma | stated | seeded | A | There are universal e_iso^r > 0, r_iso > 0 such that, for every finite-dimension… |
+| `lem-stage1-uniform-inversion-isolation` | lemma | proved | validated | A | There are universal e_iso^r > 0, r_iso > 0 such that, for every finite-dimension… |
 | `lem-stage1-unitary-graph-control` | lemma | proved | validated | A | Uniform unitary graph control: there are universal C_ch >= 1, kappa_ch in (0, 1/… |
 | `lem-stage1-unitary-graph-transport` | lemma | proved | validated | A | Parameterized unitary-graph transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |
 | `lem-starvation-completion-obstruction` | lemma | proved | validated | B | Bounded-slab starvation completion obstruction (K-free): for every finite I, eve… |

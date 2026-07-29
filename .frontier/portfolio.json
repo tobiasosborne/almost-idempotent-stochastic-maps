@@ -913,6 +913,18 @@
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-finite-polyhedron-maximal-simplex-placement/ledger",
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-finite-polyhedron-maximal-simplex-placement.md"
         ]
+      },
+      {
+        "name": "af-lem-stage1-uniform-inversion-isolation",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-stage1-uniform-inversion-isolation"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-uniform-inversion-isolation/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-uniform-inversion-isolation.md"
+        ]
       }
     ]
   },
