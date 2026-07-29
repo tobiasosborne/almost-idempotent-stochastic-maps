@@ -1,0 +1,8 @@
+{
+  "id": "f75a47cc72fcfff1",
+  "name": "lem-stage1-maurer-cartan-trivialization",
+  "source": "imports validated registry lemma proofs/lem-stage1-maurer-cartan-trivialization — Uniform global tangent/Maurer-Cartan control: there are universal C_ch \u003e= 1, kappa_ch in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra and every delta \u003e 0 with C_ch*(epsilon_r + delta) \u003c= kappa_ch, the graph maps supplied by lem-stage1-unitary-graph-control satisfy: every tangent space T_U calU is the image of L_U(I + Dg_U(0)): icalH -\u003e calX, and omega_U(Z) = (L_U^{-1} Z)^par : T_U calU -\u003e icalH is a global C^1 bundle trivialization with distortion at most 1 + C_ch*epsilon_r, satisfying omega_{cU}(cZ) = omega_U(Z) and omega_U(iU) = iJ for every c in U(1).",
+  "content_hash": "0f0f323e84dbbfd371b3a330b7719a8291741e60d7e5208cce1bd95160bd14f2",
+  "created": "2026-07-29T11:19:57.149281527Z",
+  "notes": ""
+}

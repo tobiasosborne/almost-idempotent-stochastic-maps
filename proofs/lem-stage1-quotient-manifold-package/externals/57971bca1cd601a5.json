@@ -1,0 +1,8 @@
+{
+  "id": "57971bca1cd601a5",
+  "name": "lem-topology-quotient-manifold",
+  "source": "imports validated registry lemma proofs/lem-topology-quotient-manifold — Quotient manifold theorem: if a Lie group G acts smoothly, freely, and properly on a smooth manifold M, then the orbit space M/G is a topological manifold of dimension dim M - dim G with a unique smooth structure for which the quotient map pi:M-\u003eM/G is a smooth submersion.",
+  "content_hash": "cd963f62b284635dce6a5bcf3765b258484e651b6a7750bf0ee0381b990a2a23",
+  "created": "2026-07-29T11:19:57.229380738Z",
+  "notes": ""
+}

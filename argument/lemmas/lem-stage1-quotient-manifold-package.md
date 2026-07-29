@@ -5,7 +5,8 @@ contract: There is a universal e_quot^r > 0 such that, for every finite-dimensio
 defs: def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-maurer-cartan-trivialization; lem-stage1-smooth-unitary-atlas; lem-stage1-polar-constant-ledger; lem-topology-quotient-manifold
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-stage1-quotient-manifold-package
 provenance: DESIGN-S1-POLAR-v6.md sect-5 downstream row 2, landed verbatim (LaTeX flattened to registry ASCII); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80).
 owner: A
 ---
@@ -27,3 +28,22 @@ and an explicit right inverse, and restricts/corestricts through the
 sound embedded atlas) — depending on the new smooth bridge here would
 needlessly couple the quotient construction to a chosen delta and its
 polar antecedents. Contract and defs BYTE-UNCHANGED.
+
+**Build-granularity discipline (BINDING on the af tree; extends the
+user-ratified W98 row-1 discipline of 2026-07-28).** The target is the
+design's 8-node skeleton (budget 8/3; hard cap 12). Tree discipline:
+(i) ONE early node fixing the witness inputs (the ledger tuple W from
+the polar-constant-ledger external — e_quot^r is defined from its
+fields — and the atlas/trivialization externals at those fields);
+(ii) ONE node for the LOCAL binder-free scalar-action proof per the W97
+amendment above (ambient scalar multiplication is smooth, preserves
+calU by the exact unitary equations and an explicit right inverse,
+restricts/corestricts through the sound embedded atlas) — do NOT import
+the smooth bridge; (iii) ONE node each for: freeness+properness of the
+U(1) action (compact group on a compact space), the quotient smooth
+structure via the lem-topology-quotient-manifold external, dimension
+count N-1 via the Maurer-Cartan trivialization, connectedness,
+compactness/closedness, and orientation via the trivialization — one
+node per design-skeleton step, do NOT sub-split routine
+point-set/linear-algebra steps. Constants live in the proof body, never
+the contract.
