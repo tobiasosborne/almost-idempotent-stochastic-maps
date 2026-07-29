@@ -1,17 +1,22 @@
 % SHARD-ID: AISM-51-STAGE1-POLAR-TRANSPORTS-II
 % SHARD-TITLE: Parameterized transports of the Stage-1 polar layer, II: paths and the inversion derivative
-% SHARD-SUMMARY: States lem-stage1-polar-path-transport and lem-stage1-inversion-derivative-transport (BOTH af validations RETRACTED 2026-07-28, now stated candidates); both carry projected-path / inversion-derivative content to the parameterized witness-data form with explicit definite descriptions for the polar and graph binders.
-% SHARD-SUMMARY: Explains the joint-threshold construction that transports five scalar guards to four fixed-constant parents simultaneously, and the three binder identifications that discharge the explicit u_delta, g_sJ and sigma descriptions from af-validated imports.
-% SHARD-SUMMARY: Records the inversion-derivative run-1 STUCK abort on bare-anaphor binders in the sole allowed external, repaired by widening the deps line with six T0 imports while leaving the contract byte-unchanged.
-% SHARD-KEYWORDS: lem-stage1-polar-path-transport, lem-stage1-inversion-derivative-transport, af validated, witness data, transport, definite description, deps widening, Stage 1
+% SHARD-SUMMARY: Reproduces lem-stage1-polar-path-transport and lem-stage1-inversion-derivative-transport, both af-RE-VALIDATED 2026-07-29 on clean re-seeds over typed provider spines; both carry projected-path and inversion-derivative content to the parameterized witness-data form with explicit definite descriptions for the polar and graph binders.
+% SHARD-SUMMARY: States the typed-spine discipline that replaced the retracted anaphoric attachments: the path row uses its fixed-constant parent only for binder-free conclusions and takes the displayed inverse from the polar-retraction transport, while the inversion row fixes four provider witnesses and builds every base threshold before the receiving tuple is quantified.
+% SHARD-SUMMARY: Records, condensed, that both earlier validations were retracted 2026-07-28 for attaching a parent's anaphorically bound u_delta to the root's explicitly displayed Pi_delta inverse without a typed preimage witness; neither contract was ever in dispute and both are byte-unchanged.
+% SHARD-KEYWORDS: lem-stage1-polar-path-transport, lem-stage1-inversion-derivative-transport, af validated, witness data, transport, definite description, typed provider spine, re-validation, Stage 1
 \section{Parameterized transports of the Stage-1 polar layer, II: paths and the inversion derivative}\label{sec:stage1-polar-transports-ii}
 
-The two rows below complete the \texttt{af}-validated part of the transport family begun
+The two rows below complete the \texttt{af}-validated transport family begun
 in \S\ref{sec:stage1-polar-transports}; the witness datum $W$, its coefficient and margin
 fields, the threshold discipline and the \emph{common transport skeleton} (steps
-(i)--(v)) are exactly those stated there and are not repeated.
+(i)--(v)) are exactly those stated there and are not repeated. What distinguishes these two
+rows is that their roots carry \emph{explicit definite descriptions} where their
+fixed-constant ancestors bound $u_\delta$, $g_{\varsigma J}$ and $\sigma$ as bare anaphors;
+each is therefore built on a spine of \emph{typed} providers that display the very same
+$\Pi_\delta$, so that ordinary uniqueness of an inverse --- and nothing weaker --- performs
+the identification.
 
-\begin{conjecture}[\texttt{lem-stage1-polar-path-transport} --- proof retracted 2026-07-28]\label{lem:stage1-polar-path-transport}
+\begin{lemma}[\texttt{lem-stage1-polar-path-transport}]\label{lem:stage1-polar-path-transport}
 There exist $C^{0}_{\mathrm{path}},C^{0}_{\mathrm{pol}}\ge1$ and
 $\kappa^{0}_{\mathrm{pol}}\in(0,\tfrac12]$ such that for every witness datum $W$ with
 $C_{\mathrm{path}}\ge C^{0}_{\mathrm{path}}$, $C_{\mathrm{pol}}\ge C^{0}_{\mathrm{pol}}$
@@ -26,35 +31,48 @@ the unique first component of the inverse of $\Pi_\delta$ (the explicit binder o
 Lemma~\ref{lem:stage1-polar-retraction-transport}), $H(t,U_0,U_1)=u_\delta(Z_t)$ is jointly
 continuous in $(t,U_0,U_1)$, joins $U_0$ to $U_1$, and obeys
 $H(t,cU_0,cU_1)=c\,H(t,U_0,U_1)$ for every $c\in U(1)$.
-\emph{Retraction note (2026-07-28).} The \texttt{af} validation was RETRACTED by the
-Stage-1 binder sweep: export node~1.3.1 attaches the parent path-admissibility conclusion
-to the root's explicitly bound $u_\delta$ by ``the same polar-inverse notation'' --- the
-parent contract exports only the anaphoric path formula, with no $h_\delta$, no displayed
-$\Pi_\delta$, and no typed preimage identity (see \texttt{docs/LEARNINGS.md}, second entry
-of 2026-07-28). The statement stands as a \emph{stated} candidate; its explicit-binder
-repair is part of the W97 campaign.
-\end{conjecture}
+\end{lemma}
 
 \noindent\textbf{Registry contract (verbatim).}
 \contractquote{Parameterized polar-path transport: there exist C_path^0, C_pol^0 >= 1 and kappa_pol^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_path >= C_path^0, C_pol >= C_pol^0, and 0 < kappa_pol <= kappa_pol^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra, every delta > 0 with C_pol*(epsilon_r + delta) <= kappa_pol, every U_0, U_1 in calU, and every q in [0, 1] satisfying ||U_1 - U_0|| <= q, C_path*q <= 1/4, and C_path*(q + epsilon_r*q + q^2) < delta - C_pol*(epsilon_r*delta + delta^2), every L_{Z_t} is invertible and every Z_t = (1-t)*U_0 + t*U_1 lies in calUbar_{C_path*(q + epsilon_r*q + q^2)} for t in [0, 1], and, writing u_delta for the unique first component of the inverse of Pi_delta: calU x B^{calH}_delta(J) -> S_delta := Pi_delta(calU x B^{calH}_delta(J)), Pi_delta(U, H) = U bold-dot H, the map H(t, U_0, U_1) = u_delta(Z_t) is jointly continuous in (t, U_0, U_1), joins U_0 to U_1, and satisfies H(t, cU_0, cU_1) = c*H(t, U_0, U_1) for every c in U(1).}
 
-\paragraph{Historical record: the RETRACTED proof attempt (not a proof; defect marked).}
-The skeleton verbatim, seeded by Lemma~\ref{lem:stage1-polar-path-admissibility} with
-witnesses $(a,b,k)$ for $(C_{\mathrm{path}},C_{\mathrm{pol}},\kappa_{\mathrm{pol}})$. With
-$A=q+\ecs_rq+q^{2}\ge0$ and $B=\ecs_r\delta+\delta^{2}\ge0$, step (iii) transports the
-smallness guard and $aq\le C_{\mathrm{path}}q\le\tfrac14$, and the \emph{strict} loss
-inequality survives as the chain
-$aA\le C_{\mathrm{path}}A<\delta-C_{\mathrm{pol}}B\le\delta-bB$, the strictness carried by
-the middle (hypothesised) inequality alone. The parent yields everything with
-$Z_t\in\Unitc{aA}$; step (v) upgrades the membership to $\Unitc{C_{\mathrm{path}}A}$ by
-radius monotonicity, and every other conclusion --- invertibility, joint continuity,
-endpoints, circle equivariance --- was claimed to match verbatim, ``the bare-$u_\delta$
-anaphor of the parent resolving against the explicit polar binder.'' \emph{That final
-resolution is the sweep-adjudicated defect (export node 1.3.1): the parent contract
-exports only the anaphoric path formula, with no $h_\delta$, no displayed $\Pi_\delta$,
-and no typed preimage identity --- sameness of notation is not an equality premise.}
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{Witnesses first.} Take $(A,B,k)$ from Lemma~\ref{lem:stage1-polar-path-admissibility}
+and $(P,\rho)$ from Lemma~\ref{lem:stage1-polar-retraction-transport}, and set
+$C^{0}_{\mathrm{path}}=A$, $C^{0}_{\mathrm{pol}}=\max\{B,P\}$,
+$\kappa^{0}_{\mathrm{pol}}=\min\{k,\rho\}$ --- all fixed \emph{before} the receiving tuple
+$W$ is quantified. With $\gamma=q+\ecs_rq+q^{2}\ge0$ and $y=\ecs_r\delta+\delta^{2}\ge0$,
+step (iii) of the skeleton transports each guard: $B(\ecs_r+\delta)\le\kappa_{\mathrm{pol}}\le k$,
+$P(\ecs_r+\delta)\le\kappa_{\mathrm{pol}}\le\rho$, $Aq\le C_{\mathrm{path}}q\le\tfrac14$,
+and --- the only strict one --- the mixed chain
+$A\gamma\le C_{\mathrm{path}}\gamma<\delta-C_{\mathrm{pol}}y\le\delta-By$, whose strictness
+is carried by the hypothesised middle inequality alone.
 
-\begin{conjecture}[\texttt{lem-stage1-inversion-derivative-transport} --- proof retracted 2026-07-28]\label{lem:stage1-inversion-derivative-transport}
+\emph{Binder-free conclusions from the parent.}
+Lemma~\ref{lem:stage1-polar-path-admissibility} is used for exactly two things: every
+$\Lmul{Z_t}$ is invertible, and $Z_t\in\Unitc{A\gamma}$ --- which radius monotonicity
+enlarges to $\Unitc{C_{\mathrm{path}}\gamma}$ with the same right inverse.
+
+\emph{The typed inverse.} Lemma~\ref{lem:stage1-polar-retraction-transport}, applied to the
+same tuple $W$ under the non-strict guard $C_{\mathrm{pol}}(\ecs_r+\delta)\le\kappa_{\mathrm{pol}}$,
+gives for the \emph{very} map displayed in the root a $C^{1}$ diffeomorphism onto
+$S_\delta$ with unique inverse $(u_\delta,h_\delta)$, the normalisations
+\eqref{eq:s1pr-inverse}, and $\Unito{\delta-C_{\mathrm{pol}}y}\subseteq S_\delta$. Since
+$Z_t\in\Unitc{C_{\mathrm{path}}\gamma}$ gives $\nrm{Z_t\dg\bdot Z_t-J}\le2C_{\mathrm{path}}\gamma
+<2(\delta-C_{\mathrm{pol}}y)$, Definition~\ref{def:approximate-unitary-space} puts
+$Z_t\in\Unito{\delta-C_{\mathrm{pol}}y}\subseteq S_\delta$; so $u_\delta(Z_t)$ is the
+well-typed first component of the inverse of that same displayed $\Pi_\delta$.
+
+\emph{The path.} $(t,U_0,U_1)\mapsto Z_t$ is jointly continuous and $u_\delta$ is $C^{1}$,
+hence continuous, on $S_\delta$, so $H$ is jointly continuous; $Z_0=U_0$, $Z_1=U_1$ and
+$u_\delta(U)=U$ give the endpoints. For $c\in U(1)$ put $(u,h)=(u_\delta(Z_t),h_\delta(Z_t))$;
+conjugate-linearity of $\dagger$, bilinearity of $\bdot$ and $|c|=1$ show directly from
+Definition~\ref{def:approximate-unitary-space} that $cu\in\Unit$ (its residual is unchanged
+and a right inverse rescales by $\bar c$), while $\Pi_\delta(cu,h)=c\,\Pi_\delta(u,h)=cZ_t$
+and $(1-t)cU_0+tcU_1=cZ_t$. A bijection has exactly one inverse, so
+$u_\delta(cZ_t)=c\,u_\delta(Z_t)$, i.e.\ $H(t,cU_0,cU_1)=c\,H(t,U_0,U_1)$.
+
+\begin{lemma}[\texttt{lem-stage1-inversion-derivative-transport}]\label{lem:stage1-inversion-derivative-transport}
 There exist $C^{0}_{\mathrm{der}},C^{0}_{\mathrm{ch}},C^{0}_{\mathrm{pol}},C^{0}_{\mathrm{grp}}\ge1$
 and $\kappa^{0}_{\mathrm{der}},\kappa^{0}_{\mathrm{ch}},\kappa^{0}_{\mathrm{pol}}\in(0,\tfrac12]$
 such that for every witness datum $W$ with $C_{\mathrm{der}}\ge C^{0}_{\mathrm{der}}$,
@@ -76,92 +94,114 @@ $F_{\varsigma}(A)=\phi^{\parallel}_{\varsigma J}(\sigma(\chi_{\varsigma}(A)))$ s
 $\nrm{D(F_{\varsigma}-\mathrm{id})(A)+2I_{\aHerm}}\le C_{\mathrm{der}}(\ecs_r+r)$ for every
 $A\in B^{\aHerm}_{r}(0)$.
 \emph{Transcription note.} The registry writes the sign as $s$; it is renamed $\varsigma$
-here exactly as in Lemma~\ref{lem:stage1-inversion-derivative-control}. Where that parent
+here exactly as in \S\ref{sec:stage1-smooth-polar}. Where the fixed-constant control row
 binds $u_\delta$, $g_{\varsigma J}$ and $\sigma$ as bare anaphors, this row carries
 \emph{explicit definite descriptions} for all three --- the point of the transport.
-\emph{Retraction note (2026-07-28).} The W95 run-2 \texttt{af} validation of this row was
-RETRACTED the same day: an independent adjudication found that, while its polar and graph
-binder identifications are sound, the substitution of the parent's derivative estimate
-(stated for an anaphorically bound $\sigma$) into the explicitly bound $F_{\varsigma}$ has
-no typed preimage witness among the registered externals, and the parent's own validation
-was retracted for the same defect class (see \texttt{docs/LEARNINGS.md}, entry 2026-07-28).
-The statement stands as a \emph{stated} candidate (the contract is not in dispute);
-re-derivation on an explicit-binder dependency spine is part of the 13e repair campaign.
-\end{conjecture}
+\end{lemma}
 
 \noindent\textbf{Registry contract (verbatim).}
 \contractquote{Parameterized inversion-derivative transport: there exist C_der^0, C_ch^0, C_pol^0, C_grp^0 >= 1 and kappa_der^0, kappa_ch^0, kappa_pol^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_der >= C_der^0, C_ch >= C_ch^0, C_pol >= C_pol^0, C_grp >= C_grp^0, 0 < kappa_der <= kappa_der^0, 0 < kappa_ch <= kappa_ch^0, and 0 < kappa_pol <= kappa_pol^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra, every delta > 0, every s in {+1, -1}, and every 0 < r <= delta satisfying C_ch*(epsilon_r + delta) <= kappa_ch, C_pol*(epsilon_r + delta) <= kappa_pol, C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), C_der*(epsilon_r + r) <= kappa_der, and (1 + epsilon_r)*(1 + C_ch*(epsilon_r + delta))*r + C_grp*epsilon_r < 2*delta, writing u_delta for the unique first component of the inverse of Pi_delta: calU x B^{calH}_delta(J) -> S_delta := Pi_delta(calU x B^{calH}_delta(J)), Pi_delta(U, H) = U bold-dot H, and g_{sJ}: B_{2delta}^{icalH}(0) -> B_{2delta}^{calH}(0) for the unique C^1 map such that, for every A in B_{2delta}^{icalH}(0), f_{sJ}(A + g_{sJ}(A)) = 0, where f_{sJ}(B) = (1/2)*(((J + B^dagger) bold-dot (sJ)^dagger) bold-dot (sJ bold-dot (J + B)) - J), define chi_s(A) = sJ bold-dot (J + A + g_{sJ}(A)) and the global C^1 map sigma(U) = u_delta(U^dagger); then sigma maps chi_s(B_r^{icalH}(0)) into the same sJ-graph chart and, with F_s(A) = phi_{sJ}^par(sigma(chi_s(A))), one has ||D(F_s - id)(A) + 2*I_{icalH}|| <= C_der*(epsilon_r + r) for every A in B_r^{icalH}(0).}
 
-\paragraph{Retracted proof sketch (the defective af tree, kept for the record).}
-The retracted run-2 validation ran the skeleton with \emph{joint} thresholds: each
-coefficient floor is the maximum, and each
-margin cap the minimum, of the corresponding witnesses of the four parents
-(Lemmas~\ref{lem:stage1-inversion-derivative-control}, \ref{lem:stage1-polar-retraction},
-\ref{lem:stage1-unitary-graph-control} and \ref{lem:stage1-approximate-group-laws}), so
-that every field guard transports simultaneously to all four --- including the strict
-group-defect chain
-$C^{q}_{\mathrm{grp}}\ecs_r\le C_{\mathrm{grp}}\ecs_r<\delta-C_{\mathrm{pol}}y\le\delta-C^{q}_{\mathrm{pol}}y$
-(with $y=\ecs_r\delta+\delta^{2}\ge0$) and the radius-chart guard, both monotone in the
-same direction. Then three binder identifications discharge the explicit definite
-descriptions. \emph{Polar:} Lemma~\ref{lem:stage1-polar-retraction} supplies the bijective
-$\Pi_\delta$ on the identical domain with the identical image, and a bijection has exactly
-one inverse, so the description selects its first component. \emph{Graph:}
-$(\varsigma J)\dg=\varsigma J$ and $(\varsigma J)\bdot(\varsigma J)=J$ exactly, so
-$\varsigma J\in\Unit\subseteq\Unitc{\delta}$ and
-Lemma~\ref{lem:stage1-unitary-graph-control} at $V=\varsigma J$ supplies the unique
-$g_{\varsigma J}$ --- its displayed $f_V$ is verbatim the $f_{\varsigma J}$ above.
-\emph{Inversion:} the group laws (Lemma~\ref{lem:stage1-approximate-group-laws}) define
-$\sigma(U)=u_\delta(U\dg)$ on all of $\Unit$ for this same $u_\delta$; the graph-control
-conclusions satisfy the hypotheses of the smooth-atlas row
-(Lemma~\ref{lem:stage1-smooth-unitary-atlas}, via the Neumann invertibility of
-$D_{A^{\perp}}f_V$ from \eqref{eq:s1gc-normal}), and, through the \texttt{af}-validated
-registry rows \texttt{lem-stage1-smooth-polar-inverse}
-(Lemma~\ref{lem:stage1-smooth-polar-inverse}) and
-\texttt{lem-stage1-smooth-unitary-operations}
-(Lemma~\ref{lem:stage1-smooth-unitary-operations}), the
-same $\sigma$ is a smooth --- hence $C^{1}$ --- self-map of $\Unit$, with no point or first
-derivative changed. Finally Lemma~\ref{lem:stage1-inversion-derivative-control} applies
-with its own witnesses; after the identifications its $\chi_{\varsigma}$, $\sigma$,
-$F_{\varsigma}$ and chart are precisely those above, and step (v) enlarges only the
-displayed bound, $C^{I}_{\mathrm{der}}(\ecs_r+r)\le C_{\mathrm{der}}(\ecs_r+r)$.
-\emph{Where it fails (adjudicated 2026-07-28):} the \emph{polar} and \emph{graph}
-identifications above are sound, but the \emph{inversion} step is not --- neither the
-group-laws row nor smooth-unitary-operations attaches \emph{their} anaphorically bound
-$u_\delta$ to the explicit $\Pi_\delta$ inverse by a typed preimage witness, and the final
-application of the parent substitutes an estimate stated for the parent's own anaphoric
-$\sigma$ into the explicitly bound $F_{\varsigma}$ without that synchronization.
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{Four fixed providers, then the tuple.} Fix $(G_d,P_d,k_d)$ from
+\texttt{lem-stage1-explicit-group-domain-membership}, $(G_c,P_c,k_c)$ from
+\texttt{lem-stage1-explicit-group-closeness}, $(P_r,k_r)$ from
+Lemma~\ref{lem:stage1-polar-retraction} and $(C_g,k_g)$ from
+Lemma~\ref{lem:stage1-unitary-graph-control}, and set $C^{0}_{\mathrm{ch}}=\max\{1,C_g\}$,
+$C^{0}_{\mathrm{pol}}=\max\{1,P_d,P_c,P_r\}$, $C^{0}_{\mathrm{grp}}=\max\{1,G_d,G_c\}$,
+$\kappa^{0}_{\mathrm{ch}}=\min\{\tfrac12,k_g\}$,
+$\kappa^{0}_{\mathrm{pol}}=\min\{\tfrac12,k_d,k_c,k_r\}$ --- all \emph{before} the receiving
+tuple enters, so that no step ever absorbs the unbounded receiving $C_{\mathrm{grp}}$. With
+$x=\ecs_r\delta+\delta^{2}\ge0$ the receiving guards imply every provider guard by
+monotonicity, including $G\ecs_r\le C_{\mathrm{grp}}\ecs_r<\delta-C_{\mathrm{pol}}x\le\delta-Px$
+for $(G,P)\in\{(G_d,P_d),(G_c,P_c)\}$ and the chart-retention inequality at $C_g,G_c$. All
+polar providers and the root display the identical $\Pi_\delta$ on
+$\Unit\times B^{\Herm}_{\delta}(J)$ with target its image, so inverse uniqueness identifies
+their inverse pair with the root-bound $(u_\delta,h_\delta)$; uniqueness in
+Lemma~\ref{lem:stage1-unitary-graph-control} at $V=\varsigma J$ identifies its graph map
+with the root-bound $g_{\varsigma J}$.
+
+\emph{The graph map at $\varsigma J$.} Writing $G=g_{\varsigma J}$ and $Z_T=T+G(T)$, exact
+unitality and $(\varsigma J)\dg=\varsigma J$ collapse the graph equation to
+$0=G(T)+\tfrac12Z_T\dg\bdot Z_T$; $G=0$ solves it at $T=0$, so $G(0)=0$ by uniqueness, and
+the parent's derivative bound $d=C_g(\ecs_r+\delta)\le k_g\le\tfrac12$ gives
+$\nrm{G(T)}\le d\nrm{T}$. Differentiating the exact quadratic equation gives
+$\nrm{DG(T)}\le(1+\ecs_r)\nrm{Z_T}(1+\nrm{DG(T)})$ with $\nrm{Z_T}\le3r$ for
+$\nrm{T}\le2r$, so one universal cutoff yields $\nrm{DG(T)}\le K_gr$ with $K_g=7$.
+
+\emph{The typed factorization.} The root-bound $u_\delta$ is the $C^{1}$ first component
+supplied by Lemma~\ref{lem:stage1-polar-retraction}; it is defined at every $U\dg$ by the
+explicit domain-membership bridge, and $\dagger$ is real-linear, so
+$\sigma(U)=u_\delta(U\dg)$ is globally $C^{1}$ on $\Unit$, with $\sigma(\varsigma J)=\varsigma J$.
+For $A\in B^{\aHerm}_{r}(0)$, $U=\chi_{\varsigma}(A)\in\Unit$; put $W=\sigma(U)$ and
+$Q=h_\delta(U\dg)-J\in\Herm$ with $\nrm{Q}<\delta$. Then $U\dg=W\bdot(J+Q)$, everything
+depending $C^{1}$ on $A$, and the explicit closeness bridge for this same $u_\delta$ gives
+$\nrm{W-U\dg}\le G_c\ecs_r$. Exact unitality turns this into $\nrm{W\bdot Q}\le G_c\ecs_r$;
+since $W\dg\bdot W=J$, the $C^*$-lower bound and one associator absorb the remainder into
+$\nrm{Q}\le K_qG_c\ecs_r$, an estimate in which only the \emph{fixed} $G_c$ occurs.
+
+\emph{Chart retention and the coordinate identity.} From
+$U\dg=\varsigma(J-A+G(A))$ one gets $\nrm{U\dg-\varsigma J}\le(1+C_g(\ecs_r+\delta))r$, and
+adding the fixed closeness bound the chart-retention guard gives $\nrm{W-\varsigma J}<2\delta$.
+As $\Lmul{\varsigma J}=\varsigma I$, $C=\phi_{\varsigma J}(W)$ has norm below $2\delta$; put
+$B=C^{\parallel}$. Unitarity of $W$ makes $f_{\varsigma J}(C)=0$, so graph uniqueness forces
+$C^{\perp}=G(B)$: $W=\chi_{\varsigma}(B)$ in the \emph{same} chart, with
+$B=\phi^{\parallel}_{\varsigma J}(W)=F_{\varsigma}(A)$ and $F_{\varsigma}$ of class $C^{1}$.
+Substituting the three factorizations gives the exact identity
+$J-A+G(A)=(J+B+G(B))\bdot(J+Q)$, whose anti-Hermitian part is
+$-A=B+P^{\parallel}((B+G(B))\bdot Q)$; with $\nrm{Q}\le K_qG_c\ecs_r$ and one universal
+cutoff this yields $\nrm{B}\le2r$, so the sharp $\nrm{DG}\le K_gr$ applies at both $A$ and $B$.
+
+\emph{The derivative.} Differentiating that identity along $\xi\in\aHerm$, with
+$P=DF_{\varsigma}(A)\xi$ and $R=DQ(A)\xi$, gives $-\xi+DG(A)\xi=P+DG(B)P+R+E$ with
+$E=(P+DG(B)P)\bdot Q+(B+G(B))\bdot R$; typing by parts gives $P+\xi=-P^{\parallel}(E)$ and
+$R=DG(A)\xi-DG(B)P-P^{\perp}(E)$. The product bound with the three fixed estimates yields
+$\nrm{E}\le\alpha\nrm{P}+\beta\nrm{R}$, $\alpha\le K_1\ecs_r$, $\beta\le K_2r$; universal
+cutoffs give $\nrm{P}\le2$, then $\nrm{R}\le K_3(\ecs_r+r)$ and
+$\nrm{(DF_{\varsigma}(A)+I)\xi}\le D_0(\ecs_r+r)\nrm{\xi}$. Finally, collecting the finitely
+many raw cutoffs $c_i$ and all fixed coefficients into $D=\max\{1,D_0,d_1,\dots,d_m\}$ and
+setting $C^{0}_{\mathrm{der}}=D$,
+$\kappa^{0}_{\mathrm{der}}=\min\{\tfrac12,c_1/2,\dots,c_n/2,1/(2D)\}$ makes the receiving
+guards $C_{\mathrm{der}}\ge C^{0}_{\mathrm{der}}$ and
+$C_{\mathrm{der}}(\ecs_r+r)\le\kappa_{\mathrm{der}}\le\kappa^{0}_{\mathrm{der}}$ enforce
+every cutoff \emph{strictly}, even at the permitted endpoints, and give
+$D_0(\ecs_r+r)\le C_{\mathrm{der}}(\ecs_r+r)$. Since
+$D(F_{\varsigma}-\mathrm{id})+2I_{\aHerm}=DF_{\varsigma}+I_{\aHerm}$, this is the root
+estimate.
 
 \medskip
-\noindent\textbf{Status.} BOTH rows of this shard are \texttt{stated} / \texttt{af: seeded}
---- both validations were RETRACTED 2026-07-28 (\texttt{docs/LEARNINGS.md}):
-\texttt{lem-stage1-polar-path-transport} (9 nodes, first-pass) on the sweep-adjudicated
-node-1.3.1 anaphor attachment above, and
-\texttt{lem-stage1-inversion-derivative-transport} (run 2: 13 live nodes validated of 22
-created, 9 archived) on the adjudicated synchronization defect above. Workspaces and run
-ledgers are retained as re-elevation bases.
+\noindent\textbf{Status.} Both rows are \texttt{proved} with \texttt{af: validated} (T0),
+tier \emph{routine}, taint clean, af-RE-VALIDATED 2026-07-29 on clean re-seeds (the
+retracted trees were \emph{not} used as repair bases).
+\texttt{proofs/lem-stage1-polar-path-transport}: root validated, 11/11 live nodes (design
+target 10, hard cap 14), 10 rounds, two in-run challenges repaired --- both
+strict-versus-non-strict guard transfers at permitted equality cases --- and re-verified
+fresh. \texttt{proofs/lem-stage1-inversion-derivative-transport}: root validated, 25/25 live
+nodes (design target 22, hard cap 25, not exceeded), 7 rounds, three in-run challenges
+repaired --- the open-domain boundary cases at $r=\delta$ for $G$ and $DG$, and a strict
+cutoff transfer --- and re-verified fresh.
 
-\noindent\textbf{Correction of record (deps-level, not contract-level).} The
-inversion-derivative row's first orchestration (2026-07-28, W95 run 1) aborted
-\textsc{stuck} with the root pending: verifier-validated audit nodes recorded that the
-sole allowed external (the parent control lemma) binds $u_\delta$ and $g_{\varsigma J}$ as
-bare anaphors, so three root premises --- the polar binder, the graph binder, and global
-$C^{1}$-ness of $\sigma$ --- were underivable from the allowed inputs. All three are
-carried verbatim by existing \texttt{af}-validated results, so the registry \texttt{deps}
-line was widened by six T0 imports (\texttt{lem-stage1-polar-retraction},
-\texttt{lem-stage1-unitary-graph-control}, \texttt{lem-stage1-smooth-unitary-operations}
-and the latter's three antecedents \texttt{lem-stage1-approximate-group-laws},
-\texttt{lem-stage1-smooth-unitary-atlas}, \texttt{lem-stage1-smooth-polar-inverse}), the
-contract staying \textbf{byte-unchanged}; the workspace was re-seeded and run 2 validated
-cleanly. No contract was amended.
+\noindent\textbf{Correction of record (deps-level, not contract-level).} Both rows carried
+\texttt{af} validations that were RETRACTED 2026-07-28 by the Stage-1 binder sweep and its
+adjudications: each attached a parent's \emph{anaphorically} bound $u_\delta$ to the root's
+explicitly displayed $\Pi_\delta$ inverse on the strength of shared notation, with no typed
+preimage witness. The repair was to widen or replace the registry \texttt{deps} with typed
+providers that display the same $\Pi_\delta$ --- for the path row, the polar-retraction
+transport alongside the parent used only for its binder-free conclusions; for the inversion
+row, the two explicit group bridges together with the polar retraction and unitary graph
+control, the retracted control parent being dropped entirely. In both cases the
+\texttt{contract} stayed \textbf{byte-unchanged}; nothing was amended.
 
 \noindent\textbf{Role in the chain.} Registry \texttt{defs} (both rows):
 \texttt{def-stage1-polar-witness-data}, \texttt{def-approximate-unitary-space},
-\texttt{def-epsilon-cstar-algebra}. Registry \texttt{deps}: the path row imports exactly
-its fixed-constant parent, Lemma~\ref{lem:stage1-polar-path-admissibility}
-(\S\ref{sec:stage1-smooth-polar}); the inversion row imports its parent
-Lemma~\ref{lem:stage1-inversion-derivative-control} (\S\ref{sec:stage1-smooth-polar})
-together with the six widened imports listed above. The family's remaining transport row
-(for the approximate group laws) and the scalar-arithmetic and constant-ledger rows are
-\textbf{not} \texttt{af}-validated and are \textbf{not} reproduced here; nothing in these
-two sections assembles the Stage-1 front into a statement about almost-idempotent maps,
-and \texttt{op-classical} remains \textbf{open}.
+\texttt{def-epsilon-cstar-algebra}. Registry \texttt{deps}: the path row imports
+Lemma~\ref{lem:stage1-polar-path-admissibility} (\S\ref{sec:stage1-smooth-polar}) and
+Lemma~\ref{lem:stage1-polar-retraction-transport}; the inversion row imports
+\texttt{lem-stage1-explicit-group-domain-membership},
+\texttt{lem-stage1-explicit-group-closeness},
+Lemma~\ref{lem:stage1-polar-retraction} (\S\ref{sec:stage1-polar-retraction}) and
+Lemma~\ref{lem:stage1-unitary-graph-control} (\S\ref{sec:stage1-polar-charts}). With the
+group-law transport of \S\ref{sec:stage1-ledger-keystone} these seven rows are exactly the
+analytic inputs of the Stage-1 constant ledger; nothing in them assembles the Stage-1 front
+into a statement about almost-idempotent maps, and \texttt{op-classical} remains
+\textbf{open}.

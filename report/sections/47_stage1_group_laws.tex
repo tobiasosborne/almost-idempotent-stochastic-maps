@@ -1,16 +1,18 @@
 % SHARD-ID: AISM-47-STAGE1-GROUP-LAWS
 % SHARD-TITLE: Quantitative approximate group laws on the unitaries
 % SHARD-SUMMARY: Reproduces lem-stage1-group-domain-membership and lem-stage1-group-closeness, the two af-validated sub-lemmas showing that a product U bold-dot V and an adjoint U^dagger of unitaries lie in the polar domain with right inverses, and that the polar projection moves them by at most C_grp*epsilon_r.
-% SHARD-SUMMARY: States lem-stage1-approximate-group-laws (af validation RETRACTED 2026-07-28 by the binder sweep, now a stated candidate): the polar projection of the product and of the adjoint are globally defined C1 maps mu and sigma with exact basepoint identities and five defect estimates of size C_grp*epsilon_r.
-% SHARD-SUMMARY: Records the balloon abort that forced the parent proof to be factored into these two deliberately sibling-independent children, the binding in-scope smallness discipline, and the endpoint discipline that keeps every estimate meaningful at epsilon_r = 0.
-% SHARD-KEYWORDS: lem-stage1-group-domain-membership, lem-stage1-group-closeness, lem-stage1-approximate-group-laws, af validated, approximate group, associator defect, balloon repair, endpoint discipline, Stage 1
+% SHARD-SUMMARY: States lem-stage1-approximate-group-laws (af validation RETRACTED 2026-07-28 by the binder sweep; RETIRED IN PLACE, not re-elevated): the polar projection of the product and of the adjoint are globally defined C1 maps mu and sigma with exact basepoint identities and five defect estimates of size C_grp*epsilon_r.
+% SHARD-SUMMARY: Records the balloon abort that forced the parent proof to be factored into these two deliberately sibling-independent children, the binding in-scope smallness discipline, the endpoint discipline that keeps every estimate meaningful at epsilon_r = 0, and the live replacement path through the explicit binder bridges and the validated transport row 13e.
+% SHARD-KEYWORDS: lem-stage1-group-domain-membership, lem-stage1-group-closeness, lem-stage1-approximate-group-laws, af validated, approximate group, associator defect, balloon repair, endpoint discipline, retired in place, explicit binder bridge, Stage 1
 \section{Quantitative approximate group laws on the unitaries}\label{sec:stage1-group-laws}
 
 The unitary set $\Unit$ of Definition~\ref{def:approximate-unitary-space} is not a group:
 $\bdot$ is only approximately associative and $U\dg$ is only approximately an inverse.
-The three results below turn it into an approximate group by \emph{projecting} the naive
-product and adjoint back to $\Unit$ through the polar inverse $u_\delta$ of
-Lemma~\ref{lem:stage1-polar-retraction}. Throughout, all three carry the same pair of guards
+The three results below aim to turn it into an approximate group by \emph{projecting} the
+naive product and adjoint back to $\Unit$ through the polar inverse $u_\delta$ of
+Lemma~\ref{lem:stage1-polar-retraction}. The first two are \texttt{af}-validated; the third
+--- the compound parent --- is \textbf{retired in place} (below). Throughout, all three
+carry the same pair of guards
 \begin{equation}\label{eq:s1gl-guards}
   C_{\mathrm{pol}}(\ecs_r+\delta)\le\kappa_{\mathrm{pol}},
   \qquad
@@ -201,6 +203,20 @@ taint clean). The parent \texttt{lem-stage1-approximate-group-laws} is \texttt{s
 \texttt{af: seeded}: its validation (14 nodes) was RETRACTED 2026-07-28 on the sweep-
 adjudicated node-1.1.2 defect above (\texttt{docs/LEARNINGS.md}).
 
+\noindent\textbf{Retired in place; the live replacement path.} The parent row is
+\textbf{not} being re-elevated. Its live content re-enters the record through the
+binder-closed rebuild of \S\ref{sec:stage1-explicit-bridges}: the two explicit bridges
+\texttt{lem-stage1-explicit-group-domain-membership} and
+\texttt{lem-stage1-explicit-group-closeness} (each carrying a contract-local typed
+$(u_\delta,h_\delta)$ in place of the anaphoric one), together with the explicit smooth
+bridge \texttt{lem-stage1-explicit-smooth-unitary-operations}; and the
+\emph{parameterized} approximate-group statement itself is now carried by
+\texttt{lem-stage1-approximate-group-laws-transport} (row 13e), \texttt{af}-validated
+2026-07-29 on exactly those two explicit bridges plus
+Lemma~\ref{lem:stage1-polar-retraction}, with the retired parent and
+\texttt{lem-stage1-polar-coherence-naturality} dropped from its \texttt{deps}. No
+downstream row imports the retired parent any longer.
+
 \noindent\textbf{Correction of record (proof-level, not contract-level).} The parent's first
 elevation \textbf{aborted on the balloon tripwire} at 60 live nodes. Per that protocol the
 \emph{proof} was factored --- the contract above is byte-unchanged --- into the two children
@@ -216,6 +232,7 @@ threshold. No contract was amended.
 \texttt{def-approximate-unitary-space}, \texttt{def-epsilon-cstar-algebra}. Registry
 \texttt{deps}: \texttt{lem-stage1-polar-retraction} (\S\ref{sec:stage1-polar-retraction}) for
 both children; that lemma together with \texttt{lem-stage1-polar-coherence-naturality} and
-the two children for the parent. Downstream the parent supplies the all-$\Unit$ adjoint
-domain used in \S\ref{sec:stage1-smooth-polar}. Nothing here bears on
-\texttt{op-classical}, which is \textbf{open}.
+the two children for the parent. The parent has \textbf{no} live dependents: the all-$\Unit$
+adjoint domain once drawn from it in \S\ref{sec:stage1-smooth-polar} is now supplied by
+\texttt{lem-stage1-explicit-group-closeness} (\S\ref{sec:stage1-explicit-bridges}). Nothing
+here bears on \texttt{op-classical}, which is \textbf{open}.

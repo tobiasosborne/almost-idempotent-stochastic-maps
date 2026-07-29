@@ -270,12 +270,11 @@ lem-topology-hopf-structure
 # rebuild (DESIGN-13E-BINDER-v3.md as amended by v3.1/v3.2; AUDIT-13E-BINDER-v3.2.md LAND);
 # unanchored at initial landing per AUDIT-13E-BINDER-v3.md finding 3 — anchor into the
 # report (and delete these lines) when the elevation queue validates them.
-lem-stage1-explicit-group-domain-membership
-lem-stage1-explicit-group-closeness
-lem-stage1-explicit-smooth-unitary-operations
-lem-stage1-approximate-group-laws-transport
-lem-stage1-polar-constant-ledger
-lem-finite-polyhedron-maximal-simplex-placement
+# 2026-07-29: the three explicit-binder bridges validated and are now WIRED into
+# report/sections/49b_stage1_explicit_bridges.tex; their lines deleted here.
+# 2026-07-29: lem-stage1-approximate-group-laws-transport, lem-stage1-polar-constant-ledger and
+# lem-finite-polyhedron-maximal-simplex-placement af-VALIDATED and WIRED into
+# report/sections/51b_stage1_ledger_keystone.tex; their lines deleted here.
 lem-stage1-uniform-inversion-isolation
 lem-stage1-quotient-manifold-package
 lem-stage1-quotient-finite-cw

@@ -1,19 +1,22 @@
 % SHARD-ID: AISM-49-STAGE1-SMOOTH-UPGRADES
 % SHARD-TITLE: The smooth polar inverse, smooth operations, and the polar arithmetic
 % SHARD-SUMMARY: Reproduces lem-stage1-smooth-polar-inverse, the af-validated conditional upgrade of the bijective C1 polar map Pi_delta to a smooth diffeomorphism whose same set-theoretic inverse (u_delta, h_delta) is smooth, obtained chartwise from Lee's inverse function theorem with no point or first derivative changed.
-% SHARD-SUMMARY: States lem-stage1-smooth-unitary-operations (af validation RETRACTED 2026-07-28 by the binder sweep, now a stated candidate): the circle action and the polar-projected product and inversion mu and sigma are smooth maps into the embedded manifold calU and obey the exact covariance identities mu(cU,dV) = cd mu(U,V) and sigma(cU) = conj(c) sigma(U).
+% SHARD-SUMMARY: States lem-stage1-smooth-unitary-operations (af validation RETRACTED 2026-07-28 by the binder sweep; RETIRED IN PLACE, replaced by the explicit smooth bridge lem-stage1-explicit-smooth-unitary-operations): the circle action and the polar-projected product and inversion mu and sigma are smooth maps into the embedded manifold calU and obey the exact covariance identities mu(cU,dV) = cd mu(U,V) and sigma(cU) = conj(c) sigma(U).
 % SHARD-SUMMARY: Reproduces lem-stage1-polar-scalar-arithmetic, the af-validated universal scalar row: the derived scales delta_*, epsilon_*^r, e_S1, r_iso built from any admissible coefficients and margins make every epsilon_X below e_S1 satisfy all seven Stage-1 polar guards, with the quantitative slack r_- >= 3 delta_*/4 and eta <= delta_*/4.
-% SHARD-KEYWORDS: lem-stage1-smooth-polar-inverse, lem-stage1-smooth-unitary-operations, lem-stage1-polar-scalar-arithmetic, af validated, smooth diffeomorphism, inverse function theorem, circle equivariance, guard arithmetic, witness tuple, Stage 1
+% SHARD-KEYWORDS: lem-stage1-smooth-polar-inverse, lem-stage1-smooth-unitary-operations, lem-stage1-polar-scalar-arithmetic, af validated, smooth diffeomorphism, inverse function theorem, circle equivariance, guard arithmetic, witness tuple, retired in place, explicit smooth bridge, Stage 1
 \section{The smooth polar inverse, smooth operations, and the polar arithmetic}\label{sec:stage1-smooth-upgrades}
 
-The three rows of this section close the \texttt{af}-validated part of the Stage-1 polar
-block begun in \S\ref{sec:stage1-polar-charts}. The first two are smoothness upgrades in
-the style of Lemma~\ref{lem:stage1-smooth-unitary-atlas}: they replace no map, no point and
-no first derivative, but promote the $C^{1}$ regularity of the polar inverse and of the
-approximate-group operations to $C^{\infty}$ for the embedded smooth structure. The third
-is pure scalar arithmetic: it packages, once and for all, the guard inequalities that every
-analytic row of the block demands, so that downstream consumers can instantiate the whole
-front from a single smallness assumption on $\ecs_X$.
+The three rows of this section continue the Stage-1 polar block begun in
+\S\ref{sec:stage1-polar-charts}. The first two are smoothness upgrades in the style of
+Lemma~\ref{lem:stage1-smooth-unitary-atlas}: they replace no map, no point and no first
+derivative, but promote the $C^{1}$ regularity of the polar inverse and of the
+approximate-group operations to $C^{\infty}$ for the embedded smooth structure. Of these,
+only the first is \texttt{af}-validated; the operations row is \textbf{retired in place}
+and its live content is carried by the explicit smooth bridge of
+\S\ref{sec:stage1-explicit-bridges}. The third row is pure scalar arithmetic: it packages,
+once and for all, the guard inequalities that every analytic row of the block demands, so
+that downstream consumers can instantiate the whole front from a single smallness
+assumption on $\ecs_X$.
 
 \begin{lemma}[\texttt{lem-stage1-smooth-polar-inverse}]\label{lem:stage1-smooth-polar-inverse}
 For every finite-dimensional exact-unit $\ecs_r$-$C^*$-algebra and every $\delta>0$: if
@@ -239,6 +242,16 @@ deps) and \texttt{proofs/lem-stage1-polar-scalar-arithmetic} (15 nodes, 15
 validation (15 nodes) was RETRACTED 2026-07-28 on the sweep-adjudicated attachment defect
 above (\texttt{docs/LEARNINGS.md}).
 
+\noindent\textbf{Retired in place; the live replacement path.} The operations row is
+\textbf{not} being re-elevated. Its live content re-enters through the binder-closed
+\texttt{lem-stage1-explicit-smooth-unitary-operations}
+(\S\ref{sec:stage1-explicit-bridges}), \texttt{af}-validated 2026-07-29, whose contract
+quantifies explicitly over the graph family, the smooth structure, the displayed
+$\Pi_\delta$ with both typed inverse identities and the $C^{1}$ maps
+$\alpha_{C^{1}},\mu_{C^{1}},\sigma_{C^{1}}$, so that every formerly anaphoric map has a
+contract-local typed referent. It uses neither the retired parent nor
+\texttt{lem-stage1-polar-coherence-naturality}.
+
 \noindent\textbf{Corrections of record (proof-level, not contract-level).} The operations
 tree drew two genuine cross-sibling challenges: as first written, the covariance nodes
 leaned on the \emph{pending} sibling that made the scalar action $\Unit$-valued, which the
@@ -256,8 +269,6 @@ upgrades; \texttt{def-stage1-polar-witness-data} for the arithmetic row. Registr
 (\S\ref{sec:stage1-smooth-polar}) for the smooth polar inverse; those two conclusions
 together with \texttt{lem-stage1-polar-coherence-naturality} and
 \texttt{lem-stage1-approximate-group-laws} (\S\ref{sec:stage1-group-laws}) for the
-operations; the arithmetic row has none. The remaining Stage-1 polar rows --- the seven
-parameterized transport helpers and the constant ledger --- are \textbf{not}
-\texttt{af}-validated and are \textbf{not} reproduced here; nothing in this document
-assembles the Stage-1 front into a statement about almost-idempotent maps, and
-\texttt{op-classical} is \textbf{open}.
+operations; the arithmetic row has none. The retired operations row has no live dependents.
+Nothing in this document assembles the Stage-1 front into a statement about
+almost-idempotent maps, and \texttt{op-classical} is \textbf{open}.

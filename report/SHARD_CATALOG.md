@@ -351,40 +351,57 @@ verbatim), and keywords.
 - **File:** `report/sections/47_stage1_group_laws.tex`
 - **Title:** Quantitative approximate group laws on the unitaries
 - **Summary:** Reproduces lem-stage1-group-domain-membership and lem-stage1-group-closeness, the two af-validated sub-lemmas showing that a product U bold-dot V and an adjoint U^dagger of unitaries lie in the polar domain with right inverses, and that the polar projection moves them by at most C_grp*epsilon_r.
-- **Summary:** States lem-stage1-approximate-group-laws (af validation RETRACTED 2026-07-28 by the binder sweep, now a stated candidate): the polar projection of the product and of the adjoint are globally defined C1 maps mu and sigma with exact basepoint identities and five defect estimates of size C_grp*epsilon_r.
-- **Summary:** Records the balloon abort that forced the parent proof to be factored into these two deliberately sibling-independent children, the binding in-scope smallness discipline, and the endpoint discipline that keeps every estimate meaningful at epsilon_r = 0.
-- **Keywords:** lem-stage1-group-domain-membership, lem-stage1-group-closeness, lem-stage1-approximate-group-laws, af validated, approximate group, associator defect, balloon repair, endpoint discipline, Stage 1
+- **Summary:** States lem-stage1-approximate-group-laws (af validation RETRACTED 2026-07-28 by the binder sweep; RETIRED IN PLACE, not re-elevated): the polar projection of the product and of the adjoint are globally defined C1 maps mu and sigma with exact basepoint identities and five defect estimates of size C_grp*epsilon_r.
+- **Summary:** Records the balloon abort that forced the parent proof to be factored into these two deliberately sibling-independent children, the binding in-scope smallness discipline, the endpoint discipline that keeps every estimate meaningful at epsilon_r = 0, and the live replacement path through the explicit binder bridges and the validated transport row 13e.
+- **Keywords:** lem-stage1-group-domain-membership, lem-stage1-group-closeness, lem-stage1-approximate-group-laws, af validated, approximate group, associator defect, balloon repair, endpoint discipline, retired in place, explicit binder bridge, Stage 1
 
 ## `AISM-48-STAGE1-SMOOTH-POLAR`
 - **File:** `report/sections/48_stage1_smooth_polar.tex`
 - **Title:** Paths, the inversion derivative, and the smooth atlas
 - **Summary:** Reproduces lem-stage1-polar-path-admissibility, the af-validated statement that the straight segment between two nearby unitaries stays in the polar domain and projects to a jointly continuous, circle-equivariant path joining them.
-- **Summary:** States lem-stage1-inversion-derivative-control (af validation RETRACTED 2026-07-28, now a stated candidate): the polar inversion sigma retains the sJ graph chart on a small ball and its coordinate representative has derivative within C_der*(epsilon_r+r) of minus the identity.
+- **Summary:** Reproduces lem-stage1-inversion-derivative-control, af-RE-VALIDATED 2026-07-29 on the typed explicit-closeness dependency spine: the polar inversion sigma retains the sJ graph chart on a small ball and its coordinate representative has derivative within C_der*(epsilon_r+r) of minus the identity.
 - **Summary:** Reproduces lem-stage1-smooth-unitary-atlas, the af-validated conditional upgrade of the C1 graph functions to C-infinity by Lee's implicit function theorem, leaving every point, chart and first derivative unchanged.
-- **Keywords:** lem-stage1-polar-path-admissibility, lem-stage1-inversion-derivative-control, lem-stage1-smooth-unitary-atlas, af validated, projected straight path, chart retention, implicit function theorem, smooth embedded manifold, Stage 1
+- **Keywords:** lem-stage1-polar-path-admissibility, lem-stage1-inversion-derivative-control, lem-stage1-smooth-unitary-atlas, af validated, re-validation, typed provider spine, projected straight path, chart retention, implicit function theorem, smooth embedded manifold, Stage 1
 
 ## `AISM-49-STAGE1-SMOOTH-UPGRADES`
 - **File:** `report/sections/49_stage1_smooth_upgrades.tex`
 - **Title:** The smooth polar inverse, smooth operations, and the polar arithmetic
 - **Summary:** Reproduces lem-stage1-smooth-polar-inverse, the af-validated conditional upgrade of the bijective C1 polar map Pi_delta to a smooth diffeomorphism whose same set-theoretic inverse (u_delta, h_delta) is smooth, obtained chartwise from Lee's inverse function theorem with no point or first derivative changed.
-- **Summary:** States lem-stage1-smooth-unitary-operations (af validation RETRACTED 2026-07-28 by the binder sweep, now a stated candidate): the circle action and the polar-projected product and inversion mu and sigma are smooth maps into the embedded manifold calU and obey the exact covariance identities mu(cU,dV) = cd mu(U,V) and sigma(cU) = conj(c) sigma(U).
+- **Summary:** States lem-stage1-smooth-unitary-operations (af validation RETRACTED 2026-07-28 by the binder sweep; RETIRED IN PLACE, replaced by the explicit smooth bridge lem-stage1-explicit-smooth-unitary-operations): the circle action and the polar-projected product and inversion mu and sigma are smooth maps into the embedded manifold calU and obey the exact covariance identities mu(cU,dV) = cd mu(U,V) and sigma(cU) = conj(c) sigma(U).
 - **Summary:** Reproduces lem-stage1-polar-scalar-arithmetic, the af-validated universal scalar row: the derived scales delta_*, epsilon_*^r, e_S1, r_iso built from any admissible coefficients and margins make every epsilon_X below e_S1 satisfy all seven Stage-1 polar guards, with the quantitative slack r_- >= 3 delta_*/4 and eta <= delta_*/4.
-- **Keywords:** lem-stage1-smooth-polar-inverse, lem-stage1-smooth-unitary-operations, lem-stage1-polar-scalar-arithmetic, af validated, smooth diffeomorphism, inverse function theorem, circle equivariance, guard arithmetic, witness tuple, Stage 1
+- **Keywords:** lem-stage1-smooth-polar-inverse, lem-stage1-smooth-unitary-operations, lem-stage1-polar-scalar-arithmetic, af validated, smooth diffeomorphism, inverse function theorem, circle equivariance, guard arithmetic, witness tuple, retired in place, explicit smooth bridge, Stage 1
+
+## `AISM-49B-STAGE1-EXPLICIT-BRIDGES`
+- **File:** `report/sections/49b_stage1_explicit_bridges.tex`
+- **Title:** The explicit binder bridges of the Stage-1 polar block
+- **Summary:** Reproduces lem-stage1-explicit-group-domain-membership and lem-stage1-explicit-group-closeness, the two af-validated bridges that redo the group-input domain and closeness statements with the polar pair (u_delta, h_delta) bound inside the contract from the displayed retraction inverse, before either group input is treated.
+- **Summary:** Reproduces lem-stage1-explicit-smooth-unitary-operations, the af-validated quantifier-closed smooth bridge: for any graph family, smooth structure, displayed Pi_delta with both typed inverse identities and the resulting C1 maps, the scalar action and the polar-projected product and inversion admit smooth representatives with the same points, the same first derivatives, and the exact covariance identities.
+- **Summary:** Explains what binder closure means here, and records the run history: a ballooned first run on the membership row, an epsilon_r = 0 endpoint repair and a dependency restructure on the closeness row, and a challenge-free first pass on the smooth row.
+- **Keywords:** lem-stage1-explicit-group-domain-membership, lem-stage1-explicit-group-closeness, lem-stage1-explicit-smooth-unitary-operations, af validated, binder closure, typed witness, anaphoric contract, covariance, balloon abort, endpoint discipline, Stage 1
+
 ## `AISM-50-STAGE1-POLAR-TRANSPORTS`
 - **File:** `report/sections/50_stage1_polar_transports.tex`
 - **Title:** Parameterized transports of the Stage-1 polar layer
-- **Summary:** Reproduces three af-validated Stage-1 polar transport rows (lem-stage1-rectified-cstar-transport, lem-stage1-unitary-graph-transport, lem-stage1-polar-retraction-transport) and states lem-stage1-maurer-cartan-transport (af validation RETRACTED 2026-07-28 by the binder sweep); all four re-state fixed-constant polar lemmas at the named fields of an arbitrary Stage-1 polar witness datum.
+- **Summary:** Reproduces four af-validated Stage-1 polar transport rows (lem-stage1-rectified-cstar-transport, lem-stage1-unitary-graph-transport, lem-stage1-maurer-cartan-transport, lem-stage1-polar-retraction-transport); all four re-state fixed-constant polar lemmas at the named fields of an arbitrary Stage-1 polar witness datum.
 - **Summary:** States the common transport skeleton once: instantiate the parent's universal witnesses as thresholds, derive epsilon_r >= 0 from the product-norm axiom at the unit, transport every scalar guard by coefficient/margin monotonicity, apply the parent, and weaken the conclusion coefficients back to the fields of the tuple.
-- **Summary:** Records the Maurer-Cartan challenges that forced an arbitrary-family tangent argument independent of the distinguished graph family, with the conditional uniqueness bridge kept explicitly conditional.
-- **Keywords:** lem-stage1-rectified-cstar-transport, lem-stage1-unitary-graph-transport, lem-stage1-maurer-cartan-transport, lem-stage1-polar-retraction-transport, af validated, witness data, transport, guard monotonicity, Stage 1
+- **Summary:** Records the repository's first in-ledger repair: the Maurer-Cartan row was retracted 2026-07-28 on a defective identification node and re-validated 2026-07-29 after that node was revoked and archived and the typed-family bypass was freshly re-accepted bottom-up, its tangent argument owing nothing to the distinguished graph family.
+- **Keywords:** lem-stage1-rectified-cstar-transport, lem-stage1-unitary-graph-transport, lem-stage1-maurer-cartan-transport, lem-stage1-polar-retraction-transport, af validated, witness data, transport, guard monotonicity, in-ledger repair, Stage 1
 
 ## `AISM-51-STAGE1-POLAR-TRANSPORTS-II`
 - **File:** `report/sections/51_stage1_polar_transports_ii.tex`
 - **Title:** Parameterized transports of the Stage-1 polar layer, II: paths and the inversion derivative
-- **Summary:** States lem-stage1-polar-path-transport and lem-stage1-inversion-derivative-transport (BOTH af validations RETRACTED 2026-07-28, now stated candidates); both carry projected-path / inversion-derivative content to the parameterized witness-data form with explicit definite descriptions for the polar and graph binders.
-- **Summary:** Explains the joint-threshold construction that transports five scalar guards to four fixed-constant parents simultaneously, and the three binder identifications that discharge the explicit u_delta, g_sJ and sigma descriptions from af-validated imports.
-- **Summary:** Records the inversion-derivative run-1 STUCK abort on bare-anaphor binders in the sole allowed external, repaired by widening the deps line with six T0 imports while leaving the contract byte-unchanged.
-- **Keywords:** lem-stage1-polar-path-transport, lem-stage1-inversion-derivative-transport, af validated, witness data, transport, definite description, deps widening, Stage 1
+- **Summary:** Reproduces lem-stage1-polar-path-transport and lem-stage1-inversion-derivative-transport, both af-RE-VALIDATED 2026-07-29 on clean re-seeds over typed provider spines; both carry projected-path and inversion-derivative content to the parameterized witness-data form with explicit definite descriptions for the polar and graph binders.
+- **Summary:** States the typed-spine discipline that replaced the retracted anaphoric attachments: the path row uses its fixed-constant parent only for binder-free conclusions and takes the displayed inverse from the polar-retraction transport, while the inversion row fixes four provider witnesses and builds every base threshold before the receiving tuple is quantified.
+- **Summary:** Records, condensed, that both earlier validations were retracted 2026-07-28 for attaching a parent's anaphorically bound u_delta to the root's explicitly displayed Pi_delta inverse without a typed preimage witness; neither contract was ever in dispute and both are byte-unchanged.
+- **Keywords:** lem-stage1-polar-path-transport, lem-stage1-inversion-derivative-transport, af validated, witness data, transport, definite description, typed provider spine, re-validation, Stage 1
+
+## `AISM-51B-STAGE1-LEDGER-KEYSTONE`
+- **File:** `report/sections/51b_stage1_ledger_keystone.tex`
+- **Title:** The Stage-1 keystone: the group-law transport and the single-tuple constant ledger
+- **Summary:** Reproduces lem-stage1-approximate-group-laws-transport, the first-ever validation of the 13e row, whose typed three-provider spine removes by construction the u_grp/u_pol synchronization gap that stalled two earlier attempts.
+- **Summary:** Reproduces lem-stage1-polar-constant-ledger, the Stage-1 KEYSTONE: one universal witness tuple W simultaneously witnessing all eight clauses (A_1)-(A_7) and (R), consuming all seven parameterized transports plus the scalar-arithmetic row.
+- **Summary:** Reproduces lem-finite-polyhedron-maximal-simplex-placement, an algebra-independent finite-poset row, and records honestly the user-ratified 2026-07-29 contract amendment to its pointwise reading after a verifier refuted the collective reading by two isolated vertices.
+- **Keywords:** lem-stage1-approximate-group-laws-transport, lem-stage1-polar-constant-ledger, lem-finite-polyhedron-maximal-simplex-placement, af validated, witness tuple, constant ledger, approximate group laws, finite simplicial complex, contract amendment, Stage 1
 
 ## `AISM-39-ARGUMENT-DAG`
 - **File:** `report/sections/39_argument_dag.tex`

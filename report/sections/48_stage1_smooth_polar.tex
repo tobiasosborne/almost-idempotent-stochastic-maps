@@ -1,9 +1,9 @@
 % SHARD-ID: AISM-48-STAGE1-SMOOTH-POLAR
 % SHARD-TITLE: Paths, the inversion derivative, and the smooth atlas
 % SHARD-SUMMARY: Reproduces lem-stage1-polar-path-admissibility, the af-validated statement that the straight segment between two nearby unitaries stays in the polar domain and projects to a jointly continuous, circle-equivariant path joining them.
-% SHARD-SUMMARY: States lem-stage1-inversion-derivative-control (af validation RETRACTED 2026-07-28, now a stated candidate): the polar inversion sigma retains the sJ graph chart on a small ball and its coordinate representative has derivative within C_der*(epsilon_r+r) of minus the identity.
+% SHARD-SUMMARY: Reproduces lem-stage1-inversion-derivative-control, af-RE-VALIDATED 2026-07-29 on the typed explicit-closeness dependency spine: the polar inversion sigma retains the sJ graph chart on a small ball and its coordinate representative has derivative within C_der*(epsilon_r+r) of minus the identity.
 % SHARD-SUMMARY: Reproduces lem-stage1-smooth-unitary-atlas, the af-validated conditional upgrade of the C1 graph functions to C-infinity by Lee's implicit function theorem, leaving every point, chart and first derivative unchanged.
-% SHARD-KEYWORDS: lem-stage1-polar-path-admissibility, lem-stage1-inversion-derivative-control, lem-stage1-smooth-unitary-atlas, af validated, projected straight path, chart retention, implicit function theorem, smooth embedded manifold, Stage 1
+% SHARD-KEYWORDS: lem-stage1-polar-path-admissibility, lem-stage1-inversion-derivative-control, lem-stage1-smooth-unitary-atlas, af validated, re-validation, typed provider spine, projected straight path, chart retention, implicit function theorem, smooth embedded manifold, Stage 1
 \section{Paths, the inversion derivative, and the smooth atlas}\label{sec:stage1-smooth-polar}
 
 \begin{lemma}[\texttt{lem-stage1-polar-path-admissibility}]\label{lem:stage1-polar-path-admissibility}
@@ -60,7 +60,7 @@ both $Z_t$ and $cZ_t$ lie in $S_\delta$; the scalar-naturality clause
 \eqref{eq:s1cn-natural} of Lemma~\ref{lem:stage1-polar-coherence-naturality}, applied to the
 polar datum $(\delta,S_\delta,u_\delta,h_\delta)$, gives $u_\delta(cZ_t)=c\,u_\delta(Z_t)$.
 
-\begin{conjecture}[\texttt{lem-stage1-inversion-derivative-control} --- proof retracted 2026-07-28]\label{lem:stage1-inversion-derivative-control}
+\begin{lemma}[\texttt{lem-stage1-inversion-derivative-control}]\label{lem:stage1-inversion-derivative-control}
 There exist universal
 $C_{\mathrm{der}},C_{\mathrm{ch}},C_{\mathrm{pol}},C_{\mathrm{grp}}\ge1$ and
 $\kappa_{\mathrm{der}},\kappa_{\mathrm{ch}},\kappa_{\mathrm{pol}}\in(0,\tfrac12]$ such that
@@ -89,51 +89,75 @@ here only to keep it apart from the scale variables. The second display of
 \eqref{eq:s1id-retention} is the \emph{chart-retention guard}: it is what makes the
 coordinate identity $F_{\varsigma}(A)=B$ below legitimate, rather than a comparison of
 coordinates in two different charts.
-\emph{Retraction note (2026-07-28).} The 2026-07-27 \texttt{af} validation of this row was
-RETRACTED: an independent adjudication found its export node~1.3 identifies the
-anaphorically bound group-law polar factor with the typed retraction inverse without a
-typed preimage witness (see \texttt{docs/LEARNINGS.md}, entry 2026-07-28). The statement
-stands as a \emph{stated} candidate (the contract is not in dispute); re-derivation on an
-explicit-binder dependency spine is part of the 13e repair campaign.
-\end{conjecture}
+\emph{Historical note (contract byte-unchanged throughout).} A first \texttt{af} validation
+of 2026-07-27 was RETRACTED on 2026-07-28: an independent adjudication found that its export
+node~1.3 identified the anaphorically bound group-law polar factor with the typed retraction
+inverse without a typed preimage witness (\texttt{docs/LEARNINGS.md}, entry 2026-07-28). The
+2026-07-29 re-validation below replays the calculation on the typed explicit-closeness
+spine, where one polar pair is bound from the displayed retraction inverse and the closeness
+estimate speaks about that same pair; the defective substitution is absent by construction.
+\end{lemma}
 
 \noindent\textbf{Registry contract (verbatim).}
 \contractquote{Typed inversion derivative with chart retention: there exist universal C_der, C_ch, C_pol, C_grp >= 1 and kappa_der, kappa_ch, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra, s in {+1, -1}, and 0 < r <= delta satisfying C_ch*(epsilon_r + delta) <= kappa_ch, C_pol*(epsilon_r + delta) <= kappa_pol, C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), C_der*(epsilon_r + r) <= kappa_der, and (1 + epsilon_r)*(1 + C_ch*(epsilon_r + delta))*r + C_grp*epsilon_r < 2*delta, the globally defined sigma(U) = u_delta(U^dagger) maps chi_s(B_r^{icalH}(0)) into the same sJ-graph chart, where chi_s(A) = sJ bold-dot (J + A + g_{sJ}(A)), and F_s(A) = phi_{sJ}^par(sigma(chi_s(A))) satisfies ||D(F_s - id)(A) + 2*I_{icalH}|| <= C_der*(epsilon_r + r) for all A in B_r^{icalH}(0).}
 
-\paragraph{Retracted proof sketch (the defective af tree, kept for the record).}
-The retracted validation aligned constants first:
-$C_{\mathrm{ch}},\kappa_{\mathrm{ch}}$ from
-Lemma~\ref{lem:stage1-unitary-graph-control}, $C_{\mathrm{pol}}$ the larger and
-$\kappa_{\mathrm{pol}}$ the smaller of the polar and group-law witnesses, $C_{\mathrm{grp}}$
-from Lemma~\ref{lem:stage1-approximate-group-laws}; $C_{\mathrm{der}},\kappa_{\mathrm{der}}$
-chosen last. \emph{The defect sits in the polar-factorization step below (the identification
-of the group-law polar factor with the typed retraction inverse); the remaining scalar and
-chart steps are unchallenged but the tree does not stand without it.}
+\paragraph{Proof (prose account of the af-validated tree).}
+\emph{Provider alignment and typed synchronisation --- before any calculation.} Fix the
+witnesses $(C_g,k_g)$ of Lemma~\ref{lem:stage1-unitary-graph-control}, $(P_r,k_r)$ of
+Lemma~\ref{lem:stage1-polar-retraction} and $(G_c,P_c,k_c)$ of
+Lemma~\ref{lem:stage1-explicit-group-closeness}, and set
+$C_{\mathrm{ch}}=\max\{1,C_g\}$, $\kappa_{\mathrm{ch}}=\min\{\tfrac12,k_g\}$,
+$C_{\mathrm{pol}}=\max\{1,P_r,P_c\}$, $\kappa_{\mathrm{pol}}=\min\{\tfrac12,k_r,k_c\}$ and
+$C_{\mathrm{grp}}=\max\{1,G_c\}$; the receiving guards \eqref{eq:s1id-guards} then imply
+each provider's own guard. Both polar providers \emph{display} the identical map
+$\Pi_\delta(U,H)=U\bdot H$ on the identical domain
+$\Unit\times B^{\Herm}_{\delta}(J)$ with target its image $S_\delta$, and both call its
+inverse unique; ordinary uniqueness of a set-theoretic inverse therefore identifies their
+displayed pairs $(u_\delta,h_\delta)$. This is the step at which the retracted tree
+substituted one opaque factor for another; here there is a single typed pair, bound once.
+The pair $C_{\mathrm{der}},\kappa_{\mathrm{der}}$ is chosen last, after the universal
+estimates below are fixed.
 
 \emph{The scalar chart.} Write $V=\varsigma J$, $G=g_V$ and $Z_T=T+G(T)$. Exact unitality,
 bilinearity, the involution laws and $\varsigma^{2}=1$ collapse \eqref{eq:s1gc-f} to
-$f_V(Z_T)=G(T)+\tfrac12Z_T\dg\bdot Z_T$, so $G(0)=0$ by uniqueness and
-$G(T)=-\tfrac12Z_T\dg\bdot Z_T$; differentiating and absorbing the resulting $DG$ term
-gives $\nrm{DG(T)}\le K_gr$ for $\nrm{T}\le2r$.
+$f_V(Z_T)=G(T)+\tfrac12Z_T\dg\bdot Z_T$, so $G(0)=0$ by the uniqueness clause of
+Lemma~\ref{lem:stage1-unitary-graph-control}, and with
+$d=C_{\mathrm{ch}}(\ecs_r+\delta)\le\kappa_{\mathrm{ch}}\le\tfrac12$ its derivative bound
+gives $\nrm{G(T)}\le d\nrm{T}$. Differentiating the collapsed identity and absorbing the
+resulting $DG$ term gives $\nrm{DG(T)}\le K_gr$ for $\nrm{T}\le2r$, once $\ecs_r+r$ lies
+below a universal cutoff.
 
-\emph{Polar factorisation and the normal term.} For $A\in B^{\aHerm}_{r}(0)$,
-$U=\chi_{\varsigma}(A)$ lies in $\Unit$; the all-$\Unit$ adjoint domain of
-Lemma~\ref{lem:stage1-approximate-group-laws}, with the common $u_\delta$ identified by
-Lemma~\ref{lem:stage1-polar-coherence-naturality}, gives $C^{1}$ maps
-$W=\sigma(U)$ and $Q=h_\delta(U\dg)-J\in\Herm$ with $\nrm{Q}<\delta$,
-$U\dg=W\bdot(J+Q)$ and $\nrm{W-U\dg}\le C_{\mathrm{grp}}\ecs_r$. Since $W\dg\bdot W=J$,
-one associator and the $C^*$-lower bound absorb into
+\emph{Typed adjoint factorisation.} For $A\in B^{\aHerm}_{r}(0)$ the point
+$U=\chi_{\varsigma}(A)$ lies in $\Unit$ by Lemma~\ref{lem:stage1-unitary-graph-control}.
+Applied to the \emph{synchronised} pair, the $C^{1}$ inverse of
+Lemma~\ref{lem:stage1-polar-retraction} and the adjoint estimate of
+Lemma~\ref{lem:stage1-explicit-group-closeness} speak about one and the same $u_\delta$, so
+$W=\sigma(U)=u_\delta(U\dg)$ and $Q=h_\delta(U\dg)-J$ are $C^{1}$ in $A$ with $W\in\Unit$,
+$Q\in\Herm$, $\nrm{Q}<\delta$,
+\begin{equation}\label{eq:s1id-factor}
+  U\dg=W\bdot(J+Q),\qquad \nrm{W-U\dg}\le C_{\mathrm{grp}}\ecs_r ;
+\end{equation}
+no unnamed or separately supplied polar factor occurs. Since $\varsigma J\in\Unit$ and
+$(\varsigma J)\dg=\varsigma J$, the retraction identity \eqref{eq:s1pr-inverse} also gives
+$\sigma(\varsigma J)=\varsigma J$.
+
+\emph{The normal term.} From \eqref{eq:s1id-factor}, $U\dg-W=W\bdot Q$, so
+$\nrm{W\bdot Q}\le C_{\mathrm{grp}}\ecs_r$; approximate associativity together with
+$W\dg\bdot W=J$ and the $C^*$-lower bound $\nrm{W}\le(1-\ecs_r)^{-1/2}$ absorb the associator
+error into
 \begin{equation}\label{eq:s1id-Q}
   \nrm{Q}\;\le\;K_qC_{\mathrm{grp}}\ecs_r .
 \end{equation}
 
 \emph{Chart retention.} The involution law and the product estimate give
-$\nrm{U\dg-\varsigma J}\le(1+\ecs_r)(1+C_{\mathrm{ch}}(\ecs_r+\delta))\nrm{A}$, so the second
-guard of \eqref{eq:s1id-retention} gives $\nrm{W-\varsigma J}<2\delta$. As
+$\nrm{U\dg-\varsigma J}\le(1+\ecs_r)(1+C_{\mathrm{ch}}(\ecs_r+\delta))\nrm{A}$, so the
+closeness estimate of \eqref{eq:s1id-factor} and the second guard of
+\eqref{eq:s1id-retention} give $\nrm{W-\varsigma J}<2\delta$. As
 $\Lmul{\varsigma J}=\varsigma I$ exactly, $C=\phi_{\varsigma J}(W)$ has norm below $2\delta$
 and contractive components; unitarity of $W$ makes $f_{\varsigma J}(C)=0$, so uniqueness in
 Lemma~\ref{lem:stage1-unitary-graph-control} forces $C^{\perp}=G(C^{\parallel})$. Thus
-$W=\chi_{\varsigma}(B)$ with $B=C^{\parallel}=F_{\varsigma}(A)$ in the \emph{same} chart.
+$W=\chi_{\varsigma}(B)$ with $B=C^{\parallel}=F_{\varsigma}(A)$ in the \emph{same} chart,
+and these coordinate maps are $C^{1}$.
 
 \emph{The coordinate identity and its derivative.} Substituting the three factorisations and
 cancelling $\varsigma$ gives the exact identity
@@ -141,17 +165,21 @@ $J-A+G(A)=(J+B+G(B))\bdot(J+Q)$, whose anti-Hermitian part reads
 \begin{equation}\label{eq:s1id-coord}
   -A\;=\;B+P^{\parallel}\bigl((B+G(B))\bdot Q\bigr),
 \end{equation}
-so $\nrm{B}\le2r$ once \eqref{eq:s1id-Q} is small. Differentiating \eqref{eq:s1id-coord} in
-a unit direction $\xi$, with $P=DF_{\varsigma}(A)\xi$ and $R=DQ(A)\xi$, gives
+so $\nrm{B}\le2r$ once the cutoff makes $(1+\ecs_r)(1+d)\nrm{Q}\le\tfrac12$ in
+\eqref{eq:s1id-Q}. Differentiating \eqref{eq:s1id-coord} in a unit direction $\xi$, with
+$P=DF_{\varsigma}(A)\xi$ and $R=DQ(A)\xi$, gives
 $-\xi+DG(A)\xi=P+DG(B)P+R+E$ with
 $E=(P+DG(B)P)\bdot Q+(B+G(B))\bdot R$; typing by Hermitian and anti-Hermitian parts yields
 $P+\xi=-P^{\parallel}(E)$. The product bound with \eqref{eq:s1id-Q}, $\nrm{B}\le2r$ and
 $\nrm{DG}\le K_gr$ gives $\nrm{E}\le\alpha\nrm{P}+\beta\nrm{R}$ with $\alpha\le K_1\ecs_r$
-and $\beta\le K_2r$; elementary absorption then bounds $\nrm{P}\le2$,
-$\nrm{R}\le K_3(\ecs_r+r)$ and finally $\nrm{P+\xi}\le K_4(\ecs_r+r)$. Choosing
-$\kappa_{\mathrm{der}}$ small and $C_{\mathrm{der}}\ge K_4$ enforces every absorption
-condition, and since $D(F_{\varsigma}-\mathrm{id})+2I_{\aHerm}=DF_{\varsigma}+I_{\aHerm}$,
-this is \eqref{eq:s1id-derivative}.
+and $\beta\le K_2r$; a universal cutoff making $\alpha,\beta,K_gr\le\tfrac18$ bounds
+$\nrm{P}\le2$, then $\nrm{R}\le K_3(\ecs_r+r)$ and finally
+$\nrm{P+\xi}\le K_4(\ecs_r+r)$. Choosing $C_{\mathrm{der}}\ge\max\{1,K_4\}$ and
+$\kappa_{\mathrm{der}}\in(0,\tfrac12]$ so that $C_{\mathrm{der}}(\ecs_r+r)\le
+\kappa_{\mathrm{der}}$ enforces every cutoff and absorption used above, homogeneity extends
+the last estimate to all $\xi$, and since
+$D(F_{\varsigma}-\mathrm{id})+2I_{\aHerm}=DF_{\varsigma}+I_{\aHerm}$, this is
+\eqref{eq:s1id-derivative}.
 
 \begin{lemma}[\texttt{lem-stage1-smooth-unitary-atlas}]\label{lem:stage1-smooth-unitary-atlas}
 For every finite-dimensional exact-unit $\ecs_r$-$C^*$-algebra, if $\Unit$ is covered by the
@@ -202,18 +230,21 @@ Lemma~\ref{lem:stage1-unitary-graph-control}, and every set, function and coordi
 used is the old one, so $\Unit$ is a smooth embedded manifold with nothing replaced.
 
 \medskip
-\noindent\textbf{Status.} \texttt{lem-stage1-polar-path-admissibility} and
-\texttt{lem-stage1-smooth-unitary-atlas} are \texttt{proved} with \texttt{af: validated}
-(T0); workspaces \texttt{proofs/lem-stage1-polar-path-admissibility} (12 nodes, 12
-\texttt{validated}, taint clean, no challenges) and
-\texttt{proofs/lem-stage1-smooth-unitary-atlas} (14 nodes, 14 \texttt{validated}, taint
-clean). \texttt{lem-stage1-inversion-derivative-control} is \texttt{stated} /
-\texttt{af: seeded}: its 2026-07-27 validation (10 nodes, no challenges) was RETRACTED
-2026-07-28 on the adjudicated synchronization defect above
-(\texttt{docs/LEARNINGS.md}). The last registers three imports: the validated
-contracts of \texttt{lem-stage1-rectified-cstar-control} and
+\noindent\textbf{Status.} All three rows of this section are \texttt{proved} with
+\texttt{af: validated} (T0). Workspaces:
+\texttt{proofs/lem-stage1-polar-path-admissibility} (12 nodes, 12 \texttt{validated}, taint
+clean, no challenges); \texttt{proofs/lem-stage1-smooth-unitary-atlas} (14 nodes, 14
+\texttt{validated}, taint clean), which registers three imports --- the validated contracts
+of \texttt{lem-stage1-rectified-cstar-control} and
 \texttt{lem-stage1-unitary-graph-control}, and the byte-matched external
-\texttt{GT-lee-2ed-thm-C.40}.
+\texttt{GT-lee-2ed-thm-C.40}; and
+\texttt{proofs/lem-stage1-inversion-derivative-control}, af-\textbf{RE}-VALIDATED
+2026-07-29 by a clean re-seed on the amended typed dependency spine (root validated,
+10/10 live nodes, taint clean, 2 rounds, ZERO challenges), after its 2026-07-27 validation
+(also 10 nodes, no challenges) had been RETRACTED 2026-07-28 on the adjudicated
+synchronisation defect recorded above (\texttt{docs/LEARNINGS.md}). The re-validated tree
+is not a repair of the old one: the workspace was re-seeded from empty, so the defective
+node-1.3 substitution is absent by construction.
 
 \noindent\textbf{Correction of record (proof-level, not contract-level).} The atlas tree
 drew one genuine challenge: the transition-map node leaned on a \emph{pending} sibling for
@@ -225,11 +256,12 @@ $g_V=F$ inside the node itself. No contract was amended.
 \texttt{def-approximate-unitary-space}, \texttt{def-epsilon-cstar-algebra}. Registry
 \texttt{deps}: \texttt{lem-stage1-polar-retraction} and
 \texttt{lem-stage1-polar-coherence-naturality} (\S\ref{sec:stage1-polar-retraction}) for the
-path row; those two together with \texttt{lem-stage1-unitary-graph-control}
-(\S\ref{sec:stage1-polar-charts}) and \texttt{lem-stage1-approximate-group-laws}
-(\S\ref{sec:stage1-group-laws}) for the inversion row;
+path row; \texttt{lem-stage1-unitary-graph-control} (\S\ref{sec:stage1-polar-charts}),
+\texttt{lem-stage1-polar-retraction} and \texttt{lem-stage1-explicit-group-closeness}
+(\S\ref{sec:stage1-explicit-bridges}) for the inversion row --- the 2026-07-28 deps
+amendment that dropped the anaphoric \texttt{lem-stage1-approximate-group-laws} and
+\texttt{lem-stage1-polar-coherence-naturality} in favour of the typed explicit provider,
+with the contract and \texttt{defs} byte-unchanged;
 \texttt{lem-stage1-rectified-cstar-control} and \texttt{lem-stage1-unitary-graph-control}
-for the atlas. The Stage-1 polar rows beyond these --- the smooth polar inverse, the
-transport helpers and the constant ledger --- are \textbf{not} \texttt{af}-validated and are
-\textbf{not} reproduced here; nothing in this document assembles the Stage-1 front into a
-statement about almost-idempotent maps, and \texttt{op-classical} is \textbf{open}.
+for the atlas. Nothing in this document assembles the Stage-1 front into a statement about
+almost-idempotent maps, and \texttt{op-classical} is \textbf{open}.

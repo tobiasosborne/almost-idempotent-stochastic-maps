@@ -91,11 +91,24 @@ mid-check.
      carrying the fixed-constant polar lemmas to the def-stage1-polar-witness-data form).
      CONTENT sections, \include'd after 49 and BEFORE the generated/meta sections 39-41,
      same convention as 42-48. Nothing was renumbered. -->
+<!-- ADDENDUM (2026-07-29): 49b stage1-explicit-bridges (lem-stage1-explicit-group-domain-membership
+     + lem-stage1-explicit-group-closeness + lem-stage1-explicit-smooth-unitary-operations,
+     the af-validated binder-closed rebuild replacing the two retired anaphoric parents).
+     A CONTENT section, \include'd after 49 and before 50; the letter suffix takes a slot
+     between 49 and 50 WITHOUT renumbering anything, exactly as 00a does. -->
 <!-- STATUS NOTE (2026-07-28, binder sweep): per-result status lives in each shard's
      Status block and report/PROVENANCE.md, NOT here. Six Stage-1 af validations were
      RETRACTED 2026-07-28 (approximate-group-laws, smooth-unitary-operations,
      inversion-derivative-control, and transports 13c/13f/13g — docs/LEARNINGS.md); their
      statements remain anchored in shards 47-51 as conjectures with retraction notes. -->
+<!-- ADDENDUM (2026-07-29): 51b stage1-ledger-keystone (lem-stage1-approximate-group-laws-transport
+     + lem-stage1-polar-constant-ledger + lem-finite-polyhedron-maximal-simplex-placement), a
+     CONTENT section \include'd after 51 and BEFORE the generated/meta sections 39-41, same
+     convention as 42-51; the letter suffix inserts it after 51 without renumbering anything.
+     Same date: the three transport rows of shards 50-51 whose validations were retracted
+     2026-07-28 (maurer-cartan, polar-path, inversion-derivative) were af-RE-VALIDATED and are
+     restored to lemma environments there, so the 2026-07-28 STATUS NOTE above is superseded for
+     those three. Status of record remains each shard's Status block + report/PROVENANCE.md. -->
 
 | # | SHARD-ID | file |
 |---|----------|------|
@@ -147,8 +160,10 @@ mid-check.
 | 47 | `AISM-47-STAGE1-GROUP-LAWS` | `report/sections/47_stage1_group_laws.tex` |
 | 48 | `AISM-48-STAGE1-SMOOTH-POLAR` | `report/sections/48_stage1_smooth_polar.tex` |
 | 49 | `AISM-49-STAGE1-SMOOTH-UPGRADES` | `report/sections/49_stage1_smooth_upgrades.tex` |
+| 49b | `AISM-49B-STAGE1-EXPLICIT-BRIDGES` | `report/sections/49b_stage1_explicit_bridges.tex` |
 | 50 | `AISM-50-STAGE1-POLAR-TRANSPORTS` | `report/sections/50_stage1_polar_transports.tex` |
 | 51 | `AISM-51-STAGE1-POLAR-TRANSPORTS-II` | `report/sections/51_stage1_polar_transports_ii.tex` |
+| 51b | `AISM-51B-STAGE1-LEDGER-KEYSTONE` | `report/sections/51b_stage1_ledger_keystone.tex` |
 | 39 | `AISM-39-ARGUMENT-DAG` | `report/sections/39_argument_dag.tex` |
 | 40 | `AISM-40-CAMPAIGN-STATISTICS` | `report/sections/40_campaign_statistics.tex` |
 | 41 | `AISM-41-STATUS-OUTLOOK` | `report/sections/41_status_outlook.tex` |

@@ -1,0 +1,242 @@
+% SHARD-ID: AISM-49B-STAGE1-EXPLICIT-BRIDGES
+% SHARD-TITLE: The explicit binder bridges of the Stage-1 polar block
+% SHARD-SUMMARY: Reproduces lem-stage1-explicit-group-domain-membership and lem-stage1-explicit-group-closeness, the two af-validated bridges that redo the group-input domain and closeness statements with the polar pair (u_delta, h_delta) bound inside the contract from the displayed retraction inverse, before either group input is treated.
+% SHARD-SUMMARY: Reproduces lem-stage1-explicit-smooth-unitary-operations, the af-validated quantifier-closed smooth bridge: for any graph family, smooth structure, displayed Pi_delta with both typed inverse identities and the resulting C1 maps, the scalar action and the polar-projected product and inversion admit smooth representatives with the same points, the same first derivatives, and the exact covariance identities.
+% SHARD-SUMMARY: Explains what binder closure means here, and records the run history: a ballooned first run on the membership row, an epsilon_r = 0 endpoint repair and a dependency restructure on the closeness row, and a challenge-free first pass on the smooth row.
+% SHARD-KEYWORDS: lem-stage1-explicit-group-domain-membership, lem-stage1-explicit-group-closeness, lem-stage1-explicit-smooth-unitary-operations, af validated, binder closure, typed witness, anaphoric contract, covariance, balloon abort, endpoint discipline, Stage 1
+\section{The explicit binder bridges of the Stage-1 polar block}\label{sec:stage1-explicit-bridges}
+
+The three rows of this section are the binder-closed rebuild that replaces the two rows
+retired in \S\S\ref{sec:stage1-group-laws} and \ref{sec:stage1-smooth-upgrades}.
+
+\paragraph{What binder closure means here.} The retracted proofs failed for one reason: a
+contract that merely says ``the inverse $u_\delta$ of the polar map'' exports an
+\emph{anaphoric} first component --- a symbol with no typed companion $h_\delta$, no
+displayed source map and no preimage identity --- so two such components, arriving from two
+different imports, cannot legitimately be identified with each other. A contract is
+\emph{binder-closed} when every map it mentions has a contract-local typed referent. In the
+two group rows below this is achieved by \emph{displaying} $\Pi_\delta(U,H)=U\bdot H$ on
+$\Unit\times B^{\Herm}_{\delta}(J)$ with target its own image $S_\delta$ and binding the
+typed pair $(u_\delta,h_\delta)$ as \emph{the} inverse of that displayed map --- before
+either group input is treated; ordinary uniqueness of a set-theoretic inverse then
+synchronises any two consumers automatically. In the smooth row it is achieved by
+quantifying explicitly over the graph family, the smooth structure, the displayed
+$\Pi_\delta$ with both inverse identities, and the $C^{1}$ maps themselves.
+
+\begin{lemma}[\texttt{lem-stage1-explicit-group-domain-membership}]\label{lem:stage1-explicit-group-domain-membership}
+There exist universal $C_{\mathrm{grp}},C_{\mathrm{pol}}\ge1$ and
+$\kappa_{\mathrm{pol}}\in(0,\tfrac12]$ such that for every finite-dimensional exact-unit
+$\ecs_r$-$C^*$-algebra and every $\delta>0$ satisfying \eqref{eq:s1gl-guards}, writing
+$(u_\delta,h_\delta)$ for the unique inverse of
+\begin{equation}\label{eq:s1eb-pi}
+  \Pi_\delta:\Unit\times B^{\Herm}_{\delta}(J)\longrightarrow
+  S_\delta:=\Pi_\delta\bigl(\Unit\times B^{\Herm}_{\delta}(J)\bigr),
+  \qquad \Pi_\delta(U,H)=U\bdot H,
+\end{equation}
+the first inverse component $u_\delta:S_\delta\to\Unit$ is defined at $U\bdot V$ and at
+$U\dg$ for every $U,V\in\Unit$; moreover $U\bdot V$ and $U\dg$ each have a right inverse.
+\emph{Transcription note.} The statement of Lemma~\ref{lem:stage1-group-domain-membership}
+is recovered word for word once its anaphoric ``$u_\delta:S_\delta\to\Unit$ of the polar
+map'' is replaced by the displayed \eqref{eq:s1eb-pi}; the mathematical content is the same
+and the sound anaphoric row is evidence for the calculation, not an import of it.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Explicit group-input polar-domain membership: there exist universal C_grp, C_pol >= 1, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra and delta > 0 satisfying C_pol*(epsilon_r + delta) <= kappa_pol and C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), writing (u_delta, h_delta) for the unique inverse of Pi_delta: calU x B^{calH}_delta(J) -> S_delta := Pi_delta(calU x B^{calH}_delta(J)), Pi_delta(U, H) = U bold-dot H, the first inverse component u_delta:S_delta -> calU is defined at U bold-dot V and U^dagger for every U, V in calU; moreover, U bold-dot V and U^dagger each have a right inverse.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Take $C_{\mathrm{pol}},\kappa_{\mathrm{pol}}$ from Lemma~\ref{lem:stage1-polar-retraction}
+and $C_{\mathrm{grp}}=4$. \emph{Before any group input is chosen}, apply that lemma under
+the first guard to obtain the displayed map \eqref{eq:s1eb-pi} and bind its unique typed
+inverse $(u_\delta,h_\delta):S_\delta\to\Unit\times B^{\Herm}_{\delta}(J)$; write
+$e=\ecs_r$ and $t=\delta-C_{\mathrm{pol}}(e\delta+\delta^{2})$, so that the inner inclusion
+of \eqref{eq:s1pr-sandwich} reads $\Unito{t}\subseteq S_\delta$. Only now fix $U,V\in\Unit$.
+
+\emph{Guard arithmetic (cited by every later smallness step).} With $s=e+\delta$, the first
+guard and $C_{\mathrm{pol}}\ge1$, $\kappa_{\mathrm{pol}}\le\tfrac12$ give $s\le\tfrac12$ and
+$\delta\le\tfrac12$; the second gives $4e<t$. Since
+$t=\delta(1-C_{\mathrm{pol}}s)\le\delta(1-s)=(s-e)(1-s)$, whose maximum over
+$e\le s\le\tfrac12$ is $(\tfrac12-e)/2$, the chain $e<t\le(\tfrac12-e)/2$ forces
+$e<\tfrac16$.
+
+\emph{The common left multiplier.} For $W\in\Unit$, $W\dg\bdot W=J$ with the $C^*$-lower
+bound gives $(1-e)\nrm{W}^{2}\le1$, hence $\nrm{W}\le\tfrac65$, while the associator axiom
+gives $\nrm{\Lmul{W\dg}\Lmul{W}-I}\le e\nrm{W}^{2}\le e/(1-e)<\tfrac15$. So $\Lmul{W}$ is
+injective, therefore bijective in finite dimension, with $\nrm{\Lmul{W\dg}}\le\tfrac75$ and
+$\nrm{\Lmul{W}^{-1}}\le\tfrac74$.
+
+\emph{The product.} For $X=U\bdot V$ the star rule gives $X\dg=V\dg\bdot U\dg$; inserting
+$((V\dg\bdot U\dg)\bdot U)\bdot V$ and $(V\dg\bdot(U\dg\bdot U))\bdot V$ costs two
+associators and lands on $J$, so
+\begin{equation}\label{eq:s1eb-proddefect}
+  \nrm{X\dg\bdot X-J}\;\le\;2e(1+e)\nrm{U}^{2}\nrm{V}^{2}\;\le\;4e\;<\;t\;<\;2t .
+\end{equation}
+Approximate associativity gives $\nrm{\Lmul{X}-\Lmul{U}\Lmul{V}}\le e\nrm{U}\nrm{V}<\tfrac15$
+while $\nrm{(\Lmul{U}\Lmul{V})^{-1}}\le\tfrac{49}{16}$, so the Neumann perturbation is
+$<\tfrac{49}{80}<1$: $\Lmul{X}$ is invertible and $R_X=\Lmul{X}^{-1}J$ is a right inverse
+of $X$.
+
+\emph{The adjoint.} $U\dg\bdot U=J$ exhibits $U$ as a right inverse of $U\dg$. The right
+inverse $R$ of $U$ supplied by Definition~\ref{def:approximate-unitary-space} equals
+$\Lmul{U}^{-1}J$, so $\nrm{R}\le\tfrac74$; one associator gives
+$\nrm{U\dg-R}\le e\nrm{U}^{2}\nrm{R}$ and hence
+$\nrm{U\bdot U\dg-J}\le(1+e)e\nrm{U}^{3}\nrm{R}\le\tfrac{441}{125}e<4e<t<2t$. Both inputs
+therefore lie in $\Unito{t}\subseteq S_\delta$, which is the domain of the map $u_\delta$
+bound at the outset; since the algebra, $\delta$, $U$ and $V$ were arbitrary, this proves
+every clause.
+
+\begin{lemma}[\texttt{lem-stage1-explicit-group-closeness}]\label{lem:stage1-explicit-group-closeness}
+There exist universal $C_{\mathrm{grp}},C_{\mathrm{pol}}\ge1$ and
+$\kappa_{\mathrm{pol}}\in(0,\tfrac12]$ such that for every finite-dimensional exact-unit
+$\ecs_r$-$C^*$-algebra and every $\delta>0$ satisfying \eqref{eq:s1gl-guards}, the first
+component of the unique inverse $(u_\delta,h_\delta)$ of the displayed map
+\eqref{eq:s1eb-pi} satisfies
+\begin{equation}\label{eq:s1eb-close}
+  \nrm{u_\delta(U\bdot V)-U\bdot V}\le C_{\mathrm{grp}}\ecs_r,
+  \qquad
+  \nrm{u_\delta(U\dg)-U\dg}\le C_{\mathrm{grp}}\ecs_r
+  \qquad(U,V\in\Unit).
+\end{equation}
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Explicit group-input polar closeness: there exist universal C_grp, C_pol >= 1, kappa_pol in (0, 1/2] such that for every finite-dimensional exact-unit epsilon_r-C*-algebra and delta > 0 satisfying C_pol*(epsilon_r + delta) <= kappa_pol and C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), writing (u_delta, h_delta) for the unique inverse of Pi_delta: calU x B^{calH}_delta(J) -> S_delta := Pi_delta(calU x B^{calH}_delta(J)), Pi_delta(U, H) = U bold-dot H, the first inverse component u_delta:S_delta -> calU satisfies ||u_delta(U bold-dot V) - U bold-dot V|| <= C_grp*epsilon_r and ||u_delta(U^dagger) - U^dagger|| <= C_grp*epsilon_r for every U, V in calU.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Take $C_{\mathrm{pol}}$ from Lemma~\ref{lem:stage1-polar-retraction},
+$\kappa_{\mathrm{pol}}=\min(\kappa_{\mathrm{pol}}^{0},\tfrac1{16})$ and
+$C_{\mathrm{grp}}=5$, and put $\rho=\delta-C_{\mathrm{pol}}(\ecs_r\delta+\delta^{2})$, so
+that $\ecs_r+\delta\le\tfrac1{16}$ and $\rho>5\ecs_r\ge0$. Under these guards that lemma
+supplies the displayed \eqref{eq:s1eb-pi} together with its unique typed pair: for every
+$X\in S_\delta$ one has $X=u_\delta(X)\bdot h_\delta(X)$ with $u_\delta(X)\in\Unit$ and
+$\nrm{h_\delta(X)-J}<\delta$, and $\Unito{\rho}\subseteq S_\delta$.
+
+\emph{Typing the two inputs.} For $W\in\Unit$ the $C^*$-lower bound gives
+$\nrm{W}^{2}\le1/(1-\ecs_r)\le\tfrac{16}{15}$; with $R$ the right inverse of $W$, exact
+unitality and one associator give $\nrm{R-W\dg}\le\ecs_r\nrm{W}^{2}\nrm{R}$, hence
+$\nrm{R}\le\tfrac{15}{14}\nrm{W}$ and
+$\nrm{W\bdot W\dg-J}=\nrm{W\bdot(W\dg-R)}\le2\ecs_r$. Two associators as in
+\eqref{eq:s1eb-proddefect} give $\nrm{X\dg\bdot X-J}\le\tfrac{544}{225}\ecs_r\le3\ecs_r$
+for $X=U\bdot V$, and if $X\bdot Y=0$ then
+$\nrm{Y}\le\bigl((1+\ecs_r)3\ecs_r+\ecs_r\nrm{X}^{2}\bigr)\nrm{Y}<\tfrac12\nrm{Y}$, so
+$\Lmul{X}$ is injective, hence surjective in finite dimension, and $X$ has a right inverse.
+Both defects are strictly below $2\rho$ --- \emph{including at $\ecs_r=0$}, where they
+vanish while $\rho>0$ --- so $U\bdot V,U\dg\in\Unito{\rho}\subseteq S_\delta$ and the pair
+fixed at the outset may be evaluated at both.
+
+\emph{The estimate.} Let $X\in S_\delta$ with $\nrm{X\dg\bdot X-J}\le3\ecs_r$, and write
+$u=u_\delta(X)$, $h=h_\delta(X)$, $a=h-J$, so $X=u\bdot h$ and $\nrm{a}<\delta$. Two
+associator comparisons of $(h\bdot u\dg)\bdot(u\bdot h)$ against $h\bdot h$ give
+\begin{equation}\label{eq:s1eb-square}
+  \nrm{X\dg\bdot X-h\bdot h}\;\le\;2\ecs_r(1+\ecs_r)\nrm{h}^{2}\nrm{u}^{2}\;\le\;3\ecs_r .
+\end{equation}
+Exact unitality and bilinearity give $h\bdot h-J=2a+a\bdot a$, so
+$2\nrm{a}\le6\ecs_r+(1+\ecs_r)\nrm{a}^{2}$; as $\nrm{a}<\delta\le\tfrac1{16}$ the quadratic
+term is at most $\tfrac{17}{256}\nrm{a}$ and absorbs, leaving
+$\nrm{a}\le\tfrac{1536}{495}\ecs_r\le4\ecs_r$. Exact right unitality then gives
+$\nrm{u_\delta(X)-X}=\nrm{u\bdot(J-h)}\le(1+\ecs_r)\nrm{u}\nrm{a}
+\le\tfrac{17}{\sqrt{15}}\ecs_r\le5\ecs_r$. Applying this to the two inputs typed above is
+\eqref{eq:s1eb-close}.
+
+\begin{lemma}[\texttt{lem-stage1-explicit-smooth-unitary-operations}]\label{lem:stage1-explicit-smooth-unitary-operations}
+Fix a finite-dimensional exact-unit $\ecs_r$-$C^*$-algebra and $\delta>0$, and suppose given:
+a family $g=(g_V)_{V\in\Unit}$ of $C^{1}$ maps
+$g_V:B^{\aHerm}_{2\delta}(0)\to B^{\Herm}_{2\delta}(0)$ such that $g_V(A^{\parallel})$ is the
+\emph{unique} $A^{\perp}\in B^{\Herm}_{2\delta}(0)$ with $f_V(A^{\parallel}+A^{\perp})=0$,
+where $f_V(A)=\tfrac12\bigl(((J+A\dg)\bdot V\dg)\bdot(V\bdot(J+A))-J\bigr)$, and such that
+$\chi_V(A^{\parallel})=V\bdot(J+A^{\parallel}+g_V(A^{\parallel}))$ form a $C^{1}$ graph atlas
+$\mathcal A_\delta=\{\chi_V\}_{V\in\Unit}$ covering $\Unit$; a smooth embedded-manifold
+structure $\mathcal M_\delta$ on the underlying set $\Unit$ for which $\mathcal A_\delta$ is
+a $C^{\infty}$ atlas and every displayed $g_V,\chi_V$ is $C^{\infty}$ with exactly its
+displayed point values and $C^{1}$ differentials; the displayed $\Pi_\delta$ of
+\eqref{eq:s1eb-pi}, assumed a $C^{1}$ diffeomorphism onto the open $S_\delta$ with inverse
+$(u_\delta,h_\delta)$ characterised by both inverse identities, smooth relative to
+$\mathcal M_\delta$ with the same point values and differentials; and the memberships
+$U\bdot V,U\dg\in S_\delta$ for all $U,V\in\Unit$. Then, writing
+$\alpha_{C^{1}}(c,U)=cU$, $\mu_{C^{1}}(U,V)=u_\delta(U\bdot V)$ and
+$\sigma_{C^{1}}(U)=u_\delta(U\dg)$ for the resulting $C^{1}$ maps, there exist maps
+$\alpha,\mu,\sigma$, smooth relative to $\mathcal M_\delta$, with
+$\alpha=\alpha_{C^{1}}$, $\mu=\mu_{C^{1}}$, $\sigma=\sigma_{C^{1}}$ pointwise,
+$D\alpha=D\alpha_{C^{1}}$, $D\mu=D\mu_{C^{1}}$, $D\sigma=D\sigma_{C^{1}}$, and
+\begin{equation}\label{eq:s1eb-covariance}
+  \mu(cU,dV)=cd\,\mu(U,V),\qquad \sigma(cU)=\bar c\,\sigma(U)
+  \qquad(c,d\in U(1)).
+\end{equation}
+\emph{Transcription note.} This is the quantifier-closed \emph{v3.2} contract: every
+hypothesis above is displayed inside it, so the row asserts no existence and introduces no
+threshold. Which $\delta$ realises the hypotheses is the business of
+Lemmas~\ref{lem:stage1-unitary-graph-control}, \ref{lem:stage1-polar-retraction},
+\ref{lem:stage1-smooth-unitary-atlas}, \ref{lem:stage1-smooth-polar-inverse} and
+\ref{lem:stage1-explicit-group-domain-membership}.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Explicit smooth action/operations bridge: for every finite-dimensional exact-unit epsilon_r-C*-algebra and every delta > 0, every family g = (g_V)_{V in calU} of C^1 maps g_V:B_{2delta}^{icalH}(0) -> B_{2delta}^{calH}(0) such that, for every V in calU and every A^par in B_{2delta}^{icalH}(0), g_V(A^par) is the unique A^perp in B_{2delta}^{calH}(0) satisfying f_V(A^par + A^perp) = 0, where f_V(A) = (1/2)*(((J + A^dagger) bold-dot V^dagger) bold-dot (V bold-dot (J + A)) - J), and such that the maps chi_V:B_{2delta}^{icalH}(0) -> calU, chi_V(A^par) = V bold-dot (J + A^par + g_V(A^par)), form a C^1 graph atlas calA_delta = {chi_V}_{V in calU} covering calU, and every smooth embedded-manifold structure calM_delta on the underlying set calU for which this displayed calA_delta is a C^infinity atlas and every displayed g_V and chi_V is C^infinity with exactly its displayed point values and C^1 differentials Dg_V and Dchi_V, suppose Pi_delta:calU x B_delta^{calH}(J) -> S_delta := Pi_delta(calU x B_delta^{calH}(J)), Pi_delta(U,H) = U bold-dot H, is a C^1 diffeomorphism onto the open set S_delta with inverse (u_delta,h_delta):S_delta -> calU x B_delta^{calH}(J) characterized by Pi_delta(u_delta(X),h_delta(X)) = X for every X in S_delta and (u_delta(Pi_delta(U,H)),h_delta(Pi_delta(U,H))) = (U,H) for every (U,H) in calU x B_delta^{calH}(J), suppose U bold-dot V and U^dagger lie in S_delta for every U,V in calU, and suppose the displayed Pi_delta and displayed inverse (u_delta,h_delta) are smooth relative to calM_delta with the same displayed point values and with smooth differentials D[(U,H) |-> U bold-dot H] and D[X |-> (u_delta(X),h_delta(X))] equal to their displayed C^1 differentials; writing alpha_C1:U(1) x calU -> calU, alpha_C1(c,U) = cU, mu_C1:calU x calU -> calU, mu_C1(U,V) = u_delta(U bold-dot V), and sigma_C1:calU -> calU, sigma_C1(U) = u_delta(U^dagger), for the resulting C^1 maps, there exist maps alpha:U(1) x calU -> calU, mu:calU x calU -> calU, and sigma:calU -> calU that are smooth relative to calM_delta and satisfy alpha(c,U) = alpha_C1(c,U) = cU, mu(U,V) = mu_C1(U,V) = u_delta(U bold-dot V), sigma(U) = sigma_C1(U) = u_delta(U^dagger), Dalpha = Dalpha_C1, Dmu = Dmu_C1, Dsigma = Dsigma_C1, mu(cU,dV) = c*d*mu(U,V), and sigma(cU) = conj(c)*sigma(U) for every U,V in calU and c,d in U(1).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Fix arbitrary data satisfying every hypothesis; proving the conclusion for them permits
+universal generalisation. Because all of $g$, $\mathcal A_\delta$, $\mathcal M_\delta$,
+$\Pi_\delta$, $(u_\delta,h_\delta)$ and the three $C^{1}$ maps are \emph{displayed} in the
+hypothesis, no smallness guard and no existence claim is inferred inside the proof, and
+every later occurrence of a symbol refers to the one datum fixed here.
+
+\emph{Ambient smoothness.} By Definition~\ref{def:epsilon-cstar-algebra} the product
+$\bdot$ is continuous complex-bilinear and $\dagger$ is continuous conjugate-linear (indeed
+isometric); ambient scalar multiplication is continuous complex-bilinear by the
+Banach-space structure. All three are therefore smooth as real maps, and since $U(1)$ is a
+smooth embedded submanifold of $\mathbb C$, the restriction of scalar multiplication to
+$U(1)\times\calX$ is smooth. Restricting further to products involving
+$\mathcal M_\delta$ gives smooth ambient-valued maps, whose values lie in $\Unit$
+respectively in the open set $S_\delta$ by the stipulated codomain and the membership
+hypothesis.
+
+\emph{The three maps are smooth.} $\alpha_{C^{1}}$ is exactly the restriction of ambient
+scalar multiplication to $U(1)\times\mathcal M_\delta$ with image in the embedded
+submanifold, so the initial property of an embedded submanifold makes the corestriction
+smooth. The restricted product $\mathcal M_\delta\times\mathcal M_\delta\to\calX$ is smooth
+with image in the open $S_\delta$, hence smooth as an $S_\delta$-valued map; composing with
+the stipulated smooth $u_\delta$ gives $\mu_{C^{1}}$. The same argument with the involution
+in place of the product gives $\sigma_{C^{1}}$.
+
+\emph{Nothing is changed.} Define $\alpha=\alpha_{C^{1}}$, $\mu=\mu_{C^{1}}$ and
+$\sigma=\sigma_{C^{1}}$ as literal equalities of maps between the same domains and
+codomains. They are smooth by the previous step, their values are the stipulated formulas
+by definition, and equal $C^{1}$ maps between the same manifolds have equal differentials.
+
+\emph{Covariance.} Complex bilinearity of $\bdot$ and conjugate-linearity of $\dagger$ give
+$(cU)\bdot(dV)=(cd)(U\bdot V)$, $((cd)W)\bdot H=(cd)(W\bdot H)$ and
+$(cU)\dg=\bar c\,U\dg$, with $cd,\bar c\in U(1)$. Put $W=u_\delta(U\bdot V)$ and
+$H=h_\delta(U\bdot V)$, so $U\bdot V=\Pi_\delta(W,H)$ by the inverse identity; then
+$(cU)\bdot(dV)=\Pi_\delta((cd)W,H)$. The pairs $((cd)W,H)$ and the inverse pair of
+$(cU)\bdot(dV)$ both lie in the displayed domain and have the same $\Pi_\delta$-image, so
+\emph{ordinary injectivity of the one displayed $\Pi_\delta$} makes them equal, which is the
+first identity of \eqref{eq:s1eb-covariance}. The same argument at $U\dg$ gives the second.
+No associativity, positivity or approximate group law enters.
+
+\medskip
+\noindent\textbf{Status.} All three rows are \texttt{proved} with \texttt{af: validated}
+(T0). \texttt{proofs/lem-stage1-explicit-group-domain-membership}: run 2, root validated,
+12/12 live nodes plus one archived, taint clean, 5 rounds, two in-run challenges repaired;
+run 1 had ABORTED on the \textbf{balloon} tripwire at 20 live nodes against a hard cap of
+14, and its ledger was discarded at the clean re-seed.
+\texttt{proofs/lem-stage1-explicit-group-closeness}: first-pass run, root validated, 16/16
+live nodes (hard cap 16, not exceeded), taint clean, 10 rounds, two in-run challenges
+repaired --- one restoring the final numerical chain at $\ecs_r=0$, one restructuring the
+dependencies so that the product defect, the right inverse and domain membership are derived
+without leaning on a pending sibling. \texttt{proofs/lem-stage1-explicit-smooth-unitary-operations}:
+first-pass run, root validated, 12/12 live nodes (exactly the design target; hard cap 18),
+taint clean, 6 rounds, ZERO challenges.
+
+\noindent\textbf{Role in the chain.} Registry \texttt{defs} for all three:
+\texttt{def-approximate-unitary-space}, \texttt{def-epsilon-cstar-algebra}. Registry
+\texttt{deps}: \texttt{lem-stage1-polar-retraction}
+(\S\ref{sec:stage1-polar-retraction}) for the two group rows; for the smooth row,
+\texttt{lem-stage1-explicit-group-domain-membership},
+\texttt{lem-stage1-unitary-graph-control} (\S\ref{sec:stage1-polar-charts}),
+\texttt{lem-stage1-polar-retraction}, \texttt{lem-stage1-smooth-unitary-atlas}
+(\S\ref{sec:stage1-smooth-polar}) and \texttt{lem-stage1-smooth-polar-inverse}
+(\S\ref{sec:stage1-smooth-upgrades}). Downstream, the closeness row is the typed provider of
+\texttt{lem-stage1-inversion-derivative-control} (\S\ref{sec:stage1-smooth-polar}), and the
+two group rows are the typed providers of the parameterized transport
+\texttt{lem-stage1-approximate-group-laws-transport}. None of this assembles the Stage-1
+front into a statement about almost-idempotent maps; \texttt{op-classical} is \textbf{open}.
