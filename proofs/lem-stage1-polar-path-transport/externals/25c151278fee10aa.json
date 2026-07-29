@@ -1,0 +1,8 @@
+{
+  "id": "25c151278fee10aa",
+  "name": "lem-stage1-polar-retraction-transport",
+  "source": "imports validated registry lemma proofs/lem-stage1-polar-retraction-transport — Parameterized polar-retraction transport: there exist C_pol^0 \u003e= 1 and kappa_pol^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_pol \u003e= C_pol^0 and 0 \u003c kappa_pol \u003c= kappa_pol^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra and every delta \u003e 0 with C_pol*(epsilon_r + delta) \u003c= kappa_pol, the map Pi_delta: calU x B^{calH}_delta(J) -\u003e calX, Pi_delta(U, H) = U bold-dot H, is a C^1 diffeomorphism onto the open set S_delta := Pi_delta(calU x B^{calH}_delta(J)), its inverse (u_delta, h_delta): S_delta -\u003e calU x B^{calH}_delta(J) satisfies X = u_delta(X) bold-dot h_delta(X), u_delta(U) = U, and h_delta(U) = J for every X in S_delta and U in calU, and calU_{delta - C_pol*(epsilon_r*delta + delta^2)} subseteq S_delta subseteq calU_{delta + C_pol*(epsilon_r*delta + delta^2)}.",
+  "content_hash": "02f0ee07a22c9b7c770cd5cb2d9232dc2b790acf97773d04d08c02afcb865c7e",
+  "created": "2026-07-29T09:14:21.757491015Z",
+  "notes": ""
+}

@@ -1,8 +1,8 @@
 {
-  "id": "65a6b8134399a636",
+  "id": "a1bd67508f097795",
   "name": "lem-stage1-polar-path-admissibility",
   "source": "imports validated registry lemma proofs/lem-stage1-polar-path-admissibility — Joint projected-straight-path admissibility: there exist universal C_path, C_pol \u003e= 1, kappa_pol in (0, 1/2] such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra, every delta \u003e 0 with C_pol*(epsilon_r + delta) \u003c= kappa_pol, and U_0, U_1 in calU, if 0 \u003c= q \u003c= 1, ||U_1 - U_0|| \u003c= q, C_path*q \u003c= 1/4, and C_path*(q + epsilon_r*q + q^2) \u003c delta - C_pol*(epsilon_r*delta + delta^2), then for Z_t = (1-t)*U_0 + t*U_1 every L_{Z_t} is invertible, every Z_t in calUbar_{C_path*(q + epsilon_r*q + q^2)}, and H(t, U_0, U_1) = u_delta(Z_t) is jointly continuous in all displayed variables, joins U_0 to U_1, and obeys H(t, cU_0, cU_1) = c*H(t, U_0, U_1) for c in U(1).",
   "content_hash": "2dea9f6e48997c807dc7ecf8b6dd9ba2bc877ce2ba447c1e01d6fa809519ff1e",
-  "created": "2026-07-27T19:28:25.561120565Z",
+  "created": "2026-07-29T09:14:21.731187885Z",
   "notes": ""
 }

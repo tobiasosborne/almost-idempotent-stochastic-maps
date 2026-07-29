@@ -166,7 +166,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-STAGE1-MAURER-CARTAN-TRANSPORT` | `proofs/lem-stage1-maurer-cartan-transport/export.md` | `71b2a5f0144811fa` | `af` proof export for `lem-stage1-maurer-cartan-transport` |
 | `ARG-LEM-STAGE1-POLAR-RETRACTION-TRANSPORT` | `argument/lemmas/lem-stage1-polar-retraction-transport.md` | `5e700e4db5662bb3` | Registry shard for `lem-stage1-polar-retraction-transport` |
 | `AF-LEM-STAGE1-POLAR-RETRACTION-TRANSPORT` | `proofs/lem-stage1-polar-retraction-transport/export.md` | `a3e87360fa5022a6` | `af` proof export for `lem-stage1-polar-retraction-transport` |
-| `ARG-LEM-STAGE1-POLAR-PATH-TRANSPORT` | `argument/lemmas/lem-stage1-polar-path-transport.md` | `562888611a1b349b` | Registry shard for `lem-stage1-polar-path-transport` |
+| `ARG-LEM-STAGE1-POLAR-PATH-TRANSPORT` | `argument/lemmas/lem-stage1-polar-path-transport.md` | `c047a0032b4a1653` | Registry shard for `lem-stage1-polar-path-transport` |
 | `AF-LEM-STAGE1-POLAR-PATH-TRANSPORT` | `proofs/lem-stage1-polar-path-transport/export.md` | `b06ec3f05f1e1324` | `af` proof export for `lem-stage1-polar-path-transport` |
 | `ARG-LEM-STAGE1-INVERSION-DERIVATIVE-TRANSPORT` | `argument/lemmas/lem-stage1-inversion-derivative-transport.md` | `c26c275f958fcd46` | Registry shard for `lem-stage1-inversion-derivative-transport` |
 | `AF-LEM-STAGE1-INVERSION-DERIVATIVE-TRANSPORT` | `proofs/lem-stage1-inversion-derivative-transport/export.md` | `c2b7a95190d4ead6` | `af` proof export for `lem-stage1-inversion-derivative-transport` |

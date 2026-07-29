@@ -31,3 +31,23 @@ invertibility, near-unitary membership); the typed inverse of the same
 displayed Pi_delta comes from 13d; equivariance by one-inverse uniqueness.
 The defective 9-node tree is NOT a repair base — cleanly RE-SEED at
 elevation (superseding the earlier "re-elevation base" phrasing above).
+
+**Build-granularity discipline (BINDING on the af tree; extends the
+user-ratified row-1 discipline of 2026-07-28 — run-1 there ABORTED
+[BALLOON] from sub-splitting routine norm estimates).** The target is the
+design's 10-node skeleton (hard cap 14). Tree discipline per design v3
+sect-1.9: (i) ONE early node fixing the provider witnesses — the parent
+path witnesses (A,B,k) from polar-path-admissibility and the sound 13d
+witnesses (P,q_pol) from polar-retraction-transport — and setting
+C_path^0 = A, C_pol^0 = max{B,P}, kappa_pol^0 = min{k,q_pol}, BEFORE
+quantifying over the receiving tuple W (receiving fields transport by
+monotonicity); (ii) ONE node for the parent's binder-free conclusions
+(L_{Z_t} invertibility + near-unitary membership, enlarged to the
+receiving C_path by monotonicity); (iii) ONE node placing Z_t in S_delta
+via the strict receiving path guard + the 13d typed inverse of the SAME
+displayed Pi_delta; (iv) ONE node each for continuity (13d C^1 inverse +
+affine path), endpoints (u_delta(U)=U), and scalar equivariance
+(Pi_delta(c*u_delta(Z_t),h_delta(Z_t))=c*Z_t + ordinary uniqueness) — do
+NOT sub-split routine estimates; no coherence external. Constants live
+in the proof body, never the contract; every smallness inference cites
+its guard node explicitly.
