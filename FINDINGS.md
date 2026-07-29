@@ -933,3 +933,25 @@ imports a future agent might reach for — read before importing ANY external to
 - **DEAD — freight-row censoring without a norm gap:** `lem-censoring-exactness` cannot be invoked on a freight block unless \(\|A\|_{\infty\to\infty}<1\) is proved, and no such bound follows for a signed row block (VERDICT-W56-R2 r2-F4).
 - **DEAD — second-generation L-C recursion:** rows in a carrier's second web are far from that carrier rather than the original top, lie only in a widened \(9\tau\) band, and do not satisfy L-C's hidden-top and score hypotheses at either center (VERDICT-W56-R2 r2-F5).
 - **DEAD — max-principle far-side return:** positivity of \(\psi_u\) on \(T(u)\) does not locate a global maximizer in \(T(u)\), because \(\psi_u\)'s sign is unconstrained off \(T(u)\), and independently generated corners do not finance the same carrier—the W55 carrier-coincidence obstruction (VERDICT-W56-R2 r2-F6).
+
+## 2026-07-29 — scan-OCR locus trap: splitlines() vs sed line numbers (an L1 near-miss, caught pre-banking)
+
+- **The trap.** The per-page tesseract OCR txts under `refs/` contain one form feed (`\f`) per
+  scanned page (`munkres-elementary-differential-topology.txt`: 117 of them). Python's
+  `str.splitlines()` treats `\f` as a line break; `sed -n 'N p'` / `grep -n` / the repo's locus
+  convention count `\n` ONLY. Extracting a "line N" quote with `splitlines()` therefore drifts by
+  one line per preceding page (~82 lines by p.79 of Munkres) and silently quotes the WRONG passage.
+  **Always extract ground-truth quotes in sed-space: `open(f).read().split('\n')`.**
+- **Why the gate did not catch it.** `check-refs` verifies the quoted string exists byte-verbatim
+  SOMEWHERE in the payload — it does not verify the quote sits at the claimed `file:lo-hi` locus.
+  A wrong-passage quote from the same book passes. When registering an external, additionally
+  verify quote-at-claimed-locus (find the quote's actual `\n`-space line range and compare), and
+  eyeball the quote's opening words against the page image.
+- **Verification near-miss (recorded honestly).** In the discarded 2026-07-29 STUCK run of
+  `lem-topology-finite-triangulation`, node 1.2 cited the two corrupted externals
+  (`GT-munkres-edt-def-8.1/8.3` whose content was §7 rectilinear-triangulation prose, not the
+  definitions) and a fresh verifier ACCEPTED it anyway — the node's mathematical claim happened to
+  match the true Definitions 8.1/8.3, but the certificate rested on wrong evidence. All 5
+  validations of that run were discarded with the workspace (ledger in git history). Lesson: a
+  verifier pass does not audit external CONTENT against `refs/`; only the orchestrator-side
+  locus check above does.

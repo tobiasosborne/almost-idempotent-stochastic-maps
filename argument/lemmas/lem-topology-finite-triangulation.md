@@ -51,17 +51,27 @@ imbedding; "if it is also a homeomorphism onto, it is called a C^r
 triangulation of M"; txt:3384-3392, printed pp.80-81) — both visually
 reconciled against the page images (same scan-OCR pattern as Thm 10.6).
 The 16 ballooned pending nodes (the 1.6-1.10 subtree) were archived at
-re-seed. A first re-run then aborted round-0 on the balloon tripwire
-WITHOUT any verification: the fresh Munkres build honored the ~5-node
-discipline (6 pending nodes), but the 21 validated nodes of the RETIRED
-Cairns route still count as live (validated->archived is an invalid af
-transition), so live=27 > cap 26 structurally. Resolution: CLEAN
-RE-SEED (2026-07-29) — the full old ledger is preserved in git history
-(commits through the round-0 abort record); fresh `af init` with the
-byte-unchanged contract; the three Munkres externals re-registered
-byte-verbatim (Thm 10.6 + Def 8.1 + Def 8.3, all check-refs PASS); the
-Cairns external deliberately NOT re-registered (retired route). Cap
-stays 26 (R12: provision, don't bump).
+re-seed. A first re-run aborted round-0 on the balloon tripwire (the 21
+retired-Cairns validated nodes count live; validated->archived is an
+invalid af transition; live=27 > cap 26 structurally) -> first clean
+re-seed. That re-seed's Def 8.1/8.3 externals were CORRUPTED by a
+line-counting defect (python splitlines() counts the OCR txt's 117
+form-feed page separators as line breaks; sed/grep -n do not; the
+quotes came from ~82 lines earlier in the file) — check-refs still
+passed because it verifies the quote exists verbatim SOMEWHERE, not at
+the claimed locus. The resulting STUCK run's 5 validated nodes are
+DISCARDED (node 1.2 cited both corrupted externals; its acceptance is
+a recorded verification near-miss). See FINDINGS.md 2026-07-29. Second
+clean re-seed (2026-07-29): fresh `af init`, byte-unchanged contract;
+FOUR authorized externals, all re-extracted in sed-space (\n-only) and
+verified quote-at-claimed-locus + against the page images:
+`GT-munkres-edt-thm-10.6` (txt:4356-4358), `GT-munkres-edt-def-8.1`
+(txt:3332-3336), `GT-munkres-edt-def-8.3` (txt:3384-3392), and
+`GT-munkres-edt-def-1.1-non-bounded` (txt:241-242; bridges the
+contract's "without boundary" to Thm 10.6's "non-bounded" — the
+authorization the previous run's verifier correctly demanded). The
+Cairns external stays dropped (retired route). Old ledgers preserved in
+git history. Cap stays 26 (R12: provision, don't bump).
 
 **Build-granularity discipline (BINDING on the re-run tree).** With the
 def externals provisioned the remaining route is ~5 steps: (i) ONE node

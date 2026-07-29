@@ -1,0 +1,8 @@
+{
+  "id": "57fc403ac2872534",
+  "name": "GT-munkres-edt-def-8.1",
+  "source": "refs/munkres-elementary-differential-topology/munkres-elementary-differential-topology.txt:3332-3336 VERBATIM: \"8.1 Definition. Let K be a complex. The map f: |K]|—~M is\ndifferentiable of class C” relative to K if flo is of class co”, for\neach simplex co of K. We usually shorten this to the phrase, f:K-—M\nis of class C’. The map f is said to be non-degenerate if flo has rank\nequal to the dimension of so, for each o in K.\" [Munkres EDT Definition 8.1, printed p.79; OCR garbles visually reconciled against the page image 2026-07-29: class C^r relative to K = f|sigma of class C^r per simplex; non-degenerate = f|sigma has rank equal to dim sigma]",
+  "content_hash": "a6133de0e1302a6bff61e6144c8698a2eef7e1b7dd4e699024d826196775f0ce",
+  "created": "2026-07-29T16:20:34.682081086Z",
+  "notes": ""
+}

@@ -1,8 +1,0 @@
-{
-  "id": "2cbd945244ef0d7c",
-  "name": "GT-munkres-edt-def-8.3",
-  "source": "refs/munkres-elementary-differential-topology/munkres-elementary-differential-topology.txt:3384-3392 VERBATIM: \"A,. This means that any simplex of K, which does not intersect Ay is a\nsimplex of K,,, aswell. Let lim, _., K, denote the collection of those\nsimplices o such that o belongs to Ky for all i greater than some\ninteger N,. Show that this collection is a subdivision of K.\n\n(a) Exercise. Let K be a simplicial camplex; let a(x) bea\npositive continuous function on |K|. There is a subdivision K' of K\n\nsuch that for any simplex o of K', the diameter of o is less than the\" [Munkres EDT Definition 8.3, printed pp.80-81 incl. the page-81 running head mid-quote; OCR garbles visually reconciled against the page images 2026-07-29: immersion = df_b one-to-one on St(b,K); an immersion which is a homeomorphism is an imbedding; if also a homeomorphism ONTO, it is a C^r triangulation of M]",
-  "content_hash": "f08e8dd82ee0f1bd6e3cc5b146b8bacd4fa22129ab78dc263f12214f78a5af23",
-  "created": "2026-07-29T16:05:29.239082029Z",
-  "notes": ""
-}

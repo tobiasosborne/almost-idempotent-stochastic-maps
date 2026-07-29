@@ -1,0 +1,8 @@
+{
+  "id": "6a78feaad1b78f07",
+  "name": "GT-munkres-edt-def-8.3",
+  "source": "refs/munkres-elementary-differential-topology/munkres-elementary-differential-topology.txt:3384-3392 VERBATIM: \"8.3 Definition. Let f :K-—~M bea C\" map, where M isa Cc”\nsubmanifold of R™. The map f is said to be an immersion if\ndf,: Bt(b,K) — R”\n\nis one-to-one for each b. An immersion which is a homeomorphism is called\n\f\n§8, iPMMPRSIONS AND IMREDDINGS OF COMPLEXES 81\n\nan imbécding; if it is alse a homéqmorphism onto, it is called a\" [Munkres EDT Definition 8.3, printed pp.80-81 incl. the page-81 running head mid-quote; OCR garbles visually reconciled against the page images 2026-07-29: immersion = df_b one-to-one on St(b,K); an immersion which is a homeomorphism is an imbedding; if also a homeomorphism ONTO, it is a C^r triangulation of M]",
+  "content_hash": "5b68c492d881e594b98f1c2a799fb9d92fd03e5c66245475c691f82ec0e43c2d",
+  "created": "2026-07-29T16:20:34.686677741Z",
+  "notes": ""
+}

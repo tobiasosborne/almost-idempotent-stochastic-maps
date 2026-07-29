@@ -1,0 +1,8 @@
+{
+  "id": "7119ecc198c5ac83",
+  "name": "GT-munkres-edt-def-1.1-non-bounded",
+  "source": "refs/munkres-elementary-differential-topology/munkres-elementary-differential-topology.txt:241-242 VERBATIM: \"points is called the boundary of M, denoted by BAM. If BaM is empty,\nwe say M is non-bounded. (In the literature, the word manifold is common-\" [Munkres EDT Definition 1.1 tail, printed p.3: the boundary Bd M and non-bounded = empty boundary; bridges the contract's 'without boundary' to Thm 10.6's 'non-bounded' hypothesis]",
+  "content_hash": "7161f1c2ebc76a35c98d61411feb93f02bdedb43b71dc1c2b3f9513fc00c7303",
+  "created": "2026-07-29T16:20:34.691119845Z",
+  "notes": ""
+}

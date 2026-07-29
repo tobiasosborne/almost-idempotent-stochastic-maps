@@ -1,8 +1,0 @@
-{
-  "id": "d2357281c249e674",
-  "name": "GT-munkres-edt-def-8.1",
-  "source": "refs/munkres-elementary-differential-topology/munkres-elementary-differential-topology.txt:3332-3336 VERBATIM: \"angulation J, of am which contains o,. One way to construct sucha J,\nis to take any rectilinear triangulation J of R\" and find a non-singular\naffine transformation h, of R™ which carries one of its simplices onto\no,3; the collection h, (J) will be the required complex. (An affine trans-\nformation is a linear transformation composed with a translation.) Similarly,\" [Munkres EDT Definition 8.1, printed p.79; OCR garbles visually reconciled against the page image 2026-07-29: class C^r relative to K = f|sigma of class C^r per simplex; non-degenerate = f|sigma has rank equal to dim sigma]",
-  "content_hash": "aa5af3a8d00ad29e87cc82ebf8f6b09f841ea08aa588b978c5665ae84ca7e376",
-  "created": "2026-07-29T16:05:29.234649638Z",
-  "notes": ""
-}
