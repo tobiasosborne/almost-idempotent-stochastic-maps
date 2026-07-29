@@ -4,16 +4,25 @@ kind: lemma
 contract: There is a universal e_idx^r > 0 such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0 <= epsilon_r <= e_idx^r and 1 < N = dim_C calX < infinity, the scalar class breve-e = [J] is an isolated fixed point of the smooth breve-sigma, the vertical line iR*J is D-sigma_J-invariant, ||D-breve-sigma_{breve-e} + I|| < 1 in the quotient norm, and det(I - D-breve-sigma_{breve-e}) > 0, so its local index is +1; more precisely, there is a quotient neighborhood calN of [J] such that if [U] in calN is fixed, choose a representative U_0 close to J and c in U(1) with sigma(U_0) = c*U_0, choose a in U(1) with a^2 = c, and use sigma(a*U_0) = conj(a)*sigma(U_0) = a*U_0: the two actual fixed lifts +-a*U_0 lie in the J- and -J-isolation balls, hence equal J and -J, so [U] = [J].
 defs: def-approximate-unitary-space; def-lefschetz-fixed-point-data; def-epsilon-cstar-algebra
 deps: lem-stage1-uniform-inversion-isolation; lem-stage1-explicit-smooth-unitary-operations; lem-stage1-smooth-unitary-atlas; lem-stage1-smooth-polar-inverse; lem-stage1-polar-constant-ledger; lem-stage1-quotient-manifold-package; lem-stage1-quotient-left-inversion; lem-topology-local-index-sign
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-stage1-quotient-inversion-index-data
 provenance: DESIGN-S1-POLAR-v6.md sect-5 downstream row 5, landed verbatim (LaTeX flattened to registry ASCII; incl. the explicit square-root phase-lift clause required by the audits); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80).
 owner: A
 ---
 
-**Status.** `stated` candidate transcribed VERBATIM from the audited
-`DESIGN-S1-POLAR-v6.md` §5 (final verdict LAND). Not proved in-repo;
-af elevation per the design's projected budget 9/3.
+**Status.** af-VALIDATED in-repo (2026-07-29): 12-node tree, root
+`validated`, taint clean 12/12 (`proofs/lem-stage1-quotient-inversion-
+index-data/export.md`; oracle `af-lem-stage1-quotient-inversion-index-
+data` pass). Run: tier routine, 8/9 leaves first-pass; two major
+challenges on the derivative branch — 1.2 (dependency guard: e_idx^r
+had to be locally proved <= e_H^r, e_quot^r before applying the
+quotient externals) and 1.2.2 (the tangent-quotient identification /
+differentiated intertwining needed explicit local slice charts) — both
+repaired in-ledger and freshly verified. Contract transcribed VERBATIM
+from the audited `DESIGN-S1-POLAR-v6.md` §5 (final verdict LAND;
+projected budget 9/3, actual 12 nodes <= cap 13), incl. the explicit
+square-root phase-lift clause.
 
 **Phase-lift obligation (design §5, binding on the proof).** The proof must
 include the neighborhood estimate suppressed by the one-line contract:

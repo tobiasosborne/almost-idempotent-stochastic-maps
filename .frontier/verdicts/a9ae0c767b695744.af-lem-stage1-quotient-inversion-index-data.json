@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-quotient-inversion-index-data/export.md",
+  "oracle": "af-lem-stage1-quotient-inversion-index-data",
+  "result": "pass",
+  "claim_hash": "cc5901d49baa94b092240bcb67305e2d860251a2e2739da04cca92692d9f32e6",
+  "oracle_digest": "d2a6a370f1d08bc6761cebc721eab9f18368e427e439ba765532aa8613d589dc",
+  "inputs_hash": "986d0f01c8abb4091be32432403e240f6073e1c80da2962bc3dfc9a157506176",
+  "ts": "2026-07-29T15:53:44.476Z"
+}

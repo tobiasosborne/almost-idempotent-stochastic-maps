@@ -240,7 +240,7 @@
 | `lem-stage1-polar-scalar-arithmetic` | lemma | proved | validated | A | Universal Stage-1 polar arithmetic: for every C_rect, C_ch, C_pol, C_grp, C_path… |
 | `lem-stage1-quantitative-inverse-function` | lemma | proved | validated | A | Quantitative inverse-function control: if V:X->Y is a Banach-space isomorphism a… |
 | `lem-stage1-quotient-finite-cw` | lemma | stated | none | A | For every finite-dimensional exact-unit epsilon_r-C*-algebra, if breve-calU = ca… |
-| `lem-stage1-quotient-inversion-index-data` | lemma | stated | seeded | A | There is a universal e_idx^r > 0 such that, for every finite-dimensional exact-u… |
+| `lem-stage1-quotient-inversion-index-data` | lemma | proved | validated | A | There is a universal e_idx^r > 0 such that, for every finite-dimensional exact-u… |
 | `lem-stage1-quotient-left-inversion` | lemma | proved | validated | A | There is a universal e_H^r > 0 such that, for every finite-dimensional exact-uni… |
 | `lem-stage1-quotient-manifold-package` | lemma | proved | validated | A | There is a universal e_quot^r > 0 such that, for every finite-dimensional exact-… |
 | `lem-stage1-rectified-cstar-control` | lemma | proved | validated | A | Controlled exact-unit C*-rectification: there are universal C_rect >= 1 and e_re… |
