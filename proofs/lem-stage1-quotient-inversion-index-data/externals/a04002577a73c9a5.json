@@ -1,0 +1,8 @@
+{
+  "id": "a04002577a73c9a5",
+  "name": "lem-stage1-quotient-left-inversion",
+  "source": "imports validated registry lemma proofs/lem-stage1-quotient-left-inversion — There is a universal e_H^r \u003e 0 such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0 \u003c= epsilon_r \u003c= e_H^r, the scalar-equivariant mu, sigma and the jointly continuous projected straight paths descend to breve-calU; the descended multiplication makes it a connected H-space, and the descended smooth map breve-sigma is a left inversion.",
+  "content_hash": "a7f7a8f3239fcbe9768a1dc52f7fde14ec65581bab3ff995a3416638e4d65e0e",
+  "created": "2026-07-29T15:30:00.746991424Z",
+  "notes": ""
+}

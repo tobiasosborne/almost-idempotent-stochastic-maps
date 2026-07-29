@@ -1,0 +1,8 @@
+{
+  "id": "3e5ad2523576fb64",
+  "name": "lem-topology-local-index-sign",
+  "source": "imports validated registry lemma proofs/lem-topology-local-index-sign — Nondegenerate local fixed-point index: if x is an isolated fixed point of a smooth self-map f of a compact orientable manifold with det(I-Df_x) != 0, then its local fixed-point index is sgn det(I-Df_x).",
+  "content_hash": "6082383e9314a8185d7651d16a8a0a69cb1364d0c1536dc7cec660768edc1cc9",
+  "created": "2026-07-29T15:30:00.768632996Z",
+  "notes": ""
+}
