@@ -74,3 +74,26 @@ D_0,k_D,C_der^0,kappa_der^0 are built before the receiving tuple enters;
 no step absorbs the unbounded receiving C_grp. Neither the defective
 run-2 tree nor the archived run-1 branch is a proof base — cleanly
 RE-SEED at elevation (superseding the "re-elevation base" phrasing above).
+
+**Build-granularity discipline (BINDING on the af tree; extends the
+user-ratified row-1 discipline of 2026-07-28 — run-1 there ABORTED
+[BALLOON] from sub-splitting routine norm estimates).** The target is the
+design's 22-node skeleton (hard cap 25). Tree discipline per design v3
+sect-1.10 (audit-v2's fixed explicit-closeness-witness repair): (i) ONE
+early node fixing the provider witnesses (G_d,P_d,k_d), (G_c,P_c,k_c),
+(P_r,k_r), (C_g,k_g) from the four displayed externals and defining the
+base thresholds C_ch^0 = max{1,C_g}, C_pol^0 = max{1,P_d,P_c,P_r},
+C_grp^0 = max{1,G_d,G_c}, kappa_ch^0 = min{1/2,k_g}, kappa_pol^0 =
+min{1/2,k_d,k_c,k_r} — BEFORE the receiving tuple enters; (ii) ONE node
+showing the receiving guards imply the fixed provider guards by
+monotonicity (incl. the displayed G_c/G_d chains and the
+fixed-coefficient chart-retention inequality); (iii) replay the control
+calculation for the root-bound typed (u_delta,h_delta) and typed g_{sJ}
+at one node per design-skeleton step — the normal term, chart retention,
+the coordinate identity, the differentiated factorization — with the
+universal D_0 = max d_i and k_D = min b_j taken over the FIXED
+coefficients (no step absorbs the unbounded receiving C_grp; C_der^0 and
+kappa_der^0 are built before the receiving tuple enters); do NOT
+sub-split routine Neumann/smallness cutoffs or triangle estimates.
+Constants live in the proof body, never the contract; every smallness
+inference cites its guard node explicitly.

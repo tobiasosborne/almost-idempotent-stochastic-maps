@@ -168,7 +168,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `AF-LEM-STAGE1-POLAR-RETRACTION-TRANSPORT` | `proofs/lem-stage1-polar-retraction-transport/export.md` | `a3e87360fa5022a6` | `af` proof export for `lem-stage1-polar-retraction-transport` |
 | `ARG-LEM-STAGE1-POLAR-PATH-TRANSPORT` | `argument/lemmas/lem-stage1-polar-path-transport.md` | `29150038f1988829` | Registry shard for `lem-stage1-polar-path-transport` |
 | `AF-LEM-STAGE1-POLAR-PATH-TRANSPORT` | `proofs/lem-stage1-polar-path-transport/export.md` | `2100dfba8a8615e2` | `af` proof export for `lem-stage1-polar-path-transport` |
-| `ARG-LEM-STAGE1-INVERSION-DERIVATIVE-TRANSPORT` | `argument/lemmas/lem-stage1-inversion-derivative-transport.md` | `c26c275f958fcd46` | Registry shard for `lem-stage1-inversion-derivative-transport` |
+| `ARG-LEM-STAGE1-INVERSION-DERIVATIVE-TRANSPORT` | `argument/lemmas/lem-stage1-inversion-derivative-transport.md` | `eb695fc4e02bfd2e` | Registry shard for `lem-stage1-inversion-derivative-transport` |
 | `AF-LEM-STAGE1-INVERSION-DERIVATIVE-TRANSPORT` | `proofs/lem-stage1-inversion-derivative-transport/export.md` | `c2b7a95190d4ead6` | `af` proof export for `lem-stage1-inversion-derivative-transport` |
 
 ## Per-claim ledger
