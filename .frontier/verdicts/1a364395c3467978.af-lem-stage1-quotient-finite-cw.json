@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-quotient-finite-cw/export.md",
+  "oracle": "af-lem-stage1-quotient-finite-cw",
+  "result": "pass",
+  "claim_hash": "448eb6447c278f8213cd4b20df6919812949c2e892da77a1015d7c935d19e718",
+  "oracle_digest": "c73e037e84e7fe590e56eef62a26cf9f6ae801c59560a532872aa4f39c6022e1",
+  "inputs_hash": "0624c393c6820edc8757d289ffecd0a8caeade795ebf351d4d6be641df45542b",
+  "ts": "2026-07-29T16:37:37.683Z"
+}

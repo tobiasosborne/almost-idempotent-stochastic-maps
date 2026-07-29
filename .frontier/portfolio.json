@@ -973,6 +973,18 @@
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-finite-triangulation/ledger",
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-finite-triangulation.md"
         ]
+      },
+      {
+        "name": "af-lem-stage1-quotient-finite-cw",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-stage1-quotient-finite-cw"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-quotient-finite-cw/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-quotient-finite-cw.md"
+        ]
       }
     ]
   },

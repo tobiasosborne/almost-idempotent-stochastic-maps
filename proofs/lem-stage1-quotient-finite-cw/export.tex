@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{For every finite-dimensional exact-unit epsilon\_r-C*-alge...}
+\step{1} For every finite-dimensional exact-unit epsilon\_r-C*-algebra, if breve-calU = calU\_e/U(1) is a compact smooth manifold without boundary, then breve-calU is homeomorphic to a finite simplicial complex and hence has finite CW type. \steptag{validated} \\[6pt]
+\step{1.1} Antecedent instantiation (including its Stage-1 source): fix a finite-dimensional exact-unit epsilon\_r-C*-algebra and write M = breve-calU = calU\_e/U(1). Under the root antecedent, M is by hypothesis a compact smooth manifold without boundary. In the intended small-error range this hypothesis is also supplied as follows: if 1 < N = dim\_C calX < infinity and 0 <= epsilon\_r <= e\_quot\textasciicircum{}r, lem-stage1-quotient-manifold-package gives exactly that M is a connected compact orientable smooth manifold without boundary (with extra conclusions not needed here); if N=1, exact unitality gives calX = C J, (zJ)\textasciicircum{}dagger = conjugate(z)J, and (zJ)·(wJ)=zwJ, hence calU=calU\_e=\{zJ:|z|=1\} and its scalar U(1)-quotient M is one point, a compact smooth 0-manifold without boundary. The proof below uses only the root antecedent that M has the stated manifold properties. \steptag{validated} \\[4pt]
+\step{1.2} Finite triangulation: for M fixed in node 1.1, the compact-smooth-without-boundary hypothesis and the validated external lem-topology-finite-triangulation imply that there exist a finite simplicial complex K and a homeomorphism h:|K|→M. Equivalently, M is homeomorphic to a finite simplicial complex. \steptag{validated} \\[4pt]
+\step{1.3} Finite-CW transfer and assembly: the geometric realization |K| of a finite simplicial complex K is a finite CW complex, with one open cell for the relative interior of each simplex and the usual face-attachment maps. Thus the homeomorphism h:|K|→M from node 1.2 either transports that finite CW structure to M or, more weakly, exhibits M as homotopy equivalent to the finite CW complex |K|. Hence M has finite CW type. Together with node 1.2 this proves both conclusions of the root conditional for the arbitrary algebra fixed in node 1.1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
