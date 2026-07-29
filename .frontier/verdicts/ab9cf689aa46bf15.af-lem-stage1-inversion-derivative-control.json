@@ -2,8 +2,8 @@
   "claim": "proofs/lem-stage1-inversion-derivative-control/export.md",
   "oracle": "af-lem-stage1-inversion-derivative-control",
   "result": "pass",
-  "claim_hash": "9dd0ce17b9689cf141b33ba91167d8226f8556fec6b1d7eec963f6d98a2637b5",
+  "claim_hash": "a94e1e152be93126cfe7661eae5cdf6014476d44d89afb6f719f9e886ee5f4d2",
   "oracle_digest": "92f035a27c3bdd10ed794b487be9a1961e3a153f8ee211015895555429b9c07e",
-  "inputs_hash": "5404a20fe7d59297aa816061e231252979e33ac21b89dcd25bc55ad3a1562887",
-  "ts": "2026-07-27T16:22:37.081Z"
+  "inputs_hash": "6114d1f9a5e8d072112b2f585f5e3b0f063c32868623d1d20827776490363ed9",
+  "ts": "2026-07-29T08:35:41.526Z"
 }
