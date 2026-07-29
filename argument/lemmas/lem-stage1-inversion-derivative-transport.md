@@ -4,8 +4,8 @@ kind: lemma
 contract: Parameterized inversion-derivative transport: there exist C_der^0, C_ch^0, C_pol^0, C_grp^0 >= 1 and kappa_der^0, kappa_ch^0, kappa_pol^0 in (0, 1/2] such that, for every def-stage1-polar-witness-data tuple W with C_der >= C_der^0, C_ch >= C_ch^0, C_pol >= C_pol^0, C_grp >= C_grp^0, 0 < kappa_der <= kappa_der^0, 0 < kappa_ch <= kappa_ch^0, and 0 < kappa_pol <= kappa_pol^0, for every finite-dimensional exact-unit epsilon_r-C*-algebra, every delta > 0, every s in {+1, -1}, and every 0 < r <= delta satisfying C_ch*(epsilon_r + delta) <= kappa_ch, C_pol*(epsilon_r + delta) <= kappa_pol, C_grp*epsilon_r < delta - C_pol*(epsilon_r*delta + delta^2), C_der*(epsilon_r + r) <= kappa_der, and (1 + epsilon_r)*(1 + C_ch*(epsilon_r + delta))*r + C_grp*epsilon_r < 2*delta, writing u_delta for the unique first component of the inverse of Pi_delta: calU x B^{calH}_delta(J) -> S_delta := Pi_delta(calU x B^{calH}_delta(J)), Pi_delta(U, H) = U bold-dot H, and g_{sJ}: B_{2delta}^{icalH}(0) -> B_{2delta}^{calH}(0) for the unique C^1 map such that, for every A in B_{2delta}^{icalH}(0), f_{sJ}(A + g_{sJ}(A)) = 0, where f_{sJ}(B) = (1/2)*(((J + B^dagger) bold-dot (sJ)^dagger) bold-dot (sJ bold-dot (J + B)) - J), define chi_s(A) = sJ bold-dot (J + A + g_{sJ}(A)) and the global C^1 map sigma(U) = u_delta(U^dagger); then sigma maps chi_s(B_r^{icalH}(0)) into the same sJ-graph chart and, with F_s(A) = phi_{sJ}^par(sigma(chi_s(A))), one has ||D(F_s - id)(A) + 2*I_{icalH}|| <= C_der*(epsilon_r + r) for every A in B_r^{icalH}(0).
 defs: def-stage1-polar-witness-data; def-approximate-unitary-space; def-epsilon-cstar-algebra
 deps: lem-stage1-explicit-group-domain-membership; lem-stage1-explicit-group-closeness; lem-stage1-polar-retraction; lem-stage1-unitary-graph-control
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-stage1-inversion-derivative-transport
 provenance: DESIGN-S1-POLAR-v6.md sect-3 row 13g, landed verbatim (LaTeX flattened to registry ASCII; incl. the v6 finite-dimensional domain restriction, audit-v5 sect-6 option 1); AUDIT-S1-POLAR-v6.md LAND; ratified W78 package sect-5 step 2 (W80). TeX 728-762, 857-892, 943; parameterized chart/derivative/guard monotonicity; AUDIT-S1-POLAR-v4.md sect-1.7, sect-3.
 owner: A
@@ -97,3 +97,18 @@ kappa_der^0 are built before the receiving tuple enters); do NOT
 sub-split routine Neumann/smallness cutoffs or triangle estimates.
 Constants live in the proof body, never the contract; every smallness
 inference cites its guard node explicitly.
+
+**af-RE-VALIDATED 2026-07-29 (W98, elevation queue row 8 — the LAST
+queue row; the endorsed W97 rebuild is COMPLETE).** Clean re-seed on
+the four-provider typed spine (audit-v2's fixed
+explicit-closeness-witness repair; base thresholds built before the
+receiving tuple enters; the run-2 universal-constant defect absent by
+construction). First-pass run under the binding build-granularity
+discipline above (tier routine, fresh codex verifier per node): root
+validated, 25/25 live nodes (hard cap 25, not exceeded; design target
+22), taint clean, 7 rounds, three in-run challenges repaired
+(open-domain boundary cases at r = delta for G/DG at nodes 1.3/1.3.2;
+strict cutoff transfer at 1.9, ch-69c37495) and re-verified fresh.
+Export in the workspace; oracle
+`af-lem-stage1-inversion-derivative-transport` + `fr verify` PASS.
+This status flip is a mechanical reflection of the codex ledger.

@@ -2,8 +2,8 @@
   "claim": "proofs/lem-stage1-inversion-derivative-transport/export.md",
   "oracle": "af-lem-stage1-inversion-derivative-transport",
   "result": "pass",
-  "claim_hash": "c2b7a95190d4ead6b385497a80b0456ff10e5ae8f82e929a391d6d4b36db322c",
+  "claim_hash": "162c53e54facb48ec6f3bc971e1b6c3bbe94bc1f571070c331ae7163dcecfefa",
   "oracle_digest": "ad8463dcf8b6cd6a517f2db0cd0f9e8ccfdee1a5fd3248cbd92f43dcd58001b2",
-  "inputs_hash": "f8bf569855486e2c8117b3c3e23368075bc75f5f80c14e8a2b08aaac147a7f8b",
-  "ts": "2026-07-28T06:45:55.716Z"
+  "inputs_hash": "eb695fc4e02bfd2e6294cd5382cc7336bbb8cf41adda60554dab48d035a8309d",
+  "ts": "2026-07-29T10:06:45.101Z"
 }
