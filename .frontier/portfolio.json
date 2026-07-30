@@ -1093,6 +1093,18 @@
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-extra-fixed-class/ledger",
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-extra-fixed-class.md"
         ]
+      },
+      {
+        "name": "af-lem-stage1-fixed-unitary-projection-bridge",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-stage1-fixed-unitary-projection-bridge"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-fixed-unitary-projection-bridge/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-fixed-unitary-projection-bridge.md"
+        ]
       }
     ]
   },

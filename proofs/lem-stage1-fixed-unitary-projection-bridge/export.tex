@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Fixed-unitary projection bridge: there are universal C\_br...}
+\step{1} Fixed-unitary projection bridge: there are universal C\_bridge<infinity and e\_bridge\textasciicircum{}r>0 such that every finite-dimensional exact-unit epsilon\_r-C*-algebra with 0<=epsilon\_r<=e\_bridge\textasciicircum{}r and 1<dim\_C calX<infinity contains a nontrivial C\_bridge*epsilon\_r-projection P for the product bold-dot and unit J. \steptag{validated} \\[6pt]
+\step{1.1} Constant selection and the single upstream application: invoke lem-stage1-extra-fixed-class exactly once, obtaining universal C\_fix>=1, e\_fix\textasciicircum{}r>0 and r:=r\_bidx>0 and, for every admissible algebra with epsilon\_r<=e\_fix\textasciicircum{}r, its displayed U in calU\_e satisfying sigma(U)=U, ||U-U\textasciicircum{}dagger||<=C\_fix*epsilon\_r, and ||U-J||,||U+J||>=r. Define K:=3+4*C\_fix/r, C\_bridge:=max\{C\_fix,K\}, and e\_bridge\textasciicircum{}r:=min\{e\_fix\textasciicircum{}r,1/2,1/C\_fix,r/C\_fix\}; these are universal with C\_bridge<infinity and e\_bridge\textasciicircum{}r>0. \steptag{validated} \\[4pt]
+\step{1.2} Conditional fixed-unitary bridge: let C\_fix>=1 and r>0, let 0<=epsilon<=min\{1/2,1/C\_fix,r/C\_fix\}, and let U belong to calU in an exact-unit epsilon-C*-algebra and satisfy ||U-U\textasciicircum{}dagger||<=C\_fix*epsilon and ||U-J||,||U+J||>=r. Then for A:=(U+U\textasciicircum{}dagger)/2 and P:=(J+A)/2=(2J+U+U\textasciicircum{}dagger)/4, P is a nontrivial C\_bridge*epsilon-projection, where C\_bridge=max\{C\_fix,3+4*C\_fix/r\}. \steptag{validated} \\[6pt]
+\step{1.2.1} Unitary norm and Hermitian construction: because U belongs to calU, def-approximate-unitary-space gives U\textasciicircum{}dagger bold-dot U=J. The def-epsilon-cstar-algebra lower C*-bound and ||J||=1 give (1-epsilon)||U||\textasciicircum{}2<=1, hence ||U||<=sqrt(2)<2. For A=(U+U\textasciicircum{}dagger)/2, P=(J+A)/2 and Q=J-P=(J-A)/2, involutivity, conjugate linearity, and J\textasciicircum{}dagger=J give A\textasciicircum{}dagger=A, P\textasciicircum{}dagger=P, Q\textasciicircum{}dagger=Q, and ||A||<=||U||. \steptag{validated} \\[4pt]
+\step{1.2.2} Exact fixed-term defect identities: define Q:=J-P=(J-A)/2 in this node. Bilinearity and the exact two-sided unit from def-epsilon-cstar-algebra give P bold-dot P-P=(A bold-dot A-J)/4 and Q bold-dot Q-Q=P bold-dot P-P. Moreover A bold-dot A-U\textasciicircum{}dagger bold-dot U=(A-U\textasciicircum{}dagger) bold-dot A+U\textasciicircum{}dagger bold-dot(A-U), while ||A-U||=||A-U\textasciicircum{}dagger||=||U-U\textasciicircum{}dagger||/2. \steptag{validated} \\[4pt]
+\step{1.2.3} Defect estimate: writing eta=||U-U\textasciicircum{}dagger||, the product-norm axiom in def-epsilon-cstar-algebra, ||A||<=||U||<2, epsilon<=1/2, and U\textasciicircum{}dagger bold-dot U=J imply ||A bold-dot A-J||<=(1+epsilon)*(eta/2)*(||A||+||U||)<=3*eta. Hence ||P bold-dot P-P||=||Q bold-dot Q-Q||<=3*C\_fix*epsilon/4<=C\_fix*epsilon<=C\_bridge*epsilon. \steptag{validated} \\[4pt]
+\step{1.2.4} Separation excludes small norms quantitatively: define Q:=J-P=(J-A)/2. Then the exact identities U+J=2P+(U-A) and U-J=-2Q+(U-A), together with ||U-A||<=C\_fix*epsilon/2<=r/2 and the assumed two distance bounds, imply ||P||>=r/4 and ||Q||>=r/4. \steptag{validated} \\[6pt]
+\step{1.2.4.1} With Q:=J-P=(J-A)/2, the definitions 2P=J+A and 2Q=J-A give U+J=2P+(U-A) and U-J=-2Q+(U-A). Also ||U-A||=||U-U\textasciicircum{}dagger||/2<=C\_fix*epsilon/2<=r/2. Hence r<=||U+J||<=2||P||+||U-A||<=2||P||+r/2 and r<=||U-J||<=2||Q||+||U-A||<=2||Q||+r/2. Subtracting r/2 and dividing by 2 yields ||P||>=r/4 and ||Q||>=r/4. \steptag{validated} \\[4pt]
+\step{1.2.5} Near-one norm estimate and nontriviality: for either R=P or R=Q, put n=||R|| and d=||R bold-dot R-R||. Hermiticity, the epsilon-C* lower bound, the product upper bound, and the triangle inequality give (1-epsilon)n\textasciicircum{}2<=n+d and n<=(1+epsilon)n\textasciicircum{}2+d. Since epsilon<=1/2 and d<=C\_fix*epsilon<=1, the first inequality gives n<3. Using n>=r/4, the first inequality when n>=1 and the second when n<=1 yield |n-1|<=3*epsilon+d/n<=(3+4*C\_fix/r)*epsilon<=C\_bridge*epsilon. Thus P and Q=J-P both satisfy the nonvanishing alternative in def-delta-projection; with Hermiticity and the defect bound, that definition says P is a nontrivial C\_bridge*epsilon-projection. \steptag{validated} \\[4pt]
+\step{1.3} Explicit composition, including epsilon\_r=0: fix an admissible algebra with 0<=epsilon\_r<=e\_bridge\textasciicircum{}r and take C\_fix,r,U from node 1.1. Since e\_bridge\textasciicircum{}r<=min\{1/2,1/C\_fix,r/C\_fix\}, one has 0<=epsilon\_r<=min\{1/2,1/C\_fix,r/C\_fix\}; node 1.1 also gives U in calU, ||U-U\textasciicircum{}dagger||<=C\_fix*epsilon\_r, and ||U-J||,||U+J||>=r. Hence node 1.2 applies with epsilon:=epsilon\_r and yields its P as a nontrivial C\_bridge*epsilon\_r-projection. This remains valid at epsilon\_r=0: the required hypothesis is the non-strict inequality ||U-U\textasciicircum{}dagger||<=0, supplied by node 1.1, never the false strict inequality 0<0. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

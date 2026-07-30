@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-fixed-unitary-projection-bridge/export.md",
+  "oracle": "af-lem-stage1-fixed-unitary-projection-bridge",
+  "result": "pass",
+  "claim_hash": "242be18b9edc9b481e0858a609f1c9d0ccee3de4ded43ef61c6d0546b31d08d1",
+  "oracle_digest": "d30c02c6e1a8e9e756b55d49637e00652e398e31ab16c57537ab400e8e1a3987",
+  "inputs_hash": "cb193020899d0c43bcfe832796aa847d3c55d6106a1298701449f2bdcd89f6d7",
+  "ts": "2026-07-30T12:24:15.970Z"
+}
