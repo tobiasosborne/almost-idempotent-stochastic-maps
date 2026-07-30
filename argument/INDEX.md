@@ -197,7 +197,7 @@
 | `lem-maincb-stage1-raw-refinement` | lemma | proved | validated | A | There are universal D_1 < infinity and e_1 > 0 such that, if an explicit Stage-1… |
 | `lem-maincb-stage1-strict-refinement` | lemma | stated | seeded | A | If A is a finite-dimensional extended epsilon-C*-algebra with 0 <= epsilon <= ep… |
 | `lem-maincb-stage2-call-envelope` | lemma | stated | seeded | A | There are universal K_2 >= max{1,L,c_0^cb*L} and e_call_2 > 0, with K_2*e_call_2… |
-| `lem-maincb-stage2-extcb-datum` | lemma | stated | seeded | A | There are universal C_s2 >= 1 and e_s2 > 0, with the e_ca threshold and universa… |
+| `lem-maincb-stage2-extcb-datum` | lemma | proved | validated | A | There are universal C_s2 >= 1 and e_s2 > 0, with the e_ca threshold and universa… |
 | `lem-maincb-stage2-raw-extension` | lemma | stated | seeded | A | There are universal D_2 < infinity and e_2 > 0, chosen with e_2 <= e_s2 and C_s2… |
 | `lem-maincb-stage3-call-envelope` | lemma | stated | seeded | A | There are universal K_3 >= max{1,L,c_0^cb*L} and e_call_3 > 0, with K_3*e_call_3… |
 | `lem-maincb-stage3-finite-recombination` | lemma | stated | seeded | A | If A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= epsilo… |
