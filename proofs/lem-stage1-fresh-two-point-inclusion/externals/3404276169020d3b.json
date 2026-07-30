@@ -1,0 +1,8 @@
+{
+  "id": "3404276169020d3b",
+  "name": "GT-kitaev-prop-delta-hominc",
+  "source": "refs/kitaev-2405.02434/approximate_algebras.tex:1194-1196 VERBATIM: \"\\begin{Proposition}\\label{prop_delta_hominc}\nLet $v\\colon \\calA'\\to\\calA''$ be a non-unital $\\delta$-homomorphism of $\\eps$-$C^*$ algebras. Then in general, $\\|v\\|\\le 1+O(\\delta+\\eps)$. If $\\|v(X)\\|\\ge\\eta\\|X\\|$ for some $\\eta\u003e2\\delta$ and all $X$, then $\\|v(X)\\|\\ge a\\|X\\|$ for $a=1-O(\\delta+\\eps)$ and all $X$. Furthermore, if $\\|v(I_{\\calA'})-I_{\\calA''}\\|$ is less than a certain positive constant, then $\\|v(I_{\\calA'})-I_{\\calA''}\\|\\le O(\\delta+\\eps)$.\n\\end{Proposition}\" [Kitaev arXiv:2405.02434 Proposition prop_delta_hominc, statement lines 1194-1196; proof retained in-source at :1198-1222 (NOT imported); smallness/implicit-quantification convention at :1192 (constants eps_max, delta_max exist such that for all eps\u003c=eps_max, delta\u003c=delta_max); data-independence of big-O at :458 (each big-O is a concrete function, not depending on any additional data). Imports exactly the printed Proposition statement: non-unital delta-homomorphism norm bound ||v||\u003c=1+O(delta+eps); lower-bound upgrade eta\u003e2delta =\u003e a=1-O(delta+eps); near-unitality upgrade ||v(I')-I''||\u003c=O(delta+eps).]",
+  "content_hash": "60ba6c519c53d4638d6dc1607d9233c221337bd63db3a586a37f910e5315ac26",
+  "created": "2026-07-30T13:09:43.082320504Z",
+  "notes": ""
+}
