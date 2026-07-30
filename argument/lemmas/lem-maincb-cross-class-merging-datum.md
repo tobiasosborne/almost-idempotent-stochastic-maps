@@ -2,7 +2,7 @@
 id: lem-maincb-cross-class-merging-datum
 kind: lemma
 contract: There are universal C_cross >= 1 and e_cross > 0 such that, if A is a finite-dimensional extended epsilon_A-C*-algebra with epsilon_A <= t, a supplied MAIN partition state comes from a non-unital extended t-inclusion w:C^m->A with one-dimensional images P_j, has disjoint nonempty unions U,V sharing no class and R = U union V, and two separately supplied current reset states v_U:B_U->A_U, v_V:B_V->A_V are extended isomorphisms satisfying epsilon_U, epsilon_V, d_U, d_V <= t <= e_cross, d_U <= c_0^cb*epsilon_U, and d_V <= c_0^cb*epsilon_V, then lem-maincb-nested-corner-comparison makes P_U^R, P_V^R common-quantitative-defect target projections, the two lem-maincb-outer-compression-transfer outer-compressed diagonal maps and the unique maps between the two lem-maincb-cross-union-zero-corners zero corners form the explicit Stage-3 raw-call amplified four-corner datum in A_R, with common defect rho <= C_cross*t.
-defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-raw-call; def-four-corner-merging-datum; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
+defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-raw-call; def-four-corner-merging-datum; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion; def-delta-projection; def-one-dimensional-delta-projection
 deps: lem-maincb-error-improvement; lem-maincb-nested-corner-comparison; lem-maincb-outer-compression-transfer; lem-maincb-cross-union-zero-corners
 status: stated
 af: seeded
