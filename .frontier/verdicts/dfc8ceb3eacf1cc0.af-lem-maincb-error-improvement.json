@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-error-improvement/export.md",
+  "oracle": "af-lem-maincb-error-improvement",
+  "result": "pass",
+  "claim_hash": "7d7d383c8c94f2c8e453b0e56030a62317a3d678c02c63eafb7608fdcd995890",
+  "oracle_digest": "9718b6d0db238ace35344372a057d40df0989c439c0483c669a03e30a4c53d69",
+  "inputs_hash": "1761d6b0a063e74928120c178631edd9b651b9ee0d05456834e2d4598cbcb1cd",
+  "ts": "2026-07-30T17:51:13.244Z"
+}

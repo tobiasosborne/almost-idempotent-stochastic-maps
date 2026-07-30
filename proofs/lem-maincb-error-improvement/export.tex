@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Complete error improvement: there are universal epsilon\_m...}
+\step{1} Complete error improvement: there are universal epsilon\_max\textasciicircum{}cb>0, delta\_max\textasciicircum{}cb>0 and c\_0\textasciicircum{}cb<infinity such that every extended delta-inclusion v:B->A from a finite-dimensional C*-algebra B into an extended epsilon-C*-algebra A with 0<=epsilon<=epsilon\_max\textasciicircum{}cb and 0<=delta<=delta\_max\textasciicircum{}cb can be replaced by an extended c\_0\textasciicircum{}cb*epsilon-inclusion v\_tilde:B->A that is bijective whenever v is bijective. \steptag{validated} \\[6pt]
+\step{1.1} Fix universal constants e\_it>0, K\_disp<infinity, and K\_floor<infinity supplied by lem-maincb-improvement-iteration, and set epsilon\_max\textasciicircum{}cb:=e\_it/2, delta\_max\textasciicircum{}cb:=min(e\_it/2, 1/(2*(1+|K\_disp|))), and c\_0\textasciicircum{}cb:=K\_floor; then epsilon\_max\textasciicircum{}cb and delta\_max\textasciicircum{}cb are positive and c\_0\textasciicircum{}cb is finite. \steptag{validated} \\[4pt]
+\step{1.2} For any 0<=epsilon<=epsilon\_max\textasciicircum{}cb and 0<=delta<=delta\_max\textasciicircum{}cb, one has delta+epsilon<=e\_it and 1-delta-|K\_disp|*delta>=1/2. \steptag{validated} \\[4pt]
+\step{1.3} Under the hypotheses of node 1, lem-maincb-improvement-iteration applied with d=delta yields a linear map v\_tilde:B->A that is an extended c\_0\textasciicircum{}cb*epsilon-inclusion and satisfies ||v\_tilde-v||<=K\_disp*delta<=|K\_disp|*delta at level one. \steptag{validated} \\[6pt]
+\step{1.3.1} By node 1.2, d:=delta satisfies d+epsilon<=e\_it; the remaining assumptions that B is a finite-dimensional C*-algebra, A is an extended epsilon-C*-algebra, and v:B->A is an extended d-inclusion are exactly the hypotheses of node 1. \steptag{validated} \\[6pt]
+\step{1.3.1.1} Validated node 1.1 fixes epsilon\_max\textasciicircum{}cb=e\_it/2 and delta\_max\textasciicircum{}cb=min(e\_it/2,1/(2*(1+|K\_disp|))); validated node 1.2 consequently establishes, for the present bounds 0<=epsilon<=epsilon\_max\textasciicircum{}cb and 0<=delta<=delta\_max\textasciicircum{}cb, the required inequality delta+epsilon<=e\_it. \steptag{validated} \\[4pt]
+\step{1.3.1.2} Set d:=delta. The preceding child gives d+epsilon<=e\_it. For the arbitrary instance under node 1, B is a finite-dimensional C*-algebra, A is an extended epsilon-C*-algebra, and v:B->A is an extended delta-inclusion, hence an extended d-inclusion by the equality d=delta. These are exactly all hypotheses of lem-maincb-improvement-iteration. \steptag{validated} \\[4pt]
+\step{1.3.2} Applying lem-maincb-improvement-iteration with d=delta therefore gives a linear dagger-preserving v\_tilde:B->A which is an extended K\_floor*epsilon-inclusion and obeys sup\_n ||I\_n tensor v\_tilde-I\_n tensor v||<=K\_disp*delta. \steptag{validated} \\[4pt]
+\step{1.3.3} Since c\_0\textasciicircum{}cb=K\_floor, the inclusion conclusion is the required extended c\_0\textasciicircum{}cb*epsilon-inclusion; taking n=1 in the supremum gives ||v\_tilde-v||<=K\_disp*delta, and K\_disp*delta<=|K\_disp|*delta because delta>=0. \steptag{validated} \\[4pt]
+\step{1.4} If v is bijective, then the map v\_tilde furnished above is injective: for every x in B, the level-one lower norm bound for the extended delta-inclusion v and the displacement estimate give ||v\_tilde(x)|| >= ||v(x)||-||(v\_tilde-v)(x)|| >= (1-delta-|K\_disp|*delta)||x|| >= (1/2)||x||. \steptag{validated} \\[6pt]
+\step{1.4.1} Because v is an extended delta-inclusion, its n=1 amplification satisfies the lower norm bound ||v(x)||>=(1-delta)||x|| for every x in B. \steptag{validated} \\[4pt]
+\step{1.4.2} The level-one displacement bound in node 1.3 implies ||(v\_tilde-v)(x)||<=|K\_disp|*delta*||x|| for every x in B. \steptag{validated} \\[4pt]
+\step{1.4.3} The reverse triangle inequality and the preceding two bounds give ||v\_tilde(x)||>=||v(x)||-||(v\_tilde-v)(x)||>=(1-delta-|K\_disp|*delta)||x||; node 1.2 makes the last coefficient at least 1/2, so v\_tilde(x)=0 forces x=0 and v\_tilde is injective. \steptag{validated} \\[4pt]
+\step{1.5} If v is bijective, then A and B have the same finite dimension; hence the linear injective map v\_tilde:B->A is also surjective and therefore bijective. Together with the preceding nodes this proves node 1. \steptag{validated} \\[6pt]
+\step{1.5.1} If v:B->A is bijective and B is finite-dimensional, then v is a linear vector-space isomorphism, so A is finite-dimensional and dim(A)=dim(B). \steptag{validated} \\[4pt]
+\step{1.5.2} By node 1.4, v\_tilde:B->A is injective; an injective linear map between finite-dimensional vector spaces of equal dimension is surjective, hence v\_tilde is bijective. \steptag{validated} \\[4pt]
+\step{1.5.3} Nodes 1.1--1.3 provide universal positive thresholds, a finite c\_0\textasciicircum{}cb, and the required extended c\_0\textasciicircum{}cb*epsilon-inclusion for every admissible v; the preceding child supplies the additional bijectivity whenever v is bijective, which is precisely the conclusion of node 1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

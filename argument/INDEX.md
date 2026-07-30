@@ -179,7 +179,7 @@
 | `lem-maincb-cross-union-zero-corners` | lemma | proved | validated | A | There is a universal e_zero > 0 such that, if A is a finite-dimensional extended… |
 | `lem-maincb-direct-corner-envelope` | lemma | stated | seeded | A | There are universal L >= 1 and e_env > 0 such that, if A is a finite-dimensional… |
 | `lem-maincb-direct-sum-inclusion-merge` | lemma | proved | validated | A | There are universal C_dir < infinity and e_dir > 0 such that, if B_1,B_2 are fin… |
-| `lem-maincb-error-improvement` | lemma | stated | seeded | A | Complete error improvement: there are universal epsilon_max^cb>0, delta_max^cb>0… |
+| `lem-maincb-error-improvement` | lemma | proved | validated | A | Complete error improvement: there are universal epsilon_max^cb>0, delta_max^cb>0… |
 | `lem-maincb-full-corner-identification` | lemma | proved | validated | A | There is a universal e_full > 0 such that, if R is a t-projection in an extended… |
 | `lem-maincb-improvement-iteration` | lemma | proved | validated | A | There are universal e_it > 0, K_disp < infinity, and K_floor < infinity such tha… |
 | `lem-maincb-improvement-one-step` | lemma | proved | validated | A | There are universal K_step >= 1 and e_step > 0 such that, if B is a finite-dimen… |

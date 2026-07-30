@@ -4,20 +4,29 @@ kind: lemma
 contract: Complete error improvement: there are universal epsilon_max^cb>0, delta_max^cb>0 and c_0^cb<infinity such that every extended delta-inclusion v:B->A from a finite-dimensional C*-algebra B into an extended epsilon-C*-algebra A with 0<=epsilon<=epsilon_max^cb and 0<=delta<=delta_max^cb can be replaced by an extended c_0^cb*epsilon-inclusion v_tilde:B->A that is bijective whenever v is bijective.
 defs: def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
 deps: lem-maincb-improvement-iteration; lem-maincb-improvement-one-step
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-maincb-error-improvement
 provenance: kitaev-2405.02434 approximate_algebras.tex:1256-1319 (DECOMP IMPROVE-CB; the narrowed hypotheses — finite-dimensional source B and epsilon <= epsilon_max^cb — are the literal source hypotheses at 1317-1319 that the v4.1 register text suppressed); DESIGN-GAP-EA.md §2.3 (narrowing USER-RATIFIED in-session 2026-07-26); DESIGN-FUDW-DECOMP-v4.1.md register row
 owner: A
 ---
 
-**Status.** IMPROVE-CB, the consumer gate of the GAP-EA discharge: `stated`
-target of the MAIN-CB chain, now safe to seed. **Contract = the
-DESIGN-GAP-EA §2.3 NARROWED form, user-ratified 2026-07-26** — the v4.1
-register's broad form suppressed two literal source hypotheses
-(finite-dimensional source algebra; ambient defect below a universal
-epsilon_max^cb) and would have repeated the quarantined local-domain failure
-pattern if seeded unnarrowed.
+**Status.** af-VALIDATED in-repo (2026-07-30): 17-node tree, root
+`validated`, taint clean 17/17
+(`proofs/lem-maincb-error-improvement/export.md`; oracle pass; tier
+routine; parallel-af worktree run af-m03, run 4). The four-run history
+is itself the audit trail: runs 1-2 validated the interior but three
+independent verifier cohorts held the root underivable from the
+then-weaker M02 wording; run 3 (clean re-seed) confirmed by ballooning
+to 26 nodes internalizing the iteration; the USER-RATIFIED M02
+strengthening (full extended K_floor*epsilon-inclusion) then let run 4
+close as the designed consumer: iterate strengthened M02, O(epsilon)
+extended inclusion, injectivity via lower-norm + displacement,
+bijectivity via finite-dimensional dimension equality. Scoped cap
+amendments 9->16->20 (final tree 17; repo cap 26) classified
+transparent build size + repair growth, flagged for review. IMPROVE-CB
+— the consumer gate of the MAIN chain — is RIGOROUS. Contract = the
+DESIGN-GAP-EA sect-2.3 narrowed form, unchanged throughout.
 
 **Dep wiring (REWIRED 2026-07-30 per DESIGN-MAIN-STRUCTURE-v5.md sect-10
 step 1; user-ratified).** Deps rewired from
