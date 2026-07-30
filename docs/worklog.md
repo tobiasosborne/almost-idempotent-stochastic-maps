@@ -2000,3 +2000,41 @@ cycle (bead `aism-tpai` claimed). One and a half rounds run, all fresh codex xhi
 Graceful stop per user request: audit v2 deliberately NOT dispatched; nothing landed in
 the registry (byte-identical to the post-bank state); resume point = dispatch audit v2
 (HANDOFF 6.1). check-all OK; all pushed; nothing in flight.
+
+## 2026-07-30 — session 37: the S1-ENDGAME session — design cycle CONVERGED, package RATIFIED, 10 of 13 rows BANKED (T0 117 → 127)
+
+Single-arc session on bead `aism-tpai` → `aism-8dsp` (FH arm throughout):
+
+**Design cycle rounds 2–5 (rounds run this session; round 1 was session 36):**
+audit v2 = REDESIGN (but the Hatcher weak-Hopf ground truth VERIFIED locally at
+AT.txt:17654-17677 / 17798-17800, retiring the design's biggest L1 risk) → BRIEF v3 →
+design v3 → audit v3 = REDESIGN (3 narrow interface fatals) → BRIEF v4 → design v4 →
+audit v4 = REDESIGN (2 plumbing fatals; the r_bidx=r_iso ambient bridge PASSED hostile
+checking) → BRIEF v5 → design v5 → **audit v5 = LAND, zero corrections**. Fatal count
+per round 6→3→2→0. All briefs orchestrator-authored from the audits; every design and
+every audit a separate fresh codex xhigh.
+
+**Ratification + landing:** user ratified all 13 contracts + 3 externals. Shards landed
+VERBATIM by extraction script (no hand transcription; registry 298→311); 13 workspaces
+seeded round-trip-verified; UNWIRED whitelist; all gates green.
+
+**Elevation (the verified bank sequence ~10×, all tier routine, fresh verifier per
+node):** A0 (14n, 1 challenge: functoriality→Alexander-Whitney repair) · A1 (8n clean;
+Hatcher externals consumed exactly as registered, grading derived internally) · A2 (9n
+first-pass) · A3 (6n first-pass) — A-chain complete · B0a (13 live == cap; 3 challenges
+repaired; typed epsilon_B^r architecture validated) · B0i (19n; BALLOON stop at 17>15 →
+honest classification (transparent verifier-forced repair growth, all challenges
+resolved) → USER-RATIFIED one-row cap amendment 15→20 (commit bc3ca739) → resumed, FIVE
+challenges total repaired incl. a false-as-displayed quotient-norm equality) · B0s (10n,
+1 challenge) · B0b (7n first-pass) — B0 chain complete · **B1 the KEYSTONE (15n == cap;
+one ledger elimination; the extra fixed class via Lefschetz–Hopf + trace; 3 challenges
+repaired incl. proving conjugacy-invariance of the local index)** · C0 (10n, 2 unbound-Q
+challenges repaired; architecture (b) validated). Results 124th–133rd; T0 127.
+
+**Also this session:** the parallel-af assessment (worktree-per-run on DAG antichains;
+unblocker aism-2kyc; user still deciding — not filed as a bead).
+
+**Graceful stop per user:** C0 banked as the last act; C1–C3 (~21 target nodes) remain
+seeded with all deps T0; NOTHING in flight; check-all OK; all pushed. Resume point =
+HANDOFF item 5.1 (provision + launch C1). Codex spend: ~4 design/audit xhigh jobs + ~16
+orchestration runs' worth of routine prover/verifier jobs.
