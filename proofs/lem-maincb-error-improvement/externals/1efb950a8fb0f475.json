@@ -1,8 +1,0 @@
-{
-  "id": "1efb950a8fb0f475",
-  "name": "lem-maincb-improvement-iteration",
-  "source": "imports validated registry lemma proofs/lem-maincb-improvement-iteration — There are universal e_it \u003e 0, K_disp \u003c infinity, and K_floor \u003c infinity such that, if B is a finite-dimensional C*-algebra, A is an extended epsilon-C*-algebra, and v:B-\u003eA is an extended d-inclusion with d+epsilon \u003c= e_it, then one dagger-preserving v_tilde, with v_tilde_n = I_n tensor v_tilde, satisfies sup_n ||v_tilde_n - v_n|| \u003c= K_disp*d and has extended defect at most K_floor*epsilon; for epsilon \u003e 0 it is reached after finitely many correction steps, and for epsilon = 0 it is their operator-norm limit.",
-  "content_hash": "36682b5051e37e727f5652ffbeceef02f2caec2f72bd3c0836257f9066a25267",
-  "created": "2026-07-30T16:40:04.491038415Z",
-  "notes": ""
-}
