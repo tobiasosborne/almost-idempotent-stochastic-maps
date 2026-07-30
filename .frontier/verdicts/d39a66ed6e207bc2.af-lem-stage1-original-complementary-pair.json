@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-original-complementary-pair/export.md",
+  "oracle": "af-lem-stage1-original-complementary-pair",
+  "result": "pass",
+  "claim_hash": "629e04854c6cd2af6b063599ccab77fe3f41ac390ddef5c292ed3205088ecf78",
+  "oracle_digest": "318100a0ac34c89407586fb0695962a01898769bfe8a296d15448013a7431368",
+  "inputs_hash": "68fd415a774d5c0044407a2641333546eb7da904181a00b895058c9c5dde9fa8",
+  "ts": "2026-07-30T13:07:08.763Z"
+}

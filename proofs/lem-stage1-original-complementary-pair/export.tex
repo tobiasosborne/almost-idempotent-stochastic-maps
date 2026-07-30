@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{There are universal C\_np<infinity and e\_np>0 such that ev...}
+\step{1} There are universal C\_np<infinity and e\_np>0 such that every finite-dimensional extended epsilon\_X-C*-algebra (calX,I\_X,.,dagger) with 0<=epsilon\_X<=e\_np and 1<dim\_C calX<infinity contains nonvanishing C\_np*epsilon\_X-projections P' and P'' for the original product such that P'+P''=I\_X and ||P'P''||,||P''P'||<=C\_np*epsilon\_X. \steptag{validated} \\[6pt]
+\step{1.1} Dependency instantiation and constants: let C\_np:=C\_proj and e\_np:=e\_proj, where C\_proj<infinity and e\_proj>0 are the universal constants from the validated external lem-stage1-rectified-nontrivial-projection. Fix any finite-dimensional extended epsilon\_X-C*-algebra (calX,I\_X,.,dagger) with 0<=epsilon\_X<=e\_np and 1<dim\_C calX<infinity. That external, applied with epsilon\_X, supplies an element P\_0 that is a nontrivial delta-projection for the original product and original unit I\_X with delta=C\_proj*epsilon\_X=C\_np*epsilon\_X. \steptag{validated} \\[4pt]
+\step{1.2} Complementary choice: for the P\_0 supplied in node 1.1, define P\_prime:=P\_0 and P\_doubleprime:=I\_X-P\_0. Since I\_X is the two-sided unit for the original multiplication, direct vector-space cancellation gives P\_prime+P\_doubleprime=I\_X. \steptag{validated} \\[4pt]
+\step{1.3} Projection and nonvanishing transfer with coefficient enlargement: let C\_base:=C\_proj (the coefficient called C\_np in node 1.1). The definition def-delta-projection supplies a universal complement-error coefficient, so there is a universal finite C\_cmp>=0 for which the complement of a delta-projection in an epsilon\_X-C*-algebra is a (delta+C\_cmp*epsilon\_X)-projection (the definition's delta+O(epsilon\_X) clause). Set C\_bar:=max\{C\_base,C\_base+C\_cmp\}. Then the P\_prime and P\_doubleprime of node 1.2 are both nonvanishing C\_bar*epsilon\_X-projections for the original product. \steptag{validated} \\[6pt]
+\step{1.3.1} Complement-defect bookkeeping: node 1.1 gives P\_0=P\_prime as a delta-projection with delta=C\_base*epsilon\_X. The general-unit complement clause in def-delta-projection states that I\_X-P\_0=P\_doubleprime is a delta\_prime-projection with delta\_prime=delta+O(epsilon\_X). Unpacking this fixed definitional O-term, choose its universal finite coefficient C\_cmp>=0, so delta\_prime<=delta+C\_cmp*epsilon\_X=(C\_base+C\_cmp)*epsilon\_X<=C\_bar*epsilon\_X. Also delta<=C\_bar*epsilon\_X; hence both elements are C\_bar*epsilon\_X-projections. \steptag{validated} \\[4pt]
+\step{1.3.2} Nonvanishing bookkeeping: node 1.1 supplies P\_0 as nontrivial for the original unit I\_X. By def-delta-projection, nontrivial means exactly that both P\_0 and I\_X-P\_0 satisfy the nonvanishing norm alternative. With the identifications in node 1.2 and the defect bounds of child 1.3.1, P\_prime and P\_doubleprime are therefore nonvanishing C\_bar*epsilon\_X-projections for the original product. \steptag{validated} \\[4pt]
+\step{1.4} Cross-product bounds: bilinearity of the original multiplication and the two-sided unit identities P\_0 I\_X=I\_X P\_0=P\_0 give P\_prime P\_doubleprime=P\_0(I\_X-P\_0)=P\_0-P\_0\textasciicircum{}2 and P\_doubleprime P\_prime=(I\_X-P\_0)P\_0=P\_0-P\_0\textasciicircum{}2. Since node 1.1 gives ||P\_0\textasciicircum{}2-P\_0||<=delta=C\_np*epsilon\_X, norm symmetry under multiplication by -1 yields ||P\_prime P\_doubleprime||,||P\_doubleprime P\_prime||<=C\_np*epsilon\_X. \steptag{validated} \\[4pt]
+\step{1.5} Quantified assembly with one enlargement: retain e\_np:=e\_proj>0 from node 1.1 and take the root coefficient C\_np:=C\_bar=max\{C\_proj,C\_proj+C\_cmp\}<infinity from node 1.3. For every algebra in the root range, nodes 1.1-1.2 construct P\_prime,P\_doubleprime; node 1.3 proves both are nonvanishing C\_np*epsilon\_X-projections; node 1.2 gives P\_prime+P\_doubleprime=I\_X; and node 1.4 gives each cross norm at most C\_proj*epsilon\_X<=C\_np*epsilon\_X. Universality and positivity/finiteness of the constants follow from the validated external and the fixed universal complement coefficient in def-delta-projection. Thus the witnesses establish the root contract, also at epsilon\_X=0 because all bounds are non-strict. \steptag{validated} \\[6pt]
+\step{1.5.1} Validated-dependency discharge: once nodes 1.1, 1.2, 1.3 (through 1.3.1-1.3.2), and 1.4 are validated, choose e\_np=e\_proj and choose the root's C\_np to be the enlarged C\_bar from node 1.3. Their conjunction gives, for every admissible algebra, witnesses P\_prime,P\_doubleprime that are nonvanishing C\_np*epsilon\_X-projections for the original product, sum exactly to I\_X, and obey both cross-product bounds (the node-1.4 coefficient is no larger than C\_np). Existential generalization in the witnesses and universal generalization in the arbitrary admissible algebra prove node 1.5 and hence root node 1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
