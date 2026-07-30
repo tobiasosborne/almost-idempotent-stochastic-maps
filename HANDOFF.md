@@ -10,103 +10,110 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. The proof sketch is `docs/plans/CURRENT.md` → **v40** (current; the
-   S1-ENDGAME fold-in is DONE). The S1-ENDGAME campaign is **COMPLETE**
-   (bead `aism-8dsp` CLOSED): all 13 rows banked, **G-S1 gate
-   DISCHARGED**.
-3. **Rigorous (af-validated, T0): 130.** Registry: 311. `op-classical`
+2. The proof sketch is `docs/plans/CURRENT.md` → **v41** (current).
+3. **Rigorous (af-validated, T0): 144.** Registry: 341. `op-classical`
    OPEN.
-4. **SESSION-38 RECORD (2026-07-30, the queue-completion session):**
-   - **C1 `lem-stage1-rectified-nontrivial-projection` (134th, T0→128):**
-     7 nodes, first-pass, ZERO challenges (budget 6/3/10).
-   - **C2 `lem-stage1-original-complementary-pair` (135th, T0→129):**
-     9 nodes, cap 10; one major challenge (node 1.3 equated the original
-     unit with an exact two-sided unit beyond
-     def-extended-epsilon-cstar-algebra) repaired by factoring +
-     enlarging C_np to absorb the general-unit O(epsilon_X) complement
-     error; resumed --phase all per the open-challenge rule.
-   - **C3 `lem-stage1-fresh-two-point-inclusion` (136th, T0→130):**
-     12 nodes, cap 14; TWO challenges (the GT external's independent
-     delta-smallness hypothesis not established → leaf 1.7.1 pins
-     e_up <= delta_max/(4*max{C_np,1}); 1.8's coefficient rested on
-     then-pending 1.7 → leaf 1.8.1 explicit universal K, hard dep)
-     repaired in-run; resumed --phase all. The ONE Kitaev external
-     `GT-kitaev-prop-delta-hominc` (approximate_algebras.tex:1194-1196)
-     registered under the locus-trap rule, programmatic quote-at-locus
-     assertion PASS (unique at 1194-1196).
-   - **G-S1 GATE DISCHARGED** — all three Stage-1 split producers
-     (C1/C2/C3) T0. Sketch **v40** written + CURRENT pointer re-run;
-     `aism-8dsp` closed with rationale.
-   - **`aism-e1qs` (audit-allegation bug) CLOSED as already-resolved:**
-     the allegation was adjudicated (ADJUDICATION-T0-ALLEGATION.md, T1/T2
-     DEFECTIVE), both results retracted 2026-07-28 (LEARNINGS.md), and
-     re-validated 2026-07-29 in W98 rows 4/8 on the typed
-     explicit-binder spine; the bead had simply been left open.
-   - Every bank followed the verified sequence (export md+tex →
-     register-oracle → `fr verify` PASS → mechanical flip → regenerate →
-     check-all OK → fr log banked → commit → push), now ~46×.
-5. **NEXT SESSION STARTS HERE — the critical path is ONE USER DECISION:**
-   1. **`aism-dm8n` (P1, USER): the MAIN P0 definition gate.**
-      `DESIGN-MAIN-STRUCTURE-v5.md` (audited REPAIR-CONFIRMED,
-      W78-ratified) has a HARD STOP before M01: four datum-only def
-      shards need user sign-off (Rule 7). Then: land M01/M02 (+ M04–M18
-      rows) → rewire M03 deps to M02 (do NOT elevate M03 against its
-      current registry deps) → elevate serially. With G-S1 discharged,
-      M19-S1..M28 are gated ONLY on this pre-gate.
-   2. **`aism-9kmt` (P2) report paper-track sync** — scope broadened to
-      banks 120–136 (17 T0 results); session-35 worktree-subagent
-      pattern; delete the 13 S1-ENDGAME lines from `report/UNWIRED.md`
-      on anchoring. Actionable WITHOUT user decisions.
-   3. Parallel-af proposal (user "still thinking"): worktree-per-run on
-      DAG antichains; unblocker `aism-2kyc`. Not yet filed as a bead.
-6. **Per-row worked pattern (verified 13×; follow verbatim):**
-   provision (def-add --file per def; add-external per dep with
-   "imports validated registry lemma proofs/<dep> — <contract>"; GT
-   externals under the FINDINGS.md locus-trap rule with a programmatic
-   quote-at-locus assertion) → commit provisioning → launch
-   `python3 scripts/af-orchestrate.py <id> --workers 4 --max-rounds
-   <rounds> --node-cap <cap> --tier routine` in background → on
-   "converging but hit --max-rounds" with all challenges resolved,
-   resume `--phase verify --max-rounds 6`; with OPEN challenges,
-   resume `--phase all --max-rounds 6` → on root=validated, bank per
-   item 4's sequence. A BALLOON abort is a factoring STOP → classify →
-   user decision (precedent bc3ca739: scoped cap amendment for
-   transparent repair growth).
-7. **Carried housekeeping (unchanged):** polar-retraction 29-node
-   REFACTOR warning (cosmetic); `def-stage1-polar-witness-data` `\rm`
-   typeset flag; report/*.aux policy; 12 dormant signed-trunk draft
-   defs; `aism-ur9` (dormant); two stale pre-session-33 agent worktrees
-   under `.claude/worktrees/`; Gonzalez–Hartfiel 1991 not in lit DB;
-   Flor 1969 acquired, never promoted.
-8. **Orchestration laws (BINDING, unchanged):** af runs strictly
-   sequential; no design/audit codex while an af run is live; fr/bd
-   writes FIRST, commit, launch LAST; commits only in zero-live-run
-   windows. Codex = `gpt-5.6-sol`, xhigh cap (elevations run tier
-   routine). A hard-cap hit is a factoring stop. A verifier finding
-   needing a CONTRACT change returns to design/user.
+4. **SESSION-38 RECORD (2026-07-30, the MAIN-campaign session):**
+   - **S1-ENDGAME COMPLETED** (rows C1–C3 banked, 134th–136th; G-S1
+     DISCHARGED; sketch v40; `aism-8dsp` closed).
+   - **The full MAIN package landed** (30 rows M01–M28 verbatim from
+     the audited DESIGN-MAIN-STRUCTURE-v5, user-ratified in-session;
+     registry 311→341; M03 deps rewired; the P0 def gate turned out to
+     be ALREADY discharged 2026-07-27 — `aism-dm8n` was stale).
+   - **PARALLEL-AF ROLLED OUT (user-ratified):** detached-worktree
+     orchestrations (≤5 concurrent), ALL banking serial in the main
+     checkout (fr's absolute-path oracle contract respected; the
+     `aism-2kyc` migration is unnecessary — see the bead note).
+     Reusable tooling: `scripts/provision-af-row.py` (provisions a
+     workspace from its shard; REFUSES non-validated dep externals).
+   - **EIGHTEEN MAIN rows banked (137th–151st; T0 130→144):** M14,
+     M01, M06, M10, M02(×2: weaker then STRENGTHENED), M07 (telescope
+     gap-stop CLEARED), M05, M08, M15, M11, M09, M03 (IMPROVE-CB
+     rigorous, run 4), M04, M13(×2: VACUOUS flagged, then NON-VACUOUS
+     under the amended def).
+   - **THREE contract-level interface defects caught** (sketch v41 map
+     change 3): M02 under-export (RESOLVED, user-ratified
+     strengthening); partition-state 'union of classes' semantics
+     (RESOLVED, user-ratified amendment to 'nonempty subset of J';
+     M13's vacuous validation honestly flagged then superseded);
+     **OPEN: `aism-jl4g` (P0)** — the unit-clause thread + the W93
+     anaphoric-constant pattern (below).
+   - Every bank: export → register-oracle → `fr verify` PASS →
+     mechanical flip → regenerate → check-all OK → fr log → commit →
+     push (now ~65× lifetime).
+5. **NEXT SESSION STARTS HERE — `aism-jl4g` (P0), the ONLY gate:**
+   1. Dispatch a fresh-codex DESIGN job + hostile audit (zero live
+      runs now; W78/W97 protocol) for the TWO-defect repair package:
+      (a) **unit-clause thread**: def-four-corner-merging-datum
+      requires a diagonal-unit estimate; def-extended-delta-inclusion
+      has NO unit clause, so extended isomorphisms cannot supply it —
+      thread ||v_W(I_{B_W}) - u_{A_W}|| <= t from the reset states
+      through M12 / M19-S3 / M26 / M25 / M19-R (source near-unitality:
+      prop_delta_hominc third clause, tex:1194-1196 — already a
+      registered GT external in C3's workspace).
+      (b) **maincb witness ledger**: M19-S1/M20–M28 use c_0^cb, L,
+      e_env, e_1, e_s2, e_cross, K_1..3, K_call, epsilon_MAIN,
+      r_reset as unquantified anaphors — af verifiers refuse anaphoric
+      constants (the W93 lesson). Repair pattern PROVEN in-repo:
+      def-stage1-polar-witness-data + rebound contracts (see the
+      Stage-1 B-chain shards). Produce a def-maincb-witness-ledger +
+      contract rebindings for the affected rows.
+   2. User ratifies the package (defs + contract amendments).
+   3. Then: complete M12 (parked 9/10, ONLY the unit clause open) and
+      M19-S1 (parked 15/17, ONLY ledger nodes open) — both parked
+      trees preserved in main `proofs/`; re-seed under the repaired
+      contracts per the session-38 lesson (patched trees thrash,
+      fresh builds close). Then M16, M17, M19-S2/S3/R, M20–M28.
+   4. On M28 + M19-R: the escalated `lem-thmainext-conditional` rewire
+      (design sect-10 step 15). Then the decoupled campaigns (14-row
+      ledger, k-ledger, f0-assembly, root rewire LAST).
+6. **Worked patterns (BINDING; follow verbatim):**
+   - Provision: `python3 scripts/provision-af-row.py <rid>` + base
+     `def-epsilon-cstar-algebra` (the M01/M14 lesson) + any
+     vocabulary defs the contract uses (L2: no naked symbols — check
+     delta-projection/compressed-corner especially).
+   - Launch: worktree per run (`git worktree add --detach
+     .claude/worktrees/af-<row> HEAD`), orchestrator from INSIDE the
+     worktree, ONE backgrounded call (no inner `&` — the session-38
+     orphan incident), tier routine, workers 4.
+   - Balloon/stuck: transparent repair growth ⇒ scoped cap amendment
+     (flag it; ceiling = repo cap 26); tangled/stale-premise tree ⇒
+     clean RE-SEED (never patch a tree that architected around a
+     missing provider); contract-level finding ⇒ STOP, escalate.
+   - Bank: serial in main (rsync back → export → oracle → verify →
+     flip → regenerate → check-all → fr log → commit → push).
+7. **Parallel P2 / carried items:** `aism-9kmt` report sync (now banks
+   120–151, ~31 results); v41 sketch is current; housekeeping items
+   unchanged from session 37 (polar-retraction REFACTOR warning, \rm
+   typeset flags — now also def-maincb-reset-state —, report/*.aux
+   policy, dormant signed-trunk defs, `aism-ur9`, Gonzalez–Hartfiel /
+   Flor lit-DB items).
+8. **Orchestration laws (BINDING, session-38 amendments):** parallel
+   worktree orchestrations ARE ratified (≤5 concurrent, serial
+   banking); no design/audit codex while ANY af run is live; fr/bd
+   writes FIRST, commit, launch LAST; codex = `gpt-5.6-sol`, xhigh
+   cap, elevations tier routine. A verifier finding needing a
+   CONTRACT/DEF change returns to design/user — session 38 exercised
+   this three times; it works.
 9. Gate: `sh scripts/check-all.sh` → `[check-all] OK` (verified at
    close). All work committed AND pushed. **NOTHING is in flight.**
 
 ## Next steps (ranked)
 
-1. `aism-dm8n`: USER ratifies the MAIN P0 defs → land M01/M02 rows →
-   rewire M03 → elevate the MAIN pre-gate serially (M01–M18), then
-   M19-S1..M28.
-2. `aism-9kmt` report sync (17 results) — parallel, no user decision
-   needed.
-3. Parallel-af decision (user pending) + `aism-2kyc` unblocker.
-4. Housekeeping (item 7) opportunistically in zero-live-run windows.
+1. `aism-jl4g` (P0): the two-defect design round → user ratification →
+   M12/M19-S1 completions → M16–M28.
+2. `lem-thmainext-conditional` rewire after M28+M19-R (escalated).
+3. `aism-9kmt` report sync (P2, large).
+4. Decoupled campaigns (14-row ledger, k-ledger, f0-assembly, root
+   rewire LAST) toward `op-classical`.
 
 ## What is intentionally NOT here
 
-- Any claim `op-classical` is proved — OPEN. T0 = 130. The S1-ENDGAME
-  completion discharges G-S1, a Stage-1 gate — NOT the theorem: the
-  MAIN pre-gate (P0 + M01–M18) and M19-S1..M28 remain, plus the
-  decoupled campaigns (14-row ledger, k-ledger, f0-assembly, root
-  rewire LAST).
-- Any new registry content beyond the 13 ratified rows — zero new defs,
-  zero new contracts this session.
-- The report paper-track anchoring of banks 120–136 (deliberately
-  carried as `aism-9kmt`; the 13 ids remain whitelisted in
-  `report/UNWIRED.md` until anchored).
+- Any claim `op-classical` is proved — OPEN. T0 = 144. The MAIN
+  campaign is 18/31 rows; the remainder is gated on ONE design round
+  (`aism-jl4g`), not on elevation capacity.
+- Any claim the vacuous M13 validation counts as mathematical
+  content — it was flagged at bank time and SUPERSEDED by the
+  non-vacuous run-4 validation under the user-ratified def amendment.
+- The report anchoring of banks 120–151 (carried as `aism-9kmt`).
 - Route X / XE decider work (fallback only); signed trunk PAUSED.

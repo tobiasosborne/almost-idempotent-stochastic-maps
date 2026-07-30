@@ -2079,3 +2079,52 @@ banks 120–136.
 **The critical path is now ONE user decision:** aism-dm8n — the MAIN P0 definition
 gate (four datum-only defs, Rule 7) before M01–M18, then M19-S1..M28. Escalated at
 session close. check-all OK; all work committed and pushed; nothing in flight.
+
+## 2026-07-30 — session 38 (part 2): the MAIN campaign under parallel-af (T0 130 → 144); three interface defects caught; wind-down
+
+Continuation of the "keep orchestrating until the full theorem" mandate with 55%
+weekly codex quota authorized. After completing S1-ENDGAME (part 1, T0 → 130):
+
+- **Landed the full MAIN package** (30 rows M01–M28 verbatim from the audited
+  DESIGN-MAIN-STRUCTURE-v5, user-ratified in-session; registry 311 → 341; M03
+  deps rewired; the P0 def gate was already discharged 2026-07-27 — aism-dm8n
+  was stale). Seeded all 31 workspaces; wrote scripts/provision-af-row.py.
+- **Rolled out parallel-af (user-ratified):** detached-worktree orchestrations
+  (≤5 concurrent, ~20 codex workers at peak), ALL banking serial in the main
+  checkout. fr's documented absolute-path oracle contract makes the aism-2kyc
+  migration unnecessary. One process incident (an orchestrator orphaned by an
+  inner '&') caught pre-ledger-write and documented.
+- **EIGHTEEN MAIN banks (137th–151st rigorous results):** M14, M01, M06, M10,
+  M02 (weaker, then user-ratified STRENGTHENED full-inclusion form), M07 (the
+  load-bearing telescope: both directions hostile-verified, the design's
+  declared gap-stop CLEARED), M05, M08, M15, M11, M09, M03 (IMPROVE-CB
+  rigorous on run 4), M04, M13 (VACUOUS validation honestly flagged, then
+  NON-VACUOUS under the user-ratified def amendment).
+- **Three contract-level interface defects surfaced by the adversarial
+  pipeline** (all recorded in sketch v41 map change 3): (1) M02's conclusion
+  under-exported the full-inclusion norm bounds — user ratified the one-line
+  strengthening; supersession bookkeeping kept T0 honest throughout. (2) The
+  locked def-maincb-partition-state field 'one current union U of classes'
+  made the M13/M19-S2/M25 partial-class hypotheses UNSATISFIABLE — M13
+  validated vacuously (banked with a loud DO-NOT-CONSUME flag), the user
+  ratified the amendment to 'one current nonempty subset U of J', and M13
+  re-elevated non-vacuously. (3) OPEN (aism-jl4g, P0): the diagonal-unit
+  clause of def-four-corner-merging-datum is underivable from extended
+  isomorphisms (no unit clause in def-extended-delta-inclusion) — the unit
+  estimate must thread M12→M19-S3→M26/M25/M19-R; AND the W93
+  anaphoric-constant pattern in M19-S1/M20–M28 (c_0^cb, K_call, epsilon_MAIN
+  etc. unquantified) needs a typed def-maincb-witness-ledger + rebound
+  contracts, the Stage-1-proven repair pattern. M12 parked at 9/10, M19-S1 at
+  15/17; both trees preserved in main proofs/.
+- **Process lessons banked in HANDOFF item 6:** vocabulary defs must match
+  contract usage (26 shards completed after the M14 pilot catch); patched
+  trees thrash, clean re-seeds close (M03/M09/M12/M13/M19-S1); scoped cap
+  amendments only for transparent repair growth, ceiling = repo cap 26.
+- Wind-down (user request): M13-r4 allowed to land (validated 12/12), banked;
+  parked states preserved; worktrees removed; sketch v41 + CURRENT pointer;
+  HANDOFF rewritten; this entry; all pushed. Zero unsound claims banked at any
+  point in the session; every status honest.
+
+**Critical path for session 39:** the aism-jl4g design round (two-defect repair
+package) → user ratification → M12/M19-S1 completions → M16–M28 → the
+lem-thmainext-conditional rewire → the decoupled campaigns → op-classical.
