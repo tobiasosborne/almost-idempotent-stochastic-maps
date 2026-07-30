@@ -1285,6 +1285,18 @@
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-error-improvement/ledger",
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-error-improvement.md"
         ]
+      },
+      {
+        "name": "af-lem-maincb-direct-corner-envelope",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-maincb-direct-corner-envelope"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-direct-corner-envelope/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-direct-corner-envelope.md"
+        ]
       }
     ]
   },

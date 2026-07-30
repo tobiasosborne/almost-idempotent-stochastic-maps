@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{There are universal L >= 1 and e\_env > 0 such that, if A ...}
+\step{1} There are universal L >= 1 and e\_env > 0 such that, if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= e\_env, and w:C\textasciicircum{}m->A is an extended c\_0\textasciicircum{}cb*epsilon-inclusion, then every nonempty U has P\_U a c\_0\textasciicircum{}cb*epsilon-projection, every A\_U = S\textasciicircum{}A\_\{P\_U\} is an extended L*epsilon-C*-algebra, and for U subseteq R all subordination and complementarity errors among P\_U, P\_\{R minus U\}, P\_R are at most L*epsilon. \steptag{validated} \\[6pt]
+\step{1.1} Universal constant ledger. Choose the witness c\_0\textasciicircum{}cb in lem-maincb-error-improvement at least 1 (enlarging an inclusion-defect constant preserves every stated error inequality). Let C\_ca<infinity and e\_ca>0 be the universal witnesses in lem-compcb-corner-algebra. Set K:=c\_0\textasciicircum{}cb+1, L:=max\{1,c\_0\textasciicircum{}cb,C\_ca*K\}, and e\_env:=min\{e\_ca/K,1/(2*c\_0\textasciicircum{}cb)\}. These are positive universal constants, L>=1, and whenever 0<=epsilon<=e\_env and delta:=c\_0\textasciicircum{}cb*epsilon, one has delta<=1/2, delta+epsilon=K*epsilon<=e\_ca, delta<=L*epsilon, and C\_ca*(delta+epsilon)<=L*epsilon. \steptag{validated} \\[4pt]
+\step{1.2} Coordinate projections give nonvanishing approximate projections. For a nonempty U subseteq \{1,...,m\}, let e\_U=sum\_\{j in U\}e\_j in C\textasciicircum{}m. By def-maincb-partition-state and linearity, P\_U=sum\_\{j in U\}P\_j=w(e\_U) and A\_U=S\textasciicircum{}A\_\{P\_U\}. Now e\_U\textasciicircum{}dagger=e\_U, e\_U\textasciicircum{}2=e\_U, and ||e\_U||=1. At amplification n=1, def-extended-delta-inclusion says that w is a delta-homomorphism with the two-sided (1 plus-or-minus delta) norm bounds, where delta=c\_0\textasciicircum{}cb*epsilon. Hence P\_U\textasciicircum{}dagger=P\_U, ||P\_U\textasciicircum{}2-P\_U||=||w(e\_U)w(e\_U)-w(e\_U\textasciicircum{}2)||<=delta, and 1-delta<=||P\_U||<=1+delta. Thus P\_U is a delta-projection by def-delta-projection and satisfies its nonvanishing second alternative with explicit coefficient 1, since abs(||P\_U||-1)<=delta<=delta+epsilon. \steptag{validated} \\[4pt]
+\step{1.3} Uniform corner algebra. For every nonempty U, node 1.2 supplies a nonvanishing delta-projection P\_U, while node 1.1 gives delta+epsilon<=e\_ca. Applying lem-compcb-corner-algebra to P\_U shows that S\textasciicircum{}A\_\{P\_U\}, with the compressed product, inherited involution and compressed unit Co\_\{P\_U\}(P\_U) from def-compressed-corner, is an extended C\_ca*(delta+epsilon)-C*-algebra. Since C\_ca*(delta+epsilon)<=L*epsilon, enlarging the common error bound in the defining inequalities makes A\_U=S\textasciicircum{}A\_\{P\_U\} an extended L*epsilon-C*-algebra. The coefficient and threshold are independent of m,U,A and every amplification. \steptag{validated} \\[4pt]
+\step{1.4} All subordination and complementarity errors are direct coordinate identities. Fix arbitrary U subseteq R subseteq \{1,...,m\}, put V:=R minus U, and use e\_U,e\_V,e\_R in C\textasciicircum{}m. They satisfy e\_Ue\_R=e\_Re\_U=e\_U, e\_Ve\_R=e\_Re\_V=e\_V, e\_Ue\_V=e\_Ve\_U=0, and e\_U+e\_V=e\_R. Linearity gives P\_U+P\_V=P\_R exactly (including empty-set cases), while the delta-multiplicative clause of def-extended-delta-inclusion gives each of ||P\_UP\_R-P\_U||, ||P\_RP\_U-P\_U||, ||P\_VP\_R-P\_V||, ||P\_RP\_V-P\_V||, ||P\_UP\_V||, and ||P\_VP\_U|| at most delta (and zero whenever a relevant coordinate projection is zero). These are respectively all left/right subordination errors and the orthogonality/additivity complementarity errors among P\_U,P\_\{R minus U\},P\_R; node 1.1 gives delta<=L*epsilon. \steptag{validated} \\[4pt]
+\step{1.5} Assembly after the explicit same-(A,w) notation bridge in node 1.5.1. In the root conclusion P\_U and A\_U are the local abbreviations P\_U:=w(e\_U) and A\_U:=S\textasciicircum{}A\_\{P\_U\} for e\_U=sum\_\{j in U\}e\_j; they are not taken from an independently supplied MAIN-CB partition state. Under the hypotheses of node 1, use the universal L,e\_env of node 1.1. With this binding, node 1.2 proves the asserted c\_0\textasciicircum{}cb*epsilon-projection and nonvanishing statements for every nonempty U, node 1.3 proves the extended L*epsilon-C*-algebra statement for every A\_U, and node 1.4 proves every subordination and complementarity estimate for U subseteq R. Thus nodes 1.1-1.4 together with the context repair 1.5.1 establish exactly all clauses of the root contract without an additional state hypothesis. \steptag{validated} \\[6pt]
+\step{1.5.1} Same-(A,w) notation bridge and repaired assembly. For each U subseteq \{1,...,m\}, set e\_U:=sum\_\{j in U\} e\_j in C\textasciicircum{}m and bind the symbols in the root conclusion by the local abbreviations P\_U:=w(e\_U) and A\_U:=S\textasciicircum{}A\_\{P\_U\}. These objects are determined solely by the displayed A and w; no MAIN-CB partition state is assumed or consumed, and in particular no current-union or reset-state field is needed. The abbreviations agree with the geometric P\_U,A\_U fields of def-maincb-partition-state whenever a state for this same (A,w) is separately supplied. With this binding, the first sentence of node 1.2 is obtained directly from the displayed definitions and linearity, rather than from existence of a partition state; the remainder of node 1.2 proves the delta-projection and nonvanishing assertions for delta=c\_0\textasciicircum{}cb*epsilon. Node 1.3 then applies lem-compcb-corner-algebra to exactly A\_U=S\textasciicircum{}A\_\{P\_U\}, and node 1.4 uses the same definitions P\_U=w(e\_U), P\_\{R minus U\}=w(e\_\{R minus U\}), P\_R=w(e\_R) to prove all subordination and complementarity bounds. Together with the constants of node 1.1, this proves every clause of node 1 without any hidden state hypothesis. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

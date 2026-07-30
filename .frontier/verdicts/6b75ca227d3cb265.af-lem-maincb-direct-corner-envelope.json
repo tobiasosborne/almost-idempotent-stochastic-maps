@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-direct-corner-envelope/export.md",
+  "oracle": "af-lem-maincb-direct-corner-envelope",
+  "result": "pass",
+  "claim_hash": "8f43dd34d6e131bb6ddef2194151e2449330d7fe061ecda59300838a220ad337",
+  "oracle_digest": "32d93aba1a7311ade74f0f3c5cd6e74551276a6e1e4c397669c5320fa59c7d8a",
+  "inputs_hash": "4a9a8a3e89d6726713d2f1cfcb6076bb1aa80d7e9ea77d642bc4b9f19178f094",
+  "ts": "2026-07-30T18:12:32.422Z"
+}

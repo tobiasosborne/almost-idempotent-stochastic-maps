@@ -177,7 +177,7 @@
 | `lem-maincb-corner-equivalence` | lemma | proved | validated | A | There is a universal e_sim > 0 such that, for every finite family of one-dimensi… |
 | `lem-maincb-cross-class-merging-datum` | lemma | stated | seeded | A | There are universal C_cross >= 1 and e_cross > 0 such that, if A is a finite-dim… |
 | `lem-maincb-cross-union-zero-corners` | lemma | proved | validated | A | There is a universal e_zero > 0 such that, if A is a finite-dimensional extended… |
-| `lem-maincb-direct-corner-envelope` | lemma | stated | seeded | A | There are universal L >= 1 and e_env > 0 such that, if A is a finite-dimensional… |
+| `lem-maincb-direct-corner-envelope` | lemma | proved | validated | A | There are universal L >= 1 and e_env > 0 such that, if A is a finite-dimensional… |
 | `lem-maincb-direct-sum-inclusion-merge` | lemma | proved | validated | A | There are universal C_dir < infinity and e_dir > 0 such that, if B_1,B_2 are fin… |
 | `lem-maincb-error-improvement` | lemma | proved | validated | A | Complete error improvement: there are universal epsilon_max^cb>0, delta_max^cb>0… |
 | `lem-maincb-full-corner-identification` | lemma | proved | validated | A | There is a universal e_full > 0 such that, if R is a t-projection in an extended… |
