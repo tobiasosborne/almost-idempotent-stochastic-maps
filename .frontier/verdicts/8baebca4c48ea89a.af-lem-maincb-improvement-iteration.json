@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-improvement-iteration/export.md",
+  "oracle": "af-lem-maincb-improvement-iteration",
+  "result": "pass",
+  "claim_hash": "788f3beb1fe93937b33958e0370ab3940b46ed56db591da8a7d11ea5f457e087",
+  "oracle_digest": "574ab7b0cf7645d95d6d38295e823fbf0914873417f94b6d0564fe226fcf1e2e",
+  "inputs_hash": "d2110d38cd42dbd18d4502eda370c585f76de601b4d2b0d3568fdbe7f96a966d",
+  "ts": "2026-07-30T16:01:04.045Z"
+}

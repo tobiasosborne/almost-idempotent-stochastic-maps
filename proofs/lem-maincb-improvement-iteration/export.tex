@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{There are universal e\_it > 0, K\_disp < infinity, and K\_fl...}
+\step{1} There are universal e\_it > 0, K\_disp < infinity, and K\_floor < infinity such that, if B is a finite-dimensional C*-algebra, A is an extended epsilon-C*-algebra, and v:B->A is an extended d-inclusion with d+epsilon <= e\_it, then one dagger-preserving v\_tilde, with v\_tilde\_n = I\_n tensor v\_tilde, satisfies sup\_n ||v\_tilde\_n - v\_n|| <= K\_disp*d and has extended defect at most K\_floor*epsilon; for epsilon > 0 it is reached after finitely many correction steps, and for epsilon = 0 it is their operator-norm limit. \steptag{validated} \\[6pt]
+\step{1.1} Let K:=K\_step>=1 and e:=e\_step>0 be the universal witnesses from lem-maincb-improvement-one-step, and set e\_it:=min\{e,1/(4K)\}, K\_disp:=4K, and K\_floor:=2K. For data satisfying d+epsilon<=e\_it, put v\_0:=v and d\_0:=d. The cited lemma is applicable at j=0 and, whenever d\_j<=d\_0, also at j because d\_j+epsilon<=d\_0+epsilon<=e\_it<=e; it supplies a dagger-preserving v\_\{j+1\}, amplified as I\_n tensor v\_\{j+1\}, with sup\_n||v\_\{j+1,n\}-v\_\{j,n\}||<=K d\_j and extended defect d\_\{j+1\}<=K(d\_j\textasciicircum{}2+epsilon). If d\_j>2K epsilon, then K d\_j\textasciicircum{}2<=d\_j/4 (since d\_j<=d\_0<=1/(4K)) and K epsilon<d\_j/2, hence d\_\{j+1\}<=(3/4)d\_j<=d\_0. Thus corrections may be iterated while above the floor. If epsilon>0 and already d\_0<=2K epsilon, perform exactly the first correction anyway; then d\_1<=K d\_0\textasciicircum{}2+K epsilon<=d\_0/4+K epsilon<=3K epsilon/2<=2K epsilon. This mandatory first step ensures the selected output is dagger-preserving. \steptag{validated} \\[4pt]
+\step{1.2} Assume epsilon>0. If d\_0<=2K epsilon, the construction in 1.1 stops after its mandatory first correction with d\_1<=2K epsilon. Otherwise, repeatedly apply 1.1 while d\_j>2K epsilon and stop at the first N>=1 with d\_N<=2K epsilon. Such N is finite: before stopping, induction gives d\_j<=(3/4)\textasciicircum{}j d\_0, whereas a positive geometric sequence eventually falls below the positive number 2K epsilon. Consequently v\_N is dagger-preserving and is an extended d\_N-inclusion with d\_N<=K\_floor epsilon. \steptag{validated} \\[4pt]
+\step{1.3} In the epsilon>0 construction, the complete displacement telescopes. In the one-step floor case it is at most K d\_0<=4K d\_0. Otherwise every preterminal defect obeys d\_j<=(3/4)\textasciicircum{}j d\_0, so sup\_n||v\_\{N,n\}-v\_\{0,n\}||<=sum\_\{j=0\}\textasciicircum{}\{N-1\} sup\_n||v\_\{j+1,n\}-v\_\{j,n\}||<=K sum\_\{j=0\}\textasciicircum{}\{N-1\}d\_j<=K d\_0 sum\_\{j>=0\}(3/4)\textasciicircum{}j=4K d\_0=K\_disp d. \steptag{validated} \\[4pt]
+\step{1.4} Assume epsilon=0 and apply the correction in 1.1 indefinitely. Then d\_\{j+1\}<=K d\_j\textasciicircum{}2<=d\_j/4, so d\_j<=4\textasciicircum{}\{-j\}d. Hence for k>j, sup\_n||v\_\{k,n\}-v\_\{j,n\}||<=K sum\_\{r=j\}\textasciicircum{}\{k-1\}d\_r<=K d 4\textasciicircum{}\{-j\}/(1-1/4), which tends to zero uniformly in n. Completeness of A at level one and finite dimensionality of B therefore give an operator-norm limit linear map v\_tilde:B->A; for each n its amplification is the limit of v\_\{j,n\}=I\_n tensor v\_j, and the same tail estimate yields sup\_n||v\_tilde\_n-v\_n||<=K sum\_\{j>=0\}d\_j<=4K d/3<=K\_disp d. \steptag{validated} \\[4pt]
+\step{1.5} The epsilon=0 limit from 1.4 is dagger-preserving and has extended defect zero. Indeed every v\_j for j>=1 is dagger-preserving and the involution is isometric, so that identity passes to the operator-norm limit. At each fixed amplification, the two-sided (1+-d\_j) norm bounds pass to the limit as d\_j tends to zero. The d\_j-homomorphism defect inequalities also pass to the limit because multiplication is continuous at every matrix level in the extended 0-C*-algebra (the product-norm axiom gives ||XY||<=||X||||Y||). Thus every v\_tilde\_n=I\_n tensor v\_tilde is a 0-homomorphism satisfying exact two-sided norm bounds, i.e. v\_tilde is an extended 0-inclusion, and its extended defect is 0=K\_floor epsilon. \steptag{validated} \\[4pt]
+\step{1.6} The constants in 1.1 are positive/finite and universal because the witnesses in lem-maincb-improvement-one-step are universal. For epsilon>0, nodes 1.2-1.3 provide the required finite correction output, floor, amplification identity, and displacement. For epsilon=0, nodes 1.4-1.5 provide their operator-norm limit with the same amplification identity, displacement bound, dagger preservation, and zero floor. These two exhaustive cases prove the root contract with e\_it, K\_disp, and K\_floor chosen in 1.1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

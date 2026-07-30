@@ -181,7 +181,7 @@
 | `lem-maincb-direct-sum-inclusion-merge` | lemma | stated | seeded | A | There are universal C_dir < infinity and e_dir > 0 such that, if B_1,B_2 are fin… |
 | `lem-maincb-error-improvement` | lemma | stated | seeded | A | Complete error improvement: there are universal epsilon_max^cb>0, delta_max^cb>0… |
 | `lem-maincb-full-corner-identification` | lemma | proved | validated | A | There is a universal e_full > 0 such that, if R is a t-projection in an extended… |
-| `lem-maincb-improvement-iteration` | lemma | stated | seeded | A | There are universal e_it > 0, K_disp < infinity, and K_floor < infinity such tha… |
+| `lem-maincb-improvement-iteration` | lemma | proved | validated | A | There are universal e_it > 0, K_disp < infinity, and K_floor < infinity such tha… |
 | `lem-maincb-improvement-one-step` | lemma | proved | validated | A | There are universal K_step >= 1 and e_step > 0 such that, if B is a finite-dimen… |
 | `lem-maincb-initial-raw-inclusion` | lemma | proved | validated | A | There are universal D_0 < infinity and e_0 > 0 such that, in every finite-dimens… |
 | `lem-maincb-initial-reset-inclusion` | lemma | stated | seeded | A | For every finite-dimensional extended epsilon-C*-algebra A with 0 <= epsilon <= … |
