@@ -11,19 +11,16 @@ provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.1 row M02 (landed verbatim, LaTeX
 owner: A
 ---
 
-**Status.** `stated` — CONTRACT STRENGTHENED 2026-07-30 (USER-RATIFIED
-in-session): the conclusion 'has extended defect at most
-K_floor*epsilon' is replaced by 'is an extended
-K_floor*epsilon-inclusion', matching the source's actual iteration
-output (approximate_algebras.tex:1313,1508-1535). Driver: three
-independent M03 verifier cohorts + a clean-re-seed rebuild established
-that the weaker wording under-exports the amplified norm bounds every
-downstream consumer needs (M03 ballooned to 26 nodes internalizing the
-iteration). The 2026-07-30 af validation of the WEAKER statement
-(7-node first-pass, oracle pass, fr banked cycle) is SUPERSEDED, not
-retracted — no incorrect claim entered the record; its ledger is
-preserved in git history. T0 count -1 pending re-elevation of the
-strengthened contract. Workspace cleanly re-seeded.
+**Status.** af-VALIDATED in-repo (2026-07-30, STRENGTHENED contract):
+10-node tree, root `validated`, taint clean 10/10
+(`proofs/lem-maincb-improvement-iteration/export.md`; oracle pass; tier
+routine; parallel-af worktree run af-m02, clean re-seed under the
+USER-RATIFIED strengthened contract — conclusion upgraded from
+defect-only to the full extended K_floor*epsilon-inclusion, matching
+approximate_algebras.tex:1313,1508-1535). One threshold-boundary
+challenge (d+epsilon <= e_it correction setup) repaired and accepted.
+The earlier validation of the WEAKER wording is superseded (ledger in
+git history). MAIN campaign row M02, second (strengthened) elevation.
 
 **Build budget (BINDING on the af tree).** Design target/rounds/hard-cap:
 6 / 3 / 10. Per-row skeleton and audit delta:
