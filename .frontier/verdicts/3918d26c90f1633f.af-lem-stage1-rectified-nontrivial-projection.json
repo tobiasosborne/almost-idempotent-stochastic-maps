@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-rectified-nontrivial-projection/export.md",
+  "oracle": "af-lem-stage1-rectified-nontrivial-projection",
+  "result": "pass",
+  "claim_hash": "591f79bad66de193fb8f8c449e41e72bf30fec558b2a6c4e52414e03618ef128",
+  "oracle_digest": "68ebaf43bae6d091cf99db521a3d95e51b2f011c25ad1d07bc3990840a26f237",
+  "inputs_hash": "4854c194879881c8e1a6f781dcfc0224eba64359cef618996bcbd523a61b169d",
+  "ts": "2026-07-30T12:46:49.556Z"
+}

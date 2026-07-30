@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{There are universal C\_proj<infinity and e\_proj>0 such tha...}
+\step{1} There are universal C\_proj<infinity and e\_proj>0 such that every finite-dimensional extended epsilon\_X-C*-algebra (calX,I\_X,.,dagger) with 0<=epsilon\_X<=e\_proj and 1<dim\_C calX<infinity contains a nontrivial C\_proj*epsilon\_X-projection P\_0 for the original product and original unit I\_X. \steptag{validated} \\[6pt]
+\step{1.1} Choose the universal witnesses C\_rect>=1 and e\_rect>0 from lem-stage1-rectified-cstar-control and C\_bridge<infinity and e\_bridge\textasciicircum{}r>0 from lem-stage1-fixed-unitary-projection-bridge, and put D=max(1,C\_bridge). Unpacking the two dimension-independent O-bounds in the def-delta-projection meaning of the bridge conclusion that P is nontrivial, choose one universal K>=1 such that both rectified nonvanishing estimates are bounded by K(D epsilon\_r+epsilon\_r). Put B=K(D+1)C\_rect, A=C\_rect(D+4), C\_proj=A+6, and e\_proj=min(e\_rect,e\_bridge\textasciicircum{}r/C\_rect,1,1/B). Then C\_proj<infinity and e\_proj>0 are universal. \steptag{validated} \\[4pt]
+\step{1.2} Fix a finite-dimensional extended epsilon\_X-C*-algebra (calX,I\_X,.,dagger) with 0<=epsilon\_X<=e\_proj and 1<dim\_C calX<infinity. By def-extended-epsilon-cstar-algebra at matrix level n=1 it is an epsilon\_X-C*-algebra. Apply lem-stage1-rectified-cstar-control to obtain on the same involutive normed space an exact-unit epsilon\_r-C*-algebra (calX,J,bold-dot,dagger), where epsilon\_r=C\_rect epsilon\_X, ||J-I\_X||<=C\_rect epsilon\_X, and ||x bold-dot y-xy||<=C\_rect epsilon\_X||x||||y||. Since epsilon\_r<=e\_bridge\textasciicircum{}r, lem-stage1-fixed-unitary-projection-bridge gives a nontrivial C\_bridge epsilon\_r-projection P for bold-dot and J. Because D=max(1,C\_bridge), the same P is, after harmless enlargement of the tolerance and its universal nonvanishing O-bound, a nontrivial delta\_r-projection with delta\_r=D epsilon\_r=D C\_rect epsilon\_X. \steptag{validated} \\[4pt]
+\step{1.3} For the P obtained above, rectified nontriviality and the choice of K give | ||P||-1 |<=K(delta\_r+epsilon\_r)=B epsilon\_X and | ||J-P||-1 |<=B epsilon\_X. Since epsilon\_X<=1/B, ||P||<=2. \steptag{validated} \\[4pt]
+\step{1.4} The same element P is self-adjoint for the original structure, and its original-product defect obeys ||P P-P||<=||P P-(P bold-dot P)||+||P bold-dot P-P||<=C\_rect epsilon\_X||P||\textasciicircum{}2+C\_bridge C\_rect epsilon\_X<=(4C\_rect+D C\_rect)epsilon\_X=A epsilon\_X<=C\_proj epsilon\_X. Hence P is a C\_proj epsilon\_X-projection for the original product. \steptag{validated} \\[4pt]
+\step{1.5} Let R=I\_X-P. The original unit is self-adjoint, so R is self-adjoint. The approximate-unit axioms in def-epsilon-cstar-algebra give ||I\_X||<=1+epsilon\_X<=2, ||I\_X\textasciicircum{}2-I\_X||<=epsilon\_X||I\_X||<=2epsilon\_X, and ||I\_XP-P||,||PI\_X-P||<=epsilon\_X||P||<=2epsilon\_X. Using R\textasciicircum{}2-R=(I\_X\textasciicircum{}2-I\_X)-(I\_XP-P)-(PI\_X-P)+(P\textasciicircum{}2-P) and the preceding original defect bound yields ||R\textasciicircum{}2-R||<=(A+6)epsilon\_X=C\_proj epsilon\_X. Thus I\_X-P is also a C\_proj epsilon\_X-projection for the original product. \steptag{validated} \\[4pt]
+\step{1.6} The original projection P is nonvanishing because | ||P||-1 |<=B epsilon\_X=O(C\_proj epsilon\_X+epsilon\_X). Its original-unit complement is nonvanishing because the reverse triangle inequality, rectified nontriviality, and unit closeness give | ||I\_X-P||-1 |<=||I\_X-J||+| ||J-P||-1 |<=(C\_rect+B)epsilon\_X=O(C\_proj epsilon\_X+epsilon\_X). Together with the two C\_proj epsilon\_X-projection statements, def-delta-projection says that P\_0:=P is nontrivial for the original product and original unit I\_X. Since the algebra was arbitrary and C\_proj,e\_proj are universal, this proves the root contract. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
