@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-extra-fixed-class/export.md",
+  "oracle": "af-lem-stage1-extra-fixed-class",
+  "result": "pass",
+  "claim_hash": "fe943a7ae9fe6b0d471739a55b4c8b6c1fb086ceabdde28e9dba9efc71fffc68",
+  "oracle_digest": "f31d26b741439892824edea2f89703a39133eef51e79d23d7ed2f1e7f0f58e45",
+  "inputs_hash": "851bfc30c99cc8e6942dd451930aff817cd0a0a019745f93dc39cef041326609",
+  "ts": "2026-07-30T12:02:32.459Z"
+}
