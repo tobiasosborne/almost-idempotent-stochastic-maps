@@ -3,7 +3,7 @@ id: lem-maincb-error-improvement
 kind: lemma
 contract: Complete error improvement: there are universal epsilon_max^cb>0, delta_max^cb>0 and c_0^cb<infinity such that every extended delta-inclusion v:B->A from a finite-dimensional C*-algebra B into an extended epsilon-C*-algebra A with 0<=epsilon<=epsilon_max^cb and 0<=delta<=delta_max^cb can be replaced by an extended c_0^cb*epsilon-inclusion v_tilde:B->A that is bijective whenever v is bijective.
 defs: def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
-deps: lem-maincb-improvement-iteration
+deps: lem-maincb-improvement-iteration; lem-maincb-improvement-one-step
 status: stated
 af: seeded
 workspace: proofs/lem-maincb-error-improvement
@@ -27,6 +27,13 @@ from the one-step improvement (M01) iterated to the K_floor*epsilon floor
 (M02), exactly the source route approximate_algebras.tex:1256-1319.
 CONTRACT BYTE-UNCHANGED (audit v4/v5: character-for-character exact).
 Original 2026-07-26 wiring note preserved in git history.
+DEPS-ONLY WIDENING 2026-07-30 (13e precedent): + lem-maincb-improvement-one-step
+(T0). The M03 root verifier challenged (ch-36576d78f9a02736) that M02's
+literal wording ('has extended defect at most K_floor*epsilon') does not
+supply the amplified norm bounds of a full extended inclusion; M01's
+contract concludes the full extended d^+-inclusion for the one-step map,
+so the root derivation is rebuilt by iterating M01 directly. Contract
+untouched.
 
 **Proof shape (when seeded — remeasure independently, DESIGN-GAP-EA §3.3).**
 The exact-target correction subtree alone does NOT prove this: the target
