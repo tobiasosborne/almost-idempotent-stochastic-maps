@@ -239,7 +239,7 @@
 | `lem-stage1-inversion-derivative-control` | lemma | proved | validated | A | Typed inversion derivative with chart retention: there exist universal C_der, C_… |
 | `lem-stage1-inversion-derivative-transport` | lemma | proved | validated | A | Parameterized inversion-derivative transport: there exist C_der^0, C_ch^0, C_pol… |
 | `lem-stage1-left-inversion-associated-graded` | lemma | proved | validated | A | Associated-graded action of a left inversion over the real field: if M is a conn… |
-| `lem-stage1-left-inversion-trace` | lemma | stated | seeded | A | Left-inversion trace over the real field: if M is a connected CW complex with di… |
+| `lem-stage1-left-inversion-trace` | lemma | proved | validated | A | Left-inversion trace over the real field: if M is a connected CW complex with di… |
 | `lem-stage1-maurer-cartan-transport` | lemma | proved | validated | A | Parameterized Maurer-Cartan transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |
 | `lem-stage1-maurer-cartan-trivialization` | lemma | proved | validated | A | Uniform global tangent/Maurer-Cartan control: there are universal C_ch >= 1, kap… |
 | `lem-stage1-original-complementary-pair` | lemma | stated | seeded | A | There are universal C_np<infinity and e_np>0 such that every finite-dimensional … |

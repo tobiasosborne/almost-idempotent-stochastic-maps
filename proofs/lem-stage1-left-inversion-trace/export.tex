@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Left-inversion trace over the real field: if M is a conne...}
+\step{1} Left-inversion trace over the real field: if M is a connected CW complex with dim\_reals H\textasciicircum{}*(M;reals) < infinity, (M,mu,e) is an H-space, and sigma:M->M is a left inversion, then Tr(sigma\textasciicircum{}\{*k\}:H\textasciicircum{}k(M;reals)->H\textasciicircum{}k(M;reals))=(-1)\textasciicircum{}k*dim\_reals H\textasciicircum{}k(M;reals) for every k >= 0. \steptag{validated} \\[6pt]
+\step{1.1} Fix k >= 0 and apply lem-stage1-left-inversion-associated-graded with A=H\textasciicircum{}*(M;reals); put V=A\textasciicircum{}k and W\_p=F\textasciicircum{}\{p,k-p\}=(A\textasciicircum{}+)\textasciicircum{}p intersect A\textasciicircum{}k. The zeroth ideal power gives W\_0=A\textasciicircum{}k=V, ideal powers give W\_\{p+1\} contained in W\_p, and W\_\{k+1\}=0 because a product of k+1 positive-degree classes has degree at least k+1 and hence has no degree-k part. The hypothesis dim\_reals A<infinity makes V finite-dimensional. The same external lemma says sigma\textasciicircum{}* preserves every F\textasciicircum{}\{p,q\}, so its degree-k map sigma\textasciicircum{}\{*k\} preserves each W\_p; moreover W\_p/W\_\{p+1\}=F\textasciicircum{}\{p,k-p\}/F\textasciicircum{}\{p+1,k-p-1\}=E\textasciicircum{}\{p,k-p\}. Thus W\_0 superset ... superset W\_\{k+1\}=0 is a finite sigma\textasciicircum{}\{*k\}-invariant filtration of V. \steptag{validated} \\[4pt]
+\step{1.2} Fix k >= 0, take A and F from lem-stage1-left-inversion-associated-graded, and set W\_p=F\textasciicircum{}\{p,k-p\}. For every 0 <= p <= k, that external lemma identifies W\_p/W\_\{p+1\}=F\textasciicircum{}\{p,k-p\}/F\textasciicircum{}\{p+1,k-p-1\}=E\textasciicircum{}\{p,k-p\} and says the map induced there by the degree-k component sigma\textasciicircum{}\{*k\} is (-1)\textasciicircum{}\{p+(k-p)\} id=(-1)\textasciicircum{}k id. \steptag{validated} \\[4pt]
+\step{1.3} Let T be an endomorphism of a finite-dimensional vector space V preserving a finite decreasing filtration W\_0=V superset W\_1 superset ... superset W\_\{k+1\}=0. Choose a basis adapted to the filtration. The matrix of T is block triangular with diagonal blocks representing the induced maps T\_p on W\_p/W\_\{p+1\}; since the trace of a block-triangular matrix is the sum of the traces of its diagonal blocks, Tr(T|V)=sum\_\{p=0\}\textasciicircum{}k Tr(T\_p|W\_p/W\_\{p+1\}). \steptag{validated} \\[4pt]
+\step{1.4} For the finite filtration W\_0=V superset W\_1 superset ... superset W\_\{k+1\}=0, the identities dim\_reals W\_p=dim\_reals(W\_p/W\_\{p+1\})+dim\_reals W\_\{p+1\} telescope to dim\_reals V=sum\_\{p=0\}\textasciicircum{}k dim\_reals(W\_p/W\_\{p+1\}). \steptag{validated} \\[4pt]
+\step{1.5} Combining 1.1--1.4, each quotient trace in the trace sum is (-1)\textasciicircum{}k dim\_reals(W\_p/W\_\{p+1\}), and the quotient dimensions sum to dim\_reals V. Hence Tr(sigma\textasciicircum{}\{*k\}:H\textasciicircum{}k(M;reals)->H\textasciicircum{}k(M;reals))=(-1)\textasciicircum{}k dim\_reals H\textasciicircum{}k(M;reals); since k >= 0 was arbitrary, this proves the root claim for every k. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

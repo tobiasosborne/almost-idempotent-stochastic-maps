@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-left-inversion-trace/export.md",
+  "oracle": "af-lem-stage1-left-inversion-trace",
+  "result": "pass",
+  "claim_hash": "ba3c780730a32d3462ceacbb5b6d4efee0e275879d6632dd42d16a1ac7fa7e49",
+  "oracle_digest": "0763cae60916ed2391e2fe63f3c2feb6a4b00d2514cc783b803a6176a4f0ae06",
+  "inputs_hash": "70d4a9076a0c4d62677f0089873fb90b09a41154619b026669ec7fb2f3a3720f",
+  "ts": "2026-07-30T10:01:58.946Z"
+}
