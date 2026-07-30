@@ -5,7 +5,7 @@ contract: Parameterized same-map quotient local-index and ambient-chart package:
 defs: def-stage1-polar-witness-data; def-approximate-unitary-space; def-epsilon-cstar-algebra; def-h-space-left-inversion; def-lefschetz-fixed-point-data
 deps: lem-stage1-bound-quotient-left-inversion; lem-stage1-smooth-unitary-atlas; lem-stage1-smooth-polar-inverse; lem-stage1-explicit-smooth-unitary-operations; lem-stage1-quantitative-inverse-function; lem-topology-local-index-sign
 status: stated
-af: none
+af: seeded
 workspace: proofs/lem-stage1-bound-quotient-local-index
 provenance: DESIGN-S1-ENDGAME-v5.md sect-2 (landed verbatim); AUDIT-S1-ENDGAME-v5.md VERDICT LAND (zero corrections); user-ratified 2026-07-30
 owner: A

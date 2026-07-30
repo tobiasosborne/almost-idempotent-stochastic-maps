@@ -5,7 +5,7 @@ contract: Bound extra fixed class with one ledger selection: there exist one def
 defs: def-epsilon-cstar-algebra; def-stage1-polar-witness-data; def-approximate-unitary-space; def-h-space-left-inversion; def-lefschetz-fixed-point-data
 deps: lem-stage1-uniform-inversion-isolation; lem-stage1-quotient-manifold-package; lem-stage1-quotient-finite-cw; lem-stage1-quotient-left-inversion; lem-stage1-left-inversion-trace; lem-topology-lefschetz-hopf; lem-topology-local-index-sign; lem-topology-orientable-top-cohomology; lem-stage1-quotient-inversion-index-data; lem-finite-polyhedron-maximal-simplex-placement; lem-stage1-polar-constant-ledger; lem-stage1-bound-quotient-index-data
 status: stated
-af: none
+af: seeded
 workspace: proofs/lem-stage1-extra-fixed-class
 provenance: DESIGN-S1-ENDGAME-v5.md sect-2 (landed verbatim); AUDIT-S1-ENDGAME-v5.md VERDICT LAND (zero corrections); user-ratified 2026-07-30
 owner: A

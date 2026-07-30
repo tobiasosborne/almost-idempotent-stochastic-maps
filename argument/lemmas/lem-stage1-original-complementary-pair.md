@@ -5,7 +5,7 @@ contract: There are universal C_np<infinity and e_np>0 such that every finite-di
 defs: def-extended-epsilon-cstar-algebra; def-delta-projection
 deps: lem-stage1-rectified-nontrivial-projection
 status: stated
-af: none
+af: seeded
 workspace: proofs/lem-stage1-original-complementary-pair
 provenance: DESIGN-S1-ENDGAME-v5.md sect-2 (landed verbatim); AUDIT-S1-ENDGAME-v5.md VERDICT LAND (zero corrections); user-ratified 2026-07-30
 owner: A

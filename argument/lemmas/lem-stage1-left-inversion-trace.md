@@ -5,7 +5,7 @@ contract: Left-inversion trace over the real field: if M is a connected CW compl
 defs: def-h-space-left-inversion
 deps: lem-stage1-left-inversion-associated-graded
 status: stated
-af: none
+af: seeded
 workspace: proofs/lem-stage1-left-inversion-trace
 provenance: DESIGN-S1-ENDGAME-v5.md sect-2 (landed verbatim); AUDIT-S1-ENDGAME-v5.md VERDICT LAND (zero corrections); user-ratified 2026-07-30
 owner: A

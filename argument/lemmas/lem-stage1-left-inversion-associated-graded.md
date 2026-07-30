@@ -5,7 +5,7 @@ contract: Associated-graded action of a left inversion over the real field: if M
 defs: def-h-space-left-inversion
 deps: lem-stage1-exterior-cohomology
 status: stated
-af: none
+af: seeded
 workspace: proofs/lem-stage1-left-inversion-associated-graded
 provenance: DESIGN-S1-ENDGAME-v5.md sect-2 (landed verbatim); AUDIT-S1-ENDGAME-v5.md VERDICT LAND (zero corrections); user-ratified 2026-07-30
 owner: A

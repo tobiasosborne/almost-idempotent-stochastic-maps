@@ -1,0 +1,8 @@
+{
+  "id": "48f6efa34d4d2628",
+  "name": "lem-topology-kunneth-cross-product",
+  "source": "imports validated registry lemma proofs/lem-topology-kunneth-cross-product — Cohomological Kunneth isomorphism over R: for CW complexes X and Y with each H^k(Y;R) a finitely generated free R-module, the cross product H*(X;R) (x)_R H*(Y;R) -\u003e H*(X x Y;R) is an isomorphism of rings; in particular this holds over the field R = reals for finite-CW spaces with finite-dimensional cohomology.",
+  "content_hash": "c205976d5de1d1f28cdb7f246f039ee234f7e8c8be6fb9cb79f25a656e40ecba",
+  "created": "2026-07-30T09:07:50.615112982Z",
+  "notes": ""
+}

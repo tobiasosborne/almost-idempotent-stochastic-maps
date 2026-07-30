@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-07-30T09:03:28Z",
+ "extracted_at": "2026-07-30T09:08:36Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-07-30T09:03:28Z",
+  "mined_at": "2026-07-30T09:08:36Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -464,25 +464,25 @@
     "approach_tried": 1,
     "challenge_raised": 319,
     "challenge_resolved": 312,
-    "def_added": 554,
+    "def_added": 555,
     "node_amended": 236,
     "node_archived": 42,
-    "node_created": 1942,
+    "node_created": 1955,
     "node_unvalidated": 7,
     "node_validated": 1893,
     "nodes_claimed": 3130,
     "nodes_released": 3130,
-    "proof_initialized": 129
+    "proof_initialized": 142
    },
-   "ledger_entries": 11695,
-   "nodes_total": 1942,
+   "ledger_entries": 11722,
+   "nodes_total": 1955,
    "owner_roles": {
     "prover (fix round)": 359,
     "prover (initial build)": 470,
     "verifier": 2301
    },
    "root_validated": 119,
-   "seeded_not_validated": 10,
+   "seeded_not_validated": 23,
    "validation_days": {
     "2026-07-02": 7,
     "2026-07-03": 5,
@@ -498,7 +498,7 @@
     "2026-07-28": 1,
     "2026-07-29": 15
    },
-   "workspaces": 129,
+   "workspaces": 142,
    "workspaces_detail": [
     {
      "amendments": 0,
@@ -1831,6 +1831,70 @@
     {
      "amendments": 0,
      "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 0,
+     "first_ts": "2026-07-30T09:06:06.020335067Z",
+     "id": "lem-stage1-bound-inversion-isolation",
+     "last_ts": "2026-07-30T09:06:06.023572894Z",
+     "ledger_entries": 2,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 0,
+     "first_ts": "2026-07-30T09:06:06.086678869Z",
+     "id": "lem-stage1-bound-quotient-index-data",
+     "last_ts": "2026-07-30T09:06:06.090141191Z",
+     "ledger_entries": 2,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 0,
+     "first_ts": "2026-07-30T09:06:05.889223746Z",
+     "id": "lem-stage1-bound-quotient-left-inversion",
+     "last_ts": "2026-07-30T09:06:05.892983164Z",
+     "ledger_entries": 2,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 0,
+     "first_ts": "2026-07-30T09:06:05.956543273Z",
+     "id": "lem-stage1-bound-quotient-local-index",
+     "last_ts": "2026-07-30T09:06:05.959769203Z",
+     "ledger_entries": 2,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
      "challenges": 1,
      "challenges_resolved": 1,
      "claims": 9,
@@ -1897,6 +1961,70 @@
      "archived": 0,
      "challenges": 0,
      "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 0,
+     "first_ts": "2026-07-30T09:06:05.674554432Z",
+     "id": "lem-stage1-exterior-cohomology",
+     "last_ts": "2026-07-30T09:06:05.67881307Z",
+     "ledger_entries": 2,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 0,
+     "first_ts": "2026-07-30T09:06:06.152324487Z",
+     "id": "lem-stage1-extra-fixed-class",
+     "last_ts": "2026-07-30T09:06:06.155692211Z",
+     "ledger_entries": 2,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 0,
+     "first_ts": "2026-07-30T09:06:06.215662856Z",
+     "id": "lem-stage1-fixed-unitary-projection-bridge",
+     "last_ts": "2026-07-30T09:06:06.218678988Z",
+     "ledger_entries": 2,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 0,
+     "first_ts": "2026-07-30T09:06:06.40367981Z",
+     "id": "lem-stage1-fresh-two-point-inclusion",
+     "last_ts": "2026-07-30T09:06:06.406936537Z",
+     "ledger_entries": 2,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
      "claims": 15,
      "defs_imported": 2,
      "first_ts": "2026-07-27T14:38:42.776056421Z",
@@ -1923,6 +2051,22 @@
      "nodes": 10,
      "root_validated": "2026-07-27T14:38:06.350553408Z",
      "validated": 10
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 1,
+     "first_ts": "2026-07-30T09:06:05.607232154Z",
+     "id": "lem-stage1-hspace-coproduct-tail",
+     "last_ts": "2026-07-30T09:07:50.598964824Z",
+     "ledger_entries": 3,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
     },
     {
      "amendments": 0,
@@ -1957,6 +2101,38 @@
      "validated": 25
     },
     {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 0,
+     "first_ts": "2026-07-30T09:06:05.747622896Z",
+     "id": "lem-stage1-left-inversion-associated-graded",
+     "last_ts": "2026-07-30T09:06:05.751674127Z",
+     "ledger_entries": 2,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 0,
+     "first_ts": "2026-07-30T09:06:05.819734229Z",
+     "id": "lem-stage1-left-inversion-trace",
+     "last_ts": "2026-07-30T09:06:05.82380636Z",
+     "ledger_entries": 2,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
+    },
+    {
      "amendments": 2,
      "archived": 1,
      "challenges": 2,
@@ -1987,6 +2163,22 @@
      "nodes": 15,
      "root_validated": "2026-07-27T12:39:02.646975691Z",
      "validated": 15
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 0,
+     "first_ts": "2026-07-30T09:06:06.341082524Z",
+     "id": "lem-stage1-original-complementary-pair",
+     "last_ts": "2026-07-30T09:06:06.344226053Z",
+     "ledger_entries": 2,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
     },
     {
      "amendments": 0,
@@ -2211,6 +2403,22 @@
      "nodes": 7,
      "root_validated": "2026-07-27T17:51:13.339716754Z",
      "validated": 7
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 0,
+     "first_ts": "2026-07-30T09:06:06.278689833Z",
+     "id": "lem-stage1-rectified-nontrivial-projection",
+     "last_ts": "2026-07-30T09:06:06.281833462Z",
+     "ledger_entries": 2,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
     },
     {
      "amendments": 1,
@@ -2692,7 +2900,7 @@
      "lem-topology-orientable-top-cohomology af-VALIDATED (79th rigorous result; 14 nodes taint clean — Thm 3.26 + field-UCT + Cor 3.39 composed) + lem-topology-quotient-manifold af-VALIDATED (80th; 4 nodes taint clean — the external-attachment verifier challenge resolved by the re-run prover) — 4 of 7 topology elevations banked, oracles registered, fr verify PASS both, T0 78 -> 80. GAP-EA rows LANDED per DESIGN-GAP-EA option (a): lem-extcb-exact-target-correction (validated node-1.2 contract verbatim, proved/af:none) + lem-extcb-exact-target-approximation (v4.1 bridge, stated), UNWIRED-whitelisted, gate green. Next: seed+orchestrate the correction row; finishing runs for finite-triangulation (14/17), local-index-sign (18/22), hopf re-run.": 1,
      "null": 1,
      "obstruction": 1,
-     "progress": 158
+     "progress": 159
     },
     "G": {
      "banked": 2,
@@ -2731,7 +2939,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-07-30T08:48:54.375Z"
+     "last": "2026-07-30T09:05:20.036Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -2752,7 +2960,7 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 319,
+    "FH": 320,
     "G": 21,
     "R": 52,
     "XE": 1
@@ -2772,7 +2980,7 @@
     "2026-07-29": 15
    },
    "decisions": {
-    "EXPLOIT": 403,
+    "EXPLOIT": 404,
     "EXPLORE": 14,
     "PIVOT": 3
    },
@@ -2807,7 +3015,7 @@
     "reconciliation": 1,
     "refs": 1,
     "refuter": 2,
-    "registry": 1,
+    "registry": 2,
     "registry-landing": 1,
     "report": 2,
     "review": 2,
@@ -2821,12 +3029,12 @@
    },
    "evidence_tiers": {
     "T0": 130,
-    "T1": 155,
+    "T1": 156,
     "T2": 134
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-07-30T08:48:54.375Z",
-   "max_cycle": 888,
+   "last_ts": "2026-07-30T09:05:20.036Z",
+   "max_cycle": 889,
    "outcomes": {
     "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
     "banked": 79,
@@ -2841,7 +3049,7 @@
     "null": 1,
     "obstruction": 1,
     "orient": 352,
-    "progress": 325,
+    "progress": 326,
     "refuted": 1
    },
    "per_day": {
@@ -2865,9 +3073,9 @@
     "2026-07-27": 102,
     "2026-07-28": 29,
     "2026-07-29": 49,
-    "2026-07-30": 17
+    "2026-07-30": 18
    },
-   "records": 888,
+   "records": 889,
    "worker_jobs": 411,
    "worker_models": {
     "codex": 338,
@@ -2937,9 +3145,9 @@
   "git": {
    "active_days": 21,
    "authors": {
-    "tobiasosborne": 916
+    "tobiasosborne": 917
    },
-   "commits": 916,
+   "commits": 917,
    "first_day": "2026-07-02",
    "last_day": "2026-07-30",
    "per_day": {
@@ -2963,7 +3171,7 @@
     "2026-07-27": 74,
     "2026-07-28": 32,
     "2026-07-29": 45,
-    "2026-07-30": 10
+    "2026-07-30": 11
    },
    "subject_prefixes": {
     "W61": 13,
@@ -3058,8 +3266,8 @@
   },
   "registry": {
    "af": {
-    "none": 182,
-    "seeded": 12,
+    "none": 169,
+    "seeded": 25,
     "validated": 117
    },
    "kind": {

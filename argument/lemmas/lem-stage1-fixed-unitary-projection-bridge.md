@@ -5,7 +5,7 @@ contract: Fixed-unitary projection bridge: there are universal C_bridge<infinity
 defs: def-epsilon-cstar-algebra; def-stage1-polar-witness-data; def-approximate-unitary-space; def-delta-projection
 deps: lem-stage1-extra-fixed-class
 status: stated
-af: none
+af: seeded
 workspace: proofs/lem-stage1-fixed-unitary-projection-bridge
 provenance: DESIGN-S1-ENDGAME-v5.md sect-2 (landed verbatim); AUDIT-S1-ENDGAME-v5.md VERDICT LAND (zero corrections); user-ratified 2026-07-30
 owner: A

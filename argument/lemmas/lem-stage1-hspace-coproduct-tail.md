@@ -5,7 +5,7 @@ contract: H-space coproduct-tail package over the real field: if M is a connecte
 defs: def-h-space-left-inversion
 deps: lem-topology-kunneth-cross-product
 status: stated
-af: none
+af: seeded
 workspace: proofs/lem-stage1-hspace-coproduct-tail
 provenance: DESIGN-S1-ENDGAME-v5.md sect-2 (landed verbatim); AUDIT-S1-ENDGAME-v5.md VERDICT LAND (zero corrections); user-ratified 2026-07-30
 owner: A

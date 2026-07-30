@@ -5,7 +5,7 @@ contract: Parameterized complete quotient package: for every universal def-stage
 defs: def-stage1-polar-witness-data; def-approximate-unitary-space; def-epsilon-cstar-algebra; def-h-space-left-inversion; def-lefschetz-fixed-point-data
 deps: lem-stage1-bound-inversion-isolation; lem-stage1-quotient-finite-cw
 status: stated
-af: none
+af: seeded
 workspace: proofs/lem-stage1-bound-quotient-index-data
 provenance: DESIGN-S1-ENDGAME-v5.md sect-2 (landed verbatim); AUDIT-S1-ENDGAME-v5.md VERDICT LAND (zero corrections); user-ratified 2026-07-30
 owner: A
