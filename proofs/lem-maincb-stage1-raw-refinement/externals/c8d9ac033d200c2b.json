@@ -1,0 +1,8 @@
+{
+  "id": "c8d9ac033d200c2b",
+  "name": "lem-compcb-single-compression-transfer",
+  "source": "imports validated registry lemma proofs/lem-compcb-single-compression-transfer — Single-compression transfer: there are universal C_co \u003c infinity and e_co \u003e 0 such that restricting an extended alpha-inclusion to one ideal and following it by one compatible amplified compression produces an extended C_co*(alpha+epsilon)-inclusion whenever alpha+epsilon \u003c= e_co.",
+  "content_hash": "482315588a175989a5a3a7f826cc2e4e61a8fb162d29d87c5d3d60adbac4d6f0",
+  "created": "2026-07-30T16:09:55.613390853Z",
+  "notes": ""
+}

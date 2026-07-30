@@ -1,0 +1,8 @@
+{
+  "id": "78ee73f2b0574dc8",
+  "name": "lem-maincb-direct-sum-inclusion-merge",
+  "source": "imports validated registry lemma proofs/lem-maincb-direct-sum-inclusion-merge — There are universal C_dir \u003c infinity and e_dir \u003e 0 such that, if B_1,B_2 are finite-dimensional C*-algebras, P_1,P_2 are target t-projections, ||P_1+P_2-I|| \u003c= t, and v_i:B_i-\u003eS_{P_i} are extended t-inclusions with target ambient defect at most t \u003c= e_dir, then (x_1,x_2) |-\u003e v_1(x_1)+v_2(x_2) is an extended C_dir*t-inclusion; bijectivity is asserted only if both v_i are bijective and both target cross-corners vanish.",
+  "content_hash": "3e392abedc9cc3dbe9128d3cee8132a7d0b4a9611a86908075df13ebf37a033a",
+  "created": "2026-07-30T16:09:55.608714166Z",
+  "notes": ""
+}
