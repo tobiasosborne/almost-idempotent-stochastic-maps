@@ -187,7 +187,7 @@
 | `lem-maincb-initial-reset-inclusion` | lemma | stated | seeded | A | For every finite-dimensional extended epsilon-C*-algebra A with 0 <= epsilon <= … |
 | `lem-maincb-maximal-reset-selection` | lemma | stated | seeded | A | If A is a finite-dimensional extended epsilon-C*-algebra with 0 <= epsilon <= ep… |
 | `lem-maincb-nested-corner-comparison` | lemma | proved | validated | A | There are universal C_nest < infinity and e_nest > 0 such that, whenever R,P,Q a… |
-| `lem-maincb-nested-corner-dimension-transport` | lemma | stated | seeded | A | There is a universal e_ncd > 0 such that, whenever R,P,Q are t-projections in a … |
+| `lem-maincb-nested-corner-dimension-transport` | lemma | proved | validated | A | There is a universal e_ncd > 0 such that, whenever R,P,Q are t-projections in a … |
 | `lem-maincb-one-class-extension` | lemma | stated | seeded | A | If A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= epsilo… |
 | `lem-maincb-outer-compression-transfer` | lemma | stated | seeded | A | There are universal C_out < infinity and e_out > 0 such that, whenever R,P are t… |
 | `lem-maincb-reset-constant-ledger` | lemma | stated | seeded | A | With D_* = max{1,D_0,D_1,D_2,D_3} and r_reset := min{e_0,e_1,e_2,e_3,epsilon_max… |

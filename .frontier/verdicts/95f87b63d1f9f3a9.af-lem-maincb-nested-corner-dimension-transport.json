@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-nested-corner-dimension-transport/export.md",
+  "oracle": "af-lem-maincb-nested-corner-dimension-transport",
+  "result": "pass",
+  "claim_hash": "7d47ad21274a49bdcbc7aca38063142a8eeeabfa53d419f49c62a0984fd43a4b",
+  "oracle_digest": "59900f0ff2849dfa21d4cd46ba4d0b18735a646ba73951210c415565a7e9d7e4",
+  "inputs_hash": "0a587a5c016dc8ae473aab42e5cf6889c666519d9f9d41c0345abbda313da8d9",
+  "ts": "2026-07-30T16:16:51.085Z"
+}

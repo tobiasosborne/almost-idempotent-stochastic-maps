@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{There is a universal e\_ncd > 0 such that, whenever R,P,Q ...}
+\step{1} There is a universal e\_ncd > 0 such that, whenever R,P,Q are t-projections in a finite-dimensional extended t-C*-algebra, R is nonvanishing, all four left/right subordination errors of P,Q to R are at most t <= e\_ncd, A\_R = S\textasciicircum{}A\_R, P\textasciicircum{}R = Co\textasciicircum{}A\_R(P), and Q\textasciicircum{}R = Co\textasciicircum{}A\_R(Q), one has dim S\textasciicircum{}A\_\{P,Q\} = dim S\textasciicircum{}\{A\_R\}\_\{P\textasciicircum{}R,Q\textasciicircum{}R\}. \steptag{validated} \\[6pt]
+\step{1.1} Let C\_* := max\{C\_nest,1\} and e\_ncd := min\{e\_nest,(2C\_*)\textasciicircum{}\{-1\}\}, where C\_nest,e\_nest are supplied by lem-maincb-nested-corner-comparison. Then e\_ncd>0 is universal. Under the hypotheses of node 1, that cited lemma applies. Writing U:=S\textasciicircum{}A\_\{P,Q\} and V:=S\textasciicircum{}\{A\_R\}\_\{P\textasciicircum{}R,Q\textasciicircum{}R\}, its two linear comparison maps T:U→V and S:V→U are T(X):=F\textasciicircum{}R\_\{P,Q\}(Co\textasciicircum{}A\_R X) and S(Y):=Co\textasciicircum{}A\_\{P,Q\}Y, and they satisfy ||TX-X||≤C\_*t||X|| for X∈U and ||SY-Y||≤C\_*t||Y|| for Y∈V, with C\_*t≤1/2. \steptag{validated} \\[4pt]
+\step{1.2} The comparison maps in node 1.1 are injective. Indeed, if TX=0 then ||X||=||TX-X||≤(1/2)||X||, so X=0; and if SY=0 then ||Y||=||SY-Y||≤(1/2)||Y||, so Y=0. \steptag{validated} \\[4pt]
+\step{1.3} Because A is finite-dimensional, U and V are finite-dimensional. The injections T:U→V and S:V→U therefore give dim U≤dim V and dim V≤dim U, hence dim S\textasciicircum{}A\_\{P,Q\}=dim S\textasciicircum{}\{A\_R\}\_\{P\textasciicircum{}R,Q\textasciicircum{}R\}. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
