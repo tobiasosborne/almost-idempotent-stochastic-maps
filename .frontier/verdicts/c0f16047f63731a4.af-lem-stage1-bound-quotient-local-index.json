@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-bound-quotient-local-index/export.md",
+  "oracle": "af-lem-stage1-bound-quotient-local-index",
+  "result": "pass",
+  "claim_hash": "34a57e1d6df0ea56470c42c3178dc26fbb6243c8efdd38b7e983120c5248a54a",
+  "oracle_digest": "81713bbcea97751fd3aa018e1fff5dec9ab0d766cbc9dae465e7c39b7c3f19c8",
+  "inputs_hash": "8295105454fcacb9f8598d7b56693d0b5e4e38313e560a907dd721fa481202de",
+  "ts": "2026-07-30T11:20:06.101Z"
+}
