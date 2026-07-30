@@ -2,7 +2,7 @@
 id: lem-maincb-nested-corner-dimension-transport
 kind: lemma
 contract: There is a universal e_ncd > 0 such that, whenever R,P,Q are t-projections in a finite-dimensional extended t-C*-algebra, R is nonvanishing, all four left/right subordination errors of P,Q to R are at most t <= e_ncd, A_R = S^A_R, P^R = Co^A_R(P), and Q^R = Co^A_R(Q), one has dim S^A_{P,Q} = dim S^{A_R}_{P^R,Q^R}.
-defs: def-operator-space; def-compressed-corner; def-delta-projection
+defs: def-operator-space; def-compressed-corner; def-delta-projection; def-extended-epsilon-cstar-algebra
 deps: lem-maincb-nested-corner-comparison
 status: stated
 af: seeded

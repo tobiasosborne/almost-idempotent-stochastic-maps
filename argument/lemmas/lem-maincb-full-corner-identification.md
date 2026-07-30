@@ -2,7 +2,7 @@
 id: lem-maincb-full-corner-identification
 kind: lemma
 contract: There is a universal e_full > 0 such that, if R is a t-projection in an extended t-C*-algebra and ||R-I|| <= t <= e_full, then Co_R = I and S_R = A, at every amplification.
-defs: def-operator-space; def-compressed-corner; def-delta-projection
+defs: def-operator-space; def-compressed-corner; def-delta-projection; def-extended-epsilon-cstar-algebra
 deps: lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities
 status: stated
 af: seeded

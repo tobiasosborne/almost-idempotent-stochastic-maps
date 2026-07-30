@@ -45,9 +45,9 @@ Dropped (outside the closure; canonical, just not reproduced here):
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 19 | `def-column-hilbert-corner` | `def:column-hilbert-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1123-1128,1546-1550` | `e7eb512a2ec2438d` | 2 | 2 |
 | 20 | `def-compressed-corner` | `def:compressed-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1054-1066,1077-1082` | `e7eb512a2ec2438d` | 25 | 17 |
-| 21 | `def-delta-projection` | `def:delta-projection` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:917-920,926-929` | `e7eb512a2ec2438d` | 23 | 15 |
+| 21 | `def-delta-projection` | `def:delta-projection` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:917-920,926-929` | `e7eb512a2ec2438d` | 27 | 15 |
 | 22 | `def-epsilon-cstar-algebra` | `def:epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:407-440` | `e7eb512a2ec2438d` | 39 | 27 |
-| 23 | `def-extended-epsilon-cstar-algebra` | `def:extended-epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1477-1479` | `e7eb512a2ec2438d` | 28 | 18 |
+| 23 | `def-extended-epsilon-cstar-algebra` | `def:extended-epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1477-1479` | `e7eb512a2ec2438d` | 50 | 18 |
 | 24 | `def-fd-cstar-diagonal` | `def:fd-cstar-diagonal` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1233-1242` | `e7eb512a2ec2438d` | 6 | 0 |
 | 25 | `def-h-space-left-inversion` | `def:h-space-left-inversion` | cited | locked | shard statement | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:895-912` | `e7eb512a2ec2438d` | 11 | 0 |
 | 26 | `def-ha-map` | `def:ha-map` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1146-1149` | `e7eb512a2ec2438d` | 13 | 13 |
@@ -65,7 +65,7 @@ Dropped (outside the closure; canonical, just not reproduced here):
 | 33 | `def-canonical-corner-identifications` | `def:canonical-corner-identifications` | original | locked | shard statement | — | `internal` | `PROOF-W74F-E-HCB.md §8.1; DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 4 | 4 |
 | 34 | `def-compressed-associator` | `def:compressed-associator` | original | locked | shard statement | — | `internal` | `PROOF-W74F-E-HCB.md §3; DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 2 | 2 |
 | 35 | `def-extcb-datum` | `def:extcb-datum` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package` | `-` | 6 | 3 |
-| 36 | `def-extended-delta-inclusion` | `def:extended-delta-inclusion` | consensus | locked | shard statement | — | `internal` | `harmonization of approximate_algebras.tex:443-456,1477-1484 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 11 | 4 |
+| 36 | `def-extended-delta-inclusion` | `def:extended-delta-inclusion` | consensus | locked | shard statement | — | `internal` | `harmonization of approximate_algebras.tex:443-456,1477-1484 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 30 | 4 |
 | 37 | `def-four-corner-merging-datum` | `def:four-corner-merging-datum` | original | locked | shard statement | — | `internal` | `project packaging of approximate_algebras.tex:1325-1345 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 6 | 2 |
 | 38 | `def-hcb-datum` | `def:hcb-datum` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package` | `-` | 15 | 15 |
 | 39 | `def-maincb-reset-state` | `def:maincb-reset-state` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v4.1.md:419-423; DESIGN-MAIN-STRUCTURE-v5.md sect 1.2` | `-` | 16 | 0 |

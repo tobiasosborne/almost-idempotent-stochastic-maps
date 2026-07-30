@@ -2,7 +2,7 @@
 id: lem-maincb-direct-sum-inclusion-merge
 kind: lemma
 contract: There are universal C_dir < infinity and e_dir > 0 such that, if B_1,B_2 are finite-dimensional C*-algebras, P_1,P_2 are target t-projections, ||P_1+P_2-I|| <= t, and v_i:B_i->S_{P_i} are extended t-inclusions with target ambient defect at most t <= e_dir, then (x_1,x_2) |-> v_1(x_1)+v_2(x_2) is an extended C_dir*t-inclusion; bijectivity is asserted only if both v_i are bijective and both target cross-corners vanish.
-defs: def-operator-space; def-extended-delta-inclusion; def-compressed-corner
+defs: def-operator-space; def-extended-delta-inclusion; def-compressed-corner; def-delta-projection
 deps: lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities; lem-compcb-corner-algebra; lem-compcb-rectangular-product
 status: stated
 af: seeded

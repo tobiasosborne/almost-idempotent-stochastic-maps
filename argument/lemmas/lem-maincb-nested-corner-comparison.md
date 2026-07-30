@@ -2,7 +2,7 @@
 id: lem-maincb-nested-corner-comparison
 kind: lemma
 contract: There are universal C_nest < infinity and e_nest > 0 such that, whenever R,P,Q are t-projections in a finite-dimensional extended t-C*-algebra, R is nonvanishing, P,Q are subordinate to R with all four left/right subordination errors at most t <= e_nest, A_R = S^A_R, P^R = Co^A_R(P), and Q^R = Co^A_R(Q), then P^R,Q^R are C_nest*t-projections in A_R and, at every amplification, ||F^R_{P,Q}(Co^A_R X) - X|| <= C_nest*t*||X|| for X in S^A_{P,Q}, while ||Co^A_{P,Q} Y - Y|| <= C_nest*t*||Y|| for Y in S^{A_R}_{P^R,Q^R}.
-defs: def-operator-space; def-compressed-corner; def-delta-projection
+defs: def-operator-space; def-compressed-corner; def-delta-projection; def-extended-epsilon-cstar-algebra
 deps: lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities; lem-compcb-amplified-almost-containment; lem-compcb-corner-algebra; lem-compcb-rectangular-product
 status: stated
 af: seeded

@@ -2,7 +2,7 @@
 id: lem-maincb-stage1-raw-refinement
 kind: lemma
 contract: There are universal D_1 < infinity and e_1 > 0 such that, if an explicit Stage-1 raw-call datum supplies complementary target t-projections, an old extended t-inclusion C^{m-1}->S_{P_old} when m > 1, a fresh extended t-inclusion C^2->S_{P_fresh}, fixed amplification families, and every projection, complementarity, map, and target-ambient defect is at most t <= e_1, then their sum map is an extended D_1*t-inclusion C^{m+1}->A; when m = 1, the old side is absent and the conclusion is the supplied fresh inclusion.
-defs: def-maincb-reset-state; def-maincb-raw-call; def-operator-space
+defs: def-maincb-reset-state; def-maincb-raw-call; def-operator-space; def-delta-projection; def-extended-delta-inclusion
 deps: lem-maincb-direct-sum-inclusion-merge; lem-compcb-single-compression-transfer
 status: stated
 af: seeded

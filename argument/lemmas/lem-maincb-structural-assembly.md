@@ -2,7 +2,7 @@
 id: lem-maincb-structural-assembly
 kind: lemma
 contract: There are universal C_struct = c_0^cb*K_call < infinity and e_struct = epsilon_MAIN > 0 such that every finite-dimensional extended epsilon-C*-algebra A, 0 <= epsilon <= e_struct, admits a finite-dimensional C*-algebra B = oplus_C M_{|C|} and one extended C_struct*epsilon-isomorphism v:B->A.
-defs: def-maincb-partition-state; def-maincb-reset-state; def-operator-space
+defs: def-maincb-partition-state; def-maincb-reset-state; def-operator-space; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
 deps: lem-maincb-full-corner-identification; lem-maincb-corner-equivalence; lem-maincb-structural-domain-ledger; lem-maincb-maximal-reset-selection; lem-maincb-stage1-maximality; lem-maincb-one-class-extension; lem-maincb-stage3-finite-recombination
 status: stated
 af: seeded

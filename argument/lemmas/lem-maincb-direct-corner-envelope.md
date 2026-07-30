@@ -2,7 +2,7 @@
 id: lem-maincb-direct-corner-envelope
 kind: lemma
 contract: There are universal L >= 1 and e_env > 0 such that, if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= e_env, and w:C^m->A is an extended c_0^cb*epsilon-inclusion, then every nonempty U has P_U a c_0^cb*epsilon-projection, every A_U = S^A_{P_U} is an extended L*epsilon-C*-algebra, and for U subseteq R all subordination and complementarity errors among P_U, P_{R minus U}, P_R are at most L*epsilon.
-defs: def-maincb-partition-state; def-compressed-corner; def-delta-projection
+defs: def-maincb-partition-state; def-compressed-corner; def-delta-projection; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
 deps: lem-maincb-error-improvement; lem-compcb-corner-algebra
 status: stated
 af: seeded

@@ -2,7 +2,7 @@
 id: lem-maincb-outer-compression-transfer
 kind: lemma
 contract: There are universal C_out < infinity and e_out > 0 such that, whenever R,P are t-projections in a finite-dimensional extended t-C*-algebra, R is nonvanishing, both subordination errors of P to R are at most t, v:B->S^A_P is an extended t-isomorphism, A_R = S^A_R, P^R = Co^A_R(P), and t <= e_out, the explicitly defined map T = Co^{A_R}_{P^R} o Co^A_R o v : B->S^{A_R}_{P^R} is an extended C_out*t-isomorphism and T_n = I_n tensor T for every n.
-defs: def-operator-space; def-compressed-corner; def-extended-delta-inclusion
+defs: def-operator-space; def-compressed-corner; def-extended-delta-inclusion; def-extended-epsilon-cstar-algebra; def-delta-projection
 deps: lem-maincb-nested-corner-comparison; lem-maincb-nested-corner-dimension-transport; lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities; lem-compcb-corner-algebra; lem-compcb-rectangular-product
 status: stated
 af: seeded

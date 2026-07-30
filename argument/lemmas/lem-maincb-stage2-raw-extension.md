@@ -2,7 +2,7 @@
 id: lem-maincb-stage2-raw-extension
 kind: lemma
 contract: There are universal D_2 < infinity and e_2 > 0, chosen with e_2 <= e_s2 and C_s2*e_2 <= e_ext, such that every explicit Stage-2 raw-call closed EXT-CB datum in A_R whose total post-helper defect is at most C_s2*t, for base scale 0 <= t <= e_2, admits an extended D_2*t-isomorphism M_{r+1}->A_R.
-defs: def-maincb-raw-call; def-extcb-datum; def-operator-space
+defs: def-maincb-raw-call; def-extcb-datum; def-operator-space; def-extended-delta-inclusion
 deps: lem-maincb-stage2-extcb-datum; conj-extcb
 status: stated
 af: seeded

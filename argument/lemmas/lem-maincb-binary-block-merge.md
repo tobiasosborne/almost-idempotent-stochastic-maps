@@ -2,7 +2,7 @@
 id: lem-maincb-binary-block-merge
 kind: lemma
 contract: If A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= epsilon_MAIN, a supplied MAIN partition state comes from an extended c_0^cb*epsilon-inclusion w:C^m->A with one-dimensional atomic images, has disjoint nonempty unions U,V sharing no class, and two separately supplied current reset states v_U:B_U->A_U, v_V:B_V->A_V are extended isomorphisms satisfying d_U <= c_0^cb*epsilon_U and d_V <= c_0^cb*epsilon_V, then there is a current reset state v_{U union V}:B_U oplus B_V->A_{U union V} satisfying d_{U union V} <= c_0^cb*epsilon_{U union V}.
-defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-raw-call; def-four-corner-merging-datum
+defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-raw-call; def-four-corner-merging-datum; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
 deps: lem-maincb-stage3-raw-merge; lem-maincb-stage3-call-envelope; lem-maincb-reset-invariant-preservation; lem-maincb-structural-domain-ledger
 status: stated
 af: seeded

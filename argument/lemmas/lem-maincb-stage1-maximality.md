@@ -2,7 +2,7 @@
 id: lem-maincb-stage1-maximality
 kind: lemma
 contract: If A is a finite-dimensional extended epsilon-C*-algebra with 0 <= epsilon <= epsilon_MAIN and w:C^m->A has maximum source dimension among all extended c_0^cb*epsilon-inclusions into A, then every projection-basis image P_j = w(e_j) satisfies dim S_{P_j} = 1.
-defs: def-maincb-partition-state; def-projection-basis
+defs: def-maincb-partition-state; def-projection-basis; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
 deps: lem-maincb-maximal-reset-selection; lem-maincb-stage1-strict-refinement
 status: stated
 af: seeded

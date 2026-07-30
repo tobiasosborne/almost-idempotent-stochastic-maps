@@ -2,7 +2,7 @@
 id: lem-maincb-maximal-reset-selection
 kind: lemma
 contract: If A is a finite-dimensional extended epsilon-C*-algebra with 0 <= epsilon <= epsilon_MAIN, then the nonempty set of m admitting an extended c_0^cb*epsilon-inclusion C^m->A has a maximum, because the lower norm is positive and hence m <= dim_C A.
-defs: def-maincb-reset-state; def-projection-basis
+defs: def-maincb-reset-state; def-projection-basis; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
 deps: lem-maincb-structural-domain-ledger; lem-maincb-initial-reset-inclusion
 status: stated
 af: seeded

@@ -2,7 +2,7 @@
 id: lem-maincb-corner-equivalence
 kind: lemma
 contract: There is a universal e_sim > 0 such that, for every finite family of one-dimensional t-projections P_1,...,P_m in an extended t-C*-algebra with t <= e_sim, the relation j ~ k iff dim S_{P_j,P_k} = 1 is an equivalence relation.
-defs: def-maincb-partition-state; def-one-dimensional-delta-projection; def-compressed-corner
+defs: def-maincb-partition-state; def-one-dimensional-delta-projection; def-compressed-corner; def-extended-epsilon-cstar-algebra; def-delta-projection
 deps: lem-extcb-one-dimensional-product; lem-extcb-one-dimensional-corner-dimension
 status: stated
 af: seeded

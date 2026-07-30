@@ -2,7 +2,7 @@
 id: lem-maincb-initial-raw-inclusion
 kind: lemma
 contract: There are universal D_0 < infinity and e_0 > 0 such that, in every finite-dimensional extended epsilon-C*-algebra with epsilon <= t <= e_0, the scalar map lambda |-> lambda*I_A is an extended D_0*t-inclusion; if dim A = 1, it is bijective.
-defs: def-operator-space; def-maincb-raw-call; def-extended-delta-inclusion
+defs: def-operator-space; def-maincb-raw-call; def-extended-delta-inclusion; def-extended-epsilon-cstar-algebra
 status: stated
 af: seeded
 workspace: proofs/lem-maincb-initial-raw-inclusion

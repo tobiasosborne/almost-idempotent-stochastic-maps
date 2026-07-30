@@ -2,7 +2,7 @@
 id: lem-maincb-stage3-raw-merge
 kind: lemma
 contract: There are universal D_3 < infinity and e_3 > 0, with e_3 <= a_merge/(C_cross+1), such that every amplified four-corner datum in A_R with common defect rho <= C_cross*t and target ambient defect epsilon_{A_R} <= t <= e_3 satisfies rho + epsilon_{A_R} <= a_merge and yields an extended D_3*t-isomorphism B_U oplus B_V -> A_R.
-defs: def-maincb-raw-call; def-four-corner-merging-datum; def-operator-space
+defs: def-maincb-raw-call; def-four-corner-merging-datum; def-operator-space; def-extended-delta-inclusion
 deps: lem-maincb-cross-class-merging-datum; lem-extcb-four-corner-merge
 status: stated
 af: seeded

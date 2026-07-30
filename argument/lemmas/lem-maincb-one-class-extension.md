@@ -2,7 +2,7 @@
 id: lem-maincb-one-class-extension
 kind: lemma
 contract: If A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= epsilon_MAIN, a supplied MAIN partition state comes from an extended c_0^cb*epsilon-inclusion w:C^m->A, all atomic images P_j are one-dimensional, and C = {j_1,...,j_s} is one equivalence class, then there is a current reset state v_C:M_s->A_C that is an extended isomorphism and satisfies the local invariant d_C <= c_0^cb*epsilon_C; moreover epsilon_C <= K_call*epsilon, so the bound d_C <= c_0^cb*K_call*epsilon follows.
-defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-raw-call
+defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-raw-call; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
 deps: lem-maincb-direct-corner-envelope; lem-maincb-corner-equivalence; lem-maincb-initial-raw-inclusion; lem-maincb-stage2-raw-extension; lem-maincb-stage2-call-envelope; lem-maincb-reset-invariant-preservation; lem-maincb-structural-domain-ledger
 status: stated
 af: seeded

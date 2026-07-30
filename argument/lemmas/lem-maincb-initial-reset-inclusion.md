@@ -2,7 +2,7 @@
 id: lem-maincb-initial-reset-inclusion
 kind: lemma
 contract: For every finite-dimensional extended epsilon-C*-algebra A with 0 <= epsilon <= epsilon_MAIN, there is an extended c_0^cb*epsilon-inclusion C->A.
-defs: def-maincb-reset-state; def-maincb-raw-call; def-operator-space
+defs: def-maincb-reset-state; def-maincb-raw-call; def-operator-space; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
 deps: lem-maincb-initial-raw-inclusion; lem-maincb-reset-invariant-preservation; lem-maincb-structural-domain-ledger
 status: stated
 af: seeded
