@@ -1,0 +1,8 @@
+{
+  "id": "a04e8b5fd634565f",
+  "name": "lem-stage1-rectified-nontrivial-projection",
+  "source": "imports validated registry lemma proofs/lem-stage1-rectified-nontrivial-projection — There are universal C_proj\u003cinfinity and e_proj\u003e0 such that every finite-dimensional extended epsilon_X-C*-algebra (calX,I_X,.,dagger) with 0\u003c=epsilon_X\u003c=e_proj and 1\u003cdim_C calX\u003cinfinity contains a nontrivial C_proj*epsilon_X-projection P_0 for the original product and original unit I_X.",
+  "content_hash": "73c7a7eeb70798f16d968f03613df93827f3734211a834bd20277d720eef56cd",
+  "created": "2026-07-30T12:48:34.136386768Z",
+  "notes": ""
+}
