@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{There are universal D\_1 < infinity and e\_1 > 0 such that,...}
+\step{1} There are universal D\_1 < infinity and e\_1 > 0 such that, if an explicit Stage-1 raw-call datum supplies complementary target t-projections, an old extended t-inclusion C\textasciicircum{}\{m-1\}->S\_\{P\_old\} when m > 1, a fresh extended t-inclusion C\textasciicircum{}2->S\_\{P\_fresh\}, fixed amplification families, and every projection, complementarity, map, and target-ambient defect is at most t <= e\_1, then their sum map is an extended D\_1*t-inclusion C\textasciicircum{}\{m+1\}->A; when m = 1, the old side is absent and the conclusion is the supplied fresh inclusion. \steptag{validated} \\[6pt]
+\step{1.1} Defect-parameter monotonicity: if 0 <= delta <= Delta and a linear map with its fixed amplification family is an extended delta-inclusion, then it is an extended Delta-inclusion, because every defining delta-homomorphism defect upper bound and the two-sided (1 +/- delta) norm bounds in def-extended-delta-inclusion only weaken when delta is enlarged. \steptag{validated} \\[4pt]
+\step{1.2} Choose the universal constants from lem-maincb-direct-sum-inclusion-merge: if C\_dir < infinity and e\_dir > 0 are its witnesses, set D\_1 := max(1,C\_dir) and e\_1 := e\_dir; then D\_1 < infinity and e\_1 > 0 are universal. \steptag{validated} \\[4pt]
+\step{1.3} Case m = 1: the final clause of the root contract explicitly replaces the preceding merged-map conclusion by the supplied fresh inclusion. The old side is absent, and the hypothesis already supplies v\_fresh:C\textasciicircum{}2->S\_\{P\_fresh\} as an extended t-inclusion with its fixed amplification family. Since C\textasciicircum{}2=C\textasciicircum{}\{m+1\}, this is exactly the conclusion stipulated for m=1. No change of codomain from S\_\{P\_fresh\} to A is asserted, and neither defect-parameter monotonicity nor a corner-to-ambient transfer is used. \steptag{validated} \\[4pt]
+\step{1.4} Case m > 1: apply lem-maincb-direct-sum-inclusion-merge with B\_1=C\textasciicircum{}\{m-1\}, B\_2=C\textasciicircum{}2, P\_1=P\_old, P\_2=P\_fresh, v\_1=v\_old, and v\_2=v\_fresh. All of its hypotheses are exactly among the raw-call hypotheses and t <= e\_1=e\_dir. It yields the sum map as an extended C\_dir*t-inclusion on C\textasciicircum{}\{m-1\} direct-sum C\textasciicircum{}2 = C\textasciicircum{}\{m+1\}; since C\_dir*t <= D\_1*t, defect-parameter monotonicity gives the required extended D\_1*t-inclusion into A. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

@@ -15,10 +15,10 @@
 \toprule & \textbf{class} & \textbf{rung} & \textbf{what it means} \\ \midrule \endhead
 \bottomrule
 \endfoot
-\dagswatch{dagDagVal} & $\blacksquare$~af-validated\ (115) & RIGOROUS (L0 rung b) & \texttt{af: validated} --- root + every node validated by fresh codex verifiers, taint clean. The only rung this repo currently reaches. \\[0.25em]
+\dagswatch{dagDagVal} & $\blacksquare$~af-validated\ (116) & RIGOROUS (L0 rung b) & \texttt{af: validated} --- root + every node validated by fresh codex verifiers, taint clean. The only rung this repo currently reaches. \\[0.25em]
 \dagswatch{dagDagCit} & $\blacklozenge$~cited\ (0) & RIGOROUS (L0 rung a) & \texttt{status: cited} --- byte-verbatim string-matched to a local published source under \texttt{refs/}. (No result in this subgraph currently holds this rung.) \\[0.25em]
 \dagswatch{dagDagPrv} & $\bullet$~proved\ (21) & NOT rigorous & \texttt{status: proved} with \texttt{af: none/seeded} --- a proof written in-repo that has NOT cleared an independent \texttt{af} validation. Solid, but not L0. \\[0.25em]
-\dagswatch{dagDagSee} & $\lozenge$~seeded\ (25) & NOT rigorous & \texttt{af: seeded} --- an \texttt{af} workspace exists and the contract is pinned, but no validated tree yet. \\[0.25em]
+\dagswatch{dagDagSee} & $\lozenge$~seeded\ (24) & NOT rigorous & \texttt{af: seeded} --- an \texttt{af} workspace exists and the contract is pinned, but no validated tree yet. \\[0.25em]
 \dagswatch{dagDagNon} & $\blacktriangle$~mod-audit / conj.\ (24) & NOT rigorous (flagged) & \texttt{proved-mod-audit} $\cdot$ \texttt{conjecture} $\cdot$ \texttt{heuristic} $\cdot$ \texttt{numerical} --- the workhorse rungs of the inherited campaign. Content, no independent check. \\[0.25em]
 \dagswatch{dagDagSta} & $\circ$~stated\ (1) & NOT rigorous & \texttt{status: stated} --- transcribed from an upstream artifact, unchecked here. \\[0.25em]
 \dagswatch{dagDagOpn} & $\bigstar$~OPEN\ (3) & OPEN & \texttt{status: open} or \texttt{kind: open-problem} --- a live open question. \texttt{op-classical} is the north star and is one of these. \\[0.25em]
@@ -48,8 +48,8 @@
 results drawn & 189 & of 341 in the registry \\
 registry edges drawn & 424 & \texttt{deps:} 421, OR-route members 3 \\
 design-pending (GAP) links & 2 & drawn dashed; \emph{not} registry edges \\
-\textbf{rigorous (L0)} & \textbf{115} & \texttt{af: validated} or \texttt{status: cited} --- 60.8\% of the chain \\
-non-rigorous & 74 & everything else, flagged loudly by colour and glyph \\
+\textbf{rigorous (L0)} & \textbf{116} & \texttt{af: validated} or \texttt{status: cited} --- 61.4\% of the chain \\
+non-rigorous & 73 & everything else, flagged loudly by colour and glyph \\
 \midrule
 phase \dagphase{comp}{COMP/H-CB} & 27 & COMP-CB / H-CB corner tower \\
 phase \dagphase{ext}{EXT-CB} & 10 & EXT-CB corner extension \\

@@ -194,7 +194,7 @@
 | `lem-maincb-reset-invariant-preservation` | lemma | stated | seeded | A | For any explicit global-scalar, compressed-corner-scalar, Stage-1, Stage-2, or S… |
 | `lem-maincb-stage1-call-envelope` | lemma | stated | seeded | A | After the Stage-1 producer gate, there are universal K_1 >= 1 and e_call_1 > 0, … |
 | `lem-maincb-stage1-maximality` | lemma | stated | seeded | A | If A is a finite-dimensional extended epsilon-C*-algebra with 0 <= epsilon <= ep… |
-| `lem-maincb-stage1-raw-refinement` | lemma | stated | seeded | A | There are universal D_1 < infinity and e_1 > 0 such that, if an explicit Stage-1… |
+| `lem-maincb-stage1-raw-refinement` | lemma | proved | validated | A | There are universal D_1 < infinity and e_1 > 0 such that, if an explicit Stage-1… |
 | `lem-maincb-stage1-strict-refinement` | lemma | stated | seeded | A | If A is a finite-dimensional extended epsilon-C*-algebra with 0 <= epsilon <= ep… |
 | `lem-maincb-stage2-call-envelope` | lemma | stated | seeded | A | There are universal K_2 >= max{1,L,c_0^cb*L} and e_call_2 > 0, with K_2*e_call_2… |
 | `lem-maincb-stage2-extcb-datum` | lemma | stated | seeded | A | There are universal C_s2 >= 1 and e_s2 > 0, with the e_ca threshold and universa… |

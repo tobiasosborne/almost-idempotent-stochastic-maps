@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-stage1-raw-refinement/export.md",
+  "oracle": "af-lem-maincb-stage1-raw-refinement",
+  "result": "pass",
+  "claim_hash": "a95cc04657fa88719290ae7bdb1f41a37cdcd8d550c7498dfaca655817fb7b41",
+  "oracle_digest": "80012041b27a882d80200c925a73927e70b9e4ba5a29c5ab4e60aea52271c193",
+  "inputs_hash": "427e07fa7facdc6067ac6c76cd15dcfd4276326c9b5ae57dbf3090427d2769f3",
+  "ts": "2026-07-30T16:19:01.936Z"
+}
