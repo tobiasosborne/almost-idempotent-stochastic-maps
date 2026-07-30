@@ -1,8 +1,8 @@
 {
-  "id": "337838f414054f8c",
+  "id": "fdca3adc046be32d",
   "name": "lem-maincb-nested-corner-comparison",
   "source": "imports validated registry lemma proofs/lem-maincb-nested-corner-comparison — There are universal C_nest \u003c infinity and e_nest \u003e 0 such that, whenever R,P,Q are t-projections in a finite-dimensional extended t-C*-algebra, R is nonvanishing, P,Q are subordinate to R with all four left/right subordination errors at most t \u003c= e_nest, A_R = S^A_R, P^R = Co^A_R(P), and Q^R = Co^A_R(Q), then P^R,Q^R are C_nest*t-projections in A_R and, at every amplification, ||F^R_{P,Q}(Co^A_R X) - X|| \u003c= C_nest*t*||X|| for X in S^A_{P,Q}, while ||Co^A_{P,Q} Y - Y|| \u003c= C_nest*t*||Y|| for Y in S^{A_R}_{P^R,Q^R}.",
   "content_hash": "bff47c3449574b0ab7855fd3cd0ad397e0af51c04be2baf448ad5427e83b3eca",
-  "created": "2026-07-30T17:52:21.000411246Z",
+  "created": "2026-07-30T18:32:47.735832738Z",
   "notes": ""
 }
