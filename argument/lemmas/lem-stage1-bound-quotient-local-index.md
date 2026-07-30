@@ -18,7 +18,13 @@ Elevation position 6/13 in the serial order of DESIGN-S1-ENDGAME-v5.md
 sect-3. NOT proved in-repo; af elevation pending.
 
 **Build budget (BINDING on the af tree).** Design target/rounds/hard-cap:
-10 / 4 / 15. The per-node skeleton is DESIGN-S1-ENDGAME-v5.md sect-4
+10 / 4 / 15. **USER-RATIFIED CAP AMENDMENT (2026-07-30): hard cap 15 -> 20
+for THIS row only** — the run-1 tree reached 17 live nodes purely through
+visible verifier-forced repair nodes (the (A_4)-ambient-openness,
+quotient-norm-equality, and ||L+I||<1 repairs; all three challenges
+RESOLVED, zero open), not concealed multi-obligation nodes; well below
+the 26-node brittleness threshold. Precedent-setting for transparent
+repair growth only; concealed-obligation balloons remain factoring stops. The per-node skeleton is DESIGN-S1-ENDGAME-v5.md sect-4
 (lem-stage1-bound-quotient-local-index); a hard-cap hit is a factoring stop, not a rounds bump. Constants
 live in the proof body, never the contract.
 
