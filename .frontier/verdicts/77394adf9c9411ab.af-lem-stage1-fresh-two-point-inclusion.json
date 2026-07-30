@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-fresh-two-point-inclusion/export.md",
+  "oracle": "af-lem-stage1-fresh-two-point-inclusion",
+  "result": "pass",
+  "claim_hash": "afa883643d5a49612835d93e27027ee33500f0973758b7902446babd07102d2f",
+  "oracle_digest": "15eb384ab9b4ed3d0694b38eb6bd0efca8262548bd5523040b0f1fa17108b6f0",
+  "inputs_hash": "6ad5c837287e6dbac4cc54268034092199b3076896cdb9f76e6b52e3f6281a13",
+  "ts": "2026-07-30T13:33:43.575Z"
+}

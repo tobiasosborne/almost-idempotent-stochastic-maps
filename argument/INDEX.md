@@ -232,7 +232,7 @@
 | `lem-stage1-exterior-cohomology` | lemma | proved | validated | A | Exterior cohomology of a finite H-space over the real field: if M is a connected… |
 | `lem-stage1-extra-fixed-class` | lemma | proved | validated | A | Bound extra fixed class with one ledger selection: there exist one def-stage1-po… |
 | `lem-stage1-fixed-unitary-projection-bridge` | lemma | proved | validated | A | Fixed-unitary projection bridge: there are universal C_bridge<infinity and e_bri… |
-| `lem-stage1-fresh-two-point-inclusion` | lemma | stated | seeded | A | There are universal C_pair<infinity and e_pair>0 such that every finite-dimensio… |
+| `lem-stage1-fresh-two-point-inclusion` | lemma | proved | validated | A | There are universal C_pair<infinity and e_pair>0 such that every finite-dimensio… |
 | `lem-stage1-group-closeness` | lemma | proved | validated | A | Group-input polar closeness: there exist universal C_grp, C_pol >= 1, kappa_pol … |
 | `lem-stage1-group-domain-membership` | lemma | proved | validated | A | Group-input polar-domain membership: there exist universal C_grp, C_pol >= 1, ka… |
 | `lem-stage1-hspace-coproduct-tail` | lemma | proved | validated | A | H-space coproduct-tail package over the real field: if M is a connected CW compl… |
