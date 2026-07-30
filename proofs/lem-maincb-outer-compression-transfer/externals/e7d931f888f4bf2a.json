@@ -1,0 +1,8 @@
+{
+  "id": "e7d931f888f4bf2a",
+  "name": "lem-maincb-nested-corner-dimension-transport",
+  "source": "imports validated registry lemma proofs/lem-maincb-nested-corner-dimension-transport — There is a universal e_ncd \u003e 0 such that, whenever R,P,Q are t-projections in a finite-dimensional extended t-C*-algebra, R is nonvanishing, all four left/right subordination errors of P,Q to R are at most t \u003c= e_ncd, A_R = S^A_R, P^R = Co^A_R(P), and Q^R = Co^A_R(Q), one has dim S^A_{P,Q} = dim S^{A_R}_{P^R,Q^R}.",
+  "content_hash": "8b4349633b2e947e506cb1826b2d0c16dbe716a2a4ad4953527a2f8e108973ce",
+  "created": "2026-07-30T16:17:29.322177594Z",
+  "notes": ""
+}
