@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-exterior-cohomology/export.md",
+  "oracle": "af-lem-stage1-exterior-cohomology",
+  "result": "pass",
+  "claim_hash": "9aee3b745d9f7e5976649e0e38cbd92d58ddf546d6481870e9df98888a3574ae",
+  "oracle_digest": "2ea1a6eef0a355e8bdd0cd4bbd62f98fae5add720f28dc555da9799d70767336",
+  "inputs_hash": "4b7845bc72d92c914095da55feb551f2b4be21ae150d90960f03b73ba93b165a",
+  "ts": "2026-07-30T09:40:33.324Z"
+}

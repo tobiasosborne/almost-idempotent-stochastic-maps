@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Exterior cohomology of a finite H-space over the real fie...}
+\step{1} Exterior cohomology of a finite H-space over the real field: if M is a connected CW complex with dim\_reals H\textasciicircum{}*(M;reals) < infinity and (M,mu,e) is an H-space, set A=H\textasciicircum{}*(M;reals), A\textasciicircum{}+=direct\_sum\_\{k>0\} A\textasciicircum{}k, and Delta=(cross product)\textasciicircum{}(-1) o mu\textasciicircum{}*; then A is a finite-dimensional graded-commutative associative unital algebra with A\textasciicircum{}0=reals*1, Delta:A->A tensor\_reals A is a degree-preserving unital algebra homomorphism with Delta(1)=1 tensor 1, for every homogeneous a in A\textasciicircum{}+ there exist a finite set J\_a and homogeneous a'\_j,a''\_j in A\textasciicircum{}+ for j in J\_a such that Delta(a)=a tensor 1+1 tensor a+sum\_\{j in J\_a\} a'\_j tensor a''\_j, and A is isomorphic as a graded algebra to an exterior algebra on a finite family of odd-positive-degree homogeneous generators. \steptag{validated} \\[6pt]
+\step{1.1} By the established external lem-stage1-hspace-coproduct-tail, under the hypotheses of node 1 the asserted entire coproduct-tail package holds: A is finite-dimensional, graded-commutative, associative, and unital with A\textasciicircum{}0=reals*1; Delta is a degree-preserving unital algebra homomorphism with Delta(1)=1 tensor 1; and every homogeneous positive-degree a has the displayed finite positive-positive tail expansion. \steptag{validated} \\[4pt]
+\step{1.2} The data in node 1.1 satisfy the hypotheses of GT-hatcher-hopf-structure-3C4: over the characteristic-zero field reals, A is a commutative associative Hopf algebra in the precise weak sense of GT-hatcher-weak-hopf-conditions (connectedness A\textasciicircum{}0=reals*1 and the graded-algebra coproduct with positive-positive tail), and every graded piece A\textasciicircum{}n is finite-dimensional because A is finite-dimensional in total. \steptag{validated} \\[4pt]
+\step{1.3} Applying GT-hatcher-hopf-structure-3C4 to node 1.2 yields an algebra isomorphism phi from Lambda\_reals(x\_i | i in I) tensor\_reals reals[y\_j | j in J] onto A, where each x\_i maps to a homogeneous odd-degree element of A and each y\_j maps to a homogeneous even-degree element of A. \steptag{validated} \\[4pt]
+\step{1.4} The isomorphism phi of node 1.3 is degree-preserving: give each formal generator the degree of its homogeneous image; phi preserves degree on every monomial because multiplication in A adds degrees, and these monomials span the tensor product. Hence phi is an isomorphism of graded algebras. \steptag{validated} \\[4pt]
+\step{1.5} The polynomial-generator family J in node 1.3 is empty. If y\_j existed, the polynomial-algebra factor would contain the linearly independent powers 1,y\_j,y\_j\textasciicircum{}2,...; tensoring them with the nonzero exterior unit would give infinitely many linearly independent elements, contradicting the finite-dimensionality of A through phi. \steptag{validated} \\[4pt]
+\step{1.6} The exterior-generator family I in node 1.3 is finite. If I were infinite, its distinct exterior-word-length-one monomials x\_i would be linearly independent, and after tensoring with the polynomial unit their images under phi would make A infinite-dimensional, contradicting node 1.1. \steptag{validated} \\[4pt]
+\step{1.7} By nodes 1.3--1.6, phi restricts to a graded-algebra isomorphism from the exterior algebra on the finite family (x\_i)\_\{i in I\} of odd-positive-degree homogeneous generators onto A; together with the full coproduct-tail package already obtained in node 1.1, this proves every clause of node 1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
