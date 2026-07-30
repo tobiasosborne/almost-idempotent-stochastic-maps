@@ -1,0 +1,8 @@
+{
+  "id": "0daa082b34d04924",
+  "name": "lem-finite-polyhedron-maximal-simplex-placement",
+  "source": "imports validated registry lemma proofs/lem-finite-polyhedron-maximal-simplex-placement — Every point of a finite polyhedron lies in a maximal simplex of its defining finite simplicial complex; therefore every point of every finite fixed set does.",
+  "content_hash": "3ba73a3a2b8953d2367b69177d32017292d4ff28fb4c140fb26625f289c8c1dd",
+  "created": "2026-07-30T11:44:46.603203051Z",
+  "notes": ""
+}

@@ -1,0 +1,8 @@
+{
+  "id": "2e4eaeca68643ef2",
+  "name": "lem-topology-orientable-top-cohomology",
+  "source": "imports validated registry lemma proofs/lem-topology-orientable-top-cohomology — Top cohomology of a closed orientable manifold: if M is a connected compact orientable d-manifold without boundary, then H^d(M;R) != 0.",
+  "content_hash": "7391f19987ea01ec05937e811c58f473a1961510ecd88e5364308190260d583a",
+  "created": "2026-07-30T11:44:46.592666471Z",
+  "notes": ""
+}

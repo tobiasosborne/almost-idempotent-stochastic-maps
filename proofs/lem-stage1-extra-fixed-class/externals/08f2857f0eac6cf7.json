@@ -1,0 +1,8 @@
+{
+  "id": "08f2857f0eac6cf7",
+  "name": "lem-stage1-quotient-manifold-package",
+  "source": "imports validated registry lemma proofs/lem-stage1-quotient-manifold-package — There is a universal e_quot^r \u003e 0 such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0 \u003c= epsilon_r \u003c= e_quot^r and 1 \u003c N = dim_C calX \u003c infinity, breve-calU = calU_e/U(1) is a connected compact orientable smooth manifold without boundary of real dimension N - 1.",
+  "content_hash": "b81f325f99a475afcce4c8da5cd48bdc3de6b42601c7913c6e7c5eda50d1a8ee",
+  "created": "2026-07-30T11:44:46.563495859Z",
+  "notes": ""
+}

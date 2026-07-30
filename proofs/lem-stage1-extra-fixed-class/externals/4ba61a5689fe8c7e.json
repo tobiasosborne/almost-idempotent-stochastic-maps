@@ -1,0 +1,8 @@
+{
+  "id": "4ba61a5689fe8c7e",
+  "name": "lem-stage1-quotient-finite-cw",
+  "source": "imports validated registry lemma proofs/lem-stage1-quotient-finite-cw — For every finite-dimensional exact-unit epsilon_r-C*-algebra, if breve-calU = calU_e/U(1) is a compact smooth manifold without boundary, then breve-calU is homeomorphic to a finite simplicial complex and hence has finite CW type.",
+  "content_hash": "be25f6ae2565e92d148cbd1b9fbc8be76fcc472632ed83a295f2043e28fcbad2",
+  "created": "2026-07-30T11:44:46.568304526Z",
+  "notes": ""
+}

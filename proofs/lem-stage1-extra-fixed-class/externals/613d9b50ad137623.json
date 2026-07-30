@@ -1,0 +1,8 @@
+{
+  "id": "613d9b50ad137623",
+  "name": "lem-stage1-quotient-inversion-index-data",
+  "source": "imports validated registry lemma proofs/lem-stage1-quotient-inversion-index-data — There is a universal e_idx^r \u003e 0 such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0 \u003c= epsilon_r \u003c= e_idx^r and 1 \u003c N = dim_C calX \u003c infinity, the scalar class breve-e = [J] is an isolated fixed point of the smooth breve-sigma, the vertical line iR*J is D-sigma_J-invariant, ||D-breve-sigma_{breve-e} + I|| \u003c 1 in the quotient norm, and det(I - D-breve-sigma_{breve-e}) \u003e 0, so its local index is +1; more precisely, there is a quotient neighborhood calN of [J] such that if [U] in calN is fixed, choose a representative U_0 close to J and c in U(1) with sigma(U_0) = c*U_0, choose a in U(1) with a^2 = c, and use sigma(a*U_0) = conj(a)*sigma(U_0) = a*U_0: the two actual fixed lifts +-a*U_0 lie in the J- and -J-isolation balls, hence equal J and -J, so [U] = [J].",
+  "content_hash": "0540ea8e37add815a3c32d8a81cc7132c2c2eb8c02f6367b3d22b737743e71a8",
+  "created": "2026-07-30T11:44:46.597900018Z",
+  "notes": ""
+}

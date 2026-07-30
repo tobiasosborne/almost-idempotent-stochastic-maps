@@ -1,0 +1,8 @@
+{
+  "id": "8077fb6d94d48443",
+  "name": "lem-stage1-left-inversion-trace",
+  "source": "imports validated registry lemma proofs/lem-stage1-left-inversion-trace — Left-inversion trace over the real field: if M is a connected CW complex with dim_reals H^*(M;reals) \u003c infinity, (M,mu,e) is an H-space, and sigma:M-\u003eM is a left inversion, then Tr(sigma^{*k}:H^k(M;reals)-\u003eH^k(M;reals))=(-1)^k*dim_reals H^k(M;reals) for every k \u003e= 0.",
+  "content_hash": "980a0ad46c3a7f291ef1dcd0e8f37c0db92f64ab10555b24419d137497108cee",
+  "created": "2026-07-30T11:44:46.578061341Z",
+  "notes": ""
+}

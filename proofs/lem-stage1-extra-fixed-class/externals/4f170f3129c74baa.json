@@ -1,0 +1,8 @@
+{
+  "id": "4f170f3129c74baa",
+  "name": "lem-topology-lefschetz-hopf",
+  "source": "imports validated registry lemma proofs/lem-topology-lefschetz-hopf — Lefschetz-Hopf formula (maximal-simplex form): if f:X-\u003eX is a map of a finite polyhedron with a finite set of fixed points, each of which lies in a maximal simplex of X, then the Lefschetz number L(f) is the sum of the indices of all the fixed points of f.",
+  "content_hash": "bee4695c58fe0847a5b95c082132c324594367e634e5018092ac2dc01a0889a4",
+  "created": "2026-07-30T11:44:46.582856929Z",
+  "notes": ""
+}
