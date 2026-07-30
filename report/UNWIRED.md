@@ -20,6 +20,20 @@ are ignored by the parser (`load_unwired`). Two sections:
 
 ```
 # --- 2026-07-27 W80 step-1 F0 seam rows: af-VALIDATED and now anchored in report/sections/42_routef_f0_seam.tex (delisted 2026-07-27) ---
+# --- 2026-07-30 S1-ENDGAME ratified rows (DESIGN-S1-ENDGAME-v5, audit v5 LAND): pre-elevation; anchor into report on af validation ---
+lem-stage1-hspace-coproduct-tail
+lem-stage1-exterior-cohomology
+lem-stage1-left-inversion-associated-graded
+lem-stage1-left-inversion-trace
+lem-stage1-bound-quotient-left-inversion
+lem-stage1-bound-quotient-local-index
+lem-stage1-bound-inversion-isolation
+lem-stage1-bound-quotient-index-data
+lem-stage1-extra-fixed-class
+lem-stage1-fixed-unitary-projection-bridge
+lem-stage1-rectified-nontrivial-projection
+lem-stage1-original-complementary-pair
+lem-stage1-fresh-two-point-inclusion
 # --- 2026-07-26 GAP-EA discharge rows (aism-fbh8): pre-elevation; anchor into report on af validation ---
 lem-extcb-exact-target-correction
 lem-extcb-exact-target-approximation
