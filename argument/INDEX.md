@@ -222,7 +222,7 @@
 | `lem-stage1-approximate-group-laws` | lemma | stated | seeded | A | Quantitative approximate group laws: there exist universal C_grp, C_pol >= 1, ka… |
 | `lem-stage1-approximate-group-laws-transport` | lemma | proved | validated | A | Parameterized approximate-group transport: there exist C_grp^0, C_pol^0 >= 1 and… |
 | `lem-stage1-bound-inversion-isolation` | lemma | proved | validated | A | Parameterized same-map actual-isolation package: for every universal def-stage1-… |
-| `lem-stage1-bound-quotient-index-data` | lemma | stated | seeded | A | Parameterized complete quotient package: for every universal def-stage1-polar-wi… |
+| `lem-stage1-bound-quotient-index-data` | lemma | proved | validated | A | Parameterized complete quotient package: for every universal def-stage1-polar-wi… |
 | `lem-stage1-bound-quotient-left-inversion` | lemma | proved | validated | A | Parameterized bound quotient H-space package: for every universal def-stage1-pol… |
 | `lem-stage1-bound-quotient-local-index` | lemma | proved | validated | A | Parameterized same-map quotient local-index and ambient-chart package: for every… |
 | `lem-stage1-exact-unit-rectification` | lemma | proved | validated | A | Dimension-free exact-unit rectification: there are universal C_unit < infinity a… |

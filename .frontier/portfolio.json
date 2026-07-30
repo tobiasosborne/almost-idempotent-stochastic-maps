@@ -1069,6 +1069,18 @@
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-bound-inversion-isolation/ledger",
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-bound-inversion-isolation.md"
         ]
+      },
+      {
+        "name": "af-lem-stage1-bound-quotient-index-data",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-stage1-bound-quotient-index-data"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-bound-quotient-index-data/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-bound-quotient-index-data.md"
+        ]
       }
     ]
   },
