@@ -1,0 +1,8 @@
+{
+  "id": "241aab3236c8cb8f",
+  "name": "lem-maincb-improvement-one-step",
+  "source": "imports validated registry lemma proofs/lem-maincb-improvement-one-step — There are universal K_step \u003e= 1 and e_step \u003e 0 such that, if B is a finite-dimensional C*-algebra, A an extended epsilon-C*-algebra, and v:B-\u003eA an extended d-inclusion with d+epsilon \u003c= e_step, then one dagger-preserving level-one map v^+, with v_n^+ = I_n tensor v^+, satisfies sup_n ||v_n^+ - v_n|| \u003c= K_step*d and is an extended d^+-inclusion for d^+ \u003c= K_step*(d^2+epsilon).",
+  "content_hash": "f9d77a993704685a453d1b1c1597cad1502141cb6ff0533a3b1907557ba4441f",
+  "created": "2026-07-30T16:40:04.496329067Z",
+  "notes": ""
+}
