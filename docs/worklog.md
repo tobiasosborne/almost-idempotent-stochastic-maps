@@ -2038,3 +2038,44 @@ unblocker aism-2kyc; user still deciding — not filed as a bead).
 seeded with all deps T0; NOTHING in flight; check-all OK; all pushed. Resume point =
 HANDOFF item 5.1 (provision + launch C1). Codex spend: ~4 design/audit xhigh jobs + ~16
 orchestration runs' worth of routine prover/verifier jobs.
+
+## 2026-07-30 — session 38: S1-ENDGAME COMPLETE (T0 127 → 130); the G-S1 gate DISCHARGED
+
+Continuation session (user: "keep orchestrating until the full theorem is obtained").
+Executed the remaining three rows of the ratified 13-row S1-ENDGAME queue (bead
+aism-8dsp), strictly serial, tier routine, fresh verifier per node, the verified
+banking sequence each time:
+
+- **C1 `lem-stage1-rectified-nontrivial-projection` (134th rigorous result, T0→128).**
+  7-node tree, first-pass, ZERO challenges (budget 6/3/10). Route: rectify via the
+  W-free provider, apply the C0 bridge exactly once, transfer projection defect +
+  both nonvanishing bounds to the original product/unit.
+- **C2 `lem-stage1-original-complementary-pair` (135th, T0→129).** 9 nodes ≤ cap 10.
+  Run 1 hit max-rounds 2 with one OPEN challenge: node 1.3 equated the original unit
+  with an exact two-sided unit beyond def-extended-epsilon-cstar-algebra. Resumed
+  --phase all per the HANDOFF item-6 rule; prover factored 1.3 → 1.3.1/1.3.2 and
+  enlarged C_np to absorb the general-unit O(epsilon_X) complement error; 9/9 accepted.
+- **C3 `lem-stage1-fresh-two-point-inclusion` (136th, T0→130).** 12 nodes ≤ cap 14.
+  The ONE Kitaev GT external `GT-kitaev-prop-delta-hominc`
+  (approximate_algebras.tex:1194-1196) registered under the FINDINGS locus-trap rule
+  (\n-only extraction, programmatic quote-at-locus assertion PASS, unique). Run 1 hit
+  max-rounds with two challenges — the GT external's independent delta-smallness
+  hypothesis not established (repaired by leaf 1.7.1: e_up <= delta_max/(4*max{C_np,1}),
+  giving delta_n <= delta_max and 2delta_n < eta = 1/4) and 1.8's coefficient resting
+  on then-pending 1.7 (repaired by leaf 1.8.1: explicit universal K, hard dep).
+  Resumed --phase all; 12/12 accepted, taint clean.
+
+**G-S1 GATE DISCHARGED** — all three Stage-1 split producers T0. All 13 rows of
+DESIGN-S1-ENDGAME-v5 banked across sessions 37–38 (124th–136th rigorous results,
+T0 117 → 130). Sketch **v40** written (Rule-9 fold-in of all 13 banks),
+CURRENT pointer regenerated, aism-8dsp CLOSED.
+
+Also: committed the stale regenerated DAG-atlas stat left from session-37 close;
+CLOSED the stale audit-allegation bug bead aism-e1qs (already fully resolved in
+sessions 34–35: adjudicated DEFECTIVE → retracted → re-validated in W98 rows 4/8 on
+the typed spine; bead left open by oversight); broadened aism-9kmt (report sync) to
+banks 120–136.
+
+**The critical path is now ONE user decision:** aism-dm8n — the MAIN P0 definition
+gate (four datum-only defs, Rule 7) before M01–M18, then M19-S1..M28. Escalated at
+session close. check-all OK; all work committed and pushed; nothing in flight.
