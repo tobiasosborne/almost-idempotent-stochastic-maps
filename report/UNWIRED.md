@@ -20,6 +20,37 @@ are ignored by the parser (`load_unwired`). Two sections:
 
 ```
 # --- 2026-07-27 W80 step-1 F0 seam rows: af-VALIDATED and now anchored in report/sections/42_routef_f0_seam.tex (delisted 2026-07-27) ---
+# --- 2026-07-30 MAIN campaign rows (DESIGN-MAIN-STRUCTURE-v5, user-ratified 2026-07-30): pre-elevation; anchor into report on af validation ---
+lem-maincb-improvement-one-step
+lem-maincb-improvement-iteration
+lem-maincb-direct-corner-envelope
+lem-maincb-direct-sum-inclusion-merge
+lem-maincb-full-corner-identification
+lem-maincb-nested-corner-comparison
+lem-maincb-nested-corner-dimension-transport
+lem-maincb-outer-compression-transfer
+lem-maincb-corner-equivalence
+lem-maincb-cross-union-zero-corners
+lem-maincb-cross-class-merging-datum
+lem-maincb-stage2-extcb-datum
+lem-maincb-initial-raw-inclusion
+lem-maincb-stage1-raw-refinement
+lem-maincb-stage2-raw-extension
+lem-maincb-stage3-raw-merge
+lem-maincb-reset-constant-ledger
+lem-maincb-stage1-call-envelope
+lem-maincb-stage2-call-envelope
+lem-maincb-stage3-call-envelope
+lem-maincb-reset-invariant-preservation
+lem-maincb-structural-domain-ledger
+lem-maincb-initial-reset-inclusion
+lem-maincb-maximal-reset-selection
+lem-maincb-stage1-strict-refinement
+lem-maincb-stage1-maximality
+lem-maincb-one-class-extension
+lem-maincb-binary-block-merge
+lem-maincb-stage3-finite-recombination
+lem-maincb-structural-assembly
 # --- 2026-07-30 S1-ENDGAME ratified rows (DESIGN-S1-ENDGAME-v5, audit v5 LAND): pre-elevation; anchor into report on af validation ---
 lem-stage1-hspace-coproduct-tail
 lem-stage1-exterior-cohomology
