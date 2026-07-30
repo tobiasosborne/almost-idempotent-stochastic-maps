@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-stage2-extcb-datum/export.md",
+  "oracle": "af-lem-maincb-stage2-extcb-datum",
+  "result": "pass",
+  "claim_hash": "1ae3097d7b17969e5ca9f4b3b97b26ce3f8d4ebb7fff13741be0fff07068b2b9",
+  "oracle_digest": "f1eaf834179fd9f6d2214fdc45e1287d856a96aac7778cd78ca7876532f181f4",
+  "inputs_hash": "fae653bf4a3b4111cf03f7953d6d82f55065813c5c80204ac1c2cab35e118d7b",
+  "ts": "2026-07-30T19:15:53.165Z"
+}
