@@ -44,7 +44,7 @@ Dropped (outside the closure; canonical, just not reproduced here):
 | # | id | label | kind | status | statement | source check | source | locus | sha256 | registry uses | in report |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 19 | `def-column-hilbert-corner` | `def:column-hilbert-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1123-1128,1546-1550` | `e7eb512a2ec2438d` | 2 | 2 |
-| 20 | `def-compressed-corner` | `def:compressed-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1054-1066,1077-1082` | `e7eb512a2ec2438d` | 25 | 17 |
+| 20 | `def-compressed-corner` | `def:compressed-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1054-1066,1077-1082` | `e7eb512a2ec2438d` | 26 | 17 |
 | 21 | `def-delta-projection` | `def:delta-projection` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:917-920,926-929` | `e7eb512a2ec2438d` | 30 | 15 |
 | 22 | `def-epsilon-cstar-algebra` | `def:epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:407-440` | `e7eb512a2ec2438d` | 39 | 27 |
 | 23 | `def-extended-epsilon-cstar-algebra` | `def:extended-epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1477-1479` | `e7eb512a2ec2438d` | 50 | 18 |
