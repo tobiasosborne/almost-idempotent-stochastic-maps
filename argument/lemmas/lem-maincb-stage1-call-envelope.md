@@ -3,7 +3,7 @@ id: lem-maincb-stage1-call-envelope
 kind: lemma
 contract: After the Stage-1 producer gate, there are universal K_1 >= 1 and e_call_1 > 0, with K_1*e_call_1 <= e_1 and all Stage-1-producer/old-side prerequisite thresholds absorbed into e_call_1, such that, if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= e_call_1, w:C^m->A is a supplied extended c_0^cb*epsilon-inclusion (including its unit clause), and some P_j = w(e_j) has dim S_{P_j} > 1, then the three Stage-1 producers and the literal old-side compression furnish an explicit Stage-1 raw-call datum satisfying lem-maincb-stage1-raw-refinement with base scale t_1 = K_1*epsilon.
 defs: def-maincb-reset-state; def-maincb-raw-call; def-maincb-partition-state; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
-deps: lem-maincb-direct-corner-envelope; lem-compcb-single-compression-transfer; lem-stage1-rectified-nontrivial-projection; lem-stage1-original-complementary-pair; lem-stage1-fresh-two-point-inclusion; lem-maincb-stage1-raw-refinement
+deps: lem-maincb-direct-corner-envelope; lem-compcb-single-compression-transfer; lem-stage1-rectified-nontrivial-projection; lem-stage1-original-complementary-pair; lem-stage1-fresh-two-point-inclusion; lem-maincb-stage1-raw-refinement; lem-maincb-error-improvement
 status: stated
 af: seeded
 workspace: proofs/lem-maincb-stage1-call-envelope
