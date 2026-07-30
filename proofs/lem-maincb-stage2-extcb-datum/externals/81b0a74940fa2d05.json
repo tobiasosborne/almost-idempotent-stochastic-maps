@@ -1,8 +1,8 @@
 {
-  "id": "97f388c030dcf727",
+  "id": "81b0a74940fa2d05",
   "name": "lem-extcb-corner-dimension-additivity",
   "source": "imports validated registry lemma proofs/lem-extcb-corner-dimension-additivity — Level-one corner-dimension additivity: for two finite-dimensional commutative C*-algebras with projection bases and non-unital sufficiently accurate inclusions v,w, the compressed corner S_{v(I),w(I)} is linearly bijective to the direct sum over j,k of S_{v(Pi_j),w(Sigma_k)}.",
   "content_hash": "02565b29a978eae41f9bc428a4a205ef5b92058207a8806111d887236b3acb50",
-  "created": "2026-07-30T17:52:21.138936349Z",
+  "created": "2026-07-30T18:25:50.41176578Z",
   "notes": ""
 }
