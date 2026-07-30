@@ -2,8 +2,8 @@
 id: lem-maincb-cross-union-zero-corners
 kind: lemma
 contract: There is a universal e_zero > 0 such that, if A is a finite-dimensional extended epsilon_A-C*-algebra with epsilon_A <= t, a supplied MAIN partition state has w:C^m->A a non-unital extended t-inclusion with one-dimensional images P_j, U,V are disjoint nonempty unions sharing no equivalence class, R = U union V, and t <= e_zero, then dim S^A_{P_U,P_V} = dim S^A_{P_V,P_U} = 0 and dim S^{A_R}_{P_U^R,P_V^R} = dim S^{A_R}_{P_V^R,P_U^R} = 0.
-defs: def-maincb-partition-state; def-compressed-corner; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
-deps: lem-maincb-nested-corner-dimension-transport; lem-maincb-corner-equivalence; lem-extcb-corner-dimension-additivity
+defs: def-maincb-partition-state; def-compressed-corner; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion; def-delta-projection; def-one-dimensional-delta-projection
+deps: lem-maincb-nested-corner-dimension-transport; lem-maincb-corner-equivalence; lem-extcb-corner-dimension-additivity; lem-extcb-one-dimensional-corner-dimension
 status: stated
 af: seeded
 workspace: proofs/lem-maincb-cross-union-zero-corners
