@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-bound-quotient-left-inversion/export.md",
+  "oracle": "af-lem-stage1-bound-quotient-left-inversion",
+  "result": "pass",
+  "claim_hash": "613d9ff3c0cb5726ecce34f9d571d604026ceda63a5f235e7ad3b7668c094fdd",
+  "oracle_digest": "7264d13dd1a7a8cf8d668c85b039623e4039d13607c95eabb4d3124c4729ff77",
+  "inputs_hash": "889574a73430f4c8f4da5bcf07589b0ae48dd07110b21d6dc5ca1302d9715b55",
+  "ts": "2026-07-30T10:27:36.151Z"
+}
