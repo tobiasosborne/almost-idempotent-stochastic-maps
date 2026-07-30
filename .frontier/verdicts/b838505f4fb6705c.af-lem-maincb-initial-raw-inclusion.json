@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-initial-raw-inclusion/export.md",
+  "oracle": "af-lem-maincb-initial-raw-inclusion",
+  "result": "pass",
+  "claim_hash": "926a48a596712eb2d980715ffb2ae69c5eeb94ffaff6a66cd193094c5d137889",
+  "oracle_digest": "961ab39c94550279b02bd189875be54983e080a6543ae9dddec68f8f73e4139b",
+  "inputs_hash": "c5543755a5e3b8dfaa54b7364e3fd9635544c21ab741dc78e34a88bdd5d45ad2",
+  "ts": "2026-07-30T15:39:16.815Z"
+}

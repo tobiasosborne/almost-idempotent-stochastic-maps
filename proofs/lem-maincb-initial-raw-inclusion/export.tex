@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{There are universal D\_0 < infinity and e\_0 > 0 such that,...}
+\step{1} There are universal D\_0 < infinity and e\_0 > 0 such that, in every finite-dimensional extended epsilon-C*-algebra with epsilon <= t <= e\_0, the scalar map lambda $|-\rangle$ lambda*I\_A is an extended D\_0*t-inclusion; if dim A = 1, it is bijective. \steptag{validated} \\[6pt]
+\step{1.1} Fix D\_0=2 and e\_0=1/2. For every n>=1, every scalar matrix X in M\_n, and every a in A, the operator-space axioms imply the exact scalar cross-norm identity ||X tensor a||\_n=||X|| ||a||. \steptag{validated} \\[6pt]
+\step{1.1.1} The operator-space rectangular-matrix axiom gives ||X tensor a||\_n=||X(I\_n tensor a)I\_n||\_n <= ||X|| ||I\_n tensor a||\_n=||X|| ||a||, where the last equality follows by repeated use of the block-diagonal axiom. \steptag{validated} \\[4pt]
+\step{1.1.2} Choose unit vectors xi,eta with |eta\textasciicircum{}* X xi|=||X||. Rectangular compression and the operator-space axiom give ||X tensor a||\_n >= ||eta\textasciicircum{}*(X tensor a)xi||\_1=|(eta\textasciicircum{}*Xxi)| ||a||=||X|| ||a||. \steptag{validated} \\[4pt]
+\step{1.2} For v(lambda)=lambda I\_A and v\_n=1\_\{M\_n\} tensor v, one has v\_n(X)=X tensor I\_A; v\_n is linear, dagger-preserving and unital, while ||v\_n(X)v\_n(Y)-v\_n(XY)||\_n <= 2 epsilon ||X|| ||Y|| for all X,Y in M\_n when epsilon<=1/2. \steptag{archived} \\[6pt]
+\step{1.2.1} Conditional repair: suppose, in addition to the registered operator-space data, that A has a bilinear multiplication and a distinguished element I\_A such that for every n and X,Y in M\_n the amplification v\_n(X)=X tensor I\_A is linear, (X tensor I\_A)(Y tensor I\_A)=XY tensor I\_A\textasciicircum{}2, (X tensor I\_A)\textasciicircum{}dagger=X\textasciicircum{}* tensor I\_A (in particular I\_A\textasciicircum{}dagger=I\_A), and I\_n tensor I\_A is the designated target unit; suppose also ||I\_A\textasciicircum{}2-I\_A||<=epsilon||I\_A||, ||I\_A||<=1+epsilon, and ||XY||<=||X||||Y||. Then, once node 1.1 is validated, v\_n is linear, dagger-preserving and unital and ||v\_n(X)v\_n(Y)-v\_n(XY)||\_n<=2epsilon||X||||Y|| for epsilon<=1/2. These added structural hypotheses are not consequences of the three definitions currently registered in this workspace. \steptag{archived} \\[6pt]
+\step{1.2.1.1} \textsc{assume}: For the conditional implication, assume exactly the additional structural hypotheses displayed in node 1.2.1: the bilinear multiplication, distinguished I\_A, amplified multiplication and involution identities, designated target-unit statement, approximate-unit estimate, upper norm bound, and matrix submultiplicativity. No one of these is inferred from def-operator-space, def-maincb-raw-call, or def-extended-delta-inclusion. \steptag{archived} \\[4pt]
+\step{1.2.1.2} Under those hypotheses, v\_n(X)v\_n(Y)-v\_n(XY)=XY tensor (I\_A\textasciicircum{}2-I\_A), v\_n(X\textasciicircum{}*)=v\_n(X)\textasciicircum{}dagger, and v\_n(I\_n)=I\_n tensor I\_A is the designated target unit; linearity is one of the displayed hypotheses. \steptag{archived} \\[4pt]
+\step{1.2.1.3} Using node 1.1 only after it is validated, ||XY tensor (I\_A\textasciicircum{}2-I\_A)||\_n=||XY|| ||I\_A\textasciicircum{}2-I\_A||<=||X||||Y|| epsilon||I\_A||<=epsilon(1+epsilon)||X||||Y||<=2epsilon||X||||Y|| when epsilon<=1/2. Together with node 1.2.1.2 this proves the conditional conclusion. It does not prove that an extended epsilon-C*-algebra satisfies the added hypotheses; that missing implication requires definitions not registered in this workspace. \steptag{archived} \\[4pt]
+\step{1.3} Conditional repair only: if the scalar cross-norm identity, linearity, dagger preservation, unitality, product defect <=2epsilon||X||||Y||, and the unit bounds 1-epsilon<=||I\_A||<=1+epsilon are available, then for epsilon<=t<=1/2 every amplification v\_n is a 2t-homomorphism and satisfies (1-2t)||X||<=||v\_n(X)||\_n<=(1+2t)||X||; hence v is an extended 2t-inclusion by def-extended-delta-inclusion. The currently registered definitions do not establish all of these prerequisites, so this conditional statement does not prove the original unconditional consequence. \steptag{archived} \\[6pt]
+\step{1.3.1} Assume nodes 1.1, 1.2, and 1.2.1 are validated and, additionally, assume the missing lower unit bound 1-epsilon<=||I\_A|| (none of the registered definitions supplies this bound). Then node 1.1 gives ||v\_n(X)||\_n=||X||||I\_A||, while the upper bound ||I\_A||<=1+epsilon and epsilon<=t imply (1-2t)||X||<=||v\_n(X)||\_n<=(1+2t)||X||. Node 1.2 gives linearity, dagger preservation, unitality, and product defect <=2epsilon||X||||Y||<=2t||X||||Y||. Thus the conditional conclusion in node 1.3 follows. This explicitly does not establish the original unconditional claim without the missing extended-algebra axioms and lower unit bound. \steptag{archived} \\[4pt]
+\step{1.4} After shrinking the universal radius to e\_0=1/4, the extended 2t-inclusion established in node 1.3 implies ||I\_A||=||v(1)|| >= (1-2t)||1|| >= 1/2. Hence I\_A is nonzero; if dim\_C A=1, the linear map v:C->A, lambda$|-\rangle$lambda I\_A, is bijective. \steptag{archived} \\[6pt]
+\step{1.4.1} Assume node 1.3 and take e\_0=1/4 (which is allowed because the root asserts existence of a positive universal radius). Since v is then an extended 2t-inclusion, def-extended-delta-inclusion gives at amplification n=1 the lower norm bound ||v(lambda)|| >= (1-2t)||lambda|| for every lambda in C. Setting lambda=1 and using t<=e\_0=1/4 yields ||I\_A||=||v(1)|| >= 1-2t >= 1/2, so I\_A is nonzero. If dim\_C A=1, the image of v contains the nonzero vector I\_A and therefore equals A; also v(lambda)=0 implies |lambda|*||I\_A||=0, hence lambda=0. Thus v is both surjective and injective, hence bijective. \steptag{archived} \\[4pt]
+\step{1.5} Let v(lambda)=lambda I\_A and v\_n=1\_\{M\_n\} tensor v. By def-extended-epsilon-cstar-algebra, U\_n=I\_n tensor I\_A is the designated unit of the epsilon-C*-algebra M\_n tensor A, so v\_n is linear, v\_n(I\_n)=U\_n, and v\_n(X\textasciicircum{}*)=v\_n(X)\textasciicircum{}dagger because I\_A\textasciicircum{}dagger=I\_A. Moreover v\_n(X)v\_n(Y)-v\_n(XY)=v\_n(XY)U\_n-v\_n(XY); the defining approximate right-unit axiom at level n, node 1.1, ||XY||<=||X||||Y|| in M\_n, and ||I\_A||<=1+epsilon give ||v\_n(X)v\_n(Y)-v\_n(XY)||\_n<=epsilon||v\_n(XY)||\_n=epsilon||XY||||I\_A||<=epsilon(1+epsilon)||X||||Y||<=2epsilon||X||||Y|| for epsilon<=1/2. Thus every v\_n is a 2epsilon-homomorphism. \steptag{validated} \\[4pt]
+\step{1.6} Take D\_0=2 and e\_0=1/4. For epsilon<=t<=e\_0, node 1.1 and the defining unit-norm bound | ||I\_A||-1 |<=epsilon in the epsilon-C*-algebra A give (1-epsilon)||X||<=||v\_n(X)||\_n=||X||||I\_A||<=(1+epsilon)||X||, hence (1-2t)||X||<=||v\_n(X)||\_n<=(1+2t)||X||. The preceding homomorphism node gives 2epsilon-homomorphism defect at most 2t at every n. Therefore v is an extended 2t-inclusion by def-extended-delta-inclusion. \steptag{validated} \\[4pt]
+\step{1.7} If dim\_C A=1, the extended 2t-inclusion from the preceding node has at level one ||I\_A||=||v(1)||>=(1-2t)||1||>=1/2 because t<=e\_0=1/4. Hence I\_A is nonzero. The linear map v:C->A is injective since v(lambda)=0 implies |lambda| ||I\_A||=0, and it is surjective because its image contains the nonzero vector I\_A in the one-dimensional complex space A. Thus v is bijective. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
