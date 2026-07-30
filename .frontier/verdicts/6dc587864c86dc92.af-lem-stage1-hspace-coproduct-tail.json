@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-hspace-coproduct-tail/export.md",
+  "oracle": "af-lem-stage1-hspace-coproduct-tail",
+  "result": "pass",
+  "claim_hash": "74c50090a942995450adf197d2142de2d01d5003a7ab948ce2279421e58cc168",
+  "oracle_digest": "cb6fe0db34f9cec4474aabd53c072dbaeb4d326c4c1bbf26b76fe8b841f12e07",
+  "inputs_hash": "ac84080cc7f9728032ca5c8a68f5512d56da9a1887d3a1c1c1d2125e152291a6",
+  "ts": "2026-07-30T09:24:38.504Z"
+}

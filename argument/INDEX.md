@@ -235,7 +235,7 @@
 | `lem-stage1-fresh-two-point-inclusion` | lemma | stated | seeded | A | There are universal C_pair<infinity and e_pair>0 such that every finite-dimensio… |
 | `lem-stage1-group-closeness` | lemma | proved | validated | A | Group-input polar closeness: there exist universal C_grp, C_pol >= 1, kappa_pol … |
 | `lem-stage1-group-domain-membership` | lemma | proved | validated | A | Group-input polar-domain membership: there exist universal C_grp, C_pol >= 1, ka… |
-| `lem-stage1-hspace-coproduct-tail` | lemma | stated | seeded | A | H-space coproduct-tail package over the real field: if M is a connected CW compl… |
+| `lem-stage1-hspace-coproduct-tail` | lemma | proved | validated | A | H-space coproduct-tail package over the real field: if M is a connected CW compl… |
 | `lem-stage1-inversion-derivative-control` | lemma | proved | validated | A | Typed inversion derivative with chart retention: there exist universal C_der, C_… |
 | `lem-stage1-inversion-derivative-transport` | lemma | proved | validated | A | Parameterized inversion-derivative transport: there exist C_der^0, C_ch^0, C_pol… |
 | `lem-stage1-left-inversion-associated-graded` | lemma | stated | seeded | A | Associated-graded action of a left inversion over the real field: if M is a conn… |

@@ -4,18 +4,21 @@ kind: lemma
 contract: H-space coproduct-tail package over the real field: if M is a connected CW complex with dim_reals H^*(M;reals) < infinity and (M,mu,e) is an H-space, set A=H^*(M;reals), A^+=direct_sum_{k>0} A^k, and Delta=(cross product)^(-1) o mu^*; then A is a finite-dimensional graded-commutative associative unital algebra with A^0=reals*1, Delta:A->A tensor_reals A is a degree-preserving unital algebra homomorphism with Delta(1)=1 tensor 1, and for every homogeneous a in A^+ there exist a finite set J_a and homogeneous a'_j,a''_j in A^+ for j in J_a such that Delta(a)=a tensor 1+1 tensor a+sum_{j in J_a} a'_j tensor a''_j.
 defs: def-h-space-left-inversion
 deps: lem-topology-kunneth-cross-product
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-stage1-hspace-coproduct-tail
 provenance: DESIGN-S1-ENDGAME-v5.md sect-2 (landed verbatim); AUDIT-S1-ENDGAME-v5.md VERDICT LAND (zero corrections); user-ratified 2026-07-30
 owner: A
 ---
 
-**Status.** `stated` — contract transcribed VERBATIM from the audited
-`DESIGN-S1-ENDGAME-v5.md` sect-2 (hostile audit v5 verdict LAND, zero
-corrections, after a 5-round design cycle; user ratified 2026-07-30).
-Elevation position 1/13 in the serial order of DESIGN-S1-ENDGAME-v5.md
-sect-3. NOT proved in-repo; af elevation pending.
+**Status.** af-VALIDATED in-repo (2026-07-30): 14-node tree, root
+`validated`, taint clean 14/14 (`proofs/lem-stage1-hspace-coproduct-tail/export.md`;
+oracle `af-lem-stage1-hspace-coproduct-tail` pass; run tier routine,
+14 nodes <= cap 15, design budget 10/4/15; one prover repair — the
+functoriality assumption at 1.3.1 replaced by a direct
+Alexander-Whitney cochain-level proof under challenge). Contract
+transcribed VERBATIM from the audited `DESIGN-S1-ENDGAME-v5.md` sect-2
+(audit v5 LAND; user ratified 2026-07-30). Elevation position 1/13.
 
 **Build budget (BINDING on the af tree).** Design target/rounds/hard-cap:
 10 / 4 / 15. The per-node skeleton is DESIGN-S1-ENDGAME-v5.md sect-4

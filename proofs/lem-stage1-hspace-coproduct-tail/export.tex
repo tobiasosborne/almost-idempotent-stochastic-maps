@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{H-space coproduct-tail package over the real field: if M ...}
+\step{1} H-space coproduct-tail package over the real field: if M is a connected CW complex with dim\_reals H\textasciicircum{}*(M;reals) < infinity and (M,mu,e) is an H-space, set A=H\textasciicircum{}*(M;reals), A\textasciicircum{}+=direct\_sum\_\{k>0\} A\textasciicircum{}k, and Delta=(cross product)\textasciicircum{}(-1) o mu\textasciicircum{}*; then A is a finite-dimensional graded-commutative associative unital algebra with A\textasciicircum{}0=reals*1, Delta:A->A tensor\_reals A is a degree-preserving unital algebra homomorphism with Delta(1)=1 tensor 1, and for every homogeneous a in A\textasciicircum{}+ there exist a finite set J\_a and homogeneous a'\_j,a''\_j in A\textasciicircum{}+ for j in J\_a such that Delta(a)=a tensor 1+1 tensor a+sum\_\{j in J\_a\} a'\_j tensor a''\_j. \steptag{validated} \\[6pt]
+\step{1.1} Let M be a connected CW complex with finite-dimensional total real cohomology and let A=H\textasciicircum{}*(M;reals). Then the ordinary cup-product makes A a finite-dimensional graded-commutative associative unital real algebra, and connectedness gives A\textasciicircum{}0=H\textasciicircum{}0(M;reals)=reals*1. \steptag{validated} \\[4pt]
+\step{1.2} For such M, the cohomological cross product kappa:A tensor\_reals A -> H\textasciicircum{}*(M times M;reals) is a degree-preserving isomorphism of unital graded rings, by the validated external lem-topology-kunneth-cross-product after checking its hypotheses. \steptag{validated} \\[6pt]
+\step{1.2.1} Since the total graded real vector space A=direct\_sum\_\{q>=0\}H\textasciicircum{}q(M;reals) is finite-dimensional, each H\textasciicircum{}q(M;reals) is finite-dimensional and hence a finitely generated free real module; thus M satisfies the Y=M coefficient hypothesis of lem-topology-kunneth-cross-product for X=M. \steptag{validated} \\[4pt]
+\step{1.2.2} Applying lem-topology-kunneth-cross-product with R=reals and X=Y=M, the cross product kappa:A tensor\_reals A -> H\textasciicircum{}*(M times M;reals) is a ring isomorphism; the defining degree rule H\textasciicircum{}p tensor H\textasciicircum{}q -> H\textasciicircum{}(p+q) and 1 cross 1=1 make it degree-preserving and unital, so its inverse is also a degree-preserving unital ring isomorphism. \steptag{validated} \\[4pt]
+\step{1.3} For the H-space multiplication mu from def-h-space-left-inversion and Delta=kappa\textasciicircum{}(-1) o mu\textasciicircum{}*, Delta:A->A tensor\_reals A is a degree-preserving unital algebra homomorphism and Delta(1)=1 tensor 1. \steptag{validated} \\[6pt]
+\step{1.3.1} For every continuous map, singular-cohomology pullback preserves degree, cup products, and the unit; hence mu\textasciicircum{}*:H\textasciicircum{}*(M;reals)->H\textasciicircum{}*(M times M;reals) is a degree-preserving unital algebra homomorphism, and composing it with the degree-preserving unital ring isomorphism kappa\textasciicircum{}(-1) gives the same properties for Delta. \steptag{validated} \\[6pt]
+\step{1.3.1.1} Let f:X->Y be continuous. For each singular n-simplex sigma:Delta\textasciicircum{}n->X define f\_\#(sigma)=f o sigma and extend linearly. Because restricting f o sigma to any face equals f composed with the corresponding face restriction of sigma, the alternating face formula gives boundary o f\_\# = f\_\# o boundary. For an n-cochain phi on Y define f\textasciicircum{}\#phi=phi o f\_\#. Dualizing the preceding identity gives coboundary o f\textasciicircum{}\# = f\textasciicircum{}\# o coboundary. Thus f\textasciicircum{}\# preserves cochain degree, carries cocycles to cocycles and coboundaries to coboundaries, and induces a degree-preserving map f\textasciicircum{}*:H\textasciicircum{}n(Y;reals)->H\textasciicircum{}n(X;reals) in every degree. \steptag{validated} \\[4pt]
+\step{1.3.1.2} For a singular p-cochain alpha and q-cochain beta, the Alexander-Whitney cup formula on a singular (p+q)-simplex sigma is (alpha cup beta)(sigma)=alpha(sigma restricted to the front p-face [v\_0,...,v\_p]) beta(sigma restricted to the back q-face [v\_p,...,v\_(p+q)]). Since composition with f commutes with both face restrictions, direct substitution yields f\textasciicircum{}\#(alpha cup beta)=f\textasciicircum{}\#alpha cup f\textasciicircum{}\#beta. The degree-zero unit cochain is the function taking every singular 0-simplex to 1, so f\textasciicircum{}\#1=1. These identities descend through the cochain map of the preceding child, proving that f\textasciicircum{}* preserves cup products and the unit. Apply this to f=mu:M times M->M; then mu\textasciicircum{}* is a degree-preserving unital algebra homomorphism. By validated node 1.2.2, kappa\textasciicircum{}(-1) is a degree-preserving unital ring isomorphism, so Delta=kappa\textasciicircum{}(-1) o mu\textasciicircum{}* is a degree-preserving unital algebra homomorphism. \steptag{validated} \\[4pt]
+\step{1.3.2} Because mu\textasciicircum{}*(1)=1 in H\textasciicircum{}0(M times M;reals) and kappa(1 tensor 1)=1, one has Delta(1)=kappa\textasciicircum{}(-1)(mu\textasciicircum{}*(1))=1 tensor 1. \steptag{validated} \\[4pt]
+\step{1.4} For every homogeneous a in A\textasciicircum{}+=direct\_sum\_\{k>0\}A\textasciicircum{}k, Delta(a) has the form a tensor 1+1 tensor a plus a finite sum of pure tensors whose two factors are homogeneous of positive degree. \steptag{validated} \\[6pt]
+\step{1.4.1} Let epsilon=e\textasciicircum{}*:A->H\textasciicircum{}*(\{e\};reals)=reals. For i\_R:M->M times M, i\_R(x)=(x,e), the right-unit homotopy in def-h-space-left-inversion gives mu o i\_R homotopic to id\_M. Homotopy invariance and naturality give i\_R\textasciicircum{}*mu\textasciicircum{}*=id\_A, while i\_R\textasciicircum{}*kappa(x tensor y)=x cup e\textasciicircum{}*(y); therefore (id tensor epsilon) o Delta=id\_A. \steptag{validated} \\[4pt]
+\step{1.4.2} For i\_L:M->M times M, i\_L(x)=(e,x), the left-unit homotopy in def-h-space-left-inversion gives mu o i\_L homotopic to id\_M. Hence i\_L\textasciicircum{}*mu\textasciicircum{}*=id\_A and i\_L\textasciicircum{}*kappa(x tensor y)=e\textasciicircum{}*(x) cup y, so (epsilon tensor id) o Delta=id\_A. \steptag{validated} \\[4pt]
+\step{1.4.3} If a is homogeneous of degree n>0, degree preservation puts Delta(a) in direct\_sum\_\{p+q=n\} A\textasciicircum{}p tensor A\textasciicircum{}q. Since M is connected, A\textasciicircum{}0=reals*1 and epsilon is the identity on A\textasciicircum{}0 and zero on every A\textasciicircum{}k for k>0; the two edge identities therefore force the (n,0) component to be a tensor 1 and the (0,n) component to be 1 tensor a. The remainder lies in the finite direct sum over p,q>0 with p+q=n, and each element of each algebraic tensor product A\textasciicircum{}p tensor A\textasciicircum{}q is a finite sum of pure tensors of homogeneous factors. Taking the finite union of these expansions gives a finite set J\_a and homogeneous a'\_j,a''\_j in A\textasciicircum{}+ with Delta(a)=a tensor 1+1 tensor a+sum\_\{j in J\_a\}a'\_j tensor a''\_j. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
