@@ -1,0 +1,8 @@
+{
+  "id": "8fff34cd15816b59",
+  "name": "lem-extcb-one-dimensional-corner-dimension",
+  "source": "imports validated registry lemma proofs/lem-extcb-one-dimensional-corner-dimension — Level-one one-dimensional corner dimension: for sufficiently small universal delta+epsilon, if P and Q are one-dimensional delta-projections then dim S_{P,Q} \u003c= 1.",
+  "content_hash": "87895d6410d36ba96483c13ff1eeb3c21725c6ec1ec15f3e6790e191c200bfc0",
+  "created": "2026-07-30T16:32:31.877208495Z",
+  "notes": ""
+}

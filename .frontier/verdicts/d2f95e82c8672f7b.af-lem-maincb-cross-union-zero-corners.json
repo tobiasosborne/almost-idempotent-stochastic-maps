@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-cross-union-zero-corners/export.md",
+  "oracle": "af-lem-maincb-cross-union-zero-corners",
+  "result": "pass",
+  "claim_hash": "c69882f26a74776dd18965c4578f784ebd7decbdfdefea3b10da50fd9a01a768",
+  "oracle_digest": "58f9f1282077ebf2896371094ed05a7238fcf56f292b38ed0998690ae1eabfa4",
+  "inputs_hash": "834698a66c28d8460aabd2e9f072a854b611e043542465d9b79c42b20f54d1e6",
+  "ts": "2026-07-30T17:11:54.387Z"
+}
