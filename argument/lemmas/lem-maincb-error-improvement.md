@@ -5,7 +5,8 @@ contract: Complete error improvement: there are universal epsilon_max^cb>0, delt
 defs: def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
 deps: lem-maincb-improvement-iteration
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-error-improvement
 provenance: kitaev-2405.02434 approximate_algebras.tex:1256-1319 (DECOMP IMPROVE-CB; the narrowed hypotheses — finite-dimensional source B and epsilon <= epsilon_max^cb — are the literal source hypotheses at 1317-1319 that the v4.1 register text suppressed); DESIGN-GAP-EA.md §2.3 (narrowing USER-RATIFIED in-session 2026-07-26); DESIGN-FUDW-DECOMP-v4.1.md register row
 owner: A
 ---

@@ -5,7 +5,8 @@ contract: There are universal D_1 < infinity and e_1 > 0 such that, if an explic
 defs: def-maincb-reset-state; def-maincb-raw-call; def-operator-space
 deps: lem-maincb-direct-sum-inclusion-merge; lem-compcb-single-compression-transfer
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-stage1-raw-refinement
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.4 row M15 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1352-1359,1419-1426
 owner: A
 ---

@@ -5,7 +5,8 @@ contract: If A is a finite-dimensional extended epsilon-C*-algebra with 0 <= eps
 defs: def-maincb-partition-state; def-projection-basis
 deps: lem-maincb-maximal-reset-selection; lem-maincb-stage1-strict-refinement
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-stage1-maximality
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-7 row M24 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1417-1426
 owner: A
 ---

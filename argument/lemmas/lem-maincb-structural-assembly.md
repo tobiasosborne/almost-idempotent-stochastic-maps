@@ -5,7 +5,8 @@ contract: There are universal C_struct = c_0^cb*K_call < infinity and e_struct =
 defs: def-maincb-partition-state; def-maincb-reset-state; def-operator-space
 deps: lem-maincb-full-corner-identification; lem-maincb-corner-equivalence; lem-maincb-structural-domain-ledger; lem-maincb-maximal-reset-selection; lem-maincb-stage1-maximality; lem-maincb-one-class-extension; lem-maincb-stage3-finite-recombination
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-structural-assembly
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-7 row M28 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1414-1444
 owner: A
 ---

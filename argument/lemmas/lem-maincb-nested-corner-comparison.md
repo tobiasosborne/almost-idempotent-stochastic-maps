@@ -5,7 +5,8 @@ contract: There are universal C_nest < infinity and e_nest > 0 such that, whenev
 defs: def-operator-space; def-compressed-corner; def-delta-projection
 deps: lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities; lem-compcb-amplified-almost-containment; lem-compcb-corner-algebra; lem-compcb-rectangular-product
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-nested-corner-comparison
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.2 row M07 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1054-1082,1435-1441
 owner: A
 ---

@@ -4,7 +4,8 @@ kind: lemma
 contract: There are universal D_0 < infinity and e_0 > 0 such that, in every finite-dimensional extended epsilon-C*-algebra with epsilon <= t <= e_0, the scalar map lambda |-> lambda*I_A is an extended D_0*t-inclusion; if dim A = 1, it is bijective.
 defs: def-operator-space; def-maincb-raw-call; def-extended-delta-inclusion
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-initial-raw-inclusion
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.4 row M14 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:430-455,1467-1475
 owner: A
 ---

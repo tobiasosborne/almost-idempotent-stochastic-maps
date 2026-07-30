@@ -5,7 +5,8 @@ contract: There are universal C_s2 >= 1 and e_s2 > 0, with the e_ca threshold an
 defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-raw-call; def-extcb-datum
 deps: lem-maincb-error-improvement; lem-maincb-nested-corner-comparison; lem-maincb-nested-corner-dimension-transport; lem-maincb-outer-compression-transfer; lem-maincb-corner-equivalence; lem-compcb-corner-algebra; lem-extcb-corner-dimension-additivity
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-stage2-extcb-datum
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.3 row M13 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1363-1412,1430-1441
 owner: A
 ---

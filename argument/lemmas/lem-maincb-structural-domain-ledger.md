@@ -5,7 +5,8 @@ contract: With the earlier witnesses, set K_call := max{1,L,c_0^cb,K_1,K_2,K_3} 
 defs: def-maincb-reset-state; def-maincb-raw-call; def-maincb-partition-state
 deps: lem-maincb-error-improvement; lem-maincb-direct-corner-envelope; lem-maincb-full-corner-identification; lem-maincb-corner-equivalence; lem-maincb-reset-constant-ledger; lem-maincb-stage1-call-envelope; lem-maincb-stage2-call-envelope; lem-maincb-stage3-call-envelope
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-structural-domain-ledger
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-6 row M20 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source finite-minimum arithmetic
 owner: A
 ---

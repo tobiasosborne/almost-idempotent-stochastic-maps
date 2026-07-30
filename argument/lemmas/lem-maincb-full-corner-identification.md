@@ -5,7 +5,8 @@ contract: There is a universal e_full > 0 such that, if R is a t-projection in a
 defs: def-operator-space; def-compressed-corner; def-delta-projection
 deps: lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-full-corner-identification
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.1 row M06 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1064-1066,1542-1544
 owner: A
 ---

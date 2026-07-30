@@ -5,7 +5,8 @@ contract: If A is a finite-dimensional extended epsilon-C*-algebra with 0 <= eps
 defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-raw-call
 deps: lem-maincb-stage1-call-envelope; lem-maincb-stage1-raw-refinement; lem-maincb-reset-invariant-preservation; lem-maincb-structural-domain-ledger
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-stage1-strict-refinement
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-7 row M23 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1419-1426
 owner: A
 ---

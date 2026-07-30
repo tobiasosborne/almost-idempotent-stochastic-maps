@@ -5,7 +5,8 @@ contract: There are universal C_cross >= 1 and e_cross > 0 such that, if A is a 
 defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-raw-call; def-four-corner-merging-datum
 deps: lem-maincb-error-improvement; lem-maincb-nested-corner-comparison; lem-maincb-outer-compression-transfer; lem-maincb-cross-union-zero-corners
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-cross-class-merging-datum
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.3 row M12 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1325-1345,1358,1363-1369,1443
 owner: A
 ---

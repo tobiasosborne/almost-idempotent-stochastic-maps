@@ -5,7 +5,8 @@ contract: There is a universal e_ncd > 0 such that, whenever R,P,Q are t-project
 defs: def-operator-space; def-compressed-corner; def-delta-projection
 deps: lem-maincb-nested-corner-comparison
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-nested-corner-dimension-transport
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.2 row M08 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1054-1082
 owner: A
 ---

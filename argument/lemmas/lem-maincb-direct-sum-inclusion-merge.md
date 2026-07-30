@@ -5,7 +5,8 @@ contract: There are universal C_dir < infinity and e_dir > 0 such that, if B_1,B
 defs: def-operator-space; def-extended-delta-inclusion; def-compressed-corner
 deps: lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities; lem-compcb-corner-algebra; lem-compcb-rectangular-product
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-direct-sum-inclusion-merge
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.1 row M05 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1325-1359,1542-1544,1557
 owner: A
 ---

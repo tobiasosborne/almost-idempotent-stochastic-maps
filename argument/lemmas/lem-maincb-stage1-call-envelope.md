@@ -5,7 +5,8 @@ contract: After the Stage-1 producer gate, there are universal K_1 >= 1 and e_ca
 defs: def-maincb-reset-state; def-maincb-raw-call; def-maincb-partition-state
 deps: lem-maincb-direct-corner-envelope; lem-compcb-single-compression-transfer; lem-stage1-rectified-nontrivial-projection; lem-stage1-original-complementary-pair; lem-stage1-fresh-two-point-inclusion
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-stage1-call-envelope
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-6 row M19-S1 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:917-969,1419-1426
 owner: A
 ---

@@ -5,7 +5,8 @@ contract: If A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon
 defs: def-maincb-partition-state; def-maincb-reset-state
 deps: lem-maincb-binary-block-merge
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-stage3-finite-recombination
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-7 row M27 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1443
 owner: A
 ---

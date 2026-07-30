@@ -5,7 +5,8 @@ contract: If A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon
 defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-raw-call
 deps: lem-maincb-direct-corner-envelope; lem-maincb-corner-equivalence; lem-maincb-initial-raw-inclusion; lem-maincb-stage2-raw-extension; lem-maincb-stage2-call-envelope; lem-maincb-reset-invariant-preservation; lem-maincb-structural-domain-ledger
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-one-class-extension
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-7 row M25 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1430-1441
 owner: A
 ---

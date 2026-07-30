@@ -5,7 +5,8 @@ contract: For every finite-dimensional extended epsilon-C*-algebra A with 0 <= e
 defs: def-maincb-reset-state; def-maincb-raw-call; def-operator-space
 deps: lem-maincb-initial-raw-inclusion; lem-maincb-reset-invariant-preservation; lem-maincb-structural-domain-ledger
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-initial-reset-inclusion
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-7 row M21 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:430-455,1317-1319,1417
 owner: A
 ---

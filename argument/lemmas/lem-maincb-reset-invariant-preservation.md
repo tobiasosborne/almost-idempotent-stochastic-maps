@@ -5,7 +5,8 @@ contract: For any explicit global-scalar, compressed-corner-scalar, Stage-1, Sta
 defs: def-maincb-reset-state; def-maincb-raw-call; def-maincb-partition-state
 deps: lem-maincb-error-improvement; lem-maincb-reset-constant-ledger
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-reset-invariant-preservation
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-6 row M19-R (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1317-1319,1435-1443,1557
 owner: A
 ---

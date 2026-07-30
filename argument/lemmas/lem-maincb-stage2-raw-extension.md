@@ -5,7 +5,8 @@ contract: There are universal D_2 < infinity and e_2 > 0, chosen with e_2 <= e_s
 defs: def-maincb-raw-call; def-extcb-datum; def-operator-space
 deps: lem-maincb-stage2-extcb-datum; conj-extcb
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-stage2-raw-extension
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.4 row M16 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1378-1412,1435-1441
 owner: A
 ---

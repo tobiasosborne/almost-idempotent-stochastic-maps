@@ -5,7 +5,8 @@ contract: There are universal e_it > 0, K_disp < infinity, and K_floor < infinit
 defs: def-operator-space; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion; def-fd-cstar-diagonal
 deps: lem-maincb-improvement-one-step
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-improvement-iteration
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.1 row M02 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1313,1508-1535
 owner: A
 ---

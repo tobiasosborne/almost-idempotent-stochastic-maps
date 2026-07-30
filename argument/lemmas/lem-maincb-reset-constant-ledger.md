@@ -5,7 +5,8 @@ contract: With D_* = max{1,D_0,D_1,D_2,D_3} and r_reset := min{e_0,e_1,e_2,e_3,e
 defs: def-maincb-raw-call; def-maincb-reset-state
 deps: lem-maincb-error-improvement; lem-maincb-initial-raw-inclusion; lem-maincb-stage1-raw-refinement; lem-maincb-stage2-raw-extension; lem-maincb-stage3-raw-merge
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-reset-constant-ledger
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.4 row M18 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source finite-minimum arithmetic
 owner: A
 ---

@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-07-30T15:09:38.827147011Z","conjecture":"There is a universal e_sim \u003e 0 such that, for every finite family of one-dimensional t-projections P_1,...,P_m in an extended t-C*-algebra with t \u003c= e_sim, the relation j ~ k iff dim S_{P_j,P_k} = 1 is an equivalence relation.","author":"orchestrator"}

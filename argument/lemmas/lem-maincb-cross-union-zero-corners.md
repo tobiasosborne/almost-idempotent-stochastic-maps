@@ -5,7 +5,8 @@ contract: There is a universal e_zero > 0 such that, if A is a finite-dimensiona
 defs: def-maincb-partition-state; def-compressed-corner
 deps: lem-maincb-nested-corner-dimension-transport; lem-maincb-corner-equivalence; lem-extcb-corner-dimension-additivity
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-cross-union-zero-corners
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.3 row M11 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1363-1369,1428,1443
 owner: A
 ---

@@ -5,7 +5,8 @@ contract: There are universal D_3 < infinity and e_3 > 0, with e_3 <= a_merge/(C
 defs: def-maincb-raw-call; def-four-corner-merging-datum; def-operator-space
 deps: lem-maincb-cross-class-merging-datum; lem-extcb-four-corner-merge
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-stage3-raw-merge
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.4 row M17 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1325-1359,1443
 owner: A
 ---

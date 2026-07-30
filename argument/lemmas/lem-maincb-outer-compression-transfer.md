@@ -5,7 +5,8 @@ contract: There are universal C_out < infinity and e_out > 0 such that, whenever
 defs: def-operator-space; def-compressed-corner; def-extended-delta-inclusion
 deps: lem-maincb-nested-corner-comparison; lem-maincb-nested-corner-dimension-transport; lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities; lem-compcb-corner-algebra; lem-compcb-rectangular-product
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-outer-compression-transfer
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.2 row M09 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1068-1082,1435-1441,1542-1544
 owner: A
 ---

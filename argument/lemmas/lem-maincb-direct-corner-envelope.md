@@ -5,7 +5,8 @@ contract: There are universal L >= 1 and e_env > 0 such that, if A is a finite-d
 defs: def-maincb-partition-state; def-compressed-corner; def-delta-projection
 deps: lem-maincb-error-improvement; lem-compcb-corner-algebra
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-direct-corner-envelope
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.1 row M04 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1068-1084,1367-1368,1428-1435
 owner: A
 ---

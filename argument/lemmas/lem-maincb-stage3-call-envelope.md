@@ -5,7 +5,8 @@ contract: There are universal K_3 >= max{1,L,c_0^cb*L} and e_call_3 > 0, with K_
 defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-raw-call; def-four-corner-merging-datum
 deps: lem-maincb-direct-corner-envelope; lem-maincb-cross-class-merging-datum
 status: stated
-af: none
+af: seeded
+workspace: proofs/lem-maincb-stage3-call-envelope
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-6 row M19-S3 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1428,1443
 owner: A
 ---
