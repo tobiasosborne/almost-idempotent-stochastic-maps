@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Associated-graded action of a left inversion over the rea...}
+\step{1} Associated-graded action of a left inversion over the real field: if M is a connected CW complex with dim\_reals H\textasciicircum{}*(M;reals) < infinity, (M,mu,e) is an H-space, and sigma:M->M is a left inversion, set A=H\textasciicircum{}*(M;reals), A\textasciicircum{}+=direct\_sum\_\{k>0\} A\textasciicircum{}k, F\textasciicircum{}\{p,q\}=(A\textasciicircum{}+)\textasciicircum{}p intersect A\textasciicircum{}\{p+q\}, and E\textasciicircum{}\{p,q\}=F\textasciicircum{}\{p,q\}/F\textasciicircum{}\{p+1,q-1\}; then sigma\textasciicircum{}* preserves every F\textasciicircum{}\{p,q\} and induces (-1)\textasciicircum{}(p+q)*id on every E\textasciicircum{}\{p,q\} for p >= 0 and p+q >= 0. \steptag{validated} \\[6pt]
+\step{1.1} Put I=A\textasciicircum{}+. By functoriality of real singular cohomology, sigma\textasciicircum{}*:A->A is a degree-preserving unital algebra homomorphism. Hence sigma\textasciicircum{}*(I) is contained in I and sigma\textasciicircum{}*(I\textasciicircum{}p) is contained in I\textasciicircum{}p for every p>=0; consequently sigma\textasciicircum{}* preserves F\textasciicircum{}\{p,q\}=I\textasciicircum{}p intersect A\textasciicircum{}\{p+q\}. \steptag{validated} \\[4pt]
+\step{1.2} For every homogeneous a in I, the left-inversion relation and the coproduct expansion supplied by lem-stage1-exterior-cohomology give 0=sigma\textasciicircum{}*(a)+a+sum\_\{j in J\_a\} sigma\textasciicircum{}*(aPrime\_j)aDoublePrime\_j in A, where aPrime\_j and aDoublePrime\_j are the positive-degree factors appearing in that external coproduct expansion. \steptag{validated} \\[6pt]
+\step{1.2.1} Let ell:M->M be ell(x)=mu(sigma(x),x). By def-h-space-left-inversion, ell is homotopic to the constant map with value e. Therefore ell\textasciicircum{}*:H\textasciicircum{}*(M;reals)->H\textasciicircum{}*(M;reals) is the pullback of that constant map and ell\textasciicircum{}*(a)=0 for every positive-degree a in I. \steptag{validated} \\[4pt]
+\step{1.2.2} Under the cross-product identification used to define Delta in lem-stage1-exterior-cohomology, functoriality of pullback and the diagonal formula for cup product give ell\textasciicircum{}*(a)=m\_A((sigma\textasciicircum{}* tensor id)Delta(a)). Substituting the external expansion Delta(a)=a tensor 1+1 tensor a+sum\_j aPrime\_j tensor aDoublePrime\_j yields ell\textasciicircum{}*(a)=sigma\textasciicircum{}*(a)+a+sum\_j sigma\textasciicircum{}*(aPrime\_j)aDoublePrime\_j. Together with the preceding vanishing, this is the asserted identity. \steptag{validated} \\[4pt]
+\step{1.3} In the identity of node 1.2, every aPrime\_j and aDoublePrime\_j lies in I, and node 1.1 gives sigma\textasciicircum{}*(aPrime\_j) in I; hence every product sigma\textasciicircum{}*(aPrime\_j)aDoublePrime\_j lies in I\textasciicircum{}2. Thus sigma\textasciicircum{}*(a) is congruent to -a modulo I\textasciicircum{}2 for each homogeneous a in I, and by homogeneous decomposition and linearity sigma\textasciicircum{}* induces -id on all of I/I\textasciicircum{}2. \steptag{validated} \\[4pt]
+\step{1.4} For p=0, lem-stage1-exterior-cohomology gives A/I=A\textasciicircum{}0=reals*1, and unitality of sigma\textasciicircum{}* gives id=(-1)\textasciicircum{}0 id. For p>=1, I\textasciicircum{}p/I\textasciicircum{}\{p+1\} is spanned by classes of products a\_1...a\_p with a\_i in I. Node 1.3 lets us write sigma\textasciicircum{}*(a\_i)=-a\_i+r\_i with r\_i in I\textasciicircum{}2; multiplicativity then gives sigma\textasciicircum{}*(a\_1...a\_p)=(-1)\textasciicircum{}p a\_1...a\_p modulo I\textasciicircum{}\{p+1\}, because every other expanded term has at least p+1 factors from I. Therefore sigma\textasciicircum{}* induces (-1)\textasciicircum{}p id on I\textasciicircum{}p/I\textasciicircum{}\{p+1\}, and, being degree-preserving, on each component (I\textasciicircum{}p intersect A\textasciicircum{}n)/(I\textasciicircum{}\{p+1\} intersect A\textasciicircum{}n). \steptag{validated} \\[4pt]
+\step{1.5} By lem-stage1-exterior-cohomology, A is a graded exterior algebra on odd-positive-degree homogeneous generators, and I=A\textasciicircum{}+ is its ideal spanned by nonempty generator monomials. Consequently I\textasciicircum{}p is spanned by generator monomials of exterior length at least p, so I\textasciicircum{}p/I\textasciicircum{}\{p+1\} is spanned by those of length exactly p (with the empty monomial for p=0). Every length-p monomial has total cohomological degree congruent to p modulo 2 because every generator degree is odd. Thus (I\textasciicircum{}p/I\textasciicircum{}\{p+1\})\textasciicircum{}n=0 unless n is congruent to p modulo 2. \steptag{validated} \\[4pt]
+\step{1.6} For p>=0 and n=p+q>=0, E\textasciicircum{}\{p,q\}=(I\textasciicircum{}p intersect A\textasciicircum{}n)/(I\textasciicircum{}\{p+1\} intersect A\textasciicircum{}n). The preceding preservation and associated-graded calculation show that sigma\textasciicircum{}* preserves F\textasciicircum{}\{p,q\} and acts on E\textasciicircum{}\{p,q\} by (-1)\textasciicircum{}p; if E\textasciicircum{}\{p,q\} is nonzero, exterior-length parity gives (-1)\textasciicircum{}p=(-1)\textasciicircum{}n=(-1)\textasciicircum{}(p+q), while on a zero component the asserted scalar action is automatic. This proves the contract. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

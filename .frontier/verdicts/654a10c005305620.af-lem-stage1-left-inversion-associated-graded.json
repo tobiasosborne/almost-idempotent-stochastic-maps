@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-left-inversion-associated-graded/export.md",
+  "oracle": "af-lem-stage1-left-inversion-associated-graded",
+  "result": "pass",
+  "claim_hash": "622956f0a794d71a6bc1e2c8352279727a818a05ca800d6f9ada2e69a16c7f8b",
+  "oracle_digest": "1de819144cfecf8e0473d6b324e14d10e54be1297d692817ca64c4211f315f11",
+  "inputs_hash": "88d077c85bc65006af7bf89410beed9a3042a8b9447449e7616b3cc16640bf6b",
+  "ts": "2026-07-30T09:52:38.131Z"
+}
