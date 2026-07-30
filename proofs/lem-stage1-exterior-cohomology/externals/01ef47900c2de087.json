@@ -1,0 +1,8 @@
+{
+  "id": "01ef47900c2de087",
+  "name": "GT-hatcher-hopf-structure-3C4",
+  "source": "refs/hatcher-algebraic-topology/AT.txt:17798-17800 VERBATIM: \"Theorem 3C.4. If A is a commutative, associative Hopf algebra over a field F of\ncharacteristic 0 , and An is finite-dimensional over F for each n , then A is isomorphic as an algebra to the tensor product of an exterior algebra on odd-dimensional\ngenerators and a polynomial algebra on even-dimensional generators.\" [Hatcher AT Theorem 3C.4 printed p.284: commutative associative Hopf algebra over char-0 field, degreewise finite-dimensional =\u003e isomorphic AS AN ALGEBRA to exterior(odd) tensor polynomial(even). NOTE: exterior-TENSOR-polynomial as an algebra ONLY — polynomial exclusion, generator finiteness, and grading are explicit A1 derivation obligations, not part of this external.]",
+  "content_hash": "6e95f210a2a4b7a254a0ef90677d4a25c558a95fae5c2e85b3d5f7b98eb02a42",
+  "created": "2026-07-30T09:26:46.981678261Z",
+  "notes": ""
+}
