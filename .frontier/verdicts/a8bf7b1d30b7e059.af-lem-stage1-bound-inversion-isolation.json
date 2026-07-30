@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-stage1-bound-inversion-isolation/export.md",
+  "oracle": "af-lem-stage1-bound-inversion-isolation",
+  "result": "pass",
+  "claim_hash": "58c5444792772792b1a5b182abf280a7f9e751b3921160366fc0ab71486ec358",
+  "oracle_digest": "5e7f5fdbe326af926143afc1a212dc4aef26bf5e41c25934307c8bc5a00f59fe",
+  "inputs_hash": "176126a3bdfaae73c506c7156dacc711425a2b60df830af818a91a5b9b1abb87",
+  "ts": "2026-07-30T11:36:31.915Z"
+}
