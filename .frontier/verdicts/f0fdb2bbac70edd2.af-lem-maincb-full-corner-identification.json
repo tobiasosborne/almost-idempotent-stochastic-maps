@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-full-corner-identification/export.md",
+  "oracle": "af-lem-maincb-full-corner-identification",
+  "result": "pass",
+  "claim_hash": "2cf37fd58abd653b25ec055a2d5fb1705582445368fd6cb7fc501e1d701b84e2",
+  "oracle_digest": "711c17a4fafbbe95f963dc844d9e9f8ccd271420d3276b1dd6c608f3df3e2e7f",
+  "inputs_hash": "c887578ec9539ef36ddfe19154cbef9fccc6110e07a2ead59dba98f34cb4eff4",
+  "ts": "2026-07-30T15:53:39.058Z"
+}

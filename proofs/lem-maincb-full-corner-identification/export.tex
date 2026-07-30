@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{There is a universal e\_full > 0 such that, if R is a t-pr...}
+\step{1} There is a universal e\_full > 0 such that, if R is a t-projection in an extended t-C*-algebra and ||R-I|| <= t <= e\_full, then Co\_R = I and S\_R = A, at every amplification. \steptag{validated} \\[6pt]
+\step{1.1} Fix universal constants C\_co,e\_co>0 witnessing the O(delta+epsilon) compression estimate in def-compressed-corner, and let e\_cmp>0 be no larger than the thresholds in both lem-compcb-amplified-compression and lem-compcb-amplified-compression-identities. Put K=21+2*C\_co and e\_full=min\{1,e\_co/2,e\_cmp/2,1/(2*K)\}. Under the root hypotheses with t<=e\_full, the level-one operator satisfies ||Co\_R-I\_A||<=K*t<=1/2<1. \steptag{validated} \\[6pt]
+\step{1.1.1} By def-compressed-corner, the statement ||L\_R R\_R-Co\_R||=O(delta+epsilon) means that there are universal C\_co,e\_co>0 such that whenever delta+epsilon<=e\_co, ||Co\_R-L\_R R\_R||<=C\_co*(delta+epsilon); here delta=epsilon=t, so ||Co\_R-L\_R R\_R||<=2*C\_co*t. \steptag{validated} \\[4pt]
+\step{1.1.2} If 0<=t<=1, A is a t-C*-algebra and ||R-I||<=t, then ||L\_R R\_R-I\_A||<=21*t. Indeed, for ||X||=1, def-epsilon-cstar-algebra gives ||R||<=||I||+t<=1+2*t and ||XR||<=(1+t)||R||<=6. Bilinearity gives R(XR)-X=(R-I)(XR)+(I(XR)-XR)+(XR-X) and XR-X=X(R-I)+(XI-X). Therefore ||R(XR)-X||<=((1+t)*t+t)||XR||+(1+t)*t+t<=18*t+3*t=21*t. Since L\_R R\_R(X)=R(XR) by def-compressed-corner, taking the supremum over ||X||=1 proves the operator-norm bound. \steptag{validated} \\[4pt]
+\step{1.2} Under the same choice t<=e\_full, lem-compcb-amplified-compression-identities applied with delta=epsilon=t, P=Q=R and n=1 gives Co\_R\textasciicircum{}2=Co\_R as an operator on A. \steptag{validated} \\[4pt]
+\step{1.3} Idempotent rigidity: if E is a bounded linear operator on a normed space with E\textasciicircum{}2=E and ||E-I||<1, then E=I; consequently, for the compression map, Co\_R=I\_A and S\_R=Img(Co\_R)=A once the preceding closeness and idempotence statements hold. \steptag{validated} \\[6pt]
+\step{1.3.1} Let E be a bounded linear operator on a normed space with E\textasciicircum{}2=E and q=||E-I||<1. For arbitrary X put Y=(I-E)X. Then EY=EX-E\textasciicircum{}2X=0, so (I-E)Y=Y. Hence ||Y||=||(I-E)Y||<=q||Y||. Since q<1, this forces ||Y||=0 and Y=0. Thus (I-E)X=0 for every X and E=I. In particular, conditionally, if Co\_R\textasciicircum{}2=Co\_R and ||Co\_R-I\_A||<1, then applying this result to E=Co\_R gives Co\_R=I\_A; def-compressed-corner then gives S\_R=Img(Co\_R)=Img(I\_A)=A. This is a conditional implication only and does not assert or use the sibling conclusions inside this node. \steptag{validated} \\[6pt]
+\step{1.3.1.1} Abstract rigidity. Let E be a bounded linear operator on a normed space with E\textasciicircum{}2=E and q=||E-I||<1. For arbitrary X, set Y=(I-E)X. Then EY=EX-E\textasciicircum{}2X=0, so (I-E)Y=Y. Hence ||Y||=||(I-E)Y||<=||I-E||·||Y||=q||Y||. Since (1-q)||Y||<=0 while 1-q>0 and ||Y||>=0, one has ||Y||=0 and therefore Y=0. Thus (I-E)X=0 for every X, so E=I. \steptag{archived} \\[4pt]
+\step{1.3.1.2} Apply the abstract rigidity result to E=Co\_R. Node 1.2 supplies Co\_R\textasciicircum{}2=Co\_R, and node 1.1 supplies ||Co\_R-I\_A||<1; therefore Co\_R=I\_A. By def-compressed-corner, S\_R=Img(Co\_R), while Img(I\_A)=A, hence S\_R=A. \steptag{archived} \\[4pt]
+\step{1.4} For every n>=1, set R\_n=I\_n tensor R. By lem-compcb-amplified-compression with delta=epsilon=t and P=Q=R, Co\_\{R\_n\}=1\_\{M\_n\} tensor Co\_R and S\_\{R\_n\}=M\_n tensor S\_R. Hence the level-one conclusions Co\_R=I\_A and S\_R=A imply Co\_\{R\_n\}=I\_\{M\_n tensor A\} and S\_\{R\_n\}=M\_n tensor A for every n, which is exactly the asserted conclusion at every amplification. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
