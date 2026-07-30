@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-nested-corner-comparison/export.md",
+  "oracle": "af-lem-maincb-nested-corner-comparison",
+  "result": "pass",
+  "claim_hash": "99e4e89cd618cdca58305291643c70e3d5733e1ec75014f815657e88ded96e39",
+  "oracle_digest": "f9663fcada20efa1caed08618682885c8201b5d64c8fa476826d2f6d9d34d076",
+  "inputs_hash": "738baa6f3fc889ab537d96eb0bd31555848642417db813be95a4c71bbf946193",
+  "ts": "2026-07-30T16:08:40.953Z"
+}

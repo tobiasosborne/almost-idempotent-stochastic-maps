@@ -178,7 +178,7 @@
 | `lem-maincb-cross-class-merging-datum` | lemma | stated | seeded | A | There are universal C_cross >= 1 and e_cross > 0 such that, if A is a finite-dim… |
 | `lem-maincb-cross-union-zero-corners` | lemma | stated | seeded | A | There is a universal e_zero > 0 such that, if A is a finite-dimensional extended… |
 | `lem-maincb-direct-corner-envelope` | lemma | stated | seeded | A | There are universal L >= 1 and e_env > 0 such that, if A is a finite-dimensional… |
-| `lem-maincb-direct-sum-inclusion-merge` | lemma | stated | seeded | A | There are universal C_dir < infinity and e_dir > 0 such that, if B_1,B_2 are fin… |
+| `lem-maincb-direct-sum-inclusion-merge` | lemma | proved | validated | A | There are universal C_dir < infinity and e_dir > 0 such that, if B_1,B_2 are fin… |
 | `lem-maincb-error-improvement` | lemma | stated | seeded | A | Complete error improvement: there are universal epsilon_max^cb>0, delta_max^cb>0… |
 | `lem-maincb-full-corner-identification` | lemma | proved | validated | A | There is a universal e_full > 0 such that, if R is a t-projection in an extended… |
 | `lem-maincb-improvement-iteration` | lemma | proved | validated | A | There are universal e_it > 0, K_disp < infinity, and K_floor < infinity such tha… |
@@ -186,7 +186,7 @@
 | `lem-maincb-initial-raw-inclusion` | lemma | proved | validated | A | There are universal D_0 < infinity and e_0 > 0 such that, in every finite-dimens… |
 | `lem-maincb-initial-reset-inclusion` | lemma | stated | seeded | A | For every finite-dimensional extended epsilon-C*-algebra A with 0 <= epsilon <= … |
 | `lem-maincb-maximal-reset-selection` | lemma | stated | seeded | A | If A is a finite-dimensional extended epsilon-C*-algebra with 0 <= epsilon <= ep… |
-| `lem-maincb-nested-corner-comparison` | lemma | stated | seeded | A | There are universal C_nest < infinity and e_nest > 0 such that, whenever R,P,Q a… |
+| `lem-maincb-nested-corner-comparison` | lemma | proved | validated | A | There are universal C_nest < infinity and e_nest > 0 such that, whenever R,P,Q a… |
 | `lem-maincb-nested-corner-dimension-transport` | lemma | stated | seeded | A | There is a universal e_ncd > 0 such that, whenever R,P,Q are t-projections in a … |
 | `lem-maincb-one-class-extension` | lemma | stated | seeded | A | If A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= epsilo… |
 | `lem-maincb-outer-compression-transfer` | lemma | stated | seeded | A | There are universal C_out < infinity and e_out > 0 such that, whenever R,P are t… |

@@ -4,18 +4,22 @@ kind: lemma
 contract: There are universal C_dir < infinity and e_dir > 0 such that, if B_1,B_2 are finite-dimensional C*-algebras, P_1,P_2 are target t-projections, ||P_1+P_2-I|| <= t, and v_i:B_i->S_{P_i} are extended t-inclusions with target ambient defect at most t <= e_dir, then (x_1,x_2) |-> v_1(x_1)+v_2(x_2) is an extended C_dir*t-inclusion; bijectivity is asserted only if both v_i are bijective and both target cross-corners vanish.
 defs: def-operator-space; def-extended-delta-inclusion; def-compressed-corner; def-delta-projection
 deps: lem-compcb-amplified-compression; lem-compcb-amplified-compression-identities; lem-compcb-corner-algebra; lem-compcb-rectangular-product
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-maincb-direct-sum-inclusion-merge
 provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-4.1 row M05 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1325-1359,1542-1544,1557
 owner: A
 ---
 
-**Status.** `stated` — contract transcribed from the audited
-`DESIGN-MAIN-STRUCTURE-v5.md` sect-4.1 row M05 (REPAIR-CONFIRMED audit chain
-v2..v5; W78-ratified package; full MAIN row package user-ratified
-2026-07-30 in-session). MAIN campaign row M05. NOT proved in-repo;
-af elevation pending.
+**Status.** af-VALIDATED in-repo (2026-07-30): 14-node tree, root
+`validated`, taint clean 14/14
+(`proofs/lem-maincb-direct-sum-inclusion-merge/export.md`; oracle pass;
+tier routine; parallel-af worktree run af-m05). Five cross-sibling
+dependency challenges repaired in-run (explicit dependency-backed
+children incl. a coarse-to-sharp bootstrap made self-contained);
+verify-only continuation to the root. Two-diagonal direct-sum merge
+with bijectivity ONLY under the zero-cross-corner hypothesis, per the
+source corollary. MAIN campaign row M05.
 
 **Build budget (BINDING on the af tree).** Design target/rounds/hard-cap:
 8 / 3 / 12. Per-row skeleton and audit delta:

@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-direct-sum-inclusion-merge/export.md",
+  "oracle": "af-lem-maincb-direct-sum-inclusion-merge",
+  "result": "pass",
+  "claim_hash": "805f3f44ec5a7fc124d3321f7868b760c8eab927d2ff269eb98de2315dd1ad4c",
+  "oracle_digest": "fac902bbc7ea6ece43eff4f900215d0926f10a6d2400995cd3e967b9afd14c73",
+  "inputs_hash": "948083a0c870eb4c550c64bfc882fef8f14de8937c4689d61157b74ecd8b7c5b",
+  "ts": "2026-07-30T16:08:41.158Z"
+}

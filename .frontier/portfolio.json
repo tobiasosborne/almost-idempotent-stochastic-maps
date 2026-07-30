@@ -1201,6 +1201,30 @@
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-improvement-iteration/ledger",
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-improvement-iteration.md"
         ]
+      },
+      {
+        "name": "af-lem-maincb-nested-corner-comparison",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-maincb-nested-corner-comparison"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-nested-corner-comparison/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-nested-corner-comparison.md"
+        ]
+      },
+      {
+        "name": "af-lem-maincb-direct-sum-inclusion-merge",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-maincb-direct-sum-inclusion-merge"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-direct-sum-inclusion-merge/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-direct-sum-inclusion-merge.md"
+        ]
       }
     ]
   },
