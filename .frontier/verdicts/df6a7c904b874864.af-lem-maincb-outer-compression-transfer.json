@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-outer-compression-transfer/export.md",
+  "oracle": "af-lem-maincb-outer-compression-transfer",
+  "result": "pass",
+  "claim_hash": "753e8cb2ef21f2244316eb99bb3cc14435499573a71bf4304c770a7f42a4641c",
+  "oracle_digest": "3241306e028c2528a1b5579771e5bd76ba861ba6e0e571d128bd762e1fc25aad",
+  "inputs_hash": "baa98a78ef1ac2ee00a1fc018d1f85f0349a828395e6686d635dcf12557de87f",
+  "ts": "2026-07-30T17:20:16.980Z"
+}
