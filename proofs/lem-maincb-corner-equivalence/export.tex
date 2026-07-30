@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{There is a universal e\_sim > 0 such that, for every finit...}
+\step{1} There is a universal e\_sim > 0 such that, for every finite family of one-dimensional t-projections P\_1,...,P\_m in an extended t-C*-algebra with t <= e\_sim, the relation j \textasciitilde{} k iff dim S\_\{P\_j,P\_k\} = 1 is an equivalence relation. \steptag{validated} \\[6pt]
+\step{1.1} The external lem-extcb-one-dimensional-product supplies universal C\_PQR<infinity and e\_PQR>0, and lem-extcb-one-dimensional-corner-dimension supplies a universal threshold e\_dim>0 for its sufficiently-small hypothesis. After enlarging C\_PQR to at least 1, define e\_sim=min\{e\_PQR/2,e\_dim/2,1/(4*C\_PQR)\}. Then e\_sim>0, and t<=e\_sim implies e:=t+t=2t<=e\_PQR, e<=e\_dim, and C\_PQR*e<=1/2. \steptag{validated} \\[4pt]
+\step{1.2} Fix any t>=0 and any finite family of one-dimensional t-projections P\_1,...,P\_m in an extended t-C*-algebra, and suppose e:=2t satisfies e<=e\_PQR, e<=e\_dim, and C\_PQR*e<=1/2, where the constants are as in the two named externals. Then the relation j\textasciitilde{}k iff dim S\_\{P\_j,P\_k\}=1 is reflexive, symmetric, and transitive, hence is an equivalence relation. \steptag{validated} \\[6pt]
+\step{1.2.1} The relation is reflexive: for every j, one-dimensionality of the t-projection P\_j means dim S\_\{P\_j\}=1, and def-compressed-corner identifies S\_\{P\_j\} as the abbreviation S\_\{P\_j,P\_j\}; hence j\textasciitilde{}j. \steptag{validated} \\[4pt]
+\step{1.2.2} The relation is symmetric: def-compressed-corner gives C\_\{P,Q\}(Z)\textasciicircum{}dagger=C\_\{Q,P\}(Z\textasciicircum{}dagger), so the conjugate-linear involution dagger restricts to a bijection S\_\{P,Q\}->S\_\{Q,P\}; consequently these complex vector spaces have equal dimension, and dim S\_\{P\_j,P\_k\}=1 implies dim S\_\{P\_k,P\_j\}=1. \steptag{validated} \\[4pt]
+\step{1.2.3} The relation is transitive: if j\textasciitilde{}k and k\textasciitilde{}l, then dim S\_\{P\_j,P\_l\}=1, hence j\textasciitilde{}l. \steptag{validated} \\[6pt]
+\step{1.2.3.1} Assume j\textasciitilde{}k and k\textasciitilde{}l. Choose nonzero X in S\_\{P\_j,P\_k\} and nonzero Y in S\_\{P\_k,P\_l\}. By def-compressed-corner their compressed product Z:=X dot Y belongs to S\_\{P\_j,P\_l\}. Applying lem-extcb-one-dimensional-product to (P\_j,P\_k,P\_l), since P\_k is one-dimensional and e=2t<=e\_PQR, gives ||Z|| >= (1-C\_PQR*e)||X||||Y|| >= (1/2)||X||||Y||>0; thus S\_\{P\_j,P\_l\} is nonzero. \steptag{validated} \\[4pt]
+\step{1.2.3.2} Because S\_\{P\_j,P\_l\} contains the nonzero product from child 1.2.3.1, its dimension is at least 1. Since P\_j and P\_l are one-dimensional t-projections and e=2t<=e\_dim, lem-extcb-one-dimensional-corner-dimension gives dim S\_\{P\_j,P\_l\}<=1. Therefore dim S\_\{P\_j,P\_l\}=1, which is j\textasciitilde{}l. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

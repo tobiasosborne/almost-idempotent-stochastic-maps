@@ -174,7 +174,7 @@
 | `lem-leakage` | lemma | proved-mod-audit | none | A | Affine-face leakage: for row-stochastic Q with ||Q^2-Q|| <= eta and affine h:Del… |
 | `lem-low-slab-cap-implies-min-a` | lemma | proved | none | A | Low-slab-cap implies MIN-A: assuming conj-low-slab-cap holds at width a = 4 with… |
 | `lem-maincb-binary-block-merge` | lemma | stated | seeded | A | If A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= epsilo… |
-| `lem-maincb-corner-equivalence` | lemma | stated | seeded | A | There is a universal e_sim > 0 such that, for every finite family of one-dimensi… |
+| `lem-maincb-corner-equivalence` | lemma | proved | validated | A | There is a universal e_sim > 0 such that, for every finite family of one-dimensi… |
 | `lem-maincb-cross-class-merging-datum` | lemma | stated | seeded | A | There are universal C_cross >= 1 and e_cross > 0 such that, if A is a finite-dim… |
 | `lem-maincb-cross-union-zero-corners` | lemma | stated | seeded | A | There is a universal e_zero > 0 such that, if A is a finite-dimensional extended… |
 | `lem-maincb-direct-corner-envelope` | lemma | stated | seeded | A | There are universal L >= 1 and e_env > 0 such that, if A is a finite-dimensional… |

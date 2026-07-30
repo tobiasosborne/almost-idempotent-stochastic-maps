@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-corner-equivalence/export.md",
+  "oracle": "af-lem-maincb-corner-equivalence",
+  "result": "pass",
+  "claim_hash": "08fa560b1a461fb49cce049dc478e3942f084bd9630f330248b1a5f9ca6abb3e",
+  "oracle_digest": "90c595325db40f53c1d1f48b675b516579a3a5cb671028808368f6635c3c673c",
+  "inputs_hash": "d424f5623d14f241b0491f5c5be2c21fd4f457d8133474f1927a28ac50b353f7",
+  "ts": "2026-07-30T15:55:27.562Z"
+}
