@@ -1,0 +1,8 @@
+{
+  "id": "e6a926ef1c230783",
+  "name": "lem-compcb-amplified-almost-containment",
+  "source": "imports validated registry lemma proofs/lem-compcb-amplified-almost-containment — Amplified almost-containment: there are universal C_ac \u003c infinity and e_ac \u003e 0 such that, whenever e=delta+epsilon \u003c= e_ac, P_1,P,Q_1,Q are delta-projections with ||P_1 P-P_1||,||Q_1 Q-Q_1|| \u003c= delta, every n \u003e= 1, and X in M_n tensor S_{P_1,Q_1}, one has ||Co_{P_n,Q_n}(X)-X|| \u003c= C_ac*e*||X||.",
+  "content_hash": "9ade18c2c23e2720e5a448e738e7defad1b273fddfc848310d3a51a4cdaf8263",
+  "created": "2026-07-30T15:11:44.188524242Z",
+  "notes": ""
+}
