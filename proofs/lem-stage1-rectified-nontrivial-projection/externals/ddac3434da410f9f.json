@@ -1,0 +1,8 @@
+{
+  "id": "ddac3434da410f9f",
+  "name": "lem-stage1-fixed-unitary-projection-bridge",
+  "source": "imports validated registry lemma proofs/lem-stage1-fixed-unitary-projection-bridge — Fixed-unitary projection bridge: there are universal C_bridge\u003cinfinity and e_bridge^r\u003e0 such that every finite-dimensional exact-unit epsilon_r-C*-algebra with 0\u003c=epsilon_r\u003c=e_bridge^r and 1\u003cdim_C calX\u003cinfinity contains a nontrivial C_bridge*epsilon_r-projection P for the product bold-dot and unit J.",
+  "content_hash": "11a8ea31926d0e9923b2edbae409dc380b3c80785cc1b2a8ca1f58f850437846",
+  "created": "2026-07-30T12:35:56.479588541Z",
+  "notes": ""
+}
