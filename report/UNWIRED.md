@@ -51,6 +51,9 @@ lem-maincb-one-class-extension
 lem-maincb-binary-block-merge
 lem-maincb-stage3-finite-recombination
 lem-maincb-structural-assembly
+lem-maincb-isomorphism-unit-control
+lem-maincb-compressed-corner-unit-comparison
+lem-maincb-witness-arithmetic
 # --- 2026-07-30 S1-ENDGAME ratified rows (DESIGN-S1-ENDGAME-v5, audit v5 LAND): pre-elevation; anchor into report on af validation ---
 lem-stage1-hspace-coproduct-tail
 lem-stage1-exterior-cohomology

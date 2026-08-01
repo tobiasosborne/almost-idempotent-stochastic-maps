@@ -1,25 +1,26 @@
 ---
 id: lem-maincb-structural-assembly
 kind: lemma
-contract: There are universal C_struct = c_0^cb*K_call < infinity and e_struct = epsilon_MAIN > 0 such that every finite-dimensional extended epsilon-C*-algebra A, 0 <= epsilon <= e_struct, admits a finite-dimensional C*-algebra B = oplus_C M_{|C|} and one extended C_struct*epsilon-isomorphism v:B->A.
-defs: def-maincb-partition-state; def-maincb-reset-state; def-operator-space; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
+contract: Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; every finite-dimensional extended epsilon-C*-algebra A with 0 <= epsilon <= W.epsilon_MAIN admits a finite-dimensional C*-algebra B=oplus_C M_{|C|} and an extended W.c0_cb*W.K_call*epsilon-isomorphism v:B->A satisfying ||v(I_B)-I_A|| <= W.c0_cb*W.K_call*epsilon; hence C_struct=W.c0_cb*W.K_call and e_struct=W.epsilon_MAIN are finite positive universal witnesses.
+defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-witness-ledger; def-operator-space; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
 deps: lem-maincb-full-corner-identification; lem-maincb-corner-equivalence; lem-maincb-structural-domain-ledger; lem-maincb-maximal-reset-selection; lem-maincb-stage1-maximality; lem-maincb-one-class-extension; lem-maincb-stage3-finite-recombination
 status: stated
 af: seeded
 workspace: proofs/lem-maincb-structural-assembly
-provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-7 row M28 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1414-1444
+provenance: DESIGN-MAINCB-REPAIR-v2.md sect-4 row M28 (amended contract, landed verbatim; supersedes the 2026-07-30 DESIGN-MAIN-STRUCTURE-v5 form); AUDIT-MAINCB-REPAIR.md DESIGN-CONFIRMED (F1-F3 applied verbatim in v2); user-ratified 2026-08-01 (tobiasosborne, in-session sign-off); source approximate_algebras.tex:1414-1444
 owner: A
 ---
-
-**Status.** `stated` — contract transcribed from the audited
-`DESIGN-MAIN-STRUCTURE-v5.md` sect-7 row M28 (REPAIR-CONFIRMED audit chain
-v2..v5; W78-ratified package; full MAIN row package user-ratified
-2026-07-30 in-session). MAIN campaign row M28. NOT proved in-repo;
-af elevation pending.
+**Status.** `stated` — contract AMENDED per the audited
+`DESIGN-MAINCB-REPAIR-v2.md` sect-4 row M28 (aism-jl4g two-defect repair:
+unit-clause thread + witness-ledger rebinding; hostile-audit chain
+AUDIT-MAINCB-REPAIR.md DESIGN-CONFIRMED; user-ratified 2026-08-01
+in-session; supersedes the 2026-07-30 v5 contract). MAIN campaign row
+M28. NOT proved in-repo; af elevation pending.
 
 **Build budget (BINDING on the af tree).** Design target/rounds/hard-cap:
-7 / 3 / 11. Per-row skeleton and audit delta:
-DESIGN-MAIN-STRUCTURE-v5.md sect-7 row M28. A hard-cap hit is a factoring stop,
-not a rounds bump. Constants live in the proof body, never the contract.
+9 / 3 / 13. Per-row skeleton and audit delta:
+DESIGN-MAINCB-REPAIR-v2.md sect-4 (and sect-8 re-seed guidance where applicable).
+A hard-cap hit is a factoring stop, not a rounds bump. Constants live in the
+proof body, never the contract.
 
-**Provenance loci.** approximate_algebras.tex:1414-1444; consumer argument/lemmas/lem-thmainext-conditional.md:4,26-30
+**Provenance loci.** approximate_algebras.tex:1414-1444

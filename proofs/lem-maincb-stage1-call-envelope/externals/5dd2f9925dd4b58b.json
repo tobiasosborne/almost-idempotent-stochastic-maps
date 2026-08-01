@@ -1,8 +1,0 @@
-{
-  "id": "5dd2f9925dd4b58b",
-  "name": "lem-stage1-fresh-two-point-inclusion",
-  "source": "imports validated registry lemma proofs/lem-stage1-fresh-two-point-inclusion — There are universal C_pair\u003cinfinity and e_pair\u003e0 such that every finite-dimensional extended epsilon_X-C*-algebra (calX,I_X,.,dagger) with 0\u003c=epsilon_X\u003c=e_pair and 1\u003cdim_C calX\u003cinfinity contains nonvanishing C_pair*epsilon_X-projections P',P'' with P'+P''=I_X for which the linear map v^(2):C^2-\u003ecalX, v^(2)(lambda,mu)=lambda*P'+mu*P'', is an extended C_pair*epsilon_X-inclusion, satisfies v^(2)(1,1)=I_X, and sends the standard projection basis Pi',Pi'' to P',P''.",
-  "content_hash": "5e3c9ac350a067221584c1f624ecda113d498deded3d9b7e5207e0f196fef3a5",
-  "created": "2026-07-30T18:41:14.243861136Z",
-  "notes": ""
-}

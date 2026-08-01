@@ -1,8 +1,0 @@
-{
-  "id": "723111dff617bbe2",
-  "name": "lem-maincb-outer-compression-transfer",
-  "source": "imports validated registry lemma proofs/lem-maincb-outer-compression-transfer — There are universal C_out \u003c infinity and e_out \u003e 0 such that, whenever R,P are t-projections in a finite-dimensional extended t-C*-algebra, R is nonvanishing, both subordination errors of P to R are at most t, v:B-\u003eS^A_P is an extended t-isomorphism, A_R = S^A_R, P^R = Co^A_R(P), and t \u003c= e_out, the explicitly defined map T = Co^{A_R}_{P^R} o Co^A_R o v : B-\u003eS^{A_R}_{P^R} is an extended C_out*t-isomorphism and T_n = I_n tensor T for every n.",
-  "content_hash": "e3c6b9099626cf1472c6743c39b8927bb3dbc08380fb8580bbe3d7b3e0102199",
-  "created": "2026-07-30T18:46:53.44536415Z",
-  "notes": ""
-}

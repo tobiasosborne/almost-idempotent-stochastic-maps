@@ -149,7 +149,7 @@ it is a \(\delta\)-homomorphism and satisfies the two-sided
 \par
 \textbf{Provenance.} \texttt{source: internal}; locus \texttt{harmonization of approximate\_algebras.\allowbreak{}tex:\allowbreak{}443-\allowbreak{}456,\allowbreak{}1477-\allowbreak{}1484 prescribed by DESIGN-\allowbreak{}FUDW-\allowbreak{}DECOMP-\allowbreak{}v3.\allowbreak{}md \S{}4.\allowbreak{}1}; no source hash (not a literature transcription); record: user-\allowbreak{}ratified 2026-\allowbreak{}07-\allowbreak{}24 (tobiasosborne,\allowbreak{} in-\allowbreak{}session sign-\allowbreak{}off;\allowbreak{} delegated ratification for consensus/\allowbreak{}original tiers).
 \par
-\textbf{Used in this report by} \hyperref[conj:extcb]{\texttt{conj-\allowbreak{}extcb}}, \hyperref[lem:compcb-single-compression-transfer]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}single-\allowbreak{}compression-\allowbreak{}transfer}}, \hyperref[lem:extcb-corner-dimension-additivity]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}corner-\allowbreak{}dimension-\allowbreak{}additivity}}, \hyperref[lem:extcb-four-corner-merge]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}four-\allowbreak{}corner-\allowbreak{}merge}} (30 registry results import it in total; see \texttt{argument/INDEX.md}).
+\textbf{Used in this report by} \hyperref[conj:extcb]{\texttt{conj-\allowbreak{}extcb}}, \hyperref[lem:compcb-single-compression-transfer]{\texttt{lem-\allowbreak{}compcb-\allowbreak{}single-\allowbreak{}compression-\allowbreak{}transfer}}, \hyperref[lem:extcb-corner-dimension-additivity]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}corner-\allowbreak{}dimension-\allowbreak{}additivity}}, \hyperref[lem:extcb-four-corner-merge]{\texttt{lem-\allowbreak{}extcb-\allowbreak{}four-\allowbreak{}corner-\allowbreak{}merge}} (32 registry results import it in total; see \texttt{argument/INDEX.md}).
 \par
 \textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}extended-\allowbreak{}delta-\allowbreak{}inclusion.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
 \par
@@ -344,6 +344,27 @@ induction base uses $t_{\rm atom}=K_{\rm call}\varepsilon$
 \end{verbatim}
 \par
 \textbf{Rendering note.} 2 block(s) of this shard are flagged above; see \texttt{report/generated/defs/MANIFEST.md}.
+\end{defnote}
+
+%% ---- def-maincb-witness-ledger -----------------------------------------
+\hypertarget{def:maincb-witness-ledger}{}%
+\begin{definition}[MAIN-CB witness ledger\normalfont{} (\texttt{def-\allowbreak{}maincb-\allowbreak{}witness-\allowbreak{}ledger})]\label{def:maincb-witness-ledger}
+A \emph{MAIN-CB witness ledger} is a tuple W of twelve named real scalar fields
+\[
+W=(c0_{cb},L,K1,K2,K3,K_{call},e_{env},e1,e_{s2},e_{cross},r_{reset},epsilon_{MAIN}).
+\]
+The first five fields are receiving coefficients, the sixth is a derived coefficient, the next four are receiving margins, and the last two are derived scales.
+\end{definition}
+\begin{defnote}
+\textbf{Kind.} original (introduced by this project); \texttt{status: locked}.\quad\textbf{Aliases.} MAIN witness tuple; MAIN-CB constants tuple.
+\par
+\textbf{Provenance.} \texttt{source: internal}; locus \texttt{DESIGN-\allowbreak{}MAINCB-\allowbreak{}REPAIR-\allowbreak{}v2.\allowbreak{}md sect 2 (hostile-\allowbreak{}audited AUDIT-\allowbreak{}MAINCB-\allowbreak{}REPAIR.\allowbreak{}md,\allowbreak{} verdict VALID AS DATA)}; no source hash (not a literature transcription); record: user-\allowbreak{}ratified 2026-\allowbreak{}08-\allowbreak{}01 (tobiasosborne,\allowbreak{} in-\allowbreak{}session sign-\allowbreak{}off;\allowbreak{} delegated ratification for consensus/\allowbreak{}original tiers;\allowbreak{} aism-\allowbreak{}jl4g repair package).
+\par
+\textbf{Used by} 18 registry results, none of them reproduced in this report (exploration track; see \texttt{argument/INDEX.md} and \texttt{report/UNWIRED.md}).
+\par
+\textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}maincb-\allowbreak{}witness-\allowbreak{}ledger.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
+\par
+\textbf{Notes / provenance.} Pure data: this shard contains no inequality between fields, no existence, uniqueness, estimate, map, regularity, admissibility, or dimension-freeness assertion. The analytic-witness relation and scalar arithmetic are exported only by \texttt{lem-\allowbreak{}maincb-\allowbreak{}witness-\allowbreak{}arithmetic} and \texttt{lem-\allowbreak{}maincb-\allowbreak{}reset-\allowbreak{}constant-\allowbreak{}ledger}. This is the MAIN-CB instance of the typed-witness pattern in \texttt{def-\allowbreak{}stage1-\allowbreak{}polar-\allowbreak{}witness-\allowbreak{}data} and \texttt{DESIGN-\allowbreak{}S1-\allowbreak{}POLAR-\allowbreak{}v6.\allowbreak{}md} sects 2--3 and 8, motivated by \texttt{docs/\allowbreak{}LEARNINGS.\allowbreak{}md} 2026-07-28 laws (i)--(ii). Related: \hyperref[def:maincb-reset-state]{\texttt{def-\allowbreak{}maincb-\allowbreak{}reset-\allowbreak{}state}}, \hyperref[def:maincb-raw-call]{\texttt{def-\allowbreak{}maincb-\allowbreak{}raw-\allowbreak{}call}}, \hyperref[def:maincb-partition-state]{\texttt{def-\allowbreak{}maincb-\allowbreak{}partition-\allowbreak{}state}}.
 \end{defnote}
 
 %% ---- def-positive-approximate-retract ----------------------------------

@@ -1,25 +1,26 @@
 ---
 id: lem-maincb-one-class-extension
 kind: lemma
-contract: If A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= epsilon_MAIN, a supplied MAIN partition state comes from an extended c_0^cb*epsilon-inclusion w:C^m->A, all atomic images P_j are one-dimensional, and C = {j_1,...,j_s} is one equivalence class, then there is a current reset state v_C:M_s->A_C that is an extended isomorphism and satisfies the local invariant d_C <= c_0^cb*epsilon_C; moreover epsilon_C <= K_call*epsilon, so the bound d_C <= c_0^cb*K_call*epsilon follows.
-defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-raw-call; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
+contract: Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= W.epsilon_MAIN, a supplied MAIN partition state comes from an extended W.c0_cb*epsilon-inclusion w:C^m->A satisfying ||w(I_{C^m})-I_A|| <= W.c0_cb*epsilon, all atomic images are one-dimensional, and C is one equivalence class, then there is a current reset isomorphism v_C:M_{|C|}->A_C satisfying d_C <= W.c0_cb*epsilon_C and ||v_C(I_{M_{|C|}})-u_{A_C}|| <= W.c0_cb*epsilon_C; moreover epsilon_C <= W.K_call*epsilon.
+defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-raw-call; def-maincb-witness-ledger; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
 deps: lem-maincb-direct-corner-envelope; lem-maincb-corner-equivalence; lem-maincb-initial-raw-inclusion; lem-maincb-stage2-raw-extension; lem-maincb-stage2-call-envelope; lem-maincb-reset-invariant-preservation; lem-maincb-structural-domain-ledger
 status: stated
 af: seeded
 workspace: proofs/lem-maincb-one-class-extension
-provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-7 row M25 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1430-1441
+provenance: DESIGN-MAINCB-REPAIR-v2.md sect-4 row M25 (amended contract, landed verbatim; supersedes the 2026-07-30 DESIGN-MAIN-STRUCTURE-v5 form); AUDIT-MAINCB-REPAIR.md DESIGN-CONFIRMED (F1-F3 applied verbatim in v2); user-ratified 2026-08-01 (tobiasosborne, in-session sign-off); source approximate_algebras.tex:1378-1412,1430-1441
 owner: A
 ---
-
-**Status.** `stated` — contract transcribed from the audited
-`DESIGN-MAIN-STRUCTURE-v5.md` sect-7 row M25 (REPAIR-CONFIRMED audit chain
-v2..v5; W78-ratified package; full MAIN row package user-ratified
-2026-07-30 in-session). MAIN campaign row M25. NOT proved in-repo;
-af elevation pending.
+**Status.** `stated` — contract AMENDED per the audited
+`DESIGN-MAINCB-REPAIR-v2.md` sect-4 row M25 (aism-jl4g two-defect repair:
+unit-clause thread + witness-ledger rebinding; hostile-audit chain
+AUDIT-MAINCB-REPAIR.md DESIGN-CONFIRMED; user-ratified 2026-08-01
+in-session; supersedes the 2026-07-30 v5 contract). MAIN campaign row
+M25. NOT proved in-repo; af elevation pending.
 
 **Build budget (BINDING on the af tree).** Design target/rounds/hard-cap:
-7 / 3 / 11. Per-row skeleton and audit delta:
-DESIGN-MAIN-STRUCTURE-v5.md sect-7 row M25. A hard-cap hit is a factoring stop,
-not a rounds bump. Constants live in the proof body, never the contract.
+9 / 3 / 13. Per-row skeleton and audit delta:
+DESIGN-MAINCB-REPAIR-v2.md sect-4 (and sect-8 re-seed guidance where applicable).
+A hard-cap hit is a factoring stop, not a rounds bump. Constants live in the
+proof body, never the contract.
 
-**Provenance loci.** approximate_algebras.tex:1430-1441
+**Provenance loci.** approximate_algebras.tex:1378-1412,1430-1441

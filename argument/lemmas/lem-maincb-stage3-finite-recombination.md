@@ -1,25 +1,26 @@
 ---
 id: lem-maincb-stage3-finite-recombination
 kind: lemma
-contract: If A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= epsilon_MAIN, a supplied MAIN partition state comes from an extended c_0^cb*epsilon-inclusion w:C^m->A with one-dimensional atomic images and has all equivalence classes C_1,...,C_q, and as initial data every C_a has a finite-dimensional C*-algebra B_{C_a} and current reset isomorphism v_{C_a}:B_{C_a}->A_{C_a} satisfying d_{C_a} <= c_0^cb*epsilon_{C_a}, then there is a current reset isomorphism oplus_{a=1}^q B_{C_a} -> A_{union_a C_a} satisfying the same local invariant at the full union.
-defs: def-maincb-partition-state; def-maincb-reset-state; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
-deps: lem-maincb-binary-block-merge
+contract: Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= W.epsilon_MAIN, a supplied MAIN partition state comes from an extended W.c0_cb*epsilon-inclusion w:C^m->A satisfying ||w(I_{C^m})-I_A|| <= W.c0_cb*epsilon and has classes C_1,...,C_q, and each initial current reset isomorphism v_{C_a}:B_{C_a}->A_{C_a} satisfies d_{C_a} <= W.c0_cb*epsilon_{C_a} and ||v_{C_a}(I_{B_{C_a}})-u_{A_{C_a}}|| <= W.c0_cb*epsilon_{C_a}, then there is a current reset isomorphism v:oplus_a B_{C_a}->A_{union_a C_a} satisfying d_{union_a C_a} <= W.c0_cb*epsilon_{union_a C_a} and ||v(I_{oplus_a B_{C_a}})-u_{A_{union_a C_a}}|| <= W.c0_cb*epsilon_{union_a C_a}.
+defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-witness-ledger; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
+deps: lem-maincb-structural-domain-ledger; lem-maincb-binary-block-merge
 status: stated
 af: seeded
 workspace: proofs/lem-maincb-stage3-finite-recombination
-provenance: DESIGN-MAIN-STRUCTURE-v5.md sect-7 row M27 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-MAIN-STRUCTURE-v5.md REPAIR-CONFIRMED (W78-ratified package); user-ratified 2026-07-30; source approximate_algebras.tex:1443
+provenance: DESIGN-MAINCB-REPAIR-v2.md sect-4 row M27 (amended contract, landed verbatim; supersedes the 2026-07-30 DESIGN-MAIN-STRUCTURE-v5 form); AUDIT-MAINCB-REPAIR.md DESIGN-CONFIRMED (F1-F3 applied verbatim in v2); user-ratified 2026-08-01 (tobiasosborne, in-session sign-off); source approximate_algebras.tex:1443
 owner: A
 ---
-
-**Status.** `stated` — contract transcribed from the audited
-`DESIGN-MAIN-STRUCTURE-v5.md` sect-7 row M27 (REPAIR-CONFIRMED audit chain
-v2..v5; W78-ratified package; full MAIN row package user-ratified
-2026-07-30 in-session). MAIN campaign row M27. NOT proved in-repo;
-af elevation pending.
+**Status.** `stated` — contract AMENDED per the audited
+`DESIGN-MAINCB-REPAIR-v2.md` sect-4 row M27 (aism-jl4g two-defect repair:
+unit-clause thread + witness-ledger rebinding; hostile-audit chain
+AUDIT-MAINCB-REPAIR.md DESIGN-CONFIRMED; user-ratified 2026-08-01
+in-session; supersedes the 2026-07-30 v5 contract). MAIN campaign row
+M27. NOT proved in-repo; af elevation pending.
 
 **Build budget (BINDING on the af tree).** Design target/rounds/hard-cap:
-4 / 2 / 8. Per-row skeleton and audit delta:
-DESIGN-MAIN-STRUCTURE-v5.md sect-7 row M27. A hard-cap hit is a factoring stop,
-not a rounds bump. Constants live in the proof body, never the contract.
+6 / 2 / 10. Per-row skeleton and audit delta:
+DESIGN-MAINCB-REPAIR-v2.md sect-4 (and sect-8 re-seed guidance where applicable).
+A hard-cap hit is a factoring stop, not a rounds bump. Constants live in the
+proof body, never the contract.
 
-**Provenance loci.** approximate_algebras.tex:1443; AUDIT-MAIN-STRUCTURE-v3.md sect-6-8
+**Provenance loci.** approximate_algebras.tex:1443
