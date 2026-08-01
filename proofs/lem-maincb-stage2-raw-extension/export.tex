@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing the universal C\_s2\textasciicircum{}0,e\_s2\textasciicircum{}0 witnesses ...}
+\step{1} After first fixing the universal C\_s2\textasciicircum{}0,e\_s2\textasciicircum{}0 witnesses of lem-maincb-stage2-extcb-datum, C\_ext,e\_ext witnesses of conj-extcb, and C\_iso\_unit,e\_iso\_unit witnesses of lem-maincb-isomorphism-unit-control, there are universal D\_2 < infinity and e\_2 > 0 such that for every def-maincb-witness-ledger datum W with W.e\_s2 <= min\{e\_s2\textasciicircum{}0,e\_2\}, C\_s2\textasciicircum{}0*e\_2 <= e\_ext, and (C\_ext+1)*C\_s2\textasciicircum{}0*e\_2 <= e\_iso\_unit, every explicit Stage-2 raw-call closed EXT-CB datum in A\_R with total post-helper defect at most C\_s2\textasciicircum{}0*t and 0 <= t <= W.e\_s2 admits an extended D\_2*t-isomorphism v\_+:M\_\{r+1\}->A\_R satisfying ||v\_+(I\_\{M\_\{r+1\}\})-u\_\{A\_R\}|| <= D\_2*t. \steptag{validated} \\[6pt]
+\step{1.1} Define e\_2 := (1/2) min\{1, e\_s2\textasciicircum{}0, e\_ext/C\_s2\textasciicircum{}0, e\_iso\_unit/[C\_s2\textasciicircum{}0(|C\_ext+1|+1)]\} and D\_2 := 1 + C\_s2\textasciicircum{}0(|C\_ext| + |C\_iso\_unit|(|C\_ext|+1)). These are positive/finite universal constants (in particular D\_2<infinity and e\_2>0), and elementary real arithmetic gives e\_2<=e\_s2\textasciicircum{}0, C\_s2\textasciicircum{}0 e\_2<=e\_ext, and (C\_ext+1)C\_s2\textasciicircum{}0 e\_2<=e\_iso\_unit. Moreover D\_2>=C\_ext C\_s2\textasciicircum{}0 and D\_2>=C\_iso\_unit(C\_ext+1)C\_s2\textasciicircum{}0. \steptag{validated} \\[4pt]
+\step{1.2} Fix an arbitrary def-maincb-witness-ledger datum W and arbitrary explicit Stage-2 raw-call closed EXT-CB datum in A\_R covered by node 1, with base scale 0<=t<=W.e\_s2 and total post-helper defect e:=delta+epsilon\_\{A\_R\}<=C\_s2\textasciicircum{}0 t. By def-extcb-datum and the precise output of lem-maincb-stage2-extcb-datum, A\_R is a finite-dimensional extended epsilon\_\{A\_R\}-C*-algebra and its P,Q,v:M\_r->S\_P satisfy every hypothesis of conj-extcb. Also W.e\_s2<=e\_2 implies 0<=e<=C\_s2\textasciicircum{}0 t<=C\_s2\textasciicircum{}0 e\_2<=e\_ext. \steptag{validated} \\[4pt]
+\step{1.3} Applying conj-extcb to the datum and smallness established in node 1.2 yields one map v\_+:M\_\{r+1\}->A\_R whose every amplification is a C\_ext e-isomorphism, hence v\_+ is an extended C\_ext e-isomorphism by def-extended-delta-inclusion. Since e<=C\_s2\textasciicircum{}0 t and D\_2>=C\_ext C\_s2\textasciicircum{}0, weakening the defect bounds at every amplification shows that v\_+ is an extended D\_2 t-isomorphism. \steptag{validated} \\[4pt]
+\step{1.4} For the same v\_+ supplied by node 1.3 put delta\_+:=C\_ext e. We split into two cases. If e=0, then epsilon\_\{A\_R\}=0 (both defects in e=delta+epsilon\_\{A\_R\} are nonnegative) and delta\_+=0. Thus lem-maincb-isomorphism-unit-control applies with B=M\_\{r+1\}, A=A\_R and v=v\_+ because 0<=delta\_++epsilon\_\{A\_R\}=0<=e\_iso\_unit; it gives ||v\_+(I\_\{M\_\{r+1\}\})-u\_\{A\_R\}||<=C\_iso\_unit*0=0<=D\_2 t. Now suppose e>0. Since v\_+ is a C\_ext e-isomorphism by node 1.3, its two-sided level-one bounds applied to the nonzero identity of M\_\{r+1\} give (1-C\_ext e)||I||<=||v\_+(I)||<=(1+C\_ext e)||I||, whence C\_ext e>=0 and therefore C\_ext>=0. Consequently 0<=delta\_++epsilon\_\{A\_R\}<=C\_ext e+e=(C\_ext+1)e<=(C\_ext+1)C\_s2\textasciicircum{}0 e\_2<=e\_iso\_unit, using epsilon\_\{A\_R\}<=e, node 1.2, and node 1.1. Applying lem-maincb-isomorphism-unit-control to B=M\_\{r+1\}, A=A\_R, v=v\_+ yields ||v\_+(I\_\{M\_\{r+1\}\})-u\_\{A\_R\}||<=C\_iso\_unit(delta\_++epsilon\_\{A\_R\})<=|C\_iso\_unit|(C\_ext+1)C\_s2\textasciicircum{}0 t<=D\_2 t, where the middle inequality follows from the preceding nonnegative upper bound and the last from C\_ext>=0 and the definition of D\_2 in node 1.1. Thus the required unit estimate holds in both cases. \steptag{validated} \\[4pt]
+\step{1.5} The choices in node 1.1 are independent of W,t,r and A\_R. For every W and Stage-2 datum quantified in node 1, node 1.3 supplies the required extended D\_2 t-isomorphism and node 1.4 supplies its required unit estimate. These two conclusions are witnessed by the same map v\_+, so the existential conclusion and all universal quantifiers of node 1 follow. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

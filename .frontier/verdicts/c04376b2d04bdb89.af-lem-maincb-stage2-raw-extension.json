@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-stage2-raw-extension/export.md",
+  "oracle": "af-lem-maincb-stage2-raw-extension",
+  "result": "pass",
+  "claim_hash": "7b762a5bf55914200a7659d007d30fba646e1cfc6c8a99767a3b802d66567085",
+  "oracle_digest": "1089d39f0de84998e7121be1e31581b3a4f81ab01c98bdc84beea0d9ce2181aa",
+  "inputs_hash": "d8b9c6da189923990fa1dc3da65c5bce7cc87e779c81d07c1aa53aec17c10caa",
+  "ts": "2026-08-01T09:49:18.178Z"
+}
