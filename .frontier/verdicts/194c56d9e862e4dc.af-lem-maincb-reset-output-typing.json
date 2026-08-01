@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-reset-output-typing/export.md",
+  "oracle": "af-lem-maincb-reset-output-typing",
+  "result": "pass",
+  "claim_hash": "ae50ad97bb0c072e3fc38b4bc5df686f8636a77138e5416a3b4f1d6e57bf277f",
+  "oracle_digest": "c216da6bfd164b8dc1f12d76c6d65a1d99806b432345c4fcc8205d0d1dbeed48",
+  "inputs_hash": "becfc2be168201817ae2a86e3a7c6e2c229c92ee717c7280ef61e47822bfb56c",
+  "ts": "2026-08-01T19:02:54.689Z"
+}

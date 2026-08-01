@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing the universal e\_it,K\_disp,K\_floor witn...}
+\step{1} After first fixing the universal e\_it,K\_disp,K\_floor witnesses of lem-maincb-improvement-iteration and epsilon\_max\textasciicircum{}cb,delta\_max\textasciicircum{}cb,c0\textasciicircum{}0 witnesses of lem-maincb-error-improvement, there are universal 0 < C\_unit < infinity and epsilon\_unit,delta\_unit,a\_unit > 0 furnished by the third clause of prop\_delta\_hominc and its implicit quantifier convention such that, for every D >= 1 and every def-maincb-witness-ledger datum W with W.c0\_cb >= max\{c0\textasciicircum{}0,K\_floor,C\_unit*(K\_floor+1)\} and W.r\_reset <= min\{epsilon\_max\textasciicircum{}cb,delta\_max\textasciicircum{}cb/D,e\_it/(D+1),epsilon\_unit,delta\_unit/max\{1,K\_floor\},a\_unit/((1+K\_disp)*D),[2*(1+K\_disp)*D]\textasciicircum{}\{-1\}\}, every explicit raw call into an extended epsilon\_R-C*-corner A\_R at scale 0 <= t <= W.r\_reset whose literal map u\_R:B\_R->A\_R is an extended D*t-inclusion and satisfies ||u\_R(I\_\{B\_R\})-u\_\{A\_R\}|| <= D*t and epsilon\_R <= t admits an error-improved map v\_R:B\_R->A\_R that satisfies d\_R <= W.c0\_cb*epsilon\_R and ||v\_R(I\_\{B\_R\})-u\_\{A\_R\}|| <= W.c0\_cb*epsilon\_R, is an extended W.c0\_cb*epsilon\_R-inclusion, is an extended W.c0\_cb*epsilon\_R-isomorphism when u\_R is bijective, and leaves the source, target corner, and amplification form unchanged. \steptag{validated} \\[6pt]
+\step{1.1} Unpack the third clause of GT-kitaev-prop-delta-hominc using its registered implicit quantifier convention. There are universal C\_unit>0, epsilon\_unit>0, delta\_unit>0 and a\_unit>0, chosen with a\_unit strictly below the positive near-unit threshold in that clause, such that every level-one delta-homomorphism f between epsilon-C*-algebras with epsilon<=epsilon\_unit, delta<=delta\_unit, and ||f(I)-I||<=a\_unit satisfies ||f(I)-I||<=C\_unit*(delta+epsilon). These constants are independent of all algebras, dimensions, maps, D, W and t. \steptag{validated} \\[4pt]
+\step{1.2} Fix D, W and one raw call as in node 1, and put q=(1+K\_disp)*D*t. The ledger radius inequalities and epsilon\_R<=t give epsilon\_R<=epsilon\_max\textasciicircum{}cb, D*t<=delta\_max\textasciicircum{}cb, D*t+epsilon\_R<=e\_it, epsilon\_R<=epsilon\_unit, K\_floor*epsilon\_R<=delta\_unit, and q<=min\{a\_unit,1/2\}. \steptag{validated} \\[4pt]
+\step{1.3} Apply lem-maincb-improvement-iteration to the literal map u\_R with d=D*t and epsilon=epsilon\_R. It produces one specific dagger-preserving map v\_R:B\_R->A\_R, with amplifications (v\_R)\_n=I\_n tensor v\_R, such that sup\_n||(v\_R)\_n-(u\_R)\_n||<=K\_disp*D*t and v\_R is an extended K\_floor*epsilon\_R-inclusion; this is the map retained throughout the proof, including at epsilon\_R=0 where the provider specifies the operator-norm limit. \steptag{validated} \\[4pt]
+\step{1.4} For the same v\_R from node 1.3, the n=1 map bound and ||I\_\{B\_R\}||=1 give ||v\_R(I\_\{B\_R\})-u\_R(I\_\{B\_R\})||<=K\_disp*D*t. The raw-call unit hypothesis and the triangle inequality therefore give ||v\_R(I\_\{B\_R\})-u\_\{A\_R\}||<=q<=a\_unit. Since an extended K\_floor*epsilon\_R-inclusion is at level one a K\_floor*epsilon\_R-homomorphism, the source exact C*-algebra is also an epsilon\_R-C*-algebra, and the target is an epsilon\_R-C*-algebra, node 1.1 and GT-kitaev-prop-delta-hominc apply with delta=K\_floor*epsilon\_R. Hence ||v\_R(I\_\{B\_R\})-u\_\{A\_R\}||<=C\_unit*(K\_floor+1)*epsilon\_R<=W.c0\_cb*epsilon\_R. \steptag{validated} \\[4pt]
+\step{1.5} Record d\_R=K\_floor*epsilon\_R for this v\_R. Then d\_R<=W.c0\_cb*epsilon\_R. Also K\_floor*epsilon\_R<=W.c0\_cb*epsilon\_R, so definitional weakening of the amplified homomorphism and two-sided norm inequalities, equivalently lem-maincb-extended-inclusion-monotone in the finite-dimensional MAIN corner setting, makes this same v\_R an extended W.c0\_cb*epsilon\_R-inclusion. \steptag{validated} \\[4pt]
+\step{1.6} If u\_R is bijective, its extended D*t-inclusion lower norm bound and node 1.3 imply ||v\_R(x)||>=||u\_R(x)||-||(v\_R-u\_R)(x)||>=(1-(1+K\_disp)*D*t)||x||=(1-q)||x||>=||x||/2 for every x in B\_R. Thus v\_R is injective. Bijectivity of u\_R identifies the finite dimensions of B\_R and A\_R, so v\_R is bijective. By def-extended-delta-inclusion it is an extended K\_floor*epsilon\_R-isomorphism, and lem-maincb-extended-inclusion-monotone upgrades it to an extended W.c0\_cb*epsilon\_R-isomorphism. \steptag{validated} \\[4pt]
+\step{1.7} The map satisfying all conclusions is the single iteration output v\_R of node 1.3, not the separate existential replacement offered by lem-maincb-error-improvement. Nodes 1.4-1.6 give its unit estimate, recorded defect, extended inclusion, and conditional extended-isomorphism typing. Because node 1.3 constructs v\_R with literal type B\_R->A\_R and amplifications I\_n tensor v\_R, the source, target corner, and amplification form are unchanged. Together with the universal choices in node 1.1 this establishes every clause of node 1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
