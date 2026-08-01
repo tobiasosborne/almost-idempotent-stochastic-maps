@@ -2128,3 +2128,29 @@ weekly codex quota authorized. After completing S1-ENDGAME (part 1, T0 → 130):
 **Critical path for session 39:** the aism-jl4g design round (two-defect repair
 package) → user ratification → M12/M19-S1 completions → M16–M28 → the
 lem-thmainext-conditional rewire → the decoupled campaigns → op-classical.
+
+## 2026-08-01 — Session 39: the aism-jl4g dissolution; T0 144 → 156 (net +12); three certificate retractions caught same-day
+
+The session ran the full design → fresh-codex hostile audit → user
+ratification → land → elevate loop FIVE times (witness-ledger+unit-thread;
+recorded-field ENV repair after a validated M_2 countermodel; bijectivity
+bridge + typed M17; monotonicity micro-row; consumer-chain repair), and
+banked 16 times (152nd–168th events; 12 net new T0 rows): both session-38
+parked blockers (M12 9/10→closed, M19-S1 3-stalls→first-pass), the M19
+family, M16–M18, M20, M25 (later retracted), and 6 new bridge/ledger rows.
+Registry 341→347 (+1 def, def-maincb-witness-ledger, locked).
+
+The day's defining event: the adversarial pipeline caught THREE latent
+certificate gaps in same-day banks (M25 bijective=>isomorphism without the
+inclusion typing; M19-S2/S3 unimported monotonicity) — design-codex
+allegation, independently audit-confirmed from the exports, then
+linker-propagated (M18/M20 suspended, certificates intact). All demoted
+honestly with a LEARNINGS retraction; M19-S2 re-validated 10/10 first-pass
+within the hour. Five contract-level interface defects were also caught and
+repaired through ratified rounds (unit clause, recorded fields, M17
+typing, M26/M27 dropped hypothesis, M19-R output typing → the typed-reset
+provider row). Wind-down parked M19-S3 (~15-19/24) and M25 re-validations
+with precise re-architecture notes in HANDOFF. Closed beads: aism-jl4g,
+aism-4kof, aism-73ur. Open: aism-mc54 (the re-validation completions).
+~35 fr log/dispatch events (W99–W112); every bank through the external
+oracle gate; ~30 pushes.
