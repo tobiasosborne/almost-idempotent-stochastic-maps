@@ -55,6 +55,7 @@ lem-maincb-isomorphism-unit-control
 lem-maincb-compressed-corner-unit-comparison
 lem-maincb-witness-arithmetic
 lem-maincb-cross-datum-bijectivity
+lem-maincb-extended-inclusion-monotone
 # --- 2026-07-30 S1-ENDGAME ratified rows (DESIGN-S1-ENDGAME-v5, audit v5 LAND): pre-elevation; anchor into report on af validation ---
 lem-stage1-hspace-coproduct-tail
 lem-stage1-exterior-cohomology
