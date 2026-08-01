@@ -1,8 +1,8 @@
 {
-  "id": "006e31362e25e2a2",
+  "id": "0452e4f793d6db68",
   "name": "lem-maincb-stage1-raw-refinement",
   "source": "imports validated registry lemma proofs/lem-maincb-stage1-raw-refinement — There are universal D_1 \u003c infinity and e_1 \u003e 0 such that, if an explicit Stage-1 raw-call datum supplies complementary target t-projections, an old extended t-inclusion C^{m-1}-\u003eS_{P_old} when m \u003e 1, a fresh extended t-inclusion C^2-\u003eS_{P_fresh}, fixed amplification families, and every projection, complementarity, map, and target-ambient defect is at most t \u003c= e_1, then their sum map is an extended D_1*t-inclusion C^{m+1}-\u003eA; when m = 1, the old side is absent and the conclusion is the supplied fresh inclusion.",
   "content_hash": "6d804409c666188f251d175bae14503fd4891fa80952f93dd07e27657f0d547e",
-  "created": "2026-08-01T15:28:14.897140681Z",
+  "created": "2026-08-01T15:46:26.597980896Z",
   "notes": ""
 }

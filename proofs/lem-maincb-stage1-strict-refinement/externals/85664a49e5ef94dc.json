@@ -1,8 +1,8 @@
 {
-  "id": "64d8a36c41057fea",
+  "id": "85664a49e5ef94dc",
   "name": "lem-maincb-stage1-call-envelope",
   "source": "imports validated registry lemma proofs/lem-maincb-stage1-call-envelope — After first choosing a universal c0 witness for which lem-maincb-error-improvement remains valid, fixing the corresponding lem-maincb-direct-corner-envelope witnesses, fixing the C_corner_unit,e_corner_unit witnesses of lem-maincb-compressed-corner-unit-comparison, and fixing the D_1^0,e_1^0 witnesses of lem-maincb-stage1-raw-refinement, there are universal receiving witnesses K_1^0 \u003e= 1, D_1 \u003e= D_1^0, and e_1 \u003e 0 with e_1 \u003c= min{e_1^0,e_corner_unit} and every Stage-1 producer prerequisite absorbed, such that for every def-maincb-witness-ledger datum W with W.c0_cb = c0, W.K1 \u003e= K_1^0, and W.e1 \u003c= e_1, if A is a finite-dimensional extended epsilon-C*-algebra, 0 \u003c= epsilon \u003c= W.e1/W.K1, w:C^m-\u003eA is a supplied extended W.c0_cb*epsilon-inclusion satisfying ||w(I_{C^m})-I_A|| \u003c= W.c0_cb*epsilon, and some P_j=w(e_j) has dim S_{P_j}\u003e1, then the three Stage-1 producers, lem-maincb-compressed-corner-unit-comparison, and literal old-side compression furnish the explicit Stage-1 raw call at t_1=W.K1*epsilon whose literal map u_1:C^{m+1}-\u003eA is an extended D_1*t_1-inclusion and satisfies ||u_1(I_{C^{m+1}})-I_A|| \u003c= D_1*t_1, when m=1, u_1 is the supplied fresh C^2-\u003eA_fresh=S_{P_fresh} inclusion followed by the canonical amplified linear embedding A_fresh-\u003eA; lem-compcb-rectangular-product, lem-maincb-compressed-corner-unit-comparison, P_fresh=w(I_C), and the displayed incoming unit estimate furnish the asserted A-valued inclusion and unit bounds.",
   "content_hash": "a88d22fb7f85ee7ec9753b0591a34a2d0a1bd60870a629dbca6877fdbea2458d",
-  "created": "2026-08-01T15:28:14.890191946Z",
+  "created": "2026-08-01T15:46:26.592765571Z",
   "notes": ""
 }
