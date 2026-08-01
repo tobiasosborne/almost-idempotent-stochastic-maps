@@ -1,8 +1,0 @@
-{
-  "id": "4a38c811620f295e",
-  "name": "lem-extcb-four-corner-merge",
-  "source": "imports validated registry lemma proofs/lem-extcb-four-corner-merge — Complete four-corner merge: there are universal C_merge \u003c infinity and a_merge \u003e 0 such that four fixed bijective level-one corner maps satisfying def-four-corner-merging-datum with common defect rho and rho+epsilon \u003c= a_merge combine into one extended C_merge*(rho+epsilon)-isomorphism.",
-  "content_hash": "61ebc2cc2ab2f482e5cc59f2b758b72539f4a569686d2055a0fb9942dce67516",
-  "created": "2026-08-01T11:04:02.843386399Z",
-  "notes": ""
-}
