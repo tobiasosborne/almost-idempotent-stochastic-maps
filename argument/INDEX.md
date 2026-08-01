@@ -194,7 +194,7 @@
 | `lem-maincb-outer-compression-transfer` | lemma | proved | validated | A | There are universal C_out < infinity and e_out > 0 such that, whenever R,P are t… |
 | `lem-maincb-reset-constant-ledger` | lemma | stated | seeded | A | After first fixing e_it,K_disp,K_floor from lem-maincb-improvement-iteration, ep… |
 | `lem-maincb-reset-invariant-preservation` | lemma | proved | validated | A | After first fixing the universal e_it,K_disp,K_floor witnesses of lem-maincb-imp… |
-| `lem-maincb-stage1-call-envelope` | lemma | stated | seeded | A | After first choosing a universal c0 witness for which lem-maincb-error-improveme… |
+| `lem-maincb-stage1-call-envelope` | lemma | proved | validated | A | After first choosing a universal c0 witness for which lem-maincb-error-improveme… |
 | `lem-maincb-stage1-maximality` | lemma | stated | seeded | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
 | `lem-maincb-stage1-raw-refinement` | lemma | proved | validated | A | There are universal D_1 < infinity and e_1 > 0 such that, if an explicit Stage-1… |
 | `lem-maincb-stage1-strict-refinement` | lemma | stated | seeded | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
