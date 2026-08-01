@@ -204,7 +204,7 @@
 | `lem-maincb-stage2-raw-extension` | lemma | proved | validated | A | After first fixing the universal C_s2^0,e_s2^0 witnesses of lem-maincb-stage2-ex… |
 | `lem-maincb-stage3-call-envelope` | lemma | proved | validated | A | After first choosing a universal c0 witness for which lem-maincb-error-improveme… |
 | `lem-maincb-stage3-finite-recombination` | lemma | stated | seeded | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
-| `lem-maincb-stage3-raw-merge` | lemma | stated | seeded | A | After first fixing the universal C_cross^0,e_cross^0 witnesses of lem-maincb-cro… |
+| `lem-maincb-stage3-raw-merge` | lemma | proved | validated | A | After first fixing the universal C_cross^0,e_cross^0 witnesses of lem-maincb-cro… |
 | `lem-maincb-structural-assembly` | lemma | stated | seeded | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
 | `lem-maincb-structural-domain-ledger` | lemma | stated | seeded | A | After first fixing a particular universal e_sim>0 witness furnished by lem-mainc… |
 | `lem-maincb-witness-arithmetic` | lemma | proved | validated | A | After first fixing positive finite universal provider witnesses D_0,D_1,D_2,D_3,… |

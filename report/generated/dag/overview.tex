@@ -787,7 +787,7 @@
   \node[dagghost] (N6_0_17) at (4.096,-4.53) {\hyperlink{dag:lem-leakage}{lem-leakage}};
   \node[dagnode,dagDagNon] (N6_0_18) at (8.192,-0) {\hypertarget{dag:lem-kitaev-diagonal-repair}{}\texttt{lem-\hspace{0pt}kitaev-\hspace{0pt}diagonal-\hspace{0pt}repair}\\[-0.15em]{\dagstatus{$\blacktriangle$\,mod-audit / conj.\,\dagphasetag{C}}}};
   \node[dagnode,dagDagVal] (N6_0_19) at (8.192,-1.46) {\hypertarget{dag:lem-prh}{}\texttt{lem-\hspace{0pt}prh}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{D}\,\hyperref[lem:prh]{$\S$}}}};
-  \node[dagnode,dagDagSee] (N6_0_20) at (8.192,-2.92) {\hypertarget{dag:lem-maincb-stage3-raw-merge}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}stage3-\hspace{0pt}raw-\hspace{0pt}merge}\\[-0.15em]{\dagstatus{$\lozenge$\,seeded\,\dagphasetag{C}}}};
+  \node[dagnode,dagDagVal] (N6_0_20) at (8.192,-2.92) {\hypertarget{dag:lem-maincb-stage3-raw-merge}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}stage3-\hspace{0pt}raw-\hspace{0pt}merge}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{C}}}};
   \node[dagnode,dagDagVal] (N6_0_21) at (8.192,-4.38) {\hypertarget{dag:conj-extcb}{}\texttt{conj-\hspace{0pt}extcb}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{B}\,\hyperref[conj:extcb]{$\S$}}}};
   \node[dagnode,dagDagNon] (N6_0_22) at (11.512,-0) {\hypertarget{dag:lem-exposed-circuit}{}\texttt{lem-\hspace{0pt}exposed-\hspace{0pt}circuit}\\[-0.15em]{\dagstatus{$\blacktriangle$\,mod-audit / conj.\,\dagphasetag{F}}}};
   \node[dagnode,dagDagPrv] (N6_0_23) at (11.512,-1.46) {\hypertarget{dag:lem-hlc-implies-exposed-hull}{}\texttt{lem-\hspace{0pt}hlc-\hspace{0pt}implies-\hspace{0pt}exposed-\hspace{0pt}hull}\\[-0.15em]{\dagstatus{$\bullet$\,proved\,\dagphasetag{E}}}};
@@ -934,8 +934,8 @@
   \node[dagghost] (N7_1_12) at (4.096,-9.25) {\hyperlink{dag:lem-maincb-stage2-extcb-datum}{lem-maincb-stage2-extcb-datum}};
   \node[dagghost] (N7_1_13) at (4.096,-9.71) {\hyperlink{dag:lem-maincb-stage2-raw-extension}{lem-maincb-stage2-raw-extension}};
   \node[dagghost] (N7_1_14) at (4.096,-10.17) {\hyperlink{dag:lem-maincb-stage3-call-envelope}{lem-maincb-stage3-call-envelope}};
-  \node[dagghost] (N7_1_15) at (4.096,-10.63) {\hyperlink{dag:lem-maincb-witness-arithmetic}{lem-maincb-witness-arithmetic}};
-  \node[dagghost] (N7_1_16) at (4.096,-11.09) {\hyperlink{dag:lem-maincb-stage3-raw-merge}{lem-maincb-stage3-raw-merge}};
+  \node[dagghost] (N7_1_15) at (4.096,-10.63) {\hyperlink{dag:lem-maincb-stage3-raw-merge}{lem-maincb-stage3-raw-merge}};
+  \node[dagghost] (N7_1_16) at (4.096,-11.09) {\hyperlink{dag:lem-maincb-witness-arithmetic}{lem-maincb-witness-arithmetic}};
   \node[dagnode,dagDagSee] (N7_1_17) at (8.192,-8.98) {\hypertarget{dag:lem-maincb-reset-constant-ledger}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}reset-\hspace{0pt}constant-\hspace{0pt}ledger}\\[-0.15em]{\dagstatus{$\lozenge$\,seeded\,\dagphasetag{C}}}};
   \node[dagnode,dagDagSee] (N7_1_18) at (11.512,-8.98) {\hypertarget{dag:lem-maincb-structural-domain-ledger}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}structural-\hspace{0pt}domain-\hspace{0pt}ledger}\\[-0.15em]{\dagstatus{$\lozenge$\,seeded\,\dagphasetag{C}}}};
   \node[dagnode,dagDagSee] (N7_1_19) at (14.832,-6.79) {\hypertarget{dag:lem-maincb-initial-reset-inclusion}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}initial-\hspace{0pt}reset-\hspace{0pt}inclusion}\\[-0.15em]{\dagstatus{$\lozenge$\,seeded\,\dagphasetag{C}}}};
@@ -984,8 +984,8 @@
     \draw[dagedge] (N7_1_14) to[out=0,in=180] (N7_1_18);
     \draw[dagedge] (N7_1_14) to[out=0,in=180] (N7_1_22);
     \draw[dagedge] (N7_1_15) to[out=0,in=180] (N7_1_17);
+    \draw[dagedge] (N7_1_15) to[out=0,in=180] (N7_1_22);
     \draw[dagedge] (N7_1_16) to[out=0,in=180] (N7_1_17);
-    \draw[dagedge] (N7_1_16) to[out=0,in=180] (N7_1_22);
     \draw[dagedge] (N7_1_17) to[out=0,in=180] (N7_1_18);
     \draw[dagedge] (N7_1_18) to[out=0,in=180] (N7_1_19);
     \draw[dagedge] (N7_1_18) to[out=0,in=180] (N7_1_20);

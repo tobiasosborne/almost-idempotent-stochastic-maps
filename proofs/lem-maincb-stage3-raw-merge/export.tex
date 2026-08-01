@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing the universal C\_cross\textasciicircum{}0,e\_cross\textasciicircum{}0 witn...}
+\step{1} After first fixing the universal C\_cross\textasciicircum{}0,e\_cross\textasciicircum{}0 witnesses of lem-maincb-cross-class-merging-datum furnished by lem-maincb-cross-datum-bijectivity, C\_merge,a\_merge witnesses of lem-extcb-four-corner-merge, and C\_iso\_unit,e\_iso\_unit witnesses of lem-maincb-isomorphism-unit-control, there are universal D\_3 < infinity and e\_3 > 0 such that for every def-maincb-witness-ledger datum W with W.e\_cross <= min\{e\_cross\textasciicircum{}0,e\_3\}, (C\_cross\textasciicircum{}0+1)*e\_3 <= a\_merge, and (C\_merge*(C\_cross\textasciicircum{}0+1)+1)*e\_3 <= e\_iso\_unit, every explicit Stage-3 amplified four-corner datum in A\_R furnished by lem-maincb-cross-class-merging-datum with source B\_U oplus B\_V, with B\_U and B\_V finite-dimensional C*-algebras, with A\_R a finite-dimensional extended epsilon\_\{A\_R\}-C*-algebra, whose four fixed level-one corner maps are bijective, and with 0 <= rho <= C\_cross\textasciicircum{}0*t and 0 <= epsilon\_\{A\_R\} <= t <= W.e\_cross yields an extended D\_3*t-isomorphism v:B\_U oplus B\_V->A\_R satisfying ||v(I\_\{B\_U oplus B\_V\})-u\_\{A\_R\}|| <= D\_3*t. \steptag{validated} \\[6pt]
+\step{1.1} By lem-maincb-cross-datum-bijectivity, fix universal C\_cross\textasciicircum{}0 >= 1 and e\_cross\textasciicircum{}0 > 0 that are valid witnesses for lem-maincb-cross-class-merging-datum. By lem-extcb-four-corner-merge and lem-maincb-isomorphism-unit-control fix their universal witnesses, taking the error coefficients C\_merge and C\_iso\_unit nonnegative (replace either by its maximum with 0; enlarging a defect tolerance or the right side of a nonnegative norm estimate preserves the respective imported conclusion by def-extended-delta-inclusion). Put K:=C\_merge*(C\_cross\textasciicircum{}0+1), D\_3:=max\{K,C\_iso\_unit*(K+1)\}, and e\_3:=min\{1,a\_merge/(C\_cross\textasciicircum{}0+1),e\_iso\_unit/(K+1)\}. Then D\_3<infinity and e\_3>0 are universal, (C\_cross\textasciicircum{}0+1)*e\_3<=a\_merge, and (C\_merge*(C\_cross\textasciicircum{}0+1)+1)*e\_3<=e\_iso\_unit. \steptag{validated} \\[4pt]
+\step{1.2} Fix an arbitrary W and an arbitrary explicit Stage-3 datum satisfying every hypothesis of node 1. Since t<=W.e\_cross<=e\_3, rho<=C\_cross\textasciicircum{}0*t, and epsilon\_\{A\_R\}<=t, one has rho+epsilon\_\{A\_R\}<=(C\_cross\textasciicircum{}0+1)*t<=(C\_cross\textasciicircum{}0+1)*e\_3<=a\_merge. Thus this amplified four-corner merging datum, whose four fixed level-one maps are bijective, satisfies the smallness hypothesis of lem-extcb-four-corner-merge. \steptag{validated} \\[4pt]
+\step{1.3} Apply lem-extcb-four-corner-merge to the datum of the preceding node. It yields a map v:B\_U oplus B\_V->A\_R which is an extended delta-isomorphism for delta:=C\_merge*(rho+epsilon\_\{A\_R\}). \steptag{validated} \\[4pt]
+\step{1.4} The inequalities rho+epsilon\_\{A\_R\}<=(C\_cross\textasciicircum{}0+1)*t and C\_merge>=0 give 0<=delta<=K*t<=D\_3*t. By the defining inequalities in def-extended-delta-inclusion, increasing a nonnegative defect parameter weakens the homomorphism-error bound and both two-sided norm bounds, while bijectivity is unchanged. Hence the map v from the preceding node is an extended D\_3*t-isomorphism. \steptag{validated} \\[4pt]
+\step{1.5} Moreover 0<=delta+epsilon\_\{A\_R\}<=(K+1)*t<=(K+1)*e\_3<=e\_iso\_unit. Since B\_U oplus B\_V is a finite-dimensional C*-algebra and A\_R is the stated finite-dimensional extended epsilon\_\{A\_R\}-C*-algebra, lem-maincb-isomorphism-unit-control applied to v gives ||v(I\_\{B\_U oplus B\_V\})-I\_\{A\_R\}||<=C\_iso\_unit*(delta+epsilon\_\{A\_R\})<=C\_iso\_unit*(K+1)*t<=D\_3*t. The designated unit I\_\{A\_R\} is the u\_\{A\_R\} appearing in node 1, so this is exactly the required unit estimate. Since W and the Stage-3 datum were arbitrary, the two conclusions prove node 1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

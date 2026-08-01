@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-stage3-raw-merge/export.md",
+  "oracle": "af-lem-maincb-stage3-raw-merge",
+  "result": "pass",
+  "claim_hash": "d620cc023adf9dbaa8b297a3e17e9aeb7a26d8cf7fb83e2f69389a0167670e0c",
+  "oracle_digest": "61451b7c564454bd10072d64cb83712f402deeb3a011c59f23e8ebb9945944ad",
+  "inputs_hash": "e1f84d7bb58a691bb8bc9f2c7869719cbb8eca3c2a61ef0dc2e5272c81bdfca0",
+  "ts": "2026-08-01T13:35:19.110Z"
+}
