@@ -1,0 +1,8 @@
+{
+  "id": "7e5f6e3bbd9f4aff",
+  "name": "lem-maincb-stage2-raw-extension",
+  "source": "imports validated registry lemma proofs/lem-maincb-stage2-raw-extension — After first fixing the universal C_s2^0,e_s2^0 witnesses of lem-maincb-stage2-extcb-datum, C_ext,e_ext witnesses of conj-extcb, and C_iso_unit,e_iso_unit witnesses of lem-maincb-isomorphism-unit-control, there are universal D_2 \u003c infinity and e_2 \u003e 0 such that for every def-maincb-witness-ledger datum W with W.e_s2 \u003c= min{e_s2^0,e_2}, C_s2^0*e_2 \u003c= e_ext, and (C_ext+1)*C_s2^0*e_2 \u003c= e_iso_unit, every explicit Stage-2 raw-call closed EXT-CB datum in A_R with total post-helper defect at most C_s2^0*t and 0 \u003c= t \u003c= W.e_s2 admits an extended D_2*t-isomorphism v_+:M_{r+1}-\u003eA_R satisfying ||v_+(I_{M_{r+1}})-u_{A_R}|| \u003c= D_2*t.",
+  "content_hash": "9ee83f6ca4ac6183bcc78ba088a4df6f6fd0984bc0f017590cbcf08199dbe5db",
+  "created": "2026-08-01T19:03:54.730190107Z",
+  "notes": ""
+}

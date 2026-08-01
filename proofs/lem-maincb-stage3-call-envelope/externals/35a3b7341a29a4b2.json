@@ -1,0 +1,8 @@
+{
+  "id": "35a3b7341a29a4b2",
+  "name": "lem-maincb-cross-class-merging-datum",
+  "source": "imports validated registry lemma proofs/lem-maincb-cross-class-merging-datum — After first choosing a universal c0 witness for which lem-maincb-error-improvement remains valid, fixing the corresponding lem-maincb-direct-corner-envelope witnesses, and fixing the C_corner_unit,e_corner_unit witnesses of lem-maincb-compressed-corner-unit-comparison, there are universal C_cross^0 \u003e= 1 and 0 \u003c e_cross^0 \u003c= e_corner_unit such that for every def-maincb-witness-ledger datum W with W.c0_cb = c0 and W.e_cross \u003c= e_cross^0, if A is a finite-dimensional extended epsilon_A-C*-algebra with epsilon_A \u003c= t, a supplied MAIN partition state comes from a non-unital extended t-inclusion w:C^m-\u003eA with one-dimensional images P_j, has disjoint nonempty unions U,V sharing no class and R=U union V, and supplied current reset isomorphisms v_U:B_U-\u003eA_U and v_V:B_V-\u003eA_V satisfy epsilon_U,epsilon_V,d_U,d_V \u003c= t \u003c= W.e_cross, d_U \u003c= W.c0_cb*epsilon_U, d_V \u003c= W.c0_cb*epsilon_V, ||v_U(I_{B_U})-u_{A_U}|| \u003c= t, and ||v_V(I_{B_V})-u_{A_V}|| \u003c= t, then lem-maincb-compressed-corner-unit-comparison and the nested-corner, outer-compression, and zero-cross-corner constructions form the explicit Stage-3 amplified four-corner datum in A_R with common defect rho \u003c= C_cross^0*t.",
+  "content_hash": "542826d0503127eb335a19b22a9e8b1f019b542485dcde86c8035cfcbe65b1b7",
+  "created": "2026-08-01T19:03:54.656876976Z",
+  "notes": ""
+}

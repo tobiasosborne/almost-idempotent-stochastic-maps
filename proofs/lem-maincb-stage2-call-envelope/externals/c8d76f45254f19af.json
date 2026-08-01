@@ -1,0 +1,8 @@
+{
+  "id": "c8d76f45254f19af",
+  "name": "lem-maincb-extended-inclusion-monotone",
+  "source": "imports validated registry lemma proofs/lem-maincb-extended-inclusion-monotone — If B is a finite-dimensional C*-algebra, A is a finite-dimensional extended epsilon-C*-algebra, v:B-\u003eA is linear, and 0 \u003c= delta \u003c= delta', then if v is an extended delta-inclusion it is an extended delta'-inclusion, and if v is an extended delta-isomorphism it is an extended delta'-isomorphism and in particular an extended delta'-inclusion.",
+  "content_hash": "347960d2d3c3fb365d3a8ea0855e9feb4f3e10b72e0d0c99d4fcf42312e0e737",
+  "created": "2026-08-01T19:03:54.582049841Z",
+  "notes": ""
+}
