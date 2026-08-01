@@ -174,7 +174,7 @@
 | `lem-leakage` | lemma | proved-mod-audit | none | A | Affine-face leakage: for row-stochastic Q with ||Q^2-Q|| <= eta and affine h:Del… |
 | `lem-low-slab-cap-implies-min-a` | lemma | proved | none | A | Low-slab-cap implies MIN-A: assuming conj-low-slab-cap holds at width a = 4 with… |
 | `lem-maincb-binary-block-merge` | lemma | stated | seeded | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
-| `lem-maincb-compressed-corner-unit-comparison` | lemma | stated | seeded | A | There are universal C_corner_unit < infinity and e_corner_unit > 0 such that bot… |
+| `lem-maincb-compressed-corner-unit-comparison` | lemma | proved | validated | A | There are universal C_corner_unit < infinity and e_corner_unit > 0 such that bot… |
 | `lem-maincb-corner-equivalence` | lemma | proved | validated | A | There is a universal e_sim > 0 such that, for every finite family of one-dimensi… |
 | `lem-maincb-cross-class-merging-datum` | lemma | stated | seeded | A | After first choosing a universal c0 witness for which lem-maincb-error-improveme… |
 | `lem-maincb-cross-union-zero-corners` | lemma | proved | validated | A | There is a universal e_zero > 0 such that, if A is a finite-dimensional extended… |

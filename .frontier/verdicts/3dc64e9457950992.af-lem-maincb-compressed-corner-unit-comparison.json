@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-compressed-corner-unit-comparison/export.md",
+  "oracle": "af-lem-maincb-compressed-corner-unit-comparison",
+  "result": "pass",
+  "claim_hash": "88852c39834b102659fd55388852ea789ba575d835004285817ddc992803020c",
+  "oracle_digest": "84015bfd0ab2e4e3ec510f6ff0f9ebb941511858babdcb16bd14790ee98b37c6",
+  "inputs_hash": "324b02d095e45948b9aaa297532831eb79e9036b19fc872372631e8d12c2b419",
+  "ts": "2026-08-01T09:57:35.300Z"
+}
