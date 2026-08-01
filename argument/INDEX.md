@@ -176,7 +176,7 @@
 | `lem-maincb-binary-block-merge` | lemma | stated | seeded | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
 | `lem-maincb-compressed-corner-unit-comparison` | lemma | proved | validated | A | There are universal C_corner_unit < infinity and e_corner_unit > 0 such that bot… |
 | `lem-maincb-corner-equivalence` | lemma | proved | validated | A | There is a universal e_sim > 0 such that, for every finite family of one-dimensi… |
-| `lem-maincb-cross-class-merging-datum` | lemma | stated | seeded | A | After first choosing a universal c0 witness for which lem-maincb-error-improveme… |
+| `lem-maincb-cross-class-merging-datum` | lemma | proved | validated | A | After first choosing a universal c0 witness for which lem-maincb-error-improveme… |
 | `lem-maincb-cross-union-zero-corners` | lemma | proved | validated | A | There is a universal e_zero > 0 such that, if A is a finite-dimensional extended… |
 | `lem-maincb-direct-corner-envelope` | lemma | proved | validated | A | There are universal L >= 1 and e_env > 0 such that, if A is a finite-dimensional… |
 | `lem-maincb-direct-sum-inclusion-merge` | lemma | proved | validated | A | There are universal C_dir < infinity and e_dir > 0 such that, if B_1,B_2 are fin… |

@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-cross-class-merging-datum/export.md",
+  "oracle": "af-lem-maincb-cross-class-merging-datum",
+  "result": "pass",
+  "claim_hash": "c08cd01200f8f47a9faf9b0c954bc13fcf37fde700e9055d58edb66757ccfc0f",
+  "oracle_digest": "efa7f728e98e4ecf14d836b268595de2e26af4167998805c7c722ad221c026e0",
+  "inputs_hash": "8ba0cac80ccc74166199407b52e8f74fb4cae61e61bd6bc60152d7ce12db5037",
+  "ts": "2026-08-01T11:02:56.423Z"
+}

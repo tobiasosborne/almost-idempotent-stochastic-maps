@@ -1381,6 +1381,18 @@
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage1-call-envelope/ledger",
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage1-call-envelope.md"
         ]
+      },
+      {
+        "name": "af-lem-maincb-cross-class-merging-datum",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-maincb-cross-class-merging-datum"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-cross-class-merging-datum/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-cross-class-merging-datum.md"
+        ]
       }
     ]
   },
