@@ -1,8 +1,0 @@
-{
-  "id": "6c418f191a1b5c07",
-  "name": "lem-maincb-stage3-raw-merge",
-  "source": "imports validated registry lemma proofs/lem-maincb-stage3-raw-merge — After first fixing the universal C_cross^0,e_cross^0 witnesses of lem-maincb-cross-class-merging-datum furnished by lem-maincb-cross-datum-bijectivity, C_merge,a_merge witnesses of lem-extcb-four-corner-merge, and C_iso_unit,e_iso_unit witnesses of lem-maincb-isomorphism-unit-control, there are universal D_3 \u003c infinity and e_3 \u003e 0 such that for every def-maincb-witness-ledger datum W with W.e_cross \u003c= min{e_cross^0,e_3}, (C_cross^0+1)*e_3 \u003c= a_merge, and (C_merge*(C_cross^0+1)+1)*e_3 \u003c= e_iso_unit, every explicit Stage-3 amplified four-corner datum in A_R furnished by lem-maincb-cross-class-merging-datum with source B_U oplus B_V, with B_U and B_V finite-dimensional C*-algebras, with A_R a finite-dimensional extended epsilon_{A_R}-C*-algebra, whose four fixed level-one corner maps are bijective, and with 0 \u003c= rho \u003c= C_cross^0*t and 0 \u003c= epsilon_{A_R} \u003c= t \u003c= W.e_cross yields an extended D_3*t-isomorphism v:B_U oplus B_V-\u003eA_R satisfying ||v(I_{B_U oplus B_V})-u_{A_R}|| \u003c= D_3*t.",
-  "content_hash": "fa6c88b006ee3f11b284ec7dd482c4e42004b3e0699cb793f073a0b47740d058",
-  "created": "2026-08-01T15:46:27.978414518Z",
-  "notes": ""
-}

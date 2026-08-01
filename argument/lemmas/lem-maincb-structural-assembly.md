@@ -3,7 +3,7 @@ id: lem-maincb-structural-assembly
 kind: lemma
 contract: Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; every finite-dimensional extended epsilon-C*-algebra A with 0 <= epsilon <= W.epsilon_MAIN admits a finite-dimensional C*-algebra B=oplus_C M_{|C|} and an extended W.c0_cb*W.K_call*epsilon-isomorphism v:B->A satisfying ||v(I_B)-I_A|| <= W.c0_cb*W.K_call*epsilon; hence C_struct=W.c0_cb*W.K_call and e_struct=W.epsilon_MAIN are finite positive universal witnesses.
 defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-witness-ledger; def-operator-space; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
-deps: lem-maincb-full-corner-identification; lem-maincb-corner-equivalence; lem-maincb-structural-domain-ledger; lem-maincb-maximal-reset-selection; lem-maincb-stage1-maximality; lem-maincb-one-class-extension; lem-maincb-stage3-finite-recombination; lem-maincb-reset-constant-ledger
+deps: lem-maincb-full-corner-identification; lem-maincb-corner-equivalence; lem-maincb-structural-domain-ledger; lem-maincb-maximal-reset-selection; lem-maincb-stage1-maximality; lem-maincb-one-class-extension; lem-maincb-stage3-finite-recombination; lem-maincb-reset-constant-ledger; lem-maincb-extended-inclusion-monotone; lem-maincb-witness-arithmetic
 status: stated
 af: seeded
 workspace: proofs/lem-maincb-structural-assembly

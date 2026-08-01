@@ -3,7 +3,7 @@ id: lem-maincb-initial-reset-inclusion
 kind: lemma
 contract: Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; every finite-dimensional extended epsilon-C*-algebra A with 0 <= epsilon <= W.epsilon_MAIN admits an extended W.c0_cb*epsilon-inclusion v:C->A satisfying ||v(I_C)-I_A|| <= W.c0_cb*epsilon.
 defs: def-maincb-reset-state; def-maincb-raw-call; def-maincb-witness-ledger; def-operator-space; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
-deps: lem-maincb-initial-raw-inclusion; lem-maincb-reset-invariant-preservation; lem-maincb-structural-domain-ledger; lem-maincb-reset-constant-ledger
+deps: lem-maincb-initial-raw-inclusion; lem-maincb-reset-invariant-preservation; lem-maincb-structural-domain-ledger; lem-maincb-reset-constant-ledger; lem-maincb-witness-arithmetic; lem-maincb-reset-output-typing
 status: stated
 af: seeded
 workspace: proofs/lem-maincb-initial-reset-inclusion

@@ -1,8 +1,0 @@
-{
-  "id": "db6c7af20323c465",
-  "name": "lem-maincb-structural-domain-ledger",
-  "source": "imports validated registry lemma proofs/lem-maincb-structural-domain-ledger — After first fixing a particular universal e_sim\u003e0 witness furnished by lem-maincb-corner-equivalence and a particular universal e_full\u003e0 witness furnished by lem-maincb-full-corner-identification, fix one def-maincb-witness-ledger datum W whose existence is furnished by lem-maincb-reset-constant-ledger instantiated with those same e_sim,e_full witnesses; then 0 \u003c= epsilon \u003c= W.epsilon_MAIN implies epsilon \u003c= W.e_env, epsilon \u003c= W.e1/W.K1, epsilon \u003c= W.e_s2/W.K2, and epsilon \u003c= W.e_cross/W.K3, while the global scalar scale epsilon, atomic scalar scale W.K_call*epsilon, and Stage-1, Stage-2, and Stage-3 scales W.K1*epsilon,W.K2*epsilon,W.K3*epsilon are all at most W.K_call*epsilon \u003c= W.r_reset,e_sim,e_full; moreover W.L*epsilon \u003c= W.K_call*epsilon and W.c0_cb*W.K_call*epsilon \u003c= 1/2.",
-  "content_hash": "71fcdb0305e789499d77211126c8f7b836fda84227b75c469c72fc4d63f48c7f",
-  "created": "2026-08-01T15:46:25.85359527Z",
-  "notes": ""
-}

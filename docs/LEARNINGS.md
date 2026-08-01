@@ -153,3 +153,41 @@ _(The inherited REFUTED routes from the classical-portfolio are recorded as dead
   opaque theorem boundaries — same-named anaphora elevated into missing equality premises.
   Ordinary uniqueness remains valid in single-construction chains, which is exactly why fourteen
   trees survive.
+
+## 2026-08-01 — M25, M19-S2, M19-S3: three af-VALIDATED certificates carried latent unregistered-premise gaps (demoted, re-validation pending)
+
+- **Claimed:** `lem-maincb-one-class-extension` (M25, 166th rigorous result),
+  `lem-maincb-stage2-call-envelope` (M19-S2, 159th), and
+  `lem-maincb-stage3-call-envelope` (M19-S3, 160th) were banked af-VALIDATED T0
+  on 2026-08-01.
+- **Why wrong (the certificates, not the statements):** each validated tree
+  used an inference not derivable from its REGISTERED premises. M25 (nodes
+  1.1.2.2/1.1.3.2) inferred "bijective hence extended isomorphism" from old
+  M19-R's export, which supplies only recorded-number/unit bounds and
+  conditional bijectivity — never the extended-INCLUSION typing that
+  `def-extended-delta-inclusion` requires of an isomorphism. M19-S2 (node 1.4)
+  and M19-S3 (node 1.3.3) applied defect/tolerance monotonicity without
+  importing `lem-maincb-extended-inclusion-monotone` — the exact fact the
+  repo had just factored for M18 after verifiers rejected the same implicit
+  step in M21. No countermodel to the CONTRACTS is known; the defect is that
+  the banked certificates do not prove their roots from their registered
+  inputs (the exact-input standard).
+- **Caught by:** the aism-mc54 design round (fresh codex) alleged the M25 gap;
+  the fresh hostile audit (`AUDIT-CONSUMER-REPAIR.md` F1/F5) independently
+  CONFIRMED it by reading the exports, and widened the finding to M19-S2/S3.
+- **Resolution:** user-ratified 2026-08-01 (in-session): all three demoted
+  proved->stated / validated->none (T0 159->156), contracts byte-identical;
+  fresh re-validation with the explicit typed providers
+  (`lem-maincb-reset-output-typing`, `lem-maincb-extended-inclusion-monotone`)
+  required before any re-bank. The oracle verdicts staled automatically with
+  the ledger changes. A retraction here is the rigour machinery succeeding:
+  the gap classes were surfaced by later, stricter verifier cohorts within
+  the same day and nothing downstream was banked on the flawed certificates
+  (M26/M27/M28 remained unproved).
+
+  **Propagation addendum (same date):** the linker's status-propagation law
+  then suspended banked M18 (`lem-maincb-reset-constant-ledger`) and M20
+  (`lem-maincb-structural-domain-ledger`) — their certificates are intact and
+  their workspaces preserved, but they rest on the demoted M19-S2/S3
+  premises; they re-flip mechanically once those re-validate (T0 156->154
+  in the interim).
