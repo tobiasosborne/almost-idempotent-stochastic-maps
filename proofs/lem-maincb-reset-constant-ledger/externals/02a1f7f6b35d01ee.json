@@ -1,8 +1,0 @@
-{
-  "id": "02a1f7f6b35d01ee",
-  "name": "lem-maincb-initial-raw-inclusion",
-  "source": "imports validated registry lemma proofs/lem-maincb-initial-raw-inclusion — There are universal D_0 \u003c infinity and e_0 \u003e 0 such that, in every finite-dimensional extended epsilon-C*-algebra with epsilon \u003c= t \u003c= e_0, the scalar map lambda |-\u003e lambda*I_A is an extended D_0*t-inclusion; if dim A = 1, it is bijective.",
-  "content_hash": "c37f4c02c8e89d45d5a3c18df4e1e860250c8945f5dc817e71fbfaecf8f06c65",
-  "created": "2026-08-01T13:36:32.399813659Z",
-  "notes": ""
-}
