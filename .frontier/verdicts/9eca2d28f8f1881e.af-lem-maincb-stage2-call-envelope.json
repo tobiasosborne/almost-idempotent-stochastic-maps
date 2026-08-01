@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-stage2-call-envelope/export.md",
+  "oracle": "af-lem-maincb-stage2-call-envelope",
+  "result": "pass",
+  "claim_hash": "bb4c193b3ba788b2f5900370999d92ea8058ec208fe828e7498a4935842f3cae",
+  "oracle_digest": "bf9aec85e385f432a702ce1403b89312fb8cb95b539cd8ea07ea2d64fdebec31",
+  "inputs_hash": "c84f4c4458a2dd623b25159998f51ab8c935d43e48294ba85293396d76ca9bc4",
+  "ts": "2026-08-01T11:04:35.798Z"
+}
