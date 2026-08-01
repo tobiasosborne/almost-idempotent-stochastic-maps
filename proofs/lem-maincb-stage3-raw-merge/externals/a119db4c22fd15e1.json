@@ -1,0 +1,8 @@
+{
+  "id": "a119db4c22fd15e1",
+  "name": "lem-maincb-isomorphism-unit-control",
+  "source": "imports validated registry lemma proofs/lem-maincb-isomorphism-unit-control — There are universal C_iso_unit \u003c infinity and e_iso_unit \u003e 0 such that if B is a finite-dimensional C*-algebra, A is a finite-dimensional extended epsilon-C*-algebra, and v:B-\u003eA is an extended delta-isomorphism with 0 \u003c= delta+epsilon \u003c= e_iso_unit, then ||v(I_B)-I_A|| \u003c= C_iso_unit*(delta+epsilon); the witnesses are independent of dimension, amplification, block data, and the particular source and target.",
+  "content_hash": "0691bfe5d2807e350ebc328028218e72fb90fbe36ecffa5f40ab60f6dd4f6e30",
+  "created": "2026-08-01T13:22:20.93725574Z",
+  "notes": ""
+}
