@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-extended-inclusion-monotone/export.md",
+  "oracle": "af-lem-maincb-extended-inclusion-monotone",
+  "result": "pass",
+  "claim_hash": "8154968ddd59ad13762c0089b78cb52d8ef16619125aa7943d8ed8a366c75e90",
+  "oracle_digest": "ec75a0c3347e3155b6bed0f3647489720431cdb590be60b96f173dda9fc0b955",
+  "inputs_hash": "67fbb133a29cbae1a5ca1a29d56f3eb130519720e576aeaa11947cab37aa3fc3",
+  "ts": "2026-08-01T14:36:00.052Z"
+}
