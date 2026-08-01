@@ -192,7 +192,7 @@
 | `lem-maincb-maximal-reset-selection` | lemma | stated | seeded | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
 | `lem-maincb-nested-corner-comparison` | lemma | proved | validated | A | There are universal C_nest < infinity and e_nest > 0 such that, whenever R,P,Q a… |
 | `lem-maincb-nested-corner-dimension-transport` | lemma | proved | validated | A | There is a universal e_ncd > 0 such that, whenever R,P,Q are t-projections in a … |
-| `lem-maincb-one-class-extension` | lemma | stated | seeded | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
+| `lem-maincb-one-class-extension` | lemma | proved | validated | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
 | `lem-maincb-outer-compression-transfer` | lemma | proved | validated | A | There are universal C_out < infinity and e_out > 0 such that, whenever R,P are t… |
 | `lem-maincb-reset-constant-ledger` | lemma | proved | validated | A | After first fixing e_it,K_disp,K_floor from lem-maincb-improvement-iteration, ep… |
 | `lem-maincb-reset-invariant-preservation` | lemma | proved | validated | A | After first fixing the universal e_it,K_disp,K_floor witnesses of lem-maincb-imp… |
