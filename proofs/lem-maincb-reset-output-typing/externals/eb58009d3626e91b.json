@@ -1,0 +1,8 @@
+{
+  "id": "eb58009d3626e91b",
+  "name": "lem-maincb-error-improvement",
+  "source": "imports validated registry lemma proofs/lem-maincb-error-improvement — Complete error improvement: there are universal epsilon_max^cb\u003e0, delta_max^cb\u003e0 and c_0^cb\u003cinfinity such that every extended delta-inclusion v:B-\u003eA from a finite-dimensional C*-algebra B into an extended epsilon-C*-algebra A with 0\u003c=epsilon\u003c=epsilon_max^cb and 0\u003c=delta\u003c=delta_max^cb can be replaced by an extended c_0^cb*epsilon-inclusion v_tilde:B-\u003eA that is bijective whenever v is bijective.",
+  "content_hash": "766e91f2a55ae816e61627b208134fa4f77a7e72fc333997eb9d7fbde23507e2",
+  "created": "2026-08-01T18:46:34.455959959Z",
+  "notes": ""
+}
