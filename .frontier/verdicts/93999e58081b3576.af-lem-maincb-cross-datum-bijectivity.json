@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-cross-datum-bijectivity/export.md",
+  "oracle": "af-lem-maincb-cross-datum-bijectivity",
+  "result": "pass",
+  "claim_hash": "dcc4e90e43649791b4a0cde18b3c4fd794bd7d63cf94afd470c35e14458c4596",
+  "oracle_digest": "945826aa5543471803d4e5f8a6398f5f6886161ac36165e4b4a516401968b5d9",
+  "inputs_hash": "664b9c7e08d47fd9061cd4dc4f35fae807fd47c6ad587f3d7785110a2a5f4c57",
+  "ts": "2026-08-01T13:21:24.077Z"
+}
