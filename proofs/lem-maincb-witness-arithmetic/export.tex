@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing positive finite universal provider wit...}
+\step{1} After first fixing positive finite universal provider witnesses D\_0,D\_1,D\_2,D\_3,e\_0,e\_1,e\_2,e\_3,epsilon\_max\textasciicircum{}cb,delta\_max\textasciicircum{}cb,e\_it,K\_disp,K\_floor,epsilon\_unit,delta\_unit,a\_unit,L,c0\_cb,K\_1,K\_2,K\_3,e\_env,e\_s2,e\_cross,e\_sim,e\_full with K\_2,K\_3 >= max\{1,L,c0\_cb*L\}, set D\_* = max\{1,D\_0,D\_1,D\_2,D\_3\}; then there is a def-maincb-witness-ledger datum W whose fields satisfy W.r\_reset = min\{e\_0,e\_1,e\_2,e\_3,epsilon\_max\textasciicircum{}cb,delta\_max\textasciicircum{}cb/D\_*,e\_it/(D\_*+1),epsilon\_unit,delta\_unit/max\{1,K\_floor\},a\_unit/((1+K\_disp)*D\_*),[2*(1+K\_disp)*D\_*]\textasciicircum{}\{-1\}\}, W.K\_call = max\{1,L+1,c0\_cb,K\_1,K\_2,K\_3\}, W.epsilon\_MAIN = min\{e\_env,e\_1/K\_1,e\_s2/K\_2,e\_cross/K\_3,W.r\_reset/W.K\_call,e\_sim/W.K\_call,e\_full/W.K\_call,[2*max\{1,c0\_cb*W.K\_call\}]\textasciicircum{}\{-1\}\}, and the remaining fields equal the correspondingly named receiving witnesses; in particular every field is positive, finite, universal, and independent of dimension, amplification, block data, class count, and stage index. \steptag{validated} \\[6pt]
+\step{1.1} Since D\_0,D\_1,D\_2,D\_3 are positive finite universal scalars, D\_* = max\{1,D\_0,D\_1,D\_2,D\_3\} is positive, finite, universal, dimension-independent, and satisfies D\_* >= 1. Consequently each of e\_0,e\_1,e\_2,e\_3,epsilon\_max\textasciicircum{}cb,delta\_max\textasciicircum{}cb/D\_*,e\_it/(D\_*+1),epsilon\_unit,delta\_unit/max\{1,K\_floor\},a\_unit/((1+K\_disp)*D\_*), and [2*(1+K\_disp)*D\_*]\textasciicircum{}\{-1\} is a positive finite universal scalar independent of dimension, amplification, block data, class count, and stage index. \steptag{validated} \\[4pt]
+\step{1.2} Therefore the finite minimum r\_reset of the eleven reset candidates displayed in the contract is positive, finite, universal, independent of dimension, amplification, block data, class count, and stage index, and it has exactly the asserted formula. \steptag{validated} \\[4pt]
+\step{1.3} Since L,c0\_cb,K\_1,K\_2,K\_3 are positive finite universal scalars, K\_call = max\{1,L+1,c0\_cb,K\_1,K\_2,K\_3\} is positive, finite, universal, independent of dimension, amplification, block data, class count, and stage index, satisfies K\_call >= 1, and has exactly the asserted formula. \steptag{validated} \\[4pt]
+\step{1.4} Using positivity and finiteness of K\_1,K\_2,K\_3,K\_call,r\_reset and of e\_env,e\_1,e\_s2,e\_cross,e\_sim,e\_full, every one of e\_env,e\_1/K\_1,e\_s2/K\_2,e\_cross/K\_3,r\_reset/K\_call,e\_sim/K\_call,e\_full/K\_call,[2*max\{1,c0\_cb*K\_call\}]\textasciicircum{}\{-1\} is positive, finite, universal and independent of dimension, amplification, block data, class count, and stage index. Hence their finite minimum epsilon\_MAIN is so as well and has exactly the asserted formula. \steptag{validated} \\[4pt]
+\step{1.5} Define W to be the def-maincb-witness-ledger tuple (c0\_cb,L,K\_1,K\_2,K\_3,K\_call,e\_env,e\_1,e\_s2,e\_cross,r\_reset,epsilon\_MAIN). By the definition, these entries are exactly its twelve named fields, so the remaining fields equal the correspondingly named receiving witnesses; combining their inherited properties with the established properties of K\_call,r\_reset,epsilon\_MAIN proves existence of the asserted W and proves that every field is positive, finite, universal, and independent of dimension, amplification, block data, class count, and stage index. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

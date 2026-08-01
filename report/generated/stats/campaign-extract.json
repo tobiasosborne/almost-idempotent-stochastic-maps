@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-08-01T09:23:23Z",
+ "extracted_at": "2026-08-01T09:24:35Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-08-01T09:23:23Z",
+  "mined_at": "2026-08-01T09:24:35Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -467,22 +467,22 @@
     "def_added": 689,
     "node_amended": 303,
     "node_archived": 56,
-    "node_created": 2266,
+    "node_created": 2271,
     "node_unvalidated": 7,
-    "node_validated": 2184,
-    "nodes_claimed": 3656,
-    "nodes_released": 3656,
+    "node_validated": 2190,
+    "nodes_claimed": 3663,
+    "nodes_released": 3663,
     "proof_initialized": 176
    },
-   "ledger_entries": 13740,
-   "nodes_total": 2266,
+   "ledger_entries": 13765,
+   "nodes_total": 2271,
    "owner_roles": {
     "prover (fix round)": 422,
-    "prover (initial build)": 561,
-    "verifier": 2673
+    "prover (initial build)": 562,
+    "verifier": 2679
    },
-   "root_validated": 147,
-   "seeded_not_validated": 29,
+   "root_validated": 148,
+   "seeded_not_validated": 28,
    "validation_days": {
     "2026-07-02": 7,
     "2026-07-03": 5,
@@ -498,7 +498,7 @@
     "2026-07-28": 1,
     "2026-07-29": 15,
     "2026-07-30": 27,
-    "2026-08-01": 1
+    "2026-08-01": 2
    },
    "workspaces": 176,
    "workspaces_detail": [
@@ -2059,16 +2059,16 @@
      "archived": 0,
      "challenges": 0,
      "challenges_resolved": 0,
-     "claims": 0,
+     "claims": 7,
      "defs_imported": 2,
      "first_ts": "2026-08-01T09:13:27.277805709Z",
      "id": "lem-maincb-witness-arithmetic",
-     "last_ts": "2026-08-01T09:16:02.196536145Z",
-     "ledger_entries": 4,
-     "max_round": 0,
-     "nodes": 1,
-     "root_validated": null,
-     "validated": 0
+     "last_ts": "2026-08-01T09:22:25.401710264Z",
+     "ledger_entries": 29,
+     "max_round": 1,
+     "nodes": 6,
+     "root_validated": "2026-08-01T09:22:25.313250559Z",
+     "validated": 6
     },
     {
      "amendments": 0,
@@ -3436,7 +3436,7 @@
     },
     "FH": {
      "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
-     "banked": 73,
+     "banked": 74,
      "blocked": 1,
      "died": 2,
      "dispatch": 174,
@@ -3485,7 +3485,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-08-01T09:16:21.075Z"
+     "last": "2026-08-01T09:23:59.678Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -3506,7 +3506,7 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 425,
+    "FH": 426,
     "G": 21,
     "R": 52,
     "XE": 1
@@ -3524,16 +3524,17 @@
     "2026-07-27": 23,
     "2026-07-28": 2,
     "2026-07-29": 15,
-    "2026-07-30": 28
+    "2026-07-30": 28,
+    "2026-08-01": 1
    },
    "decisions": {
-    "EXPLOIT": 441,
+    "EXPLOIT": 442,
     "EXPLORE": 14,
     "PIVOT": 3
    },
    "evidence_classes": {
     "advisory": 1,
-    "af": 119,
+    "af": 120,
     "af-export": 10,
     "af-ledger": 1,
     "af-validated": 3,
@@ -3577,16 +3578,16 @@
     "wave": 24
    },
    "evidence_tiers": {
-    "T0": 158,
+    "T0": 159,
     "T1": 158,
     "T2": 141
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-08-01T09:16:21.075Z",
-   "max_cycle": 997,
+   "last_ts": "2026-08-01T09:23:59.678Z",
+   "max_cycle": 998,
    "outcomes": {
     "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
-    "banked": 107,
+    "banked": 108,
     "blocked": 1,
     "died": 7,
     "discovery": 3,
@@ -3623,15 +3624,15 @@
     "2026-07-28": 29,
     "2026-07-29": 49,
     "2026-07-30": 118,
-    "2026-08-01": 8
+    "2026-08-01": 9
    },
-   "records": 997,
-   "worker_jobs": 449,
+   "records": 998,
+   "worker_jobs": 451,
    "worker_models": {
     "codex": 338,
     "codex-gpt-5.6-sol": 8,
     "fable": 10,
-    "gpt-5.6-sol": 68,
+    "gpt-5.6-sol": 70,
     "opus": 20,
     "sonnet": 5
    },
@@ -3647,13 +3648,13 @@
     "designer": 2,
     "measurer": 1,
     "obstructor": 1,
-    "prover": 212,
+    "prover": 213,
     "refuter": 7,
     "researcher": 2,
     "strategist": 6,
     "summarizer": 1,
     "transcriber": 4,
-    "verifier": 178
+    "verifier": 179
    },
    "workers": {
     "codex / adversary": 2,
@@ -3678,8 +3679,8 @@
     "fable / prover": 2,
     "fable / strategist": 1,
     "gpt-5.6-sol / designer": 2,
-    "gpt-5.6-sol / prover": 28,
-    "gpt-5.6-sol / verifier": 38,
+    "gpt-5.6-sol / prover": 29,
+    "gpt-5.6-sol / verifier": 39,
     "opus / auditor": 1,
     "opus / author": 5,
     "opus / prover": 11,
@@ -3695,9 +3696,9 @@
   "git": {
    "active_days": 22,
    "authors": {
-    "tobiasosborne": 1003
+    "tobiasosborne": 1004
    },
-   "commits": 1003,
+   "commits": 1004,
    "first_day": "2026-07-02",
    "last_day": "2026-08-01",
    "per_day": {
@@ -3722,7 +3723,7 @@
     "2026-07-28": 32,
     "2026-07-29": 45,
     "2026-07-30": 90,
-    "2026-08-01": 7
+    "2026-08-01": 8
    },
    "subject_prefixes": {
     "W61": 13,
@@ -3797,7 +3798,7 @@
    ],
    "frontier": "The Kernel/(EX) conjecture: every rank->=3 signed idempotent P with delta<=1/4 has a theta-1/2 actual-row chart U0 with max_s Phi_s(U0) <= C0*delta (C0=1 empirically); equivalently every hidden row vertex with invisible mass > sqrt(delta) has height <= B*sqrt(delta). This one input closes op-classical via HLC <= op-exposed-hull <= op-classical.",
    "goal": "Prove op-classical: universal eta0,C>0 (dimension-free) such that every row-stochastic Q with ||Q^2-Q||_{inf->inf} <= eta <= eta0 admits a stochastic idempotent E with ||Q-E||_{inf->inf} <= C*sqrt(eta) (sharp exponent 1/2).",
-   "verdict_files": 122
+   "verdict_files": 123
   },
   "refs": {
    "locked_files": 23,
@@ -3818,8 +3819,8 @@
   "registry": {
    "af": {
     "none": 168,
-    "seeded": 31,
-    "validated": 145
+    "seeded": 30,
+    "validated": 146
    },
    "kind": {
     "corollary": 2,
@@ -3837,9 +3838,9 @@
     "numerical": 2,
     "obstruction": 1,
     "open": 3,
-    "proved": 258,
+    "proved": 259,
     "proved-mod-audit": 23,
-    "stated": 22
+    "stated": 21
    }
   },
   "runs": {

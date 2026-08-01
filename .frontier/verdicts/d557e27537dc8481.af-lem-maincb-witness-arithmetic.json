@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-witness-arithmetic/export.md",
+  "oracle": "af-lem-maincb-witness-arithmetic",
+  "result": "pass",
+  "claim_hash": "11ce61336900f1f87d5f56d8f86959792ffe146cc78dae072d402e950797b75b",
+  "oracle_digest": "985c2491e7851d3e1e59d272823f9528dcea7c63d688d03645a01a6ae8a5f8bf",
+  "inputs_hash": "d45ca787d51b4ad3f249f2124975775a9dcad48d50927ac7277cbce6656e08e5",
+  "ts": "2026-08-01T09:24:31.747Z"
+}
