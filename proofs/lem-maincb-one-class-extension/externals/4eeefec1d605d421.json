@@ -1,0 +1,8 @@
+{
+  "id": "4eeefec1d605d421",
+  "name": "lem-maincb-reset-invariant-preservation",
+  "source": "imports validated registry lemma proofs/lem-maincb-reset-invariant-preservation — After first fixing the universal e_it,K_disp,K_floor witnesses of lem-maincb-improvement-iteration and epsilon_max^cb,delta_max^cb,c0^0 witnesses of lem-maincb-error-improvement, there are universal 0 \u003c C_unit \u003c infinity and epsilon_unit,delta_unit,a_unit \u003e 0 furnished by the third clause of prop_delta_hominc and its implicit quantifier convention such that, for every D \u003e= 1 and every def-maincb-witness-ledger datum W with W.c0_cb \u003e= max{c0^0,K_floor,C_unit*(K_floor+1)} and W.r_reset \u003c= min{epsilon_max^cb,delta_max^cb/D,e_it/(D+1),epsilon_unit,delta_unit/max{1,K_floor},a_unit/((1+K_disp)*D),[2*(1+K_disp)*D]^{-1}}, every explicit raw call into an extended epsilon_R-C*-corner A_R at scale 0 \u003c= t \u003c= W.r_reset whose literal map u_R:B_R-\u003eA_R is an extended D*t-inclusion and satisfies ||u_R(I_{B_R})-u_{A_R}|| \u003c= D*t and epsilon_R \u003c= t admits an error-improved map v_R:B_R-\u003eA_R satisfying d_R \u003c= W.c0_cb*epsilon_R and ||v_R(I_{B_R})-u_{A_R}|| \u003c= W.c0_cb*epsilon_R, preserving bijectivity when u_R is bijective and leaving the source, target corner, and amplification form unchanged.",
+  "content_hash": "a90c7c7022cbc94aca72b12112820e1d57048149622ff1d4c63600f8f0cbd731",
+  "created": "2026-08-01T19:05:28.007342033Z",
+  "notes": ""
+}
