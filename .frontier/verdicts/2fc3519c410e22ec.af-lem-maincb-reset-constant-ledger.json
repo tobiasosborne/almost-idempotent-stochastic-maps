@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-reset-constant-ledger/export.md",
+  "oracle": "af-lem-maincb-reset-constant-ledger",
+  "result": "pass",
+  "claim_hash": "ed31b62218c4ea2b795566fe63f37906672da948a3ea9e4ee14ad6fc066649b5",
+  "oracle_digest": "07186281a4ba68e64f265901143015972aa6bcc9a494be1d3d0e88b634bfba46",
+  "inputs_hash": "b0c16bf0541e23b10da0e78a3d7fd05c78553023eb37f5eaf053af9cf163e1e8",
+  "ts": "2026-08-01T14:59:52.517Z"
+}
