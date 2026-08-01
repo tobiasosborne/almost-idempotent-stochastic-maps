@@ -1,0 +1,8 @@
+{
+  "id": "2119c1c93850538f",
+  "name": "lem-maincb-cross-union-zero-corners",
+  "source": "imports validated registry lemma proofs/lem-maincb-cross-union-zero-corners — There is a universal e_zero \u003e 0 such that, if A is a finite-dimensional extended epsilon_A-C*-algebra with epsilon_A \u003c= t, a supplied MAIN partition state has w:C^m-\u003eA a non-unital extended t-inclusion with one-dimensional images P_j, U,V are disjoint nonempty unions sharing no equivalence class, R = U union V, and t \u003c= e_zero, then dim S^A_{P_U,P_V} = dim S^A_{P_V,P_U} = 0 and dim S^{A_R}_{P_U^R,P_V^R} = dim S^{A_R}_{P_V^R,P_U^R} = 0.",
+  "content_hash": "b65b01819285b085a34fb9a971e7e0323b6ac6f9b4359ea290f1aa5ab799923c",
+  "created": "2026-08-01T10:41:40.36278705Z",
+  "notes": ""
+}

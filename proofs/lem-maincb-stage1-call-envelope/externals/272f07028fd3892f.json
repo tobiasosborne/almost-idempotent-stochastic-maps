@@ -1,0 +1,8 @@
+{
+  "id": "272f07028fd3892f",
+  "name": "lem-maincb-compressed-corner-unit-comparison",
+  "source": "imports validated registry lemma proofs/lem-maincb-compressed-corner-unit-comparison — There are universal C_corner_unit \u003c infinity and e_corner_unit \u003e 0 such that both of the following hold: if P is a t-projection in a finite-dimensional extended t-C*-algebra A with 0 \u003c= t \u003c= e_corner_unit, then the compressed-corner unit u_{S_P}=Co_P(P) satisfies ||I_n tensor u_{S_P}-I_n tensor P|| \u003c= C_corner_unit*t for every n \u003e= 1; and, under the hypotheses of lem-maincb-outer-compression-transfer with 0 \u003c= t \u003c= e_corner_unit, if ||v(I_B)-u_{S_P}|| \u003c= t then its explicit outer-compressed map T=Co^{A_R}_{P^R} o Co^A_R o v satisfies ||T_n(I_n tensor I_B)-I_n tensor P^R|| \u003c= C_corner_unit*t for every n \u003e= 1.",
+  "content_hash": "c79dd61806a037f1fdc17c31114ff2b226b757ab1fa11aa6ebfa94fd12e62e72",
+  "created": "2026-08-01T10:41:40.099055567Z",
+  "notes": ""
+}

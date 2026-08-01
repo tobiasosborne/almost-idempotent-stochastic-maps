@@ -1,0 +1,8 @@
+{
+  "id": "f163e947b8b7b744",
+  "name": "lem-maincb-direct-corner-envelope",
+  "source": "imports validated registry lemma proofs/lem-maincb-direct-corner-envelope — There are universal L \u003e= 1 and e_env \u003e 0 such that, if A is a finite-dimensional extended epsilon-C*-algebra, 0 \u003c= epsilon \u003c= e_env, and w:C^m-\u003eA is an extended c_0^cb*epsilon-inclusion, then every nonempty U has P_U a c_0^cb*epsilon-projection, every A_U = S^A_{P_U} is an extended L*epsilon-C*-algebra, and for U subseteq R all subordination and complementarity errors among P_U, P_{R minus U}, P_R are at most L*epsilon.",
+  "content_hash": "c579ebe7a037832f81e1266538261156fdbf5ede00f6770d520d92362bbcfb0a",
+  "created": "2026-08-01T10:41:39.981222093Z",
+  "notes": ""
+}
