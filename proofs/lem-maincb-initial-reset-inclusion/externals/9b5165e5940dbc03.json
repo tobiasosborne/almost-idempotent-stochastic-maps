@@ -1,8 +1,8 @@
 {
-  "id": "41537983cfc71525",
+  "id": "9b5165e5940dbc03",
   "name": "GT-kitaev-def-delta-homomorphism",
   "source": "approximate_algebras.tex:443-456 (verbatim): \\begin{Definition}\nA \\emph{$\\delta$-homomorphism} from an $\\eps'$-Banach algebra $\\calA'$ to an $\\eps''$-Banach algebra $\\calA''$ is a bounded linear map $v\\colon \\calA'\\to\\calA''$ that almost preserves the unit and the multiplication:\n\\begin{align}\n\\label{hom_unit}\n\\|v(I)-I\\|\u0026\\le \\delta,\\\\[2pt]\n\\label{hom_mult}\n\\|v(XY)-v(X)v(Y)\\|\u0026\\le \\delta\\ts\\|X\\|\\ts\\|Y\\|\\qquad (X,Y\\in \\calA').\n\\end{align}\nA \\emph{non-unital $\\delta$-homomorphism} is defined by imposing only condition \\eqref{hom_mult}. In the $*$-algebra setting, it is also required that $v(X^\\dag)=v(X)^\\dag$. A \\emph{$\\delta$-inclusion} is a $\\delta$-homomorphism such that\n\\begin{equation}\n(1-\\delta)\\ts\\|X\\|\\le \\|v(X)\\|\\le (1+\\delta)\\ts\\|X\\|\\qquad (X\\in \\calA').\n\\end{equation}\nA \\emph{$\\delta$-isomorphism} is a bijective $\\delta$-inclusion.\n\\end{Definition}",
   "content_hash": "2edfd15365161f27afd201537991406e57941afbccb784495351f854ebdb3c3f",
-  "created": "2026-08-01T15:59:49.794226548Z",
+  "created": "2026-08-01T15:59:49.807239596Z",
   "notes": ""
 }
