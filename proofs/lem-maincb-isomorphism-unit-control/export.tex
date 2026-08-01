@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{There are universal C\_iso\_unit < infinity and e\_iso\_unit ...}
+\step{1} There are universal C\_iso\_unit < infinity and e\_iso\_unit > 0 such that if B is a finite-dimensional C*-algebra, A is a finite-dimensional extended epsilon-C*-algebra, and v:B->A is an extended delta-isomorphism with 0 <= delta+epsilon <= e\_iso\_unit, then ||v(I\_B)-I\_A|| <= C\_iso\_unit*(delta+epsilon); the witnesses are independent of dimension, amplification, block data, and the particular source and target. \steptag{validated} \\[6pt]
+\step{1.1} Choose the numerical witnesses C\_iso\_unit:=1 and e\_iso\_unit:=1; these are finite and positive universal constants. \steptag{validated} \\[4pt]
+\step{1.2} Fix B,A,v,delta,epsilon satisfying the hypotheses. By def-extended-delta-inclusion, an extended delta-isomorphism is an extended delta-inclusion, so every amplification is a delta-inclusion; specializing to n=1 says that v itself is a delta-inclusion and hence a delta-homomorphism. \steptag{validated} \\[4pt]
+\step{1.3} By the unit clause in the delta-homomorphism definition incorporated by def-extended-delta-inclusion, the level-one map satisfies ||v(I\_B)-I\_A|| <= delta. \steptag{validated} \\[4pt]
+\step{1.4} By def-extended-epsilon-cstar-algebra at amplification n=1 and def-epsilon-cstar-algebra, the target unit obeys | ||I\_A||-1 | <= epsilon; since the left side is nonnegative, epsilon >= 0, and therefore delta <= delta+epsilon. \steptag{validated} \\[4pt]
+\step{1.5} Combining the preceding two inequalities yields ||v(I\_B)-I\_A|| <= delta+epsilon = C\_iso\_unit*(delta+epsilon); because C\_iso\_unit=e\_iso\_unit=1 were fixed numerical constants, the witnesses are independent of dimension, amplification, block data, and the particular B,A,v. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

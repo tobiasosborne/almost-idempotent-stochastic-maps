@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-isomorphism-unit-control/export.md",
+  "oracle": "af-lem-maincb-isomorphism-unit-control",
+  "result": "pass",
+  "claim_hash": "a597d016f92f9db195c34e1431e79c36c6e935330bf7e9ed03bcc5a896c45ccf",
+  "oracle_digest": "fd83710fee8e7d2b4218163c8524cd81819e9b28fe01c1584fc0ec540fa72192",
+  "inputs_hash": "638b7d71fcf7fe30cf1ee376cf06b53844aa9ac02c665da4c25c2e0ad06e849d",
+  "ts": "2026-08-01T09:23:04.929Z"
+}
