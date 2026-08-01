@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing the universal e\_it,K\_disp,K\_floor witn...}
+\step{1} After first fixing the universal e\_it,K\_disp,K\_floor witnesses of lem-maincb-improvement-iteration and epsilon\_max\textasciicircum{}cb,delta\_max\textasciicircum{}cb,c0\textasciicircum{}0 witnesses of lem-maincb-error-improvement, there are universal 0 < C\_unit < infinity and epsilon\_unit,delta\_unit,a\_unit > 0 furnished by the third clause of prop\_delta\_hominc and its implicit quantifier convention such that, for every D >= 1 and every def-maincb-witness-ledger datum W with W.c0\_cb >= max\{c0\textasciicircum{}0,K\_floor,C\_unit*(K\_floor+1)\} and W.r\_reset <= min\{epsilon\_max\textasciicircum{}cb,delta\_max\textasciicircum{}cb/D,e\_it/(D+1),epsilon\_unit,delta\_unit/max\{1,K\_floor\},a\_unit/((1+K\_disp)*D),[2*(1+K\_disp)*D]\textasciicircum{}\{-1\}\}, every explicit raw call into an extended epsilon\_R-C*-corner A\_R at scale 0 <= t <= W.r\_reset whose literal map u\_R:B\_R->A\_R is an extended D*t-inclusion and satisfies ||u\_R(I\_\{B\_R\})-u\_\{A\_R\}|| <= D*t and epsilon\_R <= t admits an error-improved map v\_R:B\_R->A\_R satisfying d\_R <= W.c0\_cb*epsilon\_R and ||v\_R(I\_\{B\_R\})-u\_\{A\_R\}|| <= W.c0\_cb*epsilon\_R, preserving bijectivity when u\_R is bijective and leaving the source, target corner, and amplification form unchanged. \steptag{validated} \\[6pt]
+\step{1.1} By GT-kitaev-prop-delta-hominc and its registered implicit small-parameter convention, there are universal constants 0 < C\_unit < infinity and epsilon\_unit,delta\_unit,a\_unit > 0 such that a delta-homomorphism from an exact C*-algebra into an epsilon-C*-algebra, with epsilon <= epsilon\_unit, delta <= delta\_unit, and unit distance at most a\_unit, has unit distance at most C\_unit*(delta+epsilon). The witnesses may be chosen with a\_unit strictly below the positive threshold printed in the proposition. \steptag{validated} \\[4pt]
+\step{1.2} For every D,W and raw call in the root hypotheses, lem-maincb-improvement-iteration applies to the literal map u\_R and furnishes one fixed map v\_R:B\_R->A\_R, with (v\_R)\_n=I\_n tensor v\_R, sup\_n ||(v\_R)\_n-(u\_R)\_n|| <= K\_disp*D*t, and v\_R an extended K\_floor*epsilon\_R-inclusion. \steptag{validated} \\[6pt]
+\step{1.2.1} Write d=D*t. From epsilon\_R <= t and t <= W.r\_reset <= e\_it/(D+1), one has d+epsilon\_R <= (D+1)*t <= e\_it. The raw-call hypotheses also supply that B\_R is a finite-dimensional C*-algebra, A\_R is an extended epsilon\_R-C*-algebra, and u\_R is an extended d-inclusion. \steptag{validated} \\[4pt]
+\step{1.2.2} Apply lem-maincb-improvement-iteration with B=B\_R, A=A\_R, epsilon=epsilon\_R, d=D*t, and v=u\_R. Its single output is a map v\_R:B\_R->A\_R having exactly the amplification family (v\_R)\_n=I\_n tensor v\_R, displacement sup\_n ||(v\_R)\_n-(u\_R)\_n|| <= K\_disp*D*t, and extended-inclusion defect K\_floor*epsilon\_R. \steptag{validated} \\[4pt]
+\step{1.3} The same map v\_R furnished in 1.2 satisfies d\_R <= W.c0\_cb*epsilon\_R and ||v\_R(I\_\{B\_R\})-u\_\{A\_R\}|| <= W.c0\_cb*epsilon\_R. \steptag{validated} \\[6pt]
+\step{1.3.1} For the map v\_R of 1.2, the level-one displacement and the raw unit hypothesis give ||v\_R(I\_\{B\_R\})-u\_\{A\_R\}|| <= K\_disp*D*t+D*t=(1+K\_disp)*D*t <= a\_unit. Moreover epsilon\_R <= t <= epsilon\_unit and K\_floor*epsilon\_R <= max\{1,K\_floor\}*t <= delta\_unit. \steptag{validated} \\[4pt]
+\step{1.3.2} At amplification one, the extended K\_floor*epsilon\_R-inclusion v\_R is a K\_floor*epsilon\_R-homomorphism from the exact C*-algebra B\_R into the epsilon\_R-C*-algebra A\_R. Thus 1.1 and GT-kitaev-prop-delta-hominc give ||v\_R(I\_\{B\_R\})-u\_\{A\_R\}|| <= C\_unit*(K\_floor+1)*epsilon\_R <= W.c0\_cb*epsilon\_R. Also its inclusion defect satisfies d\_R <= K\_floor*epsilon\_R <= W.c0\_cb*epsilon\_R. \steptag{validated} \\[4pt]
+\step{1.4} If the literal raw map u\_R is bijective, then the same map v\_R furnished in 1.2 is bijective. \steptag{validated} \\[6pt]
+\step{1.4.1} If u\_R is bijective, then for every x in B\_R its extended D*t-inclusion lower norm bound and the level-one displacement in 1.2 imply ||v\_R(x)|| >= ||u\_R(x)||-||(v\_R-u\_R)(x)|| >= [1-(1+K\_disp)*D*t]||x|| >= (1/2)||x||, using t <= [2*(1+K\_disp)*D]\textasciicircum{}\{-1\}. \steptag{validated} \\[4pt]
+\step{1.4.2} The bound in 1.4.1 makes v\_R injective. Since u\_R is a linear bijection from finite-dimensional B\_R onto A\_R, the spaces B\_R and A\_R have the same finite dimension; therefore the injective linear map v\_R:B\_R->A\_R is surjective and hence bijective. \steptag{validated} \\[4pt]
+\step{1.5} Taking the single map v\_R from 1.2, the conclusions of 1.3 and 1.4 give the required error-improved map; its displayed signature and amplification identity leave B\_R, A\_R, and the amplification form unchanged. The fixed c0\textasciicircum{}0 witness from lem-maincb-error-improvement is absorbed by W.c0\_cb >= c0\textasciicircum{}0, while no distinct existential output of that lemma is substituted for v\_R. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

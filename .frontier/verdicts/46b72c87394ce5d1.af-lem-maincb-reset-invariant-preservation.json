@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-reset-invariant-preservation/export.md",
+  "oracle": "af-lem-maincb-reset-invariant-preservation",
+  "result": "pass",
+  "claim_hash": "9ff0d72077d32f9ca7cfeb967a5a3077b2c5e26f9bd6f8613bb009642f35295a",
+  "oracle_digest": "c7a73a23764f0bb558d65e7990dcbb3a9d333dd1095b64efc398d0cb11551487",
+  "inputs_hash": "21ded2e980d06bb84e22c7695bc92dec062b67433a7c5347134d7953a8a7c017",
+  "ts": "2026-08-01T09:37:36.352Z"
+}
