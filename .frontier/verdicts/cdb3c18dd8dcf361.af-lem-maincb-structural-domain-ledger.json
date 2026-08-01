@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-structural-domain-ledger/export.md",
+  "oracle": "af-lem-maincb-structural-domain-ledger",
+  "result": "pass",
+  "claim_hash": "cfe995149cfdaa72cb5f269e827b6101783a0c54042b00c084a2f3b16500ff43",
+  "oracle_digest": "e49660a2b8f2a589643d66ccdfe2d7c3ab9ba70c50e9d4b2a8acd9460ba3ea2a",
+  "inputs_hash": "54ae91f271baf0c605f28d7ed223f16135d3c958f0a66ba7032342dc2b433625",
+  "ts": "2026-08-01T15:27:17.458Z"
+}

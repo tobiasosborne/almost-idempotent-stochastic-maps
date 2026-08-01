@@ -1465,6 +1465,18 @@
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-reset-constant-ledger/ledger",
           "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-reset-constant-ledger.md"
         ]
+      },
+      {
+        "name": "af-lem-maincb-structural-domain-ledger",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-maincb-structural-domain-ledger"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-structural-domain-ledger/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-structural-domain-ledger.md"
+        ]
       }
     ]
   },
