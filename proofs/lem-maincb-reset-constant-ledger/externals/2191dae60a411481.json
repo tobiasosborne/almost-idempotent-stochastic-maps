@@ -1,0 +1,8 @@
+{
+  "id": "2191dae60a411481",
+  "name": "lem-maincb-corner-equivalence",
+  "source": "imports validated registry lemma proofs/lem-maincb-corner-equivalence — There is a universal e_sim \u003e 0 such that, for every finite family of one-dimensional t-projections P_1,...,P_m in an extended t-C*-algebra with t \u003c= e_sim, the relation j ~ k iff dim S_{P_j,P_k} = 1 is an equivalence relation.",
+  "content_hash": "b3abca19e157120706290464f6ecb45e86a1358d5ef08ad20d9a93cdeed9d23c",
+  "created": "2026-08-01T13:36:32.389145787Z",
+  "notes": ""
+}
