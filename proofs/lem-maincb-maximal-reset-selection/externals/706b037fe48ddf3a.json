@@ -1,0 +1,8 @@
+{
+  "id": "706b037fe48ddf3a",
+  "name": "lem-maincb-initial-reset-inclusion",
+  "source": "imports validated registry lemma proofs/lem-maincb-initial-reset-inclusion — Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; every finite-dimensional extended epsilon-C*-algebra A with 0 \u003c= epsilon \u003c= W.epsilon_MAIN admits an extended W.c0_cb*epsilon-inclusion v:C-\u003eA satisfying ||v(I_C)-I_A|| \u003c= W.c0_cb*epsilon.",
+  "content_hash": "e75ac641f1e8bf5f8cf64ecd170a3edc63dd59d966e01844ee1c8f6de3569cd4",
+  "created": "2026-08-02T12:49:32.463003109Z",
+  "notes": ""
+}
