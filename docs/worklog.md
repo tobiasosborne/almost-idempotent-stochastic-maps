@@ -2154,3 +2154,39 @@ with precise re-architecture notes in HANDOFF. Closed beads: aism-jl4g,
 aism-4kof, aism-73ur. Open: aism-mc54 (the re-validation completions).
 ~35 fr log/dispatch events (W99–W112); every bank through the external
 oracle gate; ~30 pushes.
+
+## 2026-08-02 — Session 40: the re-validation debt cleared; the consumer chain executed first-pass; M-chain complete except M24/M28 (T0 156 → 165)
+
+Session 40 opened on the session-39 handoff (two parked re-validations,
+two suspended rows) and closed with the entire MAIN consumer chain banked
+except the capstone. NINE T0 events: M19-S3 re-banked (fresh v2 tree
+19/19 — after a first re-seed ballooned at 27 nodes on an unregistered
+c0>=1 assumption and pending-sibling citations, re-seed architecture v2
+mirrored the validated S2 export's constant-choice pattern and passed
+clean); M18/M20 re-flipped mechanically (certificates intact, oracles
+re-verified); M25 re-banked (20/20 under typed-reset-alone + same-map +
+explicit-induction + the F1 typing cure); then M21 (6/6), M23 (11/11),
+M22 (9/9), M26 (11/11), M27 (7/7) — all FIRST-PASS under the binding
+elevation guidance distilled from the session-39 failures. Bead aism-mc54
+closed at its T0-159 target, then exceeded.
+
+Two contract-integrity events, both caught by protocol: (1) the M26 shard
+contract had been MIS-LANDED in 894c983f (the typed-reset design block
+pasted where the binary-block-merge block belonged — shard and workspace
+mutually consistent, so every gate stayed green; visible only against the
+ratified design text). Caught pre-launch, fixed by landing the ratified
+block byte-verbatim, re-seeded, banked first-pass (P1 aism-wazy carries
+the duplicate-contract tripwire lesson; root==ratified-text is now a
+pre-launch check). (2) M24 aborted STUCK on a genuine CONTRACT-LEVEL gap:
+dim S_{P_j}=1 is not derivable from the allowed inputs (only P_j!=0 and
+dim<=1; the nonzero-projection=>nonzero-corner-space inference is
+unregistered). Escalated as P0 aism-twpa with three unjudged resolution
+options; the workspace was restored to the clean ratified seed after the
+prover's root weakening was rejected as scope drift. M28 — the MAIN
+structural-assembly capstone — is blocked SOLELY on that decision.
+
+~14 fr events (W113–W124+: 4 dispatch/harvest cycles, 8 banked pulls,
+1 progress find, 1 null contract-finding harvest); every bank through the
+external oracle gate; ~15 pushes; sketch v43 + CURRENT pointer + HANDOFF
+rewritten. Note: zero self-judged verdicts — both defects were
+established by verifiers or ratified-text comparison, per L5.

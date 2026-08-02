@@ -10,88 +10,89 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. The proof sketch is `docs/plans/CURRENT.md` → **v42** (current).
-3. **Rigorous (af-validated, T0): 156.** Registry: 347. `op-classical` OPEN.
-4. **SESSION-39 RECORD (2026-08-01, the aism-jl4g dissolution session):**
-   - **FIVE user ratifications** executed the whole design→hostile-audit→
-     ratify→land→elevate loop end-to-end five times: (1) the witness-ledger
-     + unit-thread package (1 new def, 3 new rows, 17 amended contracts);
-     (2) the recorded-field ENV repair (6 contracts; a validated M_2
-     countermodel had refuted the pre-ENV M19-S2); (3) the bijectivity
-     bridge + typed M17; (4) the monotonicity micro-row; (5) the
-     consumer-chain repair (M26/M27 hypothesis restore + the typed-reset
-     provider + three demotions).
-   - **SIXTEEN bank events, TWELVE net new T0 rows (152nd–168th; 144→156):**
-     both session-38 parked blockers (M12, M19-S1) closed; the full M19
-     family reached T0 (S3 later demoted, see below); M16, M17, M18, M20
-     banked (M18/M20 currently suspended, see below); 6 new bridge/ledger
-     rows all T0 (isomorphism-unit, corner-unit-comparison,
-     witness-arithmetic, cross-datum-bijectivity, inclusion-monotone,
-     reset-output-typing).
-   - **THREE latent certificate gaps RETRACTED (docs/LEARNINGS.md
-     2026-08-01):** M25, M19-S2, M19-S3 banked certificates used
-     inferences underivable from registered premises (audit F1/F5 of
-     `AUDIT-CONSUMER-REPAIR.md`); demoted honestly; M19-S2 RE-VALIDATED
-     same-day (10/10 first-pass with the explicit monotonicity import).
-     The linker's L0 propagation then SUSPENDED M18/M20 — their
-     certificates are INTACT, workspaces preserved; they re-flip
-     mechanically (flip + fr re-verify) once S2✓(done)+S3 re-bank.
-   - Every bank: export → register-oracle → `fr verify` PASS → mechanical
-     flip → regenerate → check-all OK → fr log → commit → push.
-5. **NEXT SESSION STARTS HERE — finish the re-validations, then the chain:**
-   1. **M19-S3 re-validation** (parked ~15-19/24 in
-      `proofs/lem-maincb-stage3-call-envelope`, preserved): RE-SEED FRESH
-      (the parked tree churned on the corner-envelope export-scope and the
-      monotonicity-typing application — architect around: (a) M04 exports
-      projections at c0*eps and subordination/complementarity at L0*eps —
-      keep the two scales separated from the start; (b) the monotonicity
-      row's typing is v:B->A with B a plain fd C*-algebra — apply it only
-      to such maps, or derive corner-level monotonicity from the def
-      directly; (c) the raw-call record stores the derived output map and
-      scale, never the datum). Its re-bank re-flips M18 AND M20
-      (mechanical: status/af flip + fr re-verify; both trees untouched).
-   2. **M25 re-validation** (parked in
-      `proofs/lem-maincb-one-class-extension`): RE-SEED FRESH using the
-      typed-reset provider `lem-maincb-reset-output-typing` ALONE for
-      every reset step (its conclusion subsumes M19-R's — the
-      dual-provider distinct-witness challenge was the killer), with
-      explicit induction dependencies (no floating 'inductively
-      constructed state' nodes).
-   3. **M21 + M23 re-seeds** (deps already wired: witness-arithmetic +
-      typed-reset for M21; typed-reset for M23). Then M22, M24.
-   4. **M26** (contract now has the restored one-dimensional-images
-      hypothesis + the bridge import), then M27, then **M28** — the MAIN
-      structural assembly. All contracts ratified and audit-stable.
-   5. Then the escalated `lem-thmainext-conditional` rewire (design
-      sect-10 step 15), the decoupled campaigns (14-row ledger, k-ledger,
-      f0-assembly), root rewire LAST.
+2. The proof sketch is `docs/plans/CURRENT.md` → **v43** (current).
+3. **Rigorous (af-validated, T0): 165.** Registry: 347. `op-classical` OPEN.
+4. **SESSION-40 RECORD (2026-08-02, the re-validation-clearing + consumer-chain session):**
+   - **NINE T0 events (T0 156 → 165):** M19-S3 re-banked (fresh v2 tree
+     19/19 — re-seed architecture v2: S2-pattern constant-choice first
+     child, nonnegative-c0 enlargement, K_3^0 absorption, no
+     pending-sibling citations; cures the F5 gap); M18 + M20 re-flipped
+     mechanically (certificates intact, oracles re-verified); M25
+     re-banked (20/20 under typed-reset-alone + same-map law + explicit
+     induction + the F1 typing cure); then the consumer chain M21 (6/6),
+     M23 (11/11), M22 (9/9), M26 (11/11), M27 (7/7) — **all FIRST-PASS**
+     under the binding elevation guidance. Bead `aism-mc54` CLOSED.
+   - **M26 contract MIS-LANDING caught pre-launch and fixed** (P1
+     `aism-wazy`, commit c8eb827b): 894c983f had pasted the typed-reset
+     contract (design block 3) into the M26 shard; the user-ratified
+     block 1 was landed byte-verbatim and the workspace re-seeded.
+     Lesson: linker contract-match is shard<->workspace ONLY — verify
+     root==RATIFIED-DESIGN-TEXT before every launch (now in the worked
+     pattern); a duplicate-contract tripwire would catch this class.
+   - **M24 CONTRACT-LEVEL GAP escalated** (P0 `aism-twpa`, commit
+     2d9feb7a): `lem-maincb-stage1-maximality` requires
+     `dim S_{P_j} = 1` but verifiers established no allowed input gives
+     `dim >= 1` (only `P_j != 0` and `dim <= 1`; the nonzero-projection
+     => nonzero-corner-space inference is unregistered). Prover root
+     weakening correctly rejected as scope drift; workspace restored to
+     the clean ratified seed (linker green); aborted tree preserved in
+     the session scratchpad + classification on the bead/fr W124.
+   - Every bank: rsync-back → export → (register-)oracle → `fr verify`
+     PASS → mechanical flip → regenerate (argument + report-dag +
+     report-stats) → check-all OK → fr log → commit → push.
+5. **NEXT SESSION STARTS HERE — the M24 decision, then M28:**
+   1. **USER DECISION (aism-twpa, P0):** resolve the M24
+      `dim S_{P_j} = 1` gap via a design round + hostile audit +
+      ratification. Options (unjudged): (a) a compressed-corner
+      nontriviality provider row (candidate pointer, applicability
+      unassessed: `lem-stage1-rectified-nontrivial-projection`); (b)
+      amend M24 to the provable `dim <= 1` form IF the consumer survey
+      (M28 + Stage-1 chain) allows; (c) strengthen a dep to export
+      nontriviality. Do NOT re-launch M24 until ratified.
+   2. **M28** (`lem-maincb-structural-assembly`) — the MAIN capstone —
+      is blocked SOLELY on M24 (M27 banked this session; all other deps
+      green; oracle already registered).
+   3. Then the escalated `lem-thmainext-conditional` rewire (design
+      sect-10 step 15), the decoupled campaigns (14-row ledger,
+      k-ledger, f0-assembly), root rewire LAST.
+   4. `aism-9kmt` report sync (P2, large — unanchored banks now
+      ~120–174).
 6. **Worked patterns (BINDING; follow verbatim):**
+   - **Pre-launch check (NEW, the aism-wazy lesson):** verify the
+     workspace root string == the ratified design contract text (not
+     just == the shard — the shard itself can be mis-landed).
    - Provision: `python3 scripts/provision-af-row.py <rid>` + base
-     `def-epsilon-cstar-algebra` + vocabulary defs (M25 needed
-     `def-extcb-datum`; M21 and the micro-row needed the byte-verbatim
-     `GT-kitaev-def-delta-homomorphism` external, tex:443-456 — reuse the
-     registration pattern in `proofs/lem-maincb-extended-inclusion-monotone/externals/`).
+     `def-epsilon-cstar-algebra` + vocabulary defs + (where the row
+     touches δ-homomorphism arithmetic) the byte-verbatim
+     `GT-kitaev-def-delta-homomorphism` external (tex:443-456; reuse the
+     registration in `proofs/lem-maincb-extended-inclusion-monotone/externals/`).
+   - **Elevation guidance (in each shard body; demonstrated 6-for-6
+     first-pass):** constant-choice FIRST child (nonnegative universal
+     constants by enlargement under the monotonicity import; absorb every
+     scalar prerequisite into the chosen universal; never assume an
+     unregistered inequality like c0>=1); typed-reset provider ALONE with
+     ONE fixed witness threaded through (same-map law); NO
+     pending-sibling citations; typing-cited bijective=>isomorphism;
+     explicit induction dependencies.
    - Launch: worktree per run (`git worktree add --detach
      .claude/worktrees/af-<row> HEAD`), orchestrator from INSIDE the
-     worktree, ONE backgrounded call, tier routine, workers 4.
+     worktree, ONE backgrounded call, tier routine, workers 4, node-cap =
+     the row's (amended) hard cap.
    - Balloon/stuck: transparent repair growth ⇒ scoped cap amendment
-     (flag it; ceiling = repo cap 26); tangled/stale-premise tree ⇒ clean
-     RE-SEED; contract-level finding ⇒ STOP, escalate (exercised FIVE
-     times this session; it works).
-   - Bank: serial in main (rsync back → export → oracle → verify → flip →
-     regenerate → check-all → fr log → commit → push).
-   - **Session-39 additions:** deps must list every lemma a contract
-     NAMES (the F3-class wiring rule — two waves were lost to it);
-     consumers of existential providers must fix ONE witness explicitly
-     (the same-map law); design/audit worker prompts carry an explicit
-     no-git/no-fr/no-bd prohibition (a designer self-committed once,
-     benign, f8920d0a).
-7. **Open beads:** `aism-mc54` (P0, claimed) — the re-validation
-   completions above are its remaining scope; close it when M19-S3 + M25
-   re-bank and M18/M20 re-flip. `aism-jl4g`, `aism-4kof`, `aism-73ur`
-   closed this session. Carried P2 items unchanged (aism-9kmt report sync
-   — now ~47 unanchored banks; the \rm typeset flags; polar-retraction
-   REFACTOR warning; dormant signed-trunk defs; lit-DB items).
+     (flag it; ceiling 26); tangled tree ⇒ clean RE-SEED with sharpened
+     body guidance; contract-level finding ⇒ STOP, escalate (exercised
+     for M24; if the aborted tree's root was amended by the prover,
+     git-checkout + git-clean the workspace back to the seed or the
+     linker's contract-match fails).
+   - Bank: serial in main (rsync back → export → oracle → verify → flip
+     → regenerate → check-all → fr log → commit → push). Oracle
+     registration: append to `config.oracles` in
+     `.frontier/portfolio.json` (af-validated.py pattern).
+7. **Open beads:** `aism-twpa` (P0, the M24 USER DECISION — blocks M28);
+   `aism-wazy` (P1, the duplicate-contract tripwire lesson; the landing
+   fix itself is DONE). Carried P1/P2 items unchanged (aism-9kmt report
+   sync; typeset flags; polar-retraction REFACTOR warning; dormant
+   signed-trunk defs; lit-DB items).
 8. **Orchestration laws (BINDING):** parallel worktree orchestrations ≤5
    concurrent, serial banking; no design/audit codex while ANY af run is
    live; fr/bd writes FIRST, commit, launch LAST; codex = `gpt-5.6-sol`,
@@ -102,19 +103,19 @@ TRIGGER: session close, or a material change in the current frontier / next task
 
 ## Next steps (ranked)
 
-1. M19-S3 re-seed/re-validate → mechanical M18/M20 re-flips (T0 156→159).
-2. M25 re-seed/re-validate (typed-reset provider only, explicit induction).
-3. M21, M23 (wired), then M22, M24, M26, M27, M28 — the MAIN capstone.
-4. `lem-thmainext-conditional` rewire; then the decoupled campaigns.
-5. `aism-9kmt` report sync (P2, large — banks 120–168 unanchored).
+1. **aism-twpa (P0):** design round + audit + user ratification for the
+   M24 nontriviality gap; then re-seed/elevate M24.
+2. **M28** — the MAIN structural-assembly capstone (blocked only on M24).
+3. `lem-thmainext-conditional` rewire; then the decoupled campaigns.
+4. `aism-9kmt` report sync (P2, large — banks ~120–174 unanchored).
+5. Consider the `aism-wazy` tripwire: a linker check that no two registry
+   rows share a byte-identical contract.
 
 ## What is intentionally NOT here
 
-- Any claim `op-classical` is proved — OPEN. T0 = 156 (peak 160 today;
-  the delta is honest demotions/suspensions, not lost mathematics: the
-  suspended M18/M20 certificates are intact and the retracted-certificate
-  CONTRACTS were never refuted).
-- Any claim the retracted M25/M19-S2/M19-S3 certificates count — see
-  docs/LEARNINGS.md 2026-08-01 (M19-S2 already re-validated cleanly).
-- The report anchoring of banks 120–168 (carried as `aism-9kmt`).
+- Any claim `op-classical` is proved — OPEN. T0 = 165.
+- Any claim about how the M24 gap should be resolved — that is the user's
+  call after a design round (options on `aism-twpa`, deliberately
+  unjudged).
+- The report anchoring of banks ~120–174 (carried as `aism-9kmt`).
 - Route X / XE decider work (fallback only); signed trunk PAUSED.
