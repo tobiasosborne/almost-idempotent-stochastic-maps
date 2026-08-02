@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Fix the def-maincb-witness-ledger datum W supplied by lem...}
+\step{1} Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra with 0 <= epsilon <= W.epsilon\_MAIN and w:C\textasciicircum{}m->A has maximum source dimension among all extended W.c0\_cb*epsilon-inclusions satisfying ||w(I\_\{C\textasciicircum{}m\})-I\_A|| <= W.c0\_cb*epsilon, then every projection-basis image P\_j=w(e\_j) satisfies dim S\_\{P\_j\}=1. \steptag{validated} \\[6pt]
+\step{1.1} Fix once and for all the single def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger, and then fix A and epsilon with the hypotheses in node 1. Define D(A,W,epsilon) to be the set of integers n for which there exists a map v:C\textasciicircum{}n->A that is an extended W.c0\_cb*epsilon-inclusion in the precise sense of def-extended-delta-inclusion and satisfies ||v(I\_\{C\textasciicircum{}n\})-I\_A|| <= W.c0\_cb*epsilon. By lem-maincb-maximal-reset-selection this set is nonempty and has a maximum. The maximality hypothesis on the displayed w says exactly that m=max D(A,W,epsilon); in particular no map C\textasciicircum{}\{m+1\}->A satisfying those same extended-inclusion and near-unit conditions exists. No new ledger or witness is chosen after this definition. \steptag{validated} \\[4pt]
+\step{1.2} Let e\_j be an arbitrary projection-basis element of C\textasciicircum{}m in the sense of def-projection-basis and put P\_j=w(e\_j). Applying lem-maincb-corner-nontriviality to the same fixed W,A,epsilon,w,e\_j (whose hypotheses are precisely those of node 1) gives that S\_\{P\_j\} contains a nonzero element and therefore dim S\_\{P\_j\} >= 1. \steptag{validated} \\[4pt]
+\step{1.3} For an arbitrary projection-basis element e\_j of C\textasciicircum{}m, dim S\_\{w(e\_j)\}>1 is impossible. Indeed, if dim S\_\{w(e\_j)\}>1, lem-maincb-stage1-strict-refinement, applied to the same fixed W,A,epsilon,w and this j, produces a map w\_+:C\textasciicircum{}\{m+1\}->A which is an extended W.c0\_cb*epsilon-inclusion in the precise sense of def-extended-delta-inclusion and satisfies ||w\_+(I\_\{C\textasciicircum{}\{m+1\}\})-I\_A|| <= W.c0\_cb*epsilon. Thus w\_+ is an admissible map of source dimension m+1, contradicting directly the node-1 hypothesis that w has maximum source dimension among all such maps. Hence not(dim S\_\{w(e\_j)\}>1). \steptag{validated} \\[4pt]
+\step{1.4} For every finite-dimensional complex vector space S, dim S is a nonnegative integer; consequently, if dim S >= 1 and not(dim S>1), then dim S=1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

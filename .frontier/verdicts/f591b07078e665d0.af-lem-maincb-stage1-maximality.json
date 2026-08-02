@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-stage1-maximality/export.md",
+  "oracle": "af-lem-maincb-stage1-maximality",
+  "result": "pass",
+  "claim_hash": "6fbf38948578244bf9e6c44ccab31fa436d37849a52eae70a70dc126cfd3d454",
+  "oracle_digest": "0e707fb45130d990a53a2edac99e3c194993059bbb0b4e5d5b5fe8d3621305a5",
+  "inputs_hash": "8f64d21eac0a8c8e6ce381df378e2de4290a77abb029dade57251c247c0a1053",
+  "ts": "2026-08-02T15:43:08.800Z"
+}
