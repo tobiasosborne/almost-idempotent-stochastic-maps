@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Fix the def-maincb-witness-ledger datum W supplied by lem...}
+\step{1} Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; every finite-dimensional extended epsilon-C*-algebra A with 0 <= epsilon <= W.epsilon\_MAIN admits an extended W.c0\_cb*epsilon-inclusion v:C->A satisfying ||v(I\_C)-I\_A|| <= W.c0\_cb*epsilon. \steptag{validated} \\[6pt]
+\step{1.1} Fix once the universal e\_it,K\_disp,K\_floor and epsilon\_max\textasciicircum{}cb,delta\_max\textasciicircum{}cb,c0\textasciicircum{}0 witnesses, then fix one and the same C\_unit,epsilon\_unit,delta\_unit,a\_unit witness tuple furnished by the third-clause provider in lem-maincb-reset-output-typing and use that tuple in the reset-ledger construction; fix all remaining provider witnesses named in lem-maincb-reset-constant-ledger, put D\_* = max\{1,D\_0,D\_1,D\_2,D\_3\}, and let W be the resulting ledger datum. For every finite-dimensional extended epsilon-C*-algebra A with 0 <= epsilon <= W.epsilon\_MAIN, the global scalar raw call at t=epsilon satisfies every hypothesis of lem-maincb-reset-output-typing with D=D\_*, epsilon\_R=epsilon, B\_R=C, A\_R=A, and u\_R(lambda)=lambda I\_A; applying that lemma to this same literal map produces an extended W.c0\_cb*epsilon-inclusion v:C->A satisfying ||v(I\_C)-I\_A|| <= W.c0\_cb*epsilon. \steptag{validated} \\[6pt]
+\step{1.1.1} For the single witness choice fixed in 1.1, lem-maincb-reset-constant-ledger and lem-maincb-witness-arithmetic give D\_* >= 1, W.c0\_cb=c0 >= max\{c0\textasciicircum{}0,K\_floor,C\_unit*(K\_floor+1)\}, and W.r\_reset = min\{e\_0,e\_1,e\_2,e\_3,epsilon\_max\textasciicircum{}cb,delta\_max\textasciicircum{}cb/D\_*,e\_it/(D\_*+1),epsilon\_unit,delta\_unit/max\{1,K\_floor\},a\_unit/((1+K\_disp)*D\_*),[2*(1+K\_disp)*D\_*]\textasciicircum{}\{-1\}\}. Thus W.r\_reset is at most every reset threshold required by lem-maincb-reset-output-typing for D=D\_*. In addition, lem-maincb-structural-domain-ledger gives, from 0 <= epsilon <= W.epsilon\_MAIN, the global scalar-scale bound epsilon <= W.r\_reset. All occurrences of C\_unit,epsilon\_unit,delta\_unit,a\_unit here are the one tuple fixed in 1.1, not a second existential choice. \steptag{validated} \\[4pt]
+\step{1.1.2} Let the universal witnesses and W obey D\_* = max\{1,D\_0,D\_1,D\_2,D\_3\}, D\_* >= 1, W.r\_reset <= e\_0, and, whenever 0 <= epsilon <= W.epsilon\_MAIN, epsilon <= W.r\_reset, exactly as supplied by lem-maincb-reset-constant-ledger, lem-maincb-witness-arithmetic, and lem-maincb-structural-domain-ledger. For a finite-dimensional extended epsilon-C*-algebra A with 0 <= epsilon <= W.epsilon\_MAIN, set t=epsilon. Then epsilon <= t <= e\_0, so lem-maincb-initial-raw-inclusion furnishes the literal scalar map u\_0:C->A, u\_0(lambda)=lambda I\_A. Because 0 <= t <= W.r\_reset and the target ambient defect epsilon is at most t, the initial-call clause of lem-maincb-reset-constant-ledger states that this same literal u\_0 is an extended D\_*t-inclusion and ||u\_0(I\_C)-I\_A|| <= D\_*t. Recording its global-scalar tag, source C, target A, scale t, target defect epsilon, literal level-one map, and fixed amplifications makes it the explicit raw call required by def-maincb-raw-call; no replacement map is introduced. \steptag{validated} \\[6pt]
+\step{1.1.2.1} Complete the def-maincb-raw-call record by choosing its recorded raw-defect field to be d\_raw := D\_* t. Explicitly, take the global-scalar tag; no supplied input reset state or map (this is the initial call); source C; explicit target corner A itself; pre-helper base scale t=epsilon; no post-helper datum scale; literal level-one output u\_0(lambda)=lambda I\_A together with its fixed amplification family (1\_\{M\_n\} tensor u\_0)\_\{n>=1\}; recorded target ambient defect epsilon; and recorded raw-defect number d\_raw=D\_*t. These are exactly all fields required by def-maincb-raw-call, so they define an explicit raw-call datum. This assignment of d\_raw is a record-field choice, distinct from the independently supplied assertion that the same u\_0 is an extended D\_*t-inclusion; the latter and ||u\_0(I\_C)-I\_A|| <= D\_*t come from the initial-call clause of lem-maincb-reset-constant-ledger. \steptag{validated} \\[4pt]
+\step{1.1.3} Fix the single C\_unit,epsilon\_unit,delta\_unit,a\_unit witness tuple used in constructing W. Suppose D\_* >= 1, W.c0\_cb >= max\{c0\textasciicircum{}0,K\_floor,C\_unit*(K\_floor+1)\}, and W.r\_reset <= min\{epsilon\_max\textasciicircum{}cb,delta\_max\textasciicircum{}cb/D\_*,e\_it/(D\_*+1),epsilon\_unit,delta\_unit/max\{1,K\_floor\},a\_unit/((1+K\_disp)*D\_*),[2*(1+K\_disp)*D\_*]\textasciicircum{}\{-1\}\}. If the global scalar datum with B\_R=C, A\_R=A, epsilon\_R=t=epsilon, and u\_R=u\_0 is an explicit raw call, with 0 <= t <= W.r\_reset, u\_0 an extended D\_*t-inclusion, ||u\_0(I\_C)-I\_A|| <= D\_*t, and epsilon\_R <= t, then lem-maincb-reset-output-typing, applied with D=D\_* to that same fixed witness tuple and that same literal u\_0, produces a map v:C->A. Its source and target are unchanged, it is an extended W.c0\_cb*epsilon-inclusion, and ||v(I\_C)-I\_A|| <= W.c0\_cb*epsilon; these are exactly the asserted existence, typing, and near-unit conclusions. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

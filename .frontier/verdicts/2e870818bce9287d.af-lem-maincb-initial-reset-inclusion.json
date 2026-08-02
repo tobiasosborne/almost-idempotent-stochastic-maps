@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-initial-reset-inclusion/export.md",
+  "oracle": "af-lem-maincb-initial-reset-inclusion",
+  "result": "pass",
+  "claim_hash": "2c5ff9744fa12cf5c441c2a4e53ea2cd40a68952502d84b321f9be3ffd20d7c8",
+  "oracle_digest": "129439a2b6cb9d8cbd8ee0282228b96f0b0ddb82f2ec0c7d12f02b5759d3f9d1",
+  "inputs_hash": "446aa92593cd5e25afbb03a9a8025fb43bb49e900b6403c2e01741d7b2dd3553",
+  "ts": "2026-08-02T12:48:06.488Z"
+}

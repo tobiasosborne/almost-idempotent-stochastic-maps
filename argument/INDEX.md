@@ -187,7 +187,7 @@
 | `lem-maincb-improvement-iteration` | lemma | proved | validated | A | There are universal e_it > 0, K_disp < infinity, and K_floor < infinity such tha… |
 | `lem-maincb-improvement-one-step` | lemma | proved | validated | A | There are universal K_step >= 1 and e_step > 0 such that, if B is a finite-dimen… |
 | `lem-maincb-initial-raw-inclusion` | lemma | proved | validated | A | There are universal D_0 < infinity and e_0 > 0 such that, in every finite-dimens… |
-| `lem-maincb-initial-reset-inclusion` | lemma | stated | seeded | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
+| `lem-maincb-initial-reset-inclusion` | lemma | proved | validated | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
 | `lem-maincb-isomorphism-unit-control` | lemma | proved | validated | A | There are universal C_iso_unit < infinity and e_iso_unit > 0 such that if B is a… |
 | `lem-maincb-maximal-reset-selection` | lemma | stated | seeded | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
 | `lem-maincb-nested-corner-comparison` | lemma | proved | validated | A | There are universal C_nest < infinity and e_nest > 0 such that, whenever R,P,Q a… |

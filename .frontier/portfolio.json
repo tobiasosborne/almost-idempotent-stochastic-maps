@@ -1,1596 +1,1620 @@
 {
-  "goal": "Prove op-classical: universal eta0,C>0 (dimension-free) such that every row-stochastic Q with ||Q^2-Q||_{inf->inf} <= eta <= eta0 admits a stochastic idempotent E with ||Q-E||_{inf->inf} <= C*sqrt(eta) (sharp exponent 1/2).",
-  "frontier": "The Kernel/(EX) conjecture: every rank->=3 signed idempotent P with delta<=1/4 has a theta-1/2 actual-row chart U0 with max_s Phi_s(U0) <= C0*delta (C0=1 empirically); equivalently every hidden row vertex with invisible mass > sqrt(delta) has height <= B*sqrt(delta). This one input closes op-classical via HLC <= op-exposed-hull <= op-classical.",
-  "config": {
-    "stale_threshold": 2,
-    "max_blocks_per_turn": 2,
-    "oracles": [
-      {
-        "name": "af-conj-extcb",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "conj-extcb"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/conj-extcb/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/conj-extcb.md"
-        ]
-      },
-      {
-        "name": "af-conj-hcb",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "conj-hcb"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/conj-hcb/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/conj-hcb.md"
-        ]
-      },
-      {
-        "name": "af-lem-classical-equiv",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-classical-equiv"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-classical-equiv/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-classical-equiv.md"
-        ]
-      },
-      {
-        "name": "af-obs-height-collapse",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "obs-height-collapse"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/obs-height-collapse/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/obs-height-collapse.md"
-        ]
-      },
-      {
-        "name": "af-lem-mass-split",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-mass-split"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-mass-split/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-mass-split.md"
-        ]
-      },
-      {
-        "name": "af-lem-residual-lower",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-residual-lower"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-residual-lower/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-residual-lower.md"
-        ]
-      },
-      {
-        "name": "af-lem-residual-upper",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-residual-upper"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-residual-upper/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-residual-upper.md"
-        ]
-      },
-      {
-        "name": "af-lem-halo-collapse",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-halo-collapse"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-halo-collapse/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-halo-collapse.md"
-        ]
-      },
-      {
-        "name": "af-lem-factorization",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-factorization"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-factorization/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-factorization.md"
-        ]
-      },
-      {
-        "name": "af-lem-zerosum-triangle",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-zerosum-triangle"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-zerosum-triangle/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-zerosum-triangle.md"
-        ]
-      },
-      {
-        "name": "af-lem-weighted-min",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-weighted-min"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-weighted-min/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-weighted-min.md"
-        ]
-      },
-      {
-        "name": "af-lem-fan-payment",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-fan-payment"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-fan-payment/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-fan-payment.md"
-        ]
-      },
-      {
-        "name": "af-lem-negpart-subadditive",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-negpart-subadditive"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-negpart-subadditive/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-negpart-subadditive.md"
-        ]
-      },
-      {
-        "name": "af-lem-fan-payment-restricted",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-fan-payment-restricted"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-fan-payment-restricted/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-fan-payment-restricted.md"
-        ]
-      },
-      {
-        "name": "af-lem-pivot-removing-move",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-pivot-removing-move"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-pivot-removing-move/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-pivot-removing-move.md"
-        ]
-      },
-      {
-        "name": "af-lem-collateral-import",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-collateral-import"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-collateral-import/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-collateral-import.md"
-        ]
-      },
-      {
-        "name": "af-lem-cross-pivot-cancellation",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-cross-pivot-cancellation"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-cross-pivot-cancellation/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-cross-pivot-cancellation.md"
-        ]
-      },
-      {
-        "name": "af-lem-import-reduction",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-import-reduction"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-import-reduction/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-import-reduction.md"
-        ]
-      },
-      {
-        "name": "nsc-zero-den-refuter",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-nsc-zero-denominator-refuter/scripts/orch_verify_refuter.py"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-nsc-zero-denominator-refuter/data/nsc_certificates.json",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-nsc-zero-denominator-refuter/scripts/orch_verify_refuter.py"
-        ]
-      },
-      {
-        "name": "gamma-emptiness-refuter",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-gamma-emptiness-refuter/scripts/orch_verify_refuter.py"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-gamma-emptiness-refuter/scripts/orch_verify_refuter.py"
-        ]
-      },
-      {
-        "name": "af-lem-parametric-halo-collapse",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-parametric-halo-collapse"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-parametric-halo-collapse/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-parametric-halo-collapse.md"
-        ]
-      },
-      {
-        "name": "af-lem-genuine-disintegration",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-genuine-disintegration"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-genuine-disintegration/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-genuine-disintegration.md"
-        ]
-      },
-      {
-        "name": "af-lem-top-concentration",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-top-concentration"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-top-concentration/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-top-concentration.md"
-        ]
-      },
-      {
-        "name": "af-lem-hiddenness-dual-witness",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-hiddenness-dual-witness"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-hiddenness-dual-witness/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-hiddenness-dual-witness.md"
-        ]
-      },
-      {
-        "name": "af-lem-cs-low-slab-pincer",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-cs-low-slab-pincer"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-cs-low-slab-pincer/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-cs-low-slab-pincer.md"
-        ]
-      },
-      {
-        "name": "af-lem-harmonic-affine-bridge",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-harmonic-affine-bridge"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-harmonic-affine-bridge/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-harmonic-affine-bridge.md"
-        ]
-      },
-      {
-        "name": "af-lem-row-far-dual-certificate",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-row-far-dual-certificate"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-row-far-dual-certificate/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-row-far-dual-certificate.md"
-        ]
-      },
-      {
-        "name": "af-lem-top-slab-companion",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-top-slab-companion"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-top-slab-companion/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-top-slab-companion.md"
-        ]
-      },
-      {
-        "name": "af-lem-hiddenness-depth-markov",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-hiddenness-depth-markov"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-hiddenness-depth-markov/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-hiddenness-depth-markov.md"
-        ]
-      },
-      {
-        "name": "af-lem-depth-d-halo-collapse",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-depth-d-halo-collapse"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-depth-d-halo-collapse/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-depth-d-halo-collapse.md"
-        ]
-      },
-      {
-        "name": "af-lem-row-zero-capacity",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-row-zero-capacity"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-row-zero-capacity/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-row-zero-capacity.md"
-        ]
-      },
-      {
-        "name": "af-lem-always-tight-dual-support",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-always-tight-dual-support"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-always-tight-dual-support/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-always-tight-dual-support.md"
-        ]
-      },
-      {
-        "name": "af-lem-starvation-completion-obstruction",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-starvation-completion-obstruction"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-starvation-completion-obstruction/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-starvation-completion-obstruction.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-quantitative-inverse-function",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-quantitative-inverse-function"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-quantitative-inverse-function/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-quantitative-inverse-function.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-exact-unit-rectification",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-exact-unit-rectification"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-exact-unit-rectification/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-exact-unit-rectification.md"
-        ]
-      },
-      {
-        "name": "af-lem-routef-prh-finish",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-routef-prh-finish"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-prh-finish/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-prh-finish.md"
-        ]
-      },
-      {
-        "name": "af-lem-kitaev-almost-idemp-audit",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-kitaev-almost-idemp-audit"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-kitaev-almost-idemp-audit/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-kitaev-almost-idemp-audit.md"
-        ]
-      },
-      {
-        "name": "af-lem-routef-functional-calculus-closeness",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-routef-functional-calculus-closeness"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-functional-calculus-closeness/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-functional-calculus-closeness.md"
-        ]
-      },
-      {
-        "name": "af-lem-routef-ai-defect-linearization",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-routef-ai-defect-linearization"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-ai-defect-linearization/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-ai-defect-linearization.md"
-        ]
-      },
-      {
-        "name": "af-lem-topology-lefschetz-hopf",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-topology-lefschetz-hopf"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-lefschetz-hopf/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-lefschetz-hopf.md"
-        ]
-      },
-      {
-        "name": "af-lem-topology-kunneth-cross-product",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-topology-kunneth-cross-product"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-kunneth-cross-product/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-kunneth-cross-product.md"
-        ]
-      },
-      {
-        "name": "af-lem-topology-orientable-top-cohomology",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-topology-orientable-top-cohomology"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-orientable-top-cohomology/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-orientable-top-cohomology.md"
-        ]
-      },
-      {
-        "name": "af-lem-topology-quotient-manifold",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-topology-quotient-manifold"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-quotient-manifold/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-quotient-manifold.md"
-        ]
-      },
-      {
-        "name": "af-lem-topology-hopf-structure",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-topology-hopf-structure"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-hopf-structure/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-hopf-structure.md"
-        ]
-      },
-      {
-        "name": "af-lem-extcb-exact-target-correction",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-extcb-exact-target-correction"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-extcb-exact-target-correction/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-extcb-exact-target-correction.md"
-        ]
-      },
-      {
-        "name": "af-lem-topology-local-index-sign",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-topology-local-index-sign"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-local-index-sign/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-local-index-sign.md"
-        ]
-      },
-      {
-        "name": "af-lem-routef-f0-ucp-lift",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-routef-f0-ucp-lift"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-f0-ucp-lift/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-f0-ucp-lift.md"
-        ]
-      },
-      {
-        "name": "af-lem-routef-f0-defect-identity",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-routef-f0-defect-identity"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-f0-defect-identity/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-f0-defect-identity.md"
-        ]
-      },
-      {
-        "name": "af-lem-routef-f2-positive-unital-compression",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-routef-f2-positive-unital-compression"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-f2-positive-unital-compression/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-f2-positive-unital-compression.md"
-        ]
-      },
-      {
-        "name": "af-lem-routef-f3-retract-defect",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-routef-f3-retract-defect"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-f3-retract-defect/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-f3-retract-defect.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-rectified-cstar-control",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-rectified-cstar-control"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-rectified-cstar-control/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-rectified-cstar-control.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-unitary-graph-control",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-unitary-graph-control"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-unitary-graph-control/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-unitary-graph-control.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-maurer-cartan-trivialization",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-maurer-cartan-trivialization"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-maurer-cartan-trivialization/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-maurer-cartan-trivialization.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-polar-retraction",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-polar-retraction"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-retraction/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-retraction.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-polar-coherence-naturality",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-polar-coherence-naturality"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-coherence-naturality/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-coherence-naturality.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-group-domain-membership",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-group-domain-membership"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-group-domain-membership/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-group-domain-membership.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-group-closeness",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-group-closeness"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-group-closeness/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-group-closeness.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-approximate-group-laws",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-approximate-group-laws"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-approximate-group-laws/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-approximate-group-laws.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-polar-path-admissibility",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-polar-path-admissibility"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-path-admissibility/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-path-admissibility.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-inversion-derivative-control",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-inversion-derivative-control"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-inversion-derivative-control/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-inversion-derivative-control.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-smooth-unitary-atlas",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-smooth-unitary-atlas"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-smooth-unitary-atlas/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-smooth-unitary-atlas.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-smooth-polar-inverse",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-smooth-polar-inverse"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-smooth-polar-inverse/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-smooth-polar-inverse.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-smooth-unitary-operations",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-smooth-unitary-operations"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-smooth-unitary-operations/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-smooth-unitary-operations.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-polar-scalar-arithmetic",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-polar-scalar-arithmetic"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-scalar-arithmetic/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-scalar-arithmetic.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-rectified-cstar-transport",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-rectified-cstar-transport"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-rectified-cstar-transport/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-rectified-cstar-transport.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-unitary-graph-transport",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-unitary-graph-transport"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-unitary-graph-transport/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-unitary-graph-transport.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-maurer-cartan-transport",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-maurer-cartan-transport"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-maurer-cartan-transport/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-maurer-cartan-transport.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-polar-retraction-transport",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-polar-retraction-transport"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-retraction-transport/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-retraction-transport.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-polar-path-transport",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-polar-path-transport"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-path-transport/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-path-transport.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-inversion-derivative-transport",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-inversion-derivative-transport"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-inversion-derivative-transport/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-inversion-derivative-transport.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-explicit-group-domain-membership",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-explicit-group-domain-membership"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-explicit-group-domain-membership/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-explicit-group-domain-membership.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-explicit-group-closeness",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-explicit-group-closeness"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-explicit-group-closeness/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-explicit-group-closeness.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-explicit-smooth-unitary-operations",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-explicit-smooth-unitary-operations"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-explicit-smooth-unitary-operations/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-explicit-smooth-unitary-operations.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-approximate-group-laws-transport",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-approximate-group-laws-transport"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-approximate-group-laws-transport/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-approximate-group-laws-transport.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-polar-constant-ledger",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-polar-constant-ledger"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-constant-ledger/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-constant-ledger.md"
-        ]
-      },
-      {
-        "name": "af-lem-finite-polyhedron-maximal-simplex-placement",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-finite-polyhedron-maximal-simplex-placement"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-finite-polyhedron-maximal-simplex-placement/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-finite-polyhedron-maximal-simplex-placement.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-uniform-inversion-isolation",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-uniform-inversion-isolation"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-uniform-inversion-isolation/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-uniform-inversion-isolation.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-quotient-manifold-package",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-quotient-manifold-package"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-quotient-manifold-package/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-quotient-manifold-package.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-quotient-left-inversion",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-quotient-left-inversion"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-quotient-left-inversion/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-quotient-left-inversion.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-quotient-inversion-index-data",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-quotient-inversion-index-data"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-quotient-inversion-index-data/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-quotient-inversion-index-data.md"
-        ]
-      },
-      {
-        "name": "af-lem-topology-finite-triangulation",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-topology-finite-triangulation"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-finite-triangulation/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-finite-triangulation.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-quotient-finite-cw",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-quotient-finite-cw"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-quotient-finite-cw/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-quotient-finite-cw.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-hspace-coproduct-tail",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-hspace-coproduct-tail"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-hspace-coproduct-tail/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-hspace-coproduct-tail.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-exterior-cohomology",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-exterior-cohomology"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-exterior-cohomology/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-exterior-cohomology.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-left-inversion-associated-graded",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-left-inversion-associated-graded"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-left-inversion-associated-graded/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-left-inversion-associated-graded.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-left-inversion-trace",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-left-inversion-trace"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-left-inversion-trace/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-left-inversion-trace.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-bound-quotient-left-inversion",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-bound-quotient-left-inversion"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-bound-quotient-left-inversion/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-bound-quotient-left-inversion.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-bound-quotient-local-index",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-bound-quotient-local-index"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-bound-quotient-local-index/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-bound-quotient-local-index.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-bound-inversion-isolation",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-bound-inversion-isolation"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-bound-inversion-isolation/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-bound-inversion-isolation.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-bound-quotient-index-data",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-bound-quotient-index-data"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-bound-quotient-index-data/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-bound-quotient-index-data.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-extra-fixed-class",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-extra-fixed-class"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-extra-fixed-class/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-extra-fixed-class.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-fixed-unitary-projection-bridge",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-fixed-unitary-projection-bridge"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-fixed-unitary-projection-bridge/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-fixed-unitary-projection-bridge.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-rectified-nontrivial-projection",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-rectified-nontrivial-projection"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-rectified-nontrivial-projection/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-rectified-nontrivial-projection.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-original-complementary-pair",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-original-complementary-pair"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-original-complementary-pair/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-original-complementary-pair.md"
-        ]
-      },
-      {
-        "name": "af-lem-stage1-fresh-two-point-inclusion",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-stage1-fresh-two-point-inclusion"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-fresh-two-point-inclusion/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-fresh-two-point-inclusion.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-initial-raw-inclusion",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-initial-raw-inclusion"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-initial-raw-inclusion/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-initial-raw-inclusion.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-improvement-one-step",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-improvement-one-step"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-improvement-one-step/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-improvement-one-step.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-full-corner-identification",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-full-corner-identification"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-full-corner-identification/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-full-corner-identification.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-corner-equivalence",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-corner-equivalence"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-corner-equivalence/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-corner-equivalence.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-improvement-iteration",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-improvement-iteration"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-improvement-iteration/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-improvement-iteration.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-nested-corner-comparison",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-nested-corner-comparison"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-nested-corner-comparison/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-nested-corner-comparison.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-direct-sum-inclusion-merge",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-direct-sum-inclusion-merge"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-direct-sum-inclusion-merge/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-direct-sum-inclusion-merge.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-nested-corner-dimension-transport",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-nested-corner-dimension-transport"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-nested-corner-dimension-transport/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-nested-corner-dimension-transport.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-stage1-raw-refinement",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-stage1-raw-refinement"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage1-raw-refinement/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage1-raw-refinement.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-cross-union-zero-corners",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-cross-union-zero-corners"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-cross-union-zero-corners/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-cross-union-zero-corners.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-outer-compression-transfer",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-outer-compression-transfer"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-outer-compression-transfer/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-outer-compression-transfer.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-error-improvement",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-error-improvement"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-error-improvement/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-error-improvement.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-direct-corner-envelope",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-direct-corner-envelope"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-direct-corner-envelope/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-direct-corner-envelope.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-stage2-extcb-datum",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-stage2-extcb-datum"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage2-extcb-datum/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage2-extcb-datum.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-isomorphism-unit-control",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-isomorphism-unit-control"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-isomorphism-unit-control/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-isomorphism-unit-control.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-witness-arithmetic",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-witness-arithmetic"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-witness-arithmetic/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-witness-arithmetic.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-reset-invariant-preservation",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-reset-invariant-preservation"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-reset-invariant-preservation/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-reset-invariant-preservation.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-stage2-raw-extension",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-stage2-raw-extension"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage2-raw-extension/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage2-raw-extension.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-compressed-corner-unit-comparison",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-compressed-corner-unit-comparison"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-compressed-corner-unit-comparison/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-compressed-corner-unit-comparison.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-stage1-call-envelope",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-stage1-call-envelope"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage1-call-envelope/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage1-call-envelope.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-cross-class-merging-datum",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-cross-class-merging-datum"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-cross-class-merging-datum/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-cross-class-merging-datum.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-stage2-call-envelope",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-stage2-call-envelope"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage2-call-envelope/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage2-call-envelope.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-stage3-call-envelope",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-stage3-call-envelope"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage3-call-envelope/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage3-call-envelope.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-cross-datum-bijectivity",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-cross-datum-bijectivity"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-cross-datum-bijectivity/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-cross-datum-bijectivity.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-stage3-raw-merge",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-stage3-raw-merge"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage3-raw-merge/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage3-raw-merge.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-extended-inclusion-monotone",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-extended-inclusion-monotone"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-extended-inclusion-monotone/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-extended-inclusion-monotone.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-reset-constant-ledger",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-reset-constant-ledger"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-reset-constant-ledger/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-reset-constant-ledger.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-structural-domain-ledger",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-structural-domain-ledger"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-structural-domain-ledger/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-structural-domain-ledger.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-one-class-extension",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-one-class-extension"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-one-class-extension/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-one-class-extension.md"
-        ]
-      },
-      {
-        "name": "af-lem-maincb-reset-output-typing",
-        "cmd": [
-          "python3",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
-          "lem-maincb-reset-output-typing"
-        ],
-        "inputs": [
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-reset-output-typing/ledger",
-          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-reset-output-typing.md"
-        ]
-      }
+ "goal": "Prove op-classical: universal eta0,C>0 (dimension-free) such that every row-stochastic Q with ||Q^2-Q||_{inf->inf} <= eta <= eta0 admits a stochastic idempotent E with ||Q-E||_{inf->inf} <= C*sqrt(eta) (sharp exponent 1/2).",
+ "frontier": "The Kernel/(EX) conjecture: every rank->=3 signed idempotent P with delta<=1/4 has a theta-1/2 actual-row chart U0 with max_s Phi_s(U0) <= C0*delta (C0=1 empirically); equivalently every hidden row vertex with invisible mass > sqrt(delta) has height <= B*sqrt(delta). This one input closes op-classical via HLC <= op-exposed-hull <= op-classical.",
+ "config": {
+  "stale_threshold": 2,
+  "max_blocks_per_turn": 2,
+  "oracles": [
+   {
+    "name": "af-conj-extcb",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "conj-extcb"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/conj-extcb/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/conj-extcb.md"
     ]
-  },
-  "arms": [
-    {
-      "id": "A",
-      "desc": "Prove the (EX) kernel at rank >=3: every rank->=3 signed idempotent P with delta<=1/4 has a theta-1/2 actual-row chart U0 with max_s Phi_s(U0) <= delta (C0=1). Geometric tie-selection for max-volume charts; charge the two rank-3 bad wedges to the pivot row negative mass.",
-      "priority": "parked-tier1-override",
-      "target": "max_s Phi_s(U0) <= C0*delta for a selectable chart; composes with S*<=2Phi+6delta to C_sf=8",
-      "kill": "a rank->=3 counterexample with min_U max_s Phi_s/delta > 1",
-      "created": "1970-01-01T00:00:00.000Z",
-      "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
-    },
-    {
-      "id": "B",
-      "desc": "THE HUDDLE-CHARGE / SIX-LEAF PROGRAM (reconciled 2026-07-10; supersedes the retired frame-free-dual-localization text): close the open leaves of the wired conditional spine \u2014 the three SL1a sigma-cells (conj-sl1a-deep-diagonal-cell H-D, conj-sl1a-intersection-diagonal-cell H-I, conj-sl1a-off-diagonal-cell H-X, on the proved lem-sl1a-three-cell-reduction interface), conj-shallow-counterweight-exclusion (SL1b), the conj-cotop-web-coupling residuals (E1-E5 codification, small-gauge bridge, mixed co-top straddle, large-gauge completion), and the L5 dual-face mass minimax. H-X is anchored at T0 by lem-starvation-completion-obstruction (af-validated).",
-      "priority": "primary",
-      "target": "Any one leaf closed (proved+hostile-verified) or refuted with a delta->0 family; the huddle charge follows from the leaf system via the stated bridges (hostile pass pending, aism-bbv).",
-      "kill": "A certified wall covering a whole leaf family (cf. the W56 one-hard-leaf certificate); or the op-hlc OR-route decision (aism-hse) re-routing the trunk away from MIN-A/huddle.",
-      "created": "1970-01-01T00:00:00.000Z"
-    },
-    {
-      "id": "C",
-      "desc": "Repair the local-linear-law assembly: combine the four audited variety lemmas into H <= C_loc*delta near the Hognas-Mukherjea locus via nearest-branch recoding.",
-      "priority": "parked-tier1-override",
-      "target": "H <= C_loc*delta assembled from the variety lemmas without the 12.8-128x blowup",
-      "kill": null,
-      "created": "1970-01-01T00:00:00.000Z",
-      "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
-    },
-    {
-      "id": "D",
-      "desc": "Global gap via Hognas-Mukherjea Thm 1.12 + the transverse coefficient tax sum_j (P_usj)+ * sum_{t!=s} (-a_t(j))+ <= C_mu*delta; signed quantitative Baake-Sumner stability.",
-      "priority": "parked-tier1-override",
-      "target": "the transverse coefficient tax bound, closing displacement->face->L4->global",
-      "kill": null,
-      "created": "1970-01-01T00:00:00.000Z",
-      "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
-    },
-    {
-      "id": "E",
-      "desc": "Lojasiewicz/error-bound route: frame the linear law as a semialgebraic error bound (Hoffman 1952, Luo-Pang 1994) and/or quantitative stability of norm-one (contractive) projections (Douglas-Ando).",
-      "priority": "parked-tier1-override",
-      "target": "an error-bound modulus giving the sqrt(delta) distance",
-      "kill": null,
-      "created": "1970-01-01T00:00:00.000Z",
-      "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
-    },
-    {
-      "id": "F",
-      "desc": "Numerical cross-checks: exact-arithmetic LP enumeration and certified instances of candidate bounds and of (EX) at higher rank. NON-rigorous, feeds runs/ bundles only.",
-      "priority": "parked-tier1-override",
-      "target": "certified numerical support/refutation; never promoted without a certificate",
-      "kill": null,
-      "created": "1970-01-01T00:00:00.000Z",
-      "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
-    },
-    {
-      "id": "R",
-      "desc": "re-establish the inherited reduction chain rigorously via af elevation (fresh codex prover/verifier per node; orchestrator never judges)",
-      "priority": "parked-tier1-override",
-      "target": "every proved-mod-audit link of the chain af-validated in-repo",
-      "kill": "an af run refutes an inherited link (re-tag disproved, escalate to user)",
-      "created": "1970-01-01T00:00:00.000Z",
-      "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
-    },
-    {
-      "id": "G",
-      "desc": "Flow conservation over the swap family: prove that the beta-weighted excess of a theta-1/2 Phi-argmin chart, summed against the A9 stationarity disjunctions of all volume-permitted swaps, TELESCOPES against the D5 financing ledger with the rigorous fan lemmas (2, 2+sqrt(2)) as exchange rate and the proved delta-budgets (sum Gamma^- <= delta, sum beta^- <= delta, R_D^nu <= (5/4)delta) as boundary terms \u2014 the single conjectured missing lemma of the (EX) engine, subsuming the coupled payment/(FIN) and legal-collateral horns; equivalently (constructive form) the H-M Thm 1.12 CONVERSE rounding: merge classes, project B-rows onto the (1.2)/(1.3) nonnegative polytope, projection distance O(delta)",
-      "priority": "parked-tier1-override",
-      "target": "the (EX)/GAP-B argmin charge via one joint mechanism instead of two coupled horns",
-      "kill": "the D6 legal-leak certificates AMPLIFY instead of telescoping (a rank-growing family with L_mu-type leaks composing past every universal constant) \u2014 then (EX) is false and the retarget is the height-conditional kernel",
-      "created": "1970-01-01T00:00:00.000Z",
-      "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
-    },
-    {
-      "id": "FH",
-      "desc": "Route F: factorization-hardening \u2014 Kitaev Thm 12.3 commutative specialization + positive-retract hardening (PRH) lemma; convergent A/C architecture from the W73 strategy reset",
-      "priority": "primary",
-      "target": "op-classical via positive approximate retract; decisive test = hostile line-by-line audit of Kitaev arXiv:2405.02434 Thm 12.3 (steps F0-F3)",
-      "kill": "F1 audit fails: Thm 12.3 does not deliver a two-sided O(eta) factorization with approximate multiplicativity, dimension-free, applicable to the diagonal lift",
-      "created": "1970-01-01T00:00:00.000Z"
-    },
-    {
-      "id": "XE",
-      "desc": "Route X: exchange-or-expose family \u2014 RTS at L5-GAP-1 (aggregate L1 transverse current, primal-exposer min-cut) / APAL-PAT at kernel (positive-recipient carrier + aggregate peak-or-leak) / QCMP capacity form; convergent B/D/A-II shape from the W73 strategy reset",
-      "priority": "exploratory",
-      "target": "conj-l5-gap-1 (RTS) or conj-kernel (PAT: sigma_g <= 1/2+48tau => B=9/8); deciders first: aggregate-peak, QCMP ratio, quotient-refinement/cross-financing",
-      "kill": "deciders refute: exact instance with m(A_C)>1/2+48tau and no peak, or QCMP ratio unbounded, or current norm decays with w_*",
-      "created": "1970-01-01T00:00:00.000Z"
-    }
+   },
+   {
+    "name": "af-conj-hcb",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "conj-hcb"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/conj-hcb/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/conj-hcb.md"
+    ]
+   },
+   {
+    "name": "af-lem-classical-equiv",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-classical-equiv"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-classical-equiv/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-classical-equiv.md"
+    ]
+   },
+   {
+    "name": "af-obs-height-collapse",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "obs-height-collapse"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/obs-height-collapse/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/obs-height-collapse.md"
+    ]
+   },
+   {
+    "name": "af-lem-mass-split",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-mass-split"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-mass-split/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-mass-split.md"
+    ]
+   },
+   {
+    "name": "af-lem-residual-lower",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-residual-lower"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-residual-lower/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-residual-lower.md"
+    ]
+   },
+   {
+    "name": "af-lem-residual-upper",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-residual-upper"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-residual-upper/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-residual-upper.md"
+    ]
+   },
+   {
+    "name": "af-lem-halo-collapse",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-halo-collapse"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-halo-collapse/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-halo-collapse.md"
+    ]
+   },
+   {
+    "name": "af-lem-factorization",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-factorization"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-factorization/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-factorization.md"
+    ]
+   },
+   {
+    "name": "af-lem-zerosum-triangle",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-zerosum-triangle"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-zerosum-triangle/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-zerosum-triangle.md"
+    ]
+   },
+   {
+    "name": "af-lem-weighted-min",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-weighted-min"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-weighted-min/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-weighted-min.md"
+    ]
+   },
+   {
+    "name": "af-lem-fan-payment",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-fan-payment"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-fan-payment/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-fan-payment.md"
+    ]
+   },
+   {
+    "name": "af-lem-negpart-subadditive",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-negpart-subadditive"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-negpart-subadditive/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-negpart-subadditive.md"
+    ]
+   },
+   {
+    "name": "af-lem-fan-payment-restricted",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-fan-payment-restricted"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-fan-payment-restricted/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-fan-payment-restricted.md"
+    ]
+   },
+   {
+    "name": "af-lem-pivot-removing-move",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-pivot-removing-move"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-pivot-removing-move/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-pivot-removing-move.md"
+    ]
+   },
+   {
+    "name": "af-lem-collateral-import",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-collateral-import"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-collateral-import/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-collateral-import.md"
+    ]
+   },
+   {
+    "name": "af-lem-cross-pivot-cancellation",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-cross-pivot-cancellation"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-cross-pivot-cancellation/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-cross-pivot-cancellation.md"
+    ]
+   },
+   {
+    "name": "af-lem-import-reduction",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-import-reduction"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-import-reduction/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-import-reduction.md"
+    ]
+   },
+   {
+    "name": "nsc-zero-den-refuter",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-nsc-zero-denominator-refuter/scripts/orch_verify_refuter.py"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-nsc-zero-denominator-refuter/data/nsc_certificates.json",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-nsc-zero-denominator-refuter/scripts/orch_verify_refuter.py"
+    ]
+   },
+   {
+    "name": "gamma-emptiness-refuter",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-gamma-emptiness-refuter/scripts/orch_verify_refuter.py"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/runs/2026-07-05-gamma-emptiness-refuter/scripts/orch_verify_refuter.py"
+    ]
+   },
+   {
+    "name": "af-lem-parametric-halo-collapse",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-parametric-halo-collapse"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-parametric-halo-collapse/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-parametric-halo-collapse.md"
+    ]
+   },
+   {
+    "name": "af-lem-genuine-disintegration",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-genuine-disintegration"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-genuine-disintegration/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-genuine-disintegration.md"
+    ]
+   },
+   {
+    "name": "af-lem-top-concentration",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-top-concentration"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-top-concentration/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-top-concentration.md"
+    ]
+   },
+   {
+    "name": "af-lem-hiddenness-dual-witness",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-hiddenness-dual-witness"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-hiddenness-dual-witness/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-hiddenness-dual-witness.md"
+    ]
+   },
+   {
+    "name": "af-lem-cs-low-slab-pincer",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-cs-low-slab-pincer"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-cs-low-slab-pincer/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-cs-low-slab-pincer.md"
+    ]
+   },
+   {
+    "name": "af-lem-harmonic-affine-bridge",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-harmonic-affine-bridge"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-harmonic-affine-bridge/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-harmonic-affine-bridge.md"
+    ]
+   },
+   {
+    "name": "af-lem-row-far-dual-certificate",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-row-far-dual-certificate"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-row-far-dual-certificate/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-row-far-dual-certificate.md"
+    ]
+   },
+   {
+    "name": "af-lem-top-slab-companion",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-top-slab-companion"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-top-slab-companion/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-top-slab-companion.md"
+    ]
+   },
+   {
+    "name": "af-lem-hiddenness-depth-markov",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-hiddenness-depth-markov"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-hiddenness-depth-markov/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-hiddenness-depth-markov.md"
+    ]
+   },
+   {
+    "name": "af-lem-depth-d-halo-collapse",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-depth-d-halo-collapse"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-depth-d-halo-collapse/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-depth-d-halo-collapse.md"
+    ]
+   },
+   {
+    "name": "af-lem-row-zero-capacity",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-row-zero-capacity"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-row-zero-capacity/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-row-zero-capacity.md"
+    ]
+   },
+   {
+    "name": "af-lem-always-tight-dual-support",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-always-tight-dual-support"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-always-tight-dual-support/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-always-tight-dual-support.md"
+    ]
+   },
+   {
+    "name": "af-lem-starvation-completion-obstruction",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-starvation-completion-obstruction"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-starvation-completion-obstruction/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-starvation-completion-obstruction.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-quantitative-inverse-function",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-quantitative-inverse-function"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-quantitative-inverse-function/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-quantitative-inverse-function.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-exact-unit-rectification",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-exact-unit-rectification"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-exact-unit-rectification/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-exact-unit-rectification.md"
+    ]
+   },
+   {
+    "name": "af-lem-routef-prh-finish",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-routef-prh-finish"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-prh-finish/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-prh-finish.md"
+    ]
+   },
+   {
+    "name": "af-lem-kitaev-almost-idemp-audit",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-kitaev-almost-idemp-audit"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-kitaev-almost-idemp-audit/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-kitaev-almost-idemp-audit.md"
+    ]
+   },
+   {
+    "name": "af-lem-routef-functional-calculus-closeness",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-routef-functional-calculus-closeness"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-functional-calculus-closeness/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-functional-calculus-closeness.md"
+    ]
+   },
+   {
+    "name": "af-lem-routef-ai-defect-linearization",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-routef-ai-defect-linearization"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-ai-defect-linearization/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-ai-defect-linearization.md"
+    ]
+   },
+   {
+    "name": "af-lem-topology-lefschetz-hopf",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-topology-lefschetz-hopf"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-lefschetz-hopf/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-lefschetz-hopf.md"
+    ]
+   },
+   {
+    "name": "af-lem-topology-kunneth-cross-product",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-topology-kunneth-cross-product"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-kunneth-cross-product/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-kunneth-cross-product.md"
+    ]
+   },
+   {
+    "name": "af-lem-topology-orientable-top-cohomology",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-topology-orientable-top-cohomology"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-orientable-top-cohomology/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-orientable-top-cohomology.md"
+    ]
+   },
+   {
+    "name": "af-lem-topology-quotient-manifold",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-topology-quotient-manifold"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-quotient-manifold/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-quotient-manifold.md"
+    ]
+   },
+   {
+    "name": "af-lem-topology-hopf-structure",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-topology-hopf-structure"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-hopf-structure/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-hopf-structure.md"
+    ]
+   },
+   {
+    "name": "af-lem-extcb-exact-target-correction",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-extcb-exact-target-correction"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-extcb-exact-target-correction/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-extcb-exact-target-correction.md"
+    ]
+   },
+   {
+    "name": "af-lem-topology-local-index-sign",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-topology-local-index-sign"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-local-index-sign/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-local-index-sign.md"
+    ]
+   },
+   {
+    "name": "af-lem-routef-f0-ucp-lift",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-routef-f0-ucp-lift"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-f0-ucp-lift/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-f0-ucp-lift.md"
+    ]
+   },
+   {
+    "name": "af-lem-routef-f0-defect-identity",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-routef-f0-defect-identity"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-f0-defect-identity/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-f0-defect-identity.md"
+    ]
+   },
+   {
+    "name": "af-lem-routef-f2-positive-unital-compression",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-routef-f2-positive-unital-compression"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-f2-positive-unital-compression/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-f2-positive-unital-compression.md"
+    ]
+   },
+   {
+    "name": "af-lem-routef-f3-retract-defect",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-routef-f3-retract-defect"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-f3-retract-defect/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-f3-retract-defect.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-rectified-cstar-control",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-rectified-cstar-control"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-rectified-cstar-control/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-rectified-cstar-control.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-unitary-graph-control",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-unitary-graph-control"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-unitary-graph-control/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-unitary-graph-control.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-maurer-cartan-trivialization",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-maurer-cartan-trivialization"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-maurer-cartan-trivialization/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-maurer-cartan-trivialization.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-polar-retraction",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-polar-retraction"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-retraction/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-retraction.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-polar-coherence-naturality",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-polar-coherence-naturality"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-coherence-naturality/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-coherence-naturality.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-group-domain-membership",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-group-domain-membership"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-group-domain-membership/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-group-domain-membership.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-group-closeness",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-group-closeness"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-group-closeness/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-group-closeness.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-approximate-group-laws",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-approximate-group-laws"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-approximate-group-laws/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-approximate-group-laws.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-polar-path-admissibility",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-polar-path-admissibility"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-path-admissibility/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-path-admissibility.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-inversion-derivative-control",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-inversion-derivative-control"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-inversion-derivative-control/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-inversion-derivative-control.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-smooth-unitary-atlas",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-smooth-unitary-atlas"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-smooth-unitary-atlas/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-smooth-unitary-atlas.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-smooth-polar-inverse",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-smooth-polar-inverse"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-smooth-polar-inverse/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-smooth-polar-inverse.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-smooth-unitary-operations",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-smooth-unitary-operations"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-smooth-unitary-operations/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-smooth-unitary-operations.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-polar-scalar-arithmetic",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-polar-scalar-arithmetic"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-scalar-arithmetic/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-scalar-arithmetic.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-rectified-cstar-transport",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-rectified-cstar-transport"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-rectified-cstar-transport/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-rectified-cstar-transport.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-unitary-graph-transport",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-unitary-graph-transport"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-unitary-graph-transport/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-unitary-graph-transport.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-maurer-cartan-transport",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-maurer-cartan-transport"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-maurer-cartan-transport/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-maurer-cartan-transport.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-polar-retraction-transport",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-polar-retraction-transport"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-retraction-transport/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-retraction-transport.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-polar-path-transport",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-polar-path-transport"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-path-transport/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-path-transport.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-inversion-derivative-transport",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-inversion-derivative-transport"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-inversion-derivative-transport/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-inversion-derivative-transport.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-explicit-group-domain-membership",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-explicit-group-domain-membership"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-explicit-group-domain-membership/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-explicit-group-domain-membership.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-explicit-group-closeness",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-explicit-group-closeness"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-explicit-group-closeness/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-explicit-group-closeness.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-explicit-smooth-unitary-operations",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-explicit-smooth-unitary-operations"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-explicit-smooth-unitary-operations/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-explicit-smooth-unitary-operations.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-approximate-group-laws-transport",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-approximate-group-laws-transport"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-approximate-group-laws-transport/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-approximate-group-laws-transport.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-polar-constant-ledger",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-polar-constant-ledger"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-polar-constant-ledger/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-polar-constant-ledger.md"
+    ]
+   },
+   {
+    "name": "af-lem-finite-polyhedron-maximal-simplex-placement",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-finite-polyhedron-maximal-simplex-placement"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-finite-polyhedron-maximal-simplex-placement/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-finite-polyhedron-maximal-simplex-placement.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-uniform-inversion-isolation",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-uniform-inversion-isolation"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-uniform-inversion-isolation/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-uniform-inversion-isolation.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-quotient-manifold-package",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-quotient-manifold-package"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-quotient-manifold-package/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-quotient-manifold-package.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-quotient-left-inversion",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-quotient-left-inversion"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-quotient-left-inversion/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-quotient-left-inversion.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-quotient-inversion-index-data",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-quotient-inversion-index-data"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-quotient-inversion-index-data/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-quotient-inversion-index-data.md"
+    ]
+   },
+   {
+    "name": "af-lem-topology-finite-triangulation",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-topology-finite-triangulation"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-topology-finite-triangulation/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-topology-finite-triangulation.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-quotient-finite-cw",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-quotient-finite-cw"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-quotient-finite-cw/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-quotient-finite-cw.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-hspace-coproduct-tail",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-hspace-coproduct-tail"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-hspace-coproduct-tail/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-hspace-coproduct-tail.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-exterior-cohomology",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-exterior-cohomology"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-exterior-cohomology/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-exterior-cohomology.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-left-inversion-associated-graded",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-left-inversion-associated-graded"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-left-inversion-associated-graded/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-left-inversion-associated-graded.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-left-inversion-trace",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-left-inversion-trace"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-left-inversion-trace/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-left-inversion-trace.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-bound-quotient-left-inversion",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-bound-quotient-left-inversion"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-bound-quotient-left-inversion/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-bound-quotient-left-inversion.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-bound-quotient-local-index",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-bound-quotient-local-index"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-bound-quotient-local-index/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-bound-quotient-local-index.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-bound-inversion-isolation",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-bound-inversion-isolation"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-bound-inversion-isolation/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-bound-inversion-isolation.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-bound-quotient-index-data",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-bound-quotient-index-data"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-bound-quotient-index-data/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-bound-quotient-index-data.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-extra-fixed-class",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-extra-fixed-class"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-extra-fixed-class/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-extra-fixed-class.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-fixed-unitary-projection-bridge",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-fixed-unitary-projection-bridge"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-fixed-unitary-projection-bridge/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-fixed-unitary-projection-bridge.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-rectified-nontrivial-projection",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-rectified-nontrivial-projection"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-rectified-nontrivial-projection/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-rectified-nontrivial-projection.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-original-complementary-pair",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-original-complementary-pair"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-original-complementary-pair/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-original-complementary-pair.md"
+    ]
+   },
+   {
+    "name": "af-lem-stage1-fresh-two-point-inclusion",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-stage1-fresh-two-point-inclusion"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-stage1-fresh-two-point-inclusion/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-stage1-fresh-two-point-inclusion.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-initial-raw-inclusion",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-initial-raw-inclusion"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-initial-raw-inclusion/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-initial-raw-inclusion.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-improvement-one-step",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-improvement-one-step"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-improvement-one-step/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-improvement-one-step.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-full-corner-identification",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-full-corner-identification"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-full-corner-identification/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-full-corner-identification.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-corner-equivalence",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-corner-equivalence"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-corner-equivalence/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-corner-equivalence.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-improvement-iteration",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-improvement-iteration"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-improvement-iteration/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-improvement-iteration.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-nested-corner-comparison",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-nested-corner-comparison"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-nested-corner-comparison/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-nested-corner-comparison.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-direct-sum-inclusion-merge",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-direct-sum-inclusion-merge"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-direct-sum-inclusion-merge/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-direct-sum-inclusion-merge.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-nested-corner-dimension-transport",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-nested-corner-dimension-transport"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-nested-corner-dimension-transport/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-nested-corner-dimension-transport.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-stage1-raw-refinement",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-stage1-raw-refinement"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage1-raw-refinement/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage1-raw-refinement.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-cross-union-zero-corners",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-cross-union-zero-corners"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-cross-union-zero-corners/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-cross-union-zero-corners.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-outer-compression-transfer",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-outer-compression-transfer"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-outer-compression-transfer/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-outer-compression-transfer.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-error-improvement",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-error-improvement"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-error-improvement/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-error-improvement.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-direct-corner-envelope",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-direct-corner-envelope"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-direct-corner-envelope/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-direct-corner-envelope.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-stage2-extcb-datum",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-stage2-extcb-datum"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage2-extcb-datum/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage2-extcb-datum.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-isomorphism-unit-control",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-isomorphism-unit-control"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-isomorphism-unit-control/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-isomorphism-unit-control.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-witness-arithmetic",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-witness-arithmetic"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-witness-arithmetic/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-witness-arithmetic.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-reset-invariant-preservation",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-reset-invariant-preservation"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-reset-invariant-preservation/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-reset-invariant-preservation.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-stage2-raw-extension",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-stage2-raw-extension"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage2-raw-extension/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage2-raw-extension.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-compressed-corner-unit-comparison",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-compressed-corner-unit-comparison"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-compressed-corner-unit-comparison/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-compressed-corner-unit-comparison.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-stage1-call-envelope",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-stage1-call-envelope"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage1-call-envelope/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage1-call-envelope.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-cross-class-merging-datum",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-cross-class-merging-datum"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-cross-class-merging-datum/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-cross-class-merging-datum.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-stage2-call-envelope",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-stage2-call-envelope"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage2-call-envelope/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage2-call-envelope.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-stage3-call-envelope",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-stage3-call-envelope"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage3-call-envelope/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage3-call-envelope.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-cross-datum-bijectivity",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-cross-datum-bijectivity"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-cross-datum-bijectivity/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-cross-datum-bijectivity.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-stage3-raw-merge",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-stage3-raw-merge"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage3-raw-merge/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage3-raw-merge.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-extended-inclusion-monotone",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-extended-inclusion-monotone"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-extended-inclusion-monotone/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-extended-inclusion-monotone.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-reset-constant-ledger",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-reset-constant-ledger"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-reset-constant-ledger/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-reset-constant-ledger.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-structural-domain-ledger",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-structural-domain-ledger"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-structural-domain-ledger/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-structural-domain-ledger.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-one-class-extension",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-one-class-extension"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-one-class-extension/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-one-class-extension.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-reset-output-typing",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-reset-output-typing"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-reset-output-typing/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-reset-output-typing.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-initial-reset-inclusion",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-initial-reset-inclusion"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-initial-reset-inclusion/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-initial-reset-inclusion.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-stage1-strict-refinement",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-stage1-strict-refinement"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage1-strict-refinement/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage1-strict-refinement.md"
+    ]
+   }
   ]
+ },
+ "arms": [
+  {
+   "id": "A",
+   "desc": "Prove the (EX) kernel at rank >=3: every rank->=3 signed idempotent P with delta<=1/4 has a theta-1/2 actual-row chart U0 with max_s Phi_s(U0) <= delta (C0=1). Geometric tie-selection for max-volume charts; charge the two rank-3 bad wedges to the pivot row negative mass.",
+   "priority": "parked-tier1-override",
+   "target": "max_s Phi_s(U0) <= C0*delta for a selectable chart; composes with S*<=2Phi+6delta to C_sf=8",
+   "kill": "a rank->=3 counterexample with min_U max_s Phi_s/delta > 1",
+   "created": "1970-01-01T00:00:00.000Z",
+   "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
+  },
+  {
+   "id": "B",
+   "desc": "THE HUDDLE-CHARGE / SIX-LEAF PROGRAM (reconciled 2026-07-10; supersedes the retired frame-free-dual-localization text): close the open leaves of the wired conditional spine \u2014 the three SL1a sigma-cells (conj-sl1a-deep-diagonal-cell H-D, conj-sl1a-intersection-diagonal-cell H-I, conj-sl1a-off-diagonal-cell H-X, on the proved lem-sl1a-three-cell-reduction interface), conj-shallow-counterweight-exclusion (SL1b), the conj-cotop-web-coupling residuals (E1-E5 codification, small-gauge bridge, mixed co-top straddle, large-gauge completion), and the L5 dual-face mass minimax. H-X is anchored at T0 by lem-starvation-completion-obstruction (af-validated).",
+   "priority": "primary",
+   "target": "Any one leaf closed (proved+hostile-verified) or refuted with a delta->0 family; the huddle charge follows from the leaf system via the stated bridges (hostile pass pending, aism-bbv).",
+   "kill": "A certified wall covering a whole leaf family (cf. the W56 one-hard-leaf certificate); or the op-hlc OR-route decision (aism-hse) re-routing the trunk away from MIN-A/huddle.",
+   "created": "1970-01-01T00:00:00.000Z"
+  },
+  {
+   "id": "C",
+   "desc": "Repair the local-linear-law assembly: combine the four audited variety lemmas into H <= C_loc*delta near the Hognas-Mukherjea locus via nearest-branch recoding.",
+   "priority": "parked-tier1-override",
+   "target": "H <= C_loc*delta assembled from the variety lemmas without the 12.8-128x blowup",
+   "kill": null,
+   "created": "1970-01-01T00:00:00.000Z",
+   "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
+  },
+  {
+   "id": "D",
+   "desc": "Global gap via Hognas-Mukherjea Thm 1.12 + the transverse coefficient tax sum_j (P_usj)+ * sum_{t!=s} (-a_t(j))+ <= C_mu*delta; signed quantitative Baake-Sumner stability.",
+   "priority": "parked-tier1-override",
+   "target": "the transverse coefficient tax bound, closing displacement->face->L4->global",
+   "kill": null,
+   "created": "1970-01-01T00:00:00.000Z",
+   "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
+  },
+  {
+   "id": "E",
+   "desc": "Lojasiewicz/error-bound route: frame the linear law as a semialgebraic error bound (Hoffman 1952, Luo-Pang 1994) and/or quantitative stability of norm-one (contractive) projections (Douglas-Ando).",
+   "priority": "parked-tier1-override",
+   "target": "an error-bound modulus giving the sqrt(delta) distance",
+   "kill": null,
+   "created": "1970-01-01T00:00:00.000Z",
+   "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
+  },
+  {
+   "id": "F",
+   "desc": "Numerical cross-checks: exact-arithmetic LP enumeration and certified instances of candidate bounds and of (EX) at higher rank. NON-rigorous, feeds runs/ bundles only.",
+   "priority": "parked-tier1-override",
+   "target": "certified numerical support/refutation; never promoted without a certificate",
+   "kill": null,
+   "created": "1970-01-01T00:00:00.000Z",
+   "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
+  },
+  {
+   "id": "R",
+   "desc": "re-establish the inherited reduction chain rigorously via af elevation (fresh codex prover/verifier per node; orchestrator never judges)",
+   "priority": "parked-tier1-override",
+   "target": "every proved-mod-audit link of the chain af-validated in-repo",
+   "kill": "an af run refutes an inherited link (re-tag disproved, escalate to user)",
+   "created": "1970-01-01T00:00:00.000Z",
+   "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
+  },
+  {
+   "id": "G",
+   "desc": "Flow conservation over the swap family: prove that the beta-weighted excess of a theta-1/2 Phi-argmin chart, summed against the A9 stationarity disjunctions of all volume-permitted swaps, TELESCOPES against the D5 financing ledger with the rigorous fan lemmas (2, 2+sqrt(2)) as exchange rate and the proved delta-budgets (sum Gamma^- <= delta, sum beta^- <= delta, R_D^nu <= (5/4)delta) as boundary terms \u2014 the single conjectured missing lemma of the (EX) engine, subsuming the coupled payment/(FIN) and legal-collateral horns; equivalently (constructive form) the H-M Thm 1.12 CONVERSE rounding: merge classes, project B-rows onto the (1.2)/(1.3) nonnegative polytope, projection distance O(delta)",
+   "priority": "parked-tier1-override",
+   "target": "the (EX)/GAP-B argmin charge via one joint mechanism instead of two coupled horns",
+   "kill": "the D6 legal-leak certificates AMPLIFY instead of telescoping (a rank-growing family with L_mu-type leaks composing past every universal constant) \u2014 then (EX) is false and the retarget is the height-conditional kernel",
+   "created": "1970-01-01T00:00:00.000Z",
+   "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
+  },
+  {
+   "id": "FH",
+   "desc": "Route F: factorization-hardening \u2014 Kitaev Thm 12.3 commutative specialization + positive-retract hardening (PRH) lemma; convergent A/C architecture from the W73 strategy reset",
+   "priority": "primary",
+   "target": "op-classical via positive approximate retract; decisive test = hostile line-by-line audit of Kitaev arXiv:2405.02434 Thm 12.3 (steps F0-F3)",
+   "kill": "F1 audit fails: Thm 12.3 does not deliver a two-sided O(eta) factorization with approximate multiplicativity, dimension-free, applicable to the diagonal lift",
+   "created": "1970-01-01T00:00:00.000Z"
+  },
+  {
+   "id": "XE",
+   "desc": "Route X: exchange-or-expose family \u2014 RTS at L5-GAP-1 (aggregate L1 transverse current, primal-exposer min-cut) / APAL-PAT at kernel (positive-recipient carrier + aggregate peak-or-leak) / QCMP capacity form; convergent B/D/A-II shape from the W73 strategy reset",
+   "priority": "exploratory",
+   "target": "conj-l5-gap-1 (RTS) or conj-kernel (PAT: sigma_g <= 1/2+48tau => B=9/8); deciders first: aggregate-peak, QCMP ratio, quotient-refinement/cross-financing",
+   "kill": "deciders refute: exact instance with m(A_C)>1/2+48tau and no peak, or QCMP ratio unbounded, or current norm decays with w_*",
+   "created": "1970-01-01T00:00:00.000Z"
+  }
+ ]
 }
