@@ -205,7 +205,7 @@
 | `lem-maincb-stage2-extcb-datum` | lemma | proved | validated | A | There are universal C_s2 >= 1 and e_s2 > 0, with the e_ca threshold and universa… |
 | `lem-maincb-stage2-raw-extension` | lemma | proved | validated | A | After first fixing the universal C_s2^0,e_s2^0 witnesses of lem-maincb-stage2-ex… |
 | `lem-maincb-stage3-call-envelope` | lemma | proved | validated | A | After first choosing a universal c0 witness for which lem-maincb-error-improveme… |
-| `lem-maincb-stage3-finite-recombination` | lemma | stated | seeded | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
+| `lem-maincb-stage3-finite-recombination` | lemma | proved | validated | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
 | `lem-maincb-stage3-raw-merge` | lemma | proved | validated | A | After first fixing the universal C_cross^0,e_cross^0 witnesses of lem-maincb-cro… |
 | `lem-maincb-structural-assembly` | lemma | stated | seeded | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
 | `lem-maincb-structural-domain-ledger` | lemma | proved | validated | A | After first fixing a particular universal e_sim>0 witness furnished by lem-mainc… |

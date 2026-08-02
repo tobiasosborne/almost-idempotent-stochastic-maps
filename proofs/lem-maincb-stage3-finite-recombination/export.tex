@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Fix the def-maincb-witness-ledger datum W supplied by lem...}
+\step{1} Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= W.epsilon\_MAIN, a supplied MAIN partition state comes from an extended W.c0\_cb*epsilon-inclusion w:C\textasciicircum{}m->A satisfying ||w(I\_\{C\textasciicircum{}m\})-I\_A|| <= W.c0\_cb*epsilon with one-dimensional atomic images and has classes C\_1,...,C\_q, and each initial current reset isomorphism v\_\{C\_a\}:B\_\{C\_a\}->A\_\{C\_a\} has recorded ambient field epsilon\_\{C\_a\} <= W.L*epsilon and satisfies d\_\{C\_a\} <= W.c0\_cb*epsilon\_\{C\_a\} and ||v\_\{C\_a\}(I\_\{B\_\{C\_a\}\})-u\_\{A\_\{C\_a\}\}|| <= W.c0\_cb*epsilon\_\{C\_a\}, then there is a current reset isomorphism v:oplus\_a B\_\{C\_a\}->A\_\{union\_a C\_a\} whose recorded ambient field epsilon\_\{union\_a C\_a\} satisfies epsilon\_\{union\_a C\_a\} <= W.L*epsilon, d\_\{union\_a C\_a\} <= W.c0\_cb*epsilon\_\{union\_a C\_a\}, and ||v(I\_\{oplus\_a B\_\{C\_a\}\})-u\_\{A\_\{union\_a C\_a\}\}|| <= W.c0\_cb*epsilon\_\{union\_a C\_a\}. \steptag{validated} \\[6pt]
+\step{1.1} Constant and domain ledger: keep the single def-maincb-witness-ledger datum W already fixed in the root, namely the witness supplied by lem-maincb-reset-constant-ledger for the same fixed e\_sim and e\_full witnesses. By lem-maincb-structural-domain-ledger and 0 <= epsilon <= W.epsilon\_MAIN, epsilon <= W.e\_env, epsilon <= W.e1/W.K1, epsilon <= W.e\_s2/W.K2, and epsilon <= W.e\_cross/W.K3; the global scale epsilon, atomic scale W.K\_call*epsilon, and Stage-1, Stage-2, Stage-3 scales W.K1*epsilon, W.K2*epsilon, W.K3*epsilon are at most W.K\_call*epsilon <= W.r\_reset,e\_sim,e\_full; also W.L*epsilon <= W.K\_call*epsilon and W.c0\_cb*W.K\_call*epsilon <= 1/2. No new constants or replacement witness are selected in the recombination, and in particular the scalar hypotheses 0 <= epsilon <= W.epsilon\_MAIN required by every use of lem-maincb-binary-block-merge are fixed once here. \steptag{validated} \\[4pt]
+\step{1.2} Finite recombination assertion: for 1 <= k <= q put U\_k=union\_\{a=1\}\textasciicircum{}k C\_a and define B\textasciicircum{}(1)=B\_\{C\_1\}, B\textasciicircum{}(k+1)=B\textasciicircum{}(k) oplus B\_\{C\_\{k+1\}\}. Let P(k) mean that there is one current reset isomorphism v\_k:B\textasciicircum{}(k)->A\_\{U\_k\}, with its own recorded ambient field epsilon\_\{U\_k\} <= W.L*epsilon, satisfying d\_\{U\_k\} <= W.c0\_cb*epsilon\_\{U\_k\} and ||v\_k(I\_\{B\textasciicircum{}(k)\})-u\_\{A\_\{U\_k\}\}|| <= W.c0\_cb*epsilon\_\{U\_k\}. Then q >= 1 and P(q); since U\_q=union\_a C\_a and B\textasciicircum{}(q)=oplus\_a B\_\{C\_a\} in this recursive notation, P(q) is exactly the current reset isomorphism and the three bounds required by the root. \steptag{validated} \\[6pt]
+\step{1.2.1} Index setup: a def-maincb-partition-state contains a nonempty current subset of its finite atomic index set J, hence J is nonempty. The displayed classes C\_1,...,C\_q partition J into nonempty equivalence classes, so q >= 1. For U\_k=union\_\{a=1\}\textasciicircum{}k C\_a, each U\_k is a nonempty union of whole classes; whenever k<q, U\_k and C\_\{k+1\} are disjoint nonempty unions sharing no class. Define the finite direct sum recursively by B\textasciicircum{}(1)=B\_\{C\_1\} and B\textasciicircum{}(k+1)=B\textasciicircum{}(k) oplus B\_\{C\_\{k+1\}\}; consequently U\_q=union\_a C\_a and B\textasciicircum{}(q)=oplus\_a B\_\{C\_a\}. \steptag{validated} \\[4pt]
+\step{1.2.2} Base case P(1): U\_1=C\_1 and B\textasciicircum{}(1)=B\_\{C\_1\}. Take v\_1 to be the one root-supplied initial current reset isomorphism v\_\{C\_1\}:B\_\{C\_1\}->A\_\{C\_1\}, without changing its witness. Its recorded field and recorded defect and unit estimates are exactly epsilon\_\{C\_1\} <= W.L*epsilon, d\_\{C\_1\} <= W.c0\_cb*epsilon\_\{C\_1\}, and ||v\_\{C\_1\}(I\_\{B\_\{C\_1\}\})-u\_\{A\_\{C\_1\}\}|| <= W.c0\_cb*epsilon\_\{C\_1\}, so it witnesses P(1). \steptag{validated} \\[4pt]
+\step{1.2.3} Inductive transition: fix any integer k with 1 <= k < q and assume P(k), witnessed by the particular current reset isomorphism v\_k:B\textasciicircum{}(k)->A\_\{U\_k\} produced at the preceding induction index (for k=1 this is the exact witness in the base case; thereafter it is the exact output of the preceding instance of this transition). Apply lem-maincb-binary-block-merge with U=U\_k, V=C\_\{k+1\}, v\_U=v\_k, and v\_V equal to the root-supplied initial v\_\{C\_\{k+1\}\}. The root supplies the same A, epsilon, W, partition state, w, near-unit estimate, and one-dimensional atomic-image hypothesis; 0 <= epsilon <= W.epsilon\_MAIN is a root hypothesis; U\_k and C\_\{k+1\} are disjoint nonempty unions sharing no class by their definitions as distinct class unions; P(k) supplies all three recorded-field/defect/unit hypotheses for v\_U; and the root supplies those same three hypotheses for v\_V. The cited lemma returns one particular current reset isomorphism v\_\{k+1\}:B\textasciicircum{}(k) oplus B\_\{C\_\{k+1\}\}->A\_\{U\_k union C\_\{k+1\}\} with recorded field epsilon\_\{U\_k union C\_\{k+1\}\} <= W.L*epsilon and the required defect and unit bounds. Since B\textasciicircum{}(k+1)=B\textasciicircum{}(k) oplus B\_\{C\_\{k+1\}\} and U\_\{k+1\}=U\_k union C\_\{k+1\}, this exact returned witness establishes P(k+1), and it alone is threaded into the next index. \steptag{validated} \\[4pt]
+\step{1.2.4} Finite-induction rule: for any integer q >= 1 and propositions P(1),...,P(q), the conjunction of P(1) and the implications P(k) => P(k+1) for every integer 1 <= k < q implies P(q). This follows by ordinary induction on k (with the q=1 case ending at the base case). \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

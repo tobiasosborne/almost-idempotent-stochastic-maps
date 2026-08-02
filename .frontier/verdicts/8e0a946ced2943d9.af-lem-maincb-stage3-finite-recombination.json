@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-stage3-finite-recombination/export.md",
+  "oracle": "af-lem-maincb-stage3-finite-recombination",
+  "result": "pass",
+  "claim_hash": "cdfde1660c586b082cae24cae11161404d021e8f5224c44501e6fb1417e3935c",
+  "oracle_digest": "e8c9ed9ee3ed46aa8a076cd88839f6cf8c2da385ea5c6f52e403e184ca6cc763",
+  "inputs_hash": "3502338671731685c7cc782eec0a3180f303e690860c1fadb5fc4e887d055d85",
+  "ts": "2026-08-02T13:25:33.385Z"
+}
