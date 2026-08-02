@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-08-02T12:51:44Z",
+ "extracted_at": "2026-08-02T12:56:00Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-08-02T12:51:44Z",
+  "mined_at": "2026-08-02T12:56:00Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -464,7 +464,7 @@
     "approach_tried": 2,
     "challenge_raised": 404,
     "challenge_resolved": 397,
-    "def_added": 818,
+    "def_added": 826,
     "node_amended": 329,
     "node_archived": 56,
     "node_created": 2433,
@@ -474,7 +474,7 @@
     "nodes_released": 3966,
     "proof_initialized": 179
    },
-   "ledger_entries": 14922,
+   "ledger_entries": 14930,
    "nodes_total": 2433,
    "owner_roles": {
     "prover (fix round)": 449,
@@ -1533,11 +1533,11 @@
      "challenges": 0,
      "challenges_resolved": 0,
      "claims": 0,
-     "defs_imported": 0,
-     "first_ts": "2026-08-01T18:44:06.149250663Z",
+     "defs_imported": 8,
+     "first_ts": "2026-08-02T12:55:32.530311731Z",
      "id": "lem-maincb-binary-block-merge",
-     "last_ts": "2026-08-01T18:44:06.152769911Z",
-     "ledger_entries": 2,
+     "last_ts": "2026-08-02T12:55:32.725586152Z",
+     "ledger_entries": 10,
      "max_round": 0,
      "nodes": 1,
      "root_validated": null,
@@ -3485,7 +3485,7 @@
     },
     "FH": {
      "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
-     "banked": 95,
+     "banked": 96,
      "blocked": 1,
      "died": 2,
      "dispatch": 226,
@@ -3534,7 +3534,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-08-02T12:50:03.123Z"
+     "last": "2026-08-02T12:52:18.742Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -3555,7 +3555,7 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 519,
+    "FH": 520,
     "G": 21,
     "R": 52,
     "XE": 1
@@ -3575,16 +3575,16 @@
     "2026-07-29": 15,
     "2026-07-30": 28,
     "2026-08-01": 17,
-    "2026-08-02": 5
+    "2026-08-02": 6
    },
    "decisions": {
-    "EXPLOIT": 483,
+    "EXPLOIT": 484,
     "EXPLORE": 14,
     "PIVOT": 3
    },
    "evidence_classes": {
     "advisory": 1,
-    "af": 148,
+    "af": 149,
     "af-export": 10,
     "af-ledger": 1,
     "af-validated": 3,
@@ -3628,16 +3628,16 @@
     "wave": 24
    },
    "evidence_tiers": {
-    "T0": 180,
+    "T0": 181,
     "T1": 166,
     "T2": 153
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-08-02T12:50:03.123Z",
-   "max_cycle": 1092,
+   "last_ts": "2026-08-02T12:52:18.742Z",
+   "max_cycle": 1093,
    "outcomes": {
     "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
-    "banked": 129,
+    "banked": 130,
     "blocked": 1,
     "died": 7,
     "discovery": 3,
@@ -3675,16 +3675,16 @@
     "2026-07-29": 49,
     "2026-07-30": 118,
     "2026-08-01": 89,
-    "2026-08-02": 14
+    "2026-08-02": 15
    },
-   "records": 1092,
-   "worker_jobs": 511,
+   "records": 1093,
+   "worker_jobs": 513,
    "worker_models": {
     "codex": 338,
     "codex-gpt-5.6-sol": 8,
     "fable": 10,
     "gpt-5": 1,
-    "gpt-5.6-sol": 129,
+    "gpt-5.6-sol": 131,
     "opus": 20,
     "sonnet": 5
    },
@@ -3700,13 +3700,13 @@
     "designer": 6,
     "measurer": 1,
     "obstructor": 1,
-    "prover": 239,
+    "prover": 240,
     "refuter": 7,
     "researcher": 2,
     "strategist": 6,
     "summarizer": 1,
     "transcriber": 4,
-    "verifier": 209
+    "verifier": 210
    },
    "workers": {
     "codex / adversary": 2,
@@ -3732,8 +3732,8 @@
     "fable / strategist": 1,
     "gpt-5 / designer": 1,
     "gpt-5.6-sol / designer": 5,
-    "gpt-5.6-sol / prover": 55,
-    "gpt-5.6-sol / verifier": 69,
+    "gpt-5.6-sol / prover": 56,
+    "gpt-5.6-sol / verifier": 70,
     "opus / auditor": 1,
     "opus / author": 5,
     "opus / prover": 11,
@@ -3749,9 +3749,9 @@
   "git": {
    "active_days": 23,
    "authors": {
-    "tobiasosborne": 1073
+    "tobiasosborne": 1074
    },
-   "commits": 1073,
+   "commits": 1074,
    "first_day": "2026-07-02",
    "last_day": "2026-08-02",
    "per_day": {
@@ -3777,7 +3777,7 @@
     "2026-07-29": 45,
     "2026-07-30": 90,
     "2026-08-01": 66,
-    "2026-08-02": 11
+    "2026-08-02": 12
    },
    "subject_prefixes": {
     "W61": 13,
