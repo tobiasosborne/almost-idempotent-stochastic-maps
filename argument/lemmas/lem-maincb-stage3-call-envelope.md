@@ -10,17 +10,36 @@ workspace: proofs/lem-maincb-stage3-call-envelope
 provenance: DESIGN-MAINCB-REPAIR-v2.md sect-4 row M19-S3 (amended contract, landed verbatim; supersedes the 2026-07-30 DESIGN-MAIN-STRUCTURE-v5 form); AUDIT-MAINCB-REPAIR.md DESIGN-CONFIRMED (F1-F3 applied verbatim in v2); user-ratified 2026-08-01 (tobiasosborne, in-session sign-off); source approximate_algebras.tex:1325-1359,1428,1443; recorded-field ENV repair per DESIGN-RECFIELD-REPAIR.md sect-3 (hostile-audited AUDIT-RECFIELD-REPAIR.md DESIGN-CONFIRMED zero corrections; user-ratified 2026-08-01 (tobiasosborne, in-session sign-off, second ratification)); DEMOTED 2026-08-01 (latent unregistered-premise gap, AUDIT-CONSUMER-REPAIR.md F5 (node 1.3.3: unimported monotonicity); docs/LEARNINGS.md 2026-08-01; re-validation pending) per DESIGN-CONSUMER-REPAIR.md + AUDIT-CONSUMER-REPAIR.md (F-corrections applied verbatim); user-ratified 2026-08-01 (tobiasosborne, in-session sign-off, fifth ratification)
 owner: A
 ---
-**Status.** `proved` — af-VALIDATED in-repo (root validated, 11 validated + 4 archived all clean, ENV-repaired re-seed + resume under scoped cap amendment 12->18, tier routine, 2026-08-01; oracle PASS). Contract AMENDED per the audited
-`DESIGN-MAINCB-REPAIR-v2.md` sect-4 row M19-S3 (aism-jl4g two-defect repair:
-unit-clause thread + witness-ledger rebinding; hostile-audit chain
-AUDIT-MAINCB-REPAIR.md DESIGN-CONFIRMED; user-ratified 2026-08-01
-in-session; supersedes the 2026-07-30 v5 contract). MAIN campaign row
-M19-S3. NOT proved in-repo; af elevation pending.
+**Status.** `stated` — DEMOTED 2026-08-01 (the banked certificate's node 1.3.3
+used an unregistered monotonicity inference, AUDIT-CONSUMER-REPAIR.md F5;
+docs/LEARNINGS.md 2026-08-01; the CONTRACT was never refuted). The 2026-08-01
+re-validation run churned (~15-19/24 across rounds; parked tree preserved at
+commit 60098719) and is superseded by the fresh 2026-08-02 re-seed below.
+Contract per the audited `DESIGN-MAINCB-REPAIR-v2.md` sect-4 row M19-S3
+(hostile-audit chain AUDIT-MAINCB-REPAIR.md DESIGN-CONFIRMED; user-ratified
+2026-08-01 in-session). MAIN campaign row M19-S3. NOT proved in-repo; af
+re-validation pending. Its re-bank mechanically re-flips the suspended
+M18/M20 (certificates intact).
 
 **Build budget (BINDING on the af tree).** Design target/rounds/hard-cap:
-8 / 3 / 12. Per-row skeleton and audit delta:
-DESIGN-MAINCB-REPAIR-v2.md sect-4 (and sect-8 re-seed guidance where applicable).
-A hard-cap hit is a factoring stop, not a rounds bump. Constants live in the
-proof body, never the contract.
+8 / 3 / 12; scoped cap amendment 12->24 exercised transparently in the
+2026-08-01 run (all growth challenge-resolving, flagged in fr log W112) and
+CARRIED into the 2026-08-02 re-seed; repo ceiling 26. Per-row skeleton and
+audit delta: DESIGN-MAINCB-REPAIR-v2.md sect-4 (and sect-8 re-seed guidance
+where applicable). A hard-cap hit is a factoring stop, not a rounds bump.
+Constants live in the proof body, never the contract.
+
+**Re-seed architecture (BINDING on the fresh tree, 2026-08-02; from the
+parked run's factor recommendation, HANDOFF session-39).**
+(a) lem-maincb-direct-corner-envelope exports projections at `c0*epsilon`
+scale and subordination/complementarity at `L^0*epsilon` scale — keep the
+two scales SEPARATED from the start; never cite one export at the other's
+scale. (b) lem-maincb-extended-inclusion-monotone is typed `v:B->A` with
+`B` a plain finite-dimensional C*-algebra — apply it ONLY to such maps, or
+derive corner-level monotonicity directly from def-extended-delta-inclusion.
+(c) A def-maincb-raw-call record stores the DERIVED output map and its
+scale, never the datum itself. Verify the exact two-line inequality
+forwarding both unit errors to lem-maincb-cross-class-merging-datum
+(design sect-11 risk row).
 
 **Provenance loci.** approximate_algebras.tex:1325-1359,1428,1443
