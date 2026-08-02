@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-structural-assembly/export.md",
+  "oracle": "af-lem-maincb-structural-assembly",
+  "result": "pass",
+  "claim_hash": "1b95297bb4e11e5d9735ef07795a401d2c522f8b17421f5ec5c78ec9ad8d9246",
+  "oracle_digest": "afdb5b262f7d15581df10ed20db7e99a6ee030de635e6783fb088602fa3e2597",
+  "inputs_hash": "ff56d51f2d1e7d42e5fff0b7302650b114ab392a5e45f806722f38c3bfbc42b9",
+  "ts": "2026-08-02T16:46:22.805Z"
+}
