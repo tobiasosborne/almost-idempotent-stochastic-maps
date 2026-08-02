@@ -35,4 +35,16 @@ constant-choice node or its children. (iv) Any bijective=>isomorphism
 inference cites the extended-inclusion typing explicitly at the point of
 use.
 
+**PARKED — USER DECISION PENDING (2026-08-02, aism-twpa).** First
+elevation aborted STUCK on a contract-level finding: the contract's
+`dim S_{P_j} = 1` conclusion is not derivable from the allowed inputs
+(they give only `P_j != 0` and `dim S_{P_j} <= 1`; the inference
+`P_j != 0 => S_{P_j} nonzero` is unregistered — challenges
+ch-94ae993f6abc0f5b / ch-7411a0325c917f52 / ch-37eff8dcb9a3b5d1).
+Workspace restored to the clean ratified seed (the prover's root
+weakening was scope drift and is discarded). Resolution requires a
+design round + hostile audit + user ratification: nontriviality
+provider row vs contract amendment vs dep strengthening (options on
+the bead). Do NOT re-launch until ratified.
+
 **Provenance loci.** approximate_algebras.tex:1417-1426
