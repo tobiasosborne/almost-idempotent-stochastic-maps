@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-maximal-reset-selection/export.md",
+  "oracle": "af-lem-maincb-maximal-reset-selection",
+  "result": "pass",
+  "claim_hash": "26c38cdc302a6ddcb9482f88214ada5c08d0218139a0f952810544f28697ef47",
+  "oracle_digest": "d8efa876ac217fc975087fed395ce7c2e4d25ddffc0a9c259c4f97a10c6f6c2f",
+  "inputs_hash": "9eefc4d44517e21cfacd69e9a27fc38a121faac2016141e6ce354c05af891c60",
+  "ts": "2026-08-02T13:00:14.128Z"
+}
