@@ -8,7 +8,7 @@ L2); this table and the `.tex` files beside it are a deterministic projection of
 ## Scope (directive: render only what the current proof strategy needs)
 
 - selection rule: **Route-F landing chain (scripts/gen-report-dag.py select_subgraph)**
-- registry results in the strategy subgraph: **195**; registry results anchored in `report/sections/`: **73**
+- registry results in the strategy subgraph: **196**; registry results anchored in `report/sections/`: **73**
 - definitions they import directly: **44**; after the statement-region
   `[[def-…]]` closure: **45** rendered, **1** dropped
 
@@ -44,17 +44,17 @@ Dropped (outside the closure; canonical, just not reproduced here):
 | # | id | label | kind | status | statement | source check | source | locus | sha256 | registry uses | in report |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 19 | `def-column-hilbert-corner` | `def:column-hilbert-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1123-1128,1546-1550` | `e7eb512a2ec2438d` | 2 | 2 |
-| 20 | `def-compressed-corner` | `def:compressed-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1054-1066,1077-1082` | `e7eb512a2ec2438d` | 30 | 17 |
-| 21 | `def-delta-projection` | `def:delta-projection` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:917-920,926-929` | `e7eb512a2ec2438d` | 32 | 15 |
-| 22 | `def-epsilon-cstar-algebra` | `def:epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:407-440` | `e7eb512a2ec2438d` | 39 | 27 |
-| 23 | `def-extended-epsilon-cstar-algebra` | `def:extended-epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1477-1479` | `e7eb512a2ec2438d` | 55 | 18 |
+| 20 | `def-compressed-corner` | `def:compressed-corner` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1054-1066,1077-1082` | `e7eb512a2ec2438d` | 31 | 17 |
+| 21 | `def-delta-projection` | `def:delta-projection` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:917-920,926-929` | `e7eb512a2ec2438d` | 33 | 15 |
+| 22 | `def-epsilon-cstar-algebra` | `def:epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:407-440` | `e7eb512a2ec2438d` | 40 | 27 |
+| 23 | `def-extended-epsilon-cstar-algebra` | `def:extended-epsilon-cstar-algebra` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1477-1479` | `e7eb512a2ec2438d` | 56 | 18 |
 | 24 | `def-fd-cstar-diagonal` | `def:fd-cstar-diagonal` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1233-1242` | `e7eb512a2ec2438d` | 6 | 0 |
 | 25 | `def-h-space-left-inversion` | `def:h-space-left-inversion` | cited | locked | shard statement | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:895-912` | `e7eb512a2ec2438d` | 11 | 0 |
 | 26 | `def-ha-map` | `def:ha-map` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1146-1149` | `e7eb512a2ec2438d` | 13 | 13 |
 | 27 | `def-lefschetz-fixed-point-data` | `def:lefschetz-fixed-point-data` | cited | locked | shard statement | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:961-967` | `e7eb512a2ec2438d` | 7 | 0 |
 | 28 | `def-one-dimensional-delta-projection` | `def:one-dimensional-delta-projection` | cited | locked | translated (table v1) | 2 | `kitaev-2405.02434` | `approximate_algebras.tex:1066,1187` | `e7eb512a2ec2438d` | 8 | 3 |
 | 29 | `def-operator-space` | `def:operator-space` | cited | locked | shard statement | — | `kitaev-2405.02434` | `approximate_algebras.tex:1453-1464 (Definition def:opspace)` | `e7eb512a2ec2438d` | 16 | 0 |
-| 30 | `def-projection-basis` | `def:projection-basis` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1361` | `e7eb512a2ec2438d` | 6 | 3 |
+| 30 | `def-projection-basis` | `def:projection-basis` | cited | locked | translated (table v1) | 1 | `kitaev-2405.02434` | `approximate_algebras.tex:1361` | `e7eb512a2ec2438d` | 7 | 3 |
 | 31 | `def-theta-idempotent-approximation` | `def:theta-idempotent-approximation` | cited | draft | translated (table v1) | 3 | `kitaev-2405.02434` | `approximate_algebras.tex:505-528 (displays Taylor_simple, Taylor_simple_bound, abs_sgn, and the theta display inside Proposition prop_P — ONLY the definitional displays are cited; the Proposition's claims are NOT citable and must be re-proved)` | `e7eb512a2ec2438d` | 2 | 2 |
 
 ## Project-internal packaging: hypothesis data and derived notation
@@ -65,13 +65,13 @@ Dropped (outside the closure; canonical, just not reproduced here):
 | 33 | `def-canonical-corner-identifications` | `def:canonical-corner-identifications` | original | locked | shard statement | — | `internal` | `PROOF-W74F-E-HCB.md §8.1; DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 4 | 4 |
 | 34 | `def-compressed-associator` | `def:compressed-associator` | original | locked | shard statement | — | `internal` | `PROOF-W74F-E-HCB.md §3; DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 2 | 2 |
 | 35 | `def-extcb-datum` | `def:extcb-datum` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package` | `-` | 6 | 3 |
-| 36 | `def-extended-delta-inclusion` | `def:extended-delta-inclusion` | consensus | locked | shard statement | — | `internal` | `harmonization of approximate_algebras.tex:443-456,1477-1484 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 35 | 4 |
+| 36 | `def-extended-delta-inclusion` | `def:extended-delta-inclusion` | consensus | locked | shard statement | — | `internal` | `harmonization of approximate_algebras.tex:443-456,1477-1484 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 36 | 4 |
 | 37 | `def-four-corner-merging-datum` | `def:four-corner-merging-datum` | original | locked | shard statement | — | `internal` | `project packaging of approximate_algebras.tex:1325-1345 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1` | `-` | 7 | 2 |
 | 38 | `def-hcb-datum` | `def:hcb-datum` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package` | `-` | 15 | 15 |
 | 39 | `def-maincb-reset-state` | `def:maincb-reset-state` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v4.1.md:419-423; DESIGN-MAIN-STRUCTURE-v5.md sect 1.2` | `-` | 18 | 0 |
 | 40 | `def-maincb-partition-state` | `def:maincb-partition-state` | original | locked | shard statement | — | `internal` | `DESIGN-MAIN-STRUCTURE-v5.md sect 1.4` | `-` | 18 | 0 |
 | 41 | `def-maincb-raw-call` | `def:maincb-raw-call` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v4.1.md:424-428; DESIGN-MAIN-STRUCTURE-v5.md sect 1.3` | `-` | 17 | 0 |
-| 42 | `def-maincb-witness-ledger` | `def:maincb-witness-ledger` | original | locked | shard statement | — | `internal` | `DESIGN-MAINCB-REPAIR-v2.md sect 2 (hostile-audited AUDIT-MAINCB-REPAIR.md, verdict VALID AS DATA)` | `-` | 20 | 0 |
+| 42 | `def-maincb-witness-ledger` | `def:maincb-witness-ledger` | original | locked | shard statement | — | `internal` | `DESIGN-MAINCB-REPAIR-v2.md sect 2 (hostile-audited AUDIT-MAINCB-REPAIR.md, verdict VALID AS DATA)` | `-` | 21 | 0 |
 | 43 | `def-positive-approximate-retract` | `def:positive-approximate-retract` | original | locked | shard statement | — | `internal` | `project formulation transcribed from docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §§1,4` | `-` | 3 | 2 |
 | 44 | `def-stage1-polar-witness-data` | `def:stage1-polar-witness-data` | original | locked | shard statement | — | `internal` | `DESIGN-S1-POLAR-v6.md sect 8 (unchanged from v2 sect 8; audited AUDIT-S1-POLAR-v3/v4/v5/v6)` | `-` | 15 | 9 |
 | 45 | `def-ucp-map` | `def:ucp-map` | consensus | locked | shard statement | — | `internal` | `standard operator-algebra textbook notion (e.g. Paulsen, Completely Bounded Maps and Operator Algebras, ch. 2-3); adopted for the Route-F rows per AUDIT-F0-ASSEMBLY.md sect 1.1` | `-` | 3 | 3 |

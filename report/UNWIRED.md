@@ -47,6 +47,7 @@ lem-maincb-initial-reset-inclusion
 lem-maincb-maximal-reset-selection
 lem-maincb-stage1-strict-refinement
 lem-maincb-stage1-maximality
+lem-maincb-corner-nontriviality
 lem-maincb-one-class-extension
 lem-maincb-binary-block-merge
 lem-maincb-stage3-finite-recombination

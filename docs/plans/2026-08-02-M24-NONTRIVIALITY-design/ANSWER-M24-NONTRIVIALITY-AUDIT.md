@@ -1,0 +1,1 @@
+DESIGN-CONFIRMED — M04 supplies the exact singleton corner algebra without a partition-state or near-unit premise, and the frozen ledger bounds force its unit to be nonzero, closing `dim S_{P_j} ≥ 1`. M23 supplies the matching upper bound. The audit records three non-substantive wording/provenance corrections; neither package contract nor any T0 artifact requires alteration.
