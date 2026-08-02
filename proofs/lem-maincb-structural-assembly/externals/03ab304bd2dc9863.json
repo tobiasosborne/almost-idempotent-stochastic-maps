@@ -1,0 +1,8 @@
+{
+  "id": "03ab304bd2dc9863",
+  "name": "lem-maincb-maximal-reset-selection",
+  "source": "imports validated registry lemma proofs/lem-maincb-maximal-reset-selection — Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra with 0 \u003c= epsilon \u003c= W.epsilon_MAIN, then the nonempty set of m admitting an extended W.c0_cb*epsilon-inclusion w:C^m-\u003eA with ||w(I_{C^m})-I_A|| \u003c= W.c0_cb*epsilon has a maximum because the lower norm is positive and m \u003c= dim_C A.",
+  "content_hash": "136a5c5a1181967f07f3d8c7303c5b4d654b0aa8a0c6f680310be98c53cbdaad",
+  "created": "2026-08-02T15:45:07.026866138Z",
+  "notes": ""
+}

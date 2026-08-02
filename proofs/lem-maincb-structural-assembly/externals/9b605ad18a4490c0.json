@@ -1,0 +1,8 @@
+{
+  "id": "9b605ad18a4490c0",
+  "name": "lem-maincb-stage3-finite-recombination",
+  "source": "imports validated registry lemma proofs/lem-maincb-stage3-finite-recombination — Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra, 0 \u003c= epsilon \u003c= W.epsilon_MAIN, a supplied MAIN partition state comes from an extended W.c0_cb*epsilon-inclusion w:C^m-\u003eA satisfying ||w(I_{C^m})-I_A|| \u003c= W.c0_cb*epsilon with one-dimensional atomic images and has classes C_1,...,C_q, and each initial current reset isomorphism v_{C_a}:B_{C_a}-\u003eA_{C_a} has recorded ambient field epsilon_{C_a} \u003c= W.L*epsilon and satisfies d_{C_a} \u003c= W.c0_cb*epsilon_{C_a} and ||v_{C_a}(I_{B_{C_a}})-u_{A_{C_a}}|| \u003c= W.c0_cb*epsilon_{C_a}, then there is a current reset isomorphism v:oplus_a B_{C_a}-\u003eA_{union_a C_a} whose recorded ambient field epsilon_{union_a C_a} satisfies epsilon_{union_a C_a} \u003c= W.L*epsilon, d_{union_a C_a} \u003c= W.c0_cb*epsilon_{union_a C_a}, and ||v(I_{oplus_a B_{C_a}})-u_{A_{union_a C_a}}|| \u003c= W.c0_cb*epsilon_{union_a C_a}.",
+  "content_hash": "8effeaed42cf7d48a1ba28130bfbdf6ae37a3ea44c8ce5c3202e6e9ce0875651",
+  "created": "2026-08-02T15:45:07.040716712Z",
+  "notes": ""
+}

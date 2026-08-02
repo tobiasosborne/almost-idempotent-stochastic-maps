@@ -1,0 +1,8 @@
+{
+  "id": "9410229e79a6dce2",
+  "name": "lem-maincb-stage1-maximality",
+  "source": "imports validated registry lemma proofs/lem-maincb-stage1-maximality — Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra with 0 \u003c= epsilon \u003c= W.epsilon_MAIN and w:C^m-\u003eA has maximum source dimension among all extended W.c0_cb*epsilon-inclusions satisfying ||w(I_{C^m})-I_A|| \u003c= W.c0_cb*epsilon, then every projection-basis image P_j=w(e_j) satisfies dim S_{P_j}=1.",
+  "content_hash": "cc7a6635035b53930dd0586a0bc3c9554d86cfe2e5a7813fe71e180d12786f18",
+  "created": "2026-08-02T15:45:07.031475439Z",
+  "notes": ""
+}
