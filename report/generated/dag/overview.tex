@@ -992,7 +992,7 @@
   \node[dagghost] (N8_0_15) at (4.096,-3.61) {\hyperlink{dag:lem-maincb-stage3-call-envelope}{lem-maincb-stage3-call-envelope}};
   \node[dagghost] (N8_0_16) at (4.096,-4.07) {\hyperlink{dag:lem-maincb-stage3-raw-merge}{lem-maincb-stage3-raw-merge}};
   \node[dagghost] (N8_0_17) at (4.096,-4.53) {\hyperlink{dag:lem-maincb-witness-arithmetic}{lem-maincb-witness-arithmetic}};
-  \node[dagnode,dagDagSee] (N8_0_18) at (8.192,-2.19) {\hypertarget{dag:lem-maincb-reset-constant-ledger}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}reset-\hspace{0pt}constant-\hspace{0pt}ledger}\\[-0.15em]{\dagstatus{$\lozenge$\,seeded\,\dagphasetag{C}}}};
+  \node[dagnode,dagDagVal] (N8_0_18) at (8.192,-2.19) {\hypertarget{dag:lem-maincb-reset-constant-ledger}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}reset-\hspace{0pt}constant-\hspace{0pt}ledger}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{C}}}};
   \node[dagnode,dagDagSee] (N8_0_19) at (11.512,-1.46) {\hypertarget{dag:lem-maincb-structural-domain-ledger}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}structural-\hspace{0pt}domain-\hspace{0pt}ledger}\\[-0.15em]{\dagstatus{$\lozenge$\,seeded\,\dagphasetag{C}}}};
   \node[dagnode,dagDagVal] (N8_0_20) at (11.512,-2.92) {\hypertarget{dag:lem-maincb-reset-output-typing}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}reset-\hspace{0pt}output-\hspace{0pt}typing}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{C}}}};
   \node[dagnode,dagDagSee] (N8_0_21) at (14.832,-0) {\hypertarget{dag:lem-maincb-initial-reset-inclusion}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}initial-\hspace{0pt}reset-\hspace{0pt}inclusion}\\[-0.15em]{\dagstatus{$\lozenge$\,seeded\,\dagphasetag{C}}}};
@@ -1004,10 +1004,10 @@
   \node[dagghost] (N8_1_0) at (0,-6.79) {\hyperlink{dag:lem-maincb-corner-equivalence}{lem-maincb-corner-equivalence}};
   \node[dagghost] (N8_1_1) at (0,-7.25) {\hyperlink{dag:lem-maincb-extended-inclusion-monotone}{lem-maincb-extended-inclusion-mon...}};
   \node[dagghost] (N8_1_2) at (0,-7.71) {\hyperlink{dag:lem-maincb-full-corner-identification}{lem-maincb-full-corner-identifica...}};
-  \node[dagghost] (N8_1_3) at (0,-8.17) {\hyperlink{dag:lem-maincb-witness-arithmetic}{lem-maincb-witness-arithmetic}};
-  \node[dagghost] (N8_1_4) at (0,-8.63) {\hyperlink{dag:lem-maincb-maximal-reset-selection}{lem-maincb-maximal-reset-selection}};
-  \node[dagghost] (N8_1_5) at (0,-9.09) {\hyperlink{dag:lem-maincb-one-class-extension}{lem-maincb-one-class-extension}};
-  \node[dagghost] (N8_1_6) at (0,-9.55) {\hyperlink{dag:lem-maincb-reset-constant-ledger}{lem-maincb-reset-constant-ledger}};
+  \node[dagghost] (N8_1_3) at (0,-8.17) {\hyperlink{dag:lem-maincb-reset-constant-ledger}{lem-maincb-reset-constant-ledger}};
+  \node[dagghost] (N8_1_4) at (0,-8.63) {\hyperlink{dag:lem-maincb-witness-arithmetic}{lem-maincb-witness-arithmetic}};
+  \node[dagghost] (N8_1_5) at (0,-9.09) {\hyperlink{dag:lem-maincb-maximal-reset-selection}{lem-maincb-maximal-reset-selection}};
+  \node[dagghost] (N8_1_6) at (0,-9.55) {\hyperlink{dag:lem-maincb-one-class-extension}{lem-maincb-one-class-extension}};
   \node[dagghost] (N8_1_7) at (0,-10.01) {\hyperlink{dag:lem-maincb-stage1-strict-refinement}{lem-maincb-stage1-strict-refinement}};
   \node[dagghost] (N8_1_8) at (0,-10.47) {\hyperlink{dag:lem-maincb-stage3-finite-recombination}{lem-maincb-stage3-finite-recombin...}};
   \node[dagghost] (N8_1_9) at (0,-10.93) {\hyperlink{dag:lem-maincb-structural-domain-ledger}{lem-maincb-structural-domain-ledger}};
@@ -1081,11 +1081,11 @@
     \draw[dagedge] (N8_1_1) to[out=0,in=180] (N8_1_11);
     \draw[dagedge] (N8_1_10) to[out=0,in=180] (N8_1_11);
     \draw[dagedge] (N8_1_2) to[out=0,in=180] (N8_1_11);
+    \draw[dagedge] (N8_1_3) to[out=0,in=180] (N8_1_10);
     \draw[dagedge] (N8_1_3) to[out=0,in=180] (N8_1_11);
-    \draw[dagedge] (N8_1_4) to[out=0,in=180] (N8_1_10);
     \draw[dagedge] (N8_1_4) to[out=0,in=180] (N8_1_11);
+    \draw[dagedge] (N8_1_5) to[out=0,in=180] (N8_1_10);
     \draw[dagedge] (N8_1_5) to[out=0,in=180] (N8_1_11);
-    \draw[dagedge] (N8_1_6) to[out=0,in=180] (N8_1_10);
     \draw[dagedge] (N8_1_6) to[out=0,in=180] (N8_1_11);
     \draw[dagedge] (N8_1_7) to[out=0,in=180] (N8_1_10);
     \draw[dagedge] (N8_1_8) to[out=0,in=180] (N8_1_11);
