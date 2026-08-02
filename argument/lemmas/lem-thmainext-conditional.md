@@ -3,10 +3,10 @@ id: lem-thmainext-conditional
 kind: lemma
 contract: Extended th_main_ext assembly: there are universal C_E < infinity and epsilon_E > 0 such that every finite-dimensional extended epsilon-C*-algebra A, for 0 <= epsilon <= epsilon_E, is carried by one extended C_E*epsilon-isomorphism v:B->A from a finite-dimensional C*-algebra; the assembly uses the corrected squared COL-HILB estimate and the hostile-verified H-CB (conj-hcb), EXT-CB (conj-extcb), and Stage-1 reset packets, with constants independent of dimension, amplification level, and block data.
 defs: def-extended-epsilon-cstar-algebra; def-fd-cstar-diagonal
-deps: conj-hcb; conj-extcb
+deps: conj-hcb; conj-extcb; lem-hcb-column-hilbert-squared; lem-maincb-error-improvement; lem-maincb-reset-invariant-preservation; lem-maincb-structural-assembly; lem-extcb-four-corner-merge
 status: proved-mod-audit
 af: none
-provenance: docs/plans/2026-07-23-W74F-artifacts/DECOMP-W74F-C-THMAINEXT.md §§3-5 (assembly + corrected COL-HILB); PROOF-W74F-H-STAGE1.md (Stage-1 reset packet); hostile verdicts VERDICT-W74F-BATCH.md §C, VERDICT-W74F-E-HCB.md, VERDICT-W74F-F-EXTCB.md, VERDICT-W74F-H-STAGE1.md (contract restatement endorsed verbatim by the H-verdict)
+provenance: docs/plans/2026-07-23-W74F-artifacts/DECOMP-W74F-C-THMAINEXT.md §§3-5 (assembly + corrected COL-HILB); PROOF-W74F-H-STAGE1.md (Stage-1 reset packet); hostile verdicts VERDICT-W74F-BATCH.md §C, VERDICT-W74F-E-HCB.md, VERDICT-W74F-F-EXTCB.md, VERDICT-W74F-H-STAGE1.md (contract restatement endorsed verbatim by the H-verdict) Dependency-only amendment prescribed by DESIGN-MAIN-STRUCTURE-v5.md sect-10 step 15, re-validated against the repaired current contracts by DESIGN-THMAINEXT-REWIRE.md, and approved by AUDIT-THMAINEXT-REWIRE.md; contract byte-UNCHANGED, status unchanged at proved-mod-audit, and af unchanged at none.
 owner: A
 workspace: proofs/lem-thmainext-conditional
 ---
