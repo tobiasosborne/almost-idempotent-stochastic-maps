@@ -18,9 +18,43 @@ in-session; supersedes the 2026-07-30 v5 contract). MAIN campaign row
 M28. NOT proved in-repo; af elevation pending.
 
 **Build budget (BINDING on the af tree).** Design target/rounds/hard-cap:
-9 / 3 / 13. Per-row skeleton and audit delta:
-DESIGN-MAINCB-REPAIR-v2.md sect-4 (and sect-8 re-seed guidance where applicable).
-A hard-cap hit is a factoring stop, not a rounds bump. Constants live in the
-proof body, never the contract.
+9 / 3 / 13; **SCOPED CAP AMENDMENT 2026-08-02 (flagged): hard cap 20**
+(ceiling 26) — the W129 first elevation aborted BALLOON at 20 nodes with
+transparent repair growth (each round-1 child answered a specific
+challenge; root never challenged); the enlarged cap covers the glue
+nodes below. Per-row skeleton and audit delta:
+DESIGN-MAINCB-REPAIR-v2.md sect-4 (and sect-8 re-seed guidance where
+applicable). A hard-cap hit is a factoring stop, not a rounds bump.
+Constants live in the proof body, never the contract.
+
+**Elevation guidance (BINDING, 2026-08-02; the W129 balloon lessons —
+challenges ch-33d9c549284c60fd, ch-261ab25fa415cf4a, ch-5294728017efdb3f,
+ch-6e65073fecfd7483, ch-02181cc73c5a694b, ch-81b32a18e3409c3b).**
+(i) WORKSPACE VOCABULARY (provisioned; use it, do not re-derive):
+def-delta-projection, def-projection-basis,
+def-one-dimensional-delta-projection, def-compressed-corner,
+def-epsilon-cstar-algebra, and the byte-verbatim
+GT-kitaev-def-delta-homomorphism external — every t-projection /
+one-dimensionality / compressed-unit inference cites these explicitly at
+the point of use. (ii) CONSTRUCT the MAIN partition state EXPLICITLY in
+an early dedicated node BEFORE any M25/M27 citation: fix W, the maximal
+w (M22), one-dimensional atomic images (M24), the class family
+(corner-equivalence M10 + def-maincb-partition-state), the current
+subset, and the per-class initial reset-state data; never write "the
+supplied MAIN partition state" without having constructed it. (iii) A
+dedicated identification node derives A_J = A and u_{A_J} = Co_R(R) = R
+from lem-maincb-full-corner-identification (Co_R = I, S_R = A) +
+def-compressed-corner; every downstream node that uses either fact
+declares THIS node as a dependency. (iv) NO node may cite a PENDING
+SIBLING — declare real dependencies (the W129 1.5/1.7 failures were
+exactly sibling anaphora). (v) One fixed W threaded throughout; no
+witness reselection; constants through the ledger only.
+
+**W129 ABORT RECORD (2026-08-02).** First elevation BALLOON 20 > 13:
+6 major challenges, 4 curable by the missing vocabulary above, 2 by the
+explicit partition-state/identification nodes; classification on the
+session-41 bead; ballooned 102-entry tree preserved in the session-41
+scratchpad. Root contract NEVER challenged (not a contract-level
+finding). Workspace re-seeded clean.
 
 **Provenance loci.** approximate_algebras.tex:1414-1444
