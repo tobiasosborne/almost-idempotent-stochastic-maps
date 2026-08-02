@@ -1,0 +1,3 @@
+Completed [DESIGN-M24-NONTRIVIALITY.md](/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/docs/plans/2026-08-02-M24-NONTRIVIALITY-design/DESIGN-M24-NONTRIVIALITY.md).
+
+Recommendation: choose option (a), adding one ledger-bound corner-nontriviality provider while keeping M24’s contract unchanged. Weakening M24 is untenable because M25–M27 and the partition equivalence require genuinely one-dimensional, nonzero corners.
