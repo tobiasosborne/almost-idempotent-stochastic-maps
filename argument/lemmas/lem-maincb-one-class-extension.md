@@ -26,7 +26,10 @@ M19-S3 re-bank — M25 may validate but can only FLIP after they re-flip.
 
 **Build budget (BINDING on the af tree).** Design target/rounds/hard-cap:
 10 / 3 / 14; scoped cap amendment 14->17 exercised transparently in the
-2026-08-01 runs (flagged) and CARRIED into the 2026-08-02 re-seed; repo
+2026-08-01 runs (flagged) and CARRIED into the 2026-08-02 re-seed; further
+scoped amendment 17->20 (2026-08-02, flagged fr W114: run 1 of the fresh
+re-seed hit 18 live via ONE witness-preserving repair of its single
+challenge, round-2 open-ch=0 — transparent growth, tree resumed); repo
 ceiling 26. Per-row skeleton and audit delta: DESIGN-MAINCB-REPAIR-v2.md
 sect-4 (and sect-8 re-seed guidance where applicable). A hard-cap hit is a
 factoring stop, not a rounds bump. Constants live in the proof body, never

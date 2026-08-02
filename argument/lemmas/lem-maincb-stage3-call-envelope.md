@@ -15,6 +15,9 @@ used an unregistered monotonicity inference, AUDIT-CONSUMER-REPAIR.md F5;
 docs/LEARNINGS.md 2026-08-01; the CONTRACT was never refuted). The 2026-08-01
 re-validation run churned (~15-19/24 across rounds; parked tree preserved at
 commit 60098719) and is superseded by the fresh 2026-08-02 re-seed below.
+Re-seed run 1 (2026-08-02) ABORTED [BALLOON] at 27 live vs cap 24: the
+prover assumed c0>=1 and let leaves cite pending siblings (evidence synced;
+fr W113 harvest). Superseded by the v2 re-seed below.
 Contract per the audited `DESIGN-MAINCB-REPAIR-v2.md` sect-4 row M19-S3
 (hostile-audit chain AUDIT-MAINCB-REPAIR.md DESIGN-CONFIRMED; user-ratified
 2026-08-01 in-session). MAIN campaign row M19-S3. NOT proved in-repo; af
@@ -29,8 +32,24 @@ audit delta: DESIGN-MAINCB-REPAIR-v2.md sect-4 (and sect-8 re-seed guidance
 where applicable). A hard-cap hit is a factoring stop, not a rounds bump.
 Constants live in the proof body, never the contract.
 
-**Re-seed architecture (BINDING on the fresh tree, 2026-08-02; from the
-parked run's factor recommendation, HANDOFF session-39).**
+**Re-seed architecture v2 (BINDING on the fresh tree, 2026-08-02; from the
+parked run's factor recommendation + the run-1 balloon classification,
+mirroring the VALIDATED lem-maincb-stage2-call-envelope export pattern).**
+(0) FIRST child = one constant-choice node fixing ALL universal constants,
+exactly as in the validated S2 export: choose a finite NONNEGATIVE
+universal c0 for which lem-maincb-error-improvement remains valid (an
+original finite error coefficient may be enlarged to a nonnegative one,
+with lem-maincb-extended-inclusion-monotone preserving the resulting
+inclusion conclusion); fix the witnesses L^0 >= 1 and e_env^0 > 0 of
+lem-maincb-direct-corner-envelope and C_cross^0, e_cross^0 of
+lem-maincb-cross-class-merging-datum; then CHOOSE K_3^0 explicitly to
+absorb EVERY Stage-3 scalar prerequisite (the contract's 'every Stage-3
+prerequisite absorbed' clause licenses this). NEVER assume c0 >= 1 —
+every scalar chain must use only c0 >= 0, W.L >= L^0 >= 1,
+W.K3 >= max{K_3^0,1,W.L,W.c0_cb*W.L}, and epsilon >= 0.
+(0') NO node may cite a PENDING SIBLING: shared scalar facts (0 <= delta
+for monotonicity; epsilon <= e_env^0; c0*epsilon <= t_3) live in the
+constant-choice node or its own children and are cited from there.
 (a) lem-maincb-direct-corner-envelope exports projections at `c0*epsilon`
 scale and subordination/complementarity at `L^0*epsilon` scale — keep the
 two scales SEPARATED from the start; never cite one export at the other's
