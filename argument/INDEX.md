@@ -200,7 +200,7 @@
 | `lem-maincb-stage1-call-envelope` | lemma | proved | validated | A | After first choosing a universal c0 witness for which lem-maincb-error-improveme… |
 | `lem-maincb-stage1-maximality` | lemma | stated | seeded | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
 | `lem-maincb-stage1-raw-refinement` | lemma | proved | validated | A | There are universal D_1 < infinity and e_1 > 0 such that, if an explicit Stage-1… |
-| `lem-maincb-stage1-strict-refinement` | lemma | stated | seeded | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
+| `lem-maincb-stage1-strict-refinement` | lemma | proved | validated | A | Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-… |
 | `lem-maincb-stage2-call-envelope` | lemma | proved | validated | A | After first choosing a universal c0 witness for which lem-maincb-error-improveme… |
 | `lem-maincb-stage2-extcb-datum` | lemma | proved | validated | A | There are universal C_s2 >= 1 and e_s2 > 0, with the e_ca threshold and universa… |
 | `lem-maincb-stage2-raw-extension` | lemma | proved | validated | A | After first fixing the universal C_s2^0,e_s2^0 witnesses of lem-maincb-stage2-ex… |
