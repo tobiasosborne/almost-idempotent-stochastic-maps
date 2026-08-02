@@ -1,0 +1,9 @@
+{
+  "claim": "lem-maincb-corner-nontriviality af-validated: root validated, 7/7 nodes clean",
+  "oracle": "af-lem-maincb-corner-nontriviality",
+  "result": "fail",
+  "claim_hash": "df24cd1d5575fb2b7d2860f999e3668207629d9f34d7f65ec677511d0e197047",
+  "oracle_digest": "690b9d93da45b3c6fe754ce2cbbc05eaf67b0540f093feed12fc412494a4b08a",
+  "inputs_hash": "1866054675fa1c1c57ca190be840363e7cdf5cbd0230349cde5690a332bc5b0b",
+  "ts": "2026-08-02T15:32:42.509Z"
+}

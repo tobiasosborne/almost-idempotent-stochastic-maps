@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-corner-nontriviality/export.md",
+  "oracle": "af-lem-maincb-corner-nontriviality",
+  "result": "pass",
+  "claim_hash": "221095cecb79e46b409a7c59d835931ab5fbe1abcb5a4b2e6af3ae9d981f6b2f",
+  "oracle_digest": "690b9d93da45b3c6fe754ce2cbbc05eaf67b0540f093feed12fc412494a4b08a",
+  "inputs_hash": "1866054675fa1c1c57ca190be840363e7cdf5cbd0230349cde5690a332bc5b0b",
+  "ts": "2026-08-02T15:33:07.569Z"
+}

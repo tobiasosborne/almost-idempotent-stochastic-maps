@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Fix the def-maincb-witness-ledger datum W supplied by lem...}
+\step{1} Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= W.epsilon\_MAIN, w:C\textasciicircum{}m->A is an extended W.c0\_cb*epsilon-inclusion, and e\_j is any projection-basis element of C\textasciicircum{}m, then P\_j=w(e\_j) is a W.c0\_cb*epsilon-projection satisfying | ||P\_j||-1 | <= W.c0\_cb*epsilon and hence is nonvanishing, while S\_\{P\_j\} contains a nonzero element and therefore dim S\_\{P\_j\} >= 1. \steptag{validated} \\[6pt]
+\step{1.1} Same-instance ledger alignment: in the construction of the exact fixed W supplied by lem-maincb-reset-constant-ledger, let L\textasciicircum{}0,e\_env\textasciicircum{}0 denote the particular lem-maincb-direct-corner-envelope witnesses selected before W. The cited reset-ledger result gives W.L>=L\textasciicircum{}0 and W.e\_env<=e\_env\textasciicircum{}0, with no existential reselection. For the root scale 0<=epsilon<=W.epsilon\_MAIN, lem-maincb-structural-domain-ledger gives epsilon<=W.e\_env and W.L*epsilon<=W.K\_call*epsilon<=W.r\_reset. Consequently epsilon<=W.e\_env<=e\_env\textasciicircum{}0 and 0<=L\textasciicircum{}0*epsilon<=W.L*epsilon<=W.K\_call*epsilon<=W.r\_reset. \steptag{validated} \\[4pt]
+\step{1.2} Set d:=W.c0\_cb*epsilon and P\_j:=w(e\_j). By def-projection-basis, the coordinate projection-basis element e\_j of C\textasciicircum{}m is a nonzero self-adjoint idempotent; as a nonzero projection in the exact C*-algebra C\textasciicircum{}m it has norm one. At amplification n=1, def-extended-delta-inclusion says that the supplied extended d-inclusion w is a d-homomorphism with the star and product clauses and two-sided (1+-d) norm bounds. Therefore P\_j\textasciicircum{}dagger=P\_j, ||P\_j\textasciicircum{}2-P\_j||=||w(e\_j)w(e\_j)-w(e\_j\textasciicircum{}2)||<=d, and 1-d<=||P\_j||<=1+d. Hence P\_j is a d-projection by def-delta-projection and | ||P\_j||-1 |<=d; this explicit second alternative makes P\_j nonvanishing. \steptag{validated} \\[6pt]
+\step{1.2.1} Let d:=W.c0\_cb*epsilon and specialize the extended d-inclusion w at amplification n=1. By def-extended-delta-inclusion, w is then a d-inclusion. GT-kitaev-def-delta-homomorphism defines a d-inclusion to be a d-homomorphism satisfying the two-sided norm bounds, and defines a d-homomorphism in the star-algebra setting to preserve the involution exactly and to satisfy ||w(XY)-w(X)w(Y)|| <= d||X||||Y||. Since def-projection-basis gives e\_j\textasciicircum{}dagger=e\_j and e\_j\textasciicircum{}2=e\_j, and the nonzero projection e\_j in C\textasciicircum{}m has ||e\_j||=1, these clauses yield w(e\_j)\textasciicircum{}dagger=w(e\_j), ||w(e\_j)\textasciicircum{}2-w(e\_j)||=||w(e\_j)w(e\_j)-w(e\_j\textasciicircum{}2)|| <= d, and 1-d <= ||w(e\_j)|| <= 1+d. Thus, for P\_j=w(e\_j), def-delta-projection applies and | ||P\_j||-1 | <= d; this is precisely the explicit nonvanishing alternative used by the parent. \steptag{validated} \\[4pt]
+\step{1.3} After node 1.1 is validated, epsilon<=e\_env\textasciicircum{}0 for the same witnesses frozen before W. The singleton U=\{j\} is nonempty, the root supplies the same finite-dimensional extended epsilon-C*-algebra A and the same extended W.c0\_cb*epsilon-inclusion w, and W.c0\_cb is the c0 witness used for lem-maincb-direct-corner-envelope in lem-maincb-reset-constant-ledger. Applying lem-maincb-direct-corner-envelope to U=\{j\} gives P\_U=w(e\_j)=P\_j and makes the exact vector space A\_U=S\textasciicircum{}A\_\{P\_U\}=S\textasciicircum{}A\_\{P\_j\} an extended L\textasciicircum{}0*epsilon-C*-algebra. Denote the unit furnished on this exact space by I\_\{S\_\{P\_j\}\}; by the algebra typing, I\_\{S\_\{P\_j\}\} is an element of S\_\{P\_j\}. \steptag{validated} \\[4pt]
+\step{1.4} After nodes 1.1 and 1.3 are validated, I\_\{S\_\{P\_j\}\} is the unit of the extended L\textasciicircum{}0*epsilon-C*-algebra on the exact space S\_\{P\_j\}, and 0<=L\textasciicircum{}0*epsilon<=W.r\_reset. By lem-maincb-witness-arithmetic as instantiated in lem-maincb-reset-constant-ledger, W.r\_reset is the minimum of listed positive thresholds including [2*(1+K\_disp)*D\_*]\textasciicircum{}\{-1\}, where K\_disp>0 and D\_*=max\{1,D\_0,D\_1,D\_2,D\_3\}>=1. Thus L\textasciicircum{}0*epsilon<=W.r\_reset<1/2. The n=1 approximate-unit axiom in def-epsilon-cstar-algebra, inherited through def-extended-epsilon-cstar-algebra, gives | ||I\_\{S\_\{P\_j\}\}||-1 |<=L\textasciicircum{}0*epsilon<1/2. Hence ||I\_\{S\_\{P\_j\}\}||>1/2, so this element of S\_\{P\_j\} is nonzero. \steptag{validated} \\[4pt]
+\step{1.5} After node 1.4 is validated, the exact vector space S\_\{P\_j\} contains its explicitly typed nonzero element I\_\{S\_\{P\_j\}\}. Since S\_\{P\_j\} is a linear subspace of the finite-dimensional space A, it is finite-dimensional; the elementary dimension theorem for finite-dimensional vector spaces then gives dim S\_\{P\_j\}>=1. Combining this with node 1.2 yields every conclusion of the root contract. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

@@ -4,19 +4,22 @@ kind: lemma
 contract: Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= W.epsilon_MAIN, w:C^m->A is an extended W.c0_cb*epsilon-inclusion, and e_j is any projection-basis element of C^m, then P_j=w(e_j) is a W.c0_cb*epsilon-projection satisfying | ||P_j||-1 | <= W.c0_cb*epsilon and hence is nonvanishing, while S_{P_j} contains a nonzero element and therefore dim S_{P_j} >= 1.
 defs: def-maincb-witness-ledger; def-projection-basis; def-epsilon-cstar-algebra; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion; def-delta-projection; def-compressed-corner
 deps: lem-maincb-reset-constant-ledger; lem-maincb-structural-domain-ledger; lem-maincb-direct-corner-envelope; lem-maincb-witness-arithmetic
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-maincb-corner-nontriviality
-provenance: DESIGN-M24-NONTRIVIALITY-v2.md sect-2.1 (landed verbatim; the aism-twpa option-(a) repair); AUDIT-M24-NONTRIVIALITY.md DESIGN-CONFIRMED (three editorial/provenance corrections applied verbatim in v2); user pre-ratified 2026-08-02 (tobiasosborne, in-session standing ratification of the audited design process, session 41); source refs/kitaev-2405.02434/approximate_algebras.tex:407-456,917-929,1054-1065,1067-1084,1477-1479; finite-dimensional linear algebra; M04 dependency provenance inherited from lem-maincb-direct-corner-envelope; 1417-1428 is Stage-1 context only
+provenance: DESIGN-M24-NONTRIVIALITY-v2.md sect-2.1 (landed verbatim; the aism-twpa option-(a) repair); AUDIT-M24-NONTRIVIALITY.md DESIGN-CONFIRMED (three editorial/provenance corrections applied verbatim in v2); user pre-ratified 2026-08-02 (tobiasosborne, in-session standing ratification of the audited design process, session 41); source refs/kitaev-2405.02434/approximate_algebras.tex:407-456,917-929,1054-1065,1067-1084,1477-1479; finite-dimensional linear algebra; M04 dependency provenance inherited from lem-maincb-direct-corner-envelope; 1417-1428 is Stage-1 context only; af-VALIDATED 2026-08-02 (first-pass 7/7 clean; oracle af-lem-maincb-corner-nontriviality PASS)
 owner: A
 ---
-**Status.** `stated` — the NEW additive nontriviality provider closing the
+**Status.** `proved` — af-VALIDATED in-repo (root validated, 7/7 nodes
+clean, taint clean, FIRST-PASS elevation, tier routine, 2026-08-02; one
+verifier challenge on the inclusion clauses cured by registering the
+byte-verbatim `GT-kitaev-def-delta-homomorphism` external + child 1.2.1;
+oracle PASS). The NEW additive nontriviality provider closing the
 M24 contract-level gap (bead `aism-twpa`: challenges ch-94ae993f6abc0f5b /
 ch-7411a0325c917f52 established that no prior allowed input yields
 `dim S_{P_j} >= 1`; ch-37eff8dcb9a3b5d1 rejected the root weakening as
-scope drift). MAIN campaign additive row (post-M23,
-pre-M24 in the serial elevation order). NOT proved in-repo; af elevation
-pending.
+scope drift). MAIN campaign additive row (post-M23, pre-M24 in the serial
+elevation order).
 
 **Route (design v2 sect-4.1).** Fix exactly the W supplied by M18; the
 extended `W.c0_cb*epsilon`-inclusion clauses applied to the nonzero
