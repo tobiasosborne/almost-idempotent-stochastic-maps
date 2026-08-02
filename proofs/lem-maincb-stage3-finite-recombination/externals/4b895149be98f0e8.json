@@ -1,0 +1,8 @@
+{
+  "id": "4b895149be98f0e8",
+  "name": "lem-maincb-binary-block-merge",
+  "source": "imports validated registry lemma proofs/lem-maincb-binary-block-merge — Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra, 0 \u003c= epsilon \u003c= W.epsilon_MAIN, a supplied MAIN partition state comes from an extended W.c0_cb*epsilon-inclusion w:C^m-\u003eA satisfying ||w(I_{C^m})-I_A|| \u003c= W.c0_cb*epsilon with one-dimensional atomic images and has disjoint nonempty unions U,V sharing no class, and current reset isomorphisms v_U:B_U-\u003eA_U and v_V:B_V-\u003eA_V have recorded ambient fields epsilon_U,epsilon_V \u003c= W.L*epsilon and satisfy d_U \u003c= W.c0_cb*epsilon_U, d_V \u003c= W.c0_cb*epsilon_V, ||v_U(I_{B_U})-u_{A_U}|| \u003c= W.c0_cb*epsilon_U, and ||v_V(I_{B_V})-u_{A_V}|| \u003c= W.c0_cb*epsilon_V, then there is a current reset isomorphism v_{U union V}:B_U oplus B_V-\u003eA_{U union V} whose recorded ambient field epsilon_{U union V} is selected so that A_{U union V} is an extended epsilon_{U union V}-C*-algebra and epsilon_{U union V} \u003c= W.L*epsilon, and which satisfies d_{U union V} \u003c= W.c0_cb*epsilon_{U union V} and ||v_{U union V}(I_{B_U oplus B_V})-u_{A_{U union V}}|| \u003c= W.c0_cb*epsilon_{U union V}.",
+  "content_hash": "c22f2178a419ad7dbd7738c27dd23f56e187cceeb37b74162e88ff0e33853420",
+  "created": "2026-08-02T13:16:46.635525962Z",
+  "notes": ""
+}

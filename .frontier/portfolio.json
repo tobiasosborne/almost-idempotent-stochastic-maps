@@ -1561,6 +1561,30 @@
      "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-binary-block-merge/ledger",
      "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-binary-block-merge.md"
     ]
+   },
+   {
+    "name": "af-lem-maincb-stage3-finite-recombination",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-stage3-finite-recombination"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-stage3-finite-recombination/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-stage3-finite-recombination.md"
+    ]
+   },
+   {
+    "name": "af-lem-maincb-structural-assembly",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-maincb-structural-assembly"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-maincb-structural-assembly/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-maincb-structural-assembly.md"
+    ]
    }
   ]
  },
