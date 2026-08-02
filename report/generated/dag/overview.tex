@@ -757,7 +757,7 @@
   \node[dagghost] (N6_0_28) at (8.192,-3.22) {\hyperlink{dag:lem-kernel-implies-hlc}{lem-kernel-implies-hlc}};
   \node[dagghost] (N6_0_29) at (8.192,-3.68) {\hyperlink{dag:lem-min-a-implies-height}{lem-min-a-implies-height}};
   \node[dagghost] (N6_0_30) at (8.192,-4.14) {\hyperlink{dag:conj-kernel}{conj-kernel}};
-  \node[dagnode,dagDagSee] (N6_0_31) at (12.288,-0.34) {\hypertarget{dag:lem-maincb-stage3-call-envelope}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}stage3-\hspace{0pt}call-\hspace{0pt}envelope}\\[-0.15em]{\dagstatus{$\lozenge$\,seeded\,\dagphasetag{C}}}};
+  \node[dagnode,dagDagVal] (N6_0_31) at (12.288,-0.34) {\hypertarget{dag:lem-maincb-stage3-call-envelope}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}stage3-\hspace{0pt}call-\hspace{0pt}envelope}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{C}}}};
   \node[dagnode,dagDagVal] (N6_0_32) at (12.288,-1.8) {\hypertarget{dag:conj-hcb}{}\texttt{conj-\hspace{0pt}hcb}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{A}\,\hyperref[conj:hcb]{$\S$}}}};
   \node[dagnode,dagDagVal] (N6_0_33) at (12.288,-3.26) {\hypertarget{dag:lem-maincb-cross-datum-bijectivity}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}cross-\hspace{0pt}datum-\hspace{0pt}bijectivity}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{C}}}};
   \node[dagnode,dagDagVal] (N6_0_34) at (15.608,-0.34) {\hypertarget{dag:lem-maincb-isomorphism-unit-control}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}isomorphism-\hspace{0pt}unit-\hspace{0pt}control}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{C}}}};
@@ -989,9 +989,9 @@
   \node[dagghost] (N8_0_12) at (4.096,-2.23) {\hyperlink{dag:lem-maincb-stage2-call-envelope}{lem-maincb-stage2-call-envelope}};
   \node[dagghost] (N8_0_13) at (4.096,-2.69) {\hyperlink{dag:lem-maincb-stage2-extcb-datum}{lem-maincb-stage2-extcb-datum}};
   \node[dagghost] (N8_0_14) at (4.096,-3.15) {\hyperlink{dag:lem-maincb-stage2-raw-extension}{lem-maincb-stage2-raw-extension}};
-  \node[dagghost] (N8_0_15) at (4.096,-3.61) {\hyperlink{dag:lem-maincb-stage3-raw-merge}{lem-maincb-stage3-raw-merge}};
-  \node[dagghost] (N8_0_16) at (4.096,-4.07) {\hyperlink{dag:lem-maincb-witness-arithmetic}{lem-maincb-witness-arithmetic}};
-  \node[dagghost] (N8_0_17) at (4.096,-4.53) {\hyperlink{dag:lem-maincb-stage3-call-envelope}{lem-maincb-stage3-call-envelope}};
+  \node[dagghost] (N8_0_15) at (4.096,-3.61) {\hyperlink{dag:lem-maincb-stage3-call-envelope}{lem-maincb-stage3-call-envelope}};
+  \node[dagghost] (N8_0_16) at (4.096,-4.07) {\hyperlink{dag:lem-maincb-stage3-raw-merge}{lem-maincb-stage3-raw-merge}};
+  \node[dagghost] (N8_0_17) at (4.096,-4.53) {\hyperlink{dag:lem-maincb-witness-arithmetic}{lem-maincb-witness-arithmetic}};
   \node[dagnode,dagDagSee] (N8_0_18) at (8.192,-2.19) {\hypertarget{dag:lem-maincb-reset-constant-ledger}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}reset-\hspace{0pt}constant-\hspace{0pt}ledger}\\[-0.15em]{\dagstatus{$\lozenge$\,seeded\,\dagphasetag{C}}}};
   \node[dagnode,dagDagSee] (N8_0_19) at (11.512,-1.46) {\hypertarget{dag:lem-maincb-structural-domain-ledger}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}structural-\hspace{0pt}domain-\hspace{0pt}ledger}\\[-0.15em]{\dagstatus{$\lozenge$\,seeded\,\dagphasetag{C}}}};
   \node[dagnode,dagDagVal] (N8_0_20) at (11.512,-2.92) {\hypertarget{dag:lem-maincb-reset-output-typing}{}\texttt{lem-\hspace{0pt}maincb-\hspace{0pt}reset-\hspace{0pt}output-\hspace{0pt}typing}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{C}}}};
@@ -1030,12 +1030,12 @@
     \draw[dagedge] (N8_0_14) to[out=0,in=180] (N8_0_18);
     \draw[dagedge] (N8_0_14) to[out=0,in=180] (N8_0_22);
     \draw[dagedge] (N8_0_15) to[out=0,in=180] (N8_0_18);
+    \draw[dagedge] (N8_0_15) to[out=0,in=180] (N8_0_19);
     \draw[dagedge] (N8_0_15) to[out=0,in=180] (N8_0_24);
     \draw[dagedge] (N8_0_16) to[out=0,in=180] (N8_0_18);
-    \draw[dagedge] (N8_0_16) to[out=0,in=180] (N8_0_21);
+    \draw[dagedge] (N8_0_16) to[out=0,in=180] (N8_0_24);
     \draw[dagedge] (N8_0_17) to[out=0,in=180] (N8_0_18);
-    \draw[dagedge] (N8_0_17) to[out=0,in=180] (N8_0_19);
-    \draw[dagedge] (N8_0_17) to[out=0,in=180] (N8_0_24);
+    \draw[dagedge] (N8_0_17) to[out=0,in=180] (N8_0_21);
     \draw[dagedge] (N8_0_18) to[out=0,in=180] (N8_0_19);
     \draw[dagedge] (N8_0_18) to[out=0,in=180] (N8_0_21);
     \draw[dagedge] (N8_0_18) to[out=0,in=180] (N8_0_22);
