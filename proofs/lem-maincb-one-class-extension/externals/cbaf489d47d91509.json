@@ -1,0 +1,8 @@
+{
+  "id": "cbaf489d47d91509",
+  "name": "lem-maincb-stage2-call-envelope",
+  "source": "imports validated registry lemma proofs/lem-maincb-stage2-call-envelope — After first choosing a universal c0 witness for which lem-maincb-error-improvement remains valid, fixing the corresponding L^0,e_env^0 witnesses of lem-maincb-direct-corner-envelope, and fixing the C_s2^0,e_s2^0 witnesses of lem-maincb-stage2-extcb-datum, there is a universal K_2^0 \u003e= 1 with every Stage-2 prerequisite absorbed such that for every def-maincb-witness-ledger datum W with W.c0_cb = c0, W.L \u003e= L^0, W.K2 \u003e= max{K_2^0,1,W.L,W.c0_cb*W.L}, and W.e_s2 \u003c= e_s2^0, if A is a finite-dimensional extended epsilon-C*-algebra, w:C^m-\u003eA is an extended W.c0_cb*epsilon-inclusion satisfying ||w(I_{C^m})-I_A|| \u003c= W.c0_cb*epsilon with one-dimensional atomic images, a supplied MAIN partition state for A,w has nonempty U contained in one equivalence class, j notin U in that same class, and R=U union {j}, 0 \u003c= epsilon \u003c= W.e_s2/W.K2, and a supplied current reset isomorphism v_U:M_{|U|}-\u003eA_U has recorded ambient field epsilon_U \u003c= W.L*epsilon and satisfies d_U \u003c= W.c0_cb*epsilon_U and ||v_U(I_{M_{|U|}})-u_{A_U}|| \u003c= W.c0_cb*epsilon_U, then lem-maincb-direct-corner-envelope certifies A_R with the Stage-2 raw-call target ambient record epsilon_R := W.L*epsilon, and t_2=W.K2*epsilon dominates epsilon_U,d_U,epsilon_R, the reset unit error, and every other datum error, so lem-maincb-stage2-extcb-datum furnishes the explicit Stage-2 EXT raw-call datum with total defect at most C_s2^0*t_2.",
+  "content_hash": "946043fb3b2860e4a94b3c4872eb9c0f834845a1f31eefae4ffbe105cdd2c77f",
+  "created": "2026-08-02T11:30:05.013090578Z",
+  "notes": ""
+}
