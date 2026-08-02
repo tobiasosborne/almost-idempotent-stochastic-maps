@@ -23,4 +23,18 @@ DESIGN-MAINCB-REPAIR-v2.md sect-4 (and sect-8 re-seed guidance where applicable)
 A hard-cap hit is a factoring stop, not a rounds bump. Constants live in the
 proof body, never the contract.
 
+**Elevation guidance (BINDING, 2026-08-02; session-39 worked patterns that
+cured the M19-S3/M25 re-validations).** (i) Use the typed-reset provider
+lem-maincb-reset-output-typing ALONE for every reset step (its conclusion
+subsumes lem-maincb-reset-invariant-preservation's; dual-provider citation
+for one step invites the distinct-witness challenge). A consumer of an
+existential provider must fix ONE witness explicitly and thread that SAME
+witness through all later uses (the same-map law). (ii) FIRST child = one
+constant-choice node fixing all universal constants nonnegatively and
+absorbing every scalar prerequisite into the chosen universal — never
+assume an unregistered scalar inequality (e.g. c0 >= 1). (iii) NO node may
+cite a PENDING SIBLING — shared scalar facts live in the constant-choice
+node or its children. (iv) Any bijective=>isomorphism inference cites the
+extended-inclusion typing explicitly at the point of use.
+
 **Provenance loci.** approximate_algebras.tex:917-969,1194-1222,1419-1426
