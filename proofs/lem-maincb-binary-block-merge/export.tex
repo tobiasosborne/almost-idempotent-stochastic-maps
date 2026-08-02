@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Fix the def-maincb-witness-ledger datum W supplied by lem...}
+\step{1} Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= W.epsilon\_MAIN, a supplied MAIN partition state comes from an extended W.c0\_cb*epsilon-inclusion w:C\textasciicircum{}m->A satisfying ||w(I\_\{C\textasciicircum{}m\})-I\_A|| <= W.c0\_cb*epsilon with one-dimensional atomic images and has disjoint nonempty unions U,V sharing no class, and current reset isomorphisms v\_U:B\_U->A\_U and v\_V:B\_V->A\_V have recorded ambient fields epsilon\_U,epsilon\_V <= W.L*epsilon and satisfy d\_U <= W.c0\_cb*epsilon\_U, d\_V <= W.c0\_cb*epsilon\_V, ||v\_U(I\_\{B\_U\})-u\_\{A\_U\}|| <= W.c0\_cb*epsilon\_U, and ||v\_V(I\_\{B\_V\})-u\_\{A\_V\}|| <= W.c0\_cb*epsilon\_V, then there is a current reset isomorphism v\_\{U union V\}:B\_U oplus B\_V->A\_\{U union V\} whose recorded ambient field epsilon\_\{U union V\} is selected so that A\_\{U union V\} is an extended epsilon\_\{U union V\}-C*-algebra and epsilon\_\{U union V\} <= W.L*epsilon, and which satisfies d\_\{U union V\} <= W.c0\_cb*epsilon\_\{U union V\} and ||v\_\{U union V\}(I\_\{B\_U oplus B\_V\})-u\_\{A\_\{U union V\}\}|| <= W.c0\_cb*epsilon\_\{U union V\}. \steptag{validated} \\[6pt]
+\step{1.1} Universal constants and scalar domain package: fix the universal witnesses in the order required by lem-maincb-reset-constant-ledger, use one common C\_unit, epsilon\_unit, delta\_unit, a\_unit witness package for the reset theorem, set D\_*:=max\{1,D\_0,D\_1,D\_2,D\_3\}, and fix the supplied W. Then D\_*>=1; W satisfies the coefficient, margin, Stage-3 producer, near-unit, and reset-radius requirements packaged by lem-maincb-reset-constant-ledger. Moreover lem-maincb-structural-domain-ledger gives, for every 0<=epsilon<=W.epsilon\_MAIN, epsilon<=W.e\_cross/W.K3 and t\_3:=W.K3*epsilon satisfies 0<=t\_3<=W.r\_reset and t\_3<=W.e\_cross; also W.K3>=W.L from lem-maincb-reset-constant-ledger gives epsilon\_R:=W.L*epsilon<=t\_3. These choices are universal and datum-independent. \steptag{validated} \\[4pt]
+\step{1.2} Assume the universal/scalar package just stated. Under the hypotheses of node 1, the asserted current reset isomorphism for R=U union V exists. \steptag{validated} \\[6pt]
+\step{1.2.1} Apply lem-maincb-stage3-call-envelope with R:=U union V and t\_3:=W.K3*epsilon. Its hypotheses are exactly the root hypotheses together with the scalar package: it selects the target ambient record epsilon\_R:=W.L*epsilon, certifies A\_R as an extended epsilon\_R-C*-algebra, and furnishes the explicit Stage-3 amplified four-corner raw-call datum with rho<=C\_cross\textasciicircum{}0*t\_3. The same conclusion says t\_3 dominates epsilon, epsilon\_U, epsilon\_V, d\_U, d\_V, epsilon\_R, both displayed unit norms, and every other datum error, in particular 0<=W.c0\_cb*epsilon<=t\_3. \steptag{validated} \\[4pt]
+\step{1.2.2} Assume the Stage-3 call package just stated. Then the asserted current reset isomorphism for R=U union V exists. \steptag{validated} \\[6pt]
+\step{1.2.2.1} The root hypothesis types w:C\textasciicircum{}m->A as an extended W.c0\_cb*epsilon-inclusion, while the Stage-3 call package gives 0<=W.c0\_cb*epsilon<=t\_3. Since C\textasciicircum{}m is a finite-dimensional C*-algebra and A is a finite-dimensional extended epsilon-C*-algebra, lem-maincb-extended-inclusion-monotone applies and types this same w as an extended t\_3-inclusion; its one-dimensional atomic images and the absence of any unitality assumption are unchanged. \steptag{validated} \\[4pt]
+\step{1.2.2.2} Assume this extended t\_3-inclusion typing of w, together with the Stage-3 call package and the root hypotheses. Then the asserted current reset isomorphism for R=U union V exists. \steptag{validated} \\[6pt]
+\step{1.2.2.2.1} Apply lem-maincb-cross-datum-bijectivity at t=t\_3. The call package supplies epsilon<=t\_3, epsilon\_U,epsilon\_V,d\_U,d\_V<=t\_3, both unit bounds <=t\_3, the explicit datum, and rho control; the scalar package supplies t\_3<=W.e\_cross and the required W witness inequalities; the root supplies disjoint nonempty U,V sharing no class and one-dimensional images; and the preceding typing supplies the required non-unital extended t\_3-inclusion. Hence the four fixed level-one maps gamma\_UU,gamma\_UV,gamma\_VU,gamma\_VV in that explicit Stage-3 datum are bijective. \steptag{validated} \\[4pt]
+\step{1.2.2.2.2} Assume that the four fixed level-one maps of the explicit Stage-3 datum are bijective, together with the call and scalar packages. Then the asserted current reset isomorphism for R=U union V exists. \steptag{validated} \\[6pt]
+\step{1.2.2.2.2.1} Apply lem-maincb-stage3-raw-merge to the explicit datum: its source is B\_U oplus B\_V with finite-dimensional C*-algebra summands, its target is A\_R, its four maps are bijective, and 0<=rho<=C\_cross\textasciicircum{}0*t\_3 with 0<=epsilon\_R<=t\_3<=W.e\_cross. Using the same fixed witnesses, the Stage-3 producer conclusion packaged in lem-maincb-reset-constant-ledger names the resulting literal map u\_3:B\_U oplus B\_V->A\_R and gives that it is an extended D\_*t\_3-isomorphism with ||u\_3(I\_\{B\_U oplus B\_V\})-u\_\{A\_R\}||<=D\_*t\_3. \steptag{validated} \\[4pt]
+\step{1.2.2.2.2.2} For any such explicit Stage-3 raw call with target record epsilon\_R, scale 0<=t\_3<=W.r\_reset, and literal map u\_3 that is an extended D\_*t\_3-isomorphism with the displayed D\_*t\_3 unit bound, apply lem-maincb-reset-output-typing once with D=D\_* and fix one resulting map v\_R. By def-extended-delta-inclusion, u\_3 being an extended isomorphism makes it bijective and in particular an extended D\_*t\_3-inclusion, so the typed-reset conclusion makes this same fixed v\_R an extended W.c0\_cb*epsilon\_R-isomorphism, gives d\_R<=W.c0\_cb*epsilon\_R and ||v\_R(I\_\{B\_U oplus B\_V\})-u\_\{A\_R\}||<=W.c0\_cb*epsilon\_R, and leaves source, target, and amplification form unchanged. Record this one v\_R with R=U union V and epsilon\_R=W.L*epsilon as the current reset state. Since A\_R was certified extended epsilon\_R-C*-algebra and epsilon\_R=W.L*epsilon, all conclusions of node 1 follow. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

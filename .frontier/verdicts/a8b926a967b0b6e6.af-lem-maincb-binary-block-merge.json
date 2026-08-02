@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-maincb-binary-block-merge/export.md",
+  "oracle": "af-lem-maincb-binary-block-merge",
+  "result": "pass",
+  "claim_hash": "90e5d801ffd1668feb3abca739a16195a70ae1c15ce8f48f396d3fab6c56c7c7",
+  "oracle_digest": "a02a2e1a882cf3e6cb9fd290d572b0c9f9a5c234d6c793d422643b82973a6b9e",
+  "inputs_hash": "51df379d606e33e28b9f5c217b5d91da8e021f08d0bcbb6c2fdf630083a144d0",
+  "ts": "2026-08-02T13:15:31.473Z"
+}
