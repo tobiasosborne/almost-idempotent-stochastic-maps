@@ -2,8 +2,8 @@
   "claim": "proofs/lem-maincb-one-class-extension/export.md",
   "oracle": "af-lem-maincb-one-class-extension",
   "result": "pass",
-  "claim_hash": "cea7e088e9b6d31c6b91775e6bf544eaa4fcbf5111df6deb5f89371ca778a67d",
+  "claim_hash": "c07a9667537f0c820f7420f4af6be127c9ef76045ffba8b93ea71eb9b5febab0",
   "oracle_digest": "2976b491c46465757fa5fb1671a4127a2b21928a69f95f0213011509198f36f4",
-  "inputs_hash": "08e73f3d01e713e6cf979646e873fac4fb1130d76355c95c8c4d962d71c5d39b",
-  "ts": "2026-08-01T16:14:52.447Z"
+  "inputs_hash": "6faea03f77b85dd2aad687ee8cdf789ae514dc51914782520fbb195851b72fe8",
+  "ts": "2026-08-02T12:30:17.822Z"
 }

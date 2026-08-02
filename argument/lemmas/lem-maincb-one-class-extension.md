@@ -4,25 +4,27 @@ kind: lemma
 contract: Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= W.epsilon_MAIN, a supplied MAIN partition state comes from an extended W.c0_cb*epsilon-inclusion w:C^m->A satisfying ||w(I_{C^m})-I_A|| <= W.c0_cb*epsilon, all atomic images are one-dimensional, and C is one equivalence class, then there is a current reset isomorphism v_C:M_{|C|}->A_C whose recorded ambient field epsilon_C is selected so that A_C is an extended epsilon_C-C*-algebra and epsilon_C <= W.L*epsilon <= W.K_call*epsilon, and which satisfies d_C <= W.c0_cb*epsilon_C and ||v_C(I_{M_{|C|}})-u_{A_C}|| <= W.c0_cb*epsilon_C.
 defs: def-maincb-partition-state; def-maincb-reset-state; def-maincb-raw-call; def-maincb-witness-ledger; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
 deps: lem-maincb-direct-corner-envelope; lem-maincb-corner-equivalence; lem-maincb-initial-raw-inclusion; lem-maincb-stage2-raw-extension; lem-maincb-stage2-call-envelope; lem-maincb-reset-invariant-preservation; lem-maincb-structural-domain-ledger; lem-maincb-reset-constant-ledger; lem-maincb-reset-output-typing
-status: stated
-af: seeded
+status: proved
+af: validated
 workspace: proofs/lem-maincb-one-class-extension
-provenance: DESIGN-MAINCB-REPAIR-v2.md sect-4 row M25 (amended contract, landed verbatim; supersedes the 2026-07-30 DESIGN-MAIN-STRUCTURE-v5 form); AUDIT-MAINCB-REPAIR.md DESIGN-CONFIRMED (F1-F3 applied verbatim in v2); user-ratified 2026-08-01 (tobiasosborne, in-session sign-off); source approximate_algebras.tex:1378-1412,1430-1441; recorded-field ENV repair per DESIGN-RECFIELD-REPAIR.md sect-3 (hostile-audited AUDIT-RECFIELD-REPAIR.md DESIGN-CONFIRMED zero corrections; user-ratified 2026-08-01 (tobiasosborne, in-session sign-off, second ratification)); deps aligned with the contract's own W-supplier reference (F3-class wiring fix, 2026-08-01: contract names lem-maincb-reset-constant-ledger, deps must import it — argument/README module rule); DEMOTED 2026-08-01 (latent unregistered-premise gap, AUDIT-CONSUMER-REPAIR.md F1 (nodes 1.1.2.2/1.1.3.2: bijective=>isomorphism without the extended-inclusion typing); docs/LEARNINGS.md 2026-08-01; re-validation pending) per DESIGN-CONSUMER-REPAIR.md + AUDIT-CONSUMER-REPAIR.md (F-corrections applied verbatim); user-ratified 2026-08-01 (tobiasosborne, in-session sign-off, fifth ratification)
+provenance: DESIGN-MAINCB-REPAIR-v2.md sect-4 row M25 (amended contract, landed verbatim; supersedes the 2026-07-30 DESIGN-MAIN-STRUCTURE-v5 form); AUDIT-MAINCB-REPAIR.md DESIGN-CONFIRMED (F1-F3 applied verbatim in v2); user-ratified 2026-08-01 (tobiasosborne, in-session sign-off); source approximate_algebras.tex:1378-1412,1430-1441; recorded-field ENV repair per DESIGN-RECFIELD-REPAIR.md sect-3 (hostile-audited AUDIT-RECFIELD-REPAIR.md DESIGN-CONFIRMED zero corrections; user-ratified 2026-08-01 (tobiasosborne, in-session sign-off, second ratification)); deps aligned with the contract's own W-supplier reference (F3-class wiring fix, 2026-08-01: contract names lem-maincb-reset-constant-ledger, deps must import it — argument/README module rule); DEMOTED 2026-08-01 (latent unregistered-premise gap, AUDIT-CONSUMER-REPAIR.md F1 (nodes 1.1.2.2/1.1.3.2: bijective=>isomorphism without the extended-inclusion typing); docs/LEARNINGS.md 2026-08-01; re-validation pending) per DESIGN-CONSUMER-REPAIR.md + AUDIT-CONSUMER-REPAIR.md (F-corrections applied verbatim); user-ratified 2026-08-01 (tobiasosborne, in-session sign-off, fifth ratification); RE-VALIDATED 2026-08-02 (fresh tree 20/20 clean under the typed-reset-alone re-seed architecture; oracle af-lem-maincb-one-class-extension PASS; flipped after the M19-S3 re-bank restored the suspended deps)
 owner: A
 ---
-**Status.** `stated` — DEMOTED 2026-08-01 (the banked certificate's nodes
-1.1.2.2/1.1.3.2 inferred bijective=>isomorphism without the
-extended-inclusion typing, AUDIT-CONSUMER-REPAIR.md F1; docs/LEARNINGS.md
-2026-08-01; the CONTRACT was never refuted). The 2026-08-01 re-validation
-(2 runs) churned on the dual-provider distinct-witness and
-induction-packaging challenges (parked tree preserved at commit 0288aa43)
-and is superseded by the fresh 2026-08-02 re-seed below. Contract per the
-audited `DESIGN-MAINCB-REPAIR-v2.md` sect-4 row M25 (hostile-audit chain
+**Status.** `proved` — af-RE-VALIDATED in-repo (root validated, 20/20
+nodes clean, taint clean, fresh 2026-08-02 re-seed under the re-seed
+architecture below + verify-phase resume, scoped cap 20, tier routine;
+oracle PASS — cures the F1 latent gap of the retracted 2026-08-01
+certificate, docs/LEARNINGS.md 2026-08-01). Flip executed AFTER the
+M19-S3 re-bank restored deps lem-maincb-reset-constant-ledger /
+lem-maincb-structural-domain-ledger (serial banking order honoured).
+History: DEMOTED 2026-08-01 (nodes 1.1.2.2/1.1.3.2 bijective=>isomorphism
+without the extended-inclusion typing, AUDIT-CONSUMER-REPAIR.md F1; the
+CONTRACT was never refuted); the 2026-08-01 re-validation (2 runs)
+churned on the dual-provider distinct-witness and induction-packaging
+challenges (parked tree at commit 0288aa43). Contract per the audited
+`DESIGN-MAINCB-REPAIR-v2.md` sect-4 row M25 (hostile-audit chain
 AUDIT-MAINCB-REPAIR.md DESIGN-CONFIRMED; user-ratified 2026-08-01
-in-session). MAIN campaign row M25. NOT proved in-repo; af re-validation
-pending. NOTE (banking order): deps lem-maincb-reset-constant-ledger /
-lem-maincb-structural-domain-ledger are linker-SUSPENDED pending the
-M19-S3 re-bank — M25 may validate but can only FLIP after they re-flip.
+in-session). MAIN campaign row M25.
 
 **Build budget (BINDING on the af tree).** Design target/rounds/hard-cap:
 10 / 3 / 14; scoped cap amendment 14->17 exercised transparently in the
