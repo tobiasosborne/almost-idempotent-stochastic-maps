@@ -2190,3 +2190,56 @@ structural-assembly capstone — is blocked SOLELY on that decision.
 external oracle gate; ~15 pushes; sketch v43 + CURRENT pointer + HANDOFF
 rewritten. Note: zero self-judged verdicts — both defects were
 established by verifiers or ratified-text comparison, per L5.
+
+## 2026-08-02 — Session 41 (the MAIN-completion session): T0 165 → 168; M24 repaired end-to-end; M28 capstone banked; thmainext rewired
+
+User pre-ratified the prescribed process in-session ("i ratify the
+decisions. please continue work"); every substantive step still ran the
+full reviewer≠author loop (fresh designer, separate fresh hostile
+auditor, fresh provers/verifiers per node; zero self-judged steps).
+
+- **aism-twpa (P0) RESOLVED end-to-end.** Design round selected option
+  (a): ONE new ledger-bound provider `lem-maincb-corner-nontriviality`
+  (nonvanishing atomic image via the extended-inclusion norm clauses +
+  nonzero M04 singleton-corner unit via the frozen W.r_reset < 1/2
+  arithmetic ⇒ dim S_{P_j} >= 1), M24 contract byte-UNCHANGED, deps-only
+  amendment; option (b) (dim<=1) rejected on the frozen one-dimensional
+  consumers + partition reflexivity; option (c) collapses into (a).
+  Hostile audit: DESIGN-CONFIRMED, 3 editorial corrections → v2. The
+  paper's unproved tex:1066 sentence deliberately EXCLUDED as an external.
+  Provider banked FIRST-PASS 7/7 (T0 166; round-0 challenge cured by the
+  byte-verbatim GT-kitaev-def-delta-homomorphism external + derivation
+  child). M24 re-seeded clean, banked FIRST-PASS 5/5 ZERO challenges
+  (T0 167). Bead CLOSED.
+- **M28 `lem-maincb-structural-assembly` banked (T0 168) — THE MAIN
+  CAMPAIGN IS COMPLETE (M01–M28 all af-validated T0).** Run 1 ABORTED
+  [BALLOON] 20 > 13 with the root never challenged: 4/6 challenges were
+  MISSING WORKSPACE VOCABULARY (projection/corner defs + the GT
+  δ-homomorphism external — absent from the shard defs list), 2 were
+  glue structure (partition-state construction before M25/M27; the
+  A_J=A / u_{A_J}=Co_R(R)=R identification). First-line response per the
+  balloon law (no registry mutation): vocabulary provisioned, shard-body
+  guidance sharpened, scoped cap 13→20 flagged. Run 2: 20 nodes, all
+  in-run challenges resolved (cross-unit monotonicity pair cured by an
+  amplification-wise direct check), hit max-rounds while converging,
+  completed in a resumed --phase verify pass, 20/20 clean. Bead
+  aism-8kiu opened+closed same session.
+- **`lem-thmainext-conditional` deps rewire LANDED** (design v5 sect-10
+  step 15; precondition M28+M19-R T0 met this session). Fresh-designer
+  re-validation against the repaired contracts kept the ratified
+  seven-dep line VERBATIM; corrected v5's transitivity rationale (reset
+  ledger through M28, not M19-R); W-ledger coherence: C_E :=
+  W.c0_cb*W.K_call, epsilon_E := W.epsilon_MAIN with the contract
+  byte-unchanged. Separate hostile audit: DESIGN-CONFIRMED. Deps-only
+  landing; status stays proved-mod-audit, af stays none.
+- **Lessons banked into the worked patterns:** provision the PROOF's
+  vocabulary at seeding time, not the contract's (bit twice: M19-S3
+  session 39, M28 this session); `af def-add` silently accepts duplicate
+  names (fresh ids — ledger pollution; the M24 re-provision hit this,
+  wiped + re-seeded); "converging but hit max-rounds" resumes with
+  --phase verify on the same tree (no rebuild).
+- Sketch v44 folded in (CURRENT.md regenerated); FRONTIER updated off
+  the stale pre-session-40 M17 line to the decoupled-campaigns surface.
+- Waves W125–W132 on arm FH: 2 design waves, 2 hostile audits, 3
+  elevations (one two-run), 4 T0 banks, 1 balloon classified and cured
+  in-session. Commits a5efba9e…a3d62afd, all pushed.

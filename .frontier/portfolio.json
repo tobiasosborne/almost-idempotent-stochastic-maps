@@ -1,6 +1,6 @@
 {
   "goal": "Prove op-classical: universal eta0,C>0 (dimension-free) such that every row-stochastic Q with ||Q^2-Q||_{inf->inf} <= eta <= eta0 admits a stochastic idempotent E with ||Q-E||_{inf->inf} <= C*sqrt(eta) (sharp exponent 1/2).",
-  "frontier": "The Kernel/(EX) conjecture: every rank->=3 signed idempotent P with delta<=1/4 has a theta-1/2 actual-row chart U0 with max_s Phi_s(U0) <= C0*delta (C0=1 empirically); equivalently every hidden row vertex with invisible mass > sqrt(delta) has height <= B*sqrt(delta). This one input closes op-classical via HLC <= op-exposed-hull <= op-classical.",
+  "frontier": "Carry the Route-F chain ABOVE the now-complete MAIN subtree to T0 (M01-M28 all af-validated; lem-thmainext-conditional deps rewired onto M28 per the ratified v5 step-15): the decoupled campaigns — 14-row ledger, k-ledger, F0-assembly — then the thmainext elevation and the root rewire LAST.",
   "config": {
     "stale_threshold": 2,
     "max_blocks_per_turn": 2,
@@ -1612,7 +1612,7 @@
     },
     {
       "id": "B",
-      "desc": "THE HUDDLE-CHARGE / SIX-LEAF PROGRAM (reconciled 2026-07-10; supersedes the retired frame-free-dual-localization text): close the open leaves of the wired conditional spine \u2014 the three SL1a sigma-cells (conj-sl1a-deep-diagonal-cell H-D, conj-sl1a-intersection-diagonal-cell H-I, conj-sl1a-off-diagonal-cell H-X, on the proved lem-sl1a-three-cell-reduction interface), conj-shallow-counterweight-exclusion (SL1b), the conj-cotop-web-coupling residuals (E1-E5 codification, small-gauge bridge, mixed co-top straddle, large-gauge completion), and the L5 dual-face mass minimax. H-X is anchored at T0 by lem-starvation-completion-obstruction (af-validated).",
+      "desc": "THE HUDDLE-CHARGE / SIX-LEAF PROGRAM (reconciled 2026-07-10; supersedes the retired frame-free-dual-localization text): close the open leaves of the wired conditional spine — the three SL1a sigma-cells (conj-sl1a-deep-diagonal-cell H-D, conj-sl1a-intersection-diagonal-cell H-I, conj-sl1a-off-diagonal-cell H-X, on the proved lem-sl1a-three-cell-reduction interface), conj-shallow-counterweight-exclusion (SL1b), the conj-cotop-web-coupling residuals (E1-E5 codification, small-gauge bridge, mixed co-top straddle, large-gauge completion), and the L5 dual-face mass minimax. H-X is anchored at T0 by lem-starvation-completion-obstruction (af-validated).",
       "priority": "primary",
       "target": "Any one leaf closed (proved+hostile-verified) or refuted with a delta->0 family; the huddle charge follows from the leaf system via the stated bridges (hostile pass pending, aism-bbv).",
       "kill": "A certified wall covering a whole leaf family (cf. the W56 one-hard-leaf certificate); or the op-hlc OR-route decision (aism-hse) re-routing the trunk away from MIN-A/huddle.",
@@ -1665,16 +1665,16 @@
     },
     {
       "id": "G",
-      "desc": "Flow conservation over the swap family: prove that the beta-weighted excess of a theta-1/2 Phi-argmin chart, summed against the A9 stationarity disjunctions of all volume-permitted swaps, TELESCOPES against the D5 financing ledger with the rigorous fan lemmas (2, 2+sqrt(2)) as exchange rate and the proved delta-budgets (sum Gamma^- <= delta, sum beta^- <= delta, R_D^nu <= (5/4)delta) as boundary terms \u2014 the single conjectured missing lemma of the (EX) engine, subsuming the coupled payment/(FIN) and legal-collateral horns; equivalently (constructive form) the H-M Thm 1.12 CONVERSE rounding: merge classes, project B-rows onto the (1.2)/(1.3) nonnegative polytope, projection distance O(delta)",
+      "desc": "Flow conservation over the swap family: prove that the beta-weighted excess of a theta-1/2 Phi-argmin chart, summed against the A9 stationarity disjunctions of all volume-permitted swaps, TELESCOPES against the D5 financing ledger with the rigorous fan lemmas (2, 2+sqrt(2)) as exchange rate and the proved delta-budgets (sum Gamma^- <= delta, sum beta^- <= delta, R_D^nu <= (5/4)delta) as boundary terms — the single conjectured missing lemma of the (EX) engine, subsuming the coupled payment/(FIN) and legal-collateral horns; equivalently (constructive form) the H-M Thm 1.12 CONVERSE rounding: merge classes, project B-rows onto the (1.2)/(1.3) nonnegative polytope, projection distance O(delta)",
       "priority": "parked-tier1-override",
       "target": "the (EX)/GAP-B argmin charge via one joint mechanism instead of two coupled horns",
-      "kill": "the D6 legal-leak certificates AMPLIFY instead of telescoping (a rank-growing family with L_mu-type leaks composing past every universal constant) \u2014 then (EX) is false and the retarget is the height-conditional kernel",
+      "kill": "the D6 legal-leak certificates AMPLIFY instead of telescoping (a rank-growing family with L_mu-type leaks composing past every universal constant) — then (EX) is false and the retarget is the height-conditional kernel",
       "created": "1970-01-01T00:00:00.000Z",
       "parked_note": "PARKED-TIER1-OVERRIDE (2026-07-10): standing user directive 2026-07-07 concentrates all capacity on the Tier-1 leaves (arm B). This arm is retained for post-Tier-1 reactivation; its text is historical."
     },
     {
       "id": "FH",
-      "desc": "Route F: factorization-hardening \u2014 Kitaev Thm 12.3 commutative specialization + positive-retract hardening (PRH) lemma; convergent A/C architecture from the W73 strategy reset",
+      "desc": "Route F: factorization-hardening — Kitaev Thm 12.3 commutative specialization + positive-retract hardening (PRH) lemma; convergent A/C architecture from the W73 strategy reset",
       "priority": "primary",
       "target": "op-classical via positive approximate retract; decisive test = hostile line-by-line audit of Kitaev arXiv:2405.02434 Thm 12.3 (steps F0-F3)",
       "kill": "F1 audit fails: Thm 12.3 does not deliver a two-sided O(eta) factorization with approximate multiplicativity, dimension-free, applicable to the diagonal lift",
@@ -1682,7 +1682,7 @@
     },
     {
       "id": "XE",
-      "desc": "Route X: exchange-or-expose family \u2014 RTS at L5-GAP-1 (aggregate L1 transverse current, primal-exposer min-cut) / APAL-PAT at kernel (positive-recipient carrier + aggregate peak-or-leak) / QCMP capacity form; convergent B/D/A-II shape from the W73 strategy reset",
+      "desc": "Route X: exchange-or-expose family — RTS at L5-GAP-1 (aggregate L1 transverse current, primal-exposer min-cut) / APAL-PAT at kernel (positive-recipient carrier + aggregate peak-or-leak) / QCMP capacity form; convergent B/D/A-II shape from the W73 strategy reset",
       "priority": "exploratory",
       "target": "conj-l5-gap-1 (RTS) or conj-kernel (PAT: sigma_g <= 1/2+48tau => B=9/8); deciders first: aggregate-peak, QCMP ratio, quotient-refinement/cross-financing",
       "kill": "deciders refute: exact instance with m(A_C)>1/2+48tau and no peak, or QCMP ratio unbounded, or current norm decays with w_*",
