@@ -1,0 +1,8 @@
+{
+  "id": "0cfbf22f00ae4d2b",
+  "name": "lem-maincb-corner-nontriviality",
+  "source": "imports validated registry lemma proofs/lem-maincb-corner-nontriviality — Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra, 0 \u003c= epsilon \u003c= W.epsilon_MAIN, w:C^m-\u003eA is an extended W.c0_cb*epsilon-inclusion, and e_j is any projection-basis element of C^m, then P_j=w(e_j) is a W.c0_cb*epsilon-projection satisfying | ||P_j||-1 | \u003c= W.c0_cb*epsilon and hence is nonvanishing, while S_{P_j} contains a nonzero element and therefore dim S_{P_j} \u003e= 1.",
+  "content_hash": "486db2c5967c6bbfb736e98e3ae0d9d822213f793f24b169e77772fc882519ab",
+  "created": "2026-08-02T15:36:39.551700684Z",
+  "notes": ""
+}
