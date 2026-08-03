@@ -6,7 +6,7 @@ defs: def-almost-idempotent; def-extended-epsilon-cstar-algebra; def-stochastic;
 deps: lem-thmainext-conditional; lem-routef-k-finiteness; lem-routef-f2-positive-unital-compression; lem-routef-f3-retract-defect; lem-routef-prh-finish
 status: stated
 af: none
-provenance: DESIGN-LEDGER-DOMAINS-v2.md sect-2 row 14 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-LEDGER-DOMAINS-v2.md LAND-14 with two exact corrections, both folded in; W78-ratified package front 3; user-ratified 2026-07-30, ledger front re-selected by the user 2026-08-03; source AUDIT-LEDGER-DOMAINS.md:262-301; argument/lemmas/lem-thmainext-conditional.md:4-9; lem-routef-f2-positive-unital-compression / lem-routef-f3-retract-defect / lem-routef-prh-finish shards:4-9
+provenance: DESIGN-LEDGER-DOMAINS-v2.md sect-2 row 14 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-LEDGER-DOMAINS-v2.md LAND-14 with two exact corrections, both folded in; W78-ratified package front 3; user-ratified 2026-07-30, ledger front re-selected by the user 2026-08-03; source AUDIT-LEDGER-DOMAINS.md:273-317; argument/lemmas/lem-thmainext-conditional.md:4-9; lem-routef-f2-positive-unital-compression / lem-routef-f3-retract-defect / lem-routef-prh-finish shards:4-9
 owner: A
 workspace: proofs/lem-routef-threshold-minimum
 ---

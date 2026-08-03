@@ -72,7 +72,7 @@ ROWS = [
         ),
         defs="def-almost-idempotent; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion",
         deps="lem-routef-raw-factor-norms; lem-routef-ai-defect-linearization; lem-thmainext-conditional",
-        prov="approximate_algebras.tex:2754-2757; LEDGER-W74F-G-K.md:169-181; AUDIT-LEDGER-DOMAINS.md:160-162",
+        prov="approximate_algebras.tex:2754-2757; LEDGER-W74F-G-K.md:169-181; AUDIT-LEDGER-DOMAINS.md:187",
         budget="4 / 2",
     ),
     dict(
@@ -83,7 +83,7 @@ ROWS = [
         ),
         defs="def-almost-idempotent; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion",
         deps="lem-kitaev-almost-idemp-audit; lem-routef-ai-defect-linearization; lem-thmainext-conditional",
-        prov="approximate_algebras.tex:2749-2753; LEDGER-W74F-G-K.md:183-187; AUDIT-LEDGER-DOMAINS.md:163-165",
+        prov="approximate_algebras.tex:2749-2753; LEDGER-W74F-G-K.md:183-187; AUDIT-LEDGER-DOMAINS.md:188",
         budget="3 / 2",
         extra=(
             "\n**Audit correction 1 (applied).** `AUDIT-LEDGER-DOMAINS-v2.md` sect-0 and sect-7 replace "
@@ -103,7 +103,7 @@ ROWS = [
         ),
         defs="def-almost-idempotent; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion",
         deps="lem-routef-raw-factor-norms; lem-routef-raw-factor-identities; lem-routef-ai-defect-linearization; lem-thmainext-conditional",
-        prov="approximate_algebras.tex:2754-2766; LEDGER-W74F-G-K.md:174-181; AUDIT-LEDGER-DOMAINS.md:166-168",
+        prov="approximate_algebras.tex:2754-2766; LEDGER-W74F-G-K.md:174-181; AUDIT-LEDGER-DOMAINS.md:189",
         budget="4 / 2",
     ),
     dict(
@@ -115,7 +115,7 @@ ROWS = [
         ),
         defs="def-fd-cstar-diagonal; def-extended-epsilon-cstar-algebra",
         deps="cor-kitaev-diagonal-cpization; lem-routef-functional-calculus-closeness; lem-thmainext-conditional; lem-routef-raw-factor-norms; lem-routef-raw-product-estimate",
-        prov="approximate_algebras.tex:2771-2801; LEDGER-W74F-G-K.md:193-226; argument/lemmas/cor-kitaev-diagonal-cpization.md:4-9; AUDIT-LEDGER-DOMAINS.md:169-171",
+        prov="approximate_algebras.tex:2771-2801; LEDGER-W74F-G-K.md:193-226; argument/lemmas/cor-kitaev-diagonal-cpization.md:4-9; AUDIT-LEDGER-DOMAINS.md:190",
         budget="6 / 3",
     ),
     dict(
@@ -140,7 +140,7 @@ ROWS = [
         ),
         defs="def-almost-idempotent; def-extended-epsilon-cstar-algebra",
         deps="lem-routef-functional-calculus-closeness; lem-routef-raw-factor-norms; lem-routef-raw-product-estimate; lem-routef-delta-prime-closeness; lem-routef-delta-normalization-closeness",
-        prov="approximate_algebras.tex:2803-2812; LEDGER-W74F-G-K.md:193-226; VERDICT-W74F-G-KLEDGER.md:119-128; AUDIT-LEDGER-DOMAINS.md:217-227",
+        prov="approximate_algebras.tex:2803-2812; LEDGER-W74F-G-K.md:193-226; VERDICT-W74F-G-KLEDGER.md:119-128; AUDIT-LEDGER-DOMAINS.md:234-249",
         budget="5 / 3",
         extra=(
             "\n**Reconnection row (D2).** Not one of the fourteen reservations: a degree-row "
@@ -172,7 +172,7 @@ ROWS = [
         ),
         defs="def-almost-idempotent; def-extended-epsilon-cstar-algebra",
         deps="lem-kitaev-almost-idemp-audit; lem-routef-functional-calculus-closeness; lem-routef-raw-factor-norms; lem-routef-delta-prime-closeness; lem-routef-delta-normalization-closeness; lem-routef-degree-two-estimate",
-        prov="approximate_algebras.tex:2813-2829; LEDGER-W74F-G-K.md:193-226; VERDICT-W74F-G-KLEDGER.md:119-128; AUDIT-LEDGER-DOMAINS.md:229-242",
+        prov="approximate_algebras.tex:2813-2829; LEDGER-W74F-G-K.md:193-226; VERDICT-W74F-G-KLEDGER.md:119-128; AUDIT-LEDGER-DOMAINS.md:251-264",
         budget="7 / 3",
         extra=(
             "\n**Reconnection row (D3).** Not one of the fourteen reservations: a degree-row "
@@ -190,7 +190,7 @@ ROWS = [
         ),
         defs="def-extended-epsilon-cstar-algebra",
         deps="lem-routef-functional-calculus-closeness; lem-routef-raw-factor-norms; lem-routef-raw-factor-identities; lem-routef-delta-normalization-closeness; lem-routef-degree-two-estimate; lem-routef-degree-three-estimate",
-        prov="approximate_algebras.tex:2831-2895; LEDGER-W74F-G-K.md:228-245; AUDIT-LEDGER-DOMAINS.md:181-209",
+        prov="approximate_algebras.tex:2831-2895; LEDGER-W74F-G-K.md:228-245; AUDIT-LEDGER-DOMAINS.md:181-230",
         budget="11 / 3",
         extra=(
             "\n**The load-bearing repair.** The `(2*C_R)^(-1)` entry of `rho_Upsilon'` is the first "
@@ -271,7 +271,7 @@ ROWS = [
         ),
         defs="def-almost-idempotent; def-extended-epsilon-cstar-algebra; def-stochastic; def-positive-approximate-retract",
         deps="lem-thmainext-conditional; lem-routef-k-finiteness; lem-routef-f2-positive-unital-compression; lem-routef-f3-retract-defect; lem-routef-prh-finish",
-        prov="AUDIT-LEDGER-DOMAINS.md:262-301; argument/lemmas/lem-thmainext-conditional.md:4-9; lem-routef-f2-positive-unital-compression / lem-routef-f3-retract-defect / lem-routef-prh-finish shards:4-9",
+        prov="AUDIT-LEDGER-DOMAINS.md:273-317; argument/lemmas/lem-thmainext-conditional.md:4-9; lem-routef-f2-positive-unital-compression / lem-routef-f3-retract-defect / lem-routef-prh-finish shards:4-9",
         budget="5 / 2",
         extra=(
             "\n**Terminal-row note (design sect-2).** This row consumes [[lem-thmainext-conditional]] AT "

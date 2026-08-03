@@ -6,7 +6,7 @@ defs: def-almost-idempotent; def-extended-epsilon-cstar-algebra; def-extended-de
 deps: lem-routef-raw-factor-norms; lem-routef-ai-defect-linearization; lem-thmainext-conditional
 status: stated
 af: none
-provenance: DESIGN-LEDGER-DOMAINS-v2.md sect-2 row 2 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-LEDGER-DOMAINS-v2.md LAND-14 with two exact corrections, both folded in; W78-ratified package front 3; user-ratified 2026-07-30, ledger front re-selected by the user 2026-08-03; source approximate_algebras.tex:2754-2757; LEDGER-W74F-G-K.md:169-181; AUDIT-LEDGER-DOMAINS.md:160-162
+provenance: DESIGN-LEDGER-DOMAINS-v2.md sect-2 row 2 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-LEDGER-DOMAINS-v2.md LAND-14 with two exact corrections, both folded in; W78-ratified package front 3; user-ratified 2026-07-30, ledger front re-selected by the user 2026-08-03; source approximate_algebras.tex:2754-2757; LEDGER-W74F-G-K.md:169-181; AUDIT-LEDGER-DOMAINS.md:187
 owner: A
 workspace: proofs/lem-routef-raw-factor-units
 ---
