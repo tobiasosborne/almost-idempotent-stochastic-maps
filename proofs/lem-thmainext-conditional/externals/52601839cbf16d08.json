@@ -1,0 +1,8 @@
+{
+  "id": "52601839cbf16d08",
+  "name": "conj-extcb",
+  "source": "imports validated registry lemma proofs/conj-extcb — EXT-CB: there are universal C_ext \u003c infinity and e_ext \u003e 0 such that if e=delta+epsilon \u003c= e_ext, P,Q are delta-projections in an extended epsilon-C*-algebra A with ||P+Q-I|| \u003c= delta, v:M_r-\u003eS_P is an extended delta-isomorphism, dim S_Q=1 at level one, and S_{P,Q} is nonzero, then there is one map v_+:M_{r+1}-\u003eA whose every amplification is a C_ext*e-isomorphism; the same level-one unitary and the same four corner maps carry all amplification levels, with constants independent of r, n, and dim A.",
+  "content_hash": "906a309da1891c79858dba296f5a08cd842bb14d35a8fb0d7f24dbaf19cf12e5",
+  "created": "2026-08-03T11:27:51.009143985Z",
+  "notes": ""
+}

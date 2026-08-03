@@ -5,7 +5,7 @@ contract: Extended th_main_ext assembly: there are universal C_E < infinity and 
 defs: def-extended-epsilon-cstar-algebra; def-fd-cstar-diagonal
 deps: conj-hcb; conj-extcb; lem-hcb-column-hilbert-squared; lem-maincb-error-improvement; lem-maincb-reset-invariant-preservation; lem-maincb-structural-assembly; lem-extcb-four-corner-merge
 status: proved-mod-audit
-af: none
+af: seeded
 provenance: docs/plans/2026-07-23-W74F-artifacts/DECOMP-W74F-C-THMAINEXT.md §§3-5 (assembly + corrected COL-HILB); PROOF-W74F-H-STAGE1.md (Stage-1 reset packet); hostile verdicts VERDICT-W74F-BATCH.md §C, VERDICT-W74F-E-HCB.md, VERDICT-W74F-F-EXTCB.md, VERDICT-W74F-H-STAGE1.md (contract restatement endorsed verbatim by the H-verdict) Dependency-only amendment prescribed by DESIGN-MAIN-STRUCTURE-v5.md sect-10 step 15, re-validated against the repaired current contracts by DESIGN-THMAINEXT-REWIRE.md, and approved by AUDIT-THMAINEXT-REWIRE.md; contract byte-UNCHANGED, status unchanged at proved-mod-audit, and af unchanged at none. METHOD-CLAUSE RE-SCOPE 2026-08-03 (option B, USER-RATIFIED in-session; bead aism-g83q): the clause "the assembly uses the corrected squared COL-HILB estimate and the hostile-verified H-CB (conj-hcb), EXT-CB (conj-extcb), and Stage-1 reset packets" was REMOVED from the contract and re-scoped as documentary provenance, on the finding of AUDIT-THMAINEXT-ELEVATION.md (DESIGN-REJECTED) that it is a factual claim about how the proof is built, not about A/B/v, and is not dischargeable from the seven frozen T0 deps. The mathematical content -- the existential in C_E, epsilon_E, the map type, and independence of dimension, amplification level and block data -- is byte-unchanged. The deps line is DELIBERATELY LEFT AT ALL SEVEN IDS: those edges are the linker-enforced record of the same "uses" statement (in particular the edge to lem-hcb-column-hilbert-squared, the corrected squared estimate replacing the paper's unsquared display), and are NOT to be transitively reduced to lem-maincb-structural-assembly. Status unchanged at proved-mod-audit, af unchanged at none: this is a re-scope, NOT a promotion.
 owner: A
 workspace: proofs/lem-thmainext-conditional
@@ -38,8 +38,11 @@ of the same statement (above all the edge to
 [[lem-hcb-column-hilbert-squared]], the corrected squared estimate that
 replaces the paper's unsquared display), and a future reader must not
 "simplify" them away to the transitive reduction
-[[lem-maincb-structural-assembly]].  Nothing was promoted: the row stays
-`proved-mod-audit` / `af: none`.
+[[lem-maincb-structural-assembly]].  Nothing was promoted by the re-scope:
+the row stays `proved-mod-audit`.  (The `af:` field later moved
+`none` → `seeded` when the workspace was stood up on 2026-08-03 for the
+audit-confirmed three-node elevation; seeding is not a rigour promotion
+either.)
 
 **Interface width (honest note).** After the re-scope this row is a
 *thin* existential repackaging of [[lem-maincb-structural-assembly]]: it

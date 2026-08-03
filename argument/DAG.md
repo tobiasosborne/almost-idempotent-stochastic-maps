@@ -329,7 +329,7 @@ graph LR
   lem-stage1-unitary-graph-control["lem-stage1-unitary-graph-control<br/>proved/validated"]
   lem-stage1-unitary-graph-transport["lem-stage1-unitary-graph-transport<br/>proved/validated"]
   lem-starvation-completion-obstruction["lem-starvation-completion-obstruction<br/>proved/validated"]
-  lem-thmainext-conditional["lem-thmainext-conditional<br/>proved-mod-audit/none"]
+  lem-thmainext-conditional["lem-thmainext-conditional<br/>proved-mod-audit/seeded"]
   lem-tight-far-geography["lem-tight-far-geography<br/>proved/none"]
   lem-top-concentration["lem-top-concentration<br/>proved/validated"]
   lem-top-deficit-price["lem-top-deficit-price<br/>proved/none"]

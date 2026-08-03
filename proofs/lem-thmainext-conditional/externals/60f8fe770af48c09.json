@@ -1,0 +1,8 @@
+{
+  "id": "60f8fe770af48c09",
+  "name": "lem-maincb-structural-assembly",
+  "source": "imports validated registry lemma proofs/lem-maincb-structural-assembly — Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; every finite-dimensional extended epsilon-C*-algebra A with 0 \u003c= epsilon \u003c= W.epsilon_MAIN admits a finite-dimensional C*-algebra B=oplus_C M_{|C|} and an extended W.c0_cb*W.K_call*epsilon-isomorphism v:B-\u003eA satisfying ||v(I_B)-I_A|| \u003c= W.c0_cb*W.K_call*epsilon; hence C_struct=W.c0_cb*W.K_call and e_struct=W.epsilon_MAIN are finite positive universal witnesses.",
+  "content_hash": "5e20a9468b0845a75d6e791581f068c32e0caf7fcd51ae33eba7f2b465f2edd0",
+  "created": "2026-08-03T11:27:51.029336023Z",
+  "notes": ""
+}
