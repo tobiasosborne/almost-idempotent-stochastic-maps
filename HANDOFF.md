@@ -10,186 +10,183 @@ TRIGGER: session close, or a material change in the current frontier / next task
 ## START HERE
 
 1. Read `PRD.md`, then `CLAUDE.md` (== `AGENTS.md`).
-2. The proof sketch is `docs/plans/CURRENT.md` → **v45** (current).
-3. **Rigorous (af-validated, T0): 168.** Registry: **364** (was 348).
-   `op-classical` OPEN.
-4. **SESSION-42 RECORD (2026-08-03) — one blocker LOCATED, one front LANDED.
-   T0 did not move, and that is the honest result: no mathematics was
-   proved this session.**
+2. The proof sketch is `docs/plans/CURRENT.md` → **v46** (current).
+3. **Rigorous (af-validated, T0): 169.** Registry: **364**. `op-classical` OPEN.
+4. **SESSION-42 RECORD (2026-08-03).** Three things landed: a contract-level
+   blocker was located and then dissolved by user decision, the LEDGER-DOMAINS
+   front was transcribed, and `lem-thmainext-conditional` was banked.
 
-   **(a) The thmainext elevation is BLOCKED — a contract-level finding.**
-   `lem-thmainext-conditional` looked elevation-ready (all 7 deps and all
-   120 ancestors T0, workspace an unseeded scaffold). A fresh-codex design
-   round produced a nine-node skeleton; a SEPARATE fresh hostile audit
-   returned **DESIGN-REJECTED**
-   (`docs/plans/2026-08-03-THMAINEXT-ELEVATION-design/`).
-   - **Settled affirmatively (Q-A):** there is NO hidden eighth premise.
-     M28 consumed as one validated `af` external DOES close the
-     ledger-datum existential (its contract binds `W` as "supplied by" the
-     ledger theorem and closes by asserting its projections are finite
-     positive universal witnesses; `af` externals are usable without
-     re-deriving their proof deps). A search of every
-     `proofs/*/externals/*.json` carrying the `"Fix ... W supplied by ..."`
-     phrase found no contrary precedent. So
-     `lem-maincb-reset-constant-ledger` does NOT belong on the deps line,
-     the ratified `C_E := W.c0_cb*W.K_call` / `epsilon_E := W.epsilon_MAIN`
-     choice stands, and the `DESIGN-THMAINEXT-REWIRE` §3 flag is
-     discharged.
-   - **The blocker:** the frozen contract's clause *"the assembly USES the
-     corrected squared COL-HILB estimate and the hostile-verified H-CB,
-     EXT-CB, and Stage-1 reset packets"* is **not dischargeable from the
-     seven frozen T0 deps**. M28 exports only `W.epsilon_MAIN`, the final
-     `B,v` and their estimates — **no trace of its own construction** — and
-     no frozen contract supplies `W.epsilon_MAIN <= e_H` or `<= e_ext`. So
-     every packet branch can prove only a conditional interface, and all
-     six fail the semantic deletion test. Secondary: the M03 branch never
-     identifies its output with M19-R's `v_R`. Mechanical: the seed omitted
-     base `def-epsilon-cstar-algebra`.
-   - Attacks that PASSED: one `W` bound before the receiving constants; the
-     final `v` is M28's own typed witness; squared COL estimate and
-     conditional H-CB inverse clauses intact; `rho+epsilon <= a_merge`;
-     constants exactly M28's field expressions, un-shrunk. **That last pass
-     forecloses the illicit repair** of hiding the missing threshold
-     compatibility inside a smaller `epsilon_E`.
-   - **USER DECISION PENDING — bead `aism-g83q`.** Options: **(A)** a new
-     packet-trace bridge lemma + ratify adding it to the frozen deps line,
-     then redesign (cost risk: may need MAIN to export construction data it
-     does not, which `DESIGN-MAINCB-REPAIR-v2`'s hand-off clause forbids);
-     **(B)** re-scope the frozen contract to its existential content, which
-     M28 already discharges, treating the method clause as documentary
-     provenance (the auditor judged this "would weaken the target" but
-     could not determine whether a verifier reads it as prose or as a
-     proposition); **(C)** park it. **User chose (C) in-session on
-     2026-08-03**; A-vs-B remains open.
+   **(a) `lem-thmainext-conditional` af-VALIDATED — T0 168 → 169.**
+   4-node tree, root validated, taint clean, **FIRST PASS, zero challenges**
+   (fresh codex prover, separate fresh verifier per node; one verifier
+   correctly *blocked* node 1.3 until its children validated). Oracle
+   `af-lem-thmainext-conditional` registered, `fr verify` PASS, shard flipped
+   mechanically from the codex ledger. Tree: fix M28's ledger datum `W` and
+   define `C_E := W.c0_cb*W.K_call`, `epsilon_E := W.epsilon_MAIN` (1.1);
+   apply M28 to arbitrary `A, epsilon` and substitute (1.2); unfold
+   `def-extended-delta-inclusion` for the all-amplification reading and
+   universality (1.3).
+   - **HONEST SCOPE — do not let the counter speak for itself.** This proves
+     **no mathematics absent from `lem-maincb-structural-assembly`**. The
+     hostile auditor was asked outright and answered: mathematically the row
+     is *redundant* relative to M28 — a strict weakening with no new analytic
+     information; structurally it is a meaningful *interface*, hiding `W`, the
+     block form `⊕_C M_{|C|}` and the unit estimate while exposing exactly the
+     two constants `lem-routef-k-ledger` consumes. Value = validated interface
+     projection + DAG decoupling. What genuinely improved: the Route-F chain
+     above MAIN now rests on a **T0** carrier, and blocked count fell 117 → 115.
 
-   **(b) The LEDGER-DOMAINS front LANDED — 16 rows, registry 348 → 364.**
-   The LAND-14 package had been hostile-audited (`AUDIT-LEDGER-DOMAINS-v2.md`)
-   and W78-ratified since July but never transcribed. Landed by script
-   (`scripts/land-ledger-domains-rows.py`, retained) with contracts
-   flattened LaTeX → registry ASCII per the `a7ab84c7` precedent: 14
-   reserved rows + the D2/D3 degree-row reconnections (dep lists from
-   design §6.1). **Both audit corrections folded in verbatim** —
+   **(b) How it got unblocked — the method-clause re-scope (option B,
+   USER-RATIFIED).** A design round + separate hostile audit returned
+   **DESIGN-REJECTED**: the contract's clause "the assembly *uses* the
+   corrected squared COL-HILB estimate and the hostile-verified H-CB, EXT-CB,
+   and Stage-1 reset packets" is a claim about a *proof*, not about `A,B,v`,
+   and is not dischargeable from the frozen deps (M28 exports no trace of its
+   own construction; no frozen contract supplies `W.epsilon_MAIN <= e_H` or
+   `<= e_ext`). The user ratified removing it (commit `7b044403`); the
+   mathematical content is **byte-unchanged**.
+   - **The `deps:` line was deliberately NOT reduced.** Those seven edges are
+     the *linker-enforced* form of the same "uses" statement — above all the
+     edge to `lem-hcb-column-hilbert-squared`, the corrected squared estimate
+     replacing the paper's unsquared display. Prose in a contract enforces
+     nothing; a dep edge is checked every gate run. Shard body + provenance
+     forbid "simplifying" them to the transitive reduction.
+   - The same audit **settled Q-A affirmatively**: no hidden eighth premise —
+     M28 as one validated external closes the ledger-datum existential, so
+     `lem-maincb-reset-constant-ledger` stays off the deps line.
+
+   **(c) The LEDGER-DOMAINS front LANDED — 16 rows, registry 348 → 364.**
+   The LAND-14 package (hostile-audited `AUDIT-LEDGER-DOMAINS-v2.md`,
+   W78-ratified since July) transcribed at last, by retained script
+   `scripts/land-ledger-domains-rows.py`, contracts flattened LaTeX → registry
+   ASCII per the `a7ab84c7` precedent: 14 reserved rows + D2/D3 reconnections
+   (dep lists from design §6.1). Both audit corrections folded in verbatim —
    `rho_id^corr := min{rho_theta, rho_AI, epsilon_E/C_A}` (the `rho_theta`
-   entry exposes the `eta < 1/4` domain of `lem-kitaev-almost-idemp-audit`),
-   and the unit-defect wording. **All 16 rows are `status: stated` /
-   `af: none` — NOTHING promoted.**
-   - **Independently verified:** a fresh transcription auditor returned
-     **TRANSCRIPTION-CONFIRMED-WITH-CORRECTIONS with ZERO substantive
-     findings** (`AUDIT-LEDGER-LANDING-TRANSCRIPTION.md`) — no symbol drift
-     in any of the 16 contracts, defs/deps matching in membership AND
-     order, correction scoping right, bodies inventing nothing. Its 8
-     prescribed fixes were editorial provenance-locus typos **inherited
-     from the ratified design's own table**; applied verbatim to both the
-     shards and the generating script.
-   - The `lem-routef-k-ledger` parent rewire (design §6.2) was deliberately
-     NOT done; its **DO-NOT-REWIRE guard stays on** (W78 §5 step 6).
+   entry exposes the `eta < 1/4` domain of `lem-kitaev-almost-idemp-audit`)
+   and the unit-defect wording. All 16 rows `status: stated` / `af: none`.
+   - **Independently verified:** fresh transcription auditor returned
+     **TRANSCRIPTION-CONFIRMED-WITH-CORRECTIONS, ZERO substantive findings** —
+     no symbol drift, defs/deps matching in membership AND order, correction
+     scoping right, bodies inventing nothing. Its 8 fixes were editorial
+     provenance-locus typos **inherited from the ratified design's own table**,
+     applied to both the shards and the generating script.
+   - The `lem-routef-k-ledger` parent rewire was deliberately NOT done; its
+     **DO-NOT-REWIRE guard stays on** (W78 §5 step 6).
 
 5. **NEXT SESSION STARTS HERE:**
-   1. **The ledger elevation queue** (bead `aism-3fjg`) — serial, design
-      §D-order, per-row node budgets in the design §2 "projected af"
-      column. **Split by the status cap:** rows 6, D2, 7, D3, 8–13 do NOT
-      import `lem-thmainext-conditional` and are **elevatable now**; rows
-      1–5 and 14 DO import it and cannot reach `af: validated` until it is
-      T0 (linker status propagation), so they wait on `aism-g83q`.
+   1. **The ledger elevation queue** — bead `aism-3fjg`. 16 rows, serial, in
+      the design's §D order; per-row node budgets in
+      `DESIGN-LEDGER-DOMAINS-v2.md` §2 ("projected af" column: 8/3, 4/2, 3/2,
+      4/2, 6/3, 5/3, 5/3 D2, 4/2, 7/3 D3, 11/3, 5/3, 4/2, 4/2, 3/2, 4/2, 5/2).
+      **The v45 status cap is GONE** — rows 1–5 and 14 import
+      `lem-thmainext-conditional`, which is now T0, so the WHOLE queue is
+      elevatable.
    2. **The F0-assembly landing** — `DESIGN-F0-ASSEMBLY.md` (audit **LAND**,
       four corrections, W78-ratified D4) is still untranscribed:
-      `lem-routef-f0-assembly` and the **strengthened `lem-routef-k-ledger`
-      replacement contract**. Note this REPLACES a landed contract and
-      releases the DO-NOT-REWIRE guard — W78 §5 step 6 sequences it here,
-      and it needs its own fresh prover + fresh hostile verifier.
-   3. `aism-g83q` — the thmainext A-vs-B decision, whenever you want it.
-   4. `aism-9kmt` report sync (P2, LARGE — unanchored banks ~120–177, plus
-      the 16 new ledger ids now whitelisted in `report/UNWIRED.md`).
+      `lem-routef-f0-assembly` + the **strengthened `lem-routef-k-ledger`
+      replacement contract**. This REPLACES a landed contract and releases the
+      DO-NOT-REWIRE guard (W78 §5 step 6); needs its own fresh prover + fresh
+      hostile verifier.
+   3. Then the **root rewire LAST** — unchanged from v41–v46.
+   4. `aism-9kmt` report sync (P2, LARGE — unanchored banks ~120–177, plus the
+      16 ledger ids and `lem-thmainext-conditional`, all whitelisted in
+      `report/UNWIRED.md`).
 
 6. **Worked patterns (BINDING; follow verbatim):**
-   - **Pre-launch checks:** workspace root string == the RATIFIED design
-     contract text (not merely == the shard); def_added names UNIQUE in
-     the ledger (`af def-add` does NOT reject duplicates — it assigns fresh
-     ids and pollutes the seed; wipe + re-seed if polluted).
-   - **Provision the PROOF's vocabulary, not the contract's** (M19-S3 and
-     M28, demonstrated twice; the thmainext design also omitted base
-     `def-epsilon-cstar-algebra`): add the per-node import lists from the
-     design skeleton at seeding time. Reuse the byte-verbatim
-     `GT-kitaev-def-delta-homomorphism` registration from
-     `proofs/lem-maincb-extended-inclusion-monotone/externals/` wherever
-     δ-homomorphism arithmetic appears.
-   - Elevation guidance that produced 8 first-pass banks: constant-choice /
+   - **Pre-launch checks (all four, every launch):** af root node 1 == the
+     shard contract under the linker's normalisation **AND** byte-present in
+     the RATIFIED design (root == ratified text, not merely == shard);
+     registered def names UNIQUE in the ledger (`af def-add` does NOT reject
+     duplicates — it assigns fresh ids and pollutes the seed); externals carry
+     the literal `proofs/<dep-id>` path.
+   - **Provision the PROOF's vocabulary at SEEDING time, not the contract's**
+     (M19-S3, M28, and again thmainext v1 which omitted base
+     `def-epsilon-cstar-algebra`). Take the per-node import lists from the
+     design skeleton. The prover prompt skips already-registered names, so
+     pre-provisioning also dodges the duplicate-pollution gotcha.
+   - **Registered-but-uncited externals are safe** (verified against the
+     scripts: `check-refs` has no citation/use test; `argument.py` never reads
+     the workspace external set; `af-orchestrate` directs registration of every
+     dep but citation only where used) — **but operationally visible**: they
+     tempt tree reinflation. Register all deps, cite only what is used, and
+     **prune a revived branch rather than raise the cap**.
+   - **Design rounds:** commission with an explicit brief; ALWAYS follow with a
+     SEPARATE fresh hostile audit told that finding a gap is a BIG SUCCESS.
+     Arm it with a **deletion test** for decorative dep branches (that caught
+     the thmainext method clause) and, when a design comes back *small*, aim it
+     at **under**-specification instead.
+   - **Landings the orchestrator transcribes** get their own fresh independent
+     transcription audit (Rule 3 / L5). Retain the generating script and apply
+     corrections to it too, so a re-run reproduces the corrected state.
+   - Elevation guidance that produced 9 first-pass banks: constant-choice /
      binder FIRST child; one fixed W threaded (same-map law); NO
-     pending-sibling citations; explicit typing citations at point of use;
-     NO reset provider unless the row genuinely resets.
-   - **Design rounds:** commission with an explicit brief; ALWAYS follow
-     with a SEPARATE fresh hostile audit told that finding a gap is a BIG
-     SUCCESS. The orchestrator judges neither. Give the auditor a
-     deletion test for decorative dep branches — that is what caught the
-     thmainext method clause.
-   - **Landings the orchestrator transcribes** get a fresh independent
-     transcription audit (reviewer ≠ author, Rule 3 / L5). Retain the
-     generating script and apply corrections to it too, so a re-run
-     reproduces the corrected state.
+     pending-sibling citations; explicit typing citations at point of use; NO
+     reset provider unless the row genuinely resets.
    - Launch: worktree per run (`git worktree add --detach
-     .claude/worktrees/af-<row> HEAD`), orchestrator from INSIDE the
-     worktree, ONE backgrounded call, tier routine, workers 4, node-cap =
-     the row's (amended) hard cap.
-   - Balloon/stuck: read the orchestrator's classification; missing
-     vocabulary ⇒ provision + clean re-seed; transparent repair growth ⇒
-     scoped cap amendment (flag it; ceiling 26); "converging, hit
-     max-rounds" ⇒ resume `--phase verify` on the SAME tree (no rebuild);
-     contract-level finding ⇒ STOP, escalate.
-   - Bank: serial in main (rsync back → export → oracle → `fr verify`
-     export.md → flip → regenerate → check-all → fr log → commit → push).
-     **`fr log banked` REQUIRES an oracle-verified artifact** — it
-     correctly refused a registry landing this session; landings and
-     design/audit harvests log as `progress`.
+     .claude/worktrees/af-<row> HEAD`), orchestrator from INSIDE the worktree,
+     ONE backgrounded call, tier routine, workers 4, node-cap = the row's
+     (amended) hard cap. Remove the worktree after banking.
+   - Balloon/stuck: read the orchestrator's classification; missing vocabulary
+     ⇒ provision + clean re-seed; transparent repair growth ⇒ scoped cap
+     amendment (flag it; ceiling 26); "converging, hit max-rounds" ⇒ resume
+     `--phase verify` on the SAME tree; contract-level finding ⇒ STOP, escalate.
+   - Bank: rsync back → export → register oracle → `fr verify` export.md →
+     mechanical flip → regenerate (argument INDEX/DAG + report defs/dag/stats)
+     → check-all → `fr log banked` → commit → push → remove worktree.
+     **`fr log banked` REQUIRES an oracle-verified artifact** — it correctly
+     refused a registry landing this session; landings and design/audit
+     harvests log as `progress`.
+   - **A newly validated row STAYS in `report/UNWIRED.md`** until the paper
+     track anchors it; removing the line fails `check-provenance` (tested).
 
-7. **A NEW CLASS OF OBSTRUCTION is now on the map (sketch v45 §2).**
-   A **contract that asserts its own provenance**. The thmainext method
-   clause names hostile-verified packets and reads like a W74F
-   transcription artifact, but once frozen into a `contract:` the linker's
-   contract-match law makes it a proof obligation like any other —
-   invisible until an elevation is attempted. **Worth a sweep of the
-   remaining un-elevated rows before their design rounds are
-   commissioned.**
+7. **The obstruction class, and its worked remedy (sketch v45 §2, v46 §4).**
+   *A contract that asserts its own provenance* — invisible until an elevation
+   is attempted, because the linker's contract-match law turns the annotation
+   into a proof obligation. **Remedy, now demonstrated end to end:** check
+   whether any consumer depends on the narrative clause; if none does, re-scope
+   it to `provenance:` and let the `deps:` edges carry it. **A sweep of the
+   remaining un-elevated rows for this pattern is still recommended**, and now
+   has a cheap disposition for whatever it finds.
 
-8. **Open beads:** `aism-g83q` (P1, the thmainext A-vs-B decision;
-   `aism-ixtc` is blocked on it), `aism-3fjg` (P1, ledger elevation queue),
-   `aism-wazy` (P1, duplicate-contract tripwire suggestion), `aism-9kmt`
-   (P2, report sync), `aism-xjnc` (P3, `docs/plans/CHANGELOG.md` stale
-   since v31 — decide backfill vs explicit retirement). Carried P1 items
-   unchanged (typeset flags, polar-retraction REFACTOR warning, dormant
-   signed-trunk defs, lit-DB).
+8. **Open beads:** `aism-3fjg` (P1, ledger elevation queue), `aism-wazy` (P1,
+   duplicate-contract tripwire), `aism-9kmt` (P2, report sync), `aism-xjnc`
+   (P3, `docs/plans/CHANGELOG.md` stale since v31 — backfill or retire).
+   Carried P1 items unchanged (typeset flags, polar-retraction REFACTOR
+   warning, dormant signed-trunk defs, lit-DB). `aism-g83q` and `aism-ixtc`
+   CLOSED this session.
 
 9. **Orchestration laws (BINDING):** parallel worktree orchestrations ≤5
-   concurrent, serial banking; no design/audit codex while ANY af run is
-   live; fr/bd writes FIRST, commit, launch LAST; codex = `gpt-5.6-sol`,
-   xhigh cap (designs/audits xhigh or high; elevations tier routine). A
-   verifier finding needing a CONTRACT/DEF change returns to design/user.
+   concurrent, serial banking; no design/audit codex while ANY af run is live;
+   fr/bd writes FIRST, commit, launch LAST; codex = `gpt-5.6-sol`, xhigh cap
+   (designs/audits xhigh or high; elevations tier routine). A verifier finding
+   needing a CONTRACT/DEF change returns to design/user.
 
 10. Gate: `sh scripts/check-all.sh` → `[check-all] OK` (verified at close).
     All work committed AND pushed. **NOTHING is in flight.**
 
 ## Next steps (ranked)
 
-1. The ledger elevation queue, thmainext-free subtree first (rows 6, D2, 7,
-   D3, 8–13) — `aism-3fjg`.
-2. The F0-assembly landing + the strengthened `lem-routef-k-ledger`
-   replacement (W78 §5 step 6; releases the DO-NOT-REWIRE guard).
-3. `aism-g83q` — the thmainext A-vs-B decision, then its redesign.
+1. The ledger elevation queue, 16 rows, serial — `aism-3fjg`. No status cap
+   remains.
+2. The F0-assembly landing + the strengthened `lem-routef-k-ledger` replacement
+   (W78 §5 step 6; releases the DO-NOT-REWIRE guard).
+3. The root rewire — LAST.
 4. `aism-9kmt` report sync (P2, large).
-5. The `aism-wazy` tripwire: a linker check that no two registry rows share
-   a byte-identical contract.
+5. The provenance-clause sweep of remaining un-elevated rows (§7).
+6. The `aism-wazy` tripwire: a linker check that no two registry rows share a
+   byte-identical contract.
 
 ## What is intentionally NOT here
 
-- Any claim `op-classical` is proved — OPEN. **T0 = 168, unchanged this
-  session.** The 16 landed ledger rows are `stated`: transcriptions, not
-  proofs. The MAIN subtree being complete is a STRUCTURAL milestone inside
-  Route F, not the theorem.
-- Any rigour claim for the ledger landing. It was verified as a faithful
-  *transcription* by an independent agent — that is a provenance fact, not
-  a mathematical one.
-- Any resolution of the thmainext method-clause blocker: options A and B
-  are both open and both need user ratification.
+- Any claim `op-classical` is proved — **OPEN**. T0 = 169.
+- Any claim that T0 168 → 169 was new mathematics. It was not: the row is a
+  validated *interface projection* over `lem-maincb-structural-assembly`, and
+  it was reachable only because the user ratified re-scoping the contract's
+  method clause out.
+- Any rigour claim for the 16 landed ledger rows: they are `stated`
+  transcriptions, verified as faithful *transcriptions* by an independent
+  agent — a provenance fact, not a mathematical one.
 - The `lem-routef-k-ledger` parent rewire (guard still on).
-- The report anchoring of banks ~120–177 and the 16 new ledger ids
-  (carried as `aism-9kmt`).
+- The report anchoring of banks ~120–177, the 16 ledger ids, and
+  `lem-thmainext-conditional` (carried as `aism-9kmt`).
 - Route X / XE decider work (fallback only); signed trunk PAUSED.

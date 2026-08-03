@@ -2326,3 +2326,66 @@ in the registry with an independent transcription verdict behind it.
 
 Beads: `aism-ixtc` (blocked on `aism-g83q`), `aism-g83q`, `aism-3fjg` (ledger
 elevation queue), `aism-xjnc` opened. Waves W133–W134 on arm FH.
+
+### Session 42 addendum (same day): the method-clause re-scope and the thmainext bank (T0 168 → 169)
+
+**The user's read was right.** Asked whether the thmainext blocker was "just some
+contract nonsense" with a common-sense fix. Read-only checks established that it
+was, precisely: (1) all 17 consumers take exactly one thing from the row — it is a
+"black-box producer of `C_E, epsilon_E`" — and **not one** consumes the method
+clause; (2) the frozen contract text appeared nowhere live outside its own shard;
+(3) the workspace was still empty, so no `af` root needed re-matching; (4) the
+report cites the row by *status* only; (5) the shard body already carried the
+MAIN-CB-assembly, squared-correction and conditional-ledger content the clause
+duplicated.
+
+**The decisive argument, and the transferable lesson:** the `deps:` line *is* the
+"uses" statement, in the mechanism this repo actually enforces. The linker checks
+dependency edges every gate run; nothing checks prose inside a contract string.
+So option B does not weaken the corrected-COL-HILB guarantee — it moves it to the
+enforced mechanism. Recommended B with exact replacement text; **user ratified**.
+
+**Landed** (`7b044403`): one clause deleted, mathematical content byte-unchanged,
+status untouched. The seven deps were **deliberately NOT reduced** to M28 alone —
+that would have discarded the very enforcement the argument relied on — and both
+the shard body and provenance forbid a later reader "simplifying" them.
+
+**Then the full pipeline, in one pass:** design v2 (fresh codex, routine tier) →
+three-node tree, honestly self-described as "a near-trivial existential
+repackaging", explicitly refusing to invent nodes for the six unused deps →
+SEPARATE fresh hostile audit, briefed at the **inverse** failure mode (v1 was
+rejected for padding, so attack under-specification) → **DESIGN-CONFIRMED, zero
+substantive and zero editorial findings**. It verified the
+registered-but-uncited-externals claim against `check-refs.py` / `argument.py` /
+`af-orchestrate.py` rather than taking it on trust, and answered the structural
+question outright: the row is **mathematically redundant** relative to M28 but a
+meaningful **interface**.
+
+**Seeded** with the PROOF's vocabulary (6 defs, incl. base
+`def-epsilon-cstar-algebra` — v1's real omission) and all seven deps as externals;
+all four pre-launch laws verified. **Elevation: 4 nodes, root validated, taint
+clean, FIRST PASS, zero challenges.** One verifier correctly *blocked* node 1.3
+while its children were pending and accepted only after they validated — the
+bottom-up law enforcing itself. No reinflation: the six uncited historical
+externals stayed uncited, which was the auditor's flagged operational risk.
+Oracle registered, `fr verify` PASS, mechanical flip, banked (`f157e032`).
+
+**Honest scope, stated in the shard, the sketch and the commit:** this proves **no
+mathematics absent from `lem-maincb-structural-assembly`**. Value = validated
+interface projection + DAG decoupling; the Route-F chain above MAIN now rests on a
+T0 carrier and the linker's blocked count fell 117 → 115. It was reachable only
+because the contract was re-scoped. `op-classical` remains **OPEN**.
+
+**Side effect worth having:** the v45 status cap on the ledger queue is gone. Rows
+1–5 and 14 import thmainext; with it T0, the whole 16-row queue is elevatable.
+
+**Process note.** Removing the newly-validated row from `report/UNWIRED.md`
+correctly FAILED `check-provenance` and was reverted — a validated-but-unanchored
+id must stay whitelisted until the paper track anchors it. Recorded as a worked
+pattern.
+
+**Session totals.** Six distinct fresh agents (two designers, three hostile
+auditors, one prover cohort with separate per-node verifiers); zero self-judged
+steps. The most valuable artifact was the *rejection*: without it the campaign
+would have spent substantial effort proving a claim about a proof. Sketch **v46**
+folded in; T0 169; registry 364.
