@@ -2243,3 +2243,86 @@ auditor, fresh provers/verifiers per node; zero self-judged steps).
 - Waves W125–W132 on arm FH: 2 design waves, 2 hostile audits, 3
   elevations (one two-run), 4 T0 banks, 1 balloon classified and cured
   in-session. Commits a5efba9e…a3d62afd, all pushed.
+
+## 2026-08-03 — session 42: the thmainext method-clause blocker LOCATED; the LEDGER-DOMAINS front LANDED (T0 168 unchanged; registry 348 → 364)
+
+**Arc.** Two decoupled rounds on arm FH, both closing with an artifact that an
+independent fresh agent — never the orchestrator — adjudicated.
+
+**Round 1 — thmainext elevation: DESIGN-REJECTED (W133).** `lem-thmainext-conditional`
+presented as elevation-ready (7 deps + 120 ancestors T0; workspace an unseeded
+scaffold). Commissioned a fresh-codex design round (`BRIEF-THMAINEXT-ELEVATION.md`,
+xhigh) for the proof skeleton + workspace vocabulary — a design round rather than a
+direct seed, because the M19-S3/M28 lesson (a `defs:` list sized to the CONTRACT is
+not sized to the PROOF; M28 run 1 ballooned 20 > cap 13 with the root never
+challenged) makes the seed only as good as the skeleton it is driven from.
+Designer returned a 9-node tree, cap 14, 17 defs, 7 externals, no GT external, and
+named its own weakest point. Orchestrator pre-checks were mechanical only (17 def
+shards exist; all 8 quoted contracts byte-match the registry) and were handed to the
+auditor as provenance, explicitly not correctness, facts.
+
+A SEPARATE fresh hostile audit returned **DESIGN-REJECTED**:
+- **Q-A settled affirmatively** — no hidden eighth premise. M28 as one validated
+  external DOES close the ledger-datum existential; a search of every
+  `proofs/*/externals/*.json` carrying `"Fix ... W supplied by ..."` found no
+  contrary precedent. `lem-maincb-reset-constant-ledger` stays off the deps line and
+  the ratified `C_E`/`epsilon_E` choice stands.
+- **The blocker** — the frozen contract's clause "the assembly USES the corrected
+  squared COL-HILB estimate and the hostile-verified H-CB, EXT-CB, and Stage-1 reset
+  packets" is NOT dischargeable from the seven frozen T0 deps. M28 exports no trace
+  of its own construction, and no frozen contract supplies `W.epsilon_MAIN <= e_H`
+  or `<= e_ext`; so every packet branch proves only a conditional interface and all
+  six fail the semantic deletion test. Secondary: the M03 branch never identifies its
+  output with M19-R's `v_R`. Mechanical: the seed omitted base
+  `def-epsilon-cstar-algebra`.
+- Attacks 4/6/7/10 passed — notably attack 7, whose pass **forecloses the illicit
+  repair** of hiding the missing threshold compatibility inside a smaller `epsilon_E`.
+
+Escalated per the orchestration law (a finding needing a CONTRACT/DEPS change is not
+an orchestrator decision): bead `aism-g83q` with options (A) packet-trace bridge +
+frozen-deps amendment, (B) re-scope the contract's method clause as documentary
+provenance, (C) park. **User chose (C)**; A-vs-B remains open. Sketch **v45** folded
+in the delta and named a NEW CLASS OF OBSTRUCTION — *a contract that asserts its own
+provenance*, invisible until an elevation is attempted, and worth a sweep of the
+remaining un-elevated rows.
+
+**Round 2 — LEDGER-DOMAINS front LANDED: 16 rows, registry 348 → 364.** The LAND-14
+package had been hostile-audited (`AUDIT-LEDGER-DOMAINS-v2.md`) and W78-ratified
+since 2026-07-27 but never transcribed. Landed by retained script
+(`scripts/land-ledger-domains-rows.py`), contracts flattened LaTeX → registry ASCII
+per the `a7ab84c7` MAIN-landing precedent: 14 reserved rows + the D2/D3
+reconnections (dep lists from design §6.1). Both audit corrections folded in
+verbatim — `rho_id^corr := min{rho_theta, rho_AI, epsilon_E/C_A}` (the `rho_theta`
+entry exposes the `eta < 1/4` domain of `lem-kitaev-almost-idemp-audit`) and the
+unit-defect wording. All 16 rows `status: stated` / `af: none`.
+
+Because the orchestrator authored this transcription, a fresh independent
+transcription auditor was commissioned (reviewer ≠ author, Rule 3 / L5). Verdict
+**TRANSCRIPTION-CONFIRMED-WITH-CORRECTIONS, ZERO substantive findings**: no symbol
+drift across the 16 contracts, defs/deps matching in membership AND order,
+correction 1 scoped to row 3 only with `rho_id` correctly left symbolic downstream,
+bodies inventing nothing. Its 8 prescribed fixes were editorial provenance-locus
+typos **inherited from the ratified design's own §2 table**; applied verbatim to
+both the shards and the generating script, leaving the ratified design unedited as
+the historical source. The `lem-routef-k-ledger` parent rewire was deliberately not
+done; the DO-NOT-REWIRE guard stays on.
+
+**Process notes.**
+- `fr log banked` was attempted for the verified landing and the **bank gate
+  correctly refused it** (banking requires a passing `fr verify` oracle verdict). Not
+  worked around — re-logged as `progress` and the refusal recorded in the commit. The
+  anti-gaming design working as designed.
+- Three distinct fresh agents this session (designer, hostile auditor, transcription
+  auditor); the orchestrator judged none of their artifacts.
+- Filed `aism-xjnc` (P3): `docs/plans/CHANGELOG.md` has been stale since v31 —
+  fourteen sketch versions unlogged. Deliberately NOT restarted partially, since a
+  lone v45 entry after a 14-version gap would misrepresent the record.
+
+**Honest status line.** **T0 = 168, unchanged — no mathematics was proved this
+session.** The 16 landed rows are `stated`: transcriptions, not proofs. What moved
+is the map: one blocker precisely located and escalated, one ratified design finally
+in the registry with an independent transcription verdict behind it.
+`op-classical` remains **OPEN**.
+
+Beads: `aism-ixtc` (blocked on `aism-g83q`), `aism-g83q`, `aism-3fjg` (ledger
+elevation queue), `aism-xjnc` opened. Waves W133–W134 on arm FH.
