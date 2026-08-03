@@ -332,4 +332,22 @@ lem-stage1-quotient-manifold-package
 lem-stage1-quotient-finite-cw
 lem-stage1-quotient-left-inversion
 lem-stage1-quotient-inversion-index-data
+# 2026-08-03: the LAND-14 ledger-domains package (14 reserved rows + D2/D3 reconnections)
+# landed as stated/af: none; whitelist until the af elevation queue validates them.
+lem-routef-raw-factor-norms
+lem-routef-raw-factor-units
+lem-routef-raw-factor-identities
+lem-routef-raw-product-estimate
+lem-routef-delta-prime-closeness
+lem-routef-delta-normalization-closeness
+lem-routef-degree-two-estimate
+lem-routef-delta-phi-product
+lem-routef-degree-three-estimate
+lem-routef-upsilon-prime-closeness
+lem-routef-upsilon-normalization-closeness
+lem-routef-delta-upsilon-telescope
+lem-routef-multiplicative-telescope
+lem-routef-upsilon-delta-telescope
+lem-routef-k-finiteness
+lem-routef-threshold-minimum
 ```
