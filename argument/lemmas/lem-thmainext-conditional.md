@@ -4,15 +4,28 @@ kind: lemma
 contract: Extended th_main_ext assembly: there are universal C_E < infinity and epsilon_E > 0 such that every finite-dimensional extended epsilon-C*-algebra A, for 0 <= epsilon <= epsilon_E, is carried by one extended C_E*epsilon-isomorphism v:B->A from a finite-dimensional C*-algebra, with constants independent of dimension, amplification level, and block data.
 defs: def-extended-epsilon-cstar-algebra; def-fd-cstar-diagonal
 deps: conj-hcb; conj-extcb; lem-hcb-column-hilbert-squared; lem-maincb-error-improvement; lem-maincb-reset-invariant-preservation; lem-maincb-structural-assembly; lem-extcb-four-corner-merge
-status: proved-mod-audit
-af: seeded
+status: proved
+af: validated
 provenance: docs/plans/2026-07-23-W74F-artifacts/DECOMP-W74F-C-THMAINEXT.md §§3-5 (assembly + corrected COL-HILB); PROOF-W74F-H-STAGE1.md (Stage-1 reset packet); hostile verdicts VERDICT-W74F-BATCH.md §C, VERDICT-W74F-E-HCB.md, VERDICT-W74F-F-EXTCB.md, VERDICT-W74F-H-STAGE1.md (contract restatement endorsed verbatim by the H-verdict) Dependency-only amendment prescribed by DESIGN-MAIN-STRUCTURE-v5.md sect-10 step 15, re-validated against the repaired current contracts by DESIGN-THMAINEXT-REWIRE.md, and approved by AUDIT-THMAINEXT-REWIRE.md; contract byte-UNCHANGED, status unchanged at proved-mod-audit, and af unchanged at none. METHOD-CLAUSE RE-SCOPE 2026-08-03 (option B, USER-RATIFIED in-session; bead aism-g83q): the clause "the assembly uses the corrected squared COL-HILB estimate and the hostile-verified H-CB (conj-hcb), EXT-CB (conj-extcb), and Stage-1 reset packets" was REMOVED from the contract and re-scoped as documentary provenance, on the finding of AUDIT-THMAINEXT-ELEVATION.md (DESIGN-REJECTED) that it is a factual claim about how the proof is built, not about A/B/v, and is not dischargeable from the seven frozen T0 deps. The mathematical content -- the existential in C_E, epsilon_E, the map type, and independence of dimension, amplification level and block data -- is byte-unchanged. The deps line is DELIBERATELY LEFT AT ALL SEVEN IDS: those edges are the linker-enforced record of the same "uses" statement (in particular the edge to lem-hcb-column-hilbert-squared, the corrected squared estimate replacing the paper's unsquared display), and are NOT to be transitively reduced to lem-maincb-structural-assembly. Status unchanged at proved-mod-audit, af unchanged at none: this is a re-scope, NOT a promotion.
 owner: A
 workspace: proofs/lem-thmainext-conditional
 ---
 
-**Status.** Hostile-verified paper proof, hence `proved-mod-audit`; not
-`af`-validated and not L0-rigorous.
+**Status.** **af-VALIDATED in-repo (2026-08-03)** — `proved` / `af: validated`, L0-rigorous.
+Four-node tree, root `validated`, taint clean, FIRST PASS with ZERO
+challenges: fresh-codex prover, separate fresh codex verifier per node
+(CLAUDE.md §6). Export in `proofs/lem-thmainext-conditional/export.md`;
+oracle `af-lem-thmainext-conditional` registered and `fr verify` PASS.
+The flip is a MECHANICAL reflection of the codex ledger — no orchestrator
+judgment of the proof was exercised.
+
+**What this does and does not buy (read with the interface note below).**
+The tree is: fix M28's ledger datum `W` and define the two constants
+(1.1); apply M28 to arbitrary `A, epsilon` and substitute (1.2); unfold
+`def-extended-delta-inclusion` for the all-amplification reading and
+universality (1.3). It proves no mathematics absent from
+[[lem-maincb-structural-assembly]]; its value is a validated interface
+projection and DAG decoupling, per `AUDIT-THMAINEXT-ELEVATION-V2.md` §9.
 
 **Contract restatement (2026-07-24).** Originally registered as an
 explicitly conditional assembly ("assuming conj-hcb and conj-extcb");

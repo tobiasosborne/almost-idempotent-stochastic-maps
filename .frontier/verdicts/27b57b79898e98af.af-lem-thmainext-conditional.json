@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-thmainext-conditional/export.md",
+  "oracle": "af-lem-thmainext-conditional",
+  "result": "pass",
+  "claim_hash": "2850f4a3ae2dda334bd5b70ce0cf1f68ccc7859e85e9a449a5b078ea6a8d7f96",
+  "oracle_digest": "1ce2f538c73b9ff36a13cf6e5df50d6bfdc175ebfb4fd1c12a8d829b9cecf087",
+  "inputs_hash": "1ce2125ff21a2e8a4a5ebf3cdb60d8b57604b8f61ec9d9c3c127d09dfa065372",
+  "ts": "2026-08-03T11:38:16.999Z"
+}

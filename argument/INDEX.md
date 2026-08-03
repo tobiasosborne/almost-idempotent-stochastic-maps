@@ -318,7 +318,7 @@
 | `lem-stage1-unitary-graph-control` | lemma | proved | validated | A | Uniform unitary graph control: there are universal C_ch >= 1, kappa_ch in (0, 1/… |
 | `lem-stage1-unitary-graph-transport` | lemma | proved | validated | A | Parameterized unitary-graph transport: there exist C_ch^0 >= 1 and kappa_ch^0 in… |
 | `lem-starvation-completion-obstruction` | lemma | proved | validated | B | Bounded-slab starvation completion obstruction (K-free): for every finite I, eve… |
-| `lem-thmainext-conditional` | lemma | proved-mod-audit | seeded | A | Extended th_main_ext assembly: there are universal C_E < infinity and epsilon_E … |
+| `lem-thmainext-conditional` | lemma | proved | validated | A | Extended th_main_ext assembly: there are universal C_E < infinity and epsilon_E … |
 | `lem-tight-far-geography` | lemma | proved | none | A | Tight-far geography: for an exact signed idempotent P with delta(P) > 0 and none… |
 | `lem-top-concentration` | lemma | proved | validated | A | Top concentration: for an exact signed idempotent P with 0 < delta(P) <= 1/4, no… |
 | `lem-top-deficit-price` | lemma | proved | none | A | Top-deficit price: for an exact signed idempotent P with delta(P) > 0 and nonemp… |
