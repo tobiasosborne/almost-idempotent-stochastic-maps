@@ -10,6 +10,7 @@
 !/refs/manifest/SOURCES.md
 !/refs/manifest/checksums.sha256
 !/refs/manifest/sources.lock.json
+!/refs/manifest/absent-acknowledged.json
 
 # =====================================================================
 # af proof workspaces (proofs/<lemma-id>/): when af is stood up, the ledger

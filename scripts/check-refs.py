@@ -29,6 +29,7 @@ Usage:
   python3 scripts/check-refs.py            # audit; prints per-external verdicts + summary
   python3 scripts/check-refs.py --check    # same; exit non-zero iff any FAIL (the gate mode)
 """
+import hashlib
 import json
 import pathlib
 import re
@@ -36,6 +37,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PROOFS = ROOT / "proofs"
+ACK_FILE = ROOT / "refs" / "manifest" / "absent-acknowledged.json"
 
 MIN_RUN = 40  # a matched contiguous chunk must be at least this long to count as "distinctive"
 
@@ -138,7 +140,7 @@ def classify_and_check(name, src, _cache):
         # absent cannot be byte-verified — so in --check it is a hard FAIL, never a silent skip. A
         # green run must never mean "we couldn't look". (Dep-IMPORTs that carry a proofs/<dep-id>
         # path and no refs locus are handled above as skip_import and are unaffected.)
-        return {"verdict": "fail", "refs_locus": refs_locus,
+        return {"verdict": "fail", "refs_locus": refs_locus, "absent_path": fp,
                 "claimed_quote_snippet": "",
                 "note": f"refs file {fp} ABSENT — a claimed VERBATIM refs quote cannot be byte-verified "
                         f"(fetch the payload into refs/ or remove the quote); L1 forbids an unverifiable pass"}
@@ -156,13 +158,99 @@ def classify_and_check(name, src, _cache):
             "note": "claimed VERBATIM quote NOT found in refs file (word-level mismatch / fabrication)"}
 
 
-def check_refs(proofs_dir=PROOFS):
+MANIFEST_FILE = ROOT / "refs" / "manifest" / "checksums.sha256"
+
+
+def _parse_manifest(manifest_file):
+    """STRICT sha256sum-format parser for checksums.sha256 — a TRUST INPUT for acknowledgments.
+
+    Accepts only `<64-hex>` + two-char separator (`  ` text / ` *` binary) + path lines; a malformed
+    non-blank line or a duplicate path ABORTS (fail-closed — never guess at a trust input). Paths
+    are returned refs/-rooted, stripping exactly one leading './'. Filenames containing spaces are
+    preserved verbatim (the path is everything after the separator, never a whitespace split)."""
+    pinned = {}
+    if not manifest_file.is_file():
+        return pinned
+    for i, line in enumerate(manifest_file.read_text(encoding="utf-8").splitlines(), 1):
+        if not line.strip():
+            continue
+        m = re.match(r'^([0-9a-f]{64})( \*|  )(.+)$', line)
+        if not m:
+            raise ValueError(f"checksums.sha256:{i}: malformed line {line!r} — "
+                             f"refuse to load acknowledgments")
+        sha, path = m.group(1), m.group(3)
+        if path.startswith("./"):
+            path = path[2:]
+        key = "refs/" + path
+        if key in pinned:
+            raise ValueError(f"checksums.sha256:{i}: duplicate path {key!r} — refuse to load")
+        pinned[key] = sha
+    return pinned
+
+
+def load_absent_acks(ack_file=ACK_FILE, manifest_file=MANIFEST_FILE):
+    """Load refs/manifest/absent-acknowledged.json — the deliberately NARROW device-provisioning
+    escape hatch over the aism-dbq un-vacuum rule (absent payload => hard FAIL).
+
+    Returns {(refs_path, workspace, external_name): ack} covering ONLY entries whose payload is
+    still absent, where each ack digest-binds ONE external: its JSON filename ('file') and the
+    sha256 of its exact 'source' string ('source_sha256'). The caller must enforce both, so an
+    altered quote, a renamed external, or a new file impersonating a listed name still hard-FAILs —
+    an acknowledgment can never launder a NEW or MODIFIED quote.
+
+    Load-time validation (fail-closed, ANY violation raises and kills the gate; ALL of it runs
+    before the staleness check, so a malformed entry can never hide behind a present payload):
+      - entry path must be canonical under refs/: segments 'refs/<seg>/...', no '', '.', '..'
+        segments (rejects '//', '/./', traversal, trailing '/'), and its RESOLVED location (symlinks
+        followed) must lie physically beneath refs/;
+      - entry path must be PINNED in checksums.sha256 with EXACTLY the entry's sha256 — an
+        acknowledgment can only ever cover a payload this repo committed to byte-for-byte;
+      - every external must carry workspace/name/file/source_sha256.
+    An entry whose payload is PRESENT is stale (verification has resumed): warn to remove it.
+    """
+    acks = {}
+    if not ack_file.is_file():
+        return acks
+    pinned = _parse_manifest(manifest_file)
+    refs_root = (ROOT / "refs").resolve()
+    data = json.loads(ack_file.read_text(encoding="utf-8"))
+    for e in data.get("entries", []):
+        p = e["path"]
+        segs = p.split("/")
+        if segs[0] != "refs" or len(segs) < 2 or any(s in ("", ".", "..") for s in segs[1:]):
+            raise ValueError(f"absent-acknowledged: non-canonical path {p!r} — refuse to load")
+        rp = (ROOT / p).resolve()
+        if refs_root != rp and refs_root not in rp.parents:
+            raise ValueError(f"absent-acknowledged: {p!r} resolves outside refs/ "
+                             f"({rp}) — refuse to load")
+        if pinned.get(p) != e["sha256"]:
+            raise ValueError(f"absent-acknowledged: {p!r} sha256 is not pinned in "
+                             f"checksums.sha256 with the acknowledged hash — refuse to load")
+        exts = e.get("externals", [])
+        for ex in exts:
+            if not all(k in ex for k in ("workspace", "name", "file", "source_sha256")):
+                raise ValueError(f"absent-acknowledged: external {ex!r} lacks the digest binding "
+                                 f"(workspace/name/file/source_sha256) — refuse to load")
+        if (ROOT / p).is_file():
+            print(f"check-refs: (warn) acknowledged-absent entry STALE — payload PRESENT again: "
+                  f"{p}; byte-verification has resumed; REMOVE the entry "
+                  f"(bead {e.get('restore_bead', '?')})")
+            continue
+        for ex in exts:
+            acks[(p, ex["workspace"], ex["name"])] = {"file": ex["file"],
+                                                      "source_sha256": ex["source_sha256"],
+                                                      "restore_bead": e.get("restore_bead", "?")}
+    return acks
+
+
+def check_refs(proofs_dir=PROOFS, ack_file=ACK_FILE, manifest_file=MANIFEST_FILE):
     """Walk every proofs/<ws>/externals/*.json. Return (rows, fail_count, skip_count).
 
     rows: list of {workspace, external, refs_locus, verdict, claimed_quote_snippet, note}.
     """
     rows = []
     cache = {}
+    acks = load_absent_acks(ack_file, manifest_file)
     if not proofs_dir.is_dir():
         return rows, 0, 0
     for ws_dir in sorted(p for p in proofs_dir.iterdir() if p.is_dir()):
@@ -181,6 +269,20 @@ def check_refs(proofs_dir=PROOFS):
             src = d.get("source", "") or ""
             res = classify_and_check(name, src, cache)
             res.update({"workspace": ws_dir.name, "external": name})
+            if res["verdict"] == "fail" and res.get("absent_path"):
+                ack = acks.get((res["absent_path"], ws_dir.name, name))
+                # The rescue is DIGEST-BOUND: the external's JSON filename AND the sha256 of its
+                # exact source string must match the acknowledgment. An altered quote, a renamed
+                # external, or a new file reusing a listed name falls through and stays a hard FAIL.
+                if ack and ack["file"] == f.name and \
+                        ack["source_sha256"] == hashlib.sha256(src.encode("utf-8")).hexdigest():
+                    res["verdict"] = "skip_absent_ack"
+                    res["note"] = (f"payload {res['absent_path']} ABSENT but ACKNOWLEDGED "
+                                   f"(repository-tracked policy, activated by local payload "
+                                   f"absence: refs/manifest/absent-acknowledged.json; restore "
+                                   f"bead {ack['restore_bead']}) — this exact external (filename + "
+                                   f"source digest bound) was byte-verified before the payload went "
+                                   f"absent; verification resumes automatically on restore")
             rows.append(res)
     fail_count = sum(1 for r in rows if r["verdict"] == "fail")
     skip_count = sum(1 for r in rows if r["verdict"].startswith("skip"))
@@ -191,7 +293,7 @@ def main(argv):
     check_mode = "--check" in argv
     rows, fail_count, skip_count = check_refs()
     symbol = {"pass": "PASS ", "fail": "FAIL ",
-              "skip_import": "skip ", "skip_noquote": "WARN "}
+              "skip_import": "skip ", "skip_noquote": "WARN ", "skip_absent_ack": "ACK! "}
     for r in rows:
         line = (f"[{symbol.get(r['verdict'], '?????')}] {r['workspace']:38s} "
                 f"{r['external']:24s} {r['verdict']:12s} {r['refs_locus'] or '-'}")
@@ -200,10 +302,14 @@ def main(argv):
             print(f"           ! {r['note']}")
             if r["claimed_quote_snippet"]:
                 print(f"           ! claimed: {r['claimed_quote_snippet']!r}")
-        elif r["verdict"] == "skip_noquote":
+        elif r["verdict"] in ("skip_noquote", "skip_absent_ack"):
             print(f"           (warn) {r['note']}")
     total = len(rows)
-    print(f"\ncheck-refs: {total} externals, {fail_count} failed, {skip_count} skipped")
+    ack_count = sum(1 for r in rows if r["verdict"] == "skip_absent_ack")
+    ack_note = (f" (of which {ack_count} ACKNOWLEDGED-ABSENT — repository-tracked policy, "
+                f"activated by local payload absence; see refs/manifest/absent-acknowledged.json)"
+                if ack_count else "")
+    print(f"\ncheck-refs: {total} externals, {fail_count} failed, {skip_count} skipped{ack_note}")
     if check_mode and fail_count:
         print("check-refs: FAILED — fabricated/mismatched verbatim quote(s) above.")
         return 1

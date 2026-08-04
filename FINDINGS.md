@@ -955,3 +955,28 @@ imports a future agent might reach for — read before importing ANY external to
   validations of that run were discarded with the workspace (ledger in git history). Lesson: a
   verifier pass does not audit external CONTENT against `refs/`; only the orchestrator-side
   locus check above does.
+
+## 2026-08-04 — acknowledged-absent refs payloads (new-device provisioning) + a check-refs laundering vector
+
+- **Context.** New device provisioned from git: gitignored `refs/` payloads did not travel. 10 of 12
+  missing files were restored hash-verified (refs-staging promotions; TIB-VPN Springer re-downloads
+  byte-identical to the pinned shas; `pdftotext -layout` extractions reproduced byte-identically
+  under poppler 24.02.0). The Munkres scan (`.pdf` + OCR `.txt`) exists ONLY on the old device
+  (restore bead `aism-l4uw`); its absence hard-failed 4 externals of the af-validated
+  `lem-topology-finite-triangulation` and thereby blocked EVERY commit (pre-commit runs check-all).
+- **Mechanism (user-directed "proceed without the missing refs").**
+  `refs/manifest/absent-acknowledged.json` — a repository-tracked policy, activated by local payload
+  absence: it downgrades the aism-dbq absent⇒FAIL to a loud `ACK!` WARN for EXACTLY the externals
+  listed, each digest-bound (workspace + name + external JSON filename + sha256 of the exact
+  `source` string), with entries validated fail-closed against `checksums.sha256` (strict sha256sum
+  parse; canonical segments; symlink-confined under `refs/`). An altered quote, renamed external,
+  impersonating file, or unpinned path still hard-FAILs. Entries go stale (ignored + warned) the
+  moment the payload is present; byte-verification resumes automatically. Remove the entry on
+  restore. 3 rounds of fresh-codex hostile review (REJECT → REJECT → ACCEPT-WITH-CORRECTIONS, all
+  corrections applied): `docs/plans/2026-08-04-absent-acknowledged-gate/`.
+- **Pre-existing vector found by review round 2 (NOT fixed here, tracked `aism-ccso`, P1).**
+  `_REFS_RE` in `check-refs.py` matches lowercase `refs/` ASCII paths only: an external citing
+  `Refs/...` or a unicode-lookalike path with a quoted "VERBATIM" string degrades to
+  `skip_noquote` (WARN, non-failing) — a quote can claim refs-like provenance without ever being
+  byte-checked. Related: payload symlink components are not confined for QUOTE checking (only
+  acknowledgment entries are resolve-confined).
