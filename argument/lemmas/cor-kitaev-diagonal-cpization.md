@@ -31,3 +31,10 @@ CP cone is used.
 **Scope.** The diagonal belongs to the exact finite-dimensional algebra
 \(\mathcal B\), never to the approximate algebra.  This local corollary
 does not close the separate amplified structure-theorem gaps.
+
+**Typing scope (AUDIT-KITAEV-PAIR-ELEVATION.md finding 5, user-ratified
+2026-08-05).** Without changing the frozen contract: throughout the af tree,
+the displayed formula is interpreted with `Phi:B(H)->B(H)` UCP — the products
+fed to `Phi` lie in `B(H)` and the codomain of `Delta'` is `B(H)`, so the
+displayed formula forces this type. Any proof using a differently typed map
+is invalid.
