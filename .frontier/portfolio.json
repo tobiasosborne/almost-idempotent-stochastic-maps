@@ -1611,6 +1611,30 @@
     ]
    },
    {
+    "name": "af-lem-routef-raw-factor-identities",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-routef-raw-factor-identities"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-raw-factor-identities/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-raw-factor-identities.md"
+    ]
+   },
+   {
+    "name": "af-lem-routef-raw-factor-norms",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-routef-raw-factor-norms"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-raw-factor-norms/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-raw-factor-norms.md"
+    ]
+   },
+   {
     "name": "af-lem-thmainext-conditional",
     "cmd": [
      "python3",

@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-raw-factor-identities/export.md",
+  "oracle": "af-lem-routef-raw-factor-identities",
+  "result": "pass",
+  "claim_hash": "87abaf6738e1cda9bba524a3e83a81f3c733da374b583411586515e42ebb1195",
+  "oracle_digest": "26b58b35813f8840099f3b02d0c9a8cc6d441bed6def0dbbc64b3e0badc05fd7",
+  "inputs_hash": "0efd1d7ae828a5475873de1eb01dfdb02aaf8a11cc72f56c2ae8f3343ee1b23d",
+  "ts": "2026-08-05T12:24:29.048Z"
+}

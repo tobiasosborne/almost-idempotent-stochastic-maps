@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-raw-factor-norms/export.md",
+  "oracle": "af-lem-routef-raw-factor-norms",
+  "result": "pass",
+  "claim_hash": "a2b1b88a96021b6534d63d0bdb4435ae92daaa95e7246acf5460d18902f464e3",
+  "oracle_digest": "934b03e026a7b1b071336ba38c9c163313d6d97a8e38a80f952256b4d1a79535",
+  "inputs_hash": "a37e3f681bf9f397a23405e20b2420463dd718604524f30a9b2bc2c1fdc7db6f",
+  "ts": "2026-08-05T12:24:58.166Z"
+}

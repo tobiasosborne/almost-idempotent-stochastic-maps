@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing one global witness package W\_RF suppli...}
+\step{1} After first fixing one global witness package W\_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W\_RF supplied by the same result, writing the fields of (W\_RF,S) as the unqualified symbols below: Raw factor-map identities: for 0 <= eta <= rho\_id\textasciicircum{}corr := min\{rho\_theta, rho\_AI, epsilon\_E/C\_A\}, tilde-Delta tilde-Upsilon = tilde-Phi and tilde-Upsilon tilde-Delta = I\_B. \steptag{validated} \\[6pt]
+\step{1.1} Formation instantiation and retained identities: invoke lem-routef-raw-factor-setting-formation once to fix its single global scalar header W\_RF. For an arbitrary input (H,Phi,eta) to which that result applies (in particular 0 <= eta <= rho\_id\textasciicircum{}corr and the stated cb-defect hypothesis), choose the supplied datum S over this same W\_RF. Then, with the notation of def-routef-raw-factor-setting, A=Im(tilde-Phi), u=v\textasciicircum{}(-1), tilde-Phi\textasciicircum{}2=tilde-Phi, tilde-Delta=iota\_\{A subseteq B(H)\} o v, and tilde-Upsilon=u o tilde-Phi. \steptag{validated} \\[4pt]
+\step{1.2} First raw factor identity: for every datum S fixed by the preceding formation step, tilde-Delta o tilde-Upsilon = tilde-Phi as maps B(H)->B(H). \steptag{validated} \\[6pt]
+\step{1.2.1} Pointwise expansion: for each x in B(H), (tilde-Delta o tilde-Upsilon)(x)=iota\_\{A subseteq B(H)\}(v(u(tilde-Phi(x)))), by the two defining composition formulas in def-routef-raw-factor-setting. \steptag{validated} \\[4pt]
+\step{1.2.2} Inverse cancellation in the correctly typed space: tilde-Phi(x) lies in A=Im(tilde-Phi), and u=v\textasciicircum{}(-1) from lem-routef-raw-factor-setting-formation entails v o u=I\_A; hence iota\_\{A subseteq B(H)\}(v(u(tilde-Phi(x))))=iota\_\{A subseteq B(H)\}(tilde-Phi(x))=tilde-Phi(x). \steptag{validated} \\[4pt]
+\step{1.2.3} Map extensionality: the equality in the preceding two steps holds for every x in B(H), so tilde-Delta o tilde-Upsilon and tilde-Phi are equal as maps B(H)->B(H). \steptag{validated} \\[4pt]
+\step{1.3} Second raw factor identity: for every datum S fixed by the preceding formation step, tilde-Upsilon o tilde-Delta = I\_B as maps B->B. \steptag{validated} \\[6pt]
+\step{1.3.1} Pointwise expansion: for each b in B, (tilde-Upsilon o tilde-Delta)(b)=u(tilde-Phi(iota\_\{A subseteq B(H)\}(v(b)))), by the two defining composition formulas in def-routef-raw-factor-setting. \steptag{validated} \\[4pt]
+\step{1.3.2} Projection-on-range fact: if a lies in A=Im(tilde-Phi), choose x in B(H) with a=tilde-Phi(x); then tilde-Phi(a)=tilde-Phi(tilde-Phi(x))=tilde-Phi(x)=a by tilde-Phi\textasciicircum{}2=tilde-Phi from lem-routef-raw-factor-setting-formation. Thus tilde-Phi restricted to A is I\_A (with the canonical inclusion into B(H) understood). \steptag{validated} \\[4pt]
+\step{1.3.3} Apply the projection-on-range fact to v(b) in A: tilde-Phi(iota\_\{A subseteq B(H)\}(v(b)))=v(b), so the pointwise expression becomes u(v(b))=b because u=v\textasciicircum{}(-1) from lem-routef-raw-factor-setting-formation entails u o v=I\_B. \steptag{validated} \\[4pt]
+\step{1.3.4} Map extensionality: the equality (tilde-Upsilon o tilde-Delta)(b)=b holds for every b in B, so tilde-Upsilon o tilde-Delta=I\_B as maps B->B. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
