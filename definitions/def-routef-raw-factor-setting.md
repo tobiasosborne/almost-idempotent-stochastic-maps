@@ -7,7 +7,7 @@ status: locked
 source: internal
 locus: DESIGN-LEDGER-SETTING-RESCOPE-V2.md sect-1 (hostile re-audit AUDIT-LEDGER-SETTING-RESCOPE-V2.md, deletion test CLEARED: data-and-typing only)
 sha256: -
-consensus: user-ratified 2026-08-05 (tobiasosborne, in-session sign-off of the audited LAND-WITH-EXACT-CORRECTIONS rescope package; corrections folded in at landing)
+consensus: user-ratified 2026-08-05 (tobiasosborne, in-session sign-off of the audited LAND-WITH-EXACT-CORRECTIONS rescope package; corrections folded in at landing); I_B notation corrected to the identity map of B, user-ratified 2026-08-05 (fresh-verifier-caught type error in the ratified design text: rows 3/12 use I_B as a map, not the unit element)
 ---
 
 **Statement (data, typing, and notation only).** *Route-F raw-factor setting
@@ -148,7 +148,7 @@ $$
 
 For every linear map `T` occurring in a datum and every integer `q>=1`,
 `T_q:=id_{M_q} tensor T`.  Registry ASCII `A` and `B` denote the two
-algebras above; `I_B` denotes the unit of `B`.  An unsubscripted `I` is the
+algebras above; `I_B` denotes the identity map of `B`.  An unsubscripted `I` is the
 unit forced by the adjacent map types.
 
 **Notes / provenance.** This shard asserts only the shape and notation of a
