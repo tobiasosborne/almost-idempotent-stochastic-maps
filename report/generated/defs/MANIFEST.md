@@ -135,4 +135,5 @@ as here.  One bullet per affected shard:
 - `def-maincb-raw-call` — statement: a paragraph did not typeset (math uses \rm, which report/main.tex does not define and the translation table does not cover) — 'A *MAIN-CB raw call* consists of: a\nliteral call-type tag (g'
 - `def-maincb-raw-call` — shard note: a paragraph did not typeset (math uses \rm, which report/main.tex does not define and the translation table does not cover) — '**Notes / provenance.** A recorded number does NOT assert th'
 - `def-maincb-reset-state` — shard note: a paragraph did not typeset (math uses \rm, which report/main.tex does not define and the translation table does not cover) — '**Notes / provenance.** The tag is hypothesis data, not an e'
+- `def-routef-raw-factor-setting` — shard note: a paragraph did not typeset (unmapped non-ASCII '“' (U+201C, LEFT DOUBLE QUOTATION MARK) in prose) — '**Notes / provenance.** This shard asserts only the shape an'
 - `def-stage1-polar-witness-data` — statement: a paragraph did not typeset (math uses \rm, which report/main.tex does not define and the translation table does not cover) — 'A *Stage-1 polar witness datum* is a\ntuple $W$ of fourteen n'

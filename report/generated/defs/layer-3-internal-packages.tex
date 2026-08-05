@@ -483,13 +483,13 @@ that header.
 
 The scalar header has four receiving real-scalar fields
 \[
-W_{RF}=(\eta_A,C_A,C_E,\varepsilon_E).
+(\eta_A,C_A,C_E,\varepsilon_E).
 \]
 
 The following symbols are derived notation, not independent witnesses:
 \[
 C_\theta:=12(\sqrt2-1),\qquad
-\rho_\theta:=\tfrac18,\qquad
+\rho_\theta:=\frac18,\qquad
 \rho_{\mathrm{AI}}:=\eta_A,\qquad
 \bar C_E:=\max\{1,C_E\},
 \]
@@ -627,20 +627,24 @@ unit forced by the adjacent map types.
 \par
 \textbf{Canonical shard.} \texttt{definitions/\allowbreak{}def-\allowbreak{}routef-\allowbreak{}raw-\allowbreak{}factor-\allowbreak{}setting.\allowbreak{}md}; twins: \texttt{definitions/INDEX.md}, \texttt{argument/DAG.md}.
 \par
-\textbf{Notes / provenance.} This shard asserts only the shape and notation of a
+\begin{defflag}
+This paragraph could not be typeset: unmapped non-ASCII '“' (U+201C, LEFT DOUBLE QUOTATION MARK) in prose. Its bytes follow, unaltered.
+\end{defflag}
+
+\begin{verbatim}
+**Notes / provenance.** This shard asserts only the shape and notation of a
 record.  In particular, it asserts none of the following: that a header or
 datum exists; that any scalar is positive, finite, universal, or independent
-of input data; that \texttt{||Phi\textasciicircum{}2-\allowbreak{}Phi||\_cb\textless{}=eta}; that \texttt{tilde-\allowbreak{}Phi} is
-idempotent; that \texttt{A} is an extended approximate $C^{*}$-algebra; that \texttt{v} is an
-\hyperref[def:extended-delta-inclusion]{extended isomorphism}; or any norm,
+of input data; that `||Phi^2-Phi||_cb<=eta`; that `tilde-Phi` is
+idempotent; that `A` is an extended approximate C*-algebra; that `v` is an
+[[def-extended-delta-inclusion|extended isomorphism]]; or any norm,
 smallness, admissibility, CP, or UCP estimate for the recorded maps.  Those
 assertions belong only to result rows, beginning with
-\texttt{lem-\allowbreak{}routef-\allowbreak{}raw-\allowbreak{}factor-\allowbreak{}setting-\allowbreak{}formation}.  The terms ``UCP map'', ``extended
-epsilon-$C^{*}$-algebra'', and ``extended delta-isomorphism'' are referenced from
-their canonical shards (\hyperref[def:ucp-map]{\texttt{def-\allowbreak{}ucp-\allowbreak{}map}},
-\hyperref[def:extended-epsilon-cstar-algebra]{\texttt{def-\allowbreak{}extended-\allowbreak{}epsilon-\allowbreak{}cstar-\allowbreak{}algebra}}, \hyperref[def:extended-delta-inclusion]{\texttt{def-\allowbreak{}extended-\allowbreak{}delta-\allowbreak{}inclusion}})
-and are not redefined here.  The labels \texttt{u} and \texttt{v} do not assert an inverse
-relation; that relation is a conclusion of the formation result.  This is
-the Route-F instance of the typed-witness pattern in
-\hyperref[def:maincb-witness-ledger]{\texttt{def-\allowbreak{}maincb-\allowbreak{}witness-\allowbreak{}ledger}} and \hyperref[def:stage1-polar-witness-data]{\texttt{def-\allowbreak{}stage1-\allowbreak{}polar-\allowbreak{}witness-\allowbreak{}data}}.
+`lem-routef-raw-factor-setting-formation`.  The terms “UCP map”, “extended
+epsilon-C*-algebra”, and “extended delta-isomorphism” are referenced from
+their canonical shards and are not redefined here.  The labels `u` and `v` do not assert an inverse
+relation; that relation is a conclusion of the formation result.
+\end{verbatim}
+\par
+\textbf{Rendering note.} 1 block(s) of this shard are flagged above; see \texttt{report/generated/defs/MANIFEST.md}.
 \end{defnote}

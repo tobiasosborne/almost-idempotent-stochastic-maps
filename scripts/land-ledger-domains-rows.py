@@ -129,8 +129,7 @@ ROWS = [
             "epsilon_E/C_A}`, exposing the `eta < 1/4` domain of the landed "
             "[[lem-kitaev-almost-idemp-audit]] contract (`rho_theta = 1/8`). Only this row uses "
             "`rho_id^corr`; later rows retain the two-term `rho_id`, and their effective domains are "
-            "unchanged because they also descend from `rho_T <= rho_id^corr` "
-            "(AUDIT-LEDGER-SETTING-RESCOPE-V2.md finding 8).\n"
+            "unchanged because they also descend from `rho_T <= rho_id^corr`.\n"
         ),
     ),
     dict(

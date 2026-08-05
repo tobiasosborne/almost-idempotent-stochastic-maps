@@ -16,13 +16,13 @@ that header.
 
 The scalar header has four receiving real-scalar fields
 $$
-W_{RF}=(\eta_A,C_A,C_E,\varepsilon_E).
+(\eta_A,C_A,C_E,\varepsilon_E).
 $$
 
 The following symbols are derived notation, not independent witnesses:
 $$
 C_\theta:=12(\sqrt2-1),\qquad
-\rho_\theta:=\tfrac18,\qquad
+\rho_\theta:=\frac18,\qquad
 \rho_{\mathrm{AI}}:=\eta_A,\qquad
 \bar C_E:=\max\{1,C_E\},
 $$
@@ -159,11 +159,7 @@ idempotent; that `A` is an extended approximate C*-algebra; that `v` is an
 [[def-extended-delta-inclusion|extended isomorphism]]; or any norm,
 smallness, admissibility, CP, or UCP estimate for the recorded maps.  Those
 assertions belong only to result rows, beginning with
-`lem-routef-raw-factor-setting-formation`.  The terms "UCP map", "extended
-epsilon-C*-algebra", and "extended delta-isomorphism" are referenced from
-their canonical shards ([[def-ucp-map]],
-[[def-extended-epsilon-cstar-algebra]], [[def-extended-delta-inclusion]])
-and are not redefined here.  The labels `u` and `v` do not assert an inverse
-relation; that relation is a conclusion of the formation result.  This is
-the Route-F instance of the typed-witness pattern in
-[[def-maincb-witness-ledger]] and [[def-stage1-polar-witness-data]].
+`lem-routef-raw-factor-setting-formation`.  The terms “UCP map”, “extended
+epsilon-C*-algebra”, and “extended delta-isomorphism” are referenced from
+their canonical shards and are not redefined here.  The labels `u` and `v` do not assert an inverse
+relation; that relation is a conclusion of the formation result.
