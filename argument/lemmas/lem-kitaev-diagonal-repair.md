@@ -4,8 +4,8 @@ kind: lemma
 contract: Kitaev diagonal repair: the direct-sum diagonal formula printed at approximate_algebras.tex:1254 and :2780-2783 is false (already for B=C direct-sum C), but every finite-dimensional C*-algebra B=direct-sum_{r=1}^m M_{d_r} has a finite phase-balanced diagonal D=sum_t q_t W_t^dagger tensor W_t with unitary W_t, q_t >= 0, sum_t q_t=1, ZD=DZ for every Z in B, pi(D)=I_B, and projective norm ||D||_pi=sum_t q_t||W_t^dagger||||W_t||=1, independently of block count and block dimensions.
 defs: def-fd-cstar-diagonal
 deps:
-status: proved-mod-audit
-af: seeded
+status: proved
+af: validated
 provenance: docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-B-DIAGONAL.md §§2-3; hostile batch verdict VERDICT-W74F-BATCH.md §B (VALID, no correction)
 owner: B
 workspace: proofs/lem-kitaev-diagonal-repair

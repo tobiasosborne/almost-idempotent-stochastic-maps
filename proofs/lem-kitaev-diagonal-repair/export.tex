@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Kitaev diagonal repair: the direct-sum diagonal formula p...}
+\step{1} Kitaev diagonal repair: the direct-sum diagonal formula printed at approximate\_algebras.tex:1254 and :2780-2783 is false (already for B=C direct-sum C), but every finite-dimensional C*-algebra B=direct-sum\_\{r=1\}\textasciicircum{}m M\_\{d\_r\} has a finite phase-balanced diagonal D=sum\_t q\_t W\_t\textasciicircum{}dagger tensor W\_t with unitary W\_t, q\_t >= 0, sum\_t q\_t=1, ZD=DZ for every Z in B, pi(D)=I\_B, and projective norm ||D||\_pi=sum\_t q\_t||W\_t\textasciicircum{}dagger||||W\_t||=1, independently of block count and block dimensions. \steptag{validated} \\[6pt]
+\step{1.1} For B=C direct-sum C, each component diagonal is 1 tensor 1, so each printed prescription recorded by GT-kitaev-printed-direct-sum-formula-1254 and GT-kitaev-printed-direct-sum-formula-2780-2783 produces I\_B tensor I\_B; with Z=(1,0), Z(I\_B tensor I\_B)=Z tensor I\_B differs from (I\_B tensor I\_B)Z=I\_B tensor Z, hence the printed element is not central and is not a diagonal by def-fd-cstar-diagonal. \steptag{validated} \\[6pt]
+\step{1.1.1} In each scalar summand C, choose the valid one-term component-diagonal representation p=1 and U=1. Substitution into each of GT-kitaev-printed-direct-sum-formula-1254 and GT-kitaev-printed-direct-sum-formula-2780-2783 gives the single term (1 direct-sum 1)\textasciicircum{}dagger tensor (1 direct-sum 1)=I\_B tensor I\_B. For Z=(1,0), the tensor-block coordinates of Z tensor I\_B and I\_B tensor Z differ (for example at block (1,2)), so the two module actions differ and def-fd-cstar-diagonal rules out this element as a diagonal. \steptag{validated} \\[4pt]
+\step{1.2} For every B=direct-sum\_\{r=1\}\textasciicircum{}m M\_\{d\_r\}, an explicit finite Weyl-unitary and sign-phase average produces D=sum\_t q\_t W\_t\textasciicircum{}dagger tensor W\_t with all W\_t unitary, q\_t>=0 and sum\_t q\_t=1; this D obeys ZD=DZ for every Z in B, pi(D)=I\_B, and ||D||\_pi=sum\_t q\_t||W\_t\textasciicircum{}dagger||||W\_t||=1 independently of m and the d\_r. \steptag{validated} \\[6pt]
+\step{1.2.1} For each d>=1, let omega=exp(2*pi*i/d), use indices in Z/dZ and matrix units E\_ij, and set U\_ab=sum\_k omega\textasciicircum{}(bk) E\_\{k+a,k\}. Then every U\_ab is unitary and (1/d\textasciicircum{}2) sum\_\{a,b\} U\_ab\textasciicircum{}dagger tensor U\_ab = D\_d := (1/d) sum\_\{i,j\} E\_ij tensor E\_ji. \steptag{validated} \\[6pt]
+\step{1.2.1.1} For U\_ab=sum\_k omega\textasciicircum{}(bk)E\_\{k+a,k\}, one has U\_ab e\_k=omega\textasciicircum{}(bk)e\_\{k+a\}; hence U\_ab sends an orthonormal basis to an orthonormal basis and is unitary (also for d=1). \steptag{validated} \\[4pt]
+\step{1.2.1.2} Expanding U\_ab\textasciicircum{}dagger tensor U\_ab gives sum\_\{k,l\} omega\textasciicircum{}(b(l-k)) E\_\{k,k+a\} tensor E\_\{l+a,l\}; since sum\_\{b=0\}\textasciicircum{}\{d-1\}omega\textasciicircum{}(b(l-k)) is d if l=k modulo d and 0 otherwise, averaging over a,b gives (1/d)sum\_\{a,k\}E\_\{k,k+a\} tensor E\_\{k+a,k\}=(1/d)sum\_\{i,j\}E\_ij tensor E\_ji. \steptag{validated} \\[4pt]
+\step{1.2.2} For gamma=((a\_r,b\_r))\_\{r=1\}\textasciicircum{}m and sigma in \{+1,-1\}\textasciicircum{}m, set W\_\{gamma,sigma\}=direct-sum\_r sigma\_r U\textasciicircum{}\{(r)\}\_\{a\_r b\_r\} and q\_\{gamma,sigma\}=2\textasciicircum{}(-m) product\_r d\_r\textasciicircum{}(-2). This is a finite family, every W\_\{gamma,sigma\} is unitary, every q is positive, and the q's sum to 1. \steptag{validated} \\[6pt]
+\step{1.2.2.1} A finite direct sum of the unitary matrices sigma\_r U\textasciicircum{}\{(r)\}\_\{a\_r b\_r\} is unitary because each sigma\_r has modulus one and blockwise multiplication by its adjoint gives direct-sum\_r I\_\{d\_r\}; hence every W\_\{gamma,sigma\} is unitary. \steptag{validated} \\[4pt]
+\step{1.2.2.2} There are 2\textasciicircum{}m product\_r d\_r\textasciicircum{}2 pairs (gamma,sigma), each q equals 2\textasciicircum{}(-m)product\_r d\_r\textasciicircum{}(-2)>0, so their sum is exactly 1; in particular the family and its convex coefficients are finite. \steptag{validated} \\[4pt]
+\step{1.2.3} For D=sum\_\{gamma,sigma\} q\_\{gamma,sigma\} W\_\{gamma,sigma\}\textasciicircum{}dagger tensor W\_\{gamma,sigma\}, the identity 2\textasciicircum{}(-m) sum\_sigma sigma\_r sigma\_s=1 when r=s and 0 otherwise, together with the block Weyl averages, gives D=sum\_r iota\_r tensor iota\_r(D\_\{d\_r\}); thus all cross-block tensor components vanish exactly. \steptag{validated} \\[6pt]
+\step{1.2.3.1} For r=s, sigma\_r sigma\_s=1 for every sign vector, so 2\textasciicircum{}(-m)sum\_sigma sigma\_r sigma\_s=1; for r not equal s, pairing each sigma with the vector obtained by flipping sigma\_r reverses sigma\_r sigma\_s and proves the average is 0. \steptag{validated} \\[4pt]
+\step{1.2.3.2} The block expansion W\_\{gamma,sigma\}\textasciicircum{}dagger tensor W\_\{gamma,sigma\}=sum\_\{r,s\}sigma\_r sigma\_s iota\_r(U\textasciicircum{}\{(r),dagger\}\_\{a\_r b\_r\}) tensor iota\_s(U\textasciicircum{}\{(s)\}\_\{a\_s b\_s\}), after sign averaging, retains only r=s. For fixed r, summing the independent gamma coordinates outside r cancels their factors d\_u\textasciicircum{}(-2), while the r-coordinate gives d\_r\textasciicircum{}(-2)sum\_\{a\_r,b\_r\}U\textasciicircum{}\{(r),dagger\}\_\{a\_r b\_r\} tensor U\textasciicircum{}\{(r)\}\_\{a\_r b\_r\}=D\_\{d\_r\}; therefore D=sum\_r iota\_r tensor iota\_r(D\_\{d\_r\}). \steptag{validated} \\[4pt]
+\step{1.2.4} The element D\_0=sum\_r iota\_r tensor iota\_r(D\_\{d\_r\}), with D\_d=(1/d)sum\_\{i,j\}E\_ij tensor E\_ji, satisfies ZD\_0=D\_0Z for every Z in direct-sum\_r M\_\{d\_r\} and pi(D\_0)=I\_B, hence is a diagonal by def-fd-cstar-diagonal. \steptag{validated} \\[6pt]
+\step{1.2.4.1} For a matrix unit X=E\_ab in M\_d, XD\_d=(1/d)sum\_j E\_aj tensor E\_jb=D\_dX; by linearity this holds for every X in M\_d. Since D\_0 has only (r,r) tensor-block components, applying this calculation in each summand gives ZD\_0=D\_0Z for every Z=direct-sum\_r Z\_r. \steptag{validated} \\[4pt]
+\step{1.2.4.2} For every block M\_d, the multiplication map satisfies pi(D\_d)=(1/d)sum\_\{i,j\}E\_ij E\_ji=(1/d)sum\_\{i,j\}E\_ii=sum\_i E\_ii=I\_\{M\_d\}; since multiplication preserves matching block embeddings, pi(D\_0)=sum\_r iota\_r(pi(D\_\{d\_r\}))=direct-sum\_r I\_\{M\_\{d\_r\}\}=I\_B. \steptag{validated} \\[6pt]
+\step{1.2.4.2.1} For each block M\_d, the matrix-unit identity E\_ij E\_ji=E\_ii gives pi(D\_d)=(1/d) sum\_\{i,j\} E\_ii=(1/d) sum\_i d E\_ii=sum\_i E\_ii=I\_\{M\_d\}. Because multiplication in B=direct-sum\_r M\_\{d\_r\} preserves each matching block embedding iota\_r, pi(D\_0)=sum\_r iota\_r(pi(D\_\{d\_r\}))=direct-sum\_r I\_\{M\_\{d\_r\}\}=I\_B. \steptag{validated} \\[4pt]
+\step{1.2.5} For the above D, the displayed convex-unitary representation has sum\_\{gamma,sigma\} q\_\{gamma,sigma\}||W\_\{gamma,sigma\}\textasciicircum{}dagger||||W\_\{gamma,sigma\}||=1; GT-kitaev-projective-tensor-norm gives ||D||\_pi<=1, while pi(D)=I\_B forces ||D|$|\_pi\rangle$=1, so ||D||\_pi=1 for every finite m and every positive d\_r. \steptag{validated} \\[6pt]
+\step{1.2.5.1} Every W\_\{gamma,sigma\} is unitary, so ||W\_\{gamma,sigma\}||=||W\_\{gamma,sigma\}\textasciicircum{}dagger||=1; since the nonnegative q's sum to 1, the displayed representation cost is sum q||W\textasciicircum{}dagger||||W||=sum q=1, and the infimum formula in GT-kitaev-projective-tensor-norm yields ||D||\_pi<=1. \steptag{validated} \\[4pt]
+\step{1.2.5.2} For every finite tensor representation C=sum\_l A\_l tensor B\_l, triangle inequality and submultiplicativity give ||pi(C)||=||sum\_l A\_lB\_l||<=sum\_l||A\_l||||B\_l||; taking the infimum in GT-kitaev-projective-tensor-norm gives ||pi(C)||<=||C||\_pi. Thus pi(D)=I\_B and ||I\_B||=1 imply ||D|$|\_pi\rangle$=1, which with the upper bound proves equality without dependence on m or d\_r. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

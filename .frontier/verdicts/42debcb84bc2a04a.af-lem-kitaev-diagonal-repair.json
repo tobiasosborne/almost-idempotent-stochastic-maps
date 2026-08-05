@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-kitaev-diagonal-repair/export.md",
+  "oracle": "af-lem-kitaev-diagonal-repair",
+  "result": "pass",
+  "claim_hash": "f688f17bc4b1c6ca86f6e3cb89244f31c59c070646dcc696d155a612faff49f8",
+  "oracle_digest": "1ff8dd3af42dcd582515eb9dbbebe8648a47a348e49a52df8de6d5945e4c5306",
+  "inputs_hash": "ac16666551fb67c27698aaf6ea2659eab6d8d8895bbfefad9c0faebe4c7dcf3e",
+  "ts": "2026-08-05T14:06:19.413Z"
+}
