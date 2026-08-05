@@ -980,3 +980,32 @@ imports a future agent might reach for — read before importing ANY external to
   `skip_noquote` (WARN, non-failing) — a quote can claim refs-like provenance without ever being
   byte-checked. Related: payload symlink components are not confined for QUOTE checking (only
   acknowledgment entries are resolve-confined).
+
+## 2026-08-05 — session-43 operational gotchas (W136)
+
+- **Sandbox path-remap illusion (harness-level).** Under this session's Bash
+  sandbox, main-repo paths could RESOLVE to a git-worktree's directory (same
+  inode, probe-file visible "across"), making worktree isolation look broken.
+  Unsandboxed checks showed the real filesystem was correctly isolated all
+  along. Before diagnosing "shared worktree state", re-run the stat probe
+  with the sandbox disabled. (One orchestrator resume was killed/relaunched
+  on this false signal; workspace verified clean before relaunch.)
+- **Ambient-binding under-specification (obstruction instance #2).** A
+  contract family (LEDGER-DOMAINS, 16 rows) passed two design audits yet was
+  undischargeable at af: the ambient UCP/cb setting lived in the design
+  preamble, not the contracts. Worked remedy (now twice-precedented with the
+  maincb/stage1 witness ledgers): theorem-free setting DEFINITION + formation
+  ROW (`exists one global witness header, then per-input datum`), prefix-only
+  contract binding with byte-identical suffixes. See
+  docs/plans/2026-08-05-LEDGER-SETTING-RESCOPE/ (v1 design was REJECTED by
+  its own hostile audit for definition-as-theorem laundering — keep arming
+  audits with the deletion test).
+- **Interface projections hide load-bearing clauses.** `lem-thmainext-conditional`
+  deliberately hides M28's unit estimate; ledger row 2 needed it. It resurfaced
+  definitionally via Kitaev's `hom_unit` clause (`GT-kitaev-def-delta-homomorphism`,
+  approximate_algebras.tex:443-456). When routing a family through an interface
+  row, check which consumers need the hidden clauses FIRST.
+- **Worker-discipline drift.** The KITAEV-PAIR hostile auditor committed AND
+  pushed its own audit file (66a9f657; content verified: the one file only).
+  Design/audit codex must not commit or push. Verify `git log` after every
+  codex round; content was accepted this time, but treat as a tripwire.

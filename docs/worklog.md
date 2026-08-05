@@ -2389,3 +2389,33 @@ auditors, one prover cohort with separate per-node verifiers); zero self-judged
 steps. The most valuable artifact was the *rejection*: without it the campaign
 would have spent substantial effort proving a claim about a proof. Sketch **v46**
 folded in; T0 169; registry 364.
+
+## 2026-08-05 — Session 43 (W136): the ledger rescope + seven banks (T0 169 → 176)
+
+- Verified the 2026-08-04 other-device commits (acknowledged-absent gate) are
+  benign here; flagged that beads aism-l4uw/aism-ccso live only on the other
+  device (no dolt remote; JSONL export stale since s30).
+- Opened the ledger elevation queue (aism-3fjg). First elevations of rows 1/3
+  validated the mathematics but exposed a family-wide contract
+  under-specification (ambient UCP/cb setting unbound). Full repair loop:
+  design (REJECTED by hostile audit — definition-as-theorem laundering) → v2
+  design (formation backbone) → re-audit LAND-WITH-EXACT-CORRECTIONS →
+  USER-RATIFIED landing → independent transcription audit (REJECTED on 5
+  editorial deviations → corrected → CONFIRMED). New:
+  def-routef-raw-factor-setting (locked) + lem-routef-raw-factor-setting-formation
+  (registry 365); 16 contracts prefix-rebound (15 suffixes byte-identical;
+  row 14 revised to the scalar interface); generator updated + reproducible.
+- Banked SEVEN af-validated rows (fresh prover / fresh verifier per node,
+  oracle + fr verify each): formation (10/10 first pass), raw-factor-norms
+  (23/23; a false strict dim bound refuted+repaired in-tree), raw-factor-
+  identities (11/11 first pass after the user-ratified I_B type fix + clean
+  re-seed), raw-product-estimate (6/6), raw-factor-units (8/8; unit clause
+  grounded in GT-kitaev-def-delta-homomorphism), and the KITAEV PAIR:
+  lem-kitaev-diagonal-repair (20/20; printed-formula refutation + phase-
+  balanced construction) and cor-kitaev-diagonal-cpization (22/22;
+  centrality-only CP). T0 169 → 176; registry 364 → 365.
+- MILESTONE: the rows 5–14 status cap is dissolved; the entire remaining
+  LEDGER-DOMAINS queue is elevatable.
+- Sketch v47 written; CURRENT pointer regenerated; FINDINGS gotchas recorded
+  (sandbox path-remap illusion; under-specification obstruction instance;
+  worker-discipline drift: the pair auditor self-pushed its audit file).
