@@ -1647,6 +1647,18 @@
     ]
    },
    {
+    "name": "af-lem-routef-raw-factor-units",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-routef-raw-factor-units"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-raw-factor-units/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-raw-factor-units.md"
+    ]
+   },
+   {
     "name": "af-lem-thmainext-conditional",
     "cmd": [
      "python3",

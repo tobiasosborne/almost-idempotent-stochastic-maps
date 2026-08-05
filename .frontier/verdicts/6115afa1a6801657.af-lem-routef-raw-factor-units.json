@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-raw-factor-units/export.md",
+  "oracle": "af-lem-routef-raw-factor-units",
+  "result": "pass",
+  "claim_hash": "756e3fae174d47ec452b18c55487a3ccab3234b3cefd7afeaf3bfcc761fcdfda",
+  "oracle_digest": "89e79abbf8034cfbca424c05dd973a7ffea368fb387641c0d63f5688f31781fa",
+  "inputs_hash": "bb3efb3f1399af0b5e970897d7d40e297cd04d9adae112dc257f6ba5156e32cd",
+  "ts": "2026-08-05T12:55:45.547Z"
+}
