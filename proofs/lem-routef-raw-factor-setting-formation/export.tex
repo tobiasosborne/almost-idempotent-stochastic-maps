@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Route F raw-factor setting formation: there exists one ch...}
+\step{1} Route F raw-factor setting formation: there exists one choice W\_RF of the scalar header of def-routef-raw-factor-setting, independent of H, Phi, eta, dimension, amplification level, and block data, with C\_theta=12*(sqrt(2)-1), C\_A=20+(211/8)*C\_theta, eta\_A>0 and (C\_A,eta\_A) the fixed witnesses of lem-routef-ai-defect-linearization, C\_E<infinity and epsilon\_E>0 the fixed witnesses of lem-thmainext-conditional, rho\_theta:=1/8, rho\_AI:=eta\_A, and all remaining named scalar quantities defined by (1.1)-(1.8), such that for every nonzero finite-dimensional Hilbert space H, every UCP map Phi:B(H)->B(H), and every eta with 0 <= eta <= rho\_id\textasciicircum{}corr and ||Phi\textasciicircum{}2-Phi||\_cb <= eta, there exist a finite-dimensional unital C*-algebra B, an extended C\_E*epsilon\_AI(eta)-isomorphism v:B->A, and a def-routef-raw-factor-setting datum S over this same W\_RF whose fields are the displayed H,Phi,eta,B,v,u=v\textasciicircum{}(-1) and the canonical tilde-Phi,A,star,epsilon\_AI(eta),tilde-Delta,tilde-Upsilon notation, with tilde-Phi\textasciicircum{}2=tilde-Phi, A an extended epsilon\_AI(eta)-C*-algebra, and 0 <= epsilon\_AI(eta) <= C\_A*eta <= epsilon\_E. \steptag{validated} \\[6pt]
+\step{1.1} Global-witness selection. Invoke lem-routef-ai-defect-linearization once to fix universal eta\_A>0 and C\_A=20+(211/8)*C\_theta<infinity with C\_theta=12*(sqrt(2)-1), and invoke lem-thmainext-conditional once to fix universal C\_E<infinity and epsilon\_E>0. These choices precede and are independent of H, Phi, eta, dimension, amplification level, and block data. \steptag{validated} \\[4pt]
+\step{1.2} Scalar-header assembly. Using the fixed eta\_A,C\_A,C\_E,epsilon\_E, take W\_RF to have precisely these four receiving fields; set C\_theta=12*(sqrt(2)-1), rho\_theta=1/8, rho\_AI=eta\_A, and define every remaining named scalar in the displayed order (1.1)-(1.8) of def-routef-raw-factor-setting. These formulas are well-defined because C\_A=20+(211/8)*12*(sqrt(2)-1)>0, eta\_A>0, epsilon\_E>0, and bar C\_E=max\{1,C\_E\}>=1, so every displayed reciprocal has a positive denominator. Thus this single W\_RF is universal and input-independent. \steptag{validated} \\[4pt]
+\step{1.3} Radius extraction. Fix an arbitrary nonzero finite-dimensional H, UCP Phi:B(H)->B(H), and eta with 0<=eta<=rho\_id\textasciicircum{}corr and ||Phi\textasciicircum{}2-Phi||\_cb<=eta. From rho\_id\textasciicircum{}corr=min\{rho\_theta,rho\_AI,epsilon\_E/C\_A\}, rho\_theta=1/8, and rho\_AI=eta\_A, obtain eta<=1/8<1/4, eta<=eta\_A, and C\_A*eta<=epsilon\_E; the last implication uses C\_A>0. \steptag{validated} \\[4pt]
+\step{1.4} Kitaev application. For an arbitrary input in the root domain, eta<=rho\_id\textasciicircum{}corr<=rho\_theta=1/8<1/4, while ||Phi\textasciicircum{}2-Phi||\_cb<=eta is assumed. Therefore lem-kitaev-almost-idemp-audit applies to the canonical tilde-Phi=(1/2)(I+(2Phi-I)(I-4(Phi-Phi\textasciicircum{}2))\textasciicircum{}(-1/2)), A=Im(tilde-Phi), and X star Y=tilde-Phi(XY), and yields tilde-Phi\textasciicircum{}2=tilde-Phi. \steptag{validated} \\[4pt]
+\step{1.5} Approximate-algebra application. For an arbitrary input in the root domain, rho\_id\textasciicircum{}corr<=rho\_AI=eta\_A gives 0<=eta<=eta\_A, so lem-routef-ai-defect-linearization applies to the same canonical tilde-Phi,A,star and gives the extended epsilon\_AI(eta)-C*-algebra structure and epsilon\_AI(eta)<=C\_A*eta. Also rho\_id\textasciicircum{}corr<=1/8 makes 1-4eta lie in [1/2,1], hence r=(3/2)((1-4eta)\textasciicircum{}(-1/2)-1)>=0 and epsilon\_AI(eta), being a maximum containing r, is nonnegative. Finally rho\_id\textasciicircum{}corr<=epsilon\_E/C\_A and C\_A=20+(211/8)*12*(sqrt(2)-1)>0 give C\_A*eta<=epsilon\_E. Thus 0<=epsilon\_AI(eta)<=C\_A*eta<=epsilon\_E. \steptag{validated} \\[4pt]
+\step{1.6} Finite-dimensional-range step. Since H is finite-dimensional, B(H) is finite-dimensional, and therefore its linear subspace A=Im(tilde-Phi) is finite-dimensional. The extended epsilon\_AI(eta)-C*-algebra structure on this very same A is the one supplied by lem-routef-ai-defect-linearization. \steptag{validated} \\[4pt]
+\step{1.7} Conditional structure-theorem application. If the canonical A is finite-dimensional, carries the extended epsilon\_AI(eta)-C*-algebra structure, and satisfies 0<=epsilon\_AI(eta)<=epsilon\_E, then lem-thmainext-conditional applied with epsilon=epsilon\_AI(eta) supplies a finite-dimensional C*-algebra B and one extended C\_E*epsilon\_AI(eta)-isomorphism v:B->A. Every finite-dimensional C*-algebra is unital, so B has the required finite-dimensional unital C*-algebra type. \steptag{validated} \\[4pt]
+\step{1.8} Same-output packaging, as a pure conditional construction. Suppose the fixed header W\_RF, an input H,Phi,eta, the canonical tilde-Phi,A,star,r,epsilon\_AI(eta), a finite-dimensional unital C*-algebra B, an extended C\_E*epsilon\_AI(eta)-isomorphism v:B->A, and the asserted idempotence, approximate-algebra, and scalar-bound conclusions have been obtained. By def-extended-delta-inclusion, v is bijective, so define u=v\textasciicircum{}(-1):A->B. Then def-routef-raw-factor-setting permits one datum S over that same W\_RF with exactly these fields and with tilde-Delta=iota\_\{A subseteq B(H)\} composed with v and tilde-Upsilon=u composed with tilde-Phi. These maps have the required types, no field is reselected, and no analytic conclusion is inferred from the data definition. \steptag{validated} \\[4pt]
+\step{1.9} Quantifier and universality closure, as a logical implication. If eta\_A,C\_A,C\_E,epsilon\_E and hence W\_RF are chosen once independently of all inputs, and if for an arbitrary H,Phi,eta in the root domain the input-dependent B,v,u,S and all displayed conclusions are obtained, then universal generalization over H,Phi,eta followed by existential introduction of the single fixed W\_RF and the input-dependent B,v,S gives exactly the quantifier order and independence assertions of root node 1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

@@ -1599,6 +1599,18 @@
     ]
    },
    {
+    "name": "af-lem-routef-raw-factor-setting-formation",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-routef-raw-factor-setting-formation"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-raw-factor-setting-formation/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-raw-factor-setting-formation.md"
+    ]
+   },
+   {
     "name": "af-lem-thmainext-conditional",
     "cmd": [
      "python3",

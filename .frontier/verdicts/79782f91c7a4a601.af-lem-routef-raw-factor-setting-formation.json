@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-raw-factor-setting-formation/export.md",
+  "oracle": "af-lem-routef-raw-factor-setting-formation",
+  "result": "pass",
+  "claim_hash": "3626e62650d4942d518beeedd7139789fe647818a4c2941ae1927f0fd8c637f1",
+  "oracle_digest": "a491ab19bd9554ef931248a38fbabd3d4155d7c120d9a2ff66afd09141b5ae49",
+  "inputs_hash": "45865fc1f2c2aa872cf4ede1069930c738269aa0ea0e898c66503e46bdc0c94a",
+  "ts": "2026-08-05T12:05:36.192Z"
+}
