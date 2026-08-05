@@ -1,0 +1,8 @@
+{
+  "id": "ceaaff21725a5034",
+  "name": "lem-kitaev-almost-idemp-audit",
+  "source": "imports validated registry lemma proofs/lem-kitaev-almost-idemp-audit — Corrected th_almost_idemp audit: let H be nonzero and let Phi:B(H)-\u003eB(H) be UCP with ||Phi^2-Phi||_cb \u003c= eta \u003c 1/4; for tilde-Phi=(1/2)(I+(2Phi-I)(I-4(Phi-Phi^2))^(-1/2)), A=Im(tilde-Phi), and X star Y=tilde-Phi(XY), one has tilde-Phi^2=tilde-Phi, both amplified associativity identities Phi_assoc1 and Phi_assoc2 have error at most 10*eta*||X||||Y||||Z|| after the local source type/index corrections, and for sufficiently small universal eta the inherited operator-space norms, involution, and unit make A an extended epsilon_AI(eta)-C*-algebra with epsilon_AI=max{r,20eta+2(M^5-1),3r-r^2}=O(eta), r=(3/2)((1-4eta)^(-1/2)-1), M=1+r, dimension-free at every amplification.",
+  "content_hash": "85de1b9dc03c28c36181bc07e8e253b89a9308e58806edcaf4f0462337c6d4cb",
+  "created": "2026-08-05T09:38:04.639832738Z",
+  "notes": ""
+}

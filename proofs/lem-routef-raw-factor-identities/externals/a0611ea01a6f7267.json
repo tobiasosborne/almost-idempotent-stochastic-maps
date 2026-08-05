@@ -1,0 +1,8 @@
+{
+  "id": "a0611ea01a6f7267",
+  "name": "lem-routef-ai-defect-linearization",
+  "source": "imports validated registry lemma proofs/lem-routef-ai-defect-linearization — Approximate-algebra defect linearization: set C_theta=12*(sqrt(2)-1). There are universal C_A \u003c infinity and eta_A \u003e 0, with C_A=20+(211/8)*C_theta, such that for every nonzero Hilbert space H, every UCP map Phi:B(H)-\u003eB(H), and every eta satisfying 0 \u003c= eta \u003c= eta_A and ||Phi^2-Phi||_cb \u003c= eta, if tilde-Phi=(1/2)*(I+(2*Phi-I)*(I-4*(Phi-Phi^2))^(-1/2)), A=Im(tilde-Phi), X star Y=tilde-Phi(XY), r=(3/2)*((1-4*eta)^(-1/2)-1), and epsilon_AI(eta)=max{r,20*eta+2*((1+r)^5-1),3*r-r^2}, then the inherited operator-space norms, involution, and unit together with star make A an extended epsilon_AI(eta)-C*-algebra and epsilon_AI(eta) \u003c= C_A*eta.",
+  "content_hash": "9a0ce49d539d56908887e2446db32a53c3399a2c536eb7590df9e59a17284bb8",
+  "created": "2026-08-05T09:38:04.644893728Z",
+  "notes": ""
+}

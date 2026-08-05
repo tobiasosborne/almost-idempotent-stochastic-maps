@@ -5,7 +5,7 @@ contract: Raw factor-map norms: with C_V, C_T, rho_T from (1.1), for 0 <= eta <=
 defs: def-almost-idempotent; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
 deps: lem-routef-functional-calculus-closeness; lem-routef-ai-defect-linearization; lem-thmainext-conditional
 status: stated
-af: none
+af: seeded
 provenance: DESIGN-LEDGER-DOMAINS-v2.md sect-2 row 1 (landed verbatim, LaTeX flattened to registry ASCII); AUDIT-LEDGER-DOMAINS-v2.md LAND-14 with two exact corrections, both folded in; W78-ratified package front 3; user-ratified 2026-07-30, ledger front re-selected by the user 2026-08-03; source approximate_algebras.tex:2749-2753; LEDGER-W74F-G-K.md:154-190
 owner: A
 workspace: proofs/lem-routef-raw-factor-norms

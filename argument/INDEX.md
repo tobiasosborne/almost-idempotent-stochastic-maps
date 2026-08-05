@@ -253,8 +253,8 @@
 | `lem-routef-k-ledger` | lemma | proved-mod-audit | none | A | Relative Route F factorization ledger: there are universal K >= 1 and eta_K > 0,… |
 | `lem-routef-multiplicative-telescope` | lemma | stated | none | A | Multiplicative telescope: for rho_mult := min{rho_T, rho_id, rho_DeltaPhi, rho_U… |
 | `lem-routef-prh-finish` | lemma | proved | validated | A | Route F PRH finish: let A:l-infinity(k)->l-infinity(n) and M:l-infinity(n)->l-in… |
-| `lem-routef-raw-factor-identities` | lemma | stated | none | A | Raw factor-map identities: for 0 <= eta <= rho_id^corr := min{rho_theta, rho_AI,… |
-| `lem-routef-raw-factor-norms` | lemma | stated | none | A | Raw factor-map norms: with C_V, C_T, rho_T from (1.1), for 0 <= eta <= rho_T, ev… |
+| `lem-routef-raw-factor-identities` | lemma | stated | seeded | A | Raw factor-map identities: for 0 <= eta <= rho_id^corr := min{rho_theta, rho_AI,… |
+| `lem-routef-raw-factor-norms` | lemma | stated | seeded | A | Raw factor-map norms: with C_V, C_T, rho_T from (1.1), for 0 <= eta <= rho_T, ev… |
 | `lem-routef-raw-factor-units` | lemma | stated | none | A | Raw factor-map units: for 0 <= eta <= rho_unit := rho_T, max{||tilde-Delta(I)-I|… |
 | `lem-routef-raw-product-estimate` | lemma | stated | none | A | Raw tilde-Delta-product estimate: for 0 <= eta <= rho_prod := rho_T, every ampli… |
 | `lem-routef-threshold-minimum` | lemma | stated | none | A | Route F threshold minimum: importing the black-box constants C_E, epsilon_E used… |

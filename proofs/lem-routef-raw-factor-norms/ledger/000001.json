@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-08-05T09:37:47.551734007Z","conjecture":"Raw factor-map norms: with C_V, C_T, rho_T from (1.1), for 0 \u003c= eta \u003c= rho_T, every amplification satisfies (1-C_V*eta)*||X|| \u003c= ||tilde-Delta_n X|| \u003c= (1+C_V*eta)*||X|| and max{||tilde-Delta||_cb, ||tilde-Upsilon||_cb} \u003c= 1+C_T*eta.","author":"orchestrator"}
