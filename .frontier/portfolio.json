@@ -1671,6 +1671,18 @@
     ]
    },
    {
+    "name": "af-cor-kitaev-diagonal-cpization",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "cor-kitaev-diagonal-cpization"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/cor-kitaev-diagonal-cpization/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/cor-kitaev-diagonal-cpization.md"
+    ]
+   },
+   {
     "name": "af-lem-thmainext-conditional",
     "cmd": [
      "python3",

@@ -4,8 +4,8 @@ kind: corollary
 contract: Entrywise CP-ization from the repaired diagonal: for the finite phase-balanced diagonal D=sum_t q_t W_t^dagger tensor W_t supplied by lem-kitaev-diagonal-repair, every involution-preserving linear map tilde-Delta:B->B(H) and every UCP map Phi define a completely positive map Delta'(X)=sum_t q_t Phi(tilde-Delta(X W_t^dagger) tilde-Delta(W_t)); complete positivity uses exact centrality of D and does not require exact multiplicativity of tilde-Delta.
 defs: def-fd-cstar-diagonal; def-ucp-map
 deps: lem-kitaev-diagonal-repair
-status: proved-mod-audit
-af: seeded
+status: proved
+af: validated
 provenance: docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-B-DIAGONAL.md §4.1; hostile batch verdict VERDICT-W74F-BATCH.md §B (VALID, no correction); defs line += def-ucp-map per AUDIT-KITAEV-PAIR-ELEVATION.md (L2 no-naked-symbols finding, user-ratified 2026-08-05)
 owner: B
 workspace: proofs/cor-kitaev-diagonal-cpization

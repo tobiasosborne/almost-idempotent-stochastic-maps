@@ -1022,7 +1022,7 @@
   \node[dagnode,dagDagVal] (N8_1_20) at (8.192,-9.71) {\hypertarget{dag:lem-prh}{}\texttt{lem-\hspace{0pt}prh}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{D}\,\hyperref[lem:prh]{$\S$}}}};
   \node[dagnode,dagDagVal] (N8_1_21) at (11.512,-6.06) {\hypertarget{dag:lem-routef-ai-defect-linearization}{}\texttt{lem-\hspace{0pt}routef-\hspace{0pt}ai-\hspace{0pt}defect-\hspace{0pt}linearization}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{D}\,\hyperref[lem:routef-ai-defect-linearization]{$\S$}}}};
   \node[dagnode,dagDagVal] (N8_1_22) at (11.512,-7.52) {\hypertarget{dag:lem-thmainext-conditional}{}\texttt{lem-\hspace{0pt}thmainext-\hspace{0pt}conditional}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{C}}}};
-  \node[dagnode,dagDagNon] (N8_1_23) at (11.512,-8.98) {\hypertarget{dag:cor-kitaev-diagonal-cpization}{}\texttt{cor-\hspace{0pt}kitaev-\hspace{0pt}diagonal-\hspace{0pt}cpization}\\[-0.15em]{\dagstatus{$\blacktriangle$\,mod-audit / conj.\,\dagphasetag{C}}}};
+  \node[dagnode,dagDagVal] (N8_1_23) at (11.512,-8.98) {\hypertarget{dag:cor-kitaev-diagonal-cpization}{}\texttt{cor-\hspace{0pt}kitaev-\hspace{0pt}diagonal-\hspace{0pt}cpization}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{C}}}};
   \node[dagnode,dagDagVal] (N8_1_24) at (14.832,-6.79) {\hypertarget{dag:lem-routef-prh-finish}{}\texttt{lem-\hspace{0pt}routef-\hspace{0pt}prh-\hspace{0pt}finish}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{D}\,\hyperref[lem:routef-prh-finish]{$\S$}}}};
   \node[dagnode,dagDagVal] (N8_1_25) at (14.832,-8.25) {\hypertarget{dag:lem-classical-equiv}{}\texttt{lem-\hspace{0pt}classical-\hspace{0pt}equiv}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{E}\,\hyperref[lem:classical-equiv]{$\S$}}}};
   \node[dagnode,dagDagVal] (N8_1_26) at (18.152,-6.06) {\hypertarget{dag:lem-routef-raw-factor-setting-formation}{}\texttt{lem-\hspace{0pt}routef-\hspace{0pt}raw-\hspace{0pt}factor-\hspace{0pt}setting-\hspace{0pt}formation}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{D}}}};
@@ -1111,9 +1111,9 @@
 \begin{center}\dagpagetitle{The Route-F proof chain for \texttt{op-classical} --- complete sub-DAG \textit{(cont.)}}\end{center}
 \noindent\begin{adjustbox}{max width=\linewidth,max totalheight=0.90\textheight,center}
 \begin{tikzpicture}[dagpic]
-  \node[dagghost] (N9_0_0) at (0,-0.12) {\hyperlink{dag:lem-kitaev-almost-idemp-audit}{lem-kitaev-almost-idemp-audit}};
-  \node[dagghost] (N9_0_1) at (0,-0.58) {\hyperlink{dag:lem-thmainext-conditional}{lem-thmainext-conditional}};
-  \node[dagghost] (N9_0_2) at (0,-1.04) {\hyperlink{dag:cor-kitaev-diagonal-cpization}{cor-kitaev-diagonal-cpization}};
+  \node[dagghost] (N9_0_0) at (0,-0.12) {\hyperlink{dag:cor-kitaev-diagonal-cpization}{cor-kitaev-diagonal-cpization}};
+  \node[dagghost] (N9_0_1) at (0,-0.58) {\hyperlink{dag:lem-kitaev-almost-idemp-audit}{lem-kitaev-almost-idemp-audit}};
+  \node[dagghost] (N9_0_2) at (0,-1.04) {\hyperlink{dag:lem-thmainext-conditional}{lem-thmainext-conditional}};
   \node[dagghost] (N9_0_3) at (0,-1.5) {\hyperlink{dag:lem-routef-ai-defect-linearization}{lem-routef-ai-defect-linearization}};
   \node[dagghost] (N9_0_4) at (0,-1.96) {\hyperlink{dag:lem-routef-functional-calculus-closeness}{lem-routef-functional-calculus-cl...}};
   \node[dagghost] (N9_0_5) at (0,-2.42) {\hyperlink{dag:lem-routef-raw-factor-setting-formation}{lem-routef-raw-factor-setting-for...}};
@@ -1142,17 +1142,17 @@
   \node[dagnode,dagDagSta] (N9_1_12) at (10.736,-6.67) {\hypertarget{dag:lem-routef-upsilon-prime-closeness}{}\texttt{lem-\hspace{0pt}routef-\hspace{0pt}upsilon-\hspace{0pt}prime-\hspace{0pt}closeness}\\[-0.15em]{\dagstatus{$\circ$\,stated\,\dagphasetag{D}}}};
   \node[dagnode,dagDagSta] (N9_1_13) at (14.056,-6.67) {\hypertarget{dag:lem-routef-upsilon-normalization-closeness}{}\texttt{lem-\hspace{0pt}routef-\hspace{0pt}upsilon-\hspace{0pt}normalization-\hspace{0pt}closeness}\\[-0.15em]{\dagstatus{$\circ$\,stated\,\dagphasetag{D}}}};
   \begin{scope}[on background layer]
-    \draw[dagedge] (N9_0_0) to[out=0,in=180] (N9_0_10);
+    \draw[dagedge] (N9_0_0) to[out=0,in=180] (N9_0_14);
     \draw[dagedge] (N9_0_1) to[out=0,in=180] (N9_0_10);
-    \draw[dagedge] (N9_0_1) to[out=0,in=180] (N9_0_12);
-    \draw[dagedge] (N9_0_1) to[out=0,in=180] (N9_0_13);
-    \draw[dagedge] (N9_0_1) to[out=0,in=180] (N9_0_14);
-    \draw[dagedge] (N9_0_1) to[out=0,in=180] (N9_0_9);
     \draw[dagedge] (N9_0_10) to[out=0,in=180] (N9_0_13);
     \draw[dagedge] (N9_0_12) to[out=0,in=180] (N9_0_15);
     \draw[dagedge] (N9_0_13) to[out=0,in=180] (N9_0_14);
     \draw[dagedge] (N9_0_14) to[out=0,in=180] (N9_0_15);
+    \draw[dagedge] (N9_0_2) to[out=0,in=180] (N9_0_10);
+    \draw[dagedge] (N9_0_2) to[out=0,in=180] (N9_0_12);
+    \draw[dagedge] (N9_0_2) to[out=0,in=180] (N9_0_13);
     \draw[dagedge] (N9_0_2) to[out=0,in=180] (N9_0_14);
+    \draw[dagedge] (N9_0_2) to[out=0,in=180] (N9_0_9);
     \draw[dagedge] (N9_0_3) to[out=0,in=180] (N9_0_10);
     \draw[dagedge] (N9_0_3) to[out=0,in=180] (N9_0_12);
     \draw[dagedge] (N9_0_3) to[out=0,in=180] (N9_0_13);

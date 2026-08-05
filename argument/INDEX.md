@@ -42,7 +42,7 @@
 | `conj-w72-poti0-root-selection-exchange-ledger` | lemma | proved-mod-audit | none | B | Within the literal W72 POTI-0 hypothesis block of conj-dtr-zero-oriented-surplus… |
 | `conj-w72-poti0-routine-conditional-assembly` | lemma | proved-mod-audit | none | B | Assume conj-w72-poti0-root-dilution-selected-support-exchange and conj-w72-poti0… |
 | `conj-zero-face-elimination` | lemma | conjecture | none | A | (CONJECTURE) Tall-cluster zero-face elimination: there exist universal constants… |
-| `cor-kitaev-diagonal-cpization` | corollary | proved-mod-audit | seeded | B | Entrywise CP-ization from the repaired diagonal: for the finite phase-balanced d… |
+| `cor-kitaev-diagonal-cpization` | corollary | proved | validated | B | Entrywise CP-ization from the repaired diagonal: for the finite phase-balanced d… |
 | `cor-rank-two-visible` | corollary | proved | none | A | Rank-two visibility: every exact signed idempotent P with rank(P) <= 2 and delta… |
 | `ex-hume` | obstruction | proved-mod-audit | seeded | A | The explicit 3x3 family P_s=I-u_s v_s^T (v_s=(1,-1+s,-s), u_s=(1-s+s^2,-s,0)^T) … |
 | `lem-absorption-implies-low-slab-cap` | lemma | proved | none | A | Conditional absorption-to-low-slab bridge: assuming conj-near-cluster-absorption… |

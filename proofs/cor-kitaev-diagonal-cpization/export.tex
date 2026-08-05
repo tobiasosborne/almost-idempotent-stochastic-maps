@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Entrywise CP-ization from the repaired diagonal: for the ...}
+\step{1} Entrywise CP-ization from the repaired diagonal: for the finite phase-balanced diagonal D=sum\_t q\_t W\_t\textasciicircum{}dagger tensor W\_t supplied by lem-kitaev-diagonal-repair, every involution-preserving linear map tilde-Delta:B->B(H) and every UCP map Phi define a completely positive map Delta'(X)=sum\_t q\_t Phi(tilde-Delta(X W\_t\textasciicircum{}dagger) tilde-Delta(W\_t)); complete positivity uses exact centrality of D and does not require exact multiplicativity of tilde-Delta. \steptag{validated} \\[6pt]
+\step{1.1} The displayed formula for Delta' is linear in X. \steptag{validated} \\[6pt]
+\step{1.1.1} For each fixed t, the map X mapsto X W\_t\textasciicircum{}dagger is linear, tilde-Delta is linear, right multiplication by the fixed operator tilde-Delta(W\_t) is linear, and Phi is linear; hence X mapsto Phi(tilde-Delta(X W\_t\textasciicircum{}dagger) tilde-Delta(W\_t)) is linear. \steptag{validated} \\[4pt]
+\step{1.1.2} A finite scalar-weighted sum of linear maps is linear, so Delta' is linear. \steptag{validated} \\[4pt]
+\step{1.2} For every n at least 1 and every Y in M\_n(B), if Z\_t=tilde-Delta\_n((I\_n tensor W\_t)Y), then the exact identity Delta'\_n(Y\textasciicircum{}dagger Y)=sum\_t q\_t Phi\_n(Z\_t\textasciicircum{}dagger Z\_t) holds. \steptag{validated} \\[6pt]
+\step{1.2.1} By lem-kitaev-diagonal-repair, D=sum\_t q\_t W\_t\textasciicircum{}dagger tensor W\_t is exactly central. Thus for every pair of entries Y\_ca,Y\_cb, multiplying the equality Y\_cb D=D Y\_cb on the first tensor factor by Y\_ca\textasciicircum{}dagger gives sum\_t q\_t Y\_ca\textasciicircum{}dagger Y\_cb W\_t\textasciicircum{}dagger tensor W\_t = sum\_t q\_t Y\_ca\textasciicircum{}dagger W\_t\textasciicircum{}dagger tensor W\_t Y\_cb. \steptag{validated} \\[4pt]
+\step{1.2.2} The rule beta(A tensor B)=tilde-Delta(A) tilde-Delta(B) is induced by a bilinear map and hence is linear on the algebraic tensor product; applying beta to the tensor equality gives sum\_t q\_t tilde-Delta(Y\_ca\textasciicircum{}dagger Y\_cb W\_t\textasciicircum{}dagger) tilde-Delta(W\_t) = sum\_t q\_t tilde-Delta(Y\_ca\textasciicircum{}dagger W\_t\textasciicircum{}dagger) tilde-Delta(W\_t Y\_cb). \steptag{validated} \\[6pt]
+\step{1.2.2.1} Because B is finite-dimensional, the linear map tilde-Delta is bounded; operator multiplication is bounded, so (A,B) mapsto tilde-Delta(A)tilde-Delta(B) is a bounded bilinear map and therefore induces a continuous linear map beta on the projective tensor product B hat-tensor B. \steptag{validated} \\[4pt]
+\step{1.2.2.2} Applying this beta to the equality in node 1.2.1 and evaluating beta(A tensor B)=tilde-Delta(A)tilde-Delta(B) gives sum\_t q\_t tilde-Delta(Y\_ca\textasciicircum{}dagger Y\_cb W\_t\textasciicircum{}dagger) tilde-Delta(W\_t) = sum\_t q\_t tilde-Delta(Y\_ca\textasciicircum{}dagger W\_t\textasciicircum{}dagger) tilde-Delta(W\_t Y\_cb). \steptag{validated} \\[4pt]
+\step{1.2.3} Involution preservation gives tilde-Delta(Y\_ca\textasciicircum{}dagger W\_t\textasciicircum{}dagger)=tilde-Delta((W\_t Y\_ca)\textasciicircum{}dagger)=tilde-Delta(W\_t Y\_ca)\textasciicircum{}dagger, so the right side is sum\_t q\_t tilde-Delta(W\_t Y\_ca)\textasciicircum{}dagger tilde-Delta(W\_t Y\_cb). \steptag{validated} \\[4pt]
+\step{1.2.4} Summing the entry identity over c and using linearity of Delta' and Phi shows entry by entry that Delta'\_n(Y\textasciicircum{}dagger Y)=sum\_t q\_t Phi\_n(Z\_t\textasciicircum{}dagger Z\_t), where Z\_t has entries tilde-Delta(W\_t Y\_ab), equivalently Z\_t=tilde-Delta\_n((I\_n tensor W\_t)Y). \steptag{validated} \\[4pt]
+\step{1.3} For every n at least 1 and every Y in M\_n(B), the operator sum\_t q\_t Phi\_n(Z\_t\textasciicircum{}dagger Z\_t) is positive. \steptag{validated} \\[6pt]
+\step{1.3.1} For every t, Z\_t\textasciicircum{}dagger Z\_t is positive in M\_n(B(H)). \steptag{validated} \\[4pt]
+\step{1.3.2} Because Phi is UCP, def-ucp-map says Phi is completely positive; therefore its nth amplification Phi\_n is positive and Phi\_n(Z\_t\textasciicircum{}dagger Z\_t) is positive for every t. \steptag{validated} \\[4pt]
+\step{1.3.3} By lem-kitaev-diagonal-repair every q\_t is nonnegative, so the finite sum sum\_t q\_t Phi\_n(Z\_t\textasciicircum{}dagger Z\_t) is positive because the positive cone is closed under nonnegative finite linear combinations. \steptag{validated} \\[4pt]
+\step{1.4} The preceding matrix-level identity and positivity prove that Delta' is completely positive, and the derivation uses no multiplicativity of tilde-Delta. \steptag{validated} \\[6pt]
+\step{1.4.1} Every positive A in M\_n(B) has a positive square root Y=A\textasciicircum{}(1/2), hence A=Y\textasciicircum{}dagger Y. \steptag{validated} \\[4pt]
+\step{1.4.2} Applying the identity of node 1.2 and the positivity of node 1.3 to this square root gives Delta'\_n(A) positive for every positive A in M\_n(B). \steptag{validated} \\[4pt]
+\step{1.4.3} Since n was arbitrary, every amplification Delta'\_n is positive; together with linearity from node 1.1, def-ucp-map's definition of complete positivity yields that Delta' is completely positive. \steptag{validated} \\[4pt]
+\step{1.4.4} The algebraic derivation used only exact centrality from lem-kitaev-diagonal-repair, linearity and involution preservation of tilde-Delta, and linearity and complete positivity of Phi; it nowhere replaced tilde-Delta(AB) by tilde-Delta(A)tilde-Delta(B), so exact multiplicativity of tilde-Delta is not required. \steptag{validated} \\[6pt]
+\step{1.4.4.1} Correction to the exhaustive wording of node 1.4.4: the derivation also uses the phase-balanced coefficient data supplied by lem-kitaev-diagonal-repair, namely that the index set is finite and every q\_t is nonnegative (indeed sum\_t q\_t=1). Thus, after the matrix-level identity is established using exact centrality together with linearity and involution preservation of tilde-Delta, complete positivity of Phi makes each Phi\_n(Z\_t\textasciicircum{}dagger Z\_t) positive, and finiteness plus q\_t>=0 makes their weighted sum positive. No step in either the identity or this positivity argument replaces tilde-Delta(AB) by tilde-Delta(A)tilde-Delta(B); hence exact multiplicativity of tilde-Delta is not required. The phrase used only in node 1.4.4 must be read with this coefficient hypothesis added. \steptag{validated} \\[4pt]
+\step{1.5} Typing clarification forced by the displayed definition and fixed by the registry shard: throughout this corollary, the quantifier over Phi ranges over UCP maps Phi:B(H)->B(H). Indeed tilde-Delta(X W\_t\textasciicircum{}dagger) and tilde-Delta(W\_t) lie in B(H), hence their product lies in B(H), while the asserted codomain of Delta prime is B(H); thus the displayed formula is a well-typed definition precisely with this stated Phi type. Consequently Phi\_n has domain M\_n(B(H)) and codomain M\_n(B(H)), as used in nodes 1.2.4 and 1.3.2. For H=C\textasciicircum{}2, id\_C:C->C is not an element of this typed quantifier and therefore is not a counterexample. This is an explicit type annotation for the frozen formula, not an additional multiplicativity assumption on tilde-Delta. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

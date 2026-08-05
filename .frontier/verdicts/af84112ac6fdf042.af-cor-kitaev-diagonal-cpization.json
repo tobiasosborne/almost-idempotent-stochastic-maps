@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/cor-kitaev-diagonal-cpization/export.md",
+  "oracle": "af-cor-kitaev-diagonal-cpization",
+  "result": "pass",
+  "claim_hash": "ba1a984dcdbcf86ba6df0add3c890decd5b3c98888c0e22330179f3aab4f305b",
+  "oracle_digest": "468ba7888a801f941c4620cf5a7a6e491bcbde320105000a762c1a2585a2c5a7",
+  "inputs_hash": "3a0358aa1089672bc827199c237ddf333767adfbd223d14f237dfaf24c4af9c8",
+  "ts": "2026-08-05T14:35:49.140Z"
+}
