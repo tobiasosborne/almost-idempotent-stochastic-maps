@@ -350,4 +350,7 @@ lem-routef-multiplicative-telescope
 lem-routef-upsilon-delta-telescope
 lem-routef-k-finiteness
 lem-routef-threshold-minimum
+# 2026-08-05: the LEDGER-SETTING-RESCOPE formation row (user-ratified landing,
+# LAND-WITH-EXACT-CORRECTIONS); whitelist until af-validated and anchored.
+lem-routef-raw-factor-setting-formation
 ```

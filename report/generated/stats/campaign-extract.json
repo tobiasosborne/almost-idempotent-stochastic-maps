@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-08-05T09:39:05Z",
+ "extracted_at": "2026-08-05T11:33:27Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-08-05T09:39:05Z",
+  "mined_at": "2026-08-05T11:33:27Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -458,28 +458,29 @@
  "schema": 1,
  "successor": {
   "af": {
-   "amendments_total": 343,
-   "challenges_total": 409,
+   "amendments_total": 346,
+   "challenges_total": 415,
    "entry_types": {
     "approach_tried": 2,
-    "challenge_raised": 409,
-    "challenge_resolved": 402,
+    "challenge_raised": 415,
+    "challenge_resolved": 406,
     "def_added": 872,
-    "node_amended": 343,
+    "node_amended": 346,
     "node_archived": 56,
-    "node_created": 2493,
+    "node_created": 2516,
     "node_unvalidated": 7,
-    "node_validated": 2428,
-    "nodes_claimed": 4062,
-    "nodes_released": 4062,
+    "node_validated": 2445,
+    "nodes_claimed": 4101,
+    "nodes_released": 4101,
     "proof_initialized": 183
    },
-   "ledger_entries": 15319,
-   "nodes_total": 2493,
+   "ledger_entries": 15450,
+   "nodes_total": 2516,
    "owner_roles": {
-    "prover (fix round)": 454,
-    "prover (initial build)": 629,
-    "verifier": 2979
+    "other": 2,
+    "prover (fix round)": 459,
+    "prover (initial build)": 636,
+    "verifier": 3004
    },
    "root_validated": 171,
    "seeded_not_validated": 12,
@@ -2377,36 +2378,36 @@
      "validated": 22
     },
     {
-     "amendments": 0,
+     "amendments": 2,
      "archived": 0,
-     "challenges": 0,
-     "challenges_resolved": 0,
-     "claims": 0,
+     "challenges": 3,
+     "challenges_resolved": 2,
+     "claims": 13,
      "defs_imported": 5,
      "first_ts": "2026-08-05T09:37:47.625871697Z",
      "id": "lem-routef-raw-factor-identities",
-     "last_ts": "2026-08-05T09:38:04.615332218Z",
-     "ledger_entries": 7,
-     "max_round": 0,
-     "nodes": 1,
+     "last_ts": "2026-08-05T11:32:57.533855951Z",
+     "ledger_entries": 48,
+     "max_round": 2,
+     "nodes": 5,
      "root_validated": null,
-     "validated": 0
+     "validated": 4
     },
     {
-     "amendments": 0,
+     "amendments": 1,
      "archived": 0,
-     "challenges": 0,
-     "challenges_resolved": 0,
-     "claims": 0,
+     "challenges": 3,
+     "challenges_resolved": 2,
+     "claims": 26,
      "defs_imported": 5,
      "first_ts": "2026-08-05T09:37:47.551734007Z",
      "id": "lem-routef-raw-factor-norms",
-     "last_ts": "2026-08-05T09:38:04.563725058Z",
-     "ledger_entries": 7,
-     "max_round": 0,
-     "nodes": 1,
+     "last_ts": "2026-08-05T11:32:57.511371841Z",
+     "ledger_entries": 97,
+     "max_round": 2,
+     "nodes": 20,
      "root_validated": null,
-     "validated": 0
+     "validated": 13
     },
     {
      "amendments": 2,
@@ -3492,15 +3493,15 @@
    }
   },
   "definitions": {
-   "definitions": 46,
+   "definitions": 47,
    "kind": {
     "cited": 13,
     "consensus": 6,
-    "original": 27
+    "original": 28
    },
    "status": {
     "draft": 11,
-    "locked": 35
+    "locked": 36
    }
   },
   "docs": {
@@ -3508,7 +3509,7 @@
    "ingest": 7,
    "ingest_experiment_files": 60,
    "lit-review": 1,
-   "plans": 83,
+   "plans": 84,
    "recon": 1,
    "report_shard_lines": 7467,
    "report_shards": 55,
@@ -3560,7 +3561,7 @@
      "lem-topology-orientable-top-cohomology af-VALIDATED (79th rigorous result; 14 nodes taint clean — Thm 3.26 + field-UCT + Cor 3.39 composed) + lem-topology-quotient-manifold af-VALIDATED (80th; 4 nodes taint clean — the external-attachment verifier challenge resolved by the re-run prover) — 4 of 7 topology elevations banked, oracles registered, fr verify PASS both, T0 78 -> 80. GAP-EA rows LANDED per DESIGN-GAP-EA option (a): lem-extcb-exact-target-correction (validated node-1.2 contract verbatim, proved/af:none) + lem-extcb-exact-target-approximation (v4.1 bridge, stated), UNWIRED-whitelisted, gate green. Next: seed+orchestrate the correction row; finishing runs for finite-triangulation (14/17), local-index-sign (18/22), hopf re-run.": 1,
      "null": 3,
      "obstruction": 1,
-     "progress": 194
+     "progress": 199
     },
     "G": {
      "banked": 2,
@@ -3599,7 +3600,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-08-05T09:37:41.091Z"
+     "last": "2026-08-05T11:25:17.818Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -3620,7 +3621,7 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 552,
+    "FH": 557,
     "G": 21,
     "R": 52,
     "XE": 1
@@ -3644,13 +3645,13 @@
     "2026-08-03": 1
    },
    "decisions": {
-    "EXPLOIT": 499,
+    "EXPLOIT": 504,
     "EXPLORE": 14,
     "PIVOT": 3
    },
    "evidence_classes": {
     "advisory": 1,
-    "af": 155,
+    "af": 156,
     "af-export": 10,
     "af-ledger": 1,
     "af-validated": 3,
@@ -3661,7 +3662,7 @@
     "codification": 2,
     "contract": 1,
     "decomposition": 1,
-    "design": 27,
+    "design": 31,
     "dispatch": 4,
     "doc": 4,
     "docs": 1,
@@ -3697,11 +3698,11 @@
    "evidence_tiers": {
     "T0": 188,
     "T1": 167,
-    "T2": 158
+    "T2": 163
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-08-05T09:37:41.091Z",
-   "max_cycle": 1135,
+   "last_ts": "2026-08-05T11:25:17.818Z",
+   "max_cycle": 1141,
    "outcomes": {
     "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
     "banked": 137,
@@ -3715,8 +3716,8 @@
     "lem-topology-orientable-top-cohomology af-VALIDATED (79th rigorous result; 14 nodes taint clean — Thm 3.26 + field-UCT + Cor 3.39 composed) + lem-topology-quotient-manifold af-VALIDATED (80th; 4 nodes taint clean — the external-attachment verifier challenge resolved by the re-run prover) — 4 of 7 topology elevations banked, oracles registered, fr verify PASS both, T0 78 -> 80. GAP-EA rows LANDED per DESIGN-GAP-EA option (a): lem-extcb-exact-target-correction (validated node-1.2 contract verbatim, proved/af:none) + lem-extcb-exact-target-approximation (v4.1 bridge, stated), UNWIRED-whitelisted, gate green. Next: seed+orchestrate the correction row; finishing runs for finite-triangulation (14/17), local-index-sign (18/22), hopf re-run.": 1,
     "null": 3,
     "obstruction": 1,
-    "orient": 366,
-    "progress": 361,
+    "orient": 367,
+    "progress": 366,
     "refuted": 1
    },
    "per_day": {
@@ -3745,9 +3746,9 @@
     "2026-08-02": 41,
     "2026-08-03": 11,
     "2026-08-04": 3,
-    "2026-08-05": 2
+    "2026-08-05": 8
    },
-   "records": 1135,
+   "records": 1141,
    "worker_jobs": 524,
    "worker_models": {
     "codex": 338,
@@ -3820,13 +3821,13 @@
    }
   },
   "git": {
-   "active_days": 25,
+   "active_days": 26,
    "authors": {
-    "tobiasosborne": 1114
+    "tobiasosborne": 1120
    },
-   "commits": 1114,
+   "commits": 1120,
    "first_day": "2026-07-02",
-   "last_day": "2026-08-04",
+   "last_day": "2026-08-05",
    "per_day": {
     "2026-07-02": 46,
     "2026-07-03": 53,
@@ -3852,7 +3853,8 @@
     "2026-08-01": 66,
     "2026-08-02": 34,
     "2026-08-03": 16,
-    "2026-08-04": 2
+    "2026-08-04": 2,
+    "2026-08-05": 6
    },
    "subject_prefixes": {
     "W61": 13,
@@ -3947,19 +3949,19 @@
   },
   "registry": {
    "af": {
-    "none": 181,
+    "none": 182,
     "seeded": 14,
     "validated": 169
    },
    "kind": {
     "corollary": 2,
-    "lemma": 335,
+    "lemma": 336,
     "obstruction": 13,
     "open-problem": 6,
     "proposition": 2,
     "theorem": 6
    },
-   "results": 364,
+   "results": 365,
    "status": {
     "conjecture": 31,
     "disproved": 2,
@@ -3969,7 +3971,7 @@
     "open": 3,
     "proved": 282,
     "proved-mod-audit": 22,
-    "stated": 19
+    "stated": 20
    }
   },
   "runs": {
@@ -4023,7 +4025,7 @@
    "gate_lines": 1999,
    "gate_scripts": 7,
    "script_files": 30,
-   "script_lines": 9782,
+   "script_lines": 9959,
    "test_files": 7,
    "test_lines": 1528
   },
