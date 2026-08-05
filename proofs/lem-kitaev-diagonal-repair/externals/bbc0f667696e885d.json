@@ -1,0 +1,8 @@
+{
+  "id": "bbc0f667696e885d",
+  "name": "GT-kitaev-printed-direct-sum-formula-1254",
+  "source": "refs/kitaev-2405.02434/approximate_algebras.tex:1254 VERBATIM: \"where $\\braket{e_l}{S_{jk}e_m}$ are the matrix elements of $S_{jk}$ in some orthonormal basis $\\{e_0,\\dots,e_{d-1}\\}$. The diagonal of $\\bigoplus_{l=1}^{m}\\Bo(\\CC^{d_l})$ is obtained by combining the component diagonals $D_l=\\sum_j p_{lj}\\ts U_{lj}^\\dag\\otimes U_{lj}$ into a sum over $j=(j_1,\\dots,j_m)$ with $p_{j_1,\\dots,j_m}=p_{1j_1}\\cdots p_{mj_m}$ and $U_{j_1,\\dots,j_m}=U_{1j_1}\\oplus\\cdots\\oplus U_{mj_m}$.\" [PROVENANCE-ONLY: records the printed prescription; does not assert that it is a diagonal.]",
+  "content_hash": "4b48778399c83ff765762e031f3f80aee004a4dc1d9c16d2b01bedd85daced92",
+  "created": "2026-08-05T13:42:25.834669996Z",
+  "notes": ""
+}

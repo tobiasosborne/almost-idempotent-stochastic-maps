@@ -1,0 +1,8 @@
+{
+  "id": "03ea1a62f3c46fa3",
+  "name": "GT-kitaev-projective-tensor-norm",
+  "source": "refs/kitaev-2405.02434/approximate_algebras.tex:1228-1232 VERBATIM: \"The proof involves the concept of a diagonal. Let us give its general definition for completeness, and then specialize to the finite-dimensional case. For arbitrary Banach algebras $\\calA$ and $\\calB$, the projective tensor product $\\calA\\hotimes\\calB$ is also a Banach algebra. In more detail, $\\calA\\hotimes\\calB$ is the completion of $\\calA\\otimes\\calB$ endowed with the projective tensor norm,\n\\begin{equation}\n\\|C\\|=\\inf\\biggl\\{\\sum_{j}\\|A_j\\|\\ts\\|B_j\\|:\\,\n\\sum_{j}A_j\\otimes B_j=C\\biggr\\}\\qquad (A_j\\in\\calA,\\,\\: B_j\\in\\calB),\n\\end{equation}\"",
+  "content_hash": "2bedaf5a8c5de8e8b3322add893ae6c2064265971510691e19597573159663c6",
+  "created": "2026-08-05T13:42:25.828166356Z",
+  "notes": ""
+}

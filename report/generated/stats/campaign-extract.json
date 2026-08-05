@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-08-05T13:41:23Z",
+ "extracted_at": "2026-08-05T13:42:42Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-08-05T13:41:23Z",
+  "mined_at": "2026-08-05T13:42:42Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -464,18 +464,18 @@
     "approach_tried": 2,
     "challenge_raised": 418,
     "challenge_resolved": 411,
-    "def_added": 891,
+    "def_added": 892,
     "node_amended": 355,
     "node_archived": 56,
-    "node_created": 2549,
+    "node_created": 2550,
     "node_unvalidated": 7,
     "node_validated": 2486,
     "nodes_claimed": 4159,
     "nodes_released": 4159,
-    "proof_initialized": 186
+    "proof_initialized": 187
    },
-   "ledger_entries": 15679,
-   "nodes_total": 2549,
+   "ledger_entries": 15682,
+   "nodes_total": 2550,
    "owner_roles": {
     "other": 1,
     "prover (fix round)": 466,
@@ -483,7 +483,7 @@
     "verifier": 3051
    },
    "root_validated": 176,
-   "seeded_not_validated": 10,
+   "seeded_not_validated": 11,
    "validation_days": {
     "2026-07-02": 7,
     "2026-07-03": 5,
@@ -504,7 +504,7 @@
     "2026-08-03": 1,
     "2026-08-05": 5
    },
-   "workspaces": 186,
+   "workspaces": 187,
    "workspaces_detail": [
     {
      "amendments": 0,
@@ -1529,6 +1529,22 @@
      "nodes": 24,
      "root_validated": "2026-07-26T10:06:37.321059135Z",
      "validated": 24
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 1,
+     "first_ts": "2026-08-05T13:42:25.758000436Z",
+     "id": "lem-kitaev-diagonal-repair",
+     "last_ts": "2026-08-05T13:42:25.792489176Z",
+     "ledger_entries": 3,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
     },
     {
      "amendments": 0,
@@ -3873,9 +3889,9 @@
   "git": {
    "active_days": 26,
    "authors": {
-    "tobiasosborne": 1135
+    "tobiasosborne": 1136
    },
-   "commits": 1135,
+   "commits": 1136,
    "first_day": "2026-07-02",
    "last_day": "2026-08-05",
    "per_day": {
@@ -3904,7 +3920,7 @@
     "2026-08-02": 34,
     "2026-08-03": 16,
     "2026-08-04": 2,
-    "2026-08-05": 21
+    "2026-08-05": 22
    },
    "subject_prefixes": {
     "W61": 13,
@@ -3999,8 +4015,8 @@
   },
   "registry": {
    "af": {
-    "none": 179,
-    "seeded": 12,
+    "none": 178,
+    "seeded": 13,
     "validated": 174
    },
    "kind": {

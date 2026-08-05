@@ -1,0 +1,8 @@
+{
+  "id": "429d75290f0f3a2b",
+  "name": "GT-kitaev-printed-direct-sum-formula-2780-2783",
+  "source": "refs/kitaev-2405.02434/approximate_algebras.tex:2780-2783 VERBATIM: \"(See \\eqref{Pauli_diag} for an explicit example.) The diagonal of the entire algebra $\\calB$ is $D=\\sum_{s}p_{s}\\ts U_{s}^\\dag\\otimes U_{s}$, where $s=(s_1,\\dots,s_m)$,\n\\begin{equation}\np_{s_1,\\dots,s_m}=p_{1s_1}\\cdots p_{ms_m},\\qquad\nU_{s_1,\\dots,s_m}=U_{1s_1}\\oplus\\cdots\\oplus U_{ms_m}.\n\\end{equation}\" [PROVENANCE-ONLY: records the printed prescription; does not assert that it is a diagonal.]",
+  "content_hash": "804b70bfab1d25c0c71d08dd12af5f644b029f929e42ea39ae2eca9846fc5c2b",
+  "created": "2026-08-05T13:42:25.840710646Z",
+  "notes": ""
+}

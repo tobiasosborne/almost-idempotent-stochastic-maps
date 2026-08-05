@@ -21,16 +21,16 @@ Quantity & Progenitor & This repository \\
 \midrule
 First commit & 2026-06-02 & 2026-07-02 \\
 Last commit in snapshot & 2026-06-13 & 2026-08-05 \\
-Commits & 174 & 1\,135 \\
+Commits & 174 & 1\,136 \\
 Days with a commit & 11 & 26 \\
 Work-log entries & 22 & 81 \\
 \texttt{fr} controller cycles & --- (no controller) & 1\,158 \\
 Registry results & 59 & 365 \\
 Definition shards & 25 & 47 \\
-\texttt{af} workspaces & 16 & 186 \\
+\texttt{af} workspaces & 16 & 187 \\
 \texttt{af}-validated roots (T0) & 16 & 176 \\
-Adversarial proof nodes built & 132 & 2\,549 \\
-Ledger entries (append-only) & 822 & 15\,679 \\
+Adversarial proof nodes built & 132 & 2\,550 \\
+Ledger entries (append-only) & 822 & 15\,682 \\
 Numerical run bundles & -- & 38 \\
 \bottomrule
 \end{tabular}
@@ -55,7 +55,7 @@ Numerical run bundles & -- & 38 \\
 
 \subsection{The campaign calendar}\label{sec:stats-calendar}
 
-The two campaigns ran as short, dense bursts rather than as steady background work. This repository put 1\,135 commits into 26 calendar days with a commit (out of 35 days elapsed), and the progenitor put 174 into 11.
+The two campaigns ran as short, dense bursts rather than as steady background work. This repository put 1\,136 commits into 26 calendar days with a commit (out of 35 days elapsed), and the progenitor put 174 into 11.
 
 \begin{figure}[H]\centering
 \begin{tikzpicture}
@@ -69,7 +69,7 @@ The two campaigns ran as short, dense bursts rather than as steady background wo
 ]
 \addplot[draw=oiBlue, fill=oiBlue] coordinates {(0,2) (1,1) (2,1) (3,16) (4,19) (5,15) (7,5) (8,44) (9,44) (10,16) (11,11)};
 \addlegendentry{progenitor commits}
-\addplot[draw=oiVermillion, fill=oiVermillion] coordinates {(30,46) (31,53) (32,29) (33,21) (34,31) (35,70) (37,16) (38,72) (39,6) (41,6) (42,17) (44,9) (50,2) (51,16) (52,111) (53,165) (54,85) (55,74) (56,32) (57,45) (58,90) (60,66) (61,34) (62,16) (63,2) (64,21)};
+\addplot[draw=oiVermillion, fill=oiVermillion] coordinates {(30,46) (31,53) (32,29) (33,21) (34,31) (35,70) (37,16) (38,72) (39,6) (41,6) (42,17) (44,9) (50,2) (51,16) (52,111) (53,165) (54,85) (55,74) (56,32) (57,45) (58,90) (60,66) (61,34) (62,16) (63,2) (64,22)};
 \addlegendentry{this repository, commits}
 \addplot[sharp plot, draw=oiGreen, mark=none, line width=0.9pt] coordinates {(30,48) (31,35) (32,46) (33,35) (34,61) (35,66) (37,35) (38,67) (39,3) (41,7) (42,19) (44,11) (50,7) (51,11) (52,65) (53,95) (54,80) (55,102) (56,29) (57,49) (58,118) (60,89) (61,41) (62,11) (63,3) (64,25)};
 \addlegendentry{\texttt{fr} controller cycles}
@@ -146,9 +146,9 @@ Registry \texttt{status:} & Results & Share \\
 \toprule
 \texttt{af:} field & Results & Share \\
 \midrule
-\texttt{none} & 179 & 49.0\% \\
+\texttt{none} & 178 & 48.8\% \\
 \texttt{validated} & 174 & 47.7\% \\
-\texttt{seeded} & 12 & 3.3\% \\
+\texttt{seeded} & 13 & 3.6\% \\
 \bottomrule
 \end{tabular}
 \par\vspace{0.6ex}{\footnotesize \texttt{seeded} means a workspace exists with the registry contract as its root conjecture but the tree is not (yet) closed.}
@@ -237,7 +237,7 @@ Aggregated over all cycles the outcome mix is 373~\texttt{orient}, 368~\texttt{p
 
 \subsection{Adversarial elevations}\label{sec:stats-elevations}
 
-A result reaches the top in-repo rung only through an \texttt{af} workspace: the registry contract becomes the root conjecture, a fresh prover agent builds a proof tree, and every node is validated by a \emph{separate} fresh verifier told that finding a gap is a success. The orchestrator never judges a step. 186 workspaces were opened; 176 reached a validated root and 10 remain seeded or open. Between them the workers built 2\,549 proof nodes, raised 418 challenges (of which 411 were resolved), and forced 355 node amendments.
+A result reaches the top in-repo rung only through an \texttt{af} workspace: the registry contract becomes the root conjecture, a fresh prover agent builds a proof tree, and every node is validated by a \emph{separate} fresh verifier told that finding a gap is a success. The orchestrator never judges a step. 187 workspaces were opened; 176 reached a validated root and 11 remain seeded or open. Between them the workers built 2\,550 proof nodes, raised 418 challenges (of which 411 were resolved), and forced 355 node amendments.
 
 \begin{figure}[H]\centering
 \begin{tikzpicture}
@@ -246,10 +246,10 @@ A result reaches the top in-repo rung only through an \texttt{af} workspace: the
   xlabel={nodes in the proof tree}, ylabel={workspaces}, ymin=0,
   nodes near coords, every node near coord/.append style={font=\scriptsize},
 ]
-\addplot[draw=oiBlue, fill=oiBlue!70] coordinates {(1--5,21) (6--10,49) (11--15,59) (16--20,30) (21--30,18) (31--40,6) (41--60,3)};
+\addplot[draw=oiBlue, fill=oiBlue!70] coordinates {(1--5,22) (6--10,49) (11--15,59) (16--20,30) (21--30,18) (31--40,6) (41--60,3)};
 \end{axis}
 \end{tikzpicture}
-\caption{Size distribution of the 186 adversarial proof trees. The median tree has 12 nodes; the largest, \texttt{lem-residual-upper}, has 52.}\label{fig:stats-treesize}
+\caption{Size distribution of the 187 adversarial proof trees. The median tree has 12 nodes; the largest, \texttt{lem-residual-upper}, has 52.}\label{fig:stats-treesize}
 \end{figure}
 
 The most-contested tree was \texttt{conj-extcb} (24 challenges raised); the longest-running was \texttt{conj-extcb}, which needed 20 prover/verifier rounds before its root closed.
@@ -263,13 +263,13 @@ Ledger entry type & Count \\
 \midrule
 \texttt{nodes\_claimed} & 4\,159 \\
 \texttt{nodes\_released} & 4\,159 \\
-\texttt{node\_created} & 2\,549 \\
+\texttt{node\_created} & 2\,550 \\
 \texttt{node\_validated} & 2\,486 \\
-\texttt{def\_added} & 891 \\
+\texttt{def\_added} & 892 \\
 \texttt{challenge\_raised} & 418 \\
 \texttt{challenge\_resolved} & 411 \\
 \texttt{node\_amended} & 355 \\
-\texttt{proof\_initialized} & 186 \\
+\texttt{proof\_initialized} & 187 \\
 \texttt{node\_archived} & 56 \\
 \texttt{node\_unvalidated} & 7 \\
 \texttt{approach\_tried} & 2 \\
@@ -476,7 +476,7 @@ Ledger entry type & Count \\
 \noindent{\footnotesize ``Val.'' counts validated nodes; ``Chal.'' counts challenges raised by verifiers against nodes of that tree; ``Amd.'' counts node statements the prover had to change in response; ``Defs'' counts definitions imported into the workspace as byte-matched externals; ``Rnds'' is the highest prover/verifier round index reached; ``Jobs'' is the number of node-claim events, i.e.\ worker invocations against that tree; ``Closed'' is the day the root node was validated. Fewer validated nodes than created nodes means nodes were archived or superseded during the run.\par}
 \endgroup
 
-The 10 workspaces that were seeded but never closed a root are \texttt{conj-degenerate-transport}, \texttt{conj-nsc}, \texttt{conj-rh}, \texttt{conj-sc}, \texttt{ex-hume}, \texttt{lem-hiddenness-alpha-slab-leakage}, \texttt{lem-negative-pivot-import}, \texttt{prop-approx-simplex}, \texttt{thm-classical-factorization}, \texttt{thm-cluster}. A seeded-and-open workspace is a recorded state, not a failure: it means a contract exists and the tree is still being built or was superseded.
+The 11 workspaces that were seeded but never closed a root are \texttt{conj-degenerate-transport}, \texttt{conj-nsc}, \texttt{conj-rh}, \texttt{conj-sc}, \texttt{ex-hume}, \texttt{lem-hiddenness-alpha-slab-leakage}, \texttt{lem-kitaev-diagonal-repair}, \texttt{lem-negative-pivot-import}, \texttt{prop-approx-simplex}, \texttt{thm-classical-factorization}, \texttt{thm-cluster}. A seeded-and-open workspace is a recorded state, not a failure: it means a contract exists and the tree is still being built or was superseded.
 
 
 \subsection{Worker and job census}\label{sec:stats-workers}
@@ -626,11 +626,11 @@ Everything in \Cref{sec:campaign-statistics} is generated by \texttt{scripts/gen
 \hspace*{1.5em}the gate: re-renders, byte-compares, and prints a non-fatal drift advisory.
 \end{quote}
 
-\textbf{Staleness semantics.} Only the render step is gated, so the check is stable across ordinary commits and fails exactly when it should: a hand-edited generated file, or a renderer change without a re-render. The \emph{numbers}, by contrast, are as of \textbf{2026-08-05T13:41:23Z} and go stale silently by design --- refreshing them is a deliberate act. \texttt{--check} therefore also compares a few cheap live counts against the snapshot and prints how far behind it is, without blocking a commit.
+\textbf{Staleness semantics.} Only the render step is gated, so the check is stable across ordinary commits and fails exactly when it should: a hand-edited generated file, or a renderer change without a re-render. The \emph{numbers}, by contrast, are as of \textbf{2026-08-05T13:42:42Z} and go stale silently by design --- refreshing them is a deliberate act. \texttt{--check} therefore also compares a few cheap live counts against the snapshot and prints how far behind it is, without blocking a commit.
 
 \textbf{Progenitor data.} The \texttt{almost-\discretionary{}{}{}idempotent-\discretionary{}{}{}positive-\discretionary{}{}{}maps} block is mined live when that repository sits beside this one and is otherwise carried forward from the committed snapshot, so the gate is green on machines that do not have the sibling. The current block was mined live at the last extraction.
 
-\textbf{Provenance of the figures.} 1\,158 controller records, 15\,679 \texttt{af} ledger entries, 365 registry shards, 47 definition shards, 38 run bundles, 81 work-log entries, 210 issue records, and 1\,309 commits were read to produce this section.
+\textbf{Provenance of the figures.} 1\,158 controller records, 15\,682 \texttt{af} ledger entries, 365 registry shards, 47 definition shards, 38 run bundles, 81 work-log entries, 210 issue records, and 1\,310 commits were read to produce this section.
 
 
 \emergencystretch=0pt\relax
