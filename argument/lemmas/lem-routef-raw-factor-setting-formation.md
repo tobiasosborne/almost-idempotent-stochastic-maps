@@ -5,7 +5,7 @@ contract: Route F raw-factor setting formation: there exists one choice W_RF of 
 defs: def-routef-raw-factor-setting; def-ucp-map; def-extended-epsilon-cstar-algebra; def-extended-delta-inclusion
 deps: lem-kitaev-almost-idemp-audit; lem-routef-ai-defect-linearization; lem-thmainext-conditional
 status: stated
-af: none
+af: seeded
 provenance: DESIGN-LEDGER-SETTING-RESCOPE-V2.md sect-2 (formation repair required by AUDIT-LEDGER-SETTING-RESCOPE.md findings 1-3); hostile re-audit AUDIT-LEDGER-SETTING-RESCOPE-V2.md verdict LAND-WITH-EXACT-CORRECTIONS (formation cleared, elevation phase mandated by its finding 3); user-ratified 2026-08-05; scalar ledger source DESIGN-LEDGER-DOMAINS-v2.md sect-1
 owner: A
 workspace: proofs/lem-routef-raw-factor-setting-formation

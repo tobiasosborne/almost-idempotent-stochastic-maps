@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-08-05T11:46:41Z",
+ "extracted_at": "2026-08-05T11:53:39Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-08-05T11:46:41Z",
+  "mined_at": "2026-08-05T11:53:39Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -464,18 +464,18 @@
     "approach_tried": 2,
     "challenge_raised": 415,
     "challenge_resolved": 406,
-    "def_added": 872,
+    "def_added": 876,
     "node_amended": 346,
     "node_archived": 56,
-    "node_created": 2516,
+    "node_created": 2517,
     "node_unvalidated": 7,
     "node_validated": 2445,
     "nodes_claimed": 4101,
     "nodes_released": 4101,
-    "proof_initialized": 183
+    "proof_initialized": 184
    },
-   "ledger_entries": 15450,
-   "nodes_total": 2516,
+   "ledger_entries": 15456,
+   "nodes_total": 2517,
    "owner_roles": {
     "other": 2,
     "prover (fix round)": 459,
@@ -483,7 +483,7 @@
     "verifier": 3004
    },
    "root_validated": 171,
-   "seeded_not_validated": 12,
+   "seeded_not_validated": 13,
    "validation_days": {
     "2026-07-02": 7,
     "2026-07-03": 5,
@@ -503,7 +503,7 @@
     "2026-08-02": 10,
     "2026-08-03": 1
    },
-   "workspaces": 183,
+   "workspaces": 184,
    "workspaces_detail": [
     {
      "amendments": 0,
@@ -2410,6 +2410,22 @@
      "validated": 13
     },
     {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 4,
+     "first_ts": "2026-08-05T11:52:42.267046306Z",
+     "id": "lem-routef-raw-factor-setting-formation",
+     "last_ts": "2026-08-05T11:52:51.479346607Z",
+     "ledger_entries": 6,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
+    },
+    {
      "amendments": 2,
      "archived": 0,
      "challenges": 3,
@@ -3561,7 +3577,7 @@
      "lem-topology-orientable-top-cohomology af-VALIDATED (79th rigorous result; 14 nodes taint clean — Thm 3.26 + field-UCT + Cor 3.39 composed) + lem-topology-quotient-manifold af-VALIDATED (80th; 4 nodes taint clean — the external-attachment verifier challenge resolved by the re-run prover) — 4 of 7 topology elevations banked, oracles registered, fr verify PASS both, T0 78 -> 80. GAP-EA rows LANDED per DESIGN-GAP-EA option (a): lem-extcb-exact-target-correction (validated node-1.2 contract verbatim, proved/af:none) + lem-extcb-exact-target-approximation (v4.1 bridge, stated), UNWIRED-whitelisted, gate green. Next: seed+orchestrate the correction row; finishing runs for finite-triangulation (14/17), local-index-sign (18/22), hopf re-run.": 1,
      "null": 3,
      "obstruction": 1,
-     "progress": 199
+     "progress": 200
     },
     "G": {
      "banked": 2,
@@ -3600,7 +3616,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-08-05T11:25:17.818Z"
+     "last": "2026-08-05T11:47:39.049Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -3621,7 +3637,7 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 557,
+    "FH": 558,
     "G": 21,
     "R": 52,
     "XE": 1
@@ -3645,7 +3661,7 @@
     "2026-08-03": 1
    },
    "decisions": {
-    "EXPLOIT": 504,
+    "EXPLOIT": 505,
     "EXPLORE": 14,
     "PIVOT": 3
    },
@@ -3662,7 +3678,7 @@
     "codification": 2,
     "contract": 1,
     "decomposition": 1,
-    "design": 31,
+    "design": 32,
     "dispatch": 4,
     "doc": 4,
     "docs": 1,
@@ -3698,11 +3714,11 @@
    "evidence_tiers": {
     "T0": 188,
     "T1": 167,
-    "T2": 163
+    "T2": 164
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-08-05T11:25:17.818Z",
-   "max_cycle": 1141,
+   "last_ts": "2026-08-05T11:47:39.049Z",
+   "max_cycle": 1142,
    "outcomes": {
     "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
     "banked": 137,
@@ -3717,7 +3733,7 @@
     "null": 3,
     "obstruction": 1,
     "orient": 367,
-    "progress": 366,
+    "progress": 367,
     "refuted": 1
    },
    "per_day": {
@@ -3746,9 +3762,9 @@
     "2026-08-02": 41,
     "2026-08-03": 11,
     "2026-08-04": 3,
-    "2026-08-05": 8
+    "2026-08-05": 9
    },
-   "records": 1141,
+   "records": 1142,
    "worker_jobs": 524,
    "worker_models": {
     "codex": 338,
@@ -3823,9 +3839,9 @@
   "git": {
    "active_days": 26,
    "authors": {
-    "tobiasosborne": 1121
+    "tobiasosborne": 1123
    },
-   "commits": 1121,
+   "commits": 1123,
    "first_day": "2026-07-02",
    "last_day": "2026-08-05",
    "per_day": {
@@ -3854,7 +3870,7 @@
     "2026-08-02": 34,
     "2026-08-03": 16,
     "2026-08-04": 2,
-    "2026-08-05": 7
+    "2026-08-05": 9
    },
    "subject_prefixes": {
     "W61": 13,
@@ -3949,8 +3965,8 @@
   },
   "registry": {
    "af": {
-    "none": 182,
-    "seeded": 14,
+    "none": 181,
+    "seeded": 15,
     "validated": 169
    },
    "kind": {
