@@ -53,7 +53,7 @@ graph LR
   conj-w72-poti0-root-selection-exchange-ledger["conj-w72-poti0-root-selection-exchange-ledger<br/>proved-mod-audit/none"]
   conj-w72-poti0-routine-conditional-assembly["conj-w72-poti0-routine-conditional-assembly<br/>proved-mod-audit/none"]
   conj-zero-face-elimination["conj-zero-face-elimination<br/>conjecture/none"]
-  cor-kitaev-diagonal-cpization["cor-kitaev-diagonal-cpization<br/>proved-mod-audit/none"]
+  cor-kitaev-diagonal-cpization["cor-kitaev-diagonal-cpization<br/>proved-mod-audit/seeded"]
   cor-rank-two-visible["cor-rank-two-visible<br/>proved/none"]
   ex-hume["ex-hume<br/>proved-mod-audit/seeded"]
   lem-absorption-implies-low-slab-cap["lem-absorption-implies-low-slab-cap<br/>proved/none"]
