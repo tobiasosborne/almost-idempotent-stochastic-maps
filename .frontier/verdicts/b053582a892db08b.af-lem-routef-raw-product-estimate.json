@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-raw-product-estimate/export.md",
+  "oracle": "af-lem-routef-raw-product-estimate",
+  "result": "pass",
+  "claim_hash": "e5c53e4dea27bb35dd34961b41a61383d59b664fa6a2e4c926cf7a904c13acb0",
+  "oracle_digest": "02d5f118a152cdb7ec843c4ce075209477880792a11d110a8dd08c1b4288a947",
+  "inputs_hash": "cc0228fedc7fddba72086564377667d069b6f873b2858d11e73309a3dbac3bb0",
+  "ts": "2026-08-05T12:46:38.590Z"
+}

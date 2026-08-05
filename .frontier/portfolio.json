@@ -1635,6 +1635,18 @@
     ]
    },
    {
+    "name": "af-lem-routef-raw-product-estimate",
+    "cmd": [
+     "python3",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+     "lem-routef-raw-product-estimate"
+    ],
+    "inputs": [
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-raw-product-estimate/ledger",
+     "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-raw-product-estimate.md"
+    ]
+   },
+   {
     "name": "af-lem-thmainext-conditional",
     "cmd": [
      "python3",

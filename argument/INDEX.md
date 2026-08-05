@@ -257,7 +257,7 @@
 | `lem-routef-raw-factor-norms` | lemma | proved | validated | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-raw-factor-setting-formation` | lemma | proved | validated | A | Route F raw-factor setting formation: there exists one choice W_RF of the scalar… |
 | `lem-routef-raw-factor-units` | lemma | stated | seeded | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
-| `lem-routef-raw-product-estimate` | lemma | stated | seeded | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
+| `lem-routef-raw-product-estimate` | lemma | proved | validated | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-threshold-minimum` | lemma | stated | none | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-upsilon-delta-telescope` | lemma | stated | none | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-upsilon-normalization-closeness` | lemma | stated | none | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |

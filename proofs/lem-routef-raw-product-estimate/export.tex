@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing one global witness package W\_RF suppli...}
+\step{1} After first fixing one global witness package W\_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W\_RF supplied by the same result; for every integer n >= 1 and all X, Y in M\_n(S.B), writing the fields of (W\_RF,S) as the unqualified symbols below: Raw tilde-Delta-product estimate: for 0 <= eta <= rho\_prod := rho\_T, every amplification and all X, Y satisfy ||tilde-Phi\_n(tilde-Delta\_n X tilde-Delta\_n Y) - tilde-Delta\_n(XY)|| <= C\_T*eta*||X||*||Y||. \steptag{validated} \\[6pt]
+\step{1.1} Fix the global W\_RF and arbitrary formation-admissible (H,Phi,eta), its supplied datum S, n>=1, and X,Y in M\_n(S.B), with 0<=eta<=rho\_prod=rho\_T. Put d:=C\_E*epsilon\_AI(eta). By lem-routef-raw-factor-setting-formation, v:S.B->A is an extended d-isomorphism and 0<=epsilon\_AI(eta)<=C\_A*eta. By def-routef-raw-factor-setting, tilde-Delta is the inclusion of A into B(H) composed with v, while the multiplication on A is a star b:=tilde-Phi(ab); hence tilde-Delta\_n(Z) is v\_n(Z) viewed in M\_n(B(H)) for every Z in M\_n(S.B). \steptag{validated} \\[4pt]
+\step{1.2} For the arbitrary data of the root and d:=C\_E*epsilon\_AI(eta), the extended d-isomorphism assertion for v from lem-routef-raw-factor-setting-formation and def-extended-delta-inclusion imply that v\_n is a d-homomorphism. Its product-defect clause is ||v\_n(XY)-v\_n(X) star\_n v\_n(Y)||<=d*||X||*||Y||. Entrywise matrix multiplication, linearity of tilde-Phi, and def-routef-raw-factor-setting give v\_n(X) star\_n v\_n(Y)=tilde-Phi\_n(tilde-Delta\_n X tilde-Delta\_n Y) and v\_n(XY)=tilde-Delta\_n(XY). Therefore ||tilde-Phi\_n(tilde-Delta\_n X tilde-Delta\_n Y)-tilde-Delta\_n(XY)||<=d*||X||*||Y||. \steptag{validated} \\[6pt]
+\step{1.2.1} Put d:=C\_E*epsilon\_AI(eta). The formation result says that v:B->A is an extended d-isomorphism. Hence it is an extended d-inclusion, and def-extended-delta-inclusion gives, for the fixed n, that v\_n=id\_\{M\_n\} tensor v is a d-homomorphism from M\_n(B) to M\_n(A), where the target multiplication is the amplification star\_n of star. The newly provisioned byte-verbatim external GT-kitaev-def-delta-homomorphism supplies the previously missing multiplication clause, so ||v\_n(XY)-v\_n(X) star\_n v\_n(Y)|| <= d*||X||*||Y||. \steptag{validated} \\[4pt]
+\step{1.2.2} Under the inclusion A subseteq B(H), def-routef-raw-factor-setting gives v\_n(XY)=tilde-Delta\_n(XY). Moreover, for every i,j, [v\_n(X) star\_n v\_n(Y)]\_\{ij\}=sum\_k(v(X\_ik) star v(Y\_kj))=sum\_k tilde-Phi(v(X\_ik)v(Y\_kj))=tilde-Phi(sum\_k tilde-Delta(X\_ik)tilde-Delta(Y\_kj))=[tilde-Phi\_n(tilde-Delta\_n(X)tilde-Delta\_n(Y))]\_\{ij\}, using the definition a star b:=tilde-Phi(ab), ordinary matrix multiplication, and linearity of tilde-Phi. The operator-space norms on A are inherited from B(H), so the inequality of the preceding child, together with ||Z||=||-Z||, is exactly ||tilde-Phi\_n(tilde-Delta\_n X tilde-Delta\_n Y)-tilde-Delta\_n(XY)|| <= d*||X||*||Y||. \steptag{validated} \\[4pt]
+\step{1.3} The scalar header in def-routef-raw-factor-setting has bar\_C\_E=max\{1,C\_E\}, C\_V=bar\_C\_E*C\_A, and C\_T=C\_theta+3*C\_V, with C\_theta=12*(sqrt(2)-1). The formation result gives 0<=epsilon\_AI(eta)<=C\_A*eta and d=C\_E*epsilon\_AI(eta); since C\_E is the nonnegative defect coefficient of the extended isomorphism, d<=bar\_C\_E*C\_A*eta=C\_V*eta. Also bar\_C\_E>=1, C\_A=20+(211/8)*C\_theta>0, and C\_theta>0, so C\_V>=0 and C\_T=C\_theta+3*C\_V>=C\_V. Thus d<=C\_T*eta. Combining this scalar bound with the multiplication-defect estimate proves the root inequality for all the arbitrary choices, with rho\_prod=rho\_T as defined. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
