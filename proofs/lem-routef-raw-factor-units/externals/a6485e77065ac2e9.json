@@ -1,0 +1,8 @@
+{
+  "id": "a6485e77065ac2e9",
+  "name": "lem-thmainext-conditional",
+  "source": "imports validated registry lemma proofs/lem-thmainext-conditional — Extended th_main_ext assembly: there are universal C_E \u003c infinity and epsilon_E \u003e 0 such that every finite-dimensional extended epsilon-C*-algebra A, for 0 \u003c= epsilon \u003c= epsilon_E, is carried by one extended C_E*epsilon-isomorphism v:B-\u003eA from a finite-dimensional C*-algebra, with constants independent of dimension, amplification level, and block data.",
+  "content_hash": "bb3e1a4edf4fa11b1191cf02dd097742e832d342851b0d3e21c4a133a9947695",
+  "created": "2026-08-05T12:27:36.041871568Z",
+  "notes": ""
+}
