@@ -124,3 +124,48 @@ separately authorized correction landing, then rerun this transcription
 audit.  Until that happens, the mathematical registry interfaces are
 faithfully landed, but the package as a whole is not byte-faithful to the
 ratified source under the user's stated adaptation whitelist.
+
+## RE-AUDIT (post-corrections)
+
+Date: 2026-08-05
+Role: fresh independent transcription re-auditor
+Status: **NON-RIGOROUS TRANSCRIPTION AUDIT / NOTHING PROMOTED**
+
+**Verdict: TRANSCRIPTION-CONFIRMED.**
+
+**New findings: none.**
+
+All five section-1 findings are corrected exactly as prescribed:
+
+1. `definitions/def-routef-raw-factor-setting.md` now displays precisely
+   `(\eta_A,C_A,C_E,\varepsilon_E).`, with no `W_{RF}=` assignment.
+2. The same shard has `\rho_\theta:=\frac18`, not `\tfrac18`.
+3. Its notes restore the exact curly-quoted sentence naming “UCP map”,
+   “extended epsilon-C*-algebra”, and “extended delta-isomorphism”, with no
+   appended wiki-link list.
+4. The undeclared typed-witness-pattern sentence is absent.
+5. `argument/lemmas/lem-routef-raw-factor-identities.md` ends the prescribed
+   row-3 correction sentence immediately after
+   ``rho_T <= rho_id^corr``; the parenthesized audit citation is absent.
+
+The complete `HEAD~1..HEAD` diff contains eight paths.  The only primary
+content changes are those five corrections in the definition and row-3
+body, plus the matching retained-generator correction.  The remaining paths
+are this prior audit file and deterministic report projections
+(`report/generated/defs/*` and `report/generated/stats/*`).  No contract,
+frontmatter, `defs:`, `deps:`, `af` root, `UNWIRED`, INDEX, or DAG content
+changed.
+
+I reran `python3 scripts/land-ledger-domains-rows.py`.  It reproduced all 17
+argument shards without a delta.  In a clean clone at `HEAD`, the immediately
+following `git status --porcelain` was empty.  The active orchestrator
+worktree retained only its pre-existing `.frontier/log.jsonl` entry, and the
+replay introduced no additional change there or anywhere else.
+
+Finally, after applying exactly the declared presentation adaptations
+(`\tag{1.n}` to `\qquad (1.n)`, `{\rm X}` to `{\mathrm{X}}`, and `\[...\]`
+to `$$...$$`) and using the same whitespace-neutral Markdown comparison as
+the first audit, the definition body is equal to design section 1.1.  No
+additional textual adaptation is required.  The definition and argument
+gates report zero errors, and the generated definition and statistics
+projections pass their freshness checks.
