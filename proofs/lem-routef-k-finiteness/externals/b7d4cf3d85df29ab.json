@@ -1,0 +1,8 @@
+{
+  "id": "b7d4cf3d85df29ab",
+  "name": "lem-routef-delta-upsilon-telescope",
+  "source": "imports validated registry lemma proofs/lem-routef-delta-upsilon-telescope — After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, every Upsilon' supplied from that same pair by lem-routef-upsilon-prime-closeness, and every Upsilon supplied from that same triple by lem-routef-upsilon-normalization-closeness, writing the fields of (W_RF,S) as the unqualified symbols below: Delta-Upsilon telescope: for rho_DeltaUpsilon := min{rho_theta, rho_T, rho_id, rho_Delta, rho_Upsilon} and 0 \u003c= eta \u003c= rho_DeltaUpsilon, ||Delta Upsilon - Phi||_cb \u003c= (C_theta+C_Delta+2*C_Upsilon)*eta.",
+  "content_hash": "501cf690cc74e59b280d76fc6ba87d92dd246bb5a263ed3939877dc975784d0e",
+  "created": "2026-08-08T12:52:13.4304955Z",
+  "notes": ""
+}
