@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-delta-prime-closeness/export.md",
+  "oracle": "af-lem-routef-delta-prime-closeness",
+  "result": "pass",
+  "claim_hash": "7448c00297756b96040aa86cf822889d93c2034e55227eb46836cfac799f72c0",
+  "oracle_digest": "ae6044a9f4bf10c408137bf69d5381ee8a09494891d3317f8e3084c18c4ad10b",
+  "inputs_hash": "f4cfb9673043e78665f42747eb0d1d5c110a8e9cebb811c0a611639f39ed17af",
+  "ts": "2026-08-08T08:08:29.931Z"
+}

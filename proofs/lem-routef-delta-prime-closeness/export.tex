@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing one global witness package W\_RF suppli...}
+\step{1} After first fixing one global witness package W\_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W\_RF supplied by the same result, writing the fields of (W\_RF,S) as the unqualified symbols below: Delta-prime CP closeness: with C\_Delta' := C\_T+4*C\_theta and rho\_Delta' := min\{rho\_T, rho\_prod\}, for 0 <= eta <= rho\_Delta', the repaired norm-one diagonal produces a CP map Delta' with ||Delta' - tilde-Delta||\_cb <= C\_Delta'*eta. \steptag{validated} \\[6pt]
+\step{1.1} Fix the single global W\_RF and then the input-dependent datum S using lem-routef-raw-factor-setting-formation. Under 0 <= eta <= rho\_Delta\_prime, all radius hypotheses needed below hold: eta <= rho\_T, eta <= rho\_prod, eta <= rho\_theta=1/8, and C\_V*eta <= 1/4. \steptag{validated} \\[6pt]
+\step{1.1.1} By lem-routef-raw-factor-setting-formation, choose its one global scalar header W\_RF before the input; for the fixed admissible (H,Phi,eta), choose the resulting datum S. Thus B is a finite-dimensional unital C*-algebra, Phi is UCP, tilde-Delta=iota\_\{A subseteq B(H)\} o v, v is an extended C\_E*epsilon\_AI(eta)-isomorphism, and all scalar notation is exactly (1.1)-(1.8) of def-routef-raw-factor-setting. \steptag{validated} \\[4pt]
+\step{1.1.2} By def-routef-raw-factor-setting, rho\_Delta\_prime=min\{rho\_T,rho\_prod\}, rho\_prod=rho\_T, and rho\_T is at most rho\_theta=1/8 and at most 1/(4*(1+C\_V)). Since C\_A=20+(211/8)*C\_theta>0 and bar\_C\_E=max\{1,C\_E\}>=1, C\_V=bar\_C\_E*C\_A>=0; hence 0<=eta<=rho\_Delta\_prime implies eta<=rho\_T, eta<=rho\_prod, eta<=1/8, and C\_V*eta<=C\_V/(4*(1+C\_V))<=1/4. \steptag{validated} \\[4pt]
+\step{1.2} For the repaired finite phase-balanced diagonal of B, tilde-Delta is involution-preserving and Phi is UCP; hence cor-kitaev-diagonal-cpization makes the map Delta\_prime(X)=sum\_t q\_t Phi(tilde-Delta(X W\_t\textasciicircum{}dagger) tilde-Delta(W\_t)) completely positive. \steptag{validated} \\[6pt]
+\step{1.2.1} Apply lem-kitaev-diagonal-repair to the finite-dimensional C*-algebra B from 1.1: obtain a finite phase-balanced diagonal D=sum\_t q\_t W\_t\textasciicircum{}dagger tensor W\_t with each W\_t unitary, q\_t>=0, sum\_t q\_t=1, exact centrality, pi(D)=1\_B, and norm-one representation. \steptag{validated} \\[4pt]
+\step{1.2.2} The map tilde-Delta is involution-preserving. Indeed, formation gives tilde-Delta=iota o v with v an extended isomorphism; by the registered definition def-extended-delta-inclusion its level-one map is a star-algebra delta-homomorphism and therefore preserves involution. By lem-routef-ai-defect-linearization (applicable since eta<=rho\_T<=rho\_AI=eta\_A), the involution on A is the inherited ambient adjoint, so the inclusion iota:A subseteq B(H) also preserves involution. Thus tilde-Delta(X\textasciicircum{}dagger)=tilde-Delta(X)\textasciicircum{}dagger for X in B. \steptag{validated} \\[4pt]
+\step{1.2.3} Now cor-kitaev-diagonal-cpization applies to the diagonal from 1.2.1, the involution-preserving tilde-Delta from 1.2.2, and the UCP map Phi from 1.1; it concludes that Delta\_prime(X)=sum\_t q\_t Phi(tilde-Delta(X W\_t\textasciicircum{}dagger) tilde-Delta(W\_t)) is completely positive. \steptag{validated} \\[4pt]
+\step{1.3} For every n >= 1 and X in M\_n(B), the amplified maps satisfy ||Delta\_prime\_n(X)-tilde-Delta\_n(X)|| <= (C\_T+4*C\_theta)*eta*||X||. \steptag{validated} \\[6pt]
+\step{1.3.1} Fix n>=1 and X in M\_n(B). For each diagonal term set U\_t=I\_n tensor W\_t, X\_t=X U\_t\textasciicircum{}dagger, Y\_t=U\_t, and Z\_t=tilde-Delta\_n(X\_t) tilde-Delta\_n(Y\_t). Entrywise amplification of the defining finite sum gives Delta\_prime\_n(X)=sum\_t q\_t Phi\_n(Z\_t). Since U\_t is unitary, ||X\_t||=||X||, ||Y\_t||=1, and X\_t Y\_t=X. \steptag{validated} \\[4pt]
+\step{1.3.2} By lem-routef-raw-factor-norms, applicable because eta<=rho\_T, ||tilde-Delta\_n(X\_t)|| <= (1+C\_V*eta)||X|| and ||tilde-Delta\_n(Y\_t)|| <= 1+C\_V*eta. Submultiplicativity in M\_n(B(H)) and C\_V*eta<=1/4 therefore give ||Z\_t|| <= (1+C\_V*eta)\textasciicircum{}2||X|| <= (5/4)\textasciicircum{}2||X|| <= 4||X||. \steptag{validated} \\[4pt]
+\step{1.3.3} By lem-routef-functional-calculus-closeness, applicable because eta<=1/8, ||Phi\_n-tilde-Phi\_n|| <= C\_theta*eta at every n. Hence 1.3.2 yields ||Phi\_n(Z\_t)-tilde-Phi\_n(Z\_t)|| <= 4*C\_theta*eta*||X||. \steptag{validated} \\[4pt]
+\step{1.3.4} By lem-routef-raw-product-estimate, applicable because eta<=rho\_prod, and because X\_t Y\_t=X, one has ||tilde-Phi\_n(Z\_t)-tilde-Delta\_n(X)|| <= C\_T*eta*||X\_t||*||Y\_t||=C\_T*eta*||X||. \steptag{validated} \\[4pt]
+\step{1.3.5} Since q\_t>=0 and sum\_t q\_t=1 by lem-kitaev-diagonal-repair, subtract tilde-Delta\_n(X)=sum\_t q\_t tilde-Delta\_n(X) from the formula in 1.3.1 and use the triangle inequality with 1.3.3 and 1.3.4. This gives ||Delta\_prime\_n(X)-tilde-Delta\_n(X)|| <= sum\_t q\_t*(4*C\_theta+C\_T)*eta*||X||=(C\_T+4*C\_theta)*eta*||X||. \steptag{validated} \\[4pt]
+\step{1.4} Taking the supremum of the level-n operator norms in the preceding uniform estimate gives ||Delta\_prime-tilde-Delta||\_cb <= (C\_T+4*C\_theta)*eta=C\_Delta\_prime*eta; together with complete positivity this is the root claim. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
