@@ -1,0 +1,8 @@
+{
+  "id": "f7cb260ff76ec23e",
+  "name": "lem-routef-f0-ucp-lift",
+  "source": "imports validated registry lemma proofs/lem-routef-f0-ucp-lift — Route F F0 UCP lift: let n \u003e= 1, let D: M_n -\u003e C^n be diagonal extraction onto the complex diagonal algebra C^n = l_inf^n(C) and J: C^n -\u003e M_n the diagonal inclusion, let Q: l_inf^n -\u003e l_inf^n be row-stochastic, and let Q_C: C^n -\u003e C^n be the canonical complex-linear extension of Q; then Phi := J Q_C D: M_n -\u003e M_n is a unital completely positive map.",
+  "content_hash": "ab0906821348b1977a86294a778caa0bcd68dcb9de0bcb13df2bc44ede41f6d6",
+  "created": "2026-08-08T15:30:38.620368145Z",
+  "notes": ""
+}

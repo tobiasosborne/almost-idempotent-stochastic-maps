@@ -1,0 +1,8 @@
+{
+  "id": "7a907d8899a03306",
+  "name": "lem-routef-f0-defect-identity",
+  "source": "imports validated registry lemma proofs/lem-routef-f0-defect-identity — Route F F0 defect identity: let n \u003e= 1, let D: M_n -\u003e C^n be diagonal extraction onto the complex diagonal algebra C^n = l_inf^n(C) and J: C^n -\u003e M_n the diagonal inclusion, let Q: l_inf^n -\u003e l_inf^n be row-stochastic with canonical complex-linear extension Q_C: C^n -\u003e C^n, and put Phi := J Q_C D; then ||Phi^2 - Phi||_cb = ||Q^2 - Q||_{infinity-\u003einfinity}.",
+  "content_hash": "3e342c95ab4ff14edbfc9c7e6a24eb64a407adf100eb49e7774777012c91bc37",
+  "created": "2026-08-08T15:30:38.625424695Z",
+  "notes": ""
+}

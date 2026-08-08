@@ -1,0 +1,8 @@
+{
+  "id": "d9fc704c7ab9145f",
+  "name": "lem-routef-scalar-header-positivity",
+  "source": "imports validated registry lemma proofs/lem-routef-scalar-header-positivity — Route F scalar-header positivity: there exists one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation such that, writing K for its scalar (1.6), rho_fac for its scalar (1.7), and eta_K := min{rho_fac, (24*K)^(-1), 1} for its scalar (1.8), K is finite with K \u003e= 1, rho_fac \u003e 0, and eta_K \u003e 0, these scalars are universal and independent of H, Phi, eta, n, amplification level, simple-block count, and block dimensions, and eta_K \u003c= rho_fac \u003c= rho_2 \u003c= rho_T \u003c= rho_id^corr, rho_2 \u003c= rho_Delta', rho_2 \u003c= rho_Delta, rho_fac \u003c= rho_DeltaUpsilon \u003c= rho_Upsilon \u003c= rho_Upsilon', rho_fac \u003c= rho_mult, and rho_fac \u003c= rho_UpsilonDelta.",
+  "content_hash": "0a0e5e48140adf5e2ea3ce725a1fb6de926fc6a01437346f83a96609046c4b3c",
+  "created": "2026-08-08T15:30:38.614895861Z",
+  "notes": ""
+}

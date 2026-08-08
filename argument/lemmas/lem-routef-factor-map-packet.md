@@ -5,7 +5,7 @@ contract: Relative Route F factor-map packet: after first fixing one global witn
 defs: def-routef-raw-factor-setting; def-stochastic; def-almost-idempotent; def-ucp-map
 deps: lem-routef-scalar-header-positivity; lem-routef-f0-ucp-lift; lem-routef-f0-defect-identity; lem-routef-raw-factor-setting-formation; lem-routef-delta-prime-closeness; lem-routef-delta-normalization-closeness; lem-routef-upsilon-prime-closeness; lem-routef-upsilon-normalization-closeness
 status: stated
-af: none
+af: seeded
 provenance: The byte-frozen F0, formation, and rows 5/6/8/9 interfaces audited in AUDIT-KLEDGER-STRENGTHENED.md findings 5-9; first-class cap factoring designed in DESIGN-KLEDGER-STRENGTHENED-V2.md, pending fresh hostile audit and user ratification.
 owner: A
 workspace: proofs/lem-routef-factor-map-packet
