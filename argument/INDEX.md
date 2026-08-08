@@ -240,7 +240,7 @@
 | `lem-routef-ai-defect-linearization` | lemma | proved | validated | A | Approximate-algebra defect linearization: set C_theta=12*(sqrt(2)-1). There are … |
 | `lem-routef-degree-three-estimate` | lemma | stated | none | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-degree-two-estimate` | lemma | stated | none | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
-| `lem-routef-delta-normalization-closeness` | lemma | stated | none | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
+| `lem-routef-delta-normalization-closeness` | lemma | stated | seeded | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-delta-phi-product` | lemma | stated | none | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-delta-prime-closeness` | lemma | proved | validated | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-delta-upsilon-telescope` | lemma | stated | none | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
