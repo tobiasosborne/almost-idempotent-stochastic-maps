@@ -1,8 +1,8 @@
 {
-  "id": "848c5a3a39b99bf6",
+  "id": "228d91e739b2a459",
   "name": "lem-routef-degree-three-estimate",
   "source": "imports validated registry lemma proofs/lem-routef-degree-three-estimate — After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, and every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness; for every integer n \u003e= 1 and all X, Y, Z in M_n(S.B), writing the fields of (W_RF,S) as the unqualified symbols below: Route F degree-three estimate: with C_3 := 10+20*C_Delta+12*C_theta+2*C_Delta' and rho_3 := min{rho_theta, rho_Delta', rho_Delta, rho_2}, for 0 \u003c= eta \u003c= rho_3, every amplification satisfies ||Phi_n(Delta_n X Delta_n Y Delta_n Z) - Delta_n(XYZ)|| \u003c= C_3*eta*||X||*||Y||*||Z||.",
   "content_hash": "c168ec4e785275e65c4ab576a18135b7dbf7bcd4f68c9a4da2257c0b4f5e65ed",
-  "created": "2026-08-08T08:57:24.103602204Z",
+  "created": "2026-08-08T11:15:17.520317118Z",
   "notes": ""
 }

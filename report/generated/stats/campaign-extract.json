@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-08-08T11:14:22Z",
+ "extracted_at": "2026-08-08T11:15:21Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-08-08T11:14:22Z",
+  "mined_at": "2026-08-08T11:15:21Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -2578,9 +2578,9 @@
      "challenges_resolved": 0,
      "claims": 0,
      "defs_imported": 6,
-     "first_ts": "2026-08-08T08:57:23.944704213Z",
+     "first_ts": "2026-08-08T11:15:17.353535945Z",
      "id": "lem-routef-upsilon-prime-closeness",
-     "last_ts": "2026-08-08T08:57:24.051022258Z",
+     "last_ts": "2026-08-08T11:15:17.467648559Z",
      "ledger_entries": 8,
      "max_round": 0,
      "nodes": 1,
@@ -3761,7 +3761,7 @@
     },
     "FH": {
      "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
-     "banked": 116,
+     "banked": 117,
      "blocked": 1,
      "died": 2,
      "dispatch": 265,
@@ -3810,7 +3810,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-08-08T11:07:22.878Z"
+     "last": "2026-08-08T11:14:46.448Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -3831,7 +3831,7 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 603,
+    "FH": 604,
     "G": 21,
     "R": 52,
     "XE": 1
@@ -3854,16 +3854,16 @@
     "2026-08-02": 12,
     "2026-08-03": 1,
     "2026-08-05": 7,
-    "2026-08-08": 6
+    "2026-08-08": 7
    },
    "decisions": {
-    "EXPLOIT": 525,
+    "EXPLOIT": 526,
     "EXPLORE": 14,
     "PIVOT": 6
    },
    "evidence_classes": {
     "advisory": 1,
-    "af": 169,
+    "af": 170,
     "af-export": 10,
     "af-ledger": 1,
     "af-validated": 3,
@@ -3908,16 +3908,16 @@
     "wave": 24
    },
    "evidence_tiers": {
-    "T0": 201,
+    "T0": 202,
     "T1": 167,
     "T2": 169
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-08-08T11:07:22.878Z",
-   "max_cycle": 1198,
+   "last_ts": "2026-08-08T11:14:46.448Z",
+   "max_cycle": 1199,
    "outcomes": {
     "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
-    "banked": 150,
+    "banked": 151,
     "blocked": 1,
     "died": 7,
     "discovery": 3,
@@ -3959,9 +3959,9 @@
     "2026-08-03": 11,
     "2026-08-04": 3,
     "2026-08-05": 32,
-    "2026-08-08": 33
+    "2026-08-08": 34
    },
-   "records": 1198,
+   "records": 1199,
    "worker_jobs": 524,
    "worker_models": {
     "codex": 338,
@@ -4036,9 +4036,9 @@
   "git": {
    "active_days": 27,
    "authors": {
-    "tobiasosborne": 1161
+    "tobiasosborne": 1162
    },
-   "commits": 1161,
+   "commits": 1162,
    "first_day": "2026-07-02",
    "last_day": "2026-08-08",
    "per_day": {
@@ -4068,7 +4068,7 @@
     "2026-08-03": 16,
     "2026-08-04": 2,
     "2026-08-05": 28,
-    "2026-08-08": 19
+    "2026-08-08": 20
    },
    "subject_prefixes": {
     "W61": 13,

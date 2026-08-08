@@ -1,0 +1,8 @@
+{
+  "id": "33fb1981aec42c3b",
+  "name": "lem-routef-upsilon-prime-left-inverse",
+  "source": "imports validated registry lemma proofs/lem-routef-upsilon-prime-left-inverse — After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, writing the fields of (W_RF,S) as the unqualified symbols below: for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, and every componentwise package (m,(L_j,E_j,W_j,Sigma_j,U_js,p_js,C_j,xi_j,Lambda_j,Upsilon'_j)_{j=1}^m,F,V,Upsilon') supplied for (W_RF,S,Delta',Delta) by lem-routef-upsilon-prime-component-construction, with C_L:=C_2+C_3+2*C_R from (1.3) and rho_Upsilon' := min{rho_T, rho_id, rho_Delta, rho_2, rho_3, (2*C_R)^(-1)}, for 0 \u003c= eta \u003c= rho_Upsilon', every integer q \u003e= 1, and every Y=(Y_1,...,Y_m) in M_q(B)=direct-sum_{j=1}^m M_q(B(L_j)), ||(Upsilon'_j)_q(Delta_q(Y))-Y_j|| \u003c= C_L*eta*||Y|| for every j, and consequently ||(Upsilon' Delta-I_B)_q(Y)|| \u003c= C_L*eta*||Y|| and ||Upsilon' Delta-I_B||_cb \u003c= C_L*eta.",
+  "content_hash": "060ab68876e9a49dbd428fdd668ad581d69eaa1019ef9230833e04f9fd2c8791",
+  "created": "2026-08-08T11:15:17.531818844Z",
+  "notes": ""
+}
