@@ -363,7 +363,7 @@
 | `obs-sigma-halo-nonrobust` | obstruction | numerical | none | A | The sigma-cap is FALSE as literally written at epsilon = 0: the exact 5x5 signed… |
 | `obs-thin-zero-face-blocker-graft` | obstruction | proved | none | A | Thin zero-face blocker graft: the explicit coordinate-row signed idempotent with… |
 | `obs-zero-face-perturbation-collapse` | obstruction | proved | none | A | Zero-face perturbation collapse: in the setting of lem-separator-zero-face-obstr… |
-| `op-classical` | open-problem | open | none | A | Classical projection stability: there are universal eta_0,C>0 (n-free) such that… |
+| `op-classical` | theorem | stated | seeded | A | Classical projection stability: there are universal eta_0,C>0 (n-free) such that… |
 | `op-exposed-hull` | open-problem | open | none | A | (OPEN) Global exposed-hull lemma (pinned-delta form, adopted 2026-07-10 per W46/… |
 | `op-hlc` | open-problem | open | none | A | (OPEN) Hull-linear cap HLC: there are universal delta_0>0 and C_1<inf (n-free) s… |
 | `prop-approx-simplex` | proposition | proved-mod-audit | seeded | A | If the rows of P admit gamma-approximate simplex coordinates (representatives r^… |

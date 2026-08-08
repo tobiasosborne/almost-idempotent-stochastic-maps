@@ -1,12 +1,12 @@
 ---
 id: op-classical
-kind: open-problem
+kind: theorem
 contract: Classical projection stability: there are universal eta_0,C>0 (n-free) such that every row-stochastic Q with ||Q^2-Q||_{inf->inf} <= eta <= eta_0 admits a stochastic idempotent E with ||Q-E||_{inf->inf} <= C sqrt(eta) (the commutative case of op-npps).
 defs: def-stochastic; def-almost-idempotent; def-near-positive-projection
 deps:
 routes: [lem-routef-f0-assembly] | [thm-classical-factorization; prop-approx-simplex]
-status: open
-af: none
+status: stated
+af: seeded
 provenance: docs/ingest (classical-portfolio; contracts verbatim from ../almost-idempotent-positive-maps/argument/lemmas or report/kernel-conjecture.tex); ROOT REWIRE 2026-08-08 (user-ratified): OR-routes block per DESIGN-F0-ASSEMBLY.md sect-3 / AUDIT-F0-ASSEMBLY.md sect-3 (Route F via the T0 lem-routef-f0-assembly; the legacy signed-geometry route retained as an independent alternative); the "(OPEN)" contract marker removed as part of the ratified discharge package (D1 sharpness split executed W80; sharpness carried by ex-hume)
 owner: A
 workspace: proofs/op-classical
