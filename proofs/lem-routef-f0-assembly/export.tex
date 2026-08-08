@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Route F F0 assembly: there are universal eta\_0,C > 0, ind...}
+\step{1} Route F F0 assembly: there are universal eta\_0,C > 0, independent of n, such that for every n >= 1, every row-stochastic Q: l\_inf\textasciicircum{}n -> l\_inf\textasciicircum{}n, and every 0 <= eta <= eta\_0 with ||Q\textasciicircum{}2-Q|$|\_\{infinity-\rangle$infinity\} <= eta, let D: M\_n -> C\textasciicircum{}n be diagonal extraction onto the complex diagonal algebra C\textasciicircum{}n = l\_inf\textasciicircum{}n(C), let J: C\textasciicircum{}n -> M\_n be the diagonal inclusion, let Q\_C: C\textasciicircum{}n -> C\textasciicircum{}n be the canonical complex-linear extension of Q, and put Phi := J Q\_C D; then the same Q admits a stochastic idempotent E satisfying ||Q-E|$|\_\{infinity-\rangle$infinity\} <= C*sqrt(eta); for the universal K and eta\_K supplied by lem-routef-k-ledger, one may take eta\_0 := eta\_K and C := K+4*sqrt(2*K). \steptag{validated} \\[6pt]
+\step{1.1} By lem-routef-k-ledger there are fixed scalars K and eta\_K with K >= 1 and eta\_K > 0, universal and independent of n; define eta\_0 := eta\_K and C := K+4*sqrt(2*K). Then eta\_0>0 and C>0, and both constants are universal and independent of n. \steptag{validated} \\[6pt]
+\step{1.1.1} The external lemma lem-routef-k-ledger supplies fixed universal scalars K and eta\_K, independent of n, amplification level, simple-block count, and block dimensions, and asserts K >= 1 and eta\_K > 0. \steptag{validated} \\[4pt]
+\step{1.1.2} Set eta\_0:=eta\_K and C:=K+4*sqrt(2*K). The first child gives eta\_0>0. Also K>=1 implies 2*K>0, so the real principal square root sqrt(2*K) is nonnegative and C>=K>=1>0. Because eta\_0 and C are fixed expressions in the universal dimension-free scalars K and eta\_K, they too are universal and independent of n. \steptag{validated} \\[4pt]
+\step{1.2} Fix arbitrary n >= 1, row-stochastic Q: l\_inf\textasciicircum{}n -> l\_inf\textasciicircum{}n, and 0 <= eta <= eta\_0 with ||Q\textasciicircum{}2-Q|$|\_\{infinity-\rangle$infinity\} <= eta, and define D,J,Q\_C,Phi exactly as in the root. Since eta\_0=eta\_K, lem-routef-k-ledger applies and supplies a stochastic idempotent E for the same Q with ||Q-E|$|\_\{infinity-\rangle$infinity\} <= (K+4*sqrt(2*K))*sqrt(eta) = C*sqrt(eta). \steptag{validated} \\[6pt]
+\step{1.2.1} For the arbitrary data fixed in 1.2, eta\_0=eta\_K turns 0 <= eta <= eta\_0 into 0 <= eta <= eta\_K; all remaining hypotheses and the definitions of D,J,Q\_C,Phi are exactly those in lem-routef-k-ledger. \steptag{validated} \\[4pt]
+\step{1.2.2} Applying lem-routef-k-ledger to those data yields, for the same Q, a stochastic idempotent E with ||Q-E|$|\_\{infinity-\rangle$infinity\} <= (K+4*sqrt(2*K))*sqrt(eta). Since C=K+4*sqrt(2*K), this is exactly ||Q-E|$|\_\{infinity-\rangle$infinity\} <= C*sqrt(eta). \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

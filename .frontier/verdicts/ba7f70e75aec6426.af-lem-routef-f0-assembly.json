@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-f0-assembly/export.md",
+  "oracle": "af-lem-routef-f0-assembly",
+  "result": "pass",
+  "claim_hash": "621cd6fa171b1e07d92ec10130f432d0d0e05117260b758212497c96876616b3",
+  "oracle_digest": "0d529fd70acf12f1162bf91e0f8e2eb74999d3a17d426c7d50c18bfdb8a7a345",
+  "inputs_hash": "b827b1568ed69ecf1ae024c2ba67884bdd5980bd5bdd64b1497d4eb3e1dd370e",
+  "ts": "2026-08-08T16:12:02.318Z"
+}
