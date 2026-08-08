@@ -1,0 +1,9 @@
+{
+  "claim": "lem-routef-scalar-header-positivity",
+  "oracle": "af-lem-routef-scalar-header-positivity",
+  "result": "pass",
+  "claim_hash": "8e82f4c3b4679863fc25cd088daeb154595e6687abd113701eb65aca2889148c",
+  "oracle_digest": "944224f9a2b9119af908705ff5134d017febdc226f38e1be62d38cea1fd0769d",
+  "inputs_hash": "ce90474d27858deac905de2b206e187c674797f87ae2e12184115a901cbf5cf6",
+  "ts": "2026-08-08T15:28:44.598Z"
+}

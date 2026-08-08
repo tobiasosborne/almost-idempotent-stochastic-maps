@@ -4,15 +4,18 @@ kind: lemma
 contract: Route F scalar-header positivity: there exists one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation such that, writing K for its scalar (1.6), rho_fac for its scalar (1.7), and eta_K := min{rho_fac, (24*K)^(-1), 1} for its scalar (1.8), K is finite with K >= 1, rho_fac > 0, and eta_K > 0, these scalars are universal and independent of H, Phi, eta, n, amplification level, simple-block count, and block dimensions, and eta_K <= rho_fac <= rho_2 <= rho_T <= rho_id^corr, rho_2 <= rho_Delta', rho_2 <= rho_Delta, rho_fac <= rho_DeltaUpsilon <= rho_Upsilon <= rho_Upsilon', rho_fac <= rho_mult, and rho_fac <= rho_UpsilonDelta.
 defs: def-routef-raw-factor-setting
 deps: lem-routef-raw-factor-setting-formation
-status: stated
-af: seeded
+status: proved
+af: validated
 provenance: definitions/def-routef-raw-factor-setting.md equations (1.1)-(1.8) and the global scalar-header witness exported by lem-routef-raw-factor-setting-formation; factoring and pre-forall quantifier repair designed in DESIGN-KLEDGER-STRENGTHENED-V2.md, pending fresh hostile audit and user ratification.
 owner: A
 workspace: proofs/lem-routef-scalar-header-positivity
 ---
 
-**Status.** `stated`, `af: none`. This is a new elementary scalar-header proof obligation.
-It promotes no part of the former paper ledger.
+**Status.** `proved`, `af: validated` (2026-08-08): root node 1 validated/clean, 16-node
+tree (14 live validated, 2 archived), fresh codex provers with separate fresh hostile
+verifiers per node, cap 14 held; external oracle `af-lem-routef-scalar-header-positivity`
++ `fr verify` PASS. This flip is a mechanical reflection of the codex ledger. It promotes
+no part of the former paper ledger.
 
 **Quantifier scope.** Select the global `W_RF` from
 [[lem-routef-raw-factor-setting-formation]] and stop before entering that lemma's

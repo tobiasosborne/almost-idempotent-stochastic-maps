@@ -1,0 +1,9 @@
+{
+  "claim": "lem-routef-scalar-header-positivity af-validated: root 1 validated/clean (16 nodes, 14 live validated, 2 archived), fresh codex provers + separate fresh verifiers per node, cap 14 held",
+  "oracle": "af-lem-routef-scalar-header-positivity",
+  "result": "fail",
+  "claim_hash": "d8bddcd12d81ede8ab427ffd49aa1f35d42a91c8614a2f4bff36a5c5686e9b11",
+  "oracle_digest": "944224f9a2b9119af908705ff5134d017febdc226f38e1be62d38cea1fd0769d",
+  "inputs_hash": "ce90474d27858deac905de2b206e187c674797f87ae2e12184115a901cbf5cf6",
+  "ts": "2026-08-08T15:28:29.581Z"
+}

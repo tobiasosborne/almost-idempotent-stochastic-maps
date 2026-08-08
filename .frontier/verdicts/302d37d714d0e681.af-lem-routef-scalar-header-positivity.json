@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-scalar-header-positivity/export.md",
+  "oracle": "af-lem-routef-scalar-header-positivity",
+  "result": "pass",
+  "claim_hash": "fd351ecc19680256818f0afc3885e9f6ebae4d06f115496d73da92dc38d0765c",
+  "oracle_digest": "944224f9a2b9119af908705ff5134d017febdc226f38e1be62d38cea1fd0769d",
+  "inputs_hash": "68b32fcee0099036be822d810b7c5b9340962346b81a40d99c36a5d726b7679c",
+  "ts": "2026-08-08T15:29:55.215Z"
+}
