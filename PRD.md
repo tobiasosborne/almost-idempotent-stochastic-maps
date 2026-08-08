@@ -109,16 +109,22 @@ the rigorous record.** Nothing is "rigorous" here until it is byte-matched to a 
 - `.frontier/` — the `fr` campaign record (append-only `log.jsonl` + `portfolio.json`).
 - `docs/ingest/` — the ingested classical-portfolio (read-mostly; never cited as rigorous, L1).
 
-## Current state (2026-07-02)
+## Current state (2026-08-08)
 
-**Repository stood up (day 1).** Governance (`CLAUDE.md`==`AGENTS.md`, this `PRD.md`, `HANDOFF.md`,
-`README.md`, `CONVENTIONS.md`, `FINDINGS.md`, `RESEARCH_NOTES.md`), the layered architecture
-(`definitions/`, `argument/`, `proofs/`, `report/`, `runs/`, `refs/`, `docs/ingest/`), the local-CI gates
-(`scripts/`, incl. the AQM-style `check-report-shards.sh`), and the `fr` controller are being put in place;
-the classical-portfolio is being ingested and honestly re-tagged, and the knowledge DAG seeded from it.
-`scripts/check-all.sh` is green on the scaffold. `af` is **designed-in but opt-in** (`af: none` everywhere;
-codex protocol per `CLAUDE.md` §6); the first elevation target is `lem-classical-equiv` (re-validate the
-signed↔stochastic bridge). **No mathematics is rigorous in-repo yet.** See `HANDOFF.md` and `bd ready`.
+**THE NORTH-STAR THEOREM IS DISCHARGED AT THE AF-VALIDATED RUNG.** `op-classical` is
+`proved` / `af: validated` (T0 = 196 of 371 registry results): universal, dimension-free
+`eta_0 = eta_K > 0` and `C = K + 4*sqrt(2K)` with the `C*sqrt(eta)` conclusion, via
+Route F (F0 diagonal seam → MAIN assembly → the 19-row ledger family → the strengthened
+K-ledger → F2/F3/PRH → F0 assembly → the user-ratified root rewire). Every edge carries a
+fresh-prover / separate-fresh-verifier af tree plus an external oracle gate.
+
+**The honest boundary.** (i) af-validation is L0 rung (b) — not a Lean/mathlib proof
+(the ladder's top rung remains open work). (ii) The discharged contract is the upper
+bound only (the ratified D1 split): **sharpness of the exponent 1/2 rests on `ex-hume`,
+still `proved-mod-audit`** — its af elevation is the natural next rigour target.
+(iii) The legacy signed-geometry route remains a non-rigorous independent alternative.
+Remaining work: `ex-hume` elevation, the report sync (`aism-9kmt`), the standalone paper
+(`paper/main.tex`), and Lean if elevated. See `HANDOFF.md` and `docs/plans/CURRENT.md`.
 
 ## Escalation (stop and ask the user)
 

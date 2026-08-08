@@ -26,7 +26,7 @@ verbatim), and keywords.
 ## `AISM-00-OVERVIEW`
 - **File:** `report/sections/00_overview.tex`
 - **Title:** Orientation and rigour boundary
-- **Summary:** States the open target op-classical and fixes the two equivalent pictures bridged by lem-classical-equiv.
+- **Summary:** States the target op-classical (discharged at the af-validated rung 2026-08-08 via Route F) and fixes the two equivalent pictures bridged by lem-classical-equiv.
 - **Summary:** Describes the five af-validated blocks reproduced here: the bridge, PRH, the COMP tier, the H-CB tier, and the H-CB-parent/EXT tier.
 - **Summary:** Records the honesty boundary: only af-validated results appear as lemmas; everything else stays outside this document.
 - **Keywords:** overview, op-classical, rigour ladder, signed picture, stochastic picture, COMP tier, H-CB tier
@@ -289,7 +289,7 @@ verbatim), and keywords.
 - **Title:** The Route F finish edge
 - **Summary:** Reproduces lem-routef-prh-finish, the af-validated conditional PRH finish edge within Route F: retract data for a row-stochastic Q at defect eta yields a stochastic idempotent within (K+4*sqrt(2K))*sqrt(eta).
 - **Summary:** Explains the scalar preparation that converts the hypothesis eta-window into the PRH window, the exhaustive dimension split guarding the import of lem-prh, and the two-term triangle finish.
-- **Summary:** States plainly that this is an implication whose antecedent is supplied by no result reproduced here, so no unconditional square-root bound follows and op-classical stays open.
+- **Summary:** States plainly that this is an implication; its antecedent is now supplied by the validated strengthened K-ledger, so the unconditional square-root bound follows and op-classical is discharged.
 - **Keywords:** lem-routef-prh-finish, af validated, Route F, positive approximate retract, stochastic idempotent, square-root rate, conditional finish
 
 ## `AISM-37-STAGE1-QUANTITATIVE-IFT`
@@ -313,7 +313,7 @@ verbatim), and keywords.
 - **Title:** The F0 seam: a stochastic matrix as a unital completely positive map
 - **Summary:** Reproduces the two af-validated F0 seam rows lem-routef-f0-ucp-lift and lem-routef-f0-defect-identity, which carry a row-stochastic Q into the matrix algebra M_n as the UCP map Phi = J Q_C D.
 - **Summary:** Explains the real-versus-complex typing the seam turns on, the diagonal-compression argument that makes extraction and inclusion completely positive, and the two-sided matrix-level computation giving the defect identity with constant exactly one.
-- **Summary:** Records that the seam consumes no smallness hypothesis and performs no conversion of the defect, and that neither row on its own bears on op-classical, which is open.
+- **Summary:** Records that the seam consumes no smallness hypothesis and performs no conversion of the defect; through the validated K-ledger and F0 assembly it feeds the discharged op-classical.
 - **Keywords:** lem-routef-f0-ucp-lift, lem-routef-f0-defect-identity, af validated, Route F, F0 seam, diagonal inclusion, diagonal extraction, complete positivity, cb norm, defect identity
 
 ## `AISM-43-ROUTEF-AI-LEDGER`
@@ -321,7 +321,7 @@ verbatim), and keywords.
 - **Title:** The approximate-algebra ledger for an almost-idempotent UCP map
 - **Summary:** Reproduces three af-validated rows: lem-kitaev-almost-idemp-audit, the corrected audit turning an almost-idempotent UCP map into an extended epsilon-C*-algebra; lem-routef-functional-calculus-closeness, the C_theta*eta bound on the functional-calculus projector; and lem-routef-ai-defect-linearization, which linearises the resulting defect.
 - **Summary:** Explains the spectral correction package built from the binomial series, the internally constructed iterated Stinespring stack that carries the two amplified associativity estimates, and the telescoping that converts them into the epsilon-C*-algebra axioms at every amplification.
-- **Summary:** Records the local source type and index corrections the audit had to apply, and the banking-time contract reconciliation of the linearization row, and states that the ledger is an implication whose consumer is not af-validated.
+- **Summary:** Records the local source type and index corrections the audit had to apply, and the banking-time contract reconciliation of the linearization row; the ledger's consumer (the strengthened K-ledger) is now af-validated.
 - **Keywords:** lem-kitaev-almost-idemp-audit, lem-routef-functional-calculus-closeness, lem-routef-ai-defect-linearization, af validated, Route F, extended epsilon-C*-algebra, functional calculus, Stinespring stack, associativity defect, defect linearization
 
 ## `AISM-44-ROUTEF-F2-F3`
@@ -329,7 +329,7 @@ verbatim), and keywords.
 - **Title:** The F2/F3 block: manufacturing the positive unital retract pair
 - **Summary:** Reproduces the two af-validated rows lem-routef-f2-positive-unital-compression and lem-routef-f3-retract-defect, which convert an approximate UCP factorization of the F0 lift through a finite-dimensional C*-algebra into a positive unital pair A, M with the three estimates the Route F finish edge consumes.
 - **Summary:** Explains the commutator argument that forces commutativity of the intermediate algebra, the in-tree norm-two Pauli witness that replaces the unavailable finite-dimensional classification, the coordinate isomorphism built from the byte-matched projection basis, and the exact identity behind the retract-defect bound.
-- **Summary:** States that the factorization hypotheses are supplied by a registry row that is not af-validated, so the Route F chain is not closed here and op-classical stays open.
+- **Summary:** States that the factorization hypotheses are supplied by the strengthened K-ledger, now af-validated, so the Route F chain is closed and op-classical is discharged.
 - **Keywords:** lem-routef-f2-positive-unital-compression, lem-routef-f3-retract-defect, af validated, Route F, positive unital compression, commutativity forcing, projection basis, retract defect, lower modulus
 ## `AISM-45-STAGE1-POLAR-CHARTS`
 - **File:** `report/sections/45_stage1_polar_charts.tex`

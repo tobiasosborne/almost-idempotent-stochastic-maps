@@ -67,11 +67,13 @@ factorization ledger in Theorem~\ref{thm:factor}, one may take
 No uniform estimate with $\eta^\beta$ in place of $\sqrt\eta$ can hold for
 any $\beta>\tfrac12$.
 \end{theorem}\footnotemark
-\footnotetext{Most component lemmas have been machine-adversarially
-validated in this project's registry.  The scalar-header positivity lemma,
-factor-map packet, factor-estimate packet, strengthened ledger, and
-top-level assembly remain in progress, so this draft does not claim
-completed formal verification.}
+\footnotetext{The full argument --- every component lemma, the
+factorization ledger, the assembly, and the top-level statement itself ---
+has been machine-adversarially validated in this project's registry
+(independent prover and hostile verifier per proof node).  This is an
+adversarial machine protocol, not a proof-assistant formalization: no
+Lean/mathlib proof exists, and the sharpness example is at present
+verified only by human audit.}
 
 Kitaev's approximate-algebra theorem \cite{Kitaev} is the large structural
 input, which we use rather than reproduce.  The new work is to cross into its

@@ -1,6 +1,6 @@
 % SHARD-ID: AISM-00-OVERVIEW
 % SHARD-TITLE: Orientation and rigour boundary
-% SHARD-SUMMARY: States the open target op-classical and fixes the two equivalent pictures bridged by lem-classical-equiv.
+% SHARD-SUMMARY: States the target op-classical (discharged at the af-validated rung 2026-08-08 via Route F) and fixes the two equivalent pictures bridged by lem-classical-equiv.
 % SHARD-SUMMARY: Describes the five af-validated blocks reproduced here: the bridge, PRH, the COMP tier, the H-CB tier, and the H-CB-parent/EXT tier.
 % SHARD-SUMMARY: Records the honesty boundary: only af-validated results appear as lemmas; everything else stays outside this document.
 % SHARD-KEYWORDS: overview, op-classical, rigour ladder, signed picture, stochastic picture, COMP tier, H-CB tier
@@ -111,14 +111,15 @@ rather than a registry definition.
 
 \subsection*{What is deliberately absent}
 
-No claim, direct or implied, that \texttt{op-classical} follows. The H-CB tier feeds the
-parent contract \texttt{conj-hcb} (\S\ref{sec:hcb}), and that in turn feeds the EXT
-parent \texttt{conj-extcb} (\S\ref{sec:extcb}); both are \texttt{proved} with
-\texttt{af: validated}, as is the assembly carrier \texttt{lem-thmainext-conditional}
-(af-validated, not reproduced here). What remains below the af-validated rung is the
-strengthened \texttt{lem-routef-k-ledger} replacement together with its three helper rows
-and \texttt{lem-routef-f0-assembly}, all \texttt{stated} with \texttt{af: none}; the
-Route-F root rewire remains open. The route is a route, not a proof.
+As of 2026-08-08, \texttt{op-classical} is \texttt{proved} with \texttt{af: validated}:
+the H-CB tier feeds \texttt{conj-hcb} (\S\ref{sec:hcb}), that feeds \texttt{conj-extcb}
+(\S\ref{sec:extcb}), the MAIN assembly carrier \texttt{lem-thmainext-conditional}, the
+strengthened \texttt{lem-routef-k-ledger} with its three helper rows, and
+\texttt{lem-routef-f0-assembly} are all \texttt{proved} with \texttt{af: validated}, and
+the user-ratified root rewire discharged the theorem through Route F
+(\S\ref{sec:status-outlook}). What this document does NOT claim: sharpness of the
+exponent (the separate obstruction \texttt{ex-hume}, still \texttt{proved-mod-audit}),
+and any rigour rung above af-validation (no Lean proof exists).
 Also absent: any numerical statement (those live in
 \texttt{runs/}, and are never rigorous), and the earlier signed-geometry material, which
 is off the live route and inventoried in \S\ref{sec:status-outlook}.

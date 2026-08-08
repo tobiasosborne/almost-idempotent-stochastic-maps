@@ -2473,3 +2473,27 @@ folded in; T0 169; registry 364.
   audience; fresh-codex draft dispatched (faithfulness audit pending).
 - Artifacts: docs/plans/2026-08-08-KLEDGER-STRENGTHENED/ (2 briefs + 2
   designs + 2 audits + 2 audit briefs); beads aism-e30g (W138), aism-aywn.
+
+## 2026-08-08 (session 45 close, W138) — op-classical DISCHARGED AT T0 (196); root rewire + queue complete
+
+- Elevation queue 5/5 banked: scalar-header-positivity (T0 191; one (1.6)
+  statement challenge corrected + re-verified), factor-map-packet (192,
+  16/16 first pass), factor-estimate-packet (193, 16/16 first pass),
+  strengthened lem-routef-k-ledger (194, 7/7 FIRST PASS — the factoring
+  absorbed the work as designed), lem-routef-f0-assembly (195, 7/7).
+- USER-RATIFIED ROOT REWIRE + DISCHARGE: audited OR-routes block
+  (Route F | legacy signed route); kind open-problem -> theorem
+  (conj-hcb precedent); "(OPEN)" marker removed; root af tree 5/5
+  validated/clean; oracle af-op-classical + fr verify PASS; mechanical
+  flip. op-classical = proved / af: validated. T0 = 196, registry = 371.
+- Honest boundary recorded everywhere: af-validated rung only (no Lean);
+  upper bound only (sharpness = ex-hume, still proved-mod-audit); legacy
+  route unused.
+- Report truthfulness sweep: 28 stock open-claims, 8 bespoke paragraphs,
+  5 shard headers + catalog rows; PRD current-state rewritten; UNWIRED
+  comments updated; sketch v50 + CURRENT; all generators; check-all OK.
+- Paper footnote updated post-discharge; rebuilt (4pp); re-delivered.
+- Beads: aism-e30g closed (W138), aism-xuvw closed (Route-F T0 epic
+  complete); aism-9kmt now the biggest debt (report sync).
+- Next: ex-hume elevation (sharpness at T0), report sync, paper polish,
+  Lean only on user elevation.

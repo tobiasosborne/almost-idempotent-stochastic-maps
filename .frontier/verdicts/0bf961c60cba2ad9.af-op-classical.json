@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/op-classical/export.md",
+  "oracle": "af-op-classical",
+  "result": "pass",
+  "claim_hash": "fba8a5aa520a4c9a2bbb63143a65997acfc31fcf225ea1d14c41689c0433b2f2",
+  "oracle_digest": "0fd07574754705cf5893b590a72c912cd49ee8e83a265c1d2a86d764e2c01d55",
+  "inputs_hash": "d8c2ee4a3460e464ac4d3ec773439aea0708f82da0253e684815f8e987bf6e36",
+  "ts": "2026-08-08T16:28:41.413Z"
+}

@@ -5,12 +5,22 @@ contract: Classical projection stability: there are universal eta_0,C>0 (n-free)
 defs: def-stochastic; def-almost-idempotent; def-near-positive-projection
 deps:
 routes: [lem-routef-f0-assembly] | [thm-classical-factorization; prop-approx-simplex]
-status: stated
-af: seeded
+status: proved
+af: validated
 provenance: docs/ingest (classical-portfolio; contracts verbatim from ../almost-idempotent-positive-maps/argument/lemmas or report/kernel-conjecture.tex); ROOT REWIRE 2026-08-08 (user-ratified): OR-routes block per DESIGN-F0-ASSEMBLY.md sect-3 / AUDIT-F0-ASSEMBLY.md sect-3 (Route F via the T0 lem-routef-f0-assembly; the legacy signed-geometry route retained as an independent alternative); the "(OPEN)" contract marker removed as part of the ratified discharge package (D1 sharpness split executed W80; sharpness carried by ex-hume)
 owner: A
 workspace: proofs/op-classical
 ---
+
+**DISCHARGED AT T0 (2026-08-08).** Root af tree: 5/5 nodes validated/clean
+(fresh codex prover, separate fresh hostile verifiers per node); external
+oracle `af-op-classical` + `fr verify` PASS; mechanical flip. The theorem
+is af-validated end-to-end through Route F; explicit witnesses
+eta_0 = eta_K and C = K+4*sqrt(2K) from the strengthened
+[[lem-routef-k-ledger]]. NOTE the honest boundary: this discharges the
+UPPER-BOUND contract (the D1 split, W80); sharpness of the exponent 1/2
+is the separate obstruction [[ex-hume]] (still proved-mod-audit), and
+af-validation is this repo's L0 rung (b), not a Lean/mathlib proof.
 
 The **north star** (`PRD.md`). Two independent routes: Route F via
 [[lem-routef-f0-assembly]] (the T0 Kitaev-factorization assembly; eta_0 = eta_K,

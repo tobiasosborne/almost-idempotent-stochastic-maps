@@ -2,7 +2,7 @@
 % SHARD-TITLE: The approximate-algebra ledger for an almost-idempotent UCP map
 % SHARD-SUMMARY: Reproduces three af-validated rows: lem-kitaev-almost-idemp-audit, the corrected audit turning an almost-idempotent UCP map into an extended epsilon-C*-algebra; lem-routef-functional-calculus-closeness, the C_theta*eta bound on the functional-calculus projector; and lem-routef-ai-defect-linearization, which linearises the resulting defect.
 % SHARD-SUMMARY: Explains the spectral correction package built from the binomial series, the internally constructed iterated Stinespring stack that carries the two amplified associativity estimates, and the telescoping that converts them into the epsilon-C*-algebra axioms at every amplification.
-% SHARD-SUMMARY: Records the local source type and index corrections the audit had to apply, and the banking-time contract reconciliation of the linearization row, and states that the ledger is an implication whose consumer is not af-validated.
+% SHARD-SUMMARY: Records the local source type and index corrections the audit had to apply, and the banking-time contract reconciliation of the linearization row; the ledger's consumer (the strengthened K-ledger) is now af-validated.
 % SHARD-KEYWORDS: lem-kitaev-almost-idemp-audit, lem-routef-functional-calculus-closeness, lem-routef-ai-defect-linearization, af validated, Route F, extended epsilon-C*-algebra, functional calculus, Stinespring stack, associativity defect, defect linearization
 \section{The approximate-algebra ledger for an almost-idempotent UCP map}\label{sec:routef-ai-ledger}
 
@@ -253,8 +253,8 @@ forced the reconciliation.
 \texttt{deps}: \texttt{lem-kitaev-almost-idemp-audit} and
 \texttt{lem-routef-functional-calculus-closeness}, both reproduced above and both
 \texttt{af}-validated. The consumer of this ledger is the strengthened factorization row
-\texttt{lem-routef-k-ledger}, which is \texttt{stated} with \texttt{af: none} (its helper
-projections likewise, pending elevation) --- \textbf{open} at this document's rigour bar
-and \textbf{not} reproduced here; no unconditional bound exists yet. Nothing in
-this section therefore produces a bound on a stochastic matrix, and
-\texttt{op-classical} is \textbf{open}.
+\texttt{lem-routef-k-ledger}, now \texttt{proved} with \texttt{af: validated} together
+with its three helper projections (\textbf{not} reproduced here;
+\S\ref{sec:status-outlook}). Through that consumer and the F0 assembly,
+\texttt{op-classical} is now \textbf{discharged} at the af-validated rung via Route F
+(\S\ref{sec:status-outlook}); sharpness remains with \texttt{ex-hume}.

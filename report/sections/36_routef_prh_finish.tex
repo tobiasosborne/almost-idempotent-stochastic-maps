@@ -2,7 +2,7 @@
 % SHARD-TITLE: The Route F finish edge
 % SHARD-SUMMARY: Reproduces lem-routef-prh-finish, the af-validated conditional PRH finish edge within Route F: retract data for a row-stochastic Q at defect eta yields a stochastic idempotent within (K+4*sqrt(2K))*sqrt(eta).
 % SHARD-SUMMARY: Explains the scalar preparation that converts the hypothesis eta-window into the PRH window, the exhaustive dimension split guarding the import of lem-prh, and the two-term triangle finish.
-% SHARD-SUMMARY: States plainly that this is an implication whose antecedent is supplied by no result reproduced here, so no unconditional square-root bound follows and op-classical stays open.
+% SHARD-SUMMARY: States plainly that this is an implication; its antecedent is now supplied by the validated strengthened K-ledger, so the unconditional square-root bound follows and op-classical is discharged.
 % SHARD-KEYWORDS: lem-routef-prh-finish, af validated, Route F, positive approximate retract, stochastic idempotent, square-root rate, conditional finish
 \section{The Route F finish edge}\label{sec:routef-prh-finish}
 
@@ -119,15 +119,15 @@ unconditionally anywhere in this document. Two of the registry rows that produce
 \texttt{lem-routef-f3-retract-defect} (the retract-defect bound, whose conclusion is
 literally the second hypothesis here), are now \texttt{proved} with \texttt{af: validated}
 and are reproduced in \S\ref{sec:routef-f2-f3}, as are the seam and ledger rows upstream of
-them (\S\ref{sec:routef-f0-seam}, \S\ref{sec:routef-ai-ledger}). But the F2 row is itself an
-implication, and while the assembly carrier \texttt{lem-thmainext-conditional} is now
-\texttt{proved} with \texttt{af: validated}, the factorization row that would discharge
-F2's antecedent --- the strengthened \texttt{lem-routef-k-ledger}, which also fixes the
-dimension-free $K$ --- is \texttt{stated} with \texttt{af: none}: \textbf{open} at this
-document's rigour bar and \textbf{not} reproduced here (\S\ref{sec:status-outlook}). Consequently nothing here yields an unconditional
-$\sqrt{\defect}$ bound for a row-stochastic $Q$, and \texttt{op-classical} is
-\textbf{open}. The shape of \eqref{eq:rpf-target} is the shape the target asks for; the
-antecedent is the whole remaining problem on this route.
+them (\S\ref{sec:routef-f0-seam}, \S\ref{sec:routef-ai-ledger}). The F2 row is itself an
+implication, but its antecedent is now discharged: the assembly carrier
+\texttt{lem-thmainext-conditional} and the strengthened
+\texttt{lem-routef-k-ledger} --- the factorization row that fixes the dimension-free
+$K$ --- are both \texttt{proved} with \texttt{af: validated} (the latter not reproduced
+here; \S\ref{sec:status-outlook}). Consequently the unconditional
+$\sqrt{\defect}$ bound for a row-stochastic $Q$ holds through this edge, and
+\texttt{op-classical} is now \textbf{discharged} at the af-validated rung via Route F
+(\S\ref{sec:status-outlook}); sharpness remains with \texttt{ex-hume}.
 
 \noindent\textbf{Role in the chain.} Registry \texttt{defs}:
 \texttt{def-positive-approximate-retract}, \texttt{def-stochastic}. Registry

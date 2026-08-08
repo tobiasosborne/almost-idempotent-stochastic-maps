@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Classical projection stability: there are universal eta\_0...}
+\step{1} Classical projection stability: there are universal eta\_0,C>0 (n-free) such that every row-stochastic Q with ||Q\textasciicircum{}2-Q|$|\_\{inf-\rangle$inf\} <= eta <= eta\_0 admits a stochastic idempotent E with ||Q-E|$|\_\{inf-\rangle$inf\} <= C sqrt(eta) (the commutative case of op-npps). \steptag{validated} \\[6pt]
+\step{1.1} External invocation: lem-routef-f0-assembly supplies universal eta\_0,C>0 independent of n such that for every n>=1, every row-stochastic Q:l\_inf\textasciicircum{}n->l\_inf\textasciicircum{}n, and every 0<=eta<=eta\_0 with ||Q\textasciicircum{}2-Q|$|\_\{infinity-\rangle$infinity\}<=eta, the same Q admits a stochastic idempotent E satisfying ||Q-E|$|\_\{infinity-\rangle$infinity\}<=C*sqrt(eta). \steptag{validated} \\[4pt]
+\step{1.2} Vocabulary match: by def-stochastic and def-almost-idempotent, a row-stochastic matrix Q is the same object as the row-stochastic map Q:l\_inf\textasciicircum{}n->l\_inf\textasciicircum{}n used in lem-routef-f0-assembly, a stochastic idempotent means row-stochastic E with E\textasciicircum{}2=E, and ||.|$|\_\{inf-\rangle$inf\} is the same induced operator norm denoted ||.|$|\_\{infinity-\rangle$infinity\}; independent of n is exactly n-free. Hence the external conclusion has precisely the hypotheses and conclusion of node 1. \steptag{validated} \\[6pt]
+\step{1.2.1} By def-stochastic and def-almost-idempotent, a row-stochastic matrix Q is equivalently the row-stochastic map Q:l\_inf\textasciicircum{}n->l\_inf\textasciicircum{}n used by lem-routef-f0-assembly, a stochastic idempotent is row-stochastic E with E\textasciicircum{}2=E, and the inf->inf and infinity->infinity symbols denote the same induced operator norm; independent of n means n-free. \steptag{validated} \\[4pt]
+\step{1.2.2} By def-near-positive-projection, near-positive-projection stability has as its commutative stochastic specialization exactly approximation by a stochastic idempotent with a square-root bound, so the parenthetical phrase the commutative case of op-npps is descriptive and adds no further hypothesis or conclusion to node 1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

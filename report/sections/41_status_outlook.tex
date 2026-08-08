@@ -94,25 +94,31 @@ $\Mat{r}$ to $\Mat{r+1}$, at one universal accuracy, with one unitary and four f
 corner maps serving every amplification level. It is not an induction, and nothing here
 iterates it.
 
-Beyond the EXT tier lies the assembly, and its carrier is now rigorous: the MAIN-CB
-assembly rows and \texttt{lem-thmainext-conditional} are \texttt{proved} with
+Beyond the EXT tier lies the assembly, and the whole cone above it is now rigorous: the
+MAIN-CB assembly rows and \texttt{lem-thmainext-conditional} are \texttt{proved} with
 \texttt{af: validated} (not reproduced here), as are all fifteen original inputs of the
 K-ledger factorization --- the formation backbone, ledger rows 1--14 with D2/D3, the two
-row-8 factoring sub-lemmas, the F0 seam pair, F2, F3, and the PRH finish. Where the live
-route now stops is the top of that cone: the strengthened \texttt{lem-routef-k-ledger}
+row-8 factoring sub-lemmas, the F0 seam pair, F2, F3, and the PRH finish --- and, as of
+2026-08-08, the top of the cone itself: the strengthened \texttt{lem-routef-k-ledger}
 replacement, its three helper rows
 (\texttt{lem-routef-scalar-header-positivity},
 \texttt{lem-routef-factor-map-packet},
 \texttt{lem-routef-factor-estimate-packet}), and
-\texttt{lem-routef-f0-assembly} are \texttt{stated} with \texttt{af: none}, landed under
-the user-ratified, twice-hostile-audited KLEDGER-STRENGTHENED v2 package and awaiting
-their af elevations --- which would discharge the antecedent of
-\S\ref{sec:routef-f2-f3}.
+\texttt{lem-routef-f0-assembly}, all elevated under the user-ratified,
+twice-hostile-audited KLEDGER-STRENGTHENED v2 package (fresh prover, separate fresh
+verifier per node, external oracle per bank), followed by the user-ratified root rewire
+(the audited OR-routes block) and the root's own af tree.
 
-The honest summary is therefore: the base, the middle, both tier parents, the MAIN
-assembly, and the entire ledger family of the live route have been made rigorous here;
-the stated K-ledger/helper/F0 frontier and the root rewire remain.
-\texttt{op-classical} is \textbf{open}.
+The honest summary is therefore: every edge of the live route, from the base tiers
+through the MAIN assembly, the ledger family, the strengthened K-ledger, and the F0
+assembly, up to and including the root, has been made rigorous at this document's
+af-validated rung.
+\texttt{op-classical} is now \textbf{discharged}: \texttt{proved} with
+\texttt{af: validated}, with explicit dimension-free witnesses
+$\eta_0=\eta_K$ and $C=K+4\sqrt{2K}$. What remains open: sharpness of the exponent
+$1/2$ as a rigorous (af-validated) statement --- the obstruction \texttt{ex-hume} is
+still \texttt{proved-mod-audit} --- and every rung above af-validation (no Lean/mathlib
+proof exists; that is the ladder's top rung and a separate campaign).
 
 \subsection*{Validated registry results not reproduced here}
 

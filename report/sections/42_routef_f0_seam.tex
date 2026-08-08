@@ -2,7 +2,7 @@
 % SHARD-TITLE: The F0 seam: a stochastic matrix as a unital completely positive map
 % SHARD-SUMMARY: Reproduces the two af-validated F0 seam rows lem-routef-f0-ucp-lift and lem-routef-f0-defect-identity, which carry a row-stochastic Q into the matrix algebra M_n as the UCP map Phi = J Q_C D.
 % SHARD-SUMMARY: Explains the real-versus-complex typing the seam turns on, the diagonal-compression argument that makes extraction and inclusion completely positive, and the two-sided matrix-level computation giving the defect identity with constant exactly one.
-% SHARD-SUMMARY: Records that the seam consumes no smallness hypothesis and performs no conversion of the defect, and that neither row on its own bears on op-classical, which is open.
+% SHARD-SUMMARY: Records that the seam consumes no smallness hypothesis and performs no conversion of the defect; through the validated K-ledger and F0 assembly it feeds the discharged op-classical.
 % SHARD-KEYWORDS: lem-routef-f0-ucp-lift, lem-routef-f0-defect-identity, af validated, Route F, F0 seam, diagonal inclusion, diagonal extraction, complete positivity, cb norm, defect identity
 \section{The F0 seam: a stochastic matrix as a unital completely positive map}\label{sec:routef-f0-seam}
 
@@ -139,9 +139,9 @@ in particular this proof does not use Lemma~\ref{lem:routef-f0-ucp-lift}.
 leaves. Together they are the entry point of Route F --- a row-stochastic $Q$ with defect
 $\defect$ in the sense of \texttt{def-almost-idempotent} becomes a UCP $\Phi$ with
 $\nrm{\Phi^{2}-\Phi}_{\mathrm{cb}}\le\defect$, which is exactly the input the ledger of
-\S\ref{sec:routef-ai-ledger} consumes. The registry records their intended consumer as the
-strengthened \texttt{lem-routef-k-ledger} replacement, which is \texttt{stated} with
-\texttt{af: none} (all fifteen of its original T0 inputs are af-validated; its three
-helper projections are likewise \texttt{stated} pending elevation) --- \textbf{open} at
-this document's rigour bar and \textbf{not} reproduced here --- so no chain is closed by
-this section, and \texttt{op-classical} is \textbf{open}.
+\S\ref{sec:routef-ai-ledger} consumes. The registry records their consumer as the
+strengthened \texttt{lem-routef-k-ledger} replacement, now \texttt{proved} with
+\texttt{af: validated} together with its three helper projections (\textbf{not}
+reproduced here) --- so the seam feeds a fully validated chain, and
+\texttt{op-classical} is now \textbf{discharged} at the af-validated rung via Route F
+(\S\ref{sec:status-outlook}); sharpness remains with \texttt{ex-hume}.

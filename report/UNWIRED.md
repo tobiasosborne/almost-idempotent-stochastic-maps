@@ -358,8 +358,10 @@ lem-routef-threshold-minimum
 lem-routef-raw-factor-setting-formation
 # 2026-08-08: the KLEDGER-STRENGTHENED v2 package (user-ratified; hostile re-audit
 # AUDIT-KLEDGER-STRENGTHENED-V2.md VERDICT LAND): the strengthened lem-routef-k-ledger
-# replacement (entry retained above) plus three helper rows and the F0 assembly, all
-# stated/af: none; whitelist until the af elevation queue validates and anchors them.
+# replacement (entry retained above) plus three helper rows and the F0 assembly.
+# All five af-VALIDATED (T0) later the same day, followed by the user-ratified root
+# discharge of op-classical; rows stay whitelisted only until the report sync
+# (aism-9kmt) anchors/reproduces them on the paper track.
 lem-routef-scalar-header-positivity
 lem-routef-factor-map-packet
 lem-routef-factor-estimate-packet

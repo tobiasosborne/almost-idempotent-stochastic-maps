@@ -2,7 +2,7 @@
 % SHARD-TITLE: The F2/F3 block: manufacturing the positive unital retract pair
 % SHARD-SUMMARY: Reproduces the two af-validated rows lem-routef-f2-positive-unital-compression and lem-routef-f3-retract-defect, which convert an approximate UCP factorization of the F0 lift through a finite-dimensional C*-algebra into a positive unital pair A, M with the three estimates the Route F finish edge consumes.
 % SHARD-SUMMARY: Explains the commutator argument that forces commutativity of the intermediate algebra, the in-tree norm-two Pauli witness that replaces the unavailable finite-dimensional classification, the coordinate isomorphism built from the byte-matched projection basis, and the exact identity behind the retract-defect bound.
-% SHARD-SUMMARY: States that the factorization hypotheses are supplied by a registry row that is not af-validated, so the Route F chain is not closed here and op-classical stays open.
+% SHARD-SUMMARY: States that the factorization hypotheses are supplied by the strengthened K-ledger, now af-validated, so the Route F chain is closed and op-classical is discharged.
 % SHARD-KEYWORDS: lem-routef-f2-positive-unital-compression, lem-routef-f3-retract-defect, af validated, Route F, positive unital compression, commutativity forcing, projection basis, retract defect, lower modulus
 \section{The F2/F3 block: manufacturing the positive unital retract pair}\label{sec:routef-f2-f3}
 
@@ -196,10 +196,10 @@ verbatim that lemma's second hypothesis, at the same threshold
 $\defect\le(24K)^{-1}$. What is \emph{not} supplied anywhere in this document is the
 antecedent of Lemma~\ref{lem:routef-f2-positive-unital-compression} itself: the
 factorization datum $(\mathcal B,\Delta,\Upsilon)$ with the three estimates
-\eqref{eq:f2-hyp} and a dimension-free $K$. The registry row that would supply it,
-the strengthened \texttt{lem-routef-k-ledger}, is \texttt{stated} with \texttt{af: none}
---- \textbf{open} at this document's rigour bar and \textbf{not} reproduced here ---
-although the assembly carrier \texttt{lem-thmainext-conditional} is now \texttt{proved}
-with \texttt{af: validated}. The Route F chain is therefore
-\emph{not} closed, no unconditional $\sqrt{\defect}$ bound follows, and
-\texttt{op-classical} is \textbf{open}.
+\eqref{eq:f2-hyp} and a dimension-free $K$. The registry row that supplies it,
+the strengthened \texttt{lem-routef-k-ledger}, is now \texttt{proved} with
+\texttt{af: validated} (\textbf{not} reproduced here), as is the assembly carrier
+\texttt{lem-thmainext-conditional}. The Route F chain is therefore
+closed at the af-validated rung: the unconditional $\sqrt{\defect}$ bound follows, and
+\texttt{op-classical} is now \textbf{discharged} via Route F
+(\S\ref{sec:status-outlook}); sharpness remains with \texttt{ex-hume}.

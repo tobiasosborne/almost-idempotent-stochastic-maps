@@ -1191,7 +1191,7 @@
 \begin{tikzpicture}[dagpic]
   \node[dagghost] (N2_0_0) at (0,-0.5) {\hyperlink{dag:lem-routef-k-ledger}{lem-routef-k-ledger}};
   \node[dagnode,dagDagVal] (N2_0_1) at (4.096,-0) {\hypertarget{dag:lem-routef-f0-assembly}{}\texttt{lem-\hspace{0pt}routef-\hspace{0pt}f0-\hspace{0pt}assembly}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{D}}}};
-  \node[dagnode,dagDagSee] (N2_0_2) at (7.416,-0) {\hypertarget{dag:op-classical}{}\texttt{op-\hspace{0pt}classical}\\[-0.15em]{\dagstatus{$\lozenge$\,seeded\,\dagphasetag{E}}}};
+  \node[dagnode,dagDagVal] (N2_0_2) at (7.416,-0) {\hypertarget{dag:op-classical}{}\texttt{op-\hspace{0pt}classical}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{E}}}};
   \begin{scope}[on background layer]
     \draw[dagedge] (N2_0_0) to[out=0,in=180] (N2_0_1);
     \draw[daggap] (N2_0_0) to[out=0,in=180] (N2_0_2);
@@ -1204,7 +1204,7 @@
 \phantomsection\label{fig:dag-root}
 \hypertarget{dag:phase:root}{}
 \begin{center}\dagpagetitle{Phase E --- root, classical reduction \& the exposed-hull spine}\end{center}
-{\dagnote 12 results (1 af-validated, 3 proved, 1 seeded, 5 mod-audit / conj., 2 OPEN). Boundary nodes of neighbouring phases are drawn as small dashed chips; click one to jump to its own page.\par}\vspace{0.35em}
+{\dagnote 12 results (2 af-validated, 3 proved, 5 mod-audit / conj., 2 OPEN). Boundary nodes of neighbouring phases are drawn as small dashed chips; click one to jump to its own page.\par}\vspace{0.35em}
 \noindent\begin{adjustbox}{max width=\linewidth,max totalheight=0.90\textheight,center}
 \begin{tikzpicture}[dagpic]
   \node[dagnode,dagDagNon] (N0_0_0) at (0,-0.73) {\hypertarget{dag:conj-kernel}{}\texttt{conj-\hspace{0pt}kernel}\\[-0.15em]{\dagstatus{$\blacktriangle$\,mod-audit / conj.\,\dagphasetag{E}}}};
@@ -1228,7 +1228,7 @@
   \node[dagghost] (N0_1_1) at (0,-7.25) {\hyperlink{dag:lem-routef-k-ledger}{lem-routef-k-ledger}};
   \node[dagghost] (N0_1_2) at (0,-7.71) {\hyperlink{dag:prop-approx-simplex}{prop-approx-simplex}};
   \node[dagghost] (N0_1_3) at (0,-8.17) {\hyperlink{dag:thm-classical-factorization}{thm-classical-factorization}};
-  \node[dagnode,dagDagSee] (N0_1_4) at (4.096,-6.98) {\hypertarget{dag:op-classical}{}\texttt{op-\hspace{0pt}classical}\\[-0.15em]{\dagstatus{$\lozenge$\,seeded\,\dagphasetag{E}}}};
+  \node[dagnode,dagDagVal] (N0_1_4) at (4.096,-6.98) {\hypertarget{dag:op-classical}{}\texttt{op-\hspace{0pt}classical}\\[-0.15em]{\dagstatus{$\blacksquare$\,af-validated\,\dagphasetag{E}}}};
   \begin{scope}[on background layer]
     \draw[dagedge] (N0_0_0) to[out=0,in=180] (N0_0_5);
     \draw[dagroute] (N0_0_0) to[out=0,in=180] (N0_0_7);
