@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-upsilon-normalization-closeness/export.md",
+  "oracle": "af-lem-routef-upsilon-normalization-closeness",
+  "result": "pass",
+  "claim_hash": "aa1d570416d5f23d4c70fb5a65d3273bfcc8f93ccac4c96ddcdd1042a67ba1a8",
+  "oracle_digest": "5ea56b88f1c750789d2d8719d2ebf177c5ed5d4f45cfab8a81dc57abd7ebec2b",
+  "inputs_hash": "44336a04b4161cbaaa333f12fef46cd12f893026e999b6aaa7ebfa23e12833c8",
+  "ts": "2026-08-08T11:46:33.684Z"
+}

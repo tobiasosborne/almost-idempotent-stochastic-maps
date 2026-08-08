@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing one global witness package W\_RF suppli...}
+\step{1} After first fixing one global witness package W\_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W\_RF supplied by the same result, for every Delta' supplied for (W\_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, and every Upsilon' supplied from that same pair by lem-routef-upsilon-prime-closeness, and for every X in B(H), writing the fields of (W\_RF,S) as the unqualified symbols below: Upsilon UCP normalization: with C\_Upsilon := 6*C\_T+7*C\_Upsilon' and rho\_Upsilon := min\{rho\_unit, rho\_Upsilon', [2*(C\_T+C\_Upsilon')]\textasciicircum{}(-1)\}, for 0 <= eta <= rho\_Upsilon, b = Upsilon'(I) is invertible and Upsilon(X) = b\textasciicircum{}(-1/2)*Upsilon'(X)*b\textasciicircum{}(-1/2) is UCP with ||Upsilon - tilde-Upsilon||\_cb <= C\_Upsilon*eta. \steptag{validated} \\[6pt]
+\step{1.1} Fix W\_RF, (H,Phi,eta), S, Delta-prime, Delta, Upsilon-prime, and X exactly as quantified in node 1, and assume 0 <= eta <= rho\_Upsilon. Then the scalar definition of rho\_Upsilon and the imported lemmas give eta <= rho\_unit, eta <= rho\_Upsilon-prime, Upsilon-prime completely positive, ||Upsilon-prime-tilde-Upsilon||\_cb <= C\_Upsilon-prime*eta, and ||tilde-Upsilon(I)-I|| <= C\_T*eta; moreover d:=(C\_T+C\_Upsilon-prime)*eta satisfies 0 <= d <= 1/2. \steptag{validated} \\[6pt]
+\step{1.1.1} The ambient objects have the required types and common witness package because lem-routef-raw-factor-setting-formation supplies W\_RF and S, lem-routef-delta-prime-closeness supplies the fixed Delta', and lem-routef-delta-normalization-closeness supplies the fixed Delta from that same Delta'; thus lem-routef-upsilon-prime-closeness applies to the fixed Upsilon'. \steptag{validated} \\[4pt]
+\step{1.1.2} From rho\_Upsilon=min\{rho\_unit,rho\_Upsilon',[2*(C\_T+C\_Upsilon')]\textasciicircum{}(-1)\} and 0<=eta<=rho\_Upsilon, one has eta<=rho\_unit, eta<=rho\_Upsilon', and eta<=[2*(C\_T+C\_Upsilon')]\textasciicircum{}(-1). Applying lem-routef-raw-factor-units and lem-routef-upsilon-prime-closeness gives ||tilde-Upsilon(I)-I||<=C\_T*eta, Upsilon' CP, and ||Upsilon'-tilde-Upsilon||\_cb<=C\_Upsilon'*eta. \steptag{validated} \\[4pt]
+\step{1.1.3} The scalar ledger in def-routef-raw-factor-setting makes C\_T and C\_Upsilon' finite and nonnegative, so d=(C\_T+C\_Upsilon')*eta is nonnegative; multiplying eta<=[2*(C\_T+C\_Upsilon')]\textasciicircum{}(-1) by C\_T+C\_Upsilon' gives d<=1/2. \steptag{validated} \\[6pt]
+\step{1.1.3.1} By lem-routef-raw-factor-setting-formation, C\_theta=12*(sqrt(2)-1) and C\_A=20+(211/8)*C\_theta are finite positive reals, eta\_A and epsilon\_E are positive, C\_E is a finite real, and all remaining scalar quantities are defined by equations (1.1)-(1.8) of def-routef-raw-factor-setting. Those equations give bar-C\_E=max\{1,C\_E\}>=1, C\_V=bar-C\_E*C\_A>0, C\_T=C\_theta+3*C\_V>0, and recursively finite nonnegative C\_Delta-prime,C\_Delta,C\_2,C\_3,C\_N,C\_R,C\_L and C\_Upsilon'=1+C\_theta+2*C\_Delta+2*C\_L>0. \steptag{validated} \\[4pt]
+\step{1.1.3.2} Since C\_T+C\_Upsilon'>0 and eta<=[2*(C\_T+C\_Upsilon')]\textasciicircum{}(-1), multiplication by the positive scalar C\_T+C\_Upsilon' gives d=(C\_T+C\_Upsilon')*eta<=1/2; since eta>=0, also d>=0. \steptag{validated} \\[4pt]
+\step{1.1.4} Notation convention for the tree: Upsilon-prime means the contract's Upsilon', and C\_Upsilon-prime means the contract's C\_Upsilon'; no new map or scalar is introduced. \steptag{validated} \\[4pt]
+\step{1.2} For b:=Upsilon-prime(I), the conclusions of 1.1 imply b is positive and ||b-I|| <= d <= 1/2; consequently b is invertible, c:=b\textasciicircum{}(-1/2) exists, ||b|| <= 3/2, ||c|| <= 3/2, and ||c-I|| <= ||b-I|| <= d. \steptag{validated} \\[6pt]
+\step{1.2.1} Because Upsilon' is CP, b=Upsilon'(I) is positive. Since ||I||=1, evaluation at I is bounded by cb norm, and the triangle inequality with 1.1 gives ||b-I||<=||Upsilon'(I)-tilde-Upsilon(I)||+||tilde-Upsilon(I)-I||<=(C\_Upsilon'+C\_T)*eta=d. \steptag{validated} \\[4pt]
+\step{1.2.2} For positive b with ||b-I||<=d<=1/2, the finite-dimensional C*-algebra spectral theorem gives sigma(b) subset [1-d,1+d] subset [1/2,3/2]. Hence b is invertible, c=b\textasciicircum{}(-1/2) exists by continuous functional calculus, ||b||<=3/2, and ||c||<=sqrt(2)<=3/2. \steptag{validated} \\[4pt]
+\step{1.2.3} For every t in [1/2,3/2], |t\textasciicircum{}(-1/2)-1|=|t-1|/[sqrt(t)*(1+sqrt(t))]<=|t-1| because sqrt(t)*(1+sqrt(t))>=1. Functional calculus therefore gives ||c-I||<=||b-I||<=d. \steptag{validated} \\[4pt]
+\step{1.3} With c=b\textasciicircum{}(-1/2), the map Upsilon(Y):=c*Upsilon-prime(Y)*c from B(H) to B is completely positive and unital, hence UCP; furthermore ||Upsilon-prime||\_cb <= ||b|| <= 3/2. \steptag{validated} \\[6pt]
+\step{1.3.1} At every matrix level q, positivity of (id\_q tensor Upsilon') and conjugation by I\_q tensor c imply positivity of id\_q tensor Upsilon; hence Upsilon is CP. Also Upsilon(I)=c*b*c=I by functional calculus, so Upsilon is unital and therefore UCP by def-ucp-map. \steptag{validated} \\[4pt]
+\step{1.3.2} Every amplification id\_q tensor Upsilon is again UCP and therefore contractive by def-ucp-map, so ||Upsilon||\_cb<=1; unitality gives ||Upsilon|$|\_cb\rangle$=||Upsilon(I)||=1, hence ||Upsilon||\_cb=1. \steptag{validated} \\[6pt]
+\step{1.3.2.1} By validated node 1.3.1, Upsilon is UCP. For each q>=1, id\_\{M\_q\} tensor Upsilon is unital because it sends I\_q tensor I to itself, and it is completely positive because for every r>=1 its r-th amplification is, under the canonical identification M\_r(M\_q(B(H)))=M\_\{rq\}(B(H)) and the corresponding codomain identification, the (rq)-th amplification id\_\{M\_\{rq\}\} tensor Upsilon, which is positive since Upsilon is CP. Thus every q-th amplification is UCP and hence contractive by def-ucp-map. Taking the supremum over q gives ||Upsilon||\_cb<=1. Conversely the q=1 level gives ||Upsilon|$|\_cb\rangle$=||Upsilon||>=||Upsilon(I)||/||I||=1, since Upsilon(I)=I and ||I||=1. Therefore ||Upsilon||\_cb=1. \steptag{validated} \\[4pt]
+\step{1.3.3} The relation Upsilon(Y)=c*Upsilon'(Y)*c and c=b\textasciicircum{}(-1/2) rearranges to Upsilon'(Y)=b\textasciicircum{}(1/2)*Upsilon(Y)*b\textasciicircum{}(1/2). Left and right multiplication at every matrix level have norms at most ||b\textasciicircum{}(1/2)||, so ||Upsilon'||\_cb<=||b\textasciicircum{}(1/2)||\textasciicircum{}2*||Upsilon||\_cb=||b||<=3/2. \steptag{validated} \\[4pt]
+\step{1.4} The identities Upsilon-Upsilon-prime=(c-I)Upsilon-prime c+Upsilon-prime(c-I), together with 1.2 and 1.3, give ||Upsilon-Upsilon-prime||\_cb <= 6d. Therefore the triangle inequality and d=(C\_T+C\_Upsilon-prime)*eta yield ||Upsilon-tilde-Upsilon||\_cb <= (6*C\_T+7*C\_Upsilon-prime)*eta=C\_Upsilon*eta, completing every conclusion of node 1. \steptag{validated} \\[6pt]
+\step{1.4.1} For every Y, adding and subtracting Upsilon'(Y)c gives Upsilon(Y)-Upsilon'(Y)=(c-I)*Upsilon'(Y)*c+Upsilon'(Y)*(c-I). Taking amplified norms and then the supremum yields ||Upsilon-Upsilon'||\_cb<=||c-I||*||Upsilon'||\_cb*(||c||+1). \steptag{validated} \\[4pt]
+\step{1.4.2} Using ||c-I||<=d, ||Upsilon'||\_cb<=3/2, and ||c||<=3/2 from 1.2-1.3 gives ||Upsilon-Upsilon'||\_cb<=(15/4)*d<=6*d. \steptag{validated} \\[4pt]
+\step{1.4.3} By the cb-norm triangle inequality and 1.1, ||Upsilon-tilde-Upsilon||\_cb<=6*d+C\_Upsilon'*eta=[6*C\_T+7*C\_Upsilon']*eta=C\_Upsilon*eta. Together with 1.2 and 1.3 this proves invertibility, the displayed normalization formula for every X in B(H), UCP, and the claimed closeness at the stated rho\_Upsilon. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
