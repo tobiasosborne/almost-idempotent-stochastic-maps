@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-08-08T13:07:04Z",
+ "extracted_at": "2026-08-08T13:08:03Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-08-08T13:07:04Z",
+  "mined_at": "2026-08-08T13:08:03Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -464,18 +464,18 @@
     "approach_tried": 2,
     "challenge_raised": 429,
     "challenge_resolved": 422,
-    "def_added": 973,
+    "def_added": 979,
     "node_amended": 376,
     "node_archived": 56,
-    "node_created": 2752,
+    "node_created": 2753,
     "node_unvalidated": 7,
     "node_validated": 2689,
     "nodes_claimed": 4450,
     "nodes_released": 4450,
-    "proof_initialized": 201
+    "proof_initialized": 202
    },
-   "ledger_entries": 16807,
-   "nodes_total": 2752,
+   "ledger_entries": 16815,
+   "nodes_total": 2753,
    "owner_roles": {
     "other": 1,
     "prover (fix round)": 477,
@@ -483,7 +483,7 @@
     "verifier": 3269
    },
    "root_validated": 191,
-   "seeded_not_validated": 10,
+   "seeded_not_validated": 11,
    "validation_days": {
     "2026-07-02": 7,
     "2026-07-03": 5,
@@ -505,7 +505,7 @@
     "2026-08-05": 7,
     "2026-08-08": 13
    },
-   "workspaces": 201,
+   "workspaces": 202,
    "workspaces_detail": [
     {
      "amendments": 0,
@@ -2622,6 +2622,22 @@
     {
      "amendments": 0,
      "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 6,
+     "first_ts": "2026-08-08T13:07:59.218948724Z",
+     "id": "lem-routef-threshold-minimum",
+     "last_ts": "2026-08-08T13:07:59.309808355Z",
+     "ledger_entries": 8,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
      "challenges": 1,
      "challenges_resolved": 1,
      "claims": 18,
@@ -3841,7 +3857,7 @@
     },
     "FH": {
      "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
-     "banked": 122,
+     "banked": 123,
      "blocked": 1,
      "died": 2,
      "dispatch": 273,
@@ -3890,7 +3906,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-08-08T12:53:31.082Z"
+     "last": "2026-08-08T13:07:28.309Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -3911,7 +3927,7 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 618,
+    "FH": 619,
     "G": 21,
     "R": 52,
     "XE": 1
@@ -3934,16 +3950,16 @@
     "2026-08-02": 12,
     "2026-08-03": 1,
     "2026-08-05": 7,
-    "2026-08-08": 12
+    "2026-08-08": 13
    },
    "decisions": {
-    "EXPLOIT": 532,
+    "EXPLOIT": 533,
     "EXPLORE": 14,
     "PIVOT": 6
    },
    "evidence_classes": {
     "advisory": 1,
-    "af": 175,
+    "af": 176,
     "af-export": 10,
     "af-ledger": 1,
     "af-validated": 3,
@@ -3988,16 +4004,16 @@
     "wave": 24
    },
    "evidence_tiers": {
-    "T0": 207,
+    "T0": 208,
     "T1": 167,
     "T2": 169
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-08-08T12:53:31.082Z",
-   "max_cycle": 1213,
+   "last_ts": "2026-08-08T13:07:28.309Z",
+   "max_cycle": 1214,
    "outcomes": {
     "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
-    "banked": 156,
+    "banked": 157,
     "blocked": 1,
     "died": 7,
     "discovery": 3,
@@ -4039,9 +4055,9 @@
     "2026-08-03": 11,
     "2026-08-04": 3,
     "2026-08-05": 32,
-    "2026-08-08": 48
+    "2026-08-08": 49
    },
-   "records": 1213,
+   "records": 1214,
    "worker_jobs": 524,
    "worker_models": {
     "codex": 338,
@@ -4116,9 +4132,9 @@
   "git": {
    "active_days": 27,
    "authors": {
-    "tobiasosborne": 1174
+    "tobiasosborne": 1175
    },
-   "commits": 1174,
+   "commits": 1175,
    "first_day": "2026-07-02",
    "last_day": "2026-08-08",
    "per_day": {
@@ -4148,7 +4164,7 @@
     "2026-08-03": 16,
     "2026-08-04": 2,
     "2026-08-05": 28,
-    "2026-08-08": 32
+    "2026-08-08": 33
    },
    "subject_prefixes": {
     "W61": 13,
@@ -4243,8 +4259,8 @@
   },
   "registry": {
    "af": {
-    "none": 166,
-    "seeded": 12,
+    "none": 165,
+    "seeded": 13,
     "validated": 189
    },
    "kind": {
