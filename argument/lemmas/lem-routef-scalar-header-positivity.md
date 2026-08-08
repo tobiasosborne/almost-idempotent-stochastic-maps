@@ -5,7 +5,7 @@ contract: Route F scalar-header positivity: there exists one global witness pack
 defs: def-routef-raw-factor-setting
 deps: lem-routef-raw-factor-setting-formation
 status: stated
-af: none
+af: seeded
 provenance: definitions/def-routef-raw-factor-setting.md equations (1.1)-(1.8) and the global scalar-header witness exported by lem-routef-raw-factor-setting-formation; factoring and pre-forall quantifier repair designed in DESIGN-KLEDGER-STRENGTHENED-V2.md, pending fresh hostile audit and user ratification.
 owner: A
 workspace: proofs/lem-routef-scalar-header-positivity
