@@ -251,7 +251,7 @@
 | `lem-routef-functional-calculus-closeness` | lemma | proved | validated | A | Functional-calculus closeness: for 0 <= eta <= 1/8, the exact functional-calculu… |
 | `lem-routef-k-finiteness` | lemma | stated | none | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-k-ledger` | lemma | proved-mod-audit | none | A | Relative Route F factorization ledger: there are universal K >= 1 and eta_K > 0,… |
-| `lem-routef-multiplicative-telescope` | lemma | stated | seeded | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
+| `lem-routef-multiplicative-telescope` | lemma | proved | validated | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-prh-finish` | lemma | proved | validated | A | Route F PRH finish: let A:l-infinity(k)->l-infinity(n) and M:l-infinity(n)->l-in… |
 | `lem-routef-raw-factor-identities` | lemma | proved | validated | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-raw-factor-norms` | lemma | proved | validated | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |

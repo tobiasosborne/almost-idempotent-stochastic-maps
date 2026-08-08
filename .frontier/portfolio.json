@@ -1803,6 +1803,18 @@
         ]
       },
       {
+        "name": "af-lem-routef-multiplicative-telescope",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-routef-multiplicative-telescope"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-multiplicative-telescope/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-multiplicative-telescope.md"
+        ]
+      },
+      {
         "name": "af-lem-thmainext-conditional",
         "cmd": [
           "python3",

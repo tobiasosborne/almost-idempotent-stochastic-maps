@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-multiplicative-telescope/export.md",
+  "oracle": "af-lem-routef-multiplicative-telescope",
+  "result": "pass",
+  "claim_hash": "4f0496e5cddd0f11a065225e6dc138bbdcf7fdf74880b529548977bda76fee99",
+  "oracle_digest": "a92fe9e21bb621a4271bbe8b64a7c739ad215f1d37158580abb29f58427f36a3",
+  "inputs_hash": "bc9ca6738549d5358f110f5a5c48cfa4e7a8e2e2099dc03703583bcc683de2b2",
+  "ts": "2026-08-08T12:35:40.428Z"
+}
