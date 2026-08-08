@@ -1,0 +1,8 @@
+{
+  "id": "c8f2a70416a1858f",
+  "name": "GT-kitaev-fd-cstar-structure",
+  "source": "approximate_algebras.tex:257 (verbatim): \"In general, the logical algebra of observables is a finite-dimensional $C^*$ algebra. As such, it is isomorphic to an algebra of the form $\\calA=\\bigoplus_{j=1}^{m}\\Bo(\\calL_j)$. (In general, $\\Bo(\\calL)$ denotes the algebra of bounded linear operators on a nonzero Hilbert space $\\calL$. In the finite-dimensional case, all linear operators are bounded.)\" [GROUND TRUTH for the standard structure of finite-dimensional C*-algebras: isomorphism to a finite direct sum of full matrix algebras B(L_j), asserted at this locus.]",
+  "content_hash": "5cfe7461a0218cf4123fa3d4e0a52ed7a3a95a5815c74a34c28bf162cdd52261",
+  "created": "2026-08-08T10:32:58.682063372Z",
+  "notes": ""
+}

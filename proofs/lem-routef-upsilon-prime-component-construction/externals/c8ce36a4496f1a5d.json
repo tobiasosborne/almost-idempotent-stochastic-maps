@@ -1,0 +1,8 @@
+{
+  "id": "c8ce36a4496f1a5d",
+  "name": "GT-kitaev-canonical-stinespring",
+  "source": "approximate_algebras.tex:1621-1634 (verbatim): Let $\\calA$ be a $C^*$ algebra, $I$ its unit, $\\calH$ a Hilbert space, and $\\Phi\\colon\\calA\\to\\Bo(\\calH)$ a UCP map. A \\emph{Stinespring representation} of $\\Phi$ has the general form\n\\begin{equation}\\label{Stinespring_def}\n\\Phi(X)=V^\\dag\\, u(X)\\, V,\n\\end{equation}\nwhere $u\\colon\\calA\\to\\Bo(\\calG)$ is a $*$-homomorphism and $V\\colon\\calH\\to\\calG$ is an isometry. The \\emph{canonical Stinespring representation} \\cite{Sti55}, \\cite[Theorem~4.1]{Paulsen} is a generalization of the GNS construction. It uses the space $\\wt{\\calG}=\\calA\\otimes\\calH$ with the possibly degenerate inner product\\footnote{On the right-hand side, vectors are interpreted as linear maps from $\\CC$. Thus, $\\xi\\colon\\CC\\to\\calH$ and $\\eta^\\dag\\colon\\calH\\to\\CC$.}\n\\begin{equation}\n\\braket{B\\otimes\\eta}{A\\otimes\\xi}=\\eta^\\dag\\,\\Phi(B^\\dag A)\\,\\xi\\qquad\n(A,B\\in\\calA,\\quad \\xi,\\eta\\in\\calH).\n\\end{equation}\nThe space $\\calG$ is the completion of the quotient of $\\wt{G}$ by the null subspace, and $u$ and $V$ are defined as follows:\n\\begin{equation}\nu(C)\\ts(A\\otimes\\xi)=CA\\otimes\\xi,\\qquad V\\xi=I\\otimes\\xi.\n\\end{equation}\n",
+  "content_hash": "e37b4c5a56af905a86c69e9d2b4ba052873c60ec8a62a0072371468ddec54522",
+  "created": "2026-08-08T10:32:58.687977214Z",
+  "notes": ""
+}
