@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-degree-two-estimate/export.md",
+  "oracle": "af-lem-routef-degree-two-estimate",
+  "result": "pass",
+  "claim_hash": "607dbdb535aec19c738c7cec9d7e701a9bfbad596d56ea1e30dd7e859faa15b2",
+  "oracle_digest": "5c68b210fa8bfab91f031fec1b72162785f46ba3ae56a0bfb679feebaf6c81ad",
+  "inputs_hash": "c6782b4281b4fcd400c7827f6f96efc9b9dad39825d2c011d86f9d88f3a32851",
+  "ts": "2026-08-08T08:31:42.243Z"
+}

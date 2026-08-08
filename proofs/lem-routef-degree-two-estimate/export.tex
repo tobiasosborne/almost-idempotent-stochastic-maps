@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing one global witness package W\_RF suppli...}
+\step{1} After first fixing one global witness package W\_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W\_RF supplied by the same result, for every Delta' supplied for (W\_RF,S) by lem-routef-delta-prime-closeness, and every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness; for every integer n >= 1 and all X, Y in M\_n(S.B), writing the fields of (W\_RF,S) as the unqualified symbols below: Route F degree-two estimate: with C\_2 := C\_Delta'+4*C\_Delta and rho\_2 := min\{rho\_prod, rho\_Delta', rho\_Delta\}, for 0 <= eta <= rho\_2, every amplification satisfies ||Phi\_n(Delta\_n X Delta\_n Y) - Delta\_n(XY)|| <= C\_2*eta*||X||*||Y||. \steptag{validated} \\[6pt]
+\step{1.1} Fix arbitrary W\_RF, S, Delta', Delta, n, X, Y as quantified in node 1 and assume 0 <= eta <= rho\_2. By def-routef-raw-factor-setting and lem-routef-raw-factor-setting-formation, rho\_2=min\{rho\_prod,rho\_Delta',rho\_Delta\}, rho\_prod=rho\_T, rho\_theta=1/8, rho\_T <= rho\_theta, rho\_T <= 1/[4(1+C\_V)], and C\_theta,C\_V,C\_T,C\_Delta',C\_Delta are nonnegative. Hence eta <= rho\_prod=rho\_T <= rho\_theta=1/8, eta <= rho\_Delta', eta <= rho\_Delta, and C\_V*eta <= C\_V/[4(1+C\_V)] <= 1/4. \steptag{validated} \\[4pt]
+\step{1.2} For the arbitrary data of node 1 under 0 <= eta <= rho\_2, instantiate lem-routef-raw-factor-norms, lem-routef-raw-product-estimate, lem-routef-functional-calculus-closeness, and lem-routef-delta-normalization-closeness. Since Phi and Delta are UCP, Phi\_n and Delta\_n are contractive. Thus ||(Delta\_n-tilde-Delta\_n)Z|| <= C\_Delta*eta*||Z||, ||tilde-Delta\_n Z|| <= (1+C\_V*eta)*||Z||, ||(Phi\_n-tilde-Phi\_n)Z|| <= C\_theta*eta*||Z||, and ||tilde-Phi\_n(tilde-Delta\_n X tilde-Delta\_n Y)-tilde-Delta\_n(XY)|| <= C\_T*eta*||X||*||Y||. \steptag{validated} \\[4pt]
+\step{1.3} For the arbitrary data of node 1 under 0 <= eta <= rho\_2, the identity Delta\_n X Delta\_n Y-tilde-Delta\_n X tilde-Delta\_n Y=(Delta\_n-tilde-Delta\_n)X Delta\_n Y+tilde-Delta\_n X (Delta\_n-tilde-Delta\_n)Y, the C*-norm product inequality, C\_V*eta <= 1/4, and the bounds supplied in the preceding admissibility/import steps give ||Phi\_n(Delta\_n X Delta\_n Y)-Phi\_n(tilde-Delta\_n X tilde-Delta\_n Y)|| <= (2+C\_V*eta)*C\_Delta*eta*||X||*||Y|| <= 3*C\_Delta*eta*||X||*||Y||. \steptag{validated} \\[4pt]
+\step{1.4} For the arbitrary data of node 1 under 0 <= eta <= rho\_2, insert tilde-Phi\_n at tilde-Delta\_n X tilde-Delta\_n Y. The functional-calculus closeness, raw product estimate, raw factor norm, and C\_V*eta <= 1/4 give ||Phi\_n(tilde-Delta\_n X tilde-Delta\_n Y)-tilde-Delta\_n(XY)|| <= [C\_theta*(1+C\_V*eta)\textasciicircum{}2+C\_T]*eta*||X||*||Y|| <= (2*C\_theta+C\_T)*eta*||X||*||Y||. \steptag{validated} \\[4pt]
+\step{1.5} For the arbitrary data of node 1 under 0 <= eta <= rho\_2, lem-routef-delta-normalization-closeness at amplification n and submultiplicativity in M\_n(B) give ||tilde-Delta\_n(XY)-Delta\_n(XY)|| <= C\_Delta*eta*||XY|| <= C\_Delta*eta*||X||*||Y||. \steptag{validated} \\[4pt]
+\step{1.6} For the arbitrary data of node 1 under 0 <= eta <= rho\_2, insert successively Phi\_n(tilde-Delta\_n X tilde-Delta\_n Y) and tilde-Delta\_n(XY), apply nodes 1.3, 1.4, and 1.5 and the triangle inequality, and use C\_theta >= 0, C\_Delta'=C\_T+4*C\_theta, and C\_2=C\_Delta'+4*C\_Delta. This yields ||Phi\_n(Delta\_n X Delta\_n Y)-Delta\_n(XY)|| <= [3*C\_Delta+C\_T+2*C\_theta+C\_Delta]*eta*||X||*||Y|| <= C\_2*eta*||X||*||Y||. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
