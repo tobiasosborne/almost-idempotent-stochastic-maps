@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Relative Route F factorization-and-finish ledger: there e...}
+\step{1} Relative Route F factorization-and-finish ledger: there exists one global witness package W\_RF supplied by lem-routef-raw-factor-setting-formation such that, writing K for its scalar (1.6), rho\_fac for its scalar (1.7), and eta\_K := min\{rho\_fac, (24*K)\textasciicircum{}(-1), 1\} for its scalar (1.8), K >= 1 and eta\_K > 0 are universal and independent of n, amplification level, simple-block count, and block dimensions, and for every n >= 1, every row-stochastic Q: l\_inf\textasciicircum{}n -> l\_inf\textasciicircum{}n, and every 0 <= eta <= eta\_K with ||Q\textasciicircum{}2-Q|$|\_\{infinity-\rangle$infinity\} <= eta, let D: M\_n -> C\textasciicircum{}n be diagonal extraction onto the complex diagonal algebra C\textasciicircum{}n = l\_inf\textasciicircum{}n(C), let J: C\textasciicircum{}n -> M\_n be the diagonal inclusion, let Q\_C: C\textasciicircum{}n -> C\textasciicircum{}n be the canonical complex-linear extension of Q, and put Phi := J Q\_C D; then there exist a finite-dimensional unital C*-algebra B and UCP maps Delta: B -> M\_n and Upsilon: M\_n -> B such that ||Delta Upsilon-Phi||\_cb <= K*eta, ||Upsilon Delta-I\_B||\_cb <= K*eta, and for every integer r >= 1 and all X,Y in M\_r(B), ||Upsilon\_r(Delta\_r X Delta\_r Y)-XY|| <= K*eta*||X||*||Y||, and the same Q admits a stochastic idempotent E satisfying ||Q-E|$|\_\{infinity-\rangle$infinity\} <= (K+4*sqrt(2*K))*sqrt(eta). \steptag{validated} \\[6pt]
+\step{1.1} By lem-routef-scalar-header-positivity, choose one global witness package W\_RF supplied by lem-routef-raw-factor-setting-formation. Writing K for its scalar (1.6), rho\_fac for its scalar (1.7), and eta\_K := min\{rho\_fac,(24*K)\textasciicircum{}(-1),1\} for its scalar (1.8), K is finite with K >= 1, rho\_fac > 0, and eta\_K > 0; these scalars are universal and independent of H, Phi, eta, n, amplification level, simple-block count, and block dimensions. Thus this single W\_RF has all the global scalar properties and independence required in node 1. \steptag{validated} \\[4pt]
+\step{1.2} Fix the W\_RF chosen in 1.1, and fix arbitrary n >= 1, row-stochastic Q:l\_inf\textasciicircum{}n->l\_inf\textasciicircum{}n, and 0 <= eta <= eta\_K with ||Q\textasciicircum{}2-Q|$|\_\{infinity-\rangle$infinity\} <= eta, with D, J, Q\_C and Phi := J Q\_C D exactly as in node 1. By lem-routef-factor-map-packet there exist a finite-dimensional unital C*-algebra B, one setting datum S over this same W\_RF, CP maps Delta':B->M\_n and Upsilon':M\_n->B, and UCP maps Delta:B->M\_n and Upsilon:M\_n->B, all supplied in the stated serial same-datum order. \steptag{validated} \\[4pt]
+\step{1.3} For the same W\_RF, input, and packet (B,S,Delta',Delta,Upsilon',Upsilon) fixed in 1.2, lem-routef-factor-estimate-packet gives ||Delta Upsilon-Phi||\_cb <= K*eta, ||Upsilon Delta-I\_B||\_cb <= K*eta, and, for every integer r >= 1 and all X,Y in M\_r(B), ||Upsilon\_r(Delta\_r X Delta\_r Y)-XY|| <= K*eta*||X||*||Y||. It also gives 0 <= eta <= min\{(24*K)\textasciicircum{}(-1),1\}, 3*K*eta <= 1/8 < 1, and 3*K*eta/(1-3*K*eta) <= 4*K*eta <= 1/6 < 1/2. \steptag{validated} \\[4pt]
+\step{1.4} Apply lem-routef-f2-positive-unital-compression to K,n,Q,D,J,Q\_C,Phi,B,Delta,Upsilon from 1.1-1.3. Its threshold and two cb-estimate hypotheses are in 1.3, and its level-one multiplicative hypothesis is the r=1 case of the amplified estimate in 1.3. Hence B is commutative and there exist k >= 1, a unital *-isomorphism iota\_C:C\textasciicircum{}k->B, and positive unital maps A:l\_inf\textasciicircum{}k->l\_inf\textasciicircum{}n and M:l\_inf\textasciicircum{}n->l\_inf\textasciicircum{}k such that ||Q-AM|$|\_\{infinity-\rangle$infinity\} <= K*eta, ||QA-A|$|\_\{infinity-\rangle$infinity\} <= 2*K*eta, and ||Ax||\_infinity >= (1-3*K*eta)*||x||\_infinity for every x in l\_inf\textasciicircum{}k. \steptag{validated} \\[4pt]
+\step{1.5} Since 3*K*eta <= 1/8 < 1 by 1.3, apply lem-routef-f3-retract-defect to the positive unital A,M from 1.4, using all three estimates in 1.4. It yields ||MA-I\_k|$|\_\{infinity-\rangle$infinity\} <= 3*K*eta/(1-3*K*eta). \steptag{validated} \\[4pt]
+\step{1.6} Apply lem-routef-prh-finish to the positive unital maps A,M from 1.4 and the same row-stochastic Q. Its hypotheses K >= 1, 0 <= eta <= min\{(24*K)\textasciicircum{}(-1),1\}, ||Q-AM|$|\_\{infinity-\rangle$infinity\} <= K*eta, and ||MA-I\_k|$|\_\{infinity-\rangle$infinity\} <= 3*K*eta/(1-3*K*eta) follow respectively from 1.1, 1.3, 1.4, and 1.5. Therefore the same Q admits a stochastic idempotent E with ||Q-E|$|\_\{infinity-\rangle$infinity\} <= (K+4*sqrt(2*K))*sqrt(eta). \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

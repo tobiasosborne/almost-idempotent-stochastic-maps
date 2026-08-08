@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-k-ledger/export.md",
+  "oracle": "af-lem-routef-k-ledger",
+  "result": "pass",
+  "claim_hash": "51d078c70975b92c542ebe325a549e856679ac8c9e6684be1b9e717aaba94591",
+  "oracle_digest": "e501e55e5baadfb50ec71ee7d3bad07f049f862dfa5cb7c882f59bf6f650fa52",
+  "inputs_hash": "8e836215803e65666f00e5805a23e5b061672cafe907ded39df5178463a75dc6",
+  "ts": "2026-08-08T16:04:37.837Z"
+}

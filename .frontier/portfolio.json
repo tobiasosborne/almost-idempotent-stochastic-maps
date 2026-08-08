@@ -1887,6 +1887,18 @@
         ]
       },
       {
+        "name": "af-lem-routef-k-ledger",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-routef-k-ledger"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-k-ledger/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-k-ledger.md"
+        ]
+      },
+      {
         "name": "af-lem-thmainext-conditional",
         "cmd": [
           "python3",
