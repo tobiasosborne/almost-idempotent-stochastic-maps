@@ -1,0 +1,349 @@
+\documentclass[10pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=0.76in]{geometry}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\linf}{\ell_\infty}
+\newcommand{\cb}{\mathrm{cb}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\dist}{\operatorname{dist}}
+
+\title{Almost-Idempotent Stochastic Maps\\via Kitaev Factorization}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-2.5em}
+
+\begin{abstract}
+We prove a dimension-free stability theorem for almost-idempotent stochastic
+matrices, with the sharp square-root modulus.  The entry point is an exact,
+constant-one seam from a stochastic map on $\linf^n$ to a UCP map on $M_n$.
+After an audited repair of the diagonal step in Kitaev's factorization, the
+resulting finite-dimensional $C^*$-factorization descends to a positive
+approximate retract; an elementary hardening argument then returns to the
+stochastic category without sacrificing positivity.
+\end{abstract}
+
+\section{Introduction}
+
+We regard a row-stochastic matrix $Q$ as a positive unital map on the real
+space $\linf^n$.  Exact stochastic idempotents are the finite Markov analogue
+of conditional expectations onto partitions: on each recurrent class they
+collapse onto one probability distribution, while transient rows retain
+convex weights among the recurrent classes.  Their normal form is classical;
+see \cite{HognasMukherjea,BaakeSumner}.  At defect zero there is of course
+nothing to prove: $Q^2=Q$ allows $E=Q$.  The point below is that the
+neighbourhood in which this remains quantitatively true does not shrink with
+the number of states or recurrent classes.
+
+\begin{theorem}[Stochastic stability]\label{thm:main}
+There are universal constants $\eta_0,C>0$, independent of $n$, such that if
+$Q:\linf^n\to\linf^n$ is row-stochastic and
+\[
+  \norm{Q^2-Q}_{\infty\to\infty}\leq \eta\leq\eta_0,
+\]
+then there is a row-stochastic idempotent $E$ satisfying
+\[
+  \norm{Q-E}_{\infty\to\infty}\leq C\sqrt\eta.
+\]
+For the explicit universal $K\geq1$ and $\eta_K>0$ produced by the
+factorization ledger in Theorem~\ref{thm:factor}, one may take
+\[
+  \eta_0=\eta_K,\qquad C=K+4\sqrt{2K}.
+\]
+No uniform estimate with $\eta^\beta$ in place of $\sqrt\eta$ can hold for
+any $\beta>\tfrac12$.
+\end{theorem}\footnotemark
+\footnotetext{Most component lemmas have been machine-adversarially
+validated in this project's registry.  The scalar-header positivity lemma,
+factor-map packet, factor-estimate packet, strengthened ledger, and
+top-level assembly remain in progress, so this draft does not claim
+completed formal verification.}
+
+Kitaev's approximate-algebra theorem \cite{Kitaev} is the large structural
+input, which we use rather than reproduce.  The new work is to cross into its
+completely bounded setting with no loss, repair the diagonal used in the
+factorization, audit all constants uniformly over matrix amplifications and
+block data, and then descend from a finite-dimensional $C^*$-algebra to an
+actual stochastic idempotent.
+
+\section{The diagonal seam}
+
+Let $D:M_n\to\C^n$ be diagonal extraction and
+$J:\C^n\to M_n$ diagonal inclusion, so that $DJ=I_{\C^n}$.  If
+$Q_{\C}:\C^n\to\C^n$ denotes the canonical complexification of $Q$, put
+\[
+  \Phi:=JQ_{\C}D:M_n\longrightarrow M_n.
+\]
+
+\begin{lemma}[Exact seam]\label{lem:seam}
+$\Phi$ is UCP and
+\[
+  \norm{\Phi^2-\Phi}_{\cb}
+  =\norm{Q^2-Q}_{\infty\to\infty}.
+\]
+\end{lemma}
+
+\begin{proof}
+The map $Q_{\C}$ is positive and unital on the commutative $C^*$-algebra
+$\C^n$, hence completely positive; $D$ and $J$ are UCP as well.  Thus so is
+$\Phi$.  With $L=Q_{\C}^2-Q_{\C}$, the identity $DJ=I$ gives
+$\Phi^2-\Phi=JLD$.  Complete contractivity of $D$ and complete isometry of
+$J$ give the upper bound.  Conversely, testing at each matrix level on
+diagonal inputs $J_rX$ and using $D_rJ_r=I$ gives
+$\norm{J_rL_rD_r}\geq\norm{L_r}$.  Finally, for a map between finite
+commutative $C^*$-algebras the completely bounded norm is its ordinary norm,
+and the sign/phase test gives
+$\norm{L}=\max_i\sum_j|L_{ij}|$.  This is precisely the
+$\linf\!\to\!\linf$ norm of $Q^2-Q$.
+\end{proof}
+
+The equality in Lemma~\ref{lem:seam}, including its lower-bound direction,
+is what makes the noncommutative machinery useful here: the original defect
+$\eta$ enters the matrix-algebra picture without a dimensional or numerical
+conversion factor.
+
+\section{The repaired factorization ledger}
+
+For a UCP $\Phi$ with $\norm{\Phi^2-\Phi}_{\cb}\leq\eta<\tfrac14$, Kitaev's
+functional calculus uses
+\[
+ \widetilde\Phi=\frac12\left[I+(2\Phi-I)
+       \bigl(I-4(\Phi-\Phi^2)\bigr)^{-1/2}\right]
+\]
+and the product $X\star Y=\widetilde\Phi(XY)$ on
+$\mathcal A=\operatorname{im}\widetilde\Phi$.  Set
+\[
+ r=\frac32\bigl((1-4\eta)^{-1/2}-1\bigr),\qquad
+ \varepsilon_{\rm AI}(\eta)
+ =\max\{r,\,20\eta+2((1+r)^5-1),\,3r-r^2\}.
+\]
+There are universal $\eta_A>0$ and
+$C_A=20+\frac{211}{8}C_\theta$, where $C_\theta=12(\sqrt2-1)$, such that
+whenever $0\leq\eta\leq\eta_A$ the inherited operator-space norms,
+involution, and unit make $\mathcal A$ an extended
+$\varepsilon_{\rm AI}(\eta)$-$C^*$-algebra and
+\[
+ \varepsilon_{\rm AI}(\eta)\leq C_A\eta.
+\]
+The audited extension interface supplies universal $C_E<\infty$ and
+$\varepsilon_E>0$: whenever $\varepsilon\leq\varepsilon_E$, a
+finite-dimensional extended $\varepsilon$-$C^*$-algebra is the image of a
+finite-dimensional $C^*$-algebra under an extended
+$C_E\varepsilon$-isomorphism.  These constants are independent of dimension,
+amplification level, number of simple blocks, and their sizes.
+
+One step in the printed factorization needs a genuine repair.  The proposed
+direct-sum diagonal is not central, already for $\C\oplus\C$.  For
+$\mathcal B=\bigoplus_{a=1}^mM_{d_a}$ we instead use a finite phase-balanced
+diagonal
+\[
+  \mathfrak d_{\mathcal B}=\sum_tq_tW_t^*\otimes W_t,\qquad
+  q_t\geq0,\quad \sum_tq_t=1,\quad
+  z\mathfrak d_{\mathcal B}=\mathfrak d_{\mathcal B}z,\quad
+  \pi(\mathfrak d_{\mathcal B})=1_{\mathcal B},\quad
+  \norm{\mathfrak d_{\mathcal B}}_\pi=1.
+\]
+Independent signs on the simple blocks cancel all cross-block tensors.  The
+same exact centrality makes the repaired map
+\[
+ \Delta'(x)=\sum_tq_t\,\Phi\!\left(
+   \widetilde\Delta(xW_t^*)\widetilde\Delta(W_t)\right)
+\]
+completely positive whenever $\widetilde\Delta$ preserves the involution;
+no false exact-multiplicativity premise is used.  This phase balancing and
+the resulting CP-ization are the repair contributed here.
+
+The remaining estimates are bookkeeping, but the bookkeeping is essential.
+The scalar ledger first fixes one universal witness package from
+$(\eta_A,C_A,C_E,\varepsilon_E)$.  Its finite sum, product, maximum,
+reciprocal, and minimum formulas define coefficients
+$C_\Delta,C_{\Delta'},C_2,C_\Upsilon$ and positive radii
+$\rho_2,\rho_{\Delta\Upsilon},\rho_{\rm mult},
+\rho_{\Upsilon\Delta}$.  In particular, its final three formulas are
+\begin{align}
+ K&=\max\bigl\{1,\ C_\theta+C_\Delta+2C_\Upsilon,\
+ C_\Upsilon+2(C_2+C_\theta+C_\Delta),\
+ C_\Upsilon+2C_\Delta\bigr\},\label{eq:K}\\
+ \rho_{\rm fac}&=\min\{\rho_2,\rho_{\Delta\Upsilon},
+ \rho_{\rm mult},\rho_{\Upsilon\Delta}\},\qquad
+ \eta_K=\min\{\rho_{\rm fac},(24K)^{-1},1\}.
+ \label{eq:etaK}
+\end{align}
+Every quantity on the right is a fixed scalar from the preceding repaired
+factorization steps; none counts dimensions, amplifications, or blocks.
+
+\begin{theorem}[Dimension-free factorization ledger]\label{thm:factor}
+Let $K$ and $\eta_K$ be given by \eqref{eq:K}--\eqref{eq:etaK}.  For every
+$n\geq1$, every row-stochastic $Q:\linf^n\to\linf^n$, and every
+$0\leq\eta\leq\eta_K$ with
+$\norm{Q^2-Q}_{\infty\to\infty}\leq\eta$, form $\Phi=JQ_{\C}D$ as above.
+There are a finite-dimensional unital $C^*$-algebra $\mathcal B$ and UCP maps
+\[
+ \Delta:\mathcal B\to M_n,\qquad \Upsilon:M_n\to\mathcal B
+\]
+such that
+\begin{align*}
+ \norm{\Delta\Upsilon-\Phi}_{\cb}&\leq K\eta,&
+ \norm{\Upsilon\Delta-I_{\mathcal B}}_{\cb}&\leq K\eta,\\
+ \norm{\Upsilon_r(\Delta_rX\,\Delta_rY)-XY}_{M_r(\mathcal B)}
+ &\leq K\eta\norm{X}_{M_r(\mathcal B)}\norm{Y}_{M_r(\mathcal B)}
+ &&(r\geq1,\ X,Y\in M_r(\mathcal B)).
+\end{align*}
+Moreover, the same $Q$ admits a stochastic idempotent $E$ with
+\[
+ \norm{Q-E}_{\infty\to\infty}
+ \leq (K+4\sqrt{2K})\sqrt\eta.
+\]
+\end{theorem}
+
+The factorization assertions are Kitaev's construction, with the corrected
+almost-idempotent interface and diagonal above, assembled through the
+dimension-free ledger.  The last assertion is the stochastic descent, to
+which we now turn.
+
+\section{Descent to the stochastic category}
+
+Apply the factorization theorem.  Its approximate multiplicativity and its
+closeness to the diagonal-range map $\Phi$ force $\mathcal B$ to be
+commutative at the threshold \eqref{eq:etaK}; a noncommutative simple block
+would contain a norm-two commutator, contradicting the corresponding
+factorization estimate.  Hence $\mathcal B\cong\C^k$.  After fixing a unital
+$*$-isomorphism $\iota:\C^k\to\mathcal B$, restrict the diagonal parts to
+the real self-adjoint subspaces:
+\[
+ A=(D\Delta\iota)|_{\R^k}:\linf^k\to\linf^n,\qquad
+ M=(\iota^{-1}\Upsilon J)|_{\R^n}:\linf^n\to\linf^k.
+\]
+These maps are positive and unital.  The level-one factorization estimates
+give, in the $\linf\!\to\!\linf$ norm,
+\begin{equation}\label{eq:F2}
+ \norm{Q-AM}\leq K\eta,\qquad
+ \norm{QA-A}\leq2K\eta,\qquad
+ \norm{Ax}_\infty\geq(1-3K\eta)\norm{x}_\infty.
+\end{equation}
+This is the decisive categorical crossing: completely positive maps on
+matrix algebras have become honest stochastic matrices, with no signed
+intermediate projection.
+
+The retract defect follows directly.  For $x\in\linf^k$,
+\[
+ A(MA-I_k)x=(AM-Q)Ax+(QA-A)x.
+\]
+Since $A$ is unital and positive, $\norm A=1$; combining this identity with
+\eqref{eq:F2} gives
+\begin{equation}\label{eq:F3}
+ \norm{MA-I_k}_{\infty\to\infty}
+ \leq\frac{3K\eta}{1-3K\eta}.
+\end{equation}
+
+It remains to harden this positive approximate retract.  We record the short
+argument because it is both elementary and the unique source of the square
+root.  Write the rows of $A$ as probability vectors $a_i$ and those of $M$
+as probability measures $\mu_s$.  If
+$\norm{MA-I_k}_{\infty\to\infty}\leq\varepsilon<\tfrac12$, set
+$\lambda=\sqrt{\varepsilon/2}$ and
+\[
+ C_s=\{i:a_{is}>1-\lambda\}.
+\]
+The $C_s$ are disjoint, and the $s$-th row estimate gives
+\[
+ \sum_i\mu_s(i)(1-a_{is})\leq\frac\varepsilon2,\qquad
+ \beta_s:=\mu_s(C_s^c)\leq\frac{\varepsilon}{2\lambda}.
+\]
+Condition $\mu_s$ on $C_s$ to obtain the rows of a stochastic map $N$, and
+replace each encoder row $a_i$, $i\in C_s$, by the vertex $e_s$ to obtain
+$\widehat A$.  Then $N\widehat A=I_k$ exactly, so
+$E=\widehat A N$ is stochastic and $E^2=E$.  Conditioning and hardening cost
+respectively at most $\varepsilon/\lambda$ and $2\lambda$, whence
+\begin{equation}\label{eq:PRH}
+ \norm{AM-E}_{\infty\to\infty}\leq2\sqrt{2\varepsilon}.
+\end{equation}
+For $\varepsilon=0$, simply take $E=AM$.
+
+Now $\eta\leq(24K)^{-1}$ makes the right side of \eqref{eq:F3} at most
+$4K\eta<\tfrac12$.  Equations \eqref{eq:F2} and \eqref{eq:PRH}, together
+with $\eta\leq1$, yield
+\[
+ \norm{Q-E}_{\infty\to\infty}
+ \leq K\eta+4\sqrt{2K\eta}
+ \leq (K+4\sqrt{2K})\sqrt\eta.
+\]
+This proves Theorem~\ref{thm:main} except for sharpness.
+
+\section{Sharpness and remarks}
+
+For $0<s<1$, consider the explicit $3\times3$ family
+\[
+ P_s=I-u_sv_s^{\mathsf T},\qquad
+ v_s=(1,-1+s,-s),\qquad
+ u_s=(1-s+s^2,-s,0)^{\mathsf T}.
+\]
+It is a signed affine retraction with maximal row negative mass
+$\delta_s=s^2$.  If $\mathcal I_{\rm stoch}$ denotes the set of stochastic
+idempotents, then
+\[
+ \operatorname{dist}_{\infty\to\infty}(P_s,\mathcal I_{\rm stoch})
+ :=\inf_{F\in\mathcal I_{\rm stoch}}\norm{P_s-F}_{\infty\to\infty}
+ =2s-2s^2+2s^3
+ =2\sqrt{\delta_s}+O(\delta_s).
+\]
+Normalize the positive part of each row to obtain a row-stochastic $Q_s$.
+The signed--stochastic bridge gives
+\[
+ \norm{P_s-Q_s}_{\infty\to\infty}\leq2s^2,\qquad
+ \norm{Q_s^2-Q_s}_{\infty\to\infty}\leq6s^2+4s^4.
+\]
+Hence every $F\in\mathcal I_{\rm stoch}$ satisfies
+\[
+ \norm{Q_s-F}_{\infty\to\infty}\geq2s-4s^2+2s^3=2s(1-s)^2,
+\]
+which is $\Omega(s)$ as $s\downarrow0$ and excludes every exponent
+$\beta>\tfrac12$.
+
+All losses before \eqref{eq:PRH} are linear in $\eta$.  The square root is
+born precisely when almost-disjoint stochastic cores are selected and their
+measures are conditioned.  The sharp family therefore identifies not merely
+the optimal exponent, but also the step at which an argument preserving
+positivity must spend it.  Related dimension-free square-root repair
+phenomena for fixed points of classical and quantum channels appear in
+\cite{SalzmannBerghDatta}.
+
+\begin{thebibliography}{9}
+
+\bibitem{Kitaev}
+A.~Kitaev,
+\emph{Almost-idempotent quantum channels and approximate $C^*$-algebras},
+arXiv:2405.02434v2, 2025.
+
+\bibitem{BaakeSumner}
+M.~Baake and J.~Sumner,
+\emph{On equal-input and monotone Markov matrices},
+J. Appl. Probab. (2022), doi:10.1017/apr.2021.39.
+
+\bibitem{HognasMukherjea}
+G.~H\"ogn\"as and A.~Mukherjea,
+\emph{Probability Measures on Semigroups: Convolution Products, Random
+Walks, and Random Matrices}, 2nd ed., Springer, 2011.
+
+\bibitem{SalzmannBerghDatta}
+R.~Salzmann, B.~Bergh, and N.~Datta,
+\emph{Robustness of fixed points of quantum channels and application to
+approximate quantum Markov chains}, arXiv:2405.01532, 2024.
+
+\end{thebibliography}
+
+\end{document}
