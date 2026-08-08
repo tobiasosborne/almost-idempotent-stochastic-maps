@@ -1049,3 +1049,20 @@ imports a future agent might reach for — read before importing ANY external to
 - **Retracted proposition.** The former `ex-hume` contract claimed, without binding all variables, that the explicit `P_s=I_3-u_sv_s^T` family had one common distance `2s-2s^2+2s^3` to every stochastic idempotent.  The canonical retraction now states that historical proposition with `0<s<1`, a per-idempotent universal quantifier, `s->0` as the asymptotic variable, quantified `C,beta`, and no `op-npps` clause, and marks it `disproved`.
 - **Exact death certificate.** Put `a=1-s+s^2`.  Then `v_s^T 1=0`, `v_s^T u_s=1`, `P_s 1=1`, `P_s^2=P_s`, and the only negative entry is `(P_s)_{23}=-s^2`.  But `I_3` is a stochastic idempotent and `||P_s-I_3||_{infinity->infinity}=||u_sv_s^T||_{infinity->infinity}=2a`, whereas the claimed common value is `2sa`; the positive difference is `2(1-s)a`.  Therefore “distance to every ... equals” is false.
 - **Boundary.** The corrected distance-to-the-set formula in `paper/main.tex` section 5 remains a non-rigorous historical candidate and is not seeded here.  References to the old 3x3 matrices in numerical fixtures or negative “not consumed” statements are matrix-family references only, never imports of the disproved contract.  The active op-classical-facing sharpness carrier is `cor-classical-sharpness`, built directly from the 4x4 `lem-prh-sharpness` witnesses.
+
+## 2026-08-08 — sharpness-family elevation: THREE consecutive balloons; treat as a family-specific pathology
+
+- The lem-prh-sharpness monolith ballooned twice (27, 28 live vs cap 26; honest size
+  ~28-31 vs the 8-node design projection), and after the ratified factoring the
+  family-arithmetic sub-row ALSO ballooned on its first run (27 > 26 with 20 validated;
+  challenges: cross-sibling dependency declarations + "the displayed candidate vectors
+  are THE rows of A,M" identification left unsupported). Aborted trees:
+  docs/plans/2026-08-08-EXHUME-SHARPNESS/TREE-PRHSHARP-ABORTED.md, TREE-FAMARITH-ABORTED.md.
+- Pattern: provers in this explicit-finite-computation family spend nodes on per-entry
+  matrix arithmetic and then on dependency-declaration repairs; verifiers (correctly)
+  refuse strict-from-weak inequality slips and unsupported identifications.
+- For the next attempt, options in order of preference: (a) re-run stage 1/4 with a
+  fresh prover at HIGHER effort (xhigh) and the same cap — the tree was converging and
+  the challenges are bookkeeping-shaped; (b) tighten the skeleton in a design addendum
+  (name the A,M rows AS the definition of the family in node 1, so identification is
+  definitional); (c) only if (a)+(b) fail, a further factoring round. Never bump caps.

@@ -2497,3 +2497,23 @@ folded in; T0 169; registry 364.
   complete); aism-9kmt now the biggest debt (report sync).
 - Next: ex-hume elevation (sharpness at T0), report sync, paper polish,
   Lean only on user elevation.
+
+## 2026-08-08 (session 45 final close, W139 partial) — ex-hume retracted; sharpness route landed + factored; elevations left clean for next session
+
+- W139 (sharpness at T0): ex-hume RETRACTED as disproved (I_3 counterexample;
+  3 hostile audit rounds REJECT/REJECT/LAND-W-E-C; user-ratified; first
+  docs/LEARNINGS.md entry; 51-locus sweep incl. thm-rank-one contract fix +
+  locked def-near-positive-projection scoping fix). Active carrier route
+  landed: cor-classical-sharpness (stated) <- lem-prh-sharpness.
+- lem-prh-sharpness factored (user-ratified; audit LAND-W-E-C, full math
+  re-derivation PASS): + family-arithmetic + row-coincidence rows
+  (registry 372 -> 374); main contract byte-frozen, deps extended.
+- THREE balloons in this family (monolith 27, 28; factored family-arithmetic
+  27): classified as family-specific pathology, remedy order recorded in
+  FINDINGS (xhigh fresh prover first; never cap bumps). Aborted trees
+  captured (TREE-PRHSHARP-ABORTED.md, TREE-FAMARITH-ABORTED.md).
+- Wind-down per user: no runs in flight, all worktrees removed, HANDOFF
+  rewritten with the 6-step next-session finish (elevations + Stage D),
+  sketch v51 + CURRENT, gates green, pushed.
+- T0 = 196 (unchanged since the root discharge). Registry = 374.
+  op-classical proved/validated; sharpness NOT yet T0; no Lean proof.
