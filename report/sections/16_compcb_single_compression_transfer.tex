@@ -101,6 +101,6 @@ superseded node archived), root \texttt{validated}, taint clean.
 \noindent\textbf{Role in the chain.} This is the single-compression transfer primitive aimed at compression-based
 EXT and Stage-1 assembly, where inclusions have to be pushed through
 compressions repeatedly.  The EXT parent \texttt{conj-extcb} is now
-\texttt{proved} with \texttt{af: validated}; the broader assembly carrier
-\texttt{lem-thmainext-conditional} remains \texttt{proved-mod-audit} with
-\texttt{af: none}.  This lemma has no registry consumers.
+\texttt{proved} with \texttt{af: validated}, and so is the broader assembly carrier
+\texttt{lem-thmainext-conditional}.  This lemma's registry consumers are
+\texttt{lem-maincb-stage1-raw-refinement} and \texttt{lem-maincb-stage1-call-envelope}.

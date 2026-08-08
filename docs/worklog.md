@@ -2449,3 +2449,27 @@ folded in; T0 169; registry 364.
   Route-F structure: F0-assembly landing + strengthened k-ledger
   replacement (guard release), then the root rewire LAST. op-classical
   remains OPEN. T0 = 190; registry = 367.
+
+## 2026-08-08 (session 45, W138) — KLEDGER-STRENGTHENED v2 landed (user-ratified); elevation queue opened
+
+- W78 §5 step 6 executed through the full adversarial pipeline in one session:
+  fresh codex design (15-dep decision, 0 seam mismatches) → separate fresh
+  hostile audit REJECT (1 FATAL: monolith 26–51 nodes vs cap 22; 3 HIGH:
+  quantifier hoist, missing fact census, stale report prose; 10 attacks
+  CLEARED) → fresh v2 design (three first-class helper rows, option-(a)
+  pre-forall scalar positivity, 30-item census, complete manifest) → fresh
+  hostile re-audit LAND with zero corrections (13/13 cleared) → USER
+  RATIFICATION (land + elevate).
+- Landed (registry 367 → 371; T0 = 190 unchanged; nothing promoted):
+  strengthened lem-routef-k-ledger replacement (stated/none; 18 deps;
+  W74F paper ledger superseded-history), lem-routef-scalar-header-positivity,
+  lem-routef-factor-map-packet, lem-routef-factor-estimate-packet,
+  lem-routef-f0-assembly. DO-NOT-REWIRE guard on the K-ledger RELEASED;
+  root rewire stays LAST.
+- Eleven stale report-prose loci repaired (00/02/16/35/36/41×2+catalog/42/43/44
+  + UNWIRED); sketch v49 + CURRENT pointer; all generators re-run;
+  check-all OK incl. report build.
+- USER P0 added (bead aism-aywn): standalone 3–5pp paper, Kitaev-on-faith
+  audience; fresh-codex draft dispatched (faithfulness audit pending).
+- Artifacts: docs/plans/2026-08-08-KLEDGER-STRENGTHENED/ (2 briefs + 2
+  designs + 2 audits + 2 audit briefs); beads aism-e30g (W138), aism-aywn.

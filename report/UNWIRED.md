@@ -333,7 +333,8 @@ lem-stage1-quotient-finite-cw
 lem-stage1-quotient-left-inversion
 lem-stage1-quotient-inversion-index-data
 # 2026-08-03: the LAND-14 ledger-domains package (14 reserved rows + D2/D3 reconnections)
-# landed as stated/af: none; whitelist until the af elevation queue validates them.
+# landed as stated/af: none. 2026-08-08: the entire ledger-domains queue is af-VALIDATED (T0);
+# the rows stay whitelisted here only until the aism-9kmt report sync anchors them on the paper track.
 lem-routef-raw-factor-norms
 lem-routef-raw-factor-units
 lem-routef-raw-factor-identities
@@ -355,4 +356,12 @@ lem-routef-threshold-minimum
 # 2026-08-05: the LEDGER-SETTING-RESCOPE formation row (user-ratified landing,
 # LAND-WITH-EXACT-CORRECTIONS); whitelist until af-validated and anchored.
 lem-routef-raw-factor-setting-formation
+# 2026-08-08: the KLEDGER-STRENGTHENED v2 package (user-ratified; hostile re-audit
+# AUDIT-KLEDGER-STRENGTHENED-V2.md VERDICT LAND): the strengthened lem-routef-k-ledger
+# replacement (entry retained above) plus three helper rows and the F0 assembly, all
+# stated/af: none; whitelist until the af elevation queue validates and anchors them.
+lem-routef-scalar-header-positivity
+lem-routef-factor-map-packet
+lem-routef-factor-estimate-packet
+lem-routef-f0-assembly
 ```
