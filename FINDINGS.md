@@ -1009,3 +1009,37 @@ imports a future agent might reach for — read before importing ANY external to
   pushed its own audit file (66a9f657; content verified: the one file only).
   Design/audit codex must not commit or push. Verify `git log` after every
   codex round; content was accepted this time, but treat as a tripwire.
+
+## 2026-08-08 — session-44 operational gotchas (W137, the ledger-queue completion session)
+
+- **Never resume an af run across a registry ratification.** Row 5's run 4
+  was resumed in a worktree whose checkout predated the just-ratified deps
+  edit; the fresh workers CORRECTLY ruled the newly registered external
+  not-allowed (they judge allowedness from the checkout's `deps:` line) and
+  the tree accumulated *validated* meta-nodes recording a gap the
+  ratification had already dissolved. Remedy: after ANY registry edit
+  mid-elevation, discard the run worktree and recreate it at the new HEAD
+  (clean re-seed if the tree is polluted). Worked cleanly for the rest of
+  the session.
+- **STUCK-abort with ordering/bookkeeping challenges = build-shape
+  pathology; the remedy is a fresh-prover clean re-seed, not more rounds.**
+  Row 10's first build was a 5-level 26-node monolith (designed 4!) that
+  thrashed at the cap on "relies on validated node X" (X pending)
+  challenges. Identical provisioning + fresh prover → 4/4 first pass in 2
+  rounds. Distinguish this from the balloon signature (missing fact being
+  re-derived — that needs provisioning, not a retry).
+- **Seeding-exactness audits must ask which TEXTBOOK THEOREMS the skeleton
+  silently invokes.** The ROW8-FACTOR audit cleared "seeding-package
+  exactness" against the declared deps but missed that the tree needs the
+  fd C*-algebra structure theorem and Stinespring dilation; the first build
+  re-derived both from scratch (37 > 26 balloon). Remedy class (tripwire
+  MISSING-fact): byte-matched GT externals from the pinned source —
+  GT-kitaev-fd-cstar-structure (tex:257) and GT-kitaev-canonical-stinespring
+  (tex:1621-1634) now exist for reuse by any future workspace needing them.
+- **Balloon-abort factoring works end-to-end and is cheap when the tree is
+  modular.** Row 8: 29-node monolith → fresh-codex design + separate fresh
+  hostile audit (VERDICT LAND, zero corrections) + user ratification → two
+  sub-lemma rows (23/23, 14/14) + slimmed byte-frozen main (11/11), all
+  under NODE_SOFT_CAP. Registry ids: lem-routef-upsilon-prime-component-
+  construction, lem-routef-upsilon-prime-left-inverse. Artifact trail:
+  docs/plans/2026-08-08-ROW8-FACTOR/.

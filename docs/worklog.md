@@ -2419,3 +2419,33 @@ folded in; T0 169; registry 364.
 - Sketch v47 written; CURRENT pointer regenerated; FINDINGS gotchas recorded
   (sandbox path-remap illusion; under-specification obstruction instance;
   worker-discipline drift: the pair auditor self-pushed its audit file).
+
+## 2026-08-08 — Session 44 (W137): the LEDGER-DOMAINS queue COMPLETED (T0 176 → 190)
+
+- Fourteen af banks in one session, closing the ledger elevation queue
+  (bead aism-3fjg CLOSED): rows 5, 6, D2, 7, D3, 8 (factored), 9, 10, 11,
+  12, 13, 14 — every bank fresh prover / separate fresh verifier / oracle /
+  fr verify PASS / mechanical flip / gates green.
+- Row 5 needed TWO user-ratified deps repairs, both verifier-caught rescope
+  oversights: += lem-kitaev-diagonal-repair (sole exporter of the diagonal
+  facts) and += lem-routef-ai-defect-linearization (the inherited-involution
+  identification). Contract bytes unchanged throughout.
+- Row 8 exceeded the L4 brittleness ceiling (~29 honest nodes > 26) →
+  full factoring arc: fresh-codex design + separate fresh hostile audit
+  (VERDICT LAND, zero corrections) + user ratification → 2 new registry
+  rows (upsilon-prime-component-construction 23/23, upsilon-prime-left-
+  inverse 14/14) + byte-frozen main row 8 (11/11). Registry 365 → 367.
+  First sub-lemma build ballooned re-deriving Wedderburn/Stinespring →
+  two new byte-matched GT externals (GT-kitaev-fd-cstar-structure tex:257,
+  GT-kitaev-canonical-stinespring tex:1621-1634) now reusable repo-wide.
+- Row 10 run 1 aborted [STUCK] (5-deep 26-node monolith vs designed 4;
+  ordering-bookkeeping thrash) → fresh-prover clean re-seed → 4/4 first
+  pass. New binding lesson: never resume an af run across a registry
+  ratification (row-5 run 4 stalled on a stale worktree checkout).
+- Sketch v48 written; CURRENT pointer regenerated; FINDINGS gotchas
+  recorded; HANDOFF rewritten; aism-9kmt updated (report backlog now
+  ~120-190 + the family).
+- The full re-scoped LEDGER-DOMAINS family (19 rows) is now T0. Remaining
+  Route-F structure: F0-assembly landing + strengthened k-ledger
+  replacement (guard release), then the root rewire LAST. op-classical
+  remains OPEN. T0 = 190; registry = 367.
