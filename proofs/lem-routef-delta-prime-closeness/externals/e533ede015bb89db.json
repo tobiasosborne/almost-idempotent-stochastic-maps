@@ -1,0 +1,8 @@
+{
+  "id": "e533ede015bb89db",
+  "name": "lem-routef-raw-factor-setting-formation",
+  "source": "imports validated registry lemma proofs/lem-routef-raw-factor-setting-formation — Route F raw-factor setting formation: there exists one choice W_RF of the scalar header of def-routef-raw-factor-setting, independent of H, Phi, eta, dimension, amplification level, and block data, with C_theta=12*(sqrt(2)-1), C_A=20+(211/8)*C_theta, eta_A\u003e0 and (C_A,eta_A) the fixed witnesses of lem-routef-ai-defect-linearization, C_E\u003cinfinity and epsilon_E\u003e0 the fixed witnesses of lem-thmainext-conditional, rho_theta:=1/8, rho_AI:=eta_A, and all remaining named scalar quantities defined by (1.1)-(1.8), such that for every nonzero finite-dimensional Hilbert space H, every UCP map Phi:B(H)-\u003eB(H), and every eta with 0 \u003c= eta \u003c= rho_id^corr and ||Phi^2-Phi||_cb \u003c= eta, there exist a finite-dimensional unital C*-algebra B, an extended C_E*epsilon_AI(eta)-isomorphism v:B-\u003eA, and a def-routef-raw-factor-setting datum S over this same W_RF whose fields are the displayed H,Phi,eta,B,v,u=v^(-1) and the canonical tilde-Phi,A,star,epsilon_AI(eta),tilde-Delta,tilde-Upsilon notation, with tilde-Phi^2=tilde-Phi, A an extended epsilon_AI(eta)-C*-algebra, and 0 \u003c= epsilon_AI(eta) \u003c= C_A*eta \u003c= epsilon_E.",
+  "content_hash": "24134af3f372aa4057c97f31b11098aad17bf112e7247547388b926525928f13",
+  "created": "2026-08-08T06:29:42.258169436Z",
+  "notes": ""
+}

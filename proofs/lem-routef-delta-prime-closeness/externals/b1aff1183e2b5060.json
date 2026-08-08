@@ -1,0 +1,8 @@
+{
+  "id": "b1aff1183e2b5060",
+  "name": "cor-kitaev-diagonal-cpization",
+  "source": "imports validated registry lemma proofs/cor-kitaev-diagonal-cpization — Entrywise CP-ization from the repaired diagonal: for the finite phase-balanced diagonal D=sum_t q_t W_t^dagger tensor W_t supplied by lem-kitaev-diagonal-repair, every involution-preserving linear map tilde-Delta:B-\u003eB(H) and every UCP map Phi define a completely positive map Delta'(X)=sum_t q_t Phi(tilde-Delta(X W_t^dagger) tilde-Delta(W_t)); complete positivity uses exact centrality of D and does not require exact multiplicativity of tilde-Delta.",
+  "content_hash": "dec0323f6f7186885d0b6794c1fc01a622ca31274d1c6d810f254a62f0dd7d2b",
+  "created": "2026-08-08T06:29:42.264056484Z",
+  "notes": ""
+}
