@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-08-08T18:54:32Z",
+ "extracted_at": "2026-08-08T20:03:42Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-08-08T18:54:32Z",
+  "mined_at": "2026-08-08T20:03:42Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -2258,9 +2258,9 @@
      "challenges_resolved": 0,
      "claims": 0,
      "defs_imported": 2,
-     "first_ts": "2026-08-08T18:54:24.524698228Z",
+     "first_ts": "2026-08-08T19:14:50.102729114Z",
      "id": "lem-prh-sharpness",
-     "last_ts": "2026-08-08T18:54:24.623086499Z",
+     "last_ts": "2026-08-08T19:15:10.030263551Z",
      "ledger_entries": 4,
      "max_round": 0,
      "nodes": 1,
@@ -3956,14 +3956,14 @@
      "banked": 130,
      "blocked": 1,
      "died": 2,
-     "dispatch": 290,
+     "dispatch": 294,
      "lem-topology-hopf-structure af-VALIDATED (81st rigorous result; 13 nodes 13/13 clean) + lem-extcb-exact-target-correction af-VALIDATED (82nd; 6 nodes 6/6 clean, first-pass, zero challenges — the designed transcription landed EXACTLY on budget) — GAP-EA, the first of the four v4.1 GAP families, is DISCHARGED at L0. T0 80 -> 82. Session 28 totals: +6 T0 (5 of 7 topology + the GAP-EA correction row), 2 trees parked with precise diagnoses (1 af-bookkeeping thrash, 1 genuine contract/def scope gap -> user escalation), 3 orchestration-infrastructure laws discovered+banked. Breaker honored: next cycle EXPLOREs off FH.": 1,
      "lem-topology-lefschetz-hopf af-VALIDATED (77th rigorous result; 2 nodes taint clean, first-pass canary) + lem-topology-kunneth-cross-product af-VALIDATED (78th; 7 nodes taint clean) — first two of the seven Stage-1 topology elevations banked, oracles af-lem-topology-* registered, fr verify PASS on both exports, registry flips committed, T0 76 -> 78. Session findings: parallel orchestrations mutually abort (sequential law banked to bd memory); 4 balloon-aborts + 1 stuck (external named but not attached as node dep) queued for repair.": 1,
      "lem-topology-local-index-sign af-VALIDATED (83rd rigorous result; 23 nodes 23/23 clean) under the user-ratified narrowed contract — the in-place root amendment retained all 21 previously validated nodes; oracle fr verify PASS. T0 82 -> 83; 6 of 7 topology rows T0. finite-triangulation root challenge classified: L1 ground-truth stop (Cairns delegates the class-one/allowable definitions to Veblen-Whitehead 1932, NOT in refs/) — user decision being asked in-chat (narrow to Cairns's literal statement vs acquire V-W).": 1,
      "lem-topology-orientable-top-cohomology af-VALIDATED (79th rigorous result; 14 nodes taint clean — Thm 3.26 + field-UCT + Cor 3.39 composed) + lem-topology-quotient-manifold af-VALIDATED (80th; 4 nodes taint clean — the external-attachment verifier challenge resolved by the re-run prover) — 4 of 7 topology elevations banked, oracles registered, fr verify PASS both, T0 78 -> 80. GAP-EA rows LANDED per DESIGN-GAP-EA option (a): lem-extcb-exact-target-correction (validated node-1.2 contract verbatim, proved/af:none) + lem-extcb-exact-target-approximation (v4.1 bridge, stated), UNWIRED-whitelisted, gate green. Next: seed+orchestrate the correction row; finishing runs for finite-triangulation (14/17), local-index-sign (18/22), hopf re-run.": 1,
-     "null": 9,
+     "null": 10,
      "obstruction": 1,
-     "progress": 212
+     "progress": 213
     },
     "G": {
      "banked": 2,
@@ -4002,7 +4002,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-08-08T17:45:23.427Z"
+     "last": "2026-08-08T19:48:23.394Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -4023,7 +4023,7 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 650,
+    "FH": 656,
     "G": 21,
     "R": 52,
     "XE": 1
@@ -4049,7 +4049,7 @@
     "2026-08-08": 20
    },
    "decisions": {
-    "EXPLOIT": 547,
+    "EXPLOIT": 549,
     "EXPLORE": 14,
     "PIVOT": 6
    },
@@ -4060,7 +4060,7 @@
     "af-ledger": 1,
     "af-validated": 3,
     "analysis": 6,
-    "audit": 42,
+    "audit": 43,
     "census": 1,
     "close": 2,
     "codification": 2,
@@ -4102,27 +4102,27 @@
    },
    "evidence_tiers": {
     "T0": 215,
-    "T1": 174,
+    "T1": 175,
     "T2": 169
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-08-08T17:45:23.427Z",
-   "max_cycle": 1248,
+   "last_ts": "2026-08-08T19:48:23.394Z",
+   "max_cycle": 1254,
    "outcomes": {
     "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
     "banked": 164,
     "blocked": 1,
     "died": 7,
     "discovery": 3,
-    "dispatch": 297,
+    "dispatch": 301,
     "lem-topology-hopf-structure af-VALIDATED (81st rigorous result; 13 nodes 13/13 clean) + lem-extcb-exact-target-correction af-VALIDATED (82nd; 6 nodes 6/6 clean, first-pass, zero challenges — the designed transcription landed EXACTLY on budget) — GAP-EA, the first of the four v4.1 GAP families, is DISCHARGED at L0. T0 80 -> 82. Session 28 totals: +6 T0 (5 of 7 topology + the GAP-EA correction row), 2 trees parked with precise diagnoses (1 af-bookkeeping thrash, 1 genuine contract/def scope gap -> user escalation), 3 orchestration-infrastructure laws discovered+banked. Breaker honored: next cycle EXPLOREs off FH.": 1,
     "lem-topology-lefschetz-hopf af-VALIDATED (77th rigorous result; 2 nodes taint clean, first-pass canary) + lem-topology-kunneth-cross-product af-VALIDATED (78th; 7 nodes taint clean) — first two of the seven Stage-1 topology elevations banked, oracles af-lem-topology-* registered, fr verify PASS on both exports, registry flips committed, T0 76 -> 78. Session findings: parallel orchestrations mutually abort (sequential law banked to bd memory); 4 balloon-aborts + 1 stuck (external named but not attached as node dep) queued for repair.": 1,
     "lem-topology-local-index-sign af-VALIDATED (83rd rigorous result; 23 nodes 23/23 clean) under the user-ratified narrowed contract — the in-place root amendment retained all 21 previously validated nodes; oracle fr verify PASS. T0 82 -> 83; 6 of 7 topology rows T0. finite-triangulation root challenge classified: L1 ground-truth stop (Cairns delegates the class-one/allowable definitions to Veblen-Whitehead 1932, NOT in refs/) — user decision being asked in-chat (narrow to Cairns's literal statement vs acquire V-W).": 1,
     "lem-topology-orientable-top-cohomology af-VALIDATED (79th rigorous result; 14 nodes taint clean — Thm 3.26 + field-UCT + Cor 3.39 composed) + lem-topology-quotient-manifold af-VALIDATED (80th; 4 nodes taint clean — the external-attachment verifier challenge resolved by the re-run prover) — 4 of 7 topology elevations banked, oracles registered, fr verify PASS both, T0 78 -> 80. GAP-EA rows LANDED per DESIGN-GAP-EA option (a): lem-extcb-exact-target-correction (validated node-1.2 contract verbatim, proved/af:none) + lem-extcb-exact-target-approximation (v4.1 bridge, stated), UNWIRED-whitelisted, gate green. Next: seed+orchestrate the correction row; finishing runs for finite-triangulation (14/17), local-index-sign (18/22), hopf re-run.": 1,
-    "null": 9,
+    "null": 10,
     "obstruction": 1,
     "orient": 381,
-    "progress": 379,
+    "progress": 380,
     "refuted": 1
    },
    "per_day": {
@@ -4152,16 +4152,16 @@
     "2026-08-03": 11,
     "2026-08-04": 3,
     "2026-08-05": 32,
-    "2026-08-08": 83
+    "2026-08-08": 89
    },
-   "records": 1248,
-   "worker_jobs": 548,
+   "records": 1254,
+   "worker_jobs": 552,
    "worker_models": {
     "codex": 338,
     "codex-gpt-5.6-sol": 8,
     "fable": 10,
     "gpt-5": 1,
-    "gpt-5.6-sol": 166,
+    "gpt-5.6-sol": 170,
     "opus": 20,
     "sonnet": 5
    },
@@ -4177,14 +4177,14 @@
     "designer": 7,
     "measurer": 1,
     "obstructor": 1,
-    "prover": 256,
+    "prover": 258,
     "refuter": 7,
     "researcher": 2,
     "strategist": 6,
     "summarizer": 1,
     "transcriber": 4,
     "transcription-auditor": 1,
-    "verifier": 226
+    "verifier": 228
    },
    "workers": {
     "codex / adversary": 2,
@@ -4211,9 +4211,9 @@
     "gpt-5 / designer": 1,
     "gpt-5.6-sol / auditor": 1,
     "gpt-5.6-sol / designer": 6,
-    "gpt-5.6-sol / prover": 72,
+    "gpt-5.6-sol / prover": 74,
     "gpt-5.6-sol / transcription-auditor": 1,
-    "gpt-5.6-sol / verifier": 86,
+    "gpt-5.6-sol / verifier": 88,
     "opus / auditor": 1,
     "opus / author": 5,
     "opus / prover": 11,
@@ -4229,9 +4229,9 @@
   "git": {
    "active_days": 27,
    "authors": {
-    "tobiasosborne": 1194
+    "tobiasosborne": 1197
    },
-   "commits": 1194,
+   "commits": 1197,
    "first_day": "2026-07-02",
    "last_day": "2026-08-08",
    "per_day": {
@@ -4261,7 +4261,7 @@
     "2026-08-03": 16,
     "2026-08-04": 2,
     "2026-08-05": 28,
-    "2026-08-08": 52
+    "2026-08-08": 55
    },
    "subject_prefixes": {
     "W61": 13,
@@ -4356,19 +4356,19 @@
   },
   "registry": {
    "af": {
-    "none": 164,
+    "none": 166,
     "seeded": 12,
     "validated": 196
    },
    "kind": {
     "corollary": 3,
-    "lemma": 342,
+    "lemma": 344,
     "obstruction": 13,
     "open-problem": 5,
     "proposition": 2,
     "theorem": 7
    },
-   "results": 372,
+   "results": 374,
    "status": {
     "conjecture": 31,
     "disproved": 3,
@@ -4378,7 +4378,7 @@
     "open": 2,
     "proved": 309,
     "proved-mod-audit": 18,
-    "stated": 4
+    "stated": 6
    }
   },
   "runs": {

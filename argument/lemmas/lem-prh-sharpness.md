@@ -3,7 +3,7 @@ id: lem-prh-sharpness
 kind: lemma
 contract: PRH square-root sharpness: for every 0 < lambda < 1/2 there are positive unital maps A:l-infinity(2)->l-infinity(4) and M:l-infinity(4)->l-infinity(2) with epsilon_lambda=||MA-I_2||_{infinity->infinity}=2*lambda^2 tending to 0 such that every stochastic idempotent F on l-infinity(4) satisfies ||AM-F||_{infinity->infinity} >= lambda=sqrt(epsilon_lambda/2); hence the sqrt(epsilon) order in PRH is intrinsically sharp.
 defs: def-positive-approximate-retract; def-stochastic
-deps:
+deps: lem-prh-sharpness-family-arithmetic; lem-prh-sharpness-row-coincidence
 status: proved-mod-audit
 af: seeded
 provenance: docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §7; hostile batch verdict VERDICT-W74F-BATCH.md §A (VALID, no correction)

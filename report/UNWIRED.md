@@ -370,4 +370,7 @@ lem-routef-f0-assembly
 # stated/none (whitelisted until its Stage-D report anchoring); ex-hume retracted to
 # disproved (entry retained above as the historical record's whitelist line).
 cor-classical-sharpness
+# 2026-08-08 (W139 factoring, user-ratified; AUDIT-PRHSHARP-FACTOR.md LAND-WITH-EXACT-CORRECTIONS):
+lem-prh-sharpness-family-arithmetic
+lem-prh-sharpness-row-coincidence
 ```
