@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing one global witness package W\_RF suppli...}
+\step{1} After first fixing one global witness package W\_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W\_RF supplied by the same result, for every Delta' supplied for (W\_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, every Upsilon' supplied from that same pair by lem-routef-upsilon-prime-closeness, and every Upsilon supplied from that same triple by lem-routef-upsilon-normalization-closeness, writing the fields of (W\_RF,S) as the unqualified symbols below: Delta-Upsilon telescope: for rho\_DeltaUpsilon := min\{rho\_theta, rho\_T, rho\_id, rho\_Delta, rho\_Upsilon\} and 0 <= eta <= rho\_DeltaUpsilon, ||Delta Upsilon - Phi||\_cb <= (C\_theta+C\_Delta+2*C\_Upsilon)*eta. \steptag{validated} \\[6pt]
+\step{1.1} Fix arbitrary W\_RF, (H,Phi,eta), S, Delta', Delta, Upsilon', and Upsilon exactly as quantified in node 1, and assume 0 <= eta <= rho\_DeltaUpsilon.  The definition rho\_DeltaUpsilon=min\{rho\_theta,rho\_T,rho\_id,rho\_Delta,rho\_Upsilon\}, together with rho\_theta=1/8 and rho\_id=min\{rho\_AI,epsilon\_E/C\_A\}, implies eta is in the ranges of the following imported conclusions: ||tilde-Phi-Phi||\_cb <= C\_theta*eta by lem-routef-functional-calculus-closeness; tilde-Delta tilde-Upsilon=tilde-Phi by lem-routef-raw-factor-identities; ||tilde-Delta||\_cb <= 1+C\_T*eta by lem-routef-raw-factor-norms; ||Delta-tilde-Delta||\_cb <= C\_Delta*eta and Delta is UCP by lem-routef-delta-normalization-closeness; and ||Upsilon-tilde-Upsilon||\_cb <= C\_Upsilon*eta and Upsilon is UCP by lem-routef-upsilon-normalization-closeness. \steptag{validated} \\[4pt]
+\step{1.2} In the same setting, C\_T*eta <= 1, hence ||tilde-Delta||\_cb <= 2; also ||Upsilon||\_cb=1.  Indeed, def-routef-raw-factor-setting gives C\_T=C\_theta+3*C\_V and rho\_T <= min\{[4*(1+C\_theta)]\textasciicircum{}(-1),[4*(1+C\_V)]\textasciicircum{}(-1)\}.  The formation data in lem-routef-raw-factor-setting-formation make C\_theta and C\_V nonnegative, so eta<=rho\_T gives C\_T*eta <= C\_theta/[4*(1+C\_theta)]+3*C\_V/[4*(1+C\_V)] <= 1/4+3/4=1.  The first bound now follows from lem-routef-raw-factor-norms.  The second is the standard amplification contractivity of a UCP map (and its value on the unit gives norm at least one), applied to the Upsilon furnished by lem-routef-upsilon-normalization-closeness. \steptag{validated} \\[4pt]
+\step{1.3} Algebraic telescope implication: in any instance of the setting of node 1, suppose tilde-Delta tilde-Upsilon=tilde-Phi, ||Delta-tilde-Delta||\_cb<=C\_Delta*eta, ||Upsilon||\_cb=1, ||tilde-Delta||\_cb<=2, ||Upsilon-tilde-Upsilon||\_cb<=C\_Upsilon*eta, and ||tilde-Phi-Phi||\_cb<=C\_theta*eta.  For every amplification level q>=1, the identity tilde-Delta\_q tilde-Upsilon\_q=tilde-Phi\_q gives Delta\_q Upsilon\_q-Phi\_q=(Delta\_q-tilde-Delta\_q)Upsilon\_q+tilde-Delta\_q(Upsilon\_q-tilde-Upsilon\_q)+(tilde-Phi\_q-Phi\_q).  Triangle inequality and submultiplicativity give ||Delta\_q Upsilon\_q-Phi\_q|| <= (C\_Delta*eta)*1+2*(C\_Upsilon*eta)+C\_theta*eta=(C\_theta+C\_Delta+2*C\_Upsilon)*eta.  Taking the supremum over q gives ||Delta Upsilon-Phi||\_cb <= (C\_theta+C\_Delta+2*C\_Upsilon)*eta. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

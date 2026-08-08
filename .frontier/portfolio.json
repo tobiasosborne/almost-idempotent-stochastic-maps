@@ -1791,6 +1791,18 @@
         ]
       },
       {
+        "name": "af-lem-routef-delta-upsilon-telescope",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-routef-delta-upsilon-telescope"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-delta-upsilon-telescope/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-delta-upsilon-telescope.md"
+        ]
+      },
+      {
         "name": "af-lem-thmainext-conditional",
         "cmd": [
           "python3",

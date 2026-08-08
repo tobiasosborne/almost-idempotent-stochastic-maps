@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-delta-upsilon-telescope/export.md",
+  "oracle": "af-lem-routef-delta-upsilon-telescope",
+  "result": "pass",
+  "claim_hash": "20efe821a2f504da479d74ed2460c163caaaa2d8c228a5e592d273efa2d1a80b",
+  "oracle_digest": "9d944a108e7727246f7d15f6b4de9696e54685dc2ab0a550e670f95325a5b4ab",
+  "inputs_hash": "361dd5b2f6a63d55a2d5e6cf3cad129ca5f5db48f94b7e889f377a627e701ca5",
+  "ts": "2026-08-08T12:18:01.631Z"
+}
