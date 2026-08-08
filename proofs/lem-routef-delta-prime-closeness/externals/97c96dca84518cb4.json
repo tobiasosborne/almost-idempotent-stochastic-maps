@@ -1,8 +1,8 @@
 {
-  "id": "38a8234ec2320deb",
+  "id": "97c96dca84518cb4",
   "name": "lem-routef-raw-factor-norms",
   "source": "imports validated registry lemma proofs/lem-routef-raw-factor-norms — After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result; for every integer n \u003e= 1 and every X in M_n(S.B), writing the fields of (W_RF,S) as the unqualified symbols below: Raw factor-map norms: with C_V, C_T, rho_T from (1.1), for 0 \u003c= eta \u003c= rho_T, every amplification satisfies (1-C_V*eta)*||X|| \u003c= ||tilde-Delta_n X|| \u003c= (1+C_V*eta)*||X|| and max{||tilde-Delta||_cb, ||tilde-Upsilon||_cb} \u003c= 1+C_T*eta.",
   "content_hash": "a074786f65345e912cd6c72b9d018060b4e7a2ec64ec80fa6aa6ebd6e511586c",
-  "created": "2026-08-08T06:29:42.282599529Z",
+  "created": "2026-08-08T07:51:25.067586744Z",
   "notes": ""
 }
