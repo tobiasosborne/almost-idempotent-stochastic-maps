@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-threshold-minimum/export.md",
+  "oracle": "af-lem-routef-threshold-minimum",
+  "result": "pass",
+  "claim_hash": "59c1de48e2f647ed1040eebb1e71e638ea57f386932447855205785a16a06967",
+  "oracle_digest": "2a081b7d9cca7333c02e2cbea9d7e6b7d7eaec189e30f5dda9e111d766dba23e",
+  "inputs_hash": "5cb72f60c736d31ce48eaa702be0a107cb50a71ca7bbe5853146fc4a60d4aa45",
+  "ts": "2026-08-08T13:13:38.540Z"
+}

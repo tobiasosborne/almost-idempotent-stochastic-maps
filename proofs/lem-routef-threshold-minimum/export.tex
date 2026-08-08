@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing one global witness package W\_RF suppli...}
+\step{1} After first fixing one global witness package W\_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W\_RF supplied by the same result, for every Delta' supplied for (W\_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, every Upsilon' supplied from that same pair by lem-routef-upsilon-prime-closeness, and every Upsilon supplied from that same triple by lem-routef-upsilon-normalization-closeness, writing the fields of (W\_RF,S) as the unqualified symbols below: Route F scalar threshold: let eta\_K := min\{rho\_fac, (24*K)\textasciicircum{}(-1), 1\}; then eta\_K > 0, and every 0 <= eta <= eta\_K satisfies eta <= rho\_fac, 0 <= eta <= min\{(24*K)\textasciicircum{}(-1),1\}, 3*K*eta <= 1/8 < 1, and 3*K*eta/(1-3*K*eta) <= 4*K*eta <= 1/6 < 1/2. \steptag{validated} \\[6pt]
+\step{1.1} In the ambient configuration quantified in node 1, lem-routef-raw-factor-setting-formation supplies the single global W\_RF and the datum S, while lem-routef-delta-prime-closeness, lem-routef-delta-normalization-closeness, lem-routef-upsilon-prime-closeness, and lem-routef-upsilon-normalization-closeness supply the stipulated Delta', Delta, Upsilon', and Upsilon in that order. Applying lem-routef-k-finiteness to exactly this chain gives that K is a finite universal real scalar and rho\_fac>0. Moreover, equation (1.6) of def-routef-raw-factor-setting defines K as a maximum whose entries include 1, so K>=1>0. \steptag{validated} \\[4pt]
+\step{1.2} By lem-routef-k-finiteness in the ambient configuration of node 1, rho\_fac>0 and K is a finite real scalar; independently, equation (1.6) of def-routef-raw-factor-setting makes K a maximum containing 1, so K>=1>0. Hence rho\_fac, (24*K)\textasciicircum{}(-1), and 1 are all strictly positive. The minimum of finitely many strictly positive real numbers is strictly positive, so equation (1.8), eta\_K=min\{rho\_fac,(24*K)\textasciicircum{}(-1),1\}, gives eta\_K>0. \steptag{validated} \\[4pt]
+\step{1.3} Fix any real eta with 0<=eta<=eta\_K. Equation (1.8) of def-routef-raw-factor-setting and the defining order property of a minimum give eta<=rho\_fac, eta<=(24*K)\textasciicircum{}(-1), and eta<=1; hence 0<=eta<=min\{(24*K)\textasciicircum{}(-1),1\}. Equation (1.6) makes K>=1>0, so multiplying eta<=(24*K)\textasciicircum{}(-1)=1/(24*K) by 3*K and by 4*K gives 3*K*eta<=3/24=1/8<1 and 4*K*eta<=4/24=1/6<1/2. \steptag{validated} \\[4pt]
+\step{1.4} Fix any real eta with 0<=eta<=eta\_K. By (1.8), eta<=(24*K)\textasciicircum{}(-1); by (1.6), K>=1>0. Put x:=3*K*eta. Then 0<=x<=1/8, so 1-x>0 and 1-4*x>=1/2>0. Since 4*K*eta=(4/3)*x, common-denominator arithmetic gives 4*K*eta-x/(1-x)=x*(1-4*x)/(3*(1-x))>=0. Therefore 3*K*eta/(1-3*K*eta)=x/(1-x)<=4*K*eta. Also eta<=(24*K)\textasciicircum{}(-1) gives 4*K*eta<=1/6<1/2, completing the rational chain. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
