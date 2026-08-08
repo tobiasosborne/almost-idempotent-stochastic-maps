@@ -1,0 +1,8 @@
+{
+  "id": "9922bb58ca8642a4",
+  "name": "lem-routef-f3-retract-defect",
+  "source": "imports validated registry lemma proofs/lem-routef-f3-retract-defect — Route F F3 retract defect: let K \u003e= 1 be a dimension-independent constant, n,k \u003e= 1, A: l_inf^k -\u003e l_inf^n and M: l_inf^n -\u003e l_inf^k positive unital maps, Q: l_inf^n -\u003e l_inf^n row-stochastic, and eta \u003e= 0 with 3K*eta \u003c 1; if ||Q - AM||_{inf-\u003einf} \u003c= K*eta, ||QA - A||_{inf-\u003einf} \u003c= 2K*eta, and ||Ax||_inf \u003e= (1-3K*eta)*||x||_inf for every x in l_inf^k, then ||MA - I_k||_{inf-\u003einf} \u003c= 3K*eta/(1-3K*eta).",
+  "content_hash": "9ef27f1289331e7591fef8f770a3123a739b2489e3d651215622ea576b491b41",
+  "created": "2026-08-08T15:56:45.98431417Z",
+  "notes": ""
+}

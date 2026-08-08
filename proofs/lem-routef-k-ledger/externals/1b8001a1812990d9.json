@@ -1,0 +1,8 @@
+{
+  "id": "1b8001a1812990d9",
+  "name": "lem-routef-prh-finish",
+  "source": "imports validated registry lemma proofs/lem-routef-prh-finish — Route F PRH finish: let A:l-infinity(k)-\u003el-infinity(n) and M:l-infinity(n)-\u003el-infinity(k) be positive unital maps and let Q be row-stochastic; if K \u003e= 1, 0 \u003c= eta \u003c= min{(24*K)^(-1),1}, ||Q-AM||_{infinity-\u003einfinity} \u003c= K*eta, and ||MA-I||_{infinity-\u003einfinity} \u003c= 3*K*eta/(1-3*K*eta), then there is a stochastic idempotent E with ||Q-E||_{infinity-\u003einfinity} \u003c= (K+4*sqrt(2*K))*sqrt(eta).",
+  "content_hash": "665b2862feef5ea10af6f69326715a4845308779c5ed5c77df2bd93db7e417cf",
+  "created": "2026-08-08T15:56:45.991382369Z",
+  "notes": ""
+}
