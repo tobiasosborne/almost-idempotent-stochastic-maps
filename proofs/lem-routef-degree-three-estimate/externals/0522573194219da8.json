@@ -1,0 +1,8 @@
+{
+  "id": "0522573194219da8",
+  "name": "lem-routef-functional-calculus-closeness",
+  "source": "imports validated registry lemma proofs/lem-routef-functional-calculus-closeness — Functional-calculus closeness: for 0 \u003c= eta \u003c= 1/8, the exact functional-calculus projector satisfies ||tilde-Phi-Phi||_cb \u003c= C_theta*eta, where C_theta=12*(sqrt(2)-1).",
+  "content_hash": "4acfc9c2ab777c3cb09dc6d9896f8f52643162f74895f69a3aa7fc2b160a79b3",
+  "created": "2026-08-08T08:42:36.443230874Z",
+  "notes": ""
+}
