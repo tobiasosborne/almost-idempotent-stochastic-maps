@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing one global witness package W\_RF suppli...}
+\step{1} After first fixing one global witness package W\_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W\_RF supplied by the same result, for every Delta' supplied for (W\_RF,S) by lem-routef-delta-prime-closeness, and every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness; for every integer n >= 1 and all X, Y in M\_n(S.B), writing the fields of (W\_RF,S) as the unqualified symbols below: Normalized Delta product: for rho\_DeltaPhi := min\{rho\_theta, rho\_Delta, rho\_2\} and 0 <= eta <= rho\_DeltaPhi, every amplification satisfies ||tilde-Phi\_n(Delta\_n X Delta\_n Y) - tilde-Delta\_n(XY)|| <= (C\_2+C\_theta+C\_Delta)*eta*||X||*||Y||. \steptag{validated} \\[6pt]
+\step{1.1} Fix the global package W\_RF, then an arbitrary admissible input (H,Phi,eta), a datum S, Delta', Delta, an integer n>=1, and X,Y in M\_n(S.B), exactly as in the root prefix. By def-routef-raw-factor-setting, rho\_DeltaPhi=min\{rho\_theta,rho\_Delta,rho\_2\}; hence 0<=eta<=rho\_DeltaPhi implies eta<=rho\_theta=1/8, eta<=rho\_Delta, and eta<=rho\_2. \steptag{validated} \\[4pt]
+\step{1.2} Under the fixed data and radius bounds of 1.1, lem-routef-functional-calculus-closeness gives ||tilde-Phi-Phi||\_cb<=C\_theta*eta, hence ||(tilde-Phi\_n-Phi\_n)(Z)||<=C\_theta*eta*||Z|| for every Z in M\_n(B(H)); and lem-routef-delta-normalization-closeness gives that Delta is UCP and ||Delta-tilde-Delta||\_cb<=C\_Delta*eta, hence ||(Delta\_n-tilde-Delta\_n)(W)||<=C\_Delta*eta*||W|| for every W in M\_n(S.B). \steptag{validated} \\[4pt]
+\step{1.3} Because Delta is UCP by 1.2, def-ucp-map says every amplification Delta\_n is unital positive and therefore contractive. Consequently ||Delta\_n X Delta\_n Y||<=||Delta\_n X||*||Delta\_n Y||<=||X||*||Y||; also the C*-algebra norm on M\_n(S.B) gives ||XY||<=||X||*||Y||. \steptag{validated} \\[4pt]
+\step{1.4} Since eta<=rho\_2 by 1.1 and Delta',Delta are precisely the maps fixed in the root prefix, lem-routef-degree-two-estimate applies and yields ||Phi\_n(Delta\_n X Delta\_n Y)-Delta\_n(XY)||<=C\_2*eta*||X||*||Y||. \steptag{validated} \\[4pt]
+\step{1.5} Linearity gives the exact decomposition tilde-Phi\_n(Delta\_n X Delta\_n Y)-tilde-Delta\_n(XY)=(tilde-Phi\_n-Phi\_n)(Delta\_n X Delta\_n Y)+[Phi\_n(Delta\_n X Delta\_n Y)-Delta\_n(XY)]+(Delta\_n-tilde-Delta\_n)(XY). Therefore the triangle inequality bounds its norm by the sum of the norms of these three displayed summands. \steptag{validated} \\[4pt]
+\step{1.6} Apply the two cb estimates of 1.2 to the first and third summands in 1.5, the norm bounds of 1.3 to their arguments, and the degree-two estimate 1.4 to the middle summand. The resulting upper bound is C\_theta*eta*||X||*||Y||+C\_2*eta*||X||*||Y||+C\_Delta*eta*||X||*||Y||=(C\_2+C\_theta+C\_Delta)*eta*||X||*||Y||, which is exactly the root conclusion for the arbitrary fixed data; universal generalization proves node 1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

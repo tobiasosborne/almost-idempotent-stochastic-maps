@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-delta-phi-product/export.md",
+  "oracle": "af-lem-routef-delta-phi-product",
+  "result": "pass",
+  "claim_hash": "a27d933575197dbe18f7f322187665ead5ac3b4bfe0a5ed1d398558dd1f0d19a",
+  "oracle_digest": "56be2e749dc02b97cb0d07e0ae4a729e7c120bbed099f8639742f88da828a2f0",
+  "inputs_hash": "8d4d34e25e276b75738707c4aae80cba4f5e5a7da66d9a2abee600eef4be749f",
+  "ts": "2026-08-08T08:41:35.451Z"
+}

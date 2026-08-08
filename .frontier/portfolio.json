@@ -1719,6 +1719,18 @@
         ]
       },
       {
+        "name": "af-lem-routef-delta-phi-product",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-routef-delta-phi-product"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-delta-phi-product/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-delta-phi-product.md"
+        ]
+      },
+      {
         "name": "af-lem-thmainext-conditional",
         "cmd": [
           "python3",
