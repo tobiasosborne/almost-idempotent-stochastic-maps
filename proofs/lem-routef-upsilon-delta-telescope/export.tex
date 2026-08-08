@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing one global witness package W\_RF suppli...}
+\step{1} After first fixing one global witness package W\_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W\_RF supplied by the same result, for every Delta' supplied for (W\_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, every Upsilon' supplied from that same pair by lem-routef-upsilon-prime-closeness, and every Upsilon supplied from that same triple by lem-routef-upsilon-normalization-closeness, writing the fields of (W\_RF,S) as the unqualified symbols below: Upsilon-Delta telescope: for rho\_UpsilonDelta := min\{rho\_T, rho\_id, rho\_Delta, rho\_Upsilon\} and 0 <= eta <= rho\_UpsilonDelta, ||Upsilon Delta - I\_B||\_cb <= (C\_Upsilon+2*C\_Delta)*eta. \steptag{validated} \\[6pt]
+\step{1.1} Under the ambient choices and 0 <= eta <= rho\_UpsilonDelta, establish the exact raw identity, the two normalization-closeness estimates, the complete contraction of Delta, and the bound ||tilde-Upsilon||\_cb <= 2. \steptag{validated} \\[6pt]
+\step{1.1.1} Unfolding rho\_UpsilonDelta=min\{rho\_T,rho\_id,rho\_Delta,rho\_Upsilon\} gives eta<=rho\_T, eta<=rho\_Delta, and eta<=rho\_Upsilon; moreover (1.1) gives rho\_T<=min\{rho\_theta,rho\_AI,epsilon\_E/C\_A\}=rho\_id\textasciicircum{}corr, so eta<=rho\_id\textasciicircum{}corr. \steptag{validated} \\[4pt]
+\step{1.1.2} By lem-routef-raw-factor-identities at eta<=rho\_id\textasciicircum{}corr, tilde-Upsilon tilde-Delta=I\_B, and hence tilde-Upsilon\_n tilde-Delta\_n=(I\_B)\_n for every amplification n>=1. \steptag{validated} \\[4pt]
+\step{1.1.3} By lem-routef-delta-normalization-closeness at eta<=rho\_Delta and lem-routef-upsilon-normalization-closeness at eta<=rho\_Upsilon, Delta is UCP and ||Delta-tilde-Delta||\_cb<=C\_Delta*eta, while ||Upsilon-tilde-Upsilon||\_cb<=C\_Upsilon*eta. \steptag{validated} \\[4pt]
+\step{1.1.4} Because Delta is UCP, each amplification Delta\_n is UCP and therefore contractive by def-ucp-map; thus ||Delta\_n||<=1 for every n>=1 (equivalently, Delta is a complete contraction). \steptag{validated} \\[4pt]
+\step{1.1.5} By lem-routef-raw-factor-norms at eta<=rho\_T, ||tilde-Upsilon||\_cb<=1+C\_T*eta. \steptag{validated} \\[4pt]
+\step{1.1.6} The scalar ledger in def-routef-raw-factor-setting gives C\_T=C\_theta+3*C\_V and rho\_T<=min\{[4*(1+C\_theta)]\textasciicircum{}(-1),[4*(1+C\_V)]\textasciicircum{}(-1)\}. Here C\_theta=12*(sqrt(2)-1)>=0 and C\_V=max\{1,C\_E\}*C\_A>=0 by lem-routef-raw-factor-setting-formation. Hence eta<=rho\_T implies C\_theta*eta<=1/4 and C\_V*eta<=1/4, so C\_T*eta<=1 and therefore 1+C\_T*eta<=2. \steptag{validated} \\[4pt]
+\step{1.2} Assuming the facts established in child 1.1, apply the amplification-level two-term telescope and then take the supremum over amplification levels to obtain ||Upsilon Delta - I\_B||\_cb <= (C\_Upsilon+2*C\_Delta)*eta. \steptag{validated} \\[6pt]
+\step{1.2.1} For each n>=1, amplification respects sums and compositions; using tilde-Upsilon\_n tilde-Delta\_n=(I\_B)\_n, the exact identity (Upsilon Delta-I\_B)\_n=(Upsilon\_n-tilde-Upsilon\_n)Delta\_n+tilde-Upsilon\_n(Delta\_n-tilde-Delta\_n) holds. \steptag{validated} \\[4pt]
+\step{1.2.2} For each n>=1, the triangle inequality and submultiplicativity applied to child 1.2.1, together with ||Upsilon\_n-tilde-Upsilon\_n||<=C\_Upsilon*eta, ||Delta\_n||<=1, ||tilde-Upsilon\_n||<=2, and ||Delta\_n-tilde-Delta\_n||<=C\_Delta*eta from child 1.1, give ||(Upsilon Delta-I\_B)\_n||<=(C\_Upsilon+2*C\_Delta)*eta. \steptag{validated} \\[4pt]
+\step{1.2.3} Taking the supremum over all n>=1 in the uniform estimate of child 1.2.2 and using the definition of completely bounded norm gives ||Upsilon Delta-I\_B||\_cb<=(C\_Upsilon+2*C\_Delta)*eta. \steptag{validated} \\[6pt]
+\step{1.2.3.1} By validated node 1.2.2, for every integer n>=1 one has ||(Upsilon Delta-I\_B)\_n||<=(C\_Upsilon+2*C\_Delta)*eta. This node explicitly depends on 1.2.2. Therefore, by the definition ||T||\_cb:=sup\_\{n>=1\}||T\_n|| applied to T=Upsilon Delta-I\_B, taking the supremum of the preceding uniform inequalities yields ||Upsilon Delta-I\_B||\_cb<=sup\_\{n>=1\}(C\_Upsilon+2*C\_Delta)*eta=(C\_Upsilon+2*C\_Delta)*eta. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
