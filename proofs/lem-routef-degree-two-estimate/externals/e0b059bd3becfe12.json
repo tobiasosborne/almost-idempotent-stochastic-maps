@@ -1,0 +1,8 @@
+{
+  "id": "e0b059bd3becfe12",
+  "name": "lem-routef-delta-prime-closeness",
+  "source": "imports validated registry lemma proofs/lem-routef-delta-prime-closeness — After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, writing the fields of (W_RF,S) as the unqualified symbols below: Delta-prime CP closeness: with C_Delta' := C_T+4*C_theta and rho_Delta' := min{rho_T, rho_prod}, for 0 \u003c= eta \u003c= rho_Delta', the repaired norm-one diagonal produces a CP map Delta' with ||Delta' - tilde-Delta||_cb \u003c= C_Delta'*eta.",
+  "content_hash": "00a1db82476afe208409e1bcce39aff5c1f77d5f36f77adf69b8e68dd86c77a9",
+  "created": "2026-08-08T08:21:39.502701031Z",
+  "notes": ""
+}

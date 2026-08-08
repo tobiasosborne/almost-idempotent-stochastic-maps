@@ -1,0 +1,8 @@
+{
+  "id": "39298b3a09728d47",
+  "name": "lem-routef-delta-normalization-closeness",
+  "source": "imports validated registry lemma proofs/lem-routef-delta-normalization-closeness — After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result and for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, and for every X in S.B, writing the fields of (W_RF,S) as the unqualified symbols below: Delta UCP normalization: with C_Delta := 6*C_T+7*C_Delta' and rho_Delta := min{rho_unit, rho_Delta', [2*(C_T+C_Delta')]^(-1)}, for 0 \u003c= eta \u003c= rho_Delta, a = Delta'(I) is invertible and Delta(X) = a^(-1/2)*Delta'(X)*a^(-1/2) is UCP with ||Delta - tilde-Delta||_cb \u003c= C_Delta*eta.",
+  "content_hash": "5661e1872a384b47f252591c7fb0dc47a48e3dda94c8fa9c75ebafcd923c4011",
+  "created": "2026-08-08T08:21:39.509449242Z",
+  "notes": ""
+}
