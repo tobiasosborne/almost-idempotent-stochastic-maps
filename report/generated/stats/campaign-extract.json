@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-08-08T16:12:35Z",
+ "extracted_at": "2026-08-08T16:20:16Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-08-08T16:12:35Z",
+  "mined_at": "2026-08-08T16:20:16Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -3937,7 +3937,7 @@
     },
     "FH": {
      "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
-     "banked": 128,
+     "banked": 129,
      "blocked": 1,
      "died": 2,
      "dispatch": 285,
@@ -3986,7 +3986,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-08-08T16:07:05.483Z"
+     "last": "2026-08-08T16:12:59.685Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -4007,7 +4007,7 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 640,
+    "FH": 641,
     "G": 21,
     "R": 52,
     "XE": 1
@@ -4030,17 +4030,17 @@
     "2026-08-02": 12,
     "2026-08-03": 1,
     "2026-08-05": 7,
-    "2026-08-08": 18
+    "2026-08-08": 19
    },
    "decisions": {
-    "EXPLOIT": 542,
+    "EXPLOIT": 543,
     "EXPLORE": 14,
     "PIVOT": 6
    },
    "evidence_classes": {
     "advisory": 1,
     "af": 177,
-    "af-export": 14,
+    "af-export": 15,
     "af-ledger": 1,
     "af-validated": 3,
     "analysis": 6,
@@ -4085,16 +4085,16 @@
     "wave": 24
    },
    "evidence_tiers": {
-    "T0": 213,
+    "T0": 214,
     "T1": 171,
     "T2": 169
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-08-08T16:07:05.483Z",
-   "max_cycle": 1238,
+   "last_ts": "2026-08-08T16:12:59.685Z",
+   "max_cycle": 1239,
    "outcomes": {
     "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
-    "banked": 162,
+    "banked": 163,
     "blocked": 1,
     "died": 7,
     "discovery": 3,
@@ -4136,16 +4136,16 @@
     "2026-08-03": 11,
     "2026-08-04": 3,
     "2026-08-05": 32,
-    "2026-08-08": 73
+    "2026-08-08": 74
    },
-   "records": 1238,
-   "worker_jobs": 538,
+   "records": 1239,
+   "worker_jobs": 540,
    "worker_models": {
     "codex": 338,
     "codex-gpt-5.6-sol": 8,
     "fable": 10,
     "gpt-5": 1,
-    "gpt-5.6-sol": 156,
+    "gpt-5.6-sol": 158,
     "opus": 20,
     "sonnet": 5
    },
@@ -4161,14 +4161,14 @@
     "designer": 7,
     "measurer": 1,
     "obstructor": 1,
-    "prover": 251,
+    "prover": 252,
     "refuter": 7,
     "researcher": 2,
     "strategist": 6,
     "summarizer": 1,
     "transcriber": 4,
     "transcription-auditor": 1,
-    "verifier": 221
+    "verifier": 222
    },
    "workers": {
     "codex / adversary": 2,
@@ -4195,9 +4195,9 @@
     "gpt-5 / designer": 1,
     "gpt-5.6-sol / auditor": 1,
     "gpt-5.6-sol / designer": 6,
-    "gpt-5.6-sol / prover": 67,
+    "gpt-5.6-sol / prover": 68,
     "gpt-5.6-sol / transcription-auditor": 1,
-    "gpt-5.6-sol / verifier": 81,
+    "gpt-5.6-sol / verifier": 82,
     "opus / auditor": 1,
     "opus / author": 5,
     "opus / prover": 11,
@@ -4213,9 +4213,9 @@
   "git": {
    "active_days": 27,
    "authors": {
-    "tobiasosborne": 1189
+    "tobiasosborne": 1190
    },
-   "commits": 1189,
+   "commits": 1190,
    "first_day": "2026-07-02",
    "last_day": "2026-08-08",
    "per_day": {
@@ -4245,7 +4245,7 @@
     "2026-08-03": 16,
     "2026-08-04": 2,
     "2026-08-05": 28,
-    "2026-08-08": 47
+    "2026-08-08": 48
    },
    "subject_prefixes": {
     "W61": 13,
