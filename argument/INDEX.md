@@ -262,7 +262,7 @@
 | `lem-routef-upsilon-delta-telescope` | lemma | stated | none | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-upsilon-normalization-closeness` | lemma | stated | none | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-upsilon-prime-closeness` | lemma | stated | seeded | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
-| `lem-routef-upsilon-prime-component-construction` | lemma | stated | none | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
+| `lem-routef-upsilon-prime-component-construction` | lemma | stated | seeded | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-upsilon-prime-left-inverse` | lemma | stated | none | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-row-far-dual-certificate` | lemma | proved | validated | A | Row-far dual certificate: for an exact signed idempotent P and a geometrically d… |
 | `lem-row-zero-capacity` | lemma | proved | validated | A | Row-zero capacity: for an exact signed idempotent P, a row index i, and any vect… |

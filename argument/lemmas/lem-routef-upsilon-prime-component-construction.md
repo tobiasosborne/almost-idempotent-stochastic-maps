@@ -5,7 +5,7 @@ contract: After first fixing one global witness package W_RF supplied by lem-rou
 defs: def-routef-raw-factor-setting; def-ucp-map
 deps: lem-routef-raw-factor-setting-formation; lem-routef-raw-factor-norms; lem-routef-delta-prime-closeness; lem-routef-delta-normalization-closeness; lem-routef-degree-two-estimate
 status: stated
-af: none
+af: seeded
 provenance: DESIGN-LEDGER-DOMAINS-v2.md sect-2 row 8 (TeX 2831-2895; K-ledger 228-245; audit 181-209); DESIGN-ROW8-FACTOR.md sects-1,4-6 (natural branch 1.2-1.4 factoring, 2026-08-08); TREE-ROW8-ABORTED.md balloon-abort classification (2026-08-08: 28 live nodes exceeded NODE_SOFT_CAP 26)
 owner: A
 workspace: proofs/lem-routef-upsilon-prime-component-construction
