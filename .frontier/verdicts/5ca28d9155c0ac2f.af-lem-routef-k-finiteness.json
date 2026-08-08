@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-k-finiteness/export.md",
+  "oracle": "af-lem-routef-k-finiteness",
+  "result": "pass",
+  "claim_hash": "c6faaf82b43b86ffedb57317905fa57539427b596b01f49efea9c8ccb6c32b99",
+  "oracle_digest": "7fb6ae20cb12b13d6940f20204711aab200e125cba6bfd5af9eab2cf50b89f97",
+  "inputs_hash": "b81335588e1935b2a77a2e195e71c29a2729ead5952726d254ab87c5966618c8",
+  "ts": "2026-08-08T13:06:56.953Z"
+}
