@@ -234,7 +234,7 @@ graph LR
   lem-positive-exposedness-margin["lem-positive-exposedness-margin<br/>proved/none"]
   lem-positive-row-straddle-gamma-lower["lem-positive-row-straddle-gamma-lower<br/>proved/none"]
   lem-prh["lem-prh<br/>proved/validated"]
-  lem-prh-sharpness["lem-prh-sharpness<br/>proved-mod-audit/none"]
+  lem-prh-sharpness["lem-prh-sharpness<br/>proved-mod-audit/seeded"]
   lem-psi-corner-trap["lem-psi-corner-trap<br/>proved/none"]
   lem-radial-alpha-bound["lem-radial-alpha-bound<br/>proved/none"]
   lem-radial-horn-partition["lem-radial-horn-partition<br/>proved/none"]
