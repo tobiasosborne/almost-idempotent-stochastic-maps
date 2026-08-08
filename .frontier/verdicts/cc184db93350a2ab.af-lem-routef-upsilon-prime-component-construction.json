@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-upsilon-prime-component-construction/export.md",
+  "oracle": "af-lem-routef-upsilon-prime-component-construction",
+  "result": "pass",
+  "claim_hash": "0f958e2113007fbbcfc43cdca8b011e443e317b6ea9acccd408cece598913249",
+  "oracle_digest": "6f31e29b6dff645710ca59a239614bc9b3a2088f9d220080448d242c924606f7",
+  "inputs_hash": "1255b71f5061a38706659ff7aa96e9456d564fad55617f6bf1df76a44de4ffb9",
+  "ts": "2026-08-08T10:51:32.811Z"
+}
