@@ -244,7 +244,7 @@
 | `lem-routef-delta-phi-product` | lemma | proved | validated | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-delta-prime-closeness` | lemma | proved | validated | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-delta-upsilon-telescope` | lemma | proved | validated | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
-| `lem-routef-f0-assembly` | lemma | stated | none | A | Route F F0 assembly: there are universal eta_0,C > 0, independent of n, such tha… |
+| `lem-routef-f0-assembly` | lemma | stated | seeded | A | Route F F0 assembly: there are universal eta_0,C > 0, independent of n, such tha… |
 | `lem-routef-f0-defect-identity` | lemma | proved | validated | A | Route F F0 defect identity: let n >= 1, let D: M_n -> C^n be diagonal extraction… |
 | `lem-routef-f0-ucp-lift` | lemma | proved | validated | A | Route F F0 UCP lift: let n >= 1, let D: M_n -> C^n be diagonal extraction onto t… |
 | `lem-routef-f2-positive-unital-compression` | lemma | proved | validated | A | Route F F2 positive-unital compression: let K >= 1 be a dimension-independent co… |

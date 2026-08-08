@@ -5,7 +5,7 @@ contract: Route F F0 assembly: there are universal eta_0,C > 0, independent of n
 defs: def-stochastic; def-almost-idempotent
 deps: lem-routef-k-ledger
 status: stated
-af: none
+af: seeded
 provenance: docs/plans/2026-07-27-F0-ASSEMBLY-design/DESIGN-F0-ASSEMBLY.md sect-1.4 (assembly row and no-double-counting rule), with the canonical complexification typing correction required by AUDIT-F0-ASSEMBLY.md; strengthened-parent interface and exact constants from DESIGN-KLEDGER-STRENGTHENED.md, pending its required fresh hostile audit and user ratification. That v1 package was REJECTED by AUDIT-KLEDGER-STRENGTHENED.md findings 1-4; the byte-identical F0 contract and cleared minimality finding are retained in DESIGN-KLEDGER-STRENGTHENED-V2.md, pending fresh hostile re-audit and user ratification. This is an upper-bound assembly only; no sharpness claim is imported or promoted.
 owner: A
 workspace: proofs/lem-routef-f0-assembly
