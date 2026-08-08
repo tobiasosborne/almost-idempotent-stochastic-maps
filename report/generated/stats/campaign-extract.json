@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-08-08T08:10:15Z",
+ "extracted_at": "2026-08-08T08:20:46Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-08-08T08:10:15Z",
+  "mined_at": "2026-08-08T08:20:46Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -458,32 +458,32 @@
  "schema": 1,
  "successor": {
   "af": {
-   "amendments_total": 358,
+   "amendments_total": 363,
    "challenges_total": 423,
    "entry_types": {
     "approach_tried": 2,
     "challenge_raised": 423,
     "challenge_resolved": 416,
     "def_added": 907,
-    "node_amended": 358,
+    "node_amended": 363,
     "node_archived": 56,
-    "node_created": 2607,
+    "node_created": 2612,
     "node_unvalidated": 7,
-    "node_validated": 2543,
-    "nodes_claimed": 4246,
-    "nodes_released": 4246,
+    "node_validated": 2549,
+    "nodes_claimed": 4253,
+    "nodes_released": 4253,
     "proof_initialized": 190
    },
-   "ledger_entries": 16001,
-   "nodes_total": 2607,
+   "ledger_entries": 16031,
+   "nodes_total": 2612,
    "owner_roles": {
     "other": 1,
     "prover (fix round)": 471,
-    "prover (initial build)": 659,
-    "verifier": 3115
+    "prover (initial build)": 660,
+    "verifier": 3121
    },
-   "root_validated": 179,
-   "seeded_not_validated": 11,
+   "root_validated": 180,
+   "seeded_not_validated": 10,
    "validation_days": {
     "2026-07-02": 7,
     "2026-07-03": 5,
@@ -503,7 +503,7 @@
     "2026-08-02": 10,
     "2026-08-03": 1,
     "2026-08-05": 7,
-    "2026-08-08": 1
+    "2026-08-08": 2
    },
    "workspaces": 190,
    "workspaces_detail": [
@@ -2316,20 +2316,20 @@
      "validated": 13
     },
     {
-     "amendments": 0,
+     "amendments": 5,
      "archived": 0,
      "challenges": 0,
      "challenges_resolved": 0,
-     "claims": 0,
+     "claims": 7,
      "defs_imported": 6,
      "first_ts": "2026-08-08T08:10:11.670981738Z",
      "id": "lem-routef-delta-normalization-closeness",
-     "last_ts": "2026-08-08T08:10:11.766462158Z",
-     "ledger_entries": 8,
-     "max_round": 0,
-     "nodes": 1,
-     "root_validated": null,
-     "validated": 0
+     "last_ts": "2026-08-08T08:20:00.383796571Z",
+     "ledger_entries": 38,
+     "max_round": 1,
+     "nodes": 6,
+     "root_validated": "2026-08-08T08:20:00.281159929Z",
+     "validated": 6
     },
     {
      "amendments": 1,
@@ -3668,7 +3668,7 @@
      "banked": 111,
      "blocked": 1,
      "died": 2,
-     "dispatch": 254,
+     "dispatch": 255,
      "lem-topology-hopf-structure af-VALIDATED (81st rigorous result; 13 nodes 13/13 clean) + lem-extcb-exact-target-correction af-VALIDATED (82nd; 6 nodes 6/6 clean, first-pass, zero challenges — the designed transcription landed EXACTLY on budget) — GAP-EA, the first of the four v4.1 GAP families, is DISCHARGED at L0. T0 80 -> 82. Session 28 totals: +6 T0 (5 of 7 topology + the GAP-EA correction row), 2 trees parked with precise diagnoses (1 af-bookkeeping thrash, 1 genuine contract/def scope gap -> user escalation), 3 orchestration-infrastructure laws discovered+banked. Breaker honored: next cycle EXPLOREs off FH.": 1,
      "lem-topology-lefschetz-hopf af-VALIDATED (77th rigorous result; 2 nodes taint clean, first-pass canary) + lem-topology-kunneth-cross-product af-VALIDATED (78th; 7 nodes taint clean) — first two of the seven Stage-1 topology elevations banked, oracles af-lem-topology-* registered, fr verify PASS on both exports, registry flips committed, T0 76 -> 78. Session findings: parallel orchestrations mutually abort (sequential law banked to bd memory); 4 balloon-aborts + 1 stuck (external named but not attached as node dep) queued for repair.": 1,
      "lem-topology-local-index-sign af-VALIDATED (83rd rigorous result; 23 nodes 23/23 clean) under the user-ratified narrowed contract — the in-place root amendment retained all 21 previously validated nodes; oracle fr verify PASS. T0 82 -> 83; 6 of 7 topology rows T0. finite-triangulation root challenge classified: L1 ground-truth stop (Cairns delegates the class-one/allowable definitions to Veblen-Whitehead 1932, NOT in refs/) — user decision being asked in-chat (narrow to Cairns's literal statement vs acquire V-W).": 1,
@@ -3714,7 +3714,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-08-08T08:09:15.457Z"
+     "last": "2026-08-08T08:11:39.305Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -3735,7 +3735,7 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 584,
+    "FH": 585,
     "G": 21,
     "R": 52,
     "XE": 1
@@ -3817,15 +3817,15 @@
     "T2": 168
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-08-08T08:09:15.457Z",
-   "max_cycle": 1179,
+   "last_ts": "2026-08-08T08:11:39.305Z",
+   "max_cycle": 1180,
    "outcomes": {
     "SESSION 28 FINAL: T0 76 -> 83 (six topology + GAP-EA correction banked, all oracle-verified); both user escalations ratified in-chat + executed same-session; Cairns->Munkres re-source completed with full manifest provenance (user-supplied scan, per-page OCR, visual confirmation); finite-triangulation parked on aism-j5t9 (provision the C^r-triangulation definition external). All pushed to origin + dolt. Breaker honored: next cycle EXPLORE XE.": 1,
     "banked": 145,
     "blocked": 1,
     "died": 7,
     "discovery": 3,
-    "dispatch": 261,
+    "dispatch": 262,
     "lem-topology-hopf-structure af-VALIDATED (81st rigorous result; 13 nodes 13/13 clean) + lem-extcb-exact-target-correction af-VALIDATED (82nd; 6 nodes 6/6 clean, first-pass, zero challenges — the designed transcription landed EXACTLY on budget) — GAP-EA, the first of the four v4.1 GAP families, is DISCHARGED at L0. T0 80 -> 82. Session 28 totals: +6 T0 (5 of 7 topology + the GAP-EA correction row), 2 trees parked with precise diagnoses (1 af-bookkeeping thrash, 1 genuine contract/def scope gap -> user escalation), 3 orchestration-infrastructure laws discovered+banked. Breaker honored: next cycle EXPLOREs off FH.": 1,
     "lem-topology-lefschetz-hopf af-VALIDATED (77th rigorous result; 2 nodes taint clean, first-pass canary) + lem-topology-kunneth-cross-product af-VALIDATED (78th; 7 nodes taint clean) — first two of the seven Stage-1 topology elevations banked, oracles af-lem-topology-* registered, fr verify PASS on both exports, registry flips committed, T0 76 -> 78. Session findings: parallel orchestrations mutually abort (sequential law banked to bd memory); 4 balloon-aborts + 1 stuck (external named but not attached as node dep) queued for repair.": 1,
     "lem-topology-local-index-sign af-VALIDATED (83rd rigorous result; 23 nodes 23/23 clean) under the user-ratified narrowed contract — the in-place root amendment retained all 21 previously validated nodes; oracle fr verify PASS. T0 82 -> 83; 6 of 7 topology rows T0. finite-triangulation root challenge classified: L1 ground-truth stop (Cairns delegates the class-one/allowable definitions to Veblen-Whitehead 1932, NOT in refs/) — user decision being asked in-chat (narrow to Cairns's literal statement vs acquire V-W).": 1,
@@ -3863,9 +3863,9 @@
     "2026-08-03": 11,
     "2026-08-04": 3,
     "2026-08-05": 32,
-    "2026-08-08": 14
+    "2026-08-08": 15
    },
-   "records": 1179,
+   "records": 1180,
    "worker_jobs": 524,
    "worker_models": {
     "codex": 338,
@@ -3940,9 +3940,9 @@
   "git": {
    "active_days": 27,
    "authors": {
-    "tobiasosborne": 1147
+    "tobiasosborne": 1148
    },
-   "commits": 1147,
+   "commits": 1148,
    "first_day": "2026-07-02",
    "last_day": "2026-08-08",
    "per_day": {
@@ -3972,7 +3972,7 @@
     "2026-08-03": 16,
     "2026-08-04": 2,
     "2026-08-05": 28,
-    "2026-08-08": 5
+    "2026-08-08": 6
    },
    "subject_prefixes": {
     "W61": 13,
@@ -4047,7 +4047,7 @@
    ],
    "frontier": "Carry the Route-F chain ABOVE the now-complete MAIN subtree to T0 (M01-M28 all af-validated; lem-thmainext-conditional deps rewired onto M28 per the ratified v5 step-15): the decoupled campaigns — 14-row ledger, k-ledger, F0-assembly — then the thmainext elevation and the root rewire LAST.",
    "goal": "Prove op-classical: universal eta0,C>0 (dimension-free) such that every row-stochastic Q with ||Q^2-Q||_{inf->inf} <= eta <= eta0 admits a stochastic idempotent E with ||Q-E||_{inf->inf} <= C*sqrt(eta) (sharp exponent 1/2).",
-   "verdict_files": 155
+   "verdict_files": 156
   },
   "refs": {
    "locked_files": 23,
@@ -4068,8 +4068,8 @@
   "registry": {
    "af": {
     "none": 175,
-    "seeded": 13,
-    "validated": 177
+    "seeded": 12,
+    "validated": 178
    },
    "kind": {
     "corollary": 2,
@@ -4087,9 +4087,9 @@
     "numerical": 2,
     "obstruction": 1,
     "open": 3,
-    "proved": 290,
+    "proved": 291,
     "proved-mod-audit": 20,
-    "stated": 14
+    "stated": 13
    }
   },
   "runs": {

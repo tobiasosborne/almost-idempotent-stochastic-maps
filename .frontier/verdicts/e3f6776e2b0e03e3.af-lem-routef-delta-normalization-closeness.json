@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-delta-normalization-closeness/export.md",
+  "oracle": "af-lem-routef-delta-normalization-closeness",
+  "result": "pass",
+  "claim_hash": "6a86ff77501c54311b24e0ad5813e5d986472a3e847667932c0a3aba0aebabc1",
+  "oracle_digest": "3e0058833f26bc4e8cc448851d6aa9d301fd2de9887d8dc3a3a3ad57a2fb5e88",
+  "inputs_hash": "e2c7184a99c7e6ec50c58c8615ad80860636eb2db26f5211a5dbe1fbf6bf8433",
+  "ts": "2026-08-08T08:20:24.243Z"
+}

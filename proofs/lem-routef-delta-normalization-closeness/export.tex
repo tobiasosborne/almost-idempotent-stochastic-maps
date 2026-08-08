@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing one global witness package W\_RF suppli...}
+\step{1} After first fixing one global witness package W\_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W\_RF supplied by the same result and for every Delta' supplied for (W\_RF,S) by lem-routef-delta-prime-closeness, and for every X in S.B, writing the fields of (W\_RF,S) as the unqualified symbols below: Delta UCP normalization: with C\_Delta := 6*C\_T+7*C\_Delta' and rho\_Delta := min\{rho\_unit, rho\_Delta', [2*(C\_T+C\_Delta')]\textasciicircum{}(-1)\}, for 0 <= eta <= rho\_Delta, a = Delta'(I) is invertible and Delta(X) = a\textasciicircum{}(-1/2)*Delta'(X)*a\textasciicircum{}(-1/2) is UCP with ||Delta - tilde-Delta||\_cb <= C\_Delta*eta. \steptag{validated} \\[6pt]
+\step{1.1} Fix W\_RF, an admissible input and supplied setting S, and a Delta' supplied by lem-routef-delta-prime-closeness, and assume 0 <= eta <= rho\_Delta. Put D := C\_Delta' and d := (C\_T+D)*eta. By def-routef-raw-factor-setting, rho\_Delta <= rho\_unit and rho\_Delta <= rho\_Delta'. Thus lem-routef-raw-factor-units and lem-routef-delta-prime-closeness give that Delta' is CP, ||Delta'-tilde-Delta||\_cb <= D*eta, and ||tilde-Delta(I)-I|| <= C\_T*eta. Hence a:=Delta'(I) is positive and ||a-I|| <= ||Delta'(I)-tilde-Delta(I)||+||tilde-Delta(I)-I|| <= d. Also C\_theta=12*(sqrt(2)-1)>0 and, by lem-routef-raw-factor-setting-formation and def-routef-raw-factor-setting, C\_A>0, bar(C\_E)>=1, C\_V=bar(C\_E)*C\_A>0, C\_T=C\_theta+3*C\_V>0, and D=C\_T+4*C\_theta>0. Since rho\_Delta <= [2*(C\_T+D)]\textasciicircum{}(-1), 0 <= eta <= rho\_Delta implies 0 <= d <= 1/2. \steptag{validated} \\[4pt]
+\step{1.2} For any positive a in the finite-dimensional target algebra with ||a-I|| <= d <= 1/2, finite-dimensional spectral calculus gives spectrum(a) contained in [1-d,1+d] contained in [1/2,3/2]. Thus a is invertible. If c:=a\textasciicircum{}(1/2), b:=a\textasciicircum{}(-1/2), and s:=||c-I||, then bc=cb=I and s <= d, because on spectrum(a), |sqrt(lambda)-1|=|lambda-1|/(sqrt(lambda)+1) <= |lambda-1|. The triangle inequality also gives ||c|| <= 1+s. \steptag{validated} \\[4pt]
+\step{1.3} Under the conclusions of nodes 1.1 and 1.2, define Delta(X):=b*Delta'(X)*b for every X in B. The map Delta is CP: for every q, Delta\_q is the composition of the positive map Delta'\_q with conjugation by I\_q tensor b, which preserves positivity. It is unital because Delta(I)=b*a*b=I. Hence Delta is UCP by def-ucp-map. Moreover every amplification Delta\_q is itself UCP and therefore contractive, so ||Delta\_q(Y)|| <= ||Y|| for every q and Y. \steptag{validated} \\[4pt]
+\step{1.4} Under the conclusions of nodes 1.1-1.3, for every q write c\_q:=I\_q tensor c and b\_q:=I\_q tensor b. From Delta\_q(Y)=b\_q*Delta'\_q(Y)*b\_q and c\_q*b\_q=b\_q*c\_q=I, one has Delta'\_q(Y)=c\_q*Delta\_q(Y)*c\_q. Therefore Delta'\_q(Y)-Delta\_q(Y)=(c\_q-I)*Delta\_q(Y)*c\_q+Delta\_q(Y)*(c\_q-I). Contractivity of Delta\_q, ||c\_q-I||=s, and ||c\_q||=||c||<=1+s yield ||Delta'\_q(Y)-Delta\_q(Y)|| <= s*(2+s)*||Y|| <= d*(2+d)*||Y|| <= 3*d*||Y||. Taking the supremum over q gives ||Delta'-Delta||\_cb <= 3*d. \steptag{validated} \\[4pt]
+\step{1.5} For the fixed data of node 1.1, nodes 1.1-1.4 and the cb triangle inequality give ||Delta-tilde-Delta||\_cb <= ||Delta-Delta'||\_cb+||Delta'-tilde-Delta||\_cb <= 3*d+D*eta=(3*C\_T+4*D)*eta. Since C\_T,D>=0, 3*C\_T+4*D <= 6*C\_T+7*D=C\_Delta by def-routef-raw-factor-setting. Thus ||Delta-tilde-Delta||\_cb <= C\_Delta*eta. Together with nodes 1.2 and 1.3, this proves invertibility of a and the asserted UCP formula and bound for every X in S.B. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
