@@ -5,7 +5,7 @@ contract: Relative Route F factor-estimate packet: after first fixing one global
 defs: def-routef-raw-factor-setting; def-stochastic; def-almost-idempotent; def-ucp-map
 deps: lem-routef-scalar-header-positivity; lem-routef-factor-map-packet; lem-routef-delta-upsilon-telescope; lem-routef-multiplicative-telescope; lem-routef-upsilon-delta-telescope; lem-routef-k-finiteness; lem-routef-threshold-minimum
 status: stated
-af: none
+af: seeded
 provenance: The byte-frozen telescope and rows 13/14 interfaces audited in AUDIT-KLEDGER-STRENGTHENED.md findings 5-9; first-class cap factoring and same-packet projection designed in DESIGN-KLEDGER-STRENGTHENED-V2.md, pending fresh hostile audit and user ratification.
 owner: A
 workspace: proofs/lem-routef-factor-estimate-packet

@@ -1,0 +1,8 @@
+{
+  "id": "9c8815524013539c",
+  "name": "lem-routef-k-finiteness",
+  "source": "imports validated registry lemma proofs/lem-routef-k-finiteness — After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, every Upsilon' supplied from that same pair by lem-routef-upsilon-prime-closeness, and every Upsilon supplied from that same triple by lem-routef-upsilon-normalization-closeness, writing the fields of (W_RF,S) as the unqualified symbols below: Route F common coefficient/domain: K in (1.6) is finite and universal, and rho_fac in (1.7) is positive and is a common domain for the degree-two estimate and the three Route-F factorization estimates.",
+  "content_hash": "8a00b683465a9065cf354c1a0f8e231102e82063f4c8e1df135b86ba9f675c30",
+  "created": "2026-08-08T15:43:04.998101718Z",
+  "notes": ""
+}
