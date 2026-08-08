@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-upsilon-prime-closeness/export.md",
+  "oracle": "af-lem-routef-upsilon-prime-closeness",
+  "result": "pass",
+  "claim_hash": "874a86804f28ca47adc7c1d096d1ef1b08fbe44a4ab79a995bb38ed24743372a",
+  "oracle_digest": "9ff798a73569575d663b5a7555d45307a08cca49fcce9c57f016a8565d2a112c",
+  "inputs_hash": "3c0805fc23b78e84f34007108d2f6874b27a7a95a9b822a53aa1716638510c6d",
+  "ts": "2026-08-08T11:28:16.786Z"
+}

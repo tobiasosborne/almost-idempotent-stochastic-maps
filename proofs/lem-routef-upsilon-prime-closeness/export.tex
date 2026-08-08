@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{After first fixing one global witness package W\_RF suppli...}
+\step{1} After first fixing one global witness package W\_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W\_RF supplied by the same result, for every Delta' supplied for (W\_RF,S) by lem-routef-delta-prime-closeness, and every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, writing the fields of (W\_RF,S) as the unqualified symbols below: Upsilon-prime CP closeness: with C\_N, C\_R, C\_L, C\_Upsilon' from (1.3) and rho\_Upsilon' := min\{rho\_T, rho\_id, rho\_Delta, rho\_2, rho\_3, (2*C\_R)\textasciicircum{}(-1)\}, for 0 <= eta <= rho\_Upsilon', every Choi multiplicity space used below is nonzero and the componentwise construction produces CP Upsilon' with ||Upsilon' - tilde-Upsilon||\_cb <= C\_Upsilon'*eta. \steptag{validated} \\[6pt]
+\step{1.1} Under the fixed W\_RF, input datum S, Delta', Delta, and 0 <= eta <= rho\_Upsilon' of node 1, lem-routef-upsilon-prime-component-construction supplies the stated componentwise package: every Choi multiplicity space E\_j occurring in it is nonzero, Upsilon' is CP, and ||Upsilon'||\_cb <= 1. \steptag{validated} \\[4pt]
+\step{1.2} In the same setting, ||Upsilon' - tilde-Upsilon||\_cb <= [1+C\_theta+2*C\_Delta+2*C\_L]*eta = C\_Upsilon'*eta. \steptag{validated} \\[6pt]
+\step{1.2.1} Because rho\_Upsilon' <= rho\_T <= rho\_theta=1/8, lem-routef-functional-calculus-closeness applies; because the input is one to which lem-routef-raw-factor-setting-formation applies, ||Phi\textasciicircum{}2-Phi||\_cb <= eta; and because Phi is UCP, ||Phi||\_cb=1. Hence Phi-Phi tilde-Phi=(Phi-Phi\textasciicircum{}2)+Phi(Phi-tilde-Phi) and ||Phi-Phi tilde-Phi||\_cb <= (1+C\_theta)*eta. \steptag{validated} \\[4pt]
+\step{1.2.2} For the package from lem-routef-upsilon-prime-component-construction define K\_j(T):=Lambda\_j\textasciicircum{}*(T tensor I\_F)Lambda\_j for T in B(H), and K(T):=(K\_j(T))\_j. Each Lambda\_j is a contraction, so every compression K\_j is CP with cb norm at most 1; the finite direct-sum norm is the maximum of component norms, hence ||K||\_cb <= 1, and the defining formula for Upsilon'\_j gives Upsilon'=K Phi. \steptag{validated} \\[4pt]
+\step{1.2.3} The factorization Upsilon'=K Phi and the preceding cutoff estimate give ||Upsilon'(I-tilde-Phi)||\_cb=||K(Phi-Phi tilde-Phi)||\_cb <= (1+C\_theta)*eta. \steptag{validated} \\[6pt]
+\step{1.2.3.1} By nodes 1.2.1 and 1.2.2, Upsilon'=K Phi with ||K||\_cb<=1 and ||Phi-Phi tilde-Phi||\_cb<=(1+C\_theta)*eta; cb-norm submultiplicativity therefore gives ||Upsilon'(I-tilde-Phi)||\_cb=||K(Phi-Phi tilde-Phi)||\_cb<=(1+C\_theta)*eta. \steptag{validated} \\[4pt]
+\step{1.2.4} Since rho\_Upsilon' <= rho\_Delta, lem-routef-delta-normalization-closeness gives ||Delta-tilde-Delta||\_cb <= C\_Delta*eta; lem-routef-upsilon-prime-component-construction gives ||Upsilon'||\_cb <= 1; and lem-routef-upsilon-prime-left-inverse gives ||Upsilon' Delta-I\_B||\_cb <= C\_L*eta. Therefore ||Upsilon' tilde-Delta-I\_B||\_cb <= (C\_Delta+C\_L)*eta. \steptag{validated} \\[4pt]
+\step{1.2.5} Since rho\_Upsilon' <= rho\_T, lem-routef-raw-factor-norms gives ||tilde-Upsilon||\_cb <= 1+C\_T*eta. From (1.1), C\_T=C\_theta+3*C\_V and rho\_T <= min\{[4*(1+C\_theta)]\textasciicircum{}(-1),[4*(1+C\_V)]\textasciicircum{}(-1)\}, so C\_theta*eta <= 1/4 and C\_V*eta <= 1/4; thus C\_T*eta <= 1 and ||tilde-Upsilon||\_cb <= 2. \steptag{validated} \\[4pt]
+\step{1.2.6} The input to formation has eta <= rho\_id\textasciicircum{}corr, so lem-routef-raw-factor-identities gives tilde-Delta tilde-Upsilon=tilde-Phi. Consequently Upsilon'-tilde-Upsilon=Upsilon'(I-tilde-Phi)+(Upsilon' tilde-Delta-I\_B)tilde-Upsilon. Applying the preceding cb estimates and submultiplicativity yields ||Upsilon'-tilde-Upsilon||\_cb <= [(1+C\_theta)+2*(C\_Delta+C\_L)]*eta=[1+C\_theta+2*C\_Delta+2*C\_L]*eta=C\_Upsilon'*eta by (1.3). \steptag{validated} \\[6pt]
+\step{1.2.6.1} Because the input to lem-routef-raw-factor-setting-formation has eta <= rho\_id\textasciicircum{}corr, lem-routef-raw-factor-identities gives tilde-Delta tilde-Upsilon=tilde-Phi; direct expansion therefore verifies Upsilon'-tilde-Upsilon=Upsilon'(I-tilde-Phi)+(Upsilon' tilde-Delta-I\_B)tilde-Upsilon. By node 1.2.3, the first summand has cb norm at most (1+C\_theta)*eta. By nodes 1.2.4 and 1.2.5 plus cb-norm submultiplicativity, the second has cb norm at most 2*(C\_Delta+C\_L)*eta. The triangle inequality and C\_Upsilon'=1+C\_theta+2*C\_Delta+2*C\_L from (1.3) prove the statement of node 1.2.6. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
