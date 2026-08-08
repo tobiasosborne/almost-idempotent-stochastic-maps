@@ -1863,6 +1863,18 @@
         ]
       },
       {
+        "name": "af-lem-routef-factor-map-packet",
+        "cmd": [
+          "python3",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/scripts/oracles/af-validated.py",
+          "lem-routef-factor-map-packet"
+        ],
+        "inputs": [
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/proofs/lem-routef-factor-map-packet/ledger",
+          "/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/argument/lemmas/lem-routef-factor-map-packet.md"
+        ]
+      },
+      {
         "name": "af-lem-thmainext-conditional",
         "cmd": [
           "python3",

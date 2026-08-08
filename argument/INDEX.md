@@ -250,7 +250,7 @@
 | `lem-routef-f2-positive-unital-compression` | lemma | proved | validated | A | Route F F2 positive-unital compression: let K >= 1 be a dimension-independent co… |
 | `lem-routef-f3-retract-defect` | lemma | proved | validated | A | Route F F3 retract defect: let K >= 1 be a dimension-independent constant, n,k >… |
 | `lem-routef-factor-estimate-packet` | lemma | stated | none | A | Relative Route F factor-estimate packet: after first fixing one global witness p… |
-| `lem-routef-factor-map-packet` | lemma | stated | seeded | A | Relative Route F factor-map packet: after first fixing one global witness packag… |
+| `lem-routef-factor-map-packet` | lemma | proved | validated | A | Relative Route F factor-map packet: after first fixing one global witness packag… |
 | `lem-routef-functional-calculus-closeness` | lemma | proved | validated | A | Functional-calculus closeness: for 0 <= eta <= 1/8, the exact functional-calculu… |
 | `lem-routef-k-finiteness` | lemma | proved | validated | A | After first fixing one global witness package W_RF supplied by lem-routef-raw-fa… |
 | `lem-routef-k-ledger` | lemma | stated | none | A | Relative Route F factorization-and-finish ledger: there exists one global witnes… |

@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Relative Route F factor-map packet: after first fixing on...}
+\step{1} Relative Route F factor-map packet: after first fixing one global witness package W\_RF supplied by lem-routef-scalar-header-positivity from lem-routef-raw-factor-setting-formation, writing K, rho\_fac, and eta\_K for its scalars (1.6)-(1.8), for every n >= 1, every row-stochastic Q: l\_inf\textasciicircum{}n -> l\_inf\textasciicircum{}n, and every 0 <= eta <= eta\_K with ||Q\textasciicircum{}2-Q|$|\_\{infinity-\rangle$infinity\} <= eta, let D: M\_n -> C\textasciicircum{}n be diagonal extraction onto the complex diagonal algebra C\textasciicircum{}n = l\_inf\textasciicircum{}n(C), let J: C\textasciicircum{}n -> M\_n be the diagonal inclusion, let Q\_C: C\textasciicircum{}n -> C\textasciicircum{}n be the canonical complex-linear extension of Q, and put Phi := J Q\_C D; then Phi is UCP with ||Phi\textasciicircum{}2-Phi||\_cb <= eta, and there exist a finite-dimensional unital C*-algebra B, one def-routef-raw-factor-setting datum S over this same W\_RF supplied by lem-routef-raw-factor-setting-formation for the same (H:=C\textasciicircum{}n,Phi,eta) whose B-field is B, CP maps Delta':B->M\_n and Upsilon':M\_n->B, and UCP maps Delta:B->M\_n and Upsilon:M\_n->B such that Delta' is supplied for (W\_RF,S) by lem-routef-delta-prime-closeness, Delta is supplied from that same Delta' by lem-routef-delta-normalization-closeness, Upsilon' is supplied from that same (Delta',Delta) by lem-routef-upsilon-prime-closeness, and Upsilon is supplied from that same (Delta',Delta,Upsilon') by lem-routef-upsilon-normalization-closeness. \steptag{validated} \\[6pt]
+\step{1.1} Fix once and for all the global header W\_RF given by lem-routef-scalar-header-positivity.  For this same header, eta\_K is universal and positive and the threshold consequences needed below are eta\_K <= rho\_id\textasciicircum{}corr, eta\_K <= rho\_Delta', eta\_K <= rho\_Delta, eta\_K <= rho\_Upsilon', and eta\_K <= rho\_Upsilon. \steptag{validated} \\[4pt]
+\step{1.2} For arbitrary n,Q,eta satisfying the hypotheses of node 1 and for the displayed D,J,Q\_C,Phi, the two F0 interfaces imply that Phi is UCP and ||Phi\textasciicircum{}2-Phi||\_cb <= eta. \steptag{validated} \\[6pt]
+\step{1.2.1} By lem-routef-f0-ucp-lift, the map Phi=J Q\_C D attached to the arbitrary row-stochastic Q and n>=1 in node 1 is UCP. \steptag{validated} \\[4pt]
+\step{1.2.2} By lem-routef-f0-defect-identity, ||Phi\textasciicircum{}2-Phi||\_cb=||Q\textasciicircum{}2-Q|$|\_\{infinity-\rangle$infinity\}; the hypothesis ||Q\textasciicircum{}2-Q|$|\_\{infinity-\rangle$infinity\}<=eta therefore gives ||Phi\textasciicircum{}2-Phi||\_cb<=eta. \steptag{validated} \\[4pt]
+\step{1.3} For the same fixed W\_RF and arbitrary data from the preceding conditional step, lem-routef-raw-factor-setting-formation applies at H=C\textasciicircum{}n and supplies a finite-dimensional unital C*-algebra B and one datum S over this same W\_RF for exactly (H=C\textasciicircum{}n,Phi,eta), with B-field B. \steptag{validated} \\[6pt]
+\step{1.3.1} Because n>=1, H=C\textasciicircum{}n is a nonzero finite-dimensional Hilbert space.  Node 1.2 gives that Phi is UCP and has cb defect at most eta, while 0<=eta<=eta\_K and node 1.1 give eta<=rho\_id\textasciicircum{}corr; hence every input hypothesis of lem-routef-raw-factor-setting-formation is met for this exact triple (C\textasciicircum{}n,Phi,eta) and the fixed W\_RF. \steptag{validated} \\[4pt]
+\step{1.3.2} Applying lem-routef-raw-factor-setting-formation once to that exact triple and the fixed W\_RF supplies a finite-dimensional unital C*-algebra B and one def-routef-raw-factor-setting datum S over this same W\_RF whose H,Phi,eta,B fields are exactly C\textasciicircum{}n,Phi,eta,B (along with its other asserted fields); retain this one S without reselection. \steptag{validated} \\[4pt]
+\step{1.4} For every such formation datum S, the two Delta interfaces apply serially at eta and supply a CP map Delta':B->M\_n and then, from that same Delta', a UCP map Delta:B->M\_n, with the provider relations asserted in node 1. \steptag{validated} \\[6pt]
+\step{1.4.1} From 0<=eta<=eta\_K and node 1.1, eta<=rho\_Delta' and eta<=rho\_Delta; thus both Delta interfaces' radius hypotheses hold for the fixed header and the single formation datum S. \steptag{validated} \\[4pt]
+\step{1.4.2} Apply lem-routef-delta-prime-closeness to (W\_RF,S) at this eta.  It produces a CP map Delta':B->B(C\textasciicircum{}n)=M\_n supplied for exactly (W\_RF,S) by that lemma; fix this particular Delta'. \steptag{validated} \\[4pt]
+\step{1.4.3} Apply lem-routef-delta-normalization-closeness to the same (W\_RF,S) and the particular Delta' from the preceding step.  It produces a UCP map Delta:B->B(C\textasciicircum{}n)=M\_n supplied from that same Delta' by that lemma; fix this particular Delta without changing S or Delta'. \steptag{validated} \\[4pt]
+\step{1.5} For the same S and the Delta',Delta just supplied, the two Upsilon interfaces apply serially at eta and supply a CP map Upsilon':M\_n->B and then, from that same triple (Delta',Delta,Upsilon'), a UCP map Upsilon:M\_n->B, with the provider relations asserted in node 1; combining these witnesses with the preceding steps proves node 1. \steptag{validated} \\[6pt]
+\step{1.5.1} From 0<=eta<=eta\_K and node 1.1, eta<=rho\_Upsilon' and eta<=rho\_Upsilon; thus both Upsilon interfaces' radius hypotheses hold for the same header, datum S, and fixed Delta',Delta. \steptag{validated} \\[4pt]
+\step{1.5.2} Apply lem-routef-upsilon-prime-closeness to the same (W\_RF,S) and the particular pair (Delta',Delta).  It produces a CP map Upsilon':B(C\textasciicircum{}n)=M\_n->B supplied from exactly that pair by that lemma; fix this particular Upsilon'. \steptag{validated} \\[4pt]
+\step{1.5.3} Apply lem-routef-upsilon-normalization-closeness to the same (W\_RF,S) and the particular triple (Delta',Delta,Upsilon').  It produces a UCP map Upsilon:B(C\textasciicircum{}n)=M\_n->B supplied from exactly that triple by that lemma.  No witness has been reselected, so the B,S,Delta',Delta,Upsilon',Upsilon obtained in nodes 1.3-1.5 have precisely the common-provider relations and map types required by node 1. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}
