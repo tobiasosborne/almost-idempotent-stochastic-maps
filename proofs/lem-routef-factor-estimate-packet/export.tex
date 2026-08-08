@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Relative Route F factor-estimate packet: after first fixi...}
+\step{1} Relative Route F factor-estimate packet: after first fixing one global witness package W\_RF supplied by lem-routef-scalar-header-positivity from lem-routef-raw-factor-setting-formation, writing K, rho\_fac, and eta\_K for its scalars (1.6)-(1.8), for every n >= 1, every row-stochastic Q: l\_inf\textasciicircum{}n -> l\_inf\textasciicircum{}n, and every 0 <= eta <= eta\_K with ||Q\textasciicircum{}2-Q|$|\_\{infinity-\rangle$infinity\} <= eta, let D: M\_n -> C\textasciicircum{}n be diagonal extraction onto the complex diagonal algebra C\textasciicircum{}n = l\_inf\textasciicircum{}n(C), let J: C\textasciicircum{}n -> M\_n be the diagonal inclusion, let Q\_C: C\textasciicircum{}n -> C\textasciicircum{}n be the canonical complex-linear extension of Q, and put Phi := J Q\_C D; for every same-datum packet (B,S,Delta',Delta,Upsilon',Upsilon) supplied for this (W\_RF,n,Q,eta,D,J,Q\_C,Phi) by lem-routef-factor-map-packet, ||Delta Upsilon-Phi||\_cb <= K*eta, ||Upsilon Delta-I\_B||\_cb <= K*eta, and for every integer r >= 1 and all X,Y in M\_r(B), ||Upsilon\_r(Delta\_r X Delta\_r Y)-XY|| <= K*eta*||X||*||Y||; moreover 0 <= eta <= min\{(24*K)\textasciicircum{}(-1),1\}, 3*K*eta <= 1/8 < 1, and 3*K*eta/(1-3*K*eta) <= 4*K*eta <= 1/6 < 1/2. \steptag{validated} \\[6pt]
+\step{1.1} Fix the global W\_RF supplied by lem-routef-scalar-header-positivity. For arbitrary root input (n,Q,eta,D,J,Q\_C,Phi) and an arbitrary same-datum packet (B,S,Delta\_prime,Delta,Upsilon\_prime,Upsilon) supplied by lem-routef-factor-map-packet, that packet has the exact serial provenance required by the three telescope lemmas; K is finite, universal, and K >= 1, and 0 <= eta <= eta\_K <= rho\_fac <= rho\_DeltaUpsilon, rho\_mult, rho\_UpsilonDelta. \steptag{validated} \\[6pt]
+\step{1.1.1} By lem-routef-scalar-header-positivity, choose one global W\_RF supplied by lem-routef-raw-factor-setting-formation. For its scalars (1.6)-(1.8), K is finite, universal, and K >= 1, while eta\_K > 0 and eta\_K <= rho\_fac <= rho\_DeltaUpsilon, rho\_mult, rho\_UpsilonDelta. \steptag{validated} \\[4pt]
+\step{1.1.2} For arbitrary n,Q,eta,D,J,Q\_C,Phi satisfying the root hypotheses, lem-routef-factor-map-packet gives Phi the required UCP/defect properties and supplies a packet (B,S,Delta\_prime,Delta,Upsilon\_prime,Upsilon) over this same W\_RF in the serial order: S is supplied by formation for (H:=C\textasciicircum{}n,Phi,eta), Delta\_prime by delta-prime closeness, Delta from Delta\_prime by delta normalization, Upsilon\_prime from (Delta\_prime,Delta) by upsilon-prime closeness, and Upsilon from that triple by upsilon normalization. Hence every same-datum packet quantified in the root has precisely this provenance. \steptag{validated} \\[4pt]
+\step{1.1.3} For any such same-datum packet, lem-routef-k-finiteness identifies rho\_fac as a common domain for the three factorization estimates. Combining the root assumption 0 <= eta <= eta\_K with 1.1.1 gives 0 <= eta <= rho\_DeltaUpsilon, 0 <= eta <= rho\_mult, and 0 <= eta <= rho\_UpsilonDelta, while 1.1.2 gives every serial supply hypothesis required by lem-routef-delta-upsilon-telescope, lem-routef-multiplicative-telescope, and lem-routef-upsilon-delta-telescope. \steptag{validated} \\[4pt]
+\step{1.2} For every arbitrary root input and same-datum packet fixed in 1.1, ||Delta Upsilon-Phi||\_cb <= K*eta. \steptag{validated} \\[6pt]
+\step{1.2.1} By the serial provenance and domain inequalities in 1.1, lem-routef-delta-upsilon-telescope applies to this same packet and gives ||Delta Upsilon-Phi||\_cb <= (C\_theta+C\_Delta+2*C\_Upsilon)*eta. \steptag{validated} \\[4pt]
+\step{1.2.2} By equation (1.6) in def-routef-raw-factor-setting, C\_theta+C\_Delta+2*C\_Upsilon <= K. Since eta >= 0, multiplication preserves this inequality; combining it with 1.2.1 yields ||Delta Upsilon-Phi||\_cb <= K*eta. \steptag{validated} \\[4pt]
+\step{1.3} For every arbitrary root input and same-datum packet fixed in 1.1, ||Upsilon Delta-I\_B||\_cb <= K*eta. \steptag{validated} \\[6pt]
+\step{1.3.1} By the serial provenance and domain inequalities in 1.1, lem-routef-upsilon-delta-telescope applies to this same packet and gives ||Upsilon Delta-I\_B||\_cb <= (C\_Upsilon+2*C\_Delta)*eta. \steptag{validated} \\[4pt]
+\step{1.3.2} By equation (1.6) in def-routef-raw-factor-setting, C\_Upsilon+2*C\_Delta <= K. Since eta >= 0, multiplication preserves this inequality; combining it with 1.3.1 yields ||Upsilon Delta-I\_B||\_cb <= K*eta. \steptag{validated} \\[4pt]
+\step{1.4} For every arbitrary root input and same-datum packet fixed in 1.1, every integer r >= 1 and all X,Y in M\_r(B) satisfy ||Upsilon\_r(Delta\_r X Delta\_r Y)-XY|| <= K*eta*||X||*||Y||. \steptag{validated} \\[6pt]
+\step{1.4.1} By the serial provenance and domain inequalities in 1.1, lem-routef-multiplicative-telescope applies to this same packet; hence for every integer r >= 1 and all X,Y in M\_r(B), ||Upsilon\_r(Delta\_r X Delta\_r Y)-XY|| <= [C\_Upsilon+2*(C\_2+C\_theta+C\_Delta)]*eta*||X||*||Y||. \steptag{validated} \\[4pt]
+\step{1.4.2} By equation (1.6) in def-routef-raw-factor-setting, C\_Upsilon+2*(C\_2+C\_theta+C\_Delta) <= K. Since eta, ||X||, and ||Y|| are nonnegative, multiplication preserves this inequality; combining it with 1.4.1 proves the asserted estimate simultaneously for every r >= 1 and all X,Y in M\_r(B). \steptag{validated} \\[4pt]
+\step{1.5} For every arbitrary root input and same-datum packet fixed in 1.1, 0 <= eta <= min\{(24*K)\textasciicircum{}(-1),1\}, 3*K*eta <= 1/8 < 1, and 3*K*eta/(1-3*K*eta) <= 4*K*eta <= 1/6 < 1/2. \steptag{validated} \\[6pt]
+\step{1.5.1} For this same packet, lem-routef-threshold-minimum applies. Its eta\_K is exactly equation (1.8), eta\_K=min\{rho\_fac,(24*K)\textasciicircum{}(-1),1\}; therefore the root assumption 0 <= eta <= eta\_K gives 0 <= eta <= min\{(24*K)\textasciicircum{}(-1),1\}, 3*K*eta <= 1/8 < 1, and 3*K*eta/(1-3*K*eta) <= 4*K*eta <= 1/6 < 1/2. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

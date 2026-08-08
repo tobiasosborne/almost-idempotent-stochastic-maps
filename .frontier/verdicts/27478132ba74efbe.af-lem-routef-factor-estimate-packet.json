@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-factor-estimate-packet/export.md",
+  "oracle": "af-lem-routef-factor-estimate-packet",
+  "result": "pass",
+  "claim_hash": "ab13266c91d5339a90abad17feeee548154f64560b550155282f7e95d50b917a",
+  "oracle_digest": "32cca375082fea380394ece1aedcd7437f8e7c6d5e4a4814d98fc31255e34bba",
+  "inputs_hash": "bb02264e59d2bceda9ec522f16e88a22818b95880a294615dc29f9c77252446c",
+  "ts": "2026-08-08T15:55:27.278Z"
+}
