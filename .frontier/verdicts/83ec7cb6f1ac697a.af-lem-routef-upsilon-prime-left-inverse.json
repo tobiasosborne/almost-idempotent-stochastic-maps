@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-routef-upsilon-prime-left-inverse/export.md",
+  "oracle": "af-lem-routef-upsilon-prime-left-inverse",
+  "result": "pass",
+  "claim_hash": "28a3a16eb6a764317704f911db8ef05a04ec4148bd8139784f9dc8f5699af64a",
+  "oracle_digest": "3ee6acbb0458f69dff52511c477b0125d00f56624df4380b05064fe02be7fa0f",
+  "inputs_hash": "43d73e9af1adee4e38a83cb51907bf03b24622f12b3c0d0df9c3797e2fa8edf8",
+  "ts": "2026-08-08T11:14:14.851Z"
+}
