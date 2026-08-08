@@ -366,4 +366,8 @@ lem-routef-scalar-header-positivity
 lem-routef-factor-map-packet
 lem-routef-factor-estimate-packet
 lem-routef-f0-assembly
+# 2026-08-08 (W139, user-ratified): the sharpness package — cor-classical-sharpness landed
+# stated/none (whitelisted until its Stage-D report anchoring); ex-hume retracted to
+# disproved (entry retained above as the historical record's whitelist line).
+cor-classical-sharpness
 ```

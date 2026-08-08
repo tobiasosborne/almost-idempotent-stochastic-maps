@@ -191,3 +191,10 @@ _(The inherited REFUTED routes from the classical-portfolio are recorded as dead
   their workspaces preserved, but they rest on the demoted M19-S2/S3
   premises; they re-flip mechanically once those re-validate (T0 156->154
   in the interim).
+
+## 2026-08-08 — `ex-hume`: “distance to every stochastic idempotent equals one common value” is false
+
+- **Claimed:** `ex-hume` carried `proved-mod-audit` / `af: seeded` with the historical contract: “The explicit 3x3 family P_s=I-u_s v_s^T (v_s=(1,-1+s,-s), u_s=(1-s+s^2,-s,0)^T) is a signed affine retraction with neg mass delta=s^2 whose distance to every stochastic idempotent is 2s-2s^2+2s^3 = 2 sqrt(delta)+O(delta): no bound C delta^beta with beta>1/2 holds, so the exponent 1/2 in op-classical/op-npps is sharp.”
+- **Why wrong:** for `0<s<1`, put `a=1-s+s^2`.  Although `v_s^T 1=0`, `v_s^T u_s=1`, and the only negative entry of `P_s` is `(P_s)_{23}=-s^2`, the stochastic idempotent `I_3` satisfies `||P_s-I_3||_{infinity->infinity}=||u_s v_s^T||_{infinity->infinity}=2a`, while the claimed common value is `2sa`; the difference is `2(1-s)a>0`.  Thus the per-idempotent equality is false.  The old contract also omitted `0<s<1`, left its quantifiers and asymptotic variable unstated, and mixed in the out-of-scope `op-npps`.
+- **Caught by:** the fresh hostile audit of `DESIGN-EXHUME-SHARPNESS.md`, finding 3, after the paper faithfulness audit had already corrected “distance to every” to a distance-to-set candidate.
+- **Resolution:** replace the malformed contract by the fully quantified false proposition solely so it can be honestly marked `disproved`; set `af: none`; delete and never resume the stale old-contract workspace; record the corrected 3x3 distance-to-set formula only as a non-rigorous candidate; and use `cor-classical-sharpness`, via the direct stochastic 4x4 PRH family, as the separately elevated active carrier.  All active consumers are covered by the 50-locus manifest in `DESIGN-EXHUME-SHARPNESS-V2.md`.
