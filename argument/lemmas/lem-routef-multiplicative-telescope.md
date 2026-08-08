@@ -5,7 +5,7 @@ contract: After first fixing one global witness package W_RF supplied by lem-rou
 defs: def-routef-raw-factor-setting
 deps: lem-routef-raw-factor-setting-formation; lem-routef-raw-factor-norms; lem-routef-raw-factor-identities; lem-routef-delta-prime-closeness; lem-routef-delta-normalization-closeness; lem-routef-delta-phi-product; lem-routef-upsilon-prime-closeness; lem-routef-upsilon-normalization-closeness
 status: stated
-af: none
+af: seeded
 provenance: DESIGN-LEDGER-DOMAINS-v2.md sect-2 row 11 (landed verbatim 2026-08-03, LaTeX flattened to registry ASCII); AUDIT-LEDGER-DOMAINS-v2.md LAND-14 with two exact corrections, both folded in; W78-ratified package front 3; user-ratified 2026-07-30, ledger front re-selected by the user 2026-08-03; RE-SCOPED 2026-08-05: ambient binding prefix + defs/deps repair per DESIGN-LEDGER-SETTING-RESCOPE-V2.md sect-3 (hostile re-audit AUDIT-LEDGER-SETTING-RESCOPE-V2.md LAND-WITH-EXACT-CORRECTIONS, corrections folded in), user-ratified 2026-08-05; source LEDGER-W74F-G-K.md:345-383; VERDICT-W74F-G-KLEDGER.md:96-117
 owner: A
 workspace: proofs/lem-routef-multiplicative-telescope

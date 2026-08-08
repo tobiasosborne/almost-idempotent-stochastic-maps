@@ -1,0 +1,8 @@
+{
+  "id": "ac90c48d9a05da8e",
+  "name": "lem-routef-upsilon-normalization-closeness",
+  "source": "imports validated registry lemma proofs/lem-routef-upsilon-normalization-closeness — After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, and every Upsilon' supplied from that same pair by lem-routef-upsilon-prime-closeness, and for every X in B(H), writing the fields of (W_RF,S) as the unqualified symbols below: Upsilon UCP normalization: with C_Upsilon := 6*C_T+7*C_Upsilon' and rho_Upsilon := min{rho_unit, rho_Upsilon', [2*(C_T+C_Upsilon')]^(-1)}, for 0 \u003c= eta \u003c= rho_Upsilon, b = Upsilon'(I) is invertible and Upsilon(X) = b^(-1/2)*Upsilon'(X)*b^(-1/2) is UCP with ||Upsilon - tilde-Upsilon||_cb \u003c= C_Upsilon*eta.",
+  "content_hash": "658b54e40ab15958adccd9b107987df21d11d6210d44f438f88d0851a4fc695b",
+  "created": "2026-08-08T12:18:59.442106424Z",
+  "notes": ""
+}
