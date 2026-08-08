@@ -5,7 +5,7 @@ contract: Witness arithmetic for PRH sharpness: for every real lambda with 0 < l
 defs: def-positive-approximate-retract
 deps:
 status: stated
-af: none
+af: seeded
 provenance: docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md sect-7; docs/plans/2026-08-08-EXHUME-SHARPNESS/DESIGN-EXHUME-SHARPNESS-V2.md sects-2.1,4.1 (W139 package); docs/plans/2026-08-08-EXHUME-SHARPNESS/BRIEF-PRHSHARP-FACTOR.md Situation (BALLOON run 1 at 27 live nodes and clean-reseed BALLOON run 2 at 28 live nodes, 2026-08-08); docs/plans/2026-08-08-EXHUME-SHARPNESS/TREE-PRHSHARP-ABORTED.md (run-2 tree, 2026-08-08)
 owner: A
 workspace: proofs/lem-prh-sharpness-family-arithmetic

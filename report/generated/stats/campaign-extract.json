@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-08-08T20:03:42Z",
+ "extracted_at": "2026-08-08T20:04:58Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -392,7 +392,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-08-08T20:03:42Z",
+  "mined_at": "2026-08-08T20:04:58Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -464,18 +464,18 @@
     "approach_tried": 2,
     "challenge_raised": 431,
     "challenge_resolved": 424,
-    "def_added": 1011,
+    "def_added": 1012,
     "node_amended": 381,
     "node_archived": 58,
-    "node_created": 2824,
+    "node_created": 2825,
     "node_unvalidated": 7,
     "node_validated": 2759,
     "nodes_claimed": 4550,
     "nodes_released": 4550,
-    "proof_initialized": 208
+    "proof_initialized": 209
    },
-   "ledger_entries": 17205,
-   "nodes_total": 2824,
+   "ledger_entries": 17208,
+   "nodes_total": 2825,
    "owner_roles": {
     "other": 1,
     "prover (fix round)": 478,
@@ -483,7 +483,7 @@
     "verifier": 3342
    },
    "root_validated": 198,
-   "seeded_not_validated": 10,
+   "seeded_not_validated": 11,
    "validation_days": {
     "2026-07-02": 7,
     "2026-07-03": 5,
@@ -505,7 +505,7 @@
     "2026-08-05": 7,
     "2026-08-08": 20
    },
-   "workspaces": 208,
+   "workspaces": 209,
    "workspaces_detail": [
     {
      "amendments": 0,
@@ -2262,6 +2262,22 @@
      "id": "lem-prh-sharpness",
      "last_ts": "2026-08-08T19:15:10.030263551Z",
      "ledger_entries": 4,
+     "max_round": 0,
+     "nodes": 1,
+     "root_validated": null,
+     "validated": 0
+    },
+    {
+     "amendments": 0,
+     "archived": 0,
+     "challenges": 0,
+     "challenges_resolved": 0,
+     "claims": 0,
+     "defs_imported": 1,
+     "first_ts": "2026-08-08T20:04:43.271970741Z",
+     "id": "lem-prh-sharpness-family-arithmetic",
+     "last_ts": "2026-08-08T20:04:43.305634542Z",
+     "ledger_entries": 3,
      "max_round": 0,
      "nodes": 1,
      "root_validated": null,
@@ -4229,9 +4245,9 @@
   "git": {
    "active_days": 27,
    "authors": {
-    "tobiasosborne": 1197
+    "tobiasosborne": 1198
    },
-   "commits": 1197,
+   "commits": 1198,
    "first_day": "2026-07-02",
    "last_day": "2026-08-08",
    "per_day": {
@@ -4261,7 +4277,7 @@
     "2026-08-03": 16,
     "2026-08-04": 2,
     "2026-08-05": 28,
-    "2026-08-08": 55
+    "2026-08-08": 56
    },
    "subject_prefixes": {
     "W61": 13,
@@ -4356,8 +4372,8 @@
   },
   "registry": {
    "af": {
-    "none": 166,
-    "seeded": 12,
+    "none": 165,
+    "seeded": 13,
     "validated": 196
    },
    "kind": {
