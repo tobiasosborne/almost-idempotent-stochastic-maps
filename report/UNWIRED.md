@@ -344,6 +344,8 @@ lem-routef-degree-two-estimate
 lem-routef-delta-phi-product
 lem-routef-degree-three-estimate
 lem-routef-upsilon-prime-closeness
+lem-routef-upsilon-prime-component-construction
+lem-routef-upsilon-prime-left-inverse
 lem-routef-upsilon-normalization-closeness
 lem-routef-delta-upsilon-telescope
 lem-routef-multiplicative-telescope

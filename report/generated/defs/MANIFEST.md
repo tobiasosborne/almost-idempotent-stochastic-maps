@@ -8,7 +8,7 @@ L2); this table and the `.tex` files beside it are a deterministic projection of
 ## Scope (directive: render only what the current proof strategy needs)
 
 - selection rule: **Route-F landing chain (scripts/gen-report-dag.py select_subgraph)**
-- registry results in the strategy subgraph: **213**; registry results anchored in `report/sections/`: **73**
+- registry results in the strategy subgraph: **215**; registry results anchored in `report/sections/`: **73**
 - definitions they import directly: **45**; after the statement-region
   `[[def-…]]` closure: **46** rendered, **1** dropped
 
@@ -74,8 +74,8 @@ Dropped (outside the closure; canonical, just not reproduced here):
 | 42 | `def-maincb-witness-ledger` | `def:maincb-witness-ledger` | original | locked | shard statement | — | `internal` | `DESIGN-MAINCB-REPAIR-v2.md sect 2 (hostile-audited AUDIT-MAINCB-REPAIR.md, verdict VALID AS DATA)` | `-` | 21 | 0 |
 | 43 | `def-positive-approximate-retract` | `def:positive-approximate-retract` | original | locked | shard statement | — | `internal` | `project formulation transcribed from docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §§1,4` | `-` | 3 | 2 |
 | 44 | `def-stage1-polar-witness-data` | `def:stage1-polar-witness-data` | original | locked | shard statement | — | `internal` | `DESIGN-S1-POLAR-v6.md sect 8 (unchanged from v2 sect 8; audited AUDIT-S1-POLAR-v3/v4/v5/v6)` | `-` | 15 | 9 |
-| 45 | `def-ucp-map` | `def:ucp-map` | consensus | locked | shard statement | — | `internal` | `standard operator-algebra textbook notion (e.g. Paulsen, Completely Bounded Maps and Operator Algebras, ch. 2-3); adopted for the Route-F rows per AUDIT-F0-ASSEMBLY.md sect 1.1` | `-` | 9 | 3 |
-| 46 | `def-routef-raw-factor-setting` | `def:routef-raw-factor-setting` | original | locked | shard statement | — | `internal` | `DESIGN-LEDGER-SETTING-RESCOPE-V2.md sect-1 (hostile re-audit AUDIT-LEDGER-SETTING-RESCOPE-V2.md, deletion test CLEARED: data-and-typing only)` | `-` | 17 | 0 |
+| 45 | `def-ucp-map` | `def:ucp-map` | consensus | locked | shard statement | — | `internal` | `standard operator-algebra textbook notion (e.g. Paulsen, Completely Bounded Maps and Operator Algebras, ch. 2-3); adopted for the Route-F rows per AUDIT-F0-ASSEMBLY.md sect 1.1` | `-` | 11 | 3 |
+| 46 | `def-routef-raw-factor-setting` | `def:routef-raw-factor-setting` | original | locked | shard statement | — | `internal` | `DESIGN-LEDGER-SETTING-RESCOPE-V2.md sect-1 (hostile re-audit AUDIT-LEDGER-SETTING-RESCOPE-V2.md, deletion test CLEARED: data-and-typing only)` | `-` | 19 | 0 |
 
 ## Macro-translation table v1
 
