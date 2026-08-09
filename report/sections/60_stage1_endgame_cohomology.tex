@@ -1,0 +1,176 @@
+% SHARD-ID: AISM-60-STAGE1-ENDGAME-COHOMOLOGY
+% SHARD-TITLE: S1-ENDGAME cohomological rows: the H-space coproduct tail, exterior cohomology, and the left-inversion associated graded and trace
+% SHARD-SUMMARY: Reproduces lem-stage1-hspace-coproduct-tail, the finite-dimensional real cohomology algebra and its positive-positive coproduct tail.
+% SHARD-SUMMARY: Reproduces lem-stage1-exterior-cohomology, the exterior-algebra description on finitely many odd positive-degree generators.
+% SHARD-SUMMARY: Reproduces lem-stage1-left-inversion-associated-graded, the filtration-preserving action of a left inversion on the associated graded. Reproduces lem-stage1-left-inversion-trace, the resulting degreewise trace formula for the left inversion.
+% SHARD-KEYWORDS: lem-stage1-hspace-coproduct-tail, lem-stage1-exterior-cohomology, lem-stage1-left-inversion-associated-graded, lem-stage1-left-inversion-trace, af validated, H-space, coproduct, exterior algebra, associated graded, trace
+\section{S1-ENDGAME cohomological rows: coproduct, exterior cohomology, and left inversion}\label{sec:stage1-endgame-cohomology}
+
+This section reproduces the four \texttt{af}-validated cohomological rows of the
+S1-ENDGAME chain.  The ambient H-space and left-inversion data are those of
+Definition~\ref{def:h-space-left-inversion}; the argument passes from the coproduct tail,
+through the exterior-algebra structure, to the associated-graded action and its trace.
+
+\begin{lemma}[\texttt{lem-stage1-hspace-coproduct-tail}]\label{lem:stage1-hspace-coproduct-tail}
+Let $M$ be a connected CW complex with $\dim_{\mathbb R}H^*(M;\mathbb R)<\infty$, and let
+$(M,\mu,e)$ be an H-space.  Set
+\[
+ A=H^*(M;\mathbb R),\qquad A^+=\bigoplus_{k>0}A^k,qquad
+ \Delta=({\times})^{-1}\circ\mu^*,
+\]
+where $\times$ is the cohomological cross product.  Then $A$ is a finite-dimensional
+graded-commutative associative unital algebra with $A^0=\mathbb R1$, and
+$\Delta:A\to A\otimes_{\mathbb R}A$ is a degree-preserving unital algebra homomorphism
+with $\Delta(1)=1\otimes1$.  Moreover, for every homogeneous $a\in A^+$ there are a
+finite set $J_a$ and homogeneous $a'_j,a''_j\in A^+$, $j\in J_a$, such that
+\[
+ \Delta(a)=a\otimes1+1\otimes a+\sum_{j\in J_a}a'_j\otimes a''_j.
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{H-space coproduct-tail package over the real field: if M is a connected CW complex with dim_reals H^*(M;reals) < infinity and (M,mu,e) is an H-space, set A=H^*(M;reals), A^+=direct_sum_{k>0} A^k, and Delta=(cross product)^(-1) o mu^*; then A is a finite-dimensional graded-commutative associative unital algebra with A^0=reals*1, Delta:A->A tensor_reals A is a degree-preserving unital algebra homomorphism with Delta(1)=1 tensor 1, and for every homogeneous a in A^+ there exist a finite set J_a and homogeneous a'_j,a''_j in A^+ for j in J_a such that Delta(a)=a tensor 1+1 tensor a+sum_{j in J_a} a'_j tensor a''_j.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The cup product first makes $A$ a finite-dimensional graded-commutative associative
+unital real algebra, while connectedness gives $A^0=H^0(M;\mathbb R)=\mathbb R1$.
+Finite total dimension makes every $H^q(M;\mathbb R)$ a finitely generated free real
+module, so Lemma~\ref{lem:topology-kunneth-cross-product}, applied with $X=Y=M$, makes
+the cross product $\kappa:A\otimes_{\mathbb R}A\to H^*(M\times M;\mathbb R)$ a
+degree-preserving unital ring isomorphism.  Thus $\Delta=\kappa^{-1}\mu^*$ is a
+degree-preserving unital algebra homomorphism and $\Delta(1)=1\otimes1$.
+
+The tree establishes the needed multiplicativity of pullback directly at cochain level.
+For a continuous $f$, composition defines a chain map $f_\#$ and hence a cochain map
+$f^\#$; the Alexander--Whitney formula commutes with the front and back face restrictions,
+so $f^\#(\alpha\smile\beta)=f^\#\alpha\smile f^\#\beta$, and the degree-zero unit is
+fixed.  This is the repaired branch: a verifier challenged the earlier unsupported appeal
+to functoriality, and the two cochain-level nodes replaced it without changing the contract.
+
+Finally let $\epsilon=e^*:A\to\mathbb R$.  The two H-space unit homotopies, pulled back
+along $x\mapsto(x,e)$ and $x\mapsto(e,x)$, give
+$(\operatorname{id}\otimes\epsilon)\Delta=\operatorname{id}$ and
+$(\epsilon\otimes\operatorname{id})\Delta=\operatorname{id}$.  For homogeneous
+$a\in A^n$, $n>0$, degree preservation and $A^0=\mathbb R1$ therefore force the edge
+components to be $a\otimes1$ and $1\otimes a$.  The remaining finitely many bidegrees
+have both entries positive, and expanding their algebraic tensors into finite sums of pure
+tensors produces the asserted set $J_a$ and the positive-degree factors.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (14-node tree, taint
+clean; one challenge repaired by the Alexander--Whitney cochain argument above).
+
+\begin{lemma}[\texttt{lem-stage1-exterior-cohomology}]\label{lem:stage1-exterior-cohomology}
+Under the hypotheses and notation of Lemma~\ref{lem:stage1-hspace-coproduct-tail}, the
+entire coproduct-tail package holds, and $A$ is isomorphic as a graded algebra to an
+exterior algebra on a finite family of homogeneous generators of odd positive degree.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Exterior cohomology of a finite H-space over the real field: if M is a connected CW complex with dim_reals H^*(M;reals) < infinity and (M,mu,e) is an H-space, set A=H^*(M;reals), A^+=direct_sum_{k>0} A^k, and Delta=(cross product)^(-1) o mu^*; then A is a finite-dimensional graded-commutative associative unital algebra with A^0=reals*1, Delta:A->A tensor_reals A is a degree-preserving unital algebra homomorphism with Delta(1)=1 tensor 1, for every homogeneous a in A^+ there exist a finite set J_a and homogeneous a'_j,a''_j in A^+ for j in J_a such that Delta(a)=a tensor 1+1 tensor a+sum_{j in J_a} a'_j tensor a''_j, and A is isomorphic as a graded algebra to an exterior algebra on a finite family of odd-positive-degree homogeneous generators.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Lemma~\ref{lem:stage1-hspace-coproduct-tail} supplies the complete algebra and coproduct
+package, including connectedness, finite-dimensionality, and the positive-positive tail.
+Over the characteristic-zero field $\mathbb R$, these are exactly the weak Hopf-algebra
+hypotheses used by the validated Hatcher structure external; finite total dimension also
+ensures that every graded piece is finite-dimensional.  That external yields an algebra
+isomorphism
+\[
+ \phi:\Lambda_{\mathbb R}(x_i\mid i\in I)\otimes_{\mathbb R}
+       \mathbb R[y_j\mid j\in J]\longrightarrow A,
+\]
+with the $x_i$ mapped to homogeneous odd-degree classes and the $y_j$ to homogeneous
+even-degree classes.  Giving each formal generator the degree of its image makes $\phi$
+degree-preserving on monomials, and hence a graded-algebra isomorphism.
+
+No polynomial generator can occur: if some $y_j$ existed, the powers
+$1,y_j,y_j^2,\ldots$ would be linearly independent, and tensoring with the exterior unit
+would contradict the finite dimension of $A$.  Nor can the exterior family be infinite,
+since the distinct word-length-one monomials $x_i$ would again give infinitely many
+linearly independent elements.  Thus $J=\varnothing$ and $I$ is finite, leaving precisely
+an exterior algebra on finitely many odd positive-degree homogeneous generators, together
+with the already established coproduct-tail clauses.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (8-node tree, taint
+clean, zero challenges).
+
+\begin{lemma}[\texttt{lem-stage1-left-inversion-associated-graded}]\label{lem:stage1-left-inversion-associated-graded}
+Let $M$ and $(M,\mu,e)$ be as above, and let $\sigma:M\to M$ be a left inversion.  Put
+\[
+ A=H^*(M;\mathbb R),\quad A^+=\bigoplus_{k>0}A^k,\quad
+ F^{p,q}=(A^+)^p\cap A^{p+q},\quad
+ E^{p,q}=F^{p,q}/F^{p+1,q-1}.
+\]
+Then $\sigma^*$ preserves every $F^{p,q}$ and induces
+$(-1)^{p+q}\operatorname{id}$ on every $E^{p,q}$ for $p\ge0$ and $p+q\ge0$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Associated-graded action of a left inversion over the real field: if M is a connected CW complex with dim_reals H^*(M;reals) < infinity, (M,mu,e) is an H-space, and sigma:M->M is a left inversion, set A=H^*(M;reals), A^+=direct_sum_{k>0} A^k, F^{p,q}=(A^+)^p intersect A^{p+q}, and E^{p,q}=F^{p,q}/F^{p+1,q-1}; then sigma^* preserves every F^{p,q} and induces (-1)^(p+q)*id on every E^{p,q} for p >= 0 and p+q >= 0.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Write $I=A^+$.  Functoriality makes $\sigma^*$ a degree-preserving unital algebra
+homomorphism, so it preserves $I^p$ and hence every $F^{p,q}$.  For homogeneous $a\in I$,
+let $\ell(x)=\mu(\sigma(x),x)$.  The left-inversion homotopy makes $\ell$ homotopic to the
+constant map at $e$, whence $\ell^*(a)=0$.  Combining naturality, the diagonal cup-product
+formula, and the coproduct expansion from Lemma~\ref{lem:stage1-exterior-cohomology} gives
+\[
+ 0=\sigma^*(a)+a+\sum_{j\in J_a}\sigma^*(a'_j)a''_j.
+\]
+Every summand in the tail lies in $I^2$, so $\sigma^*(a)\equiv-a\pmod{I^2}$ and
+$\sigma^*$ induces $-\operatorname{id}$ on $I/I^2$.
+
+For $p\ge1$, expand a product $a_1\cdots a_p$ modulo $I^{p+1}$ after writing
+$\sigma^*(a_i)=-a_i+r_i$ with $r_i\in I^2$.  Every term except the all-leading term has
+at least $p+1$ factors from $I$, so the induced action on $I^p/I^{p+1}$ is
+$(-1)^p\operatorname{id}$; for $p=0$, unitality gives the same conclusion on
+$A/I=\mathbb R1$.  By Lemma~\ref{lem:stage1-exterior-cohomology}, $I^p/I^{p+1}$ is
+spanned by exterior monomials of length exactly $p$.  Their generators all have odd
+degree, so a nonzero degree-$n$ component can occur only when $n\equiv p\pmod2$.
+Taking $n=p+q$ therefore changes $(-1)^p$ to $(-1)^{p+q}$ on $E^{p,q}$; if that
+component is zero, the asserted scalar action is automatic.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (9-node tree,
+first-pass single run, taint clean, zero challenges).
+
+\begin{lemma}[\texttt{lem-stage1-left-inversion-trace}]\label{lem:stage1-left-inversion-trace}
+Under the preceding hypotheses, for every $k\ge0$ one has
+\[
+ \operatorname{Tr}\!\left(\sigma^{*k}:H^k(M;\mathbb R)\to H^k(M;\mathbb R)\right)
+ =(-1)^k\dim_{\mathbb R}H^k(M;\mathbb R).
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Left-inversion trace over the real field: if M is a connected CW complex with dim_reals H^*(M;reals) < infinity, (M,mu,e) is an H-space, and sigma:M->M is a left inversion, then Tr(sigma^{*k}:H^k(M;reals)->H^k(M;reals))=(-1)^k*dim_reals H^k(M;reals) for every k >= 0.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Fix $k\ge0$, let $V=A^k$, and use the decreasing filtration
+\[
+ W_p=F^{p,k-p}=(A^+)^p\cap A^k\qquad(0\le p\le k+1).
+\]
+Here $W_0=V$, while $W_{k+1}=0$ because a product of $k+1$ positive-degree classes has
+degree at least $k+1$.  The space $V$ is finite-dimensional, and
+Lemma~\ref{lem:stage1-left-inversion-associated-graded} says that the degree-$k$ map
+$\sigma^{*k}$ preserves every $W_p$.  It also identifies
+\[
+ W_p/W_{p+1}=E^{p,k-p}
+\]
+and gives the induced action there as
+$(-1)^{p+(k-p)}\operatorname{id}=(-1)^k\operatorname{id}$.
+
+Choose a basis of $V$ adapted to the filtration.  The matrix of $\sigma^{*k}$ is block
+triangular, with diagonal blocks the induced maps on $W_p/W_{p+1}$, so its trace is the
+sum of their traces.  Each such trace is
+$(-1)^k\dim_{\mathbb R}(W_p/W_{p+1})$.  Meanwhile the dimension identities
+$\dim W_p=\dim(W_p/W_{p+1})+\dim W_{p+1}$ telescope from $W_0=V$ to $W_{k+1}=0$.
+Consequently the quotient dimensions sum to $\dim_{\mathbb R}V$, and the trace is
+$(-1)^k\dim_{\mathbb R}H^k(M;\mathbb R)$.  Since $k$ was arbitrary, the formula holds
+in every degree.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (6-node tree,
+first-pass single run, taint clean, zero challenges).

@@ -1,0 +1,199 @@
+% SHARD-ID: AISM-67-ROUTEF-UPSILON
+% SHARD-TITLE: Route-F Upsilon rows: component construction, the left inverse, and the two closeness estimates
+% SHARD-SUMMARY: Reproduces lem-routef-upsilon-prime-component-construction, the finite-dimensional Stinespring, Weyl-twirl, and compression package defining the completely positive component map.
+% SHARD-SUMMARY: Reproduces lem-routef-upsilon-prime-left-inverse, the amplification-uniform component estimate and direct-sum completely bounded left-inverse bound.
+% SHARD-SUMMARY: Reproduces lem-routef-upsilon-prime-closeness, the completely bounded comparison of the componentwise map with the raw factor map. Reproduces lem-routef-upsilon-normalization-closeness, the positive-unit normalization to a UCP map and its completely bounded closeness estimate.
+% SHARD-KEYWORDS: Route F, Upsilon prime, component construction, Weyl twirl, Choi multiplicity, left inverse, completely bounded norm, UCP normalization, af validated
+\section{Route-F Upsilon rows: component construction, the left inverse, and the two closeness estimates}\label{sec:routef-upsilon}
+
+This section reproduces the four \texttt{af}-validated rows that build the
+$\Upsilon'$ branch from the raw-factor setting, prove its approximate left-inverse
+property, compare it with $\widetilde\Upsilon$, and normalize it to a UCP map
+$\Upsilon$.  The common ambient datum is that of
+Definition~\ref{def:routef-raw-factor-setting}; UCP is used in the sense of
+Definition~\ref{def:ucp-map}.
+\begin{lemma}[\texttt{lem-routef-upsilon-prime-component-construction}]\label{lem:routef-upsilon-prime-component-construction}
+Fix first one global package $W_{\mathrm{RF}}$ supplied by Lemma~\ref{lem:routef-raw-factor-setting-formation},
+and for every admissible $(H,\Phi,\defect)$ fix over it a raw-factor datum $S$, writing
+its fields without qualification.  For every $\Delta'$ supplied by Lemma~\ref{lem:routef-delta-prime-closeness}
+and every $\Delta$ supplied from it by Lemma~\ref{lem:routef-delta-normalization-closeness},
+with $C_N,C_R$ from (1.3), put
+\[
+ \rho_{\Upsilon'}=\min\{\rho_T,\rho_{\mathrm{id}},\rho_\Delta,
+ \rho_2,\rho_3,(2C_R)^{-1}\}.
+\]
+If $0\le\defect\le\rho_{\Upsilon'}$, then there are $m\ge1$, nonzero finite-dimensional
+$L_j,E_j$ $(1\le j\le m)$, a finite-dimensional $F$, operators
+$W_j:H\to L_j\otimes E_j$, and an isometry $V:H\to H\otimes F$, such that
+\[
+ B=\bigoplus_{j=1}^{m}B(L_j),\quad \sum_jW_j^*W_j=I_H,\quad
+ \Delta(X)=\sum_jW_j^*(X_j\otimes I_{E_j})W_j,\quad
+ \Phi(T)=V^*(T\otimes I_F)V.
+\]
+For each $j$ there are a nonempty finite $\Sigma_j$, unitaries $U_{js}$, weights
+$p_{js}\ge0$ summing to one, a positive contraction $C_j$ on $E_j$, and a unit
+vector $\xi_j\in E_j$, with
+\[
+ \sum_s p_{js}(U_{js}^*\otimes I)Z(U_{js}\otimes I)
+ =I_{L_j}\otimes\frac{\operatorname{Tr}_{L_j}(Z)}{\dim L_j},
+ \qquad
+ R_j:=\sum_s p_{js}(U_{js}^*\otimes I)W_jW_j^*(U_{js}\otimes I)
+ =I_{L_j}\otimes C_j,
+\]
+where the partial trace is unnormalized, and $0\le C_j\le I_{E_j}$,
+$\nrm{C_j}\ge1-C_R\defect$, and
+$1-\langle\xi_j,C_j^*C_j\xi_j\rangle\le2C_R\defect$.
+Writing $\widehat U_{js}$ for $U_{js}$ in block $j$ and zero elsewhere and
+$\iota_{js}(z)=U_{js}z\otimes\xi_j$, the operators and maps
+\[
+ \Lambda_j:=\sum_s p_{js}(\Delta(\widehat U_{js}^*)\otimes I_F)VW_j^*\iota_{js},
+ \quad \Upsilon'_j(T):=\Lambda_j^*(\Phi(T)\otimes I_F)\Lambda_j,
+ \quad \Upsilon'(T):=(\Upsilon'_j(T))_{j=1}^{m}
+\]
+satisfy: every $\Lambda_j$ is a contraction, every $\Upsilon'_j$ and $\Upsilon'$ is CP,
+and $\nrm{\Upsilon'}_{\mathrm{cb}}\le1$.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, writing the fields of (W_RF,S) as the unqualified symbols below: for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness and every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, with C_N, C_R from (1.3) and rho_Upsilon' := min{rho_T, rho_id, rho_Delta, rho_2, rho_3, (2*C_R)^(-1)}, for 0 <= eta <= rho_Upsilon' there exist an integer m >= 1, nonzero finite-dimensional Hilbert spaces L_j and E_j for 1 <= j <= m, a finite-dimensional Hilbert space F, operators W_j:H->L_j tensor E_j, an isometry V:H->H tensor F, nonempty finite index sets Sigma_j, unitaries U_js on L_j and weights p_js for s in Sigma_j, positive contractions C_j on E_j, unit vectors xi_j in E_j, contractions Lambda_j:L_j->H tensor F, CP maps Upsilon'_j:B(H)->B(L_j), and a CP map Upsilon':B(H)->B such that B=direct-sum_{j=1}^m B(L_j), sum_j W_j^*W_j=I_H, Delta(X)=sum_j W_j^*(X_j tensor I_Ej)W_j for every X=(X_1,...,X_m) in B, Phi(T)=V^*(T tensor I_F)V for every T in B(H), p_js >= 0, sum_{s in Sigma_j}p_js=1, sum_{s in Sigma_j}p_js*(U_js^* tensor I_Ej)Z(U_js tensor I_Ej)=I_Lj tensor (Tr_Lj(Z)/dim(L_j)) for every Z in B(L_j tensor E_j), where Tr_Lj denotes the unnormalized partial trace over L_j, R_j:=sum_{s in Sigma_j}p_js*(U_js^* tensor I_Ej)W_jW_j^*(U_js tensor I_Ej)=I_Lj tensor C_j, 0 <= C_j <= I_Ej, ||C_j|| >= 1-C_R*eta, 1-<xi_j,C_j^*C_j xi_j> <= 2*C_R*eta, if hat-U_js denotes U_js in the j-th block of B and zero in every other block and iota_js(z):=U_js z tensor xi_j then Lambda_j:=sum_{s in Sigma_j}p_js*(Delta(hat-U_js^*) tensor I_F)V W_j^*iota_js, Upsilon'_j(T):=Lambda_j^*(Phi(T) tensor I_F)Lambda_j, Upsilon'(T):=(Upsilon'_j(T))_{j=1}^m, and ||Upsilon'||_cb <= 1.}
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree first applies finite-dimensional $C^*$-algebra structure and canonical Stinespring
+dilation.  It writes $B$ as the displayed direct sum, decomposes the representation as
+$L_j\otimes E_j$, and obtains the $W_j$ formula; the same matrix-unit construction for
+$B(H)$ gives $F,V$ and the formula for $\Phi$.  For $d_j=\dim L_j$, it chooses the explicit
+Weyl family $\Sigma_j=\{0,\ldots,d_j-1\}^2$, equal weights $d_j^{-2}$, and
+$U_j(a,b)e_k=e^{2\pi iak/d_j}e_{k+b}$.  Summing in $a$ removes off-diagonal matrix units,
+and summing in $b$ averages the diagonal ones, yielding the partial-trace twirl.  Applied
+to $W_jW_j^*$, this gives $R_j=I_{L_j}\otimes C_j$ with $0\le C_j\le I$.
+
+For the lower bound the tree identifies
+$W_j^*R_jW_j=\sum_s p_{js}\Delta(\widehat U_{js}^*)\Delta(\widehat U_{js})$.  The raw-factor
+norm and $\Delta$-normalization bounds give $\nrm{\Delta(e_j)}\ge1-C_N\defect$; degree two
+and contractivity of $\Phi$ give $\nrm{C_j}\ge1-(C_N+C_2)\defect=1-C_R\defect$.
+The cutoff $(2C_R)^{-1}$ makes this at least $1/2$, proving $E_j\ne0$ before choosing
+$\xi_j$.  Norm attainment gives $\nrm{C_j\xi_j}=\nrm{C_j}$ and hence
+$1-\nrm{C_j}^2\le2C_R\defect$.  Finally the summands defining $\Lambda_j$ are typed and
+contractive, so $\nrm{\Lambda_j}\le1$.  Tensoring, compression, and direct sums preserve
+CP; the amplified direct-sum norm is a maximum, so $\nrm{\Upsilon'}_{\mathrm{cb}}\le1$
+without an $m$- or amplification-factor.  This is the construction factor introduced
+after the original monolithic row exceeded the registry's brittleness cap.
+\begin{lemma}[\texttt{lem-routef-upsilon-prime-left-inverse}]\label{lem:routef-upsilon-prime-left-inverse}
+In the setting of Lemma~\ref{lem:routef-upsilon-prime-component-construction}, put
+$C_L=C_2+C_3+2C_R$ and use the same $\rho_{\Upsilon'}$.  For every $q\ge1$,
+$Y=(Y_1,\ldots,Y_m)\in M_q(B)$, and $j$,
+\[
+ \nrm{(\Upsilon'_j)_q(\Delta_q(Y))-Y_j}\le C_L\defect\nrm{Y}.
+\]
+Consequently $\nrm{(\Upsilon'\Delta-I_B)_q(Y)}\le C_L\defect\nrm{Y}$ and
+$\nrm{\Upsilon'\Delta-I_B}_{\mathrm{cb}}\le C_L\defect$.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, writing the fields of (W_RF,S) as the unqualified symbols below: for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, and every componentwise package (m,(L_j,E_j,W_j,Sigma_j,U_js,p_js,C_j,xi_j,Lambda_j,Upsilon'_j)_{j=1}^m,F,V,Upsilon') supplied for (W_RF,S,Delta',Delta) by lem-routef-upsilon-prime-component-construction, with C_L:=C_2+C_3+2*C_R from (1.3) and rho_Upsilon' := min{rho_T, rho_id, rho_Delta, rho_2, rho_3, (2*C_R)^(-1)}, for 0 <= eta <= rho_Upsilon', every integer q >= 1, and every Y=(Y_1,...,Y_m) in M_q(B)=direct-sum_{j=1}^m M_q(B(L_j)), ||(Upsilon'_j)_q(Delta_q(Y))-Y_j|| <= C_L*eta*||Y|| for every j, and consequently ||(Upsilon' Delta-I_B)_q(Y)|| <= C_L*eta*||Y|| and ||Upsilon' Delta-I_B||_cb <= C_L*eta.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Fix $q,Y,j$ and expand both occurrences of $\Lambda_j$ in $(\Upsilon'_j)_q(\Delta_q(Y))$.
+The resulting double probability average contains
+\[
+ A_{st}=\Phi_q\!\left(\Delta_q(\widehat U_{js})
+ \Phi_q(\Delta_q(Y))\Delta_q(\widehat U_{jt}^{*})\right).
+\]
+Degree two with an identity input replaces the middle $\Phi_q(\Delta_q(Y))$ by
+$\Delta_q(Y)$ at cost $C_2\defect\nrm{Y}$.  Lemma~\ref{lem:routef-degree-three-estimate}
+then replaces the three-factor expression by $\Delta_q(\widehat U_{js}Y\widehat U_{jt}^{*})$
+at cost $C_3\defect\nrm{Y}$.  Contractive sandwiches and probability weights preserve
+the sum of these errors.  Call the resulting double average $P_{jq}(Y)$.
+Substituting the block formula for $\Delta_q$ and factoring the sums places the amplified
+twirl $I_q\otimes R_j$ on both sides of $Y_j\otimes I_{E_j}$.  Since
+$R_j=I_{L_j}\otimes C_j$, compression by $z\mapsto z\otimes\xi_j$ gives exactly
+$P_{jq}(Y)=\alpha_jY_j$, $\alpha_j=\langle\xi_j,C_j^*C_j\xi_j\rangle$.
+Thus $0\le1-\alpha_j\le2C_R\defect$ and
+$\nrm{P_{jq}(Y)-Y_j}\le2C_R\defect\nrm{Y}$; the triangle inequality gives
+$C_2+C_3+2C_R=C_L$.  Taking the maximum component norm in $M_q(B)$ and then the
+supremum over $q,Y\ne0$ proves the cb bound without multiplicity loss.  The ledger records
+two repaired scope challenges: $A_{st}$ was rebound locally rather than imported from a
+pending sibling, and $P_{jq}(Y)$ was defined again in its own branch before fresh validation.
+\begin{lemma}[\texttt{lem-routef-upsilon-prime-closeness}]\label{lem:routef-upsilon-prime-closeness}
+With the same globally fixed $W_{\mathrm{RF}}$, admissible datum $S$, and maps
+$\Delta',\Delta$, let $C_N,C_R,C_L,C_{\Upsilon'}$ be as in (1.3) and let
+$\rho_{\Upsilon'}$ be as above.  If $0\le\defect\le\rho_{\Upsilon'}$, every Choi
+multiplicity space in the component construction is nonzero, that construction
+produces a completely positive $\Upsilon'$, and
+\[
+ \nrm{\Upsilon'-\widetilde\Upsilon}_{\mathrm{cb}}\le C_{\Upsilon'}\defect.
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, and every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, writing the fields of (W_RF,S) as the unqualified symbols below: Upsilon-prime CP closeness: with C_N, C_R, C_L, C_Upsilon' from (1.3) and rho_Upsilon' := min{rho_T, rho_id, rho_Delta, rho_2, rho_3, (2*C_R)^(-1)}, for 0 <= eta <= rho_Upsilon', every Choi multiplicity space used below is nonzero and the componentwise construction produces CP Upsilon' with ||Upsilon' - tilde-Upsilon||_cb <= C_Upsilon'*eta.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Lemma~\ref{lem:routef-upsilon-prime-component-construction} supplies the nonzero multiplicity
+spaces, CP $\Upsilon'$, and $\nrm{\Upsilon'}_{\mathrm{cb}}\le1$.  With
+$K_j(T)=\Lambda_j^*(T\otimes I_F)\Lambda_j$ and $K=(K_j)_j$, the tree has
+$\nrm{K}_{\mathrm{cb}}\le1$ and $\Upsilon'=K\Phi$.  Because
+$\rho_{\Upsilon'}\le\rho_T\le1/8$, Lemma~\ref{lem:routef-functional-calculus-closeness}
+applies, and
+\[
+ \Phi-\Phi\widetilde\Phi=(\Phi-\Phi^2)+\Phi(\Phi-\widetilde\Phi)
+\]
+gives $\nrm{\Upsilon'(I-\widetilde\Phi)}_{\mathrm{cb}}\le(1+C_\theta)\defect$.
+The $\Delta$ estimate and Lemma~\ref{lem:routef-upsilon-prime-left-inverse} give
+$\nrm{\Upsilon'\widetilde\Delta-I_B}_{\mathrm{cb}}\le(C_\Delta+C_L)\defect$,
+while the raw norm bound gives $\nrm{\widetilde\Upsilon}_{\mathrm{cb}}\le2$.
+The identity $\widetilde\Delta\widetilde\Upsilon=\widetilde\Phi$ yields
+\[
+ \Upsilon'-\widetilde\Upsilon
+ =\Upsilon'(I-\widetilde\Phi)
+ +(\Upsilon'\widetilde\Delta-I_B)\widetilde\Upsilon.
+\]
+The preceding estimates bound this by $[1+C_\theta+2C_\Delta+2C_L]\defect
+=C_{\Upsilon'}\defect$, the ledger entry (1.3).  Factoring added the preceding two
+dependencies while leaving this row's registry contract byte-unchanged.
+
+\begin{lemma}[\texttt{lem-routef-upsilon-normalization-closeness}]\label{lem:routef-upsilon-normalization-closeness}
+With the same fixed data and every $\Upsilon'$ supplied by
+Lemma~\ref{lem:routef-upsilon-prime-closeness}, put
+\[
+ C_\Upsilon=6C_T+7C_{\Upsilon'},\qquad
+ \rho_\Upsilon=\min\{\rho_{\mathrm{unit}},\rho_{\Upsilon'},
+ [2(C_T+C_{\Upsilon'})]^{-1}\}.
+\]
+For $0\le\defect\le\rho_\Upsilon$, $b=\Upsilon'(I)$ is invertible and, for every
+$X\in B(H)$,
+\[
+ \Upsilon(X)=b^{-1/2}\Upsilon'(X)b^{-1/2}
+\]
+defines a UCP map satisfying
+$\nrm{\Upsilon-\widetilde\Upsilon}_{\mathrm{cb}}\le C_\Upsilon\defect$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, and every Upsilon' supplied from that same pair by lem-routef-upsilon-prime-closeness, and for every X in B(H), writing the fields of (W_RF,S) as the unqualified symbols below: Upsilon UCP normalization: with C_Upsilon := 6*C_T+7*C_Upsilon' and rho_Upsilon := min{rho_unit, rho_Upsilon', [2*(C_T+C_Upsilon')]^(-1)}, for 0 <= eta <= rho_Upsilon, b = Upsilon'(I) is invertible and Upsilon(X) = b^(-1/2)*Upsilon'(X)*b^(-1/2) is UCP with ||Upsilon - tilde-Upsilon||_cb <= C_Upsilon*eta.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Set $d=(C_T+C_{\Upsilon'})\defect$.  The radius gives $0\le d\le1/2$, and
+Lemma~\ref{lem:routef-upsilon-prime-closeness} with the raw unit estimate gives
+\[
+ \nrm{b-I}\le\nrm{\Upsilon'(I)-\widetilde\Upsilon(I)}
+ +\nrm{\widetilde\Upsilon(I)-I}\le d.
+\]
+Since $\Upsilon'$ is CP, $b$ is positive.  Its spectrum lies in
+$[1-d,1+d]\subset[1/2,3/2]$, so $b$ is invertible and $c=b^{-1/2}$ satisfies
+$\nrm{b},\nrm{c}\le3/2$.  On this interval,
+$|t^{-1/2}-1|=|t-1|/[\sqrt t(1+\sqrt t)]$, so functional calculus gives
+$\nrm{c-I}\le\nrm{b-I}\le d$.  Conjugation of $\Upsilon'$ by $c$ is CP at every
+amplification, while $cbc=I$ makes $\Upsilon$ unital; hence it is UCP with cb norm one.
+The rearrangement $\Upsilon'(Y)=b^{1/2}\Upsilon(Y)b^{1/2}$ gives
+$\nrm{\Upsilon'}_{\mathrm{cb}}\le\nrm{b}\le3/2$.  Finally
+\[
+ \Upsilon-\Upsilon'=(c-I)\Upsilon'c+\Upsilon'(c-I)
+\]
+gives $\nrm{\Upsilon-\Upsilon'}_{\mathrm{cb}}\le(15/4)d\le6d$.  Adding the
+$C_{\Upsilon'}\defect$ prime-closeness bound yields
+$\nrm{\Upsilon-\widetilde\Upsilon}_{\mathrm{cb}}\le(6C_T+7C_{\Upsilon'})\defect$.
+The ledger's sole challenge was a sibling-scope gap in the cb-norm-one step; the live
+tree repairs it with a self-contained amplification argument before fresh validation.
+The quoted contract already carries the earlier rescope amendment inserting the explicit
+``for every $X\in B(H)$'' binder; its mathematical suffix was otherwise unchanged.
+
+\medskip
+\noindent\textbf{Status.} All four rows are \texttt{proved} with
+\texttt{af: validated} (T0), and the prose above reports only their live exported trees.

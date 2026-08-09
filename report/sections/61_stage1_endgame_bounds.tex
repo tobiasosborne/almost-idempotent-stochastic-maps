@@ -1,0 +1,213 @@
+% SHARD-ID: AISM-61-STAGE1-ENDGAME-BOUNDS
+% SHARD-TITLE: S1-ENDGAME bound rows: quotient left inversion, quotient local index, inversion isolation, and quotient index data
+% SHARD-SUMMARY: Reproduces lem-stage1-bound-quotient-left-inversion, the parameterized quotient H-space and smooth-left-inversion package at the common bound epsilon_B^r.
+% SHARD-SUMMARY: Reproduces lem-stage1-bound-quotient-local-index, the same-map ambient-chart package and the positive local index of the quotient inversion at [J].
+% SHARD-SUMMARY: Reproduces lem-stage1-bound-inversion-isolation, which upgrades quotient isolation to uniqueness of the actual inversion fixed points J and -J in uniform ambient balls. Reproduces lem-stage1-bound-quotient-index-data, adjoining finite simplicial type and the phase lift of every fixed quotient class to a pair of actual fixed representatives.
+% SHARD-KEYWORDS: lem-stage1-bound-quotient-left-inversion, lem-stage1-bound-quotient-local-index, lem-stage1-bound-inversion-isolation, lem-stage1-bound-quotient-index-data, af validated, Stage 1, quotient H-space, smooth left inversion, local index, fixed-point isolation, finite simplicial complex
+\section{S1-ENDGAME bound rows: quotient left inversion, quotient local index, inversion isolation, and quotient index data}\label{sec:stage1-endgame-bounds}
+
+These four bound rows form the parameterized B0 chain.  Throughout, the witness tuple is
+that of Definition~\ref{def:stage1-polar-witness-data}, and the ambient unitary and
+exact-unit vocabulary is that of Definitions~\ref{def:approximate-unitary-space} and
+\ref{def:epsilon-cstar-algebra}.  To keep the mathematical rendering legible, each
+statement names the long clauses $(A_2),(A_4)$--$(A_7)$ and $(R)$; their full, unabridged
+ASCII text is preserved immediately below each statement in the verbatim registry anchor.
+
+\begin{lemma}[\texttt{lem-stage1-bound-quotient-left-inversion}]\label{lem:stage1-bound-quotient-left-inversion}
+For every universal witness tuple $W$ satisfying the ranges and scale identities displayed
+in the contract below, there are universal $e^{r}_{\mathrm{quot}}>0$ and
+$\epsilon^{r}_{B}=\min\{\epsilon^{r}_{*},e^{r}_{\mathrm{quot}}\}>0$ such that every
+finite-dimensional exact-unit $\epsilon_r$-$C^{*}$-algebra with
+$0\le\epsilon_r\le\epsilon^{r}_{B}$ and $1<\dim_{\mathbb C}\calX<\infty$, equipped with
+the displayed data satisfying $(A_2),(A_4),(A_5),(A_6)$ and $(R)$, has
+\[
+ \breve{\mathcal U}=\mathcal U_e/\mathrm U(1),\quad \breve e=[J],\quad
+ \breve\mu([U],[V])=[\mu(U,V)],\quad \breve\sigma([U])=[\sigma(U)].
+\]
+Here $(\breve{\mathcal U},\breve\mu,\breve e)$ is a connected H-space,
+$\breve\sigma$ is a smooth left inversion,
+$\sigma(cU)=\overline c\,\sigma(U)$ and
+$\nrm{\sigma(U)-U\dg}\le C_{\mathrm{grp}}\epsilon_r$; moreover
+$\breve{\mathcal U}$ is a connected compact orientable smooth manifold without boundary
+of real dimension $\dim_{\mathbb C}\calX-1$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Parameterized bound quotient H-space package: for every universal def-stage1-polar-witness-data tuple W=(C_rect,C_ch,C_pol,C_grp,C_path,C_der,e_rect,kappa_ch,kappa_pol,kappa_der,delta_*,epsilon_*^r,e_S1,r_iso) with C_rect,C_ch,C_pol,C_grp,C_path,C_der>=1, 0<e_rect<=1/C_rect, 0<kappa_ch,kappa_pol,kappa_der<=1/2, delta_*=min{1/4,kappa_ch/(4*C_ch),kappa_pol/(4*C_pol)}, epsilon_*^r=min{1/4,kappa_ch/(4*C_ch),kappa_pol/(4*C_pol),kappa_der/(8*C_der),1/C_grp,delta_*/(12*C_path*C_grp)}, e_S1=min{e_rect,epsilon_*^r/C_rect}, and r_iso=min{delta_*/4,kappa_der/(8*C_der)}, there exist universal e_quot^r>0 and epsilon_B^r>0 with epsilon_B^r=min{epsilon_*^r,e_quot^r} such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0<=epsilon_r<=epsilon_B^r and 1<dim_C calX<infinity, and for displayed data satisfying all of the following: (A_2) for every V in calUbar_delta_* and A^par in B_{2delta_*}^{icalH}(0) there is a unique g_V(A^par) in B_{2delta_*}^{calH}(0) with f_V(A^par+g_V(A^par))=0, where f_V(A)=(1/2)*(((J+A^dagger) bold-dot V^dagger) bold-dot (V bold-dot (J+A))-J), chi_V(A^par)=V bold-dot (J+A^par+g_V(A^par)) lies in calU, ||Dg_V(A^par)||<=C_ch*(epsilon_r+delta_*), ||D_{A^perp}f_V(A^par+g_V(A^par))-I_calH||<=C_ch*(epsilon_r+delta_*)<1, and these C^1 charts cover calU; (A_4) set Pi_delta_*:calU x B_{delta_*}^{calH}(J)->calX by Pi_delta_*(U,K):=U bold-dot K and set S_delta_*:=Pi_delta_*(calU x B_{delta_*}^{calH}(J)); Pi_delta_* is a C^1 diffeomorphism onto S_delta_* with unique inverse maps u_delta:S_delta_*->calU and h_delta:S_delta_*->B_{delta_*}^{calH}(J) satisfying X=u_delta(X) bold-dot h_delta(X) for every X in S_delta_* and u_delta(U)=U and h_delta(U)=J for every U in calU; (A_5) the displayed maps mu:calU x calU->calU and sigma:calU->calU are defined by mu(U,V):=u_delta(U bold-dot V) and sigma(U):=u_delta(U^dagger), are global C^1 and, for every U,V,Z in calU, mu(J,U)=mu(U,J)=U, sigma(J)=J, ||mu(U,V)-U bold-dot V||<=C_grp*epsilon_r, ||sigma(U)-U^dagger||<=C_grp*epsilon_r, ||mu(mu(U,V),Z)-mu(U,mu(V,Z))||<=C_grp*epsilon_r, ||mu(sigma(U),U)-J||<=C_grp*epsilon_r, and ||mu(U,sigma(U))-J||<=C_grp*epsilon_r; (A_6) for every U_0,U_1 in calU and q in [0,1] satisfying ||U_1-U_0||<=q, C_path*q<=1/4, and C_path*(q+epsilon_r*q+q^2)<delta_*-C_pol*(epsilon_r*delta_*+delta_*^2), the path H(-,U_0,U_1):[0,1]->calU given by H(t,U_0,U_1):=u_delta((1-t)*U_0+t*U_1) is defined, is jointly continuous in its displayed variables, and joins U_0 to U_1, and satisfies H(t,cU_0,cU_1)=c*H(t,U_0,U_1) for every c in U(1) and t in [0,1]; and (R) set q_*:=C_grp*epsilon_r, set r_-:=delta_*-C_pol*(epsilon_r*delta_*+delta_*^2), and set eta_*:=C_path*(q_*+epsilon_r*q_*+q_*^2); the guards C_ch*(epsilon_r+delta_*)<=kappa_ch, C_pol*(epsilon_r+delta_*)<=kappa_pol, q_*<r_-, C_path*q_*<=1/4, and eta_*<r_- hold; then, for those same u_delta,h_delta,mu,sigma,H, there exist a space breve-calU and maps breve-mu:breve-calU x breve-calU->breve-calU and breve-sigma:breve-calU->breve-calU such that breve-calU=calU_e/U(1), set breve-e:=[J], breve-mu([U],[V])=[mu(U,V)], breve-sigma([U])=[sigma(U)], (breve-calU,breve-mu,breve-e) is a connected H-space, breve-sigma is a smooth left inversion, sigma(cU)=conj(c)*sigma(U), and ||sigma(U)-U^dagger||<=C_grp*epsilon_r for every c in U(1) and U in calU, and breve-calU is a connected compact orientable smooth manifold without boundary of real dimension (dim_C calX)-1.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Fix $W$ and the displayed algebra.  Positivity of the entries in the defining minimum gives
+$\epsilon_*^r>0$.  Lemma~\ref{lem:stage1-quotient-manifold-package} supplies the universal
+$e_{mathrm{quot}}^r$; taking $\epsilon_B^r=\min\{\epsilon_*^r,e_{mathrm{quot}}^r\}$
+provides the connected compact orientable quotient manifold with the asserted dimension.
+The graph derivative in $(A_2)$ differs from the identity by less than one, so the smooth
+atlas upgrade applies to the same $g_V$ and $\chi_V$, without changing values or first
+derivatives.  For the polar map, the tree supplies the ambient-openness argument explicitly:
+the involution splits $\calX_{\mathbb R}=\Herm\oplus\aHerm$, the graph charts give
+$\dim_{\mathbb R}\Unit=\dim_{\mathbb R}\aHerm$, and therefore the domain of
+$\Pi_{\delta_*}$ and $\calX_{\mathbb R}$ have equal dimension.  Its injective ambient
+differential is thus an isomorphism, so the inverse-function theorem makes
+$S_{\delta_*}$ ambient-open and the same inverse $(u_\delta,h_\delta)$ smooth.
+The smooth-operations row then upgrades the same scalar action, $\mu$, and $\sigma$ and
+retains their equivariance and the $(A_5)$ error estimate.
+
+On the identity component, the scalar action is free and proper.  The quotient theorem
+therefore gives a smooth surjective submersion; the tree deliberately chooses this quotient
+structure and transports compactness, dimension, boundarylessness, orientation, and
+connectedness topologically, rather than identifying it with the package atlas by a
+misapplied uniqueness clause.  Equivariance makes $\breve\mu$ and $\breve\sigma$
+representative-independent, while local quotient sections prove smoothness.  Finally set
+$q_*=C_{\mathrm{grp}}\epsilon_r$ and use $(A_6)$ on
+$U_0=\mu(\sigma(U),U)$ and $U_1=J$.  The path
+$[H(t,\mu(\sigma(U),U),J)]$ is representative-independent, continuous, and basepoint
+preserving, hence is the required left-inversion homotopy.  The live tree has thirteen
+nodes; three archived nodes record the repaired atlas-identification route.  Fresh
+verifiers also forced the ambient-openness proof and an explicit dependency for the
+homotopy node; all three challenges were repaired without changing the contract.
+
+\begin{lemma}[\texttt{lem-stage1-bound-quotient-local-index}]\label{lem:stage1-bound-quotient-local-index}
+Under the stronger parameterized hypotheses $(A_2),(A_4)$--$(A_7)$ and $(R)$ quoted below,
+at the same universal bound $\epsilon_B^r$, the quotient package of
+Lemma~\ref{lem:stage1-bound-quotient-left-inversion} has charts
+$\chi_s:B^{\aHerm}_{r_{\mathrm{iso}}}(0)\to\Unit$, $s\in\{\pm1\}$, with $\chi_s(0)=sJ$ and inverse $\psi_s=\phi_{sJ}^{\mathrm{par}}$ on the image, and each chart image is retained by $\sigma$, and
+\[
+ F_s=\psi_s\circ\sigma\circ\chi_s,qquad
+ \nrm{D(F_s-\mathrm{id})(A)+2I}<1,qquad
+ \nrm{A-B}\le\nrm{\chi_s(A)-\chi_s(B)}.
+\]
+The chart contains $\Unit\cap B_{r_{\mathrm{iso}}}(sJ)$.  Moreover $\breve e=[J]$ is an
+isolated fixed point of $\breve\sigma$, the line $i\mathbb R J$ is
+$D\sigma_J$-invariant,
+\[
+ \nrm{D\breve\sigma_{\breve e}+I}_{\mathrm{quot}}<1,qquad
+ \det(I-D\breve\sigma_{\breve e})>0,qquad
+ \operatorname{ind}(\breve\sigma,\breve e)=+1.
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Parameterized same-map quotient local-index and ambient-chart package: for every universal def-stage1-polar-witness-data tuple W=(C_rect,C_ch,C_pol,C_grp,C_path,C_der,e_rect,kappa_ch,kappa_pol,kappa_der,delta_*,epsilon_*^r,e_S1,r_iso) with C_rect,C_ch,C_pol,C_grp,C_path,C_der>=1, 0<e_rect<=1/C_rect, 0<kappa_ch,kappa_pol,kappa_der<=1/2, delta_*=min{1/4,kappa_ch/(4*C_ch),kappa_pol/(4*C_pol)}, epsilon_*^r=min{1/4,kappa_ch/(4*C_ch),kappa_pol/(4*C_pol),kappa_der/(8*C_der),1/C_grp,delta_*/(12*C_path*C_grp)}, e_S1=min{e_rect,epsilon_*^r/C_rect}, and r_iso=min{delta_*/4,kappa_der/(8*C_der)}, there exist universal e_quot^r>0 and epsilon_B^r>0 with epsilon_B^r=min{epsilon_*^r,e_quot^r} such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0<=epsilon_r<=epsilon_B^r and 1<dim_C calX<infinity, and for displayed data satisfying all of the following: (A_2) for every V in calUbar_delta_* and A^par in B_{2delta_*}^{icalH}(0) there is a unique g_V(A^par) in B_{2delta_*}^{calH}(0) with f_V(A^par+g_V(A^par))=0, where f_V(A)=(1/2)*(((J+A^dagger) bold-dot V^dagger) bold-dot (V bold-dot (J+A))-J), chi_V(A^par)=V bold-dot (J+A^par+g_V(A^par)) lies in calU, ||Dg_V(A^par)||<=C_ch*(epsilon_r+delta_*), ||D_{A^perp}f_V(A^par+g_V(A^par))-I_calH||<=C_ch*(epsilon_r+delta_*)<1, and these C^1 charts cover calU; (A_4) set Pi_delta_*:calU x B_{delta_*}^{calH}(J)->calX by Pi_delta_*(U,K):=U bold-dot K and set S_delta_*:=Pi_delta_*(calU x B_{delta_*}^{calH}(J)); Pi_delta_* is a C^1 diffeomorphism onto S_delta_* with unique inverse maps u_delta:S_delta_*->calU and h_delta:S_delta_*->B_{delta_*}^{calH}(J) satisfying X=u_delta(X) bold-dot h_delta(X) for every X in S_delta_* and u_delta(U)=U and h_delta(U)=J for every U in calU; (A_5) the displayed maps mu:calU x calU->calU and sigma:calU->calU are defined by mu(U,V):=u_delta(U bold-dot V) and sigma(U):=u_delta(U^dagger), are global C^1 and, for every U,V,Z in calU, mu(J,U)=mu(U,J)=U, sigma(J)=J, ||mu(U,V)-U bold-dot V||<=C_grp*epsilon_r, ||sigma(U)-U^dagger||<=C_grp*epsilon_r, ||mu(mu(U,V),Z)-mu(U,mu(V,Z))||<=C_grp*epsilon_r, ||mu(sigma(U),U)-J||<=C_grp*epsilon_r, and ||mu(U,sigma(U))-J||<=C_grp*epsilon_r; (A_6) for every U_0,U_1 in calU and q in [0,1] satisfying ||U_1-U_0||<=q, C_path*q<=1/4, and C_path*(q+epsilon_r*q+q^2)<delta_*-C_pol*(epsilon_r*delta_*+delta_*^2), the path H(-,U_0,U_1):[0,1]->calU given by H(t,U_0,U_1):=u_delta((1-t)*U_0+t*U_1) is defined, is jointly continuous in its displayed variables, and joins U_0 to U_1, and satisfies H(t,cU_0,cU_1)=c*H(t,U_0,U_1) for every c in U(1) and t in [0,1]; (A_7) for every s in {+1,-1}, set chi_s:B_{r_iso}^{icalH}(0)->calU by chi_s(A):=sJ bold-dot (J+A+g_{sJ}(A)), let phi_{sJ}^par:chi_s(B_{r_iso}^{icalH}(0))->B_{r_iso}^{icalH}(0) be its inverse, and set F_s:B_{r_iso}^{icalH}(0)->icalH by F_s(A):=phi_{sJ}^par(sigma(chi_s(A))); then sigma maps chi_s(B_{r_iso}^{icalH}(0)) into itself and ||D(F_s-id)(A)+2I||<=C_der*(epsilon_r+r_iso) for every A in B_{r_iso}^{icalH}(0); and (R) set q_*:=C_grp*epsilon_r, set r_-:=delta_*-C_pol*(epsilon_r*delta_*+delta_*^2), and set eta_*:=C_path*(q_*+epsilon_r*q_*+q_*^2); the guards C_ch*(epsilon_r+delta_*)<=kappa_ch, C_pol*(epsilon_r+delta_*)<=kappa_pol, q_*<r_-, C_path*q_*<=1/4, eta_*<r_-, C_der*(epsilon_r+r_iso)<=kappa_der/4<1, and (1+epsilon_r)*(1+C_ch*(epsilon_r+delta_*))*r_iso+q_*<2delta_* hold; then, for those same u_delta,h_delta,mu,sigma,H,chi_s,F_s, there exist a space breve-calU, maps breve-mu:breve-calU x breve-calU->breve-calU and breve-sigma:breve-calU->breve-calU, and maps psi_s:chi_s(B_{r_iso}^{icalH}(0))->B_{r_iso}^{icalH}(0) for s in {+1,-1} such that breve-calU=calU_e/U(1), set breve-e:=[J], breve-mu([U],[V])=[mu(U,V)], breve-sigma([U])=[sigma(U)], (breve-calU,breve-mu,breve-e) is a connected H-space, breve-sigma is a smooth left inversion, sigma(cU)=conj(c)*sigma(U), ||sigma(U)-U^dagger||<=C_grp*epsilon_r, breve-calU is a connected compact orientable smooth manifold without boundary of real dimension (dim_C calX)-1, chi_s:B_{r_iso}^{icalH}(0)->calU has chi_s(0)=sJ and inverse psi_s=phi_{sJ}^par on its image, sigma retains that image, F_s=psi_s o sigma o chi_s and ||D(F_s-id)(A)+2I||<1, calU intersect B_{r_iso}(sJ) is contained in chi_s(B_{r_iso}^{icalH}(0)), and ||A-B||<=||chi_s(A)-chi_s(B)|| for A,B in B_{r_iso}^{icalH}(0); for these same maps, breve-e is an isolated fixed point of breve-sigma, i*reals*J is D-sigma_J-invariant, ||D-breve-sigma_{breve-e}+I||<1 in the quotient norm, det(I-D-breve-sigma_{breve-e})>0, and the local index of breve-e is +1.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The first branch imports Lemma~\ref{lem:stage1-bound-quotient-left-inversion} with the same
+$u_\delta,h_\delta,\mu,\sigma,H$ and repeats the smooth upgrades.  Its repaired
+ambient-openness step uses the real splitting $\calX=\Herm\oplus\aHerm$, equality of source
+and target dimensions, and the quantitative inverse-function lemma to show that every
+point of $S_{\delta_*}$ has an ambient-open image neighborhood.
+For $s=\pm1$, exact unitality gives $f_{sJ}(0)=0$; uniqueness in $(A_2)$ gives
+$g_{sJ}(0)=0$, hence $\chi_s(0)=sJ$.  The inverse is the anti-Hermitian part
+$\psi_s=\phi_{sJ}^{\mathrm{par}}$.  If $U\in\Unit$ lies within $r_{\mathrm{iso}}$ of
+$sJ$, then $\phi_{sJ}(U)=s(U-sJ)$ has Hermitian and anti-Hermitian parts inside the graph
+domain; uniqueness forces the Hermitian part to equal $g_{sJ}$, placing $U$ in the chart.
+Contractivity of the anti-Hermitian projection gives the stated lower Lipschitz estimate.
+
+Scalar equivariance differentiates to $D\sigma_J(iJ)=-iJ$.  Thus, for
+$V=i\mathbb RJ$ and $R=DF_+(0)+I$, one has $R|_V=0$, so $R$ induces
+$\overline R=D\breve\sigma_{\breve e}+I$ on $\aHerm/V$.  The repaired quotient estimate is
+\[
+ \nrm{\overline R[x]}_{\mathrm{quot}}
+ \le \nrm{R(x+v)}\le\nrm R\,\nrm{x+v}\quad(v\in V),
+\]
+followed by the infimum over $v$; no false equality with an ambient norm is used.  Hence
+$\nrm{D\breve\sigma_{\breve e}+I}_{\mathrm{quot}}<1$ by the fully non-strict chain in
+$(A_7)$ and $(R)$.  Therefore $I-D\breve\sigma_{\breve e}$ is invertible.  In an arbitrary
+smooth chart the tree transports this invertibility by conjugacy, rather than transporting
+the norm bound, and applies the quantitative inverse-function lemma to
+$x\mapsto x-\breve\sigma(x)$; this isolates $\breve e$.
+Writing $E=D\breve\sigma_{\breve e}+I$, the path $2I-tE$ stays invertible for
+$0\le t\le1$, so its determinant retains the positive sign of $2I$.  The local-index sign
+formula, Lemma~\ref{lem:topology-local-index-sign}, gives index $+1$.  The nineteen-node
+tree records five repaired verifier challenges: ambient openness, the quotient-norm step,
+the coordinate-norm inference, a strict-inequality edge, and a missing dependency.  None
+changed the registry contract; the hard cap alone was ratified upward from fifteen to
+twenty to retain these visible repairs.
+
+\begin{lemma}[\texttt{lem-stage1-bound-inversion-isolation}]\label{lem:stage1-bound-inversion-isolation}
+Under the same parameterized hypotheses and at the same $\epsilon_B^r$, there is a radius
+$r_{\mathrm{bidx}}>0$, depending only on $W$, with
+$r_{\mathrm{bidx}}=r_{\mathrm{iso}}$, for which all conclusions of
+Lemma~\ref{lem:stage1-bound-quotient-local-index} hold and
+\[
+ \operatorname{Fix}(\sigma)\cap B_{r_{\mathrm{bidx}}}(J)=\{J\},
+ \qquad
+ \operatorname{Fix}(\sigma)\cap B_{r_{\mathrm{bidx}}}(-J)=\{-J\},
+\]
+where the intersections are taken inside $\Unit$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Parameterized same-map actual-isolation package: for every universal def-stage1-polar-witness-data tuple W=(C_rect,C_ch,C_pol,C_grp,C_path,C_der,e_rect,kappa_ch,kappa_pol,kappa_der,delta_*,epsilon_*^r,e_S1,r_iso) with C_rect,C_ch,C_pol,C_grp,C_path,C_der>=1, 0<e_rect<=1/C_rect, 0<kappa_ch,kappa_pol,kappa_der<=1/2, delta_*=min{1/4,kappa_ch/(4*C_ch),kappa_pol/(4*C_pol)}, epsilon_*^r=min{1/4,kappa_ch/(4*C_ch),kappa_pol/(4*C_pol),kappa_der/(8*C_der),1/C_grp,delta_*/(12*C_path*C_grp)}, e_S1=min{e_rect,epsilon_*^r/C_rect}, and r_iso=min{delta_*/4,kappa_der/(8*C_der)}, there exist universal e_quot^r>0 and epsilon_B^r>0 with epsilon_B^r=min{epsilon_*^r,e_quot^r} such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0<=epsilon_r<=epsilon_B^r and 1<dim_C calX<infinity, and for displayed data satisfying all of the following: (A_2) for every V in calUbar_delta_* and A^par in B_{2delta_*}^{icalH}(0) there is a unique g_V(A^par) in B_{2delta_*}^{calH}(0) with f_V(A^par+g_V(A^par))=0, where f_V(A)=(1/2)*(((J+A^dagger) bold-dot V^dagger) bold-dot (V bold-dot (J+A))-J), chi_V(A^par)=V bold-dot (J+A^par+g_V(A^par)) lies in calU, ||Dg_V(A^par)||<=C_ch*(epsilon_r+delta_*), ||D_{A^perp}f_V(A^par+g_V(A^par))-I_calH||<=C_ch*(epsilon_r+delta_*)<1, and these C^1 charts cover calU; (A_4) set Pi_delta_*:calU x B_{delta_*}^{calH}(J)->calX by Pi_delta_*(U,K):=U bold-dot K and set S_delta_*:=Pi_delta_*(calU x B_{delta_*}^{calH}(J)); Pi_delta_* is a C^1 diffeomorphism onto S_delta_* with unique inverse maps u_delta:S_delta_*->calU and h_delta:S_delta_*->B_{delta_*}^{calH}(J) satisfying X=u_delta(X) bold-dot h_delta(X) for every X in S_delta_* and u_delta(U)=U and h_delta(U)=J for every U in calU; (A_5) the displayed maps mu:calU x calU->calU and sigma:calU->calU are defined by mu(U,V):=u_delta(U bold-dot V) and sigma(U):=u_delta(U^dagger), are global C^1 and, for every U,V,Z in calU, mu(J,U)=mu(U,J)=U, sigma(J)=J, ||mu(U,V)-U bold-dot V||<=C_grp*epsilon_r, ||sigma(U)-U^dagger||<=C_grp*epsilon_r, ||mu(mu(U,V),Z)-mu(U,mu(V,Z))||<=C_grp*epsilon_r, ||mu(sigma(U),U)-J||<=C_grp*epsilon_r, and ||mu(U,sigma(U))-J||<=C_grp*epsilon_r; (A_6) for every U_0,U_1 in calU and q in [0,1] satisfying ||U_1-U_0||<=q, C_path*q<=1/4, and C_path*(q+epsilon_r*q+q^2)<delta_*-C_pol*(epsilon_r*delta_*+delta_*^2), the path H(-,U_0,U_1):[0,1]->calU given by H(t,U_0,U_1):=u_delta((1-t)*U_0+t*U_1) is defined, is jointly continuous in its displayed variables, and joins U_0 to U_1, and satisfies H(t,cU_0,cU_1)=c*H(t,U_0,U_1) for every c in U(1) and t in [0,1]; (A_7) for every s in {+1,-1}, set chi_s:B_{r_iso}^{icalH}(0)->calU by chi_s(A):=sJ bold-dot (J+A+g_{sJ}(A)), let phi_{sJ}^par:chi_s(B_{r_iso}^{icalH}(0))->B_{r_iso}^{icalH}(0) be its inverse, and set F_s:B_{r_iso}^{icalH}(0)->icalH by F_s(A):=phi_{sJ}^par(sigma(chi_s(A))); then sigma maps chi_s(B_{r_iso}^{icalH}(0)) into itself and ||D(F_s-id)(A)+2I||<=C_der*(epsilon_r+r_iso) for every A in B_{r_iso}^{icalH}(0); and (R) set q_*:=C_grp*epsilon_r, set r_-:=delta_*-C_pol*(epsilon_r*delta_*+delta_*^2), and set eta_*:=C_path*(q_*+epsilon_r*q_*+q_*^2); the guards C_ch*(epsilon_r+delta_*)<=kappa_ch, C_pol*(epsilon_r+delta_*)<=kappa_pol, q_*<r_-, C_path*q_*<=1/4, eta_*<r_-, C_der*(epsilon_r+r_iso)<=kappa_der/4<1, and (1+epsilon_r)*(1+C_ch*(epsilon_r+delta_*))*r_iso+q_*<2delta_* hold; then, for those same u_delta,h_delta,mu,sigma,H, there exist r_bidx>0 depending only on W, a space breve-calU, and maps breve-mu:breve-calU x breve-calU->breve-calU and breve-sigma:breve-calU->breve-calU such that r_bidx=r_iso and breve-calU=calU_e/U(1), set breve-e:=[J], breve-mu([U],[V])=[mu(U,V)], breve-sigma([U])=[sigma(U)], (breve-calU,breve-mu,breve-e) is a connected H-space, breve-sigma is a smooth left inversion, sigma(cU)=conj(c)*sigma(U), ||sigma(U)-U^dagger||<=C_grp*epsilon_r, breve-calU is a connected compact orientable smooth manifold without boundary of real dimension (dim_C calX)-1, breve-e is an isolated fixed point of breve-sigma with local index +1, and J and -J are the only sigma-fixed points in their respective ambient r_bidx-balls.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Apply Lemma~\ref{lem:stage1-bound-quotient-local-index} to obtain the same quotient, maps,
+charts, local index, and ambient-chart containment.  It remains only to prove actual
+isolation at the two representatives.  For each $s\in\{\pm1\}$ set
+$G_s=F_s-\mathrm{id}$ on $B^{\aHerm}_{r_{\mathrm{iso}}}(0)$.  Scalar equivariance gives
+$\sigma(sJ)=sJ$, and since $\chi_s(0)=sJ$ one has $G_s(0)=0$.
+Apply Lemma~\ref{lem:stage1-quantitative-inverse-function} with
+\[
+ X=Y=\aHerm,\qquad V=-2I,\qquad x_0=0,\qquad
+ r=r_{\mathrm{iso}},\qquad f=G_s.
+\]
+Since $V^{-1}=-\tfrac12I$, clauses $(A_7)$ and $(R)$ yield, for every $A$ in the ball,
+\[
+ \nrm{V^{-1}DG_s(A)-I}
+ \le \tfrac12 C_{\mathrm{der}}(\epsilon_r+r_{\mathrm{iso}})
+ \le \kappa_{\mathrm{der}}/8\le1/16<1.
+\]
+Thus $G_s$ is injective on the whole chart ball.  If
+$U\in\Unit\cap B_{r_{\mathrm{iso}}}(sJ)$ is fixed by $\sigma$, the ambient containment
+from the preceding lemma writes $U=\chi_s(A)$.  Then
+$F_s(A)=\psi_s(\sigma(\chi_s(A)))=A$, so $G_s(A)=0=G_s(0)$; injectivity gives
+$A=0$ and hence $U=sJ$.  Finally
+$r_{\mathrm{iso}}=\min\{\delta_*/4,\kappa_{\mathrm{der}}/(8C_{\mathrm{der}})\}$ is positive
+and depends only on $W$, so take $r_{\mathrm{bidx}}=r_{\mathrm{iso}}$.
+The ten-node tree received one verifier challenge: its first version used strict
+inequalities where $(A_7)$ and $(R)$ provide non-strict bounds.  The displayed non-strict
+chain is the repaired live proof; the contract was unchanged.
+
+\begin{lemma}[\texttt{lem-stage1-bound-quotient-index-data}]\label{lem:stage1-bound-quotient-index-data}
+Under the same parameterized hypotheses and at the same $\epsilon_B^r$, all conclusions of
+Lemma~\ref{lem:stage1-bound-inversion-isolation} hold; in addition,
+$\breve{\mathcal U}$ is homeomorphic to a finite simplicial complex.  For every fixed class
+$\breve V$ of $\breve\sigma$ there are $U_0\in\mathcal U_e$ and $c,a\in\mathrm U(1)$ with
+\[
+ [U_0]=\breve V,\qquad \sigma(U_0)=cU_0,qquad a^2=c,qquad
+ \sigma(aU_0)=aU_0,qquad \sigma(-aU_0)=-aU_0.
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Parameterized complete quotient package: for every universal def-stage1-polar-witness-data tuple W=(C_rect,C_ch,C_pol,C_grp,C_path,C_der,e_rect,kappa_ch,kappa_pol,kappa_der,delta_*,epsilon_*^r,e_S1,r_iso) with C_rect,C_ch,C_pol,C_grp,C_path,C_der>=1, 0<e_rect<=1/C_rect, 0<kappa_ch,kappa_pol,kappa_der<=1/2, delta_*=min{1/4,kappa_ch/(4*C_ch),kappa_pol/(4*C_pol)}, epsilon_*^r=min{1/4,kappa_ch/(4*C_ch),kappa_pol/(4*C_pol),kappa_der/(8*C_der),1/C_grp,delta_*/(12*C_path*C_grp)}, e_S1=min{e_rect,epsilon_*^r/C_rect}, and r_iso=min{delta_*/4,kappa_der/(8*C_der)}, there exist universal e_quot^r>0 and epsilon_B^r>0 with epsilon_B^r=min{epsilon_*^r,e_quot^r} such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0<=epsilon_r<=epsilon_B^r and 1<dim_C calX<infinity, and for displayed data satisfying all of the following: (A_2) for every V in calUbar_delta_* and A^par in B_{2delta_*}^{icalH}(0) there is a unique g_V(A^par) in B_{2delta_*}^{calH}(0) with f_V(A^par+g_V(A^par))=0, where f_V(A)=(1/2)*(((J+A^dagger) bold-dot V^dagger) bold-dot (V bold-dot (J+A))-J), chi_V(A^par)=V bold-dot (J+A^par+g_V(A^par)) lies in calU, ||Dg_V(A^par)||<=C_ch*(epsilon_r+delta_*), ||D_{A^perp}f_V(A^par+g_V(A^par))-I_calH||<=C_ch*(epsilon_r+delta_*)<1, and these C^1 charts cover calU; (A_4) set Pi_delta_*:calU x B_{delta_*}^{calH}(J)->calX by Pi_delta_*(U,K):=U bold-dot K and set S_delta_*:=Pi_delta_*(calU x B_{delta_*}^{calH}(J)); Pi_delta_* is a C^1 diffeomorphism onto S_delta_* with unique inverse maps u_delta:S_delta_*->calU and h_delta:S_delta_*->B_{delta_*}^{calH}(J) satisfying X=u_delta(X) bold-dot h_delta(X) for every X in S_delta_* and u_delta(U)=U and h_delta(U)=J for every U in calU; (A_5) the displayed maps mu:calU x calU->calU and sigma:calU->calU are defined by mu(U,V):=u_delta(U bold-dot V) and sigma(U):=u_delta(U^dagger), are global C^1 and, for every U,V,Z in calU, mu(J,U)=mu(U,J)=U, sigma(J)=J, ||mu(U,V)-U bold-dot V||<=C_grp*epsilon_r, ||sigma(U)-U^dagger||<=C_grp*epsilon_r, ||mu(mu(U,V),Z)-mu(U,mu(V,Z))||<=C_grp*epsilon_r, ||mu(sigma(U),U)-J||<=C_grp*epsilon_r, and ||mu(U,sigma(U))-J||<=C_grp*epsilon_r; (A_6) for every U_0,U_1 in calU and q in [0,1] satisfying ||U_1-U_0||<=q, C_path*q<=1/4, and C_path*(q+epsilon_r*q+q^2)<delta_*-C_pol*(epsilon_r*delta_*+delta_*^2), the path H(-,U_0,U_1):[0,1]->calU given by H(t,U_0,U_1):=u_delta((1-t)*U_0+t*U_1) is defined, is jointly continuous in its displayed variables, and joins U_0 to U_1, and satisfies H(t,cU_0,cU_1)=c*H(t,U_0,U_1) for every c in U(1) and t in [0,1]; (A_7) for every s in {+1,-1}, set chi_s:B_{r_iso}^{icalH}(0)->calU by chi_s(A):=sJ bold-dot (J+A+g_{sJ}(A)), let phi_{sJ}^par:chi_s(B_{r_iso}^{icalH}(0))->B_{r_iso}^{icalH}(0) be its inverse, and set F_s:B_{r_iso}^{icalH}(0)->icalH by F_s(A):=phi_{sJ}^par(sigma(chi_s(A))); then sigma maps chi_s(B_{r_iso}^{icalH}(0)) into itself and ||D(F_s-id)(A)+2I||<=C_der*(epsilon_r+r_iso) for every A in B_{r_iso}^{icalH}(0); and (R) set q_*:=C_grp*epsilon_r, set r_-:=delta_*-C_pol*(epsilon_r*delta_*+delta_*^2), and set eta_*:=C_path*(q_*+epsilon_r*q_*+q_*^2); the guards C_ch*(epsilon_r+delta_*)<=kappa_ch, C_pol*(epsilon_r+delta_*)<=kappa_pol, q_*<r_-, C_path*q_*<=1/4, eta_*<r_-, C_der*(epsilon_r+r_iso)<=kappa_der/4<1, and (1+epsilon_r)*(1+C_ch*(epsilon_r+delta_*))*r_iso+q_*<2delta_* hold; then, for those same u_delta,h_delta,mu,sigma,H, there exist r_bidx>0 depending only on W, a space breve-calU, and maps breve-mu:breve-calU x breve-calU->breve-calU and breve-sigma:breve-calU->breve-calU such that r_bidx=r_iso and breve-calU=calU_e/U(1), set breve-e:=[J], breve-mu([U],[V])=[mu(U,V)], breve-sigma([U])=[sigma(U)], (breve-calU,breve-mu,breve-e) is a connected H-space, breve-sigma is a smooth left inversion, sigma(cU)=conj(c)*sigma(U), ||sigma(U)-U^dagger||<=C_grp*epsilon_r, breve-calU is a connected compact orientable smooth manifold without boundary of real dimension (dim_C calX)-1 and is homeomorphic to a finite simplicial complex, breve-e is an isolated fixed point of breve-sigma with local index +1, J and -J are the only sigma-fixed points in their respective ambient r_bidx-balls, and for every breve-sigma-fixed class breve-V there exist U_0 in calU_e and c,a in U(1) such that [U_0]=breve-V, sigma(U_0)=c*U_0, a^2=c, sigma(a*U_0)=a*U_0, and sigma(-a*U_0)=-a*U_0.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Fix the tuple, algebra, and displayed data.  Lemma~\ref{lem:stage1-bound-inversion-isolation}
+supplies the universal constants and, for the same $u_\delta,h_\delta,\mu,\sigma,H$, the
+quotient H-space, smooth left inversion, equivariance, manifold package, local index, and
+the two ambient isolation statements.  Since the algebra is finite-dimensional and the
+quotient is a compact smooth manifold without boundary,
+Lemma~\ref{lem:stage1-quotient-finite-cw} makes $\breve{\mathcal U}$ homeomorphic to a
+finite simplicial complex.
+
+It remains to lift a fixed quotient class.  Let $\breve V$ satisfy
+$\breve\sigma(\breve V)=\breve V$ and choose $U_0\in\mathcal U_e$ representing it.  The
+identity $\breve\sigma([U])=[\sigma(U)]$ gives
+$[\sigma(U_0)]=[U_0]$; by the defining scalar-orbit equivalence there is
+$c\in\mathrm U(1)$ with $\sigma(U_0)=cU_0$.  Choose a square root in the circle: write
+$c=e^{i\theta}$ and take $a=e^{i\theta/2}$, so $a^2=c$.  Scalar equivariance now yields
+\[
+ \sigma(aU_0)=\overline a\,cU_0=aU_0,
+ \qquad
+ \sigma(-aU_0)=-\overline a\,cU_0=-aU_0,
+\]
+because $\overline a\,c=\overline a\,a^2=a$.  These are the two required actual fixed representatives of
+the same phase-adjusted orbit.  The proof tree has seven live nodes and was validated on
+its first pass with no challenges; no amendment or supersession is recorded.
+
+\medskip
+\noindent\textbf{Status.} All four rows are \texttt{proved} with
+\texttt{af: validated} (T0), validated 2026-07-30.  Their workspaces are, in the order
+above, \texttt{proofs/lem-stage1-bound-quotient-left-inversion},
+\texttt{proofs/lem-stage1-bound-quotient-local-index},
+\texttt{proofs/lem-stage1-bound-inversion-isolation}, and
+\texttt{proofs/lem-stage1-bound-quotient-index-data}.

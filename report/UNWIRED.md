@@ -19,63 +19,12 @@ are ignored by the parser (`load_unwired`). Two sections:
 ## Frontier (exploration-track, unanchored by design)
 
 ```
+# --- 2026-08-09 W140 report sync: 90 af-VALIDATED results anchored into report/sections/52-72 and delisted here (kitaev pair follows with shard 69) ---
 # --- 2026-07-27 W80 step-1 F0 seam rows: af-VALIDATED and now anchored in report/sections/42_routef_f0_seam.tex (delisted 2026-07-27) ---
 # --- 2026-07-30 MAIN campaign rows (DESIGN-MAIN-STRUCTURE-v5, user-ratified 2026-07-30): pre-elevation; anchor into report on af validation ---
-lem-maincb-improvement-one-step
-lem-maincb-improvement-iteration
-lem-maincb-direct-corner-envelope
-lem-maincb-direct-sum-inclusion-merge
-lem-maincb-full-corner-identification
-lem-maincb-nested-corner-comparison
-lem-maincb-nested-corner-dimension-transport
-lem-maincb-outer-compression-transfer
-lem-maincb-corner-equivalence
-lem-maincb-cross-union-zero-corners
-lem-maincb-cross-class-merging-datum
-lem-maincb-stage2-extcb-datum
-lem-maincb-initial-raw-inclusion
-lem-maincb-stage1-raw-refinement
-lem-maincb-stage2-raw-extension
-lem-maincb-stage3-raw-merge
-lem-maincb-reset-constant-ledger
-lem-maincb-stage1-call-envelope
-lem-maincb-stage2-call-envelope
-lem-maincb-stage3-call-envelope
-lem-maincb-reset-invariant-preservation
-lem-maincb-structural-domain-ledger
-lem-maincb-initial-reset-inclusion
-lem-maincb-maximal-reset-selection
-lem-maincb-stage1-strict-refinement
-lem-maincb-stage1-maximality
-lem-maincb-corner-nontriviality
-lem-maincb-one-class-extension
-lem-maincb-binary-block-merge
-lem-maincb-stage3-finite-recombination
-lem-maincb-structural-assembly
-lem-maincb-isomorphism-unit-control
-lem-maincb-compressed-corner-unit-comparison
-lem-maincb-witness-arithmetic
-lem-maincb-cross-datum-bijectivity
-lem-maincb-extended-inclusion-monotone
-lem-maincb-reset-output-typing
 # --- 2026-07-30 S1-ENDGAME ratified rows (DESIGN-S1-ENDGAME-v5, audit v5 LAND): pre-elevation; anchor into report on af validation ---
-lem-stage1-hspace-coproduct-tail
-lem-stage1-exterior-cohomology
-lem-stage1-left-inversion-associated-graded
-lem-stage1-left-inversion-trace
-lem-stage1-bound-quotient-left-inversion
-lem-stage1-bound-quotient-local-index
-lem-stage1-bound-inversion-isolation
-lem-stage1-bound-quotient-index-data
-lem-stage1-extra-fixed-class
-lem-stage1-fixed-unitary-projection-bridge
-lem-stage1-rectified-nontrivial-projection
-lem-stage1-original-complementary-pair
-lem-stage1-fresh-two-point-inclusion
 # --- 2026-07-26 GAP-EA discharge rows (aism-fbh8): pre-elevation; anchor into report on af validation ---
-lem-extcb-exact-target-correction
 lem-extcb-exact-target-approximation
-lem-maincb-error-improvement
 # --- 2026-07-25 report rescope: off-live-route results, registry records retained ---
 conj-degenerate-payment
 conj-degenerate-transport
@@ -85,7 +34,6 @@ conj-no-free-frontier
 conj-rh
 conj-sc
 conj-skinny-shadow-cap
-cor-kitaev-diagonal-cpization
 ex-hume
 lem-always-tight-dual-support
 lem-canonical-separator
@@ -109,7 +57,6 @@ lem-hx-robust-scalar-starvation
 lem-hx-signed-variation-ledger
 lem-hx-transverse-moment-identity
 lem-import-reduction
-lem-kitaev-diagonal-repair
 lem-leakage
 lem-mass-split
 lem-negpart-subadditive
@@ -118,11 +65,9 @@ lem-pivot-removing-move
 lem-prh-sharpness
 lem-residual-lower
 lem-residual-upper
-lem-routef-k-ledger
 lem-row-far-dual-certificate
 lem-row-zero-capacity
 lem-starvation-completion-obstruction
-lem-thmainext-conditional
 lem-top-concentration
 lem-top-slab-companion
 lem-weighted-min
@@ -134,7 +79,6 @@ obs-height-collapse
 obs-linear-law-finite-delta
 obs-orphan-amplifier
 obs-sigma-halo-nonrobust
-op-classical
 op-exposed-hull
 prop-approx-simplex
 thm-classical-factorization
@@ -293,13 +237,6 @@ op-hlc
 prop-f2-t1-equivalence
 # Stage-1 topology leaves (landed 2026-07-26, phase-4 prerequisites; to be wired
 # into the report with the Stage-1 narrative when phase 4 reaches the paper track)
-lem-topology-quotient-manifold
-lem-topology-finite-triangulation
-lem-topology-lefschetz-hopf
-lem-topology-local-index-sign
-lem-topology-orientable-top-cohomology
-lem-topology-kunneth-cross-product
-lem-topology-hopf-structure
 # Stage-1 polar campaign rows (landed 2026-07-27 per DESIGN-S1-POLAR-v6 sect-9,
 # AUDIT-S1-POLAR-v6 LAND, ratified W78 sect-5 step 2; to be wired into the report
 # with the Stage-1 narrative when phase 4 reaches the paper track).
@@ -327,45 +264,17 @@ lem-topology-hopf-structure
 # 2026-07-29: lem-stage1-approximate-group-laws-transport, lem-stage1-polar-constant-ledger and
 # lem-finite-polyhedron-maximal-simplex-placement af-VALIDATED and WIRED into
 # report/sections/51b_stage1_ledger_keystone.tex; their lines deleted here.
-lem-stage1-uniform-inversion-isolation
-lem-stage1-quotient-manifold-package
-lem-stage1-quotient-finite-cw
-lem-stage1-quotient-left-inversion
-lem-stage1-quotient-inversion-index-data
 # 2026-08-03: the LAND-14 ledger-domains package (14 reserved rows + D2/D3 reconnections)
 # landed as stated/af: none. 2026-08-08: the entire ledger-domains queue is af-VALIDATED (T0);
 # the rows stay whitelisted here only until the aism-9kmt report sync anchors them on the paper track.
-lem-routef-raw-factor-norms
-lem-routef-raw-factor-units
-lem-routef-raw-factor-identities
-lem-routef-raw-product-estimate
-lem-routef-delta-prime-closeness
-lem-routef-delta-normalization-closeness
-lem-routef-degree-two-estimate
-lem-routef-delta-phi-product
-lem-routef-degree-three-estimate
-lem-routef-upsilon-prime-closeness
-lem-routef-upsilon-prime-component-construction
-lem-routef-upsilon-prime-left-inverse
-lem-routef-upsilon-normalization-closeness
-lem-routef-delta-upsilon-telescope
-lem-routef-multiplicative-telescope
-lem-routef-upsilon-delta-telescope
-lem-routef-k-finiteness
-lem-routef-threshold-minimum
 # 2026-08-05: the LEDGER-SETTING-RESCOPE formation row (user-ratified landing,
 # LAND-WITH-EXACT-CORRECTIONS); whitelist until af-validated and anchored.
-lem-routef-raw-factor-setting-formation
 # 2026-08-08: the KLEDGER-STRENGTHENED v2 package (user-ratified; hostile re-audit
 # AUDIT-KLEDGER-STRENGTHENED-V2.md VERDICT LAND): the strengthened lem-routef-k-ledger
 # replacement (entry retained above) plus three helper rows and the F0 assembly.
 # All five af-VALIDATED (T0) later the same day, followed by the user-ratified root
 # discharge of op-classical; rows stay whitelisted only until the report sync
 # (aism-9kmt) anchors/reproduces them on the paper track.
-lem-routef-scalar-header-positivity
-lem-routef-factor-map-packet
-lem-routef-factor-estimate-packet
-lem-routef-f0-assembly
 # 2026-08-08 (W139, user-ratified): the sharpness package — cor-classical-sharpness landed
 # stated/none (whitelisted until its Stage-D report anchoring); ex-hume retracted to
 # disproved (entry retained above as the historical record's whitelist line).

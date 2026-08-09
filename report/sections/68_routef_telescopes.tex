@@ -1,0 +1,183 @@
+% SHARD-ID: AISM-68-ROUTEF-TELESCOPES
+% SHARD-TITLE: Route-F telescopes and the threshold: the three telescope estimates, K-finiteness, and the threshold minimum
+% SHARD-SUMMARY: Reproduces lem-routef-delta-upsilon-telescope, the cb-norm telescope from the normalized factors back to Phi.
+% SHARD-SUMMARY: Reproduces lem-routef-multiplicative-telescope, the amplification-uniform multiplicative-defect estimate. Reproduces lem-routef-upsilon-delta-telescope, the cb-norm estimate for the reverse composite against I_B.
+% SHARD-SUMMARY: Reproduces lem-routef-k-finiteness, the universal finiteness of K and positivity and common-domain role of rho_fac. Reproduces lem-routef-threshold-minimum, the positive scalar cutoff eta_K and its denominator estimates.
+% SHARD-KEYWORDS: Route F, telescope estimates, completely bounded norm, multiplicative defect, universal coefficient, common domain, scalar threshold, af validated
+\section{Route-F telescopes and the threshold: the three telescope estimates, $K$-finiteness, and the threshold minimum}\label{sec:routef-telescopes}
+
+Fix first the single global package $W_{\mathrm{RF}}$ supplied by
+Lemma~\ref{lem:routef-raw-factor-setting-formation}. For each admissible $(H,\Phi,\defect)$,
+fix its datum $S$ from that lemma and then quantify successively over every
+$\Delta'$, $\Delta$, $\Upsilon'$, and $\Upsilon$ supplied by
+Lemmas~\ref{lem:routef-delta-prime-closeness},
+\ref{lem:routef-delta-normalization-closeness},
+\ref{lem:routef-upsilon-prime-closeness}, and
+\ref{lem:routef-upsilon-normalization-closeness}. This is the common nested conditional
+setting below, with the fields of Definition~\ref{def:routef-raw-factor-setting} written
+without qualification; it does not assert that those maps exist outside their provider
+domains. The first three rows telescope the normalized factors, and the last two close the
+coefficient and radius ledger needed by the later factor packets.
+
+\begin{lemma}[\texttt{lem-routef-delta-upsilon-telescope}]\label{lem:routef-delta-upsilon-telescope}
+In the common setting, put
+\[
+ \rho_{\Delta\Upsilon}=\min\{\rho_{\theta},\rho_T,\rho_{\mathrm{id}},
+ \rho_{\Delta},\rho_{\Upsilon}\}.
+\]
+If $0\le\defect\le\rho_{\Delta\Upsilon}$, then
+\[
+ \nrm{\Delta\Upsilon-\Phi}_{\mathrm{cb}}
+ \le (C_{\theta}+C_{\Delta}+2C_{\Upsilon})\defect .
+\]
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).} \contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, every Upsilon' supplied from that same pair by lem-routef-upsilon-prime-closeness, and every Upsilon supplied from that same triple by lem-routef-upsilon-normalization-closeness, writing the fields of (W_RF,S) as the unqualified symbols below: Delta-Upsilon telescope: for rho_DeltaUpsilon := min{rho_theta, rho_T, rho_id, rho_Delta, rho_Upsilon} and 0 <= eta <= rho_DeltaUpsilon, ||Delta Upsilon - Phi||_cb <= (C_theta+C_Delta+2*C_Upsilon)*eta.}
+\paragraph{Proof (prose account of the af-validated tree).}
+The radius minimum places $\defect$ simultaneously in the functional-calculus, raw-factor,
+and two normalization ranges. Thus Lemma~\ref{lem:routef-functional-calculus-closeness}
+gives $\nrm{\widetilde\Phi-\Phi}_{\mathrm{cb}}\le C_{\theta}\defect$;
+Lemma~\ref{lem:routef-raw-factor-identities} gives
+$\widetilde\Delta\widetilde\Upsilon=\widetilde\Phi$; and the two normalization rows give
+$\nrm{\Delta-\widetilde\Delta}_{\mathrm{cb}}\le C_{\Delta}\defect$ and
+$\nrm{\Upsilon-\widetilde\Upsilon}_{\mathrm{cb}}\le C_{\Upsilon}\defect$, with
+$\Upsilon$ UCP and hence $\nrm{\Upsilon}_{\mathrm{cb}}=1$. The norm row gives
+$\nrm{\widetilde\Delta}_{\mathrm{cb}}\le1+C_T\defect$. Since
+$C_T=C_{\theta}+3C_V$ and $\rho_T$ is bounded by both reciprocal ledger entries,
+$C_T\defect\le\tfrac14+\tfrac34=1$, so this norm is at most $2$. At every amplification
+level $q$, the exact identity yields
+\[
+ \Delta_q\Upsilon_q-\Phi_q=(\Delta_q-\widetilde\Delta_q)\Upsilon_q
+ +\widetilde\Delta_q(\Upsilon_q-\widetilde\Upsilon_q)
+ +(\widetilde\Phi_q-\Phi_q).
+\]
+Triangle inequality and submultiplicativity bound the three terms by
+$C_{\Delta}\defect$, $2C_{\Upsilon}\defect$, and $C_{\theta}\defect$; taking the
+supremum over $q$ proves the claim. During construction node 1.3 was amended only to state
+these hypotheses locally; the contract was unchanged. The registry status is
+\texttt{proved}, \texttt{af: validated}.
+
+\begin{lemma}[\texttt{lem-routef-multiplicative-telescope}]\label{lem:routef-multiplicative-telescope}
+In the common setting, let
+$\rho_{\mathrm{mult}}=\min\{\rho_T,\rho_{\mathrm{id}},
+\rho_{\Delta\Phi},\rho_{\Upsilon}\}$. If $0\le\defect\le\rho_{\mathrm{mult}}$, then
+for every $n\ge1$ and $X,Y\in\Mat{n}(S.B)$,
+\[
+ \nrm{\Upsilon_n\bigl(\Delta_n(X)\Delta_n(Y)\bigr)-XY}
+ \le\bigl[C_{\Upsilon}+2(C_2+C_{\theta}+C_{\Delta})\bigr]
+ \defect\nrm{X}\nrm{Y}.
+\]
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).} \contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, every Upsilon' supplied from that same pair by lem-routef-upsilon-prime-closeness, and every Upsilon supplied from that same triple by lem-routef-upsilon-normalization-closeness; for every integer n >= 1 and all X, Y in M_n(S.B), writing the fields of (W_RF,S) as the unqualified symbols below: Multiplicative telescope: for rho_mult := min{rho_T, rho_id, rho_DeltaPhi, rho_Upsilon} and 0 <= eta <= rho_mult, every amplification satisfies ||Upsilon_n(Delta_n X Delta_n Y) - XY|| <= [C_Upsilon+2*(C_2+C_theta+C_Delta)]*eta*||X||*||Y||.}
+\paragraph{Proof (prose account of the af-validated tree).}
+The radius hypotheses activate the raw identities, the $\Delta\Phi$ product estimate, and
+both normalization estimates. The normalized map $\Delta$ is UCP; amplification-level
+Kadison--Schwarz therefore makes every $\Delta_n$ contractive. Hence, for
+$Z=\Delta_n(X)\Delta_n(Y)$, one has $\nrm{Z}\le\nrm{X}\nrm{Y}$. The same scalar
+calculation as above gives $\nrm{\widetilde\Upsilon}_{\mathrm{cb}}\le2$. Set
+$E=\widetilde\Phi_n(Z)-\widetilde\Delta_n(XY)$. Amplifying
+$\widetilde\Delta\widetilde\Upsilon=\widetilde\Phi$ and
+$\widetilde\Upsilon\widetilde\Delta=I_B$ gives
+$\widetilde\Upsilon_n\widetilde\Phi_n=\widetilde\Upsilon_n$ and
+$\widetilde\Upsilon_n\widetilde\Delta_n(XY)=XY$, whence the exact decomposition
+\[
+ \Upsilon_n(Z)-XY=(\Upsilon_n-\widetilde\Upsilon_n)(Z)
+ +\widetilde\Upsilon_n(E).
+\]
+The first term is at most $C_{\Upsilon}\defect\nrm{X}\nrm{Y}$, while
+Lemma~\ref{lem:routef-delta-phi-product} bounds $E$ by
+$(C_2+C_{\theta}+C_{\Delta})\defect\nrm{X}\nrm{Y}$, and the factor norm contributes
+the displayed $2$. A verifier challenged a pending-sibling dependency in the first tree;
+the repair factored the local estimates, identity, and conclusion into nodes 1.3.1--1.3.3,
+which were freshly validated. No contract amendment occurred; status is
+\texttt{proved}, \texttt{af: validated}.
+
+\begin{lemma}[\texttt{lem-routef-upsilon-delta-telescope}]\label{lem:routef-upsilon-delta-telescope}
+In the common setting, put
+$\rho_{\Upsilon\Delta}=\min\{\rho_T,\rho_{\mathrm{id}},\rho_{\Delta},\rho_{\Upsilon}\}$.
+If $0\le\defect\le\rho_{\Upsilon\Delta}$, then
+\[
+ \nrm{\Upsilon\Delta-I_B}_{\mathrm{cb}}
+ \le(C_{\Upsilon}+2C_{\Delta})\defect .
+\]
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).} \contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, every Upsilon' supplied from that same pair by lem-routef-upsilon-prime-closeness, and every Upsilon supplied from that same triple by lem-routef-upsilon-normalization-closeness, writing the fields of (W_RF,S) as the unqualified symbols below: Upsilon-Delta telescope: for rho_UpsilonDelta := min{rho_T, rho_id, rho_Delta, rho_Upsilon} and 0 <= eta <= rho_UpsilonDelta, ||Upsilon Delta - I_B||_cb <= (C_Upsilon+2*C_Delta)*eta.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Unfolding the radius gives access to the raw identity
+$\widetilde\Upsilon\widetilde\Delta=I_B$, the two closeness bounds, and the raw norm
+estimate. Because $\rho_T\le\rho_{\mathrm{id}}^{\mathrm{corr}}$, the identity applies;
+because $\defect\le\rho_{\Delta},\rho_{\Upsilon}$, normalization gives
+$\nrm{\Delta-\widetilde\Delta}_{\mathrm{cb}}\le C_{\Delta}\defect$ and
+$\nrm{\Upsilon-\widetilde\Upsilon}_{\mathrm{cb}}\le C_{\Upsilon}\defect$.
+Moreover $\Delta$ is UCP, so every $\Delta_n$ is contractive. The raw norm bound and the
+two reciprocal entries in $\rho_T$ again imply
+$\nrm{\widetilde\Upsilon}_{\mathrm{cb}}\le1+C_T\defect\le2$. At amplification level
+$n$ there is therefore the exact two-term telescope
+\[
+ (\Upsilon\Delta-I_B)_n=(\Upsilon_n-\widetilde\Upsilon_n)\Delta_n
+ +\widetilde\Upsilon_n(\Delta_n-\widetilde\Delta_n).
+\]
+Its terms have norms at most $C_{\Upsilon}\defect$ and $2C_{\Delta}\defect$,
+uniformly in $n$; the supremum is the claimed cb bound. A verifier found that the original
+supremum node referred to a pending sibling. The repaired tree added an explicit dependent
+child, node 1.2.3.1, and revalidated the closure without changing the contract. The registry
+status is \texttt{proved}, \texttt{af: validated}.
+
+\begin{lemma}[\texttt{lem-routef-k-finiteness}]\label{lem:routef-k-finiteness}
+In the common setting, $K$ in equation~(1.6) of
+Definition~\ref{def:routef-raw-factor-setting} is finite and universal, while
+$\rho_{\mathrm{fac}}$ in equation~(1.7) is positive and is a common domain for
+Lemma~\ref{lem:routef-degree-two-estimate} and the three telescope estimates above.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).} \contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, every Upsilon' supplied from that same pair by lem-routef-upsilon-prime-closeness, and every Upsilon supplied from that same triple by lem-routef-upsilon-normalization-closeness, writing the fields of (W_RF,S) as the unqualified symbols below: Route F common coefficient/domain: K in (1.6) is finite and universal, and rho_fac in (1.7) is positive and is a common domain for the degree-two estimate and the three Route-F factorization estimates.}
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree first fixes the quantifier discipline: the long prefix is a nested conditional
+binder, whereas on $0\le\defect\le\rho_{\mathrm{fac}}$ the radius inequalities activate
+the four providers in sequence. It then expands the scalar ledger serially. The formation
+row makes $C_{\theta},C_A,\overline C_E,C_V,C_T$ finite positive and input-independent,
+and makes every initial radius positive. The operations in equations~(1.2)--(1.5) are only
+finite sums, positive integer multiples, maxima, minima, and reciprocals with positive
+denominators. Consequently $C_{\Delta'},C_{\Delta},C_2,C_3,C_N,C_R,C_L,
+C_{\Upsilon'},C_{\Upsilon}$ remain finite positive and universal, and every derived radius
+through $\rho_{\Upsilon\Delta}$ remains positive. Equation~(1.6) takes a finite maximum
+of expressions in $C_{\theta},C_{\Delta},C_{\Upsilon},C_2$, so $K$ is finite and universal.
+Equation~(1.7) is the minimum of the four positive radii
+$\rho_2,\rho_{\Delta\Upsilon},\rho_{\mathrm{mult}},\rho_{\Upsilon\Delta}$, hence is
+positive. Its order properties put every smaller $\defect$ in the degree-two domain and
+all three telescope domains. A verifier challenged an earlier child that asserted map
+existence throughout the formation range; the repair made the nested-conditional reading
+explicit and proved sequential availability only on the common domain. The contract stayed
+fixed, and the registry records \texttt{proved}, \texttt{af: validated}.
+
+\begin{lemma}[\texttt{lem-routef-threshold-minimum}]\label{lem:routef-threshold-minimum}
+In the common setting, let
+$\defect_K=\min\{\rho_{\mathrm{fac}},(24K)^{-1},1\}$. Then $\defect_K>0$, and every
+$0\le\defect\le\defect_K$ satisfies
+\[
+ \defect\le\rho_{\mathrm{fac}},\qquad
+ 0\le\defect\le\min\{(24K)^{-1},1\},\qquad
+ 3K\defect\le\tfrac18<1,
+\]
+and
+\[
+ \frac{3K\defect}{1-3K\defect}\le4K\defect\le\tfrac16<\tfrac12.
+\]
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).} \contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness, every Upsilon' supplied from that same pair by lem-routef-upsilon-prime-closeness, and every Upsilon supplied from that same triple by lem-routef-upsilon-normalization-closeness, writing the fields of (W_RF,S) as the unqualified symbols below: Route F scalar threshold: let eta_K := min{rho_fac, (24*K)^(-1), 1}; then eta_K > 0, and every 0 <= eta <= eta_K satisfies eta <= rho_fac, 0 <= eta <= min{(24*K)^(-1),1}, 3*K*eta <= 1/8 < 1, and 3*K*eta/(1-3*K*eta) <= 4*K*eta <= 1/6 < 1/2.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Lemma~\ref{lem:routef-k-finiteness} supplies $\rho_{\mathrm{fac}}>0$ and finite universal
+$K$, while equation~(1.6) defines $K$ by a maximum containing $1$, so $K\ge1>0$.
+Thus all three entries in the definition of $\defect_K$ are strictly positive and their
+finite minimum is positive. If $0\le\defect\le\defect_K$, the minimum immediately gives
+$\defect\le\rho_{\mathrm{fac}}$, $\defect\le(24K)^{-1}$, and $\defect\le1$.
+Multiplication by $3K$ and $4K$ yields respectively
+$3K\defect\le1/8<1$ and $4K\defect\le1/6<1/2$. For the remaining comparison put
+$x=3K\defect$. Then $0\le x\le1/8$, so $1-x>0$ and $1-4x\ge1/2$. Since
+$4K\defect=4x/3$, common-denominator arithmetic gives
+\[
+ 4K\defect-\frac{x}{1-x}=\frac{x(1-4x)}{3(1-x)}\ge0,
+\]
+which is the asserted rational bound. The build amended three nodes to make $K\ge1$ and
+their root hypotheses explicit; there was no contract change in that run. At the registry
+level, however, the 2026-08-05 rescope had already replaced an unsupported F2/F3/PRH
+admissibility suffix by exactly these scalar inequalities. This revised contract is the one
+validated here; status is \texttt{proved}, \texttt{af: validated}.

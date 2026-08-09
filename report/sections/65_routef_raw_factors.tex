@@ -1,0 +1,198 @@
+% SHARD-ID: AISM-65-ROUTEF-RAW-FACTORS
+% SHARD-TITLE: Route-F raw factors: setting formation, factor norms, factor identities, the product estimate, and factor units
+% SHARD-SUMMARY: Reproduces lem-routef-raw-factor-setting-formation, which fixes one universal scalar header before all inputs and packages the canonical corrected range with a finite-dimensional C*-algebra factor.
+% SHARD-SUMMARY: Reproduces lem-routef-raw-factor-norms, the amplification-uniform two-sided bounds for the raw inclusion factor and the common cb-norm estimate for both raw factors. Reproduces lem-routef-raw-factor-identities, the two exact composition identities for the raw factor maps.
+% SHARD-SUMMARY: Reproduces lem-routef-raw-product-estimate, the amplification-uniform multiplicative-defect estimate for the raw inclusion factor. Reproduces lem-routef-raw-factor-units, the common linear unit-defect estimate for the two raw factors.
+% SHARD-KEYWORDS: Route F, raw factors, lem-routef-raw-factor-setting-formation, lem-routef-raw-factor-norms, lem-routef-raw-factor-identities, lem-routef-raw-product-estimate, lem-routef-raw-factor-units, af validated, extended isomorphism, cb norm, product defect, unit defect
+\section{Route-F raw factors: setting formation, factor norms, factor identities, the product estimate, and factor units}\label{sec:routef-raw-factors}
+
+This section forms the raw Route-F factorization datum and records its first four consequences.
+Definition~\ref{def:routef-raw-factor-setting} supplies the vocabulary; the first lemma
+supplies existence, and the remaining rows keep its one global scalar header fixed.
+
+\begin{lemma}[\texttt{lem-routef-raw-factor-setting-formation}]\label{lem:routef-raw-factor-setting-formation}
+There is one scalar header $W_{\mathrm{RF}}$, independent of all input, dimension,
+amplification, and block data, with $C_\theta=12(\sqrt2-1)$,
+$C_A=20+\tfrac{211}{8}C_\theta$, and fixed witnesses $\eta_A>0$, $C_E<\infty$,
+$\varepsilon_E>0$ from Lemmas~\ref{lem:routef-ai-defect-linearization} and
+\ref{lem:thmainext-conditional}.  Put $\rho_\theta=\tfrac18$, $\rho_{\mathrm{AI}}=\eta_A$,
+and define the remaining scalars by $(1.1)$--$(1.8)$ of that definition.  If
+$\mathcal H\ne0$ is finite-dimensional, $\Phi:B(\mathcal H)\to B(\mathcal H)$ is UCP, and
+\[
+  0\le\eta\le\rho_{\mathrm{id}}^{\mathrm{corr}},
+  \qquad \nrm{\Phi^2-\Phi}_{\mathrm{cb}}\le\eta,
+\]
+then there are a finite-dimensional unital $C^*$-algebra $B$, an extended
+$C_E\varepsilon_{\mathrm{AI}}(\eta)$-isomorphism $v:B\to\mathcal A$, and a setting datum
+$S$ over this same header, with the canonical fields and $u=v^{-1}$,
+such that $\widetilde\Phi^2=\widetilde\Phi$, $\mathcal A$ is an extended
+$\varepsilon_{\mathrm{AI}}(\eta)$-$C^*$-algebra, and
+$0\le\varepsilon_{\mathrm{AI}}(\eta)\le C_A\eta\le\varepsilon_E$.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Route F raw-factor setting formation: there exists one choice W_RF of the scalar header of def-routef-raw-factor-setting, independent of H, Phi, eta, dimension, amplification level, and block data, with C_theta=12*(sqrt(2)-1), C_A=20+(211/8)*C_theta, eta_A>0 and (C_A,eta_A) the fixed witnesses of lem-routef-ai-defect-linearization, C_E<infinity and epsilon_E>0 the fixed witnesses of lem-thmainext-conditional, rho_theta:=1/8, rho_AI:=eta_A, and all remaining named scalar quantities defined by (1.1)-(1.8), such that for every nonzero finite-dimensional Hilbert space H, every UCP map Phi:B(H)->B(H), and every eta with 0 <= eta <= rho_id^corr and ||Phi^2-Phi||_cb <= eta, there exist a finite-dimensional unital C*-algebra B, an extended C_E*epsilon_AI(eta)-isomorphism v:B->A, and a def-routef-raw-factor-setting datum S over this same W_RF whose fields are the displayed H,Phi,eta,B,v,u=v^(-1) and the canonical tilde-Phi,A,star,epsilon_AI(eta),tilde-Delta,tilde-Upsilon notation, with tilde-Phi^2=tilde-Phi, A an extended epsilon_AI(eta)-C*-algebra, and 0 <= epsilon_AI(eta) <= C_A*eta <= epsilon_E.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Choose once $(C_A,\eta_A)$ from Lemma~\ref{lem:routef-ai-defect-linearization} and
+$(C_E,\varepsilon_E)$ from Lemma~\ref{lem:thmainext-conditional}, before every input
+quantifier.  The tree assembles $W_{\mathrm{RF}}$ in order $(1.1)$--$(1.8)$; its
+denominators are positive because
+$C_A=20+\tfrac{211}{8}\,12(\sqrt2-1)>0$, $\eta_A,\varepsilon_E>0$, and
+$\overline C_E=\max\{1,C_E\}\ge1$, so the header is universal and well typed.
+
+For admissible $(\mathcal H,\Phi,\eta)$, the corrected radius gives
+$\eta\le\tfrac18<\tfrac14$, $\eta\le\eta_A$, and $C_A\eta\le\varepsilon_E$.
+Lemma~\ref{lem:kitaev-almost-idemp-audit} makes the canonical $\widetilde\Phi$
+idempotent; Lemma~\ref{lem:routef-ai-defect-linearization} gives the extended
+$\varepsilon_{\mathrm{AI}}(\eta)$-$C^*$ structure and its nonnegative defect with
+$\varepsilon_{\mathrm{AI}}(\eta)\le C_A\eta$.  Since $B(\mathcal H)$ is
+finite-dimensional, so is $\mathcal A=\Img(\widetilde\Phi)$.
+
+Lemma~\ref{lem:thmainext-conditional} now supplies $B$ and the extended
+$C_E\varepsilon_{\mathrm{AI}}(\eta)$-isomorphism $v:B\to\mathcal A$.
+Bijectivity gives $u=v^{-1}$, and the canonical compositions package these outputs into
+$S$ over the fixed header without reselecting a global witness.  Generalization closes
+the quantifier order.  The registry records this as the user-ratified 2026-08-05
+setting-rescope formation, not as a conclusion inferred from the data definition alone.
+
+\begin{lemma}[\texttt{lem-routef-raw-factor-norms}]\label{lem:routef-raw-factor-norms}
+Fix the global $W_{\mathrm{RF}}$ and, for an admissible input, a supplied datum $S$.
+For $n\ge1$, $X\in M_n(B)$, and $0\le\eta\le\rho_T$, the scalars of $(1.1)$ satisfy
+\[
+ (1-C_V\eta)\nrm X\le\nrm{\widetilde\Delta_nX}
+ \le(1+C_V\eta)\nrm X,
+ \qquad
+ \max\{\nrm{\widetilde\Delta}_{\mathrm{cb}},
+          \nrm{\widetilde\Upsilon}_{\mathrm{cb}}\}\le1+C_T\eta.
+\]
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result; for every integer n >= 1 and every X in M_n(S.B), writing the fields of (W_RF,S) as the unqualified symbols below: Raw factor-map norms: with C_V, C_T, rho_T from (1.1), for 0 <= eta <= rho_T, every amplification satisfies (1-C_V*eta)*||X|| <= ||tilde-Delta_n X|| <= (1+C_V*eta)*||X|| and max{||tilde-Delta||_cb, ||tilde-Upsilon||_cb} <= 1+C_T*eta.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Put $d=C_E\varepsilon_{\mathrm{AI}}(\eta)$.  Formation and linearization give
+$0\le d\le\overline C_EC_A\eta=C_V\eta$, and the conditional structure theorem gives
+the extended $d$-isomorphism $v$ carried by $S$.  At every amplification,
+Definition~\ref{def:extended-delta-inclusion} gives
+$(1-d)\nrm X\le\nrm{v_nX}\le(1+d)\nrm X$.  Since
+$\widetilde\Delta$ is $v$ followed by the isometric inclusion into $B(\mathcal H)$,
+enlarging $d$ to $C_V\eta$ proves the two-sided factor estimate and
+$\nrm{\widetilde\Delta}_{\mathrm{cb}}\le1+C_V\eta$.
+
+For the inverse branch, amplified Kadison--Schwarz gives $\nrm\Phi_{\mathrm{cb}}\le1$.
+Because $\rho_T\le\rho_\theta=\tfrac18$,
+Lemma~\ref{lem:routef-functional-calculus-closeness} yields
+$\nrm{\widetilde\Phi}_{\mathrm{cb}}\le1+C_\theta\eta$.
+The lower bound for every bijective $v_n$, together with $C_V\eta\le\tfrac14$,
+gives $\nrm{v_n^{-1}}\le(1-C_V\eta)^{-1}$.  Thus
+\[
+ \nrm{\widetilde\Upsilon}_{\mathrm{cb}}
+ \le\frac{1+C_\theta\eta}{1-C_V\eta}.
+\]
+Writing $a=C_\theta\eta$, $b=C_V\eta$, the radius guards give $0\le a,b\le\tfrac14$ and
+$1+a+3b-(1+a)/(1-b)=b(2-a-3b)/(1-b)\ge0$.  Thus the quotient is at most
+$1+(C_\theta+3C_V)\eta=1+C_T\eta$, and $C_V\le C_T$ finishes the estimate.
+The validated repairs made the ambient hypotheses and dependency children explicit,
+and replaced a false strict dimension bound by the correct non-strict rank bound.
+
+\begin{lemma}[\texttt{lem-routef-raw-factor-identities}]\label{lem:routef-raw-factor-identities}
+With the same fixed-header convention, for
+$0\le\eta\le\rho_{\mathrm{id}}^{\mathrm{corr}}
+=\min\{\rho_\theta,\rho_{\mathrm{AI}},\varepsilon_E/C_A\}$ one has
+\[
+ \widetilde\Delta\widetilde\Upsilon=\widetilde\Phi,
+ \qquad
+ \widetilde\Upsilon\widetilde\Delta=I_B.
+\]
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, writing the fields of (W_RF,S) as the unqualified symbols below: Raw factor-map identities: for 0 <= eta <= rho_id^corr := min{rho_theta, rho_AI, epsilon_E/C_A}, tilde-Delta tilde-Upsilon = tilde-Phi and tilde-Upsilon tilde-Delta = I_B.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Formation gives $\mathcal A=\Img(\widetilde\Phi)$, $\widetilde\Phi^2=\widetilde\Phi$,
+$u=v^{-1}$,
+$\widetilde\Delta=\iota_{\mathcal A\subseteq B(\mathcal H)}v$, and
+$\widetilde\Upsilon=u\widetilde\Phi$.  Thus for $x\in B(\mathcal H)$,
+\[
+ (\widetilde\Delta\widetilde\Upsilon)(x)
+ =\iota\,v(u(\widetilde\Phi(x)))=\widetilde\Phi(x),
+\]
+because $\widetilde\Phi(x)\in\mathcal A$ and $vu=I_{\mathcal A}$.  This gives the
+first identity.  For $b\in B$, the other composition is
+$u(\widetilde\Phi(\iota v(b)))$.  Every $a\in\mathcal A$ has the form
+$a=\widetilde\Phi(x)$, so idempotence gives
+$\widetilde\Phi(a)=a$ after the canonical inclusion: the projector restricts to
+$I_{\mathcal A}$ on its range.  At $v(b)$ the expression is $u(v(b))=b$, so
+extensionality yields $\widetilde\Upsilon\widetilde\Delta=I_B$.  The proof uses the
+supplied datum throughout; the 2026-08-05 rescope changed only the ambient binding
+prefix that makes this datum and its fixed global header explicit.
+
+\begin{lemma}[\texttt{lem-routef-raw-product-estimate}]\label{lem:routef-raw-product-estimate}
+With the same fixed-header convention, for $n\ge1$, $X,Y\in M_n(B)$, and
+$0\le\eta\le\rho_{\mathrm{prod}}:=\rho_T$,
+\[
+ \nrm{\widetilde\Phi_n(\widetilde\Delta_nX\,\widetilde\Delta_nY)
+       -\widetilde\Delta_n(XY)}
+ \le C_T\eta\nrm X\nrm Y.
+\]
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result; for every integer n >= 1 and all X, Y in M_n(S.B), writing the fields of (W_RF,S) as the unqualified symbols below: Raw tilde-Delta-product estimate: for 0 <= eta <= rho_prod := rho_T, every amplification and all X, Y satisfy ||tilde-Phi_n(tilde-Delta_n X tilde-Delta_n Y) - tilde-Delta_n(XY)|| <= C_T*eta*||X||*||Y||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Again set $d=C_E\varepsilon_{\mathrm{AI}}(\eta)$.  Formation makes
+$v:B\to\mathcal A$ an extended $d$-isomorphism and gives
+$d\le\overline C_EC_A\eta=C_V\eta$.  At level $n$, the homomorphism clause in
+the underlying extended inclusion therefore says
+\[
+ \nrm{v_n(XY)-v_n(X)\star_n v_n(Y)}\le d\nrm X\nrm Y.
+\]
+Under $\mathcal A\subseteq B(\mathcal H)$, $v_n(XY)=\widetilde\Delta_n(XY)$.
+Entrywise matrix multiplication, linearity of $\widetilde\Phi$, and
+$a\star b=\widetilde\Phi(ab)$ identify the other term with
+$\widetilde\Phi_n(\widetilde\Delta_nX\,\widetilde\Delta_nY)$.
+The inherited norm is the ambient norm, so reversing the difference changes nothing.
+Finally $C_T=C_\theta+3C_V\ge C_V$ gives $d\le C_T\eta$, uniformly in $n$.
+
+A verifier challenged the original branch because the permitted inputs had not made
+the base multiplicative-defect clause available.  The repaired tree provisioned the
+byte-verbatim external \texttt{GT-kitaev-def-delta-homomorphism}, then rebuilt and freshly
+validated the two children invoking that clause.  The statement itself was unchanged.
+
+\begin{lemma}[\texttt{lem-routef-raw-factor-units}]\label{lem:routef-raw-factor-units}
+With the same fixed-header convention, for
+$0\le\eta\le\rho_{\mathrm{unit}}:=\rho_T$,
+\[
+ \max\{\nrm{\widetilde\Delta(e_B)-I},
+          \nrm{\widetilde\Upsilon(I)-e_B}\}\le C_T\eta,
+\]
+where $e_B$ is the unit element of $B$ and $I$ is the ambient unit; this is the
+type-forced reading of the unsubscripted units in the registry contract.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, writing the fields of (W_RF,S) as the unqualified symbols below: Raw factor-map units: for 0 <= eta <= rho_unit := rho_T, max{||tilde-Delta(I)-I||, ||tilde-Upsilon(I)-I||} <= C_T*eta.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Put $b=C_V\eta$.  The radius guard gives $b\le C_V/[4(1+C_V)]\le\tfrac14$, while
+$C_T=C_\theta+3C_V$ gives $C_V\le C_T$ and $3C_V\le C_T$.
+For $d=C_E\varepsilon_{\mathrm{AI}}(\eta)$, formation gives an extended $d$-isomorphism
+$v:B\to\mathcal A$ and $d\le\overline C_EC_A\eta=C_V\eta$.  The ground-truth unit
+clause for its underlying $d$-homomorphism gives $\nrm{v(e_B)-I}\le d$.  Since the
+inclusion of $\mathcal A$ is isometric,
+\[
+ \nrm{\widetilde\Delta(e_B)-I}\le C_V\eta\le C_T\eta.
+\]
+
+For the inverse factor, Lemma~\ref{lem:routef-raw-factor-norms} at level one gives
+$\nrm{v(x)}\ge(1-b)\nrm x$, hence $\nrm u\le(1-b)^{-1}$.  The ambient unit lies in
+$\mathcal A=\Img(\widetilde\Phi)$ and idempotence gives
+$\widetilde\Phi(I)=I$.  Therefore
+\[
+ \widetilde\Upsilon(I)-e_B=u(I)-u(v(e_B))=u(I-v(e_B)),
+\]
+so its norm is at most $b/(1-b)\le\tfrac43b\le3C_V\eta\le C_T\eta$.
+
+The verifier history records two repairs.  Because $I_B$ denotes the identity \emph{map},
+the proof replaced ill-typed $v(I_B)$ by $v(e_B)$ while retaining the contract's
+type-forced notation.  The unit-defect estimate was also absent from the permitted inputs;
+the byte-verbatim \texttt{GT-kitaev-def-delta-homomorphism} external supplied it.
+An intermediate blocking child and its $v=-I$ countermodel were superseded because $-I$
+violates the newly available unit and multiplicativity clauses; the repaired branches
+were freshly validated.

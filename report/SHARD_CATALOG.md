@@ -425,3 +425,169 @@ verbatim), and keywords.
 - **Summary:** Records what this report validates and where the live route now stops: the T0 MAIN/ledger state and the stated K-ledger/helper/F0 frontier.
 - **Summary:** Tabulates the validated registry results not reproduced on the live route, with every row traced to the generated argument index.
 - **Keywords:** status, outlook, conj-hcb, conj-extcb, lem-thmainext-conditional, k-ledger frontier, registry index, live route, off-route table
+
+## `AISM-52-MAINCB-RAW-CALL-CHAIN`
+- **File:** `report/sections/52_maincb_raw_call_chain.tex`
+- **Title:** The MAIN-CB raw-call chain: initial inclusion, one-step improvement, iteration, and the corner envelope
+- **Summary:** Reproduces lem-maincb-initial-raw-inclusion, the universal scalar extended inclusion and its one-dimensional bijectivity clause.
+- **Summary:** Reproduces lem-maincb-improvement-one-step, the diagonal-averaged correction that replaces an extended d-inclusion by an amplified level-one correction with defect O(d^2+epsilon). Reproduces lem-maincb-improvement-iteration, the finite positive-epsilon descent to the O(epsilon) floor and the zero-epsilon operator-norm limit.
+- **Summary:** Reproduces lem-maincb-error-improvement, the complete small-error replacement and its preservation of bijectivity. Reproduces lem-extcb-exact-target-correction, the norm-one-diagonal Newton correction to a single unital dagger-homomorphism into B(H). Reproduces lem-maincb-direct-corner-envelope, the uniform projection, corner-algebra, subordination, and complementarity bounds attached directly to one map w.
+- **Keywords:** MAIN-CB, raw call, extended inclusion, one-step improvement, Newton iteration, exact target, corner envelope, af validated
+
+## `AISM-53-MAINCB-CORNER-IDENTIFICATION`
+- **File:** `report/sections/53_maincb_corner_identification.tex`
+- **Title:** MAIN-CB corner identification: merges, nested comparison, dimension transport, and corner equivalence
+- **Summary:** Reproduces lem-maincb-direct-sum-inclusion-merge, the dimension-free two-corner sum inclusion with its precisely conditional bijectivity clause.
+- **Summary:** Reproduces lem-maincb-full-corner-identification, the rigidity statement identifying a corner near the ambient unit with the full algebra at every amplification. Reproduces lem-maincb-nested-corner-comparison, the two-directional amplified telescope between an ambient corner and its compression inside a nonvanishing outer corner.
+- **Summary:** Reproduces lem-maincb-nested-corner-dimension-transport, the finite-dimensional equality obtained from the two comparison injections. Reproduces lem-maincb-outer-compression-transfer, the transport of an extended isomorphism through two exact amplified compressions. Reproduces lem-maincb-corner-equivalence, the equivalence relation on one-dimensional projections detected by one-dimensional cross-corners.
+- **Keywords:** MAIN-CB, corner identification, direct sum, nested corners, dimension transport, outer compression, one-dimensional corners, af validated
+
+## `AISM-54-MAINCB-STAGE-EXTENSIONS`
+- **File:** `report/sections/54_maincb_stage_extensions.tex`
+- **Title:** MAIN-CB stage raw moves: cross-union zero corners, the stage-1 refinement, stage-2 extension, stage-3 merge, and the stage-2 EXT-CB datum
+- **Summary:** Reproduces lem-maincb-cross-union-zero-corners, which turns separation of equivalence classes into vanishing ambient and nested cross-union corners.
+- **Summary:** Reproduces lem-maincb-stage1-raw-refinement, the old/fresh direct-sum move with its separate degenerate m=1 branch. Reproduces lem-maincb-stage2-raw-extension, which applies EXT-CB and unit control to a closed Stage-2 datum at ledger-compatible scales.
+- **Summary:** Reproduces lem-maincb-stage3-raw-merge, which converts the amplified four-corner datum into a controlled isomorphism with a quantitative unit estimate. Reproduces lem-maincb-stage2-extcb-datum, the non-vacuous assembly of the compressed Stage-2 EXT-CB input from a partition state and reset state.
+- **Keywords:** MAIN-CB, lem-maincb-cross-union-zero-corners, lem-maincb-stage1-raw-refinement, lem-maincb-stage2-raw-extension, lem-maincb-stage3-raw-merge, lem-maincb-stage2-extcb-datum, af validated, compressed corners, EXT-CB, raw calls
+
+## `AISM-55-MAINCB-BRIDGES`
+- **File:** `report/sections/55_maincb_bridges.tex`
+- **Title:** MAIN-CB interface bridges: unit control, witness arithmetic, unit comparison, bijectivity, the merging datum, and inclusion monotonicity
+- **Summary:** Reproduces lem-maincb-isomorphism-unit-control, the dimension-free level-one unit estimate for an extended approximate isomorphism.
+- **Summary:** Reproduces lem-maincb-witness-arithmetic, the finite max--min construction of one universal MAIN-CB witness ledger. Reproduces lem-maincb-compressed-corner-unit-comparison, the amplified comparison between compressed units and their defining projections, including the outer-compressed telescope.
+- **Summary:** Reproduces lem-maincb-cross-datum-bijectivity, the bijectivity of all four fixed level-one maps in the Stage-3 cross-class datum. Reproduces lem-maincb-cross-class-merging-datum, the explicit amplified four-corner datum assembled from nested, outer-compressed, unit, and zero-cross-corner constructions. Reproduces lem-maincb-extended-inclusion-monotone, the defect-parameter monotonicity of extended inclusions and isomorphisms.
+- **Keywords:** MAIN-CB, lem-maincb-isomorphism-unit-control, lem-maincb-witness-arithmetic, lem-maincb-compressed-corner-unit-comparison, lem-maincb-cross-datum-bijectivity, lem-maincb-cross-class-merging-datum, lem-maincb-extended-inclusion-monotone, af validated, unit control, witness ledger, four-corner merging
+
+## `AISM-56-MAINCB-RESET-LEDGERS`
+- **File:** `report/sections/56_maincb_reset_ledgers.tex`
+- **Title:** MAIN-CB reset states and ledgers: invariant preservation, the constant and structural-domain ledgers, and reset output typing
+- **Summary:** Reproduces lem-maincb-reset-invariant-preservation, which keeps one literal iterated map, its amplification family, its near-unit estimate, and its conditional bijectivity through a reset.
+- **Summary:** Reproduces lem-maincb-reset-constant-ledger, which selects one dimension-free MAIN-CB witness ledger and makes all four raw-call producers eligible for the same reset theorem.
+- **Summary:** Reproduces lem-maincb-structural-domain-ledger, which places the global, atomic, and three stage scales inside every recorded structural domain and the half-unit window. Reproduces lem-maincb-reset-output-typing, which types the single error-improved reset output as an extended inclusion, and as an extended isomorphism when the raw map is bijective.
+- **Keywords:** lem-maincb-reset-invariant-preservation, lem-maincb-reset-constant-ledger, lem-maincb-structural-domain-ledger, lem-maincb-reset-output-typing, MAIN-CB, reset state, witness ledger, constant ledger, structural domains, extended inclusion, af validated
+
+## `AISM-57-MAINCB-CALL-ENVELOPES`
+- **File:** `report/sections/57_maincb_call_envelopes.tex`
+- **Title:** The three MAIN-CB call envelopes: stage 1, stage 2, and stage 3
+- **Summary:** Reproduces lem-maincb-stage1-call-envelope, the universal Stage-1 scale selection and its separate multi-atom and one-atom constructions of the literal raw call.
+- **Summary:** Reproduces lem-maincb-stage2-call-envelope, the same-class one-point extension envelope with its recorded target ambient field and dominated EXT-CB datum.
+- **Summary:** Reproduces lem-maincb-stage3-call-envelope, the cross-class union envelope that packages two reset isomorphisms into the controlled four-corner merging datum.
+- **Keywords:** lem-maincb-stage1-call-envelope, lem-maincb-stage2-call-envelope, lem-maincb-stage3-call-envelope, MAIN-CB, call envelope, raw call, witness ledger, corner compression, EXT-CB, four-corner merge, af validated
+
+## `AISM-58-MAINCB-SELECTION`
+- **File:** `report/sections/58_maincb_selection.tex`
+- **Title:** MAIN-CB selection rows: initial reset inclusion, maximal reset selection, strict refinement, stage-1 maximality, and corner nontriviality
+- **Summary:** Reproduces lem-maincb-initial-reset-inclusion, which resets the scalar raw inclusion to the witness-ledger defect while preserving its near-unit bound.
+- **Summary:** Reproduces lem-maincb-maximal-reset-selection, which obtains a maximum admissible scalar-source dimension from the positive lower norm and finite-dimensionality. Reproduces lem-maincb-stage1-strict-refinement, which turns any corner of dimension greater than one into an admissible inclusion with one additional scalar summand.
+- **Summary:** Reproduces lem-maincb-stage1-maximality, which combines strict refinement with corner nontriviality to force every selected corner to be one-dimensional. Reproduces lem-maincb-corner-nontriviality, which derives projection control and a nonzero compressed-corner unit from the fixed MAIN-CB ledger.
+- **Keywords:** MAIN-CB, reset inclusion, maximal selection, strict refinement, stage-1 maximality, corner nontriviality, witness ledger, af validated
+
+## `AISM-59-MAINCB-ASSEMBLY`
+- **File:** `report/sections/59_maincb_assembly.tex`
+- **Title:** The MAIN-CB assembly: one-class extension, binary block merge, stage-3 finite recombination, and the structural assembly
+- **Summary:** Reproduces lem-maincb-one-class-extension, the reset-preserving finite extension from one atomic image to one full equivalence class.
+- **Summary:** Reproduces lem-maincb-binary-block-merge, the typed Stage-3 merge of two disjoint unions that share no equivalence class.
+- **Summary:** Reproduces lem-maincb-stage3-finite-recombination, the finite induction that recombines all classwise reset isomorphisms. Reproduces lem-maincb-structural-assembly, the capstone assembling a finite-dimensional C*-algebra and a dimension-free extended isomorphism onto the ambient algebra.
+- **Keywords:** lem-maincb-one-class-extension, lem-maincb-binary-block-merge, lem-maincb-stage3-finite-recombination, lem-maincb-structural-assembly, MAIN-CB, af validated, reset isomorphism, block merge, finite recombination, structural assembly
+
+## `AISM-60-STAGE1-ENDGAME-COHOMOLOGY`
+- **File:** `report/sections/60_stage1_endgame_cohomology.tex`
+- **Title:** S1-ENDGAME cohomological rows: the H-space coproduct tail, exterior cohomology, and the left-inversion associated graded and trace
+- **Summary:** Reproduces lem-stage1-hspace-coproduct-tail, the finite-dimensional real cohomology algebra and its positive-positive coproduct tail.
+- **Summary:** Reproduces lem-stage1-exterior-cohomology, the exterior-algebra description on finitely many odd positive-degree generators.
+- **Summary:** Reproduces lem-stage1-left-inversion-associated-graded, the filtration-preserving action of a left inversion on the associated graded. Reproduces lem-stage1-left-inversion-trace, the resulting degreewise trace formula for the left inversion.
+- **Keywords:** lem-stage1-hspace-coproduct-tail, lem-stage1-exterior-cohomology, lem-stage1-left-inversion-associated-graded, lem-stage1-left-inversion-trace, af validated, H-space, coproduct, exterior algebra, associated graded, trace
+
+## `AISM-61-STAGE1-ENDGAME-BOUNDS`
+- **File:** `report/sections/61_stage1_endgame_bounds.tex`
+- **Title:** S1-ENDGAME bound rows: quotient left inversion, quotient local index, inversion isolation, and quotient index data
+- **Summary:** Reproduces lem-stage1-bound-quotient-left-inversion, the parameterized quotient H-space and smooth-left-inversion package at the common bound epsilon_B^r.
+- **Summary:** Reproduces lem-stage1-bound-quotient-local-index, the same-map ambient-chart package and the positive local index of the quotient inversion at [J].
+- **Summary:** Reproduces lem-stage1-bound-inversion-isolation, which upgrades quotient isolation to uniqueness of the actual inversion fixed points J and -J in uniform ambient balls. Reproduces lem-stage1-bound-quotient-index-data, adjoining finite simplicial type and the phase lift of every fixed quotient class to a pair of actual fixed representatives.
+- **Keywords:** lem-stage1-bound-quotient-left-inversion, lem-stage1-bound-quotient-local-index, lem-stage1-bound-inversion-isolation, lem-stage1-bound-quotient-index-data, af validated, Stage 1, quotient H-space, smooth left inversion, local index, fixed-point isolation, finite simplicial complex
+
+## `AISM-62-STAGE1-ENDGAME-FIXED-CLASSES`
+- **File:** `report/sections/62_stage1_endgame_fixed_classes.tex`
+- **Title:** S1-ENDGAME fixed-class rows: the extra fixed class, the projection bridges, the complementary pair, and the fresh two-point inclusion
+- **Summary:** Reproduces lem-stage1-extra-fixed-class, the one-ledger fixed-class argument that combines quotient topology, Lefschetz--Hopf, and the left-inversion trace to obtain a phase-corrected fixed unitary away from both scalar classes.
+- **Summary:** Reproduces lem-stage1-fixed-unitary-projection-bridge, which averages that fixed unitary with its adjoint to obtain a nontrivial projection in the rectified exact-unit product. Reproduces lem-stage1-rectified-nontrivial-projection, which transfers the rectified projection and both nonvanishing bounds back to the original extended epsilon-C*-algebra.
+- **Summary:** Reproduces lem-stage1-original-complementary-pair, the original-product complementary pair with controlled projection defects and cross-products. Reproduces lem-stage1-fresh-two-point-inclusion, the completely uniform two-point inclusion built from the complementary pair and its canonical matrix amplifications.
+- **Keywords:** lem-stage1-extra-fixed-class, lem-stage1-fixed-unitary-projection-bridge, lem-stage1-rectified-nontrivial-projection, lem-stage1-original-complementary-pair, lem-stage1-fresh-two-point-inclusion, af validated, fixed class, Lefschetz number, nontrivial projection, complementary pair, extended inclusion, Stage 1
+
+## `AISM-63-TOPOLOGY-TOOLBOX`
+- **File:** `report/sections/63_topology_toolbox.tex`
+- **Title:** The algebraic-topology toolbox: quotient manifolds, triangulation, Lefschetz--Hopf, local index sign, orientable top cohomology, Kunneth, and Hopf structure
+- **Summary:** Reproduces lem-topology-quotient-manifold, the quotient-manifold theorem for smooth free proper Lie-group actions.
+- **Summary:** Reproduces lem-topology-finite-triangulation, the finite-triangulation consequence for compact smooth manifolds without boundary. Reproduces lem-topology-lefschetz-hopf, the maximal-simplex form of the Lefschetz--Hopf fixed-point formula. Reproduces lem-topology-local-index-sign, the determinant-sign formula for a nondegenerate local fixed-point index.
+- **Summary:** Reproduces lem-topology-orientable-top-cohomology, the nonvanishing of real top cohomology for a closed connected orientable manifold. Reproduces lem-topology-kunneth-cross-product, the cohomological Kunneth ring isomorphism and its finite-CW real-field specialization. Reproduces lem-topology-hopf-structure, the finite-dimensional exterior-algebra corollary of the characteristic-zero Hopf structure theorem.
+- **Keywords:** algebraic topology, quotient manifold, finite triangulation, Lefschetz--Hopf, local fixed-point index, orientability, top cohomology, Kunneth theorem, Hopf algebra, af validated
+
+## `AISM-64-STAGE1-QUOTIENT-PACKAGE`
+- **File:** `report/sections/64_stage1_quotient_package.tex`
+- **Title:** The Stage-1 quotient package: uniform inversion isolation, the quotient manifold package, finite CW structure, quotient left inversion, and quotient index data
+- **Summary:** Reproduces lem-stage1-uniform-inversion-isolation, which isolates the two actual fixed points of the smooth inversion uniformly near J and -J.
+- **Summary:** Reproduces lem-stage1-quotient-manifold-package, which makes the scalar quotient a connected compact orientable smooth manifold of dimension N-1. Reproduces lem-stage1-quotient-finite-cw, which triangulates the compact smooth quotient and gives it finite CW type.
+- **Summary:** Reproduces lem-stage1-quotient-left-inversion, which descends the Stage-1 operations and paths to a connected H-space with smooth left inversion. Reproduces lem-stage1-quotient-inversion-index-data, which isolates the scalar fixed class and computes its local index as +1.
+- **Keywords:** lem-stage1-uniform-inversion-isolation, lem-stage1-quotient-manifold-package, lem-stage1-quotient-finite-cw, lem-stage1-quotient-left-inversion, lem-stage1-quotient-inversion-index-data, af validated, Stage 1, scalar quotient, H-space, local fixed-point index
+
+## `AISM-65-ROUTEF-RAW-FACTORS`
+- **File:** `report/sections/65_routef_raw_factors.tex`
+- **Title:** Route-F raw factors: setting formation, factor norms, factor identities, the product estimate, and factor units
+- **Summary:** Reproduces lem-routef-raw-factor-setting-formation, which fixes one universal scalar header before all inputs and packages the canonical corrected range with a finite-dimensional C*-algebra factor.
+- **Summary:** Reproduces lem-routef-raw-factor-norms, the amplification-uniform two-sided bounds for the raw inclusion factor and the common cb-norm estimate for both raw factors. Reproduces lem-routef-raw-factor-identities, the two exact composition identities for the raw factor maps.
+- **Summary:** Reproduces lem-routef-raw-product-estimate, the amplification-uniform multiplicative-defect estimate for the raw inclusion factor. Reproduces lem-routef-raw-factor-units, the common linear unit-defect estimate for the two raw factors.
+- **Keywords:** Route F, raw factors, lem-routef-raw-factor-setting-formation, lem-routef-raw-factor-norms, lem-routef-raw-factor-identities, lem-routef-raw-product-estimate, lem-routef-raw-factor-units, af validated, extended isomorphism, cb norm, product defect, unit defect
+
+## `AISM-66-ROUTEF-NORMALIZATION-CLOSENESS`
+- **File:** `report/sections/66_routef_normalization_closeness.tex`
+- **Title:** Route-F normalization closeness: the Delta-prime and normalization estimates, the degree-two and degree-three estimates, and the Delta-Phi product
+- **Summary:** Reproduces lem-routef-delta-prime-closeness, which averages the repaired norm-one diagonal to obtain a completely positive map Delta-prime within (C_T+4C_theta)eta of the raw factor map.
+- **Summary:** Reproduces lem-routef-delta-normalization-closeness, which normalizes Delta-prime by its positive value at the unit and records the resulting UCP closeness estimate. Reproduces lem-routef-degree-two-estimate, the amplification-uniform quadratic product estimate for the normalized factor map.
+- **Summary:** Reproduces lem-routef-delta-phi-product, the three-term telescope comparing the normalized Delta product under tilde-Phi with tilde-Delta of the product. Reproduces lem-routef-degree-three-estimate, the amplification-uniform cubic estimate obtained from one-factor invariance, the audited associativity bound, and two quadratic estimates.
+- **Keywords:** lem-routef-delta-prime-closeness, lem-routef-delta-normalization-closeness, lem-routef-degree-two-estimate, lem-routef-delta-phi-product, lem-routef-degree-three-estimate, af validated, Route F, completely positive map, UCP normalization, degree-two estimate, degree-three estimate, Delta-Phi product
+
+## `AISM-67-ROUTEF-UPSILON`
+- **File:** `report/sections/67_routef_upsilon.tex`
+- **Title:** Route-F Upsilon rows: component construction, the left inverse, and the two closeness estimates
+- **Summary:** Reproduces lem-routef-upsilon-prime-component-construction, the finite-dimensional Stinespring, Weyl-twirl, and compression package defining the completely positive component map.
+- **Summary:** Reproduces lem-routef-upsilon-prime-left-inverse, the amplification-uniform component estimate and direct-sum completely bounded left-inverse bound.
+- **Summary:** Reproduces lem-routef-upsilon-prime-closeness, the completely bounded comparison of the componentwise map with the raw factor map. Reproduces lem-routef-upsilon-normalization-closeness, the positive-unit normalization to a UCP map and its completely bounded closeness estimate.
+- **Keywords:** Route F, Upsilon prime, component construction, Weyl twirl, Choi multiplicity, left inverse, completely bounded norm, UCP normalization, af validated
+
+## `AISM-68-ROUTEF-TELESCOPES`
+- **File:** `report/sections/68_routef_telescopes.tex`
+- **Title:** Route-F telescopes and the threshold: the three telescope estimates, K-finiteness, and the threshold minimum
+- **Summary:** Reproduces lem-routef-delta-upsilon-telescope, the cb-norm telescope from the normalized factors back to Phi.
+- **Summary:** Reproduces lem-routef-multiplicative-telescope, the amplification-uniform multiplicative-defect estimate. Reproduces lem-routef-upsilon-delta-telescope, the cb-norm estimate for the reverse composite against I_B.
+- **Summary:** Reproduces lem-routef-k-finiteness, the universal finiteness of K and positivity and common-domain role of rho_fac. Reproduces lem-routef-threshold-minimum, the positive scalar cutoff eta_K and its denominator estimates.
+- **Keywords:** Route F, telescope estimates, completely bounded norm, multiplicative defect, universal coefficient, common domain, scalar threshold, af validated
+
+## `AISM-70-ROUTEF-KLEDGER-PACKAGE`
+- **File:** `report/sections/70_routef_kledger_package.tex`
+- **Title:** The strengthened K-ledger package: scalar header positivity, the factor-map and factor-estimate packets, and the strengthened K-ledger
+- **Summary:** Reproduces lem-routef-scalar-header-positivity, which fixes one pre-input global Route-F witness package and proves positivity, finiteness, universality, and the complete radius chain for its scalar header.
+- **Summary:** Reproduces lem-routef-factor-map-packet, which constructs one serially compatible same-datum packet of CP and UCP factor maps for the diagonal lift of a stochastic input.
+- **Summary:** Reproduces lem-routef-factor-estimate-packet, which places the three factor estimates under one coefficient K and records the threshold arithmetic needed by the finish. Reproduces lem-routef-k-ledger, the strengthened factorization-and-finish ledger yielding the stochastic idempotent with error (K+4*sqrt(2K))*sqrt(eta).
+- **Keywords:** lem-routef-scalar-header-positivity, lem-routef-factor-map-packet, lem-routef-factor-estimate-packet, lem-routef-k-ledger, af validated, Route F, scalar header, same-datum packet, factorization, stochastic idempotent
+
+## `AISM-71-ROUTEF-F0-ASSEMBLY`
+- **File:** `report/sections/71_routef_f0_assembly.tex`
+- **Title:** The F0 assembly and the conditional main-extension theorem
+- **Summary:** Reproduces lem-routef-f0-assembly, the final Route-F specialization of the strengthened K-ledger with eta_0=eta_K and C=K+4*sqrt(2*K).
+- **Summary:** Reproduces lem-thmainext-conditional, the dimension-free extended main-extension interface obtained from the universal MAIN-CB structural witness ledger.
+- **Keywords:** lem-routef-f0-assembly, lem-thmainext-conditional, af validated, Route F, F0 assembly, MAIN-CB, extended isomorphism, stochastic idempotent, dimension-free constants
+
+## `AISM-72-OP-CLASSICAL-DISCHARGE`
+- **File:** `report/sections/72_op_classical_discharge.tex`
+- **Title:** The discharge of op-classical: the root theorem at the af-validated rung
+- **Summary:** Reproduces op-classical, the af-validated dimension-free square-root stability theorem obtained by invoking the Route-F F0 assembly and matching its stochastic vocabulary to the root contract.
+- **Summary:** Records the honest boundary of the discharge: af-validated rung only (no Lean proof), upper bound only, with sharpness of the exponent 1/2 carried by the separate W139 campaign and not yet at T0.
+- **Keywords:** op-classical, af validated, classical projection stability, stochastic idempotent, Route F, square-root bound, dimension-free
+
+## `AISM-69-KITAEV-DIAGONAL`
+- **File:** `report/sections/69_kitaev_diagonal.tex`
+- **Title:** The Kitaev diagonal repair and the entrywise CP-ization corollary
+- **Summary:** Reproduces lem-kitaev-diagonal-repair, the phase-balanced Weyl-unitary construction of a norm-one diagonal for every finite-dimensional C*-algebra after the printed direct-sum formula fails already on two scalar blocks.
+- **Summary:** Reproduces cor-kitaev-diagonal-cpization, the matrix-level positivity identity that turns an involution-preserving linear map into a completely positive map without assuming multiplicativity.
+- **Keywords:** lem-kitaev-diagonal-repair, cor-kitaev-diagonal-cpization, af validated, finite-dimensional C*-algebra, phase-balanced diagonal, Weyl unitaries, projective norm, complete positivity, CP-ization
+

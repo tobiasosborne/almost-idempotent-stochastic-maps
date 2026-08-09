@@ -1,0 +1,271 @@
+% SHARD-ID: AISM-52-MAINCB-RAW-CALL-CHAIN
+% SHARD-TITLE: The MAIN-CB raw-call chain: initial inclusion, one-step improvement, iteration, and the corner envelope
+% SHARD-SUMMARY: Reproduces lem-maincb-initial-raw-inclusion, the universal scalar extended inclusion and its one-dimensional bijectivity clause.
+% SHARD-SUMMARY: Reproduces lem-maincb-improvement-one-step, the diagonal-averaged correction that replaces an extended d-inclusion by an amplified level-one correction with defect O(d^2+epsilon). Reproduces lem-maincb-improvement-iteration, the finite positive-epsilon descent to the O(epsilon) floor and the zero-epsilon operator-norm limit.
+% SHARD-SUMMARY: Reproduces lem-maincb-error-improvement, the complete small-error replacement and its preservation of bijectivity. Reproduces lem-extcb-exact-target-correction, the norm-one-diagonal Newton correction to a single unital dagger-homomorphism into B(H). Reproduces lem-maincb-direct-corner-envelope, the uniform projection, corner-algebra, subordination, and complementarity bounds attached directly to one map w.
+% SHARD-KEYWORDS: MAIN-CB, raw call, extended inclusion, one-step improvement, Newton iteration, exact target, corner envelope, af validated
+\section{The MAIN-CB raw-call chain: initial inclusion, one-step improvement, iteration, and the corner envelope}\label{sec:maincb-raw-call-chain}
+
+This section records the six \texttt{af}-validated rows forming the analytic front of the
+MAIN-CB raw-call chain.  The vocabulary is that of Definitions~\ref{def:operator-space},
+\ref{def:extended-delta-inclusion}, and \ref{def:extended-epsilon-cstar-algebra}; the
+proof accounts report the validated witnesses, corrections, and estimates without adding
+any assertion to the registry contracts.
+
+\begin{lemma}[\texttt{lem-maincb-initial-raw-inclusion}]\label{lem:maincb-initial-raw-inclusion}
+There are universal constants $D_{0}<\infty$ and $e_{0}>0$ such that, in every
+finite-dimensional extended $\epsilon$-$C^{*}$-algebra with
+$\epsilon\le t\le e_{0}$, the scalar map
+\[
+  v:\mathbb C\longrightarrow A,\qquad v(\lambda)=\lambda I_{A},
+\]
+is an extended $D_{0}t$-inclusion.  If $\dim_{\mathbb C}A=1$, then $v$ is bijective.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There are universal D_0 < infinity and e_0 > 0 such that, in every finite-dimensional extended epsilon-C*-algebra with epsilon <= t <= e_0, the scalar map lambda |-> lambda*I_A is an extended D_0*t-inclusion; if dim A = 1, it is bijective.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree takes $D_{0}=2$ and $e_{0}=1/4$.  Its first branch derives the exact
+operator-space cross-norm identity
+$\nrm{X\otimes a}_{n}=\nrm{X}\nrm{a}$: rectangular multiplication and block diagonals
+give the upper bound, while compression by unit vectors $\xi,\eta$ with
+$|\eta^{*}X\xi|=\nrm{X}$ gives the reverse inequality.  Thus
+$v_n(X)=X\otimes I_A$ has norm $\nrm{X}\nrm{I_A}$ at every level.  The extended
+$\epsilon$-$C^{*}$ axioms make $I_n\otimes I_A$ the designated amplified unit,
+give $I_A\dg=I_A$ and $|\nrm{I_A}-1|\le\epsilon$, and yield
+\[
+ \nrm{v_n(X)v_n(Y)-v_n(XY)}_n
+ \le \epsilon\nrm{v_n(XY)}_n
+ \le 2\epsilon\nrm{X}\nrm{Y}
+\]
+when $\epsilon\le1/2$.  Hence $\epsilon\le t\le1/4$ gives the multiplicative
+error $2t$ and the two-sided $(1\pm2t)$ norm bounds, exactly the requirements
+for an extended $2t$-inclusion.  At level one these bounds give
+$\nrm{I_A}=\nrm{v(1)}\ge1-2t\ge1/2$.  Therefore $I_A\ne0$, and in complex
+dimension one the scalar map is both injective and surjective.  Three challenges in
+the recorded run exposed the missing extended-algebra vocabulary and sibling-only
+dependencies; the conditional nodes were archived, and the live replacement branch
+uses Definition~\ref{def:extended-epsilon-cstar-algebra} explicitly.
+
+\begin{lemma}[\texttt{lem-maincb-improvement-one-step}]\label{lem:maincb-improvement-one-step}
+There are universal $K_{\mathrm{step}}\ge1$ and $e_{\mathrm{step}}>0$ such that,
+if $B$ is a finite-dimensional $C^{*}$-algebra, $A$ is an extended
+$\epsilon$-$C^{*}$-algebra, and $v:B\to A$ is an extended $d$-inclusion with
+$d+\epsilon\le e_{\mathrm{step}}$, then there is one dagger-preserving level-one
+map $v^{+}$, with $v_n^{+}=I_n\otimes v^{+}$, for which
+\[
+ \sup_{n\ge1}\nrm{v_n^{+}-v_n}\le K_{\mathrm{step}}d,
+ \qquad v^{+}\text{ is an extended }d^{+}\text{-inclusion},\qquad
+ d^{+}\le K_{\mathrm{step}}(d^{2}+\epsilon).
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There are universal K_step >= 1 and e_step > 0 such that, if B is a finite-dimensional C*-algebra, A an extended epsilon-C*-algebra, and v:B->A an extended d-inclusion with d+epsilon <= e_step, then one dagger-preserving level-one map v^+, with v_n^+ = I_n tensor v^+, satisfies sup_n ||v_n^+ - v_n|| <= K_step*d and is an extended d^+-inclusion for d^+ <= K_step*(d^2+epsilon).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Choose the norm-one diagonal of Definition~\ref{def:fd-cstar-diagonal} in the form
+$D=\sum_j A_j\otimes B_j$, where $A_j=p_jU_j\dg$, $B_j=U_j$,
+$p_j\ge0$, and $\sum_jp_j=1$.  The tree constructs it blockwise from Weyl
+unitaries and kills cross-block terms by independent sign averaging.  For
+$g(X,Y)=v(XY)-v(X)v(Y)$ set
+\[
+ w'(X)=\sum_jv(A_j)g(B_j,X),\quad
+ w''(X)=w'(X\dg)\dg,\quad w=\tfrac12(w'+w''),\quad v^{+}=v+w.
+\]
+Entrywise multiplication proves that the correction at every matrix level is
+exactly $I_n\otimes w$; the diagonal weight sum and the inclusion bounds give
+$\sup_n\nrm{I_n\otimes w}\le2d$.  The cocycle identity for $g$, centrality of
+$D$, and its multiplication identity cancel the linear defect.  Seven explicit
+associativity, multiplicativity, product, and unit remainders total at most
+$100(d^{2}+\epsilon)$; symmetrizing preserves that estimate, and the quadratic
+term $w(X)w(Y)$ raises it to $105(d^{2}+\epsilon)$.  With
+$q=d^{2}+\epsilon$, the element $x=v^{+}(I_B)$ has
+$\nrm{x-I_A}\le3d$ and $\nrm{x^{2}-x}\le105q$.  Absorbing the approximate-unit
+terms for $d+\epsilon\le1/16$ gives the amplified unit defect at most $424q$.
+After further shrinking to $d+\epsilon\le e_{\mathrm{step}}:=\min\{1/16,(8\cdot424)^{-1}\}$, the upper $C^{*}$ estimate and the lower bound inherited from $v$ give
+two-sided norm bounds, so $v^{+}$ is an extended $d^{+}$-inclusion with
+$d^{+}\le1700q$; these constants furnish the universal witnesses.  The ledger
+records six repaired challenges across two runs, including provisioning the base
+$\epsilon$-$C^{*}$ axioms and the norm-one standard diagonal; the contract did not change.
+
+\begin{lemma}[\texttt{lem-maincb-improvement-iteration}]\label{lem:maincb-improvement-iteration}
+There are universal $e_{\mathrm{it}}>0$, $K_{\mathrm{disp}}<\infty$, and
+$K_{\mathrm{floor}}<\infty$ such that, if $B$ is a finite-dimensional
+$C^{*}$-algebra, $A$ is an extended $\epsilon$-$C^{*}$-algebra, and
+$v:B\to A$ is an extended $d$-inclusion with $d+\epsilon\le e_{\mathrm{it}}$,
+then one dagger-preserving $\widetilde v$, with
+$\widetilde v_n=I_n\otimes\widetilde v$, satisfies
+\[
+ \sup_{n\ge1}\nrm{\widetilde v_n-v_n}\le K_{\mathrm{disp}}d
+ \quad\text{and is an extended }K_{\mathrm{floor}}\epsilon\text{-inclusion}.
+\]
+For $\epsilon>0$ it is reached after finitely many correction steps; for
+$\epsilon=0$ it is their operator-norm limit.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There are universal e_it > 0, K_disp < infinity, and K_floor < infinity such that, if B is a finite-dimensional C*-algebra, A is an extended epsilon-C*-algebra, and v:B->A is an extended d-inclusion with d+epsilon <= e_it, then one dagger-preserving v_tilde, with v_tilde_n = I_n tensor v_tilde, satisfies sup_n ||v_tilde_n - v_n|| <= K_disp*d and is an extended K_floor*epsilon-inclusion; for epsilon > 0 it is reached after finitely many correction steps, and for epsilon = 0 it is their operator-norm limit.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Let $K=K_{\mathrm{step}}$ and $e=e_{\mathrm{step}}$ be the witnesses of
+Lemma~\ref{lem:maincb-improvement-one-step}, and choose
+\[
+ e_{\mathrm{it}}=\min\{e,(4K)^{-1}\},\qquad
+ K_{\mathrm{disp}}=4K,\qquad K_{\mathrm{floor}}=2K.
+\]
+Starting from $(v_0,d_0)=(v,d)$, one step produces $(v_{j+1},d_{j+1})$ with
+$d_{j+1}\le K(d_j^2+\epsilon)$ and amplified displacement at most $Kd_j$.
+While $d_j>2K\epsilon$, the smallness choice gives
+$Kd_j^2\le d_j/4$ and $K\epsilon<d_j/2$, hence
+$d_{j+1}\le3d_j/4$.  If $\epsilon>0$, this geometric descent reaches
+$d_N\le2K\epsilon$ after finitely many steps; when the initial defect is already
+below the floor, the prescribed single correction remains below it.  Monotonicity
+of the defining error inequalities makes $v_N$ an extended
+$K_{\mathrm{floor}}\epsilon$-inclusion, and telescoping gives
+$\sup_n\nrm{v_{N,n}-v_n}\le K\sum_jd_j\le4Kd$.
+If $\epsilon=0$, instead $d_{j+1}\le d_j/4$, so the maps are uniformly Cauchy
+at every amplification.  Completeness at level one and finite dimensionality of
+$B$ give a level-one operator-norm limit $\widetilde v$ whose amplifications are
+the corresponding limits.  Dagger preservation, exact multiplicativity, the unit,
+and exact norm bounds pass to the limit, yielding an extended $0$-inclusion with
+the same displacement estimate.  This is the strengthened contract validated after
+the earlier weaker defect-only wording was superseded; one threshold-boundary
+challenge in the clean re-seed was repaired without changing the strengthened statement.
+
+\begin{lemma}[\texttt{lem-maincb-error-improvement}]\label{lem:maincb-error-improvement}
+There are universal $\epsilon_{max}^{\mathrm{cb}}>0$,
+$\delta_{max}^{\mathrm{cb}}>0$, and $c_{0}^{\mathrm{cb}}<\infty$ such that
+every extended $\delta$-inclusion $v:B\to A$ from a finite-dimensional
+$C^{*}$-algebra into an extended $\epsilon$-$C^{*}$-algebra, with
+$0\le\epsilon\le\epsilon_{max}^{\mathrm{cb}}$ and
+$0\le\delta\le\delta_{max}^{\mathrm{cb}}$, can be replaced by an extended
+$c_{0}^{\mathrm{cb}}\epsilon$-inclusion $\widetilde v:B\to A$ that is
+bijective whenever $v$ is bijective.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Complete error improvement: there are universal epsilon_max^cb>0, delta_max^cb>0 and c_0^cb<infinity such that every extended delta-inclusion v:B->A from a finite-dimensional C*-algebra B into an extended epsilon-C*-algebra A with 0<=epsilon<=epsilon_max^cb and 0<=delta<=delta_max^cb can be replaced by an extended c_0^cb*epsilon-inclusion v_tilde:B->A that is bijective whenever v is bijective.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Take the witnesses of Lemma~\ref{lem:maincb-improvement-iteration} and set
+\[
+ \epsilon_{max}^{\mathrm{cb}}=e_{\mathrm{it}}/2,qquad
+ \delta_{\max}^{\mathrm{cb}}=\min\{e_{\mathrm{it}}/2,[2(1+|K_{\mathrm{disp}}|)]^{-1}\},
+ \qquad c_{0}^{\mathrm{cb}}=K_{\mathrm{floor}}.
+\]
+Then $\delta+\epsilon\le e_{\mathrm{it}}$ and
+$1-\delta-|K_{\mathrm{disp}}|\delta\ge1/2$.  Applying the iteration row with
+$d=\delta$ supplies a dagger-preserving $\widetilde v$ that is an extended
+$c_{0}^{\mathrm{cb}}\epsilon$-inclusion and satisfies at level one
+$\nrm{\widetilde v-v}\le K_{\mathrm{disp}}\delta$.  If $v$ is bijective, its
+lower inclusion bound and this displacement imply, for every $x\in B$,
+\[
+ \nrm{\widetilde v(x)}\ge
+ \nrm{v(x)}-\nrm{(\widetilde v-v)(x)}
+ \ge(1-\delta-|K_{\mathrm{disp}}|\delta)\nrm{x}
+ \ge\tfrac12\nrm{x}.
+\]
+Thus $\widetilde v$ is injective.  Bijectivity of $v$ identifies the finite
+dimensions of $A$ and $B$, so this injective linear map is also surjective.
+The registry records four runs: earlier verifier cohorts found that the then-weaker
+iteration contract supplied only a defect bound, and an internalized attempt ballooned;
+the user-ratified strengthening reproduced in Lemma~\ref{lem:maincb-improvement-iteration}
+made the final $17$-node consumer tree close.  The present root contract itself was
+unchanged throughout that repair history.
+
+\begin{lemma}[\texttt{lem-extcb-exact-target-correction}]\label{lem:extcb-exact-target-correction}
+There are universal $a_{\mathrm{corr}}>0$ and $C_{\mathrm{corr}}<\infty$ with
+the following property.  Let $B$ be a finite-dimensional $C^{*}$-algebra,
+$H$ a finite-dimensional Hilbert space, and $T:B\to B(H)$ linear and
+dagger-preserving.  If $0\le a\le a_{\mathrm{corr}}$ and, for every $n$,
+\[
+ \nrm{T_n(XY)-T_n(X)T_n(Y)}\le a\nrm{X}\nrm{Y},
+ \qquad \nrm{T_n(I)-I}\le a,
+\]
+then one unital dagger-homomorphism $\mu:B\to B(H)$ satisfies
+$\nrm{\mu_n-T_n}\le C_{\mathrm{corr}}a$ at every amplification.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There are universal a_corr>0 and C_corr<infinity with the following property: if B is a finite-dimensional C*-algebra, H a finite-dimensional Hilbert space, and T:B->B(H) is linear, dagger-preserving, has ||T_n(XY)-T_n(X)T_n(Y)||<=a||X||||Y|| and ||T_n(I)-I||<=a at every n, where 0<=a<=a_corr, then one unital dagger-homomorphism mu:B->B(H) satisfies ||mu_n-T_n||<=C_corr*a at every n.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+For $a\le1$, the $C^{*}$ identity and the multiplicative defect give
+$M_n^2\le M_n+a$ for $M_n=\nrm{T_n}$, hence $M_n<2$ uniformly.  Choose a
+state $\varphi$ on $B$, put $e=I-T(I)$, and set
+$S_0(x)=T(x)+\varphi(x)e$.  Then $S_0$ is exactly unital and dagger-preserving,
+$\nrm{S_0-T}_{\mathrm{cb}}\le a$, $\nrm{S_0}_{\mathrm{cb}}<3$, and its amplified
+bilinear defect $b_0$ is at most $7a$.  Haar averaging on the compact unitary
+group gives a finite convex norm-one diagonal
+$D=\sum_s p_sU_s\dg\otimes U_s$.  For any exactly unital dagger-preserving
+$S$ with $\nrm{S}_{\mathrm{cb}}\le4$ and defect $b$, the correction
+\[
+ w'(x)=\sum_sS(p_sU_s\dg)G(U_s,x),\qquad
+ w(x)=\tfrac12\bigl(w'(x)+w'(x\dg)\dg\bigr)
+\]
+has $\nrm{w}_{\mathrm{cb}}\le4b$ and $w(I)=0$.  The exact cocycle identity,
+centrality of $D$, and multiplication of $D$ to $I$ show that $S^{+}=S+w$
+has defect at most $18b^2$.  Taking
+$a_{\mathrm{corr}}=\min\{(2\cdot18\cdot7)^{-1},(16\cdot7)^{-1}\}$ makes
+$b_k\le b_0\,2^{-k}$ under iteration and keeps every iterate below cb norm $4$.
+The corrections have total norm at most $8b_0$, including the degenerate case
+$b_0=0$, so they converge in cb norm to one level-one unital dagger-homomorphism
+$\mu$.  Finally $\nrm{\mu-T}_{\mathrm{cb}}\le a+8(7a)=57a$, so
+$C_{\mathrm{corr}}=57$ works uniformly at all levels.  The six-node workspace
+validated on its first pass with no challenges or contract amendment.
+
+\begin{lemma}[\texttt{lem-maincb-direct-corner-envelope}]\label{lem:maincb-direct-corner-envelope}
+There are universal $L\ge1$ and $e_{\mathrm{env}}>0$ such that, if $A$ is a
+finite-dimensional extended $\epsilon$-$C^{*}$-algebra,
+$0\le\epsilon\le e_{\mathrm{env}}$, and
+$w:\mathbb C^{m}\to A$ is an extended $c_{0}^{\mathrm{cb}}\epsilon$-inclusion,
+then, writing $e_U=\sum_{j\in U}e_j$, $P_U=w(e_U)$, and
+$A_U=\mathcal S^{A}_{P_U}$, every nonempty $U$ has $P_U$ a
+$c_{0}^{\mathrm{cb}}\epsilon$-projection and $A_U$ an extended
+$L\epsilon$-$C^{*}$-algebra.  Moreover, whenever $U\subseteq R$ and
+$V=R\setminus U$, one has
+\[
+ \max\!\left\{
+ \nrm{P_U+P_V-P_R},
+ \nrm{P_UP_R-P_U},\nrm{P_RP_U-P_U},
+ \nrm{P_VP_R-P_V},\nrm{P_RP_V-P_V},
+ \nrm{P_UP_V},\nrm{P_VP_U}
+ \right\}\le L\epsilon.
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There are universal L >= 1 and e_env > 0 such that, if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= e_env, and w:C^m->A is an extended c_0^cb*epsilon-inclusion, then every nonempty U has P_U a c_0^cb*epsilon-projection, every A_U = S^A_{P_U} is an extended L*epsilon-C*-algebra, and for U subseteq R all subordination and complementarity errors among P_U, P_{R minus U}, P_R are at most L*epsilon.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Choose the witness $c_{0}^{\mathrm{cb}}$ of
+Lemma~\ref{lem:maincb-error-improvement} at least $1$, and let
+$C_{\mathrm{ca}},e_{\mathrm{ca}}$ be the witnesses of
+Lemma~\ref{lem:compcb-corner-algebra}.  Put
+\[
+ K=c_{0}^{\mathrm{cb}}+1,\qquad
+ L=\max\{1,c_{0}^{\mathrm{cb}},C_{\mathrm{ca}}K\},\qquad
+ e_{\mathrm{env}}=\min\{e_{\mathrm{ca}}/K,(2c_{0}^{\mathrm{cb}})^{-1}\}.
+\]
+For $\delta=c_{0}^{\mathrm{cb}}\epsilon$ these choices give
+$\delta\le1/2$, $\delta+\epsilon\le e_{\mathrm{ca}}$, and both
+$\delta$ and $C_{\mathrm{ca}}(\delta+\epsilon)$ at most $L\epsilon$.
+For nonempty $U$, the coordinate idempotent $e_U$ is self-adjoint and has norm
+$1$.  Applying the level-one inclusion bounds to $P_U=w(e_U)$ gives
+$P_U\dg=P_U$, $\nrm{P_U^2-P_U}\le\delta$, and
+$1-\delta\le\nrm{P_U}\le1+\delta$; thus it is a nonvanishing
+$\delta$-projection.  Lemma~\ref{lem:compcb-corner-algebra} then makes its
+compressed corner an extended $C_{\mathrm{ca}}(\delta+\epsilon)$-$C^{*}$-algebra,
+hence an extended $L\epsilon$-$C^{*}$-algebra.  Finally the exact coordinate
+identities $e_Ue_R=e_U$, $e_Ve_R=e_V$, $e_Ue_V=0$, and $e_U+e_V=e_R$
+give the displayed six errors by $\delta$-multiplicativity and the exact additive
+identity by linearity.  A verifier challenged a hidden partition-state assumption;
+the repaired live bridge binds $P_U$ and $A_U$ directly from this same displayed
+pair $(A,w)$, so no current-union or reset-state field is consumed.
+
+\medskip
+\noindent\textbf{Status.} Each of the six rows is \texttt{proved} with
+\texttt{af: validated}; the workspace and repair particulars are recorded in the
+companion provenance sidecar.

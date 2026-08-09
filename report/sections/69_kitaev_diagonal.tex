@@ -1,0 +1,140 @@
+% SHARD-ID: AISM-69-KITAEV-DIAGONAL
+% SHARD-TITLE: The Kitaev diagonal repair and the entrywise CP-ization corollary
+% SHARD-SUMMARY: Reproduces lem-kitaev-diagonal-repair, the phase-balanced Weyl-unitary construction of a norm-one diagonal for every finite-dimensional C*-algebra after the printed direct-sum formula fails already on two scalar blocks.
+% SHARD-SUMMARY: Reproduces cor-kitaev-diagonal-cpization, the matrix-level positivity identity that turns an involution-preserving linear map into a completely positive map without assuming multiplicativity.
+% SHARD-KEYWORDS: lem-kitaev-diagonal-repair, cor-kitaev-diagonal-cpization, af validated, finite-dimensional C*-algebra, phase-balanced diagonal, Weyl unitaries, projective norm, complete positivity, CP-ization
+\section{The Kitaev diagonal repair and the entrywise CP-ization corollary}\label{sec:kitaev-diagonal}
+
+The two validated rows below repair the finite-dimensional diagonal used in the Route~F
+factor package and then record its entrywise positivity consequence.  The diagonal is the
+object of Definition~\ref{def:fd-cstar-diagonal}; complete positivity and the UCP hypothesis
+are understood as in Definition~\ref{def:ucp-map}.  The first row supplies the exact
+phase-balanced witness consumed by the second.
+
+\begin{lemma}[\texttt{lem-kitaev-diagonal-repair}]\label{lem:kitaev-diagonal-repair}
+The direct-sum diagonal formulas printed at
+\texttt{approximate\_algebras.tex:1254} and
+\texttt{approximate\_algebras.tex:2780--2783} are false, already for
+$\mathcal B=\mathbb C\oplus\mathbb C$.  Nevertheless, every finite-dimensional
+$C^{*}$-algebra
+\[
+  \mathcal B=\bigoplus_{r=1}^{m}M_{d_r}
+\]
+has a finite phase-balanced diagonal
+\[
+  D=\sum_t q_t W_t^{\dagger}\otimes W_t,
+  \qquad q_t\ge0,
+  \qquad \sum_tq_t=1,
+\]
+in which every $W_t$ is unitary, $ZD=DZ$ for every $Z\in\mathcal B$,
+$\pi(D)=I_{\mathcal B}$, and
+\[
+  \nrm{D}_{\pi}
+  =\sum_tq_t\nrm{W_t^{\dagger}}\nrm{W_t}=1.
+\]
+These conclusions are independent of the number and dimensions of the blocks.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Kitaev diagonal repair: the direct-sum diagonal formula printed at approximate_algebras.tex:1254 and :2780-2783 is false (already for B=C direct-sum C), but every finite-dimensional C*-algebra B=direct-sum_{r=1}^m M_{d_r} has a finite phase-balanced diagonal D=sum_t q_t W_t^dagger tensor W_t with unitary W_t, q_t >= 0, sum_t q_t=1, ZD=DZ for every Z in B, pi(D)=I_B, and projective norm ||D||_pi=sum_t q_t||W_t^dagger||||W_t||=1, independently of block count and block dimensions.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The printed defect is exposed on $\mathbb C\oplus\mathbb C$ by taking the one-term
+diagonal $1\otimes1$ in each scalar summand.  Either printed prescription then returns
+$I_{\mathcal B}\otimes I_{\mathcal B}$.  For $Z=(1,0)$, its left and right module
+actions are $Z\otimes I_{\mathcal B}$ and $I_{\mathcal B}\otimes Z$, which differ in
+the $(1,2)$ tensor block; thus the printed element is not central.
+
+For the repair, fix $d\ge1$, put $\omega=e^{2\pi i/d}$, index matrix units modulo $d$,
+and define $U_{ab}=\sum_k\omega^{bk}E_{k+a,k}$.
+The action $U_{ab}e_k=\omega^{bk}e_{k+a}$ shows that each $U_{ab}$ is unitary.  Expanding
+the tensor and using the finite Fourier sum gives the exact Weyl average
+\[
+  \frac1{d^2}\sum_{a,b}U_{ab}^{\dagger}\otimes U_{ab}
+  =D_d:=\frac1d\sum_{i,j}E_{ij}\otimes E_{ji}.
+\]
+For the block algebra, take
+$\gamma=((a_r,b_r))_{r=1}^{m}$ and $\sigma\in\{\pm1\}^{m}$, and set
+$W_{\gamma,\sigma}=\bigoplus_r\sigma_rU^{(r)}_{a_rb_r}$ and
+$q_{\gamma,\sigma}=2^{-m}\prod_r d_r^{-2}$.
+The $W_{\gamma,\sigma}$ are unitary, the family is finite, and its positive coefficients
+sum to one.  The phase moment
+$2^{-m}\sum_\sigma\sigma_r\sigma_s=\delta_{rs}$ deletes every cross-block tensor term;
+the surviving Weyl averages give $D=\sum_r(\iota_r\otimes\iota_r)(D_{d_r})$.
+For a matrix unit $E_{ab}\in M_d$, direct multiplication yields
+$E_{ab}D_d=d^{-1}\sum_jE_{aj}\otimes E_{jb}=D_dE_{ab}$, and hence blockwise centrality.
+Likewise,
+$\pi(D_d)=d^{-1}\sum_{i,j}E_{ij}E_{ji}=I_{M_d}$, so
+$\pi(D)=I_{\mathcal B}$.  The displayed convex-unitary representation has cost one and
+therefore $\nrm{D}_\pi\le1$; conversely
+$\nrm{\pi(C)}\le\nrm{C}_\pi$ for every projective tensor $C$, so normalization forces
+$\nrm{D}_\pi\ge1$.
+
+The retained ledger records two major challenges in the normalization branch: two leaves
+had improperly invoked centrality from a sibling.  Both were amended to prove only
+$\pi(D)=I_{\mathcal B}$; the parent then combines that normalization with its separately
+validated centrality child.  No contract amendment or supersession was made.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0).  Workspace
+\texttt{proofs/lem-kitaev-diagonal-repair}: 20/20 live nodes validated, taint clean;
+the two repaired challenges are the dependency-scope corrections just described.
+
+\begin{corollary}[\texttt{cor-kitaev-diagonal-cpization}]\label{cor:kitaev-diagonal-cpization}
+Let $D=\sum_tq_tW_t^{\dagger}\otimes W_t$ be the finite phase-balanced diagonal supplied
+by Lemma~\ref{lem:kitaev-diagonal-repair}.  If
+$\widetilde\Delta:\mathcal B\to B(\mathcal H)$ is an involution-preserving linear map and
+$\Phi:B(\mathcal H)\to B(\mathcal H)$ is UCP, then
+\[
+  \Delta'(X)=\sum_tq_t\,
+  \Phi\!\left(\widetilde\Delta(XW_t^{\dagger})\widetilde\Delta(W_t)\right)
+\]
+defines a completely positive map.  Its complete positivity uses the exact centrality of
+$D$ and does not require $\widetilde\Delta$ to be exactly multiplicative.
+\end{corollary}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Entrywise CP-ization from the repaired diagonal: for the finite phase-balanced diagonal D=sum_t q_t W_t^dagger tensor W_t supplied by lem-kitaev-diagonal-repair, every involution-preserving linear map tilde-Delta:B->B(H) and every UCP map Phi define a completely positive map Delta'(X)=sum_t q_t Phi(tilde-Delta(X W_t^dagger) tilde-Delta(W_t)); complete positivity uses exact centrality of D and does not require exact multiplicativity of tilde-Delta.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Linearity of $\Delta'$ follows term by term from linearity of right multiplication,
+$\widetilde\Delta$, operator multiplication by the fixed $\widetilde\Delta(W_t)$, and
+$\Phi$.  Fix $n\ge1$ and $Y\in M_n(\mathcal B)$, and write
+\[
+  Z_t=\widetilde\Delta_n\bigl((I_n\otimes W_t)Y\bigr).
+\]
+Exact centrality of $D$, applied entrywise and then left-multiplied by $Y_{ca}^{\dagger}$,
+gives
+\[
+ \sum_tq_tY_{ca}^{\dagger}Y_{cb}W_t^{\dagger}\otimes W_t
+ =\sum_tq_tY_{ca}^{\dagger}W_t^{\dagger}\otimes W_tY_{cb}.
+\]
+Apply to this tensor identity the linear map induced by the bilinear rule
+$A\otimes B\mapsto\widetilde\Delta(A)\widetilde\Delta(B)$.  Involution preservation,
+and not multiplicativity, changes its right-hand side into
+\[
+  \sum_tq_t\,
+  \widetilde\Delta(W_tY_{ca})^{\dagger}\widetilde\Delta(W_tY_{cb}).
+\]
+Summing over $c$ and applying $\Phi$ therefore yields the exact matrix identity
+\[
+  \Delta'_n(Y^{\dagger}Y)=\sum_tq_t\Phi_n(Z_t^{\dagger}Z_t).
+\]
+Each $Z_t^{\dagger}Z_t$ is positive, complete positivity of $\Phi$ makes each amplified
+image positive, and the sum stays positive because the phase-balanced family is finite
+and $q_t\ge0$.  Every positive element of $M_n(\mathcal B)$ is $Y^{\dagger}Y$ for its
+positive square root; hence $\Delta'_n$ is positive for every $n$, proving complete
+positivity.
+
+The ledger records two repaired major challenges.  First, an exhaustive ``uses only''
+claim had omitted finiteness and nonnegativity of the $q_t$; a validated child now states
+those coefficient hypotheses explicitly.  Second, the frozen displayed formula left the
+type of $\Phi$ implicit.  The registry's user-ratified typing scope and the validated final
+child read it as $\Phi:B(\mathcal H)\to B(\mathcal H)$, which makes every product and
+amplification above well typed.  Neither repair adds multiplicativity of
+$\widetilde\Delta$, and the contract itself was not amended.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0).  Workspace
+\texttt{proofs/cor-kitaev-diagonal-cpization}: 22/22 live nodes validated, taint clean;
+the two repaired challenges are the coefficient and typing corrections recorded above.

@@ -1,0 +1,143 @@
+% SHARD-ID: AISM-71-ROUTEF-F0-ASSEMBLY
+% SHARD-TITLE: The F0 assembly and the conditional main-extension theorem
+% SHARD-SUMMARY: Reproduces lem-routef-f0-assembly, the final Route-F specialization of the strengthened K-ledger with eta_0=eta_K and C=K+4*sqrt(2*K).
+% SHARD-SUMMARY: Reproduces lem-thmainext-conditional, the dimension-free extended main-extension interface obtained from the universal MAIN-CB structural witness ledger.
+% SHARD-KEYWORDS: lem-routef-f0-assembly, lem-thmainext-conditional, af validated, Route F, F0 assembly, MAIN-CB, extended isomorphism, stochastic idempotent, dimension-free constants
+\section{The F0 assembly and the conditional main-extension theorem}\label{sec:routef-f0-assembly}
+
+This section records two terminal interfaces of the validated assembly.  The first
+specializes the strengthened Route-F ledger to the stochastic conclusion, with no
+repetition of the factorization below it.  The second hides the MAIN-CB witness ledger
+behind two universal constants.  The relevant vocabulary is that of
+Definition~\ref{def:stochastic}, Definition~\ref{def:almost-idempotent},
+Definition~\ref{def:extended-epsilon-cstar-algebra}, and
+Definition~\ref{def:extended-delta-inclusion}; none is restated here.
+
+\begin{lemma}[\texttt{lem-routef-f0-assembly}]\label{lem:routef-f0-assembly}
+There are universal constants $\eta_{0},C>0$, independent of $n$, such that the
+following holds.  Let $n\ge1$, let
+$Q:\ell_{\infty}^{n}\to\ell_{\infty}^{n}$ be row-stochastic, and suppose that
+$0\le\eta\le\eta_{0}$ and
+\[
+  \nrm{Q^{2}-Q}_{\infty\to\infty}\le\eta .
+\]
+Let $D:M_{n}\to\mathbb C^{n}$ be diagonal extraction onto the complex diagonal
+algebra $\mathbb C^{n}=\ell_{\infty}^{n}(\mathbb C)$, let
+$J:\mathbb C^{n}\to M_{n}$ be the diagonal inclusion, let
+$Q_{\mathbb C}:\mathbb C^{n}\to\mathbb C^{n}$ be the canonical complex-linear
+extension of $Q$, and put $\Phi=JQ_{\mathbb C}D$.  Then the same $Q$ admits a
+stochastic idempotent $E$ satisfying
+\[
+  \nrm{Q-E}_{\infty\to\infty}\le C\sqrt\eta .
+\]
+For the universal $K$ and $\eta_{K}$ supplied by
+Lemma~\ref{lem:routef-k-ledger}, one may take
+\[
+  \eta_{0}=\eta_{K},
+  \qquad
+  C=K+4\sqrt{2K}.
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Route F F0 assembly: there are universal eta_0,C > 0, independent of n, such that for every n >= 1, every row-stochastic Q: l_inf^n -> l_inf^n, and every 0 <= eta <= eta_0 with ||Q^2-Q||_{infinity->infinity} <= eta, let D: M_n -> C^n be diagonal extraction onto the complex diagonal algebra C^n = l_inf^n(C), let J: C^n -> M_n be the diagonal inclusion, let Q_C: C^n -> C^n be the canonical complex-linear extension of Q, and put Phi := J Q_C D; then the same Q admits a stochastic idempotent E satisfying ||Q-E||_{infinity->infinity} <= C*sqrt(eta); for the universal K and eta_K supplied by lem-routef-k-ledger, one may take eta_0 := eta_K and C := K+4*sqrt(2*K).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree first invokes Lemma~\ref{lem:routef-k-ledger} and fixes its universal
+scalars $K$ and $\eta_{K}$.  That imported row gives $K\ge1$ and
+$\eta_{K}>0$, with both scalars independent of $n$, amplification level,
+simple-block count, and block dimensions.  Define
+$\eta_{0}:=\eta_{K}$ and $C:=K+4\sqrt{2K}$.  Positivity of $\eta_{0}$ is
+immediate.  Since $K\ge1$, the principal square root $\sqrt{2K}$ is
+nonnegative, and therefore $C\ge K\ge1>0$.  Both new constants are fixed
+expressions in the imported universal scalars, so they retain the required
+dimension independence.
+
+Now fix arbitrary $n,Q,\eta$ satisfying the hypotheses of the statement, and
+form $D,J,Q_{\mathbb C}$ and $\Phi$ exactly as displayed there.  The identity
+$\eta_{0}=\eta_{K}$ changes the bound $0\le\eta\le\eta_{0}$ into the
+smallness hypothesis required by the imported ledger; every other hypothesis,
+including the canonical complex-linear typing of $Q_{\mathbb C}$, is literally
+the parent row's input.  Lemma~\ref{lem:routef-k-ledger} therefore returns, for
+the same $Q$, a stochastic idempotent $E$ with
+\[
+  \nrm{Q-E}_{\infty\to\infty}
+  \le \bigl(K+4\sqrt{2K}\bigr)\sqrt\eta
+  =C\sqrt\eta .
+\]
+This substitution is the whole assembly: the factor maps, their estimates, and
+the stochastic finish have already been discharged inside the single imported
+ledger and are not counted again at this interface.
+
+\medskip
+\noindent\textbf{Status and record note.} \texttt{proved};
+\texttt{af: validated} (T0).  Workspace
+\texttt{proofs/lem-routef-f0-assembly}: all seven nodes are validated and clean.
+Run~1 reached its round limit with six of seven nodes validated and zero
+challenges; a verify-phase resume validated the root.  The contract carries the
+canonical-complexification typing correction.  An earlier strengthened-parent
+package was rejected, but this F0 contract was byte-identical and retained for
+validation against the repaired parent.  This is an upper-bound assembly only
+and imports no sharpness claim.
+
+\begin{lemma}[\texttt{lem-thmainext-conditional}]\label{lem:thmainext-conditional}
+There are universal constants $C_{E}<\infty$ and $\varepsilon_{E}>0$ such that
+every finite-dimensional extended $\varepsilon$-$C^{*}$-algebra $\mathcal A$,
+for $0\le\varepsilon\le\varepsilon_{E}$, is carried by one extended
+$C_{E}\varepsilon$-isomorphism
+\[
+  v:\mathcal B\longrightarrow\mathcal A
+\]
+from a finite-dimensional $C^{*}$-algebra $\mathcal B$.  The constants are
+independent of dimension, amplification level, and block data.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Extended th_main_ext assembly: there are universal C_E < infinity and epsilon_E > 0 such that every finite-dimensional extended epsilon-C*-algebra A, for 0 <= epsilon <= epsilon_E, is carried by one extended C_E*epsilon-isomorphism v:B->A from a finite-dimensional C*-algebra, with constants independent of dimension, amplification level, and block data.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Invoke Lemma~\ref{lem:maincb-structural-assembly} and fix its universal MAIN-CB
+witness-ledger datum $W$.  The tree chooses the two witnesses
+\[
+  C_{E}:=W.c0_{\mathrm{cb}}W.K_{\mathrm{call}},
+  \qquad
+  \varepsilon_{E}:=W.\varepsilon_{\mathrm{MAIN}}.
+\]
+The final clause of the imported assembly states that these quantities are
+finite, positive, and universal, and that they are independent of dimension,
+amplification level, block count, and block dimensions.  Thus they have exactly
+the scalar properties claimed at the root.
+
+Let $\mathcal A$ be an arbitrary finite-dimensional extended
+$\varepsilon$-$C^{*}$-algebra with
+$0\le\varepsilon\le\varepsilon_{E}$.  Since
+$\varepsilon_{E}=W.\varepsilon_{\mathrm{MAIN}}$, the structural assembly
+supplies
+\[
+  \mathcal B=\bigoplus_{\mathcal C}M_{|\mathcal C|}
+\]
+and a single extended
+$W.c0_{\mathrm{cb}}W.K_{\mathrm{call}}\varepsilon$-isomorphism
+$v:\mathcal B\to\mathcal A$.  It also supplies a unit estimate, but that extra
+conclusion is not used by this interface.  Substitution of the definition of
+$C_{E}$ turns the displayed map into the required extended
+$C_{E}\varepsilon$-isomorphism.
+
+Finally, Definition~\ref{def:extended-delta-inclusion} says that this is one
+bijective linear map whose every amplification is a
+$C_{E}\varepsilon$-inclusion.  Hence the same $v$ works at all amplification
+levels with the same universal constant.  Together with the independence
+already carried by $W$, and the arbitrariness of $\mathcal A$ and
+$\varepsilon$, this proves the claimed interface.
+
+\medskip
+\noindent\textbf{Status and record note.} \texttt{proved};
+\texttt{af: validated} (T0).  Workspace
+\texttt{proofs/lem-thmainext-conditional}: the four-node tree was validated on
+its first pass, taint clean, with zero challenges.  Before elevation, a
+user-ratified re-scope removed from the contract a documentary clause describing
+the corrected squared COL-HILB, H-CB, EXT-CB, and Stage-1 reset provenance; the
+mathematical existential statement was unchanged.  The registry deliberately
+retains all seven dependency edges as the construction record, while the
+validated tree itself is the thin interface projection of
+Lemma~\ref{lem:maincb-structural-assembly} reproduced above.

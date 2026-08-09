@@ -1,0 +1,194 @@
+% SHARD-ID: AISM-56-MAINCB-RESET-LEDGERS
+% SHARD-TITLE: MAIN-CB reset states and ledgers: invariant preservation, the constant and structural-domain ledgers, and reset output typing
+% SHARD-SUMMARY: Reproduces lem-maincb-reset-invariant-preservation, which keeps one literal iterated map, its amplification family, its near-unit estimate, and its conditional bijectivity through a reset.
+% SHARD-SUMMARY: Reproduces lem-maincb-reset-constant-ledger, which selects one dimension-free MAIN-CB witness ledger and makes all four raw-call producers eligible for the same reset theorem.
+% SHARD-SUMMARY: Reproduces lem-maincb-structural-domain-ledger, which places the global, atomic, and three stage scales inside every recorded structural domain and the half-unit window. Reproduces lem-maincb-reset-output-typing, which types the single error-improved reset output as an extended inclusion, and as an extended isomorphism when the raw map is bijective.
+% SHARD-KEYWORDS: lem-maincb-reset-invariant-preservation, lem-maincb-reset-constant-ledger, lem-maincb-structural-domain-ledger, lem-maincb-reset-output-typing, MAIN-CB, reset state, witness ledger, constant ledger, structural domains, extended inclusion, af validated
+\section{MAIN-CB reset states and ledgers: invariant preservation, the constant and structural-domain ledgers, and reset output typing}\label{sec:maincb-reset-ledgers}
+
+The four rows below isolate the bookkeeping around a MAIN-CB reset.  They first keep one
+literal improvement iterate and its typing, then choose a single universal ledger for all
+four raw-call forms, and finally place every call scale inside the structural domains.
+The reset states, raw calls, and witness tuple are those of
+Definitions~\ref{def:maincb-reset-state}, \ref{def:maincb-raw-call}, and
+\ref{def:maincb-witness-ledger}; no existence or estimate is read into those data definitions.
+
+\begin{lemma}[\texttt{lem-maincb-reset-invariant-preservation}]\label{lem:maincb-reset-invariant-preservation}
+Fix the universal witnesses $e_{\rm it},K_{\rm disp},K_{\rm floor}$ of
+Lemma~\ref{lem:maincb-improvement-iteration} and
+$\epsilon^{\rm cb}_{\max},\delta^{\rm cb}_{\max},c_0^0$ of
+Lemma~\ref{lem:maincb-error-improvement}.  There are universal
+$0<C_{\rm unit}<\infty$ and $\epsilon_{\rm unit},\delta_{\rm unit},a_{\rm unit}>0$,
+furnished by the third clause of \texttt{prop\_delta\_hominc} and its implicit quantifier
+convention, with the following property.  If $D\ge1$, $W$ is a MAIN-CB witness ledger,
+\[
+ c_0^{\rm cb}\ge\max\{c_0^0,K_{\rm floor},C_{\rm unit}(K_{\rm floor}+1)\},
+ \quad r_{\rm reset}\le\min\!\left\{\epsilon^{\rm cb}_{\max},\frac{\delta^{\rm cb}_{\max}}D,
+ \frac{e_{\rm it}}{D+1},\epsilon_{\rm unit},\frac{\delta_{\rm unit}}{\max\{1,K_{\rm floor}\}},
+ \frac{a_{\rm unit}}{(1+K_{\rm disp})D},\frac1{2(1+K_{\rm disp})D}\right\},
+\]
+and an explicit raw call at $0\le t\le r_{\rm reset}$ has target an extended
+$\epsilon_R$-$C^*$-corner $A_R$, literal extended $Dt$-inclusion
+$u_R:B_R\to A_R$, $\nrm{u_R(I_{B_R})-u_{A_R}}\le Dt$, and $\epsilon_R\le t$, then it
+admits a map $v_R:B_R\to A_R$ with
+\[
+ d_R\le c_0^{\rm cb}\epsilon_R,
+ \qquad \nrm{v_R(I_{B_R})-u_{A_R}}\le c_0^{\rm cb}\epsilon_R.
+\]
+The map $v_R$ is bijective whenever $u_R$ is, and the source, target corner, and
+amplification form are unchanged.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing the universal e_it,K_disp,K_floor witnesses of lem-maincb-improvement-iteration and epsilon_max^cb,delta_max^cb,c0^0 witnesses of lem-maincb-error-improvement, there are universal 0 < C_unit < infinity and epsilon_unit,delta_unit,a_unit > 0 furnished by the third clause of prop_delta_hominc and its implicit quantifier convention such that, for every D >= 1 and every def-maincb-witness-ledger datum W with W.c0_cb >= max{c0^0,K_floor,C_unit*(K_floor+1)} and W.r_reset <= min{epsilon_max^cb,delta_max^cb/D,e_it/(D+1),epsilon_unit,delta_unit/max{1,K_floor},a_unit/((1+K_disp)*D),[2*(1+K_disp)*D]^{-1}}, every explicit raw call into an extended epsilon_R-C*-corner A_R at scale 0 <= t <= W.r_reset whose literal map u_R:B_R->A_R is an extended D*t-inclusion and satisfies ||u_R(I_{B_R})-u_{A_R}|| <= D*t and epsilon_R <= t admits an error-improved map v_R:B_R->A_R satisfying d_R <= W.c0_cb*epsilon_R and ||v_R(I_{B_R})-u_{A_R}|| <= W.c0_cb*epsilon_R, preserving bijectivity when u_R is bijective and leaving the source, target corner, and amplification form unchanged.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Choose $C_{\rm unit},\epsilon_{\rm unit},\delta_{\rm unit},a_{\rm unit}$ from the
+registered near-unit clause, with $a_{\rm unit}$ strictly below its positive threshold.
+For a raw call put $d=Dt$.  The bounds $\epsilon_R\le t$ and
+$t\le e_{\rm it}/(D+1)$ give $d+\epsilon_R\le e_{\rm it}$, so
+Lemma~\ref{lem:maincb-improvement-iteration} produces one fixed map $v_R$ with
+$(v_R)_n=I_n\otimes v_R$, displacement at most $K_{\rm disp}Dt$, and extended-inclusion
+defect $K_{\rm floor}\epsilon_R$.  At level one the triangle inequality gives
+\[
+ \nrm{v_R(I_{B_R})-u_{A_R}}\le(1+K_{\rm disp})Dt\le a_{\rm unit}.
+\]
+The other radius bounds give $\epsilon_R\le\epsilon_{\rm unit}$ and
+$K_{\rm floor}\epsilon_R\le\delta_{\rm unit}$.  Applying the near-unit clause to this
+same map yields the unit error
+$C_{\rm unit}(K_{\rm floor}+1)\epsilon_R\le c_0^{\rm cb}\epsilon_R$, while its recorded
+defect is at most $K_{\rm floor}\epsilon_R\le c_0^{\rm cb}\epsilon_R$.
+If $u_R$ is bijective, then
+$\nrm{v_R(x)}\ge[1-(1+K_{\rm disp})Dt]\nrm{x}\ge\nrm{x}/2$; thus $v_R$ is injective,
+and equality of the finite dimensions of $B_R$ and $A_R$ makes it surjective.
+The proof deliberately retains the iteration output rather than substituting the separate
+existential map of Lemma~\ref{lem:maincb-error-improvement}; hence its displayed signature
+and amplification identity preserve the source, target, and amplification form.
+The quoted contract is the user-ratified two-defect repair, superseding its 2026-07-30 form.
+
+\begin{lemma}[\texttt{lem-maincb-reset-constant-ledger}]\label{lem:maincb-reset-constant-ledger}
+Fix, in the order stated in the registry contract below, the witnesses exported by the
+iteration, error-improvement, reset-invariance, corner-envelope, corner-identification,
+corner-equivalence, and four raw-call producer rows, and put
+$D_*:=\max\{1,D_0,D_1,D_2,D_3\}$.  Then Lemma~\ref{lem:maincb-witness-arithmetic}
+supplies one universal MAIN-CB witness ledger $W$ such that
+\[
+\begin{gathered}
+ c_0^{\rm cb}=c_0,\quad L\ge L^0,\quad K_1\ge K_1^0,\quad
+ K_2\ge\max\{K_2^0,1,L,c_0^{\rm cb}L\},\quad K_3\ge\max\{K_3^0,1,L,c_0^{\rm cb}L\},\\
+ e_{\rm env}\le e_{\rm env}^0,\quad e_1\le e_1^{\rm provider},\quad
+ e_{s2}\le\min\{e_{s2}^0,e_2\},\quad e_{\rm cross}\le\min\{e_{\rm cross}^0,e_3\}.
+\end{gathered}
+\]
+Under the respective producer hypotheses at base scale $0\le t\le W.r_{\rm reset}$ and target ambient defect at most $t$, let $u_0,u_1,u_2,u_3$ be the literal maps furnished respectively by \texttt{lem-maincb-initial-raw-inclusion}, \texttt{lem-maincb-stage1-call-envelope} with \texttt{lem-maincb-stage1-raw-refinement}, \texttt{lem-maincb-stage2-call-envelope} with \texttt{lem-maincb-stage2-raw-extension}, and \texttt{lem-maincb-stage3-call-envelope} with \texttt{lem-maincb-stage3-raw-merge}. Then $u_0:\mathbb C\to A$ and $u_1:\mathbb C^{m+1}\to A$ are extended $D_*t$-inclusions, while $u_2:M_{r+1}\to A_R$ and $u_3:B_U\oplus B_V\to A_R$ are extended $D_*t$-isomorphisms.  Their respective unit
+errors are at most $D_*t$, so all four are eligible for
+Lemma~\ref{lem:maincb-reset-invariant-preservation}.  Every selected witness is universal
+and independent of dimension, amplification, block data, class count, and stage index.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing e_it,K_disp,K_floor from lem-maincb-improvement-iteration, epsilon_max^cb,delta_max^cb,c0^0 from lem-maincb-error-improvement, C_unit,epsilon_unit,delta_unit,a_unit from lem-maincb-reset-invariant-preservation, a valid enlarged c0 >= max{c0^0,K_floor,C_unit*(K_floor+1)}, L^0,e_env^0 from lem-maincb-direct-corner-envelope for this c0, e_full from lem-maincb-full-corner-identification, e_sim from lem-maincb-corner-equivalence, D_0,e_0 from lem-maincb-initial-raw-inclusion, D_1,e_1,K_1^0 from lem-maincb-stage1-call-envelope, C_s2^0,e_s2^0 from lem-maincb-stage2-extcb-datum, D_2,e_2 from lem-maincb-stage2-raw-extension, K_2^0 from lem-maincb-stage2-call-envelope, C_cross^0,e_cross^0 from lem-maincb-cross-class-merging-datum, D_3,e_3 from lem-maincb-stage3-raw-merge, and K_3^0 from lem-maincb-stage3-call-envelope, set D_* = max{1,D_0,D_1,D_2,D_3}; then there exists one def-maincb-witness-ledger datum W supplied by lem-maincb-witness-arithmetic with W.c0_cb=c0, W.L>=L^0, W.K1>=K_1^0, W.K2>=max{K_2^0,1,W.L,W.c0_cb*W.L}, W.K3>=max{K_3^0,1,W.L,W.c0_cb*W.L}, W.e_env<=e_env^0, W.e1<=e_1, W.e_s2<=min{e_s2^0,e_2}, and W.e_cross<=min{e_cross^0,e_3}, such that under the respective producer hypotheses at base scale 0 <= t <= W.r_reset and target ambient defect at most t, the literal maps u_0:C->A furnished by lem-maincb-initial-raw-inclusion and u_1:C^{m+1}->A furnished by lem-maincb-stage1-call-envelope with lem-maincb-stage1-raw-refinement are extended D_*t-inclusions, the literal maps u_2:M_{r+1}->A_R furnished by lem-maincb-stage2-call-envelope with lem-maincb-stage2-raw-extension and u_3:B_U oplus B_V->A_R furnished by lem-maincb-stage3-call-envelope with lem-maincb-stage3-raw-merge are extended D_*t-isomorphisms, and ||u_0(I_C)-I_A||,||u_1(I_{C^{m+1}})-I_A||,||u_2(I_{M_{r+1}})-u_{A_R}||,||u_3(I_{B_U oplus B_V})-u_{A_R}|| <= D_*t, so each satisfies the M02/M03 and near-unit thresholds and is eligible for lem-maincb-reset-invariant-preservation; all selected witnesses are universal and independent of dimension, amplification, block data, class count, and stage index.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree chooses $L=L^0$, $K_1=K_1^0$ and
+$K_i=\max\{K_i^0,1,L^0,c_0L^0\}$ for $i=2,3$, together with
+$e_{\rm env}=e_{\rm env}^0$, $e_{s2}=\min\{e_{s2}^0,e_2\}$ and
+$e_{\rm cross}=\min\{e_{\rm cross}^0,e_3\}$.  Applying
+Lemma~\ref{lem:maincb-witness-arithmetic} records these exact choices in one $W$ and makes
+$r_{\rm reset}$ no larger than every provider threshold and every radius required by
+Lemma~\ref{lem:maincb-reset-invariant-preservation} with $D=D_*$.  The initial scalar map
+$u_0(\lambda)=\lambda I_A$ has zero unit error.  Lemmas~\ref{lem:maincb-stage1-call-envelope} and \ref{lem:maincb-stage1-raw-refinement} give $u_1$ with defect and unit error $D_1t$.  Monotonicity
+(Lemma~\ref{lem:maincb-extended-inclusion-monotone}) weakens both map bounds to $D_*t$.
+For Stage 2 the scale is $t=K_2\epsilon$: Lemma~\ref{lem:maincb-stage2-call-envelope} provides the closed EXT-CB
+datum with $\epsilon_R=L\epsilon\le t$, and Lemma~\ref{lem:maincb-stage2-raw-extension} supplies a chosen isomorphism
+$v_+$; the composite record defines $u_2:=v_+$ rather than identifying opaque outputs.
+Stage 3 similarly takes $t=K_3\epsilon$, obtains the amplified four-corner datum, applies Lemma~\ref{lem:maincb-stage3-raw-merge} to the datum supplied by Lemma~\ref{lem:maincb-stage3-call-envelope}, and defines its output to be $u_3$.  A verifier challenged this last invocation;
+the repaired live tree unpacks ``the respective producer hypotheses'' to retain the same
+fixed cross witnesses and the four required bijective level-one corner maps, without
+inferring bijectivity from the call envelope.  Weakening $D_i t$ to $D_*t$ preserves the
+two isomorphism tags and unit bounds.  All four calls now meet the common reset radius and
+near-unit hypotheses, so Lemma~\ref{lem:maincb-reset-invariant-preservation} applies.
+This is the user-ratified amended contract; its later suspension and re-flip were mechanical dependency-status propagation, not a change to the preserved certificate.
+
+\begin{lemma}[\texttt{lem-maincb-structural-domain-ledger}]\label{lem:maincb-structural-domain-ledger}
+Fix particular universal $e_{\rm sim},e_{\rm full}>0$ furnished by
+Lemmas~\ref{lem:maincb-corner-equivalence} and
+\ref{lem:maincb-full-corner-identification}, and fix a witness ledger $W$ furnished by
+Lemma~\ref{lem:maincb-reset-constant-ledger} using those same witnesses.  If
+$0\le\epsilon\le\epsilon_{\rm MAIN}$, then
+\[
+ \epsilon\le e_{\rm env},\qquad \epsilon\le\frac{e_1}{K_1},\qquad
+ \epsilon\le\frac{e_{s2}}{K_2},\qquad \epsilon\le\frac{e_{\rm cross}}{K_3}.
+\]
+The scales $\epsilon$, $K_{\rm call}\epsilon$, $K_1\epsilon$, $K_2\epsilon$, and
+$K_3\epsilon$ are all at most $K_{\rm call}\epsilon$, and
+\[
+ K_{\rm call}\epsilon\le r_{\rm reset},e_{\rm sim},e_{\rm full},
+ \qquad L\epsilon\le K_{\rm call}\epsilon,
+ \qquad c_0^{\rm cb}K_{\rm call}\epsilon\le\tfrac12.
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing a particular universal e_sim>0 witness furnished by lem-maincb-corner-equivalence and a particular universal e_full>0 witness furnished by lem-maincb-full-corner-identification, fix one def-maincb-witness-ledger datum W whose existence is furnished by lem-maincb-reset-constant-ledger instantiated with those same e_sim,e_full witnesses; then 0 <= epsilon <= W.epsilon_MAIN implies epsilon <= W.e_env, epsilon <= W.e1/W.K1, epsilon <= W.e_s2/W.K2, and epsilon <= W.e_cross/W.K3, while the global scalar scale epsilon, atomic scalar scale W.K_call*epsilon, and Stage-1, Stage-2, and Stage-3 scales W.K1*epsilon,W.K2*epsilon,W.K3*epsilon are all at most W.K_call*epsilon <= W.r_reset,e_sim,e_full; moreover W.L*epsilon <= W.K_call*epsilon and W.c0_cb*W.K_call*epsilon <= 1/2.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+For this same fixed $W,e_{\rm sim},e_{\rm full}$, the phrase ``supplied by
+Lemma~\ref{lem:maincb-witness-arithmetic}'' in the constant-ledger conclusion yields
+positivity of every field and the exact formulas
+\[
+ K_{\rm call}=\max\{1,L+1,c_0^{\rm cb},K_1,K_2,K_3\},
+\]
+and $\epsilon_{\rm MAIN}$ as the minimum of
+$e_{\rm env},e_1/K_1,e_{s2}/K_2,e_{\rm cross}/K_3,r_{\rm reset}/K_{\rm call},
+e_{\rm sim}/K_{\rm call},e_{\rm full}/K_{\rm call}$ and
+$[2\max\{1,c_0^{\rm cb}K_{\rm call}\}]^{-1}$.  The first four entries give the four
+displayed domain bounds.  The maximum formula gives
+$K_{\rm call}\ge1,K_1,K_2,K_3$, so multiplication by $\epsilon\ge0$ compares the global,
+atomic, and stage scales.  The next three minimum entries, multiplied by positive
+$K_{\rm call}$, place their common upper bound inside
+$r_{\rm reset},e_{\rm sim},e_{\rm full}$.  Also $K_{\rm call}\ge L+1\ge L$.
+Finally put $x=c_0^{\rm cb}K_{\rm call}$ and $M=\max\{1,x\}$; then
+$\epsilon\le1/(2M)$ and $x\le M$ give $x\epsilon\le1/2$.
+The live tree records that the root already fixes $W$ with the complete provider provenance;
+it does not derive omitted witnesses from an abbreviated dependency list.  Challenges about
+that scope and about using a pending aggregate node were repaired by the explicit scope
+correction and by making the two scalar branches depend directly on the validated formula node.
+The amended contract also carries the recorded-field repair; its suspension and re-flip likewise followed the Stage-3 dependency status, with the workspace preserved.
+
+\begin{lemma}[\texttt{lem-maincb-reset-output-typing}]\label{lem:maincb-reset-output-typing}
+Under the same fixed witnesses and radius hypotheses as
+Lemma~\ref{lem:maincb-reset-invariant-preservation}, every indicated raw call admits one
+error-improved map $v_R:B_R\to A_R$ satisfying
+\[
+ d_R\le c_0^{\rm cb}\epsilon_R,\qquad
+ \nrm{v_R(I_{B_R})-u_{A_R}}\le c_0^{\rm cb}\epsilon_R,
+\]
+which is an extended $c_0^{\rm cb}\epsilon_R$-inclusion, is an extended
+$c_0^{\rm cb}\epsilon_R$-isomorphism when $u_R$ is bijective, and leaves the source,
+target corner, and amplification form unchanged.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing the universal e_it,K_disp,K_floor witnesses of lem-maincb-improvement-iteration and epsilon_max^cb,delta_max^cb,c0^0 witnesses of lem-maincb-error-improvement, there are universal 0 < C_unit < infinity and epsilon_unit,delta_unit,a_unit > 0 furnished by the third clause of prop_delta_hominc and its implicit quantifier convention such that, for every D >= 1 and every def-maincb-witness-ledger datum W with W.c0_cb >= max{c0^0,K_floor,C_unit*(K_floor+1)} and W.r_reset <= min{epsilon_max^cb,delta_max^cb/D,e_it/(D+1),epsilon_unit,delta_unit/max{1,K_floor},a_unit/((1+K_disp)*D),[2*(1+K_disp)*D]^{-1}}, every explicit raw call into an extended epsilon_R-C*-corner A_R at scale 0 <= t <= W.r_reset whose literal map u_R:B_R->A_R is an extended D*t-inclusion and satisfies ||u_R(I_{B_R})-u_{A_R}|| <= D*t and epsilon_R <= t admits an error-improved map v_R:B_R->A_R that satisfies d_R <= W.c0_cb*epsilon_R and ||v_R(I_{B_R})-u_{A_R}|| <= W.c0_cb*epsilon_R, is an extended W.c0_cb*epsilon_R-inclusion, is an extended W.c0_cb*epsilon_R-isomorphism when u_R is bijective, and leaves the source, target corner, and amplification form unchanged.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Unpack the same near-unit clause and fix its four universal constants independently of all
+algebras, maps, $D,W,t$.  For one raw call set $q=(1+K_{\rm disp})Dt$.  The ledger radius
+gives every threshold needed by the iteration and near-unit steps, in particular
+$q\le\min\{a_{\rm unit},1/2\}$.  Lemma~\ref{lem:maincb-improvement-iteration} produces a
+single dagger-preserving $v_R$ with amplifications $I_n\otimes v_R$, displacement at most
+$K_{\rm disp}Dt$, and extended-inclusion defect $K_{\rm floor}\epsilon_R$; this same map is
+retained also at $\epsilon_R=0$, where the provider specifies its operator-norm limit.
+At the unit, the displacement plus the raw-call unit error is at most $q$, so the near-unit
+clause gives the sharper bound
+$C_{\rm unit}(K_{\rm floor}+1)\epsilon_R\le c_0^{\rm cb}\epsilon_R$.
+Record $d_R=K_{\rm floor}\epsilon_R$.  Since
+$K_{\rm floor}\epsilon_R\le c_0^{\rm cb}\epsilon_R$, monotonicity
+(Lemma~\ref{lem:maincb-extended-inclusion-monotone}) types this very map as the asserted
+extended inclusion.  If $u_R$ is bijective, the lower estimate
+$\nrm{v_R(x)}\ge(1-q)\nrm{x}\ge\nrm{x}/2$ and finite-dimensionality make $v_R$ bijective;
+monotonicity preserves the resulting extended-isomorphism tag.  No separate existential
+output of Lemma~\ref{lem:maincb-error-improvement} is substituted, so the literal source,
+target corner, and amplification family remain unchanged.
+This is the user-ratified standalone strengthened reset-output row supplied by the consumer repair.

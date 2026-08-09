@@ -1,0 +1,186 @@
+% SHARD-ID: AISM-70-ROUTEF-KLEDGER-PACKAGE
+% SHARD-TITLE: The strengthened K-ledger package: scalar header positivity, the factor-map and factor-estimate packets, and the strengthened K-ledger
+% SHARD-SUMMARY: Reproduces lem-routef-scalar-header-positivity, which fixes one pre-input global Route-F witness package and proves positivity, finiteness, universality, and the complete radius chain for its scalar header.
+% SHARD-SUMMARY: Reproduces lem-routef-factor-map-packet, which constructs one serially compatible same-datum packet of CP and UCP factor maps for the diagonal lift of a stochastic input.
+% SHARD-SUMMARY: Reproduces lem-routef-factor-estimate-packet, which places the three factor estimates under one coefficient K and records the threshold arithmetic needed by the finish. Reproduces lem-routef-k-ledger, the strengthened factorization-and-finish ledger yielding the stochastic idempotent with error (K+4*sqrt(2K))*sqrt(eta).
+% SHARD-KEYWORDS: lem-routef-scalar-header-positivity, lem-routef-factor-map-packet, lem-routef-factor-estimate-packet, lem-routef-k-ledger, af validated, Route F, scalar header, same-datum packet, factorization, stochastic idempotent
+\section{The strengthened K-ledger package: scalar header positivity, the factor-map and factor-estimate packets, and the strengthened K-ledger}\label{sec:routef-kledger-package}
+
+This section reproduces the four \texttt{af}-validated rows that package the Route-F
+factorization.  The scalar header and setting datum are those of
+Definition~\ref{def:routef-raw-factor-setting}; the first row fixes their universal
+quantifier order, the next two preserve one serial packet, and the last performs the
+positive-retract finish without reselecting any witness.
+
+\begin{lemma}[\texttt{lem-routef-scalar-header-positivity}]\label{lem:routef-scalar-header-positivity}
+There is one global witness package $W_{\mathrm{RF}}$ supplied by
+Lemma~\ref{lem:routef-raw-factor-setting-formation} such that, for its scalars
+$K$ in (1.6), $\rho_{\mathrm{fac}}$ in (1.7), and
+$\eta_K=\min\{\rho_{\mathrm{fac}},(24K)^{-1},1\}$ in (1.8),
+$K<\infty$, $K\ge1$, $\rho_{\mathrm{fac}}>0$, and $\eta_K>0$.  These scalars are
+universal and independent of $\mathcal H,\Phi,\eta,n$, the amplification level, the
+simple-block count, and the block dimensions, and
+\[
+ \eta_K\le\rho_{\mathrm{fac}}\le\rho_2\le\rho_T\le\rho_{\mathrm{id}}^{\mathrm{corr}},
+ \quad \rho_2\le\rho_{\Delta'},\rho_\Delta,
+ \quad \rho_{\mathrm{fac}}\le\rho_{\Delta\Upsilon}\le\rho_\Upsilon\le\rho_{\Upsilon'},
+ \quad \rho_{\mathrm{fac}}\le\rho_{\mathrm{mult}},\rho_{\Upsilon\Delta}.
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Route F scalar-header positivity: there exists one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation such that, writing K for its scalar (1.6), rho_fac for its scalar (1.7), and eta_K := min{rho_fac, (24*K)^(-1), 1} for its scalar (1.8), K is finite with K >= 1, rho_fac > 0, and eta_K > 0, these scalars are universal and independent of H, Phi, eta, n, amplification level, simple-block count, and block dimensions, and eta_K <= rho_fac <= rho_2 <= rho_T <= rho_id^corr, rho_2 <= rho_Delta', rho_2 <= rho_Delta, rho_fac <= rho_DeltaUpsilon <= rho_Upsilon <= rho_Upsilon', rho_fac <= rho_mult, and rho_fac <= rho_UpsilonDelta.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree first selects the scalar header supplied, before every input quantifier, by
+Lemma~\ref{lem:routef-raw-factor-setting-formation}.  Its primitive fields give
+$C_\theta=12(\sqrt2-1)>0$, the positive finite $C_A$, and
+$\bar C_E=\max\{1,C_E\}$; hence $C_V,C_T$ are positive and finite.  Every entry in the
+minimum defining $\rho_T$ is then positive, including the two reciprocal entries.
+Proceeding through (1.2), each new coefficient is a finite sum of earlier coefficients
+and each new radius is a finite minimum of positive terms.  The same induction through
+(1.3)--(1.5) gives positive finite $C_N,C_R,C_L,C_{\Upsilon'},C_\Upsilon$ and positive
+$\rho_{\Upsilon'},\rho_\Upsilon,\rho_{\Delta\Upsilon},\rho_{\mathrm{mult}}$ and
+$\rho_{\Upsilon\Delta}$.  Thus (1.6) makes $K$ the maximum of $1$ and three finite
+expressions, so $K<\infty$ and $K\ge1$; (1.7) makes $\rho_{\mathrm{fac}}$ the minimum
+of the four positive radii $\rho_2,\rho_{\Delta\Upsilon},\rho_{\mathrm{mult}}$ and
+$\rho_{\Upsilon\Delta}$; and (1.8) gives $\eta_K>0$.  The displayed inequalities are
+exactly the coordinate inequalities of these successive minima.  Finally, all three
+scalars depend only on the pre-input header, proving their asserted universality.
+Two verifier challenges were repaired inside this proof tree: one removed a pending-sibling
+dependency by rebuilding the positivity step with validated support, and one corrected
+the count in (1.6) from five purported entries to its actual four.  Two superseded helper
+nodes were archived; neither repair altered the registry contract.
+
+\begin{lemma}[\texttt{lem-routef-factor-map-packet}]\label{lem:routef-factor-map-packet}
+Fix the preceding $W_{\mathrm{RF}}$ and its $K,\rho_{\mathrm{fac}},\eta_K$.  For every
+$n\ge1$, row-stochastic $Q:\linfd n\to\linfd n$, and $0\le\eta\le\eta_K$ with
+$\nrm{Q^2-Q}_{\infty\to\infty}\le\eta$, let $D:M_n\to\mathbb C^n$ be diagonal
+extraction, $J:\mathbb C^n\to M_n$ diagonal inclusion, $Q_{\mathbb C}$ the canonical
+complex-linear extension of $Q$, and $\Phi=JQ_{\mathbb C}D$.  Then $\Phi$ is UCP and
+$\nrm{\Phi^2-\Phi}_{\mathrm{cb}}\le\eta$, and there are a finite-dimensional unital
+$C^*$-algebra $B$, one setting datum $S$ over this same $W_{\mathrm{RF}}$ for
+$(\mathcal H,\Phi,\eta)=(\mathbb C^n,\Phi,\eta)$, CP maps
+$\Delta':B\to M_n$, $\Upsilon':M_n\to B$, and UCP maps
+$\Delta:B\to M_n$, $\Upsilon:M_n\to B$.  Here $\Delta'$ is supplied by
+Lemma~\ref{lem:routef-delta-prime-closeness}, $\Delta$ from that same $\Delta'$ by
+Lemma~\ref{lem:routef-delta-normalization-closeness}, $\Upsilon'$ from that same
+$(\Delta',\Delta)$ by Lemma~\ref{lem:routef-upsilon-prime-closeness}, and $\Upsilon$
+from that same triple by Lemma~\ref{lem:routef-upsilon-normalization-closeness}.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Relative Route F factor-map packet: after first fixing one global witness package W_RF supplied by lem-routef-scalar-header-positivity from lem-routef-raw-factor-setting-formation, writing K, rho_fac, and eta_K for its scalars (1.6)-(1.8), for every n >= 1, every row-stochastic Q: l_inf^n -> l_inf^n, and every 0 <= eta <= eta_K with ||Q^2-Q||_{infinity->infinity} <= eta, let D: M_n -> C^n be diagonal extraction onto the complex diagonal algebra C^n = l_inf^n(C), let J: C^n -> M_n be the diagonal inclusion, let Q_C: C^n -> C^n be the canonical complex-linear extension of Q, and put Phi := J Q_C D; then Phi is UCP with ||Phi^2-Phi||_cb <= eta, and there exist a finite-dimensional unital C*-algebra B, one def-routef-raw-factor-setting datum S over this same W_RF supplied by lem-routef-raw-factor-setting-formation for the same (H:=C^n,Phi,eta) whose B-field is B, CP maps Delta':B->M_n and Upsilon':M_n->B, and UCP maps Delta:B->M_n and Upsilon:M_n->B such that Delta' is supplied for (W_RF,S) by lem-routef-delta-prime-closeness, Delta is supplied from that same Delta' by lem-routef-delta-normalization-closeness, Upsilon' is supplied from that same (Delta',Delta) by lem-routef-upsilon-prime-closeness, and Upsilon is supplied from that same (Delta',Delta,Upsilon') by lem-routef-upsilon-normalization-closeness.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Fix the header from Lemma~\ref{lem:routef-scalar-header-positivity}.  Its radius chain gives
+$\eta_K\le\rho_{\mathrm{id}}^{\mathrm{corr}},\rho_{\Delta'},\rho_\Delta,
+\rho_{\Upsilon'},\rho_\Upsilon$.  For arbitrary $n,Q,eta$, the diagonal-lift row
+Lemma~\ref{lem:routef-f0-ucp-lift} makes $\Phi=JQ_{\mathbb C}D$ UCP, while
+Lemma~\ref{lem:routef-f0-defect-identity} identifies its completely bounded defect with
+$\nrm{Q^2-Q}_{\infty\to\infty}$.  Since $\mathbb C^n$ is nonzero, the formation row
+applies at this exact triple and is invoked once, producing one algebra $B$ and one datum
+$S$ over the already fixed header.  The proof then preserves that datum rigidly.  First
+Lemma~\ref{lem:routef-delta-prime-closeness} supplies the CP map $\Delta'$; then
+Lemma~\ref{lem:routef-delta-normalization-closeness} consumes that particular map and
+supplies the UCP map $\Delta$.  Next Lemma~\ref{lem:routef-upsilon-prime-closeness}
+consumes the same $(S,\Delta',\Delta)$ and supplies the CP map $\Upsilon'$, after which
+Lemma~\ref{lem:routef-upsilon-normalization-closeness} consumes that exact triple and
+supplies the UCP map $\Upsilon$.  Thus the witnesses have the serial provenance claimed
+at the root; no component packet is opened and no witness is reselected.  The exported
+tree is first-pass and clean, with no recorded challenge or amendment.
+
+\begin{lemma}[\texttt{lem-routef-factor-estimate-packet}]\label{lem:routef-factor-estimate-packet}
+Fix the preceding $W_{\mathrm{RF}}$ and its $K,\rho_{\mathrm{fac}},\eta_K$.  For every
+$n\ge1$, row-stochastic $Q:\linfd n\to\linfd n$, and $0\le\eta\le\eta_K$ with
+$\nrm{Q^2-Q}_{\infty\to\infty}\le\eta$, form $D,J,Q_{\mathbb C}$ and
+$\Phi=JQ_{\mathbb C}D$ as in Lemma~\ref{lem:routef-factor-map-packet}.  For every
+same-datum packet $(B,S,\Delta',\Delta,\Upsilon',\Upsilon)$ supplied there,
+\[
+ \nrm{\Delta\Upsilon-\Phi}_{\mathrm{cb}}\le K\eta,
+ \qquad \nrm{\Upsilon\Delta-I_B}_{\mathrm{cb}}\le K\eta,
+\]
+and, for every $r\ge1$ and $X,Y\in M_r(B)$,
+\[
+ \nrm{\Upsilon_r(\Delta_rX\,\Delta_rY)-XY}
+ \le K\eta\nrm X\nrm Y.
+\]
+Moreover $0\le\eta\le\min\{(24K)^{-1},1\}$ and
+\[
+ 3K\eta\le\tfrac18<1,
+ \qquad \frac{3K\eta}{1-3K\eta}\le4K\eta\le\tfrac16<\tfrac12.
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Relative Route F factor-estimate packet: after first fixing one global witness package W_RF supplied by lem-routef-scalar-header-positivity from lem-routef-raw-factor-setting-formation, writing K, rho_fac, and eta_K for its scalars (1.6)-(1.8), for every n >= 1, every row-stochastic Q: l_inf^n -> l_inf^n, and every 0 <= eta <= eta_K with ||Q^2-Q||_{infinity->infinity} <= eta, let D: M_n -> C^n be diagonal extraction onto the complex diagonal algebra C^n = l_inf^n(C), let J: C^n -> M_n be the diagonal inclusion, let Q_C: C^n -> C^n be the canonical complex-linear extension of Q, and put Phi := J Q_C D; for every same-datum packet (B,S,Delta',Delta,Upsilon',Upsilon) supplied for this (W_RF,n,Q,eta,D,J,Q_C,Phi) by lem-routef-factor-map-packet, ||Delta Upsilon-Phi||_cb <= K*eta, ||Upsilon Delta-I_B||_cb <= K*eta, and for every integer r >= 1 and all X,Y in M_r(B), ||Upsilon_r(Delta_r X Delta_r Y)-XY|| <= K*eta*||X||*||Y||; moreover 0 <= eta <= min{(24*K)^(-1),1}, 3*K*eta <= 1/8 < 1, and 3*K*eta/(1-3*K*eta) <= 4*K*eta <= 1/6 < 1/2.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Fix the header and an arbitrary packet supplied by Lemma~\ref{lem:routef-factor-map-packet}.
+The serial provenance of that packet is precisely the input required by all three telescope
+rows, while Lemma~\ref{lem:routef-scalar-header-positivity} gives
+$0\le\eta\le\eta_K\le\rho_{\mathrm{fac}}$ and places $\rho_{\mathrm{fac}}$ below their
+three domain radii.  Lemma~\ref{lem:routef-delta-upsilon-telescope} first yields
+$\nrm{\Delta\Upsilon-\Phi}_{\mathrm{cb}}\le
+(C_\theta+C_\Delta+2C_\Upsilon)\eta$; its coefficient is an entry in the maximum (1.6),
+so it is at most $K$.  Lemma~\ref{lem:routef-upsilon-delta-telescope} similarly gives
+coefficient $C_\Upsilon+2C_\Delta\le K$.  At every amplification,
+Lemma~\ref{lem:routef-multiplicative-telescope} gives coefficient
+$C_\Upsilon+2(C_2+C_\theta+C_\Delta)\le K$, and multiplication by the nonnegative
+$\eta\nrm X\nrm Y$ preserves the bound.  Lemma~\ref{lem:routef-k-finiteness} records the
+common domain and coefficient ledger used in those three applications.  Finally,
+Lemma~\ref{lem:routef-threshold-minimum} applies the formula
+$\eta_K=\min\{\rho_{\mathrm{fac}},(24K)^{-1},1\}$ to give the displayed smallness and
+rational estimates, including positivity of $1-3K\eta$.  All assertions concern the same
+arbitrary packet; the exported tree is first-pass and clean, with no recorded challenge.
+
+\begin{lemma}[\texttt{lem-routef-k-ledger}]\label{lem:routef-k-ledger}
+There is one global $W_{\mathrm{RF}}$ supplied by
+Lemma~\ref{lem:routef-raw-factor-setting-formation} such that, writing $K$ for (1.6),
+$\rho_{\mathrm{fac}}$ for (1.7), and
+$\eta_K=\min\{\rho_{\mathrm{fac}},(24K)^{-1},1\}$ for (1.8), $K\ge1$ and $\eta_K>0$
+are universal and independent of $n$, amplification level, simple-block count and block
+dimensions.  For every $n\ge1$, row-stochastic $Q:\linfd n\to\linfd n$, and
+$0\le\eta\le\eta_K$ with $\nrm{Q^2-Q}_{\infty\to\infty}\le\eta$, let
+$D:M_n\to\mathbb C^n$ be diagonal extraction, $J:\mathbb C^n\to M_n$ diagonal inclusion,
+$Q_{\mathbb C}$ the canonical complex-linear extension, and $\Phi=JQ_{\mathbb C}D$.
+Then there are a finite-dimensional unital $C^*$-algebra $B$ and UCP maps
+$\Delta:B\to M_n$, $\Upsilon:M_n\to B$ satisfying
+\[
+ \nrm{\Delta\Upsilon-\Phi}_{\mathrm{cb}},\ \nrm{\Upsilon\Delta-I_B}_{\mathrm{cb}}
+ \le K\eta,
+ \qquad
+ \nrm{\Upsilon_r(\Delta_rX\,\Delta_rY)-XY}\le K\eta\nrm X\nrm Y
+\]
+for every $r\ge1$ and $X,Y\in M_r(B)$.  The same $Q$ admits a stochastic idempotent $E$
+such that
+\[
+ \nrm{Q-E}_{\infty\to\infty}\le
+ \bigl(K+4\sqrt{2K}\bigr)\sqrt\eta.
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Relative Route F factorization-and-finish ledger: there exists one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation such that, writing K for its scalar (1.6), rho_fac for its scalar (1.7), and eta_K := min{rho_fac, (24*K)^(-1), 1} for its scalar (1.8), K >= 1 and eta_K > 0 are universal and independent of n, amplification level, simple-block count, and block dimensions, and for every n >= 1, every row-stochastic Q: l_inf^n -> l_inf^n, and every 0 <= eta <= eta_K with ||Q^2-Q||_{infinity->infinity} <= eta, let D: M_n -> C^n be diagonal extraction onto the complex diagonal algebra C^n = l_inf^n(C), let J: C^n -> M_n be the diagonal inclusion, let Q_C: C^n -> C^n be the canonical complex-linear extension of Q, and put Phi := J Q_C D; then there exist a finite-dimensional unital C*-algebra B and UCP maps Delta: B -> M_n and Upsilon: M_n -> B such that ||Delta Upsilon-Phi||_cb <= K*eta, ||Upsilon Delta-I_B||_cb <= K*eta, and for every integer r >= 1 and all X,Y in M_r(B), ||Upsilon_r(Delta_r X Delta_r Y)-XY|| <= K*eta*||X||*||Y||, and the same Q admits a stochastic idempotent E satisfying ||Q-E||_{infinity->infinity} <= (K+4*sqrt(2*K))*sqrt(eta).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Choose the single global header by Lemma~\ref{lem:routef-scalar-header-positivity}; this
+supplies the pre-input, universal $K\ge1$ and $\eta_K>0$.  For arbitrary admissible
+$n,Q,\eta$, Lemma~\ref{lem:routef-factor-map-packet} supplies one algebra $B$, its setting
+datum, and the serial maps $\Delta',\Delta,\Upsilon',\Upsilon$.  On that very packet,
+Lemma~\ref{lem:routef-factor-estimate-packet} supplies the two completely bounded factor
+estimates, the amplified multiplicative estimate, and all threshold inequalities.
+The $r=1$ specialization of the latter is the level-one hypothesis required by
+Lemma~\ref{lem:routef-f2-positive-unital-compression}.  That lemma proves that $B$ is
+commutative, selects $k\ge1$ and a unital $*$-isomorphism $\mathbb C^k\to B$, and produces
+positive unital maps $A:\linfd k\to\linfd n$ and $M:\linfd n\to\linfd k$ with
+$\nrm{Q-AM}_{\infty\to\infty}\le K\eta$,
+$\nrm{QA-A}_{\infty\to\infty}\le2K\eta$, and
+$\nrm{Ax}_\infty\ge(1-3K\eta)\nrm{x}_\infty$.  Since $3K\eta\le1/8<1$,
+Lemma~\ref{lem:routef-f3-retract-defect} turns these into
+$\nrm{MA-I_k}_{\infty\to\infty}\le3K\eta/(1-3K\eta)$.  The bounds
+$\eta\le\min\{(24K)^{-1},1\}$ now meet the hypotheses of
+Lemma~\ref{lem:routef-prh-finish}, which returns the stated stochastic idempotent for the
+same $Q$ with constant $K+4\sqrt{2K}$.  This seven-node tree validated on its first pass.
+It proves the strengthened statement as a new obligation: no status was inherited from
+the narrower \texttt{proved-mod-audit} W74F paper ledger that this registry result supersedes.

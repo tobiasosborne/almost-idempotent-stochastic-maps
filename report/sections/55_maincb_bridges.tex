@@ -1,0 +1,229 @@
+% SHARD-ID: AISM-55-MAINCB-BRIDGES
+% SHARD-TITLE: MAIN-CB interface bridges: unit control, witness arithmetic, unit comparison, bijectivity, the merging datum, and inclusion monotonicity
+% SHARD-SUMMARY: Reproduces lem-maincb-isomorphism-unit-control, the dimension-free level-one unit estimate for an extended approximate isomorphism.
+% SHARD-SUMMARY: Reproduces lem-maincb-witness-arithmetic, the finite max--min construction of one universal MAIN-CB witness ledger. Reproduces lem-maincb-compressed-corner-unit-comparison, the amplified comparison between compressed units and their defining projections, including the outer-compressed telescope.
+% SHARD-SUMMARY: Reproduces lem-maincb-cross-datum-bijectivity, the bijectivity of all four fixed level-one maps in the Stage-3 cross-class datum. Reproduces lem-maincb-cross-class-merging-datum, the explicit amplified four-corner datum assembled from nested, outer-compressed, unit, and zero-cross-corner constructions. Reproduces lem-maincb-extended-inclusion-monotone, the defect-parameter monotonicity of extended inclusions and isomorphisms.
+% SHARD-KEYWORDS: MAIN-CB, lem-maincb-isomorphism-unit-control, lem-maincb-witness-arithmetic, lem-maincb-compressed-corner-unit-comparison, lem-maincb-cross-datum-bijectivity, lem-maincb-cross-class-merging-datum, lem-maincb-extended-inclusion-monotone, af validated, unit control, witness ledger, four-corner merging
+\section{MAIN-CB interface bridges: unit control, witness arithmetic, unit comparison, bijectivity, the merging datum, and inclusion monotonicity}\label{sec:maincb-bridges}
+
+This section records six interface rows used by the MAIN-CB assembly: two scalar and unit
+bridges, the compressed-corner unit telescope, the fixed-map bijectivity bridge, the
+cross-class four-corner packet itself, and the monotonicity needed when defects are enlarged.
+The relevant data are those of Definitions~\ref{def:maincb-witness-ledger},
+\ref{def:maincb-partition-state}, and~\ref{def:four-corner-merging-datum}.
+
+\begin{lemma}[\texttt{lem-maincb-isomorphism-unit-control}]\label{lem:maincb-isomorphism-unit-control}
+There are universal constants $C_{\mathrm{iso,unit}}<\infty$ and
+$e_{\mathrm{iso,unit}}>0$ such that, if $B$ is a finite-dimensional $C^*$-algebra,
+$A$ is a finite-dimensional extended $\varepsilon$-$C^*$-algebra, and
+$v:B\to A$ is an extended $\delta$-isomorphism in the sense of
+Definition~\ref{def:extended-delta-inclusion}, with
+$0\le\delta+\varepsilon\le e_{\mathrm{iso,unit}}$, then
+\[
+  \nrm{v(I_B)-I_A}\le C_{\mathrm{iso,unit}}(\delta+\varepsilon).
+\]
+The witnesses are independent of dimension, amplification, block data, and the source and target.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There are universal C_iso_unit < infinity and e_iso_unit > 0 such that if B is a finite-dimensional C*-algebra, A is a finite-dimensional extended epsilon-C*-algebra, and v:B->A is an extended delta-isomorphism with 0 <= delta+epsilon <= e_iso_unit, then ||v(I_B)-I_A|| <= C_iso_unit*(delta+epsilon); the witnesses are independent of dimension, amplification, block data, and the particular source and target.}
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree chooses the numerical witnesses $C_{\mathrm{iso,unit}}=1$ and
+$e_{\mathrm{iso,unit}}=1$, before any algebra or map is fixed.
+For admissible $B,A,v,\delta,\varepsilon$, the definition of an extended
+$\delta$-isomorphism first makes $v$ an extended $\delta$-inclusion.
+Specialising its amplification requirement to $n=1$ makes the level-one map
+a $\delta$-homomorphism.  The unit clause in that notion then gives directly
+$\nrm{v(I_B)-I_A}\le\delta$.  At the same matrix level, the extended
+$\varepsilon$-$C^*$ structure and its underlying approximate-algebra axioms give
+$|\nrm{I_A}-1|\le\varepsilon$; in particular $\varepsilon\ge0$.
+Together with the assumed $\delta\ge0$, this yields
+$\delta\le\delta+\varepsilon$.  Hence
+$\nrm{v(I_B)-I_A}\le\delta+\varepsilon
+=C_{\mathrm{iso,unit}}(\delta+\varepsilon)$.
+Because both witnesses were fixed numerical constants, none depends on a matrix
+level, dimension, block decomposition, or on the particular $B,A,v$.
+
+\begin{lemma}[\texttt{lem-maincb-witness-arithmetic}]\label{lem:maincb-witness-arithmetic}
+Fix positive finite universal provider witnesses
+$D_0,D_1,D_2,D_3,e_0,e_1,e_2,e_3,\varepsilon_{\max}^{\mathrm{cb}},
+\delta_{max}^{\mathrm{cb}},e_{\mathrm{it}},K_{\mathrm{disp}},K_{\mathrm{floor}},
+\varepsilon_{\mathrm{unit}},\delta_{\mathrm{unit}},a_{\mathrm{unit}},L,c_0^{\mathrm{cb}},
+K_1,K_2,K_3,e_{\mathrm{env}},e_{s2},e_{\mathrm{cross}},e_{\mathrm{sim}},e_{\mathrm{full}}$
+with $K_2,K_3\ge\max\{1,L,c_0^{\mathrm{cb}}L\}$, and put
+$D_*:=\max\{1,D_0,D_1,D_2,D_3\}$.  Then there is a MAIN-CB witness ledger $W$
+(Definition~\ref{def:maincb-witness-ledger}) whose remaining fields are the correspondingly
+named witnesses and whose three derived fields are
+\begin{align*}
+W.r_{\mathrm{reset}}&=\min\{e_0,e_1,e_2,e_3,\varepsilon_{\max}^{\mathrm{cb}},
+\delta_{\max}^{\mathrm{cb}}/D_*,e_{\mathrm{it}}/(D_*+1),\varepsilon_{\mathrm{unit}},
+\delta_{\mathrm{unit}}/\max\{1,K_{\mathrm{floor}}\},a_{\mathrm{unit}}/((1+K_{\mathrm{disp}})D_*),
+[2(1+K_{\mathrm{disp}})D_*]^{-1}\},\\
+W.K_{\mathrm{call}}&=\max\{1,L+1,c_0^{\mathrm{cb}},K_1,K_2,K_3\},\\
+W.\varepsilon_{\mathrm{MAIN}}&=\min\{e_{\mathrm{env}},e_1/K_1,e_{s2}/K_2,e_{\mathrm{cross}}/K_3,
+W.r_{\mathrm{reset}}/W.K_{\mathrm{call}},e_{\mathrm{sim}}/W.K_{\mathrm{call}},
+e_{\mathrm{full}}/W.K_{\mathrm{call}},[2\max\{1,c_0^{\mathrm{cb}}W.K_{\mathrm{call}}\}]^{-1}\}.
+\end{align*}
+Every field is positive, finite, universal, and independent of dimension, amplification,
+block data, class count, and stage index.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing positive finite universal provider witnesses D_0,D_1,D_2,D_3,e_0,e_1,e_2,e_3,epsilon_max^cb,delta_max^cb,e_it,K_disp,K_floor,epsilon_unit,delta_unit,a_unit,L,c0_cb,K_1,K_2,K_3,e_env,e_s2,e_cross,e_sim,e_full with K_2,K_3 >= max{1,L,c0_cb*L}, set D_* = max{1,D_0,D_1,D_2,D_3}; then there is a def-maincb-witness-ledger datum W whose fields satisfy W.r_reset = min{e_0,e_1,e_2,e_3,epsilon_max^cb,delta_max^cb/D_*,e_it/(D_*+1),epsilon_unit,delta_unit/max{1,K_floor},a_unit/((1+K_disp)*D_*),[2*(1+K_disp)*D_*]^{-1}}, W.K_call = max{1,L+1,c0_cb,K_1,K_2,K_3}, W.epsilon_MAIN = min{e_env,e_1/K_1,e_s2/K_2,e_cross/K_3,W.r_reset/W.K_call,e_sim/W.K_call,e_full/W.K_call,[2*max{1,c0_cb*W.K_call}]^{-1}}, and the remaining fields equal the correspondingly named receiving witnesses; in particular every field is positive, finite, universal, and independent of dimension, amplification, block data, class count, and stage index.}
+\paragraph{Proof (prose account of the af-validated tree).}
+The proof is finite max--min arithmetic, performed only after all provider witnesses
+have been fixed.  Positivity and finiteness of $D_0,\ldots,D_3$ make
+$D_*\ge1$ positive, finite, universal, and independent of the structural data.
+Every one of the eleven displayed reset candidates is therefore positive and finite:
+all denominators are positive, including $D_*+1$, $\max\{1,K_{\mathrm{floor}}\}$,
+and $2(1+K_{\mathrm{disp}})D_*$.  Their finite minimum is thus the asserted
+$r_{\mathrm{reset}}$ with the same universal independence.  Likewise the finite maximum
+$K_{\mathrm{call}}=\max\{1,L+1,c_0^{\mathrm{cb}},K_1,K_2,K_3\}$ is positive,
+finite, universal, and at least one.  These properties make each of the eight
+$\varepsilon_{\mathrm{MAIN}}$ candidates positive and finite, including the three
+ratios with $K_{\mathrm{call}}$ and the final reciprocal.  Their finite minimum has
+the asserted properties.  Finally the tree defines $W$ to be the twelve-field tuple
+$(c_0^{\mathrm{cb}},L,K_1,K_2,K_3,K_{\mathrm{call}},e_{\mathrm{env}},e_1,e_{s2},
+e_{\mathrm{cross}},r_{\mathrm{reset}},\varepsilon_{\mathrm{MAIN}})$.
+The field typing in Definition~\ref{def:maincb-witness-ledger} finishes the claim.
+
+\begin{lemma}[\texttt{lem-maincb-compressed-corner-unit-comparison}]\label{lem:maincb-compressed-corner-unit-comparison}
+There are universal $C_{\mathrm{corner,unit}}<\infty$ and $e_{\mathrm{corner,unit}}>0$
+such that, for every $0\le t\le e_{\mathrm{corner,unit}}$, the following hold at every $n\ge1$.
+If $P$ is a $t$-projection in a finite-dimensional extended $t$-$C^*$-algebra $A$, then
+\[
+ \nrm{I_n\otimes\mathrm{Co}_P(P)-I_n\otimes P}\le C_{\mathrm{corner,unit}}t.
+\]
+Under the hypotheses of Lemma~\ref{lem:maincb-outer-compression-transfer}, if
+$\nrm{v(I_B)-u_{\mathcal S_P}}\le t$ and
+$T=\mathrm{Co}^{A_R}_{P^R}\circ\mathrm{Co}^{A}_{R}\circ v$, then
+\[
+ \nrm{T_n(I_n\otimes I_B)-I_n\otimes P^R}\le C_{\mathrm{corner,unit}}t.
+\]
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There are universal C_corner_unit < infinity and e_corner_unit > 0 such that both of the following hold: if P is a t-projection in a finite-dimensional extended t-C*-algebra A with 0 <= t <= e_corner_unit, then the compressed-corner unit u_{S_P}=Co_P(P) satisfies ||I_n tensor u_{S_P}-I_n tensor P|| <= C_corner_unit*t for every n >= 1; and, under the hypotheses of lem-maincb-outer-compression-transfer with 0 <= t <= e_corner_unit, if ||v(I_B)-u_{S_P}|| <= t then its explicit outer-compressed map T=Co^{A_R}_{P^R} o Co^A_R o v satisfies ||T_n(I_n tensor I_B)-I_n tensor P^R|| <= C_corner_unit*t for every n >= 1.}
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree first fixes uniform bounds for a small defective projection $S$: the
+$C^*$ lower bound and $\nrm{S^2-S}\le\delta$ give $\nrm S\le2$ after shrinking
+the universal threshold, while Definition~\ref{def:compressed-corner} supplies
+$\nrm{\mathrm{Co}_{S,S}-L_SR_S}\le K_{\mathrm{cmp}}(\delta+\varepsilon)$.
+At level $n$, $S_n=I_n\otimes S$ has the same norm and defect, and amplified
+compression identifies $I_n\otimes\mathrm{Co}_S(S)$ with $\mathrm{Co}_{S_n}(S_n)$.
+The exact split $S_n(S_n^2)-S_n=S_n(S_n^2-S_n)+(S_n^2-S_n)$ then gives a
+universal $K_u(\delta+\varepsilon)$ estimate.  Applied directly to $P_n$, the
+live first-clause branch records the explicit coefficient $4K_{\mathrm{cmp}}+7/2$.
+For the outer clause, write $a=P^R=\mathrm{Co}^{A}_{R}(P)$ and $A_R=\mathcal S_R^A$.
+The corner-algebra and amplified identities make $A_R$ an extended $K_Rt$-$C^*$-algebra
+and $a$ a $K_at$-projection; applying the preceding comparison inside $A_R$ yields
+$\nrm{I_n\otimes u_{\mathcal S^{A_R}_{P^R}}-I_n\otimes P^R}\le K_{\mathrm{tar}}t$.
+The final live branch uses the assumed $\nrm{v(I_B)-u_{\mathcal S_P}}\le t$ and bounded
+outer compressions to telescope from $T_n(I_n\otimes I_B)$ to that target unit.
+This replacement repaired the challenged unsupported unit-preservation inference;
+finite maxima of coefficients and minima of rescaled thresholds give the two witnesses.
+
+\begin{lemma}[\texttt{lem-maincb-cross-datum-bijectivity}]\label{lem:maincb-cross-datum-bijectivity}
+Choose $c_0$ for Lemma~\ref{lem:maincb-error-improvement}, its direct-corner-envelope
+witnesses, and the witnesses of Lemma~\ref{lem:maincb-compressed-corner-unit-comparison}.
+There are universal $C^0_{\mathrm{cross}}\ge1$ and
+$0<e^0_{\mathrm{cross}}\le e_{\mathrm{corner,unit}}$, valid also for
+Lemma~\ref{lem:maincb-cross-class-merging-datum}, such that the following holds.
+Let $W.c_0^{\mathrm{cb}}=c_0$, $W.e_{\mathrm{cross}}\le e^0_{\mathrm{cross}}$, and let
+$A,w,U,V,R,v_U,v_V$ satisfy all hypotheses of that merging lemma, including
+$R=U\cup V$, the bounds $\varepsilon_U,\varepsilon_V,d_U,d_V\le t\le W.e_{\mathrm{cross}}$,
+$d_X\le W.c_0^{\mathrm{cb}}\varepsilon_X$, and
+$\nrm{v_X(I_{B_X})-u_{A_X}}\le t$ for $X=U,V$.
+Put $B_R=B_U\oplus B_V$, $q_U=(I_{B_U},0)$, $q_V=(0,I_{B_V})$, and
+$P_X^R=\mathrm{Co}^{A}_{P_R}(P_X)$.  Define
+\begin{align*}
+\gamma_{UU}(b_U,0)&=\mathrm{Co}^{A_R}_{P_U^R}(\mathrm{Co}^{A}_{P_R}(v_U(b_U))),&
+\gamma_{VV}(0,b_V)&=\mathrm{Co}^{A_R}_{P_V^R}(\mathrm{Co}^{A}_{P_R}(v_V(b_V))),
+\end{align*}
+and let $\gamma_{UV},\gamma_{VU}$ be the unique maps between the corresponding zero
+cross-corners.  These are the four fixed level-one maps of the explicit Stage-3 datum,
+and all four maps are bijective.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first choosing a universal c0 witness for which lem-maincb-error-improvement remains valid, fixing the corresponding lem-maincb-direct-corner-envelope witnesses, and fixing the C_corner_unit,e_corner_unit witnesses of lem-maincb-compressed-corner-unit-comparison, there are universal C_cross^0 >= 1 and 0 < e_cross^0 <= e_corner_unit which are valid witnesses of lem-maincb-cross-class-merging-datum such that for every def-maincb-witness-ledger datum W with W.c0_cb = c0 and W.e_cross <= e_cross^0, if A is a finite-dimensional extended epsilon_A-C*-algebra with epsilon_A <= t, a supplied MAIN partition state comes from a non-unital extended t-inclusion w:C^m->A with one-dimensional images P_j, has disjoint nonempty unions U,V sharing no class and R=U union V, and supplied current reset isomorphisms v_U:B_U->A_U and v_V:B_V->A_V satisfy epsilon_U,epsilon_V,d_U,d_V <= t <= W.e_cross, d_U <= W.c0_cb*epsilon_U, d_V <= W.c0_cb*epsilon_V, ||v_U(I_{B_U})-u_{A_U}|| <= t, and ||v_V(I_{B_V})-u_{A_V}|| <= t, then, writing B_R:=B_U oplus B_V, q_U:=(I_{B_U},0), q_V:=(0,I_{B_V}), P_X^R:=Co^A_{P_R}(P_X) for X in {U,V}, gamma_UU:q_U B_R q_U->S^{A_R}_{P_U^R} defined by gamma_UU((b_U,0)):=Co^{A_R}_{P_U^R}(Co^A_{P_R}(v_U(b_U))), gamma_VV:q_V B_R q_V->S^{A_R}_{P_V^R} defined by gamma_VV((0,b_V)):=Co^{A_R}_{P_V^R}(Co^A_{P_R}(v_V(b_V))), gamma_UV:q_U B_R q_V={0}->S^{A_R}_{P_U^R,P_V^R}={0} the unique map, and gamma_VU:q_V B_R q_U={0}->S^{A_R}_{P_V^R,P_U^R}={0} the unique map, the explicit Stage-3 amplified four-corner datum in A_R furnished by lem-maincb-cross-class-merging-datum has these four fixed level-one maps and gamma_UU,gamma_UV,gamma_VU,gamma_VV are bijective.}
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree enlarges $c_0$ to at least one and fixes the providers, then sets
+$K=\max\{c_0,L,1\}$ and shrinks the merging threshold by
+$e^0_{\mathrm{cross}}=\min\{e_*,e_{\mathrm{zero}},e_{\mathrm{env}},e_{\mathrm{out}}/K,(2K)^{-1}\}$.
+Thus Lemma~\ref{lem:maincb-cross-class-merging-datum} supplies its explicit datum.
+For the $U$ diagonal, put $s=Kt$.  The direct-corner envelope makes $P_R,P_U$
+$s$-projections with both subordination errors at most $s$; the two-sided norm
+bound for $w(1_R)$ makes $P_R$ nonvanishing, and $v_U$ weakens to an extended
+$s$-isomorphism.  Outer compression therefore gives a bijection
+$T_U=\mathrm{Co}^{A_R}_{P_U^R}\circ\mathrm{Co}^{A}_{P_R}\circ v_U$.
+The coordinate bijection $\iota_U(b_U)=(b_U,0)$ satisfies
+$\gamma_{UU}\circ\iota_U=T_U$, proving bijectivity and identifying the fixed map.
+The $V$ branch repeats the same construction with $\iota_V(b_V)=(0,b_V)$.
+The zero-cross-corner lemma makes both source and target off-diagonal corners zero,
+so each unique zero-to-zero map is its own bijective inverse.
+One verifier challenge exposed an omitted premise in the $U$ fixed-map identification;
+the live tree repairs it by declaring the validated datum-construction node explicitly.
+The four identifications and bijectivity conclusions then assemble at the root.
+
+\begin{lemma}[\texttt{lem-maincb-cross-class-merging-datum}]\label{lem:maincb-cross-class-merging-datum}
+Choose $c_0$ for Lemma~\ref{lem:maincb-error-improvement}, fix the corresponding
+direct-corner-envelope witnesses, and fix the unit-comparison witnesses above.
+There are universal $C^0_{\mathrm{cross}}\ge1$ and
+$0<e^0_{\mathrm{cross}}\le e_{\mathrm{corner,unit}}$ such that, for every ledger $W$
+with $W.c_0^{\mathrm{cb}}=c_0$ and $W.e_{\mathrm{cross}}\le e^0_{\mathrm{cross}}$,
+the following holds.  Let $A$ be a finite-dimensional extended $\varepsilon_A$-$C^*$-algebra with
+$\varepsilon_A\le t$, let the supplied partition state arise from a non-unital
+extended $t$-inclusion $w:\mathbb C^m\to A$ with one-dimensional images $P_j$,
+and let $U,V$ be disjoint nonempty unions sharing no class, with $R=U\cup V$.
+If the reset isomorphisms $v_X:B_X\to A_X$ satisfy
+$\varepsilon_X,d_X\le t\le W.e_{\mathrm{cross}}$,
+$d_X\le W.c_0^{\mathrm{cb}}\varepsilon_X$, and
+$\nrm{v_X(I_{B_X})-u_{A_X}}\le t$ for $X=U,V$, then the compressed-unit comparison,
+nested-corner, outer-compression, and zero-cross-corner constructions form in $A_R$
+the explicit Stage-3 amplified four-corner datum with common defect
+$\rho\le C^0_{\mathrm{cross}}t$.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first choosing a universal c0 witness for which lem-maincb-error-improvement remains valid, fixing the corresponding lem-maincb-direct-corner-envelope witnesses, and fixing the C_corner_unit,e_corner_unit witnesses of lem-maincb-compressed-corner-unit-comparison, there are universal C_cross^0 >= 1 and 0 < e_cross^0 <= e_corner_unit such that for every def-maincb-witness-ledger datum W with W.c0_cb = c0 and W.e_cross <= e_cross^0, if A is a finite-dimensional extended epsilon_A-C*-algebra with epsilon_A <= t, a supplied MAIN partition state comes from a non-unital extended t-inclusion w:C^m->A with one-dimensional images P_j, has disjoint nonempty unions U,V sharing no class and R=U union V, and supplied current reset isomorphisms v_U:B_U->A_U and v_V:B_V->A_V satisfy epsilon_U,epsilon_V,d_U,d_V <= t <= W.e_cross, d_U <= W.c0_cb*epsilon_U, d_V <= W.c0_cb*epsilon_V, ||v_U(I_{B_U})-u_{A_U}|| <= t, and ||v_V(I_{B_V})-u_{A_V}|| <= t, then lem-maincb-compressed-corner-unit-comparison and the nested-corner, outer-compression, and zero-cross-corner constructions form the explicit Stage-3 amplified four-corner datum in A_R with common defect rho <= C_cross^0*t.}
+\paragraph{Proof (prose account of the af-validated tree).}
+The provider ledger fixes all constants first and chooses
+$C^0_{\mathrm{cross}}=\max\{1,C_{\mathrm{nest}},C_{\mathrm{out}},
+C_{\mathrm{corner,unit}},2C_{\mathrm{ca}}\}$, then takes a positive finite minimum
+of every required threshold and its fixed rescaling.  In $\mathbb C^m$, the projections
+$e_U,e_V,e_R=e_U+e_V$ map under $w$ to $P_U,P_V,P_R=P_U+P_V$.
+The inclusion bounds make these defective projections and give both subordination
+errors to $P_R$.  The challenged nonvanishing step is repaired in the live tree by
+$1-t\le\nrm{P_R}\le1+t$, hence $|\nrm{P_R}-1|\le t$.
+The corner-algebra row makes $A_R=\mathcal S^A_{P_R}$ an extended
+$2C_{\mathrm{ca}}t$-$C^*$-algebra, while nested comparison gives
+$P_U^R,P_V^R$ as $C_{\mathrm{nest}}t$-projections.  Outer compression of each
+$v_X$ supplies the two fixed diagonal maps and all their amplified algebra and norm
+estimates; Lemma~\ref{lem:maincb-compressed-corner-unit-comparison} supplies their
+unit estimates.  The zero-cross-corner row makes the two off-diagonal maps uniquely zero
+at every amplification.  Finally $P_U^R+P_V^R=\mathrm{Co}_{P_R}(P_R)=u_R$ gives target
+complementarity.  All clauses are bounded by the common defect $C^0_{\mathrm{cross}}t$.
+This is the amended M12 contract, superseding its earlier pre-unit-bridge form.
+
+\begin{lemma}[\texttt{lem-maincb-extended-inclusion-monotone}]\label{lem:maincb-extended-inclusion-monotone}
+Let $B$ be a finite-dimensional $C^*$-algebra, let $A$ be a finite-dimensional
+extended $\varepsilon$-$C^*$-algebra, let $v:B\to A$ be linear, and suppose
+$0\le\delta\le\delta'$.  Every extended $\delta$-inclusion is an extended
+$\delta'$-inclusion; every extended $\delta$-isomorphism is an extended
+$\delta'$-isomorphism and, in particular, an extended $\delta'$-inclusion.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{If B is a finite-dimensional C*-algebra, A is a finite-dimensional extended epsilon-C*-algebra, v:B->A is linear, and 0 <= delta <= delta', then if v is an extended delta-inclusion it is an extended delta'-inclusion, and if v is an extended delta-isomorphism it is an extended delta'-isomorphism and in particular an extended delta'-inclusion.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Fix an amplification $v_n=I_n\otimes v$ of an extended $\delta$-inclusion.
+Definition~\ref{def:extended-delta-inclusion} supplies the two-sided bounds
+$(1-\delta)\nrm X\le\nrm{v_n(X)}\le(1+\delta)\nrm X$ and makes $v_n$
+a $\delta$-homomorphism.  The byte-matched base definition provisioned after a
+verifier challenge spells out bounded linearity, exact involution preservation,
+$\nrm{v_n(I)-I}\le\delta$, and
+$\nrm{v_n(XY)-v_n(X)v_n(Y)}\le\delta\nrm X\nrm Y$.
+Since $0\le\delta\le\delta'$ and all norm factors are nonnegative, the latter
+two inequalities remain true with $\delta'$; linearity and involution preservation
+do not change.  Likewise
+$(1-\delta')\nrm X\le(1-\delta)\nrm X$ and
+$(1+\delta)\nrm X\le(1+\delta')\nrm X$.
+Thus every amplification is a $\delta'$-homomorphism with the required norm bounds,
+so $v$ is an extended $\delta'$-inclusion.  If $v$ was an extended
+$\delta$-isomorphism, its bijectivity is independent of the defect parameter;
+combining that unchanged bijectivity with the first conclusion proves both remaining claims.

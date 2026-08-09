@@ -1,0 +1,197 @@
+% SHARD-ID: AISM-53-MAINCB-CORNER-IDENTIFICATION
+% SHARD-TITLE: MAIN-CB corner identification: merges, nested comparison, dimension transport, and corner equivalence
+% SHARD-SUMMARY: Reproduces lem-maincb-direct-sum-inclusion-merge, the dimension-free two-corner sum inclusion with its precisely conditional bijectivity clause.
+% SHARD-SUMMARY: Reproduces lem-maincb-full-corner-identification, the rigidity statement identifying a corner near the ambient unit with the full algebra at every amplification. Reproduces lem-maincb-nested-corner-comparison, the two-directional amplified telescope between an ambient corner and its compression inside a nonvanishing outer corner.
+% SHARD-SUMMARY: Reproduces lem-maincb-nested-corner-dimension-transport, the finite-dimensional equality obtained from the two comparison injections. Reproduces lem-maincb-outer-compression-transfer, the transport of an extended isomorphism through two exact amplified compressions. Reproduces lem-maincb-corner-equivalence, the equivalence relation on one-dimensional projections detected by one-dimensional cross-corners.
+% SHARD-KEYWORDS: MAIN-CB, corner identification, direct sum, nested corners, dimension transport, outer compression, one-dimensional corners, af validated
+\section{MAIN-CB corner identification: merges, nested comparison, dimension transport, and corner equivalence}\label{sec:maincb-corner-identification}
+
+This section records the validated corner-identification block used by the MAIN-CB assembly.
+The notation and ambient hypotheses are those of Definitions~\ref{def:compressed-corner},
+\ref{def:delta-projection}, \ref{def:extended-delta-inclusion}, and
+\ref{def:extended-epsilon-cstar-algebra}; no definition is repeated here.
+
+\begin{lemma}[\texttt{lem-maincb-direct-sum-inclusion-merge}]\label{lem:maincb-direct-sum-inclusion-merge}
+There are universal constants $C_{\mathrm{dir}}<\infty$ and $e_{\mathrm{dir}}>0$ such
+that, if $B_1,B_2$ are finite-dimensional $C^*$-algebras, $P_1,P_2$ are target
+$t$-projections with $\nrm{P_1+P_2-I}\le t$, and
+$v_i:B_i\to\Cnrs{P_i}$ are extended $t$-inclusions whose target ambient defect is at
+most $t\le e_{\mathrm{dir}}$, then
+\[
+  V:B_1\oplus B_2\longrightarrow \mathcal A,
+  \qquad V(x_1,x_2)=v_1(x_1)+v_2(x_2),
+\]
+is an extended $C_{\mathrm{dir}}t$-inclusion. It is asserted to be bijective only when
+both $v_i$ are bijective and both cross-corners $\Cnr{P_1}{P_2}$ and
+$\Cnr{P_2}{P_1}$ vanish.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There are universal C_dir < infinity and e_dir > 0 such that, if B_1,B_2 are finite-dimensional C*-algebras, P_1,P_2 are target t-projections, ||P_1+P_2-I|| <= t, and v_i:B_i->S_{P_i} are extended t-inclusions with target ambient defect at most t <= e_dir, then (x_1,x_2) |-> v_1(x_1)+v_2(x_2) is an extended C_dir*t-inclusion; bijectivity is asserted only if both v_i are bijective and both target cross-corners vanish.}
+\paragraph{Proof (prose account of the af-validated tree).}
+At amplification level $n$, put $p_i=I_n\otimes P_i$ and let $C_{ij}$ denote the
+corresponding compression. The tree first bounds $\nrm{p_i}\le2$ and, writing
+$r=p_1+p_2-I$, uses the exact bilinear identity
+$p_ip_j=p_ir+(p_iI-p_i)-(p_i^2-p_i)$ to obtain $\nrm{p_ip_j}=O(t)$.
+The compression estimates and amplified idempotence then give uniformly bounded
+$C_{ii}$, small composites $C_{ii}C_{jj}$ for $i\ne j$, and
+$C_{ii}(a_1+a_2)=a_i+O(t)\max_j\nrm{a_j}$ for $a_j\in\Cnr{p_j}{p_j}$.
+For $V_n=I_n\otimes V$, these extraction estimates first yield level-independent
+coarse upper and lower norm bounds. Exact involution preservation, the two diagonal
+homomorphism estimates, and the exposed factors $p_1p_2,p_2p_1$ control the unit,
+involution, and product defects. A repeated-squaring $C^*$-bootstrap then sharpens the
+coarse bounds to $(1-Ct)\nrm{x}\le\nrm{V_nx}\le(1+Ct)\nrm{x}$.
+For the optional conclusion, the four-corner analysis and synthesis maps satisfy
+$\nrm{\alpha\beta-I}=O(t)$, so $\alpha$ is onto by a Neumann series. If the cross-corners
+vanish and both $v_i$ are onto their diagonal corners, this makes $V$ surjective;
+cross-extraction gives injectivity. The validation repaired five sibling-dependency
+challenges, including making the coarse-to-sharp bootstrap self-contained; the final
+tree has $14$ clean live nodes and makes no bijectivity claim without all four extra hypotheses.
+
+\begin{lemma}[\texttt{lem-maincb-full-corner-identification}]\label{lem:maincb-full-corner-identification}
+There is a universal $e_{\mathrm{full}}>0$ such that, if $R$ is a $t$-projection in an
+extended $t$-$C^*$-algebra and $\nrm{R-I}\le t\le e_{\mathrm{full}}$, then
+$\Cos R=I$ and $\Cnrs R=\mathcal A$ at every amplification.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There is a universal e_full > 0 such that, if R is a t-projection in an extended t-C*-algebra and ||R-I|| <= t <= e_full, then Co_R = I and S_R = A, at every amplification.}
+\paragraph{Proof (prose account of the af-validated tree).}
+The compression-to-raw-product comparison gives
+$\nrm{\Cos R-L_RR_R}\le2C_{\mathrm{co}}t$. For $\nrm X=1$, the approximate unit and
+product estimates, expanded with $R=I+(R-I)$ and with the displayed association
+$R(XR)$, give $\nrm{L_RR_R-I}\le21t$. Thus
+$\nrm{\Cos R-I}\le(21+2C_{\mathrm{co}})t<1$ after one universal threshold reduction.
+Lemma~\ref{lem:compcb-amplified-compression-identities} makes $\Cos R$ idempotent.
+The tree then applies the elementary rigidity argument: if $E^2=E$ and
+$\nrm{E-I}=q<1$, then for $Y=(I-E)X$ one has $(I-E)Y=Y$, whence
+$\nrm Y\le q\nrm Y$ and therefore $Y=0$. Consequently $E=I$, so here
+$\Cos R=I_{\mathcal A}$ and its range $\Cnrs R$ is all of $\mathcal A$.
+Finally Lemma~\ref{lem:compcb-amplified-compression} identifies
+$\Co{R_n}{R_n}=I_n\otimes\Cos R$ and $\Cnrs{R_n}=M_n\otimes\Cnrs R$,
+transporting the conclusion to every amplification. One verifier challenge was repaired
+by making the rigidity node self-contained; the validated closure has $8$ live nodes
+and $2$ archived nodes.
+
+\begin{lemma}[\texttt{lem-maincb-nested-corner-comparison}]\label{lem:maincb-nested-corner-comparison}
+There are universal $C_{\mathrm{nest}}<\infty$ and $e_{\mathrm{nest}}>0$ such that,
+whenever $R,P,Q$ are $t$-projections in a finite-dimensional extended $t$-$C^*$-algebra,
+$R$ is nonvanishing, $P,Q$ are subordinate to $R$ with all four left and right errors
+at most $t\le e_{\mathrm{nest}}$, and
+$\mathcal A_R=\Cnrs R^A$, $P^R=\Cos R^A(P)$, $Q^R=\Cos R^A(Q)$, then $P^R,Q^R$ are
+$C_{\mathrm{nest}}t$-projections in $\mathcal A_R$ and, at every amplification,
+\begin{align*}
+ \nrm{F^R_{P,Q}(\Cos R^A X)-X}&\le C_{\mathrm{nest}}t\nrm X
+   &&(X\in\Cnr P Q^A),\\
+ \nrm{\Co P Q^A Y-Y}&\le C_{\mathrm{nest}}t\nrm Y
+   &&(Y\in\Cnr{P^R}{Q^R}^{\mathcal A_R}).
+\end{align*}
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There are universal C_nest < infinity and e_nest > 0 such that, whenever R,P,Q are t-projections in a finite-dimensional extended t-C*-algebra, R is nonvanishing, P,Q are subordinate to R with all four left/right subordination errors at most t <= e_nest, A_R = S^A_R, P^R = Co^A_R(P), and Q^R = Co^A_R(Q), then P^R,Q^R are C_nest*t-projections in A_R and, at every amplification, ||F^R_{P,Q}(Co^A_R X) - X|| <= C_nest*t*||X|| for X in S^A_{P,Q}, while ||Co^A_{P,Q} Y - Y|| <= C_nest*t*||Y|| for Y in S^{A_R}_{P^R,Q^R}.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Smallness first bounds every amplified $t$-projection by $2$. Subordination and the
+raw compression comparisons give $P^R=P+O(t)$ and $Q^R=Q+O(t)$, uniformly at every
+matrix level. Lemma~\ref{lem:compcb-corner-algebra} equips $\mathcal A_R$ with defect
+$O(t)$; amplified compression identities preserve the involution, while the preceding
+perturbations and idempotence of $\Cos R$ show that $P^R,Q^R$ have $O(t)$ compressed
+idempotence defects.
+For the forward telescope, take $X\in\Cnr P Q^A$ and put $Z=\Cos R^A X$.
+Lemma~\ref{lem:compcb-amplified-almost-containment} gives $Z=X+O(t)\nrm X$ and places
+$Z$ in the amplified $R$-corner. The inner compression $F^R_{P,Q}(Z)$ is replaced by
+its raw $P^R$--$Q^R$ product; two uses of
+Lemma~\ref{lem:compcb-rectangular-product} replace the internal products by ambient
+ones; then $P^R,Q^R,Z$ are replaced by $P,Q,X$. Since the ambient $P$--$Q$
+compression fixes $X$, the remaining raw product differs from $X$ by $O(t)\nrm X$.
+The reverse telescope starts from the exact range identity $F^R_{P,Q}(Y)=Y$ and runs
+the same fixed replacements backward, ending with $\Co P Q^A(Y)=Y+O(t)\nrm Y$.
+All constants are amplification-independent. Five verifier-requested bridges made both
+telescopes explicit; run~1 ballooned at $18$ live nodes against cap $16$, was classified
+as transparent repair growth, and the validated resumed tree has $18$ clean live nodes
+under the recorded scoped cap $22$.
+
+\begin{lemma}[\texttt{lem-maincb-nested-corner-dimension-transport}]\label{lem:maincb-nested-corner-dimension-transport}
+There is a universal $e_{\mathrm{ncd}}>0$ such that, under the hypotheses of
+Lemma~\ref{lem:maincb-nested-corner-comparison} with all four subordination errors at
+most $t\le e_{\mathrm{ncd}}$, one has
+\[
+  \dim\Cnr P Q^A=\dim\Cnr{P^R}{Q^R}^{\mathcal A_R}.
+\]
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There is a universal e_ncd > 0 such that, whenever R,P,Q are t-projections in a finite-dimensional extended t-C*-algebra, R is nonvanishing, all four left/right subordination errors of P,Q to R are at most t <= e_ncd, A_R = S^A_R, P^R = Co^A_R(P), and Q^R = Co^A_R(Q), one has dim S^A_{P,Q} = dim S^{A_R}_{P^R,Q^R}.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Choose $C_* =\max\{C_{\mathrm{nest}},1\}$ and
+$e_{\mathrm{ncd}}=\min\{e_{\mathrm{nest}},(2C_*)^{-1}\}$. The two maps supplied by
+Lemma~\ref{lem:maincb-nested-corner-comparison} are
+\[
+ T(X)=F^R_{P,Q}(\Cos R^A X),\qquad S(Y)=\Co P Q^A Y,
+\]
+from the ambient corner to the nested corner and back. Their validated estimates read
+$\nrm{T(X)-X}\le C_*t\nrm X$ and $\nrm{S(Y)-Y}\le C_*t\nrm Y$, with
+$C_*t\le\tfrac12$. Thus $T(X)=0$ forces $\nrm X\le\tfrac12\nrm X$ and $X=0$;
+the same argument makes $S$ injective. Both spaces are finite-dimensional subspaces
+of the given finite-dimensional algebra. The two injections therefore give the two
+opposite dimension inequalities, and hence equality. This was a first-pass validation
+with $4$ clean live nodes and zero challenges; the proof adds no estimate beyond the
+two comparison inequalities.
+
+\begin{lemma}[\texttt{lem-maincb-outer-compression-transfer}]\label{lem:maincb-outer-compression-transfer}
+There are universal $C_{\mathrm{out}}<\infty$ and $e_{\mathrm{out}}>0$ such that,
+whenever $R,P$ are $t$-projections in a finite-dimensional extended $t$-$C^*$-algebra,
+$R$ is nonvanishing, both subordination errors of $P$ to $R$ are at most $t$,
+$v:B\to\Cnrs P^A$ is an extended $t$-isomorphism,
+$\mathcal A_R=\Cnrs R^A$, $P^R=\Cos R^A(P)$, and $t\le e_{\mathrm{out}}$, the map
+\[
+ T=\Cos{P^R}^{\mathcal A_R}\circ\Cos R^A\circ v:
+ B\longrightarrow\Cnrs{P^R}^{\mathcal A_R}
+\]
+is an extended $C_{\mathrm{out}}t$-isomorphism and $T_n=I_n\otimes T$ for every $n$.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There are universal C_out < infinity and e_out > 0 such that, whenever R,P are t-projections in a finite-dimensional extended t-C*-algebra, R is nonvanishing, both subordination errors of P to R are at most t, v:B->S^A_P is an extended t-isomorphism, A_R = S^A_R, P^R = Co^A_R(P), and t <= e_out, the explicitly defined map T = Co^{A_R}_{P^R} o Co^A_R o v : B->S^{A_R}_{P^R} is an extended C_out*t-isomorphism and T_n = I_n tensor T for every n.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Set $a=P^R$ and specialize Lemmas~\ref{lem:maincb-nested-corner-comparison} and
+\ref{lem:maincb-nested-corner-dimension-transport} to $Q=P$. Their forward map
+$W_n=\Cos{a_n}^{\mathcal A_R}\circ\Cos{R_n}^A$ is $O(t)$-close to the identity on
+$M_n\otimes\Cnrs P^A$, and the source and target diagonal corners have equal dimension.
+The tree checks that $P$ and $a$ are nonvanishing: otherwise their idempotent compression
+operators would have norm below one and hence vanish, contradicting the nonzero unital
+source and the dimension equality. Corner algebra estimates then supply the approximate
+$C^*$-structures on all three corners.
+Amplification naturality gives the exact identity $T_n=W_n\circ v_n=I_n\otimes T$,
+and the two compressions preserve the involution. The comparison estimate and the
+near-isometry of $v_n$ yield sharp two-sided norm bounds for $T_n$. For multiplication,
+the tree telescopes through the product in the $P$-corner, the ambient product, the
+$R$-corner product, and finally the $a$-corner product, using the rectangular-product
+estimate at each bridge. A separate unit telescope compares the two compressed units.
+At level one, $\nrm{W_1-I}<1$ makes $W_1$ injective; dimension equality makes it onto,
+and bijectivity of $v$ makes $T$ bijective. Run~1 was stopped on a tangled composite
+architecture; a clean re-seed made both rectangular-product bridges and exact compression
+naturality explicit, and the resulting $12$-node tree validated with zero challenges.
+
+\begin{lemma}[\texttt{lem-maincb-corner-equivalence}]\label{lem:maincb-corner-equivalence}
+There is a universal $e_{\mathrm{sim}}>0$ such that, for every finite family of
+one-dimensional $t$-projections $P_1,\ldots,P_m$ in an extended $t$-$C^*$-algebra with
+$t\le e_{\mathrm{sim}}$, the relation
+\[
+  j\sim k\quad\Longleftrightarrow\quad \dim\Cnr{P_j}{P_k}=1
+\]
+is an equivalence relation.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There is a universal e_sim > 0 such that, for every finite family of one-dimensional t-projections P_1,...,P_m in an extended t-C*-algebra with t <= e_sim, the relation j ~ k iff dim S_{P_j,P_k} = 1 is an equivalence relation.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Let $C_{PQR},e_{PQR}$ be the constants from
+Lemma~\ref{lem:extcb-one-dimensional-product}, and let $e_{\dim}$ be the threshold from
+Lemma~\ref{lem:extcb-one-dimensional-corner-dimension}. The validated tree fixes
+$e_{\mathrm{sim}}=\min\{e_{PQR}/2,e_{\dim}/2,(4C_{PQR})^{-1}\}$, so for $e=2t$
+one has $C_{PQR}e\le\tfrac12$. Reflexivity is the diagonal one-dimensionality of each
+$P_j$. Symmetry follows because the involution restricts to a conjugate-linear bijection
+$\Cnr{P_j}{P_k}\to\Cnr{P_k}{P_j}$.
+For transitivity, suppose $j\sim k$ and $k\sim\ell$, and choose nonzero
+$X\in\Cnr{P_j}{P_k}$ and $Y\in\Cnr{P_k}{P_\ell}$. Their compressed product lies in
+$\Cnr{P_j}{P_\ell}$ and satisfies
+$\nrm{X\cpr Y}\ge(1-C_{PQR}e)\nrm X\nrm Y\ge\tfrac12\nrm X\nrm Y>0$.
+The corner-dimension bound gives $\dim\Cnr{P_j}{P_\ell}\le1$, so this nonzero corner
+has dimension exactly one. Hence $j\sim\ell$. The root's original strict threshold
+inference failed at $t=e_{\mathrm{sim}}$; one challenge repaired it by installing the
+non-strict threshold above. The final validation has $8$ clean live nodes.

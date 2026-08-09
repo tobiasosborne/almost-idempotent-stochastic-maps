@@ -1,0 +1,207 @@
+% SHARD-ID: AISM-63-TOPOLOGY-TOOLBOX
+% SHARD-TITLE: The algebraic-topology toolbox: quotient manifolds, triangulation, Lefschetz--Hopf, local index sign, orientable top cohomology, Kunneth, and Hopf structure
+% SHARD-SUMMARY: Reproduces lem-topology-quotient-manifold, the quotient-manifold theorem for smooth free proper Lie-group actions.
+% SHARD-SUMMARY: Reproduces lem-topology-finite-triangulation, the finite-triangulation consequence for compact smooth manifolds without boundary. Reproduces lem-topology-lefschetz-hopf, the maximal-simplex form of the Lefschetz--Hopf fixed-point formula. Reproduces lem-topology-local-index-sign, the determinant-sign formula for a nondegenerate local fixed-point index.
+% SHARD-SUMMARY: Reproduces lem-topology-orientable-top-cohomology, the nonvanishing of real top cohomology for a closed connected orientable manifold. Reproduces lem-topology-kunneth-cross-product, the cohomological Kunneth ring isomorphism and its finite-CW real-field specialization. Reproduces lem-topology-hopf-structure, the finite-dimensional exterior-algebra corollary of the characteristic-zero Hopf structure theorem.
+% SHARD-KEYWORDS: algebraic topology, quotient manifold, finite triangulation, Lefschetz--Hopf, local fixed-point index, orientability, top cohomology, Kunneth theorem, Hopf algebra, af validated
+\section{The algebraic-topology toolbox}\label{sec:topology-toolbox}
+
+This section collects the seven \texttt{af}-validated topology rows used by the
+Stage-1 fixed-point and cohomological arguments.  Each account reports the live proof
+tree, including the source and scope repairs recorded during adversarial verification.
+
+\begin{lemma}[\texttt{lem-topology-quotient-manifold}]\label{lem:topology-quotient-manifold}
+Let a Lie group $G$ act smoothly, freely and properly on a smooth manifold $M$.
+Then $M/G$ is a topological manifold of dimension $\dim M-\dim G$, and it has a
+unique smooth structure for which the quotient map $\pi:M\to M/G$ is a smooth
+submersion.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Quotient manifold theorem: if a Lie group G acts smoothly, freely, and properly on a smooth manifold M, then the orbit space M/G is a topological manifold of dimension dim M - dim G with a unique smooth structure for which the quotient map pi:M->M/G is a smooth submersion.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree is a direct application of Lee's Quotient Manifold Theorem.
+Its registered external has precisely the smoothness, freeness and properness
+hypotheses above and returns the orbit-space dimension, the unique smooth structure
+and the submersion property in one step.  The only elaboration is documentary:
+the extracted source writes the orbit notation, minus sign and quotient-map symbol
+with OCR control glyphs.  The validated children identify those glyphs with $M/G$,
+$\dim M-\dim G$ and $\pi:M\to M/G$, while leaving the byte-matched external
+unchanged.  Three verifier challenges observed that merely naming the theorem did
+not yet place it in the formal claim context.  The repaired leaf therefore invokes
+the registered citation alias explicitly and records why the interface's empty
+optional context display does not cancel that binding.  With the external formally
+in scope, its conclusion is exactly the registry contract.
+The resulting four-node tree is taint clean, and the root adds no new assertion.
+This is precisely the direct-source leaf recorded in the export.
+No further geometric argument or additional premise is used.
+
+\begin{lemma}[\texttt{lem-topology-finite-triangulation}]\label{lem:topology-finite-triangulation}
+Every compact smooth manifold without boundary is homeomorphic to the realization of
+a finite simplicial complex.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Finite triangulation of compact smooth manifolds: every compact smooth manifold without boundary is homeomorphic to a finite simplicial complex.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Let $M$ satisfy the hypotheses.
+Smoothness implies the $C^1$ regularity used in the
+registered Munkres theorem, while the pinned terminology external identifies absence
+of boundary with ``non-bounded.''  Munkres therefore supplies a simplicial complex
+$K$ and a $C^1$ triangulation $f:|K|\to M$.  The two registered definition excerpts
+make the important next step literal: such a triangulation is a homeomorphism onto
+$M$.  Hence $|K|$ is compact, by applying the continuous inverse of $f$ to compact
+$M$.  For each vertex $v$, the live tree takes the union of the relative interiors of
+the simplices containing $v$; these open stars cover $|K|$, and a vertex $w$ belongs
+to the star centered at $v$ exactly when $w=v$.  A finite subcover therefore captures
+every vertex among finitely many centers.  There are then only finitely many simplices,
+since each is a finite subset of the finite vertex set.  Thus $K$ is finite.
+The validated workspace is the clean re-seeded Munkres route: the earlier Cairns route
+was retired because its missing Veblen--Whitehead definitions could not be grounded
+locally, and a later corrupted-locus re-seed was discarded rather than inherited.
+
+\begin{lemma}[\texttt{lem-topology-lefschetz-hopf}]\label{lem:topology-lefschetz-hopf}
+Let $f:X\to X$ be a map of a finite polyhedron with finitely many fixed points,
+each lying in a maximal simplex of $X$.  Then
+\[
+  L(f)=\sum_{x\in\operatorname{Fix}(f)}\operatorname{ind}(f,x).
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Lefschetz-Hopf formula (maximal-simplex form): if f:X->X is a map of a finite polyhedron with a finite set of fixed points, each of which lies in a maximal simplex of X, then the Lefschetz number L(f) is the sum of the indices of all the fixed points of f.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The two-node tree applies Arkowitz--Brown, Theorem~1.2, verbatim.
+The registered external assumes a self-map of a finite polyhedron, a finite fixed
+set, and placement of every fixed point in a maximal simplex.  Its conclusion is
+exactly the displayed sum of the local indices, with the notation of
+Definition~\ref{def:lefschetz-fixed-point-data}.
+The proof tree changes no hypothesis and introduces no intermediate construction.
+In particular, the maximal-simplex condition is retained: the earlier design
+wording with only isolated fixed points was broader than the pinned theorem and
+was not validated.
+The sole child quotes the registered source statement literally.
+The root then takes that child by direct theorem application.
+There is no deformation, approximation or index comparison inside this row.
+The validated conclusion is therefore the exact pinned source statement.
+Thus any downstream use must establish maximal-simplex placement separately;
+this row does not infer it from finiteness or isolation.
+
+\begin{lemma}[\texttt{lem-topology-local-index-sign}]\label{lem:topology-local-index-sign}
+Let $x$ be an isolated fixed point of a smooth self-map $f$ of a compact orientable
+manifold.  If $\det(I-Df_x)\ne0$, then
+\[
+  \operatorname{ind}(f,x)=\sgn\det(I-Df_x).
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Nondegenerate local fixed-point index: if x is an isolated fixed point of a smooth self-map f of a compact orientable manifold with det(I-Df_x) != 0, then its local fixed-point index is sgn det(I-Df_x).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The decisive live leaf applies the nondegenerate clause of
+Definition~\ref{def:lefschetz-fixed-point-data} directly: the smooth compact orientable
+scope and the determinant hypothesis are exactly its registered hypotheses, and $1$
+and $I$ denote the same tangent-space identity.  The remaining live branches audit the
+classical local calculation.  Writing $A=Df_x$, invertibility of $I-A$ excludes the
+eigenvalue $1$.  After shrinking one chart ball so that its closed ball remains in the
+coordinate domain, the Leray--Schauder formula reduces $J(f,x)$ to $J(A,0)$.
+For $h=I-A$, the Brouwer-degree theorem gives
+$d(h,V)=\sgn\det(I-A)$.  Independently, the linear Leray--Schauder formula gives
+$J(A,0)=(-1)^\beta$, where $\beta$ counts characteristic values in $(0,1)$.
+Reciprocation identifies these with real eigenvalues of $A$ larger than $1$;
+conjugate nonreal pairs contribute positively to $\det(I-A)$, so
+$(-1)^\beta=\sgn\det(I-A)$.  Verification repaired nine challenges concerning chart
+compactness, an out-of-scope use on a noncompact vector space, cutoff inequalities and
+unsupported locality bridges.  The final scope was user-ratified from the original
+unqualified $C^1$ wording to the smooth compact orientable contract quoted above.
+
+\begin{lemma}[\texttt{lem-topology-orientable-top-cohomology}]\label{lem:topology-orientable-top-cohomology}
+If $M$ is a connected compact orientable $d$-manifold without boundary, then
+$H^d(M;\mathbb R)\ne0$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Top cohomology of a closed orientable manifold: if M is a connected compact orientable d-manifold without boundary, then H^d(M;R) != 0.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Compactness without boundary is the ``closed'' hypothesis in the registered Hatcher
+theorem.  The live tree first obtains real orientability without importing an
+unregistered coefficient-change result.  Hatcher's registered top-cohomology
+corollary supplies a nonzero class in $H^d(M;\mathbb R)$; the field-coefficient
+universal coefficient theorem then forces $H_d(M;\mathbb R)\ne0$.  If $M$ were not
+$\mathbb R$-orientable, Theorem~3.26(b) would inject this group into $\mathbb R$ with
+image $\{r:2r=0\}=\{0\}$, a contradiction.  Theorem~3.26(a) now gives
+$H_d(M;\mathbb R)\cong\mathbb R$.  Applying the same universal coefficient theorem
+yields
+\[
+  H^d(M;\mathbb R)\cong
+  \operatorname{Hom}_{\mathbb R}(H_d(M;\mathbb R),\mathbb R),
+\]
+and the right-hand side contains any chosen isomorphism
+$H_d(M;\mathbb R)\to\mathbb R$, hence is nonzero.  A verifier challenge rejected the
+tree's first change-of-coefficients shortcut; the preceding Corollary--UCT--Theorem
+route is the validated replacement.
+
+\begin{lemma}[\texttt{lem-topology-kunneth-cross-product}]\label{lem:topology-kunneth-cross-product}
+Let $R$ be a commutative coefficient ring and let $X,Y$ be CW complexes such that
+each $H^k(Y;R)$ is a finitely generated free $R$-module.  Then the cross product is a
+ring isomorphism
+\[
+  H^*(X;R)\otimes_R H^*(Y;R)\xrightarrow{\ \cong\ }H^*(X\times Y;R).
+\]
+In particular, this holds over $R=\mathbb R$ for finite-CW spaces with
+finite-dimensional cohomology.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Cohomological Kunneth isomorphism over R: for CW complexes X and Y with each H^k(Y;R) a finitely generated free R-module, the cross product H*(X;R) (x)_R H*(Y;R) -> H*(X x Y;R) is an isomorphism of rings; in particular this holds over the field R = reals for finite-CW spaces with finite-dimensional cohomology.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Hatcher's registered Theorem~3.15 states the first assertion for CW complexes over
+a commutative coefficient ring when every $H^k(Y;R)$ is finitely generated and free.
+The live tree applies that theorem directly.  The commutative-ring wording records
+the scope correction forced by verification, since the provisional ``arbitrary
+ring'' reading was broader than the source.
+For a noncommutative ring the displayed tensor product of two left modules need
+not even be available in the asserted form.
+For the special case, a finite-CW space is in particular a CW complex.
+Over the field $\mathbb R$, every finite-dimensional
+cohomology group has a finite basis, hence is a finitely generated free
+$\mathbb R$-module.  These are exactly the hypotheses of the general clause,
+so its cross product gives the stated ring isomorphism for the finite-CW pair.
+The final tree node is this specialization by modus ponens.
+No finiteness conclusion beyond those explicit hypotheses, and no assertion for
+a noncommutative coefficient ring, is made.
+
+\begin{lemma}[\texttt{lem-topology-hopf-structure}]\label{lem:topology-hopf-structure}
+Every finite-dimensional connected graded-commutative bialgebra over a field of
+characteristic zero is an exterior algebra on odd-degree homogeneous generators,
+where ``connected graded'' uses the nonnegative grading convention.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Hopf structure theorem in the form consumed by Stage 1: a finite-dimensional connected graded-commutative bialgebra over a characteristic-zero field is an exterior algebra on odd-degree homogeneous generators.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Let $A=\bigoplus_{n\ge0}A_n$ be the bialgebra over the characteristic-zero field $F$.
+Connectedness gives $A_0=F1$.  For homogeneous $a\in A_n$, $n>0$, degree preservation
+and the counit identities force the coproduct decomposition
+\[
+  \Delta a=a\otimes1+1\otimes a+\sum_i a_i'\otimes a_i'',
+  \qquad |a_i'|,|a_i''|>0.
+\]
+Thus the hypotheses match Hatcher's registered Hopf-algebra convention, and total
+finite-dimensionality makes every graded piece finite-dimensional.  The structure
+theorem gives an algebra isomorphism
+$A\cong\Lambda_F(V_{\mathrm{odd}})\otimes_F F[V_{\mathrm{even}}]$.
+If $V_{\mathrm{even}}$ contained a polynomial generator $x$, the independent monomials
+$1,x,x^2,\ldots$ would make its polynomial algebra infinite-dimensional.  The map
+$p\mapsto1\otimes p$ is injective, split by the exterior augmentation, so the tensor
+product and hence $A$ would also be infinite-dimensional.  Therefore the polynomial
+factor has no generators and $A\cong\Lambda_F(V_{\mathrm{odd}})$.  Verification
+repaired one scope gap by making explicit that ``connected graded'' carries the
+source's nonnegative convention; negatively graded counterexamples are not claimed.

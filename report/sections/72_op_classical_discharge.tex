@@ -1,0 +1,68 @@
+% SHARD-ID: AISM-72-OP-CLASSICAL-DISCHARGE
+% SHARD-TITLE: The discharge of op-classical: the root theorem at the af-validated rung
+% SHARD-SUMMARY: Reproduces op-classical, the af-validated dimension-free square-root stability theorem obtained by invoking the Route-F F0 assembly and matching its stochastic vocabulary to the root contract.
+% SHARD-SUMMARY: Records the honest boundary of the discharge: af-validated rung only (no Lean proof), upper bound only, with sharpness of the exponent 1/2 carried by the separate W139 campaign and not yet at T0.
+% SHARD-KEYWORDS: op-classical, af validated, classical projection stability, stochastic idempotent, Route F, square-root bound, dimension-free
+\section{The discharge of \texttt{op-classical}: the root theorem at the \texttt{af}-validated rung}\label{sec:op-classical-discharge}
+
+This section records the discharged root of the classical upper-bound campaign.  Its
+validated tree is deliberately short: the quantitative work has already been completed by
+the Route-F assembly, and the root imports that conclusion and closes the remaining
+vocabulary interface.  The statement is the upper stability bound only; it contains no
+claim of square-root sharpness.
+
+\begin{theorem}[\texttt{op-classical}]\label{op:classical}
+There are universal constants $\eta_{0},C>0$, independent of the dimension $n$, such that
+every row-stochastic matrix $Q$ satisfying
+\begin{equation}
+  \opnorm{Q^{2}-Q}\le \eta\le \eta_{0}
+\end{equation}
+admits a stochastic idempotent $E$ for which
+\begin{equation}
+  \opnorm{Q-E}\le C\sqrt{\eta}.
+\end{equation}
+This is the commutative case of \texttt{op-npps}; the general \texttt{op-npps} problem is out of scope and is not a T0 result in this repo.
+\end{theorem}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Classical projection stability: there are universal eta_0,C>0 (n-free) such that every row-stochastic Q with ||Q^2-Q||_{inf->inf} <= eta <= eta_0 admits a stochastic idempotent E with ||Q-E||_{inf->inf} <= C sqrt(eta) (the commutative case of op-npps).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree has one substantive import and one vocabulary branch, with five live nodes in
+all.  It constructs no replacement constants at the root.  Instead, node~1.1 invokes
+Lemma~\ref{lem:routef-f0-assembly}, which supplies universal constants
+$\eta_{0},C>0$ independent of $n$ for every row-stochastic map
+$Q:\ell^{\infty}_{n}\to\ell^{\infty}_{n}$ satisfying
+$\nrm{Q^{2}-Q}_{\infty\to\infty}\le\eta\le\eta_{0}$.  That external conclusion
+produces a stochastic idempotent $E$ with
+$\nrm{Q-E}_{\infty\to\infty}\le C\sqrt{\eta}$.  Thus the witness pair
+$(\eta_{0},C)$ and the final estimate are taken over unchanged; there is no threshold
+shrinkage, constant loss, or auxiliary approximation in this root tree.
+
+Node~1.2 checks that this imported conclusion is literally the conclusion requested here.
+Its first child uses Definition~\ref{def:stochastic} and
+Definition~\ref{def:almost-idempotent} to identify a row-stochastic matrix with the
+corresponding operator on $\ell^{\infty}_{n}$, and to identify the two notations
+$\nrm{\cdot}_{\mathrm{inf}\to\mathrm{inf}}$ and
+$\nrm{\cdot}_{\infty\to\infty}$ for the same induced norm.  Under that identification,
+``independent of $n$'' is exactly ``$n$-free'', while the imported output is exactly a
+stochastic idempotent.  The second child uses
+Definition~\ref{def:near-positive-projection} only to read the parenthetical description
+``the commutative case of \texttt{op-npps}'': it adds neither a hypothesis nor a further
+conclusion.  Combining the imported Route-F assertion with these two vocabulary matches
+gives the registry contract verbatim.
+
+\emph{Record note.} The registry records a user-ratified root rewire on 2026-08-08: the
+validated Route-F assembly became one branch of an OR-routes block, while the legacy
+signed-geometry route (\texttt{thm-classical-factorization} and \texttt{prop-approx-simplex}, each \texttt{proved-mod-audit} with \texttt{af: seeded}) was retained as a non-T0 independent alternative, and the former
+``OPEN'' marker was removed on discharge.  The earlier user-ratified D1 split leaves
+sharpness outside this contract.  These are contract-and-routing changes, not repairs made
+inside the exported five-node proof; the ledger records all five nodes as validated and
+clean and contains no challenge event.
+
+\medskip
+\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0).  Workspace
+\texttt{proofs/op-classical}; 5/5 live nodes, all clean.  Registry \texttt{defs}:
+\texttt{def-stochastic}, \texttt{def-almost-idempotent} and
+\texttt{def-near-positive-projection}.  The validating branch is
+Lemma~\ref{lem:routef-f0-assembly}.

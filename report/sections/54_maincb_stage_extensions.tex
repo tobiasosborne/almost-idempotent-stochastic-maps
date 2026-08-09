@@ -1,0 +1,197 @@
+% SHARD-ID: AISM-54-MAINCB-STAGE-EXTENSIONS
+% SHARD-TITLE: MAIN-CB stage raw moves: cross-union zero corners, the stage-1 refinement, stage-2 extension, stage-3 merge, and the stage-2 EXT-CB datum
+% SHARD-SUMMARY: Reproduces lem-maincb-cross-union-zero-corners, which turns separation of equivalence classes into vanishing ambient and nested cross-union corners.
+% SHARD-SUMMARY: Reproduces lem-maincb-stage1-raw-refinement, the old/fresh direct-sum move with its separate degenerate m=1 branch. Reproduces lem-maincb-stage2-raw-extension, which applies EXT-CB and unit control to a closed Stage-2 datum at ledger-compatible scales.
+% SHARD-SUMMARY: Reproduces lem-maincb-stage3-raw-merge, which converts the amplified four-corner datum into a controlled isomorphism with a quantitative unit estimate. Reproduces lem-maincb-stage2-extcb-datum, the non-vacuous assembly of the compressed Stage-2 EXT-CB input from a partition state and reset state.
+% SHARD-KEYWORDS: MAIN-CB, lem-maincb-cross-union-zero-corners, lem-maincb-stage1-raw-refinement, lem-maincb-stage2-raw-extension, lem-maincb-stage3-raw-merge, lem-maincb-stage2-extcb-datum, af validated, compressed corners, EXT-CB, raw calls
+\section{MAIN-CB stage extensions and raw moves}\label{sec:maincb-stage-extensions}
+This section records five local MAIN-CB moves: class separation gives zero cross-corners,
+Stage~1 refines an inclusion, Stages~2 and~3 execute raw calls, and the last row builds the
+closed EXT-CB datum.  The packages are Definitions~\ref{def:maincb-partition-state}, \ref{def:maincb-reset-state}, \ref{def:maincb-raw-call}, and \ref{def:maincb-witness-ledger}.
+\begin{lemma}[\texttt{lem-maincb-cross-union-zero-corners}]\label{lem:maincb-cross-union-zero-corners}
+There is a universal $e_{\mathrm{zero}}>0$ such that, when $A$ is a finite-dimensional
+extended $\epsilon_A$-$C^*$-algebra with $\epsilon_A\le t$, a MAIN partition state supplies
+a non-unital extended $t$-inclusion $w:\mathbb C^m\to A$ with one-dimensional images $P_j$,
+and $U,V$ are disjoint nonempty unions sharing no class, then for $R=U\cup V$ and
+$t\le e_{\mathrm{zero}}$,
+\[
+ \dim S^A_{P_U,P_V}=\dim S^A_{P_V,P_U}=0,\qquad
+ \dim S^{A_R}_{P_U^R,P_V^R}=\dim S^{A_R}_{P_V^R,P_U^R}=0.
+\]
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There is a universal e_zero > 0 such that, if A is a finite-dimensional extended epsilon_A-C*-algebra with epsilon_A <= t, a supplied MAIN partition state has w:C^m->A a non-unital extended t-inclusion with one-dimensional images P_j, U,V are disjoint nonempty unions sharing no equivalence class, R = U union V, and t <= e_zero, then dim S^A_{P_U,P_V} = dim S^A_{P_V,P_U} = 0 and dim S^{A_R}_{P_U^R,P_V^R} = dim S^{A_R}_{P_V^R,P_U^R} = 0.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Choose $e_{\mathrm{zero}}$ below the universal thresholds for
+Lemma~\ref{lem:maincb-corner-equivalence}, corner-dimension additivity
+(Lemma~\ref{lem:extcb-corner-dimension-additivity}), nested dimension transport
+(Lemma~\ref{lem:maincb-nested-corner-dimension-transport}), and the rank-one argument below.
+The coordinate identities $e_j^2=e_j$ and the defect bounds for $w$ make every $P_j$ a
+$t$-projection.  Corner equivalence therefore makes
+$j\sim k\Longleftrightarrow\dim S^A_{P_j,P_k}=1$ an equivalence relation.  For
+$j\in U$, $k\in V$, separation of classes excludes dimension one in both orientations;
+the tree explicitly does not mistake this exclusion for vanishing.
+To rule out larger dimensions, take $P=P_j$, $Q=P_k$ and, if $S^A_{P,Q}\ne0$, choose
+$X\in S^A_{P,Q}$ of norm one.  With $\widetilde p=\Cos{P}(P)$ and
+$\widetilde q=\Cos{Q}(Q)$, the compression, approximate-unit and associator estimates
+show that $\widetilde p$ and $\widetilde q$ act as units up to $O(t)$.  Since the diagonal
+corners are one-dimensional, $X\mathbin{\cpr}X^\dagger=\beta\widetilde p$ and
+$X^\dagger\mathbin{\cpr}Z=\gamma(Z)\widetilde q$.  The lower $C^*$ estimate keeps
+$|\beta|$ uniformly away from zero, while associativity gives
+$\nrm{\beta Z-\gamma(Z)X}\le Ct\nrm{Z}$.  Thus the rank-one map
+$Z\mapsto\beta^{-1}\gamma(Z)X$ is within distance $<1$ of the identity after shrinking
+$e_{\mathrm{zero}}$; the Neumann lemma makes it invertible, so the corner has dimension at
+most one.  Adjointness gives the same conclusion in the reverse direction.  Hence all
+atomwise cross-corners vanish, and additivity gives both ambient union-corner equalities.
+Finally $P_R=w(e_R)=P_U+P_V$ is a $t$-projection and
+$1-t\le\nrm{P_R}\le1+t$, which is the nonvanishing norm alternative of
+Definition~\ref{def:delta-projection}.  The coordinate products give all four
+subordination errors at most $t$.  Defining locally
+$P_U^R=\mathrm{Co}^{A}_{P_R}(P_U)$ and $P_V^R=\mathrm{Co}^{A}_{P_R}(P_V)$, nested dimension transport in
+the two orientations carries the ambient zero dimensions into $A_R$.  The ledger records
+eight repaired challenges, chiefly the nonvanishing/type bookkeeping and the missing
+atomwise dimension bound; the latter is exactly the in-tree rank-one argument above.
+\begin{lemma}[\texttt{lem-maincb-stage1-raw-refinement}]\label{lem:maincb-stage1-raw-refinement}
+There are universal $D_1<\infty$ and $e_1>0$ such that an explicit Stage-1 raw-call datum with complementary target $t$-projections, old inclusion $\mathbb C^{m-1}\to S_{P_{\mathrm{old}}}$
+for $m>1$, fresh inclusion
+$\mathbb C^2\to S_{P_{\mathrm{fresh}}}$, fixed amplifications and all defects at most
+$t\le e_1$, has sum map an extended $D_1t$-inclusion $\mathbb C^{m+1}\to A$; for $m=1$
+the old side is absent and the conclusion is the supplied fresh inclusion.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There are universal D_1 < infinity and e_1 > 0 such that, if an explicit Stage-1 raw-call datum supplies complementary target t-projections, an old extended t-inclusion C^{m-1}->S_{P_old} when m > 1, a fresh extended t-inclusion C^2->S_{P_fresh}, fixed amplification families, and every projection, complementarity, map, and target-ambient defect is at most t <= e_1, then their sum map is an extended D_1*t-inclusion C^{m+1}->A; when m = 1, the old side is absent and the conclusion is the supplied fresh inclusion.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Let $C_{\mathrm{dir}},e_{\mathrm{dir}}$ be the universal witnesses of
+Lemma~\ref{lem:maincb-direct-sum-inclusion-merge}, and set
+$D_1=\max\{1,C_{\mathrm{dir}}\}$ and $e_1=e_{\mathrm{dir}}$.  The first tree branch notes
+that, for a fixed amplification family and codomain, every defining homomorphism and
+two-sided norm inequality weakens when its nonnegative defect parameter is enlarged.
+If $m>1$, apply the direct-sum merge to
+$B_1=\mathbb C^{m-1}$, $B_2=\mathbb C^2$, $P_1=P_{\mathrm{old}}$ and
+$P_2=P_{\mathrm{fresh}}$.  The raw-call hypotheses supply its complementarity and defect
+conditions, so the sum map is an extended $C_{\mathrm{dir}}t$-inclusion on
+$\mathbb C^{m-1}\oplus\mathbb C^2=\mathbb C^{m+1}$ into $A$; monotonicity replaces this
+by $D_1t$.  If $m=1$, no merge or codomain transfer is asserted: the contract's separate
+branch returns the already supplied fresh inclusion, whose source is
+$\mathbb C^2=\mathbb C^{m+1}$.  This last wording is the repair to the ledger's sole
+challenge, which correctly rejected an unsupported passage from the compressed-corner
+codomain to the ambient algebra.
+\begin{lemma}[\texttt{lem-maincb-stage2-raw-extension}]\label{lem:maincb-stage2-raw-extension}
+Fix witnesses $C^0_{s2},e^0_{s2}$ of Lemma~\ref{lem:maincb-stage2-extcb-datum},
+$C_{\mathrm{ext}},e_{\mathrm{ext}}$ of Lemma~\ref{conj:extcb}, and
+$C_{\mathrm{iso}},e_{\mathrm{iso}}$ of Lemma~\ref{lem:maincb-isomorphism-unit-control}.
+There are universal $D_2<\infty$, $e_2>0$ such that, if a witness ledger $W$ satisfies
+\[
+ W.e_{s2}\le\min\{e^0_{s2},e_2\},\quad C^0_{s2}e_2\le e_{\mathrm{ext}},\quad
+ (C_{\mathrm{ext}}+1)C^0_{s2}e_2\le e_{\mathrm{iso}},
+\]
+every closed Stage-2 EXT-CB raw-call datum in $A_R$ of total defect at most $C^0_{s2}t$,
+$0\le t\le W.e_{s2}$, admits an extended $D_2t$-isomorphism $v_+:M_{r+1}\to A_R$ with
+$\nrm{v_+(I_{M_{r+1}})-u_{A_R}}\le D_2t$.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing the universal C_s2^0,e_s2^0 witnesses of lem-maincb-stage2-extcb-datum, C_ext,e_ext witnesses of conj-extcb, and C_iso_unit,e_iso_unit witnesses of lem-maincb-isomorphism-unit-control, there are universal D_2 < infinity and e_2 > 0 such that for every def-maincb-witness-ledger datum W with W.e_s2 <= min{e_s2^0,e_2}, C_s2^0*e_2 <= e_ext, and (C_ext+1)*C_s2^0*e_2 <= e_iso_unit, every explicit Stage-2 raw-call closed EXT-CB datum in A_R with total post-helper defect at most C_s2^0*t and 0 <= t <= W.e_s2 admits an extended D_2*t-isomorphism v_+:M_{r+1}->A_R satisfying ||v_+(I_{M_{r+1}})-u_{A_R}|| <= D_2*t.}
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree chooses
+\[
+ e_2=\tfrac12\min\!\left\{1,e^0_{s2},\frac{e_{\mathrm{ext}}}{C^0_{s2}},
+ \frac{e_{\mathrm{iso}}}{C^0_{s2}(|C_{\mathrm{ext}}+1|+1)}\right\},\qquad
+ D_2=1+C^0_{s2}\bigl(|C_{\mathrm{ext}}|+|C_{\mathrm{iso}}|
+ (|C_{\mathrm{ext}}|+1)\bigr).
+\]
+For a datum with $e=\delta+\epsilon_{A_R}\le C^0_{s2}t$, the closed EXT-CB clauses and
+$e\le e_{\mathrm{ext}}$ allow Lemma~\ref{conj:extcb} to supply one map
+$v_+:M_{r+1}\to A_R$ that is an extended $C_{\mathrm{ext}}e$-isomorphism.  Enlarging
+the defect bound makes this an extended $D_2t$-isomorphism.
+The same map must satisfy the unit estimate.  The repaired tree separates $e=0$, where
+$\epsilon_{A_R}=0$ and unit control gives zero error, from $e>0$.  In the latter case the
+level-one two-sided bounds on the nonzero matrix identity force $C_{\mathrm{ext}}\ge0$.
+Consequently
+$0\le C_{\mathrm{ext}}e+\epsilon_{A_R}\le(C_{\mathrm{ext}}+1)e\le e_{\mathrm{iso}}$,
+and Lemma~\ref{lem:maincb-isomorphism-unit-control} gives the stated $D_2t$ bound.
+The split repairs the ledger challenge about multiplying by an otherwise unsigned
+$C_{\mathrm{ext}}+1$.  The registry contract is the user-ratified two-defect/witness-ledger
+amendment that superseded the 2026-07-30 form; the validated tree is a run-plus-resume.
+\begin{lemma}[\texttt{lem-maincb-stage3-raw-merge}]\label{lem:maincb-stage3-raw-merge}
+Fix $C^0_{\mathrm{cross}},e^0_{\mathrm{cross}}$ furnished by
+Lemmas~\ref{lem:maincb-cross-datum-bijectivity} and \ref{lem:maincb-cross-class-merging-datum},
+$C_{\mathrm{merge}},a_{\mathrm{merge}}$ from Lemma~\ref{lem:extcb-four-corner-merge}, and
+unit-control witnesses $C_{\mathrm{iso}},e_{\mathrm{iso}}$.  There are universal
+$D_3<\infty$, $e_3>0$ such that, under the witness-ledger bounds
+\[
+ W.e_{\mathrm{cross}}\le\min\{e^0_{\mathrm{cross}},e_3\},\quad
+ (C^0_{\mathrm{cross}}+1)e_3\le a_{\mathrm{merge}},\quad
+ (C_{\mathrm{merge}}(C^0_{\mathrm{cross}}+1)+1)e_3\le e_{\mathrm{iso}},
+\]
+every explicit Stage-3 amplified four-corner datum in $A_R$ furnished by Lemma~\ref{lem:maincb-cross-class-merging-datum}, with source $B_U\oplus B_V$, with $B_U,B_V$ finite-dimensional $C^*$-algebras, with $A_R$ a finite-dimensional extended $\epsilon_{A_R}$-$C^*$-algebra, and with bijective level-one corner maps, $0\le\rho\le C^0_{\mathrm{cross}}t$ and
+$0\le\epsilon_{A_R}\le t\le W.e_{\mathrm{cross}}$, yields an extended $D_3t$-isomorphism
+$v:B_U\oplus B_V\to A_R$ satisfying
+$\nrm{v(I_{B_U\oplus B_V})-u_{A_R}}\le D_3t$.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing the universal C_cross^0,e_cross^0 witnesses of lem-maincb-cross-class-merging-datum furnished by lem-maincb-cross-datum-bijectivity, C_merge,a_merge witnesses of lem-extcb-four-corner-merge, and C_iso_unit,e_iso_unit witnesses of lem-maincb-isomorphism-unit-control, there are universal D_3 < infinity and e_3 > 0 such that for every def-maincb-witness-ledger datum W with W.e_cross <= min{e_cross^0,e_3}, (C_cross^0+1)*e_3 <= a_merge, and (C_merge*(C_cross^0+1)+1)*e_3 <= e_iso_unit, every explicit Stage-3 amplified four-corner datum in A_R furnished by lem-maincb-cross-class-merging-datum with source B_U oplus B_V, with B_U and B_V finite-dimensional C*-algebras, with A_R a finite-dimensional extended epsilon_{A_R}-C*-algebra, whose four fixed level-one corner maps are bijective, and with 0 <= rho <= C_cross^0*t and 0 <= epsilon_{A_R} <= t <= W.e_cross yields an extended D_3*t-isomorphism v:B_U oplus B_V->A_R satisfying ||v(I_{B_U oplus B_V})-u_{A_R}|| <= D_3*t.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Take the merge and unit-control coefficients nonnegative and set
+$K=C_{\mathrm{merge}}(C^0_{\mathrm{cross}}+1)$,
+$D_3=\max\{K,C_{\mathrm{iso}}(K+1)\}$ and
+$e_3=\min\{1,a_{\mathrm{merge}}/(C^0_{\mathrm{cross}}+1),e_{\mathrm{iso}}/(K+1)\}$.
+The displayed ledger bounds follow immediately.  For an arbitrary supplied datum,
+\[
+ \rho+\epsilon_{A_R}\le(C^0_{\mathrm{cross}}+1)t\le a_{\mathrm{merge}},
+\]
+so Lemma~\ref{lem:extcb-four-corner-merge} supplies
+$v:B_U\oplus B_V\to A_R$ with defect
+$\delta=C_{\mathrm{merge}}(\rho+\epsilon_{A_R})$.  Thus
+$0\le\delta\le Kt\le D_3t$, and monotonicity of the fixed-amplification inequalities
+gives the required extended $D_3t$-isomorphism.  Moreover
+$0\le\delta+\epsilon_{A_R}\le(K+1)t\le e_{\mathrm{iso}}$; unit control therefore gives
+$\nrm{v(I)-u_{A_R}}\le C_{\mathrm{iso}}(K+1)t\le D_3t$ for the same $v$.
+The six-node typed re-seed had no challenges.  It validates the user-ratified amended
+contract above; two earlier untyped runs remain parked as a diagnostic obstruction record.
+\begin{lemma}[\texttt{lem-maincb-stage2-extcb-datum}]\label{lem:maincb-stage2-extcb-datum}
+There are universal $C_{s2}\ge1$ and $e_{s2}>0$, absorbing the corner-algebra constants,
+such that the following form the explicit closed Stage-2 EXT-CB raw-call datum in $A_R$.
+Let $A$ be a finite-dimensional extended $\epsilon_A$-$C^*$-algebra with
+$\epsilon_A\le t$, let a MAIN partition state arise from a non-unital extended
+$t$-inclusion $w:\mathbb C^m\to A$ with one-dimensional $P_j$, and assume
+$\varnothing\ne U$, $j\notin U$, $\dim S^A_{P_k,P_j}=1$ for $k\in U$, and
+$R=U\cup\{j\}$.  If a reset isomorphism $v_U:M_{|U|}\to A_U$ satisfies
+$\epsilon_U,d_U\le t\le e_{s2}$ and $d_U\le c_0^{\mathrm{cb}}\epsilon_U$, then
+$A_R$ is an extended $\epsilon_{A_R}$-$C^*$-algebra,
+$P_U^R,P_j^R$ are quantitative projections there, and the outer-compressed $v_U$ gives
+all clauses of the closed EXT-CB datum: approximate complementarity to $I_{A_R}$,
+$\dim S^{A_R}_{P_j^R}=1$, $S^{A_R}_{P_U^R,P_j^R}\ne0$, and total error
+$e=\delta+\epsilon_{A_R}\le C_{s2}t$.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There are universal C_s2 >= 1 and e_s2 > 0, with the e_ca threshold and universal C_ca coefficient of lem-compcb-corner-algebra absorbed into e_s2 and C_s2, such that, if A is a finite-dimensional extended epsilon_A-C*-algebra with epsilon_A <= t, a supplied MAIN partition state comes from a non-unital extended t-inclusion w:C^m->A with one-dimensional images P_j, has nonempty U, j notin U, dim S^A_{P_k,P_j} = 1 for every k in U, and R = U union {j}, and a supplied current reset state v_U:M_{|U|}->A_U is an extended isomorphism satisfying epsilon_U, d_U <= t <= e_s2 and d_U <= c_0^cb*epsilon_U, then lem-compcb-corner-algebra makes A_R an extended epsilon_{A_R}-C*-algebra, lem-maincb-nested-corner-comparison makes P_U^R, P_j^R quantitative projections in A_R, and together with the lem-maincb-outer-compression-transfer outer-compressed isomorphism they satisfy every def-extcb-datum clause - approximate complementarity to I_{A_R}, one-dimensional S_{P_j^R}, nonzero S_{P_U^R,P_j^R}, and total error e = delta + epsilon_{A_R} - with e <= C_s2*t, forming the explicit Stage-2 raw-call closed EXT-CB datum in A_R.}
+\paragraph{Proof (prose account of the af-validated tree).}
+The universal ledger takes the maximum of the coefficients for nested-corner comparison,
+outer compression and the corner algebra, and the minimum of their thresholds together
+with those for dimension transport, corner equivalence and one fixed-source additivity
+application.  Thus $t+\epsilon_A\le2t$ lies in the corner-algebra range and all remaining
+providers are simultaneously available.
+Writing $e_U=\sum_{k\in U}e_k$ and $e_R=e_U+e_j$, the inclusion gives
+$P_R=P_U+P_j$; $P_U,P_j,P_R$ are $t$-projections, $P_R$ satisfies the nonvanishing norm
+alternative, and all left/right subordination errors to $P_R$ are at most $t$.  Hence
+$A_R=S^A_{P_R}$ has the compressed extended-algebra structure from
+Lemma~\ref{lem:compcb-corner-algebra}, with
+$\epsilon_{A_R}=C_{\mathrm{ca}}(t+\epsilon_A)\le2C_{\mathrm{ca}}t$, while
+Lemma~\ref{lem:maincb-nested-corner-comparison} makes $P_U^R,P_j^R$ quantitative
+projections.  Lemma~\ref{lem:maincb-outer-compression-transfer} sends the reset map to
+\[
+ T=\mathrm{Co}^{A_R}_{P_U^R}\circ\mathrm{Co}^{A}_{P_R}\circ v_U:
+ M_{|U|}\longrightarrow S^{A_R}_{P_U^R},
+\]
+an extended $C_{\mathrm{out}}t$-isomorphism with its fixed amplifications.
+Nested dimension transport preserves the one-dimensional $P_j$ corner.  For the cross
+corner choose $k_0\in U$.  If $U=\{k_0\}$ the hypothesis is immediate; otherwise split
+$U=\{k_0\}\sqcup V$ and apply corner-dimension additivity only to the fixed source pair
+$\mathbb C^2,\mathbb C$.  Its summand $S^A_{P_{k_0},P_j}$ is one-dimensional, so
+$S^A_{P_U,P_j}\ne0$, and nested transport carries nonvanishing into $A_R$.  Linearity of
+compression gives the exact identity $P_U^R+P_j^R=I_{A_R}$.  With
+$\delta=C_\delta t$ these facts are precisely the clauses of Definition~\ref{def:extcb-datum},
+and $e=\delta+\epsilon_{A_R}\le(C_\delta+2C_{\mathrm{ca}})t\le C_{s2}t$.
+This is the twelve-node, non-vacuous run~4 tree.  It supersedes an earlier vacuous
+validation under the pre-amendment partition-state definition; the contract itself is
+unchanged in the validated non-vacuous run.

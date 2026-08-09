@@ -1,0 +1,198 @@
+% SHARD-ID: AISM-59-MAINCB-ASSEMBLY
+% SHARD-TITLE: The MAIN-CB assembly: one-class extension, binary block merge, stage-3 finite recombination, and the structural assembly
+% SHARD-SUMMARY: Reproduces lem-maincb-one-class-extension, the reset-preserving finite extension from one atomic image to one full equivalence class.
+% SHARD-SUMMARY: Reproduces lem-maincb-binary-block-merge, the typed Stage-3 merge of two disjoint unions that share no equivalence class.
+% SHARD-SUMMARY: Reproduces lem-maincb-stage3-finite-recombination, the finite induction that recombines all classwise reset isomorphisms. Reproduces lem-maincb-structural-assembly, the capstone assembling a finite-dimensional C*-algebra and a dimension-free extended isomorphism onto the ambient algebra.
+% SHARD-KEYWORDS: lem-maincb-one-class-extension, lem-maincb-binary-block-merge, lem-maincb-stage3-finite-recombination, lem-maincb-structural-assembly, MAIN-CB, af validated, reset isomorphism, block merge, finite recombination, structural assembly
+\section{The MAIN-CB assembly: one-class extension, binary block merge, stage-3 finite recombination, and the structural assembly}\label{sec:maincb-assembly}
+This section reproduces the four \texttt{af}-validated assembly rows.  Starting from the single witness ledger $W$ of Definition~\ref{def:maincb-witness-ledger}, they extend a reset
+through one class, merge class unions, recombine the finite class family, and finally identify the resulting full corner with the original algebra.
+\begin{lemma}[\texttt{lem-maincb-one-class-extension}]\label{lem:maincb-one-class-extension}
+Fix the datum $W$ supplied by Lemma~\ref{lem:maincb-reset-constant-ledger}.  Let $A$ be a
+finite-dimensional extended $\varepsilon$-$C^*$-algebra with
+$0\le\varepsilon\le W.\varepsilon_{\mathrm{MAIN}}$, and suppose a supplied MAIN partition
+state comes from an extended $W.c_{0,\mathrm{cb}}\varepsilon$-inclusion
+$w:\mathbb C^m\to A$ satisfying
+$\nrm{w(I_{\mathbb C^m})-I_A}\le W.c_{0,\mathrm{cb}}\varepsilon$.  If all atomic images
+are one-dimensional and $C$ is one equivalence class, then there is a current reset
+isomorphism
+\[
+  v_C:M_{|C|}\longrightarrow A_C
+\]
+whose recorded ambient field $\varepsilon_C$ makes $A_C$ an extended
+$\varepsilon_C$-$C^*$-algebra and satisfies
+\[
+ \varepsilon_C\le W.L\varepsilon\le W.K_{\mathrm{call}}\varepsilon,qquad
+ d_C\le W.c_{0,\mathrm{cb}}\varepsilon_C,qquad
+ \nrm{v_C(I_{M_{|C|}})-u_{A_C}}\le W.c_{0,\mathrm{cb}}\varepsilon_C.
+\]
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= W.epsilon_MAIN, a supplied MAIN partition state comes from an extended W.c0_cb*epsilon-inclusion w:C^m->A satisfying ||w(I_{C^m})-I_A|| <= W.c0_cb*epsilon, all atomic images are one-dimensional, and C is one equivalence class, then there is a current reset isomorphism v_C:M_{|C|}->A_C whose recorded ambient field epsilon_C is selected so that A_C is an extended epsilon_C-C*-algebra and epsilon_C <= W.L*epsilon <= W.K_call*epsilon, and which satisfies d_C <= W.c0_cb*epsilon_C and ||v_C(I_{M_{|C|}})-u_{A_C}|| <= W.c0_cb*epsilon_C.}
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree first fixes one reset-output witness package and uses that same package in
+Lemma~\ref{lem:maincb-reset-constant-ledger}; no second reset witness or improved map is
+introduced.  Lemma~\ref{lem:maincb-structural-domain-ledger} then puts the atomic and
+Stage-2 scales below the reset radius and gives $W.L\varepsilon\le W.K_{\mathrm{call}}
+\varepsilon$.  Lemma~\ref{lem:maincb-direct-corner-envelope} permits the uniform recorded
+choice $\varepsilon_U=W.L\varepsilon$ for every nonempty $U\subseteq C$.
+For a singleton $U=\{j\}$, Lemma~\ref{lem:maincb-initial-raw-inclusion} supplies the scalar
+map $u_0:\mathbb C=M_1\to A_U$.  The ledger types this literal bijection as the required raw
+inclusion with its near-unit bound, and Lemma~\ref{lem:maincb-reset-output-typing}, used
+alone, selects one map $v_U$ carrying simultaneously its source, target, amplification
+family, isomorphism tag, defect bound and unit bound.
+For the successor step, the tree fixes the exact preceding state on $U$, adjoins
+$j\in C\setminus U$, and constructs a matching partition-state record whose current
+subset and reference are precisely that $U$ and that same $v_U$.  The Stage-2 envelope
+(Lemma~\ref{lem:maincb-stage2-call-envelope}) supplies the raw datum in $A_{U\cup\{j\}}$.
+The combined producer clause of the constant ledger---not an unsupported separate call to
+the raw-extension theorem---types its literal output $u_2$ as an extended isomorphism.
+A single application of Lemma~\ref{lem:maincb-reset-output-typing} selects $v_{U\cup\{j\}}$
+and preserves the full induction invariant.
+Finally enumerate $C=\{j_1,\ldots,j_q\}$ and iterate that exact successor output from the
+singleton base.  The strengthened induction records at every stage the source $M_r$, the
+isomorphism tag, $\varepsilon_{U_r}=W.L\varepsilon$, and both estimates; at $U_q=C$ this is
+the asserted $v_C$.  The current $20$-node tree repairs five ledger challenges by making
+the matching state and isomorphism tag explicit, using the combined Stage-2 producer, and
+stating the strengthened induction and its dependencies literally.  This revalidation
+replaces the demoted 2026-08-01 certificate; the contract itself was not refuted.
+\begin{lemma}[\texttt{lem-maincb-binary-block-merge}]\label{lem:maincb-binary-block-merge}
+Fix the datum $W$ supplied by Lemma~\ref{lem:maincb-reset-constant-ledger}.  Let $A$ be a
+finite-dimensional extended $\varepsilon$-$C^*$-algebra with
+$0\le\varepsilon\le W.\varepsilon_{\mathrm{MAIN}}$, and suppose a supplied MAIN partition
+state comes from an extended $W.c_{0,\mathrm{cb}}\varepsilon$-inclusion
+$w:\mathbb C^m\to A$ with one-dimensional atomic images and
+$\nrm{w(I_{\mathbb C^m})-I_A}\le W.c_{0,\mathrm{cb}}\varepsilon$.  Let $U,V$ be disjoint
+nonempty unions sharing no class, and let current reset isomorphisms
+$v_U:B_U\to A_U$ and $v_V:B_V\to A_V$ have recorded fields
+$\varepsilon_U,\varepsilon_V\le W.L\varepsilon$ and satisfy, for $T\in\{U,V\}$,
+\[
+ d_T\le W.c_{0,\mathrm{cb}}\varepsilon_T,qquad
+ \nrm{v_T(I_{B_T})-u_{A_T}}\le W.c_{0,\mathrm{cb}}\varepsilon_T.
+\]
+Then there is a current reset isomorphism
+$v_{U\cup V}:B_U\oplus B_V\to A_{U\cup V}$ whose recorded field makes the target an
+extended $\varepsilon_{U\cup V}$-$C^*$-algebra and satisfies
+\[
+ \varepsilon_{U\cup V}\le W.L\varepsilon,\quad
+ d_{U\cup V}\le W.c_{0,\mathrm{cb}}\varepsilon_{U\cup V},\quad
+ \nrm{v_{U\cup V}(I_{B_U\oplus B_V})-u_{A_{U\cup V}}}
+ \le W.c_{0,\mathrm{cb}}\varepsilon_{U\cup V}.
+\]
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= W.epsilon_MAIN, a supplied MAIN partition state comes from an extended W.c0_cb*epsilon-inclusion w:C^m->A satisfying ||w(I_{C^m})-I_A|| <= W.c0_cb*epsilon with one-dimensional atomic images and has disjoint nonempty unions U,V sharing no class, and current reset isomorphisms v_U:B_U->A_U and v_V:B_V->A_V have recorded ambient fields epsilon_U,epsilon_V <= W.L*epsilon and satisfy d_U <= W.c0_cb*epsilon_U, d_V <= W.c0_cb*epsilon_V, ||v_U(I_{B_U})-u_{A_U}|| <= W.c0_cb*epsilon_U, and ||v_V(I_{B_V})-u_{A_V}|| <= W.c0_cb*epsilon_V, then there is a current reset isomorphism v_{U union V}:B_U oplus B_V->A_{U union V} whose recorded ambient field epsilon_{U union V} is selected so that A_{U union V} is an extended epsilon_{U union V}-C*-algebra and epsilon_{U union V} <= W.L*epsilon, and which satisfies d_{U union V} <= W.c0_cb*epsilon_{U union V} and ||v_{U union V}(I_{B_U oplus B_V})-u_{A_{U union V}}|| <= W.c0_cb*epsilon_{U union V}.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Fix the ledger witnesses once, put $t_3=W.K_3\varepsilon$ and
+$\varepsilon_R=W.L\varepsilon$ for $R=U\cup V$.  The domain ledger gives
+$0\le t_3\le W.r_{\mathrm{reset}},W.e_{\mathrm{cross}}$ and
+$\varepsilon_R\le t_3$.  Lemma~\ref{lem:maincb-stage3-call-envelope} supplies in $A_R$ the
+explicit amplified four-corner raw datum, bounds its error by
+$C^0_{\mathrm{cross}}t_3$, and dominates all ambient, reset-defect and unit errors by
+$t_3$.  Since $W.c_{0,\mathrm{cb}}\varepsilon\le t_3$, Lemma~\ref{lem:maincb-extended-inclusion-monotone}
+types the same $w$ as an extended $t_3$-inclusion without adding unitality.
+The hypotheses of Lemma~\ref{lem:maincb-cross-datum-bijectivity} now match literally: the
+unions are disjoint and share no class, the images are one-dimensional, and the datum and
+all its errors are controlled at $t_3$.  Hence its four fixed level-one corner maps are
+bijective.  Lemma~\ref{lem:maincb-stage3-raw-merge} merges those maps into the literal
+$u_3:B_U\oplus B_V\to A_R$; the constant-ledger producer types $u_3$ as an extended
+$D_*t_3$-isomorphism and supplies its near-unit bound.  One use of
+Lemma~\ref{lem:maincb-reset-output-typing} then selects a single $v_R$, preserves source,
+target and amplification family, and returns exactly the recorded-field, defect and unit
+bounds displayed above.  The corrected registry contract was validated in an $11$-node
+first-pass tree with no challenge entries; the registry also records that an earlier
+mechanical mis-landing was replaced before this validation.
+\begin{lemma}[\texttt{lem-maincb-stage3-finite-recombination}]\label{lem:maincb-stage3-finite-recombination}
+Fix the datum $W$ supplied by Lemma~\ref{lem:maincb-reset-constant-ledger}.  Let $A$ be a
+finite-dimensional extended $\varepsilon$-$C^*$-algebra with
+$0\le\varepsilon\le W.\varepsilon_{\mathrm{MAIN}}$, and suppose a supplied MAIN partition
+state comes from an extended $W.c_{0,\mathrm{cb}}\varepsilon$-inclusion
+$w:\mathbb C^m\to A$ with one-dimensional atomic images,
+$\nrm{w(I_{\mathbb C^m})-I_A}\le W.c_{0,\mathrm{cb}}\varepsilon$, and classes
+$C_1,\ldots,C_q$.  Suppose each initial current reset
+isomorphism $v_{C_a}:B_{C_a}\to A_{C_a}$ has recorded field
+$\varepsilon_{C_a}\le W.L\varepsilon$ and satisfies
+\[
+ d_{C_a}\le W.c_{0,\mathrm{cb}}\varepsilon_{C_a},qquad
+ \nrm{v_{C_a}(I_{B_{C_a}})-u_{A_{C_a}}}\le W.c_{0,\mathrm{cb}}\varepsilon_{C_a}.
+\]
+Then there is a current reset isomorphism
+\[
+ v:\bigoplus_a B_{C_a}\longrightarrow A_{\bigcup_a C_a}
+\]
+whose recorded field and two errors satisfy
+\[
+ \varepsilon_{\bigcup_a C_a}\le W.L\varepsilon,\quad d_{\bigcup_a C_a}\le W.c_{0,\mathrm{cb}}\varepsilon_{\bigcup_a C_a},\quad \nrm{v(I_{\bigoplus_aB_{C_a}})-u_{A_{\bigcup_aC_a}}}\le W.c_{0,\mathrm{cb}}\varepsilon_{\bigcup_a C_a}.
+\]
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= W.epsilon_MAIN, a supplied MAIN partition state comes from an extended W.c0_cb*epsilon-inclusion w:C^m->A satisfying ||w(I_{C^m})-I_A|| <= W.c0_cb*epsilon with one-dimensional atomic images and has classes C_1,...,C_q, and each initial current reset isomorphism v_{C_a}:B_{C_a}->A_{C_a} has recorded ambient field epsilon_{C_a} <= W.L*epsilon and satisfies d_{C_a} <= W.c0_cb*epsilon_{C_a} and ||v_{C_a}(I_{B_{C_a}})-u_{A_{C_a}}|| <= W.c0_cb*epsilon_{C_a}, then there is a current reset isomorphism v:oplus_a B_{C_a}->A_{union_a C_a} whose recorded ambient field epsilon_{union_a C_a} satisfies epsilon_{union_a C_a} <= W.L*epsilon, d_{union_a C_a} <= W.c0_cb*epsilon_{union_a C_a}, and ||v(I_{oplus_a B_{C_a}})-u_{A_{union_a C_a}}|| <= W.c0_cb*epsilon_{union_a C_a}.}
+\paragraph{Proof (prose account of the af-validated tree).}
+No witness is reselected.  The structural domain ledger fixes every scalar premise needed
+by each later use of the binary merge.  Write
+$U_k=\bigcup_{a=1}^k C_a$, set $B^{(1)}=B_{C_1}$ and
+$B^{(k+1)}=B^{(k)}\oplus B_{C_{k+1}}$, and let $P(k)$ assert the existence of one current
+reset isomorphism $v_k:B^{(k)}\to A_{U_k}$ with its own recorded field and the two stated
+bounds.  The partition state has a nonempty finite atomic index set, so its equivalence
+classes form a nonempty family and $q\ge1$.
+The root-supplied $v_{C_1}$ witnesses $P(1)$ without any change of map.  If $P(k)$ is
+witnessed by the exact output selected at the preceding index, then $U_k$ and $C_{k+1}$
+are disjoint nonempty unions sharing no class.  Apply
+Lemma~\ref{lem:maincb-binary-block-merge} to that exact $v_k$ and the root-supplied
+$v_{C_{k+1}}$.  Its selected output has source
+$B^{(k)}\oplus B_{C_{k+1}}=B^{(k+1)}$, target $A_{U_{k+1}}$, and precisely the three
+invariant bounds, so it alone witnesses $P(k+1)$.  Ordinary finite induction yields
+$P(q)$, where $U_q=\bigcup_aC_a$ and $B^{(q)}=\bigoplus_aB_{C_a}$.  The registry records
+that the one-dimensional-image hypothesis was restored before elevation; the resulting
+$7$-node tree validated on its first pass and contains no challenge entry.
+\begin{lemma}[\texttt{lem-maincb-structural-assembly}]\label{lem:maincb-structural-assembly}
+Fix the datum $W$ supplied by Lemma~\ref{lem:maincb-reset-constant-ledger}.  Every finite-dimensional extended $\varepsilon$-$C^*$-algebra $A$ with
+$0\le\varepsilon\le W.\varepsilon_{\mathrm{MAIN}}$ admits a finite-dimensional
+$C^*$-algebra and an extended isomorphism
+\[
+ B=\bigoplus_C M_{|C|},\qquad v:B\longrightarrow A,qquad
+ \nrm{v(I_B)-I_A}\le W.c_{0,\mathrm{cb}}W.K_{\mathrm{call}}\varepsilon,
+\]
+whose defect is $W.c_{0,\mathrm{cb}}W.K_{\mathrm{call}}\varepsilon$.  Consequently
+$C_{\mathrm{struct}}=W.c_{0,\mathrm{cb}}W.K_{\mathrm{call}}$ and
+$e_{\mathrm{struct}}=W.\varepsilon_{\mathrm{MAIN}}$ are finite positive universal witnesses.
+\end{lemma}
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; every finite-dimensional extended epsilon-C*-algebra A with 0 <= epsilon <= W.epsilon_MAIN admits a finite-dimensional C*-algebra B=oplus_C M_{|C|} and an extended W.c0_cb*W.K_call*epsilon-isomorphism v:B->A satisfying ||v(I_B)-I_A|| <= W.c0_cb*W.K_call*epsilon; hence C_struct=W.c0_cb*W.K_call and e_struct=W.epsilon_MAIN are finite positive universal witnesses.}
+\paragraph{Proof (prose account of the af-validated tree).}
+Lemma~\ref{lem:maincb-maximal-reset-selection} first selects a maximal-source extended
+inclusion $w:\mathbb C^m\to A$ with near-unit image $R=w(I_{\mathbb C^m})$.  Put
+$t=W.K_{\mathrm{call}}\varepsilon$ and $P_j=w(e_j)$.  Witness arithmetic gives
+$W.K_{\mathrm{call}}\ge\max\{1,W.c_{0,\mathrm{cb}}\}$, so the amplified axioms weaken
+from $\varepsilon$ to $t$ and the images $P_j,R$ are $t$-projections.  Stage-1 maximality
+(Lemma~\ref{lem:maincb-stage1-maximality}) makes every $P_j$ one-dimensional, while
+Lemma~\ref{lem:maincb-corner-equivalence} makes
+$j\sim k\Longleftrightarrow\dim\Cnr{P_j}{P_k}=1$ an equivalence relation with finite
+nonempty class family $\mathcal C$.
+At the full set $J$, Lemma~\ref{lem:maincb-full-corner-identification} gives
+$\Cos{R}=\mathrm{Id}_A$ and $A_J=\Cnrs{R}=A$; Definition~\ref{def:compressed-corner} gives the
+compressed unit $u_{A_J}=R$.  The tree then constructs the MAIN partition state explicitly,
+with current subset $J$ and the original map $w$ as its recorded reset reference.  For each
+$C\in\mathcal C$, Lemma~\ref{lem:maincb-one-class-extension} supplies
+$v_C:M_{|C|}\to A_C$.  Lemma~\ref{lem:maincb-stage3-finite-recombination} merges these
+exact witnesses into
+$v:\bigoplus_{C\in\mathcal C}M_{|C|}\to A_J$, with recorded field at most
+$W.L\varepsilon$ and both errors bounded by $W.c_{0,\mathrm{cb}}$ times that field.
+It remains to change the distinguished target unit from $R=u_{A_J}$ to $I_A$.  The tree
+does not invoke monotonicity across these different units.  Instead, at every amplification,
+$A_J=A$ and $\Cos{R}=\mathrm{Id}_A$ identify the multiplication, involution and matrix norms, so all
+non-unit clauses weaken directly to
+$D=W.c_{0,\mathrm{cb}}W.K_{\mathrm{call}}\varepsilon$.  The unit clause satisfies
+\[
+ \nrm{(I_n\otimes v)(I_n\otimes I_B)-I_n\otimes I_A}
+ \le d_J^{\mathrm{out}}+\nrm{R-I_A}
+ \le W.c_{0,\mathrm{cb}}(W.L+1)\varepsilon\le D,
+\]
+using $W.K_{\mathrm{call}}\ge W.L+1$.  Bijectivity is unchanged, hence $v:B\to A$ is the
+asserted extended $D$-isomorphism.  The ledger fields make
+$C_{\mathrm{struct}}$ and $e_{\mathrm{struct}}$ finite, positive and universal.
+The banked $20$-node tree follows an earlier ballooned elevation caused by missing workspace
+vocabulary; the root contract was not challenged.  Four challenges in the current ledger
+were repaired by validating the explicit partition-state and recombination dependencies in
+order and, most notably, replacing the ill-typed cross-unit monotonicity step by the direct
+amplification-wise estimate just displayed.

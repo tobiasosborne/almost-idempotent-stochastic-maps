@@ -1,0 +1,178 @@
+% SHARD-ID: AISM-66-ROUTEF-NORMALIZATION-CLOSENESS
+% SHARD-TITLE: Route-F normalization closeness: the Delta-prime and normalization estimates, the degree-two and degree-three estimates, and the Delta-Phi product
+% SHARD-SUMMARY: Reproduces lem-routef-delta-prime-closeness, which averages the repaired norm-one diagonal to obtain a completely positive map Delta-prime within (C_T+4C_theta)eta of the raw factor map.
+% SHARD-SUMMARY: Reproduces lem-routef-delta-normalization-closeness, which normalizes Delta-prime by its positive value at the unit and records the resulting UCP closeness estimate. Reproduces lem-routef-degree-two-estimate, the amplification-uniform quadratic product estimate for the normalized factor map.
+% SHARD-SUMMARY: Reproduces lem-routef-delta-phi-product, the three-term telescope comparing the normalized Delta product under tilde-Phi with tilde-Delta of the product. Reproduces lem-routef-degree-three-estimate, the amplification-uniform cubic estimate obtained from one-factor invariance, the audited associativity bound, and two quadratic estimates.
+% SHARD-KEYWORDS: lem-routef-delta-prime-closeness, lem-routef-delta-normalization-closeness, lem-routef-degree-two-estimate, lem-routef-delta-phi-product, lem-routef-degree-three-estimate, af validated, Route F, completely positive map, UCP normalization, degree-two estimate, degree-three estimate, Delta-Phi product
+\section{Route-F normalization closeness: the Delta-prime and normalization estimates, the degree-two and degree-three estimates, and the Delta-Phi product}\label{sec:routef-normalization-closeness}
+
+This section follows the raw factor package of Lemmas~\ref{lem:routef-raw-factor-setting-formation}--
+\ref{lem:routef-raw-factor-units}.  Throughout, the global witness package $W_{\mathrm{RF}}$
+is chosen before the input, and the input-dependent datum $S$ and all unqualified fields are
+those of Definition~\ref{def:routef-raw-factor-setting}.  The five rows first make the raw
+factor completely positive and unital, and then propagate its linear error through products
+of degrees two and three; every estimate is uniform over matrix amplifications.
+
+\begin{lemma}[\texttt{lem-routef-delta-prime-closeness}]\label{lem:routef-delta-prime-closeness}
+First fix one global package $W_{\mathrm{RF}}$ supplied by
+Lemma~\ref{lem:routef-raw-factor-setting-formation}.  For every admissible input
+$(\mathcal H,\Phi,\eta)$, fix a datum $S$ over that same package supplied by the same lemma
+and write its fields without qualification.  Set
+$C_{\Delta'}=C_T+4C_\theta$ and $\rho_{\Delta'}=\min\{\rho_T,\rho_{\mathrm{prod}}\}$.
+If $0\le\eta\le\rho_{\Delta'}$, the repaired norm-one diagonal produces a completely
+positive map $\Delta'$ satisfying
+\[
+  \nrm{\Delta'-\widetilde\Delta}_{\mathrm{cb}}\le C_{\Delta'}\eta .
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, writing the fields of (W_RF,S) as the unqualified symbols below: Delta-prime CP closeness: with C_Delta' := C_T+4*C_theta and rho_Delta' := min{rho_T, rho_prod}, for 0 <= eta <= rho_Delta', the repaired norm-one diagonal produces a CP map Delta' with ||Delta' - tilde-Delta||_cb <= C_Delta'*eta.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree first fixes $W_{\mathrm{RF}}$ and then $S$, and reads from the scalar header that
+$\eta\le\rho_T,\rho_{\mathrm{prod}},\rho_\theta=1/8$ and $C_V\eta\le1/4$.
+Lemma~\ref{lem:kitaev-diagonal-repair} supplies a finite phase-balanced diagonal
+$D=\sum_tq_tW_t^\dagger\otimes W_t$ with unitary $W_t$, nonnegative $q_t$ summing to one,
+exact centrality, $\pi(D)=1_B$, and its norm-one representation.  The factor
+$\widetilde\Delta=\iota\circ v$ preserves involution: $v$ does so as the isomorphism in
+Definition~\ref{def:extended-delta-inclusion}, and the involution on its range is the inherited
+ambient adjoint.  The diagonal cpization row therefore makes
+$\Delta'(X)=\sum_tq_t\Phi(\widetilde\Delta(XW_t^\dagger)\widetilde\Delta(W_t))$ completely positive.
+At level $n$, put $U_t=I_n\otimes W_t$, $X_t=XU_t^\dagger$, $Y_t=U_t$ and
+$Z_t=\widetilde\Delta_n(X_t)\widetilde\Delta_n(Y_t)$.  Then $X_tY_t=X$, while the raw norm
+bound and $C_V\eta\le1/4$ give $\nrm{Z_t}\le4\nrm X$.  Functional-calculus closeness costs
+$4C_\theta\eta\nrm X$, and the raw product estimate costs $C_T\eta\nrm X$.
+Averaging with $q_t\ge0$ and $\sum_tq_t=1$ yields the displayed bound at every $n$;
+taking the supremum gives the cb estimate.  Before this final run, verifier challenges
+added the diagonal-repair and inherited-involution dependencies without changing the contract.
+The live tree also repaired the ill-typed $\pi(D)=I_B$ to $\pi(D)=1_B$, the algebra unit.
+
+\begin{lemma}[\texttt{lem-routef-delta-normalization-closeness}]\label{lem:routef-delta-normalization-closeness}
+With $W_{\mathrm{RF}},S$ as above, let $\Delta'$ be supplied by
+Lemma~\ref{lem:routef-delta-prime-closeness}, and let $X\in S.B$.  Set
+\[
+ C_\Delta=6C_T+7C_{\Delta'},\qquad
+ \rho_\Delta=\min\{\rho_{\mathrm{unit}},\rho_{\Delta'},[2(C_T+C_{\Delta'})]^{-1}\}.
+\]
+For $0\le\eta\le\rho_\Delta$, the element $a=\Delta'(I)$ is invertible and
+$\Delta(X)=a^{-1/2}\Delta'(X)a^{-1/2}$ is UCP, with
+$\nrm{\Delta-\widetilde\Delta}_{\mathrm{cb}}\le C_\Delta\eta$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result and for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, and for every X in S.B, writing the fields of (W_RF,S) as the unqualified symbols below: Delta UCP normalization: with C_Delta := 6*C_T+7*C_Delta' and rho_Delta := min{rho_unit, rho_Delta', [2*(C_T+C_Delta')]^(-1)}, for 0 <= eta <= rho_Delta, a = Delta'(I) is invertible and Delta(X) = a^(-1/2)*Delta'(X)*a^(-1/2) is UCP with ||Delta - tilde-Delta||_cb <= C_Delta*eta.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Write $D=C_{\Delta'}$ and $d=(C_T+D)\eta$.  The unit estimate and the preceding
+closeness row give positivity of $a=\Delta'(I)$ and $\nrm{a-I}\le d$; the radius definition
+gives $0\le d\le1/2$.  Finite-dimensional spectral calculus places the spectrum of $a$ in
+$[1-d,1+d]\subset[1/2,3/2]$, so $a$ is invertible.  For $c=a^{1/2}$ and $b=a^{-1/2}$,
+$bc=cb=I$, and the scalar identity
+$|\sqrt\lambda-1|=|\lambda-1|/(\sqrt\lambda+1)$ gives
+$s:=\nrm{c-I}\le d$ and $\nrm c\le1+s$.  Define $\Delta(X)=b\Delta'(X)b$.
+Conjugation by $I_q\otimes b$ preserves positivity at every matrix level, so $\Delta$ is
+completely positive, and $\Delta(I)=bab=I$ makes it UCP and hence completely contractive.
+Writing $c_q=I_q\otimes c$, the exact relation
+$\Delta'_q(Y)=c_q\Delta_q(Y)c_q$ gives
+$\nrm{\Delta'_q(Y)-\Delta_q(Y)}\le s(2+s)\nrm Y\le3d\nrm Y$.
+Thus $\nrm{\Delta'-\Delta}_{\mathrm{cb}}\le3d$, and the triangle inequality yields
+$(3C_T+4D)\eta\le(6C_T+7D)\eta=C_\Delta\eta$.
+The ledger amendments only made the supplied-$\Delta'$ binder, prime notation, and node
+dependencies explicit; they changed neither the contract nor this normalization argument.
+
+\begin{lemma}[\texttt{lem-routef-degree-two-estimate}]\label{lem:routef-degree-two-estimate}
+With $W_{\mathrm{RF}},S,\Delta',\Delta$ supplied as above, for every $n\ge1$ and
+$X,Y\in M_n(S.B)$ set
+$C_2=C_{\Delta'}+4C_\Delta$ and
+$\rho_2=\min\{\rho_{\mathrm{prod}},\rho_{\Delta'},\rho_\Delta\}$.
+For $0\le\eta\le\rho_2$,
+\[
+ \nrm{\Phi_n(\Delta_nX\,\Delta_nY)-\Delta_n(XY)}
+ \le C_2\eta\nrm X\nrm Y .
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, and every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness; for every integer n >= 1 and all X, Y in M_n(S.B), writing the fields of (W_RF,S) as the unqualified symbols below: Route F degree-two estimate: with C_2 := C_Delta'+4*C_Delta and rho_2 := min{rho_prod, rho_Delta', rho_Delta}, for 0 <= eta <= rho_2, every amplification satisfies ||Phi_n(Delta_n X Delta_n Y) - Delta_n(XY)|| <= C_2*eta*||X||*||Y||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The common radius makes the raw norm, raw product, functional-calculus, and normalization
+estimates available and gives $C_V\eta\le1/4$.  Both $\Phi_n$ and $\Delta_n$ are contractive.
+First expand
+$\Delta_nX\Delta_nY-\widetilde\Delta_nX\widetilde\Delta_nY$ by replacing one factor at a
+time.  Normalization closeness, contractivity of $\Delta_n$, and
+$\nrm{\widetilde\Delta_nT}\le(1+C_V\eta)\nrm T$ bound its image under $\Phi_n$ by
+$3C_\Delta\eta\nrm X\nrm Y$.  Next insert $\widetilde\Phi_n$ at the raw product.
+Functional-calculus closeness costs at most
+$C_\theta\eta(1+C_V\eta)^2\nrm X\nrm Y\le2C_\theta\eta\nrm X\nrm Y$,
+and the raw product row costs $C_T\eta\nrm X\nrm Y$.  Finally replace
+$\widetilde\Delta_n(XY)$ by $\Delta_n(XY)$ at cost
+$C_\Delta\eta\nrm{XY}\le C_\Delta\eta\nrm X\nrm Y$.
+The three comparisons total $(4C_\Delta+C_T+2C_\theta)\eta\nrm X\nrm Y$;
+since $C_{\Delta'}=C_T+4C_\theta$, this is at most
+$(C_{\Delta'}+4C_\Delta)\eta\nrm X\nrm Y$.  The ledger amendments made the
+$\rho_\theta$ consequence and the final node references explicit; the contract was unchanged.
+
+\begin{lemma}[\texttt{lem-routef-delta-phi-product}]\label{lem:routef-delta-phi-product}
+With the same supplied data, for every $n\ge1$ and $X,Y\in M_n(S.B)$ set
+$\rho_{\Delta\Phi}=\min\{\rho_\theta,\rho_\Delta,\rho_2\}$.  If
+$0\le\eta\le\rho_{\Delta\Phi}$, then
+\[
+ \nrm{\widetilde\Phi_n(\Delta_nX\,\Delta_nY)-\widetilde\Delta_n(XY)}
+ \le(C_2+C_\theta+C_\Delta)\eta\nrm X\nrm Y .
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, and every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness; for every integer n >= 1 and all X, Y in M_n(S.B), writing the fields of (W_RF,S) as the unqualified symbols below: Normalized Delta product: for rho_DeltaPhi := min{rho_theta, rho_Delta, rho_2} and 0 <= eta <= rho_DeltaPhi, every amplification satisfies ||tilde-Phi_n(Delta_n X Delta_n Y) - tilde-Delta_n(XY)|| <= (C_2+C_theta+C_Delta)*eta*||X||*||Y||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The radius gives functional-calculus closeness, normalization closeness, and the preceding
+degree-two estimate simultaneously.  Because $\Delta$ is UCP,
+$\nrm{\Delta_nX\Delta_nY}\le\nrm X\nrm Y$, while
+$\nrm{XY}\le\nrm X\nrm Y$ in $M_n(S.B)$.  The tree uses the exact three-term decomposition
+\begin{align*}
+ \widetilde\Phi_n(\Delta_nX\Delta_nY)-\widetilde\Delta_n(XY)
+ ={}&(\widetilde\Phi_n-\Phi_n)(\Delta_nX\Delta_nY)\\
+ &+[\Phi_n(\Delta_nX\Delta_nY)-\Delta_n(XY)]
+ +(\Delta_n-\widetilde\Delta_n)(XY).
+\end{align*}
+The first term is at most $C_\theta\eta\nrm X\nrm Y$, the middle term is at most
+$C_2\eta\nrm X\nrm Y$, and the last is at most
+$C_\Delta\eta\nrm X\nrm Y$.  Their sum is precisely the asserted coefficient.
+All maps and estimates are taken at the same arbitrary amplification, so generalization in
+$n,X,Y$ completes the root.  The exported tree and ledger record no challenge or amendment.
+
+\begin{lemma}[\texttt{lem-routef-degree-three-estimate}]\label{lem:routef-degree-three-estimate}
+With the same supplied data, for every $n\ge1$ and $X,Y,Z\in M_n(S.B)$ set
+\[
+ C_3=10+20C_\Delta+12C_\theta+2C_{\Delta'},\qquad
+ \rho_3=\min\{\rho_\theta,\rho_{\Delta'},\rho_\Delta,\rho_2\}.
+\]
+For $0\le\eta\le\rho_3$,
+$\nrm{\Phi_n(\Delta_nX\Delta_nY\Delta_nZ)-\Delta_n(XYZ)}
+\le C_3\eta\nrm X\nrm Y\nrm Z$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first fixing one global witness package W_RF supplied by lem-routef-raw-factor-setting-formation, for every input (H,Phi,eta) to which that formation result applies, fix one def-routef-raw-factor-setting datum S over that same W_RF supplied by the same result, for every Delta' supplied for (W_RF,S) by lem-routef-delta-prime-closeness, and every Delta supplied from that same Delta' by lem-routef-delta-normalization-closeness; for every integer n >= 1 and all X, Y, Z in M_n(S.B), writing the fields of (W_RF,S) as the unqualified symbols below: Route F degree-three estimate: with C_3 := 10+20*C_Delta+12*C_theta+2*C_Delta' and rho_3 := min{rho_theta, rho_Delta', rho_Delta, rho_2}, for 0 <= eta <= rho_3, every amplification satisfies ||Phi_n(Delta_n X Delta_n Y Delta_n Z) - Delta_n(XYZ)|| <= C_3*eta*||X||*||Y||*||Z||.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree first proves the one-factor estimate
+$\nrm{\Phi_n(\Delta_nT)-\Delta_nT}\le d\nrm T$ with
+$d=2(C_\theta+C_\Delta)\eta$.  Indeed,
+$\widetilde\Phi_n\widetilde\Delta_n=\widetilde\Delta_n$ exactly,
+$\nrm{\widetilde\Delta}_{\mathrm{cb}}\le2$, and inserting both tilded maps costs
+$2(C_\theta+C_\Delta)\eta$.  Replacing the three factors in
+$\Phi_n(\Delta_nX\Delta_nY\Delta_nZ)$ by their $\Phi_n$-images costs $3d\nrm X\nrm Y\nrm Z$.
+The amplified first associativity estimate from Lemma~\ref{lem:kitaev-almost-idemp-audit}
+then changes the bracketing at cost $10\eta\nrm X\nrm Y\nrm Z$.
+A two-factor telescope inside the inner $\Phi_n$, followed by replacement of the third
+factor, costs a further $3d\nrm X\nrm Y\nrm Z$.  Two applications of
+Lemma~\ref{lem:routef-degree-two-estimate}, first to $X,Y$ and then to $XY,Z$, cost
+$2C_2\eta\nrm X\nrm Y\nrm Z$ and arrive at $\Delta_n(XYZ)$.
+Finally $6d+10\eta+2C_2\eta$ equals
+$(10+20C_\Delta+12C_\theta+2C_{\Delta'})\eta$ because
+$C_2=C_{\Delta'}+4C_\Delta$.  Ledger amendments only named the intermediate
+terms $P_1,\ldots,P_5$ and separated this coefficient arithmetic; the contract was unchanged.

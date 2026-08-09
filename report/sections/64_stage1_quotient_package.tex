@@ -1,0 +1,198 @@
+% SHARD-ID: AISM-64-STAGE1-QUOTIENT-PACKAGE
+% SHARD-TITLE: The Stage-1 quotient package: uniform inversion isolation, the quotient manifold package, finite CW structure, quotient left inversion, and quotient index data
+% SHARD-SUMMARY: Reproduces lem-stage1-uniform-inversion-isolation, which isolates the two actual fixed points of the smooth inversion uniformly near J and -J.
+% SHARD-SUMMARY: Reproduces lem-stage1-quotient-manifold-package, which makes the scalar quotient a connected compact orientable smooth manifold of dimension N-1. Reproduces lem-stage1-quotient-finite-cw, which triangulates the compact smooth quotient and gives it finite CW type.
+% SHARD-SUMMARY: Reproduces lem-stage1-quotient-left-inversion, which descends the Stage-1 operations and paths to a connected H-space with smooth left inversion. Reproduces lem-stage1-quotient-inversion-index-data, which isolates the scalar fixed class and computes its local index as +1.
+% SHARD-KEYWORDS: lem-stage1-uniform-inversion-isolation, lem-stage1-quotient-manifold-package, lem-stage1-quotient-finite-cw, lem-stage1-quotient-left-inversion, lem-stage1-quotient-inversion-index-data, af validated, Stage 1, scalar quotient, H-space, local fixed-point index
+\section{The Stage-1 quotient package: uniform inversion isolation, the quotient manifold package, finite CW structure, quotient left inversion, and quotient index data}\label{sec:stage1-quotient-package}
+
+This section reproduces the five \texttt{af}-validated rows that pass from the smooth
+Stage-1 unitary space of Definition~\ref{def:approximate-unitary-space} to its scalar
+quotient.  They isolate inversion before quotienting, establish the quotient's manifold
+and finite-CW structure, descend the H-space operations, and finally determine the local
+index of the scalar fixed class.  The ambient approximate algebra is that of
+Definition~\ref{def:epsilon-cstar-algebra}.
+
+\begin{lemma}[\texttt{lem-stage1-uniform-inversion-isolation}]\label{lem:stage1-uniform-inversion-isolation}
+There are universal constants $e^{r}_{\mathrm{iso}}>0$ and $r_{\mathrm{iso}}>0$ such
+that, for every finite-dimensional exact-unit $\ecs_r$-$C^{*}$-algebra with
+$0\le \ecs_r\le e^{r}_{\mathrm{iso}}$, the elements $J$ and $-J$ are the only fixed
+points of the smooth map $\sigma$ in their respective ambient $r_{\mathrm{iso}}$-balls.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There are universal e_iso^r > 0, r_iso > 0 such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0 <= epsilon_r <= e_iso^r, J and -J are the only fixed points of the smooth sigma in their respective ambient r_iso-balls.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Fix the universal tuple $W$ of the Stage-1 constant ledger and set
+$e^{r}_{\mathrm{iso}}=C_{\mathrm{rect}}e_{S1}$ and $\rho=r_{\mathrm{iso}}$.
+For $\ecs_r\le e^{r}_{\mathrm{iso}}$, put $\ecs_X=\ecs_r/C_{\mathrm{rect}}$.
+Clause $(R)$ then supplies every guard in $(A_7)$ at $\delta=\delta_*$ and $r=\rho$,
+including $c=C_{\mathrm{der}}(\ecs_r+\rho)\le\kappa_{\mathrm{der}}/4<1$.
+The ledger charts, the smooth atlas and smooth polar inverse synchronize one smooth map
+$\sigma(U)=u_{\delta_*}(U\dg)$; scalar covariance shows that it fixes both $J$ and $-J$.
+For $s\in\{+1,-1\}$ let $F_s$ be the retained same-chart map from $(A_7)$ and set
+$G_s=F_s-I$ on $B^{i\Herm}_{\rho}(0)$.  The derivative estimate reads
+$\nrm{DG_s(A)+2I}\le c$, so with $V=-2I$ one has
+$\nrm{V^{-1}DG_s(A)-I}\le c/2<1$.
+Lemma~\ref{lem:stage1-quantitative-inverse-function} therefore makes $G_s$ injective.
+At the chart centre, $f_{sJ}(0)=0$ and graph uniqueness gives $g_{sJ}(0)=0$;
+hence $G_s(0)=0$, making zero its unique zero in the chart ball.
+If $\sigma(U)=U$ and $U$ lies in the ambient $\rho$-ball about $sJ$, decompose
+$\phi_{sJ}(U)$ into anti-Hermitian and Hermitian parts.  Their norms are below $\rho$,
+and the unitary equation plus graph uniqueness writes $U=\chi_s(A)$.
+Chart retention and fixedness give $G_s(A)=0$, so $A=0$, then $g_{sJ}(0)=0$ yields
+$U=sJ$.  The single verifier challenge was proof-level: the negative-chart branch had
+an undeclared dependency, repaired by inserting the dependency-backed bridge now live
+as node~1.5.1; the contract was unchanged.
+
+\begin{lemma}[\texttt{lem-stage1-quotient-manifold-package}]\label{lem:stage1-quotient-manifold-package}
+There is a universal $e^{r}_{\mathrm{quot}}>0$ such that, whenever
+$0\le\ecs_r\le e^{r}_{\mathrm{quot}}$ and
+$1<N=\dim_{\mathbb C}\calX<\infty$, the scalar quotient
+$\breve{\mathcal U}=\mathcal U_e/U(1)$ is a connected compact orientable smooth
+manifold without boundary of real dimension $N-1$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There is a universal e_quot^r > 0 such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0 <= epsilon_r <= e_quot^r and 1 < N = dim_C calX < infinity, breve-calU = calU_e/U(1) is a connected compact orientable smooth manifold without boundary of real dimension N - 1.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+From the universal ledger tuple choose
+$e^{r}_{\mathrm{quot}}=\min\{\ecs_*^r,\tfrac14,
+\kappa_{\mathrm{ch}}/(4C_{\mathrm{ch}})\}$ and
+$\delta=\kappa_{\mathrm{ch}}/(4C_{\mathrm{ch}})$.
+The graph clause, the smooth-atlas upgrade and the Maurer--Cartan trivialization then
+make $\mathcal U$ a smooth boundaryless manifold with globally trivial tangent bundle.
+The tree proves locally, without importing an extra smooth-operations row, that
+$a(c,U)=cU$ is a smooth action on the identity component $\mathcal U_e$:
+the unitary equations and the right inverse $\bar cR$ preserve the space, while the
+path $t\mapsto e^{it\theta}J$ and multiplication by $c$ preserve its component.
+The action is free because $cU=U$ and $U\bdot R=J$ imply $cJ=J$, hence $c=1$;
+it is proper by compactness of $U(1)$ and the closed-subset criterion.
+Lemma~\ref{lem:topology-quotient-manifold} now gives the smooth boundaryless quotient.
+The Maurer--Cartan map identifies $T_U\mathcal U$ with $i\Herm$, a real space of
+dimension $N$, so quotienting the one-dimensional scalar orbit gives dimension $N-1$.
+Connectedness is inherited from the continuous image of the component $\mathcal U_e$.
+For compactness, $(1-\ecs_r)\nrm U^2\le1$ bounds the unitary locus, while
+$U\bdot X=0$ implies $\nrm X\le\ecs_r\nrm U^2\nrm X$; the coefficient is below one,
+so $L_U$ is injective and hence surjective in finite dimension.
+Thus $\mathcal U$ is a closed zero locus in a bounded set, its component is compact,
+and so is its quotient.  Finally equivariance of the Maurer--Cartan trivialization and
+$\omega_U(iU)=iJ$ descend it to
+$T\breve{\mathcal U}\cong\breve{\mathcal U}\times(i\Herm/\mathbb RiJ)$,
+which supplies an orientation.  This first-pass tree recorded no challenges.
+
+\begin{lemma}[\texttt{lem-stage1-quotient-finite-cw}]\label{lem:stage1-quotient-finite-cw}
+For every finite-dimensional exact-unit $\ecs_r$-$C^{*}$-algebra, if
+$\breve{\mathcal U}=\mathcal U_e/U(1)$ is a compact smooth manifold without boundary,
+then $\breve{\mathcal U}$ is homeomorphic to a finite simplicial complex and hence has
+finite CW type.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{For every finite-dimensional exact-unit epsilon_r-C*-algebra, if breve-calU = calU_e/U(1) is a compact smooth manifold without boundary, then breve-calU is homeomorphic to a finite simplicial complex and hence has finite CW type.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Fix the algebra and write $M=\breve{\mathcal U}$.
+The root assumes directly that $M$ is a compact smooth manifold without boundary.
+In the intended small-error range this antecedent is supplied by
+Lemma~\ref{lem:stage1-quotient-manifold-package} when $N>1$.
+For $N=1$, exact unitality instead gives $\calX=\mathbb CJ$,
+$(zJ)\dg=\bar zJ$ and $(zJ)\bdot(wJ)=zwJ$.
+Consequently $\mathcal U=\mathcal U_e=U(1)J$ and $M$ is a single point,
+again a compact smooth manifold without boundary.
+Only the stated root antecedent is used from this point onward.
+Lemma~\ref{lem:topology-finite-triangulation} supplies a finite simplicial complex $K$
+and a homeomorphism $h:|K|\to M$.
+Thus $M$ is homeomorphic to a finite simplicial complex, the first conclusion.
+The realization $|K|$ is a finite CW complex, with one open cell for the relative
+interior of each simplex and the usual face attachments.
+Transporting this CW structure along $h$ makes $M$ a finite CW complex;
+equivalently, $h$ exhibits $M$ as having finite CW type.
+This was a first-pass four-node validation with no challenges.
+
+\begin{lemma}[\texttt{lem-stage1-quotient-left-inversion}]\label{lem:stage1-quotient-left-inversion}
+There is a universal $e^{r}_{H}>0$ such that, for every finite-dimensional exact-unit $\ecs_r$-$C^*$-algebra with $0\le\ecs_r\le e^{r}_{H}$,
+the scalar-equivariant maps $\mu,\sigma$ and the jointly continuous projected straight
+paths descend to $\breve{\mathcal U}$; the descended multiplication makes it a connected
+H-space, and the descended smooth map $\breve\sigma$ is a left inversion.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There is a universal e_H^r > 0 such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0 <= epsilon_r <= e_H^r, the scalar-equivariant mu, sigma and the jointly continuous projected straight paths descend to breve-calU; the descended multiplication makes it a connected H-space, and the descended smooth map breve-sigma is a left inversion.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Fix the ledger tuple and set $e_H^r=\min\{C_{\mathrm{rect}}e_{S1},e_{\mathrm{quot}}^r\}$,
+$q=C_{\mathrm{grp}}\ecs_r$ and
+$\eta=C_{\mathrm{path}}(q+\ecs_rq+q^2)$.
+Clause $(R)$ supplies the guards for $(A_5)$ and $(A_6)$, including
+$q<r_-$, $C_{\mathrm{path}}q\le\tfrac14$ and $\eta<r_-$.
+Thus $(A_5)$ gives global $\mu(U,V)=u_{\delta_*}(U\bdot V)$ and
+$\sigma(U)=u_{\delta_*}(U\dg)$ with exact unit identities and
+$\nrm{\mu(\sigma(U),U)-J}\le q$; $(A_6)$ gives the jointly continuous paths
+$H(t,U_0,U_1)=u_{\delta_*}((1-t)U_0+tU_1)$.
+The atlas and polar upgrades identify these same maps as smooth, and the explicit
+operations row gives $\mu(cU,dV)=cd\mu(U,V)$ and
+$\sigma(cU)=\bar c\sigma(U)$.
+Their connected images remain in $\mathcal U_e$, so these covariance identities define
+$\breve\mu([U],[V])=[\mu(U,V)]$, $\breve\sigma([U])=[\sigma(U)]$ and the descended paths.
+The exact identities at $J$ make both unit maps literally the identity, hence
+$(\breve{\mathcal U},[J],\breve\mu)$ is an H-space in the sense of
+Definition~\ref{def:h-space-left-inversion}; it is connected as the quotient of
+$\mathcal U_e$.
+The verifier challenged the claimed smooth descent, so the repaired live tree constructs
+local slices explicitly: for a complement $E_U$ to $\mathbb R(iU)$,
+$(\theta,v)\mapsto e^{i\theta}\psi(v)$ has invertible derivative at $(0,0)$.
+Freeness and compactness of $U(1)$ let one shrink the slice, producing quotient charts,
+a smooth submersion and smooth local sections; there
+$\breve\sigma=p\circ\sigma\circ s_U$ is smooth.
+Finally $A(U)=\mu(\sigma(U),U)$ is phase invariant and lies within $q$ of $J$.
+The homotopy $[H(t,A(U),J)]$ is therefore well-defined, basepoint-preserving, and joins
+$x\mapsto\breve\mu(\breve\sigma(x),x)$ to the constant $[J]$, proving left inversion.
+
+\begin{lemma}[\texttt{lem-stage1-quotient-inversion-index-data}]\label{lem:stage1-quotient-inversion-index-data}
+There is a universal $e^{r}_{\mathrm{idx}}>0$ such that, whenever
+$0\le\ecs_r\le e^{r}_{\mathrm{idx}}$ and $1<N=\dim_{\mathbb C}\calX<\infty$,
+$\breve e=[J]$ is an isolated fixed point of the smooth $\breve\sigma$, the line
+$i\mathbb RJ$ is $D\sigma_J$-invariant,
+$\nrm{D\breve\sigma_{\breve e}+I}<1$ in the quotient norm, and
+$\det(I-D\breve\sigma_{\breve e})>0$, so its local index is $+1$.
+More precisely, there is a quotient neighborhood $\mathcal N$ of $[J]$ such that a fixed
+$[U]\in\mathcal N$ has a representative $U_0$ close to $J$ with $\sigma(U_0)=cU_0$; choosing $a\in U(1)$ with $a^2=c$ gives
+$\sigma(aU_0)=\bar a\sigma(U_0)=aU_0$; the two actual fixed lifts $\pm aU_0$ lie in the
+respective isolation balls, hence equal $\pm J$, and therefore $[U]=[J]$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{There is a universal e_idx^r > 0 such that, for every finite-dimensional exact-unit epsilon_r-C*-algebra with 0 <= epsilon_r <= e_idx^r and 1 < N = dim_C calX < infinity, the scalar class breve-e = [J] is an isolated fixed point of the smooth breve-sigma, the vertical line iR*J is D-sigma_J-invariant, ||D-breve-sigma_{breve-e} + I|| < 1 in the quotient norm, and det(I - D-breve-sigma_{breve-e}) > 0, so its local index is +1; more precisely, there is a quotient neighborhood calN of [J] such that if [U] in calN is fixed, choose a representative U_0 close to J and c in U(1) with sigma(U_0) = c*U_0, choose a in U(1) with a^2 = c, and use sigma(a*U_0) = conj(a)*sigma(U_0) = a*U_0: the two actual fixed lifts +-a*U_0 lie in the J- and -J-isolation balls, hence equal J and -J, so [U] = [J].}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Choose
+$e_{\mathrm{idx}}^r=\min\{C_{\mathrm{rect}}e_{S1},e_{\mathrm{iso}}^r,
+e_H^r,e_{\mathrm{quot}}^r\}$ from the four validated packages.
+The explicit minimum, inserted after a verifier challenge, proves that every isolation,
+H-space and quotient cutoff applies simultaneously.
+They synchronize one smooth scalar-equivariant $\sigma$ and the smooth compact orientable
+manifold $M=\breve{\mathcal U}$ with fixed point $\breve e=[J]$.
+At $J$, the scalar orbit has tangent $i\mathbb RJ$.
+The second repaired derivative subbranch builds local slice charts, in which the quotient
+map is $(t,k)\mapsto k$; hence
+$T_{\breve e}M\cong T_J\mathcal U_e/(i\mathbb RJ)$ and differentiating
+$p\circ\sigma=\breve\sigma\circ p$ identifies the descended differential.
+Covariance gives $D\sigma_J(iJ)=-iJ$, so the vertical line is invariant.
+In the ledger graph coordinates, $(A_7)$ gives
+$\nrm{DF_+(0)+I}\le C_{\mathrm{der}}(\ecs_r+r_{\mathrm{iso}})<1$.
+Passing to the quotient norm cannot increase this bound, yielding
+$\nrm{D\breve\sigma_{\breve e}+I}<1$.
+For $T=D\breve\sigma_{\breve e}$ put $B=(T+I)/2$; then $\nrm B<1/2$,
+so every $I-tB$ is invertible and determinant continuity gives
+$\det(I-T)=2^{\dim M}\det(I-B)>0$.
+For isolation, shrink a quotient neighborhood so a representative $U_0$ is close to $J$.
+If its class is fixed, $\sigma(U_0)=cU_0$, and continuity makes $c$ close to $1$.
+Choose the square root $a$ close to $1$; covariance makes both $aU_0$ and $-aU_0$
+actual fixed points lying in the $J$- and $-J$-isolation balls.
+Lemma~\ref{lem:stage1-uniform-inversion-isolation} forces them to be $J$ and $-J$,
+so the fixed class is $[J]$.  Finally the positive determinant and
+Lemma~\ref{lem:topology-local-index-sign} give local index $+1$ in the sense of
+Definition~\ref{def:lefschetz-fixed-point-data}.

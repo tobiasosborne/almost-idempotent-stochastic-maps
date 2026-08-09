@@ -1,0 +1,196 @@
+% SHARD-ID: AISM-57-MAINCB-CALL-ENVELOPES
+% SHARD-TITLE: The three MAIN-CB call envelopes: stage 1, stage 2, and stage 3
+% SHARD-SUMMARY: Reproduces lem-maincb-stage1-call-envelope, the universal Stage-1 scale selection and its separate multi-atom and one-atom constructions of the literal raw call.
+% SHARD-SUMMARY: Reproduces lem-maincb-stage2-call-envelope, the same-class one-point extension envelope with its recorded target ambient field and dominated EXT-CB datum.
+% SHARD-SUMMARY: Reproduces lem-maincb-stage3-call-envelope, the cross-class union envelope that packages two reset isomorphisms into the controlled four-corner merging datum.
+% SHARD-KEYWORDS: lem-maincb-stage1-call-envelope, lem-maincb-stage2-call-envelope, lem-maincb-stage3-call-envelope, MAIN-CB, call envelope, raw call, witness ledger, corner compression, EXT-CB, four-corner merge, af validated
+\section{The three MAIN-CB call envelopes: stage 1, stage 2, and stage 3}\label{sec:maincb-call-envelopes}
+
+The three rows below are the typed interfaces between a MAIN-CB witness ledger
+(Definition~\ref{def:maincb-witness-ledger}) and the three raw-call constructions of
+Definition~\ref{def:maincb-raw-call}.  Each chooses one universal receiving scale, then
+checks that every producer error is dominated at that scale; the rows do not perform the
+later reset or improvement steps.
+
+\begin{lemma}[\texttt{lem-maincb-stage1-call-envelope}]\label{lem:maincb-stage1-call-envelope}
+First choose a universal $c_{0}$ for Lemma~\ref{lem:maincb-error-improvement}, then fix the
+corresponding direct-corner witnesses, the witnesses
+$C_{\mathrm{cu}},e_{\mathrm{cu}}$ of
+Lemma~\ref{lem:maincb-compressed-corner-unit-comparison}, and the witnesses
+$D_{1}^{0},e_{1}^{0}$ of Lemma~\ref{lem:maincb-stage1-raw-refinement}.  There are universal
+$K_{1}^{0}\ge1$, $D_{1}\ge D_{1}^{0}$ and
+$0<e_{1}\le\min\{e_{1}^{0},e_{\mathrm{cu}}\}$ absorbing all Stage-1 prerequisites.
+Indeed, for every ledger $W$ with $W.c0_{\mathrm{cb}}=c_{0}$, $W.K1\ge K_{1}^{0}$ and
+$W.e1\le e_{1}$, let $A$ be a finite-dimensional extended
+$\varepsilon$-$C^{*}$-algebra, let $0\le\varepsilon\le W.e1/W.K1$, and let
+$w:\mathbb C^{m}\to A$ be an extended $W.c0_{\mathrm{cb}}\varepsilon$-inclusion satisfying
+$\nrm{w(I_{\mathbb C^{m}})-I_A}\le W.c0_{\mathrm{cb}}\varepsilon$.  If
+$P_j=w(e_j)$ has $\dim\Cnr{P_j}{P_j}>1$, then at
+$t_{1}=W.K1\varepsilon$ the three Stage-1 producers, corner-unit comparison, and literal
+old-side compression furnish the explicit raw call whose map
+$u_{1}:\mathbb C^{m+1}\to A$ is an extended $D_{1}t_{1}$-inclusion and obeys
+$\nrm{u_{1}(I_{\mathbb C^{m+1}})-I_A}\le D_{1}t_{1}$.
+When $m=1$, $u_{1}$ is the supplied fresh map
+$\mathbb C^{2}\to A_{\mathrm{fresh}}=\Cnr{P_{\mathrm{fresh}}}{P_{\mathrm{fresh}}}$ followed
+by its canonical amplified linear embedding into $A$; rectangular-product control,
+corner-unit comparison, $P_{\mathrm{fresh}}=w(I_{\mathbb C})$, and the incoming unit
+estimate give the asserted ambient inclusion and unit bounds.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first choosing a universal c0 witness for which lem-maincb-error-improvement remains valid, fixing the corresponding lem-maincb-direct-corner-envelope witnesses, fixing the C_corner_unit,e_corner_unit witnesses of lem-maincb-compressed-corner-unit-comparison, and fixing the D_1^0,e_1^0 witnesses of lem-maincb-stage1-raw-refinement, there are universal receiving witnesses K_1^0 >= 1, D_1 >= D_1^0, and e_1 > 0 with e_1 <= min{e_1^0,e_corner_unit} and every Stage-1 producer prerequisite absorbed, such that for every def-maincb-witness-ledger datum W with W.c0_cb = c0, W.K1 >= K_1^0, and W.e1 <= e_1, if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= W.e1/W.K1, w:C^m->A is a supplied extended W.c0_cb*epsilon-inclusion satisfying ||w(I_{C^m})-I_A|| <= W.c0_cb*epsilon, and some P_j=w(e_j) has dim S_{P_j}>1, then the three Stage-1 producers, lem-maincb-compressed-corner-unit-comparison, and literal old-side compression furnish the explicit Stage-1 raw call at t_1=W.K1*epsilon whose literal map u_1:C^{m+1}->A is an extended D_1*t_1-inclusion and satisfies ||u_1(I_{C^{m+1}})-I_A|| <= D_1*t_1, when m=1, u_1 is the supplied fresh C^2->A_fresh=S_{P_fresh} inclusion followed by the canonical amplified linear embedding A_fresh->A; lem-compcb-rectangular-product, lem-maincb-compressed-corner-unit-comparison, P_fresh=w(I_C), and the displayed incoming unit estimate furnish the asserted A-valued inclusion and unit bounds.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Fix the provider constants as in the root and write $L,e_{\mathrm{env}}$ for the
+direct-corner pair, $C_{\mathrm{sc}},e_{\mathrm{sc}}$ for the single-compression pair,
+and $C_{\mathrm{rect}},e_{\mathrm{rect}}$ for the rectangular-product pair.  The tree
+chooses $K_{1}^{0}$ at least
+\[
+ \max\{1,c_{0}+1,L,C_{\mathrm{sc}}(c_{0}+1),C_{\mathrm{proj}}L,
+ C_{\mathrm{np}}L,C_{\mathrm{pair}}L\},
+\]
+chooses $e_{1}$ below all producer thresholds (in particular below
+$e_{1}^{0},e_{\mathrm{cu}},e_{\mathrm{env}},e_{\mathrm{sc}},e_{\mathrm{rect}}/2$), and
+lets $D_{1}$ dominate the finite coefficients in the two unit telescopes and the
+$m=1$ transfer.  Thus $t_{1}=W.K1\varepsilon$ dominates
+$\varepsilon,c_{0}\varepsilon,L\varepsilon$.
+
+Set $P_{\mathrm{fresh}}=P_j$ and, for $m>1$,
+$P_{\mathrm{old}}=\sum_{k\ne j}w(e_k)$.  Lemma~\ref{lem:maincb-direct-corner-envelope}
+makes their corners extended $t_{1}$-$C^{*}$-algebras and supplies the required
+subordination and complementarity estimates.  The three fresh-side producers
+Lemmas~\ref{lem:stage1-rectified-nontrivial-projection},
+\ref{lem:stage1-original-complementary-pair}, and
+\ref{lem:stage1-fresh-two-point-inclusion} give one coherent pair and a map
+$v_{\mathrm{fresh}}:\mathbb C^{2}\to A_{\mathrm{fresh}}$; the proof never identifies
+separately existential pairs.  For $m>1$, restricting $w$ off $j$ and compressing by
+$P_{\mathrm{old}}$ gives $v_{\mathrm{old}}$, and
+Lemma~\ref{lem:compcb-single-compression-transfer} makes it an extended
+$t_{1}$-inclusion.  Lemma~\ref{lem:maincb-stage1-raw-refinement} then gives the literal sum
+map with defect $D_{1}^{0}t_{1}$, while the two corner-unit errors plus the incoming unit
+error are at most $(2C_{\mathrm{cu}}+1)t_{1}$.
+
+For $m=1$ there is no old side.  The canonical embedding preserves involution and all
+matrix norms; Lemma~\ref{lem:compcb-rectangular-product} bounds the extra ambient product
+error by $4C_{\mathrm{rect}}t_{1}$, and corner-unit comparison bounds the unit error by
+$(C_{\mathrm{cu}}+1)t_{1}$.  Taking $D_{1}$ above these coefficients yields the recorded
+raw call in both cases.  The validated re-seed has $11/11$ clean nodes and three rounds;
+three earlier runs stalled on the anaphoric $c_{0}^{\mathrm{cb}}$, after which the
+witness-ledger contract was amended and re-seeded.
+
+\begin{lemma}[\texttt{lem-maincb-stage2-call-envelope}]\label{lem:maincb-stage2-call-envelope}
+First choose a universal $c_{0}$ for Lemma~\ref{lem:maincb-error-improvement}, fix the
+corresponding $L^{0},e_{\mathrm{env}}^{0}$ of
+Lemma~\ref{lem:maincb-direct-corner-envelope}, and fix $C_{s2}^{0},e_{s2}^{0}$ of
+Lemma~\ref{lem:maincb-stage2-extcb-datum}.  There is a universal $K_{2}^{0}\ge1$ absorbing
+all Stage-2 prerequisites.  For every ledger $W$ with $W.c0_{\mathrm{cb}}=c_{0}$,
+$W.L\ge L^{0}$, $W.K2\ge\max\{K_{2}^{0},1,W.L,W.c0_{\mathrm{cb}}W.L\}$ and
+$W.e_{s2}\le e_{s2}^{0}$, let $A$ be a finite-dimensional extended
+$\varepsilon$-$C^{*}$-algebra and let $w:\mathbb C^m\to A$ be an extended
+$W.c0_{\mathrm{cb}}\varepsilon$-inclusion with one-dimensional atomic images and
+$\nrm{w(I_{\mathbb C^m})-I_A}\le W.c0_{\mathrm{cb}}\varepsilon$.  Suppose a partition
+state has $\varnothing\ne U$ contained in one class, $j\notin U$ in that class, and
+$R=U\cup\{j\}$.  If $0\le\varepsilon\le W.e_{s2}/W.K2$ and the supplied reset isomorphism
+$v_U:M_{|U|}\to A_U$ has $\varepsilon_U\le W.L\varepsilon$,
+$d_U\le W.c0_{\mathrm{cb}}\varepsilon_U$, and
+$\nrm{v_U(I_{M_{|U|}})-u_{A_U}}\le W.c0_{\mathrm{cb}}\varepsilon_U$, then with
+$\varepsilon_R=W.L\varepsilon$ and $t_{2}=W.K2\varepsilon$ the direct-corner envelope
+certifies $A_R$, every datum error is at most $t_{2}$, and the Stage-2 EXT-CB provider
+furnishes the explicit raw-call datum with total defect at most $C_{s2}^{0}t_{2}$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first choosing a universal c0 witness for which lem-maincb-error-improvement remains valid, fixing the corresponding L^0,e_env^0 witnesses of lem-maincb-direct-corner-envelope, and fixing the C_s2^0,e_s2^0 witnesses of lem-maincb-stage2-extcb-datum, there is a universal K_2^0 >= 1 with every Stage-2 prerequisite absorbed such that for every def-maincb-witness-ledger datum W with W.c0_cb = c0, W.L >= L^0, W.K2 >= max{K_2^0,1,W.L,W.c0_cb*W.L}, and W.e_s2 <= e_s2^0, if A is a finite-dimensional extended epsilon-C*-algebra, w:C^m->A is an extended W.c0_cb*epsilon-inclusion satisfying ||w(I_{C^m})-I_A|| <= W.c0_cb*epsilon with one-dimensional atomic images, a supplied MAIN partition state for A,w has nonempty U contained in one equivalence class, j notin U in that same class, and R=U union {j}, 0 <= epsilon <= W.e_s2/W.K2, and a supplied current reset isomorphism v_U:M_{|U|}->A_U has recorded ambient field epsilon_U <= W.L*epsilon and satisfies d_U <= W.c0_cb*epsilon_U and ||v_U(I_{M_{|U|}})-u_{A_U}|| <= W.c0_cb*epsilon_U, then lem-maincb-direct-corner-envelope certifies A_R with the Stage-2 raw-call target ambient record epsilon_R := W.L*epsilon, and t_2=W.K2*epsilon dominates epsilon_U,d_U,epsilon_R, the reset unit error, and every other datum error, so lem-maincb-stage2-extcb-datum furnishes the explicit Stage-2 EXT raw-call datum with total defect at most C_s2^0*t_2.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Starting with the coefficient supplied by Lemma~\ref{lem:maincb-error-improvement}, enlarge it if necessary to a nonnegative $c_0$; Lemma~\ref{lem:maincb-extended-inclusion-monotone} preserves the resulting inclusion conclusion. Then set $K_{2}^{0}=\max\{1,e_{s2}^{0}/e_{\mathrm{env}}^{0}\}$.  For receiving data put
+$t_{2}=W.K2\varepsilon$.  The ledger inequalities give
+\[
+ 0\le\varepsilon\le e_{\mathrm{env}}^{0},\qquad
+ 0\le\varepsilon\le t_{2}\le W.e_{s2}\le e_{s2}^{0}.
+\]
+Applying Lemma~\ref{lem:maincb-direct-corner-envelope} to $U\subseteq R$ gives
+$A_R$ at ambient tolerance $L^{0}\varepsilon$, projection defects at the separate scale
+$c_{0}\varepsilon$, and subordination and complementarity errors at scale
+$L^{0}\varepsilon$.  Increasing only the ambient tolerance to
+$\varepsilon_R=W.L\varepsilon$ preserves every defining inequality of the extended
+$C^{*}$-algebra package: upper bounds weaken, the lower $C^{*}$ bound weakens in the right
+direction, and exact clauses are unchanged at every amplification.
+
+Since $W.K2\ge\max\{W.L,c_{0}W.L\}$, the quantities
+$\varepsilon_U,d_U,\varepsilon_R$, the reset unit error, both direct-envelope scales, and
+the incoming global unit error are all at most $t_{2}$.  Moreover
+$0\le c_{0}\varepsilon\le t_{2}$, so
+Lemma~\ref{lem:maincb-extended-inclusion-monotone} promotes the same $w$ to the non-unital
+extended $t_{2}$-inclusion required by Lemma~\ref{lem:maincb-stage2-extcb-datum}; no exact
+unitality is inferred.  The partition-state relation says that each $k\in U$ has
+$\dim\Cnr{P_k}{P_j}=1$, supplying the remaining same-class hypotheses.  The EXT-CB datum
+provider now returns the explicit datum in the same $A_R$ with total defect
+$e\le C_{s2}^{0}t_{2}$.
+
+The current tree has $10/10$ clean nodes and three rounds.  Its record preserves two
+earlier failures: the pre-recorded-field contract was refuted by a validated $M_2$
+countermodel, and a later certificate was demoted for an unregistered monotonicity premise.
+The re-validated tree repairs the latter by importing the monotonicity row explicitly and
+keeps the $c_{0}\varepsilon$ and $L^{0}\varepsilon$ scales separate.
+
+\begin{lemma}[\texttt{lem-maincb-stage3-call-envelope}]\label{lem:maincb-stage3-call-envelope}
+First choose a universal $c_{0}$ for Lemma~\ref{lem:maincb-error-improvement}, fix the
+corresponding $L^{0},e_{\mathrm{env}}^{0}$ of the direct-corner envelope, and fix
+$C_{\mathrm{cross}}^{0},e_{\mathrm{cross}}^{0}$ of
+Lemma~\ref{lem:maincb-cross-class-merging-datum}.  There is a universal $K_{3}^{0}\ge1$
+absorbing every Stage-3 prerequisite.  For every ledger $W$ with
+$W.c0_{\mathrm{cb}}=c_0$, $W.L\ge L^0$,
+$W.K3\ge\max\{K_3^0,1,W.L,W.c0_{\mathrm{cb}}W.L\}$ and
+$W.e_{\mathrm{cross}}\le e_{\mathrm{cross}}^0$, let $A$ be a finite-dimensional extended
+$\varepsilon$-$C^*$-algebra and $w:\mathbb C^m\to A$ an extended
+$W.c0_{\mathrm{cb}}\varepsilon$-inclusion with one-dimensional atomic images and unit error
+at most $W.c0_{\mathrm{cb}}\varepsilon$.  Let a partition state have disjoint nonempty
+unions $U,V$ sharing no class, with $R=U\cup V$.  If
+$0\le\varepsilon\le W.e_{\mathrm{cross}}/W.K3$ and the two reset isomorphisms
+$v_U:B_U\to A_U$, $v_V:B_V\to A_V$ have
+$\varepsilon_U,\varepsilon_V\le W.L\varepsilon$, defects
+$d_U\le W.c0_{\mathrm{cb}}\varepsilon_U$, $d_V\le W.c0_{\mathrm{cb}}\varepsilon_V$, and
+unit bounds $\nrm{v_U(I_{B_U})-u_{A_U}}\le W.c0_{\mathrm{cb}}\varepsilon_U$ and
+$\nrm{v_V(I_{B_V})-u_{A_V}}\le W.c0_{\mathrm{cb}}\varepsilon_V$, then with
+$\varepsilon_R=W.L\varepsilon$ and $t_{3}=W.K3\varepsilon$ the direct-corner envelope
+certifies $A_R$, every supplied and derived datum error is at most $t_{3}$, and the
+cross-class provider furnishes the explicit four-corner raw-call datum with
+$\rho\le C_{\mathrm{cross}}^{0}t_{3}$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{After first choosing a universal c0 witness for which lem-maincb-error-improvement remains valid, fixing the corresponding L^0,e_env^0 witnesses of lem-maincb-direct-corner-envelope, and fixing the C_cross^0,e_cross^0 witnesses of lem-maincb-cross-class-merging-datum, there is a universal K_3^0 >= 1 with every Stage-3 prerequisite absorbed such that for every def-maincb-witness-ledger datum W with W.c0_cb = c0, W.L >= L^0, W.K3 >= max{K_3^0,1,W.L,W.c0_cb*W.L}, and W.e_cross <= e_cross^0, if A is a finite-dimensional extended epsilon-C*-algebra, w:C^m->A is an extended W.c0_cb*epsilon-inclusion satisfying ||w(I_{C^m})-I_A|| <= W.c0_cb*epsilon with one-dimensional atomic images, a supplied MAIN partition state for A,w has disjoint nonempty unions U,V sharing no class and R=U union V, 0 <= epsilon <= W.e_cross/W.K3, and supplied current reset isomorphisms v_U:B_U->A_U and v_V:B_V->A_V have recorded ambient fields epsilon_U,epsilon_V <= W.L*epsilon and satisfy d_U <= W.c0_cb*epsilon_U, d_V <= W.c0_cb*epsilon_V, ||v_U(I_{B_U})-u_{A_U}|| <= W.c0_cb*epsilon_U, and ||v_V(I_{B_V})-u_{A_V}|| <= W.c0_cb*epsilon_V, then lem-maincb-direct-corner-envelope certifies A_R with the Stage-3 raw-call target ambient record epsilon_R := W.L*epsilon, and t_3=W.K3*epsilon dominates epsilon_U,epsilon_V,d_U,d_V,epsilon_R, both displayed unit norms, and every other datum error, so lem-maincb-cross-class-merging-datum furnishes the explicit Stage-3 four-corner raw-call datum with rho <= C_cross^0*t_3.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree first proves that the fixed error-improvement coefficient is nonnegative: apply
+Lemma~\ref{lem:maincb-error-improvement} to the identity of $\mathbb C$ inside exact matrix
+algebras at a positive tolerance $\varepsilon_{*}$.  The level-one two-sided norm bounds
+give $1-c_{0}\varepsilon_{*}\le\nrm{\widetilde v(1)}\le1+c_{0}\varepsilon_{*}$, hence
+$c_{0}\ge0$.  Retaining the already fixed cross-class witnesses, it sets
+$K_{3}^{0}=\max\{1,e_{\mathrm{cross}}^{0}/e_{\mathrm{env}}^{0}\}$.
+Thus, for $t_{3}=W.K3\varepsilon$,
+\[
+ 0\le\varepsilon\le e_{\mathrm{env}}^{0},\qquad
+ 0\le\varepsilon\le t_{3}\le W.e_{\mathrm{cross}}\le e_{\mathrm{cross}}^{0}.
+\]
+
+The direct-corner envelope applied to $U,V,R$ gives $P_U,P_V,P_R$ at projection scale
+$c_{0}\varepsilon$, the target $A_R$ at ambient scale $L^{0}\varepsilon$, and the
+subordination and complementarity estimates at the latter scale.  Clause-by-clause
+monotonicity enlarges only the ambient record to $\varepsilon_R=W.L\varepsilon$ and leaves
+the distinct projection scale intact.  The inequalities
+$W.K3\ge\max\{W.L,c_{0}W.L\}$ then bound $\varepsilon_U,\varepsilon_V,d_U,d_V$,
+$\varepsilon_R$, both reset-unit norms, and every direct-envelope and global-unit error by
+$t_{3}$.  Lemma~\ref{lem:maincb-extended-inclusion-monotone} promotes the same
+$w:\mathbb C^m\to A$ from tolerance $c_{0}\varepsilon$ to $t_{3}$.
+
+All hypotheses of Lemma~\ref{lem:maincb-cross-class-merging-datum} are now met, so it
+returns in $A_R$ the amplified four-corner datum with common defect
+$\rho\le C_{\mathrm{cross}}^{0}t_{3}$.  The tree records carefully that this is the
+\emph{input datum} for the Stage-3 raw call, not itself the raw-call record's downstream
+output map.  The present $19/19$-node clean tree was re-validated in eight rounds after six
+dependency and scope challenges were repaired, including pending-sibling uses, the proof of
+$c_{0}\ge0$, and the scope of the fixed cross-class witnesses.  It supersedes a certificate
+demoted for an unregistered monotonicity premise and a subsequent re-seed that stopped at
+the balloon cap; the contract itself was never refuted.

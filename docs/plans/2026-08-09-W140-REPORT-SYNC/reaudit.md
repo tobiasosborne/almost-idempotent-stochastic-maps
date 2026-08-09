@@ -1,0 +1,10 @@
+VERDICT /home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/report/sections/52_maincb_raw_call_chain.tex: LAND
+VERDICT /home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/report/sections/54_maincb_stage_extensions.tex: LAND
+VERDICT /home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/report/sections/56_maincb_reset_ledgers.tex: LAND
+VERDICT /home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/report/sections/57_maincb_call_envelopes.tex: LAND
+VERDICT /home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/report/sections/61_stage1_endgame_bounds.tex: LAND
+VERDICT /home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/report/sections/62_stage1_endgame_fixed_classes.tex: LAND
+VERDICT /home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/report/sections/64_stage1_quotient_package.tex: LAND
+VERDICT /home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/report/sections/68_routef_telescopes.tex: LAND
+VERDICT /home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/report/sections/70_routef_kledger_package.tex: LAND
+VERDICT /home/tobiasosborne/Projects/almost-idempotent-stochastic-maps/report/sections/72_op_classical_discharge.tex: LAND

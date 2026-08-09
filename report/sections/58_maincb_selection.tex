@@ -1,0 +1,176 @@
+% SHARD-ID: AISM-58-MAINCB-SELECTION
+% SHARD-TITLE: MAIN-CB selection rows: initial reset inclusion, maximal reset selection, strict refinement, stage-1 maximality, and corner nontriviality
+% SHARD-SUMMARY: Reproduces lem-maincb-initial-reset-inclusion, which resets the scalar raw inclusion to the witness-ledger defect while preserving its near-unit bound.
+% SHARD-SUMMARY: Reproduces lem-maincb-maximal-reset-selection, which obtains a maximum admissible scalar-source dimension from the positive lower norm and finite-dimensionality. Reproduces lem-maincb-stage1-strict-refinement, which turns any corner of dimension greater than one into an admissible inclusion with one additional scalar summand.
+% SHARD-SUMMARY: Reproduces lem-maincb-stage1-maximality, which combines strict refinement with corner nontriviality to force every selected corner to be one-dimensional. Reproduces lem-maincb-corner-nontriviality, which derives projection control and a nonzero compressed-corner unit from the fixed MAIN-CB ledger.
+% SHARD-KEYWORDS: MAIN-CB, reset inclusion, maximal selection, strict refinement, stage-1 maximality, corner nontriviality, witness ledger, af validated
+\section{MAIN-CB selection rows: reset, refinement, and maximality}\label{sec:maincb-selection}
+
+This section records the selection mechanism attached to the single witness ledger $W$ of
+Definition~\ref{def:maincb-witness-ledger}.  Extended inclusions are understood in the sense of
+Definition~\ref{def:extended-delta-inclusion}, and the coordinate elements $e_j$ are the projection
+basis of Definition~\ref{def:projection-basis}.  The first three rows construct and refine admissible
+maps; the last two supply the integer squeeze that identifies every corner chosen at maximal rank.
+
+\begin{lemma}[\texttt{lem-maincb-initial-reset-inclusion}]\label{lem:maincb-initial-reset-inclusion}
+Fix the witness-ledger datum $W$ supplied by Lemma~\ref{lem:maincb-reset-constant-ledger}.  Every
+finite-dimensional extended $\epsilon$-$C^*$-algebra $A$ with
+$0\leq\epsilon\leq W.\epsilon_{\mathrm{MAIN}}$ admits an extended
+$W.c^{\mathrm{cb}}_0\epsilon$-inclusion $v:\mathbb C\to A$ such that
+$\nrm{v(I_{\mathbb C})-I_A}\leq W.c^{\mathrm{cb}}_0\epsilon$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; every finite-dimensional extended epsilon-C*-algebra A with 0 <= epsilon <= W.epsilon_MAIN admits an extended W.c0_cb*epsilon-inclusion v:C->A satisfying ||v(I_C)-I_A|| <= W.c0_cb*epsilon.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The tree first fixes all provider witnesses coherently, including one reset-output tuple, and uses
+that same tuple in Lemma~\ref{lem:maincb-reset-constant-ledger}.  With
+$D_*:=\max\{1,D_0,D_1,D_2,D_3\}$, the resulting ledger has all the reset thresholds required by
+the typed reset row, while Lemma~\ref{lem:maincb-structural-domain-ledger} gives
+$\epsilon\leq W.r_{\mathrm{reset}}$.  Set $t=\epsilon$.  Lemma~\ref{lem:maincb-initial-raw-inclusion}
+supplies the literal scalar map $u_0(\lambda)=\lambda I_A$; the initial-call clause of the ledger
+types this same map as an extended $D_*t$-inclusion and gives
+$\nrm{u_0(I_{\mathbb C})-I_A}\leq D_*t$.  The raw-call record keeps source $\mathbb C$, target $A$,
+scale $t$, target defect $\epsilon$, the fixed amplification family, and the explicit recorded field
+$d_{\mathrm{raw}}=D_*t$.  Applying Lemma~\ref{lem:maincb-reset-output-typing} to that exact map and
+the already-fixed reset witnesses yields $v:\mathbb C\to A$ with defect
+$W.c^{\mathrm{cb}}_0\epsilon$ and the asserted near-unit estimate.  The recorded v2 contract amends
+and supersedes the earlier v5 form.  During validation a type challenge observed that the raw-defect
+field had not been recorded; the added child choosing $d_{\mathrm{raw}}=D_*t$ is part of the live
+$6$-node tree reproduced here.
+
+\medskip\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0).  Workspace
+\texttt{proofs/lem-maincb-initial-reset-inclusion}.
+
+\begin{lemma}[\texttt{lem-maincb-maximal-reset-selection}]\label{lem:maincb-maximal-reset-selection}
+Fix the witness-ledger datum $W$ supplied by Lemma~\ref{lem:maincb-reset-constant-ledger}.  If $A$
+is a finite-dimensional extended $\epsilon$-$C^*$-algebra with
+$0\leq\epsilon\leq W.\epsilon_{\mathrm{MAIN}}$, then the nonempty set of integers $m$ for which
+there is an extended $W.c^{\mathrm{cb}}_0\epsilon$-inclusion $w:\mathbb C^m\to A$ satisfying
+$\nrm{w(I_{\mathbb C^m})-I_A}\leq W.c^{\mathrm{cb}}_0\epsilon$ has a maximum: its lower norm is
+positive, and every such $m$ obeys $m\leq\dim_{\mathbb C}A$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra with 0 <= epsilon <= W.epsilon_MAIN, then the nonempty set of m admitting an extended W.c0_cb*epsilon-inclusion w:C^m->A with ||w(I_{C^m})-I_A|| <= W.c0_cb*epsilon has a maximum because the lower norm is positive and m <= dim_C A.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Choose the ledger's freely enlargable coefficient $c_0$ nonnegative and then fix the one
+resulting $W$.  For $0\leq\epsilon\leq W.\epsilon_{\mathrm{MAIN}}$, the structural ledger gives
+$\epsilon\leq W.K_{\mathrm{call}}\epsilon$ and
+$W.c^{\mathrm{cb}}_0W.K_{\mathrm{call}}\epsilon\leq\tfrac12$.  Thus, for
+$d=W.c^{\mathrm{cb}}_0\epsilon$, one has $0\leq d\leq\tfrac12$ and $1-d>0$.
+Lemma~\ref{lem:maincb-initial-reset-inclusion} supplies the case $m=1$, so the
+admissible-index set is nonempty.  For any admissible $m$, the level-one lower norm from
+Definition~\ref{def:extended-delta-inclusion} gives
+$\nrm{w(x)}\geq(1-d)\nrm{x}\geq\tfrac12\nrm{x}$.  Hence $w$ is injective, and
+rank--nullity yields
+$m=\dim_{\mathbb C}\mathbb C^m\leq\dim_{\mathbb C}A$.  The admissible indices therefore form
+a nonempty subset of the finite set $\{0,\ldots,\dim_{\mathbb C}A\}$ and have a maximum.
+This is the
+amended v2 contract, superseding the earlier v5 wording; its $9$-node validated tree records no
+challenge or further proof repair.
+
+\medskip\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0).  Workspace
+\texttt{proofs/lem-maincb-maximal-reset-selection}.
+
+\begin{lemma}[\texttt{lem-maincb-stage1-strict-refinement}]\label{lem:maincb-stage1-strict-refinement}
+Fix the witness-ledger datum $W$ supplied by Lemma~\ref{lem:maincb-reset-constant-ledger}.  Let $A$
+be a finite-dimensional extended $\epsilon$-$C^*$-algebra with
+$0\leq\epsilon\leq W.\epsilon_{\mathrm{MAIN}}$, and let $w:\mathbb C^m\to A$ be an extended
+$W.c^{\mathrm{cb}}_0\epsilon$-inclusion with
+$\nrm{w(I_{\mathbb C^m})-I_A}\leq W.c^{\mathrm{cb}}_0\epsilon$.  If some
+$P_j=w(e_j)$ has $\dim\mathcal S_{P_j}>1$, then there is an extended
+$W.c^{\mathrm{cb}}_0\epsilon$-inclusion $w_+:\mathbb C^{m+1}\to A$ satisfying
+$\nrm{w_+(I_{\mathbb C^{m+1}})-I_A}\leq W.c^{\mathrm{cb}}_0\epsilon$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra with 0 <= epsilon <= W.epsilon_MAIN and an extended W.c0_cb*epsilon-inclusion w:C^m->A satisfies ||w(I_{C^m})-I_A|| <= W.c0_cb*epsilon and has some P_j=w(e_j) with dim S_{P_j}>1, then there is an extended W.c0_cb*epsilon-inclusion w_+:C^{m+1}->A satisfying ||w_+(I_{C^{m+1}})-I_A|| <= W.c0_cb*epsilon.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+The proof fixes one reset-output witness tuple and one Stage--1 envelope tuple before constructing
+$W$, so every later occurrence denotes the same witnesses.  Put $t_1=W.K_1\epsilon$.  The structural
+ledger gives $\epsilon\leq W.e_1/W.K_1$ and
+$0\leq t_1\leq W.K_{\mathrm{call}}\epsilon\leq W.r_{\mathrm{reset}}$; since $W.K_1\geq1$, it also
+gives $\epsilon\leq t_1$.  Under the corner hypothesis,
+Lemma~\ref{lem:maincb-stage1-call-envelope}, using
+Lemma~\ref{lem:maincb-stage1-raw-refinement}, furnishes a particular explicit Stage--1 raw call with
+literal map $u_1:\mathbb C^{m+1}\to A$.  The Stage--1 clause of the reset ledger types that same
+$u_1$ as an extended $D_*t_1$-inclusion and bounds its unit error by $D_*t_1$.  The typed reset row,
+applied with source $\mathbb C^{m+1}$, target $A$, target defect $\epsilon$, and the exact literal map
+$u_1$, returns one map $v_1$ with unchanged source and target, defect
+$W.c^{\mathrm{cb}}_0\epsilon$, and the required near-unit bound; take $w_+=v_1$.
+The v2 contract supersedes its earlier v5 form.  Two dependency challenges in the $11$-node tree
+were repaired by making the fixed-witness and literal-map provenance explicit child dependencies,
+removing both attempted uses of pending siblings.
+
+\medskip\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0).  Workspace
+\texttt{proofs/lem-maincb-stage1-strict-refinement}.
+
+\begin{lemma}[\texttt{lem-maincb-stage1-maximality}]\label{lem:maincb-stage1-maximality}
+Fix the witness-ledger datum $W$ supplied by Lemma~\ref{lem:maincb-reset-constant-ledger}.  If $A$
+is a finite-dimensional extended $\epsilon$-$C^*$-algebra with
+$0\leq\epsilon\leq W.\epsilon_{\mathrm{MAIN}}$ and $w:\mathbb C^m\to A$ has maximum source
+dimension among all extended $W.c^{\mathrm{cb}}_0\epsilon$-inclusions satisfying
+$\nrm{w(I_{\mathbb C^m})-I_A}\leq W.c^{\mathrm{cb}}_0\epsilon$, then every projection-basis image
+$P_j=w(e_j)$ satisfies $\dim\mathcal S_{P_j}=1$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra with 0 <= epsilon <= W.epsilon_MAIN and w:C^m->A has maximum source dimension among all extended W.c0_cb*epsilon-inclusions satisfying ||w(I_{C^m})-I_A|| <= W.c0_cb*epsilon, then every projection-basis image P_j=w(e_j) satisfies dim S_{P_j}=1.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+For the fixed $W,A,\epsilon$, let $D(A,W,\epsilon)$ be the source dimensions of all maps satisfying
+the displayed extended-inclusion and near-unit conditions.  Lemma~\ref{lem:maincb-maximal-reset-selection}
+makes this set nonempty with a maximum, and the hypothesis says $m=\max D(A,W,\epsilon)$;
+hence no admissible map from $\mathbb C^{m+1}$ exists.  Fix an arbitrary projection-basis element
+$e_j$ and write $P_j=w(e_j)$.  Lemma~\ref{lem:maincb-corner-nontriviality}, applied to this exact
+$W,w,e_j$, gives a nonzero element of $\mathcal S_{P_j}$, so $\dim\mathcal S_{P_j}\geq1$.  If instead
+$\dim\mathcal S_{P_j}>1$, Lemma~\ref{lem:maincb-stage1-strict-refinement} produces an admissible
+$w_+:\mathbb C^{m+1}\to A$, contradicting maximality.  Since the dimension is a nonnegative integer,
+the lower bound and the exclusion of values greater than one force $\dim\mathcal S_{P_j}=1$.
+No reset provider, second ledger, or second maximal map enters this argument.
+The contract is the amended v2 form, byte-unchanged during the later repair.  Its first elevation
+was stopped because no allowed input supplied the lower bound; the user-ratified deps-only amendment
+added Lemma~\ref{lem:maincb-corner-nontriviality}.  The cleanly reseeded $5$-node tree was then
+validated on its first post-repair pass with zero challenges, and it is that tree which this account
+reproduces.
+
+\medskip\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0).  Workspace
+\texttt{proofs/lem-maincb-stage1-maximality}.
+
+\begin{lemma}[\texttt{lem-maincb-corner-nontriviality}]\label{lem:maincb-corner-nontriviality}
+Fix the witness-ledger datum $W$ supplied by Lemma~\ref{lem:maincb-reset-constant-ledger}.  If $A$
+is a finite-dimensional extended $\epsilon$-$C^*$-algebra,
+$0\leq\epsilon\leq W.\epsilon_{\mathrm{MAIN}}$, $w:\mathbb C^m\to A$ is an extended
+$W.c^{\mathrm{cb}}_0\epsilon$-inclusion, and $e_j$ is a projection-basis element, then
+$P_j=w(e_j)$ is a $W.c^{\mathrm{cb}}_0\epsilon$-projection satisfying
+$\bigl|\nrm{P_j}-1\bigr|\leq W.c^{\mathrm{cb}}_0\epsilon$ and hence is nonvanishing; moreover,
+$\mathcal S_{P_j}$ contains a nonzero element, so $\dim\mathcal S_{P_j}\geq1$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Fix the def-maincb-witness-ledger datum W supplied by lem-maincb-reset-constant-ledger; if A is a finite-dimensional extended epsilon-C*-algebra, 0 <= epsilon <= W.epsilon_MAIN, w:C^m->A is an extended W.c0_cb*epsilon-inclusion, and e_j is any projection-basis element of C^m, then P_j=w(e_j) is a W.c0_cb*epsilon-projection satisfying | ||P_j||-1 | <= W.c0_cb*epsilon and hence is nonvanishing, while S_{P_j} contains a nonzero element and therefore dim S_{P_j} >= 1.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+In the construction of the fixed $W$, retain the particular direct-corner witnesses $L^0,e^0_{\mathrm{env}}$
+chosen beforehand.  The ledger gives $W.L\geq L^0$ and $W.e_{\mathrm{env}}\leq e^0_{\mathrm{env}}$,
+while the structural ledger yields
+$0\leq L^0\epsilon\leq W.L\epsilon\leq W.K_{\mathrm{call}}\epsilon\leq W.r_{\mathrm{reset}}$.
+Set $d=W.c^{\mathrm{cb}}_0\epsilon$.  The projection-basis element $e_j$ is a nonzero self-adjoint
+idempotent of norm one.  At amplification one, the extended $d$-inclusion clauses give
+$P_j\dg=P_j$, $\nrm{P_j^2-P_j}\leq d$, and $1-d\leq\nrm{P_j}\leq1+d$; thus
+Definition~\ref{def:delta-projection} gives the asserted projection and nonvanishing conclusions.
+Apply Lemma~\ref{lem:maincb-direct-corner-envelope} to the singleton $\{j\}$.  It equips the exact
+space $\mathcal S_{P_j}$ with an extended $L^0\epsilon$-$C^*$-algebra structure whose unit
+$I_{\mathcal S_{P_j}}$ is an element of that very space.  Lemma~\ref{lem:maincb-witness-arithmetic}
+places $L^0\epsilon$ below $W.r_{\mathrm{reset}}<\tfrac12$; the approximate-unit norm axiom therefore
+gives $\nrm{I_{\mathcal S_{P_j}}}>\tfrac12$.  This nonzero element proves
+$\dim\mathcal S_{P_j}\geq1$.  The row was introduced as the additive repair for the maximality gap.
+Its one verifier challenge identified missing base homomorphism clauses; registering the byte-matched
+external and adding child~1.2.1 repaired the $7$-node tree without changing the contract.
+
+\medskip\noindent\textbf{Status.} \texttt{proved}; \texttt{af: validated} (T0).  Workspace
+\texttt{proofs/lem-maincb-corner-nontriviality}.
