@@ -28,7 +28,8 @@ Repeating any of those edges here would misstate the module boundary.
 
 **Sharpness and root guard.** This row proves only the upper-bound statement displayed in
 its contract. It does not consume `ex-hume`, does not claim sharpness, and does not edit or
-rewire `op-classical`. Root rewire remains the separate LAST step after this row is T0.
+rewire `op-classical`. The name ex-hume here is a historical matrix-family pointer only; this
+row has no dependency on it and imports no part of its disproved contract. Root rewire remains the separate LAST step after this row is T0.
 
 **Designed af budget.** Two designed nodes; honest live expectation 3--6 under the
 observed 1.5--3x expansion; depth 2; at most 2 rounds; hard cap 8. The 3x endpoint 6 is

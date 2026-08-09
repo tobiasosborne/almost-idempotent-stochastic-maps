@@ -94,7 +94,7 @@ every exact identity sought was provable; every one-sided estimate died or went 
 (cancellation-dependence); the horns coupled (D5/D6). The single missing lemma: "the beta-weighted
 excess of the argmin chart, summed against the stationarity disjunctions of all legal swaps,
 telescopes to the delta-budgets." First campaign statement that would genuinely USE minimality.
-(3) the sqrt-delta envelope only at the exposedness window + ex-hume sharpness. Alternative
+(3) the sqrt-delta envelope only at the exposedness window + op-classical sharpness now carried at T0 by cor-classical-sharpness; the former ex-hume contract is disproved historical record. Alternative
 writeup of (2): constructive H-M rounding via the Thm 1.12 CONVERSE (cluster at sqrt(delta) scale,
 MERGE classes — never select — then project B-rows onto the (1.2)/(1.3) nonnegative polytope);
 same engine, cleaner narrative. Constants: C0=2 conjectured true (fan rate); a circulation proof
@@ -142,7 +142,7 @@ New/strengthened directions:
   controlled by η ⇒ √η via Pinsker — dimension-free + clone-invariant by construction.
 - **Kitaev incremental-construction strategy** (alternative to one-shot argmin charts): partitioned-index
   merge-and-extend with an error-reduction bootstrap — read §§5–9 before designing any new (EX) wave.
-- **Sharpness cross-check**: SBD Remark 5.4's 3-state family vs `ex-hume` — same extremal mechanism?
+- **Sharpness cross-check (historical only):** SBD Remark 5.4's 3-state family versus the historical 3x3 matrix family recorded in the disproved `ex-hume` shard — compare mechanisms only; do not import the false contract.
 
 Deciders queued BEFORE wave 13 (audit §7): rank-4/5 skeleton stress test; small-δ certified argmin sweep
 (all current B-lemma data sits at δ ∈ {0.233, 0.2498, 1/4}); ex⟺kernel adversarial audit + HLC/finisher

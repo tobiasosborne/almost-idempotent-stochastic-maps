@@ -317,7 +317,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-LEM-ROUTEF-DELTA-PHI-PRODUCT` | `argument/lemmas/lem-routef-delta-phi-product.md` | `8d4d34e25e276b75` | Registry shard for `lem-routef-delta-phi-product` |
 | `ARG-LEM-ROUTEF-DELTA-PRIME-CLOSENESS` | `argument/lemmas/lem-routef-delta-prime-closeness.md` | `f4cfb9673043e786` | Registry shard for `lem-routef-delta-prime-closeness` |
 | `ARG-LEM-ROUTEF-DELTA-UPSILON-TELESCOPE` | `argument/lemmas/lem-routef-delta-upsilon-telescope.md` | `361dd5b2f6a63d55` | Registry shard for `lem-routef-delta-upsilon-telescope` |
-| `ARG-LEM-ROUTEF-F0-ASSEMBLY` | `argument/lemmas/lem-routef-f0-assembly.md` | `b827b1568ed69ecf` | Registry shard for `lem-routef-f0-assembly` |
+| `ARG-LEM-ROUTEF-F0-ASSEMBLY` | `argument/lemmas/lem-routef-f0-assembly.md` | `6a161cd9ea21acdc` | Registry shard for `lem-routef-f0-assembly` |
 | `ARG-LEM-ROUTEF-FACTOR-ESTIMATE-PACKET` | `argument/lemmas/lem-routef-factor-estimate-packet.md` | `bb02264e59d2bced` | Registry shard for `lem-routef-factor-estimate-packet` |
 | `ARG-LEM-ROUTEF-FACTOR-MAP-PACKET` | `argument/lemmas/lem-routef-factor-map-packet.md` | `67d2908e67875259` | Registry shard for `lem-routef-factor-map-packet` |
 | `ARG-LEM-ROUTEF-K-FINITENESS` | `argument/lemmas/lem-routef-k-finiteness.md` | `b81335588e1935b2` | Registry shard for `lem-routef-k-finiteness` |
@@ -361,11 +361,19 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | `ARG-LEM-TOPOLOGY-LOCAL-INDEX-SIGN` | `argument/lemmas/lem-topology-local-index-sign.md` | `fcf39d0e1f5f8b94` | Registry shard for `lem-topology-local-index-sign` |
 | `ARG-LEM-TOPOLOGY-ORIENTABLE-TOP-COHOMOLOGY` | `argument/lemmas/lem-topology-orientable-top-cohomology.md` | `4f5ee794aafef4f5` | Registry shard for `lem-topology-orientable-top-cohomology` |
 | `ARG-LEM-TOPOLOGY-QUOTIENT-MANIFOLD` | `argument/lemmas/lem-topology-quotient-manifold.md` | `b3c901e2bc2c2525` | Registry shard for `lem-topology-quotient-manifold` |
-| `ARG-OP-CLASSICAL` | `argument/lemmas/op-classical.md` | `d8c2ee4a3460e464` | Registry shard for `op-classical` |
+| `ARG-OP-CLASSICAL` | `argument/lemmas/op-classical.md` | `e6c2c5f092f9dea5` | Registry shard for `op-classical` |
 | `ARG-LEM-KITAEV-DIAGONAL-REPAIR` | `argument/lemmas/lem-kitaev-diagonal-repair.md` | `a80d799c132a253c` | Registry shard for `lem-kitaev-diagonal-repair` |
 | `AF-LEM-KITAEV-DIAGONAL-REPAIR` | `proofs/lem-kitaev-diagonal-repair/export.md` | `f688f17bc4b1c6ca` | `af` proof export for `lem-kitaev-diagonal-repair` |
 | `ARG-COR-KITAEV-DIAGONAL-CPIZATION` | `argument/lemmas/cor-kitaev-diagonal-cpization.md` | `0186bd8ab7f226cb` | Registry shard for `cor-kitaev-diagonal-cpization` |
 | `AF-COR-KITAEV-DIAGONAL-CPIZATION` | `proofs/cor-kitaev-diagonal-cpization/export.md` | `ba1a984dcdbcf86b` | `af` proof export for `cor-kitaev-diagonal-cpization` |
+| `ARG-LEM-PRH-SHARPNESS-FAMILY-ARITHMETIC` | `argument/lemmas/lem-prh-sharpness-family-arithmetic.md` | `1b3d041c6c936e4b` | Registry shard for `lem-prh-sharpness-family-arithmetic` |
+| `AF-LEM-PRH-SHARPNESS-FAMILY-ARITHMETIC` | `proofs/lem-prh-sharpness-family-arithmetic/export.md` | `3d74021a192e27e7` | `af` proof export for `lem-prh-sharpness-family-arithmetic` |
+| `ARG-LEM-PRH-SHARPNESS-ROW-COINCIDENCE` | `argument/lemmas/lem-prh-sharpness-row-coincidence.md` | `e3d06fe324884786` | Registry shard for `lem-prh-sharpness-row-coincidence` |
+| `AF-LEM-PRH-SHARPNESS-ROW-COINCIDENCE` | `proofs/lem-prh-sharpness-row-coincidence/export.md` | `0259ec2680635ff0` | `af` proof export for `lem-prh-sharpness-row-coincidence` |
+| `ARG-LEM-PRH-SHARPNESS` | `argument/lemmas/lem-prh-sharpness.md` | `0d7382fbb48af8a4` | Registry shard for `lem-prh-sharpness` |
+| `AF-LEM-PRH-SHARPNESS` | `proofs/lem-prh-sharpness/export.md` | `a9f6ed2ede12397f` | `af` proof export for `lem-prh-sharpness` |
+| `ARG-COR-CLASSICAL-SHARPNESS` | `argument/lemmas/cor-classical-sharpness.md` | `08cfefa70756cd33` | Registry shard for `cor-classical-sharpness` |
+| `AF-COR-CLASSICAL-SHARPNESS` | `proofs/cor-classical-sharpness/export.md` | `b18129ede1755cfd` | `af` proof export for `cor-classical-sharpness` |
 
 ## Per-claim ledger
 
@@ -536,3 +544,7 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 | op:classical | ARG-OP-CLASSICAL AF-OP-CLASSICAL | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/op-classical` (5/5 live nodes, taint clean, zero challenge events visible in the ledger). |
 | lem:kitaev-diagonal-repair | ARG-LEM-KITAEV-DIAGONAL-REPAIR AF-LEM-KITAEV-DIAGONAL-REPAIR | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-kitaev-diagonal-repair` (20/20 live nodes, taint clean; two major dependency-scope challenges repaired by isolating normalization from centrality before their parent combined them). |
 | cor:kitaev-diagonal-cpization | ARG-COR-KITAEV-DIAGONAL-CPIZATION AF-COR-KITAEV-DIAGONAL-CPIZATION | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/cor-kitaev-diagonal-cpization` (22/22 live nodes, taint clean; two major challenges repaired: the coefficient hypotheses were added to the exhaustive proof account, and the displayed formula was typed with Phi:B(H)->B(H)). |
+| lem:prh-sharpness-family-arithmetic | ARG-LEM-PRH-SHARPNESS-FAMILY-ARITHMETIC AF-LEM-PRH-SHARPNESS-FAMILY-ARITHMETIC | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-prh-sharpness-family-arithmetic` (run 2 under the FINDINGS remedy (a) xhigh prover, 24/24 live nodes, taint clean, cap 26; two in-run challenges repaired: the non-strict norm chain incl. R=0 and the per-row product derivation). |
+| lem:prh-sharpness-row-coincidence | ARG-LEM-PRH-SHARPNESS-ROW-COINCIDENCE AF-LEM-PRH-SHARPNESS-ROW-COINCIDENCE | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-prh-sharpness-row-coincidence` (run 1 + verify resume, 19/19 live nodes, taint clean, cap 22; two cross-sibling dependency challenges repaired by explicit dependency-backed child nodes). |
+| lem:prh-sharpness | ARG-LEM-PRH-SHARPNESS AF-LEM-PRH-SHARPNESS | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/lem-prh-sharpness` (run 3, the sect-5.3 post-factoring clean re-seed on the two T0 sub-lemma externals: FIRST-PASS 12/12 live nodes, taint clean, cap 18, zero challenges — after two balloon aborts as a monolith). |
+| cor:classical-sharpness | ARG-COR-CLASSICAL-SHARPNESS AF-COR-CLASSICAL-SHARPNESS | registry contract and proof export node 1 | O | Contract quoted verbatim; status `proved`, `af: validated`; workspace `proofs/cor-classical-sharpness` (run 2 under the audited remedy-(b) skeleton after the run-1 26-node balloon: FIRST-PASS 5/5 live nodes, taint clean, cap 20, zero challenges; the sole theorem import is the T0 `lem-prh-sharpness` external). The op-classical-facing sharpness carrier: no uniform exponent beta>1/2 can replace 1/2. |

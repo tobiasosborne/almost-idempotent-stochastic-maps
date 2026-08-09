@@ -1,8 +1,8 @@
 % SHARD-ID: AISM-02-PRH
 % SHARD-TITLE: Positive-retract hardening
-% SHARD-SUMMARY: Reproduces lem-prh, the af-validated hardening of a positive approximate retract into an exact stochastic idempotent.
-% SHARD-SUMMARY: Explains the disjoint-core construction, the conditioning and core-replacement error terms, and the optimisation giving the sharp 2*sqrt(2*epsilon) rate.
-% SHARD-KEYWORDS: lem-prh, af validated, positive approximate retract, stochastic idempotent, disjoint cores, square-root rate
+% SHARD-SUMMARY: Reproduces lem-prh, the af-validated hardening of a positive approximate retract into an exact stochastic idempotent, and the four-row T0 sharpness factorization.
+% SHARD-SUMMARY: Typesets the explicit 4x4 family arithmetic, stochastic-idempotent row coincidence, intrinsic PRH lower bound, and direct classical quantified corollary.
+% SHARD-KEYWORDS: lem-prh, lem-prh-sharpness-family-arithmetic, lem-prh-sharpness-row-coincidence, lem-prh-sharpness, cor-classical-sharpness, af validated, positive approximate retract, stochastic idempotent, disjoint cores, square-root rate, sharpness
 \section{Positive-retract hardening}\label{sec:prh}
 
 \begin{lemma}[\texttt{lem-prh}]\label{lem:prh}
@@ -119,6 +119,136 @@ $Q$ --- stochastic $A,M$ with $\opnorm{AM-Q}=O(\defect)$ and $\opnorm{MA-I}=O(\d
 after which \eqref{eq:prh-target} delivers the exact idempotent at rate $\sqrt{\defect}$.
 Producing such a pair is what the COMP and H-CB tiers below are ultimately for, and that
 production is \emph{not} established: \texttt{lem-prh} is a conditional finisher, and
-\texttt{op-classical} is now discharged at the af-validated rung via Route F (\S\ref{sec:status-outlook}); sharpness remains with \texttt{ex-hume}. Downstream registry consumers are
+\texttt{op-classical} is now discharged at the af-validated rung via Route F (\S\ref{sec:status-outlook}); sharpness is now carried at T0 by \texttt{cor-classical-sharpness}. Downstream registry consumers are
 \texttt{lem-routef-prh-finish} (\texttt{proved}, \texttt{af: validated}) and the
 strengthened \texttt{lem-routef-k-ledger} (\texttt{proved}, \texttt{af: validated}).
+
+\subsection*{The sharp square-root order}
+
+The upper bound above has a matching T0 lower-bound family.  The four rows below separate
+the finite arithmetic, the general Markov-chain fact, the PRH conclusion, and its direct
+stochastic almost-idempotence corollary.
+
+\begin{lemma}[\texttt{lem-prh-sharpness-family-arithmetic}]\label{lem:prh-sharpness-family-arithmetic}
+For $0<\lambda<\tfrac12$, put
+\[
+A_\lambda=\begin{pmatrix}1&0\\0&1\\1-\lambda&\lambda\\\lambda&1-\lambda\end{pmatrix},
+\qquad
+M_\lambda=\begin{pmatrix}1-\lambda&0&\lambda&0\\0&1-\lambda&0&\lambda\end{pmatrix}.
+\]
+Both matrices have nonnegative probability rows and hence represent positive unital maps
+$A_\lambda:\linfd{2}\to\linfd{4}$ and $M_\lambda:\linfd{4}\to\linfd{2}$.  For every
+$B\in\mathbb R^{r\times s}$, $r,s\ge1$, its induced norm is
+$\opnorm{B}=\max_{1\le i\le r}\sum_{j=1}^{s}|B_{ij}|$.  Moreover,
+\[
+M_\lambda A_\lambda=\begin{pmatrix}1-\lambda^2&\lambda^2\\\lambda^2&1-\lambda^2\end{pmatrix},
+\qquad \varepsilon_\lambda:=\opnorm{M_\lambda A_\lambda-I_2}=2\lambda^2\longrightarrow0,
+\]
+and $P_\lambda:=A_\lambda M_\lambda$ is row-stochastic with rows
+\[
+\begin{pmatrix}
+1-\lambda&0&\lambda&0\\
+0&1-\lambda&0&\lambda\\
+(1-\lambda)^2&\lambda(1-\lambda)&\lambda(1-\lambda)&\lambda^2\\
+\lambda(1-\lambda)&(1-\lambda)^2&\lambda^2&\lambda(1-\lambda)
+\end{pmatrix},
+\qquad \lone{\operatorname{row}_1(P_\lambda)-\operatorname{row}_3(P_\lambda)}=2\lambda.
+\]
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Witness arithmetic for PRH sharpness: for every real lambda with 0 < lambda < 1/2, let A_lambda in R^(4x2) have rows (1,0), (0,1), (1-lambda,lambda), (lambda,1-lambda), and let M_lambda in R^(2x4) have rows (1-lambda,0,lambda,0), (0,1-lambda,0,lambda); A_lambda and M_lambda have nonnegative entries and probability-vector rows and hence represent positive unital maps A_lambda:l-infinity(2)->l-infinity(4) and M_lambda:l-infinity(4)->l-infinity(2); for every pair of integers r,s >= 1 and every B in R^(r x s), the induced l-infinity operator norm is ||B||_{infinity->infinity}=max_{1<=i<=r} sum_{j=1}^s |B_ij|; M_lambda A_lambda has rows (1-lambda^2,lambda^2), (lambda^2,1-lambda^2), so epsilon_lambda:=||M_lambda A_lambda-I_2||_{infinity->infinity}=2*lambda^2 and epsilon_lambda tends to 0 as lambda tends to 0; and P_lambda:=A_lambda M_lambda is row-stochastic with rows (1-lambda,0,lambda,0), (0,1-lambda,0,lambda), ((1-lambda)^2,lambda*(1-lambda),lambda*(1-lambda),lambda^2), (lambda*(1-lambda),(1-lambda)^2,lambda^2,lambda*(1-lambda)), and ||row_1(P_lambda)-row_3(P_lambda)||_1=2*lambda.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Positivity and the row sums are immediate from $0<\lambda<\tfrac12$.  For the norm
+formula, the triangle inequality gives the maximum absolute row sum as an upper bound;
+choosing signs against a row attaining that maximum gives the reverse inequality, including
+the zero-row case.  Direct row-by-column multiplication gives the displayed $M_\lambda
+A_\lambda$, whose two rows differ from those of $I_2$ by absolute row sum $2\lambda^2$.
+The same multiplication gives all four displayed rows of $P_\lambda$; they are probability
+rows, and subtracting its first and third rows gives exact $\ell^1$ norm $2\lambda$.  This is
+the content of the validated 24-node export, including its repaired non-strict norm chain
+and explicit per-row product derivations.
+
+\begin{lemma}[\texttt{lem-prh-sharpness-row-coincidence}]\label{lem:prh-sharpness-row-coincidence}
+Let $F=(f_{ab})$ be an $n\times n$ row-stochastic idempotent.  If
+$f_{ii}>0$ and $f_{ij}>0$, then $\operatorname{row}_i(F)=\operatorname{row}_j(F)$.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Row coincidence for stochastic idempotents: for every integer n >= 1, every n-by-n row-stochastic idempotent matrix F=(f_ab) over R, and all i,j in {1,...,n}, if f_ii>0 and f_ij>0 then row_i(F)=row_j(F).}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Set $p=\operatorname{row}_i(F)$ and $S=\{a:p_a>0\}$.  Idempotence makes $p$ stationary;
+nonnegativity shows that $S$ is closed.  On the positive-entry graph of the restriction to
+$S$, a source component with an outgoing edge would lose strictly positive stationary mass,
+so no edge joins distinct strongly connected components.  Since $f_{ia}=p_a>0$ for every
+$a\in S$, the graph is strongly connected.  The row $q=\operatorname{row}_j(F)$ is supported
+on $S$ and stationary there.  Finally, with $c=\min_a q_a/p_a$, the nonnegative stationary
+row $q-cp$ has a zero coordinate; strong connectivity forces every nonzero nonnegative
+stationary row to be strictly positive, so $c=1$ and $q=p$.  This follows the validated
+19-node export; its cross-sibling repairs make the closure, stationarity, and uniqueness
+steps dependency-explicit.
+
+\begin{lemma}[\texttt{lem-prh-sharpness}]\label{lem:prh-sharpness}
+For every $0<\lambda<\tfrac12$ there are positive unital maps
+$A:\linfd{2}\to\linfd{4}$ and $M:\linfd{4}\to\linfd{2}$ with
+$\varepsilon_\lambda=\opnorm{MA-I_2}=2\lambda^2\to0$ such that every stochastic
+idempotent $F$ on $\linfd{4}$ satisfies
+\[
+\opnorm{AM-F}\ge\lambda=\sqrt{\varepsilon_\lambda/2}.
+\]
+Thus the $\sqrt\varepsilon$ order in PRH is intrinsically sharp.
+\end{lemma}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{PRH square-root sharpness: for every 0 < lambda < 1/2 there are positive unital maps A:l-infinity(2)->l-infinity(4) and M:l-infinity(4)->l-infinity(2) with epsilon_lambda=||MA-I_2||_{infinity->infinity}=2*lambda^2 tending to 0 such that every stochastic idempotent F on l-infinity(4) satisfies ||AM-F||_{infinity->infinity} >= lambda=sqrt(epsilon_lambda/2); hence the sqrt(epsilon) order in PRH is intrinsically sharp.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Use $A_\lambda,M_\lambda,P_\lambda$ from Lemma~\ref{lem:prh-sharpness-family-arithmetic}.
+If a stochastic idempotent $F$ had $\opnorm{P_\lambda-F}<\lambda$, the max-row norm
+formula would give $f_{11}>1-2\lambda>0$ and $f_{13}>0$.  The row-coincidence lemma would
+then make rows $1$ and $3$ of $F$ equal, while the triangle inequality would put the two
+corresponding rows of $P_\lambda$ at distance strictly less than $2\lambda$, contradicting
+their exact distance.  Hence every $F$ is at least $\lambda$ away; since
+$\varepsilon_\lambda=2\lambda^2$, this is $\sqrt{\varepsilon_\lambda/2}$.  The factored
+main tree validated first-pass with 12 nodes and zero challenges after the two earlier
+monolithic attempts ballooned.
+
+\begin{corollary}[\texttt{cor-classical-sharpness}]\label{cor:classical-sharpness}
+For $0<\lambda<\tfrac12$, choose the preceding $A_\lambda,M_\lambda$ and put
+$\eta_\lambda=2\lambda^2$, $Q_\lambda=A_\lambda M_\lambda$.  Then $Q_\lambda$ is
+row-stochastic,
+\[
+\opnorm{Q_\lambda^2-Q_\lambda}\le\eta_\lambda,
+\qquad
+\opnorm{Q_\lambda-F}\ge\lambda=\sqrt{\eta_\lambda/2}
+\]
+for every stochastic idempotent $F$.  Consequently, for every $C>0$, $\eta_0>0$, and
+$\beta>\tfrac12$, some $0<\eta<\min\{\eta_0,\tfrac14\}$ and row-stochastic $Q$ satisfy
+$\opnorm{Q^2-Q}\le\eta$ while every stochastic idempotent $E$ satisfies
+$\opnorm{Q-E}>C\eta^\beta$.  Thus no uniform exponent $\beta>\tfrac12$ can replace
+$\tfrac12$ in \texttt{op-classical}.
+\end{corollary}
+
+\noindent\textbf{Registry contract (verbatim).}
+\contractquote{Classical square-root sharpness: for every 0 < lambda < 1/2, choose positive unital maps A_lambda:l-infinity(2)->l-infinity(4) and M_lambda:l-infinity(4)->l-infinity(2) supplied by lem-prh-sharpness, and put eta_lambda=2*lambda^2 and Q_lambda=A_lambda M_lambda; then Q_lambda is row-stochastic, ||Q_lambda^2-Q_lambda||_{infinity->infinity} <= eta_lambda, and every stochastic idempotent F on l-infinity(4) satisfies ||Q_lambda-F||_{infinity->infinity} >= lambda=sqrt(eta_lambda/2). Consequently, for every C>0, eta_0>0, and beta>1/2 there exist 0<eta<min{eta_0,1/4} and a row-stochastic Q on l-infinity(4) with ||Q^2-Q||_{infinity->infinity} <= eta such that every stochastic idempotent E satisfies ||Q-E||_{infinity->infinity} > C*eta^beta; equivalently, no uniform exponent beta>1/2 can replace 1/2 in op-classical.}
+
+\paragraph{Proof (prose account of the af-validated tree).}
+Products of probability-row matrices are row-stochastic and have operator norm one.  With
+$Q_\lambda=A_\lambda M_\lambda$ defined at the root,
+\[
+Q_\lambda^2-Q_\lambda=A_\lambda(M_\lambda A_\lambda-I_2)M_\lambda,
+\]
+so submultiplicativity gives the stated weak defect bound; the preceding lemma gives the
+distance lower bound.  Given $C,\eta_0,\beta$, choose
+\[
+0<\lambda<\min\left\{\frac1{2\sqrt2},\sqrt{\frac{\eta_0}{2}},
+(C2^\beta)^{-1/(2\beta-1)}\right\}.
+\]
+Then $\eta=2\lambda^2$ has the required range and
+$C\eta^\beta=C2^\beta\lambda^{2\beta}<\lambda\le\opnorm{Q_\lambda-E}$ for every $E$.
+This is the literal dimension-four counterexample to any proposed uniform
+$(C,\eta_0,\beta)$ estimate.  Run 1 ballooned at 26 live nodes; under the user-ratified,
+hostile-audited remedy-(b) linear-node design, the af tree validated first-pass with all
+five nodes clean, zero challenges, and only the validated PRH sharpness external.

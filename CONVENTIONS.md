@@ -54,7 +54,7 @@ until re-validated in-repo** — nothing is rigorous until re-established under 
 - **Derived scales:** `τ = √δ`, `ρ = 4τ`, `κ = τ/4` (the (ρ,κ)-exposedness window).
 - **Height** `H = H(P)`, **invisible mass** `σ̃_v` of a row vertex `v`, **visible/exposed set** `W(P)`
   (see `def-height`, `def-invisible-mass`, `def-visible-set`). **Sharp exponent:** distance-to-idempotent
-  scales like `√δ` (equivalently `√η`), certified sharp by `ex-hume`.
+  scales like `√δ` (equivalently `√η`); op-classical-facing sharpness is certified at T0 by `cor-classical-sharpness`, while `ex-hume` is a disproved historical contract.
 - **The linear law.** The realizable-family relation is `δ = H/2` (LINEAR); the `δ ≳ H²` form is only the
   worst-case envelope and binds only because `H ≤ O(τ) = O(√δ)`. State which one a claim rests on
   (`FINDINGS.md`).

@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/cor-classical-sharpness/export.md",
+  "oracle": "af-cor-classical-sharpness",
+  "result": "pass",
+  "claim_hash": "b18129ede1755cfd94f5172f4436c732fa2303454d76dd097ca9c2a37311bcd6",
+  "oracle_digest": "ee1804591df9a8f40d171af3aa7d610aad953f1c2395869afae83612bc78e121",
+  "inputs_hash": "fac2b4469c0bc68dc01cc3c212bf9d280388fe398eabd838f0acf7b0f96ed8e9",
+  "ts": "2026-08-09T08:33:14.062Z"
+}

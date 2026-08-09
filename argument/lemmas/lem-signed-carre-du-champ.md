@@ -6,7 +6,7 @@ defs: def-signed-idempotent; def-negative-mass
 deps: lem-harmonic-affine-bridge
 status: proved
 af: none
-provenance: W48 wave (docs/waves/2026-07-07-W48-mechanism-bricks.md; ideation candidate 1, re-derived independently): fresh-codex prover (worker AZ — dead-route differentiation stated: exact linear identity on the quadratic field, every harmonic g, no canonical selector, no Jensen/energy step) + SEPARATE fresh-codex joint hostile verifier (VBW, VALID — sharp constants confirmed incl. the nu >= 1 branch and sharpness examples; exact fixtures 2x2 / ex-hume / W29 frontier recomputed)
+provenance: W48 wave (docs/waves/2026-07-07-W48-mechanism-bricks.md; ideation candidate 1, re-derived independently): fresh-codex prover (worker AZ — dead-route differentiation stated: exact linear identity on the quadratic field, every harmonic g, no canonical selector, no Jensen/energy step) + SEPARATE fresh-codex joint hostile verifier (VBW, VALID — sharp constants confirmed incl. the nu >= 1 branch and sharpness examples; exact fixtures 2x2 / the historical 3x3 matrix family recorded in ex-hume (fixture reference only, not an import of its disproved contract) / W29 frontier recomputed)
 owner: A
 ---
 

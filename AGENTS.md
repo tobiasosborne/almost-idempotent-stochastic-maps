@@ -102,7 +102,8 @@ blocked on the pre-read, and stop — do not improvise.
 0. **Don't overclaim — tag status honestly.** The north star is OPEN. The honest headline of the inherited
    work is *not* "δ ≳ H²": along the realizable family the tight relation is **linear, `δ = H/2`**, and the
    `δ ≳ H²` envelope binds only because `H` is capped at `O(√δ)` by the exposedness window. The `√η`
-   exponent in `op-classical` is nonetheless **sharp** (`ex-hume`). Never silently promote a
+   exponent in `op-classical` is nonetheless **sharp**, with the af-validated carrier
+   `cor-classical-sharpness`; the former `ex-hume` contract is disproved historical record. Never silently promote a
    `proved-mod-audit` / `numerical` / `conjecture` to `proved`.
 1. **"Runs without errors" is never a passing test.** Every test/check asserts an invariant against a
    known-correct value (for gates: red→green — perturb to confirm RED, then restore; for numerics: an exact

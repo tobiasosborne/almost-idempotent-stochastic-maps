@@ -72,8 +72,8 @@ factorization ledger, the assembly, and the top-level statement itself ---
 has been machine-adversarially validated in this project's registry
 (independent prover and hostile verifier per proof node).  This is an
 adversarial machine protocol, not a proof-assistant formalization: no
-Lean/mathlib proof exists, and the sharpness example is at present
-verified only by human audit.}
+Lean/mathlib proof exists.  The sharpness statement is likewise
+af-validated, but also has no Lean/mathlib proof.}
 
 Kitaev's approximate-algebra theorem \cite{Kitaev} is the large structural
 input, which we use rather than reproduce.  The new work is to cross into its
@@ -288,33 +288,67 @@ This proves Theorem~\ref{thm:main} except for sharpness.
 
 \section{Sharpness and remarks}
 
-For $0<s<1$, consider the explicit $3\times3$ family
+For $0<\lambda<\tfrac12$, consider the positive unital maps represented by
+the probability-row matrices
 \[
- P_s=I-u_sv_s^{\mathsf T},\qquad
- v_s=(1,-1+s,-s),\qquad
- u_s=(1-s+s^2,-s,0)^{\mathsf T}.
+A_\lambda=
+\begin{pmatrix}
+1&0\\ 0&1\\ 1-\lambda&\lambda\\ \lambda&1-\lambda
+\end{pmatrix},
+\qquad
+M_\lambda=
+\begin{pmatrix}
+1-\lambda&0&\lambda&0\\ 0&1-\lambda&0&\lambda
+\end{pmatrix}.
 \]
-It is a signed affine retraction with maximal row negative mass
-$\delta_s=s^2$.  If $\mathcal I_{\rm stoch}$ denotes the set of stochastic
-idempotents, then
+Direct multiplication gives
 \[
- \operatorname{dist}_{\infty\to\infty}(P_s,\mathcal I_{\rm stoch})
- :=\inf_{F\in\mathcal I_{\rm stoch}}\norm{P_s-F}_{\infty\to\infty}
- =2s-2s^2+2s^3
- =2\sqrt{\delta_s}+O(\delta_s).
+M_\lambda A_\lambda=
+\begin{pmatrix}1-\lambda^2&\lambda^2\\
+\lambda^2&1-\lambda^2\end{pmatrix},
+\qquad
+\eta_\lambda:=
+\norm{M_\lambda A_\lambda-I_2}_{\infty\to\infty}=2\lambda^2.
 \]
-Normalize the positive part of each row to obtain a row-stochastic $Q_s$.
-The signed--stochastic bridge gives
+Put $Q_\lambda=A_\lambda M_\lambda$.  It is row-stochastic, and since
+$\norm{A_\lambda}_{\infty\to\infty}=
+\norm{M_\lambda}_{\infty\to\infty}=1$,
 \[
- \norm{P_s-Q_s}_{\infty\to\infty}\leq2s^2,\qquad
- \norm{Q_s^2-Q_s}_{\infty\to\infty}\leq6s^2+4s^4.
+Q_\lambda^2-Q_\lambda
+=A_\lambda(M_\lambda A_\lambda-I_2)M_\lambda,
+\qquad
+\norm{Q_\lambda^2-Q_\lambda}_{\infty\to\infty}\leq\eta_\lambda.
 \]
-Hence every $F\in\mathcal I_{\rm stoch}$ satisfies
+The first and third rows of $Q_\lambda$ have $\ell^1$-distance $2\lambda$.
+If a stochastic idempotent $F=(f_{ab})$ satisfied
+$\norm{Q_\lambda-F}_{\infty\to\infty}<\lambda$, then
+$f_{11}>1-2\lambda>0$ and $f_{13}>0$.  For a stochastic idempotent,
+$f_{ii}>0$ and $f_{ij}>0$ force its $i$-th and $j$-th rows to coincide:
+the support of the stationary row $i$ is closed and irreducible, and the
+stationary probability on that finite class is unique.  Thus rows $1$ and
+$3$ of $F$ coincide, and the triangle inequality would put the corresponding
+rows of $Q_\lambda$ at distance strictly less than $2\lambda$, a
+contradiction.  Consequently every stochastic idempotent $F$ satisfies
 \[
- \norm{Q_s-F}_{\infty\to\infty}\geq2s-4s^2+2s^3=2s(1-s)^2,
+\norm{Q_\lambda-F}_{\infty\to\infty}
+\geq\lambda=\sqrt{\eta_\lambda/2}.
 \]
-which is $\Omega(s)$ as $s\downarrow0$ and excludes every exponent
-$\beta>\tfrac12$.
+
+This lower bound has the quantified form required for sharpness.  Given
+$C>0$, $\eta_0>0$, and $\beta>\tfrac12$, choose
+\[
+0<\lambda<\min\left\{\frac1{2\sqrt2},
+\sqrt{\frac{\eta_0}{2}},(C2^\beta)^{-1/(2\beta-1)}\right\}.
+\]
+Then $0<\eta_\lambda<\min\{\eta_0,\tfrac14\}$ and every stochastic
+idempotent $F$ obeys
+\[
+C\eta_\lambda^\beta
+=C2^\beta\lambda^{2\beta}
+<\lambda
+\leq\norm{Q_\lambda-F}_{\infty\to\infty}.
+\]
+Hence no uniform exponent $\beta>\tfrac12$ can replace $\tfrac12$.
 
 All losses before \eqref{eq:PRH} are linear in $\eta$.  The square root is
 born precisely when almost-disjoint stochastic cores are selected and their

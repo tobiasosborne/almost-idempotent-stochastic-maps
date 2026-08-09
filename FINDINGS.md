@@ -33,8 +33,9 @@ TRIGGER: discovering a subtlety that a future agent (or you post-compaction) wou
   Everything else is `proved-mod-audit`/`conjecture`/`numerical`/`open` (`CLAUDE.md` L0).
 - ❌ **"δ ≳ H²" as the mechanism.** The realizable-family relation is **linear `δ = H/2`**; the quadratic is
   only the worst-case envelope, binding because `H` is capped at `O(τ)=O(√δ)` by the exposedness window.
-  State which one a claim rests on (`CONVENTIONS.md` (c)). The `√η`/`√δ` distance exponent is nonetheless
-  **sharp** (`ex-hume`, Hume's 3×3 family).
+  State which one a claim rests on (`CONVENTIONS.md` (c)). The `√η`/`√δ` distance exponent is nonetheless **sharp**; the
+  op-classical-facing T0 carrier is `cor-classical-sharpness`. The former `ex-hume`
+  contract is disproved and is not a sharpness certificate.
 - ❌ **Frame-specific ⇒ frame-free.** The exact identity `dist₁(λ,Δ) = 2·neg(λ)` gives `δ ≥ H/2` **in the
   canonical simplex frame** (proved); the transferable (frame-free) statement is now carried by
   `conj-skinny-shadow-cap` (`lem-dual-localization` was RETIRED 2026-07-04 — its transcribed contract was

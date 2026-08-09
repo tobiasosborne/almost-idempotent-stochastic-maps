@@ -8,7 +8,7 @@ L2); this table and the `.tex` files beside it are a deterministic projection of
 ## Scope (directive: render only what the current proof strategy needs)
 
 - selection rule: **Route-F landing chain (scripts/gen-report-dag.py select_subgraph)**
-- registry results in the strategy subgraph: **221**; registry results anchored in `report/sections/`: **165**
+- registry results in the strategy subgraph: **221**; registry results anchored in `report/sections/`: **169**
 - definitions they import directly: **45**; after the statement-region
   `[[def-…]]` closure: **46** rendered, **1** dropped
 
@@ -22,8 +22,8 @@ Dropped (outside the closure; canonical, just not reproduced here):
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | `def-negative-mass` | `def:negative-mass` | original | locked | shard statement | — | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:esi, δ(P)); row polytope from ../almost-idempotent-positive-maps/definitions/def-stochastic.md` | `-` | 165 | 1 |
 | 2 | `def-signed-idempotent` | `def:signed-idempotent` | original | locked | shard statement | — | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (Definition, exact signed idempotent)` | `-` | 186 | 1 |
-| 3 | `def-stochastic` | `def:stochastic` | consensus | locked | shard statement | — | `internal` | `adopted from ../almost-idempotent-positive-maps/definitions/def-stochastic.md` | `-` | 24 | 12 |
-| 4 | `def-almost-idempotent` | `def:almost-idempotent` | consensus | locked | shard statement | — | `internal` | `adopted from ../almost-idempotent-positive-maps/definitions/def-almost-idempotent.md (stochastic specialization)` | `-` | 10 | 9 |
+| 3 | `def-stochastic` | `def:stochastic` | consensus | locked | shard statement | — | `internal` | `adopted from ../almost-idempotent-positive-maps/definitions/def-stochastic.md` | `-` | 24 | 15 |
+| 4 | `def-almost-idempotent` | `def:almost-idempotent` | consensus | locked | shard statement | — | `internal` | `adopted from ../almost-idempotent-positive-maps/definitions/def-almost-idempotent.md (stochastic specialization)` | `-` | 10 | 10 |
 | 5 | `def-exposed` | `def:exposed` | consensus | locked | shard statement | — | `internal` | `adapted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:vertex, def:exposed); ../almost-idempotent-positive-maps/definitions/def-exposed.md` | `-` | 129 | 0 |
 | 6 | `def-visible-set` | `def:visible-set` | original | locked | shard statement | — | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:scales, def:exposed)` | `-` | 137 | 0 |
 | 7 | `def-height` | `def:height` | original | locked | shard statement | — | `internal` | `quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (Definition: Height)` | `-` | 112 | 0 |
@@ -72,7 +72,7 @@ Dropped (outside the closure; canonical, just not reproduced here):
 | 40 | `def-maincb-partition-state` | `def:maincb-partition-state` | original | locked | shard statement | — | `internal` | `DESIGN-MAIN-STRUCTURE-v5.md sect 1.4` | `-` | 18 | 18 |
 | 41 | `def-maincb-raw-call` | `def:maincb-raw-call` | original | locked | shard statement | — | `internal` | `DESIGN-FUDW-DECOMP-v4.1.md:424-428; DESIGN-MAIN-STRUCTURE-v5.md sect 1.3` | `-` | 17 | 17 |
 | 42 | `def-maincb-witness-ledger` | `def:maincb-witness-ledger` | original | locked | shard statement | — | `internal` | `DESIGN-MAINCB-REPAIR-v2.md sect 2 (hostile-audited AUDIT-MAINCB-REPAIR.md, verdict VALID AS DATA)` | `-` | 21 | 21 |
-| 43 | `def-positive-approximate-retract` | `def:positive-approximate-retract` | original | locked | shard statement | — | `internal` | `project formulation transcribed from docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §§1,4` | `-` | 5 | 2 |
+| 43 | `def-positive-approximate-retract` | `def:positive-approximate-retract` | original | locked | shard statement | — | `internal` | `project formulation transcribed from docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §§1,4` | `-` | 5 | 5 |
 | 44 | `def-stage1-polar-witness-data` | `def:stage1-polar-witness-data` | original | locked | shard statement | — | `internal` | `DESIGN-S1-POLAR-v6.md sect 8 (unchanged from v2 sect 8; audited AUDIT-S1-POLAR-v3/v4/v5/v6)` | `-` | 15 | 15 |
 | 45 | `def-ucp-map` | `def:ucp-map` | consensus | locked | shard statement | — | `internal` | `standard operator-algebra textbook notion (e.g. Paulsen, Completely Bounded Maps and Operator Algebras, ch. 2-3); adopted for the Route-F rows per AUDIT-F0-ASSEMBLY.md sect 1.1` | `-` | 14 | 14 |
 | 46 | `def-routef-raw-factor-setting` | `def:routef-raw-factor-setting` | original | locked | shard statement | — | `internal` | `DESIGN-LEDGER-SETTING-RESCOPE-V2.md sect-1 (hostile re-audit AUDIT-LEDGER-SETTING-RESCOPE-V2.md, deletion test CLEARED: data-and-typing only)` | `-` | 23 | 23 |

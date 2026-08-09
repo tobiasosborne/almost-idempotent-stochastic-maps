@@ -2572,3 +2572,37 @@ both verifier and prover"), plus two user-directed report waves.
 bank cor-classical-sharpness → Stage D closure (report sharpness
 subsection, paper sect-5 switch, deferred citation halves) → paper polish
 (aism-aywn) → Lean only on elevation.
+
+## 2026-08-09 — Session 46 (part 2): THE SHARPNESS CAMPAIGN CLOSES AT T0 (200/374); Stage D landed
+
+- **W139 stage 4 remedy (b) round** (user-ratified "b"): fresh xhigh codex
+  designer wrote ADDENDUM-CORSHARP-SKELETON.md (5 designed nodes); separate
+  fresh hostile audit returned LAND-WITH-EXACT-CORRECTIONS (4 findings:
+  explicit in-node expansion of the "equivalently" clause replacing an
+  unavailable definitional-reading claim; precise authorization wording;
+  honest 6-obligation budget 18 <= cap 20; a MUST-NOT bullet forcing node
+  1.4 linear with an abort-to-remedy-(c) rule). Corrections folded verbatim;
+  shard body replaced under byte-discipline (contract untouched, verified
+  vs HEAD).
+- **W139 stage 4 BANKED** (`cor-classical-sharpness`, T0 200): run 2
+  validated FIRST-PASS — 5/5 nodes, taint clean, cap 20, zero challenges
+  (vs the 26-node run-1 balloon). Export, oracle, external `fr verify`
+  pass, mechanical flip. **Classical √η-sharpness — no uniform exponent
+  β>1/2 can replace 1/2 in op-classical — is now at the af-validated rung.**
+  Both halves of the north-star theorem are T0.
+- **Stage D landed**: census applicator applied the deferred loci exactly
+  (12-16 op-classical pointer block; 21-46 report sweep + the typeset
+  four-row sharpness subsection appended to 02_prh.tex at 254 lines;
+  47 paper §5 switched to the 4×4 witness with the af-validated/no-Lean
+  footnote); orchestrator applied root-doc loci 1-9, 48-50 verbatim
+  (CLAUDE==AGENTS byte-identical), wired PROVENANCE (+8 source, +4 claim
+  rows) and UNWIRED (−4), re-mirrored the catalog, refreshed two stale
+  source hashes, regenerated all layers. rg sweep: every remaining
+  `ex-hume`/`Hume` mention is a disproved-historical, matrix-family-only,
+  or dated-record survivor. `check-all` OK; PDF clean (0 undefined refs).
+- Sketch v53 + CURRENT; PRD headline + current-state at T0 200 with the
+  sharpness carrier; HANDOFF rewritten; `aism-4fl4` closed.
+
+**State at close: both halves of op-classical are af-validated. Remaining
+rigour surface: paper polish (aism-aywn), Lean only on user elevation,
+and the optional legacy-chain bridge (user portfolio decision).**

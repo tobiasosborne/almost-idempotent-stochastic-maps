@@ -4,18 +4,18 @@ kind: corollary
 contract: Classical square-root sharpness: for every 0 < lambda < 1/2, choose positive unital maps A_lambda:l-infinity(2)->l-infinity(4) and M_lambda:l-infinity(4)->l-infinity(2) supplied by lem-prh-sharpness, and put eta_lambda=2*lambda^2 and Q_lambda=A_lambda M_lambda; then Q_lambda is row-stochastic, ||Q_lambda^2-Q_lambda||_{infinity->infinity} <= eta_lambda, and every stochastic idempotent F on l-infinity(4) satisfies ||Q_lambda-F||_{infinity->infinity} >= lambda=sqrt(eta_lambda/2). Consequently, for every C>0, eta_0>0, and beta>1/2 there exist 0<eta<min{eta_0,1/4} and a row-stochastic Q on l-infinity(4) with ||Q^2-Q||_{infinity->infinity} <= eta such that every stochastic idempotent E satisfies ||Q-E||_{infinity->infinity} > C*eta^beta; equivalently, no uniform exponent beta>1/2 can replace 1/2 in op-classical.
 defs: def-positive-approximate-retract; def-stochastic; def-almost-idempotent
 deps: lem-prh-sharpness
-status: stated
-af: seeded
-provenance: docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §7 (explicit 4x4 family and lower bound); docs/plans/2026-07-23-W74F-artifacts/VERDICT-W74F-BATCH.md §A (family rechecked); DESIGN-EXHUME-SHARPNESS.md §§4-6 (direct stochastic defect and quantified corollary, pending fresh hostile audit and user ratification); docs/plans/2026-08-08-EXHUME-SHARPNESS/ADDENDUM-CORSHARP-SKELETON.md §§2-4 (remedy (b) itself was user-ratified in-session 2026-08-09; the addendum TEXT is hostile-audited (AUDIT-CORSHARP-SKELETON.md, LAND-WITH-EXACT-CORRECTIONS, corrections folded))
+status: proved
+af: validated
+provenance: docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §7 (explicit 4x4 family and lower bound); docs/plans/2026-07-23-W74F-artifacts/VERDICT-W74F-BATCH.md §A (family rechecked); DESIGN-EXHUME-SHARPNESS.md §§4-6 (direct stochastic defect and quantified corollary, pending fresh hostile audit and user ratification); docs/plans/2026-08-08-EXHUME-SHARPNESS/ADDENDUM-CORSHARP-SKELETON.md §§2-4 (remedy (b) itself was user-ratified in-session 2026-08-09; the addendum TEXT is hostile-audited (AUDIT-CORSHARP-SKELETON.md, LAND-WITH-EXACT-CORRECTIONS, corrections folded)); af elevation run 2 VALIDATED 2026-08-09 FIRST-PASS under the audited remedy-(b) skeleton: 5/5 nodes, taint clean, cap 20 respected, 2 rounds, zero challenges (vs 26-node run-1 balloon); fresh xhigh prover + separate fresh xhigh verifiers; export proofs/cor-classical-sharpness/export.md; fr verify pass via oracle af-cor-classical-sharpness
 owner: A
 workspace: proofs/cor-classical-sharpness
 ---
-**Status.** `stated` design consequence only.  `lem-prh-sharpness` is T0,
-but this row is not: af run 1 aborted at build with 26 live nodes over the
-hard cap 20; remedy (b) itself was user-ratified in-session 2026-08-09; the
-addendum TEXT is hostile-audited (AUDIT-CORSHARP-SKELETON.md,
-LAND-WITH-EXACT-CORRECTIONS, corrections folded).  It is prover guidance only
-until a fresh prover and separate fresh verifiers validate a clean new tree.
+**Status.** `proved` / `af: validated` (2026-08-09, run 2 — the audited
+remedy-(b) skeleton after the run-1 balloon). Mechanical reflection of the
+codex ledger: root validated FIRST-PASS with 5/5 nodes clean under hard cap
+20, zero challenges, resting solely on the T0 `lem-prh-sharpness` external;
+externally banked via `fr verify` on the export path. The sketch below is
+retained as the as-run design record.
 
 **Definitional witness package.** For arbitrary `0<lambda<1/2`, take the
 positive unital maps `A_lambda,M_lambda` from the validated

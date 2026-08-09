@@ -62,7 +62,6 @@ lem-mass-split
 lem-negpart-subadditive
 lem-parametric-halo-collapse
 lem-pivot-removing-move
-lem-prh-sharpness
 lem-residual-lower
 lem-residual-upper
 lem-row-far-dual-certificate
@@ -278,8 +277,5 @@ prop-f2-t1-equivalence
 # 2026-08-08 (W139, user-ratified): the sharpness package — cor-classical-sharpness landed
 # stated/none (whitelisted until its Stage-D report anchoring); ex-hume retracted to
 # disproved (entry retained above as the historical record's whitelist line).
-cor-classical-sharpness
 # 2026-08-08 (W139 factoring, user-ratified; AUDIT-PRHSHARP-FACTOR.md LAND-WITH-EXACT-CORRECTIONS):
-lem-prh-sharpness-family-arithmetic
-lem-prh-sharpness-row-coincidence
 ```

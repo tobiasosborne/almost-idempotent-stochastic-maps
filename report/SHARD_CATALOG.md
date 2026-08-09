@@ -49,9 +49,9 @@ verbatim), and keywords.
 ## `AISM-02-PRH`
 - **File:** `report/sections/02_prh.tex`
 - **Title:** Positive-retract hardening
-- **Summary:** Reproduces lem-prh, the af-validated hardening of a positive approximate retract into an exact stochastic idempotent.
-- **Summary:** Explains the disjoint-core construction, the conditioning and core-replacement error terms, and the optimisation giving the sharp 2*sqrt(2*epsilon) rate.
-- **Keywords:** lem-prh, af validated, positive approximate retract, stochastic idempotent, disjoint cores, square-root rate
+- **Summary:** Reproduces lem-prh, the af-validated hardening of a positive approximate retract into an exact stochastic idempotent, and the four-row T0 sharpness factorization.
+- **Summary:** Typesets the explicit 4x4 family arithmetic, stochastic-idempotent row coincidence, intrinsic PRH lower bound, and direct classical quantified corollary.
+- **Keywords:** lem-prh, lem-prh-sharpness-family-arithmetic, lem-prh-sharpness-row-coincidence, lem-prh-sharpness, cor-classical-sharpness, af validated, positive approximate retract, stochastic idempotent, disjoint cores, square-root rate, sharpness
 
 ## `AISM-03-COMPCB-AMPLIFICATION-NATURALITY`
 - **File:** `report/sections/03_compcb_amplification_naturality.tex`

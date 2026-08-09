@@ -20,19 +20,19 @@ This section is machine-generated from the two repositories' own records: the \t
 Quantity & Progenitor & This repository \\
 \midrule
 First commit & 2026-06-02 & 2026-07-02 \\
-Last commit in snapshot & 2026-06-13 & 2026-08-08 \\
-Commits & 174 & 1\,200 \\
-Days with a commit & 11 & 27 \\
-Work-log entries & 22 & 86 \\
-\texttt{fr} controller cycles & --- (no controller) & 1\,272 \\
+Last commit in snapshot & 2026-06-13 & 2026-08-09 \\
+Commits & 174 & 1\,208 \\
+Days with a commit & 11 & 28 \\
+Work-log entries & 22 & 87 \\
+\texttt{fr} controller cycles & --- (no controller) & 1\,281 \\
 Registry results & 59 & 374 \\
 Definition shards & 25 & 47 \\
 \texttt{af} workspaces & 16 & 211 \\
-Workspaces ever recording a validated root & 16 & 201 \\
-Current registry results at T0 & 16 & 199 \\
+Workspaces ever recording a validated root & 16 & 202 \\
+Current registry results at T0 & 16 & 200 \\
 Historically validated, not current T0 & 0 & 2 \\
-Adversarial proof nodes built & 132 & 2\,879 \\
-Ledger entries (append-only) & 822 & 17\,485 \\
+Adversarial proof nodes built & 132 & 2\,883 \\
+Ledger entries (append-only) & 822 & 17\,506 \\
 Numerical run bundles & -- & 38 \\
 \bottomrule
 \end{tabular}
@@ -47,17 +47,17 @@ Numerical run bundles & -- & 38 \\
 
 \textbf{Other honest gaps.}
 \begin{itemize}\setlength{\itemsep}{0.15ex}
-\item The progenitor repository predates the \texttt{fr} controller, so it has no cycle/arm/outcome record at all. Its exploration history is reconstructible only from 22 work-log entries and 174 commits, at coarser granularity than this repository's 1\,272 controller cycles.
+\item The progenitor repository predates the \texttt{fr} controller, so it has no cycle/arm/outcome record at all. Its exploration history is reconstructible only from 22 work-log entries and 174 commits, at coarser granularity than this repository's 1\,281 controller cycles.
 \item The progenitor repository's issue tracker is stored in an embedded Dolt database rather than an exported \texttt{issues.jsonl}, so its issue counts are not in this snapshot.
-\item \texttt{fr} evidence records carry a self-reported \texttt{verdict} field whose value is \texttt{claimed} on every one of the 562 records that has one. It is a protocol marker, not an adjudication, and is therefore not tabulated as an outcome.
-\item Wave numbering (\texttt{W1}--\texttt{W139}) is a human convention in the work log and wave documents; it is not a controller-enforced counter, and a few numbers were skipped or reused. Counts of wave \emph{documents} are exact; the wave \emph{index} is indicative.
+\item \texttt{fr} evidence records carry a self-reported \texttt{verdict} field whose value is \texttt{claimed} on every one of the 564 records that has one. It is a protocol marker, not an adjudication, and is therefore not tabulated as an outcome.
+\item Wave numbering (\texttt{W1}--\texttt{W140}) is a human convention in the work log and wave documents; it is not a controller-enforced counter, and a few numbers were skipped or reused. Counts of wave \emph{documents} are exact; the wave \emph{index} is indicative.
 \item Cross-repository carry-over (what this campaign inherited from the progenitor) is described qualitatively in \Cref{sec:stats-progenitor}; it is a judgement about content, not a count.
 \end{itemize}
 
 
 \subsection{The campaign calendar}\label{sec:stats-calendar}
 
-The two campaigns ran as short, dense bursts rather than as steady background work. This repository put 1\,200 commits into 27 calendar days with a commit (out of 38 days elapsed), and the progenitor put 174 into 11.
+The two campaigns ran as short, dense bursts rather than as steady background work. This repository put 1\,208 commits into 28 calendar days with a commit (out of 39 days elapsed), and the progenitor put 174 into 11.
 
 \begin{figure}[H]\centering
 \begin{tikzpicture}
@@ -71,9 +71,9 @@ The two campaigns ran as short, dense bursts rather than as steady background wo
 ]
 \addplot[draw=oiBlue, fill=oiBlue] coordinates {(0,2) (1,1) (2,1) (3,16) (4,19) (5,15) (7,5) (8,44) (9,44) (10,16) (11,11)};
 \addlegendentry{progenitor commits}
-\addplot[draw=oiVermillion, fill=oiVermillion] coordinates {(30,46) (31,53) (32,29) (33,21) (34,31) (35,70) (37,16) (38,72) (39,6) (41,6) (42,17) (44,9) (50,2) (51,16) (52,111) (53,165) (54,85) (55,74) (56,32) (57,45) (58,90) (60,66) (61,34) (62,16) (63,2) (64,28) (67,58)};
+\addplot[draw=oiVermillion, fill=oiVermillion] coordinates {(30,46) (31,53) (32,29) (33,21) (34,31) (35,70) (37,16) (38,72) (39,6) (41,6) (42,17) (44,9) (50,2) (51,16) (52,111) (53,165) (54,85) (55,74) (56,32) (57,45) (58,90) (60,66) (61,34) (62,16) (63,2) (64,28) (67,58) (68,8)};
 \addlegendentry{this repository, commits}
-\addplot[sharp plot, draw=oiGreen, mark=none, line width=0.9pt] coordinates {(30,48) (31,35) (32,46) (33,35) (34,61) (35,66) (37,35) (38,67) (39,3) (41,7) (42,19) (44,11) (50,7) (51,11) (52,65) (53,95) (54,80) (55,102) (56,29) (57,49) (58,118) (60,89) (61,41) (62,11) (63,3) (64,32) (67,92) (68,15)};
+\addplot[sharp plot, draw=oiGreen, mark=none, line width=0.9pt] coordinates {(30,48) (31,35) (32,46) (33,35) (34,61) (35,66) (37,35) (38,67) (39,3) (41,7) (42,19) (44,11) (50,7) (51,11) (52,65) (53,95) (54,80) (55,102) (56,29) (57,49) (58,118) (60,89) (61,41) (62,11) (63,3) (64,32) (67,92) (68,24)};
 \addlegendentry{\texttt{fr} controller cycles}
 \end{axis}
 \end{tikzpicture}
@@ -100,7 +100,7 @@ Day & Commits & \texttt{fr} cycles & banked & \texttt{af} roots validated \\
 
 \subsection{The rigour ladder}\label{sec:stats-ladder}
 
-The project's whole point is that a claim's \emph{status} is tracked honestly and separately from its plausibility. The registry therefore carries a status census, and the only rung that counts as rigorous in-repo is an \texttt{af}-validated tree (or a byte-matched citation). Of 374 registry results, 199 currently carry \texttt{af: validated} --- 53.2\% of the registry. The remainder are flagged non-rigorous in the open.
+The project's whole point is that a claim's \emph{status} is tracked honestly and separately from its plausibility. The registry therefore carries a status census, and the only rung that counts as rigorous in-repo is an \texttt{af}-validated tree (or a byte-matched citation). Of 374 registry results, 200 currently carry \texttt{af: validated} --- 53.5\% of the registry. The remainder are flagged non-rigorous in the open.
 
 \begin{figure}[H]\centering
 \begin{tikzpicture}
@@ -111,7 +111,7 @@ The project's whole point is that a claim's \emph{status} is tracked honestly an
   xtick={0,7,14,21,28,35,42,49,56,63}, xticklabels={Jun 02,Jun 09,Jun 16,Jun 23,Jun 30,Jul 07,Jul 14,Jul 21,Jul 28,Aug 04},
   xticklabel style={rotate=45, anchor=east},
 ]
-\addplot[const plot, draw=oiVermillion] coordinates {(30,7) (31,12) (32,15) (33,16) (34,19) (35,28) (38,34) (52,41) (53,70) (54,83) (55,106) (56,102) (57,117) (58,144) (60,156) (61,168) (62,169) (64,176) (67,196) (68,199)};
+\addplot[const plot, draw=oiVermillion] coordinates {(30,7) (31,12) (32,15) (33,16) (34,19) (35,28) (38,34) (52,41) (53,70) (54,83) (55,106) (56,102) (57,117) (58,144) (60,156) (61,168) (62,169) (64,176) (67,196) (68,200)};
 \end{axis}
 \end{tikzpicture}
 \caption{The rigour ladder over time: ledger validation dates supply the initial segment; from the first explicit \texttt{T0 before -> after} controller transition onward, the end-of-day current census follows those transitions. Downward steps are retained, so retractions and supersessions remain visible. The final level is cross-checked against current registry frontmatter.}\label{fig:stats-ladder}
@@ -124,9 +124,9 @@ The project's whole point is that a claim's \emph{status} is tracked honestly an
 \toprule
 Census point & Count \\
 \midrule
-Current T0 registry results & 199 \\
+Current T0 registry results & 200 \\
 Registry results & 374 \\
-Workspaces with a root validation ever recorded & 201 \\
+Workspaces with a root validation ever recorded & 202 \\
 Af workspaces & 211 \\
 Historically validated but not current T0 & 2 \\
 Root discharge (2026-08-08, controller cycle 1\,241) & 196 \\
@@ -142,11 +142,11 @@ Statistics-wave dispatch (374 registry results; cycle 1\,264) & 197 \\
 \toprule
 Registry \texttt{status:} & Results & Share \\
 \midrule
-\texttt{proved} & 312 & 83.4\% \\
+\texttt{proved} & 313 & 83.7\% \\
 \texttt{conjecture} & 31 & 8.3\% \\
 \texttt{proved-mod-audit} & 17 & 4.5\% \\
-\texttt{stated} & 4 & 1.1\% \\
 \texttt{disproved} & 3 & 0.8\% \\
+\texttt{stated} & 3 & 0.8\% \\
 \texttt{heuristic} & 2 & 0.5\% \\
 \texttt{numerical} & 2 & 0.5\% \\
 \texttt{open} & 2 & 0.5\% \\
@@ -162,9 +162,9 @@ Registry \texttt{status:} & Results & Share \\
 \toprule
 \texttt{af:} field & Results & Share \\
 \midrule
-\texttt{validated} & 199 & 53.2\% \\
+\texttt{validated} & 200 & 53.5\% \\
 \texttt{none} & 163 & 43.6\% \\
-\texttt{seeded} & 12 & 3.2\% \\
+\texttt{seeded} & 11 & 2.9\% \\
 \bottomrule
 \end{tabular}
 \par\vspace{0.6ex}{\footnotesize \texttt{seeded} means a workspace exists with the registry contract as its root conjecture but the tree is not (yet) closed.}
@@ -189,9 +189,9 @@ Definition shards & Count \\
 
 \subsection{The exploration controller: arms and outcomes}\label{sec:stats-arms}
 
-Research directions are registered as \texttt{fr} \emph{arms}; every harvested result is logged as one pull with an outcome, and a Stop-hook circuit-breaker forces a stalled arm to yield. Across 1\,272 cycles, 886 carried an arm label, 383 were explicit no-wave orientation turns, and 386 records had no arm label in total. The controller recorded 573 explicit allocation decisions: \texttt{EXPLOIT} $\times$ 553, \texttt{EXPLORE} $\times$ 14, \texttt{PIVOT} $\times$ 6.
+Research directions are registered as \texttt{fr} \emph{arms}; every harvested result is logged as one pull with an outcome, and a Stop-hook circuit-breaker forces a stalled arm to yield. Across 1\,281 cycles, 894 carried an arm label, 384 were explicit no-wave orientation turns, and 387 records had no arm label in total. The controller recorded 576 explicit allocation decisions: \texttt{EXPLOIT} $\times$ 556, \texttt{EXPLORE} $\times$ 14, \texttt{PIVOT} $\times$ 6.
 
-The Route-F hardening arm \texttt{FH} received 672 of the 886 arm-labelled pulls (75.8\%). The live portfolio now parks 7 of its 10 arms at the tier-1 override priority; the table retains untried registered arms with a zero pull count.
+The Route-F hardening arm \texttt{FH} received 680 of the 894 arm-labelled pulls (76.1\%). The live portfolio now parks 7 of its 10 arms at the tier-1 override priority; the table retains untried registered arms with a zero pull count.
 
 \begin{figure}[H]\centering
 \begin{tikzpicture}
@@ -201,11 +201,11 @@ The Route-F hardening arm \texttt{FH} received 672 of the 886 arm-labelled pulls
   bar width=8pt, legend style={at={(0.5,-0.28)}, anchor=north, legend columns=3},
   y dir=reverse,
 ]
-\addplot[draw=oiGreen, fill=oiGreen] coordinates {(133,FH) (1,B) (31,R) (2,G) (0,A) (0,D) (0,F) (0,E) (0,XE) (0,C)}; \addlegendentry{\texttt{banked}}
-\addplot[draw=oiBlue, fill=oiBlue] coordinates {(213,FH) (108,B) (14,R) (19,G) (14,A) (8,D) (3,F) (1,E) (0,XE) (0,C)}; \addlegendentry{\texttt{progress}}
-\addplot[draw=oiVermillion, fill=oiVermillion] coordinates {(2,FH) (4,B) (1,R) (0,G) (0,A) (0,D) (0,F) (0,E) (0,XE) (0,C)}; \addlegendentry{\texttt{died}}
+\addplot[draw=oiGreen, fill=oiGreen] coordinates {(134,FH) (1,B) (31,R) (2,G) (0,A) (0,D) (0,F) (0,E) (0,XE) (0,C)}; \addlegendentry{\texttt{banked}}
+\addplot[draw=oiBlue, fill=oiBlue] coordinates {(214,FH) (108,B) (14,R) (19,G) (14,A) (8,D) (3,F) (1,E) (0,XE) (0,C)}; \addlegendentry{\texttt{progress}}
+\addplot[draw=oiVermillion, fill=oiVermillion] coordinates {(3,FH) (4,B) (1,R) (0,G) (0,A) (0,D) (0,F) (0,E) (0,XE) (0,C)}; \addlegendentry{\texttt{died}}
 \addplot[draw=oiOrange, fill=oiOrange] coordinates {(0,FH) (0,B) (0,R) (0,G) (0,A) (0,D) (0,F) (1,E) (0,XE) (0,C)}; \addlegendentry{\texttt{refuted}}
-\addplot[draw=oiPurple, fill=oiPurple] coordinates {(324,FH) (0,B) (6,R) (0,G) (0,A) (0,D) (0,F) (0,E) (1,XE) (0,C)}; \addlegendentry{\texttt{other}}
+\addplot[draw=oiPurple, fill=oiPurple] coordinates {(329,FH) (0,B) (6,R) (0,G) (0,A) (0,D) (0,F) (0,E) (1,XE) (0,C)}; \addlegendentry{\texttt{other}}
 \end{axis}
 \end{tikzpicture}
 \caption{Attention allocation across research directions. Each bar is one \texttt{fr} arm; segments are the recorded outcomes of the pulls on it. Records with no arm (orientation and bookkeeping cycles) are excluded.}\label{fig:stats-arms}
@@ -229,7 +229,7 @@ Arm & Pulls & \texttt{banked} & \texttt{progress} & \texttt{died} & \texttt{refu
 \endfoot
 \bottomrule
 \endlastfoot
-\texttt{FH} & 672 & 133 & 213 & 2 & 0 & 324 & 2026-07-22 & 2026-08-09 & primary \\
+\texttt{FH} & 680 & 134 & 214 & 3 & 0 & 329 & 2026-07-22 & 2026-08-09 & primary \\
 \texttt{B} & 113 & 1 & 108 & 4 & 0 & 0 & 2026-07-02 & 2026-07-16 & primary \\
 \texttt{R} & 52 & 31 & 14 & 1 & 0 & 6 & 2026-07-02 & 2026-07-26 & parked-tier1-override \\
 \texttt{G} & 21 & 2 & 19 & 0 & 0 & 0 & 2026-07-03 & 2026-07-05 & parked-tier1-override \\
@@ -243,12 +243,12 @@ Arm & Pulls & \texttt{banked} & \texttt{progress} & \texttt{died} & \texttt{refu
 \noindent{\footnotesize Outcome vocabulary: \texttt{banked} = a result harvested and recorded; \texttt{progress} = movement without a bankable result; \texttt{died} / \texttt{refuted} = the direction was killed, with a certificate; \texttt{other} combines dispatch, blocked, null, obstruction, discovery, and quarantined legacy free-text outcomes to keep the table portrait-safe.\par}
 \endgroup
 
-Aggregated over all cycles the normalized outcome mix is 383~\texttt{orient}, 380~\texttt{progress}, 313~\texttt{dispatch}, 167~\texttt{banked}, 11~\texttt{null}, 7~\texttt{died}, 5~\texttt{legacy-free-text}, 3~\texttt{discovery}, 1~\texttt{blocked}, 1~\texttt{obstruction}, 1~\texttt{refuted}. Evidence records are tiered 218~\texttt{T0}, 175~\texttt{T1}, 169~\texttt{T2}. The normalizer quarantined 5 legacy records whose free-form harvest prose occupies the outcome field; they remain counted as records and pulls but no longer become spurious table columns.
+Aggregated over all cycles the normalized outcome mix is 384~\texttt{orient}, 381~\texttt{progress}, 318~\texttt{dispatch}, 168~\texttt{banked}, 11~\texttt{null}, 8~\texttt{died}, 5~\texttt{legacy-free-text}, 3~\texttt{discovery}, 1~\texttt{blocked}, 1~\texttt{obstruction}, 1~\texttt{refuted}. Evidence records are tiered 219~\texttt{T0}, 175~\texttt{T1}, 170~\texttt{T2}. The normalizer quarantined 5 legacy records whose free-form harvest prose occupies the outcome field; they remain counted as records and pulls but no longer become spurious table columns.
 
 
 \subsection{Adversarial elevations}\label{sec:stats-elevations}
 
-A result reaches the top in-repo rung only through an \texttt{af} workspace: the registry contract becomes the root conjecture, a fresh prover agent builds a proof tree, and every node is validated by a \emph{separate} fresh verifier told that finding a gap is a success. The orchestrator never judges a step. 211 workspaces were opened; 201 have a root validation somewhere in their retained ledger, while 199 registry results are current T0 and 10 workspaces never recorded a validated root. Between them the workers built 2\,879 proof nodes, raised 435 challenges (of which 428 were resolved), and forced 381 node amendments.
+A result reaches the top in-repo rung only through an \texttt{af} workspace: the registry contract becomes the root conjecture, a fresh prover agent builds a proof tree, and every node is validated by a \emph{separate} fresh verifier told that finding a gap is a success. The orchestrator never judges a step. 211 workspaces were opened; 202 have a root validation somewhere in their retained ledger, while 200 registry results are current T0 and 9 workspaces never recorded a validated root. Between them the workers built 2\,883 proof nodes, raised 435 challenges (of which 428 were resolved), and forced 381 node amendments.
 
 \begin{figure}[H]\centering
 \begin{tikzpicture}
@@ -270,13 +270,13 @@ A result reaches the top in-repo rung only through an \texttt{af} workspace: the
 \toprule
 Mechanical pass metric & Trees/events & Rate \\
 \midrule
-Initial build needed no prover-fix claim & 77 & 38.3\% \\
-No verifier challenge recorded & 74 & 36.8\% \\
-Root-validation events & 202 & -- \\
+Initial build needed no prover-fix claim & 78 & 38.6\% \\
+No verifier challenge recorded & 75 & 37.1\% \\
+Root-validation events & 203 & -- \\
 Root-unvalidation events & 1 & -- \\
 Root re-validations after an unvalidation & 1 & -- \\
 Controller records explicitly marked re-validated or re-flipped & 9 & -- \\
-Controller records explicitly documenting a balloon abort/stop & 24 & -- \\
+Controller records explicitly documenting a balloon abort/stop & 25 & -- \\
 \bottomrule
 \end{tabular}
 \par\vspace{0.6ex}{\footnotesize A first pass here has a strict mechanical definition: a workspace recorded a validated root and no \texttt{pf-} (prover-fix) claim. This is not inferred from celebratory prose. Balloon rows count controller records matching explicit abort/stop language, not discarded trees that left no retained artifact.}
@@ -293,10 +293,10 @@ The most-contested tree was \texttt{conj-extcb} (24 challenges raised); the long
 \toprule
 Ledger entry type & Count \\
 \midrule
-\texttt{nodes\_claimed} & 4\,627 \\
-\texttt{nodes\_released} & 4\,627 \\
-\texttt{node\_created} & 2\,879 \\
-\texttt{node\_validated} & 2\,814 \\
+\texttt{nodes\_claimed} & 4\,633 \\
+\texttt{nodes\_released} & 4\,633 \\
+\texttt{node\_created} & 2\,883 \\
+\texttt{node\_validated} & 2\,819 \\
 \texttt{def\_added} & 1\,016 \\
 \texttt{challenge\_raised} & 435 \\
 \texttt{challenge\_resolved} & 428 \\
@@ -529,11 +529,12 @@ Ledger entry type & Count \\
 199 & \texttt{lem-prh-sharpness-family-arithmetic} & 24 & 24 & 2 & 0 & 1 & 4 & 34 & 2026-08-09 \\
 200 & \texttt{lem-prh-sharpness-row-coincidence} & 19 & 19 & 2 & 0 & 1 & 4 & 27 & 2026-08-09 \\
 201 & \texttt{lem-prh-sharpness} & 12 & 12 & 0 & 0 & 2 & 2 & 16 & 2026-08-09 \\
+202 & \texttt{cor-classical-sharpness} & 5 & 5 & 0 & 0 & 3 & 1 & 6 & 2026-08-09 \\
 \end{longtable}
 \noindent{\footnotesize ``Val.'' counts validated nodes; ``Chal.'' counts challenges raised by verifiers against nodes of that tree; ``Amd.'' counts node statements the prover had to change in response; ``Defs'' counts definitions imported into the workspace as byte-matched externals; ``Rnds'' is the highest prover/verifier round index reached; ``Jobs'' is the number of node-claim events, i.e.\ worker invocations against that tree; ``Closed'' is the day the root node was validated. Fewer validated nodes than created nodes means nodes were archived or superseded during the run.\par}
 \endgroup
 
-The 10 workspaces that never recorded a validated root are \texttt{conj-\discretionary{}{}{}degenerate-\discretionary{}{}{}transport}, \texttt{conj-\discretionary{}{}{}nsc}, \texttt{conj-\discretionary{}{}{}rh}, \texttt{conj-\discretionary{}{}{}sc}, \texttt{cor-\discretionary{}{}{}classical-\discretionary{}{}{}sharpness}, \texttt{lem-\discretionary{}{}{}hiddenness-\discretionary{}{}{}alpha-\discretionary{}{}{}slab-\discretionary{}{}{}leakage}, \texttt{lem-\discretionary{}{}{}negative-\discretionary{}{}{}pivot-\discretionary{}{}{}import}, \texttt{prop-\discretionary{}{}{}approx-\discretionary{}{}{}simplex}, \texttt{thm-\discretionary{}{}{}classical-\discretionary{}{}{}factorization}, \texttt{thm-\discretionary{}{}{}cluster}. The registry currently has 12 \texttt{af: seeded} rows; the difference is explained by 2 retained workspaces with historical root validations that are no longer current T0: \texttt{lem-\discretionary{}{}{}stage1-\discretionary{}{}{}approximate-\discretionary{}{}{}group-\discretionary{}{}{}laws}, \texttt{lem-\discretionary{}{}{}stage1-\discretionary{}{}{}smooth-\discretionary{}{}{}unitary-\discretionary{}{}{}operations}.
+The 9 workspaces that never recorded a validated root are \texttt{conj-\discretionary{}{}{}degenerate-\discretionary{}{}{}transport}, \texttt{conj-\discretionary{}{}{}nsc}, \texttt{conj-\discretionary{}{}{}rh}, \texttt{conj-\discretionary{}{}{}sc}, \texttt{lem-\discretionary{}{}{}hiddenness-\discretionary{}{}{}alpha-\discretionary{}{}{}slab-\discretionary{}{}{}leakage}, \texttt{lem-\discretionary{}{}{}negative-\discretionary{}{}{}pivot-\discretionary{}{}{}import}, \texttt{prop-\discretionary{}{}{}approx-\discretionary{}{}{}simplex}, \texttt{thm-\discretionary{}{}{}classical-\discretionary{}{}{}factorization}, \texttt{thm-\discretionary{}{}{}cluster}. The registry currently has 11 \texttt{af: seeded} rows; the difference is explained by 2 retained workspaces with historical root validations that are no longer current T0: \texttt{lem-\discretionary{}{}{}stage1-\discretionary{}{}{}approximate-\discretionary{}{}{}group-\discretionary{}{}{}laws}, \texttt{lem-\discretionary{}{}{}stage1-\discretionary{}{}{}smooth-\discretionary{}{}{}unitary-\discretionary{}{}{}operations}.
 
 
 \subsection{Corrections, retractions, and report catch-up}\label{sec:stats-corrections}
@@ -568,14 +569,14 @@ The report-sync reconstruction joins current T0 frontmatter to actual \texttt{\t
 Report coverage quantity & Count \\
 \midrule
 Statistics-wave dispatch census (T0 / registry) & 197 / 374 \\
-T0 results anchored before the sync cohort & 71 \\
-T0 anchoring backlog at dispatch, before the sync cohort & 126 \\
+T0 results anchored before the sync cohort & 75 \\
+T0 anchoring backlog at dispatch, before the sync cohort & 122 \\
 Sync-cohort shards present & 21 / 21 \\
 T0 results newly anchored by present sync shards & 92 \\
-T0 results anchored after present sync shards & 163 \\
-T0 anchoring backlog at dispatch, after present sync shards & 34 \\
-Current live census (T0 / registry) & 199 / 374 \\
-Current live T0 anchoring backlog & 36 \\
+T0 results anchored after present sync shards & 167 \\
+T0 anchoring backlog at dispatch, after present sync shards & 30 \\
+Current live census (T0 / registry) & 200 / 374 \\
+Current live T0 anchoring backlog & 33 \\
 \bottomrule
 \end{tabular}
 \par\vspace{0.6ex}{\footnotesize Backlog means current T0 results with no result anchor in a report section. It includes deliberately off-paper-track rows as well as recent paper-track debt; it is a coverage count, not a rigour judgement.}
@@ -584,7 +585,7 @@ Current live T0 anchoring backlog & 36 \\
 
 \subsection{Worker and job census}\label{sec:stats-workers}
 
-Two independent records count delegated work. The \texttt{fr} log names the workers involved in each harvested cycle as \texttt{model:role} pairs; that is a curated, human-entered field and covers 560 worker mentions across 37 distinct model/role pairs. The \texttt{af} ledgers count \emph{claim events} mechanically: every \texttt{nodes\_claimed} entry is one claim event: one worker owner taking one node, and the owner string encodes whether it was the initial prover build, a prover fix round, or a verifier pass. That gives 4\,627 claim events in this repository and 216 in the progenitor --- 4\,843 delegated adversarial claim events in total.
+Two independent records count delegated work. The \texttt{fr} log names the workers involved in each harvested cycle as \texttt{model:role} pairs; that is a curated, human-entered field and covers 565 worker mentions across 38 distinct model/role pairs. The \texttt{af} ledgers count \emph{claim events} mechanically: every \texttt{nodes\_claimed} entry is one claim event: one worker owner taking one node, and the owner string encodes whether it was the initial prover build, a prover fix round, or a verifier pass. That gives 4\,633 claim events in this repository and 216 in the progenitor --- 4\,849 delegated adversarial claim events in total.
 
 \begin{table}[H]
 \centering
@@ -593,8 +594,8 @@ Two independent records count delegated work. The \texttt{fr} log names the work
 \toprule
 \texttt{af} claim owner & Claim events \\
 \midrule
-\texttt{verifier} & 3\,401 \\
-\texttt{prover (initial build)} & 741 \\
+\texttt{verifier} & 3\,406 \\
+\texttt{prover (initial build)} & 742 \\
 \texttt{prover (fix round)} & 484 \\
 \texttt{other} & 1 \\
 \bottomrule
@@ -609,8 +610,8 @@ Model & Role & Cycles \\
 \midrule
 \texttt{codex} & \texttt{prover} & 168 \\
 \texttt{codex} & \texttt{verifier} & 138 \\
-\texttt{gpt-5.6-sol} & \texttt{verifier} & 92 \\
-\texttt{gpt-5.6-sol} & \texttt{prover} & 78 \\
+\texttt{gpt-5.6-sol} & \texttt{verifier} & 94 \\
+\texttt{gpt-5.6-sol} & \texttt{prover} & 80 \\
 \texttt{opus} & \texttt{prover} & 11 \\
 \texttt{codex} & \texttt{refuter} & 7 \\
 \texttt{fable} & \texttt{author} & 7 \\
@@ -625,7 +626,7 @@ Model & Role & Cycles \\
 \texttt{codex-gpt-5.6-sol} & \texttt{auditor} & 2 \\
 \texttt{codex-gpt-5.6-sol} & \texttt{verifier} & 2 \\
 \texttt{fable} & \texttt{prover} & 2 \\
-\multicolumn{2}{l}{\itshape 19 further model/role pairs} & 20 \\
+\multicolumn{2}{l}{\itshape 20 further model/role pairs} & 21 \\
 \bottomrule
 \end{tabular}
 \par\vspace{0.6ex}{\footnotesize \texttt{codex} entries are \texttt{gpt-5.6-sol} runs under the project's model/effort policy; a few rows carry the fuller \texttt{codex-gpt-5.6-sol} spelling from before the label settled. \texttt{opus}, \texttt{sonnet}, and \texttt{fable} are Claude models acting as orchestrator-side authors, strategists, and reviewers.}
@@ -648,17 +649,17 @@ Numerical work is quarantined by construction: every experiment is a run bundle 
 Artifact class & Count \\
 \midrule
 \texttt{docs/waves/} --- wave records & 107 \\
-\texttt{docs/plans/} --- strategy and proof-sketch versions & 94 \\
+\texttt{docs/plans/} --- strategy and proof-sketch versions & 96 \\
 \texttt{docs/audits/}, \texttt{lit-review/}, \texttt{recon/}, \texttt{tooling-feedback/} & 5 \\
 \texttt{docs/ingest/} --- the inherited classical portfolio & 7 \\
 \quad of which experiment files & 60 \\
 \texttt{runs/} --- numerical run bundles & 38 \\
 \quad producing scripts inside bundles & 128 \\
 \texttt{report/sections/} --- lab-book shards & 76 \\
-\quad lines of \LaTeX{} in them & 11\,502 \\
+\quad lines of \LaTeX{} in them & 11\,633 \\
 \texttt{refs/} --- pinned ground-truth sources & 10 \\
 \texttt{scripts/} --- tooling files & 31 \\
-\quad lines of tooling code & 10\,611 \\
+\quad lines of tooling code & 10\,612 \\
 \quad of which validation gates & 7 \\
 \quad lines in the gates & 1\,999 \\
 \quad gate unit-test files / lines & 8 / 1\,705 \\
@@ -666,7 +667,7 @@ Artifact class & Count \\
 \end{tabular}
 \end{table}
 
-The negative record is kept as deliberately as the positive one. \texttt{FINDINGS.md} carries 52 dated entries with 16 explicit do-not-re-walk markers, indexed by mechanism; \texttt{docs/LEARNINGS.md} carries 7 dated correction/retraction entries.
+The negative record is kept as deliberately as the positive one. \texttt{FINDINGS.md} carries 53 dated entries with 16 explicit do-not-re-walk markers, indexed by mechanism; \texttt{docs/LEARNINGS.md} carries 7 dated correction/retraction entries.
 
 \begin{table}[H]
 \centering
@@ -728,11 +729,11 @@ Everything in \Cref{sec:campaign-statistics} is generated by \texttt{scripts/gen
 \hspace*{1.5em}the gate: re-renders, byte-compares, and prints a non-fatal drift advisory.
 \end{quote}
 
-\textbf{Staleness semantics.} Only the render step is gated, so the check is stable across ordinary commits and fails exactly when it should: a hand-edited generated file, or a renderer change without a re-render. The \emph{numbers}, by contrast, are as of \textbf{2026-08-09T07:33:28Z} and go stale silently by design --- refreshing them is a deliberate act. \texttt{--check} therefore also compares a few cheap live counts against the snapshot and prints how far behind it is, without blocking a commit.
+\textbf{Staleness semantics.} Only the render step is gated, so the check is stable across ordinary commits and fails exactly when it should: a hand-edited generated file, or a renderer change without a re-render. The \emph{numbers}, by contrast, are as of \textbf{2026-08-09T08:47:46Z} and go stale silently by design --- refreshing them is a deliberate act. \texttt{--check} therefore also compares a few cheap live counts against the snapshot and prints how far behind it is, without blocking a commit.
 
 \textbf{Progenitor data.} The \texttt{almost-\discretionary{}{}{}idempotent-\discretionary{}{}{}positive-\discretionary{}{}{}maps} block is mined live when that repository sits beside this one and is otherwise carried forward from the committed snapshot, so the gate is green on machines that do not have the sibling. The current block was mined live at the last extraction.
 
-\textbf{Provenance of the figures.} 1\,272 controller records, 17\,485 \texttt{af} ledger entries, 374 registry shards, 47 definition shards, 38 run bundles, 86 work-log entries, 210 issue records, and 1\,374 commits were read to produce this section.
+\textbf{Provenance of the figures.} 1\,281 controller records, 17\,506 \texttt{af} ledger entries, 374 registry shards, 47 definition shards, 38 run bundles, 87 work-log entries, 210 issue records, and 1\,382 commits were read to produce this section.
 
 
 \emergencystretch=0pt\relax

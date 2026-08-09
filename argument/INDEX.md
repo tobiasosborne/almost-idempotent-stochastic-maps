@@ -42,7 +42,7 @@
 | `conj-w72-poti0-root-selection-exchange-ledger` | lemma | proved-mod-audit | none | B | Within the literal W72 POTI-0 hypothesis block of conj-dtr-zero-oriented-surplus… |
 | `conj-w72-poti0-routine-conditional-assembly` | lemma | proved-mod-audit | none | B | Assume conj-w72-poti0-root-dilution-selected-support-exchange and conj-w72-poti0… |
 | `conj-zero-face-elimination` | lemma | conjecture | none | A | (CONJECTURE) Tall-cluster zero-face elimination: there exist universal constants… |
-| `cor-classical-sharpness` | corollary | stated | seeded | A | Classical square-root sharpness: for every 0 < lambda < 1/2, choose positive uni… |
+| `cor-classical-sharpness` | corollary | proved | validated | A | Classical square-root sharpness: for every 0 < lambda < 1/2, choose positive uni… |
 | `cor-kitaev-diagonal-cpization` | corollary | proved | validated | B | Entrywise CP-ization from the repaired diagonal: for the finite phase-balanced d… |
 | `cor-rank-two-visible` | corollary | proved | none | A | Rank-two visibility: every exact signed idempotent P with rank(P) <= 2 and delta… |
 | `ex-hume` | obstruction | disproved | none | A | Disproved historical 3x3-family proposition: for every real s with 0<s<1, set v_… |

@@ -1,5 +1,5 @@
 {
- "extracted_at": "2026-08-09T07:33:28Z",
+ "extracted_at": "2026-08-09T08:47:46Z",
  "generator": "scripts/gen-report-stats.py",
  "progenitor": {
   "af": {
@@ -515,7 +515,7 @@
     "report": 5
    }
   },
-  "mined_at": "2026-08-09T07:33:28Z",
+  "mined_at": "2026-08-09T08:47:46Z",
   "path_name": "almost-idempotent-positive-maps",
   "portfolio": null,
   "refs": {
@@ -621,9 +621,9 @@
  "successor": {
   "af": {
    "amendments_total": 381,
-   "challenge_free_trees": 74,
+   "challenge_free_trees": 75,
    "challenges_total": 435,
-   "current_t0": 199,
+   "current_t0": 200,
    "current_without_historical_root_ids": [],
    "entry_types": {
     "approach_tried": 2,
@@ -632,34 +632,34 @@
     "def_added": 1016,
     "node_amended": 381,
     "node_archived": 58,
-    "node_created": 2879,
+    "node_created": 2883,
     "node_unvalidated": 7,
-    "node_validated": 2814,
-    "nodes_claimed": 4627,
-    "nodes_released": 4627,
+    "node_validated": 2819,
+    "nodes_claimed": 4633,
+    "nodes_released": 4633,
     "proof_initialized": 211
    },
-   "ever_root_validated": 201,
-   "first_pass_current_trees": 77,
-   "first_pass_trees": 77,
+   "ever_root_validated": 202,
+   "first_pass_current_trees": 78,
+   "first_pass_trees": 78,
    "historical_not_current": 2,
    "historical_not_current_ids": [
     "lem-stage1-approximate-group-laws",
     "lem-stage1-smooth-unitary-operations"
    ],
-   "ledger_entries": 17485,
-   "nodes_total": 2879,
+   "ledger_entries": 17506,
+   "nodes_total": 2883,
    "owner_roles": {
     "other": 1,
     "prover (fix round)": 484,
-    "prover (initial build)": 741,
-    "verifier": 3401
+    "prover (initial build)": 742,
+    "verifier": 3406
    },
    "root_revalidation_events": 1,
    "root_unvalidation_events": 1,
-   "root_validated": 201,
-   "root_validation_events": 202,
-   "seeded_not_validated": 10,
+   "root_validated": 202,
+   "root_validation_events": 203,
+   "seeded_not_validated": 9,
    "validation_days": {
     "2026-07-02": 7,
     "2026-07-03": 5,
@@ -680,7 +680,7 @@
     "2026-08-03": 1,
     "2026-08-05": 7,
     "2026-08-08": 20,
-    "2026-08-09": 3
+    "2026-08-09": 4
    },
    "workspaces": 211,
    "workspaces_detail": [
@@ -827,23 +827,23 @@
      "archived": 0,
      "challenges": 0,
      "challenges_resolved": 0,
-     "claims": 0,
+     "claims": 6,
      "defs_imported": 3,
-     "first_pass": false,
+     "first_pass": true,
      "first_ts": "2026-08-09T07:29:52.672524116Z",
      "id": "cor-classical-sharpness",
-     "initial_build_claims": 0,
-     "last_ts": "2026-08-09T07:29:52.723027203Z",
-     "ledger_entries": 5,
-     "max_round": 0,
-     "nodes": 1,
+     "initial_build_claims": 1,
+     "last_ts": "2026-08-09T08:32:46.532958072Z",
+     "ledger_entries": 26,
+     "max_round": 1,
+     "nodes": 5,
      "prover_fix_claims": 0,
      "root_revalidation_events": 0,
      "root_unvalidation_events": 0,
-     "root_validated": null,
-     "root_validation_events": 0,
-     "validated": 0,
-     "verifier_claims": 0
+     "root_validated": "2026-08-09T08:32:41.968770306Z",
+     "root_validation_events": 1,
+     "validated": 5,
+     "verifier_claims": 5
     },
     {
      "amendments": 0,
@@ -5613,15 +5613,15 @@
    "ingest": 7,
    "ingest_experiment_files": 60,
    "lit-review": 1,
-   "plans": 94,
+   "plans": 96,
    "recon": 1,
-   "report_shard_lines": 11502,
+   "report_shard_lines": 11633,
    "report_shards": 76,
    "tooling-feedback": 2,
    "waves": 107
   },
   "findings": {
-   "dated_entries": 52,
+   "dated_entries": 53,
    "ex_hume_current": {
     "af": "none",
     "status": "disproved"
@@ -5719,14 +5719,14 @@
      "progress": 3
     },
     "FH": {
-     "banked": 133,
+     "banked": 134,
      "blocked": 1,
-     "died": 2,
-     "dispatch": 306,
+     "died": 3,
+     "dispatch": 311,
      "legacy-free-text": 5,
      "null": 11,
      "obstruction": 1,
-     "progress": 213
+     "progress": 214
     },
     "G": {
      "banked": 2,
@@ -5765,7 +5765,7 @@
     },
     "FH": {
      "first": "2026-07-22T20:27:46.285Z",
-     "last": "2026-08-09T07:30:20.047Z"
+     "last": "2026-08-09T08:35:28.137Z"
     },
     "G": {
      "first": "2026-07-03T11:15:21.463Z",
@@ -5786,12 +5786,12 @@
     "D": 8,
     "E": 2,
     "F": 3,
-    "FH": 672,
+    "FH": 680,
     "G": 21,
     "R": 52,
     "XE": 1
    },
-   "balloon_record_count": 24,
+   "balloon_record_count": 25,
    "balloon_records": [
     {
      "cycle": 17,
@@ -5888,6 +5888,10 @@
     {
      "cycle": 1271,
      "ts": "2026-08-09T07:29:20.637Z"
+    },
+    {
+     "cycle": 1274,
+     "ts": "2026-08-09T07:37:25.521Z"
     }
    ],
    "banked_per_day": {
@@ -5909,16 +5913,16 @@
     "2026-08-03": 1,
     "2026-08-05": 7,
     "2026-08-08": 20,
-    "2026-08-09": 3
+    "2026-08-09": 4
    },
    "decisions": {
-    "EXPLOIT": 553,
+    "EXPLOIT": 556,
     "EXPLORE": 14,
     "PIVOT": 6
    },
    "evidence_classes": {
     "advisory": 1,
-    "af": 180,
+    "af": 181,
     "af-export": 16,
     "af-ledger": 1,
     "af-validated": 3,
@@ -5953,7 +5957,7 @@
     "refuter": 2,
     "registry": 13,
     "registry-landing": 1,
-    "report": 2,
+    "report": 3,
     "review": 2,
     "run": 3,
     "session": 2,
@@ -5964,16 +5968,16 @@
     "wave": 24
    },
    "evidence_tiers": {
-    "T0": 218,
+    "T0": 219,
     "T1": 175,
-    "T2": 169
+    "T2": 170
    },
    "first_ts": "2026-07-02T05:28:19.297Z",
-   "last_ts": "2026-08-09T07:30:20.047Z",
+   "last_ts": "2026-08-09T08:35:28.137Z",
    "legacy_outcome_records": 5,
-   "max_cycle": 1272,
-   "no_arm_records": 386,
-   "no_wave_turns": 383,
+   "max_cycle": 1281,
+   "no_arm_records": 387,
+   "no_wave_turns": 384,
    "op_classical_discharge": {
     "after": 196,
     "artifact": "proofs/op-classical/export.md",
@@ -5984,16 +5988,16 @@
     "ts": "2026-08-08T16:34:55.323Z"
    },
    "outcomes": {
-    "banked": 167,
+    "banked": 168,
     "blocked": 1,
-    "died": 7,
+    "died": 8,
     "discovery": 3,
-    "dispatch": 313,
+    "dispatch": 318,
     "legacy-free-text": 5,
     "null": 11,
     "obstruction": 1,
-    "orient": 383,
-    "progress": 380,
+    "orient": 384,
+    "progress": 381,
     "refuted": 1
    },
    "per_day": {
@@ -6024,9 +6028,9 @@
     "2026-08-04": 3,
     "2026-08-05": 32,
     "2026-08-08": 92,
-    "2026-08-09": 15
+    "2026-08-09": 24
    },
-   "records": 1272,
+   "records": 1281,
    "restoration_record_count": 9,
    "restoration_records": [
     {
@@ -7329,13 +7333,13 @@
      "ts": "2026-08-09T07:29:20.637Z"
     }
    ],
-   "worker_jobs": 560,
+   "worker_jobs": 565,
    "worker_models": {
     "codex": 338,
     "codex-gpt-5.6-sol": 8,
     "fable": 10,
     "gpt-5": 1,
-    "gpt-5.6-sol": 178,
+    "gpt-5.6-sol": 183,
     "opus": 20,
     "sonnet": 5
    },
@@ -7344,21 +7348,21 @@
     "adversary": 2,
     "applier": 5,
     "auditor": 11,
-    "author": 14,
+    "author": 15,
     "codifier": 1,
     "computational-mathematician": 1,
     "decider": 1,
     "designer": 7,
     "measurer": 1,
     "obstructor": 1,
-    "prover": 262,
+    "prover": 264,
     "refuter": 7,
     "researcher": 2,
     "strategist": 6,
     "summarizer": 1,
     "transcriber": 4,
     "transcription-auditor": 1,
-    "verifier": 232
+    "verifier": 234
    },
    "workers": {
     "codex / adversary": 2,
@@ -7384,10 +7388,11 @@
     "fable / strategist": 1,
     "gpt-5 / designer": 1,
     "gpt-5.6-sol / auditor": 1,
+    "gpt-5.6-sol / author": 1,
     "gpt-5.6-sol / designer": 6,
-    "gpt-5.6-sol / prover": 78,
+    "gpt-5.6-sol / prover": 80,
     "gpt-5.6-sol / transcription-auditor": 1,
-    "gpt-5.6-sol / verifier": 92,
+    "gpt-5.6-sol / verifier": 94,
     "opus / auditor": 1,
     "opus / author": 5,
     "opus / prover": 11,
@@ -7401,13 +7406,13 @@
    }
   },
   "git": {
-   "active_days": 27,
+   "active_days": 28,
    "authors": {
-    "tobiasosborne": 1200
+    "tobiasosborne": 1208
    },
-   "commits": 1200,
+   "commits": 1208,
    "first_day": "2026-07-02",
-   "last_day": "2026-08-08",
+   "last_day": "2026-08-09",
    "per_day": {
     "2026-07-02": 46,
     "2026-07-03": 53,
@@ -7435,7 +7440,8 @@
     "2026-08-03": 16,
     "2026-08-04": 2,
     "2026-08-05": 28,
-    "2026-08-08": 58
+    "2026-08-08": 58,
+    "2026-08-09": 8
    },
    "subject_prefixes": {
     "W61": 13,
@@ -7446,7 +7452,7 @@
     "W97": 10,
     "af": 100,
     "beads": 8,
-    "fr": 19,
+    "fr": 20,
     "fr dispatch": 9,
     "fr log": 107,
     "fr orient": 73,
@@ -7510,7 +7516,7 @@
    ],
    "frontier": "Carry the Route-F chain ABOVE the now-complete MAIN subtree to T0 (M01-M28 all af-validated; lem-thmainext-conditional deps rewired onto M28 per the ratified v5 step-15): the decoupled campaigns — 14-row ledger, k-ledger, F0-assembly — then the thmainext elevation and the root rewire LAST.",
    "goal": "Prove op-classical: universal eta0,C>0 (dimension-free) such that every row-stochastic Q with ||Q^2-Q||_{inf->inf} <= eta <= eta0 admits a stochastic idempotent E with ||Q-E||_{inf->inf} <= C*sqrt(eta) (sharp exponent 1/2).",
-   "verdict_files": 179
+   "verdict_files": 180
   },
   "refs": {
    "locked_files": 23,
@@ -7531,8 +7537,8 @@
   "registry": {
    "af": {
     "none": 163,
-    "seeded": 12,
-    "validated": 199
+    "seeded": 11,
+    "validated": 200
    },
    "kind": {
     "corollary": 3,
@@ -7550,13 +7556,14 @@
     "numerical": 2,
     "obstruction": 1,
     "open": 2,
-    "proved": 312,
+    "proved": 313,
     "proved-mod-audit": 17,
-    "stated": 4
+    "stated": 3
    },
    "validated_ids": [
     "conj-extcb",
     "conj-hcb",
+    "cor-classical-sharpness",
     "cor-kitaev-diagonal-cpization",
     "lem-always-tight-dual-support",
     "lem-classical-equiv",
@@ -7757,14 +7764,14 @@
    ]
   },
   "report": {
-   "anchored_after_sync": 163,
-   "anchored_before_sync": 71,
-   "backlog_after_at_dispatch": 34,
-   "backlog_after_sync": 36,
-   "backlog_before_at_dispatch": 126,
-   "backlog_before_sync": 128,
+   "anchored_after_sync": 167,
+   "anchored_before_sync": 75,
+   "backlog_after_at_dispatch": 30,
+   "backlog_after_sync": 33,
+   "backlog_before_at_dispatch": 122,
+   "backlog_before_sync": 125,
    "current_registry": 374,
-   "current_t0": 199,
+   "current_t0": 200,
    "dispatch_registry": 374,
    "dispatch_t0": 197,
    "newly_anchored_by_sync": 92,
@@ -7862,7 +7869,7 @@
     "lem-topology-quotient-manifold",
     "op-classical"
    ],
-   "sync_controller_declared_t0": 92,
+   "sync_controller_declared_t0": null,
    "sync_controller_note_present": true,
    "sync_range": [
     52,
@@ -7917,9 +7924,6 @@
     "lem-negpart-subadditive",
     "lem-parametric-halo-collapse",
     "lem-pivot-removing-move",
-    "lem-prh-sharpness",
-    "lem-prh-sharpness-family-arithmetic",
-    "lem-prh-sharpness-row-coincidence",
     "lem-residual-lower",
     "lem-residual-upper",
     "lem-row-far-dual-certificate",
@@ -7986,19 +7990,19 @@
    "gate_lines": 1999,
    "gate_scripts": 7,
    "script_files": 31,
-   "script_lines": 10611,
+   "script_lines": 10612,
    "test_files": 8,
    "test_lines": 1705
   },
   "worklog": {
-   "entries": 86,
+   "entries": 87,
    "first_date": "2026-06-11",
-   "last_date": "2026-08-08",
-   "lines": 2519,
-   "max_session": 45,
-   "max_wave": 139,
-   "sessions_named": 42,
-   "wave_labels": 84
+   "last_date": "2026-08-09",
+   "lines": 2574,
+   "max_session": 46,
+   "max_wave": 140,
+   "sessions_named": 43,
+   "wave_labels": 85
   }
  }
 }
