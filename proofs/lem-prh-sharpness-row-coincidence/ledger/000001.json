@@ -1,0 +1,1 @@
+{"type":"proof_initialized","timestamp":"2026-08-09T06:55:48.86805827Z","conjecture":"Row coincidence for stochastic idempotents: for every integer n \u003e= 1, every n-by-n row-stochastic idempotent matrix F=(f_ab) over R, and all i,j in {1,...,n}, if f_ii\u003e0 and f_ij\u003e0 then row_i(F)=row_j(F).","author":"orchestrator"}

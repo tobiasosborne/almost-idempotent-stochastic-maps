@@ -1,0 +1,8 @@
+{
+  "id": "b2b9be80b16e1c5d",
+  "name": "lem-prh-sharpness-row-coincidence",
+  "source": "imports validated registry lemma proofs/lem-prh-sharpness-row-coincidence — Row coincidence for stochastic idempotents: for every integer n \u003e= 1, every n-by-n row-stochastic idempotent matrix F=(f_ab) over R, and all i,j in {1,...,n}, if f_ii\u003e0 and f_ij\u003e0 then row_i(F)=row_j(F).",
+  "content_hash": "71f9d8bd509b1d6519ddefb58ab24e9678664ea1f3c6e4bbc338d2476242c322",
+  "created": "2026-08-09T07:18:00.29864237Z",
+  "notes": ""
+}

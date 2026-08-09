@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{PRH square-root sharpness: for every 0 < lambda < 1/2 the...}
+\step{1} PRH square-root sharpness: for every 0 < lambda < 1/2 there are positive unital maps A:l-infinity(2)->l-infinity(4) and M:l-infinity(4)->l-infinity(2) with epsilon\_lambda=||MA-I\_2|$|\_\{infinity-\rangle$infinity\}=2*lambda\textasciicircum{}2 tending to 0 such that every stochastic idempotent F on l-infinity(4) satisfies ||AM-F|$|\_\{infinity-\rangle$infinity\} >= lambda=sqrt(epsilon\_lambda/2); hence the sqrt(epsilon) order in PRH is intrinsically sharp. \steptag{validated} \\[6pt]
+\step{1.1} For each real lambda with 0 < lambda < 1/2, take the explicit matrices A\_lambda and M\_lambda from lem-prh-sharpness-family-arithmetic. They are positive unital maps of the required types, epsilon\_lambda=||M\_lambda A\_lambda-I\_2|$|\_\{infinity-\rangle$infinity\}=2*lambda\textasciicircum{}2 tends to 0, and P\_lambda=A\_lambda M\_lambda has the stated rows with ||row\_1(P\_lambda)-row\_3(P\_lambda)||\_1=2*lambda. \steptag{validated} \\[6pt]
+\step{1.1.1} By lem-prh-sharpness-family-arithmetic, for 0 < lambda < 1/2 the matrix A\_lambda with rows (1,0), (0,1), (1-lambda,lambda), (lambda,1-lambda) and the matrix M\_lambda with rows (1-lambda,0,lambda,0), (0,1-lambda,0,lambda) have nonnegative entries and probability-vector rows; hence they represent positive unital maps A\_lambda:l-infinity(2)->l-infinity(4) and M\_lambda:l-infinity(4)->l-infinity(2). \steptag{validated} \\[4pt]
+\step{1.1.2} By lem-prh-sharpness-family-arithmetic, M\_lambda A\_lambda has rows (1-lambda\textasciicircum{}2,lambda\textasciicircum{}2) and (lambda\textasciicircum{}2,1-lambda\textasciicircum{}2); using its induced l-infinity norm formula gives epsilon\_lambda=||M\_lambda A\_lambda-I\_2|$|\_\{infinity-\rangle$infinity\}=2*lambda\textasciicircum{}2, and this tends to 0 as lambda tends to 0. \steptag{validated} \\[4pt]
+\step{1.1.3} By lem-prh-sharpness-family-arithmetic, P\_lambda=A\_lambda M\_lambda is row-stochastic with rows (1-lambda,0,lambda,0), (0,1-lambda,0,lambda), ((1-lambda)\textasciicircum{}2,lambda*(1-lambda),lambda*(1-lambda),lambda\textasciicircum{}2), and (lambda*(1-lambda),(1-lambda)\textasciicircum{}2,lambda\textasciicircum{}2,lambda*(1-lambda)), and ||row\_1(P\_lambda)-row\_3(P\_lambda)||\_1=2*lambda. \steptag{validated} \\[4pt]
+\step{1.2} For each real lambda with 0 < lambda < 1/2, for the explicit A\_lambda,M\_lambda and P\_lambda=A\_lambda M\_lambda of lem-prh-sharpness-family-arithmetic, every 4-by-4 stochastic idempotent F satisfies ||P\_lambda-F|$|\_\{infinity-\rangle$infinity\} >= lambda. \steptag{validated} \\[6pt]
+\step{1.2.1} Let 0 < lambda < 1/2 and let F=(f\_ab) be a 4-by-4 stochastic idempotent with ||P\_lambda-F|$|\_\{infinity-\rangle$infinity\}<lambda. The norm formula and row\_1(P\_lambda)=(1-lambda,0,lambda,0) from lem-prh-sharpness-family-arithmetic give |f\_11-(1-lambda)|<lambda and |f\_13-lambda|<lambda. Therefore f\_11>1-2*lambda>0 and f\_13>0. \steptag{validated} \\[4pt]
+\step{1.2.2} For any 4-by-4 stochastic idempotent F=(f\_ab), if f\_11>0 and f\_13>0, then lem-prh-sharpness-row-coincidence applied with i=1 and j=3 gives row\_1(F)=row\_3(F). \steptag{validated} \\[4pt]
+\step{1.2.3} Let 0 < lambda < 1/2 and let F be a 4-by-4 matrix. If ||P\_lambda-F|$|\_\{infinity-\rangle$infinity\}<lambda and row\_1(F)=row\_3(F), then the norm formula from lem-prh-sharpness-family-arithmetic gives ||row\_1(P\_lambda)-row\_1(F)||\_1<lambda and ||row\_3(F)-row\_3(P\_lambda)||\_1<lambda. The l1 triangle inequality then gives ||row\_1(P\_lambda)-row\_3(P\_lambda)||\_1<2*lambda, contradicting the equality ||row\_1(P\_lambda)-row\_3(P\_lambda)||\_1=2*lambda from lem-prh-sharpness-family-arithmetic. \steptag{validated} \\[4pt]
+\step{1.3} Scalar sharpness conclusion: if epsilon\_lambda=2*lambda\textasciicircum{}2 tends to 0 and every stochastic-idempotent approximation to P\_lambda has error at least lambda, then lambda=sqrt(epsilon\_lambda/2), so the family has a fixed positive multiple of sqrt(epsilon\_lambda) as an unavoidable error and no uniformly better exponent beta>1/2 is possible. \steptag{validated} \\[6pt]
+\step{1.3.1} For lambda>0 and epsilon\_lambda=2*lambda\textasciicircum{}2, epsilon\_lambda/2=lambda\textasciicircum{}2 and the nonnegative square root is lambda; equivalently lambda=(1/sqrt(2))*sqrt(epsilon\_lambda). \steptag{validated} \\[4pt]
+\step{1.3.2} If epsilon\_lambda tends to 0 and every stochastic-idempotent approximation error is at least (1/sqrt(2))*sqrt(epsilon\_lambda), then for every beta>1/2 and every fixed C>0 the ratio of this lower bound to C*epsilon\_lambda\textasciicircum{}beta is (1/(C*sqrt(2)))*epsilon\_lambda\textasciicircum{}(1/2-beta), which tends to infinity. Thus no uniform O(epsilon\textasciicircum{}beta) bound with beta>1/2 can hold on this family, establishing intrinsic square-root-order sharpness. \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

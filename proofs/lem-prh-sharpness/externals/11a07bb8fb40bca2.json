@@ -1,0 +1,8 @@
+{
+  "id": "11a07bb8fb40bca2",
+  "name": "lem-prh-sharpness-family-arithmetic",
+  "source": "imports validated registry lemma proofs/lem-prh-sharpness-family-arithmetic — Witness arithmetic for PRH sharpness: for every real lambda with 0 \u003c lambda \u003c 1/2, let A_lambda in R^(4x2) have rows (1,0), (0,1), (1-lambda,lambda), (lambda,1-lambda), and let M_lambda in R^(2x4) have rows (1-lambda,0,lambda,0), (0,1-lambda,0,lambda); A_lambda and M_lambda have nonnegative entries and probability-vector rows and hence represent positive unital maps A_lambda:l-infinity(2)-\u003el-infinity(4) and M_lambda:l-infinity(4)-\u003el-infinity(2); for every pair of integers r,s \u003e= 1 and every B in R^(r x s), the induced l-infinity operator norm is ||B||_{infinity-\u003einfinity}=max_{1\u003c=i\u003c=r} sum_{j=1}^s |B_ij|; M_lambda A_lambda has rows (1-lambda^2,lambda^2), (lambda^2,1-lambda^2), so epsilon_lambda:=||M_lambda A_lambda-I_2||_{infinity-\u003einfinity}=2*lambda^2 and epsilon_lambda tends to 0 as lambda tends to 0; and P_lambda:=A_lambda M_lambda is row-stochastic with rows (1-lambda,0,lambda,0), (0,1-lambda,0,lambda), ((1-lambda)^2,lambda*(1-lambda),lambda*(1-lambda),lambda^2), (lambda*(1-lambda),(1-lambda)^2,lambda^2,lambda*(1-lambda)), and ||row_1(P_lambda)-row_3(P_lambda)||_1=2*lambda.",
+  "content_hash": "405f3ced8a64826d1639cee17d03cc4ea18abb0a59bcbb4c95900d0c8d3ff867",
+  "created": "2026-08-09T07:18:00.292638209Z",
+  "notes": ""
+}

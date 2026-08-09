@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\newcommand{\step}[1]{\par\noindent\hangindent=3.5em\hangafter=1%
+  \makebox[3.5em][l]{\textbf{#1.}}}
+\newcommand{\steptag}[1]{\hfill{\small\textsf{[#1]}}}
+
+\newtcolorbox{proofbox}[1]{
+  colback=gray!5, colframe=gray!60,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  left=4pt, right=4pt, top=4pt, bottom=4pt,
+  before skip=10pt, after skip=10pt
+}
+
+\begin{document}
+
+\begin{proofbox}{Row coincidence for stochastic idempotents: for every int...}
+\step{1} Row coincidence for stochastic idempotents: for every integer n >= 1, every n-by-n row-stochastic idempotent matrix F=(f\_ab) over R, and all i,j in \{1,...,n\}, if f\_ii>0 and f\_ij>0 then row\_i(F)=row\_j(F). \steptag{validated} \\[6pt]
+\step{1.1} Under the hypotheses of node 1, set p=row\_i(F), S=\{a in \{1,...,n\}: p\_a>0\}, and give S the directed edges a->b exactly when f\_ab>0. Then S is nonempty and closed under F, the restriction G=(f\_ab)\_\{a,b in S\} is row-stochastic, and the directed graph of G is strongly connected. \steptag{validated} \\[6pt]
+\step{1.1.1} Because F is row-stochastic, p=row\_i(F) is a nonnegative probability row. Idempotence gives pF=row\_i(F)F=row\_i(F\textasciicircum{}2)=row\_i(F)=p. Also p\_i=f\_ii>0, so i belongs to S and S is nonempty. \steptag{validated} \\[4pt]
+\step{1.1.2} For b not in S, 0=p\_b=(pF)\_b=sum\_\{a=1\}\textasciicircum{}n p\_a f\_ab. Every summand is nonnegative, so f\_ab=0 for every a in S. Thus every row indexed by S is supported on S; its entries over S still sum to 1, so G is row-stochastic. \steptag{validated} \\[4pt]
+\step{1.1.3} Finite support-component lemma: if a finite row-stochastic matrix G has a stationary probability p that is strictly positive at every vertex, then no positive-entry edge joins two distinct strongly connected components. Indeed, if the condensation DAG had an edge, choose a source component C in a nontrivial weak component. It has no incoming edge and has an outgoing edge. Stationarity and absence of incoming edges give p(C)=sum\_\{a in C\} p\_a G(a,C), while the outgoing edge makes G(a,C)<1 for at least one a in C; strict positivity of p makes the displayed right side strictly less than p(C), a contradiction. \steptag{validated} \\[4pt]
+\step{1.1.4} For every a in S, f\_ia=p\_a>0, so the support graph contains the edge i->a. By node 1.1.3 no such edge can join distinct strongly connected components. Hence every a in S is in the component of i, so the support graph is strongly connected; together with nodes 1.1.1 and 1.1.2 this proves node 1.1. \steptag{validated} \\[6pt]
+\step{1.1.4.1} By nodes 1.1.1 and 1.1.2, p is stationary for F, S is nonempty with i in S, S is closed, and G is row-stochastic. By the definition S=\{a:p\_a>0\}, p is zero off S and p\_S is strictly positive; for every b in S, (p\_S G)\_b=sum\_\{a in S\}p\_a f\_ab=sum\_\{a=1\}\textasciicircum{}n p\_a f\_ab=(pF)\_b=p\_b, so p\_S is a stationary probability for G. Therefore node 1.1.3 applies and every positive-entry edge of G has both endpoints in the same strongly connected component. \steptag{validated} \\[4pt]
+\step{1.1.4.2} For each a in S, node 1.1.1 gives i in S and g\_ia=f\_ia=p\_a>0, hence G has the edge i->a. By the preceding child, i and a lie in the same strongly connected component. Since a was arbitrary, every vertex of S lies in the component of i, so the graph of G is strongly connected. Together with the nonemptiness, closure, and row-stochasticity supplied by nodes 1.1.1 and 1.1.2, this proves node 1.1 and hence the statement of node 1.1.4. \steptag{validated} \\[4pt]
+\step{1.2} Under the hypotheses of node 1 and with p,S,G as in node 1.1, set q=row\_j(F). Then j is in S, q is supported on S, and the restriction q\_S is a stationary probability row for G. \steptag{validated} \\[6pt]
+\step{1.2.1} Since p=row\_i(F), the hypothesis f\_ij>0 says p\_j>0, hence j is in S. Since F is row-stochastic, q=row\_j(F) is a nonnegative probability row. \steptag{validated} \\[4pt]
+\step{1.2.2} Because j is in S and S is closed under F by node 1.1, f\_jb=0 for every b outside S. Hence q is supported on S. \steptag{validated} \\[4pt]
+\step{1.2.3} Idempotence gives qF=row\_j(F)F=row\_j(F\textasciicircum{}2)=row\_j(F)=q. Using the support of q and the closure of S, restriction to S gives q\_S G=q\_S; thus q\_S is a stationary probability row for G. \steptag{validated} \\[6pt]
+\step{1.2.3.1} Under the hypotheses of node 1, q=row\_j(F) and F\textasciicircum{}2=F imply qF=row\_j(F)F=row\_j(F\textasciicircum{}2)=row\_j(F)=q. \steptag{validated} \\[4pt]
+\step{1.2.3.2} By node 1.1.2, G=(f\_ab)\_\{a,b in S\} is row-stochastic, and by node 1.2.2, q\_a=0 for every a outside S. Hence for each b in S, (q\_S G)\_b=sum\_\{a in S\} q\_a f\_ab=sum\_\{a=1\}\textasciicircum{}n q\_a f\_ab=(qF)\_b=q\_b=(q\_S)\_b, where the penultimate equality uses node 1.2.3.1. Therefore q\_S G=q\_S. \steptag{validated} \\[4pt]
+\step{1.2.3.3} By node 1.2.1, q is nonnegative and sum\_\{a=1\}\textasciicircum{}n q\_a=1; by node 1.2.2 it vanishes outside S. Thus q\_S is nonnegative and sum\_\{a in S\} q\_a=1. Together with row-stochasticity of G from node 1.1.2 and q\_S G=q\_S from node 1.2.3.2, this says exactly that q\_S is a stationary probability row for G. \steptag{validated} \\[4pt]
+\step{1.3} For every finite row-stochastic matrix G whose positive-entry directed graph is strongly connected, any two stationary probability rows p and q with p positive in every coordinate are equal. Applying this to the p and q of nodes 1.1 and 1.2 yields row\_i(F)=row\_j(F). \steptag{validated} \\[6pt]
+\step{1.3.1} Let G be a finite row-stochastic matrix with strongly connected positive-entry graph. Every nonzero nonnegative stationary row r for G is strictly positive: its support T is nonempty, and r\_b=sum\_a r\_a g\_ab implies that every positive edge from a vertex of T ends in T. Thus T is successor-closed; strong connectivity forces T to be the whole vertex set. \steptag{validated} \\[4pt]
+\step{1.3.2} Let p and q be stationary probability rows for such a G, with p\_a>0 everywhere, and set c=min\_a(q\_a/p\_a). Then 0<=c<=1, r=q-cp is nonnegative and stationary, and r has a zero coordinate. If c<1, then sum\_a r\_a=1-c>0, so node 1.3.1 says r is strictly positive, contradicting its zero coordinate. Hence c=1, and r=q-p is nonnegative with coordinate sum zero, so q=p. \steptag{validated} \\[4pt]
+\step{1.3.3} For nodes 1.1 and 1.2, G is finite, row-stochastic, and strongly connected; p\_S is a strictly positive stationary probability row and q\_S is a stationary probability row. Node 1.3.2 gives q\_S=p\_S. Both full rows q and p vanish outside S, so q=p, namely row\_j(F)=row\_i(F). \steptag{validated} \\[4pt]
+\end{proofbox}
+
+\end{document}

@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-prh-sharpness/export.md",
+  "oracle": "af-lem-prh-sharpness",
+  "result": "pass",
+  "claim_hash": "a9f6ed2ede12397f1974b3e071d9f53d624c0fd29b42a8b42adbf21aa54b432b",
+  "oracle_digest": "123da6d70599cb2fcdfecd69bf192867a9976aa1d9b1f98a3d61b0dab8e08a4e",
+  "inputs_hash": "d7c82b340c93d18a7f1e0b9bed10c8fe5f03951c8390c06862f639135b3e08b6",
+  "ts": "2026-08-09T07:28:47.107Z"
+}

@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-prh-sharpness-row-coincidence/export.md",
+  "oracle": "af-lem-prh-sharpness-row-coincidence",
+  "result": "pass",
+  "claim_hash": "0259ec2680635ff0174a662630a0f2a1f39846d10bfc81757fb4fcaa6866c3f2",
+  "oracle_digest": "34180d23fcec8a0666336ba198a8d924cac9ab03acf05b158e478a4b8a879158",
+  "inputs_hash": "c854ed62c2047fd9aa83c99d1634155a8de147c923451a4f49c3084d1b1210e3",
+  "ts": "2026-08-09T07:16:30.807Z"
+}

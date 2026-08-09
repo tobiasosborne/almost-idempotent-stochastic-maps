@@ -1,0 +1,9 @@
+{
+  "claim": "proofs/lem-prh-sharpness-family-arithmetic/export.md",
+  "oracle": "af-lem-prh-sharpness-family-arithmetic",
+  "result": "pass",
+  "claim_hash": "3d74021a192e27e7883dc7231d9578b6602d6f5f166fd0dfab4ea3128a24f683",
+  "oracle_digest": "8e2778a03699d3be2de309657d886405dcb6a8345887a82cb12df03525fc3fca",
+  "inputs_hash": "14c0a3fdd8f47f4eeee94eddc55ec6f47d2ca29a6320a6e1f3024a9b54787e67",
+  "ts": "2026-08-09T06:53:43.987Z"
+}

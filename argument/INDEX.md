@@ -42,7 +42,7 @@
 | `conj-w72-poti0-root-selection-exchange-ledger` | lemma | proved-mod-audit | none | B | Within the literal W72 POTI-0 hypothesis block of conj-dtr-zero-oriented-surplus… |
 | `conj-w72-poti0-routine-conditional-assembly` | lemma | proved-mod-audit | none | B | Assume conj-w72-poti0-root-dilution-selected-support-exchange and conj-w72-poti0… |
 | `conj-zero-face-elimination` | lemma | conjecture | none | A | (CONJECTURE) Tall-cluster zero-face elimination: there exist universal constants… |
-| `cor-classical-sharpness` | corollary | stated | none | A | Classical square-root sharpness: for every 0 < lambda < 1/2, choose positive uni… |
+| `cor-classical-sharpness` | corollary | stated | seeded | A | Classical square-root sharpness: for every 0 < lambda < 1/2, choose positive uni… |
 | `cor-kitaev-diagonal-cpization` | corollary | proved | validated | B | Entrywise CP-ization from the repaired diagonal: for the finite phase-balanced d… |
 | `cor-rank-two-visible` | corollary | proved | none | A | Rank-two visibility: every exact signed idempotent P with rank(P) <= 2 and delta… |
 | `ex-hume` | obstruction | disproved | none | A | Disproved historical 3x3-family proposition: for every real s with 0<s<1, set v_… |
@@ -223,9 +223,9 @@
 | `lem-positive-exposedness-margin` | lemma | proved | none | A | Positive exposedness margin: for an exact signed idempotent P with rho = 4*tau >… |
 | `lem-positive-row-straddle-gamma-lower` | lemma | proved | none | A | Positive-row straddle Gamma lower bound: for an exact signed idempotent P, a vec… |
 | `lem-prh` | lemma | proved | validated | A | Positive-retract hardening (PRH): let k,n >= 1 and let A:l-infinity(k)->l-infini… |
-| `lem-prh-sharpness` | lemma | proved-mod-audit | seeded | A | PRH square-root sharpness: for every 0 < lambda < 1/2 there are positive unital … |
-| `lem-prh-sharpness-family-arithmetic` | lemma | stated | seeded | A | Witness arithmetic for PRH sharpness: for every real lambda with 0 < lambda < 1/… |
-| `lem-prh-sharpness-row-coincidence` | lemma | stated | none | A | Row coincidence for stochastic idempotents: for every integer n >= 1, every n-by… |
+| `lem-prh-sharpness` | lemma | proved | validated | A | PRH square-root sharpness: for every 0 < lambda < 1/2 there are positive unital … |
+| `lem-prh-sharpness-family-arithmetic` | lemma | proved | validated | A | Witness arithmetic for PRH sharpness: for every real lambda with 0 < lambda < 1/… |
+| `lem-prh-sharpness-row-coincidence` | lemma | proved | validated | A | Row coincidence for stochastic idempotents: for every integer n >= 1, every n-by… |
 | `lem-psi-corner-trap` | lemma | proved | none | A | Psi normalization and corner trap: for an exact signed idempotent P with 0 < del… |
 | `lem-radial-alpha-bound` | lemma | proved | none | A | Conditional radial alpha bound: for an exact signed idempotent P with delta(P) >… |
 | `lem-radial-horn-partition` | lemma | proved | none | B | 'For every finite nonnegative measure Gamma on pairs of row points, every row po… |
