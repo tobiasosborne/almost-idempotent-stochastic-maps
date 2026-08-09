@@ -1,0 +1,8 @@
+{
+  "id": "bbb2c634fd62eb6b",
+  "name": "lem-prh-sharpness",
+  "source": "imports validated registry lemma proofs/lem-prh-sharpness — PRH square-root sharpness: for every 0 \u003c lambda \u003c 1/2 there are positive unital maps A:l-infinity(2)-\u003el-infinity(4) and M:l-infinity(4)-\u003el-infinity(2) with epsilon_lambda=||MA-I_2||_{infinity-\u003einfinity}=2*lambda^2 tending to 0 such that every stochastic idempotent F on l-infinity(4) satisfies ||AM-F||_{infinity-\u003einfinity} \u003e= lambda=sqrt(epsilon_lambda/2); hence the sqrt(epsilon) order in PRH is intrinsically sharp.",
+  "content_hash": "11326545565e80fffad9bd4d3c20be00398013b94d5c24583f7cd1b1d7953493",
+  "created": "2026-08-09T07:29:52.750432204Z",
+  "notes": ""
+}

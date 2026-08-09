@@ -1066,3 +1066,23 @@ imports a future agent might reach for — read before importing ANY external to
   the challenges are bookkeeping-shaped; (b) tighten the skeleton in a design addendum
   (name the A,M rows AS the definition of the family in node 1, so identification is
   definitional); (c) only if (a)+(b) fail, a further factoring round. Never bump caps.
+
+## 2026-08-09 — cor-classical-sharpness run 1: fourth sharpness-family balloon (26 > cap 20, build-shape, xhigh)
+
+- The corollary's build ballooned at 26 live nodes before any verification (cap 20, xhigh
+  prover — remedy (a) was already in force). Aborted tree:
+  docs/plans/2026-08-08-EXHUME-SHARPNESS/TREE-CORSHARP-ABORTED.md. Family balloon record now
+  27 / 28 / 27 / 26 vs caps 26 / 26 / 26 / 20 (the three prior aborts + this one; the three
+  BANKED runs measured 24 / 19 / 12 live — factored rows land, monoliths and wide-quantifier
+  rows balloon).
+- Classification: NOT a missing byte-matched fact and NOT a genuine gap tell — the overshoot
+  is concentrated in (i) the quantifier-discharge branch (nodes 1.4-1.5, ~10 nodes: the
+  explicit b=(C*2^beta)^(-1/(2*beta-1)) choice, the per-(C,eta_0,beta) counterexample
+  packaging, and the logical-equivalence wrapper for the "no uniform beta>1/2" negation) and
+  (ii) the defect-factorization branch (1.2.x).
+- Remedy options (USER DECISION, in the standing preference order): (b) a skeleton-tightening
+  design addendum (make eta_lambda/Q_lambda definitional in node 1; state the negation clause
+  directly as the per-(C,eta_0,beta) counterexample family, dropping the equivalence wrapper
+  1.5) — fresh hostile audit + ratification, cap unchanged; or (c) factor the quantifier
+  branch into a registry sub-lemma (e.g. lem-classical-sharpness-exponent-negation) — registry
+  change, ratification + provisioning. NEVER bump caps (standing rule).

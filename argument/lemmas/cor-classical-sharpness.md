@@ -5,7 +5,7 @@ contract: Classical square-root sharpness: for every 0 < lambda < 1/2, choose po
 defs: def-positive-approximate-retract; def-stochastic; def-almost-idempotent
 deps: lem-prh-sharpness
 status: stated
-af: none
+af: seeded
 provenance: docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §7 (explicit 4x4 family and lower bound); docs/plans/2026-07-23-W74F-artifacts/VERDICT-W74F-BATCH.md §A (family rechecked); DESIGN-EXHUME-SHARPNESS.md §§4-6 (direct stochastic defect and quantified corollary, pending fresh hostile audit and user ratification)
 owner: A
 workspace: proofs/cor-classical-sharpness
