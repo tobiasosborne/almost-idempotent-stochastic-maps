@@ -109,10 +109,10 @@ the rigorous record.** Nothing is "rigorous" here until it is byte-matched to a 
 - `.frontier/` — the `fr` campaign record (append-only `log.jsonl` + `portfolio.json`).
 - `docs/ingest/` — the ingested classical-portfolio (read-mostly; never cited as rigorous, L1).
 
-## Current state (2026-08-08)
+## Current state (2026-08-09)
 
 **THE NORTH-STAR THEOREM IS DISCHARGED AT THE AF-VALIDATED RUNG.** `op-classical` is
-`proved` / `af: validated` (T0 = 196 of 371 registry results): universal, dimension-free
+`proved` / `af: validated` (T0 = 199 of 374 registry results): universal, dimension-free
 `eta_0 = eta_K > 0` and `C = K + 4*sqrt(2K)` with the `C*sqrt(eta)` conclusion, via
 Route F (F0 diagonal seam → MAIN assembly → the 19-row ledger family → the strengthened
 K-ledger → F2/F3/PRH → F0 assembly → the user-ratified root rewire). Every edge carries a
@@ -120,11 +120,15 @@ fresh-prover / separate-fresh-verifier af tree plus an external oracle gate.
 
 **The honest boundary.** (i) af-validation is L0 rung (b) — not a Lean/mathlib proof
 (the ladder's top rung remains open work). (ii) The discharged contract is the upper
-bound only (the ratified D1 split): **sharpness of the exponent 1/2 rests on `ex-hume`,
-still `proved-mod-audit`** — its af elevation is the natural next rigour target.
-(iii) The legacy signed-geometry route remains a non-rigorous independent alternative.
-Remaining work: `ex-hume` elevation, the report sync (`aism-9kmt`), the standalone paper
-(`paper/main.tex`), and Lean if elevated. See `HANDOFF.md` and `docs/plans/CURRENT.md`.
+bound only (the ratified D1 split). **PRH square-root sharpness is T0**
+(`lem-prh-sharpness` + two sub-lemmas, 2026-08-09; `ex-hume` was retracted `disproved`),
+but the classical-picture carrier `cor-classical-sharpness` is still `stated` — its
+elevation ballooned and the remedy awaits user ratification; signed-parameter (δ)
+sharpness has NO rigorous carrier. (iii) The legacy signed-geometry route remains a
+non-rigorous independent alternative. Remaining work: the `cor-classical-sharpness`
+remedy + bank, Stage D closure, the standalone paper (`paper/main.tex`), and Lean if
+elevated. The report sync (`aism-9kmt`) landed 2026-08-09 (92 results anchored,
+shards 52–72). See `HANDOFF.md` and `docs/plans/CURRENT.md`.
 
 ## Escalation (stop and ask the user)
 

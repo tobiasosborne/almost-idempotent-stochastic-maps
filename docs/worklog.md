@@ -2517,3 +2517,58 @@ folded in; T0 169; registry 364.
   sketch v51 + CURRENT, gates green, pushed.
 - T0 = 196 (unchanged since the root discharge). Registry = 374.
   op-classical proved/validated; sharpness NOT yet T0; no Lean proof.
+
+## 2026-08-09 — Session 46: W139 stages 1-3 T0 (196 → 199); W140 report sync (92 anchors); stage-4 balloon escalated
+
+Continuation of W139 under the user's codex-quota green-light ("use codex for
+both verifier and prover"), plus two user-directed report waves.
+
+- **W139 stage 1 BANKED** (`lem-prh-sharpness-family-arithmetic`, T0 197):
+  run 2 under FINDINGS remedy (a) — fresh xhigh prover, cap 26 unchanged —
+  24/24 clean after a verify-phase resume (orchestrator RECOMMEND; run 1 of
+  the resume hit max-rounds converging). Both predicted challenge classes
+  (strict-vs-weak norm chain incl. R=0; cross-sibling row identification)
+  raised by verifiers and repaired in-tree.
+- **W139 stage 2 BANKED** (`lem-prh-sharpness-row-coincidence`, T0 198):
+  19/19 clean, cap 22 (run 1 + verify resume). One protocol self-correction:
+  initially launched at 8 rounds, killed pre-ledger and relaunched at the
+  ratified 5.
+- **W139 stage 3 BANKED** (`lem-prh-sharpness`, T0 199): the sect-5.3 clean
+  re-seed (stale pre-ratification workspace deleted; both T0 sub-lemma
+  externals byte-verbatim) validated FIRST-PASS 12/12, cap 18, zero
+  challenges — the twice-ballooned monolith closes at 12 nodes once
+  factored. PRH square-root sharpness is now T0.
+- **W139 stage 4 BALLOON** (`cor-classical-sharpness` run 1): 26 live >
+  cap 20 at BUILD (fourth family balloon, 27/28/27/26). Classified
+  build-shape (quantifier-discharge branch + defect factorization); tree
+  preserved (TREE-CORSHARP-ABORTED.md), FINDINGS entry, cap not bumped;
+  remedy (b) skeleton addendum vs (c) quantifier-branch factoring
+  ESCALATED for user ratification.
+- **W140 (user-directed): the lab-book back-fill.** 92 af-validated
+  results with no paper-track prose anchored as shards 52-72 (MAIN 37,
+  S1-ENDGAME 13, GAP-EA 2, topology 7, Stage-1 quotient 5, Route-F
+  families 19, K-ledger/F0/thmainext 6, Kitaev pair 2, op-classical root).
+  Pipeline: 21 fresh codex authors → mechanical byte-verbatim contract
+  validation → wiring (PROVENANCE +94 claim rows +184 hashed source rows;
+  UNWIRED −92) → 4-batch fresh-codex hostile faithfulness audit → 26
+  findings (incl. contract-strengthening drifts in typeset statements —
+  the exact cardinal-sin class) → fixer applied all 26 verbatim →
+  fresh-verifier re-audit 10/10 LAND. **Process catch:** the FIRST audit
+  pass was VACUOUS (empty shard-list substitution; caught via the missing
+  per-shard verdicts and the 4-minute runtime) and re-run in full —
+  recorded in docs/plans/2026-08-09-W140-REPORT-SYNC/.
+- **W140 addendum (user-directed): statistics reanalysis.** A dedicated
+  xhigh codex analyst rebuilt scripts/gen-report-stats.py into a
+  retraction-aware, artifact-counted post-discharge census (validation
+  timeline incl. the discharge event and the 4 T0 drops/9 restorations,
+  normalized fr outcome census, 24 abort/stop records incl. the sharpness
+  balloons, W140 backlog reduction 126 → 34 dispatch-time). Independent
+  codex review of the diff dispatched before commit.
+- Incidents recorded honestly: one codex capacity-outage worker death
+  (shard 69, retried clean); the vacuous audit pass; the 8-round
+  mislaunch. Zero unsound claims banked; every balloon aborted at cap.
+
+**Critical path for session 47:** user remedy decision ((b) vs (c)) →
+bank cor-classical-sharpness → Stage D closure (report sharpness
+subsection, paper sect-5 switch, deferred citation halves) → paper polish
+(aism-aywn) → Lean only on elevation.
