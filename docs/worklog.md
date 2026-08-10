@@ -2606,3 +2606,39 @@ subsection, paper sect-5 switch, deferred citation halves) → paper polish
 **State at close: both halves of op-classical are af-validated. Remaining
 rigour surface: paper polish (aism-aywn), Lean only on user elevation,
 and the optional legacy-chain bridge (user portfolio decision).**
+
+## 2026-08-10 — Session 47: GOAL PIVOT to shareability; whole-repo state survey (9 subagents)
+
+- **User directive: the next sessions bring the repo to a shareable,
+  well-documented state.** The mathematical campaign is parked (paper
+  polish `aism-aywn` + Lean/legacy remain user-elevation-only). New P1
+  epic: **`aism-xvcq`** (shareability & documentation campaign).
+- Ran a 9-way parallel sonnet subagent survey — one surveyor per area
+  (root docs / definitions / argument / proofs / report+paper / runs /
+  refs+ingest / scripts+infra / docs history), read-only; `check-all.sh`
+  independently re-verified green (~9.5s).
+- **Headline finding: content healthy, front door broken.** README.md
+  (frozen 2026-07-07) still says the theorem is UNSOLVED and never
+  points at paper/report. Full ranked defect list + asset inventory
+  synthesized into HANDOFF.md (the canonical record of the survey —
+  the subagent reports themselves live only in the session transcript).
+  Top items: stale report meta-shards 39–41 + PROVENANCE header count
+  (112 vs T0=200); root INDEX.md manifest stops at W25; data/SCHEMA.md
+  missing 2 CSVs; paper/main.pdf one commit stale; hardcoded
+  `/home/tobias/...` AF fallbacks in 3 scripts + 1 absolute repo path;
+  no setup docs for fr/bd/af/codex; navigation vacuum (no
+  proofs/README, no docs/README, DAG unbrowsable at 374 nodes, 53
+  sketches unindexed, unglossed jargon).
+- Proposed sequencing (recorded in HANDOFF): Phase 1 mechanical hygiene
+  (no user input needed) → Phase 2 audience-tiered docs (mathematician /
+  auditor / process-reader). Three framing questions put to the user
+  (audience+venue; prominence of the retraction/honesty story; stance on
+  unshippable fr/af tooling) — **session ended before answers**; they are
+  parked in HANDOFF § USER DECISION PENDING.
+- No repo content changed besides HANDOFF.md, this worklog entry, and
+  the new bead. fr: two orient entries (no portfolio pull; off-arm
+  meta-work).
+
+**State at close: survey banked in HANDOFF; `aism-xvcq` open; Phase-1
+hygiene is ready to start immediately next session; Phase-2 blocked on
+the three user answers.**
