@@ -156,12 +156,20 @@
     svg.addEventListener("pointerdown", function (ev) {
       drag = { x: ev.clientX, y: ev.clientY, vx: G.view.x, vy: G.view.y, moved: false };
       svg.classList.add("dragging");
-      svg.setPointerCapture(ev.pointerId);
+      /* Capture is deferred until the drag threshold is crossed: capturing on
+         pointerdown retargets the synthesized click to the svg element, so
+         node clicks never reach the #nodes listener (the selection panel bug). */
     });
     svg.addEventListener("pointermove", function (ev) {
       if (!drag) return;
       var dx = ev.clientX - drag.x, dy = ev.clientY - drag.y;
-      if (Math.abs(dx) + Math.abs(dy) > 3) drag.moved = true;
+      if (!drag.moved && Math.abs(dx) + Math.abs(dy) > 3) {
+        drag.moved = true;
+        if (svg.setPointerCapture) {
+          try { svg.setPointerCapture(ev.pointerId); } catch (e) { /* no-op */ }
+        }
+      }
+      if (!drag.moved) return;
       G.view.x = drag.vx + dx;
       G.view.y = drag.vy + dy;
       setView();
