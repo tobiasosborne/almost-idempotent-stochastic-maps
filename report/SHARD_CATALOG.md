@@ -422,7 +422,7 @@ verbatim), and keywords.
 ## `AISM-41-STATUS-OUTLOOK`
 - **File:** `report/sections/41_status_outlook.tex`
 - **Title:** Status and outlook
-- **Summary:** Records what this report validates and where the live route now stops: the T0 MAIN/ledger state and the stated K-ledger/helper/F0 frontier.
+- **Summary:** Records what this report validates: the af-validated T0 spine through the MAIN assembly, the strengthened K-ledger, the F0 assembly, and the discharged root op-classical.
 - **Summary:** Tabulates the validated registry results not reproduced on the live route, with every row traced to the generated argument index.
 - **Keywords:** status, outlook, conj-hcb, conj-extcb, lem-thmainext-conditional, k-ledger frontier, registry index, live route, off-route table
 

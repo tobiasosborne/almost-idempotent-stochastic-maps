@@ -1,15 +1,17 @@
 % SHARD-ID: AISM-41-STATUS-OUTLOOK
 % SHARD-TITLE: Status and outlook
-% SHARD-SUMMARY: Records what this report validates and where the live route now stops: the T0 MAIN/ledger state and the stated K-ledger/helper/F0 frontier.
+% SHARD-SUMMARY: Records what this report validates: the af-validated T0 spine through the MAIN assembly, the strengthened K-ledger, the F0 assembly, and the discharged root op-classical.
 % SHARD-SUMMARY: Tabulates the validated registry results not reproduced on the live route, with every row traced to the generated argument index.
 % SHARD-KEYWORDS: status, outlook, conj-hcb, conj-extcb, lem-thmainext-conditional, k-ledger frontier, registry index, live route, off-route table
 \section{Status and outlook}\label{sec:status-outlook}
 
 \subsection*{What is validated here}
 
-% Count derivation: 47 is the number of explicitly listed reproduced ids below; each has status proved and af validated in the generated registry index.
-The preceding sections reproduce forty-seven registry results, each \texttt{proved} with
-\texttt{af: validated}: the signed--stochastic bridge
+% Count derivation: 167 is the number of af-validated per-claim rows in report/PROVENANCE.md's ledger (169 rows minus the two retracted Stage-1 rows anchored there as conjectures); it equals the 200 rows carrying proved/validated in the generated argument/INDEX.md minus the 33 off-route rows tabulated below. The forty-seven ids listed explicitly are the base tiers and the Route F upstream block; each has status proved and af validated in the generated registry index.
+The preceding sections reproduce one hundred and sixty-seven registry results, each
+\texttt{proved} with \texttt{af: validated}, enumerated one-per-row in the per-claim
+ledger of \texttt{report/PROVENANCE.md}. Forty-seven of them form the base tiers and
+the Route~F upstream block: the signed--stochastic bridge
 \texttt{lem-classical-equiv} (\S\ref{sec:classical-equiv});
 positive-retract hardening \texttt{lem-prh} (\S\ref{sec:prh}); the COMP tier ---
 \texttt{lem-compcb-amplification-naturality},
@@ -63,12 +65,16 @@ and the Route F upstream block ---
 \texttt{lem-routef-ai-defect-linearization} (\S\ref{sec:routef-ai-ledger}),
 \texttt{lem-routef-f2-positive-unital-compression} and
 \texttt{lem-routef-f3-retract-defect} (\S\ref{sec:routef-f2-f3}).
-% Count derivation: 73 is the number of rows with status proved and af validated in the registry-index SNAPSHOT the table below is transcribed from; that snapshot predates the seven Route F upstream rows listed above, which is why 73 - 47 does not equal the 33 tabulated rows.
-The registry-index snapshot from which the table below is transcribed contains \textbf{73}
-results with that status pair.
-% Count derivation: 33 is 73 snapshot rows minus the 40 reproduced ids that were in that snapshot; the seven Route F upstream rows are in neither set.
-It predates the seven Route F upstream rows just listed, none of which appears in it, so the
-set difference is the thirty-three rows tabulated below.
+The remaining one hundred and twenty --- the PRH sharpness family and its classical
+carrier \texttt{cor-classical-sharpness} (\S\ref{sec:prh}), the Stage-1 rectification
+programme and its endgame, the MAIN-CB chain, the Route~F factor and ledger family
+through the strengthened K-ledger and the F0 assembly, the Kitaev diagonal corollary,
+and the root \texttt{op-classical} itself (\S\ref{sec:op-classical-discharge}) --- are
+reproduced in the sections the ledger cites.
+% Count derivation: 200 is the number of rows with status proved and af validated in the generated argument/INDEX.md (count refreshed 2026-08-11); 200 - 167 reproduced = 33 tabulated rows.
+The generated registry index (\texttt{argument/INDEX.md}) contains \textbf{200}
+results with that status pair, so the set difference against the reproduced ids is the
+thirty-three rows tabulated below.
 
 The headline also needs qualifications. The inverse and lower-modulus results
 --- \texttt{lem-hcb3-diagonal-lower-modulus}, \texttt{lem-hcb3-diagonal-inverse},
@@ -96,7 +102,9 @@ iterates it.
 
 Beyond the EXT tier lies the assembly, and the whole cone above it is now rigorous: the
 MAIN-CB assembly rows and \texttt{lem-thmainext-conditional} are \texttt{proved} with
-\texttt{af: validated} (not reproduced here), as are all fifteen original inputs of the
+\texttt{af: validated} (reproduced in
+\S\ref{sec:maincb-raw-call-chain}--\S\ref{sec:maincb-assembly} and
+\S\ref{sec:routef-f0-assembly}), as are all fifteen original inputs of the
 K-ledger factorization --- the formation backbone, ledger rows 1--14 with D2/D3, the two
 row-8 factoring sub-lemmas, the F0 seam pair, F2, F3, and the PRH finish --- and, as of
 2026-08-08, the top of the cone itself: the strengthened \texttt{lem-routef-k-ledger}
@@ -123,9 +131,9 @@ and a separate campaign).
 
 \subsection*{Validated registry results not reproduced here}
 
-The table is the exact set difference between the supplied index rows carrying
-\texttt{proved}/\texttt{validated} and the reproduced ids listed above. Its ordering
-follows the generated index.
+The table is the exact set difference between the generated index rows carrying
+\texttt{proved}/\texttt{validated} and the reproduced ids of the per-claim ledger. Its
+ordering follows the generated index.
 
 \begin{longtable}{@{}p{0.46\textwidth}p{0.20\textwidth}p{0.28\textwidth}@{}}
 \toprule
@@ -169,7 +177,7 @@ Registry id & Status & Note \\
 \end{longtable}
 
 \noindent
-Each id and status pair in the table is transcribed from
-\texttt{repo-inputs/argument-INDEX.md}. In particular, \texttt{conj-extcb} is absent from
+Each id and status pair in the table matches the generated
+\texttt{argument/INDEX.md} (re-verified 2026-08-11). In particular, \texttt{conj-extcb} is absent from
 the table because it is \emph{reproduced} above (\S\ref{sec:extcb}), not because of its
 status: the index records it as \texttt{proved} with \texttt{af: validated}.

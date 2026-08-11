@@ -9,8 +9,9 @@ hashed proof/consensus file. Results original to this project are marked `ORIGIN
 
 Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 
-> **Current report surface.** The section shards reproduce the paper-track subset of the 112
-> `af`-validated registry results (the T0 spine; count refreshed 2026-07-29) as theorem/lemma
+> **Current report surface.** The section shards reproduce the paper-track subset of the 200
+> `af`-validated registry results (the T0 spine; count refreshed 2026-08-11 against the
+> generated `argument/INDEX.md`) as theorem/lemma
 > environments and anchor every remaining registry result in the status ledger. Non-rigorous
 > registry statuses are copied honestly; the ledger rows below are anchors, not promotions.
 
