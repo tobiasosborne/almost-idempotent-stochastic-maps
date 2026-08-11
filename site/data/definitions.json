@@ -1,0 +1,727 @@
+{
+  "definitions": [
+    {
+      "aliases": [
+        "actor hull",
+        "K_T",
+        "K_O",
+        "K_T(u)",
+        "K_O(u)",
+        "always-tight hulls",
+        "disjoint always-tight hulls",
+        "displacement hull"
+      ],
+      "body": "**Statement.** Fix an [[def-signed-idempotent|exact signed idempotent]] $P$ and a\n[[def-exposed|hidden]] geometrically distinct row vertex $u$ with $t^*(u)>0$. Let $T(u)$, $O(u)$,\n$Z(u)$ be the always-tight $\\rho$-far / upper-box / [[def-zero-face|zero-face]] constraint families of\nthe exposedness LP at $u$ ([[lem-always-tight-dual-support]]). The **always-tight hulls** (or *actor\nhulls*) are the displacement convex bodies\n$$K_T(u):=\\operatorname{conv}\\{p_f-p_u:f\\in T(u)\\},\\qquad\n  K_O(u):=t^*(u)\\cdot\\operatorname{conv}\\{p_i-p_u:i\\in O(u)\\}.$$\nThey are **disjoint** when $g:=\\operatorname{dist}_1(K_T(u),K_O(u))>0$ (the huddle / Branch-I\npredicate), and **intersect** otherwise (Branch II, the alpha-free optimal display of\n[[lem-optimal-face-conic-reduction]]). Boundary ownership: tangency / any common point counts as\nintersecting.\n\n**Notes / provenance.** Project-original; \"actor hull\" and \"always-tight hull(s)\" name the same\ndisplacement bodies $K_T,K_O$ built from the actors (far / upper-box rows) the\n[[def-dual-witness|dual witness]] charges. The disjoint-vs-intersect dichotomy on $K_T,K_O$ is the\nroot split $S1$ of the W54 huddle-charge tree. `status: draft` — A+B sign-off pending (Rule 7).\nRelated: [[def-zero-face]], [[def-dual-witness]], [[def-co-top]].",
+      "consensus": "project-original; sign-off pending (Rule 7 lock). First pinned by lem-always-tight-dual-support (the T/O families) + lem-downhill-cotop-conic-mass (the hulls K_T, K_O)",
+      "id": "def-actor-hull",
+      "kind": "original",
+      "locus": "internal; first pinned in argument/lemmas/lem-downhill-cotop-conic-mass.md and lem-always-tight-dual-support.md",
+      "source": "internal",
+      "status": "draft",
+      "term": "always-tight hull"
+    },
+    {
+      "aliases": [
+        "η-idempotent",
+        "eta-idempotent",
+        "almost-idempotent stochastic matrix"
+      ],
+      "body": "**Statement (commutative / stochastic specialization).** A [[def-stochastic|row-stochastic matrix]] $Q$\non $\\ell^\\infty_n$ is *almost idempotent* (with defect $\\eta$) if\n$$\\lVert Q^2-Q\\rVert_{\\infty\\to\\infty}\\le\\eta,\\qquad \\eta\\in[0,\\tfrac14),$$\nwhere $\\lVert\\cdot\\rVert_{\\infty\\to\\infty}$ is the operator norm induced by $\\ell^\\infty_n$ — i.e. the\nmaximum over rows of the $\\ell^1$-norm of the corresponding row of $Q^2-Q$. The range $\\eta<\\tfrac14$ is\nwhat makes the binomial series producing the exact idempotent converge.\n\n**Notes / provenance.** Adopted from `../almost-idempotent-positive-maps/definitions/def-almost-idempotent.md`\n(the operator-norm — *not* cb-norm — formulation, report rem:cb-norm), specialized to the\n$\\lVert\\cdot\\rVert_{\\infty\\to\\infty}$ map norm on stochastic matrices as in\n`classical-portfolio/report/kernel-conjecture.tex` Theorem (chain)(c). Measuring non-idempotence in the\nmap operator norm (rather than the cb-norm) is why the bridge exponent is $\\sqrt\\eta$ rather than $\\eta$.\nThe classical stability question (`op-classical`) asks whether every such $Q$ lies within $C\\sqrt\\eta$\n(max-row-$\\ell^1$) of an exactly idempotent row-stochastic matrix; its parent object is\n[[def-near-positive-projection]]. Distinguish $\\eta$ (this defect) from the\n[[def-negative-mass|negative mass]] $\\delta$ of the associated [[def-signed-idempotent]], with\n$\\delta=O(\\eta)$.",
+      "consensus": "adopted from ../almost-idempotent-positive-maps definitions/def-almost-idempotent.md (operator-norm formulation, report rem:cb-norm); ∞→∞ specialization per kernel-conjecture.tex thm:chain(c)",
+      "id": "def-almost-idempotent",
+      "kind": "consensus",
+      "locus": "adopted from ../almost-idempotent-positive-maps/definitions/def-almost-idempotent.md (stochastic specialization)",
+      "source": "internal",
+      "status": "locked",
+      "term": "almost idempotent"
+    },
+    {
+      "aliases": [
+        "approximate unitaries",
+        "unitary set of an epsilon-C*-algebra"
+      ],
+      "body": "**Statement (vocabulary and reserved notation only).** Let\n$(\\mathcal X,J,\\boldsymbol\\cdot,\\dagger)$ be an exact-unit\n$\\varepsilon$-$C^*$-algebra ([[def-epsilon-cstar-algebra]]). Define:\n\n- $\\mathcal H=\\{X\\in\\mathcal X: X^\\dagger=X\\}$ (Hermitian) and\n  $i\\mathcal H=\\{X\\in\\mathcal X: X^\\dagger=-X\\}$ (anti-Hermitian);\n- $\\overline{\\mathcal U}_\\delta=\\{X\\in\\mathcal X:\\ \\lVert X^\\dagger\\boldsymbol\\cdot X-J\\rVert\\le 2\\delta$\n  and $X$ has a right inverse$\\}$, and $\\mathcal U_\\delta$ the analogous set\n  with the strict inequality $\\lVert X^\\dagger\\boldsymbol\\cdot X-J\\rVert<2\\delta$;\n- the *unitaries* $\\mathcal U=\\overline{\\mathcal U}_0$;\n- $\\mathcal U_e$ = the connected component of $\\mathcal U$ containing $J$,\n  and the scalar action $U\\equiv cU$ for $c\\in U(1)$ on it.\n\nFor a point $V$ for which the left-multiplier $L_V$ is invertible, reserve\nthe *coordinate notation* $\\phi_V(X)=L_V^{-1}\\boldsymbol\\cdot(X-V)$ and its\ncomponents $\\phi_V^{\\parallel}$ (anti-Hermitian part) and $\\phi_V^{\\perp}$\n(Hermitian part). Reserve the symbols $u,h$ (polar inverse components) and\n$\\mu,\\sigma$ (group operations) ONLY as partial notation on domains supplied\nby result rows.\n\n**Notes / provenance.** Vocabulary/typing only — this shard asserts NO\nchart, inverse, estimate, smoothness, compactness, orientation, or isolation\ntheorem (all of those are the contracts of the Stage-1 polar result rows,\n`DESIGN-S1-POLAR-v6.md` §3). Adopted from the local source's approximate-\nunitary discussion with harmonised notation; the source loci are recorded\nabove for orientation, but this is a `consensus` adoption, not a byte-cited\ndefinition. Related: [[def-epsilon-cstar-algebra]],\n[[def-stage1-polar-witness-data]], [[def-h-space-left-inversion]],\n[[def-lefschetz-fixed-point-data]].",
+      "consensus": "user-ratified 2026-07-27 (W79 decision D2, docs/plans/2026-07-27-W78-ratification-package.md; content per DESIGN-S1-POLAR-v6.md sect 8, audited AUDIT-S1-POLAR-v4/v5/v6)",
+      "id": "def-approximate-unitary-space",
+      "kind": "consensus",
+      "locus": "adopted from refs/kitaev-2405.02434 approximate_algebras.tex:692-706 (sets), 845-859 (u,h and group maps), 945 (U_e and the scalar quotient)",
+      "source": "internal",
+      "status": "locked",
+      "term": "approximate unitary space"
+    },
+    {
+      "aliases": [
+        "canonical J maps",
+        "canonical column and row identifications"
+      ],
+      "body": "**Statement.** After identifying the one-dimensional corner\n\\(\\mathcal S_{Q,Q}\\) with \\(\\mathbb C\\) by the normalized vector \\(q_0\\), the\ncanonical column identification is\n\\[\n[J_{P,Q,n}(Z)c]_i=\\sum_j Z_{ij}c_j,\n\\]\nand the canonical row identification is\n\\[\nJ_{Q,P,n}(Z)=J_{P,Q,n}(Z^\\dagger)^\\dagger.\n\\]\n\n**Status.** Draft packaging of notation only; no norm or inverse estimate is\nincluded, and ratification is required before locking.\n\n**Provenance.** Transcribed from `PROOF-W74F-E-HCB.md` §8.1 and the\nprovisioning row of `DESIGN-FUDW-DECOMP-v3.md` §4.1; admitted by\n`VERDICT-FUDW-DECOMP-V3.md` §D.",
+      "consensus": "user-ratified 2026-07-24 (tobiasosborne, in-session sign-off; delegated ratification for consensus/original tiers)",
+      "id": "def-canonical-corner-identifications",
+      "kind": "original",
+      "locus": "PROOF-W74F-E-HCB.md §8.1; DESIGN-FUDW-DECOMP-v3.md §4.1",
+      "source": "internal",
+      "status": "locked",
+      "term": "canonical corner identifications"
+    },
+    {
+      "aliases": [
+        "co-top row",
+        "co-top vertex",
+        "co-top web",
+        "co-top far web",
+        "co-top zero-face mass",
+        "starved set"
+      ],
+      "body": "**Statement.** Fix an [[def-signed-idempotent|exact signed idempotent]] $P$ with nonempty\n[[def-visible-set|visible set]] $\\mathcal W$ and a [[def-height|hidden top vertex]] $v$ of height\n$H$; write $d_j=\\operatorname{dist}_1(p_j,\\operatorname{conv}\\{p_w:w\\in\\mathcal W\\})$,\n$\\tau=\\sqrt{\\delta(P)}$.\n\nA row $f$ is **co-top** (relative to $v$, at slack $c$) if it sits nearly as deep as the top:\n$$d_f\\;>\\;H-c\\,\\tau\\qquad(c>0\\ \\text{a small universal constant, typically }c\\in\\{4,8\\}).$$\nThe **co-top far web** of $v$ is the set of rows that are simultaneously co-top **and** $\\rho$-far\nfrom $v$ ($\\lVert p_f-p_v\\rVert_1\\ge4\\tau$) — the **starved set**\n$\\{j:\\lVert p_j-p_v\\rVert_1\\ge4\\tau,\\ d_j>H-8\\tau\\}$. By [[lem-cotop-witness-pinning]] more than\n$13/16$ of a hidden top's [[def-dual-witness|dual-witness]] $\\lambda$-mass sits in this starved set\n(at $c=4$, $\\delta\\le1/4$), and by [[lem-downhill-cotop-conic-mass]] (disjoint\n[[def-actor-hull|always-tight hulls]]) a definite share of the [[def-zero-face|zero-face]] conic mass\nlands on nonclone, $\\rho$-near, co-top rows.\n\n**Notes / provenance.** Project-original; \"co-top\" names the deep-far actors that a hidden top's dual\nwitness is forced to charge yet its positive coefficient mass need not reach (the dual-required /\nprimal-starved tension at the heart of the huddle charge and [[conj-cotop-web-coupling]]). `status:\ndraft` — A+B sign-off pending (Rule 7). Related: [[def-dual-witness]], [[def-actor-hull]],\n[[def-near-cluster]].",
+      "consensus": "project-original; sign-off pending (Rule 7 lock). First pinned by lem-cotop-witness-pinning + lem-downhill-cotop-conic-mass",
+      "id": "def-co-top",
+      "kind": "original",
+      "locus": "internal; first pinned in argument/lemmas/lem-cotop-witness-pinning.md and lem-downhill-cotop-conic-mass.md",
+      "source": "internal",
+      "status": "draft",
+      "term": "co-top"
+    },
+    {
+      "aliases": [
+        "column-Hilbert corner",
+        "amplified column space"
+      ],
+      "body": "**Byte-verbatim source text.**\n\n```tex\n\\begin{Lemma}\\label{lem_PQ_Hilb}\nLet $P$ and $Q$ be $\\delta$-projections in an $\\eps$-$C^*$ algebra. If $Q$ is one-dimensional, then $\\calS_{P,Q}$ is a Hilbert space with the inner product $\\braket{\\cdot}{\\cdot}$ defined by the equation\n\\begin{equation}\\label{1dQ_ip}\nY^\\dag\\cdot X=\\braket{Y}{X}\\,\\wt{Q}\\qquad (X,Y\\in\\calS_{P,Q}),\n\\end{equation}\nwhere $Y^\\dag\\cdot X=\\Co_{Q}(Y^{\\dag}X)$ and $\\wt{Q}=\\Co_Q(Q)$.\n```\n\n```tex\n\\noindent\\textbf{One-dimensional projections and the corresponding Hilbert spaces.} Lemma~\\ref{lem_PQ_Hilb} says that if $P,Q\\in\\calA$ are $\\delta$-projections and $Q$ is one-dimensional, then the space $\\calS_{P,Q}$ is equipped with the Hermitian inner product given by \\eqref{1dQ_ip}. The extended version of this space, $\\CC^n\\otimes\\calS_{P,Q}=\\Ma{n,1}\\otimes\\calS_{P,Q}$, satisfies essentially the same equation:\n\\begin{equation}\\label{1dQ_ip_ext}\nY^\\dag\\cdot X=\\braket{Y}{X}\\,\\wt{Q}\\qquad (X,Y\\in\\Ma{n,1}\\otimes\\calS_{P,Q}),\n\\end{equation}\nwhere $\\braket{Y}{X}=\\sum_{l}\\braket{[Y]_{l1}}{[X]_{l1}}$.\n```\n\n**Status.** Draft transcription; ratification is required before locking. The\nknown false unsquared display at source lines 1551-1555 is deliberately not\npart of this definition.\n\n**Provenance.** Byte-verbatim from the pinned source at the recorded loci\nand SHA256 prefix; the exclusion is required by `DESIGN-FUDW-DECOMP-v3.md`\n§4.1 and is consistent with `VERDICT-W74F-H-STAGE1.md`.",
+      "consensus": "user-ratified 2026-07-24 (tobiasosborne, in-session sign-off: byte-match-to-source criterion for cited; delegated ratification for consensus/original)",
+      "id": "def-column-hilbert-corner",
+      "kind": "cited",
+      "locus": "approximate_algebras.tex:1123-1128,1546-1550",
+      "source": "kitaev-2405.02434",
+      "status": "locked",
+      "term": "level-one and amplified column-Hilbert corner"
+    },
+    {
+      "aliases": [
+        "rectangular compressed associator"
+      ],
+      "body": "**Statement.** For compatible compressed rectangular products, the\n*compressed associator* is\n\\[\n(A\\mathbin{\\cdot}B)\\mathbin{\\cdot}C\n-A\\mathbin{\\cdot}(B\\mathbin{\\cdot}C).\n\\]\n\n**Status.** Draft project name for the displayed source expression; it\nasserts no estimate and requires ratification before locking.\n\n**Provenance.** Transcribed from `PROOF-W74F-E-HCB.md` §3 and the provisioning\nrow of `DESIGN-FUDW-DECOMP-v3.md` §4.1; admitted by\n`VERDICT-FUDW-DECOMP-V3.md` §D.",
+      "consensus": "user-ratified 2026-07-24 (tobiasosborne, in-session sign-off; delegated ratification for consensus/original tiers)",
+      "id": "def-compressed-associator",
+      "kind": "original",
+      "locus": "PROOF-W74F-E-HCB.md §3; DESIGN-FUDW-DECOMP-v3.md §4.1",
+      "source": "internal",
+      "status": "locked",
+      "term": "compressed associator"
+    },
+    {
+      "aliases": [
+        "compression map",
+        "compressed product",
+        "compressed unit"
+      ],
+      "body": "**Byte-verbatim source text.**\n\n```tex\nTo each pair of projections $(P,Q)$ in a $C^*$ algebra $\\calB$, one assigns the vector space $\\calS_{P,Q}=\\{PXQ:\\,X\\in\\calB\\}$. In this section, we discuss an approximate version of this construction. Recall that a $\\delta$-projection in an $\\eps$-$C^*$ algebra $\\calA$ is a Hermitian element $P$ such that $\\|P^2-P\\|\\le\\delta$. For each pair $(P,Q)$ of $\\delta$-projections, there are two slightly different maps that could be called ``compressions'': $\\La_P\\Ra_Q\\colon X\\mapsto P(XQ)$ and $\\Ra_Q\\La_P\\colon X\\mapsto (PX)Q$. We will use their symmetric combination, $\\frac{1}{2}(\\La_P\\Ra_Q+\\Ra_Q\\La_P)$. It is an $O(\\delta+\\eps)$-idempotent element of the algebra of operators acting on $\\calA$, and therefore, can be approximated by an idempotent using Proposition~\\ref{prop_P}. The \\emph{compression map} thus defined,\n\\begin{equation}\n\\Co_{P,Q}\\colon\\calA\\to\\calA,\\qquad\n\\Co_{P,Q}=\\theta(\\La_P\\Ra_Q+\\Ra_Q\\La_P-1),\n\\end{equation}\nsatisfies the equations\n\\begin{equation}\n\\Co_{P,Q}^2=\\Co_{P,Q},\\qquad\\:\n\\Co_{P,Q}(X)^\\dag=\\Co_{Q,P}(X^\\dag)\\quad\\: (X\\in\\calA),\n\\end{equation}\nand both $\\|\\La_P\\Ra_Q-\\Co_{P,Q}\\|$ and $\\|\\Ra_Q\\La_P-\\Co_{P,Q}\\|$ are bounded by $O(\\delta+\\eps)$. The image of this map, $\\calS_{P,Q}=\\Img\\Co_{P,Q}=\\Ker(1-\\Co_{P,Q})$, is a closed linear subspace of $\\calA$. There is a variant of this construction where only $\\La_P$ or only $\\Ra_Q$ is applied, and one writes $\\Co_{P,1},\\calS_{P,1}$ or $\\Co_{1,Q},\\calS_{1,Q}$, respectively. (This is the same as $\\Co_{P,I}$, etc.\\ if the unit is exact.)\n\nWhen $P=Q$, the abbreviations $\\Co_{P}$, $\\calS_P$ are used.\n```\n\n```tex\nFor any triple $(P,Q,R)$ of $\\delta$-projections, one defines the \\emph{compressed product} between elements of the corresponding subspaces:\n\\begin{equation}\\label{compr_prod}\n(X,Y)\\mapsto X\\cdot Y\\,\\colon\\,\n\\calS_{P,Q}\\times\\calS_{Q,R}\\to \\calS_{P,R},\\qquad X\\cdot Y=\\Co_{P,R}(XY).\n\\end{equation}\nIt is close to the ambient product in $\\calA$, namely, $\\|X\\cdot Y-XY\\|\\le O(\\delta+\\eps)\\|X\\|\\ts\\|Y\\|$. If $P$ is a nonvanishing projection, the compressed product turns the Banach space $\\calS_P$ (which is closed under the involution $X\\mapsto X^\\dag$) into an $O(\\delta+\\eps)$-$C^*$ algebra with unit $\\wt{P}=\\Co_{P}(P)$.\\medskip\n```\n\n**Status.** Draft transcription; ratification is required before locking.\n\n**Provenance.** Byte-verbatim from the pinned source at the recorded loci\nand SHA256 prefix; provisioned by `DESIGN-FUDW-DECOMP-v3.md` §4.1 and admitted\nonly for the safe subset by `VERDICT-FUDW-DECOMP-V3.md` §D.",
+      "consensus": "user-ratified 2026-07-24 (tobiasosborne, in-session sign-off: byte-match-to-source criterion for cited; delegated ratification for consensus/original)",
+      "id": "def-compressed-corner",
+      "kind": "cited",
+      "locus": "approximate_algebras.tex:1054-1066,1077-1082",
+      "source": "kitaev-2405.02434",
+      "status": "locked",
+      "term": "compressed corner"
+    },
+    {
+      "aliases": [
+        "delta-projection",
+        "nonvanishing delta-projection"
+      ],
+      "body": "**Byte-verbatim source text.**\n\n```tex\nA \\emph{projection} in an $\\eps$-$C^*$ algebra $\\calA$ is a Hermitian element $P$ such that $P^2=P$. Such elements are generally hard to come by, see Remark~\\ref{rem_X2}, so will content ourselves with \\emph{$\\delta$-projections} for sufficiently small $\\delta$. They are defined by the conditions\n\\begin{equation}\\label{delta_P}\nP^\\dag=P,\\qquad \\|P^2-P\\|\\le\\delta.\n\\end{equation}\n```\n\n```tex\n\\begin{equation}\\label{P_alternatives}\n\\|P\\|\\le O(\\delta)\\quad \\text{or}\\quad \\bigl|\\|P\\|-1\\bigr|\\le O(\\delta+\\eps).\n\\end{equation}\nA $\\delta$-projection is called \\emph{nonvanishing} if the second alternative holds. If $P$ is a $\\delta$-projection, then $I-P$ is a $\\delta'$-projection, where $\\delta'=\\delta$ if $\\calA$ has exact unit and $\\delta'=\\delta+O(\\eps)$ in general. A $\\delta$-projection $P$ is called \\emph{nontrivial} if both $P$ and $I-P$ are nonvanishing.\n```\n\n**Status.** Draft transcription; ratification is required before locking.\n\n**Provenance.** Byte-verbatim from the pinned source at the recorded loci\nand SHA256 prefix; provisioned by `DESIGN-FUDW-DECOMP-v3.md` §4.1 and admitted\nonly for the safe subset by `VERDICT-FUDW-DECOMP-V3.md` §D.",
+      "consensus": "user-ratified 2026-07-24 (tobiasosborne, in-session sign-off: byte-match-to-source criterion for cited; delegated ratification for consensus/original)",
+      "id": "def-delta-projection",
+      "kind": "cited",
+      "locus": "approximate_algebras.tex:917-920,926-929",
+      "source": "kitaev-2405.02434",
+      "status": "locked",
+      "term": "δ-projection and nonvanishing alternative"
+    },
+    {
+      "aliases": [
+        "dual witness",
+        "dual certificate",
+        "small-beta witness",
+        "reduced optimal witness",
+        "witness balance",
+        "(lambda, alpha, beta)"
+      ],
+      "body": "**Statement.** Fix an [[def-signed-idempotent|exact signed idempotent]] $P$ and a\n[[def-exposed|hidden]] row vertex $v$ ($\\rho=4\\tau$, $\\kappa=\\tau/4$, $\\tau=\\sqrt{\\delta(P)}$), with\n$F_v=\\{j:\\lVert p_j-p_v\\rVert_1\\ge\\rho\\}$ the (nonempty) $\\rho$-far row set.\n\nA **hiddenness dual witness** of $v$ is a triple $(\\lambda,\\alpha,\\beta)$ of nonnegative\ncoefficients — $\\lambda_f\\ (f\\in F_v)$ with $\\sum_f\\lambda_f=1$ (a probability on the far rows), and\n$\\alpha_i,\\beta_i\\ge0$ over all rows with $\\sum_i\\beta_i=t^*(v)<\\kappa$ — satisfying the *witness\nbalance*\n$$\\sum_{f\\in F_v}\\lambda_f\\,(p_f-p_v)\\;+\\;\\sum_i\\alpha_i\\,(p_i-p_v)\\;=\\;\\sum_i\\beta_i\\,(p_i-p_v).$$\nIt is the LP dual of the exposedness program (see [[def-exposed]]); the *small-beta* property is\n$\\sum_i\\beta_i=t^*(v)<\\kappa$. A witness is **reduced** when redundant centered-zero constraints are\ndeleted; by [[lem-always-tight-dual-support]] a reduced optimal witness has\n$\\operatorname{supp}(\\lambda)\\subseteq T$, $\\operatorname{supp}(\\beta)\\subseteq O$, and\n$\\operatorname{supp}(\\alpha)\\subseteq Z$ (the [[def-actor-hull|always-tight]] far / upper-box /\n[[def-zero-face|zero-face]] families).\n\n**Notes / provenance.** Project-original; from [[lem-hiddenness-dual-witness]] (existence via finite\nLP duality). The witness converts the scalar hiddenness fact $t^*(v)<\\kappa$ into a geometric object:\na convex combination of $\\rho$-far rows reproducing $p_v$ up to controlled signed slack. \"dual\ncertificate\" is used interchangeably in the shards. `status: draft` — A+B sign-off pending (Rule 7).\nRelated: [[def-zero-face]], [[def-actor-hull]], [[def-co-top]].",
+      "consensus": "project-original; sign-off pending (Rule 7 lock). First pinned by lem-hiddenness-dual-witness (the LP-dual object) + lem-always-tight-dual-support (support localization)",
+      "id": "def-dual-witness",
+      "kind": "original",
+      "locus": "internal; first pinned in argument/lemmas/lem-hiddenness-dual-witness.md",
+      "source": "internal",
+      "status": "draft",
+      "term": "hiddenness dual witness"
+    },
+    {
+      "aliases": [
+        "epsilon-C*-algebra",
+        "approximate C*-algebra"
+      ],
+      "body": "**Byte-verbatim source text.**\n\n```tex\n\\begin{Definition}\nAn \\emph{$\\eps$-Banach algebra} is a Banach space $\\calA$ endowed with a bilinear multiplication map $\\calA\\times \\calA\\to \\calA$ such that\n\\begin{alignat}{2}\n\\label{ax_prodnorm}\n\\|XY\\| &\\le (1+\\eps)\\ts\\|X\\|\\ts\\|Y\\|\\qquad &&(X,Y\\in \\calA),\\\\[2pt]\n\\label{ax_assoc}\n\\|(XY)Z-X(YZ)\\| &\\le \\eps\\ts\\|X\\|\\ts\\|Y\\|\\ts\\|Z\\|\\qquad &&(X,Y,Z\\in \\calA).\n\\end{alignat}\nSuch an algebra is called \\emph{$\\eps'$-commutative} if\n\\begin{equation}\n\\label{ax_comm}\n\\|XY-YX\\|\\le \\eps'\\ts\\|X\\|\\ts\\|Y\\|\\qquad (X,Y\\in \\calA).\n\\end{equation}\nA \\emph{$*\\eps$-Banach algebra} is a complex $\\eps$-Banach algebra with a conjugate linear involution $X\\mapsto X^\\dag$ satisfying the equations\n\\begin{equation}\n\\label{ax_*}\n\\|X^\\dag\\|=\\|X\\|,\\qquad (XY)^\\dag=Y^\\dag X^\\dag\\qquad (X,Y\\in \\calA).\n\\end{equation}\nAn \\emph{$\\eps$-$C^*$ algebra} is one with this additional property:\n\\begin{equation}\n\\label{ax_C*}\n\\|X^{\\dag}X\\|\\ge (1-\\eps)\\ts\\|X\\|^{2}\\qquad (X\\in \\calA).\n\\end{equation}\n(A bound from the other side, $\\|X^{\\dag}X\\|\\le (1+\\eps)\\ts\\|X\\|^{2}$, follows from \\eqref{ax_prodnorm} and \\eqref{ax_*}.) We assume that all algebras are unital. The unit element $I\\in\\calA$ should satisfy the approximate or exact conditions\n\\begin{alignat}{4}\n\\label{ax_eps_unit}\n\\|XI&-X\\|\\le\\eps\\ts\\|X\\|,\\qquad &\\|IX&-X\\|\\le\\eps\\ts\\|X\\|,\\qquad\n&\\bigl|\\|I\\|&-1\\bigr|\\le\\eps\\qquad &&\\text{(by default)},\\quad \\text{or}\\\\[2pt]\n\\label{ax_exact_unit}\nXI&=X,\\qquad &IX&=X,\\qquad\n&\\|I\\|&=1\\qquad &&\\text{(if specified)}.\n\\end{alignat}\nIf the involution is defined, one also requires that $I^\\dag=I$.\n\\end{Definition}\n```\n\n**Status.** Draft transcription; ratification is required before locking.\n\n**Provenance.** Byte-verbatim from the pinned source at the recorded locus\nand SHA256 prefix; provisioned by `DESIGN-FUDW-DECOMP-v3.md` §4.1 and admitted\nonly for the safe subset by `VERDICT-FUDW-DECOMP-V3.md` §D.",
+      "consensus": "user-ratified 2026-07-24 (tobiasosborne, in-session sign-off: byte-match-to-source criterion for cited; delegated ratification for consensus/original)",
+      "id": "def-epsilon-cstar-algebra",
+      "kind": "cited",
+      "locus": "approximate_algebras.tex:407-440",
+      "source": "kitaev-2405.02434",
+      "status": "locked",
+      "term": "ε-C*-algebra"
+    },
+    {
+      "aliases": [
+        "(ρ,κ)-exposed",
+        "(rho,kappa)-exposed",
+        "exposedness margin",
+        "admissible exposer",
+        "hidden row vertex",
+        "well-exposed vertex"
+      ],
+      "body": "**Statement.** Fix an [[def-signed-idempotent|exact signed idempotent]] $P\\in\\mathbb R^{n\\times n}$ and\nwrite $p_i\\in\\mathbb R^n$ for its $i$-th row, with the $\\ell^1$ metric $\\lVert x-y\\rVert_1=\\sum_j|x_j-y_j|$.\n\nA row $p_v$ is a *row vertex* of $P$ if $p_v\\notin\\operatorname{conv}\\{\\,p_j:p_j\\neq p_v\\text{ as vectors of }\\mathbb R^n\\,\\}$\n(geometrically coincident duplicate rows count as a single point; a repeated point is still a vertex if it\nlies outside the hull of the *other* points).\n\nAn *admissible exposer* for a row vertex $v$ is an affine function $h:\\mathbb R^n\\to\\mathbb R$ with\n$$h(p_v)=0\\qquad\\text{and}\\qquad 0\\le h(p_j)\\le 1\\quad\\text{for every row }p_j.$$\nThe *exposedness margin* of $v$ is\n$$t^*(v):=\\sup_{h\\text{ admissible}}\\ \\min\\{\\,h(p_j):\\lVert p_j-p_v\\rVert_1\\ge\\rho\\,\\},$$\nwith the convention $t^*(v)=+\\infty$ when no row is at $\\ell^1$-distance $\\ge\\rho$ from $p_v$. The vertex\n$v$ is *$(\\rho,\\kappa)$-exposed* if $t^*(v)\\ge\\kappa$, and *hidden* otherwise. The scales $\\rho=4\\tau$,\n$\\kappa=\\tau/4$ (with $\\tau=\\sqrt\\delta$) and the resulting *visible set* $\\mathcal W(P)$ of exposed\nvertices are recorded in [[def-visible-set]].\n\nInformally: an exposed vertex can be linearly separated, with margin $\\ge\\kappa$, from every row that is\ngenuinely far ($\\ge\\rho$) from it; rows inside the $\\rho$-ball are exempt.\n\n**Notes / provenance.** Adapted from `classical-portfolio/report/kernel-conjecture.tex` §Setting\n(def:vertex, def:exposed) and `../almost-idempotent-positive-maps/definitions/def-exposed.md`. The latter\nstates the equivalent *exposedness modulus* $e_v(\\rho)=\\sup_h\\min_{\\lVert p_i-v\\rVert_1\\ge\\rho}h(p_i)$ and\ncalls a vertex *well-exposed* at $\\sqrt{}$-scale if $e_v(\\rho)\\ge c\\sqrt\\delta$ for some\n$\\rho=O(\\sqrt\\delta)$, where $\\delta$ is the [[def-negative-mass|negative mass]]. Central to the proved\nclassical special cases (well-exposed $\\Rightarrow$ simplex) and to the open global exposed-hull lemma\n(`op-exposed-hull`). A pointwise exposed-or-redundant dichotomy is provably *insufficient* (dense regular\npolygons) — the gap must be stated globally (see [[def-height]]).",
+      "consensus": "adopted from ../almost-idempotent-positive-maps definitions/def-exposed.md (B's exposed-circuit machinery, report sec:classical); reconciled with kernel-conjecture.tex def:exposed",
+      "id": "def-exposed",
+      "kind": "consensus",
+      "locus": "adapted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:vertex, def:exposed); ../almost-idempotent-positive-maps/definitions/def-exposed.md",
+      "source": "internal",
+      "status": "locked",
+      "term": "exposed vertex"
+    },
+    {
+      "aliases": [
+        "EXT-CB datum"
+      ],
+      "body": "**Statement.** A *closed EXT-CB datum* consists of an extended\n\\(\\varepsilon\\)-\\(C^*\\)-algebra \\(\\mathcal A\\); \\(\\delta\\)-projections\n\\(P,Q\\) with \\(\\lVert P+Q-I\\rVert\\le\\delta\\); an extended\n\\(\\delta\\)-isomorphism \\(v:M_r\\to S_P\\); \\(\\dim S_Q=1\\); and\n\\(S_{P,Q}\\ne0\\), with \\(e=\\delta+\\varepsilon\\).\n\n**Status.** Draft theorem-free hypothesis package; it includes no extension\nconclusion and requires ratification before locking.\n\n**Provenance.** Byte-faithful transcription of the exact datum package in\n`DESIGN-FUDW-DECOMP-v3.md` §4.1, approved as definition provisioning by\n`VERDICT-FUDW-DECOMP-V3.md` §§6,D.",
+      "consensus": "user-ratified 2026-07-24 (tobiasosborne, in-session sign-off; delegated ratification for consensus/original tiers)",
+      "id": "def-extcb-datum",
+      "kind": "original",
+      "locus": "DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package",
+      "source": "internal",
+      "status": "locked",
+      "term": "closed EXT-CB datum"
+    },
+    {
+      "aliases": [
+        "extended delta-inclusion",
+        "extended delta-isomorphism"
+      ],
+      "body": "**Statement.** An *extended \\(\\delta\\)-inclusion* is a linear map \\(v\\) for\nwhich every amplification \\(1_{M_n}\\otimes v\\) is a \\(\\delta\\)-inclusion:\nit is a \\(\\delta\\)-homomorphism and satisfies the two-sided\n\\((1\\pm\\delta)\\) norm bounds. It is an *extended\n\\(\\delta\\)-isomorphism* when \\(v\\) is bijective.\n\n**Status.** Draft harmonization only; it contains no theorem and requires\nratification before locking.\n\n**Provenance.** Transcribed from the exact provisioning decision in\n`DESIGN-FUDW-DECOMP-v3.md` §4.1, which harmonizes the two pinned-source loci;\n`VERDICT-FUDW-DECOMP-V3.md` §§6,D admits it only for the safe subset.",
+      "consensus": "user-ratified 2026-07-24 (tobiasosborne, in-session sign-off; delegated ratification for consensus/original tiers)",
+      "id": "def-extended-delta-inclusion",
+      "kind": "consensus",
+      "locus": "harmonization of approximate_algebras.tex:443-456,1477-1484 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1",
+      "source": "internal",
+      "status": "locked",
+      "term": "extended δ-inclusion and isomorphism"
+    },
+    {
+      "aliases": [
+        "extended epsilon-C*-algebra",
+        "extended approximate C*-algebra"
+      ],
+      "body": "**Byte-verbatim source text.**\n\n```tex\nAn \\emph{extended $\\eps$-$C^*$ algebra} is a complete self-adjoint operator space $\\calA$ with a multiplication and a unit that make each space $\\Ma{n}\\otimes\\calA$ into an $\\eps$-$C^*$ algebra. An \\emph{extended $\\delta$-homomorphism} is a linear map $v\\colon\\calA'\\to\\calA''$ such that for each $n$, the map $1_{\\Ma{n}}\\otimes v\\colon \\Ma{n}\\otimes\\calA'\\to\\Ma{n}\\otimes\\calA''$ is a $\\delta$-homomorphism.\n```\n\n**Notation.** Registry contracts write the source's `\\(\\eps\\)` as\n`\\(\\varepsilon\\)` and `\\(\\Ma n\\)` as `\\(M_n\\)`.\n\n**Provenance.** Byte-verbatim from the pinned source at the recorded locus and\nSHA256 prefix.  User-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).",
+      "consensus": "",
+      "id": "def-extended-epsilon-cstar-algebra",
+      "kind": "cited",
+      "locus": "approximate_algebras.tex:1477-1479",
+      "source": "kitaev-2405.02434",
+      "status": "locked",
+      "term": "extended ε-C*-algebra"
+    },
+    {
+      "aliases": [
+        "finite-dimensional C*-algebra diagonal",
+        "algebra diagonal"
+      ],
+      "body": "**Byte-verbatim source text.**\n\n```tex\nFor arbitrary $\\tilde{D}=\\sum_{j}A_j\\otimes B_j\\in\\calB\\otimes\\calB$ and $X\\in\\calB$, we write\n\\begin{equation}\nX\\tilde{D}=\\sum_{j}XA_j\\otimes B_j,\\qquad\n\\tilde{D}X=\\sum_{j}A_j\\otimes B_jX,\\qquad\n\\pi(\\tilde{D})=\\sum_{j}A_jB_j.\n\\end{equation}\nThese operations extend from $\\calB\\otimes\\calB$ to $\\calB\\hotimes\\calB$. An element $D\\in\\calB\\hotimes\\calB$ is called a \\emph{diagonal} if\n\\begin{equation}\nXD=DX\\quad\\text{for all }\\, X\\in\\calB,\\qquad \\pi(D)=I_\\calB.\n\\end{equation}\n```\n\n**Specialization.** The registry uses this definition only when\n`\\(\\mathcal B\\)` is a finite-dimensional `\\(C^*\\)`-algebra.\n\n**Provenance.** Byte-verbatim from the pinned source at the recorded locus and\nSHA256 prefix.  User-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).",
+      "consensus": "",
+      "id": "def-fd-cstar-diagonal",
+      "kind": "cited",
+      "locus": "approximate_algebras.tex:1233-1242",
+      "source": "kitaev-2405.02434",
+      "status": "locked",
+      "term": "diagonal of a finite-dimensional C*-algebra"
+    },
+    {
+      "aliases": [
+        "four-corner merging datum"
+      ],
+      "body": "**Statement.** An *amplified four-corner merging datum* consists of two\ncomplementary source projections, two approximately complementary target\nprojections, and four fixed level-one corner maps whose amplifications share\none defect bound for: involution compatibility, compressed-product\ncompatibility, diagonal-unit approximation, and two-sided norm control. The\nfour maps are the same maps at every amplification. **Quantitative\ncomplementarity (amendment 2026-07-25, per the cited locus):** the target\nprojections are delta-projections and satisfy \\(\\|P_1+P_2-I\\|\\le\\rho\\)\nwith \\(\\rho\\) the same common defect bound — byte-faithful to the pinned\nsource at `approximate_algebras.tex:1326` (\"let \\(P_1,P_2\\) be\n\\(\\delta\\)-projections in an \\(\\eps\\)-\\(C^*\\) algebra \\(\\calA\\)\nsuch that \\(\\|P_1+P_2-I\\|\\le\\delta\\)\").\n\n**Status.** Draft project packaging of the four source hypotheses; it asserts\nno merge conclusion and requires ratification before locking.\n\n**Provenance.** Transcribed from `DESIGN-FUDW-DECOMP-v3.md` §4.1 and the four\nconditions at the pinned-source locus; admitted only for the safe EXT front\nend by `VERDICT-FUDW-DECOMP-V3.md` §D.",
+      "consensus": "user-ratified 2026-07-24 (tobiasosborne, in-session sign-off; delegated ratification for consensus/original tiers); quantitative-complementarity amendment user-ratified 2026-07-25 (tobiasosborne, in-session sign-off — transcription-fidelity correction to the cited locus; af challenge ch-4dd98c4d)",
+      "id": "def-four-corner-merging-datum",
+      "kind": "original",
+      "locus": "project packaging of approximate_algebras.tex:1325-1345 prescribed by DESIGN-FUDW-DECOMP-v3.md §4.1",
+      "source": "internal",
+      "status": "locked",
+      "term": "amplified four-corner merging datum"
+    },
+    {
+      "aliases": [
+        "H-space",
+        "associative H-space",
+        "inversion map",
+        "left inversion map"
+      ],
+      "body": "**Byte-verbatim source text.**\n\n```tex\nBy definition, an \\emph{H-space} is a topological space $M$ with a basepoint $e$ and a continuous multiplication map $\\mu\\colon M\\to M$ such that $\\mu(e,e)=e$ and\n\\begin{equation}\\label{H-unit}\n\\bigl(x\\mapsto \\mu(x,e)\\bigr)\n\\,\\sim\\,\\bigl(x\\mapsto x\\bigr)\n\\,\\sim\\,\\bigl(x\\mapsto \\mu(e,x)\\bigr),\n\\end{equation}\nwhere ``$f\\sim g$'' means that $f$ and $g$ are homotopic through basepoint-preserving maps. [...] An H-space $M$ is called \\emph{associative} if\n\\begin{equation}\n\\bigl((x,y,z)\\mapsto \\mu(\\mu(x,y),z)\\bigr)\n\\,\\sim\\,\\bigl((x,y,z)\\mapsto \\mu(x,\\mu(y,z))\\bigr).\n\\end{equation}\n[...] An \\emph{inversion map} is a continuous basepoint-preserving map $\\sigma\\colon M\\to M$ such that\n\\begin{equation}\\label{homo_inverse}\n\\bigl(x\\mapsto \\mu(\\sigma(x),x)\\bigr)\n\\,\\sim\\,\\bigl(x\\mapsto e\\bigr)\n\\,\\sim\\,\\bigl(x\\mapsto \\mu(x,\\sigma(x))\\bigr).\n\\end{equation}\n[...] When only the existence of that homotopy is required, $\\sigma$ is called a \\emph{left inversion map}.\n```\n\n**Statement (harmonised).** An *H-space* is a topological space $M$ with basepoint\n$e$ and a continuous multiplication $\\mu\\colon M\\times M\\to M$ with $\\mu(e,e)=e$\nsuch that $x\\mapsto\\mu(x,e)$ and $x\\mapsto\\mu(e,x)$ are each basepoint-preserving\nhomotopic to the identity. It is *associative* if the two triple-product maps are\nhomotopic. An *inversion map* is a continuous basepoint-preserving\n$\\sigma\\colon M\\to M$ with both $x\\mapsto\\mu(\\sigma(x),x)$ and\n$x\\mapsto\\mu(x,\\sigma(x))$ homotopic to the constant map $e$; when only the first\nhomotopy is required, $\\sigma$ is a *left inversion map*.\n\n**Notes / provenance.** Definition only (per the DESIGN-FUDW-DECOMP-v4.1 §4.1\nregister row: \"pinned TeX 895–912, definition only\") — no claim about $\\mathcal U$\nor any Stage-1 object is carried by this shard. Source typo note: the source\nwrites $\\mu\\colon M\\to M$ for the multiplication map's type where\n$\\mu\\colon M\\times M\\to M$ is meant (its uses $\\mu(x,y)$ are two-argument\nthroughout); the harmonised statement records the corrected type. Elisions\n`[...]` in the verbatim block skip source sentences about the specific space\n$\\mathcal U$ (claims, not definition content). Used by the Stage-1 topology rows\n`lem-topology-hopf-structure` and (via fixed-point data) the Lefschetz rows; see\n[[def-lefschetz-fixed-point-data]].",
+      "consensus": "byte-match lock per definitions/README.md (cited criterion); provisioned by DESIGN-FUDW-DECOMP-v4.1.md §4.1 (kind \"cited / lock after byte-match\")",
+      "id": "def-h-space-left-inversion",
+      "kind": "cited",
+      "locus": "approximate_algebras.tex:895-912",
+      "source": "kitaev-2405.02434",
+      "status": "locked",
+      "term": "H-space and left inversion"
+    },
+    {
+      "aliases": [
+        "Ha map",
+        "Kitaev Ha-map"
+      ],
+      "body": "**Byte-verbatim source text.**\n\n```tex\nLet $Q$ be a one-dimensional $\\delta$-projection in an $\\eps$-$C^*$ algebra $\\calA$. For any $\\delta$-projections $P,R\\in\\calA$, we define a map $\\Ha^{Q}_{P,R}\\colon\\calS_{P,R}\\to\\Bo(\\calS_{R,Q},\\calS_{P,Q})$. (Here $\\Bo(\\calS_{R,Q},\\calS_{P,Q})$ is the space of bounded linear maps from $\\calS_{R,Q}$ to $\\calS_{P,Q}$ with the norm induced by the Euclidean norm $\\|X\\|_\\Euc=\\sqrt{\\braket{X}{X}}$. Due to inequality \\eqref{1dQ_ip_norm}, the latter is equal to $\\|X\\|$ up to a $1\\pm O(\\eps+\\delta)$ factor.) For each $Z\\in\\calS_{P,R}$ and $X\\in\\calS_{R,Q}$, the element $\\Ha^{Q}_{P,R}(Z)(X)\\in\\calS_{P,Q}$ is defined by the condition\n\\begin{equation}\\label{Ha_def}\n(Y^\\dag\\cdot Z)\\cdot X+Y^\\dag\\cdot(Z\\cdot X)\n=2\\,\\bbraket{Y}{\\Ha^{Q}_{P,R}(Z)(X)}\\,\\wt{Q}\\quad \\text{for all }\\,Y\\in\\calS_{P,Q}.\n\\end{equation}\n```\n\n**Notation.** Registry contracts use `Ha` for the source macro `\\(\\Ha\\)`.\n\n**Provenance.** Byte-verbatim from the pinned source at the recorded locus and\nSHA256 prefix.  User-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).",
+      "consensus": "",
+      "id": "def-ha-map",
+      "kind": "cited",
+      "locus": "approximate_algebras.tex:1146-1149",
+      "source": "kitaev-2405.02434",
+      "status": "locked",
+      "term": "Ha-map"
+    },
+    {
+      "aliases": [
+        "H-CB datum"
+      ],
+      "body": "**Statement.** A *closed H-CB datum* consists of an extended\n\\(\\varepsilon\\)-\\(C^*\\)-algebra \\(\\mathcal A\\); one level-one\none-dimensional \\(\\delta\\)-projection \\(Q\\); \\(\\delta\\)-projections\n\\(P,R,S\\); the corresponding compressed corners, amplified column spaces,\nand their defined sesquilinear forms; and \\(e=\\delta+\\varepsilon\\).\n\n**Scope.** This is data and notation only. It includes no column-norm\ncomparison, Ha estimate, inverse, or parent H-CB conclusion.\n\n**Status.** Draft theorem-free package; ratification is required before\nlocking.\n\n**Provenance.** Byte-faithful transcription of the exact datum package in\n`DESIGN-FUDW-DECOMP-v3.md` §4.1, approved as definition provisioning by\n`VERDICT-FUDW-DECOMP-V3.md` §§6,D.",
+      "consensus": "user-ratified 2026-07-24 (tobiasosborne, in-session sign-off; delegated ratification for consensus/original tiers)",
+      "id": "def-hcb-datum",
+      "kind": "original",
+      "locus": "DESIGN-FUDW-DECOMP-v3.md §4.1 exact proposed datum package",
+      "source": "internal",
+      "status": "locked",
+      "term": "closed H-CB datum"
+    },
+    {
+      "aliases": [
+        "height H",
+        "H(P)",
+        "hidden top vertex"
+      ],
+      "body": "**Statement.** Let $C_{\\mathcal W}:=\\operatorname{conv}\\{p_w:w\\in\\mathcal W\\}$, where $\\mathcal W=\\mathcal W(P)$\nis the [[def-visible-set]], and let $\\operatorname{dist}_1(x,S)=\\inf_{s\\in\\operatorname{conv}S}\\lVert x-s\\rVert_1$.\nIf $\\mathcal W\\neq\\emptyset$, the *height* of a row $p_i$ is $\\operatorname{dist}_1(p_i,C_{\\mathcal W})$, and\nthe *height of $P$* is\n$$H=H(P):=\\max_{1\\le i\\le n}\\ \\operatorname{dist}_1\\!\\big(p_i,\\ \\operatorname{conv}\\{p_w:w\\in\\mathcal W\\}\\big).$$\nBecause $\\operatorname{dist}_1(\\cdot,C_{\\mathcal W})$ is convex and every row is a convex combination of the\ngeometrically distinct row vertices, the maximum is attained at a row vertex; if $H>0$, any maximizing\nvertex is necessarily [[def-exposed|hidden]]. Such a vertex is called a *hidden top vertex*.\n\n**Notes / provenance.** Quoted from `classical-portfolio/report/kernel-conjecture.tex` §Setting\n(Definition: *Height*). $H$ measures how far the rows spill outside the hull of the visible\n([[def-visible-set]], [[def-exposed]]) vertices; the linear hull bound / HLC target is\n$H(P)\\le C\\sqrt\\delta$ in the [[def-negative-mass|negative mass]] $\\delta$. The invisible mass\n[[def-invisible-mass]] of a hidden top vertex is the hypothesis quantity that governs whether $H$ can be\nlarge.",
+      "consensus": "adapted from kernel-conjecture.tex §Setting (Definition: Height, def:height)",
+      "id": "def-height",
+      "kind": "original",
+      "locus": "quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (Definition: Height)",
+      "source": "internal",
+      "status": "locked",
+      "term": "height"
+    },
+    {
+      "aliases": [
+        "invisible positive mass",
+        "σ̃_v",
+        "invisible mass σ̃_v"
+      ],
+      "body": "**Statement.** Let $C_{\\mathcal W}:=\\operatorname{conv}\\{p_w:w\\in\\mathcal W\\}$ ([[def-visible-set]]) and let\n$p_v$ be a row vertex. The *invisible (positive) mass* of $v$ is\n$$\\widetilde\\sigma_v:=\\sum_{j\\,:\\,\\operatorname{dist}_1(p_j,\\,C_{\\mathcal W})>0}\\ \\max\\{P_{vj},\\,0\\},$$\nthe total positive coefficient mass that row $v$ places on rows lying strictly outside $C_{\\mathcal W}$ —\n*including* the index $j=v$ itself when $p_v\\notin C_{\\mathcal W}$ and $P_{vv}>0$.\n\n*Halo robustness.* Replacing the condition $\\operatorname{dist}_1(p_j,C_{\\mathcal W})>0$ by\n$\\operatorname{dist}_1(p_j,C_{\\mathcal W})>\\varepsilon$ changes $\\widetilde\\sigma_v$ only by mass sitting\nin the $\\varepsilon$-halo of $C_{\\mathcal W}$, which is absorbable as an $\\varepsilon$-loss in the\n[[def-height|height]]; the $\\varepsilon=0$ form is used throughout.\n\n**Notes / provenance.** Quoted from `classical-portfolio/report/kernel-conjecture.tex` §Setting\n(Definition: *Invisible mass $\\widetilde\\sigma_v$*) with the *Halo robustness* remark. $\\widetilde\\sigma_v$\nis the hypothesis quantity of the Kernel Conjecture: a hidden top vertex ([[def-height]]) with\n$\\widetilde\\sigma_v>\\tau=\\sqrt\\delta$ is the missing branch, while the $\\widetilde\\sigma_v\\le\\tau$ branch is\nthe proved height cap. Uses [[def-visible-set]], [[def-negative-mass]].",
+      "consensus": "adapted from kernel-conjecture.tex §Setting (Definition: Invisible mass σ̃_v, def:sigt)",
+      "id": "def-invisible-mass",
+      "kind": "original",
+      "locus": "quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (Definition: Invisible mass σ̃_v; Remark: Halo robustness)",
+      "source": "internal",
+      "status": "locked",
+      "term": "invisible mass"
+    },
+    {
+      "aliases": [
+        "Lefschetz number",
+        "fixed point index",
+        "fixed-point index",
+        "ind(f,x)",
+        "Lambda(f)"
+      ],
+      "body": "**Byte-verbatim source text.**\n\n```tex\nThe \\emph{fixed point index} $\\ind(f,x)$ and the \\emph{Lefschetz number} $\\Lambda(f)$ are defined as follows:\n\\begin{alignat}{2}\n\\ind(f,x)&=\\sgn\\det(1-f'(x)),\\qquad\n& f'(x)\\colon \\Ta_xM&\\to\\Ta_xM,\\\\[2pt]\n\\Lambda(f)&=\\sum_{k}(-1)^k\\Tr f^{*k},\\qquad\n& f^{*k}\\colon H^k(M;\\RR)&\\to H^k(M;\\RR),\n\\end{alignat}\n```\n\n**Statement (harmonised).** For a smooth self-map $f$ of a compact orientable\nmanifold $M$: at a fixed point $x$ with $\\det(1-f'(x))\\ne0$ (where\n$f'(x)\\colon T_xM\\to T_xM$ is the differential), the *fixed point index* is\n$\\operatorname{ind}(f,x)=\\operatorname{sgn}\\det(1-f'(x))$; the *Lefschetz number*\nis $\\Lambda(f)=\\sum_k(-1)^k\\operatorname{Tr}f^{*k}$, where\n$f^{*k}\\colon H^k(M;\\mathbb R)\\to H^k(M;\\mathbb R)$ is the induced map on real\ncohomology.\n\n**Notes / provenance.** Definitions only (per the DESIGN-FUDW-DECOMP-v4.1 §4.1\nregister row: \"pinned TeX 957–967, definitions only\"): this shard carries the two\ndisplayed definitions and NO theorem content — in particular it does not assert\nthe Lefschetz–Hopf identity $\\sum_{x\\in\\operatorname{Fix}(f)}\\operatorname{ind}(f,x)=\\Lambda(f)$\n(that is the separate result row `lem-topology-lefschetz-hopf`, to be `cited`\nfrom Arkowitz–Brown), nor the index-sign theorem (`lem-topology-local-index-sign`,\nGranas–Dugundji). The source's index formula is stated in the nondegenerate\n($\\det\\ne0$) smooth case; the general topological index the theorem rows use is\nthe standard one in their own sources. See [[def-h-space-left-inversion]].",
+      "consensus": "byte-match lock per definitions/README.md (cited criterion); provisioned by DESIGN-FUDW-DECOMP-v4.1.md §4.1 (kind \"cited / lock after byte-match\")",
+      "id": "def-lefschetz-fixed-point-data",
+      "kind": "cited",
+      "locus": "approximate_algebras.tex:961-967",
+      "source": "kitaev-2405.02434",
+      "status": "locked",
+      "term": "Lefschetz number and local fixed-point index"
+    },
+    {
+      "aliases": [
+        "MAIN partition state"
+      ],
+      "body": "**Statement (geometry only).** A *MAIN-CB partition state* consists of: a\nfinite atomic index set $J$; an ambient $A$; a supplied commutative map\n$w:\\mathbb C^J\\to A$; the images $P_j=w(e_j)$; the conditional relation\n$j\\sim k\\iff\\dim S^A_{P_j,P_k}=1$; when this relation is an equivalence, its\nclass family $\\mathcal C$; for $U\\subseteq J$, $P_U=\\sum_{j\\in U}P_j$ and\n$A_U=S^A_{P_U}$ (a [[def-compressed-corner|compressed corner]]); one current\nnonempty subset $U$ of $J$; and a reference to one separately supplied\n[[def-maincb-reset-state]] for that subset.\n\n**Notes / provenance.** This shard records NEITHER the global ambient defect\nNOR a defect/unit tag for $w$: every consuming result that needs those\nbounds must quantify $A$ as an extended $\\varepsilon$-$C^*$-algebra and $w$\nas an extended inclusion explicitly, AND must tie the state to that same\ndisplayed $(A,w)$ (\"a supplied MAIN partition state for this same $A,w$\" —\nthe identity constraint of `AUDIT-MAIN-STRUCTURE-v4.md` §3.1, applied in\nMAIN v5). It asserts neither that $\\sim$ is an equivalence nor that a\ncurrent map exists (\"when the relation is an equivalence\" is conditional\ndata, not an assertion — `AUDIT-MAIN-STRUCTURE-v3.md` §2). Its single\ncurrent union cannot supply simultaneous $U,V$ data: cross-class rows (M12,\nM19-S3) require two separately supplied reset states. Companions:\n[[def-maincb-reset-state]], [[def-maincb-raw-call]];\n[[def-extended-delta-inclusion]], [[def-extended-epsilon-cstar-algebra]].",
+      "consensus": "user-ratified 2026-07-27 (W79 decision D2, docs/plans/2026-07-27-W78-ratification-package.md; verbatim from the audited MAIN v5 design); AMENDED user-ratified 2026-07-30 in-session: 'one current union U of classes' -> 'one current nonempty subset U of J' (the strict class-union field made the M13/M19-S2/M25 partial-class hypotheses unsatisfiable — M13 validated VACUOUSLY, bead aism-usmn; class-union-ness, where needed, is a per-row hypothesis and M12/M26/M27 already state it explicitly)",
+      "id": "def-maincb-partition-state",
+      "kind": "original",
+      "locus": "DESIGN-MAIN-STRUCTURE-v5.md sect 1.4",
+      "source": "internal",
+      "status": "locked",
+      "term": "MAIN-CB partition state"
+    },
+    {
+      "aliases": [
+        "MAIN raw-call datum"
+      ],
+      "body": "**Statement (literal-call record only).** A *MAIN-CB raw call* consists of: a\nliteral call-type tag (global scalar, compressed-corner scalar, Stage 1,\nStage 2, or Stage 3); the supplied input reset states/maps\n([[def-maincb-reset-state]]); the named finite-dimensional $C^*$-algebra\nsource and explicit target corner; a pre-helper base scale $t$; any\npost-helper datum scale; the literal output level-one map and its fixed\namplification family; the recorded target ambient defect\n$\\varepsilon_{\\rm target}$; and a recorded raw-defect number $d_{\\rm raw}$.\n\n**Notes / provenance.** A recorded number does NOT assert that the literal\nmap is an extended inclusion or isomorphism — result rows consuming a raw\ncall must state that hypothesis explicitly (`AUDIT-MAIN-STRUCTURE-v3.md`\nfatal defect C; the corrected M19-R does so). No hidden domain, smallness,\nsuccess, reset, preservation, or iteration clause is present (R35). The two\nscalar tags are distinct because the global scalar call uses base scale\n$t_0=\\varepsilon$ whereas the compressed-corner scalar call at the one-class\ninduction base uses $t_{\\rm atom}=K_{\\rm call}\\varepsilon$\n(`AUDIT-MAIN-STRUCTURE-v3.md` fatal defect D; MAIN v5 §2). Companions:\n[[def-maincb-partition-state]], [[def-maincb-reset-state]].",
+      "consensus": "user-ratified 2026-07-27 (W79 decision D2, docs/plans/2026-07-27-W78-ratification-package.md; verbatim from the audited MAIN v5 design)",
+      "id": "def-maincb-raw-call",
+      "kind": "original",
+      "locus": "DESIGN-FUDW-DECOMP-v4.1.md:424-428; DESIGN-MAIN-STRUCTURE-v5.md sect 1.3",
+      "source": "internal",
+      "status": "locked",
+      "term": "MAIN-CB raw call"
+    },
+    {
+      "aliases": [
+        "MAIN reset state"
+      ],
+      "body": "**Statement (datum only).** A *MAIN-CB current reset state* consists of: a\ncurrent index union $U$; its compressed ambient $A_U$ (a\n[[def-compressed-corner|compressed corner]]); a recorded ambient defect\n$\\varepsilon_U$; a named finite-dimensional $C^*$-algebra $B_U$; a supplied\nlevel-one map $v_U:B_U\\to A_U$; the fixed amplification family\n$(I_n\\otimes v_U)_{n\\ge1}$; a recorded map-defect number $d_U$; and a\nsupplied tag saying whether the map is an\n[[def-extended-delta-inclusion|extended inclusion]] or extended isomorphism.\n\n**Notes / provenance.** The tag is hypothesis data, not an existence or\nsuccess assertion. This shard asserts NO theorem content (R35): no\n$d_U\\le c_0^{\\rm cb}\\varepsilon_U$ invariant (that is the proof obligation of\nthe result row `lem-maincb-reset-invariant-preservation` / M19-R), no\nsmallness, admissibility, preservation, or construction. Companion data\npackages: [[def-maincb-partition-state]] (geometry),\n[[def-maincb-raw-call]] (one literal attempted call). Provisioned as P0 of\n`DESIGN-MAIN-STRUCTURE-v5.md` (audited `AUDIT-MAIN-STRUCTURE-v4.md` §2,\nVALID-WITH-CORRECTIONS applied; `AUDIT-MAIN-STRUCTURE-v5.md` REPAIR-CONFIRMED).",
+      "consensus": "user-ratified 2026-07-27 (W79 decision D2, docs/plans/2026-07-27-W78-ratification-package.md; verbatim from the audited MAIN v5 design)",
+      "id": "def-maincb-reset-state",
+      "kind": "original",
+      "locus": "DESIGN-FUDW-DECOMP-v4.1.md:419-423; DESIGN-MAIN-STRUCTURE-v5.md sect 1.2",
+      "source": "internal",
+      "status": "locked",
+      "term": "MAIN-CB current reset state"
+    },
+    {
+      "aliases": [
+        "MAIN witness tuple",
+        "MAIN-CB constants tuple"
+      ],
+      "body": "**Statement (data and typing only).** A *MAIN-CB witness ledger* is a tuple W of twelve named real scalar fields\n$$\nW=(c0_{cb},L,K1,K2,K3,K_{call},e_{env},e1,e_{s2},e_{cross},r_{reset},epsilon_{MAIN}).\n$$\nThe first five fields are receiving coefficients, the sixth is a derived coefficient, the next four are receiving margins, and the last two are derived scales.\n\n**Notes / provenance.** Pure data: this shard contains no inequality between fields, no existence, uniqueness, estimate, map, regularity, admissibility, or dimension-freeness assertion. The analytic-witness relation and scalar arithmetic are exported only by `lem-maincb-witness-arithmetic` and `lem-maincb-reset-constant-ledger`. This is the MAIN-CB instance of the typed-witness pattern in `def-stage1-polar-witness-data` and `DESIGN-S1-POLAR-v6.md` sects 2--3 and 8, motivated by `docs/LEARNINGS.md` 2026-07-28 laws (i)--(ii). Related: [[def-maincb-reset-state]], [[def-maincb-raw-call]], [[def-maincb-partition-state]].",
+      "consensus": "user-ratified 2026-08-01 (tobiasosborne, in-session sign-off; delegated ratification for consensus/original tiers; aism-jl4g repair package)",
+      "id": "def-maincb-witness-ledger",
+      "kind": "original",
+      "locus": "DESIGN-MAINCB-REPAIR-v2.md sect 2 (hostile-audited AUDIT-MAINCB-REPAIR.md, verdict VALID AS DATA)",
+      "source": "internal",
+      "status": "locked",
+      "term": "MAIN-CB witness ledger"
+    },
+    {
+      "aliases": [
+        "rho-near deep cluster",
+        "near-deep cluster",
+        "cluster C(v)",
+        "C(v)",
+        "huddle cluster",
+        "cluster mass"
+      ],
+      "body": "**Statement.** Fix an [[def-signed-idempotent|exact signed idempotent]] $P$ with nonempty\n[[def-visible-set|visible set]] $\\mathcal W$, a [[def-height|hidden top vertex]] $v$ of height $H$,\n$\\tau=\\sqrt{\\delta(P)}$, $\\rho=4\\tau$, and a width constant $a\\ge4$. Write\n$d_j=\\operatorname{dist}_1(p_j,\\operatorname{conv}\\{p_w:w\\in\\mathcal W\\})$.\n\nThe **near-cluster** (or $\\rho$-near deep cluster) of $v$ is\n$$C(v)\\;:=\\;\\{\\,j:\\ \\lVert p_j-p_v\\rVert_1<4\\tau\\ \\text{ and }\\ d_j>a\\,\\tau\\,\\}$$\n— rows simultaneously $\\rho$-near $v$ **and** deep (both conditions required). The **cluster mass**\nis $\\sum_{j\\in C(v)}\\max(P_{vj},0)$; a top is **heavy** when this is $\\ge1-\\theta_0$. A\n**cluster vertex** is a geometrically distinct row vertex $u$ carrying positive disintegrated weight\nfrom $C(v)$-rows (or, in the re-rooted assembly, $u:=v$ itself).\n\n**Notes / provenance.** Project-original; the exact summand set of\n[[conj-near-cluster-absorption]] and the pinned target of the W54 huddle-charge decomposition tree.\nThe width $a$ is a calibration constant (any universal $a\\ge4$; $a=16$ in the W54 assembly), not\nload-bearing downstream. NOTE ON DIVERGENCE: the bare word \"cluster\" is also used generically for an\narbitrary row-index subset $C$ (e.g. [[lem-cluster-return-flow]]'s return flow over any subset) — that\ngeneric set-theoretic use is common knowledge and is NOT this term; this shard defines only the\nhuddle near-cluster $C(v)$. `status: draft` — A+B sign-off pending (Rule 7). Related: [[def-co-top]],\n[[def-slab]].",
+      "consensus": "project-original; sign-off pending (Rule 7 lock). First pinned by conj-near-cluster-absorption (the summand set C(v)) and the W54 huddle-charge tree",
+      "id": "def-near-cluster",
+      "kind": "original",
+      "locus": "internal; first pinned in argument/lemmas/conj-near-cluster-absorption.md",
+      "source": "internal",
+      "status": "draft",
+      "term": "near-cluster"
+    },
+    {
+      "aliases": [
+        "δ-positive unital idempotent",
+        "delta-positive unital idempotent",
+        "near-idempotent stochastic map",
+        "near-positive idempotent"
+      ],
+      "body": "**Statement (commutative shadow).** A *near-positive projection* is a linear map\n$R\\colon\\ell^\\infty_n\\to\\ell^\\infty_n$ that is an exact unital idempotent, $R^2=R$ and\n$R(\\mathbf 1)=\\mathbf 1$, and is *$\\delta$-positive*: for every $0\\le x$ (entrywise) with\n$\\lVert x\\rVert_\\infty\\le1$ one has $Rx\\ge-\\delta\\,\\mathbf 1$, for a small parameter\n$\\delta\\in[0,\\delta_0)$. As a matrix this is exactly an [[def-signed-idempotent|exact signed idempotent]]\nwhose [[def-negative-mass|negative mass]] satisfies $\\delta(R)\\le\\delta$ (and $\\lVert R\\rVert\\le1+O(\\delta)$).\n\nThe motivating operator-algebra example is the spectral idempotent $P=\\theta(2\\Phi-\\mathbf 1)$ built from\nan [[def-almost-idempotent]] $\\Phi$, with $\\delta=O(\\eta)$; such a $P$ need **not** be a genuinely\npositive map. *Near-positive-projection stability* asks\nwhether every near-positive projection is within $C\\sqrt\\delta$ (operator norm) of a genuine *positive*\nunital idempotent — a [[def-stochastic|stochastic idempotent]] $E$. The signed and\nstochastic-defect formulations are equivalent up to universal constants by\n`lem-classical-equiv` (af-validated), and the corresponding stochastic upper-bound theorem\nis `op-classical` (af-validated 2026-08-08). Sharpness of the $\\sqrt{}$ exponent\nin the stochastic parameter $\\eta$ is the registry row `cor-classical-sharpness`\n(see its shard for status); it is not a certificate for sharpness in the signed\nparameter $\\delta$ used by THIS definition. No signed-$\\delta$ sharpness claim is\ncurrently established at any rigorous rung: the historical $3\\times3$ family record\n(`ex-hume`) is `disproved` as literally stated, and its corrected distance-to-set\nstatement remains an unproved candidate.\n\n**Notes / provenance.** Adopted from `../almost-idempotent-positive-maps/definitions/def-near-positive-projection.md`\n(B's factorization program, `op:npps`), taken here as the commutative shadow / general parent of the\nclassical object. This is the map/positivity framing of the same object as [[def-signed-idempotent]]\n(matrix/geometry framing): $R$ is $\\delta$-positive iff $\\delta(R)\\le\\delta$. The *stability* statement is not part of this definition; see `lem-classical-equiv`,\n`op-classical`, and `cor-classical-sharpness` for the separate formulations and their statuses.",
+      "consensus": "adopted from ../almost-idempotent-positive-maps definitions/def-near-positive-projection.md (B's factorization program, op:npps); commutative shadow agreed for this repo; sharpness/status remarks corrected 2026-08-08 (fresh hostile review: AUDIT-EXHUME-SHARPNESS-V3.md finding 1; user-ratified W139 package; defined object unchanged)",
+      "id": "def-near-positive-projection",
+      "kind": "original",
+      "locus": "adopted from ../almost-idempotent-positive-maps/definitions/def-near-positive-projection.md (commutative shadow)",
+      "source": "internal",
+      "status": "locked",
+      "term": "near-positive projection"
+    },
+    {
+      "aliases": [
+        "negativity",
+        "row polytope",
+        "row polytope K"
+      ],
+      "body": "**Statement.** For an [[def-signed-idempotent|exact signed idempotent]] $P\\in\\mathbb R^{n\\times n}$ (or any\nsigned matrix), the *negative mass* (equivalently *negativity*) is\n$$\\delta(P):=\\max_{1\\le i\\le n}\\ \\sum_{j=1}^{n}\\max\\{-P_{ij},\\,0\\},$$\nthe largest total negative mass in any single row. The *row polytope* is\n$$K:=\\operatorname{conv}\\{p_1,\\dots,p_n\\},$$\nthe convex hull of the rows $p_i\\in\\mathbb R^n$. A [[def-stochastic|stochastic idempotent]] is exactly a\nsigned idempotent with $\\delta(P)=0$.\n\n**Notes / provenance.** $\\delta(P)$ quoted from `classical-portfolio/report/kernel-conjecture.tex`\n§Setting (Definition: *Exact signed idempotent*); the row polytope $K$ adopted from\n`../almost-idempotent-positive-maps/definitions/def-stochastic.md`. This scalar is the single knob that\ncontrols the geometry: the three derived scales $\\tau=\\sqrt\\delta$, $\\rho=4\\tau$, $\\kappa=\\tau/4$ live in\n[[def-visible-set]]. The $\\delta$-positivity of [[def-near-positive-projection]] is the same quantity: a\nunital idempotent $R$ is $\\delta$-positive iff $\\delta(R)\\le\\delta$.",
+      "consensus": "adapted from kernel-conjecture.tex §Setting (negativity δ(P)) and ../almost-idempotent-positive-maps definitions/def-stochastic.md (row polytope K)",
+      "id": "def-negative-mass",
+      "kind": "original",
+      "locus": "quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:esi, δ(P)); row polytope from ../almost-idempotent-positive-maps/definitions/def-stochastic.md",
+      "source": "internal",
+      "status": "locked",
+      "term": "negative mass"
+    },
+    {
+      "aliases": [
+        "one-dimensional delta-projection",
+        "equivalent delta-projections"
+      ],
+      "body": "**Byte-verbatim source text.**\n\n```tex\nWhen $P=Q$, the abbreviations $\\Co_{P}$, $\\calS_P$ are used. It is clear that $\\calS_P=0$ if and only if $P$ is sufficiently close to $0$ as described by the first alternative in \\eqref{P_alternatives}. (Recall that in the opposite case, we call $P$ ``nonvanishing''.) Similarly, $\\Co_P=1$ and $\\calS_P=\\calA$ if and only if $P$ is close to $I$. If $\\dim\\calS_P=1$, we say that $P$ is a \\emph{one-dimensional $\\delta$-projection}.\n```\n\n```tex\nOne-dimensional $\\delta$-projections $P$ and $Q$ are called \\emph{equivalent} if $\\dim\\calS_{P,Q}=1$. This is indeed an equivalence relation; in particular, it is transitive due to Lemma~\\ref{lem_PQR}.\n```\n\n**Status.** Locked after the cited-definition byte-match criterion was user-ratified on 2026-07-24.\n\n**Provenance.** Byte-verbatim from the pinned source at the recorded loci\nand SHA256 prefix; provisioned by `DESIGN-FUDW-DECOMP-v3.md` §4.1 and admitted\nonly for the safe subset by `VERDICT-FUDW-DECOMP-V3.md` §D.",
+      "consensus": "user-ratified 2026-07-24 (tobiasosborne, in-session sign-off: byte-match-to-source criterion for cited; delegated ratification for consensus/original)",
+      "id": "def-one-dimensional-delta-projection",
+      "kind": "cited",
+      "locus": "approximate_algebras.tex:1066,1187",
+      "source": "kitaev-2405.02434",
+      "status": "locked",
+      "term": "one-dimensional δ-projection and equivalence"
+    },
+    {
+      "aliases": [
+        "self-adjoint operator space"
+      ],
+      "body": "**Statement (byte-matched; harmonised notation $\\mathcal L$, $M_{n,k}$).** A complex\nvector space $\\mathcal L$ is called an *operator space* if each space\n$M_n\\otimes\\mathcal L$ (for $n=1,2,\\ldots$) is equipped with a norm\n$\\lVert\\cdot\\rVert_n$ satisfying the following axioms:\n\n$$\\lVert AXB\\rVert_n \\le \\lVert A\\rVert\\,\\lVert X\\rVert_k\\,\\lVert B\\rVert\n\\qquad (A\\in M_{n,k},\\; B\\in M_{k,n},\\; X\\in M_k\\otimes\\mathcal L),$$\n\n$$\\left\\lVert\\begin{pmatrix}X&0\\\\ 0&Y\\end{pmatrix}\\right\\rVert_{k+n}\n= \\max\\bigl\\{\\lVert X\\rVert_k,\\lVert Y\\rVert_n\\bigr\\}\n\\qquad (X\\in M_k\\otimes\\mathcal L,\\; Y\\in M_n\\otimes\\mathcal L).$$\n\nThe norm on $\\mathcal L$ itself is defined by identifying $\\mathcal L$ with\n$M_1\\otimes\\mathcal L$. An operator space is called *self-adjoint* if it is\nequipped with a conjugate-linear involution $\\dagger$ that preserves all norms\n$\\lVert\\cdot\\rVert_n$.\n\n**Notes / provenance.** Byte-verbatim from the local source Definition block at\n`approximate_algebras.tex:1453-1464` ONLY (per `AUDIT-MAIN-STRUCTURE-v3.md` §2:\nthe rectangular norms/inclusions constructed at `approximate_algebras.tex:1467-1475`\nare DERIVED notation/consequences, referenced in later result-row provenance but\ndeliberately NOT primitive fields of this cited definition). Provisioned as the\nP0 vocabulary gate of the MAIN-CB structural design\n(`DESIGN-MAIN-STRUCTURE-v5.md` §1.1). Related: [[def-epsilon-cstar-algebra]],\n[[def-extended-epsilon-cstar-algebra]], [[def-compressed-corner]].",
+      "consensus": "user-ratified 2026-07-27 (W79 decision D2, docs/plans/2026-07-27-W78-ratification-package.md; byte-verified this date)",
+      "id": "def-operator-space",
+      "kind": "cited",
+      "locus": "approximate_algebras.tex:1453-1464 (Definition def:opspace)",
+      "source": "kitaev-2405.02434",
+      "status": "locked",
+      "term": "operator space"
+    },
+    {
+      "aliases": [
+        "pivot",
+        "maximal pivot",
+        "pivot-removing move",
+        "pivot-removing chart",
+        "theta-half chart",
+        "theta-half admissible",
+        "Phi-argmin chart",
+        "actual-row chart",
+        "Phi_r",
+        "Psi_j",
+        "Gamma_j"
+      ],
+      "body": "**Statement.** Fix a rank-$3$ [[def-signed-idempotent|exact signed idempotent]] $P$ with rows $p_i$.\n\n- **Actual-row chart.** $U=(u_0,u_1,u_2)$, a triple of row indices whose rows $p_{u_0},p_{u_1},p_{u_2}$\n  form a basis of the row space. Old coordinates: $a_q(i)$ with $p_i=\\sum_q a_q(i)\\,p_{u_q}$.\n- **Charge functionals.** $E_r(i)=\\max\\!\\big(\\sum_{q\\ne r}\\max(-a_q(i),0)-(1-a_r(i)),\\,0\\big)$,\n  $\\Phi_r(U)=\\sum_i\\max(P_{u_r i},0)\\,E_r(i)$, and $\\Phi(U)=\\max_r\\Phi_r(U)$.\n- **Volume gauge.** $\\operatorname{Vol}(U)$ the Gram volume of the chart, $\\operatorname{Vol}_{\\max}(P)$\n  the maximum Gram volume over actual-row charts, $m_U=\\operatorname{Vol}(U)/\\operatorname{Vol}_{\\max}(P)$.\n  $U$ is **theta-half** if $m_U\\ge\\tfrac12$; a **theta-half $\\Phi$-argmin chart** is a theta-half $U$\n  minimizing $\\Phi$ among theta-half actual-row charts.\n- **Pivot.** A **pivot** is a chart index $s$; a **maximal pivot** has $\\Phi_s(U)=\\Phi(U)$.\n- **Pivot-removing move.** For a non-chart row $j$ with $c=a_s(j)\\ne0$, the **pivot-removing chart**\n  is $V_j=U-u_s+j$; it is **theta-half admissible** when $|a_s(j)|\\,m_U\\ge\\tfrac12$ (volume factor\n  $\\operatorname{Vol}(V_j)/\\operatorname{Vol}(U)=|a_s(j)|$). New coordinates on $V_j$:\n  $a_s^{\\,j}(i)=a_s(i)/c$ and $a_q^{\\,j}(i)=a_q(i)-a_s(i)a_q(j)/c$ for $q\\ne s$. The\n  **transferred charges** are\n  $\\Psi_j=\\sum_i\\max(P_{ji},0)\\,\\max\\!\\big(\\sum_{q\\ne s}\\max(-a_q^{\\,j}(i),0)-(1-a_s^{\\,j}(i)),0\\big)$\n  and $\\Gamma_j=\\max_{r\\ne s}\\sum_i\\max(P_{u_r i},0)\\,\\max\\!\\big(\\sum_{q\\ne r}\\max(-a_q^{\\,j}(i),0)-(1-a_r^{\\,j}(i)),0\\big)$.\n\nPivot-removing max-stationarity ([[lem-pivot-removing-move]]) is the bound $\\Phi_s(U)\\le\\max(\\Psi_j,\\Gamma_j)$.\n\n**Notes / provenance.** Project-original; the \"pivot\" here is the chart-swap sense (a basis row\nexchanged for an external row), NOT the generic linear-algebra pivot. This shard is the single home of\nthe rank-$3$ chart/volume vocabulary that was inlined verbatim in the contracts of\n[[lem-pivot-removing-move]], [[conj-b-restricted]] and [[conj-gamma-emptiness]] (the latter two had\ntheir notation preambles moved here 2026-07-10). `status: draft` — A+B sign-off pending (Rule 7).\nRelated: [[def-signed-idempotent]], [[def-negative-mass]].",
+      "consensus": "project-original; sign-off pending (Rule 7 lock). First pinned by lem-pivot-removing-move",
+      "id": "def-pivot",
+      "kind": "original",
+      "locus": "internal; first pinned in argument/lemmas/lem-pivot-removing-move.md (and inlined verbatim in conj-b-restricted / conj-gamma-emptiness)",
+      "source": "internal",
+      "status": "draft",
+      "term": "pivot (chart)"
+    },
+    {
+      "aliases": [
+        "positive retract pair",
+        "PRH datum"
+      ],
+      "body": "**Statement.** A *positive approximate retract* between finite commutative\n$C^*$-algebras is a pair of positive unital maps\n\\[\nA:\\ell^\\infty(k)\\longrightarrow\\ell^\\infty(n),\n\\qquad\nM:\\ell^\\infty(n)\\longrightarrow\\ell^\\infty(k)\n\\]\nfor which $MA$ is close to $I_k$ in the\n$\\ell^\\infty\\!\\to\\!\\ell^\\infty$ operator norm.  Its retract defect is\n\\[\n\\varepsilon_{\\mathrm{ret}}:=\\lVert MA-I_k\\rVert_{\\infty\\to\\infty}.\n\\]\nEquivalently, the matrices of $A$ and $M$ have probability-vector rows.\n\n**Scope.** This project term packages the datum hardened by `lem-prh`; it\ndoes not assert that such a pair exists for any particular almost-idempotent\nmap.\n\n**Provenance.** Project formulation extracted from the W74F-A PRH artifact.\nUser-ratified and locked 2026-07-24 (tobiasosborne, in-session sign-off).",
+      "consensus": "user-ratified 2026-07-24 (tobiasosborne, in-session sign-off)",
+      "id": "def-positive-approximate-retract",
+      "kind": "original",
+      "locus": "project formulation transcribed from docs/plans/2026-07-23-W74F-artifacts/PROOF-W74F-A-PRH.md §§1,4",
+      "source": "internal",
+      "status": "locked",
+      "term": "positive approximate retract"
+    },
+    {
+      "aliases": [
+        "projection basis"
+      ],
+      "body": "**Byte-verbatim source text.**\n\n```tex\nThe second application of Lemma~\\ref{lem_merging} involves an auxiliary statement about $\\delta$-projections $P_1,\\dots,P_p,Q_1,\\dots,Q_q$ satisfying certain conditions, which will be formulated in terms of inclusions of finite-dimensional commutative $C^*$ algebras. Such an algebra $\\calB$ is described by a \\emph{projection basis} $\\{\\Pi_1,\\dots,\\Pi_n\\}\\subseteq\\calB$ such that $\\Pi_j^\\dag=\\Pi_j$,\\, $\\Pi_j\\Pi_k=\\delta_{jk}\\Pi_k$, and $\\sum_{j=1}^{n}\\Pi_j=I$.\n```\n\n**Status.** Locked on the recorded user ratification of 2026-07-24 (see\nfrontmatter `consensus:`; lock commit b9270ef4). An earlier draft-transcription\nnote stood here until 2026-07-27 (stale-body drift caught by\n`AUDIT-F2-TYPING.md` correction 3).\n\n**Provenance.** Byte-verbatim from the pinned source at the recorded locus\nand SHA256 prefix; provisioned by `DESIGN-FUDW-DECOMP-v3.md` §4.1 and admitted\nonly for the safe subset by `VERDICT-FUDW-DECOMP-V3.md` §D.",
+      "consensus": "user-ratified 2026-07-24 (tobiasosborne, in-session sign-off: byte-match-to-source criterion for cited; delegated ratification for consensus/original)",
+      "id": "def-projection-basis",
+      "kind": "cited",
+      "locus": "approximate_algebras.tex:1361",
+      "source": "kitaev-2405.02434",
+      "status": "locked",
+      "term": "projection basis of a finite-dimensional commutative C*-algebra"
+    },
+    {
+      "aliases": [
+        "finite Route-F raw-factor setting",
+        "Route-F raw-factor scalar header",
+        "raw-factor setting datum"
+      ],
+      "body": "**Statement (data, typing, and notation only).** *Route-F raw-factor setting\ndata* have two levels: a scalar header `W_RF`, and a setting datum `S` over\nthat header.\n\nThe scalar header has four receiving real-scalar fields\n$$\n(\\eta_A,C_A,C_E,\\varepsilon_E).\n$$\n\nThe following symbols are derived notation, not independent witnesses:\n$$\nC_\\theta:=12(\\sqrt2-1),\\qquad\n\\rho_\\theta:=\\frac18,\\qquad\n\\rho_{\\mathrm{AI}}:=\\eta_A,\\qquad\n\\bar C_E:=\\max\\{1,C_E\\},\n$$\n$$\nC_V:=\\bar C_EC_A,\\qquad C_T:=C_\\theta+3C_V,\n$$\n$$\n\\rho_T:=\\min\\left\\{\n\\rho_\\theta,\\rho_{\\mathrm{AI}},\\frac{\\varepsilon_E}{C_A},\n\\frac1{4(1+C_\\theta)},\\frac1{4(1+C_V)}\n\\right\\}.\n\\qquad (1.1)\n$$\n\nContinue, in the displayed order, with\n$$\n\\begin{aligned}\n\\rho_{\\mathrm{unit}}&:=\\rho_T,\\\\\n\\rho_{\\mathrm{id}}&:=\\min\\{\\rho_{\\mathrm{AI}},\\varepsilon_E/C_A\\},\\\\\n\\rho_{\\mathrm{id}}^{\\mathrm{corr}}\n&:=\\min\\{\\rho_\\theta,\\rho_{\\mathrm{AI}},\\varepsilon_E/C_A\\},\\\\\n\\rho_{\\mathrm{prod}}&:=\\rho_T,\\\\\nC_{\\Delta'}&:=C_T+4C_\\theta,\\\\\n\\rho_{\\Delta'}&:=\\min\\{\\rho_T,\\rho_{\\mathrm{prod}}\\},\\\\\nC_\\Delta&:=6C_T+7C_{\\Delta'},\\\\\n\\rho_\\Delta&:=\\min\\left\\{\n\\rho_{\\mathrm{unit}},\\rho_{\\Delta'},[2(C_T+C_{\\Delta'})]^{-1}\n\\right\\},\\\\\nC_2&:=C_{\\Delta'}+4C_\\Delta,\\\\\n\\rho_2&:=\\min\\{\\rho_{\\mathrm{prod}},\\rho_{\\Delta'},\\rho_\\Delta\\},\\\\\n\\rho_{\\Delta\\Phi}&:=\\min\\{\\rho_\\theta,\\rho_\\Delta,\\rho_2\\},\\\\\nC_3&:=10+20C_\\Delta+12C_\\theta+2C_{\\Delta'},\\\\\n\\rho_3&:=\\min\\{\\rho_\\theta,\\rho_{\\Delta'},\\rho_\\Delta,\\rho_2\\}.\n\\end{aligned}\n\\qquad (1.2)\n$$\n\nFor the componentwise block, put\n$$\n\\begin{aligned}\nC_N&:=C_V+C_\\Delta,\\\\\nC_R&:=C_N+C_2=C_V+C_\\Delta+C_2,\\\\\nC_L&:=C_2+C_3+2C_R,\\\\\nC_{\\Upsilon'}&:=1+C_\\theta+2C_\\Delta+2C_L,\n\\end{aligned}\n\\qquad (1.3)\n$$\n$$\n\\rho_{\\Upsilon'}:=\\min\\left\\{\n\\rho_T,\\rho_{\\mathrm{id}},\\rho_\\Delta,\\rho_2,\\rho_3,(2C_R)^{-1}\n\\right\\}.\n\\qquad (1.4)\n$$\n\nThen put\n$$\n\\begin{aligned}\nC_\\Upsilon&:=6C_T+7C_{\\Upsilon'},\\\\\n\\rho_\\Upsilon&:=\\min\\left\\{\n\\rho_{\\mathrm{unit}},\\rho_{\\Upsilon'},\n[2(C_T+C_{\\Upsilon'})]^{-1}\n\\right\\},\\\\\n\\rho_{\\Delta\\Upsilon}&:=\\min\\{\n\\rho_\\theta,\\rho_T,\\rho_{\\mathrm{id}},\\rho_\\Delta,\\rho_\\Upsilon\\},\\\\\n\\rho_{\\mathrm{mult}}&:=\\min\\{\n\\rho_T,\\rho_{\\mathrm{id}},\\rho_{\\Delta\\Phi},\\rho_\\Upsilon\\},\\\\\n\\rho_{\\Upsilon\\Delta}&:=\\min\\{\n\\rho_T,\\rho_{\\mathrm{id}},\\rho_\\Delta,\\rho_\\Upsilon\\}.\n\\end{aligned}\n\\qquad (1.5)\n$$\n\nFinally,\n$$\nK:=\\max\\left\\{\n1,\nC_\\theta+C_\\Delta+2C_\\Upsilon,\nC_\\Upsilon+2(C_2+C_\\theta+C_\\Delta),\nC_\\Upsilon+2C_\\Delta\n\\right\\},\n\\qquad (1.6)\n$$\n$$\n\\rho_{\\mathrm{fac}}:=\\min\\{\n\\rho_2,\\rho_{\\Delta\\Upsilon},\\rho_{\\mathrm{mult}},\n\\rho_{\\Upsilon\\Delta}\n\\},\n\\qquad (1.7)\n$$\n$$\n\\eta_K:=\\min\\{\\rho_{\\mathrm{fac}},(24K)^{-1},1\\}.\n\\qquad (1.8)\n$$\n\nA setting datum `S` over `W_RF` records the following typed data:\n\n1. a nonzero finite-dimensional complex Hilbert space `H`, a\n   [[def-ucp-map|UCP map]] `Phi:B(H)->B(H)`, and a real scalar `eta`;\n2. a linear map `tilde-Phi:B(H)->B(H)`, its range `A:=Im(tilde-Phi)`, a\n   bilinear operation `X star Y:=tilde-Phi(XY)` on `A`, and the scalar\n   notation\n   $$\n   r:=\\frac32\\bigl((1-4\\eta)^{-1/2}-1\\bigr),\n   \\qquad\n   \\varepsilon_{\\mathrm{AI}}(\\eta):=\n   \\max\\{r,20\\eta+2((1+r)^5-1),3r-r^2\\};\n   $$\n3. a finite-dimensional unital C*-algebra `B` and linear maps `v:B->A` and\n   `u:A->B`; and\n4. the notation\n   $$\n   \\widetilde\\Delta:=\\iota_{\\mathcal A\\subseteq B(H)}\\circ v,\n   \\qquad\n   \\widetilde\\Upsilon:=u\\circ\\widetilde\\Phi.\n   $$\n\nThe displayed map `tilde-Phi` is the notation\n$$\n\\widetilde\\Phi\n:=\\frac12\\left(I+(2\\Phi-I)\n\\bigl(I-4(\\Phi-\\Phi^2)\\bigr)^{-1/2}\\right).\n$$\n\nFor every linear map `T` occurring in a datum and every integer `q>=1`,\n`T_q:=id_{M_q} tensor T`.  Registry ASCII `A` and `B` denote the two\nalgebras above; `I_B` denotes the identity map of `B`.  An unsubscripted `I` is the\nunit forced by the adjacent map types.\n\n**Notes / provenance.** This shard asserts only the shape and notation of a\nrecord.  In particular, it asserts none of the following: that a header or\ndatum exists; that any scalar is positive, finite, universal, or independent\nof input data; that `||Phi^2-Phi||_cb<=eta`; that `tilde-Phi` is\nidempotent; that `A` is an extended approximate C*-algebra; that `v` is an\n[[def-extended-delta-inclusion|extended isomorphism]]; or any norm,\nsmallness, admissibility, CP, or UCP estimate for the recorded maps.  Those\nassertions belong only to result rows, beginning with\n`lem-routef-raw-factor-setting-formation`.  The terms “UCP map”, “extended\nepsilon-C*-algebra”, and “extended delta-isomorphism” are referenced from\ntheir canonical shards and are not redefined here.  The labels `u` and `v` do not assert an inverse\nrelation; that relation is a conclusion of the formation result.",
+      "consensus": "user-ratified 2026-08-05 (tobiasosborne, in-session sign-off of the audited LAND-WITH-EXACT-CORRECTIONS rescope package; corrections folded in at landing); I_B notation corrected to the identity map of B, user-ratified 2026-08-05 (fresh-verifier-caught type error in the ratified design text: rows 3/12 use I_B as a map, not the unit element)",
+      "id": "def-routef-raw-factor-setting",
+      "kind": "original",
+      "locus": "DESIGN-LEDGER-SETTING-RESCOPE-V2.md sect-1 (hostile re-audit AUDIT-LEDGER-SETTING-RESCOPE-V2.md, deletion test CLEARED: data-and-typing only)",
+      "source": "internal",
+      "status": "locked",
+      "term": "Route-F raw-factor setting data"
+    },
+    {
+      "aliases": [
+        "selected corner",
+        "corner configuration",
+        "disintegration kernel xi",
+        "Gamma_f",
+        "M_X",
+        "M_I",
+        "M_D",
+        "B_F",
+        "B_N",
+        "C_f"
+      ],
+      "body": "**Statement.** Fix a finite [[def-signed-idempotent|exact signed idempotent]] $P$ with $0<\\delta(P)$,\n$\\tau=\\sqrt{\\delta(P)}$, $D=2+4\\delta(P)$, nonempty [[def-visible-set|visible set]] $\\mathcal W$,\n$C_{\\mathcal W}=\\operatorname{conv}\\{p_w:w\\in\\mathcal W\\}$, and a [[def-height|hidden top]] $v$ of\nheight $H>16\\tau$. A **selected-corner configuration** is such $(P,v)$ together with:\n\n- an affine $\\phi$ with $\\phi(p_v)=H$, $\\phi\\le0$ on $C_{\\mathcal W}$, and $|\\phi(a)-\\phi(b)|\\le\\lVert a-b\\rVert_1$\n  (a [[def-top-support-functional|top support functional]]), an [[def-exposed|admissible exposer]] $h$ at\n  $v$, and a **selected corner row** $f$ with $\\lVert p_f-p_v\\rVert_1\\ge4\\tau$,\n  $\\operatorname{dist}_1(p_f,C_{\\mathcal W})>H-4\\tau$ ([[def-co-top|co-top]] and $\\rho$-far) satisfying\n  the corner inequality $2(H-\\phi(p_f))/D+h(p_f)\\le 12\\tau/13$;\n- a **disintegration kernel** $\\xi_x(u)$ from row points to geometrically distinct row vertices,\n  constant on clone fibers, with $p_x=\\sum_u\\xi_x(u)p_u$ and Dirac at vertex points.\n\nWrite $P^+_{fx}=\\sum_{j:p_j=p_x}\\max(P_{fj},0)$, $\\Gamma_f(x,u)=P^+_{fx}\\,\\xi_x(u)$,\n$C_f=\\{(x,u):H-\\phi(p_x)<4\\tau,\\ h(p_x)<4\\tau,\\ H-\\phi(p_u)<4\\tau,\\ h(p_u)<4\\tau\\}$,\n$B_F=C_f\\cap\\{\\lVert p_u-p_v\\rVert_1\\ge4\\tau\\}$, $B_N=C_f\\cap\\{\\lVert p_u-p_v\\rVert_1<4\\tau\\}$. For a\nblock $B\\in\\{B_F,B_N\\}$ the three **corner masses** are\n$$M_X(B)=\\Gamma_f\\{(x,u)\\in B:p_x\\ne p_u\\},\\quad\n  M_I(B)=\\Gamma_f\\{(x,u)\\in B:p_x=p_u,\\ K_T(u)\\cap K_O(u)\\ne\\emptyset\\},$$\n$$M_D(B)=\\Gamma_f\\{(x,u)\\in B:p_x=p_u,\\ K_T(u)\\cap K_O(u)=\\emptyset\\},$$\nwith $K_T(u),K_O(u)$ the [[def-actor-hull|always-tight hulls]] at $u$ (off-diagonal $X$ = distinct\n$p_x\\ne p_u$; intersection $I$ = diagonal with intersecting hulls; deep $D$ = diagonal with disjoint\nhulls).\n\n**Notes / provenance.** Project-original; the single home of the SL1a \"corner\" machinery inlined\nverbatim in [[lem-sl1a-three-cell-reduction]] and the three cell conjectures. The three cells partition\nthe selected corner's mass into the $X/I/D$ diagonal cells. `status: draft` — A+B sign-off pending\n(Rule 7). Related: [[def-actor-hull]], [[def-co-top]], [[def-top-support-functional]], [[def-top-deficit]].",
+      "consensus": "project-original; sign-off pending (Rule 7 lock). First pinned by lem-sl1a-three-cell-reduction (the SL1a three-cell surface)",
+      "id": "def-selected-corner",
+      "kind": "original",
+      "locus": "internal; first pinned (inlined verbatim) in argument/lemmas/lem-sl1a-three-cell-reduction.md and the three conj-sl1a-*-cell shards",
+      "source": "internal",
+      "status": "draft",
+      "term": "selected-corner configuration"
+    },
+    {
+      "aliases": [
+        "signed idempotent",
+        "signed affine retraction",
+        "signed stochastic retraction"
+      ],
+      "body": "**Statement (exact signed idempotent).** Let $n\\in\\mathbb N$. A matrix $P\\in\\mathbb R^{n\\times n}$ is an\n*exact signed idempotent* if\n$$P\\mathbf 1=\\mathbf 1\\qquad\\text{and}\\qquad P^2=P,$$\nwhere $\\mathbf 1=(1,\\dots,1)^{\\mathsf T}$. Equivalently, $P$ is a linear self-map of $\\mathbb R^n$ fixing\nthe all-ones vector with $P^2=P$ *exactly*, whose rows are signed measures of total mass $1$\n($\\sum_j P_{ij}=1$ for each $i$). A row-stochastic idempotent — a [[def-stochastic|stochastic idempotent]]\n— is exactly an exact signed idempotent whose [[def-negative-mass|negative mass]] $\\delta(P)=0$.\n\n*Row geometry.* Writing $p_i\\in\\mathbb R^n$ for the $i$-th row with the $\\ell^1$ metric, each row\nsatisfies $\\sum_j p_{ij}=1$ and $\\sum_j|p_{ij}|\\le1+2\\delta$; hence all rows lie in a common affine\nhyperplane and pairwise $\\ell^1$ distances are at most $2+4\\delta$ (with $\\delta=\\delta(P)$).\n\n**Notes / provenance.** Quoted from `classical-portfolio/report/kernel-conjecture.tex` §Setting\n(Definition: *Exact signed idempotent*, and the row-geometry remark). The exact-idempotence form is the\nworking object: $P^2=P$ holds exactly while non-positivity is quarantined into the scalar\n[[def-negative-mass|negative mass]] $\\delta(P)$. This is the matrix/geometry framing of\n[[def-near-positive-projection]] (map/positivity framing). Its exposed row vertices, visible set, height\nand invisible mass are [[def-exposed]], [[def-visible-set]], [[def-height]], [[def-invisible-mass]].",
+      "consensus": "adapted from ../almost-idempotent-positive-maps/agent-A/explorations/classical-portfolio/report/kernel-conjecture.tex §Setting (def:esi); exact-idempotence form adopted for this repo",
+      "id": "def-signed-idempotent",
+      "kind": "original",
+      "locus": "quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (Definition, exact signed idempotent)",
+      "source": "internal",
+      "status": "locked",
+      "term": "exact signed idempotent"
+    },
+    {
+      "aliases": [
+        "low slab",
+        "low-slab",
+        "deep low slab",
+        "very-low slab",
+        "top slab",
+        "top-slab",
+        "far slab",
+        "slab leakage"
+      ],
+      "body": "**Statement.** Fix an [[def-signed-idempotent|exact signed idempotent]] $P$, $\\tau=\\sqrt{\\delta(P)}$,\nnonempty [[def-visible-set|visible set]] $\\mathcal W$. A **slab** is the set of rows on which a fixed\naffine functional lies in a prescribed threshold band. Two families recur, kept distinct here:\n\n- **Low slab** (exposer-value): for an [[def-exposed|optimal exposer]] $h^*$ at a vertex and a\n  threshold $s$, the set $\\{j:h^*(p_j)<s\\}$. The **deep / very-low slab** takes $s=\\kappa=\\tau/4$ or\n  $s=\\tau/8$; combined with depth ($d_j>a\\tau$) it is the summand set of [[conj-low-slab-cap]] and\n  [[conj-far-low-slab-cap]]. The pincer [[lem-cs-low-slab-pincer]] controls its complementary shell\n  $\\{s\\le h^*<\\kappa\\}$.\n- **Top slab** (depth / [[def-top-deficit|top-deficit]]): the near-top band\n  $\\{j:d_j>H-c\\tau\\}$ (equivalently small top-deficit $z_j<c'\\tau$); the **far slab** additionally\n  imposes $\\rho$-farness. [[lem-top-slab-companion]] forces a $\\rho$-far row in the top slab.\n\n**Notes / provenance.** Project-original; \"slab\" is overloaded in the shards between the\nexposer-value cut ($h^*$) and the depth cut ($d$ / $z$) — this shard records BOTH canonical instances\nand which functional each uses, so downstream statements can name the functional explicitly and avoid\ndrift. `status: draft` — A+B sign-off pending (Rule 7). Related: [[def-top-deficit]],\n[[def-near-cluster]], [[def-exposed]].",
+      "consensus": "project-original; sign-off pending (Rule 7 lock). First pinned by conj-low-slab-cap (exposer-value slab) and lem-top-slab-companion (depth slab)",
+      "id": "def-slab",
+      "kind": "original",
+      "locus": "internal; first pinned across argument/lemmas/conj-low-slab-cap.md, lem-cs-low-slab-pincer.md, lem-top-slab-companion.md",
+      "source": "internal",
+      "status": "draft",
+      "term": "slab"
+    },
+    {
+      "aliases": [
+        "polar witness tuple",
+        "Stage-1 polar constants tuple"
+      ],
+      "body": "**Statement (data and typing only).** A *Stage-1 polar witness datum* is a\ntuple $W$ of fourteen named scalar fields:\n$$W=(C_{\\rm rect},\\,C_{\\rm ch},\\,C_{\\rm pol},\\,C_{\\rm grp},\\,C_{\\rm path},\\,C_{\\rm der},\\,\ne_{\\rm rect},\\,\\kappa_{\\rm ch},\\,\\kappa_{\\rm pol},\\,\\kappa_{\\rm der},\\,\n\\delta_*,\\,\\varepsilon_*^r,\\,e_{\\rm S1},\\,r_{\\rm iso}).$$\nThe first six are called coefficients, the next four margins, the last four\nderived scales.\n\n**Notes / provenance.** Pure data: this shard contains NO positivity,\ninequality, existence, uniqueness, estimate, map, regularity, admissibility,\nor topological assertion (R35; `AUDIT-S1-POLAR-v4.md` §7: \"VALID AS DATA\").\nThe analytic-witness relation — that one such tuple simultaneously witnesses\nthe seven Stage-1 polar producer rows and satisfies the scalar arithmetic —\nis exported ONLY by the result rows\n`lem-stage1-polar-scalar-arithmetic` and `lem-stage1-polar-constant-ledger`\nand their seven parameterized transport helpers\n(`DESIGN-S1-POLAR-v6.md` §§2–3), never by this definition. Related:\n[[def-approximate-unitary-space]], [[def-epsilon-cstar-algebra]].",
+      "consensus": "user-ratified 2026-07-27 (W79 decision D2, docs/plans/2026-07-27-W78-ratification-package.md; verbatim from the audited polar design)",
+      "id": "def-stage1-polar-witness-data",
+      "kind": "original",
+      "locus": "DESIGN-S1-POLAR-v6.md sect 8 (unchanged from v2 sect 8; audited AUDIT-S1-POLAR-v3/v4/v5/v6)",
+      "source": "internal",
+      "status": "locked",
+      "term": "Stage-1 polar witness data"
+    },
+    {
+      "aliases": [
+        "row-stochastic idempotent",
+        "stochastic retraction",
+        "unital positive map on ℓ∞_n"
+      ],
+      "body": "**Statement (commutative vocabulary).** A *unital positive map* of $\\ell^\\infty_n=\\mathbb R^n$ is a\n*row-stochastic matrix* $Q$ ($Q\\ge0$ entrywise, $Q\\mathbf 1=\\mathbf 1$) — an affine self-map of the\nprobability simplex $\\Delta_n$. A *stochastic idempotent* $E$ is a row-stochastic $E$ with $E^2=E$: an\naffine retraction of $\\Delta_n$ onto a sub-polytope.\n\nDropping positivity but keeping *exact* idempotence gives the *signed* generalization — a\n[[def-signed-idempotent|signed affine retraction]] $P$ with $P\\mathbf 1=\\mathbf 1$ and $P^2=P$ exactly,\nwhose rows are signed measures of total mass $1$. Its failure of positivity is quantified by the\n[[def-negative-mass|negative mass]] $\\delta(P)$; a stochastic idempotent is exactly a signed idempotent\nwith $\\delta(P)=0$.\n\n**Notes / provenance.** Adopted from `../almost-idempotent-positive-maps/definitions/def-stochastic.md`\n(B's classical formulation, report sec:classical `def:stochastic`); re-tagged `consensus` /\n`source: internal` for this repo. The signed form is the working object because $P^2=P$ holds *exactly*\n(non-positivity quarantined in $\\delta$, see [[def-negative-mass]]). This is the commutative\nspecialization of [[def-near-positive-projection]]; the approximate-idempotence sibling is\n[[def-almost-idempotent]] (a genuinely positive $Q$ with $\\lVert Q^2-Q\\rVert$ small). Exposed row\nvertices and the visible set are [[def-exposed]] / [[def-visible-set]].",
+      "consensus": "adopted from ../almost-idempotent-positive-maps definitions/def-stochastic.md (B's classical formulation, report sec:classical def:stochastic)",
+      "id": "def-stochastic",
+      "kind": "consensus",
+      "locus": "adopted from ../almost-idempotent-positive-maps/definitions/def-stochastic.md",
+      "source": "internal",
+      "status": "locked",
+      "term": "stochastic idempotent"
+    },
+    {
+      "aliases": [
+        "theta map",
+        "functional-calculus idempotent approximation"
+      ],
+      "body": "**Byte-verbatim source text.**\n\nPower-series functional calculus (tex:505-510):\n```tex\nf(X)=a_0I+\\sum_{n=1}^{\\infty}a_n(X-x_0I)^n\\quad\\:\n\\text{if }\\, \\|X-x_0I\\|<r,\\\\\n\\|f(X)-f(x_0I)\\|\\le \\sum_{n=1}^{\\infty}|a_n|\\ts\\|X-x_0I\\|^n.\n```\n\nAbsolute value and sign (tex:517-520):\n```tex\n|X|=(X^2)^{1/2},\\qquad \\sgn(X)=X(X^2)^{-1/2}\\qquad\\quad\n\\bigl(\\|X^2-x_0^2I\\|<x_0^2\\bigr).\n```\n\nThe theta map (tex:527-528, the definitional display of Proposition `prop_P`):\n```tex\n\\wt{P}=\\theta(2P-I),\\qquad\n\\text{where}\\quad \\theta(X)=\\frac{1}{2}\\bigl(I+\\sgn(X)\\bigr).\n```\n\n**Scope note.** This is the map `theta` referenced by the compression-map\ndisplay `Co_{P,Q}=\\theta(\\La_P\\Ra_Q+\\Ra_Q\\La_P-1)` in\n[[def-compressed-corner]] (tex:1057). The neighbouring Proposition's\nconclusions (idempotence of `wtP`, commutation, distance bound) are claims,\nnot definitions — they enter the registry only as re-proved results.\n\n**Ratification.** Draft pending recorded sign-off; expected to lock under the\nuser's recorded byte-match criterion (2026-07-24: \"if they match the source\nthen they are valid\").",
+      "consensus": "",
+      "id": "def-theta-idempotent-approximation",
+      "kind": "cited",
+      "locus": "approximate_algebras.tex:505-528 (displays Taylor_simple, Taylor_simple_bound, abs_sgn, and the theta display inside Proposition prop_P — ONLY the definitional displays are cited; the Proposition's claims are NOT citable and must be re-proved)",
+      "source": "kitaev-2405.02434",
+      "status": "draft",
+      "term": "theta idempotent-approximation map"
+    },
+    {
+      "aliases": [
+        "top deficit",
+        "z_j",
+        "deficit",
+        "top-deficit slab",
+        "Z_v(f)",
+        "top-deficit supremum"
+      ],
+      "body": "**Statement.** In the setting of [[def-top-support-functional]] — an\n[[def-signed-idempotent|exact signed idempotent]] $P$, nonempty [[def-visible-set|visible set]],\n[[def-height|hidden top]] $v$ of height $H$, and a top support functional $\\phi\\in\\Phi_v$ — the\n**top-deficit** of a row $j$ under $\\phi$ is\n$$z_j\\;:=\\;H-\\phi(p_j)\\;\\ge\\;0,$$\nnonnegative because $\\phi(p_j)\\le\\operatorname{dist}_1(p_j,C_{\\mathcal W})\\le H$ (and bounded above,\n$z_j\\le 2+4\\delta$). The **top-deficit supremum** of a row $f$ is\n$Z_v(f):=\\sup_{\\phi\\in\\Phi_v}\\big(H-\\phi(p_f)\\big)=\\sup_{y\\in Y_v}y\\cdot(p_v-p_f)$\n([[lem-top-support-dual-face]]). A **top-deficit slab** is a band of rows cut by a threshold on $z$,\ne.g. $\\{j:z_j\\ge L\\}$.\n\n**Notes / provenance.** Project-original; \"deficit\" alone always means this top-deficit in the\nhuddle-charge shards. The charging identity ([[lem-top-deficit-price]], from $P^2=P$ and $P\\mathbf1=\\mathbf1$)\nis $\\sum_j a_j^+z_j=\\sum_j a_j^-z_j\\le\\nu_v(2+4\\delta)$ with $a_j=P_{vj}$; its structural blind spot is\nthat rows in the $\\rho$-ball of $v$ carry $z_j<4\\tau$. `status: draft` — A+B sign-off pending (Rule 7).\nRelated: [[def-top-support-functional]], [[def-slab]], [[def-co-top]].",
+      "consensus": "project-original; sign-off pending (Rule 7 lock). First pinned by lem-top-deficit-price (z_j) + lem-top-support-dual-face (the supremum Z_v(f))",
+      "id": "def-top-deficit",
+      "kind": "original",
+      "locus": "internal; first pinned in argument/lemmas/lem-top-deficit-price.md and lem-top-support-dual-face.md",
+      "source": "internal",
+      "status": "draft",
+      "term": "top-deficit"
+    },
+    {
+      "aliases": [
+        "top support functional phi",
+        "Phi_v",
+        "support functional at the top",
+        "averaged phi-bar"
+      ],
+      "body": "**Statement.** Fix an [[def-signed-idempotent|exact signed idempotent]] $P$ with nonempty\n[[def-visible-set|visible set]] $\\mathcal W$, write $C_{\\mathcal W}=\\operatorname{conv}\\{p_w:w\\in\\mathcal W\\}$,\nand let $v$ be a [[def-height|hidden top vertex]] of height $H$.\n\nA **top support functional** at $v$ is an affine $\\phi:\\mathbb R^n\\to\\mathbb R$ with\n$$\\phi(p_v)=H,\\qquad \\phi\\le 0\\ \\text{on}\\ C_{\\mathcal W},\\qquad \\phi\\ \\text{is $1$-Lipschitz for }\\ell^1.$$\nThe set of all such is $\\Phi_v$; it is nonempty ([[lem-top-deficit-price]]), convex and compact, and\nby [[lem-top-support-dual-face]] equals $\\{\\phi_y(x)=y\\cdot x-h_{C}(y):y\\in Y_v\\}$ where\n$h_C(y)=\\sup_{c\\in C_{\\mathcal W}}y\\cdot c$ and $Y_v=\\{y:\\lVert y\\rVert_\\infty\\le1,\\ y\\cdot p_v-h_C(y)=H\\}$.\nA finite convex average of top support functionals (an **averaged $\\bar\\phi$**) is again a top support\nfunctional (the three defining conditions are convex).\n\n**Notes / provenance.** Project-original; the affine functional that realizes the height of the top\nand pins the [[def-top-deficit|top-deficit]] $z_j=H-\\phi(p_j)\\ge0$. It is the charging channel of\n[[lem-top-deficit-price]]. `status: draft` — A+B sign-off pending (Rule 7). Related:\n[[def-top-deficit]], [[def-height]], [[def-visible-set]].",
+      "consensus": "project-original; sign-off pending (Rule 7 lock). First pinned by lem-top-deficit-price (existence) + lem-top-support-dual-face (the dual face Phi_v)",
+      "id": "def-top-support-functional",
+      "kind": "original",
+      "locus": "internal; first pinned in argument/lemmas/lem-top-deficit-price.md and lem-top-support-dual-face.md",
+      "source": "internal",
+      "status": "draft",
+      "term": "top support functional"
+    },
+    {
+      "aliases": [
+        "UCP map",
+        "UCP",
+        "completely positive unital map"
+      ],
+      "body": "**Statement.** Let $A$ and $B$ be unital $C^*$-algebras (in this repo's\nRoute-F usage: finite-dimensional, typically $\\ell_\\infty^n$, $M_n$, or a\nfinite-dimensional unital $C^*$-algebra $\\mathcal B$). A linear map\n$\\varphi:A\\to B$ is *positive* if $\\varphi(a)\\ge0$ whenever $a\\ge0$;\n*completely positive* (CP) if for every $r\\ge1$ the amplification\n$\\mathrm{id}_{M_r}\\otimes\\varphi: M_r(A)\\to M_r(B)$ is positive; and\n*unital* if $\\varphi(1_A)=1_B$. A *UCP map* is a unital completely positive\nmap. Standard facts used silently at the BSc/MSc level: a UCP map is\ncontractive; a positive map out of a commutative $C^*$-algebra is\nautomatically CP; compositions of UCP maps are UCP.\n\n**Notes / provenance.** Provisioned per the F0 assembly audit\n(`AUDIT-F0-ASSEMBLY.md` §1.1: the acronym UCP appeared in proposed\ncontracts with no canonical anchor in the definitions layer). Consensus\nadoption of the universal textbook notion — no project-specific content.\nConsumers: the F0 lift rows (`lem-routef-f0-ucp-lift`), the K-ledger\nfactorization rows (UCP $\\Delta,\\Upsilon$), F2. Related:\n[[def-stochastic]] (row-stochastic = unital positive on $\\ell_\\infty^n$),\n[[def-fd-cstar-diagonal]].",
+      "consensus": "user-ratified 2026-07-27 (W79 decision D3, docs/plans/2026-07-27-W78-ratification-package.md; def shard chosen over an L2 textbook exemption because the F0 lift row's contract concludes \"Phi is UCP\")",
+      "id": "def-ucp-map",
+      "kind": "consensus",
+      "locus": "standard operator-algebra textbook notion (e.g. Paulsen, Completely Bounded Maps and Operator Algebras, ch. 2-3); adopted for the Route-F rows per AUDIT-F0-ASSEMBLY.md sect 1.1",
+      "source": "internal",
+      "status": "locked",
+      "term": "unital completely positive map"
+    },
+    {
+      "aliases": [
+        "visible set W",
+        "W(P)",
+        "(ρ,κ)-exposed set",
+        "three scales"
+      ],
+      "body": "**Statement.** Given an [[def-signed-idempotent|exact signed idempotent]] $P$ with\n$\\delta=\\delta(P)$ (the [[def-negative-mass|negative mass]]), the *three scales* are\n$$\\tau:=\\sqrt\\delta,\\qquad \\rho:=4\\tau,\\qquad \\kappa:=\\tau/4.$$\nThe *visible set* is\n$$\\mathcal W=\\mathcal W(P):=\\{\\,v:\\ p_v\\text{ is a }(\\rho,\\kappa)\\text{-exposed row vertex of }P\\,\\},$$\nthe set of row vertices that are [[def-exposed|$(\\rho,\\kappa)$-exposed]] at these scales; all other row\nvertices are *hidden*. At $\\delta=0$ the visible vertices are exactly the distinct rows of the recurrent\n(equal-input) blocks of a stochastic idempotent.\n\n**Notes / provenance.** Adapted from `classical-portfolio/report/kernel-conjecture.tex` §Setting\n(Definition: *The three scales*; Definition: *$(\\rho,\\kappa)$-exposedness and the visible set $\\mathcal W$*).\nThe scales couple exposedness ([[def-exposed]]) to the negative mass ([[def-negative-mass]]). The convex\nhull $C_{\\mathcal W}:=\\operatorname{conv}\\{p_w:w\\in\\mathcal W\\}$ is consumed by [[def-height]] (max\n$\\ell^1$-distance of a row from $C_{\\mathcal W}$) and [[def-invisible-mass]] (positive mass a row places\noutside $C_{\\mathcal W}$).",
+      "consensus": "adapted from kernel-conjecture.tex §Setting (Definition: three scales; Definition: (ρ,κ)-exposedness and the visible set W)",
+      "id": "def-visible-set",
+      "kind": "original",
+      "locus": "quoted from classical-portfolio/report/kernel-conjecture.tex §Setting (def:scales, def:exposed)",
+      "source": "internal",
+      "status": "locked",
+      "term": "visible set"
+    },
+    {
+      "aliases": [
+        "zero face",
+        "zero-face family",
+        "always-tight zero-face family",
+        "Z(u)",
+        "h-zero row",
+        "zero-face conic mass"
+      ],
+      "body": "**Statement.** Fix an [[def-signed-idempotent|exact signed idempotent]] $P$ and a hidden\n([[def-exposed|not $(\\rho,\\kappa)$-exposed]]) geometrically distinct row vertex $u$, with the\nexposedness LP at $u$ (the program defining $t^*(u)$, see [[def-exposed]]) and an *optimal exposer*\n$h^*$ (an admissible affine $h$ attaining $t^*(u)$).\n\nA row $z$ is a **zero-face row** of $u$ if $h^*(p_z)=0$, i.e. $z$ lies on the zero face\n$\\{x:h^*(x)=0\\}$ of the optimal exposer. The **always-tight zero-face family** $Z(u)$ is the set of\nrows whose lower-box constraint $h\\ge 0$ is tight on the *whole* primal optimal face of the LP\n(equivalently, $\\operatorname{supp}(\\alpha)\\subseteq Z(u)$ for every reduced optimal hiddenness\n[[def-dual-witness|dual witness]] $(\\lambda,\\alpha,\\beta)$, by [[lem-always-tight-dual-support]]).\nThe **zero-face conic mass** is $\\sum_{z\\in Z(u)}a_z$ for the reduced optimal display's zero-face\ncoefficients $a_z\\ge 0$.\n\nBy [[lem-zero-face-localization]] every zero-face row is $\\rho$-near $u$\n($\\lVert p_z-p_u\\rVert_1<4\\tau$, $\\tau=\\sqrt{\\delta}$); if $u$ is within $4\\tau$ of a\n[[def-height|hidden top]] $v$ of height $H$ then additionally $\\lVert p_z-p_v\\rVert_1<8\\tau$ and $z$\nhas depth $>H-8\\tau$.\n\n**Notes / provenance.** Project-original; the vocabulary in which the huddle-charge terminal node\nis posed (kill or bound the zero-face conic mass). Distinguish two uses in the shards, kept\nconsistent here: the *pointwise* zero-face row ($h^*(p_z)=0$ for one fixed optimal exposer) and the\n*always-tight family* $Z(u)$ (tight on the entire optimal face). $Z(u)$ is the always-tight version;\nstatements that fix one optimal exposer $h^*$ use the pointwise version, and the two agree on the\nrelative interior optimal exposer. `status: draft` — A+B sign-off pending (Rule 7). Related:\n[[def-actor-hull]] (the always-tight far/upper-box hulls $K_T,K_O$), [[def-dual-witness]].",
+      "consensus": "project-original; sign-off pending (Rule 7 lock). First pinned by lem-zero-face-localization (rho-nearness) + lem-always-tight-dual-support (the alpha-carrier family Z)",
+      "id": "def-zero-face",
+      "kind": "original",
+      "locus": "internal; first pinned in argument/lemmas/lem-zero-face-localization.md and lem-always-tight-dual-support.md",
+      "source": "internal",
+      "status": "draft",
+      "term": "zero-face row"
+    }
+  ],
+  "total": 47
+}

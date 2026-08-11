@@ -1,0 +1,10 @@
+{
+  "definitions": 47,
+  "edges": 860,
+  "frontier_entries": 1301,
+  "registry_total": 374,
+  "retractions": 7,
+  "run_bundles": 38,
+  "t0_validated": 200,
+  "workspaces_validated": 202
+}

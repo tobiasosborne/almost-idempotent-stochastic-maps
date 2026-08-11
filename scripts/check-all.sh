@@ -37,6 +37,13 @@ echo "[check-all] report campaign-statistics layer freshness (regenerate + byte-
 # printed (never fatal) when the committed snapshot is behind the live data.
 python3 scripts/gen-report-stats.py --check || fail "gen-report-stats"
 
+echo "[check-all] site data layer freshness (site/data/*.json == a fresh generation from the canonical record)"
+# The FOURTH generated layer (after report defs/dag/stats), plan slate J / principle P1: every number
+# on every site surface is generated from the registry + ledgers + LEARNINGS + runs + refs + fr log.
+# A shard/ledger/retraction that moved without regenerating leaves the site publishing a number the
+# repo no longer supports => STALE => the commit is blocked. Refresh: gen-site-data.py --generate.
+python3 scripts/check-site.py --check || fail "check-site"
+
 echo "[check-all] report<->registry provenance sync (+ latexmk build & undefined-ref scan via --build)"
 # --build folds the report compile into this step: latexmk into report/.build (never mutates the
 # tracked main.pdf) AND scans the log for undefined \ref/\Cref (which -halt-on-error does NOT fail on).
