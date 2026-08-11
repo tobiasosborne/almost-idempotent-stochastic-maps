@@ -126,36 +126,39 @@ of git, no secrets found (checked .beads config, .claude/settings.json).
 
 ## NEXT SESSION (ranked)
 
-1. **Phase 1 — mechanical hygiene pass** (`aism-xvcq`; needs NO user
-   input; respect Rule 3 reviewer≠author where substantive): fix
-   defects 1–3 + 6 above (README rewrite is content-bearing — draft it
-   against PRD/HANDOFF facts, have an independent reviewer agent check
-   status claims); rebuild `paper/main.pdf`; path fallbacks (defect 4,
-   script part); wire the missing test. Gate + commit per step.
-2. **Phase 2 — audience-tiered documentation** (blocked on the three
-   user answers below): (a) mathematician tier — README leading with
-   theorem+constants → paper → report; (b) auditor tier — methodology
-   doc (rigour ladder, af protocol, LEARNINGS as evidence), guided
-   audit path op-classical → Route-F core → one worked export.md,
-   `proofs/README.md`; (c) process tier — `docs/README.md` map,
-   curated history arc (v1 → Route-F overclaim/retraction → v53),
-   glossary.
-3. Paper polish (`aism-aywn`) — still awaiting user feedback.
-4. Lean/mathlib — top rung, ONLY on user elevation.
+**THE CAMPAIGN PLAN IS RATIFIED (2026-08-11):
+`docs/plans/2026-08-11-communication-artifacts-plan.md` — "The
+Glass-Box Lab". Headline deliverable: the QUANTIFIED Swiss-Cheese
+Defense (user mandate: this is more than a Lean formalisation — six
+independent error-catching layers whose composition catches what each
+misses; counts in the plan: 435 verifier challenges / 2,819 node
+validations / 381 amendments / 9 de-banked certificates / 16 balloon
+aborts / 3 disproofs / 8 attributed retractions). Rendered proposal:
+https://claude.ai/code/artifact/6d0be821-6f3d-4780-b65d-d546b30989b2**
 
-## USER DECISION PENDING (asked 2026-08-10, session ended unanswered)
+1. **Phase 0 — hygiene pass** (plan §Phases; needs NO user input):
+   fix defects 1–3 + 6 above; rebuild `paper/main.pdf`; path
+   fallbacks; wire the missing test; bead triage. Gate + commit per
+   step. (README rewrite moved to Phase 2 — content-bearing,
+   reviewer ≠ author.)
+2. **Phase 1 — site data layer** (plan slate J): JSON exporters +
+   `llms.txt` + `check-site` gate.
+3. **Phase 2 — front door + core**: README (A) · Theorem page (B) ·
+   Defense headline page (G) · Proof Atlas MVP (C).
+4. Paper polish (`aism-aywn`) — still awaiting user feedback.
+5. Lean/mathlib — top rung, ONLY on user elevation.
 
-1. **Audience/venue?** Public GitHub repo accompanying an arXiv
-   submission of `paper/main.tex` vs colleague-sharing vs
-   methodology-demonstration. Decides whether README leads with the
-   theorem or the process.
-2. **Prominence of the honesty story?** Recommendation on record: the
-   retraction ledger + af-not-Lean boundary are the credibility engine
-   and belong on the front page — but it is an editorial call.
-3. **Stance on unshippable tooling?** `af`/`fr` cannot be installed by
-   outsiders. Recommendation on record: document as "not required to
-   VERIFY (stdlib-only check-all.sh), only to EXTEND"; alternatives:
-   vendor/publish them, or scope sharing as read-only.
+## USER DECISIONS (asked 2026-08-10 — ANSWERED 2026-08-11, ratified)
+
+1. **Audience/venue:** public GitHub repo + GitHub Pages (committed
+   `site/`, no Actions — Rule 12 intact) + arXiv eventually.
+2. **Honesty story:** FRONT PAGE — folded into the Swiss-Cheese
+   Defense headline.
+3. **Tooling:** premise corrected — `af`
+   (github.com/tobiasosborne/vibefeld) and `fr` are BOTH public repos
+   of the user; link + document install on the Defense page. Verify
+   path stays stdlib-only. (fr repo URL: get from user in Phase 2.)
+4. **Site residence:** in-repo `site/`, lockstep with the gates.
 
 ## Worked-pattern reminders (BINDING, carried forward)
 
