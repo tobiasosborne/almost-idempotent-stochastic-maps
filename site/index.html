@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Theorem — almost-idempotent stochastic maps</title>
+<meta name="description" content="The classical projection-stability theorem for almost-idempotent stochastic maps: statement, live sharpness witness, constants, and the honest proved/not-proved boundary.">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">almost-idempotent-stochastic-maps<span>the glass-box lab</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="index.html" aria-current="page">Theorem</a>
+      <a href="defense.html">Defense</a>
+      <a href="atlas.html">Atlas</a>
+      <span class="off" aria-disabled="true" title="not yet built — Phase 3 of the plan">Replay</span>
+      <span class="off" aria-disabled="true" title="not yet built — Phase 3 of the plan">Ledger</span>
+      <span class="off" aria-disabled="true" title="not yet built — Phase 3 of the plan">Lexicon</span>
+      <span class="off" aria-disabled="true" title="not yet built — Phase 4 of the plan">Evidence</span>
+      <button class="theme-btn" id="theme-btn" type="button">Theme: auto</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="data-error" class="fetch-error" hidden></div>
+
+  <section id="hero">
+    <p class="label">op-classical &middot; argument/lemmas/op-classical.md</p>
+    <h1>Every almost-idempotent stochastic map is close to an exact one</h1>
+    <div class="chips" id="hero-chips" data-needs-data>
+      <span class="small">loading status from <code>site/data/dag.json</code>&hellip;</span>
+    </div>
+
+    <div class="eq" style="margin-top:1.25rem">
+      <span class="math">&#8214;<span class="v">Q</span>&sup2; &minus; <span class="v">Q</span>&#8214;<sub>&infin;&rarr;&infin;</sub> &le; &eta; &le; &eta;<sub>0</sub></span>
+      &nbsp;&nbsp;&rArr;&nbsp;&nbsp;
+      <span class="math">&exist; <span class="v">E</span> = <span class="v">E</span>&sup2; stochastic with &#8214;<span class="v">Q</span> &minus; <span class="v">E</span>&#8214;<sub>&infin;&rarr;&infin;</sub> &le; <span class="v">C</span>&radic;<span style="text-decoration:overline">&eta;</span></span>
+    </div>
+
+    <p>
+      There are universal constants <span class="math"><span class="v">&eta;</span><sub>0</sub>, <span class="v">C</span> &gt; 0</span>,
+      <em>independent of the dimension</em>, such that every row-stochastic matrix
+      <span class="math"><span class="v">Q</span></span> whose idempotence defect
+      <span class="math">&#8214;<span class="v">Q</span>&sup2;&minus;<span class="v">Q</span>&#8214;<sub>&infin;&rarr;&infin;</sub></span>
+      is at most <span class="math">&eta; &le; &eta;<sub>0</sub></span> admits a genuine stochastic idempotent
+      <span class="math"><span class="v">E</span></span> within distance <span class="math"><span class="v">C</span>&middot;&radic;&eta;</span>.
+      The exponent <span class="math">1/2</span> cannot be improved
+      (<code>cor-classical-sharpness</code>) &mdash; the live witness below is that family.
+    </p>
+
+    <div class="note" id="honest-boundary">
+      <strong>The rung reached is <em>af-validated</em>, not Lean.</strong>
+      Both halves of the theorem were driven to <em>validated</em> in an adversarial proof tree: a fresh
+      prover, a <em>separate</em> fresh verifier per node, and challenge/amendment rounds, with the
+      orchestrator forbidden from judging any step. That is strictly weaker, per inference, than a
+      kernel-checked proof. <strong>No <code>sorry</code>-free Lean/mathlib proof exists for anything
+      here</strong>, nothing on this site is peer-reviewed or published, and the constants are not
+      explicit. What the record does support is measured defense-in-depth &mdash;
+      <a href="defense.html">see the Defense page</a>.
+    </div>
+
+    <details class="raw" data-needs-data>
+      <summary>The registry contract, verbatim</summary>
+      <p class="contract mono" id="hero-contract" style="white-space:pre-wrap;margin-top:.5rem"></p>
+    </details>
+  </section>
+
+  <hr class="rule">
+
+  <section id="witness">
+    <p class="label">live witness &middot; lem-prh-sharpness / cor-classical-sharpness</p>
+    <h2>Why the exponent is &frac12; and not better</h2>
+    <p>
+      The sharpness half is carried by an explicit 4&times;4 family. For each
+      <span class="math">&lambda; &isin; (0, &frac12;)</span> the matrix
+      <span class="math"><span class="v">Q</span><sub>&lambda;</sub></span> below is row-stochastic with defect
+      <span class="math">&eta; = 2&lambda;&sup2;</span>, yet <em>every</em> stochastic idempotent
+      <span class="math"><span class="v">F</span></span> on <span class="math">&#8467;<sub>&infin;</sub>(4)</span> stays at
+      distance at least <span class="math">&lambda; = &radic;(&eta;/2)</span> from it. Drag the slider: the defect
+      collapses quadratically while the distance only collapses linearly, so no exponent
+      <span class="math">&beta; &gt; &frac12;</span> can survive.
+    </p>
+
+    <div class="card">
+      <div class="slider-row">
+        <label class="label" for="lam">&lambda;</label>
+        <input type="range" id="lam" min="0.02" max="0.48" step="0.005" value="0.30"
+               aria-label="lambda, the witness parameter between 0.02 and 0.48">
+        <output class="mono" id="lam-out" for="lam">0.300</output>
+      </div>
+
+      <div class="witness">
+        <div>
+          <p class="label">Q<sub>&lambda;</sub> &mdash; row-stochastic, 4&times;4</p>
+          <div class="scroll-x">
+            <table class="qmatrix" id="qmat" aria-label="the witness matrix Q lambda"></table>
+          </div>
+          <p class="small" style="margin-top:.6rem">
+            Rows: (1&minus;&lambda;, 0, &lambda;, 0); (0, 1&minus;&lambda;, 0, &lambda;);
+            ((1&minus;&lambda;)&sup2;, &lambda;(1&minus;&lambda;), &lambda;(1&minus;&lambda;), &lambda;&sup2;);
+            (&lambda;(1&minus;&lambda;), (1&minus;&lambda;)&sup2;, &lambda;&sup2;, &lambda;(1&minus;&lambda;)).
+            Each row sums to 1 for every &lambda;.
+          </p>
+          <div class="readouts">
+            <div class="ro"><b id="ro-eta">&mdash;</b><span>&eta; = 2&lambda;&sup2; (defect)</span></div>
+            <div class="ro"><b id="ro-floor">&mdash;</b><span>floor &radic;(&eta;/2) = &lambda;</span></div>
+            <div class="ro"><b id="ro-ach">&mdash;</b><span>achieved &radic;(2&eta;) = 2&lambda;</span></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="label">distance to the nearest stochastic idempotent vs defect &eta;</p>
+          <svg class="chart" id="chart" viewBox="0 0 420 270" role="img"
+               aria-label="Chart of distance against defect: the achieved curve, the dashed floor, and the shaded forbidden region below the floor.">
+            <g id="chart-body"></g>
+          </svg>
+          <p class="small">
+            The shaded band is <strong>forbidden</strong>: an <span class="math"><span class="v">E</span></span> claimed
+            below the dashed floor contradicts <code>lem-prh-sharpness</code>, so a proof that produced one would be
+            wrong. Both curves are that af-validated family's own identities
+            (<span class="math">&eta; = 2&lambda;&sup2;</span>, floor <span class="math">&radic;(&eta;/2)</span>,
+            achieved <span class="math">&radic;(2&eta;)</span>); they are reproduced here, not re-derived.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="constants">
+    <h2>The constants are universal &mdash; and not explicit</h2>
+    <p>
+      The upper-bound half closes through Route&nbsp;F. Its assembly lemma
+      (<code>lem-routef-f0-assembly</code>) does not produce a number; it produces a <em>recipe</em>. From the
+      universal scalars <span class="math"><span class="v">K</span> &ge; 1</span> and
+      <span class="math">&eta;<sub><span class="v">K</span></sub> &gt; 0</span> supplied by
+      <code>lem-routef-k-ledger</code>, one may take
+    </p>
+    <div class="eq">
+      <span class="math"><span class="v">C</span> := <span class="v">K</span> + 4&radic;(2<span class="v">K</span>)</span>,
+      &nbsp;&nbsp;
+      <span class="math">&eta;<sub>0</sub> := &eta;<sub><span class="v">K</span></sub> = min{&rho;<sub>fac</sub>, (24<span class="v">K</span>)<sup>&minus;1</sup>, 1}</span>.
+    </div>
+    <p>
+      <span class="math"><span class="v">K</span></span> is explicit only up to the unnamed big-O constants of the
+      source factorisation, so no numerical value is claimed. Two consequences <em>are</em> pinned, because they
+      follow from <span class="math"><span class="v">K</span> &ge; 1</span> alone:
+    </p>
+    <div class="statrow" style="margin:1rem 0">
+      <div class="stat"><span class="n">&ge; 6.657</span><span class="k">C &ge; 1 + 4&radic;2</span></div>
+      <div class="stat"><span class="n">&le; 1/24</span><span class="k">&eta;<sub>0</sub> &le; (24K)<sup>&minus;1</sup></span></div>
+      <div class="stat"><span class="n">&frac12;</span><span class="k">exponent &mdash; sharp, both directions</span></div>
+    </div>
+    <p class="small">
+      Turning a recipe into a certified number is a different discipline from proving the theorem: the
+      certificate philosophy &mdash; interval-arithmetic constants you can execute rather than read &mdash; lives in
+      the sibling implementation repository
+      <a href="https://github.com/tobiasosborne/almost-idempotent-channels">almost-idempotent-channels</a>.
+      Nothing on this page depends on it.
+    </p>
+  </section>
+
+  <hr class="rule">
+
+  <section id="boundary" data-needs-data>
+    <h2>What is proved &mdash; and what is not</h2>
+    <div class="grid two">
+      <div class="card layer" style="border-left-color:var(--st-t0)">
+        <p class="label">Proved &mdash; at the af-validated rung</p>
+        <ul id="is-proved" class="metrics"></ul>
+      </div>
+      <div class="card layer" style="border-left-color:var(--st-dead)">
+        <p class="label">Not proved &mdash; the honest boundary</p>
+        <ul id="not-proved" class="metrics"></ul>
+      </div>
+    </div>
+    <p class="small" style="margin-top:1rem">
+      Every row above is read at page load from <code>site/data/dag.json</code> and
+      <code>site/data/stats.json</code>, which <code>scripts/check-site.py</code> re-derives from the registry on
+      every commit. If the registry moves and the data is not regenerated, the gate fails the commit rather than
+      letting this page publish a stale number.
+    </p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <a href="../paper/main.tex">paper/main.tex</a>
+    <a href="../report/main.pdf">report/main.pdf (lab book)</a>
+    <a href="../GLOSSARY.md">GLOSSARY.md</a>
+    <a href="../proofs/README.md">proofs/README.md</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-channels">sibling: almost-idempotent-channels</a>
+    <p class="small" style="margin-top:.8rem">
+      Prose on this page is human-reviewed; every number and status chip is machine-generated from the repository
+      record. Not peer-reviewed, not published, not Lean-verified.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/theorem.js"></script>
+</body>
+</html>
