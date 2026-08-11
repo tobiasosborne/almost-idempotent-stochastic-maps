@@ -111,3 +111,17 @@ you to run the command above — no silent blank sections.
   the `refs/` source payloads are gitignored (copyright), so `check-refs` reports their quotes as
   unverifiable until you supply them (`python3 scripts/fetch-refs.py --status` lists which of the 23
   are auto-fetchable and which must be obtained manually).
+
+## Deployment
+
+Hosted at <https://tobiasosborne.github.io/almost-idempotent-stochastic-maps/> — GitHub Pages serving
+the `gh-pages` branch (legacy build, no Actions). `gh-pages` is a mirror of this directory, produced by
+
+```sh
+git subtree split --prefix=site -b gh-pages-tmp
+git push -f origin gh-pages-tmp:gh-pages
+git branch -D gh-pages-tmp
+```
+
+Re-run those three commands after any `site/` change lands on master (a deliberate local step — this
+repo runs no CI by policy, CLAUDE.md Rule 12).

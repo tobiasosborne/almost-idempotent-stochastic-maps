@@ -2685,3 +2685,45 @@ the three user answers.**
 - NEXT: Phase 1 (site data layer: JSON exporters + llms.txt + check-site gate), then
   Phase 2 (README + Theorem page + Defense headline page + Atlas MVP). Known minor:
   gen-report-stats snapshot ~17 fr records behind (advisory, refresh via --extract).
+
+## 2026-08-11 — Session 48 (part 2): PHASES 1–4 of the Glass-Box Lab EXECUTED — the site is live
+
+- **Phase 1**: site data layer (`gen-site-data.py` + `site_sources.py`, stdlib, imports
+  argument.py's parser; 7 JSONs incl. the live Defense counts and the T0 timeline with its
+  7 real de-banking dips; `check-site` gate wired, red→green proven; `llms.txt`). The layer
+  immediately CORRECTED 4 figures in the ratified plan (retractions 7 not 8 — the HTML-comment
+  template; bundles 38; externals 30 quotes/1,080 imports/23 no-quote; 1,016 = def_added
+  events) — dated correction block added to the plan; proposal artifact republished to match.
+  Navigation docs landed (proofs/README with a WALKED 5-step audit recipe incl. real challenge
+  pair ch-a5432952230b16be; docs/README; GLOSSARY 19 entries).
+- **Phase 2**: README front door rewritten (independent Opus review: SHIP, 0 overclaims,
+  36/36 links; all 8 reviewer tightenings applied — incl. '374 results, 200 af-validated'
+  and the gate-certifies-provenance-not-truth clause). Site core: index.html (live 4×4
+  sharpness witness), defense.html (all numbers runtime-rendered from defense.json),
+  atlas.html (374 nodes, lenses; jsdom-tested).
+- **Phase 3**: replay.html (T0 chart w/ dip markers + 1,304-entry log explorer), ledger.html
+  (7 retraction cards + Rule-13 dead-route cards), lexicon.html (47 defs + glossary index),
+  evidence.html (38 bundles, permanent L3 banner); nav wired across all 7 pages; 47 test
+  assertions green.
+- **Phase 4**: comprehensive adversarial review (fresh Opus): content survived a hostile
+  re-walk of the audit recipe event-id-by-event-id, but found 2 BLOCKERs in the SHIPPED
+  STATE: (1) a fresh clone fails check-all at check-refs (11/23 refs payloads unfetchable →
+  30 'fabricated quote' FAILs) — prose now honest on all four surfaces; gate-semantics change
+  filed as USER-DECISION bead aism-qen0; (2) four site commits generated site/data from the
+  UNCOMMITTED frontier log — log now staged atomically with every regenerate; durable fix
+  bead aism-a8tc. Plus 5 MAJORs fixed (the def_added label that re-published a retracted
+  figure; the achieved-curve provenance; the ≥6.657 wrong-way rounding; glossary kernel
+  wording; link-convention unification) and the minor/nit sweep (dynamic replay counts,
+  six Laws, date-stamped counts, narrowed cascade claim, atlas default lens = Route-F
+  closure, balloon threshold correction). Headless-Chromium verified, 0 errors.
+- **HOSTING LIVE**: GitHub Pages enabled (legacy build, NO Actions — Rule 12):
+  https://tobiasosborne.github.io/almost-idempotent-stochastic-maps/ serving gh-pages =
+  a `git subtree split` mirror of site/ (procedure documented in site/README.md; re-mirror
+  after site/ changes). First build propagating at session close (404 at first probe).
+- Beads: +aism-i15b (data-layer unit test), +aism-qen0 (USER DECISION: check-refs
+  absent-vs-mismatch), +aism-a8tc (frontier-log binding). All commits gate-green; 4
+  independent Opus reviews this session (counters, residual-status, README, phase-4
+  comprehensive) + 2 implementation self-verifications with walked evidence.
+- DEFERRED (documented in site/README.md deviations): KaTeX, δ–H scatter, per-result
+  drill-down pages + stable anchors (slates D/J), hover-cards, atlas hash deep-links,
+  fr repo URL (awaiting user).

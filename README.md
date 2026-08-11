@@ -83,7 +83,9 @@ interactive site: [`site/`](site/) — the Theorem page with a live 4×4 sharpne
 ([`site/index.html`](site/index.html)), the Defense page ([`site/defense.html`](site/defense.html)) and
 the Proof Atlas ([`site/atlas.html`](site/atlas.html)), all rendering from the machine-readable layer
 ([`site/data/*.json`](site/data/) — DAG, statuses, contracts, retractions, runs, defence counts). View
-locally with `python3 -m http.server -d site`; the hosted URL is pending the GitHub Pages flip.
+locally with `python3 -m http.server -d site`, or hosted at
+**<https://tobiasosborne.github.io/almost-idempotent-stochastic-maps/>** (GitHub Pages, serving the
+`gh-pages` branch mirrored from `site/`).
 <!-- 4 pp and 302 pp verified by pdfinfo on paper/main.pdf and report/main.pdf; paper/main.pdf is
      gitignored, hence the link to the .tex. -->
 
