@@ -22,6 +22,11 @@ generated data** — it holds only this schema (aqm discipline).
 | `runs/2026-07-02-ex-multiblock-coupling/data/multiblock_coupling.csv` | `runs/2026-07-02-ex-multiblock-coupling/scripts/certify_multiblock_coupling.py` | `runs/2026-07-02-ex-multiblock-coupling/` | none | see contract below |
 | `runs/2026-07-02-ex-no-center-highrank/data/no_center_highrank.csv` | `runs/2026-07-02-ex-no-center-highrank/scripts/certify_no_center_highrank.py` | `runs/2026-07-02-ex-no-center-highrank/` | none | see contract below |
 | `runs/2026-07-02-ex-enumeration-rehome/data/campaign_summary.csv` | manual re-home manifest from archived upstream outputs | `runs/2026-07-02-ex-enumeration-rehome/` | none | see contract below |
+| `runs/2026-07-04-rank4-transfer-decider/data/certified_points.csv` | `runs/2026-07-04-rank4-transfer-decider/scripts/decider_rank4.py` | `runs/2026-07-04-rank4-transfer-decider/` | none | see contract below |
+| `runs/2026-07-04-small-delta-b-sweep/data/certified_points.csv` | `runs/2026-07-04-small-delta-b-sweep/scripts/decider_small_delta.py` | `runs/2026-07-04-small-delta-b-sweep/` | none | see contract below |
+| `runs/2026-07-04-b-amplifier-hunt/data/certified_points.csv` | `runs/2026-07-04-b-amplifier-hunt/scripts/amplifier_wave13.py` | `runs/2026-07-04-b-amplifier-hunt/` | none | see contract below |
+| `runs/2026-07-05-nsc-zero-denominator-refuter/data/nsc_pair_table.csv` | `runs/2026-07-05-nsc-zero-denominator-refuter/scripts/nsc_ratio_search.py` | `runs/2026-07-05-nsc-zero-denominator-refuter/` | none | see contract below |
+| `runs/2026-07-05-w16b-dj-floor/data/floor_table.csv` | `runs/2026-07-05-w16b-dj-floor/scripts/dj_floor_decider.py` | `runs/2026-07-05-w16b-dj-floor/` | none | see contract below |
 
 ### `runs/2026-07-02-undercap-killers/data/undercap_killers.csv`
 
@@ -132,3 +137,56 @@ Column contract (exact rational strings; one row per certified argmin point):
 - `reduced_total` / `B_minus_reduced_total`: same comparison under the import-reduction coefficients.
 - `budget_total` / `B_over_budget_total`: G12 pivot-s budget terms (G_class^- + S_-^mu + SIGMA) and the
   coverage ratio (record ~ 4.24 — B needs its own delta-scale financing).
+
+### `runs/2026-07-05-nsc-zero-denominator-refuter/data/nsc_pair_table.csv`
+
+Column contract (exact values are rational strings; one row per (argmin chart, maximal pivot `s`,
+transverse `r`) pair, over every certified instance including the K0 known-witness calibrations —
+evidence table for the DC2 refuter, never a proof):
+
+- `name` / `family`: instance id and construction family (`known` = K0 witness calibration;
+  two-/three-carrier refuter families; wave-13 amplifier-boundary family).
+- `n`: ambient dimension of the signed idempotent `P` (rank 3 throughout).
+- `delta`: exact negative mass `delta(P)`.
+- `U`: certified theta-half Phi-argmin chart (row indices, space-separated; complete exact chart
+  enumeration per instance).
+- `m`: exact chart mass of `U` (theta-half means `m >= 1/2`).
+- `s` / `r`: maximal pivot (`phi_s = Phi`) and transverse index of the pair.
+- `B`: exact cross-pivot mass `B_{r,s}` at the pair.
+- `SUM_carriers`: the broad-NSC charging target `sum_{carriers} beta_r(i) * nu_i(P)`, where a carrier
+  is a row `i` with `beta = P[U_r][i] > 0` and chart coordinate `a_i[s] < 0`, and `nu_i(P)` is the
+  ambient negative mass of row `i`.
+- `R`: the NSC ratio `B / SUM_carriers`; the sentinel `INF` marks the zero-denominator refuting mode
+  (`B > 0` with `SUM_carriers = 0` — the headline counterexample); empty when `B = 0` with no
+  positive carrier sum (ratio undefined, nothing to charge).
+- `carriers`: semicolon-joined per-carrier records
+  `i=<row>:beta=<beta_r(i)>,a_s=<a_i[s]>,nu=<nu_i(P)>,inad=<bool>` (`inad` = volume-inadmissible,
+  i.e. `neg(a_i[s]) * m < 1/2`); empty when the pair has no carriers.
+
+### `runs/2026-07-05-w16b-dj-floor/data/floor_table.csv`
+
+Column contract (exact values are rational strings; one row per (instance, argmin chart `U`,
+maximal pivot `s`, transverse `r`) direct-FE floor evaluation with carrier set `J` — evidence for
+the wave-16b `D_J/B` minimization, UNDECIDED, never a proof):
+
+- `source`: `bundle` = recomputed wave-16 bundle point; `fresh` = new alpha-family point produced by
+  this decider (see the bundle README verification-scope note: fresh-point certificates lack full
+  `L,B` matrices).
+- `name` / `family`: instance id and construction family.
+- `n`: ambient dimension of the signed idempotent `P`.
+- `delta`: exact negative mass `delta(P)`.
+- `theta_count`: number of theta-half charts in the complete exact enumeration for the instance.
+- `U`: certified capped theta-half Phi-argmin chart (JSON-style row-index list; tied charts get
+  separate rows).
+- `s` / `r`: maximal pivot and transverse index (G12 convention).
+- `J`: carrier row set charged by the direct-FE identity (JSON-style list of ambient row indices).
+- `B`: exact cross-pivot mass `B_{r,s}`.
+- `D`: the carrier self-defect `D_J` (the direct-FE floor quantity; the sign-kill check `D > 0` is
+  hard-asserted whenever `B > 0`).
+- `S`: the direct-FE source-side sum `S_J`; the identity `D_J = S_J` is hard-asserted, so `S` equals
+  `D` on every row (redundant column kept as the identity witness).
+- `D_over_B`: the decider floor `D_J/B` (empty when `B = 0`; certified minimum `23/1000` on a
+  genuine `B/delta > 1/2` point).
+- `D_over_delta`: `D_J/delta` (the no-upper-side-blow-up check).
+- `negative_coefficients`: JSON-style list of rows with a negative direct-FE coefficient (empty
+  everywhere certified = no sign kill occurred).
