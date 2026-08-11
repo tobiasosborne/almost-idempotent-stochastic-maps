@@ -21,12 +21,15 @@ static server and from GitHub Pages (Rule 12: no Actions).
 | `index.html` | **The Theorem** — the `op-classical` statement, its status chips read from the registry, the live 4×4 sharpness witness (slider over λ, the matrix, η/floor/achieved readouts, and the δ–η chart with the forbidden region), the non-explicit-constant story, and the two-panel *what is proved / what is not*. |
 | `defense.html` | **The Swiss-Cheese Defense** (the headline page) — six error-catching layers with live counts, the schematic with two real error trajectories, the retraction ledger as dated cards, the honest af-vs-Lean paragraph, and the protocol explainer. |
 | `atlas.html` | **Proof Atlas** — all registry nodes and edges as an interactive DAG: rigour-rung colours, status filters, route lenses, pan/zoom, and a side panel with the verbatim one-line contract plus a link to the exported af tree for validated results. |
-| `assets/site.css` | The design system: palette tokens (validated for colourblind safety), typography, status chips, layout primitives. |
+| `replay.html` | **Campaign Replay** — the append-only explore/exploit record: the af-validated (T0) count over the whole campaign as a line chart with every *decrease* marked (de-bankings — retractions, and the point of the page), plus the full log as a filterable, searchable, paginated explorer (outcome · arm · free text; rows expand to the complete note). |
+| `ledger.html` | **The Honesty Ledger** — every retracted claim as a dated card (what was claimed, why it was wrong, which layer caught it, how it was resolved), followed by a prose section on **dead routes**: the death certificates live in `FINDINGS.md` and are deliberately not parsed into data; the seven inherited families barred by `CLAUDE.md` Rule 13 are listed as static cards. |
+| `lexicon.html` | **The Lexicon** — the canonical definition shards, searchable over term/alias/id and filterable by provenance and lock status, each body shown as the shard's own source text. Below it, the process glossary reproduced as a *list of term names* linking to `GLOSSARY.md` — one canonical source per term, so the bodies are not duplicated. |
+| `evidence.html` | **The Evidence Layer** — every run bundle as a sortable, searchable table (date · bundle · headline finding), each row linking to its README in the repository, under a permanent **“evidence, never proof (L3)”** banner. |
+| `assets/site.css` | The design system: palette tokens (validated for colourblind safety), typography, status chips, layout primitives, and the shared page components (toolbars, chart chrome, log rows, cards, tables). |
 | `assets/site.js` | Shared shell: three-state theme toggle, JSON loading with the `file://` notice, escaping helpers, the rigour-rung → badge mapping. |
-| `assets/theorem.js`, `assets/defense.js`, `assets/atlas.js` | One module per page (classic scripts; `file://` blocks ES modules). |
+| `assets/theorem.js`, `assets/defense.js`, `assets/atlas.js`, `assets/replay.js`, `assets/ledger.js`, `assets/lexicon.js`, `assets/evidence.js` | One module per page (classic scripts; `file://` blocks ES modules). |
 
-Nav entries for **Replay**, **Ledger**, **Lexicon**, and **Evidence** are deliberately disabled
-placeholders — those are Phase 3/4 of the plan.
+All seven nav entries are live.
 
 ## Where the numbers come from
 
@@ -70,6 +73,20 @@ you to run the command above — no silent blank sections.
   small text assets with zero vendored third-party code, and the statements on these three pages are
   short enough to typeset legibly without a layout engine. Revisit when a page needs displayed,
   multi-line mathematics (the drill-down pages of Phase 3 are the likely trigger).
+- **No δ–H scatter on `evidence.html` (follow-up).** The plan's slate I calls for an interactive
+  δ–H scatter over the certified instance record; this build ships the bundle table only. The scatter
+  needs the *per-instance* data lifted into `site/data/` by `gen-site-data.py` (today the generator
+  carries only each bundle's date, slug, title, and headline excerpt), and plotting it from summary
+  prose would be precisely the number-without-provenance this project refuses. Follow-up work:
+  export the instance records, then add the scatter under the same L3 banner.
+- **The T0 timeline is a parse, and says so.** `replay.html` charts `t0_timeline`, which the generator
+  recovers from free-text wave notes (liberal match on the last T0 count mentioned). The generator's own
+  caveat is printed under the chart verbatim. The *decreases* are real de-bankings, cross-checked against
+  the retraction ledger; the exact horizontal position of a point is only as good as the note it came from.
+- **`GLOSSARY.md` term names are transcribed onto `lexicon.html`.** Its entries are bold terms inside one
+  file rather than headings, so there are no anchors to link to; the list carries names only (19 at the
+  time of writing) and every link points at the file. If the glossary gains an entry, the list is merely
+  short — it never misstates what an entry *says*, because it does not reproduce any body.
 - The Atlas uses a deterministic longest-path layering rather than a force simulation — reproducible,
   instant, and dependency-free, at the cost of a wide canvas (≈2600×1000 units, aspect 2.6:1 for the
   current 374 nodes). The default view fits the whole graph, which makes individual nodes small;

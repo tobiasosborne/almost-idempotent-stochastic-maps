@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lexicon — almost-idempotent stochastic maps</title>
+<meta name="description" content="The canonical definition shards of the project — one definition per term, drift is a build failure — searchable, with provenance and lock status shown honestly.">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">almost-idempotent-stochastic-maps<span>the glass-box lab</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="index.html">Theorem</a>
+      <a href="defense.html">Defense</a>
+      <a href="atlas.html">Atlas</a>
+      <a href="replay.html">Replay</a>
+      <a href="ledger.html">Ledger</a>
+      <a href="lexicon.html" aria-current="page">Lexicon</a>
+      <a href="evidence.html">Evidence</a>
+      <button class="theme-btn" id="theme-btn" type="button">Theme: auto</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="data-error" class="fetch-error" hidden></div>
+
+  <section>
+    <p class="label">definitions/ &middot; one shard per term</p>
+    <h1>The Lexicon</h1>
+    <p style="font-size:1.05rem">
+      Every mathematical term this project uses is defined <strong>exactly once</strong>, in its own shard under
+      <code>definitions/</code>. The results, the lab book, and the proof workspaces <em>reference</em> a
+      definition by id; they never restate it. Two shards claiming the same term or alias is not a style
+      complaint, it is a <strong>build failure</strong> &mdash; the check that enforces it runs on every commit.
+      That is the whole point of this layer: a definition that drifts between two files is an error class no
+      proof checker ever sees.
+    </p>
+    <p>
+      Status is shown as the shard's own: <strong>locked</strong> (signed off, and the reference frozen) or
+      <strong>draft</strong> (in use, not yet ratified &mdash; a draft definition is not a licence to treat
+      anything resting on it as settled). Provenance is likewise the shard's own: <code>cited</code> definitions
+      are byte-matched to a local published source, <code>consensus</code> are adopted, and
+      <code>original</code> are introduced here.
+    </p>
+    <div class="chips" id="lex-chips" data-needs-data style="margin:1rem 0">
+      <span class="small">loading from <code>site/data/definitions.json</code>&hellip;</span>
+    </div>
+  </section>
+
+  <section data-needs-data>
+    <h2>Definition shards</h2>
+    <div class="toolbar">
+      <label for="q">search</label>
+      <input class="field grow" id="q" type="search" placeholder="term, alias, or id — e.g. exposed, hull, def-corner" aria-label="Search definitions by term, alias, or id">
+      <label for="f-kind">provenance</label>
+      <select class="field" id="f-kind"></select>
+      <label for="f-status">status</label>
+      <select class="field" id="f-status"></select>
+      <button class="tog" id="reset" type="button">Reset</button>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="grid" id="defs" aria-live="polite"></div>
+    <p class="small" style="margin-top:1rem">
+      Bodies are shown as the shard's own source text, LaTeX and all: this site carries no mathematics
+      renderer, so <code>\(…\)</code> and <code>\[…\]</code> appear verbatim rather than typeset. Reading the raw
+      shard is the same experience as reading the repository, which is the intent &mdash; nothing is
+      re-worded on the way to the page. Cross-references of the form <code>[[def-slug|text]]</code> are the
+      repository's internal links.
+    </p>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <h2>The process glossary</h2>
+    <p>
+      The lexicon above is <em>mathematical</em> vocabulary. The project also runs on a working jargon &mdash;
+      T0, banking, waves, arms, balloons, the rigour rungs &mdash; and that has exactly one canonical home too:
+      <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md"><code>GLOSSARY.md</code></a>.
+      The entries are listed here by name and linked there rather than copied: one canonical source per term is
+      the same rule that governs the shards, and a glossary duplicated onto a web page is a glossary that will
+      drift. (Its entries are bold terms inside one file, not headings, so the links point at the file.)
+    </p>
+    <ul class="termlist" id="glossary-terms">
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md"><code>af</code></a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">arm</a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">balloon</a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">banking</a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md"><code>bd</code> / beads</a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">byte-matched / ground-truth ref</a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">circuit breaker</a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md"><code>codex</code></a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md"><code>conj-</code> prefix</a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">contract</a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">dead route / death certificate</a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md"><code>fr</code></a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">harvest</a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">L0&ndash;L5</a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">mod-audit / <code>proved-mod-audit</code></a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">rigour ladder / rung (b)</a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">T0</a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">wave</a></li>
+      <li><a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">W&lt;number&gt;</a></li>
+    </ul>
+    <p class="small" style="margin-top:1rem">
+      Term names transcribed from <code>GLOSSARY.md</code> (19 entries at the time of writing); the bodies live
+      only there. If the glossary gains an entry and this list is not updated, the list is short &mdash; it is
+      never wrong about what an entry <em>says</em>, because it does not say it.
+    </p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <a href="atlas.html">The proof atlas</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/tree/master/definitions">definitions/</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/definitions/INDEX.md">definitions/INDEX.md</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">GLOSSARY.md</a>
+    <p class="small" style="margin-top:.8rem">
+      Every shard on this page is rendered from <code>site/data/definitions.json</code>, generated from
+      <code>definitions/</code> and gated on every commit. Not peer-reviewed, not published, not Lean-verified.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/lexicon.js"></script>
+</body>
+</html>

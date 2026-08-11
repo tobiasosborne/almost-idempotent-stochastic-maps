@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Evidence Layer — almost-idempotent stochastic maps</title>
+<meta name="description" content="Every numerical run bundle of the project, with its date, slug, and headline finding — held at evidence, never proof (L3), each linked to its re-run command and schema in the repository.">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">almost-idempotent-stochastic-maps<span>the glass-box lab</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="index.html">Theorem</a>
+      <a href="defense.html">Defense</a>
+      <a href="atlas.html">Atlas</a>
+      <a href="replay.html">Replay</a>
+      <a href="ledger.html">Ledger</a>
+      <a href="lexicon.html">Lexicon</a>
+      <a href="evidence.html" aria-current="page">Evidence</a>
+      <button class="theme-btn" id="theme-btn" type="button">Theme: auto</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="data-error" class="fetch-error" hidden></div>
+
+  <section>
+    <p class="label">runs/ &middot; one bundle per experiment</p>
+    <h1>The Evidence Layer</h1>
+
+    <div class="banner" role="note">
+      <strong>Numerical results are evidence, never proof (L3).</strong>
+      Every bundle carries its re-run command and schema in the repository. Nothing on this page is rigorous,
+      no matter how many instances it covers, and no result below has ever been promoted on the strength of a
+      computation.
+    </div>
+
+    <p style="font-size:1.05rem">
+      A number without a re-run command is not a finding here. Each experiment lands as a
+      <em>bundle</em>: a dated directory holding the script that produced it, the parameters and seeds, the data
+      under a declared schema, a checkable invariant (a known value, an exact certificate, or an independent
+      recomputation), and a README stating the headline finding <em>and its honest scope</em>. A gate refuses
+      any bundle missing those parts. Exact-rational arithmetic is used where the question is combinatorial, so
+      the certificates are exact rather than floating-point &mdash; which still makes them evidence, not proof.
+    </p>
+    <p>
+      The clearest example of the discipline: tens of thousands of exact instances have never violated the
+      standing conjecture, and the conjecture is still tagged <code>conjecture</code>. Below the corner scale
+      the dangerous case has simply never been entered &mdash; that is an absence of counterexamples, which is
+      evidence, and is not a proof.
+    </p>
+
+    <div class="chips" id="ev-chips" data-needs-data style="margin:1rem 0">
+      <span class="small">loading from <code>site/data/runs.json</code>&hellip;</span>
+    </div>
+  </section>
+
+  <section data-needs-data>
+    <h2>Run bundles</h2>
+    <div class="toolbar">
+      <label for="q">search</label>
+      <input class="field grow" id="q" type="search" placeholder="slug, title, or headline text — e.g. enumeration, corner, LP" aria-label="Search run bundles">
+      <button class="tog" id="reset" type="button">Reset</button>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="card scroll-x" style="padding:.3rem .9rem">
+      <table id="runs">
+        <thead>
+          <tr>
+            <th class="sortable" id="th-date" aria-sort="descending"><button type="button" data-key="date">date</button></th>
+            <th class="sortable" id="th-slug"><button type="button" data-key="slug">bundle</button></th>
+            <th>headline finding &mdash; as written in the bundle README</th>
+          </tr>
+        </thead>
+        <tbody aria-live="polite"></tbody>
+      </table>
+    </div>
+    <p class="small" id="runs-note" style="margin-top:1rem"></p>
+  </section>
+
+  <section>
+    <h2>What is deliberately not here</h2>
+    <div class="card">
+      <p>
+        <strong>No charts of run data in this build.</strong> The interactive
+        <span class="math">&delta;</span>&ndash;<span class="math">H</span> scatter over the certified instance
+        record is a follow-up (it needs the per-instance data exported into the site's data layer, not just the
+        bundle headlines). Plotting it from summary text would be exactly the kind of number-without-provenance
+        this project refuses.
+      </p>
+      <p style="margin-bottom:0">
+        Also absent by design: any statement that a run <em>confirms</em> a conjecture. Runs refute, bound,
+        and fail to refute. The measured relation along the realizable family is <em>linear</em>; the quadratic
+        form people quote is only the worst-case envelope &mdash; a distinction the bundles keep and this page
+        will not blur.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <a href="atlas.html">The proof atlas</a>
+    <a href="ledger.html">The honesty ledger</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/tree/master/runs">runs/</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/data/SCHEMA.md">data/SCHEMA.md</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/INDEX.md">INDEX.md</a>
+    <p class="small" style="margin-top:.8rem">
+      The table is rendered from <code>site/data/runs.json</code>, generated from the bundle READMEs and gated on
+      every commit. Numerical evidence only &mdash; never rigorous. Not peer-reviewed, not published, not
+      Lean-verified.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/evidence.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Honesty Ledger — almost-idempotent stochastic maps</title>
+<meta name="description" content="Every retracted claim of this project, dated: what was claimed, why it was wrong, which layer caught it, and how it was resolved — plus the barred dead routes.">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">almost-idempotent-stochastic-maps<span>the glass-box lab</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="index.html">Theorem</a>
+      <a href="defense.html">Defense</a>
+      <a href="atlas.html">Atlas</a>
+      <a href="replay.html">Replay</a>
+      <a href="ledger.html" aria-current="page">Ledger</a>
+      <a href="lexicon.html">Lexicon</a>
+      <a href="evidence.html">Evidence</a>
+      <button class="theme-btn" id="theme-btn" type="button">Theme: auto</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="data-error" class="fetch-error" hidden></div>
+
+  <section>
+    <p class="label">docs/LEARNINGS.md &middot; the retraction record</p>
+    <h1>The Honesty Ledger</h1>
+    <p class="quote">
+      A retraction here is a <strong>success</strong> of the rigour machinery, not an embarrassment:
+      it is the record of a wrong claim being caught <em>before</em> anything was built on it.
+    </p>
+    <p style="font-size:1.05rem">
+      This page is the complete list of claims this project made and then took back. Each entry is dated and
+      says four things: what was claimed, why it was wrong, who or what caught it &mdash; with the
+      error-catching layer it belongs to &mdash; and how it was resolved. Nothing downstream was ever left
+      resting on a retracted certificate; where a retraction removed an af-validated result, the
+      <a href="replay.html">campaign replay</a> shows the corresponding fall in the T0 count.
+      The layers themselves, and their measured catch record, are on
+      <a href="defense.html">the defense page</a>.
+    </p>
+    <div class="chips" id="ledger-chips" data-needs-data style="margin:1rem 0">
+      <span class="small">loading from <code>site/data/retractions.json</code>&hellip;</span>
+    </div>
+  </section>
+
+  <section data-needs-data>
+    <h2>Retracted claims</h2>
+    <div class="grid" id="retractions"></div>
+    <p class="small" id="ledger-note" style="margin-top:1rem"></p>
+  </section>
+
+  <hr class="rule">
+
+  <section>
+    <h2>Dead routes</h2>
+    <p>
+      A retraction removes a claim; a <em>death certificate</em> closes an approach. When a proof strategy is
+      shown not to work &mdash; usually by an explicit counterexample &mdash; the reason is written down and
+      dated so it is not quietly re-walked six weeks later. Those certificates live in
+      <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/FINDINGS.md"><code>FINDINGS.md</code></a>,
+      which is the working record: dozens of dated entries, each naming the mechanism that failed and the point
+      of death. They are deliberately <strong>not</strong> parsed into this site's data layer &mdash; a death
+      certificate is an argument, not a row, and it should be read where it was written.
+    </p>
+    <p>
+      The seven families below are the inherited ones, barred by name in the project's working rules
+      (<code>CLAUDE.md</code> Rule 13). Attempting one again requires reading its certificate first and
+      escalating &mdash; "but this time…" is exactly the failure mode the rule exists to stop.
+    </p>
+
+    <div class="grid two">
+      <div class="card route-dead">
+        <p class="label">barred — Rule 13; certificate in FINDINGS.md</p>
+        <h3>Raw-index path-product floors</h3>
+        <p style="margin:0">Refuted outright by the <strong>cloning obstruction</strong> for any
+        <span class="math">&delta;<sub>0</sub> &ge; 0.233</span>: duplicating a state leaves the map invariant
+        but breaks any raw-index floor. Only clone-invariant (quotient) quantities may appear in a proof.</p>
+      </div>
+      <div class="card route-dead">
+        <p class="label">barred — Rule 13; certificate in FINDINGS.md</p>
+        <h3>Coefficient-only LP support-cleanup</h3>
+        <p style="margin:0">The "pushed-witness death certificate" &mdash; cleaning up the support of an LP
+        witness by coefficients alone does not survive.</p>
+      </div>
+      <div class="card route-dead">
+        <p class="label">barred — Rule 13; certificate in FINDINGS.md</p>
+        <h3>Universal <span class="math"><span class="v">C</span> &le; 2</span></h3>
+        <p style="margin:0">Refuted. (The companion refutation in the same certificate:
+        <span class="math"><span class="v">C</span><sub>0</sub> &lt; 1</span> in (EX), where a transverse pair
+        at <span class="math"><span class="v">a</span> = &frac14;</span> gives
+        <span class="math">&Phi;/&delta; = 5/4</span>.)</p>
+      </div>
+      <div class="card route-dead">
+        <p class="label">barred — Rule 13; certificate in FINDINGS.md</p>
+        <h3>Exists-exact-max-volume selectors</h3>
+        <p style="margin:0">Exact maximum-volume selectors, and arbitrary max-volume tie-selection, fail.</p>
+      </div>
+      <div class="card route-dead">
+        <p class="label">barred — Rule 13; certificate in FINDINGS.md</p>
+        <h3>Jensen / convexity</h3>
+        <p style="margin:0">Recorded refuted upstream, alongside pointwise, <span class="math">&sigma;</span>-only
+        and single-swap selectors.</p>
+      </div>
+      <div class="card route-dead">
+        <p class="label">barred — Rule 13; certificate in FINDINGS.md</p>
+        <h3>The canonical-<span class="math"><span class="v">g</span></span> energy method</h3>
+        <p style="margin:0">Recorded refuted upstream; the energy bookkeeping does not close in the canonical
+        gauge.</p>
+      </div>
+      <div class="card route-dead">
+        <p class="label">barred — Rule 13; certificate in FINDINGS.md</p>
+        <h3>Finite-corner-as-asymptotic</h3>
+        <p style="margin:0">Treating the finite corner as if it were the asymptotic regime &mdash; recorded
+        refuted upstream, together with the literal <span class="math">&psi;</span>-gap.</p>
+      </div>
+    </div>
+    <p class="small" style="margin-top:1rem">
+      Wording follows <code>CLAUDE.md</code> Rule 13 and the dated dead-route entry in <code>FINDINGS.md</code>
+      (2026-07-02). These seven are the <em>inherited</em> families; routes closed during this campaign are
+      certified in the same file, further down, under their own dates. Full upstream death certificates sit in
+      the ingested portfolio (<code>docs/ingest/</code>) and are never cited here as rigorous.
+    </p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <a href="defense.html">The defense</a>
+    <a href="replay.html">The campaign replay</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/docs/LEARNINGS.md">docs/LEARNINGS.md</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/FINDINGS.md">FINDINGS.md</a>
+    <p class="small" style="margin-top:.8rem">
+      The retraction cards are rendered from <code>site/data/retractions.json</code>, parsed from
+      <code>docs/LEARNINGS.md</code> by <code>scripts/gen-site-data.py</code> and gated on every commit. The
+      dead-route section is human-written prose, reviewed, and quotes the working rules rather than parsing
+      them. Not peer-reviewed, not published, not Lean-verified.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/ledger.js"></script>
+</body>
+</html>
