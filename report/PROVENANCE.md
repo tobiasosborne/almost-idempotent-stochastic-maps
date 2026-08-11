@@ -24,11 +24,16 @@ Verify a hash with: `sha256sum "<path>" | cut -c1-16`.
 > gated by `python3 scripts/gen-report-stats.py --check` inside `scripts/check-all.sh`
 > (see `report/generated/stats/README.md`).
 
-> **Current report surface (2026-07-25 rescope).** The section shards reproduce the af-validated
-> lemmas of the live Route F chain (bridge, PRH, COMP tier, H-CB tier). Results off the live route
-> keep their registry records and statuses; they are whitelisted in `UNWIRED.md`, not reproduced here.
+> **HISTORICAL — report surface at the 2026-07-25 rescope (SUPERSEDED 2026-08-09 by the W140
+> sync; kept for the record, NOT a description of the current report).** At that date the section
+> shards reproduced the af-validated lemmas of the live Route F chain (bridge, PRH, COMP tier,
+> H-CB tier). Results off the live route keep their registry records and statuses; they are
+> whitelisted in `UNWIRED.md`, not reproduced here. For the current surface see the
+> **Current report surface** paragraph two blocks above.
 
-<!-- PROVENANCE.md rows for the fresh report (21 af-validated lemmas).
+<!-- HISTORICAL note (2026-07-25): at that date this ledger carried 21 af-validated lemma rows;
+     the count is now the one stated in the "Current report surface" paragraph above and must be
+     read from there, not from here.
      Two blocks: (A) ground-truth source-registry rows, (B) per-claim ledger rows.
      Row formats copied from report/PROVENANCE.md. SHA256-16 computed
      2026-07-25; verify with: sha256sum "<path>" | cut -c1-16 -->

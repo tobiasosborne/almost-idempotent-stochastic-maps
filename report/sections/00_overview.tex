@@ -1,7 +1,7 @@
 % SHARD-ID: AISM-00-OVERVIEW
 % SHARD-TITLE: Orientation and rigour boundary
 % SHARD-SUMMARY: States the target op-classical (discharged at the af-validated rung 2026-08-08 via Route F) and fixes the two equivalent pictures bridged by lem-classical-equiv.
-% SHARD-SUMMARY: Describes the five af-validated blocks reproduced here: the bridge, PRH, the COMP tier, the H-CB tier, and the H-CB-parent/EXT tier.
+% SHARD-SUMMARY: Describes the nine blocks of the 76-shard report: the bridge, PRH and sharpness, the COMP tier, the H-CB tier, the H-CB-parent/EXT tier, the Stage-1 front, the MAIN-CB assembly, Route F and the discharge, and the generated/meta layers.
 % SHARD-SUMMARY: Records the honesty boundary: only af-validated results appear as lemmas; everything else stays outside this document.
 % SHARD-KEYWORDS: overview, op-classical, rigour ladder, signed picture, stochastic picture, COMP tier, H-CB tier
 \section{Orientation and rigour boundary}\label{sec:overview}
@@ -18,10 +18,16 @@ $\opnorm{Q^2-Q}\le\defect\le\eta_0$ admits a stochastic idempotent $E$
 \end{equation}
 the exponent $\tfrac12$ being sharp.
 
-\textbf{This is OPEN.} Nothing in this document proves it, and nothing in this
-document should be read as evidence that it is close to proved. What follows is a
-rigorous \emph{partial} record: the components of the currently live route that have
-cleared this repository's top in-repo rigour rung.
+\textbf{This is discharged at this repository's top in-repo rigour rung, and no
+higher.} Since 2026-08-08 the registry result \texttt{op-classical} carries
+\texttt{status: proved} with \texttt{af: validated}, obtained through Route~F and
+reproduced in \S\ref{sec:op-classical-discharge}; the sharpness of the exponent
+$\tfrac12$ is a separate statement, carried at the same rung by
+\texttt{cor-classical-sharpness} (\S\ref{sec:prh}). The honest boundary is exactly
+that rung: \texttt{af}-validation by fresh \texttt{codex} provers with separate fresh
+per-node verifiers (\texttt{CLAUDE.md} L0 rung (b)). There is \emph{no} Lean/mathlib
+proof and no external publication. What follows is the record of that discharge
+together with the validated blocks it rests on.
 
 \subsection*{Two pictures, one bridge}
 
@@ -38,7 +44,8 @@ the picture it lives in and cite the bridge when it crosses.
 
 \subsection*{What this report contains}
 
-Five blocks, in dependency order.
+Nine blocks (76 shards in total), in dependency order, with the generated and meta
+layers gathered in the last block.
 
 \begin{enumerate}
 \item \textbf{The bridge} (\S\ref{sec:classical-equiv}). \texttt{lem-classical-equiv},
@@ -51,7 +58,8 @@ Five blocks, in dependency order.
   identity (\texttt{def-positive-approximate-retract}) --- into an exact stochastic
   idempotent at distance $2\sqrt{2\varepsilon}$. It is the step that turns approximate
   retraction data into the exact object \eqref{eq:ov-target} asks for, at the sharp
-  square-root rate.
+  square-root rate. The same section carries the four-row sharpness factorization
+  ending in \texttt{cor-classical-sharpness}.
 
 \item \textbf{The COMP tier} (\S\S\ref{sec:compcb-amplification-naturality}--\ref{sec:compcb-single-compression-transfer},
   interleaved). This tier builds, over an \emph{extended} $\ecs$-$C^*$-algebra
@@ -78,6 +86,38 @@ Five blocks, in dependency order.
   corner arithmetic through a one-dimensional index, the dimension selection $(r,1)$
   of an EXT-CB datum, the four-corner merge, and the EXT parent that adds one dimension
   to a level-one datum.
+
+\item \textbf{The Stage-1 front} (\S\ref{sec:stage1-quantitative-ift},
+  \S\ref{sec:stage1-exact-unit}, and
+  \S\S\ref{sec:stage1-polar-charts}--\ref{sec:stage1-ledger-keystone}, continued in
+  \S\S\ref{sec:stage1-endgame-cohomology}--\ref{sec:stage1-quotient-package}).
+  Quantitative inverse-function control and dimension-free exact-unit rectification;
+  then the polar charts, the closed polar retraction, the group-law and transport rows
+  and the constant ledger; then the cohomological endgame, the topology toolbox and the
+  quotient package.
+
+\item \textbf{The MAIN-CB assembly}
+  (\S\S\ref{sec:maincb-raw-call-chain}--\ref{sec:maincb-assembly}). The raw-call chain,
+  corner identification, stage extensions and bridges, the reset ledgers, the call
+  envelopes, the selection step, and the assembly carrier
+  \texttt{lem-thmainext-conditional}.
+
+\item \textbf{Route F and the discharge} (\S\ref{sec:routef-prh-finish},
+  \S\S\ref{sec:routef-f0-seam}--\ref{sec:routef-f2-f3}, and
+  \S\S\ref{sec:routef-raw-factors}--\ref{sec:op-classical-discharge}). The PRH finish
+  edge, the F0 seam, the almost-idempotent ledger, the F2/F3 rows, the raw factors,
+  the normalisation-closeness and $\Upsilon$ rows, the telescopes, the Kitaev diagonal
+  repair, the strengthened $K$-ledger \texttt{lem-routef-k-ledger}, the F0 assembly
+  \texttt{lem-routef-f0-assembly}, and finally the root theorem itself
+  (\S\ref{sec:op-classical-discharge}).
+
+\item \textbf{The generated and meta layers.} The definitions layer
+  (\S\ref{sec:definitions}, placed up front) and the argument-DAG atlas
+  (\S\ref{sec:argument-dag}) are machine-written from \texttt{definitions/} and
+  \texttt{argument/} and gated for freshness; the campaign statistics
+  (\S\ref{sec:campaign-statistics}) are rendered from a committed snapshot; the status
+  ledger (\S\ref{sec:status-outlook}) anchors every registry result not reproduced as a
+  theorem here.
 \end{enumerate}
 
 \subsection*{The honesty boundary}

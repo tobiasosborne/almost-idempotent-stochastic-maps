@@ -13,9 +13,12 @@ where ROUTE_F_SEEDS are the Route-F families named in the live proof strategy
 (docs/plans/CURRENT.md): lem-routef-*, lem-thmainext-*, lem-stage1-*, lem-maincb-*,
 lem-extcb*, lem-hcb*, lem-compcb-*, lem-topology-*, conj-hcb, conj-extcb, the Kitaev
 repair/audit rows, lem-prh(+sharpness), prop-f2-t1-equivalence, lem-classical-equiv, ex-hume.
-The seeds are needed because the Route-F chain is NOT yet wired into `op-classical` by
-registry `deps:` — that composition is a design-pending GAP (see GAP_EDGES below), and the
-atlas shows exactly that: where the chain is still open.
+The seeds keep the whole Route-F front on the page even where a family does not (yet) reach
+the root through registry edges; any composition the live strategy reserves but has NOT wired
+into the registry is drawn as a design-pending GAP link (see GAP_EDGE_CANDIDATES below), so the atlas
+shows exactly where — if anywhere — the chain is still open.  Both the GAP set and every
+status sentence in the generated prose are DERIVED from the shards at generation time; no
+status claim is hardcoded here.
 
 SOURCE OF TRUTH.  argument/lemmas/*.md, parsed by scripts/argument.py's own parser
 (imported, never re-implemented) — so this atlas and the generated Mermaid twin
@@ -100,7 +103,10 @@ ROUTE_F_IDS = (
 # compositions the live proof strategy reserves but has not yet wired into the registry, and
 # the atlas draws them in a loud, dashed, vermillion style so the reader sees exactly where the
 # chain is still open.  Each row carries its provenance; keep this list MINIMAL and sourced.
-GAP_EDGES = [
+# A candidate row is dropped automatically once the registry itself connects u to v (see
+# live_gap_edges): a wired composition is no longer design-pending, and drawing it would be a
+# false status claim.  So the list below is a set of CANDIDATES, not an assertion.
+GAP_EDGE_CANDIDATES = [
     ("lem-routef-k-ledger", "op-classical",
      "phase 5 (bd aism-y81y): F0 codification + root composition; "
      "docs/plans/CURRENT.md (v33 \\S The live campaign frontier: PHASE 4 "
@@ -170,7 +176,8 @@ STATUS_CLASSES = [
     ("open", "DagOpn",  (0xF8, 0xDC, 0xCB), (0xD5, 0x5E, 0x00), r"\bigstar",
      "OPEN", "OPEN",
      "\\texttt{status: open} or \\texttt{kind: open-problem} --- a live open question. "
-     "\\texttt{op-classical} is the north star and is one of these."),
+     "(Whether the north star \\texttt{op-classical} is still one of these is stated, from the "
+     "registry, in the honest-reading paragraph above.)"),
 ]
 STATUS_INDEX = {c[0]: i for i, c in enumerate(STATUS_CLASSES)}
 STATUS_STEM = {c[0]: c[1] for c in STATUS_CLASSES}
@@ -329,8 +336,41 @@ class Registry:
         return out
 
 
+def live_gap_edges(reg, nodes, edges):
+    """The GAP candidates that are STILL design-pending, derived from the registry.
+
+    A candidate (u -> v) survives only if both endpoints are drawn AND the registry does not
+    already carry u to v along `deps:`/`routes:` edges.  Once the composition is wired, the
+    candidate is dropped: keeping it would assert "not yet wired" about an edge the registry
+    has since closed."""
+    succ = collections.defaultdict(set)
+    for u, v, _k in edges:
+        succ[u].add(v)
+
+    def reaches(src, dst):
+        seen, stack = {src}, [src]
+        while stack:
+            n = stack.pop()
+            if n == dst:
+                return True
+            for m in sorted(succ[n]):
+                if m not in seen:
+                    seen.add(m)
+                    stack.append(m)
+        return False
+
+    live = []
+    for u, v, note in GAP_EDGE_CANDIDATES:
+        if u in nodes and v in nodes and not reaches(u, v):
+            live.append((u, v, note))
+    return live
+
+
 def select_subgraph(reg):
-    """The Route-F landing sub-DAG: closure of {op-classical} U ROUTE_F_SEEDS over deps+routes."""
+    """The Route-F landing sub-DAG: closure of {op-classical} U ROUTE_F_SEEDS over deps+routes.
+
+    Returns (nodes, edges, gaps): `edges` carries the registry edges plus the still-live GAP
+    links; `gaps` is the derived list of (u, v, note) rows the legend documents."""
     seeds = {i for i in reg.by if i.startswith(ROUTE_F_PREFIXES)}
     seeds |= {i for i in ROUTE_F_IDS if i in reg.by}
     if ROOT_ID in reg.by:
@@ -348,11 +388,10 @@ def select_subgraph(reg):
         for d, kind in reg.dep_edges(reg.by[i]):
             if d in seen:
                 edges.append((d, i, kind))
-    for u, v, _note in GAP_EDGES:
-        if u in seen and v in seen:
-            edges.append((u, v, "gap"))
     edges = sorted(set(edges))
-    return nodes, edges
+    gaps = live_gap_edges(reg, seen, edges)
+    edges = sorted(set(edges) | {(u, v, "gap") for u, v, _n in gaps})
+    return nodes, edges, gaps
 
 
 def phase_of(rid):
@@ -732,7 +771,7 @@ def file_preamble():
     return "\n".join(lines) + "\n"
 
 
-def file_legend(reg, nodes, edges, cls_of):
+def file_legend(reg, nodes, edges, cls_of, gaps):
     n = len(nodes)
     by_cls = collections.Counter(cls_of[i] for i in nodes)
     by_kind = collections.Counter(reg.by[i].get("kind", "?") for i in nodes)
@@ -766,21 +805,31 @@ def file_legend(reg, nodes, edges, cls_of):
           r"\tikz[baseline=-0.6ex]{\draw[dagedge](0,0)--(0.8,0);}~a registry \texttt{deps:} edge "
           r"(the dependency \emph{points at} the result that uses it);\quad",
           r"\tikz[baseline=-0.6ex]{\draw[dagroute](0,0)--(0.8,0);}~a member of an \texttt{routes:} "
-          r"OR-route (\emph{any one} route discharges the shard --- here \texttt{op-hlc});\quad",
-          r"\tikz[baseline=-0.6ex]{\draw[daggap](0,0)--(0.8,0);}~a \textbf{design-pending (GAP) "
-          r"composition}: \emph{not} a registry edge, reserved by the live strategy "
-          r"(\texttt{docs/plans/CURRENT.md}) and not yet wired. Small dashed grey chips are "
+          r"OR-route (\emph{any one} route discharges the shard --- here \texttt{op-hlc});\quad"]
+    if gaps:
+        L.append(r"\tikz[baseline=-0.6ex]{\draw[daggap](0,0)--(0.8,0);}~a \textbf{design-pending (GAP) "
+                 r"composition}: \emph{not} a registry edge, reserved by the live strategy "
+                 r"(\texttt{docs/plans/CURRENT.md}) and not yet wired.\quad")
+    L += [r"Small dashed grey chips are "
           r"\emph{boundary copies} of a node that really lives on an earlier band or in another "
           r"phase; their id is abbreviated to the shortest unambiguous prefix and each is a "
           r"hyperlink to the real node.",
           "",
           r"\subsection*{The design-pending (GAP) links}", ""]
-    L += [r"\noindent The atlas exists to show \emph{where the chain is still open}. These links are "
-          r"drawn but are \textbf{not} registry \texttt{deps:} edges --- nothing below may be read as "
-          r"an established implication:", r"\begingroup\small", r"\begin{itemize}\setlength\itemsep{0pt}"]
-    for u, v, note in GAP_EDGES:
-        L.append(r"\item \dagref{%s} $\dashrightarrow$ \dagref{%s} --- %s" % (u, v, note))
-    L += [r"\end{itemize}\endgroup", ""]
+    if gaps:
+        L += [r"\noindent The atlas exists to show \emph{where the chain is still open}. These links are "
+              r"drawn but are \textbf{not} registry \texttt{deps:} edges --- nothing below may be read as "
+              r"an established implication:", r"\begingroup\small",
+              r"\begin{itemize}\setlength\itemsep{0pt}"]
+        for u, v, note in gaps:
+            L.append(r"\item \dagref{%s} $\dashrightarrow$ \dagref{%s} --- %s" % (u, v, note))
+        L += [r"\end{itemize}\endgroup", ""]
+    else:
+        L += [r"\noindent \textbf{None.} Every composition the live strategy reserved is now carried "
+              r"by registry \texttt{deps:}/\texttt{routes:} edges, so no design-pending link is drawn. "
+              r"(The candidate list lives in \texttt{scripts/gen-report-dag.py}; a row is dropped "
+              r"automatically once the registry connects its endpoints, and would reappear here if a "
+              r"future rewire re-opened one.)", ""]
     L += [r"\subsection*{Statistics of the drawn subgraph}", r"\begingroup\small",
           r"\begin{longtable}{@{}l r l@{}}", r"\toprule",
           r"\textbf{quantity} & \textbf{value} & \textbf{note} \\ \midrule \endhead",
@@ -789,8 +838,10 @@ def file_legend(reg, nodes, edges, cls_of):
           r"registry edges drawn & %d & \texttt{deps:} %d, OR-route members %d \\"
           % (sum(v for k, v in ekind.items() if k != "gap"), ekind.get("dep", 0),
              sum(v for k, v in ekind.items() if k.startswith("route"))),
-          r"design-pending (GAP) links & %d & drawn dashed; \emph{not} registry edges \\"
-          % ekind.get("gap", 0),
+          r"design-pending (GAP) links & %d & %s \\"
+          % (ekind.get("gap", 0),
+             r"drawn dashed; \emph{not} registry edges" if ekind.get("gap", 0)
+             else r"none remain: every reserved composition is now a registry edge"),
           r"\textbf{rigorous (L0)} & \textbf{%d} & \texttt{af: validated} or \texttt{status: cited} "
           r"--- %s\%% of the chain \\" % (rigorous, fnum(round(100.0 * rigorous / max(1, n), 1))),
           r"non-rigorous & %d & everything else, flagged loudly by colour and glyph \\" % (n - rigorous),
@@ -920,17 +971,44 @@ SHARD_SUMMARIES = [
     "Nodes are colour- and glyph-coded by rigour rung (af-validated / cited / proved / seeded / "
     "proved-mod-audit-or-conjecture / stated / open) using the same proof_class function that "
     "colours the Mermaid twin argument/DAG.md, so the two views cannot disagree.",
-    "Every node carries the anchor dag:<id> and links back to its report statement; the "
-    "design-pending GAP compositions are drawn dashed and are explicitly NOT registry edges.",
+    "Every node carries the anchor dag:<id> and links back to its report statement; any "
+    "composition the live strategy reserves but the registry has not wired is drawn dashed as a "
+    "design-pending GAP link and is explicitly NOT a registry edge.",
 ]
 SHARD_KEYWORDS = ("argument DAG, atlas, Route F, op-classical, dependency graph, rigour ladder, "
                   "generated figure, crosslink anchors, GAP composition")
+
+
+def root_status_sentence(reg, cls_of):
+    r"""One clause about the north star's rung, DERIVED from its registry shard (never baked in).
+
+    The atlas is regenerated whenever a shard's status/af changes, so this clause tracks the
+    registry automatically instead of asserting a status that can go stale."""
+    l = reg.by.get(ROOT_ID)
+    if l is None:
+        return r"\texttt{%s} is not present in the registry" % tex_escape(ROOT_ID)
+    st, af = tex_escape(l.get("status", "?")), tex_escape(l.get("af", "none"))
+    if cls_of.get(ROOT_ID) == "validated":
+        return (r"the north star \dagref{%s} carries \texttt{status: %s} with \texttt{af: %s} --- "
+                r"discharged at this repo's L0 rung (b), which is \emph{not} a Lean/mathlib proof"
+                % (ROOT_ID, st, af))
+    return (r"the north star \dagref{%s} carries \texttt{status: %s} (\texttt{af: %s}) and is "
+            r"therefore not rigorous here" % (ROOT_ID, st, af))
 
 
 def file_shard(reg, nodes, edges, cls_of):
     n = len(nodes)
     rig = sum(1 for i in nodes if cls_of[i] in ("validated", "cited"))
     gap = sum(1 for _u, _v, k in edges if k == "gap")
+    if gap:
+        gap_sentence = (r"The Route-F chain is deliberately included even where it does not reach "
+                        r"the root through registry edges: that missing composition is the point, "
+                        r"and it is drawn as %d dashed \textbf{design-pending (GAP)} link%s."
+                        % (gap, "" if gap == 1 else "s"))
+    else:
+        gap_sentence = (r"Every composition the live strategy reserved is now carried by registry "
+                        r"\texttt{deps:}/\texttt{routes:} edges, so no dashed "
+                        r"\textbf{design-pending (GAP)} link is drawn.")
     # NOTE: single '%' — scripts/check-report-shards.sh matches '^% SHARD-...' exactly.
     L = [GEN_HEADER,
          "% SHARD-ID: " + SHARD_ID,
@@ -955,18 +1033,16 @@ def file_shard(reg, nodes, edges, cls_of):
           r"carries the argument landing the north star: the transitive closure of \dagref{op-classical} "
           r"along \texttt{deps:} and \texttt{routes:} edges, \emph{together with} the Route-F families "
           r"named by the live strategy \texttt{docs/plans/CURRENT.md}. That is \textbf{%d results} and "
-          r"%d edges. The Route-F chain is deliberately included even though it does not yet reach the "
-          r"root through registry edges: that missing composition is the point, and it is drawn as %d "
-          r"dashed \textbf{design-pending (GAP)} link%s."
-          % (len(reg.lemmas), n, len(edges), gap, "" if gap == 1 else "s"),
+          r"%d edges. %s"
+          % (len(reg.lemmas), n, len(edges), gap_sentence),
           "",
           r"\paragraph{Honest reading.} Of the %d results drawn, \textbf{%d are rigorous} in this repo's "
           r"sense (\texttt{af: validated}, or \texttt{cited} and byte-matched to \texttt{refs/}). "
           r"Everything else --- including every node coloured blue (\texttt{status: proved}) --- is a "
-          r"prose proof that has \emph{not} cleared an independent \texttt{af} validation, and the "
-          r"north star itself is \texttt{open}. A path of coloured boxes from left to right is "
-          r"\emph{not} a proof; it is a map of what would have to be discharged."
-          % (n, rig),
+          r"prose proof that has \emph{not} cleared an independent \texttt{af} validation. As for the "
+          r"root, %s. A path of coloured boxes from left to right is \emph{not} in itself a proof: only "
+          r"the rung recorded on each node is, so read the nodes, not the arrows."
+          % (n, rig, root_status_sentence(reg, cls_of)),
           "",
           r"\paragraph{Crosslinking (the anchor scheme).} Every drawn result carries the hypertarget "
           r"\texttt{dag:\textless registry-id\textgreater} on its node, and every imported definition "
@@ -992,14 +1068,14 @@ def file_shard(reg, nodes, edges, cls_of):
 
 def build(repo_root):
     reg = Registry(repo_root)
-    nodes, edges = select_subgraph(reg)
+    nodes, edges, gaps = select_subgraph(reg)
     cls_of = {i: reg.A.proof_class(reg.by[i]) for i in nodes}
     backlink_of = {i: reg.report_label(i) for i in nodes}
     backlink_of = {k: v for k, v in backlink_of.items() if v}
     configure_chips(nodes)          # must precede the preamble (it sizes the chip style)
     files = {}
     files[str(GEN_SUBDIR / "preamble.tex")] = file_preamble()
-    files[str(GEN_SUBDIR / "legend.tex")] = file_legend(reg, nodes, edges, cls_of)
+    files[str(GEN_SUBDIR / "legend.tex")] = file_legend(reg, nodes, edges, cls_of, gaps)
     ov, _lay = file_overview(reg, nodes, edges, cls_of, backlink_of)
     files[str(GEN_SUBDIR / "overview.tex")] = ov
     files[str(GEN_SUBDIR / "phases.tex")] = file_phases(reg, nodes, edges, cls_of, backlink_of)

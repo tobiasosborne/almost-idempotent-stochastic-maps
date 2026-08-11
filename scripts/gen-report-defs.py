@@ -616,7 +616,7 @@ def strategy_scope(root, defs, edges):
         return set(defs), [], {"mode": "unscoped (scripts/gen-report-dag.py not found)",
                                "subgraph": 0, "anchored": 0, "seed": 0}
     reg = mod.Registry(pathlib.Path(root))
-    nodes, _edges = mod.select_subgraph(reg)
+    nodes, _edges, _gaps = mod.select_subgraph(reg)
     seed = set()
     for rid in nodes:                                  # (a) the Route-F landing subgraph
         seed |= set(reg.by[rid].get("defs", []))

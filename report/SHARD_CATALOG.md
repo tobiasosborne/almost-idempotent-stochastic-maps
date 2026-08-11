@@ -27,7 +27,7 @@ verbatim), and keywords.
 - **File:** `report/sections/00_overview.tex`
 - **Title:** Orientation and rigour boundary
 - **Summary:** States the target op-classical (discharged at the af-validated rung 2026-08-08 via Route F) and fixes the two equivalent pictures bridged by lem-classical-equiv.
-- **Summary:** Describes the five af-validated blocks reproduced here: the bridge, PRH, the COMP tier, the H-CB tier, and the H-CB-parent/EXT tier.
+- **Summary:** Describes the nine blocks of the 76-shard report: the bridge, PRH and sharpness, the COMP tier, the H-CB tier, the H-CB-parent/EXT tier, the Stage-1 front, the MAIN-CB assembly, Route F and the discharge, and the generated/meta layers.
 - **Summary:** Records the honesty boundary: only af-validated results appear as lemmas; everything else stays outside this document.
 - **Keywords:** overview, op-classical, rigour ladder, signed picture, stochastic picture, COMP tier, H-CB tier
 
@@ -408,7 +408,7 @@ verbatim), and keywords.
 - **Title:** Argument-DAG atlas: the Route-F proof chain for op-classical
 - **Summary:** Generated atlas of the sub-DAG that carries the argument landing op-classical: the transitive deps/routes closure of the root together with the Route-F families, drawn layered and landscape, one detail page per phase.
 - **Summary:** Nodes are colour- and glyph-coded by rigour rung (af-validated / cited / proved / seeded / proved-mod-audit-or-conjecture / stated / open) using the same proof_class function that colours the Mermaid twin argument/DAG.md, so the two views cannot disagree.
-- **Summary:** Every node carries the anchor dag:<id> and links back to its report statement; the design-pending GAP compositions are drawn dashed and are explicitly NOT registry edges.
+- **Summary:** Every node carries the anchor dag:<id> and links back to its report statement; any composition the live strategy reserves but the registry has not wired is drawn dashed as a design-pending GAP link and is explicitly NOT a registry edge.
 - **Keywords:** argument DAG, atlas, Route F, op-classical, dependency graph, rigour ladder, generated figure, crosslink anchors, GAP composition
 
 ## `AISM-40-CAMPAIGN-STATISTICS`
@@ -423,8 +423,8 @@ verbatim), and keywords.
 - **File:** `report/sections/41_status_outlook.tex`
 - **Title:** Status and outlook
 - **Summary:** Records what this report validates: the af-validated T0 spine through the MAIN assembly, the strengthened K-ledger, the F0 assembly, and the discharged root op-classical.
-- **Summary:** Tabulates the validated registry results not reproduced on the live route, with every row traced to the generated argument index.
-- **Keywords:** status, outlook, conj-hcb, conj-extcb, lem-thmainext-conditional, k-ledger frontier, registry index, live route, off-route table
+- **Summary:** Tabulates the validated registry results not reproduced as theorems in this document, with every row traced to the generated argument index, and states the one boundary that remains: every rung above af-validation.
+- **Keywords:** status, outlook, conj-hcb, conj-extcb, lem-thmainext-conditional, lem-routef-k-ledger, op-classical discharge, registry index, off-route table
 
 ## `AISM-52-MAINCB-RAW-CALL-CHAIN`
 - **File:** `report/sections/52_maincb_raw_call_chain.tex`
@@ -581,7 +581,7 @@ verbatim), and keywords.
 - **File:** `report/sections/72_op_classical_discharge.tex`
 - **Title:** The discharge of op-classical: the root theorem at the af-validated rung
 - **Summary:** Reproduces op-classical, the af-validated dimension-free square-root stability theorem obtained by invoking the Route-F F0 assembly and matching its stochastic vocabulary to the root contract.
-- **Summary:** Records the honest boundary of the discharge: af-validated rung only (no Lean proof), upper bound only, with sharpness of the exponent 1/2 carried by the separate W139 campaign and not yet at T0.
+- **Summary:** Records the honest boundary of the discharge: af-validated rung only (no Lean proof), upper bound only, with sharpness of the exponent 1/2 carried separately by cor-classical-sharpness, itself af-validated on 2026-08-09 and reproduced in the PRH section.
 - **Keywords:** op-classical, af validated, classical projection stability, stochastic idempotent, Route F, square-root bound, dimension-free
 
 ## `AISM-69-KITAEV-DIAGONAL`

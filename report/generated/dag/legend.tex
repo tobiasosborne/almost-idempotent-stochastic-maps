@@ -21,23 +21,18 @@
 \dagswatch{dagDagSee} & $\lozenge$~seeded\ (2) & NOT rigorous & \texttt{af: seeded} --- an \texttt{af} workspace exists and the contract is pinned, but no validated tree yet. \\[0.25em]
 \dagswatch{dagDagNon} & $\blacktriangle$~mod-audit / conj.\ (18) & NOT rigorous (flagged) & \texttt{proved-mod-audit} $\cdot$ \texttt{conjecture} $\cdot$ \texttt{heuristic} $\cdot$ \texttt{numerical} --- the workhorse rungs of the inherited campaign. Content, no independent check. \\[0.25em]
 \dagswatch{dagDagSta} & $\circ$~stated\ (2) & NOT rigorous & \texttt{status: stated} --- transcribed from an upstream artifact, unchecked here. \\[0.25em]
-\dagswatch{dagDagOpn} & $\bigstar$~OPEN\ (2) & OPEN & \texttt{status: open} or \texttt{kind: open-problem} --- a live open question. \texttt{op-classical} is the north star and is one of these. \\[0.25em]
+\dagswatch{dagDagOpn} & $\bigstar$~OPEN\ (2) & OPEN & \texttt{status: open} or \texttt{kind: open-problem} --- a live open question. (Whether the north star \texttt{op-classical} is still one of these is stated, from the registry, in the honest-reading paragraph above.) \\[0.25em]
 \end{longtable}
 \endgroup
 
 \noindent\textbf{Edges.}\quad
 \tikz[baseline=-0.6ex]{\draw[dagedge](0,0)--(0.8,0);}~a registry \texttt{deps:} edge (the dependency \emph{points at} the result that uses it);\quad
 \tikz[baseline=-0.6ex]{\draw[dagroute](0,0)--(0.8,0);}~a member of an \texttt{routes:} OR-route (\emph{any one} route discharges the shard --- here \texttt{op-hlc});\quad
-\tikz[baseline=-0.6ex]{\draw[daggap](0,0)--(0.8,0);}~a \textbf{design-pending (GAP) composition}: \emph{not} a registry edge, reserved by the live strategy (\texttt{docs/plans/CURRENT.md}) and not yet wired. Small dashed grey chips are \emph{boundary copies} of a node that really lives on an earlier band or in another phase; their id is abbreviated to the shortest unambiguous prefix and each is a hyperlink to the real node.
+Small dashed grey chips are \emph{boundary copies} of a node that really lives on an earlier band or in another phase; their id is abbreviated to the shortest unambiguous prefix and each is a hyperlink to the real node.
 
 \subsection*{The design-pending (GAP) links}
 
-\noindent The atlas exists to show \emph{where the chain is still open}. These links are drawn but are \textbf{not} registry \texttt{deps:} edges --- nothing below may be read as an established implication:
-\begingroup\small
-\begin{itemize}\setlength\itemsep{0pt}
-\item \dagref{lem-routef-k-ledger} $\dashrightarrow$ \dagref{op-classical} --- phase 5 (bd aism-y81y): F0 codification + root composition; docs/plans/CURRENT.md (v33 \S The live campaign frontier: PHASE 4 preliminaries, elevation order and phase-5 root composition)
-\item \dagref{lem-routef-prh-finish} $\dashrightarrow$ \dagref{lem-routef-k-ledger} --- the registered F2/F3 rows close the stochastic-retract bridge and ``compose literally with lem-routef-prh-finish''; docs/plans/CURRENT.md (v33 \S UNCHANGED)
-\end{itemize}\endgroup
+\noindent \textbf{None.} Every composition the live strategy reserved is now carried by registry \texttt{deps:}/\texttt{routes:} edges, so no design-pending link is drawn. (The candidate list lives in \texttt{scripts/gen-report-dag.py}; a row is dropped automatically once the registry connects its endpoints, and would reappear here if a future rewire re-opened one.)
 
 \subsection*{Statistics of the drawn subgraph}
 \begingroup\small
@@ -47,7 +42,7 @@
 \bottomrule \endfoot
 results drawn & 221 & of 374 in the registry \\
 registry edges drawn & 643 & \texttt{deps:} 637, OR-route members 6 \\
-design-pending (GAP) links & 2 & drawn dashed; \emph{not} registry edges \\
+design-pending (GAP) links & 0 & none remain: every reserved composition is now a registry edge \\
 \textbf{rigorous (L0)} & \textbf{176} & \texttt{af: validated} or \texttt{status: cited} --- 79.6\% of the chain \\
 non-rigorous & 45 & everything else, flagged loudly by colour and glyph \\
 \midrule
