@@ -2642,3 +2642,46 @@ and the optional legacy-chain bridge (user portfolio decision).**
 **State at close: survey banked in HANDOFF; `aism-xvcq` open; Phase-1
 hygiene is ready to start immediately next session; Phase-2 blocked on
 the three user answers.**
+
+## 2026-08-11 — Session 48: comms plan RATIFIED (Glass-Box Lab + quantified Swiss-Cheese Defense); PHASE 0 COMPLETE (7 reviewed commits)
+
+- **Plan ratified + landed** (`docs/plans/2026-08-11-communication-artifacts-plan.md`): the
+  interactive communication layer for aism-xvcq, headline = the QUANTIFIED Swiss-Cheese
+  Defense (user mandate: more than a Lean formalisation — 6 independent error-catching
+  layers). Counts mined from the record this session: 435 verifier challenges / 428 resolved /
+  2,819 node validations / 381 amendments (proofs ledgers); 16 balloon aborts; 3 disproofs;
+  8 LEARNINGS retractions each attributed to the layer that caught it (crossings: L3→L4
+  lem-hx-financing-floor; L4→L5 the 9 de-banked certs; L3→L2 the 15 GAP rows; ingest→L3
+  ex-hume). All four framing decisions answered: public+Pages+arXiv; honesty front-page;
+  af/fr are PUBLIC repos (af=tobiasosborne/vibefeld; fr URL from user in Phase 2); site
+  in-repo. Rendered proposal artifact: claude.ai/code/artifact/6d0be821-…89b2.
+- **Phase 0 executed** (orchestrated: 5 parallel implementer subagents + 2 fresh Opus
+  reviewers; user directive mid-wave: all future subagents = Opus, saved to agent memory):
+  - `21ce0990` portability: AF fallback chain env→which→~/go/bin→../vibefeld, REPO from
+    __file__ (no wrong-user literals).
+  - `03274846` refs hygiene: stale munkres acknowledged-absent entry retired (4 externals
+    byte-verify again; check-refs 1133/0 failed); ingest dir-name fix.
+  - `49bfb89f` check-all: test_gen_report_stats.py wired, red→green proven.
+  - manifests: INDEX.md Script→output table completed (19 rows; the Run-bundles table was
+    already complete — survey premise corrected); SCHEMA contracts for nsc_pair_table +
+    floor_table + 5 registry rows. Gate blind spot (name-substring match) → bead aism-yfgy.
+  - counters (REVIEWED, SHIP 7/7): PROVENANCE 112→200; shard 41 → 167 reproduced (169
+    ledger rows = 167 T0 + 2 retracted-as-conjecture; 33-id set difference re-derived
+    byte-identical); "not reproduced here" claims fixed (36/37/41); 301pp rebuild.
+  - residual-status mop-up (REVIEWED, SHIP 7/7): 00_overview "This is OPEN" contradiction
+    fixed (nine-block/76-shard structure); gen-report-dag.py now DERIVES root status + GAP
+    links from the registry (both former gap edges verified wired; atlas 645→643, gap 2→0;
+    generator idempotent sha256-verified); PROVENANCE 2026-07-25 block retitled HISTORICAL;
+    shard 37/41/72 precision.
+  - cleanup (local): 157 empty proofs stubs deleted (211 tracked workspaces remain, 0
+    orphans), .claude/worktrees 128MB freed, 11 byte-identical refs-staging dupes deleted
+    (munkres OCR working material kept).
+  - bead triage: 46 pre-discharge beads DEFERRED w/ dated supersession notes (ready queue
+    45→7); aism-kmi (the op-classical carrier, still "(OPEN)") force-closed past two
+    deferred-superseded blockers; new bead aism-yfgy; aism-l4uw found to be a stale id in
+    the check-refs WARN text (no such bead).
+- paper/main.pdf verified current (latexmk up-to-date). Every commit gate-green; both
+  status-bearing packages carried independent fresh-Opus reviews (Rule 3/L5).
+- NEXT: Phase 1 (site data layer: JSON exporters + llms.txt + check-site gate), then
+  Phase 2 (README + Theorem page + Defense headline page + Atlas MVP). Known minor:
+  gen-report-stats snapshot ~17 fr records behind (advisory, refresh via --extract).
