@@ -19,6 +19,15 @@ User mandate 2026-08-11: this is *more than a plain Lean formalisation* — the 
 composed of many levels, each with holes, which under composition catch independent errors.
 Measured record (repo at HEAD b171edd2, campaign 2026-07-02 → 2026-08-09):
 
+> **CORRECTION (2026-08-11, same day, by the Phase-1 data layer — truth-from-canon working as
+> designed):** four figures below were wrong when written and are superseded by
+> `site/data/defense.json` / `stats.json`: retractions are **7** (the "8th" was the entry
+> template inside an HTML comment); run bundles are **38**; "1,133 quotes byte-matched" is a
+> mis-read — the 1,133 externals split as **30 byte-matched literature quotes + 1,080
+> workspace dep-imports + 23 no-quote**; and "1,016 byte-matched imports" was the ledger
+> `def_added` **event** count, not an import count. Downstream surfaces read the JSON, never
+> this prose.
+
 | Layer | Error class targeted | Measured record | Known holes |
 |---|---|---|---|
 | L1 vocabulary & provenance | hallucinated citations; definition drift | 47 canonical def shards (drift = build failure); 23 SHA256-pinned sources; 1,133 quotes byte-matched per commit; 1,016 byte-matched imports in proof workspaces | says nothing about proof correctness |
