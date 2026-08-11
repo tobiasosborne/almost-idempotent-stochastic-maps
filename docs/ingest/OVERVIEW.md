@@ -34,7 +34,7 @@ relaxed one:
   small δ. A derived scale used everywhere: **τ := √δ**.
 
 At δ = 0, these matrices are completely classified (a classical theorem of
-Högnäs–Mukherjea, source pinned locally in `refs/hognas-mukherjea-2011/`, Thm 1.16):
+Högnäs–Mukherjea, source pinned locally in `refs/hognas-mukherjea/`, Thm 1.16):
 after permuting indices, the rows organise into k "recurrent blocks" — within each
 block all rows are identical probability rows supported on that block — plus
 "transient" rows that are convex mixtures of the block rows. So at δ = 0 the geometry of the rows (as points in R^n) is: **k distinct extreme

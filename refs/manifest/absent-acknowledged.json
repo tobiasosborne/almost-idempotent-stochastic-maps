@@ -1,18 +1,4 @@
 {
   "_purpose": "Repository-tracked acknowledged-absent policy for check-refs.py, ACTIVATED BY LOCAL PAYLOAD ABSENCE (it applies in any checkout where the payload is missing; where the payload is present it is inert/stale). Deliberately NARROW: each entry acknowledges that ONE gitignored refs/ payload may be absent and downgrades the hard FAIL (aism-dbq un-vacuum) to a loud acknowledged-absent WARN — ONLY for the exact externals listed. Each external is digest-bound: the rescue requires the external's JSON filename AND the sha256 of its exact 'source' string to match, so an altered quote, a renamed external, or a new file impersonating a listed name hard-FAILs. Entries are validated at load against refs/manifest/checksums.sha256 (path must be pinned there with exactly this sha256, must live under refs/, no traversal) — a violation aborts the gate. When the payload is restored, byte-verification resumes automatically (the absent branch no longer triggers) and the entry MUST be removed (it is flagged stale until it is).",
-  "entries": [
-    {
-      "path": "refs/munkres-elementary-differential-topology/munkres-elementary-differential-topology.txt",
-      "sha256": "9fcbbac92a09926498c1caba8fafa61b1a3568033485b3977edc523cc0459e5d",
-      "reason": "user-supplied scan + tesseract OCR, cache-only (no public source); payload lives only on the previous device. New-device provisioning 2026-08-04; user directed work to proceed without it. The externals below were byte-verified when lem-topology-finite-triangulation was af-validated and banked (session 36, gates green at the banking commit); the .txt sha256 is pinned in checksums.sha256 unchanged since.",
-      "acknowledged": "2026-08-04",
-      "restore_bead": "aism-l4uw",
-      "externals": [
-        {"workspace": "lem-topology-finite-triangulation", "name": "GT-munkres-edt-thm-10.6", "file": "1cc874228b32f520.json", "source_sha256": "d4a67b6fb9c570b9b50d43e74d5c9d06320149ec5c2c032231988f57228f37e3"},
-        {"workspace": "lem-topology-finite-triangulation", "name": "GT-munkres-edt-def-8.1", "file": "57fc403ac2872534.json", "source_sha256": "a6133de0e1302a6bff61e6144c8698a2eef7e1b7dd4e699024d826196775f0ce"},
-        {"workspace": "lem-topology-finite-triangulation", "name": "GT-munkres-edt-def-8.3", "file": "6a78feaad1b78f07.json", "source_sha256": "5b68c492d881e594b98f1c2a799fb9d92fd03e5c66245475c691f82ec0e43c2d"},
-        {"workspace": "lem-topology-finite-triangulation", "name": "GT-munkres-edt-def-1.1-non-bounded", "file": "7119ecc198c5ac83.json", "source_sha256": "7161f1c2ebc76a35c98d61411feb93f02bdedb43b71dc1c2b3f9513fc00c7303"}
-      ]
-    }
-  ]
+  "entries": []
 }
