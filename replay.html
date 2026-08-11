@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campaign Replay — almost-idempotent stochastic maps</title>
+<meta name="description" content="The append-only explore/exploit record: the af-validated count over the whole campaign with every de-banking dip marked, plus the full searchable exploration log.">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">almost-idempotent-stochastic-maps<span>the glass-box lab</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="index.html">Theorem</a>
+      <a href="defense.html">Defense</a>
+      <a href="atlas.html">Atlas</a>
+      <a href="replay.html" aria-current="page">Replay</a>
+      <a href="ledger.html">Ledger</a>
+      <a href="lexicon.html">Lexicon</a>
+      <a href="evidence.html">Evidence</a>
+      <button class="theme-btn" id="theme-btn" type="button">Theme: auto</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="data-error" class="fetch-error" hidden></div>
+
+  <section>
+    <p class="label">.frontier/log.jsonl &middot; the explore/exploit controller</p>
+    <h1>Campaign Replay</h1>
+    <p style="font-size:1.05rem">
+      Every research turn of this project is logged, once, append-only, by the exploration controller: which
+      direction was pulled, what came back, and what was decided next. Nothing is edited afterwards, so the
+      record contains the reversals as well as the wins &mdash; the line below <em>falls</em> seven times, and
+      each fall is a result that had been banked as af-validated and was then taken back off the shelf. Those
+      dips are the point: a curve that only goes up is a curve nobody was allowed to correct. The dated
+      retractions behind them are written up in
+      <a href="ledger.html">the honesty ledger</a> and in
+      <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/docs/LEARNINGS.md"><code>docs/LEARNINGS.md</code></a>.
+    </p>
+
+    <div class="statrow" id="topline" data-needs-data style="margin:1.25rem 0">
+      <span class="small">loading the log from <code>site/data/frontier.json</code>&hellip;</span>
+    </div>
+  </section>
+
+  <section data-needs-data>
+    <h2>af-validated results (T0) over the campaign</h2>
+    <p class="small">
+      One point per logged wave that reported a T0 count. Red markers are the steps where the count
+      <em>decreased</em>. Hover (or focus and use the arrow keys) for the timestamp and the values either side.
+    </p>
+    <div class="card chartbox" id="chartbox">
+      <svg id="t0chart" class="chart" viewBox="0 0 720 300" role="img"
+           aria-label="Line chart of the af-validated result count over the campaign, rising from 29 to 200, with seven marked decreases where previously banked results were retracted."
+           tabindex="0"></svg>
+      <div class="tip" id="tip" hidden></div>
+    </div>
+    <p class="small" id="chart-note" style="margin-top:.6rem"></p>
+    <details class="raw" style="margin-top:.4rem">
+      <summary>Table view &mdash; every decrease in the series</summary>
+      <div class="scroll-x"><table id="dip-table"><thead><tr>
+        <th>timestamp</th><th class="num">from</th><th class="num">to</th><th class="num">&Delta;</th>
+      </tr></thead><tbody></tbody></table></div>
+    </details>
+  </section>
+
+  <section data-needs-data>
+    <h2>The log itself</h2>
+    <p class="small">
+      Filter by outcome and by research arm, or search the free text of the notes. A row expands to its full
+      note on click. Rendered 100 rows at a time so the whole log stays responsive.
+    </p>
+
+    <div class="toolbar">
+      <label for="f-outcome">outcome</label>
+      <select class="field" id="f-outcome"></select>
+      <label for="f-arm">arm</label>
+      <select class="field" id="f-arm"></select>
+      <label for="f-text">search</label>
+      <input class="field grow" id="f-text" type="search" placeholder="search notes, e.g. balloon, counterexample, af-VALIDATED" aria-label="Search the log notes">
+      <button class="tog" id="f-reset" type="button">Reset</button>
+      <span class="count" id="f-count"></span>
+    </div>
+
+    <div class="card" style="padding:.25rem .9rem">
+      <div id="log-list" aria-live="polite"></div>
+    </div>
+    <div class="pager">
+      <button class="tog" id="prev" type="button">&larr; Newer</button>
+      <button class="tog" id="next" type="button">Older &rarr;</button>
+      <span class="pos" id="pos"></span>
+    </div>
+    <p class="small" style="margin-top:1rem" id="parse-note"></p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <a href="ledger.html">The honesty ledger</a>
+    <a href="defense.html">The defense</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/docs/LEARNINGS.md">docs/LEARNINGS.md</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">GLOSSARY.md</a>
+    <p class="small" style="margin-top:.8rem">
+      The chart and the log are rendered from <code>site/data/frontier.json</code>, generated from the
+      append-only controller log by <code>scripts/gen-site-data.py</code> and gated on every commit. Prose is
+      human-written and reviewed. Not peer-reviewed, not published, not Lean-verified.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/replay.js"></script>
+</body>
+</html>

@@ -9127,6 +9127,13 @@
       "note": "README reviewed SHIP (0 overclaims, 36/36 links); applied all 7 immediate reviewer tightenings (gate-certifies-provenance-not-truth clause, 200-of-374 split, kernel wording, sharpness carrier tag, retraction phrasing, latexmk caveat, record-in-the-open). 8th (present-tense site refs) + commit wait on the site-core agent, still building.",
       "outcome": "orient",
       "ts": "2026-08-11T11:33:23.527Z"
+    },
+    {
+      "arm": null,
+      "cycle": 1305,
+      "note": "Phase-2 committed+pushed (site core + reviewed README front door). Data-layer number corrections propagated to plan doc (dated correction block) + proposal artifact (republished). Wave C (replay/ledger/lexicon/evidence pages) in flight.",
+      "outcome": "orient",
+      "ts": "2026-08-11T11:41:22.389Z"
     }
   ],
   "note": "T0 points are parsed out of free-text wave notes (liberal match on the last T0 count mentioned); dips are real — de-banked/retracted validations",
@@ -10312,5 +10319,5 @@
       "ts": "2026-08-09T08:51:37.403Z"
     }
   ],
-  "total": 1304
+  "total": 1305
 }
