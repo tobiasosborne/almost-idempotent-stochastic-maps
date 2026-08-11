@@ -35,7 +35,8 @@
     <p style="font-size:1.05rem">
       Every research turn of this project is logged, once, append-only, by the exploration controller: which
       direction was pulled, what came back, and what was decided next. Nothing is edited afterwards, so the
-      record contains the reversals as well as the wins &mdash; the line below <em>falls</em> seven times, and
+      record contains the reversals as well as the wins &mdash; the line below <em>falls</em>
+      <span id="dip-count">several</span> times, and
       each fall is a result that had been banked as af-validated and was then taken back off the shelf. Those
       dips are the point: a curve that only goes up is a curve nobody was allowed to correct. The dated
       retractions behind them are written up in
@@ -56,7 +57,7 @@
     </p>
     <div class="card chartbox" id="chartbox">
       <svg id="t0chart" class="chart" viewBox="0 0 720 300" role="img"
-           aria-label="Line chart of the af-validated result count over the campaign, rising from 29 to 200, with seven marked decreases where previously banked results were retracted."
+           aria-label="Line chart of the af-validated result count over the campaign, with every decrease where previously banked results were retracted marked; the endpoints and the number of decreases are filled in from the data at load time."
            tabindex="0"></svg>
       <div class="tip" id="tip" hidden></div>
     </div>

@@ -6,6 +6,10 @@
   "use strict";
   var S = window.S;
 
+  /* File-level link: LEARNINGS.md entries have no stable per-heading anchors. */
+  var LEARNINGS_URL =
+    "https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/docs/LEARNINGS.md";
+
   /* ---------- metric presentation ---------- */
 
   var LABELS = {
@@ -40,7 +44,7 @@
     node_amended: "nodes amended after challenge",
     challenge_raised: "challenges raised",
     challenge_resolved: "challenges resolved",
-    def_added: "byte-matched imports registered",
+    def_added: "def-add events in the ledgers",
     ledger_files: "ledger event files parsed",
     ledger_unparseable: "… unparseable",
     qed: "QED events",
@@ -245,6 +249,8 @@
         "<dl>" + fields.map(function (f) {
           return f[1] ? "<dt>" + f[0] + "</dt><dd>" + S.escTicks(f[1]) + "</dd>" : "";
         }).join("") + extra + "</dl>" +
+        '<p class="small" style="margin:0"><a href="' + LEARNINGS_URL +
+          '">read the entry in <code>docs/LEARNINGS.md</code></a></p>' +
         "</div>";
     }).join("");
 

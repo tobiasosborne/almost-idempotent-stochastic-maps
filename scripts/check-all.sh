@@ -9,7 +9,7 @@ fail() { echo "[check-all] FAILED: $1"; exit 1; }
 echo "[check-all] definitions gate (required fields, drift/dedup, cited sha256)"
 python3 scripts/check-defs.py --check || fail "check-defs"
 
-echo "[check-all] refs provenance gate (sources catalogued; payloads byte-verified if present)"
+echo "[check-all] refs provenance gate (sources catalogued; payloads byte-verified; ABSENT payloads fail unless acknowledged (refs/manifest/absent-acknowledged.json; see fetch-refs.py --status))"
 python3 scripts/check-refs.py --check || fail "check-refs"
 
 echo "[check-all] argument linker (acyclic, imports, contracts, rigour-ladder status, brittleness, orphans)"

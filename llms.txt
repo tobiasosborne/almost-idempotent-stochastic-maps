@@ -66,6 +66,12 @@ plus a retraction-ledger backstop. Live per-layer counts, regenerated every comm
 
     sh scripts/check-all.sh        # the single gate; prints "[check-all] OK"
 
+Out of the box this is green through every gate except the byte-match step: the refs/ source payloads
+are gitignored (copyright), so check-refs reports their quotes as unverifiable until you supply them —
+`python3 scripts/fetch-refs.py --status` lists which of the 23 are auto-fetchable (12) and which must be
+obtained manually (11). Everything else — definitions, linker, numerics, report, site — verifies from
+the clone alone.
+
 Stdlib Python 3 + sh only; no network, no CI, no API keys. It runs the definitions gate, the
 byte-verbatim refs provenance gate, the argument linker (acyclicity, contract-match, status
 propagation), the numerics gate, the generated report layers, and the site data freshness gate

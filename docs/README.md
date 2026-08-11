@@ -6,7 +6,7 @@ UPDATE POLICY: edit when a subdirectory is added, retired, or changes role.
 # `docs/` — history, plans, and the inherited record
 
 Nothing in this directory is a rigour rung. Claims live in `argument/`; `docs/` records how they got
-there, what was tried, and what had to be withdrawn.
+there, what was tried, and what had to be withdrawn. (Counts as of 2026-08-11.)
 
 | Path | Kind | What it holds |
 |---|---|---|

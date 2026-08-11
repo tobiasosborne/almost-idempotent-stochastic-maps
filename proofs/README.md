@@ -9,6 +9,8 @@ UPDATE POLICY: edit when the workspace layout, the tracking rules, or the audit 
 One directory per registry result that has been elevated to formalisation: `proofs/<id>/` where `<id>`
 is the id of a shard in `argument/lemmas/`. There are **211** such directories; **200** registry rows
 carry `af: validated` in `argument/INDEX.md`, and **202** directories hold an `export.md`.
+Counts in this file are as of 2026-08-11; the live figures are regenerated into
+`site/data/defense.json` by `scripts/gen-site-data.py`.
 
 `af` is the Adversarial Proof Framework (external tool; see `GLOSSARY.md`). A workspace is an
 **append-only event ledger**, not a document: the proof tree is a projection of the events.
@@ -68,7 +70,7 @@ carrying no extractable quote.
 Walked end to end on 2026-08-11; the files and event ids below are the ones actually opened.
 
 1. **Start at the root.** `proofs/op-classical/export.md` (62 lines) — five nodes, all
-   `Status: validated`, `Taint: clean`. Node 1 is the theorem statement; it matches the `contract:`
+   `**Status:** validated`, `**Taint:** clean`. Node 1 is the theorem statement; it matches the `contract:`
    line of `argument/lemmas/op-classical.md` word for word.
 2. **Follow the single import.** Node 1.1 names `lem-routef-f0-assembly`. The registered import is
    `proofs/op-classical/externals/6cfd54946b268b6d.json`, whose `source` begins `imports validated

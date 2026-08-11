@@ -9134,6 +9134,20 @@
       "note": "Phase-2 committed+pushed (site core + reviewed README front door). Data-layer number corrections propagated to plan doc (dated correction block) + proposal artifact (republished). Wave C (replay/ledger/lexicon/evidence pages) in flight.",
       "outcome": "orient",
       "ts": "2026-08-11T11:41:22.389Z"
+    },
+    {
+      "arm": null,
+      "cycle": 1306,
+      "note": "Phase 3 committed+pushed (7-page site complete: replay w/ T0 dip chart + 1304-entry log explorer, ledger, lexicon, evidence; 47 test assertions). Phase-4 comprehensive Opus reviewer dispatched (honesty sweep, number-rot sweep, glossary accuracy, fresh re-walk of the audit recipe, cross-surface consistency, link integrity, completeness critic). Pages flip + session close after its verdict.",
+      "outcome": "orient",
+      "ts": "2026-08-11T11:54:52.781Z"
+    },
+    {
+      "arm": null,
+      "cycle": 1307,
+      "note": "Phase-4 review harvested: 2 BLOCKERs (fresh-clone check-refs failure promise; site/data generated from uncommitted frontier log), 5 MAJORs, 9 MINORs, 6 NITs — content itself survived the hostile re-walk. Fixer Opus agent dispatched with explicit dispositions; 2 process beads filed (aism-qen0 USER-DECISION gate semantics, aism-a8tc durable frontier binding). Commit+Pages flip+close after fixer land…",
+      "outcome": "orient",
+      "ts": "2026-08-11T12:13:08.523Z"
     }
   ],
   "note": "T0 points are parsed out of free-text wave notes (liberal match on the last T0 count mentioned); dips are real — de-banked/retracted validations",
@@ -10319,5 +10333,5 @@
       "ts": "2026-08-09T08:51:37.403Z"
     }
   ],
-  "total": 1305
+  "total": 1307
 }

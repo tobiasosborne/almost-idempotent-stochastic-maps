@@ -59,8 +59,9 @@ line up. Each retraction so far was caught downstream of layers that had already
 backstop is the retraction ledger `docs/LEARNINGS.md`, whose own header calls a retraction "a SUCCESS of
 the rigour machinery, not an embarrassment".
 
-Measured record (all figures generated from the repo by `scripts/gen-site-data.py` into
-[`site/data/defense.json`](site/data/defense.json); never quote a defence number from prose):
+Measured record (all figures generated from the repo by `scripts/gen-site-data.py`; the canonical
+figures live in [`site/data/defense.json`](site/data/defense.json); the numbers quoted here mirror it as
+of 2026-08-11):
 
 - **435** challenges raised and **428** resolved across **2,819** node validations by fresh verifiers who
   never proved the node they judged;
@@ -96,6 +97,12 @@ thing yourself:
 ```sh
 sh scripts/check-all.sh        # the single gate; prints "[check-all] OK"
 ```
+
+Out of the box this is green through every gate except the byte-match step: the `refs/` source payloads
+are gitignored (copyright), so `check-refs` reports their quotes as unverifiable until you supply them —
+`python3 scripts/fetch-refs.py --status` lists which of the 23 are auto-fetchable (12) and which must be
+obtained manually (11). Everything else — definitions, linker, numerics, report, site — verifies from the
+clone alone.
 
 Stdlib Python 3 and `sh` only — no network, no CI, no API keys, no dependencies to install; a few seconds
 on a laptop (plus an optional LaTeX rebuild when `latexmk` is installed). It runs the definitions gate, the byte-verbatim refs provenance gate (**1,133** registered

@@ -10,8 +10,8 @@ UPDATE POLICY: add an entry when a term starts appearing in commits, HANDOFF, or
 Alphabetical. Mathematical terms are **not** here: every mathematical term has exactly one canonical
 shard under `definitions/` (`CLAUDE.md` L2), listed in `definitions/INDEX.md`.
 
-**`af`** — the Adversarial Proof Framework, the external tool that hosts this repo's machine-checked-by-
-adversary proof trees. Public repository: `github.com/tobiasosborne/vibefeld`. Locally the binary is
+**`af`** — the Adversarial Proof Framework, the external tool that hosts this repo's machine-adversarial
+proof trees. Public repository: `github.com/tobiasosborne/vibefeld`. Locally the binary is
 addressed as `AF=${AF:-…}`; the workspaces it produces live in `proofs/<id>/` and are described in
 `proofs/README.md`. The protocol wrapped around it is `CLAUDE.md` §6, driven by
 `scripts/af-orchestrate.py`.
@@ -25,7 +25,8 @@ they are *directions*, not claims, and nothing in `argument/` depends on them.
 push through. `scripts/af-orchestrate.py` aborts on it (the "balloon tripwire") and the abort is
 classified: a missing fact, a dependency that should be factored into its own registry lemma, or a
 genuine gap. The shared size constant is `NODE_SOFT_CAP = 26` in `scripts/af_constants.py`, read by
-both the orchestrator and the linker so the two cannot drift.
+both the orchestrator and the linker so the two cannot drift: 26 is the linker's REFACTOR warning
+threshold, while the orchestrator aborts at its `--node-cap`, which defaults to twice that (52).
 
 **banking** — recording an exploration result as *achieved*. A result is banked only when an external
 oracle passes, never on the agent's own say-so; for `af` work the oracle is
@@ -41,7 +42,7 @@ tracking goes through it; markdown TODO lists are forbidden (`CLAUDE.md` Rule 8)
 **byte-matched / ground-truth ref** — the strongest provenance this repo can offer for a claim taken
 from the literature: the quoted text is string-matched, character for character, against a local copy
 of the source under `refs/`. Enforced by `scripts/check-refs.py` on every commit (current run: 1133
-externals, 0 failed). Anything weaker — a paraphrase, a recollection, an unlocated citation — is not
+externals, 0 failed, as of 2026-08-11). Anything weaker — a paraphrase, a recollection, an unlocated citation — is not
 `cited` and may not be used as though it were. `refs/` payloads are gitignored for copyright and size;
 `refs/manifest/checksums.sha256` is the tracked record of what was matched.
 
@@ -71,17 +72,19 @@ counterexample. `CLAUDE.md` Rule 13 forbids re-walking them without first readin
 escalating.
 
 **`fr`** — the explore/exploit controller CLI that runs the search campaign. State is
-`.frontier/log.jsonl` (append-only, 1300 records) plus `.frontier/portfolio.json`. It defines the turn
+`.frontier/log.jsonl` (append-only, ~1,300 records as of 2026-08-11) plus `.frontier/portfolio.json`. It defines the turn
 ritual — dispatch, harvest, log one record per arm pulled, end on a decision — and enforces it through
 the circuit breaker. Its own help text is the reference: `fr help`, `fr help <topic>`. (`fr` is a
 public repository of the same author; the URL is not yet wired into this repo.)
 
 **harvest** — collecting a wave's subagent results and logging the outcome to `fr`, one record per arm
 pulled. The permitted outcomes are `banked` (requires an oracle pass), `progress` (requires a named
-artifact), `died` (requires the point of death), `refuted`, and `null`. Turns that ran no wave are
-recorded separately and do not count as pulls.
+artifact), `died` (requires the point of death), `refuted`, and `null`. Those are the *harvest*
+outcomes — `banked`/`progress`/`died`/`refuted`; the same log also carries `orient`, `dispatch` and
+`discovery` entries written by other `fr` commands. Turns that ran no wave are recorded separately and
+do not count as pulls.
 
-**L0–L5** — the five Laws in `CLAUDE.md` §1, the constitution of the repo.
+**L0–L5** — the six Laws in `CLAUDE.md` §1, the constitution of the repo.
 L0: the rigour ladder is sacred and non-rigour is flagged loudly.
 L1: ground truth before claims — every cited claim byte-matches a local source.
 L2: one canonical definition per term, no naked symbols.

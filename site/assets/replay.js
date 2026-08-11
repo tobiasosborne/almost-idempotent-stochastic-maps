@@ -1,7 +1,7 @@
 /* replay.js — the Campaign Replay: the T0-over-time chart and the log explorer.
    Everything on this page is rendered from site/data/frontier.json at load time; no count, date, or
    note is a literal in the source. The chart is one series (no legend needed — the heading names it),
-   drawn as a 2px line over a recessive grid, with the seven decreases marked and direct-labelled
+   drawn as a 2px line over a recessive grid, with every decrease marked and direct-labelled
    endpoints. The log list renders one page of rows at a time so 1,300 entries stay responsive. */
 (function () {
   "use strict";
@@ -100,6 +100,12 @@
     svg.innerHTML = p.join("");
     svg.setAttribute("data-points", String(tl.length));
     svg.setAttribute("data-dips", String(dips.length));
+    // the accessible description is computed, never a literal
+    svg.setAttribute("aria-label",
+      "Line chart of the af-validated result count over the campaign, rising from " + first.t0 +
+      " on " + day(first.ts) + " to " + last.t0 + " on " + day(last.ts) + ", with " + dips.length +
+      " marked decrease" + (dips.length === 1 ? "" : "s") +
+      " where previously banked results were retracted.");
     svg.querySelectorAll("text").forEach(function (el) {
       if (!el.getAttribute("fill")) el.setAttribute("fill", "var(--muted)");
     });
@@ -197,6 +203,10 @@
     document.getElementById("topline").innerHTML = tiles.map(function (t) {
       return '<div class="stat"><span class="n">' + t[0] + '</span><span class="k">' + t[1] + "</span></div>";
     }).join("");
+
+    // the prose count of decreases is filled from the same computed dips as the chart
+    var dc = document.getElementById("dip-count");
+    if (dc) dc.textContent = S.num(dips.length);
 
     document.getElementById("chart-note").innerHTML =
       "Series note, verbatim from the generator: " + S.esc(fr.note || "");
