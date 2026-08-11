@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Swiss-Cheese Defense — almost-idempotent stochastic maps</title>
+<meta name="description" content="Six independent error-catching layers, each with known holes, quantified from the repository record: challenges, validations, amendments, retractions, and the layer that caught each one.">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">almost-idempotent-stochastic-maps<span>the glass-box lab</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="index.html">Theorem</a>
+      <a href="defense.html" aria-current="page">Defense</a>
+      <a href="atlas.html">Atlas</a>
+      <span class="off" aria-disabled="true" title="not yet built — Phase 3 of the plan">Replay</span>
+      <span class="off" aria-disabled="true" title="not yet built — Phase 3 of the plan">Ledger</span>
+      <span class="off" aria-disabled="true" title="not yet built — Phase 3 of the plan">Lexicon</span>
+      <span class="off" aria-disabled="true" title="not yet built — Phase 4 of the plan">Evidence</span>
+      <button class="theme-btn" id="theme-btn" type="button">Theme: auto</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="data-error" class="fetch-error" hidden></div>
+
+  <section>
+    <p class="label">the headline claim</p>
+    <h1>The Swiss-Cheese Defense</h1>
+    <p style="font-size:1.1rem">
+      In a world of unlimited plausible machine-generated mathematics, the scarce resource is
+      <em>checkable provenance</em>. This project's answer is not one formalisation but six independent
+      error-catching layers, each with known holes, whose <em>composition</em> caught every error found so
+      far. The holes do not line up: different layers fail in different directions. Below, every count is
+      read at page load from <code>site/data/defense.json</code> &mdash; regenerated from the ledgers,
+      registry, and retraction record on each commit, and gated by <code>scripts/check-site.py</code>.
+    </p>
+
+    <div class="statrow" id="topline" data-needs-data style="margin:1.5rem 0">
+      <span class="small">loading counts from <code>site/data/defense.json</code>&hellip;</span>
+    </div>
+    <p class="small" id="topline-note"></p>
+  </section>
+
+  <section data-needs-data>
+    <h2>Where the errors actually stopped</h2>
+    <p>
+      Two measured crossings. Each is an error that <em>passed</em> one layer's mechanism and was stopped by a
+      different one &mdash; which is the whole claim: the layers are not redundant copies of one check.
+    </p>
+    <div class="card scroll-x">
+      <svg id="cheese" viewBox="0 0 560 310" role="img"
+           aria-label="Schematic of six defense layers drawn as slabs with holes, and two error trajectories that pass through the holes of earlier layers and are stopped by a later one."></svg>
+    </div>
+    <div class="grid two" style="margin-top:1rem" id="crossings"></div>
+  </section>
+
+  <section data-needs-data>
+    <h2>The six layers, measured</h2>
+    <p class="small">
+      Every metric shown is a field of <code>defense.json</code>; nothing here is typed by hand. New fields
+      added by a future regeneration appear automatically.
+    </p>
+    <div class="grid two" id="layers"></div>
+  </section>
+
+  <section data-needs-data>
+    <h2>The backstop: the retraction ledger</h2>
+    <p>
+      Errors that survived the layers above end up here. Every entry is dated, states what was claimed, why it
+      was wrong, and how it was resolved &mdash; and names the layer that caught it. A defense record without
+      its failures is marketing; this is the failure record.
+    </p>
+    <div class="chips" id="backstop-chips" style="margin-bottom:1rem"></div>
+    <div class="grid" id="retractions"></div>
+    <p class="small" id="retraction-note" style="margin-top:1rem"></p>
+  </section>
+
+  <section>
+    <h2>What this is <em>not</em>: the honest Lean comparison</h2>
+    <div class="card">
+      <p>
+        <strong>Per inference, an <code>af</code> tree is weaker than a Lean kernel.</strong> A validated node
+        means a fresh adversarial verifier, told that finding a gap is a success, failed to find one &mdash; it
+        does not mean a type-checker accepted a term. Where a kernel gives a binary guarantee over the whole
+        proof object, an af cohort gives a measured, falsifiable review record. We do not claim parity, and we do
+        not claim the top rung: <strong>no <code>sorry</code>-free Lean/mathlib proof exists for any result in
+        this repository.</strong>
+      </p>
+      <p>
+        What the layered design buys is <em>coverage of a different error class</em>. A kernel checks the proof
+        you wrote against the statement you wrote; it never sees a hallucinated citation, a definition that
+        drifted between two files, a contract that does not say what its lemma proves, a rigorous result quietly
+        resting on a conjecture, or a claim that is simply false. L1 (provenance) and L2 (contracts and the
+        status-propagation law) target exactly that specification-level class. L3&ndash;L6 then attack the
+        proof-level class at four different granularities, with the catch record above.
+      </p>
+      <p style="margin-bottom:0">
+        The precise headline, therefore, is <strong>not</strong> "as strong as Lean per step". It is
+        <strong>measured defense-in-depth across the error classes no single formalisation covers</strong> &mdash;
+        and Lean remains the open top rung.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The protocol, in one line each</h2>
+    <div class="grid three">
+      <div class="card">
+        <p class="label">fresh prover</p>
+        <p style="margin:0">Every proof attempt is a brand-new agent with an independent context. It cannot
+        inherit the belief that made the previous attempt look fine.</p>
+      </div>
+      <div class="card">
+        <p class="label">separate fresh verifier</p>
+        <p style="margin:0">Every node is validated by a <em>different</em> fresh agent, briefed that finding a
+        counterexample, gap, or error is a big success. Prover ≠ verifier ≠ challenger, per node, always.</p>
+      </div>
+      <div class="card">
+        <p class="label">the orchestrator never judges</p>
+        <p style="margin:0">The coordinating agent dispatches workers and does bookkeeping. It never rules on
+        whether a step is correct &mdash; reasoning about the proof would contaminate the review it is supposed
+        to be neutral about.</p>
+      </div>
+    </div>
+    <p class="small" style="margin-top:1rem">
+      The adversarial framework is a public repository:
+      <a href="https://github.com/tobiasosborne/vibefeld"><code>af</code> — github.com/tobiasosborne/vibefeld</a>.
+      The exploration controller <code>fr</code>, which allocates attention across research directions and runs
+      the explore/exploit circuit-breaker, is <em>fr (public repo — link pending)</em>.
+      The verification path itself needs neither: <code>sh scripts/check-all.sh</code> is stdlib-Python only.
+    </p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <a href="index.html">The theorem</a>
+    <a href="atlas.html">The proof atlas</a>
+    <a href="../docs/LEARNINGS.md">docs/LEARNINGS.md</a>
+    <a href="../FINDINGS.md">FINDINGS.md</a>
+    <a href="../llms.txt">llms.txt</a>
+    <p class="small" style="margin-top:.8rem">
+      Prose on this page is human-reviewed; every number is machine-generated from the repository record by
+      <code>scripts/gen-site-data.py</code>. Not peer-reviewed, not published, not Lean-verified.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/defense.js"></script>
+</body>
+</html>

@@ -9106,6 +9106,27 @@
       "note": "Phase-1 nav-docs package landed+pushed (proofs/README w/ walked audit recipe incl. real challenge pair, docs/README, GLOSSARY 19 entries). Data-layer agent still in flight. Batch content review scheduled for phase 4.",
       "outcome": "orient",
       "ts": "2026-08-11T11:16:42.893Z"
+    },
+    {
+      "arm": null,
+      "cycle": 1302,
+      "note": "Phase-1 data layer committed+pushed (site/data 7 JSONs, check-site gate, llms.txt; 4 truth-from-canon corrections to the plan's own numbers: retractions 7 not 8, bundles 38, externals 30quotes/1080imports/23noquote). Bead aism-i15b filed. Wave B dispatched (2 Opus): site core (index/defense/atlas + design system) and README rewrite. Reviewer next.",
+      "outcome": "orient",
+      "ts": "2026-08-11T11:21:03.797Z"
+    },
+    {
+      "arm": null,
+      "cycle": 1303,
+      "note": "README rewrite drafted (167 lines, 20 links verified, full claim-source table; old 'unsolved' falsehoods quoted+replaced); stale '8 entries' fixed in docs/README (7 is correct per data layer). Fresh Opus reviewer dispatched on the README (adversarial, BLOCK on any overclaim/decimal-C/marketing). Site-core agent still building index/defense/atlas.",
+      "outcome": "orient",
+      "ts": "2026-08-11T11:26:26.310Z"
+    },
+    {
+      "arm": null,
+      "cycle": 1304,
+      "note": "README reviewed SHIP (0 overclaims, 36/36 links); applied all 7 immediate reviewer tightenings (gate-certifies-provenance-not-truth clause, 200-of-374 split, kernel wording, sharpness carrier tag, retraction phrasing, latexmk caveat, record-in-the-open). 8th (present-tense site refs) + commit wait on the site-core agent, still building.",
+      "outcome": "orient",
+      "ts": "2026-08-11T11:33:23.527Z"
     }
   ],
   "note": "T0 points are parsed out of free-text wave notes (liberal match on the last T0 count mentioned); dips are real — de-banked/retracted validations",
@@ -10291,5 +10312,5 @@
       "ts": "2026-08-09T08:51:37.403Z"
     }
   ],
-  "total": 1301
+  "total": 1304
 }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proof Atlas — almost-idempotent stochastic maps</title>
+<meta name="description" content="The full contract DAG: every registry result as a node coloured by its rigour rung, with route lenses, status filters, and the verbatim one-line contract behind each node.">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap wide">
+    <a class="brand" href="index.html">almost-idempotent-stochastic-maps<span>the glass-box lab</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="index.html">Theorem</a>
+      <a href="defense.html">Defense</a>
+      <a href="atlas.html" aria-current="page">Atlas</a>
+      <span class="off" aria-disabled="true" title="not yet built — Phase 3 of the plan">Replay</span>
+      <span class="off" aria-disabled="true" title="not yet built — Phase 3 of the plan">Ledger</span>
+      <span class="off" aria-disabled="true" title="not yet built — Phase 3 of the plan">Lexicon</span>
+      <span class="off" aria-disabled="true" title="not yet built — Phase 4 of the plan">Evidence</span>
+      <button class="theme-btn" id="theme-btn" type="button">Theme: auto</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap wide">
+  <div id="data-error" class="fetch-error" hidden></div>
+
+  <section style="margin-bottom:1rem">
+    <p class="label">the contract DAG &middot; argument/lemmas</p>
+    <h1 style="margin-bottom:.3rem">Proof Atlas</h1>
+    <p class="small" id="atlas-blurb" style="max-width:56rem">
+      Every registry result is a node; every edge is a declared dependency, drawn left to right from support to
+      consumer. Colour is the rigour rung, and the label is always shown with it. Drag to pan, scroll to zoom,
+      click a node for its verbatim one-line contract. Loading&hellip;
+    </p>
+  </section>
+
+  <section data-needs-data>
+    <div class="controls" role="group" aria-label="Filter by rigour rung">
+      <span class="label" style="margin-right:.3rem">rung</span>
+      <span id="status-filters"></span>
+    </div>
+    <div class="controls" role="group" aria-label="Preset lenses">
+      <span class="label" style="margin-right:.3rem">lens</span>
+      <span id="lens-buttons"></span>
+      <span style="margin-left:auto"></span>
+      <button class="tog" id="fit" type="button">Reset view</button>
+    </div>
+
+    <div class="atlas-layout">
+      <div class="atlas-stage">
+        <svg id="atlas" role="application" aria-label="Interactive dependency graph of the registry; use the node list in the side panel after selecting a node.">
+          <g id="cam">
+            <g id="edges"></g>
+            <g id="nodes"></g>
+          </g>
+        </svg>
+      </div>
+      <aside class="panel" id="panel">
+        <div id="panel-body" aria-live="polite">
+          <p class="label">selection</p>
+          <p class="small">Click any node to see its kind, rigour rung, owner, verbatim contract, and
+          dependencies. Nodes with a validated adversarial proof tree link straight to the exported tree
+          on GitHub.</p>
+        </div>
+        <div id="legend" class="legend"></div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap wide">
+    <a href="index.html">The theorem</a>
+    <a href="defense.html">The defense</a>
+    <a href="../argument/INDEX.md">argument/INDEX.md</a>
+    <a href="../argument/DAG.md">argument/DAG.md</a>
+    <a href="../proofs/README.md">proofs/README.md</a>
+    <p class="small" style="margin-top:.8rem">
+      Layout is deterministic (longest-path layering over the dependency edges) and computed in the browser;
+      the graph itself, every status, and every contract come from <code>site/data/dag.json</code>.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/atlas.js"></script>
+</body>
+</html>
