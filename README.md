@@ -46,8 +46,9 @@ differs. So a registry change that is not regenerated **blocks the commit** rath
 publish a count the repository no longer supports (plan principle P1).
 
 Every page fetches those files at runtime with relative paths (`data/*.json`) — nothing is baked into
-the HTML. On `defense.html` this is a hard rule: not one count on that page is a literal in the source,
-so a future regeneration cannot leave it stale.
+the HTML. On `defense.html` this is a hard rule: the counts on that page are runtime-rendered from
+the data layer (the only literals are structural words like "six layers"), so a future regeneration
+cannot leave it stale.
 
 **Prose is reviewed; numbers are machine-generated.** The narrative text on each page is human-written
 and independently reviewed (Rule 3 / L5); every count, status chip, and contract string is rendered from
@@ -91,11 +92,14 @@ you to run the command above — no silent blank sections.
   instant, and dependency-free, at the cost of a wide canvas (≈2600×1000 units, aspect 2.6:1 for the
   current 374 nodes). The default view fits the whole graph, which makes individual nodes small;
   pan/zoom is the intended way to read it, and node labels appear once you zoom past 1.5×.
-- **Footer links into the repository** (`../paper/main.tex`, `../report/main.pdf`, `../GLOSSARY.md`,
-  `../proofs/README.md`, `../llms.txt`, `../argument/…`) assume the **repository root** is what gets
-  served — true for a local clone and for Pages serving the branch root. If hosting is ever flipped to
-  serve `site/` *as* the web root, those five relative links must be repointed at the GitHub blob URLs
-  (the Atlas's "audit deeper" links already use absolute `github.com` URLs and are unaffected).
+- **Links into the repository** (`paper/main.tex`, `report/main.pdf`, `GLOSSARY.md`,
+  `proofs/README.md`, `llms.txt`, `FINDINGS.md`, `docs/LEARNINGS.md`, `argument/…`) are **absolute
+  GitHub URLs** on every page — there are no repo-relative (`../`) links left, so the site renders
+  correctly whether it is served from the repository root or with `site/` *as* the web root.
+- **Still deferred from the plan.** Per-result drill-down pages and stable per-result anchors
+  (slates D and J), site-wide hover-cards (slate H), and hash deep-linking into the Atlas
+  (`#<node-id>` selecting a node) are not built. The plan's `argument.py --emit-json` step was
+  superseded by `scripts/gen-site-data.py`, which generates the whole `site/data/` layer instead.
 
 ## Honesty rules this site is built under (L0)
 
@@ -103,3 +107,7 @@ you to run the command above — no silent blank sections.
 - The rung reached is **af-validated**, and each page says so explicitly. There is **no Lean/mathlib
   proof**, nothing here is peer-reviewed or published, and the constant `C` is not explicit.
 - Numerical results are evidence, never proof, wherever they appear.
+- `sh scripts/check-all.sh` is green from a fresh clone through every gate except the byte-match step:
+  the `refs/` source payloads are gitignored (copyright), so `check-refs` reports their quotes as
+  unverifiable until you supply them (`python3 scripts/fetch-refs.py --status` lists which of the 23
+  are auto-fetchable and which must be obtained manually).

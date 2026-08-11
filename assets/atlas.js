@@ -316,9 +316,12 @@
       { id: "legacy", name: "Legacy signed route · " + S.num(r2.size), set: r2set },
       { id: "sharp", name: "Sharpness island · " + sharpN, set: sharp }
     ];
+    // Default lens: the Route-F closure (the plan's default view); "All" stays one click away.
+    G.lens = "routef";
+    G.lensSet = r1set;
     document.getElementById("lens-buttons").innerHTML = lenses.map(function (l) {
       return '<button class="tog" type="button" data-lens="' + l.id + '" aria-pressed="' +
-        (l.id === "all" ? "true" : "false") + '">' + S.esc(l.name) + "</button>";
+        (l.id === G.lens ? "true" : "false") + '">' + S.esc(l.name) + "</button>";
     }).join(" ");
     document.getElementById("lens-buttons").addEventListener("click", function (ev) {
       var b = ev.target.closest("button.tog");

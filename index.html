@@ -31,7 +31,7 @@
 
   <section id="hero">
     <p class="label">op-classical &middot; argument/lemmas/op-classical.md</p>
-    <h1>Every almost-idempotent stochastic map is close to an exact one</h1>
+    <h1>Every almost-idempotent stochastic map is close to an exact one &mdash; once its defect is small enough</h1>
     <div class="chips" id="hero-chips" data-needs-data>
       <span class="small">loading status from <code>site/data/dag.json</code>&hellip;</span>
     </div>
@@ -122,9 +122,10 @@
           <p class="small">
             The shaded band is <strong>forbidden</strong>: an <span class="math"><span class="v">E</span></span> claimed
             below the dashed floor contradicts <code>lem-prh-sharpness</code>, so a proof that produced one would be
-            wrong. Both curves are that af-validated family's own identities
-            (<span class="math">&eta; = 2&lambda;&sup2;</span>, floor <span class="math">&radic;(&eta;/2)</span>,
-            achieved <span class="math">&radic;(2&eta;)</span>); they are reproduced here, not re-derived.
+            wrong. The floor <span class="math">&radic;(&eta;/2)</span> is the af-validated bound
+            (<code>lem-prh-sharpness</code> / <code>cor-classical-sharpness</code>); the upper curve
+            <span class="math">&radic;(2&eta;)</span> is the distance to an explicit witness idempotent,
+            computed on this page, not part of the validated record.
           </p>
         </div>
       </div>
@@ -153,7 +154,7 @@
       follow from <span class="math"><span class="v">K</span> &ge; 1</span> alone:
     </p>
     <div class="statrow" style="margin:1rem 0">
-      <div class="stat"><span class="n">&ge; 6.657</span><span class="k">C &ge; 1 + 4&radic;2</span></div>
+      <div class="stat"><span class="n">1 + 4&radic;2 &asymp; 6.657</span><span class="k">the Route-F recipe's floor: C = K + 4&radic;(2K), K &ge; 1</span></div>
       <div class="stat"><span class="n">&le; 1/24</span><span class="k">&eta;<sub>0</sub> &le; (24K)<sup>&minus;1</sup></span></div>
       <div class="stat"><span class="n">&frac12;</span><span class="k">exponent &mdash; sharp, both directions</span></div>
     </div>
@@ -191,10 +192,10 @@
 
 <footer class="site-foot">
   <div class="wrap">
-    <a href="../paper/main.tex">paper/main.tex</a>
-    <a href="../report/main.pdf">report/main.pdf (lab book)</a>
-    <a href="../GLOSSARY.md">GLOSSARY.md</a>
-    <a href="../proofs/README.md">proofs/README.md</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/paper/main.tex">paper/main.tex</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/report/main.pdf">report/main.pdf (lab book)</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/GLOSSARY.md">GLOSSARY.md</a>
+    <a href="https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/proofs/README.md">proofs/README.md</a>
     <a href="https://github.com/tobiasosborne/almost-idempotent-channels">sibling: almost-idempotent-channels</a>
     <p class="small" style="margin-top:.8rem">
       Prose on this page is human-reviewed; every number and status chip is machine-generated from the repository

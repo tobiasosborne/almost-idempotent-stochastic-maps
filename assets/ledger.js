@@ -8,6 +8,10 @@
 
   var LAYER_CLASS = { L1: "num", L2: "num", L3: "audit", L4: "audit", L5: "conj", L6: "conj" };
 
+  /* File-level link: LEARNINGS.md entries have no stable per-heading anchors. */
+  var LEARNINGS_URL =
+    "https://github.com/tobiasosborne/almost-idempotent-stochastic-maps/blob/master/docs/LEARNINGS.md";
+
   var LAYER_NAME = {
     L1: "vocabulary & provenance",
     L2: "contract DAG + linker",
@@ -51,6 +55,8 @@
       "<dl>" + fields.map(function (f) {
         return f[1] ? "<dt>" + f[0] + "</dt><dd>" + S.escTicks(f[1]) + "</dd>" : "";
       }).join("") + extra + "</dl>" +
+      '<p class="small" style="margin:0"><a href="' + LEARNINGS_URL +
+        '">read the entry in <code>docs/LEARNINGS.md</code></a></p>' +
       "</div>";
   }
 
