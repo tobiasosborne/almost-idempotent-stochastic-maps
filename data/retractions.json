@@ -1,0 +1,92 @@
+{
+  "by_catching_layer": {
+    "L3": 3,
+    "L4": 1,
+    "L5": 3
+  },
+  "entries": [
+    {
+      "catch_layer": "L3",
+      "caught_by": "arm B wave 1 (`docs/waves/2026-07-02-B1-dual-localization.md` §6, opus worker),\nindependently CONFIRMED by a read-only codex verifier (2026-07-02; bd `aism-136` notes).",
+      "claimed": "the registry carried `lem-dual-localization` (status `open`) as \"the single genuine gap\nin the frame-free proof of the linear law\": *reproduce `‖Ē‖₁ ≥ H` from `P²=P` without the canonical\nsimplex frame*. (No mathematical result was asserted; the wrong claim was the shard's FRAMING — that\nthis statement has open content.)",
+      "date": "2026-07-04",
+      "extra": {},
+      "qualifier": "",
+      "resolution": "user decision 2026-07-04 (aism-136) — superseded by `conj-skinny-shadow-cap` (the\nskinny two-shadow cap, the corrected Route-B statement); `lem-dual-localization` retagged\n`obstruction` with a supersession marker in its contract; callouts in `CLAUDE.md`/`AGENTS.md`,\n`FINDINGS.md`, `RESEARCH_NOTES.md`, `HANDOFF.md`, and the report status ledger updated; DAG\nregenerated. No rigorous rung was involved at any point.",
+      "title": "`lem-dual-localization`: the transcribed \"open problem\" was vacuous (contract retired)",
+      "why_wrong": "as literally stated it is a distance tautology — once `v₁ = L̄ + Ē` with `L̄ ∈ C_W`,\n`H ≤ dist₁(p_{v₁}, C_W) ≤ ‖Ē‖₁` needs no idempotence. The upstream source\n(`docs/ingest/experiments/DELIVERABLE2_asq_proof.md:86`) mislabelled the tautology as the exactness\ncontent; the intended difficulty is the skinny mutual-shadow degeneracy."
+    },
+    {
+      "catch_layer": "L4",
+      "caught_by": "the W61 af elevation (fresh per-node codex verifiers) — three\nchallenges pinned the silent A>0 assumption in the proof chain and the root\namendment mismatch. The orchestrator's STUCK tripwire surfaced it.",
+      "claimed": "the W60 engine lemma carried status `proved` (L5, batched hostile\nverdict 'E3: VALID-WITH-CORRECTIONS') with contract \"... all reals A, Lambda > 0,\nand every set N ... |chi(p_Q)| <= A for every Q in N ...\". On the literal reading\nA ranges over ALL reals; with N = empty the A-hypothesis is vacuous, so A < 0 is\nadmissible and the claimed floor (1 - A*l_chi)/Lambda strictly exceeds what the\nunit moment supplies.",
+      "date": "2026-07-10",
+      "extra": {},
+      "qualifier": "",
+      "resolution": "contract restated with \"all reals A > 0 and Lambda > 0\" (matching\nthe mechanism actually proved in W60 and the amended af root; a strict weakening).\nStatus stays `proved` (L5) FOR THE CORRECTED STATEMENT; no rigorous rung was ever\nheld by the false reading. Consumers audited: lem-hx-forced-exterior-coupling\ninstantiates A*l = 1/2; route-fork scaffolds use A >= 4 — none touch A <= 0.\nCorrection note in-shard; af elevation resumed on the aligned contract.",
+      "title": "`lem-hx-financing-floor`: contract quantified over all reals A; the A<0 reading is false (quantifier corrected)",
+      "why_wrong": "at A < 0, N = empty the true bound is a^+(F)+b^+(F) >= 1/Lambda -\nnu(a) - nu(b); the claimed floor adds |A|*l_chi/Lambda for free. Already the 2x2\nidentity idempotent (rows e1, e2; chi = (1/2, -1/2); Lambda = 1/2; A = -1) gives\nclaimed floor 6 vs actual joint mass 2. The af verifier challenge ch-9388e571\n(proofs/lem-hx-financing-floor/ledger/) carries the counterexample; the W60\nbatched verifier and prover both missed the empty-N corner."
+    },
+    {
+      "catch_layer": "L3",
+      "caught_by": "the fresh-codex hostile design verdicts v1–v3 (2026-07-24), reviewer ≠ author.",
+      "claimed": "session 23 (2026-07-24) closed with the headline \"ROUTE F IS proved-mod-audit\nCOMPLETE\" (`docs/worklog.md:1233`, echoed in the fr frontier trail and session summaries):\nevery link of the Route-F chain carried a worker paper-proof with a hostile wave-level VALID,\nso the remaining work was presented as *elevation/verification only — no new mathematics*.",
+      "date": "2026-07-26",
+      "extra": {},
+      "qualifier": "",
+      "resolution": "the fifteen ids are held as GAP reservations (DESIGN-FUDW-DECOMP-v4.1.md §2.6,\nthe four families GAP-EA / GAP-S1-POLAR-CONTRACT / GAP-MAIN-STRUCTURE / GAP-LEDGER-DOMAINS);\nbead `aism-0163`; phase-4 work re-proves them with derived local domains. The headline was\nnever formally retracted here until today (user escalation 2026-07-26) — later agents kept\nrepeating both \"complete mod-audit\" and \"genuine open mathematics remains\" without\nreconciling them. THE LESSON: a status-bearing HEADLINE demoted by a later verdict must get\na LEARNINGS entry in the same commit as the demotion (Rule 9 applies to claims, not just\nfiles). What remains true: Route F requires no conjecture and no new idea; what was false:\nthat only verification labour remained.",
+      "title": "\"Route F proved-mod-audit COMPLETE\": PARTIALLY RETRACTED (15 rows demoted to GAP)",
+      "why_wrong": "the af-decomposition of the large chain (the `aism-fudw` design,\nverdicts v1–v3 in `docs/plans/2026-07-24-fudw-decomposition-artifacts/`) forced every step\ninto a one-line contract with explicit domains, and under that stricter bar a subset of the\nproved-mod-audit record FAILED hostile review: fourteen K-ledger rows assert their\ninequalities on domains \"stronger than the verified ledger\" (η_A is only the\nsource-linearization radius — each row needs its own dependency-produced local radius,\ne.g. `(C_T+C_Δ′)η ≤ ½`); the MAIN-CB assembly rows carried relocation-not-factoring residue;\nthe Stage-1 polar estimates existed only as prose (no formula-level contract); and one\nEXT-chain approximation step had no supporting lemma (EA). As stated, those proofs are not\ntheorems. VERDICT-FUDW-DECOMP-V3.md §2.1 (BLOCKER) prescribed stripping all fifteen ids to\nuncontracted GAP reservations (Registry impact C) — i.e. their proved-mod-audit status was\nWITHDRAWN, not merely refined."
+    },
+    {
+      "catch_layer": "L5",
+      "caught_by": "the W97 design-audit chain, NOT the runs' own verifier cohorts: the hostile audit of\n`DESIGN-13E-BINDER.md` raised the allegation (AUDIT-13E-BINDER.md finding 2, MAJOR), and an\nindependent fresh-codex adjudication primed to refute it instead CONFIRMED it per-locus\n(`docs/plans/2026-07-28-13E-BINDER-design/ADJUDICATION-T0-ALLEGATION.md`: T1 DEFECTIVE, T2\nDEFECTIVE, CASCADE exactly these two). The adjudicator also partially REFUTED the allegation's\nW93-equivalence claim (for X = U† the S_delta-membership subproblem IS discharged by the retraction\ncontract's inner inclusion) — the defect is the preimage/synchronization step alone.",
+      "claimed": "both results were af-VALIDATED (2026-07-27 first-pass 10/10 zero challenges; 2026-07-28\nrun-2 13/13 taint clean respectively) and banked as the 97th and 107th rigorous results with passing\noracle + `fr verify` certificates. The CONTRACTS are not in dispute — only the validated proofs.",
+      "date": "2026-07-28",
+      "extra": {
+        "process_lesson_recorded": "a verifier cohort can accept an inference that a differently-framed\ncohort rejects — cross-workspace CONSISTENCY of what \"the same map\" means is not enforced by\nper-node verification. The 13e repair design v2 must carry an explicit-binder discipline for every\nmap a root binds by definite description (the 13g external-provider lesson, now strengthened: the\nprovider must supply the TYPED WITNESS, not merely a same-named conclusion)."
+      },
+      "qualifier": "",
+      "resolution": "statuses mechanically demoted proved→stated / af validated→seeded same day\n(linker-verified: T2 was T1's only validated dependent, so the demotion is closed under the pair);\nreport shards 48/51 + PROVENANCE claim rows corrected; stats regenerated (T0 = 105); workspaces and\nledgers retained as re-elevation bases; re-derivation on an explicit-binder dependency spine folded\ninto the 13e repair campaign (design round v2; bead `aism-e1qs`). Sketch superseded (v37).",
+      "title": "`lem-stage1-inversion-derivative-control` (97th) + `lem-stage1-inversion-derivative-transport` (107th): af validations RETRACTED (defective polar-inverse synchronization; T0 107 → 105)",
+      "why_wrong": "both proof bodies identify the anaphorically-bound polar inverse of an imported\ncontract (`lem-stage1-approximate-group-laws` u_grp; the parent control lemma's u_I) with the\nexplicitly typed `lem-stage1-polar-retraction` inverse u_pol without a typed preimage witness\nh_X satisfying X = u_grp(X)·h_X (resp. u_I): the available exact identity X = u_pol(X)·h_pol(X)\nis paired with u_pol, and taking h_X = h_pol(X) assumes the equality being proved;\n`lem-stage1-polar-coherence-naturality` is conditional on TWO typed polar data and only one is\navailable. Loci: control export node 1.3 (\"the common polar inverse … identified across admissible\npolar data\"); transport export nodes 1.3 (second half), 1.5.5, and 1.6. This is exactly the\nmissing-h_X obstruction that three W93 verifier cohorts had established for transport 13e — the\nearlier cohorts that validated these two trees accepted the same inference the W93 cohorts\n(correctly) rejected."
+    },
+    {
+      "catch_layer": "L5",
+      "caught_by": "the second allegation wave of the W97 audit chain (AUDIT-13E-BINDER-v2.md finding\n1) routed into a comprehensive per-target sweep adjudication rather than piecemeal checks. The\nsweep also CERTIFIED FOURTEEN trees sound — including the entire typed backbone\n(polar-retraction, coherence-naturality, graph rows, smooth atlas/polar-inverse, group\nmembership/closeness, path-admissibility, scalar arithmetic, and transports 13a/13b/13d) — so\nthe defect class is now settled for the whole Stage-1 layer in one pass, cascade CLOSED (no\nother validated result descends from the demoted four).",
+      "claimed": "`lem-stage1-approximate-group-laws` (95th), `lem-stage1-smooth-unitary-operations`\n(100th), `lem-stage1-maurer-cartan-transport` (104th), and `lem-stage1-polar-path-transport`\n(106th) were af-VALIDATED and banked. Contracts are NOT in dispute — only the validated proofs.",
+      "date": "2026-07-28",
+      "extra": {
+        "root_cause_sweep_s_finding_recorded_verbatim_in_substance": "the elevating cohorts\nsystematically treated repeated notation and definite descriptions as binder unification across\nopaque theorem boundaries — same-named anaphora elevated into missing equality premises.\nOrdinary uniqueness remains valid in single-construction chains, which is exactly why fourteen\ntrees survive."
+      },
+      "qualifier": "(second entry)",
+      "resolution": "four statuses mechanically demoted proved→stated / af validated→seeded; report\nshards 47/49/50/51 + PROVENANCE corrected; stats regenerated (T0 = 101); workspaces/ledgers\nretained; repairs folded into the W97 explicit-binder campaign design v3 (bead `aism-e1qs`).",
+      "title": "the Stage-1 binder sweep: four more af validations RETRACTED (T0 105 → 101); fourteen certified sound",
+      "why_wrong": "the same untyped-map inference class as the first 2026-07-28 retraction, found by a\ncomprehensive fresh sweep over all 18 remaining Stage-1 polar T0 exports\n(`docs/plans/2026-07-28-13E-BINDER-design/SWEEP-ADJUDICATION-STAGE1.md`): group-laws node 1.1.2\ninvokes coherence on children exporting only anaphoric components; smooth-operations nodes\n1.2.1–1.2.2/1.3.1.2/1.3.2 attach the typed smooth inverse to the anaphoric group inverse;\nmaurer-cartan-transport node 1.3.3 asserts a derivative equality whose pointwise-equality premise\nits own sibling records as absent (a sound bypass exists in nodes 1.3.4–1.3.7 — pruning +\nrevalidation suffices); polar-path-transport node 1.3.1 attaches the parent's anaphoric path\nformula to the root's explicit binder by sameness of notation."
+    },
+    {
+      "catch_layer": "L5",
+      "caught_by": "the aism-mc54 design round (fresh codex) alleged the M25 gap;\nthe fresh hostile audit (`AUDIT-CONSUMER-REPAIR.md` F1/F5) independently\nCONFIRMED it by reading the exports, and widened the finding to M19-S2/S3.",
+      "claimed": "`lem-maincb-one-class-extension` (M25, 166th rigorous result),\n`lem-maincb-stage2-call-envelope` (M19-S2, 159th), and\n`lem-maincb-stage3-call-envelope` (M19-S3, 160th) were banked af-VALIDATED T0\non 2026-08-01.",
+      "date": "2026-08-01",
+      "extra": {},
+      "qualifier": "",
+      "resolution": "user-ratified 2026-08-01 (in-session): all three demoted\nproved->stated / validated->none (T0 159->156), contracts byte-identical;\nfresh re-validation with the explicit typed providers\n(`lem-maincb-reset-output-typing`, `lem-maincb-extended-inclusion-monotone`)\nrequired before any re-bank. The oracle verdicts staled automatically with\nthe ledger changes. A retraction here is the rigour machinery succeeding:\nthe gap classes were surfaced by later, stricter verifier cohorts within\nthe same day and nothing downstream was banked on the flawed certificates\n(M26/M27/M28 remained unproved).\n\n**Propagation addendum (same date):** the linker's status-propagation law\nthen suspended banked M18 (`lem-maincb-reset-constant-ledger`) and M20\n(`lem-maincb-structural-domain-ledger`) — their certificates are intact and\ntheir workspaces preserved, but they rest on the demoted M19-S2/S3\npremises; they re-flip mechanically once those re-validate (T0 156->154\nin the interim).",
+      "title": "M25, M19-S2, M19-S3: three af-VALIDATED certificates carried latent unregistered-premise gaps (demoted, re-validation pending)",
+      "why_wrong": "each validated tree\nused an inference not derivable from its REGISTERED premises. M25 (nodes\n1.1.2.2/1.1.3.2) inferred \"bijective hence extended isomorphism\" from old\nM19-R's export, which supplies only recorded-number/unit bounds and\nconditional bijectivity — never the extended-INCLUSION typing that\n`def-extended-delta-inclusion` requires of an isomorphism. M19-S2 (node 1.4)\nand M19-S3 (node 1.3.3) applied defect/tolerance monotonicity without\nimporting `lem-maincb-extended-inclusion-monotone` — the exact fact the\nrepo had just factored for M18 after verifiers rejected the same implicit\nstep in M21. No countermodel to the CONTRACTS is known; the defect is that\nthe banked certificates do not prove their roots from their registered\ninputs (the exact-input standard)."
+    },
+    {
+      "catch_layer": "L3",
+      "caught_by": "the fresh hostile audit of `DESIGN-EXHUME-SHARPNESS.md`, finding 3, after the paper faithfulness audit had already corrected “distance to every” to a distance-to-set candidate.",
+      "claimed": "`ex-hume` carried `proved-mod-audit` / `af: seeded` with the historical contract: “The explicit 3x3 family P_s=I-u_s v_s^T (v_s=(1,-1+s,-s), u_s=(1-s+s^2,-s,0)^T) is a signed affine retraction with neg mass delta=s^2 whose distance to every stochastic idempotent is 2s-2s^2+2s^3 = 2 sqrt(delta)+O(delta): no bound C delta^beta with beta>1/2 holds, so the exponent 1/2 in op-classical/op-npps is sharp.”",
+      "date": "2026-08-08",
+      "extra": {},
+      "qualifier": "",
+      "resolution": "replace the malformed contract by the fully quantified false proposition solely so it can be honestly marked `disproved`; set `af: none`; delete and never resume the stale old-contract workspace; record the corrected 3x3 distance-to-set formula only as a non-rigorous candidate; and use `cor-classical-sharpness`, via the direct stochastic 4x4 PRH family, as the separately elevated active carrier.  All active consumers are covered by the 50-locus manifest in `DESIGN-EXHUME-SHARPNESS-V2.md`.",
+      "title": "`ex-hume`: “distance to every stochastic idempotent equals one common value” is false",
+      "why_wrong": "for `0<s<1`, put `a=1-s+s^2`.  Although `v_s^T 1=0`, `v_s^T u_s=1`, and the only negative entry of `P_s` is `(P_s)_{23}=-s^2`, the stochastic idempotent `I_3` satisfies `||P_s-I_3||_{infinity->infinity}=||u_s v_s^T||_{infinity->infinity}=2a`, while the claimed common value is `2sa`; the difference is `2(1-s)a>0`.  Thus the per-idempotent equality is false.  The old contract also omitted `0<s<1`, left its quantifiers and asymptotic variable unstated, and mixed in the out-of-scope `op-npps`."
+    }
+  ],
+  "note": "dated entries of docs/LEARNINGS.md (the HTML-comment TEMPLATE is excluded); `catch_layer` is a keyword heuristic over `caught_by`",
+  "total": 7
+}

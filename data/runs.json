@@ -1,0 +1,272 @@
+{
+  "bundles": [
+    {
+      "bundle": "2026-07-02-ex-enumeration-rehome",
+      "date": "2026-07-02",
+      "headline": "1. **Broad inherited spine:** the upstream ledger records `67,000+` exact verified instances across independent d8-d14 campaigns, with no exact counterexample found. This is numerical evidence only. 2. **Linear-law finding:** within the inherited generators, the record fits the linear pattern `H ~=…",
+      "slug": "ex-enumeration-rehome",
+      "title": "Run bundle: inherited (EX) enumeration re-home - 2026-07-02"
+    },
+    {
+      "bundle": "2026-07-02-ex-multiblock-coupling",
+      "date": "2026-07-02",
+      "headline": "No growth refuter was found. Every emitted row is `certified_reduction`: the Hadamard determinant bound proves that the whole theta-half class consists of all foreign unit rows plus one signed row per anchor, and the script checks that entire class exactly.",
+      "slug": "ex-multiblock-coupling",
+      "title": "Run bundle: multiblock (EX) coupling stress test - 2026-07-02"
+    },
+    {
+      "bundle": "2026-07-02-ex-no-center-highrank",
+      "date": "2026-07-02",
+      "headline": "The no-center path at `a=1/100` follows the exact pattern `Phi/delta = 2 - 2/(k-2)` through the certified rows `k=6,8,10,12,14,16,20,30`. Thus this family plateaus toward `2` from below rather than growing without bound. The k=6 and k=8 rows reproduce the inherited exact invariants `3/2` and `5/3`;…",
+      "slug": "ex-no-center-highrank",
+      "title": "Run bundle: high-rank no-center (EX) decider - 2026-07-02"
+    },
+    {
+      "bundle": "2026-07-02-sigma-cap-refuter",
+      "date": "2026-07-02",
+      "headline": "1. **NOT a kill — the halo-robust cap survives with margin**: over ~25k float-searched hidden top vertices, genuine invisible mass (recipients at dist ≥ τ/4) never exceeded ≈0.37τ, i.e. `1−σ̃_g ≥ 0.92` everywhere; max H/τ = 0.462 (< corner 0.536); the dangerous joint regime remains un-entered. 2. **…",
+      "slug": "sigma-cap-refuter",
+      "title": "Run bundle: σ̃-cap refuter sweep (arm F, wave 2) — 2026-07-02"
+    },
+    {
+      "bundle": "2026-07-02-undercap-killers",
+      "date": "2026-07-02",
+      "headline": "A decision-grade active-pivot witness exists under the cap: multiblock charts with `delta=1/100` have certified theta-half `Phi`-argmins with multiple active anchor pivots satisfying `Phi_s > delta/2`.  Repeated-star rows certify `active=3` and `active=5` with the same `max Phi/delta = 11/8`; the tw…",
+      "slug": "undercap-killers",
+      "title": "Run bundle: under-cap (EX) mechanism killers - 2026-07-02"
+    },
+    {
+      "bundle": "2026-07-02-web-regime-hunt",
+      "date": "2026-07-02",
+      "headline": "1. **The dangerous regime was NOT entered: 0 of ~500 certified hidden vertices had H > Bτ; the joint (σ̃ > τ) ∧ (H > Bτ) never occurred** (σ̃/τ up to ≈4 alone; H/τ up to 0.502 alone, at the corner cap). 2. **The s8-style collapse bound `H·(1−σ̃) ≤ ν·(2+4δ)` held with 0/500 violations** — the quantit…",
+      "slug": "web-regime-hunt",
+      "title": "Run bundle: web-regime construction hunt (arm F, wave 1) — 2026-07-02"
+    },
+    {
+      "bundle": "2026-07-04-b-amplifier-hunt",
+      "date": "2026-07-04",
+      "headline": "1. **New record, tiny margin, and an apparent LAW:** best certified `B/δ ≈ 0.77764` (up from 0.771). The compensated-insert family has an exact switch boundary (`y* = 2679363/39161780`; variable-row law `y = 2679363/(49000(22a+799))`), and the family's limiting `B/δ` is an ALGEBRAIC number `≈ 0.7776…",
+      "slug": "b-amplifier-hunt",
+      "title": "Run bundle: B/δ amplifier hunt at certified argmins (arm G wave 13, amplifier branch) — 2026-07-04"
+    },
+    {
+      "bundle": "2026-07-04-cross-pivot-kill-test",
+      "date": "2026-07-04",
+      "headline": "1. **`B_{r,s} = 0` on every certified instance at every transverse pivot** — including the uncapped G10 witness. The mass G11 flagged as the unfinanced danger is absent from ALL existing data. 2. **`C_{r,s} ≤ 2δ` trivially** (observation, not part of the computation): `Σ_i β_r(i)⁻ = ν_{u_r} ≤ δ` is…",
+      "slug": "cross-pivot-kill-test",
+      "title": "Run bundle: cross-pivot mass kill test (arm G, post-wave-11) — 2026-07-04"
+    },
+    {
+      "bundle": "2026-07-04-rank4-transfer-decider",
+      "date": "2026-07-04",
+      "headline": "1. **The skeleton TRANSFERS in this search: no rank-4/5 violation of the pivot-removing disjunction** (48 exact θ-half moves) **nor of the natural `c>0` rank-4 (CI) transcription** (144 transverse inequalities; worst slack exactly `0`, i.e. (CI) stays sharp). 2. **No blow-up trend**: max rank-4 `Φ/δ…",
+      "slug": "rank4-transfer-decider",
+      "title": "Run bundle: rank-4/5 skeleton-transfer decider (session-7 de-risk) — 2026-07-04"
+    },
+    {
+      "bundle": "2026-07-04-small-delta-b-sweep",
+      "date": "2026-07-04",
+      "headline": "1. **`B/δ` does NOT vanish at small δ — it RISES: max certified `B/δ = 8400000/10897843 ≈ 0.771` at `δ = 55319/1000000 ≈ 0.055`** (compensated-insert family, clean high-self non-fan Γ-branch, unique certified θ-½ argmin; `C = 0` there). Nine further certified points across two families sit at `B/δ ∈…",
+      "slug": "small-delta-b-sweep",
+      "title": "Run bundle: small-δ certified argmin B-sweep (session-7 de-risk decider #2) — 2026-07-04"
+    },
+    {
+      "bundle": "2026-07-05-door-ratio-census",
+      "date": "2026-07-05",
+      "headline": "**REGIME-EMPTY-SO-FAR.** 514 rank-3 exact instances analyzed (0 errors/skips), 298 certified with `0 < δ ≤ 1/4` and nonempty `W`; 74 instances carried hidden top vertices (138 vertices measured); 50 hidden tops had `σ_g > 0`; **0 had `σ_g > 1/2`**. Best realized halo mass: `σ_g = 1/25` (`δ = 6/125`,…",
+      "slug": "door-ratio-census",
+      "title": "Run bundle: sigma-door ratio census (wave 17b decider) — 2026-07-05"
+    },
+    {
+      "bundle": "2026-07-05-e1-uniformity-pilot",
+      "date": "2026-07-05",
+      "headline": "**No visible blowup in this pilot (families tested only).** Largest certified ratio: `r² = 61937/32768` (`r ≈ 1.375`) at the stochasticized `ex-hume` anchor `s = 1/16`, with the TRUE n=3 minimum over ALL 3×3 stochastic idempotents (worker enumeration: identity / rank-one / singleton+pair / two singl…",
+      "slug": "e1-uniformity-pilot",
+      "title": "Run bundle: arm-E error-bound uniformity PILOT (E1 decision-check, worker B) — 2026-07-05"
+    },
+    {
+      "bundle": "2026-07-05-gamma-emptiness-refuter",
+      "date": "2026-07-05",
+      "headline": "**REFUTED — the first-ever certified capped clean Γ-block.** Rank-3 exact signed idempotent (6 rows, the insert-y skeleton extended by one row): `δ = 55319/1000000 ≈ 0.0553`; unique θ-half Φ-argmin `U = (0,2,4)` (`m_U = 197/200`), maximal pivot `s = 2`, `M = Φ_2(U) = 219870541/7880000000 ≈ 0.0279`;…",
+      "slug": "gamma-emptiness-refuter",
+      "title": "Run bundle: capped clean Γ-block refuter (arm G wave 15) — 2026-07-05"
+    },
+    {
+      "bundle": "2026-07-05-nsc-zero-denominator-refuter",
+      "date": "2026-07-05",
+      "headline": "**The broad form of `conj-nsc` is REFUTED — zero-denominator mode.** Exact rank-3 signed idempotent (5×5), two-carrier family parameters `(1/200, 1/100, 0, 1/200, 20099999/20200500, 1/1000)`: `δ = 20099999/4040100000 ≈ 0.004975 ≤ 1/4`; UNIQUE θ-half Φ-argmin `U = (0,3,4)` with `Φ = (0,0,0)`; at `s =…",
+      "slug": "nsc-zero-denominator-refuter",
+      "title": "Run bundle: broad-NSC zero-denominator refuter (decision-check DC2, wave 14 refute side) — 2026-07-05"
+    },
+    {
+      "bundle": "2026-07-05-w16-clean-block-b",
+      "date": "2026-07-05",
+      "headline": "- **Amplify side:** 9 certified clean-block instances; best `B/δ = 0.7776403…` — achieved by the wave-13 record instance, which (NEW, verified here) itself carries a clean Γ-block at the tied argmin `(0,2,4)` (`Ψ = 1/200 < M ≤ Γ = 7/250`). The 0.77764 family wall binds identically with and without t…",
+      "slug": "w16-clean-block-b",
+      "title": "Run bundle: clean-block B/δ amplification + direct-FE identity (arm G wave 16) — 2026-07-05"
+    },
+    {
+      "bundle": "2026-07-05-w16b-dj-floor",
+      "date": "2026-07-05",
+      "headline": "**UNDECIDED, leaning against the direct-FE route.** The certified floor dropped from the seed `157/500 = 0.314` to `23/1000 = 0.023` on a fresh two-carrier-insert α-family point with `B/δ = 1343375000/2640001033 > 1/2` (NOT a fake kill), `δ = 5248511/22375000 ≤ 1/4`, clean block at the capped argmin…",
+      "slug": "w16b-dj-floor",
+      "title": "Run bundle: D_J/B floor decider (wave 16b) — 2026-07-05"
+    },
+    {
+      "bundle": "2026-07-06-w19-sigma-frontier",
+      "date": "2026-07-06",
+      "headline": "**NOT REALIZED in these designs; the binding constraint is EXPOSEDNESS ABSORPTION, not mass capacity.** The exact LP relaxation (row-negativity + nonnegativity constraints only) places the full `5/4` mass on designated outside recipients — but the exact-geometry optimizer point has `W = [3,4,5]`, `H…",
+      "slug": "w19-sigma-frontier",
+      "title": "Run bundle: sigma_g frontier — exact-feasibility attack at ANY height (W19 worker A) — 2026-07-06"
+    },
+    {
+      "bundle": "2026-07-06-w20-g-zoo-measurement",
+      "date": "2026-07-06",
+      "headline": "**LEMMA-A-SUPPORTED / NO-KILL-FRONTIER — and the zoo cannot even enter the battleground: `G_a` is EMPTY zoo-wide for every `a ≥ 1`.** Worker A (full exact sweep, no subsampling: 311 qualifying entries covered incl. all 298 qualifying door-ratio census entries, 307 unique matrices, 1842 exact `(matri…",
+      "slug": "w20-g-zoo-measurement",
+      "title": "Run bundle: g-zoo measurement — the harmonic observable across the certified zoo (W20) — 2026-07-06"
+    },
+    {
+      "bundle": "2026-07-06-w21-lemma-a-decider",
+      "date": "2026-07-06",
+      "headline": "**NOT-REFUTED at `a ∈ {4,5,6}`: every certified construction has `G_a = ∅`, hence `g_w = 0` — the refuter could not even populate the far set** (consistent with the W20 zoo-wide emptiness). The valuable output is the **small-halo frontier certificate**: a rank-5 instance (`scaled-rank5-lambda-7/5`)…",
+      "slug": "w21-lemma-a-decider",
+      "title": "Run bundle: Lemma A refuter frontier (W21 worker D) — 2026-07-06"
+    },
+    {
+      "bundle": "2026-07-06-w23-a-gap",
+      "date": "2026-07-06",
+      "headline": "**OPEN-BOTH-SIDES.** Prove side blocked structurally [T2]: the annulus `aτ < ‖p_j − p_w‖₁ < 4τ = ρ` is priced by no available tool — the (ρ,κ)-exposer gives lower bounds only at distance ≥ ρ; shell-row reproduction controls outgoing (not incoming) mass; the hidden-top collapse tools do not estimate…",
+      "slug": "w23-a-gap",
+      "title": "Run bundle: a-gap route (ii) exact checks — small-a Lemma A frontier (W23 worker I) — 2026-07-06"
+    },
+    {
+      "bundle": "2026-07-06-w25-step4-decider",
+      "date": "2026-07-06",
+      "headline": "**INSUFFICIENT — certified by a 3×3 exact idempotent.** `P = [[1,0,0],[0,1,0],[101/100,−1/100,0]]`, δ = 1/100 (< δ₁ = (17−12√2)/2, exact squared-form check), labels W = {row 0}, hidden top = row 1. Under the labels: true point distances (0, 2, 1/50), labeled H = 2 = 20τ > 13τ; g = P·1_{{1}} = (0, 1,…",
+      "slug": "w25-step4-decider",
+      "title": "Run bundle: step-4 decider — the insufficiency certificate (W25 worker N) — 2026-07-06"
+    },
+    {
+      "bundle": "2026-07-06-w26-hiddenness",
+      "date": "2026-07-06",
+      "headline": "Hiddenness consumed both ways, blind-convergent: worker P's LP-dual witness (VP-verified, codified `lem-hiddenness-dual-witness` + `lem-top-slab-companion`) and worker Q's forced far-barycenter structure are the same object from opposite sides; the W25 3×3 insufficiency certificate is VISIBLE under…",
+      "slug": "w26-hiddenness",
+      "title": "Run bundle: W26 hiddenness wave — RELAUNCHED AND HARVESTED (2026-07-06, session 11)"
+    },
+    {
+      "bundle": "2026-07-06-w29-witness-coupling",
+      "date": "2026-07-06",
+      "headline": "NOT-REFUTED. Best certified TRUE-hidden frontier instance: δ = 99/8000, H = 1/40, H²/δ = 5/99 (H/τ = √(5/99) ≈ 0.225 ≪ 13), W = {r0,r1,r2}, hidden tops {r3,r4} with exact witnesses (t* = 1/81 each), G₄ = ∅, σ₄ ≡ 0. Two-sided pincer diagnosis: (i) true hiddenness folds back before depth 4τ — max d_j…",
+      "slug": "w29-witness-coupling",
+      "title": "Run bundle: W29 — witness-constrained tall-web hunt (refuter side) (2026-07-06/07, session 11)"
+    },
+    {
+      "bundle": "2026-07-06-w30-w-nonemptiness",
+      "date": "2026-07-06",
+      "headline": "- Worker T (verbatim first line): `PARTIAL (proved: δ=0 endpoint, and δ≤1/4 W-nonemptiness when the row polytope is a simplex, in particular affine dimension ≤1 / rank≤2; gap: no dimension-free mechanism found forcing a simplex/sharp vertex from P²=P and small δ)` — hostile verifier VT dispatched on…",
+      "slug": "w30-w-nonemptiness",
+      "title": "Run bundle: W30 — W-nonemptiness (Kernel(i)) prove-or-refute pair (2026-07-06, session 11)"
+    },
+    {
+      "bundle": "2026-07-07-w35-absorption-threshold",
+      "date": "2026-07-07",
+      "headline": "Worker AD (verbatim first line): `NOT-SUSTAINED (frontier: R_4 = 0 in these certified constructions; binding constraint: true-hidden rows stay below 4τ, while coefficient pushes are absorbed into W)`. Frontier table (all exact): - width 4: best sustained R = 0 (W29 true-hidden, δ = 99/8000, H/τ = √(…",
+      "slug": "w35-absorption-threshold",
+      "title": "Run bundle: W35 refuter side — the absorption threshold, measured exactly (2026-07-07, session 11)"
+    },
+    {
+      "bundle": "2026-07-07-w41-tall-blowup",
+      "date": "2026-07-07",
+      "headline": "Worker AM (verbatim first line): `NOT-SUSTAINED (frontier: v-top H/tau = sqrt(5/49), S4 = 0, A_min = 0, delta = 49/2000; alpha-preserved record has H_global/tau = sqrt(101183481/985900000), A_min = 100, but v is not top; binding constraint: the thin alpha row becomes visible/taller, and forcing v to…",
+      "slug": "w41-tall-blowup",
+      "title": "Run bundle: W41 refuter side — the tall alpha-blowup frontier (2026-07-07, session 11)"
+    },
+    {
+      "bundle": "2026-07-07-w44-rank3-boundary",
+      "date": "2026-07-07",
+      "headline": "Worker AU (verbatim first line): `PARTIAL (proved: exact rank-3 boundary certificates for the T/O intersection, including failure outside the tall-heavy hypotheses and success on the banked top-preserving/frontier tops; gap: no rank-3 theorem forcing optimal-face T/O interlacing from tall heavy near…",
+      "slug": "w44-rank3-boundary",
+      "title": "Run bundle: W44 rank-3 boundary census — the T/O hull intersection at the tall-heavy class boundary (2026-07-07, session 12)"
+    },
+    {
+      "bundle": "2026-07-07-w52-tall-entry",
+      "date": "2026-07-07",
+      "headline": "Worker BH (verbatim first line): `BLOCKED (binding constraints: no tried exact perturbation reached H^2/delta > 16; C4 stayed empty; when top/top-cluster behavior was restored, the always-tight hulls intersected)`. Four exact families (HA_t, HA_eps, HA_base scaling, the HEIGHT+A -> TOP-preserving in…",
+      "slug": "w52-tall-entry",
+      "title": "Run bundle: W52 pre-registered tall-entry experiment — BLOCKED with named binding constraints (2026-07-07, session 12)"
+    },
+    {
+      "bundle": "2026-07-10-w57-starvation-completion-lp",
+      "date": "2026-07-10",
+      "headline": "Worker (verbatim first line): `RESULT: INFEASIBLE-CERTIFICATE — The minimal rank-three actor-hull family is exactly infeasible, while the first extra-vertex completion family remains open.` Three cases decided in EXACT rational arithmetic (stdlib Fractions, no floating point in the decision path): `…",
+      "slug": "w57-starvation-completion-lp",
+      "title": "Run bundle: W57 exact starvation-gadget completion LP — minimal rank-3 family INFEASIBLE with stable Farkas certificates (2026-07-10, session 14)"
+    },
+    {
+      "bundle": "2026-07-10-w58-starvation-completion-extra-vertex",
+      "date": "2026-07-10",
+      "headline": "Worker (verbatim first line): `RESULT: INFEASIBLE-CERTIFICATE — All three first-extra-vertex support cases are exactly infeasible, with independent raw verification passing.` Cases `xv_literal_r3_vertex6`, `xv_hx_near_r3_vertex6`, `xv_hx_far_r3_vertex6_nonvertex7` all INFEASIBLE (exact Fractions, no…",
+      "slug": "w58-starvation-completion-extra-vertex",
+      "title": "Run bundle: W58 extra-vertex completion family — INFEASIBLE, certificate extends K-parametrically (2026-07-10, session 14)"
+    },
+    {
+      "bundle": "2026-07-10-w61-leak-financing-refuter",
+      "date": "2026-07-10",
+      "headline": "**FINANCING INSTANCE FOUND — scoped to the local N5(ii) geometry.** Fresh codex xhigh worker (isolated workspace) built an exact six-row dyadic family (tau = 2^-k, delta = tau^2, k = 8..16 banked, k -> 32 rerun exactly): a signed full-fiber split of the thin-zero-face fixture with a transient freigh…",
+      "slug": "w61-leak-financing-refuter",
+      "title": "Run bundle: W61 decider B — leak-financing refuter at the N5(ii)/N6 constants: FINANCING INSTANCE FOUND (local N5(ii)); ledger-only close is dead as budgeted (2026-07-10, session 16)"
+    },
+    {
+      "bundle": "2026-07-10-w61-x2-graft-refuter",
+      "date": "2026-07-10",
+      "headline": "**PARTIAL — X2 was NOT refuted.** Fresh codex xhigh worker (isolated workspace) built an exact six-row factorized family `P = L*B`, `B*L = I` (balanced factorized split of a carrier column, dodging the `obs-thin-zero-face-blocker-graft` append blocker) that achieves, in exact rationals for k = 512,…",
+      "slug": "w61-x2-graft-refuter",
+      "title": "Run bundle: W61 decider A — X2 thin-transient-graft refuter search: PARTIAL, X2 NOT refuted; tallness is the exact blocker (2026-07-10, session 16)"
+    },
+    {
+      "bundle": "2026-07-10-w62-i-horn-refuter",
+      "date": "2026-07-10",
+      "headline": "**All three shapes BLOCKED (in the tested families/completion classes).** Fresh codex xhigh worker, exact rationals throughout: (i) the corank-one spike family realizes mass 1/4, far/deep, and Z_v/tau = 2*tau -> 0 but has exact height H = 2*delta = 2*tau^2 << 16*tau; (ii) the simplex-fan family real…",
+      "slug": "w62-i-horn-refuter",
+      "title": "Run bundle: W62 decider — I-horn refuter batch: all three shapes BLOCKED; tallness binds for the third consecutive independent search (2026-07-10, session 16)"
+    },
+    {
+      "bundle": "2026-07-10-w63-sc-decider",
+      "date": "2026-07-10",
+      "headline": "**Both shapes BLOCKED (in the tested factorized families).** Fresh codex xhigh worker, exact rationals throughout:",
+      "slug": "w63-sc-decider",
+      "title": "Run bundle: W63 decider — S/C pre-creative shapes: both BLOCKED; the C width bouquet is a complete near-refuter failing ONLY tallness (4th consecutive tallness bind) (2026-07-10, session 17)"
+    },
+    {
+      "bundle": "2026-07-11-w63-ihorn-six-shape-decider",
+      "date": "2026-07-11",
+      "headline": "**All six shapes BLOCKED in the tested families (X: PARTIAL definition-level by-catch); ZERO genuine I-base data; tallness (H > 16*tau) binds for the FIFTH consecutive independent exact batch.** Fresh codex xhigh worker, exact rationals, orchestrator-reproduced:",
+      "slug": "w63-ihorn-six-shape-decider",
+      "title": "Run bundle: W63 decider — six-shape I-horn pre-creative batch: ALL BLOCKED (one X-cell by-catch); tallness binds for the FIFTH consecutive exact batch (2026-07-11, session 17)"
+    },
+    {
+      "bundle": "2026-07-14-w66-dcap-five-leaf-decider",
+      "date": "2026-07-14",
+      "headline": "**All five leaves BLOCKED in the tested families (C0: PARTIAL definition-level cell entrant); ZERO genuine I-base data; ZERO genuine refuters; tallness (H > 16τ) binds for the SIXTH consecutive independent exact batch.** Fresh codex xhigh worker, exact rationals, orchestrator-reproduced 2026-07-14:",
+      "slug": "w66-dcap-five-leaf-decider",
+      "title": "Run bundle: W66 decider — five-leaf D-cap pre-creative batch: ALL BLOCKED/PARTIAL (one exact local C0 cell entrant); tallness binds for the SIXTH consecutive exact batch (2026-07-14, session 19)"
+    },
+    {
+      "bundle": "2026-07-14-w69-dtr-growing-rank-decider",
+      "date": "2026-07-14",
+      "headline": "**PARTIAL — the local DTR geometry IS realizable at growing rank with exactly ZERO finance negativity, but no tested family enters the full class and none refutes the leaf.** Fresh codex xhigh worker, exact rationals, orchestrator-reproduced 2026-07-14 (exit 0):",
+      "slug": "w69-dtr-growing-rank-decider",
+      "title": "Run bundle: W69 DTR growing-rank decider — PARTIAL: local DTR geometry realized with ZERO finance negativity at ranks 4-32, but 0 full class entrants and 0 refuters (2026-07-14, session 20)"
+    },
+    {
+      "bundle": "2026-07-16-w71-poti0-zero-overlap-decider",
+      "date": "2026-07-16",
+      "headline": "**BLOCKED on both exact repair families; no full hypothesis-class entrant, no POTI-0 refuter, no POTI+ window entrant, no full leaf by-catch.** Fresh codex xhigh worker, exact rationals, orchestrator-reproduced 2026-07-16 (exit 0). Family-level verdict, NOT an emptiness claim — the conjecture remain…",
+      "slug": "w71-poti0-zero-overlap-decider",
+      "title": "Run bundle: W71 POTI-0 zero-overlap growing-rank decider — BLOCKED: the root-ownership repair cost does NOT distribute with rank (exact trade-off law); 0 entrants, 0 refuters; seventh consecutive tallness bind (2026-07-16, session 21)"
+    }
+  ],
+  "note": "L3 numerical evidence only — never rigorous (CLAUDE.md L0/L3)",
+  "total": 38
+}
