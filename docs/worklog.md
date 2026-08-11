@@ -2727,3 +2727,15 @@ the three user answers.**
 - DEFERRED (documented in site/README.md deviations): KaTeX, δ–H scatter, per-result
   drill-down pages + stable anchors (slates D/J), hover-cards, atlas hash deep-links,
   fr repo URL (awaiting user).
+
+## 2026-08-11 — Session 48 (part 3): atlas selection-panel bug fixed + VERIFIED LIVE
+
+- User-reported on the live site: clicking an atlas node did not update the selection
+  panel. Root cause: `setPointerCapture` on pointerdown retargeted the synthesized click
+  to the svg, so node clicks never reached the `#nodes` listener (prior tests had
+  exercised `select()` programmatically / HTML buttons — never a real pointer click;
+  testing lesson recorded). Fix: capture deferred until the 3px drag threshold.
+- Red→green proven with REAL Playwright/Chromium pointer events (revert: clickWorks
+  false; fix: click selects, pan works, drag-starting-on-a-node does not select, 0 page
+  errors), committed dbd188dc, gh-pages re-mirrored, and the SAME suite re-run green
+  against the LIVE Pages URL.

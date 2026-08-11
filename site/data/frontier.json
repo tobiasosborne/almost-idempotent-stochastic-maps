@@ -9155,6 +9155,27 @@
       "note": "SESSION 48 part-2 CLOSING: phases 1-4 executed (data layer, README+nav docs, 7-page site, phase-4 review + fixes), Pages enabled (gh-pages subtree mirror), worklog+HANDOFF written. Final commit+push next.",
       "outcome": "orient",
       "ts": "2026-08-11T12:24:31.799Z"
+    },
+    {
+      "arm": null,
+      "cycle": 1309,
+      "note": "Atlas selection-panel bug fixed (user report): setPointerCapture on pointerdown retargeted clicks to the svg, freezing the panel; capture now deferred past the 3px drag threshold. Red-green proven with REAL Playwright/Chromium pointer events (revert: clickWorks=false; fix: click selects 2 nodes, pan works, drag-on-node doesn't select, 0 errors). Committed dbd188dc-mirrored, pushed; awaiting Pages …",
+      "outcome": "orient",
+      "ts": "2026-08-11T12:41:06.275Z"
+    },
+    {
+      "arm": null,
+      "cycle": 1310,
+      "note": "Atlas fix VERIFIED LIVE: the deployed https://tobiasosborne.github.io/.../atlas.html passes the full real-pointer-event suite (click selects, pan works, drag-on-node no-select, 0 page errors). Repo + gh-pages in sync; turn complete.",
+      "outcome": "orient",
+      "ts": "2026-08-11T12:41:51.866Z"
+    },
+    {
+      "arm": null,
+      "cycle": 1311,
+      "note": "Session 48 final close: HANDOFF rewritten with the complete achievement record (plan ratified -> phases 0-4 -> hosting live -> atlas fix verified live; ~20 commits, 5 independent reviews), worklog part-3 appended. Committing + pushing now.",
+      "outcome": "orient",
+      "ts": "2026-08-11T13:03:20.222Z"
     }
   ],
   "note": "T0 points are parsed out of free-text wave notes (liberal match on the last T0 count mentioned); dips are real — de-banked/retracted validations",
@@ -10340,5 +10361,5 @@
       "ts": "2026-08-09T08:51:37.403Z"
     }
   ],
-  "total": 1308
+  "total": 1311
 }
