@@ -33,7 +33,7 @@ Re-running this script rewrites the 17 argument shards to the corrected state
 """
 import pathlib, sys
 
-REPO = pathlib.Path("/home/tobiasosborne/Projects/almost-idempotent-stochastic-maps")
+REPO = pathlib.Path(__file__).resolve().parent.parent
 OUT = REPO / "argument" / "lemmas"
 
 DESIGN = "DESIGN-LEDGER-DOMAINS-v2.md"

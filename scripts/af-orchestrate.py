@@ -42,7 +42,10 @@ if _SCRIPTS_DIR not in sys.path:
     sys.path.insert(0, _SCRIPTS_DIR)
 from af_constants import NODE_SOFT_CAP  # noqa: E402  (shared with argument.py — aism-s64)
 
-AF = os.environ.get("AF") or shutil.which("af") or "/home/tobias/Projects/vibefeld/af"
+AF = (os.environ.get("AF") or shutil.which("af")
+      or next((str(p) for p in (pathlib.Path("~/go/bin/af").expanduser(),
+                                ROOT.parent / "vibefeld" / "af") if p.exists()),
+              str(ROOT.parent / "vibefeld" / "af")))
 CODEX = "codex"
 CODEX_MODEL = os.environ.get("CODEX_MODEL", "gpt-5.6-sol")
 # codex quota/auth outage tell (incident 2026-07-10: a quota outage burned all 14 rounds with

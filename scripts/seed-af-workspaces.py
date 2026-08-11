@@ -23,7 +23,10 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 ARG_DIR = ROOT / "argument" / "lemmas"
-AF = os.environ.get("AF") or shutil.which("af") or "/home/tobias/Projects/vibefeld/af"
+AF = (os.environ.get("AF") or shutil.which("af")
+      or next((str(p) for p in (pathlib.Path("~/go/bin/af").expanduser(),
+                                ROOT.parent / "vibefeld" / "af") if p.exists()),
+              str(ROOT.parent / "vibefeld" / "af")))
 AUTHOR = "orchestrator"
 
 
